@@ -1,0 +1,98 @@
+---
+import Icon from './Icon.astro';
+import NavLinks from './NavLinks.astro';
+import nav from '../data/nav.json';
+const { current = '', brandHref = '/' } = Astro.props;
+const wide = new Set(['Communities']);
+---
+<aside class="topbar" aria-label="Contact and social links">
+  <div class="wrap">
+    <div class="topbar__left">
+      <a href="tel:604-928-1361">604-928-1361</a>
+      <a href="mailto:jaredgibbons@royallepage.ca">jaredgibbons@royallepage.ca</a>
+    </div>
+    <div class="topbar__right">
+      <a href="https://www.facebook.com/jaredgibbonsrealestate/">Facebook</a>
+      <a href="https://www.instagram.com/jaredgibbonsrealestate/">Instagram</a>
+      <a href="/blog.html">Blog</a>
+    </div>
+  </div>
+</aside>
+<header class="site-header" id="site-header">
+  <div class="wrap">
+    <a class="brand" href={brandHref} aria-label="Jared Gibbons – South Surrey Realtor">Jared Gibbons<small aria-hidden="true">– South Surrey Realtor</small></a>
+    <button class="btn btn--ghost menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav" id="menu-btn">
+      <span data-label>Menu</span>
+    </button>
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      {nav.map((item, i) => {
+        const hasKids = !!item.children;
+        const isWide = wide.has(item.label);
+        const id = `np-${i}`;
+        return (
+          <div class:list={['nav__item', isWide && 'nav__item--wide']}>
+            {item.href
+              ? <a class="nav__link" href={item.href} aria-current={current === item.href ? 'page' : undefined}>{item.label}</a>
+              : <span class="nav__link">{item.label}</span>}
+            {hasKids && (
+              <>
+                <button class="nav__toggle" type="button" aria-expanded="false" aria-controls={id} aria-label={`${item.label} submenu`}><Icon name="chevron" /></button>
+                <div class:list={['nav__panel', isWide && 'nav__panel--wide']} id={id} hidden>
+                  <NavLinks items={item.children} />
+                </div>
+              </>
+            )}
+          </div>
+        );
+      })}
+    </nav>
+  </div>
+</header>
+<script>
+  const nav = document.getElementById('primary-nav');
+  const btn = document.getElementById('menu-btn');
+  const label = btn?.querySelector('[data-label]');
+  const toggles = [...document.querySelectorAll('.nav__toggle')];
+  const mq = window.matchMedia('(max-width:1300px)');
+  const header = document.getElementById('site-header');
+  // Offset the mobile overlay from the header's actual bottom edge (banner/topbar may or may not be scrolled away).
+  const setTop = () => document.documentElement.style.setProperty('--nav-top', Math.max(header.getBoundingClientRect().bottom, 0) + 'px');
+
+  function closeAll(except) {
+    toggles.forEach((t) => {
+      if (t === except) return;
+      t.setAttribute('aria-expanded', 'false');
+      document.getElementById(t.getAttribute('aria-controls')).hidden = true;
+    });
+  }
+  toggles.forEach((t) => {
+    t.addEventListener('click', () => {
+      const open = t.getAttribute('aria-expanded') === 'true';
+      closeAll(t);
+      t.setAttribute('aria-expanded', String(!open));
+      document.getElementById(t.getAttribute('aria-controls')).hidden = open;
+    });
+    // desktop: open on hover/focus-in of the item
+    const item = t.closest('.nav__item');
+    item.addEventListener('mouseenter', () => { if (!mq.matches) { closeAll(t); t.setAttribute('aria-expanded','true'); document.getElementById(t.getAttribute('aria-controls')).hidden = false; } });
+    item.addEventListener('mouseleave', () => { if (!mq.matches) closeAll(); });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const open = toggles.find((t) => t.getAttribute('aria-expanded') === 'true');
+    closeAll();
+    if (nav.classList.contains('is-open')) setMenu(false);
+    (open || btn)?.focus();
+  });
+  document.addEventListener('click', (e) => { if (!mq.matches && !e.target.closest('.nav')) closeAll(); });
+  function setMenu(on) {
+    nav.classList.toggle('is-open', on);
+    btn.setAttribute('aria-expanded', String(on));
+    label.textContent = on ? 'Close menu' : 'Menu';
+    document.body.style.overflow = on ? 'hidden' : '';
+    setTop();
+  }
+  btn?.addEventListener('click', () => setMenu(!nav.classList.contains('is-open')));
+  mq.addEventListener('change', () => { setMenu(false); closeAll(); });
+  setTop();
+</script>

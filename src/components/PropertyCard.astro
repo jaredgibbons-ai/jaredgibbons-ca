@@ -1,0 +1,41 @@
+---
+/**
+ * One property-card component for every listing surface (My Listings, community grids, sold).
+ * Sold-property cards reuse this exact markup/styling; only `status`, `tags` and which meta rows
+ * are supplied differ (brief: "sold cards must match buy-page cards").
+ */
+import Icon from './Icon.astro';
+const { as: Tag = 'h3', titleRest, areaM2, moreLabel = "More Info", href, street, city, postal, area, price, beds, baths, area_sqft, floorArea, status, type, mls, brokerage, listedBy, description, tags = [] } = Astro.props;
+const fmt = (n) => n;
+---
+<li class="pcard" data-status={status ?? undefined}>
+  <div class="pcard__media" role="img" aria-label={`Photo of ${street}, ${city} — pending`}>
+    <span class="pcard__ph">Photo pending<br />from archive</span>
+  </div>
+  <div class="pcard__body">
+    {(status || type || tags.length > 0) && (
+      <p class="pcard__tags">
+        {status && <span class="pcard__tag pcard__tag--solid">{status}</span>}
+        {type && <span class="pcard__tag">{type}</span>}
+        {tags.map((t) => <span class="pcard__tag">{t}</span>)}
+      </p>
+    )}
+    <p class="pcard__price">{price}</p>
+    <Tag class="pcard__addr"><a href={href}>{street}{titleRest && <span class="sr-only">{titleRest}</span>}</a></Tag>
+    <p class="pcard__city">{[area, city, postal].filter(Boolean).join(' · ')}</p>
+    {(beds != null || baths != null || floorArea || area_sqft) && (
+      <p class="pcard__meta">
+        {beds != null && <span><Icon name="bed" /><span>{beds}<span class="sr-only"> bedrooms</span></span></span>}
+        {baths != null && <span><Icon name="bath" /><span>{baths}<span class="sr-only"> bathrooms</span></span></span>}
+        {(floorArea || area_sqft) && <span><Icon name="area" /><span><span class="sr-only">Floor Area: </span>{floorArea ?? area_sqft}{areaM2 && <span class="m2"> · {areaM2}</span>}</span></span>}
+      </p>
+    )}
+    {description && <p class="pcard__desc">{description}</p>}
+    <span class="pcard__more" aria-hidden="true">{moreLabel} →</span>
+    {(mls || listedBy || brokerage) && (
+      <p class="pcard__foot">
+        {mls && <span>MLS® Num: {mls}</span>}{mls && (listedBy || brokerage) && ' · '}{listedBy ?? brokerage}
+      </p>
+    )}
+  </div>
+</li>

@@ -1,0 +1,58 @@
+{
+ "home-desktop": {
+  "axe_violations": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 2,
+    "help": "Heading levels should only increase by one",
+    "ex": ".hero__tag"
+   }
+  ],
+  "axe_passes": 42,
+  "lab_lcp_ms": 72,
+  "lab_cls": 0.0012
+ },
+ "fort-langley-desktop": {
+  "axe_violations": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 2,
+    "help": "Heading levels should only increase by one",
+    "ex": ".pcard[data-status=\"Active\"]:nth-child(1) > .pcard__body > .pcard__addr"
+   }
+  ],
+  "axe_passes": 52,
+  "lab_lcp_ms": 68,
+  "lab_cls": 0
+ },
+ "home-mobile": {
+  "axe_violations": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 2,
+    "help": "Heading levels should only increase by one",
+    "ex": ".hero__tag"
+   }
+  ],
+  "axe_passes": 42,
+  "lab_lcp_ms": 76,
+  "lab_cls": 0
+ },
+ "fort-langley-mobile": {
+  "axe_violations": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 2,
+    "help": "Heading levels should only increase by one",
+    "ex": ".pcard[data-status=\"Active\"]:nth-child(1) > .pcard__body > .pcard__addr"
+   }
+  ],
+  "axe_passes": 53,
+  "lab_lcp_ms": 44,
+  "lab_cls": 0
+ }
+}

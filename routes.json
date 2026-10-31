@@ -1,0 +1,24 @@
+{
+ "generated": "2026-10-31",
+ "note": "Seed manifest. Full manifest generated from urls.csv/seo.csv once BL-02 is resolved. Status values: not-started | implemented-preview | validated | blocked | failed.",
+ "routes": [
+  {
+   "url": "/",
+   "source_record": "home.md",
+   "family": "home",
+   "canonical": "https://jaredgibbons.ca/",
+   "redirect_target": null,
+   "status": "implemented-preview",
+   "validation": "pass: title, canonical, 839/840 text lines (rest = <title>), 265/265 link destinations; axe 0 serious; see docs/test-results/compare-home.json"
+  },
+  {
+   "url": "/fort-langley.html",
+   "source_record": "fort-langley.html.md",
+   "family": "community",
+   "canonical": "https://jaredgibbons.ca/fort-langley.html",
+   "redirect_target": null,
+   "status": "implemented-preview",
+   "validation": "pass with documented deviations (D-10): 1067/1068 text lines, 249/251 link destinations; axe 0 serious; see docs/test-results/compare-fort-langley.json"
+  }
+ ]
+}
