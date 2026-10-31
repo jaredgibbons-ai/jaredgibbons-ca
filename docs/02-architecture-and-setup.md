@@ -36,4 +36,4 @@ npm install
 python3 -I tools/build_nav.py      # regenerates src/data/nav.json from the archive record
 npm run build && npx astro preview # or serve dist/
 ```
-Git remote: not set (BL-01). Cloudflare: nothing deployed (BL-07).
+Git remote: `origin` = github.com/jaredgibbons-ai/jaredgibbons-ca (`main`, source of truth, A-02). Cloudflare: nothing deployed (BL-07).

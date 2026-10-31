@@ -3,7 +3,7 @@
 ## Blockers (need Jared / archive owner)
 | ID | Blocker | Blocks | Who |
 |---|---|---|---|
-| BL-01 | Create an **empty private** GitHub repo (suggest `jaredgibbons-ca`, no README) and tell me its name. The sandbox GitHub token is invalid, so I can't create it. Work is committed locally and will be pushed once the repo is attached. | Source of truth | Jared |
+| BL-01 | ~~GitHub repo~~ **Resolved 31 Oct:** `jaredgibbons-ai/jaredgibbons-ca` attached; full history pushed to `main`. (Confirm it is set to private.) |
 | BL-02 | **Update 2026-10-31:** files are in Drive (`baseline-part01…11.zip`, ~1.6 GB; `urls.csv` in folder 01 is newer than the zip copy). The Drive connector can't move anything over about a few MB (`urls.csv` 7 MB and `seo.csv` 16 MB both fail; zips are 107–177 MB each) and the shell can't reach Drive (403). Needs small extracts instead, see `07-…`. `redirects.csv` (11 KB) did come through. Original ask: put the baseline zips (HTML/CSS/images) and the folder-01 CSVs (`seo.csv`, `urls.csv`, `redirects.csv`) where I can read them. The Drive connector can't pull large CSVs, zips or the 14 MB manifest. | Image/logo assets, archived CSS (star gold), meta descriptions, family counts, full redirect map | Archive owner |
 | BL-03 | Trustindex: keep the widget on `reviews.html` or drop it. **Recommendation: keep it for now, loaded lazily.** Home reviews are in the archive as plain text, but `reviews.html` is not yet read. | Reviews page | Jared |
 | BL-04 | IDX route: new board feed/licence, or another provider, with Royal LePage sign-off. Is Jared leaving MyRealPage entirely? | Every listing surface, search, map, signup/login | Jared / brokerage |
