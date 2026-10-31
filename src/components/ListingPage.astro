@@ -1,0 +1,145 @@
+---
+// Own-listing detail page. Content comes from src/data/listings/<slug>.json (tools/import_listings.py).
+// Preview note: listing photos are not imported yet (no vendor-CDN hotlinking), so the gallery slot
+// says so plainly instead of pretending to be operational.
+import Base from '../layouts/Base.astro';
+import Cta from './Cta.astro';
+
+const { page } = Astro.props as { page: any };
+const seo = page.seo || {};
+const blocks: any[] = page.blocks;
+const sumBlock = blocks.find((b) => b.t === 'summary');
+// price first, then "label: value" pairs, then free values (type, area)
+const headN: number = sumBlock?.heading_n ?? 0;
+const headLines: string[] = sumBlock ? (headN ? sumBlock.lines.slice(0, headN) : sumBlock.lines) : [];
+const tailLines: string[] = sumBlock && headN ? sumBlock.lines.slice(headN) : [];
+// price first, then "label: value" pairs, then free values (type, area)
+const price = headLines.find((l: string) => l.startsWith('$')) ?? '';
+const rest: { k?: string; v: string }[] = [];
+{
+  const ls: string[] = headLines.filter((l: string) => l !== price);
+  for (let i = 0; i < ls.length; i++) {
+    if (ls[i].endsWith(':') && i + 1 < ls.length) { rest.push({ k: ls[i], v: ls[i + 1] }); i++; }
+    else rest.push({ v: ls[i] });
+  }
+}
+const telHref = (s: string) => 'tel:' + s;
+---
+<Base
+  title={page.title}
+  canonical={page.canonical}
+  description={seo['Meta description'] || undefined}
+  ogTitle={seo['OG title'] || undefined}
+  ogDescription={seo['OG description'] || undefined}
+  ogImage={seo['OG image'] || undefined}
+  footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
+  footerCell={true}
+  brandHref="/index.html"
+>
+<main id="main">
+  <section class="section">
+    <div class="wrap ls">
+      {blocks.map((b) => {
+        if (b.t === 'h' && b.level === 1) return <h1 class="ls__h1">{b.text}</h1>;
+        if (b.t === 'summary') {
+          const inner = (
+            <>
+              <span class="ls__price">{price}</span>
+              {rest.map((r) => <span class="ls__chip">{r.k ? <><span class="ls__k">{r.k}</span> {r.v}</> : r.v}</span>)}
+            </>
+          );
+          return <>{headN ? <h2 class="ls__sum">{inner}</h2> : <p class="ls__sum">{inner}</p>}{tailLines.map((l: string) => <p class="ls__flag">{l}</p>)}</>;
+        }
+        return null;
+      })}
+      <div class="ls__photos" role="note">
+        <p class="ls__photos-t">Listing photos{page.photos.count ? ` (${page.photos.count})` : ''}</p>
+        <p>Photos are not imported in this preview.</p>
+      </div>
+      {page.status === 'Active' && (
+        <p class="notice">Status is shown as captured in the archive on 2026-10-31. Live status needs the listing feed, which is not connected in the preview.</p>
+      )}
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="wrap ls">
+      {blocks.filter((b) => !(b.t === 'h' && b.level === 1) && b.t !== 'summary' && b.t !== 'credit' && b.t !== 'disclaimer' && b.t !== 'agent').map((b) => {
+        if (b.t === 'h') return <h2 class="ls__h">{b.text}</h2>;
+        if (b.t === 'p') return <p class="ls__p">{b.parts.map((x: any) => x.h ? <a href={x.h}>{x.t}</a> : x.t).reduce((a: any[], x: any) => (a.length ? [...a, ' ', x] : [x]), [])}</p>;
+        if (b.t === 'list') return <ul class="ls__list">{b.items.map((it: any) => <li>{it.map((x: any) => x.t).join(' ')}</li>)}</ul>;
+        if (b.t === 'facts') return (
+          <dl class="ls__facts">
+            {b.items.map((it: any) => (
+              <div class="ls__row">
+                <dt>{it.k}</dt>
+                <dd>{it.v.length ? it.v.map((v: string, i: number) => <>{i > 0 && <br />}{v}</>) : ''}</dd>
+              </div>
+            ))}
+          </dl>
+        );
+        if (b.t === 'table') return (
+          <div class="ls__tablewrap" tabindex="0" role="region" aria-label={b.caption}>
+            <table class="ls__table">
+              <caption>{b.caption}</caption>
+              <thead><tr>{b.head.map((h: string) => <th scope="col">{h}</th>)}</tr></thead>
+              <tbody>{b.rows.map((r: string[]) => <tr>{b.head.map((_: string, i: number) => <td>{r[i] ?? ''}</td>)}</tr>)}</tbody>
+            </table>
+          </div>
+        );
+        return null;
+      })}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap ls">
+      {blocks.filter((b) => b.t === 'agent').slice(0, 1).map((b) => (
+        <div class="ls__agent">
+          <p class="ls__agent-n">{b.lines[0]}</p>
+          <p>{b.lines[1]}</p>
+          <p><a href={telHref(b.lines[2])}>{b.lines[2]}</a></p>
+          <p><a href={`mailto:${b.lines[3]}`}>{b.lines[3]}</a></p>
+        </div>
+      ))}
+      {blocks.filter((b) => b.t === 'credit').map((b) => <p class="ls__credit">{b.text}</p>)}
+      {blocks.filter((b) => b.t === 'disclaimer').map((b) => <p class="ls__disc">{b.text}</p>)}
+    </div>
+  </section>
+  <Cta />
+</main>
+</Base>
+
+<style>
+  .ls{max-width:none}
+  .ls__p{max-width:var(--measure)}
+  .ls__photos{max-width:var(--measure)}
+  .ls__h1{font-size:clamp(1.75rem,4vw,2.75rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 1rem;text-wrap:balance}
+  .ls__sum{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1.25rem;font:600 1rem/1.4 var(--f-head);margin:0 0 var(--s5)}
+  .ls__price{font-size:clamp(1.5rem,3.4vw,2.25rem);font-weight:800;letter-spacing:-.02em}
+  .ls__flag{font:800 .8125rem var(--f-head);letter-spacing:.06em;text-transform:uppercase;margin:-.75rem 0 var(--s5)}
+  .ls__k{text-transform:uppercase;letter-spacing:.06em;font-size:.75rem}
+  .ls__photos{border:1px solid var(--ink);background:var(--cream);padding:2.5rem 1.25rem;margin:0 0 var(--s5);text-align:center}
+  .ls__photos p{margin:0}
+  .ls__photos-t{font:700 .875rem var(--f-head);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35rem!important}
+  .ls__h{font-size:1.25rem;margin:2rem 0 .75rem}
+  .ls__h:first-child{margin-top:0}
+  .ls__p{margin:0 0 1em}
+  .ls__list{list-style:none;padding:0;margin:0 0 1.25em;display:flex;flex-wrap:wrap;gap:.25rem 1rem}
+  .ls__facts{margin:0 0 1.25rem;border-top:1px solid var(--ink);background:#fff;display:grid;grid-template-columns:1fr;column-gap:0}
+  @media (min-width:56rem){.ls__facts{grid-template-columns:1fr 1fr;column-gap:var(--s6);background:transparent}.ls__row{background:#fff}}
+  .ls__row{display:grid;grid-template-columns:minmax(8rem,12rem) 1fr;gap:1rem;padding:.6rem .85rem;border-bottom:1px solid var(--rule);align-items:baseline}
+  .ls__row dt{font:700 .8125rem var(--f-head)}
+  .ls__row dd{margin:0;overflow-wrap:anywhere}
+  .ls__tablewrap{max-width:46rem;overflow-x:auto;margin:0 0 1.25rem;background:#fff;border:1px solid var(--ink)}
+  .ls__table{border-collapse:collapse;width:100%;font-size:.9375rem}
+  .ls__table caption{text-align:left;font:700 .8125rem var(--f-head);padding:.6rem .85rem;border-bottom:1px solid var(--ink)}
+  .ls__table th,.ls__table td{text-align:left;padding:.5rem .85rem;border-bottom:1px solid var(--rule);white-space:nowrap}
+  .ls__table th{font:700 .75rem var(--f-head);text-transform:uppercase;letter-spacing:.05em}
+  .ls__agent{border:1px solid var(--ink);padding:1rem 1.25rem;margin:0 0 var(--s5)}
+  .ls__agent p{margin:0 0 .25rem}
+  .ls__agent-n{font:800 .9375rem var(--f-head);letter-spacing:.04em}
+  .ls__credit{font:600 .875rem var(--f-head);margin:0 0 .75rem}
+  .ls__disc{font-size:.8125rem;color:var(--grey);margin:0}
+  @media (max-width:36rem){.ls__row{grid-template-columns:1fr;gap:.15rem}}
+</style>

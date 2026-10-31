@@ -12,6 +12,8 @@ for _f in glob.glob('src/data/pages/*.json'):          # generic archive-driven 
     IMPLEMENTED['/' + os.path.basename(_f)[:-5] + '.html'] = 'implemented-preview'
 for _f in glob.glob('src/data/posts/*.json'):          # blog posts, emitted under /internal/blog/ and mapped by the Worker
     IMPLEMENTED['/blog.html/' + os.path.basename(_f)[:-5]] = 'implemented-preview'
+for _f in glob.glob('src/data/listings/*.json'):       # own-listing pages, emitted under /internal/listings/
+    IMPLEMENTED['/our-listings.html/' + os.path.basename(_f)[:-5]] = 'implemented-preview'
 CMP = {}
 if os.path.exists('docs/test-results/compare-all.json'):
     for _p in _json.load(open('docs/test-results/compare-all.json'))['pages']:
@@ -22,6 +24,11 @@ if os.path.exists('docs/test-results/compare-posts.json'):
     for _p in _json.load(open('docs/test-results/compare-posts.json'))['pages']:
         _clean = not (_p['lines_missing'] or _p['headings_missing'] or _p['links_missing']) and _p['title_ok'] and _p['canonical_ok'] and _p['desc_ok']
         CMP['/blog.html/' + _p['slug']] = 'clean' if _clean else 'review'
+
+if os.path.exists('docs/test-results/compare-listings.json'):
+    for _p in _json.load(open('docs/test-results/compare-listings.json'))['pages']:
+        _clean = not (_p['lines_missing'] or _p['headings_missing'] or _p['links_missing']) and _p['title_ok'] and _p['canonical_ok'] and _p['desc_ok']
+        CMP['/our-listings.html/' + _p['slug']] = 'clean' if _clean else 'review'
 
 rows = []
 for p in SRC:
@@ -107,7 +114,7 @@ with open('routes/manifest.csv', 'w', newline='', encoding='utf-8') as f:
     w = csv.DictWriter(f, fieldnames=list(out[0].keys())); w.writeheader(); w.writerows(out)
 
 C = collections.Counter
-canon = sorted({(o['path_query'], o['family']) for o in out if o['family'] in ('page', 'blog-post', 'blog-index', 'home') and not o['query_variant'] and o['disposition'] in ('rebuild',)})
+canon = sorted({(o['path_query'], o['family']) for o in out if o['family'] in ('page', 'blog-post', 'blog-index', 'home', 'listing-own') and not o['query_variant'] and o['disposition'] in ('rebuild', 'rebuild-own-listing')})
 pages = [{'path': p, 'family': fam, 'status': IMPLEMENTED.get(p, 'not-started'), **({'archive_compare': CMP[p]} if p in CMP else {})} for p, fam in canon]
 # unique listings
 def lid(p):

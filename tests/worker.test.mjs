@@ -85,6 +85,18 @@ test('worker: page 200, redirect headers, real 404 status + body, noindex header
   r = await call('/esplanade-grande-waterstone-condo-for-sale/');
   assert.equal(r.status, 404);
 });
+test('worker: blog post and own-listing pages are served at their public URLs; /internal is never public', async () => {
+  const post = fs.readdirSync(path.join(DIST, 'internal/blog')).find((f) => f.includes('salmon-sessions'));
+  let r = await call('/blog.html/' + post.replace(/\.html$/, ''));
+  assert.equal(r.status, 200); assert.match(await r.text(), /<title>Salmon Sessions Music Festival Returns to South Surrey<\/title>/);
+  const lst = fs.readdirSync(path.join(DIST, 'internal/listings')).find((f) => f.includes('similkameen'));
+  r = await call('/our-listings.html/' + lst.replace(/\.html$/, ''));
+  assert.equal(r.status, 200); assert.match(await r.text(), /511 Similkameen Ave Princeton BC \| MLS 10374265/);
+  assert.equal((await call('/internal/blog/' + post)).status, 404);
+  assert.equal((await call('/internal/listings/' + lst)).status, 404);
+  assert.equal((await call('/blog.html/not-a-real-post-1')).status, 404);
+  assert.equal((await call('/blog.html')).status, 200);
+});
 test('worker: only GET and HEAD', async () => {
   assert.equal((await call('/', { method: 'POST' })).status, 405);
   assert.equal((await call('/', { method: 'HEAD' })).status, 200);

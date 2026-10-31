@@ -1,0 +1,12 @@
+---
+// Own-listing detail pages. Public URL is /our-listings.html/<slug>; emitted under /internal/listings/
+// because our-listings.html is itself a page. The Worker maps the public URL here and never serves
+// /internal/* directly.
+import ListingPage from '../../../components/ListingPage.astro';
+export function getStaticPaths() {
+  const mods = import.meta.glob('../../../data/listings/*.json', { eager: true }) as Record<string, any>;
+  return Object.values(mods).map((m) => ({ params: { slug: m.default.slug }, props: { page: m.default } }));
+}
+const { page } = Astro.props as { page: any };
+---
+<ListingPage page={page} />

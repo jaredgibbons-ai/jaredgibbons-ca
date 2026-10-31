@@ -14,7 +14,7 @@ from html.parser import HTMLParser
 from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import records, import_pages as ip  # noqa: E402
+import records, import_pages as ip, import_listings as il  # noqa: E402
 
 norm = ip.norm
 alnum = lambda s: re.sub(r'[^a-z0-9$%]', '', s.lower())
@@ -66,7 +66,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--pages', required=True); ap.add_argument('--dist', required=True)
     ap.add_argument('--out', default='docs/test-results/compare-all.json'); ap.add_argument('--only', default='')
-    ap.add_argument('--data', default='src/data/pages'); ap.add_argument('--kind', default='page', choices=['page', 'blog'])
+    ap.add_argument('--data', default='src/data/pages'); ap.add_argument('--kind', default='page', choices=['page', 'blog', 'listing'])
     a = ap.parse_args()
     only = {s for s in a.only.split(',') if s}
     results, tot = [], Counter()
@@ -77,6 +77,9 @@ def main():
         if a.kind == 'blog':
             r = records.parse(os.path.join(a.pages, 'blog.html__' + slug + '.md'))
             html = os.path.join(a.dist, 'internal', 'blog', slug + '.html')
+        elif a.kind == 'listing':
+            r = records.parse(os.path.join(a.pages, 'our-listings.html__' + slug + '.md'))
+            html = os.path.join(a.dist, 'internal', 'listings', slug + '.html')
         else:
             r = records.parse(os.path.join(a.pages, slug + '.html.md'))
             html = os.path.join(a.dist, slug + '.html')
@@ -86,11 +89,18 @@ def main():
         body = r.lines[start:end]
         G = grid_lines(body)
         missing, idx, vendor = [], 0, 0
+        widget = set()
+        if a.kind == 'listing':
+            kept, kidx, _, _ = il.clean_lines(r, start, end)
+            keep_i = set(kidx)
+            widget = {norm(r.lines[q]) for q in range(start, end) if q not in keep_i}       # widget chrome / captions (D-30)
+            widget |= {norm(r.lines[q]) for q in range(0, start)}                            # shared header (compared as for other pages)
+            widget -= {norm(r.lines[q]) for q in kidx}
         for l in r.lines:
             n = norm(l)
             if n.lower() in hay or (alnum(n) and alnum(n) in hay_a): continue
             if n in G: idx += 1; continue
-            if n in ip.VENDOR: vendor += 1; continue
+            if n in ip.VENDOR or (a.kind == 'listing' and n in widget and n not in {norm(x) for x in r.lines[:start]}): vendor += 1; continue
             if n.startswith(ip.MLS_DISCLAIMER) or n == '-- Sort by: --': continue
             if n == 'Filters': idx += 1; continue            # IDX widget control
             missing.append(n)
@@ -102,24 +112,25 @@ def main():
                 joined.add(norm(' '.join(r.lines[q:q + sp])).lower())
         outline_only = [t for _, t in r.outline if norm(t).lower() not in joined]          # hidden / not in visible text
         heads_missing = [t for _, t in r.outline if norm(t).lower() in joined and norm(t) not in G
-                         and norm(t).lower() not in rendered_heads and 'MLS R' not in t]
+                         and norm(t).lower() not in rendered_heads and 'MLS R' not in t and not (a.kind == 'listing' and norm(t) in widget)]
         rend_links = {local(h) for h in sc.hrefs}
         want = set()
         for k, lab, tgt in r.comps:
             if k != 'LINK' or not tgt: continue
             if norm(lab) in G: continue
+            if a.kind == 'listing' and (norm(lab) in il.WIDGET or tgt.startswith('[') or 'calendar.' in tgt or 'office365' in tgt or 'outlook.' in tgt): continue   # widget links (D-30)
             if tgt.startswith(('javascript:', 'data:')) or 'myrealpage.com/wps' in tgt or 'iss-cdn' in tgt or '/wps/rest' in tgt: continue
             if '/listing.' in tgt: continue                       # IDX / listing-detail card links (A-03, own listings later)
             if tgt.endswith(('/recip.html?showlogin', '/recip.html?showsignup')): continue   # D-10
             want.add(local(tgt))
         links_missing = sorted(u for u in want if u not in rend_links and u.replace('tel:6049281361', 'tel:604-928-1361') not in rend_links)
         nav_rel = []
-        if a.kind == 'blog':
+        if a.kind in ('blog', 'listing'):
             # B-24: the archived post pages resolve the shared header/footer's relative hrefs against
             # /blog.html/, so they point at /blog.html/<page>.html (broken at source). The rebuild's shared
             # header uses the site-root destination; count those separately when the root target is present.
             for u in list(links_missing):
-                m = re.match(r'^/blog\.html/([^/?#]+)$', u)
+                m = re.match(r'^/(?:blog|our-listings)\.html/([^/?#]+)$', u)
                 if m:
                     t = '/' if m.group(1) == 'index.html' else '/' + m.group(1)
                     if t in rend_links: nav_rel.append(u); links_missing.remove(u)
