@@ -1,5 +1,6 @@
 import rules from './rules.json';
 import { buildIndex, route, NESTED } from './route.js';
+import { handleForm } from './forms.js';
 
 const index = buildIndex(rules);
 const SECURITY = {
@@ -9,6 +10,7 @@ const SECURITY = {
 
 export default {
   async fetch(request, env) {
+    if (new URL(request.url).pathname.startsWith('/api/forms/')) return handleForm(request, env);
     if (request.method !== 'GET' && request.method !== 'HEAD') {
       return new Response('Method Not Allowed', { status: 405, headers: { allow: 'GET, HEAD' } });
     }

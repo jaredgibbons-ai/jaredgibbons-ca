@@ -46,3 +46,7 @@ Git remote: `origin` = github.com/jaredgibbons-ai/jaredgibbons-ca (`main`, sourc
 - Tracking (`utm_*`, `gclid`…), CMS preview (`?p=…&preview=true`) and `?_pg=N` params serve the page without redirecting, so analytics keeps the campaign parameters. `?_pg=N` returns the base page until listings are connected.
 - Nested content cannot share a name with its parent page on a file system (`blog.html` is a page and the parent of `blog.html/<post>`). Posts are emitted under `/internal/blog/<slug>.html` (done, 200 posts) and own-listing pages will go under `/internal/listings/`; the Worker maps the public URL to them and returns 404 for any direct `/internal/*` request. (Astro ignores `_`-prefixed route folders, so the first-planned `/_blog/` prefix could not be used.)
 - Tests: `npm test` (11 tests, node:test, bundles the Worker with esbuild and runs it against `dist/`).
+
+## Forms Worker (built, not connected)
+
+`src/worker/forms.js` handles `POST /api/forms/<kind>` for `contact`, `home-evaluation` and `property-check` (see D-33, OI-27). Bindings and secrets it expects: `LEADS_DB` (D1), `LEAD_WEBHOOK_URL`, `TURNSTILE_SECRET`, optional `ALLOWED_ORIGINS` and `RATE`. Tests: `tests/forms.test.mjs` (9 cases, fake D1/fetch). Until a destination and Turnstile are configured it returns 503 and the page forms remain disabled.
