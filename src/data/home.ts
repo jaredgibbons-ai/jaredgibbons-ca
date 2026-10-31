@@ -17,7 +17,7 @@ export const reviews = [
 // Order and files follow the archive: ww-img01, 02, 03, 2, 05.
 export const awards = [
   { alt: 'Royal LePage Years of Service award', slug: 'award-of-merit', w: 199, h: 188 },
-  { alt: 'Royal LePage Top 35 Under 35 award', slug: 'diamond-club', w: 108, h: 198 },
+  { alt: 'Royal LePage Canada Top 35 Under 35 award', slug: 'diamond-club', w: 108, h: 198 },
   { alt: 'Royal LePage Rookie of the Year award', slug: 'top-100', w: 211, h: 84 },
   { alt: 'Royal LePage Top Ten Award', slug: 'hall-of-fame', w: 211, h: 117 },
   { alt: 'Royal LePage Red Diamond Award', slug: 'platinum-award', w: 170, h: 175 },
