@@ -33,7 +33,7 @@
 | OI-17 | `reviews.html` meta description, robots and OG tags are in `seo.csv` (16 MB) and not yet retrievable. Title and canonical are applied. The same gap applies to all ~850 pages. |
 | OI-18 | **Page content for the other ~850 pages:** readable `.md` records for all 1,038 sitemap pages are in archive folder 02, one file each. Fetching them one by one through the connector would mean hand-copying text, which risks breaking the verbatim rule. Needs a bundle (see message to Jared). |
 
-| OI-17a | **Resolved 2026-10-31:** `seo.csv` is in folder 09; meta description, robots and OG tags are applied to all 634 generated pages (0 mismatches). `reviews.html` meta still to be restored from it. |
+| OI-17a | **Resolved 2026-10-31:** `seo.csv` is in folder 09; meta description, robots and OG tags are applied to all 634 generated pages (0 mismatches). `reviews.html` and `fort-langley.html` meta restored from it (reviews: description, OG title, OG image; robots empty in the archive). |
 | OI-18a | **Resolved 2026-10-31:** page records for all 1,038 sitemap pages are in folder 09 and hash-verified. 634 pages are generated; 200 blog posts and 200 own-listing records are next. |
 | OI-19 | 469 same-page `#fragment` link targets (e.g. `jg-overview`, `jg-market-snapshot`, `jg-related-areas`, `jg-seller-cta`, `jg-local-guide`) have no matching heading in the text record. Links work as page links but do not scroll to a section until the source ids are known. |
 | OI-20 | Guide and market pages (about 150) use components that arrive as flat text: label/value cards, school/park cards, tables, the property-check form. Text, headings and links are complete, but the layout is the generic text rendering. Bespoke components are the next design pass. |

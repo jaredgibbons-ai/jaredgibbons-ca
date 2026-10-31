@@ -67,3 +67,4 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 | B-20 | 6,411 outline headings do not appear in the visible text (hidden or duplicate card headings). Not rendered. |
 | B-21 | Jump links such as `#aldergrove-guide-glance` point at section ids that are not in the text records. 1,031 of 1,500 same-page targets were attached to the matching heading; 469 are unmapped (OI-19). |
 | B-22 | Three review-excerpt variants exist across 251 pages (200 / 43 / 8 pages). |
+| B-23 | `seo.csv` "OG description" contains a literal backslash before an apostrophe (`Langley\'s`) in 98 rows (19 generated pages plus `fort-langley.html`). Preserved exactly as archived in `og:description`. |
