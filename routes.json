@@ -1,24 +1,4325 @@
 {
  "generated": "2026-10-31",
- "note": "Seed manifest. Full manifest generated from urls.csv/seo.csv once BL-02 is resolved. Status values: not-started | implemented-preview | validated | blocked | failed.",
+ "source": "docs/archive-extracts/urls/part1..3.csv (21,014 rows, matches archive coverage report)",
+ "note": "Full per-URL manifest is routes/manifest.csv. This file lists canonical rebuildable pages/posts and the roll-up counts. Status values: not-started | implemented-preview | validated | blocked | rule-pending | failed.",
+ "totals": {
+  "inventoried_urls": 21014,
+  "unique_listing_ids": 8172
+ },
+ "by_family": {
+  "listing-idx": 16909,
+  "page": 3613,
+  "listing-own": 211,
+  "blog-post": 201,
+  "trailing-slash-legacy": 28,
+  "home-variant": 20,
+  "idx-search-form": 9,
+  "home": 7,
+  "nested-page-artifact": 7,
+  "blog-index": 5,
+  "feed": 2,
+  "other": 2
+ },
+ "by_disposition": {
+  "blocked-idx": 16875,
+  "worker-pagination": 2930,
+  "rebuild": 858,
+  "rebuild-own-listing": 207,
+  "redirect": 86,
+  "canonicalize-to-path": 26,
+  "serve-404": 16,
+  "review": 16
+ },
+ "by_status": {
+  "blocked": 16875,
+  "rule-pending": 3058,
+  "not-started": 1079,
+  "implemented-preview": 2
+ },
+ "by_capture_status": {
+  "Fully captured": 13675,
+  "Pending retry": 7264,
+  "Redirect": 63,
+  "Broken at source": 12
+ },
+ "query_variants": {
+  "pagination": 2931,
+  "cms-preview-noise": 19,
+  "blog-filter": 15,
+  "tracking": 7,
+  "other-query": 3
+ },
+ "canonical_pages_and_posts": 854,
  "routes": [
   {
-   "url": "/",
-   "source_record": "home.md",
+   "path": "/",
    "family": "home",
-   "canonical": "https://jaredgibbons.ca/",
-   "redirect_target": null,
-   "status": "implemented-preview",
-   "validation": "pass: title, canonical, 839/840 text lines (rest = <title>), 265/265 link destinations; axe 0 serious; see docs/test-results/compare-home.json"
+   "status": "implemented-preview"
   },
   {
-   "url": "/fort-langley.html",
-   "source_record": "fort-langley.html.md",
-   "family": "community",
-   "canonical": "https://jaredgibbons.ca/fort-langley.html",
-   "redirect_target": null,
-   "status": "implemented-preview",
-   "validation": "pass with documented deviations (D-10): 1067/1068 text lines, 249/251 link destinations; axe 0 serious; see docs/test-results/compare-fort-langley.json"
+   "path": "/abbotsford-55-plus-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-55-plus-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-acreages-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-condos-under-800k.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-duplexes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-east-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-east.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-farms.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-homes-over-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-homes-under-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-lots-land.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-mobile-homes.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-neighbourhood-guides.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-open-houses.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-penthouses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-poultry-farms.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-townhomes-under-1-2m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-west-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsford-west.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsfordforeclosuresandcourtsales.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/abbotsfordlandplans.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/aberdeen-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/aberdeen.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/about.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/albion-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/albion.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/aldergrove-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/aldergrove-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/aldergrove-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/aldergrove-mobile-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/aldergrove-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/aldergrove.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/altamont.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ambleside.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/anmore-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/annacis-island.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/annieville-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/annieville.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/arbutus.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/arista-townhomes.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/bayridge.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/bc-landlord-tenant-resources.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/beach-grove-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/beach-grove.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/bear-creek-green-timbers-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/bear-creek-green-timbers.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/big-bend.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html",
+   "family": "blog-index",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/-langley-acreages-over-4-acres-best-prices-in-years-8774922",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/-safeway-sale-at-ocean-park-what-it-means-for-south-surrey-9116750",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/-salmon-sessions-music-festival-returns-to-south-surrey-8962711",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/1-bed-den-at-the-grove-walnut-grove-469k-9028946",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/10k-price-drop-south-surrey-condo-at-15735-croydon-dr-619k-8934508",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/113-acre-dev-lot-hwy-99-corridor-south-surrey-8727627",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/115-9072-fleetwood-way-599k-8919895",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/127m-surrey-water-main-road-project-unlocks-major-south-surrey-growth-9004239",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/2-bed-condo-on-royal-avenue-white-rock-9072037",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/20-avenue-overpass-at-highway-99-major-south-surrey-traffic-upgrade--8895555",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/2024-canadian-farmland-value-trends-8457386",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/2024-inclusion-conference-8240650",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/2026-bc-speculation-tax-guide-for-south-surrey-owners-8918934",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/2026-speculation-tax-what-south-surrey-langley-owners-need-to-know-8719361",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/27th-floor-corner-unit-at-firenze-vancouver-living-8672454",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/3-bed-manufactured-home-for-sale-in-surrey-9103404",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/4-bed-townhome-in-willoughby-53-19897-75a-ave-8750493",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/4-bedroom-in-willoughby-heights-relisted-5319897-75a-ave-langley-8946669",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/4-bedroom-move-in-ready-home-in-sardis-just-listed-8705971",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/4-bedroom-townhome-in-willoughby-heights-8850548",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/4657-208a-street-langley-4-bedroom-split-level-home-with-large-lot-8814843",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/53-19897-75a-ave-langley-4-bed-townhome-at-mayfair-9115463",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/7-best-real-estate-buying-opportunities-in-langley-south-surrey-2026-9134553",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/a-1-billion-lease-just-landed-in-south-surrey-9106285",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/a-closer-look-at-new-apartment-developments-in-abbotsford-8426138",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/a1-zoning-in-bc-what-it-means-for-buyers-jared-gibbons-8957123",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/advancing-bc-homes-housing-needs-in-chilliwack-and-mission-8243023",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/affordable-3-bed-home-in-princeton-bc---511-similkameen-ave-299k-8919893",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/aldergrove-film-studio-rezoning-approved-langley-news-8903829",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/bank-of-canada-cuts-rate-to-250-south-surrey-realtor-8808151",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/bank-of-canada-holds-rates-as-economy-beats-expectations-8876855",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/bank-of-canada-rate-cut-what-it-means-for-home-buyers-and-sellers-8845978",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/bc-ends-suite-incentive-program-real-estate-news-8458769",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/bc-government-initiates-transit-oriented-housing-project-in-saanich-8243031",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/bc-housing-market-slows-as-population-growth-declines-jared-gibbons-8839231",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/bc-indigenous-reconciliation-musqueam-rights-fisheries-update-8937019",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/bc-new-home-gst-guide-rates-rebates-what-youll-owe-8967272",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/bc-pst-on-real-estate-services-what-local-sellers-must-know-8930971",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/bc-rental-pet-bans-what-pet-owners-need-to-know-in-2026-jared-gibbons-8981307",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/bchl-playoffs-surrey-eagles-face-crucial-road-games-in-penticton-8243016",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/bcs-surrey-langley-skytrain-extension-building-progress-8243028",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/beautiful-langley-family-home-1399000-8727616",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/before-you-buy-the-10-commandments-of-homeownership-8243010",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/best-value-places-to-live-in-bc-near-vancouver-in-2026-8941191",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/bolivar-heights-real-estate-future-potential-river-views-8546424",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/brand-new-554-sq-ft-strata-401-aldergrove-town-centre-dr-langley-8934509",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/bright-contemporary-1-bed-condo-in-aldergroves-new-urban-hub-8851541",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/brookswood-acreage-with-barns-now-3999000-8742340",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/brookswoods-big-new-development-langley-township-8939669",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/buyer-love-letters-are-dead-in-the-fraser-valley-how-buyers-win-in-202-9106277",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/buying-acreage-in-langley-alr-rural-plan-well-rules-9171874",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/can-foreigners-buy-farmland-in-bc-fraser-valley-rules-9186434",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/canada-cup-kicks-off-july-1-in-south-surrey-8240649",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/cannabis-retail-coming-to-surrey-what-residents-should-know-8243030",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/clayton-real-estate-waterstone-condo-offering-resort-style-amenities-8457385",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/cleanbc-rebates-in-bc-save-thousands-on-windows-heating-home-upgrades-8925479",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/cloverdale-condo-for-sale-modern-affordabl-8727623",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/cloverdale-surrey-homes-for-sale-complete-neighbourhood-guide-2025-8941200",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/condo-document-review-checklist-strata-depreciation-report-fraser-vall-8944002",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/condo-in-claytoncloverdale-real-estate-by-jared-gibbons-8562481",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/contemporary-4-bed-townhome-in-fleetwood-canopy-community-8853849",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/crescent-beach-canadas-6-beach-south-surrey-homes-9111610",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/december-2025-real-estate-market-update-langley-bc-8883662",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/depreciation-reports-explained-what-every-strata-corporation-should-kn-8243026",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/discover-your-natural-retreat-exclusive-5-acre-property-in-south-langl-8427440",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/double-wide-home-near-the-lake-in-mission-bc-8654085",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/downsizing-in-white-rock-a-retirement-living-guide-9095632",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/downtown-port-coquitlam-condo-sold-successfully-8440777",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/farm-ground-ranches-acreage-for-sale-in-bc-jared-gibbons-8957128",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/farm-land-for-sale-in-british-columbia-buyers-guide-jared-gibbons-8957117",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/farms-for-sale-in-bc-canada-8957129",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/feds-invest-25m-in-langleys-new-concert-performance-hall-8854929",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/fighting-for-clean-air-opposing-the-south-surrey-biofuel-facility-8243025",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/final-ugly-potato-day-coming-to-heppells-farm-in-south-surrey-8240652",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/first-time-buyer-faq-12-real-estate-questions-answered-8707214",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/first-time-buyer-incentives-in-canada-what-to-know-8701045",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/float-homes-and-housing-innovation-a-letter-to-canadas-housing-ministe-8243021",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/for-sale-flexible-warehouse-office-space-at-12-5327-192-street-8876121",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/fraser-valley-condos-just-dropped-under-the-zero-ptt-line-2026-9150993",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/fraser-valley-market-shifts-buyer-advantage-8458770",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/fraser-valley-market-update-april-2026-jared-gibbons-9002417",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/fraser-valley-real-estate-april-2025-market-report-8670380",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/fraser-valley-real-estate-update-key-insights-and-trends-for-april-202-8243020",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/getting-a-mortgage-on-a-mobile-home-in-bc-8778585",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/grey-whales-and-orcas-near-south-surrey-shore-8243018",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/ground-floor-condo-in-murrayville-listed-at-469000-9050785",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/guide-to-buying-land-in-bcs-alr-realtor-jared-gibbons-8864007",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/highway-99-corridor-development-site-for-sale-9115469",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/hobby-farms-for-sale-in-bc-what-buyers-need-to-know-jared-gibbons-8957120",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/holden-residences-assignment-sale-jared-gibbons-8243019",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/honoring-indigenous-culture-xwepiteng-elementary-in-south-surrey-8240648",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/how-poultry-quota-works-in-bc-chicken-egg-and-turkey-farms-explained-9126255",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/how-to-avoid-property-transfer-tax-in-bc-8666701",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/industrial-unit-for-lease-in-cloverdale-104-19232-enterprise-way-8897647",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/inside-a-35m-metro-vancouver-mansion-with-a-medieval-tavern-design-8243014",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/investment-property-maple-ridge-sold-by-jared-gibbons-8488866",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/investors-and-first-time-buyers-605150-e-cordova-st-8240647",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/is-it-time-to-buy-a-home-6-signs-youre-ready-to-own-8707219",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/is-the-fraser-valley-market-shifting-january-2026-update-8906875",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/june-2025-market-update-south-surrey-white-rock-8754811",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/just-listed-4657-208a-street-langley-8777216",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/just-sold-in-langley-city-more-homes-like-this-await-8705938",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/just-sold-record-sale-at-the-crescent-in-south-surrey-8707210",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/just-sold-renovated-home-at-8316-miller-crescent-mission-8692568",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/langley-community-activities-to-explore-in-february-and-march-2025-8423107",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/langley-events-october-2025-concerts-festivals-community-happenings-8832413",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/langley-housing-trends-for-buyers-sellers-8826503",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/langley-luxury-6-bedroom-custom-home-tour-8685830",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/langley-pushes-to-lift-old-airspace-limits-restricting-building-height-8854930",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/langley-real-estate-deal-100000-price-drop-home-in-lan-8539204",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/langley-real-estate-deal-260000-price-drop-elegant-6--8735091",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/langleys-future-fraser-hwy-employment-lands-plan-explained-8713026",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/liberal-governments-federal-budget-2024-a-snapshot-8243029",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/march-2025-real-estate-news-8493172",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/matteo-property-spotlight-investment-or-dream-home-8539206",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/morgan-heights-real-estate-living-in-morgan-heights-south-surrey-8882473",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/most-viewed-homes-in-langley-8806862",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/most-viewed-surrey-properties-top-homes-townhomes-condos-8806853",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/moving-to-south-surrey-bc-everything-you-need-to-know-2026-8941197",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/new-homes-gst-waiver-government-plan-2025-8491859",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/new-hotel-and-restaurant-proposed-for-south-surrey-public-hearing-toni-8243012",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/new-hours-for-white-rock-parks-what-you-need-to-know-8243033",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/new-listing-104-2109-rowland-st-port-coquitlam-8996885",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/new-listing-145-2853-helc-place-grandview-surrey-townhome-for-sale-8895553",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/new-listing-220-15735-croydon-drive-south-surrey-condo-for-sale-8886776",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/new-listing-401-27215-aldergrove-town-centre-drive-8851532",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/new-listing-in-sardis-chilliwack-404-7694-evans-road-condo-for-sale-8888665",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/new-morgan-creek-townhomes-condos-approved-south-surrey-8902482",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/new-price-40719885-76-ave-langley-condo-8833648",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/new-price-in-cloverdale-1-bed-den-with-2-parking-just-439k-8749202",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/new-south-surrey-condos-with-lock-off-suites-kingsgate-9093859",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/new-south-surrey-costco-moves-forward-after-council-approval-8860491",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/new-translink-route-556-connects-langley-centre-to-gloucester-industri-9142355",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/new-vietnamese-restaurant-celebrates-grand-opening-in-south-surrey-8243011",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/ocean-park-townhomes-89-new-units-at-128-street-24-avenue-surrey-8969237",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/pacific-douglas-real-estate-living-in-pacific-douglas-south-surrey-8882482",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/penticton-4-plex-investment-116-calgary-ave-8749199",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/penticton-fourplex-investment-116-calgary-ave-9142471",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/pne-prize-home-2025-langleys-willoughby-welcomes-25m-dream-home-8786379",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/policy-update-bank-of-canada-lowers-overnight-rate-by-25-basis-points-8240653",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/price-reduced-south-surrey-2-bedroom-condo-8934352",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/redwood-heights-development-faces-pushback-in-south-surrey-8678937",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/renovated-abbotsford-home-for-1625000-8734763",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/renovated-maple-ridge-townhome-priced-to-sell-8663348",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/revitalized-downtown-langley-ready-to-welcome-visitors-8844972",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/same-home-sharper-price-bolivar-heights-surrey-8972310",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/sold-5-acres-with-workshop-in-campbell-valley-8701043",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/sold-archstone-yorkson-townhome-jared-gibbons-8428837",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/sold-commercial-space-richmond-realtor---just-sold-thr-8485931",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/sold-hobby-farm-property-in-100-mile-house-8431723",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/sold-in-cloverdale-modern-3-bedroom-in-greenside-8701040",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/sold-renovated-3-bed-townhome-in-maple-ridge-8673946",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/sold-stunning-custom-home-at-4543-saddlehorn-crescent-8660216",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/sold-stylish-townhome-in-vedder-crossing-8665252",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/south-surrey-3-bed-townhomes-under-800k-best-prices-in-years-8774919",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/south-surrey-car-wash-fundraising-for-families-in-need-8243015",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/south-surrey-condos-under-420k-affordable-coastal-8774918",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/south-surrey-estate-on-acreage-16216-20-avenue-pacific-douglas-8882963",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/south-surrey-fraser-valley-real-estate-update-2025-8741015",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/south-surrey-highway-upgrades-advance-to-design-stage-8844138",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/south-surrey-industrial-boom-what-it-means-for-home-buyers-9087073",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/south-surrey-langley-real-estate-market-update-august-2025-8792895",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/south-surrey-new-ice-sports-facility--8906869",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/south-surrey-realtor-july-2025-market-update-8773603",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/south-surrey-school-approved-redwood-park-elementary-8649548",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/south-surrey-supportive-housing-plan-faces-alr-challenges-8801521",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/south-surrey-to-produce-skytrain-guideway-segments-for-transit-expansi-8243032",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/south-surrey-vs-white-rock-which-neighbourhood-is-right-for-you-in-202-8941189",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/south-surrey-white-rock-real-estate-market-update-december-2025-8883659",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/stunning-5-bedroom-modern-home-for-sale-in-langley-city-8430127",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/subject-to-sale-offers-in-real-estate-what-to-know-8645831",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/sunnyside-park-surrey-real-estate-living-in-sunnyside-park-south-surre-8882484",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/superhero-dash-in-for-annual-fundraiser-8240651",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/surrey-1-bed-condo-for-sale-399000-8727619",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/surrey-council-reviews-new-costco-plan-oct-2025-8836736",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/surrey-council-to-vote-on-34m-intersection-improvements-8819466",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/surrey-family-day-activities-2026-free-events-things-to-do-8900665",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/surrey-hosts-public-works-open-houses-for-national-public-works-week-8243013",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/surrey-langley-skytrain-project-hits-milestone-with-gantry-cranes-8801523",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/surrey-real-estate-market-update-march-2026-stats-trends-8990978",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/surrey-streamlines-development-process-8735107",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/surrey-upgrades-nicomekl-river-bridge-roads-8786377",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/tatalu-elementary-school-opening-earlier-than-expected-8243017",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/the-fhsa-hbp-stack-a-200000-down-payment-for-bc-couples-9150992",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/things-to-do-in-white-rock-south-surrey-september-2026-9142354",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/top-floor-2-bedroom-penthouse-at-axis--8777220",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/top-floor-mount-pleasant-condo-act-fast-8702460",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/top-south-surrey-condo-listings-buyers-are-viewing-right-now-8881527",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/top-south-surrey-realtor-jared-gibbons---south-surrey-real-estate-expe-8760189",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/top-viewed-homes-in-langley-september-2025-8819468",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/transforming-langley-new-development-planned-for-former-industrial-sit-8243022",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/unsold-condo-tax-bc-what-it-means-in-surrey-langley-9170120",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/urban-safari-rescue-centre-makes-progress-toward-reopening-after-fire-8243027",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/walnut-grove-1-bed-den-drops-to-439000-the-grove-9111628",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/walnut-grove-condo-price-drop-a218-8929-202-st-langley-9160362",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/waterstone-cloverdale-condo-sold-8562478",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/what-the-2026-bc-assessment-means-for-property-owners-in-bc-8884331",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/whats-happening-in-the-fraser-valley-real-estate-market-march-2024-8243034",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/why-langleys-next-wave-of-students-will-live-in-townhouses-condos-9004231",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blog.html/why-now-is-the-time-to-buy-or-sell-in-langley-real-estate-8741014",
+   "family": "blog-post",
+   "status": "not-started"
+  },
+  {
+   "path": "/blu-living-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/blueridge-nv.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/bolivar-heights-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/bolivar-heights.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/boulevard.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/boundary-beach-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/boundary-beach.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/boyd-park.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/bradner-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/bradner.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/braemar.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/brentwood-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/brentwood-park.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/bridal-falls-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/bridal-falls.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/bridgeport-ri.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/bridgeview-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/bridgeview.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/british-properties.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/broiler-farms-for-sale-bc.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/brookswood-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/brookswood-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/brookswood-mobile-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/brookswood-real-estate-development-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/brookswood.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/brownstones-at-morgan-crossing.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/buckingham-heights.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/burke-mountain-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/burke-mountain.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/burnaby-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/burnaby-hospital.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/burnaby-lake.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/buying-a-chicken-farm-bc.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/buying.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/calverhall.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cambie.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/campbell-valley-acreages-farms-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/campbell-valley-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/campbell-valley-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/campbell-valley.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/canterbury-wv.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/canyon-heights-nv.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/canyon-springs.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cape-horn.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/capilano-nv.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/capitol-hill-bn.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cariboo.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/caulfeild.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cedar-hills-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cedar-hills.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cedardale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/central-abbotsford-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/central-abbotsford.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/central-bn.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/central-coquitlam.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/central-lonsdale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/central-meadows-pitt-meadows-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/central-meadows-pitt-meadows.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/central-park-bs.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/champlain-heights.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chartwell.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cheap-mobile-homes-langley-under-500k.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chelsea-park.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chicken-farms.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-55-plus-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-55-plus-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-acreages-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-condos-under-800k.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-downtown-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-downtown.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-duplexes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-farms.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-homes-over-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-homes-under-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-lots-land.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-mobile-homes.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-mountain-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-mountain.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-neighbourhood-guides.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-open-houses.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-poultry-farms-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-proper-east-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-proper-east.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-proper-south-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-proper-south.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-proper-west-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-proper-west.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-river-valley.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwack-townhomes-under-1-2m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwackforeclosuresandcourtsales.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chilliwacklanduseplans.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/chineside.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/city-of-langley-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/city-of-langley-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/city-of-langley-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/city-of-langley-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cityofmapleridge.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cityofmission.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/clayton-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/clayton.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cliff-drive-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cliff-drive.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cloverale-foreclosures-court-ordered-sales.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cloverdale-bc-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cloverdale-bc.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cloverdale-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cloverdale-condos-under-800k.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cloverdale-duplexes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cloverdale-farms.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cloverdale-homes-over-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cloverdale-homes-under-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cloverdale-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cloverdale-lots-land.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cloverdale-neighbourhood-guides.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cloverdale-open-houses.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cloverdale-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cloverdale-townhomes-under-1-2m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/coal-harbour.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/collingwood-ve.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/columbia-valley-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/columbia-valley.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/commercial.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/communities.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/condos-under-500000.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/connaught-heights.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/contact.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/coquitlam-east.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/coquitlam-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/coquitlam-west.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cost-of-mobile-home-pad-rental-fees-in-langley.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cottonwood-maple-ridge-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cottonwood-mr.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/county-line-glen-valley-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/county-line-glen-valley.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/crescent-bch-ocean-pk.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/crescent-beach-ocean-park-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cultus-lake-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cultus-lake.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/cypress-park-estates.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/deep-cove.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/deer-lake-place.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/deer-lake.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/delbrook.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/delta-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/delta-manor-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/delta-manor.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/delta-neighbourhood-guides.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/deltalandplans.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/dewdney-deroche-mission-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/dewdney-deroche.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/dollarton.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/downtown-nw.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/downtown-vancouver-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/downtown-ve.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/downtown-vw.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/dunbar.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/durieu-mission-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/durieu.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/eagle-ridge-cq.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/east-burnaby.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/east-cambie.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/east-central-maple-ridge-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/east-central.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/east-chilliwack-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/east-chilliwack.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/east-delta-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/east-delta.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/east-newton-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/east-newton.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/eastern-hillsides-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/eastern-hillsides.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/edmonds-be.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/egg-farms-for-sale-bc.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/elgin-chantrell-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/elgin-chantrell.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/enclave-at-grandview.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/english-bluff-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/english-bluff.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fairfield-island-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fairfield-island.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fairview-vw.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/false-creek.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/faq-for-home-buyers-in-bc.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/faq-for-home-sellers.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/farms.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/first-time-buyer-calculator.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/first-time-home-buyer-program.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fleetwood-tynehead-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fleetwood-tynehead.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/foreclosures.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/forest-glen-bs.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/forest-hills-bn.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fort-langley-acreages-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fort-langley-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fort-langley-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fort-langley.html",
+   "family": "page",
+   "status": "implemented-preview"
+  },
+  {
+   "path": "/fox-aikins-north-townhomes.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fraser-heights-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fraser-heights.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fraser-valley-acreages-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fraser-valley-market-stats.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fraser-ve.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fraserview-nw.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/fraserview-ve.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/garden-village.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/garrison-crossing-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/garrison-crossing.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/geographic-information-systems-gis.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/glenbrooke-north.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/government-road.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/grandview-corners-condos-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/grandview-heights-condos.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/grandview-heights-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/grandview-surrey-duplexes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/grandview-surrey-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/grandview-surrey.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/grandview-woodland.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/granville.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/greendale-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/greendale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/greentree-village.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/greenway-townhomes-south-surrey.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/gst-rebate-in-bc.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/guildford-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/guildford-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/guildford-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/guildford.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/harbour-chines.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/hastings.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/hatzic-mission-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/hatzic.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/hawthorne-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/hawthorne.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/hazelmere-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/hazelmere.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/hemlock-valley-mission-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/hemlock.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/hockaday.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/holly-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/holly.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/home-evaluation.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/homes-under-1500000.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/how-to-buy-a-mobile-home-in-bc-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/hyde-park-south-surrey.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/index.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/jacobsen-townhomes-south-surrey.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/jared.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/killarney-ve.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/king-george-corridor-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/king-george-corridor.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/kitsilano.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/knight.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-condos-under-800k.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-duplexes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-elementary-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-elementary.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-farms.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-homes-over-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-homes-under-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-lots-land.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-open-houses.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-rural-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-rural.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladner-townhomes-under-1-2m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ladnerforeclosuresandcourtsales.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/lake-city-industrial.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/lake-errock-mission-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/lake-errock.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/land-use-plans.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/land.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-55-plus-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-55-plus-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-acreages-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-city-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-city.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-condos-under-399k.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-condos-under-499k.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-duplexes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-farms-for-sale-acreages-agricultural-land-mls.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-farms.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-foreclosures-court-ordered-sales.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-homes-over-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-homes-under-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-horse-properties-equestrian-farms-for-sale-mls-listings.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-houses-with-coach-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-lots-land.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-mobile-home-communities.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-mobile-homes.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-neighbourhood-guides.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-open-houses.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-penthouses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-poultry-farms-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langley-townhomes-under-1-2m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/langleycity.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/little-mountain-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/little-mountain.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/lower-landing-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/lower-landing.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/luxury-homes-for-sale-in-white-rock-south-surrey.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mackenzie-heights.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/main.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/majuba-hill-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/majuba-hill.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/map-search.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-55-plus-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-55-plus-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-acreages-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-condos-under-800k.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-duplexes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-farms.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-homes-over-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-homes-under-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-lots-land.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-mobile-homes.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-neighbourhood-guides.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-open-houses.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/maple-ridge-townhomes-under-1-2m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mapleridgeforeclosuresandcourtsales.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/marketing-plan.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/matsqui-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/matsqui.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/metrotown-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mid-meadows-pitt-meadows-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mid-meadows-pitt-meadows.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mission-bc-mission-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mission-bc.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mission-condos-under-800k.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mission-farms.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mission-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mission-homes-over-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mission-homes-under-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mission-lots-land.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mission-mobile-homes.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mission-neighbourhood-guides.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mission-open-houses.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mission-townhomes-under-1-2m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mission-west-mission-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mission-west.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/missionforeclosuresandcourtsales.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mobile-home-parks-fraser-valley.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/montecito.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/moody-park.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/morgan-creek-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/morgan-creek.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/morgan-crossing-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/mortgage-calculator.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/murrayville-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/murrayville-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/murrayville-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/murrayville-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/murrayville.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/neilsen-grove-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/neilsen-grove.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/new-construction-presales-in-langley-bc.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/new-westminster-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/nordel-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/nordel.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/north-arm.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/north-delta-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/north-maple-ridge-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/north-meadows-pitt-meadows-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/north-meadows-pitt-meadows.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/north-surrey-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/north-surrey-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/north-surrey-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/north-surrey-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/north-vancouver-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/northeast-maple-ridge-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/northeast.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/northwest-maple-ridge-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/northwest-maple-ridge.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/oakdale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/open-houses.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/otter-district-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/otter-district.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/our-listings.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/pacific-douglas-duplexes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/pacific-douglas-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/pacific-douglas.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/panorama-ridge-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/panorama-ridge.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/parkcrest.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/pebble-hill.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/pitt-meadows-55-plus-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/pitt-meadows-55-plus-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/pitt-meadows-acreages-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/pitt-meadows-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/pitt-meadows-duplexes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/pitt-meadows-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/pitt-meadows-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/pitt-meadows-neighbourhood-guides.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/pitt-meadows-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/popkum-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/popkum.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/poplar-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/poplar.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/port-coquitlam-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/port-guichon-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/port-guichon.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/port-kells-acreages-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/port-moody-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/poultry-farms-for-sale-bc.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/privacy.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/promontory-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/promontory.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/quay.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/queen-mary-park-surrey-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/queen-mary-park-surrey.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/queens-park.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/queensborough.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/quilchena-ri.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/recip.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/resources-for-buyers-and-sellers.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/reviews.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/richmond-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/river-valley-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/riverdale-ri.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/rosedale-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/rosedale-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/royal-heights-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/royal-heights.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ryder-lake-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/ryder-lake.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/salmon-river-acreages-farms-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/salmon-river-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/salmon-river-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/salmon-river.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sardis-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sardis-east-vedder-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sardis-east-vedder.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sardis-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sardis-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sardis-south-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sardis-south.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sardis-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sardis-west-vedder-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sardis-west-vedder.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/scottsdale-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/scottsdale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/seafair.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/seaisland.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sell-my-house-fast-in-langley-bc.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/selling.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/september-2026-market-update-south-surrey-white-rock-langley.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/serpentine-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/serpentine.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/silver-valley-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/silver-valley.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/soho-townhomes-south-surrey.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sold-properties.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-meadows-pitt-meadows-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-meadows-pitt-meadows.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-condos-under-800k.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-duplexes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-duplexes-with-suites-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-farms.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-homes-over-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-homes-under-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-lots-land.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-luxury-homes.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-mobile-homes.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-neighbourhoods.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-new-construction-presales.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-open-houses.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-presale-condos.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-real-estate-agent-jared-gibbons-realtor.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-school-catchments.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-townhomes-under-1-2m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-white-rock-55-plus-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-white-rock-55-plus-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-white-rock-ocean-view-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-white-rock-penthouses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-surrey-white-rock-waterfront-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/south-village-grandview-townhomes.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/southsurrey-foreclosures-court-ordered-sales.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/southwest-maple-ridge-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/southwest-maple-ridge.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/stave-falls-mission-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/stave-falls.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/steelhead-mission-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/steelhead.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/steveston-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/subscribe-to-our-newsletter.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sullivan-station-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sullivan-station.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sumas-mountain-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sumas-mountain.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sumas-prairie-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sumas-prairie.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sunnyside-park-surrey-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sunnyside-park-surrey.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sunshine-hills-woods-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/sunshine-hills-woods.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surrey-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surrey-condos-under-800k.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surrey-duplexes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surrey-farms.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surrey-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surrey-homes-over-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surrey-homes-under-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surrey-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surrey-lots-land.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surrey-mobile-homes.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surrey-neighbourhood-guides.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surrey-open-houses.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surrey-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surrey-townhomes-under-1-2m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surrey.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/surreyforeclosuresandcourtsales.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/terra-nova.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/testimonials.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/the-crest.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/the-heights-townhomes-south-surrey.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/thornhill-maple-ridge-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/thornhill-mr.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tilbury.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/townhomes-under-900000.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/townshipoflangleyplans.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-central-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-central.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-condos-under-800k.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-duplexes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-east-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-east.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-farms.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-foreclosures-court-ordered-sales.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-homes-over-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-homes-under-1-8m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-lots-land.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-north-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-north.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-open-houses.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-penthouses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/tsawwassen-townhomes-under-1-2m.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/turkey-farms-for-sale-bc.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/vancouver-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/vedder-crossing-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/vedder-crossing.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/vedder-mountain-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/vedder-mountain.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/walnut-grove-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/walnut-grove-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/walnut-grove-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/walnut-grove-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/walnut-grove.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/websters-corners-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/websters-corners.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/west-cambie.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/west-central-maple-ridge-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/west-central.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/west-chilliwack-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/west-chilliwack.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/west-meadows-pitt-meadows-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/west-newton-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/west-newton.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/west-vancouver-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/westham-island-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/whalley-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/whalley-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/whalley-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/whalley.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/white-rock-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/white-rock-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/white-rock.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/whonnock-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/whonnock.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/willoughby-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/willoughby-duplexes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/willoughby-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/willoughby-heights.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/willoughby-homes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/willoughby-houses-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/willoughby-townhomes-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/yaletown-condos-for-sale.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/yarrow-guide.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/yarrow.html",
+   "family": "page",
+   "status": "not-started"
+  },
+  {
+   "path": "/zonings.html",
+   "family": "page",
+   "status": "not-started"
   }
  ]
 }
