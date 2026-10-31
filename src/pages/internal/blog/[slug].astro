@@ -1,0 +1,12 @@
+---
+// Blog posts. Public URL is /blog.html/<slug>; emitted under /internal/blog/ because blog.html is
+// itself a page (a file cannot also be a directory). The Worker maps the public URL here and
+// never serves /internal/* directly.
+import GenericPage from '../../../components/GenericPage.astro';
+export function getStaticPaths() {
+  const mods = import.meta.glob('../../../data/posts/*.json', { eager: true }) as Record<string, any>;
+  return Object.values(mods).map((m) => ({ params: { slug: m.default.slug }, props: { page: m.default } }));
+}
+const { page } = Astro.props as { page: any };
+---
+<GenericPage page={page} />

@@ -1,5 +1,5 @@
 import rules from './rules.json';
-import { buildIndex, route } from './route.js';
+import { buildIndex, route, NESTED } from './route.js';
 
 const index = buildIndex(rules);
 const SECURITY = {
@@ -24,7 +24,7 @@ export default {
     // route() is synchronous; prefetch the few candidate paths it can ask about.
     const u = new URL(request.url);
     const cands = new Set([u.pathname, u.pathname + '.html', '/index.html', u.pathname.replace(/\/+$/, ''), '/404.html']);
-    for (const [re, f] of [[/^\/blog\.html\/(.+)$/, (m) => `/_blog/${m[1]}.html`], [/^\/our-listings\.html\/(.+)$/, (m) => `/_listings/${m[1]}.html`]]) {
+    for (const [re, f] of NESTED) {
       const m = u.pathname.match(re); if (m) cands.add(f(m));
     }
     for (const c of cands) await exists(c);

@@ -10,11 +10,18 @@ IMPLEMENTED = {'/': 'implemented-preview', '/fort-langley.html': 'implemented-pr
 import glob, os, json as _json
 for _f in glob.glob('src/data/pages/*.json'):          # generic archive-driven pages (tools/import_pages.py)
     IMPLEMENTED['/' + os.path.basename(_f)[:-5] + '.html'] = 'implemented-preview'
+for _f in glob.glob('src/data/posts/*.json'):          # blog posts, emitted under /internal/blog/ and mapped by the Worker
+    IMPLEMENTED['/blog.html/' + os.path.basename(_f)[:-5]] = 'implemented-preview'
 CMP = {}
 if os.path.exists('docs/test-results/compare-all.json'):
     for _p in _json.load(open('docs/test-results/compare-all.json'))['pages']:
         _clean = not (_p['lines_missing'] or _p['headings_missing'] or _p['links_missing']) and _p['title_ok'] and _p['canonical_ok'] and _p['desc_ok']
         CMP['/' + _p['slug'] + '.html'] = 'clean' if _clean else 'review'
+
+if os.path.exists('docs/test-results/compare-posts.json'):
+    for _p in _json.load(open('docs/test-results/compare-posts.json'))['pages']:
+        _clean = not (_p['lines_missing'] or _p['headings_missing'] or _p['links_missing']) and _p['title_ok'] and _p['canonical_ok'] and _p['desc_ok']
+        CMP['/blog.html/' + _p['slug']] = 'clean' if _clean else 'review'
 
 rows = []
 for p in SRC:

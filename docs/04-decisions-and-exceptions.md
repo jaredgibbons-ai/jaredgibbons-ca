@@ -57,6 +57,8 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 | D-25 | MyRealPage login / extend / verify widget lines are dropped on every page (D-10): 6,312 lines. The IDX "Filters" control is dropped with the grid. |
 | D-26 | The archived Google-review excerpt block (six excerpts, initials only) is kept verbatim as per-page data and rendered with gold stars (D-19). It is replaced by the Google Business Profile feed once approved. |
 | D-27 | Forms found in page text (property check, contact form) render as inert stubs with an explicit "not connected" notice and disabled fields until the forms Worker and lead destinations (BL-05) exist. |
+| D-28 | Blog posts (200) and the blog index are imported by the same pipeline as other pages (`tools/import_pages.py --kind blog`) into `src/data/posts/`, rendered by `GenericPage.astro`, emitted under `/internal/blog/` and served at `/blog.html/<slug>` by the Worker. Post byline ("Posted on <date> by <author>") is a styled paragraph with the archived text and the author link; post-list titles on the blog index are headings that are also links. | Approved by "keep going" (A-01/A-02 direction); review when you look at the preview |
+| D-29 | Mid-clause line breaks caused by inline markup in the archive text (a sentence cut after "its" / "the" / "of" etc.) are re-joined into one paragraph; wording is untouched. | Presentation only |
 
 ## Baseline notes from the page import (recorded, not corrected)
 | ID | Note |
@@ -68,3 +70,4 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 | B-21 | Jump links such as `#aldergrove-guide-glance` point at section ids that are not in the text records. 1,031 of 1,500 same-page targets were attached to the matching heading; 469 are unmapped (OI-19). |
 | B-22 | Three review-excerpt variants exist across 251 pages (200 / 43 / 8 pages). |
 | B-23 | `seo.csv` "OG description" contains a literal backslash before an apostrophe (`Langley\'s`) in 98 rows (19 generated pages plus `fort-langley.html`). Preserved exactly as archived in `og:description`. |
+| B-24 | On all 200 archived post pages the shared header/footer links are resolved relative to `/blog.html/`, so ~199 per post point to `https://jaredgibbons.ca/blog.html/<page>.html` (e.g. `/blog.html/abbotsford-condos-for-sale.html`), which the archive records as broken at source (403). Likewise `/blog.html/recip.html?showlogin`. The rebuild uses the site-root destinations in the shared header/footer. 39,800 link comparisons are classified `links_nav_relative` rather than missing. Needs your confirmation that the root destinations are what you want. | Open |

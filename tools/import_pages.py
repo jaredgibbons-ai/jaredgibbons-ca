@@ -76,8 +76,16 @@ class Linker:
 def ends_sentence(s):
     return s.rstrip().endswith(('.', '?', '!', ':', '…', '”', '"', ';'))
 
+OPEN_END = {'a', 'an', 'the', 'its', 'their', 'our', 'your', 'my', 'his', 'her', 'for', 'of', 'to', 'in', 'on', 'at', 'by', 'with',
+            'from', 'as', 'and', 'or', 'but', 'than', 'that', 'which', 'is', 'are', 'was', 'were', 'be', 'into', 'over', 'under',
+            'about', 'between', 'through', 'across', 'per', 'up', 'of'}
+
 def starts_cont(s):
-    return s[:1] in ',.;:)!?' or s[:1].islower()
+    return s[:1] in ',.;:)!?—–' or s[:1].islower()
+
+def open_end(s):
+    w = re.findall(r"[A-Za-z']+", s)
+    return bool(w) and w[-1].lower() in OPEN_END and len(s) >= 12   # a sentence cut mid-clause by inline markup
 
 
 def assemble(tokens):
@@ -93,7 +101,7 @@ def assemble(tokens):
             join = True
         elif not href and prev.get('h') and starts_cont(text):
             join = True
-        elif not href and not prev.get('h') and starts_cont(text) and not ends_sentence(prev['t']):
+        elif not href and not prev.get('h') and (starts_cont(text) or open_end(prev['t'])) and not ends_sentence(prev['t']):
             join = True
         elif not href and not prev.get('h') and prev['t'].endswith(':') and len(prev['t']) <= 48 and len(paras[-1]) == 1:
             join = True            # "Label:" + sentence (was <strong>label</strong> text)
@@ -134,6 +142,21 @@ def align_links(r):
     for a, b, size in sm.get_matching_blocks():
         for t in range(size):
             m[a + t] = links[b + t][1]; used_link.add(b + t)
+    # second pass: links the monotonic alignment could not place because the DOM order of the links
+    # differs from the visible-text order (e.g. the byline author link sits after body links). Pair
+    # each leftover link with a leftover line of identical text, in order, only when every
+    # leftover link of that label has a distinct line to take.
+    free = {}
+    for i, x in enumerate(L):
+        if i not in m and x: free.setdefault(x, []).append(i)
+    left = {}
+    for j, (lab, tgt) in enumerate(links):
+        if j not in used_link: left.setdefault(lab, []).append((j, tgt))
+    for lab, items in left.items():
+        idxs = free.get(lab, [])
+        if idxs and len(idxs) >= len(items):
+            for (j, tgt), i in zip(items, idxs):
+                m[i] = tgt; used_link.add(j)
     # anchors that wrap several text lines (title + description): label == join of 2..6 free lines
     spans, ptr = {}, 0
     for j, (lab, tgt) in enumerate(links):
@@ -150,6 +173,11 @@ def align_links(r):
 
 def slugify(url):
     m = re.match(r'https://jaredgibbons\.ca/([^/?#]+)\.html$', url)
+    return m.group(1) if m else None
+
+
+def post_slug(url):
+    m = re.match(r'https://jaredgibbons\.ca/blog\.html/([^/?#]+)$', url)
     return m.group(1) if m else None
 
 
@@ -248,8 +276,8 @@ def import_record(r, seo_row, reviews_ref):
                 nxt_link = (start + i + 1) in hmap
                 prv_link = bool(tokens) and tokens[-1][1] is not None
                 nxt_len = len(body[i + 1]) if i + 1 < n else 0
-                if nxt_link or (prv_link and nxt_len <= 80):
-                    hit = None
+                if (nxt_link or (prv_link and nxt_len <= 80)) and not (i + 1 < n and body[i + 1] == 'by'):
+                    hit = None   # (a post-list title followed by its byline stays a heading)
         span = 1
         if hit is None:
             for sp in (2, 3):
@@ -260,8 +288,19 @@ def import_record(r, seo_row, reviews_ref):
         if hit is not None:
             flush_tokens()
             remaining[key].pop(0)
-            blocks.append({'t': 'h', 'level': hit, 'text': norm(' '.join(body[i:i + span]))})
+            hb = {'t': 'h', 'level': hit, 'text': norm(' '.join(body[i:i + span]))}
+            if span == 1 and hmap.get(start + i): hb['href'] = hmap[start + i]   # heading that is itself a link
+            blocks.append(hb)
             i += span; continue
+        # --- post byline: "Posted on" <date> "by" <author>
+        if line == 'Posted on' and i + 3 < n and body[i + 2] == 'by':
+            flush_tokens()
+            parts = [{'t': 'Posted on'}, {'t': body[i + 1]}, {'t': 'by'}]
+            au = {'t': body[i + 3]}
+            if hmap.get(start + i + 3): au['h'] = hmap[start + i + 3]
+            parts.append(au)
+            blocks.append({'t': 'p', 'parts': parts, 'cls': 'byline'})
+            i += 4; continue
         # --- property-check form (recurs on guide pages): address + optional name + submit label
         if line == 'Property address' and i + 2 < n and body[i + 1] == 'Your name (optional)':
             flush_tokens()
@@ -283,7 +322,7 @@ def import_record(r, seo_row, reviews_ref):
         i += 1
     flush_tokens()
 
-    slug = slugify(r.canonical or r.url)
+    slug = (post_slug(r.canonical or r.url) or slugify(r.canonical or r.url)) if r.kind == 'blog' else slugify(r.canonical or r.url)
     # --- same-page fragment targets: attach ids to headings only where the label clearly matches
     base = (r.canonical or r.url).split('#')[0]
     frag = [(norm(lab), tgt.split('#', 1)[1]) for k, lab, tgt in r.comps
@@ -305,7 +344,7 @@ def import_record(r, seo_row, reviews_ref):
         else:
             unmapped_ids.append(fid)
     out = {
-        'slug': slug, 'path': f'/{slug}.html', 'url': r.url, 'kind': r.kind,
+        'slug': slug, 'path': (f'/blog.html/{slug}' if (r.kind == 'blog' and post_slug(r.canonical or r.url)) else f'/{slug}.html'), 'url': r.url, 'kind': r.kind,
         'title': r.title, 'canonical': r.canonical,
         'seo': seo_row,
         'blocks': blocks,
@@ -320,7 +359,7 @@ def import_record(r, seo_row, reviews_ref):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--pages', required=True); ap.add_argument('--seo', required=True); ap.add_argument('--out', required=True)
-    ap.add_argument('--only', default=''); ap.add_argument('--skip', default='fort-langley,reviews')
+    ap.add_argument('--only', default=''); ap.add_argument('--skip', default='fort-langley,reviews'); ap.add_argument('--kind', default='page', choices=['page', 'blog'])
     a = ap.parse_args()
     csv.field_size_limit(10**9)
     seo = {}
@@ -330,12 +369,16 @@ def main():
     os.makedirs(a.out, exist_ok=True)
     reviews_ref, report, written = [], [], 0
     for f in sorted(os.listdir(a.pages)):
-        if not f.endswith('.md') or '__' in f or f.startswith(('home.md', 'blog.html__')):
+        if not f.endswith('.md') or f.startswith('home.md'):
+            continue
+        if a.kind == 'page' and ('__' in f or f.startswith('blog.html__')):
+            continue
+        if a.kind == 'blog' and not f.startswith('blog.html__'):
             continue
         r = records.parse(os.path.join(a.pages, f))
-        if r.kind != 'page':
+        if r.kind != a.kind and not (a.kind == 'page' and f == 'blog.html.md'):   # blog index is a page route
             continue
-        slug = slugify(r.canonical or r.url)
+        slug = post_slug(r.canonical or r.url) if a.kind == 'blog' else slugify(r.canonical or r.url)
         if not slug or slug in skip or slug == 'index' or (only and slug not in only):
             continue
         row = seo.get(r.canonical) or seo.get(r.url)
@@ -352,7 +395,7 @@ def main():
         json.dump(out, open(os.path.join(a.out, slug + '.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
         written += 1
     uniq = Counter(reviews_ref)
-    json.dump({'written': written, 'reviews_variants': len(uniq), 'pages': report}, open(os.path.join(os.path.dirname(a.out.rstrip('/')), 'pages-report.json'), 'w'), indent=1, ensure_ascii=False)
+    json.dump({'written': written, 'reviews_variants': len(uniq), 'pages': report}, open(os.path.join(os.path.dirname(a.out.rstrip('/')), 'pages-report.json' if a.kind == 'page' else 'posts-report.json'), 'w'), indent=1, ensure_ascii=False)
     print('written', written, 'errors', sum(1 for x in report if 'error' in x), 'review variants', len(uniq))
 
 

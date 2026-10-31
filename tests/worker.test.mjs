@@ -52,11 +52,12 @@ test('archive 404 reference path is a real 404', () => {
   assert.equal(R('/this-page-does-not-exist-archive-check').type, 'notfound');
 });
 test('nested paths map to internal prefixes without clashing with their parent page', () => {
-  const fake = (p) => ['/blog.html', '/_blog/some-post-123.html', '/_listings/listing.r1.1.html'].includes(p);
+  const fake = (p) => ['/blog.html', '/internal/blog/some-post-123.html', '/internal/listings/listing.r1.1.html'].includes(p);
   assert.deepEqual(route('https://jaredgibbons.ca/blog.html', idx, fake), { type: 'asset', path: '/blog.html' });
-  assert.deepEqual(route('https://jaredgibbons.ca/blog.html/some-post-123', idx, fake), { type: 'asset', path: '/_blog/some-post-123.html' });
-  assert.deepEqual(route('https://jaredgibbons.ca/our-listings.html/listing.r1.1', idx, fake), { type: 'asset', path: '/_listings/listing.r1.1.html' });
+  assert.deepEqual(route('https://jaredgibbons.ca/blog.html/some-post-123', idx, fake), { type: 'asset', path: '/internal/blog/some-post-123.html' });
+  assert.deepEqual(route('https://jaredgibbons.ca/our-listings.html/listing.r1.1', idx, fake), { type: 'asset', path: '/internal/listings/listing.r1.1.html' });
   assert.equal(route('https://jaredgibbons.ca/blog.html/missing', idx, fake).type, 'notfound');
+  assert.equal(route('https://jaredgibbons.ca/internal/blog/some-post-123.html', idx, fake).type, 'notfound');   // not served directly
 });
 
 // ---- full Worker, bundled the way wrangler bundles it, with a fake ASSETS binding over dist/

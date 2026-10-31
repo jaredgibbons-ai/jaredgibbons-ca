@@ -1,0 +1,104 @@
+---
+// Archive-driven page body: renders one imported page/post JSON (tools/import_pages.py).
+// Generic archive-driven page. Content comes from src/data/pages/<slug>.json, produced by
+// tools/import_pages.py from the folder-09 page records. Bespoke pages (index, fort-langley,
+// reviews) are explicit files and take precedence over this route.
+import Base from '../layouts/Base.astro';
+import Rich from './Rich.astro';
+import Cta from './Cta.astro';
+import ReviewCards from './ReviewCards.astro';
+import FormStub from './FormStub.astro';
+
+const { page } = Astro.props as { page: any };
+const seo = page.seo || {};
+
+// Split into render sections at each level-2 heading; reviews and grid get their own sections.
+type Sec = { kind: 'text' | 'reviews' | 'grid'; blocks: any[]; block?: any };
+const sections: Sec[] = [];
+let cur: Sec = { kind: 'text', blocks: [] };
+const push = () => { if (cur.blocks.length) sections.push(cur); cur = { kind: 'text', blocks: [] }; };
+for (const b of page.blocks) {
+  if (b.t === 'reviews') { push(); sections.push({ kind: 'reviews', blocks: [], block: b }); continue; }
+  if (b.t === 'grid') { push(); sections.push({ kind: 'grid', blocks: [] }); continue; }
+  if (b.t === 'h' && b.level === 2) push();
+  cur.blocks.push(b);
+}
+push();
+const linkOnly = (items: any[]) => items.every((it) => it.length === 1 && it[0].h);
+let fid = 0;
+---
+<Base
+  title={page.title}
+  canonical={page.canonical}
+  description={seo['Meta description'] || undefined}
+  ogTitle={seo['OG title'] || undefined}
+  ogDescription={seo['OG description'] || undefined}
+  ogImage={seo['OG image'] || undefined}
+  footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
+  footerCell={true}
+  brandHref="/index.html"
+>
+<main id="main">
+  {sections.map((sec, si) => {
+    if (sec.kind === 'reviews') return <ReviewCards heading={sec.block.heading} intro={sec.block.intro} items={sec.block.items} id={`reviews-${si}`} />;
+    if (sec.kind === 'grid') return (
+      <section class="section section--cream section--tight" aria-label="Listings">
+        <div class="wrap">
+          <p class="notice">Live MLS® listings for this search are not connected in the preview. <a href="/recip.html">Search Listings</a></p>
+        </div>
+      </section>
+    );
+    return (
+      <section class:list={['section', { 'section--cream': si % 2 === 1, 'section--tight': !sec.blocks.some((x) => x.t === 'h') && sec.blocks.length <= 3 }]}>
+        <div class="wrap">
+          <div class="pg">
+            {sec.blocks.map((b) => {
+              if (b.t === 'h') {
+                const Tag = `h${Math.min(b.level, 5)}`;
+                return <Tag id={b.id} class={b.level === 1 ? 'pg__h1' : b.level === 2 ? 'h2' : 'pg__h'}>{b.href ? <Rich parts={[{ t: b.text, h: b.href }]} /> : b.text}</Tag>;
+              }
+              if (b.t === 'p') return <p class={b.cls}><Rich parts={b.parts} /></p>;
+              if (b.t === 'list') return (
+                <ul class:list={['lines', { 'lines--links': linkOnly(b.items) }]}>
+                  {b.items.map((it: any) => <li><Rich parts={it} /></li>)}
+                </ul>
+              );
+              if (b.t === 'card') return (
+                <a class="cardlink" href={b.href.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/'}>
+                  {b.lines.map((l: any, k: number) => {
+                    if (l.level) { const T = `h${Math.min(l.level, 5)}`; return <T class="cardlink__h">{l.text}</T>; }
+                    return <span class={k === 0 ? 'cardlink__h' : 'cardlink__t'}>{l.text}</span>;
+                  })}
+                </a>
+              );
+              if (b.t === 'form') return <FormStub labels={b.labels} submit={b.submit} uid={`f${fid++}`} />;
+              return null;
+            })}
+          </div>
+        </div>
+      </section>
+    );
+  })}
+  <Cta />
+</main>
+</Base>
+
+<style>
+  .section--tight{padding-block:clamp(1.25rem,3vw,2rem)}
+  .pg{max-width:var(--measure)}
+  .pg :global(p){margin:0 0 1em}
+  .pg__h1{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.05;letter-spacing:-.025em;margin:0 0 1.25rem;text-wrap:balance;max-width:24ch}
+  .pg__h{font-size:1.25rem;margin:2rem 0 .75rem}
+  .pg p,.pg li,.pg a{overflow-wrap:anywhere}
+  .byline{font:600 .8125rem var(--f-head);letter-spacing:.04em}
+  .pg .h2{margin-top:0}
+  .lines{list-style:none;margin:0 0 1.25em;padding:0;border-top:1px solid var(--ink)}
+  .lines li{padding:.55rem 0;border-bottom:1px solid var(--rule)}
+  .lines--links{columns:2 16rem;column-gap:var(--s6)}
+  .lines--links li{break-inside:avoid}
+  .pg:has(.lines--links){max-width:none}
+  .cardlink{display:grid;gap:.35rem;border:1px solid var(--ink);background:#fff;padding:1.1rem 1.25rem;margin:0 0 var(--s4);text-decoration:none}
+  .cardlink:hover,.cardlink:focus-visible{background:var(--ink);color:#fff}
+  .cardlink__h{font:700 1.0625rem/1.3 var(--f-head);margin:0}
+  .cardlink__t{font-size:.9375rem}
+</style>

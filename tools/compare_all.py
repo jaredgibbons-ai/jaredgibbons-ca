@@ -66,7 +66,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--pages', required=True); ap.add_argument('--dist', required=True)
     ap.add_argument('--out', default='docs/test-results/compare-all.json'); ap.add_argument('--only', default='')
-    ap.add_argument('--data', default='src/data/pages')
+    ap.add_argument('--data', default='src/data/pages'); ap.add_argument('--kind', default='page', choices=['page', 'blog'])
     a = ap.parse_args()
     only = {s for s in a.only.split(',') if s}
     results, tot = [], Counter()
@@ -74,8 +74,13 @@ def main():
         slug = f[:-5]
         if only and slug not in only: continue
         page = json.load(open(os.path.join(a.data, f), encoding='utf-8'))
-        r = records.parse(os.path.join(a.pages, slug + '.html.md'))
-        sc = Scan(); sc.feed(open(os.path.join(a.dist, slug + '.html'), encoding='utf-8').read())
+        if a.kind == 'blog':
+            r = records.parse(os.path.join(a.pages, 'blog.html__' + slug + '.md'))
+            html = os.path.join(a.dist, 'internal', 'blog', slug + '.html')
+        else:
+            r = records.parse(os.path.join(a.pages, slug + '.html.md'))
+            html = os.path.join(a.dist, slug + '.html')
+        sc = Scan(); sc.feed(open(html, encoding='utf-8').read())
         text = norm(' '.join(sc.text)); hay = text.lower(); hay_a = alnum(text)
         start, end = ip.body_bounds(r)
         body = r.lines[start:end]
@@ -108,17 +113,27 @@ def main():
             if tgt.endswith(('/recip.html?showlogin', '/recip.html?showsignup')): continue   # D-10
             want.add(local(tgt))
         links_missing = sorted(u for u in want if u not in rend_links and u.replace('tel:6049281361', 'tel:604-928-1361') not in rend_links)
+        nav_rel = []
+        if a.kind == 'blog':
+            # B-24: the archived post pages resolve the shared header/footer's relative hrefs against
+            # /blog.html/, so they point at /blog.html/<page>.html (broken at source). The rebuild's shared
+            # header uses the site-root destination; count those separately when the root target is present.
+            for u in list(links_missing):
+                m = re.match(r'^/blog\.html/([^/?#]+)$', u)
+                if m:
+                    t = '/' if m.group(1) == 'index.html' else '/' + m.group(1)
+                    if t in rend_links: nav_rel.append(u); links_missing.remove(u)
         seo = page.get('seo') or {}
         res = dict(slug=slug,
                    title_ok=(norm(sc.title) == norm(r.title)), canonical_ok=(sc.canon == r.canonical),
                    desc_ok=(sc.meta.get('description', '') == (seo.get('Meta description', '') or '')),
                    lines=len(r.lines), lines_missing=len(missing), lines_idx=idx, lines_vendor=vendor,
                    headings=len(r.outline), headings_missing=len(heads_missing), headings_outline_only=len(outline_only),
-                   links=len(want), links_missing=len(links_missing),
+                   links=len(want), links_missing=len(links_missing), links_nav_relative=len(nav_rel),
                    h1_count=sum(1 for l, _ in sc.heads if l == 1),
                    missing_sample=missing[:6], heads_missing_sample=heads_missing[:4], links_missing_sample=links_missing[:4])
         results.append(res)
-        for k in ('lines', 'lines_missing', 'lines_idx', 'lines_vendor', 'headings', 'headings_missing', 'headings_outline_only', 'links', 'links_missing'): tot[k] += res[k]
+        for k in ('lines', 'lines_missing', 'lines_idx', 'lines_vendor', 'headings', 'headings_missing', 'headings_outline_only', 'links', 'links_missing', 'links_nav_relative'): tot[k] += res[k]
         for k in ('title_ok', 'canonical_ok', 'desc_ok'): tot[k + '_fail'] += (not res[k])
     summary = dict(pages=len(results), **tot,
                    pages_clean=sum(1 for x in results if not x['lines_missing'] and not x['headings_missing'] and not x['links_missing'] and x['title_ok'] and x['canonical_ok'] and x['desc_ok']))

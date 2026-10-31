@@ -6,9 +6,10 @@
 
 const TRACKING = /^(utm_[a-z]+|gclid|fbclid|msclkid|mc_cid|mc_eid|_ga|ref)$/i;
 // Parent pages that also own nested paths (cannot be a file and a directory at once).
-const NESTED = [
-  [/^\/blog\.html\/(.+)$/, (m) => `/_blog/${m[1]}.html`],
-  [/^\/our-listings\.html\/(.+)$/, (m) => `/_listings/${m[1]}.html`],
+// Emitted under /internal/ (Astro ignores _-prefixed folders). Never served directly.
+export const NESTED = [
+  [/^\/blog\.html\/(.+)$/, (m) => `/internal/blog/${m[1]}.html`],
+  [/^\/our-listings\.html\/(.+)$/, (m) => `/internal/listings/${m[1]}.html`],
 ];
 
 export function buildIndex(rules) {
@@ -25,6 +26,8 @@ export function route(url, index, assetExists) {
     return { type: 'redirect', location: `https://jaredgibbons.ca${u.pathname}${u.search}`, status: 301 };
   }
   let path = u.pathname;
+  // internal build output is reachable only through its public URL
+  if (path === '/internal' || path.startsWith('/internal/')) return { type: 'notfound', reason: 'internal path' };
   // 2) exact archive rules (path, then path+query)
   const full = path + u.search;
   for (const k of [full, path]) {
