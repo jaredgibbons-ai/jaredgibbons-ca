@@ -10,7 +10,7 @@
    }
   ],
   "axe_passes": 44,
-  "lab_lcp_ms": 108,
+  "lab_lcp_ms": 104,
   "lab_cls": 0.0005
  },
  "fort-langley-desktop": {
@@ -24,7 +24,21 @@
    }
   ],
   "axe_passes": 53,
-  "lab_lcp_ms": 64,
+  "lab_lcp_ms": 72,
+  "lab_cls": 0
+ },
+ "reviews-desktop": {
+  "axe_violations": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": "h4:nth-child(2)"
+   }
+  ],
+  "axe_passes": 38,
+  "lab_lcp_ms": 96,
   "lab_cls": 0
  },
  "home-mobile": {
@@ -38,7 +52,7 @@
    }
   ],
   "axe_passes": 44,
-  "lab_lcp_ms": 68,
+  "lab_lcp_ms": 92,
   "lab_cls": 0
  },
  "fort-langley-mobile": {
@@ -52,7 +66,21 @@
    }
   ],
   "axe_passes": 54,
-  "lab_lcp_ms": 60,
+  "lab_lcp_ms": 56,
+  "lab_cls": 0
+ },
+ "reviews-mobile": {
+  "axe_violations": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": "h4:nth-child(2)"
+   }
+  ],
+  "axe_passes": 38,
+  "lab_lcp_ms": 52,
   "lab_cls": 0
  }
 }

@@ -9,7 +9,7 @@ async def main():
         for name,vp,mob in [('desktop',{'width':1440,'height':900},False),('mobile',{'width':390,'height':844},True)]:
             ctx=await b.new_context(viewport=vp,is_mobile=mob,has_touch=mob)
             pg=await ctx.new_page()
-            for slug,path in [('home','/'),('fort-langley','/fort-langley.html')]:
+            for slug,path in [('home','/'),('fort-langley','/fort-langley.html'),('reviews','/reviews.html')]:
                 await pg.add_init_script("""window.__m={cls:0,lcp:0};new PerformanceObserver(l=>{for(const e of l.getEntries())if(!e.hadRecentInput)window.__m.cls+=e.value}).observe({type:'layout-shift',buffered:true});new PerformanceObserver(l=>{for(const e of l.getEntries())window.__m.lcp=e.startTime}).observe({type:'largest-contentful-paint',buffered:true});""")
                 await pg.goto(BASE+path,wait_until='networkidle')
                 await pg.evaluate("document.querySelectorAll('details').forEach(d=>d.open=true)")

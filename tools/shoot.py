@@ -10,7 +10,7 @@ async def main():
             msgs=[]
             pg.on('console', lambda m: msgs.append(m.text) if m.type in ('error','warning') else None)
             pg.on('requestfailed', lambda r: msgs.append('FAILED '+r.url))
-            for slug, path in [('home','/'),('fort-langley','/fort-langley.html')]:
+            for slug, path in [('home','/'),('fort-langley','/fort-langley.html'),('reviews','/reviews.html')]:
                 await pg.goto(BASE+path, wait_until='networkidle')
                 await pg.screenshot(path=f'shots/{slug}-{name}-top.png')
                 await pg.screenshot(path=f'shots/{slug}-{name}-full.png', full_page=True)

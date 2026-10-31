@@ -6,7 +6,7 @@ import csv, io, json, re, collections
 from urllib.parse import urlparse, parse_qs
 
 SRC = [f'docs/archive-extracts/urls/part{i}.csv' for i in (1, 2, 3)]
-IMPLEMENTED = {'/': 'implemented-preview', '/fort-langley.html': 'implemented-preview'}
+IMPLEMENTED = {'/': 'implemented-preview', '/fort-langley.html': 'implemented-preview', '/reviews.html': 'implemented-preview'}
 
 rows = []
 for p in SRC:

@@ -31,6 +31,7 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 | D-19 | **Review stars are gold, everywhere** (user-directed). One token `--star:#a67c00` (3.8:1 on white, 3.2:1 on cream, passes the 3:1 graphic threshold) and one `Stars` component/`.stars` class used for every review. Glyphs are `aria-hidden`; the accessible name is the sr-only "5 out of 5 stars". A brighter gold (e.g. #d4a017) would fail contrast on white (2.4:1), so this is the lightest gold that passes. | Jared's instruction; the archive CSS has no star colour. | Yes: shade |
 | D-20 | **Award alt text (B-15).** Jared confirmed the five images are correct. Alt text now describes what each image shows (Years of Service, Top 35 Under 35 (Royal LePage Canada), Rookie of the Year, Top Ten, Red Diamond) instead of the mismatched archived text, so screen-reader and sighted users get the same award. Deliberate, approved exception to verbatim alt preservation (WCAG 1.1.1). | Images confirmed correct. | **Approved 2026-10-31** |
 | D-21 | Header logo now uses the supplied logo image (`site-logo.webp`) with the archived alt text "Jared Gibbons – South Surrey Realtor", replacing my text lockup. The JG monogram PNG is used for favicon/apple-touch icon only (its archive location is unconfirmed, OI-13). | Archive header is an image. | Yes |
+| D-22 | Trustindex dropped; reviews come from the Google Business Profile API once approved (docs/08). Interim static reviews on `reviews.html`. No star-rating structured data for own reviews. | Jared: "do it ourselves, connected to Google"; owns the profile. | Yes |
 
 ## Baseline notes (errors recorded, not corrected)
 | ID | Note |
@@ -44,4 +45,5 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 | B-12 | Fort Langley FAQ phone link is `tel:6049281361`; all others are `tel:604-928-1361`. Preserved for the one in-text link. |
 | B-13 | Home card for 116 Calgary Avenue shows one numeric value (beds vs baths unknown); not rendered. Cards for 12 5327 192 Street and 203 & 210 30610 Progressive Way show no beds/baths. |
 | B-15 | Home awards: archived alt text (Award of Merit, Diamond Club, Top 100, Hall of Fame, Platinum Award, file order ww-img01/02/03/2/05) does not match the image content (Years of Service, Top 35 Under 35, Rookie of the Year, Top Ten Award, Red Diamond Award). Images were taken from the live site, not the baseline zips, so the live images may have been replaced after capture. |
+| B-16 | `reviews.html` review by Ceilidh ends "3 times now !" (space before !). Preserved. |
 | B-14 | Fort Langley and home pages both carry the line "Data was last updated …" / listing snapshot dates that are only true as of capture (2026-10-31). |

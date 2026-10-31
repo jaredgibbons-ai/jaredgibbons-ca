@@ -1,0 +1,94 @@
+---
+import Base from '../layouts/Base.astro';
+import reviews from '../data/reviews.json';
+// Text is parsed verbatim from the archive record (docs/archive-extracts/reviews.html.md) by tools/import step; do not retype.
+// Star ratings are NOT in the archived text for this page (OI-15). When confirmed, pass rating to <Stars/> (always gold, D-19).
+const explore = [
+  ['South Surrey & WR', 'South Surrey Homes for Sale', 'View listings →', '/south-surrey-homes-for-sale.html'],
+  ['Local Guide', 'South Surrey Real Estate Agent', 'View page →', '/south-surrey-real-estate-agent-jared-gibbons-realtor.html'],
+  ['Langley', 'Langley Homes for Sale', 'View listings →', '/langley-homes-for-sale.html'],
+  ['Acreages & Farms', 'Langley Acreages for Sale', 'View listings →', '/langley-acreages-for-sale.html'],
+  ['Cloverdale', 'Cloverdale Real Estate & MLS®', 'View listings →', '/cloverdale-bc.html'],
+  ['Delta', 'Delta, Ladner & Tsawwassen', 'View listings →', '/delta-homes-for-sale.html'],
+  ['Selling', 'Free Home Evaluation', 'Request value →', '/home-evaluation.html'],
+  ['About', 'About Jared Gibbons, REALTOR®', 'Read bio →', '/jared.html'],
+];
+---
+<Base
+  title="Jared Gibbons Reviews | South Surrey & Langley Realtor"
+  canonical="https://jaredgibbons.ca/reviews.html"
+  footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
+  footerCell={true}
+  brandHref="/index.html"
+  current="/reviews.html"
+>
+<main id="main">
+  <section class="section rv-hero" aria-labelledby="h1">
+    <div class="wrap">
+      <h1 id="h1" class="rv-h1">JARED GIBBONS REVIEWS</h1>
+      <h2 class="rv-intro">Read real client reviews and testimonials from buyers and sellers who worked with Jared Gibbons across South Surrey, Langley, White Rock, and the Fraser Valley. See why local homeowners trust Jared for expert guidance, strong negotiation, and smooth real estate results.</h2>
+    </div>
+  </section>
+
+  <section class="section section--cream" aria-labelledby="h-comments">
+    <div class="wrap">
+      <h2 id="h-comments" class="h2">Client comments</h2>
+      <ul class="rv-list">
+        {reviews.map((r) => (
+          <li class="rv">
+            <blockquote class="rv__body">
+              {r.title && <p class="rv__title">{r.title}</p>}
+              {r.paragraphs.map((p) => <p>{p}</p>)}
+            </blockquote>
+            <p class="rv__who"><strong>{r.name}</strong><br /><span class="muted">{r.date}</span></p>
+          </li>
+        ))}
+      </ul>
+      <p class="rv-note">A selection of client comments. More reviews are shown below.</p>
+      <p class="preview-flag">Open items OI-15/OI-16: the archive text has no star ratings for these six reviews, and says "More reviews are shown below" but no further reviews were captured (they were likely loaded by the Trustindex script). Plan: Google Business Profile API feed (BL-03); until then only the six archived reviews are shown.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-explore">
+    <div class="wrap">
+      <p class="eyebrow">Explore More</p>
+      <h2 id="h-explore" class="h2">Communities, MLS® Searches &amp; Client Services</h2>
+      <ul class="explore">
+        {explore.map(([k, t, v, h], i) => (
+          <li><a href={h} class="explore__a"><span class="explore__n" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span><span class="explore__k">{k}</span><span class="explore__t">{t}</span><span class="explore__v">{v}</span></a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--ink on-dark cta" aria-labelledby="h-ready">
+    <div class="wrap">
+      <h2 id="h-ready" class="h2">Ready to get started?</h2>
+      <p class="lede">Call <a href="tel:604-928-1361">604-928-1361</a> or <a href="mailto:jaredgibbons@royallepage.ca">Email me</a> today and let's discuss your next home sale or purchase.</p>
+    </div>
+  </section>
+</main>
+</Base>
+
+<style>
+  .rv-hero{padding-bottom:clamp(1.5rem,3vw,2.5rem)}
+  .rv-h1{font-size:clamp(2.5rem,7vw,5.5rem);line-height:.98;letter-spacing:-.035em;margin:0 0 1.5rem}
+  .rv-intro{font:400 clamp(1.0625rem,1.8vw,1.3125rem)/1.55 var(--f-body);max-width:52rem;margin:0}
+  .rv-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,22rem),1fr));gap:var(--s5);margin:var(--s6) 0 var(--s5)}
+  .rv{background:#fff;border:1px solid var(--ink);padding:1.4rem 1.5rem;display:flex;flex-direction:column}
+  .rv__body{margin:0 0 1.25rem;flex:1}
+  .rv__body p{margin:0 0 .85rem}
+  .rv__body p:last-child{margin-bottom:0}
+  .rv__title{font:700 1.0625rem/1.35 var(--f-head)}
+  .rv__who{margin:0;font-size:.875rem;line-height:1.4}
+  .rv-note{font:600 .875rem var(--f-head);letter-spacing:.04em;margin:var(--s4) 0}
+  .explore{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));gap:0;border-top:1px solid var(--ink);margin-top:var(--s5)}
+  .explore li{border-bottom:1px solid var(--ink)}
+  .explore__a{display:grid;grid-template-columns:2.5rem 1fr;grid-template-rows:auto auto auto;column-gap:.5rem;padding:1.1rem .75rem 1.25rem 0;text-decoration:none}
+  .explore__a:hover{background:var(--ink);color:#fff}
+  .explore__a:hover .explore__v{text-decoration:underline}
+  .explore__n{grid-row:1/4;font:700 .75rem var(--f-head);letter-spacing:.08em;padding-top:.25rem;padding-left:.5rem}
+  .explore__k{font:600 .6875rem var(--f-head);letter-spacing:.14em;text-transform:uppercase}
+  .explore__t{font:700 1.25rem/1.2 var(--f-head);margin:.2rem 0 .35rem}
+  .explore__v{font:700 .75rem var(--f-head);letter-spacing:.1em;text-transform:uppercase}
+</style>

@@ -5,7 +5,7 @@ and prints a summary. Lines that are known, documented deviations are listed in 
 import re, json, asyncio, sys
 from playwright.async_api import async_playwright
 BASE = 'http://localhost:4321'
-PAGES = [('home', '/', 'docs/archive-extracts/home.md'), ('fort-langley', '/fort-langley.html', 'docs/archive-extracts/fort-langley.html.md')]
+PAGES = [('home', '/', 'docs/archive-extracts/home.md'), ('fort-langley', '/fort-langley.html', 'docs/archive-extracts/fort-langley.html.md'), ('reviews', '/reviews.html', 'docs/archive-extracts/reviews.html.md')]
 norm = lambda s: re.sub(r'\s+', ' ', s.replace(' ', ' ')).strip()
 KNOWN = {  # archive text lines intentionally not rendered in the preview -> reason
   'Edit sidebar contact & social media': 'B-01 editor/admin label, not visitor content',

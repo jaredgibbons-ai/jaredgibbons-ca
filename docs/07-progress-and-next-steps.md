@@ -7,6 +7,8 @@
 
 - Assets integrated (31 Oct): portrait, header logo, 5 award images, 8 As Seen In logos, MLS Reciprocity gif, favicon; all byte-length and decode verified. Fort Langley SEO meta restored. Gold stars (D-19).
 
+- Route manifest (21,014 URLs, 854 canonical routes) and `reviews.html` (third preview page, archive-verified).
+
 ## Waiting on Jared
 BL-02 (zips + CSVs), BL-03 (Trustindex), BL-04–06. Review of D-08, D-09, D-13, D-15.
 
