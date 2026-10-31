@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { handleForm, validate } from '../src/worker/forms.js';
+import { handleForm, validate, leadEmail } from '../src/worker/forms.js';
 
 const ORIGIN = 'https://jaredgibbons.ca';
 const good = { name: 'Pat Example', email: 'pat@example.com', phone: '604-555-0100', subject: 'Hello', message: 'I would like to talk.', 'cf-turnstile-response': 'tok' };
@@ -56,4 +56,27 @@ test('delivery: webhook receives the lead; any failing destination is a 502 (not
 test('schemas: property check needs only an address; home evaluation needs contact details', () => {
   assert.deepEqual(validate('property-check', { address: '1 Main St' }).errors, {});
   assert.ok(validate('home-evaluation', { address: '1 Main St' }).errors.email);
+});
+
+const fakeMail = (failFor) => { const sent = []; return { sent, send: async (m) => { if (failFor && m.to === failFor) throw new Error('rejected'); sent.push(m); return { messageId: 'x' }; } }; };
+const mailEnv = (mail, extra = {}) => ({ TURNSTILE_SECRET: 's', EMAIL: mail, LEAD_EMAIL_FROM: 'leads@example.test', LEAD_EMAIL_TO: 'crm-inbox@example.test, owner@example.test', ...extra });
+test('email delivery: one message per recipient, reply-to is the lead, body is Label: value text', async () => {
+  const mail = fakeMail(); const r = await handleForm(mk(good), mailEnv(mail), { fetch: captcha() });
+  assert.equal(r.status, 200); assert.deepEqual(mail.sent.map((m) => m.to), ['crm-inbox@example.test', 'owner@example.test']);
+  const m = mail.sent[0]; assert.equal(m.replyTo.email, 'pat@example.com'); assert.equal(m.from.email, 'leads@example.test');
+  assert.match(m.text, /^Name: Pat Example$/m); assert.match(m.text, /^Email: pat@example\.com$/m); assert.match(m.text, /^Phone: 604-555-0100$/m); assert.match(m.text, /Message:\nI would like to talk\./);
+});
+test('email delivery: a rejected recipient makes the whole lead a 502', async () => {
+  const mail = fakeMail('owner@example.test');
+  assert.equal((await handleForm(mk(good), mailEnv(mail), { fetch: captcha() })).status, 502);
+});
+test('email delivery: incomplete email config alone is not a destination (503)', async () => {
+  assert.equal((await handleForm(mk(good), mailEnv(fakeMail(), { LEAD_EMAIL_TO: '' }), { fetch: captcha() })).status, 503);
+  assert.equal((await handleForm(mk(good), mailEnv(fakeMail(), { LEAD_EMAIL_FROM: '' }), { fetch: captcha() })).status, 503);
+});
+test('email content: header injection is neutralised; address-only leads have no reply-to', () => {
+  const m = leadEmail({ kind: 'contact', received_at: 't', page: '/contact.html', fields: { name: 'Eve\r\nBcc: x@y.z', email: 'e@example.com', message: 'hi' } });
+  assert.ok(!/[\r\n]/.test(m.subject)); assert.ok(!/[\r\n]/.test(m.replyTo.name));
+  const p = leadEmail({ kind: 'property-check', received_at: 't', page: '', fields: { address: '1 Main St' } });
+  assert.equal(p.replyTo, undefined); assert.match(p.text, /^Address: 1 Main St$/m);
 });

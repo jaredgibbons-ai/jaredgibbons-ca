@@ -6,11 +6,16 @@
 // `wrangler` or the Cloudflare dashboard (never in the repo):
 //   LEADS_DB            D1 database (table `leads`, see migrations/0001_leads.sql)
 //   LEAD_WEBHOOK_URL    HTTPS endpoint that receives the lead as JSON (CRM / automation)
+//   EMAIL               Cloudflare Email Service `send_email` binding (outbound lead emails)
+//   LEAD_EMAIL_TO       secret: comma-separated recipients (Keyvera lead address + Jared's inbox).
+//                       The Keyvera address is treated like a password: set it as a Worker secret only.
+//   LEAD_EMAIL_FROM     sender on a domain onboarded to Email Sending, e.g. leads@jaredgibbons.ca
 //   TURNSTILE_SECRET    Cloudflare Turnstile secret (required: no unprotected public form)
 //   ALLOWED_ORIGINS     comma-separated origins allowed to post (default https://jaredgibbons.ca)
 //   RATE                optional Workers rate-limiting binding
 
 const MAX_BODY = 20 * 1024;
+const FORM_TITLES = { contact: 'Contact form', 'home-evaluation': 'Home evaluation request', 'property-check': 'Property check request' };
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 // Fields follow the labels captured in the archive (`Your name:`, `Your email:` ...). The archive did
@@ -51,6 +56,29 @@ export function validate(kind, input) {
   return { clean, errors };
 }
 
+const oneLine = (v) => String(v || '').replace(/[\r\n\u2028\u2029]+/g, ' ').trim();
+
+// Plain text laid out as "Label: value" lines so Keyvera can read the name, email, phone, message and the
+// home asked about. Multi-line messages go last, after the single-line fields.
+export function leadEmail(lead) {
+  const f = lead.fields;
+  const lines = [FORM_TITLES[lead.kind] || lead.kind, ''];
+  if (f.name) lines.push(`Name: ${oneLine(f.name)}`);
+  if (f.email) lines.push(`Email: ${oneLine(f.email)}`);
+  if (f.phone) lines.push(`Phone: ${oneLine(f.phone)}`);
+  if (f.address) lines.push(`Address: ${oneLine(f.address)}`);
+  if (f.subject) lines.push(`Subject: ${oneLine(f.subject)}`);
+  if (lead.page) lines.push(`Page: ${oneLine(lead.page)}`);
+  lines.push(`Received: ${lead.received_at}`);
+  if (f.message) lines.push('', 'Message:', f.message);
+  const who = oneLine(f.name) || 'website visitor';
+  return {
+    subject: `${FORM_TITLES[lead.kind] || 'Website lead'} from ${who}`.slice(0, 200),
+    text: lines.join('\n'),
+    replyTo: f.email ? { email: oneLine(f.email), ...(f.name ? { name: oneLine(f.name).replace(/["<>]/g, '') } : {}) } : undefined,
+  };
+}
+
 const json = (status, body, extra = {}) =>
   new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', ...extra } });
 
@@ -79,7 +107,9 @@ export async function handleForm(request, env, deps = {}) {
   if (!origin || !allowed.includes(origin)) return json(403, { ok: false, error: 'origin_not_allowed' });
 
   // Never accept leads we cannot deliver or protect.
-  if (!env.TURNSTILE_SECRET || !(env.LEADS_DB || env.LEAD_WEBHOOK_URL)) return json(503, { ok: false, error: 'not_configured' });
+  const emailTo = String(env.LEAD_EMAIL_TO || '').split(',').map((a) => a.trim()).filter(Boolean);
+  const emailReady = !!(env.EMAIL && env.LEAD_EMAIL_FROM && emailTo.length);
+  if (!env.TURNSTILE_SECRET || !(env.LEADS_DB || env.LEAD_WEBHOOK_URL || emailReady)) return json(503, { ok: false, error: 'not_configured' });
 
   const ip = request.headers.get('cf-connecting-ip') || '';
   if (env.RATE) {
@@ -117,6 +147,13 @@ export async function handleForm(request, env, deps = {}) {
   if (env.LEAD_WEBHOOK_URL) {
     results.push(doFetch(env.LEAD_WEBHOOK_URL, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(lead) })
       .then((r) => r.ok, () => false));
+  }
+  if (emailReady) {
+    // One message per recipient so a failure for one inbox is never hidden by success for another.
+    const msg = leadEmail(lead);
+    for (const to of emailTo) {
+      results.push(Promise.resolve().then(() => env.EMAIL.send({ to, from: { email: env.LEAD_EMAIL_FROM, name: 'Jared Gibbons website' }, ...msg })).then(() => true, () => false));
+    }
   }
   const ok = await Promise.all(results);
   // A lead counts as received only when every configured destination accepted it.

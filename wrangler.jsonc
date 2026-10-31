@@ -12,5 +12,8 @@
     "not_found_handling": "none",
     "run_worker_first": true
   },
+  // Outbound lead email (Cloudflare Email Service). Needs a sending domain onboarded first (needs approval).
+  // Secrets LEAD_EMAIL_TO, LEAD_EMAIL_FROM, TURNSTILE_SECRET are set with `wrangler secret put`, never committed.
+  "send_email": [{ "name": "EMAIL" }],
   "vars": { "PREVIEW": "true" }
 }
