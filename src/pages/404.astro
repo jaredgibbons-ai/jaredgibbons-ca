@@ -1,0 +1,26 @@
+---
+// Real 404 (served with status 404 by the Worker). NEW COPY, not from the archive: flagged in docs/05 OI-24.
+import Base from '../layouts/Base.astro';
+---
+<Base title="Page not found | Jared Gibbons" footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings" footerCell={true} brandHref="/index.html">
+<main id="main">
+  <section class="section">
+    <div class="wrap nf">
+      <p class="eyebrow">404</p>
+      <h1 class="nf__h">Page not found</h1>
+      <p class="lede">That page isn't here. It may have moved, or the link may be out of date.</p>
+      <ul class="nf__links">
+        <li><a class="btn" href="/">Go to the homepage</a></li>
+        <li><a class="btn btn--ghost" href="/recip.html">Search Listings</a></li>
+        <li><a class="btn btn--ghost" href="/contact.html">Contact Jared</a></li>
+      </ul>
+      <p>Or call <a href="tel:604-928-1361">604-928-1361</a>.</p>
+    </div>
+  </section>
+</main>
+</Base>
+<style>
+  .nf{max-width:42rem}
+  .nf__h{font-size:clamp(2.25rem,6vw,4rem);line-height:1.05;letter-spacing:-.025em;margin:.5rem 0 1.25rem}
+  .nf__links{list-style:none;margin:var(--s6) 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--s3)}
+</style>

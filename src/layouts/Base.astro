@@ -10,7 +10,7 @@ const { title, canonical, footerTagline, footerCell = false, current = '', brand
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
-  <link rel="canonical" href={canonical} />
+  {canonical && <link rel="canonical" href={canonical} />}
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <!-- PREVIEW ONLY: remove before launch -->

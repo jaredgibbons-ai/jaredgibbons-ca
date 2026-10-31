@@ -44,3 +44,7 @@ Not yet tested: forms (none in preview), real images, INP, Safari/Firefox, scree
 - axe on 20 sampled pages across 12 layout families, desktop and mobile (40 page-views): 0 serious/critical; moderate `heading-order` on all (archive hierarchy preserved, D-03). No horizontal overflow at 390 px.
 - Lab only (local, unthrottled; no field data): max LCP 108 ms, max CLS 0.0009.
 - Not yet run on all 634: axe and interaction tests (sampled only); visual review of every family. Forms, listings and redirects are not operational.
+
+## Run 2026-10-31 (routing Worker)
+- `npm test`: 11 of 11 pass. Every one of the 56 archive redirects returns its documented target and status; every "broken at source" and conflicting URL returns 404; built pages resolve; tracking/preview/pagination params serve the page; nested-path mapping; Worker run end to end against `dist/` (200, 301 with `Location`, real 404 status and body, `noindex` header, 405 for non-GET/HEAD).
+- Not yet run: against Cloudflare itself (`wrangler dev`/deploy needs the account, BL-07); HTTPS and www rules at the zone level.

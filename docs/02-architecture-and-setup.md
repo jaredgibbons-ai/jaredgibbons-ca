@@ -37,3 +37,12 @@ python3 -I tools/build_nav.py      # regenerates src/data/nav.json from the arch
 npm run build && npx astro preview # or serve dist/
 ```
 Git remote: `origin` = github.com/jaredgibbons-ai/jaredgibbons-ca (`main`, source of truth, A-02). Cloudflare: nothing deployed (BL-07).
+
+
+## Routing Worker (built 2026-10-31, not deployed)
+- `wrangler.jsonc`: Workers with static assets from `dist/`, `run_worker_first: true`, `PREVIEW=true` (adds `X-Robots-Tag: noindex`). No Cloudflare account or token is connected yet (BL-07); nothing is deployed and DNS is untouched.
+- `src/worker/route.js` (pure, unit-tested) + `src/worker/index.js` (Cloudflare glue). Rules are data: `src/worker/rules.json`, generated from `redirects.csv` by `npm run rules`.
+- Order: host/protocol (http and www to https apex) → exact archive rules (redirect or 404) → trailing slash → static assets → extensionless name to `.html` when that page exists → real 404 (`/404.html`, status 404).
+- Tracking (`utm_*`, `gclid`…), CMS preview (`?p=…&preview=true`) and `?_pg=N` params serve the page without redirecting, so analytics keeps the campaign parameters. `?_pg=N` returns the base page until listings are connected.
+- Nested content cannot share a name with its parent page on a file system (`blog.html` is a page and the parent of `blog.html/<post>`). Posts and own-listing pages will be emitted under `/_blog/` and `/_listings/` and mapped by the Worker. Not yet populated.
+- Tests: `npm test` (11 tests, node:test, bundles the Worker with esbuild and runs it against `dist/`).

@@ -1,0 +1,16 @@
+{
+  // Cloudflare Workers with static assets. Confirm Workers vs Pages at setup (docs/02).
+  // Not deployed: no account/token connected yet (BL-07). `run_worker_first` sends every request
+  // through src/worker/index.js so archive redirects, nested paths and the real 404 apply.
+  "name": "jaredgibbons-ca",
+  "main": "src/worker/index.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "html_handling": "none",
+    "not_found_handling": "none",
+    "run_worker_first": true
+  },
+  "vars": { "PREVIEW": "true" }
+}
