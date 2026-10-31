@@ -281,7 +281,7 @@ def import_record(r, seo_row, reviews_ref):
         span = 1
         if hit is None:
             for sp in (2, 3):
-                if i + sp <= n and (start + i) not in hmap:
+                if i + sp <= n and (start + i) not in hmap or (i + sp <= n and sp == 2 and (start + i) in hmap and (start + i + 1) not in hmap):
                     cand = norm(' '.join(body[i:i + sp])).lower()
                     if remaining.get(cand):
                         key, hit, span = cand, remaining[cand][0], sp; break
@@ -289,7 +289,7 @@ def import_record(r, seo_row, reviews_ref):
             flush_tokens()
             remaining[key].pop(0)
             hb = {'t': 'h', 'level': hit, 'text': norm(' '.join(body[i:i + span]))}
-            if span == 1 and hmap.get(start + i): hb['href'] = hmap[start + i]   # heading that is itself a link
+            if hmap.get(start + i): hb['href'] = hmap[start + i]   # heading that is itself a link (first line's anchor)
             blocks.append(hb)
             i += span; continue
         # --- post byline: "Posted on" <date> "by" <author>
