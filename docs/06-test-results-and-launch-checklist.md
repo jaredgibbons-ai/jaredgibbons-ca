@@ -37,3 +37,10 @@ Not yet tested: forms (none in preview), real images, INP, Safari/Firefox, scree
 - Lab only (local, no throttling; field data not yet available): LCP 48–112 ms, CLS ≤ 0.0005.
 - Interaction: mega-menu hover/Enter/Esc, mobile menu open/close, no horizontal overflow at 390 px.
 - Broken images: 0. All 10 review stars compute to rgb(166,124,0).
+
+## Run 2026-10-31 (folder 09 page import, 634 generated pages)
+- Build: 637 pages in about 5 s.
+- Archive-vs-render (`tools/compare_all.py`, all 634 pages): 644,039 archive text lines, **0 missing** (169,626 are the dropped IDX grid, 6,312 vendor-widget lines, both documented). Titles, canonicals and meta descriptions match on 634 of 634. Headings: 34 missing of 24,525 (card-internal), plus 6,411 outline-only hidden headings. Links: 292 destinations missing of 144,877 (0.2%). **562 of 634 pages are fully clean**; 72 need review (OI-21).
+- axe on 20 sampled pages across 12 layout families, desktop and mobile (40 page-views): 0 serious/critical; moderate `heading-order` on all (archive hierarchy preserved, D-03). No horizontal overflow at 390 px.
+- Lab only (local, unthrottled; no field data): max LCP 108 ms, max CLS 0.0009.
+- Not yet run on all 634: axe and interaction tests (sampled only); visual review of every family. Forms, listings and redirects are not operational.

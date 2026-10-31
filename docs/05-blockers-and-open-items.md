@@ -32,3 +32,11 @@
 | OI-16 | `reviews.html` says "More reviews are shown below" but only six reviews were captured; the rest were loaded by the Trustindex script. Replaced by the Google feed (BL-03). |
 | OI-17 | `reviews.html` meta description, robots and OG tags are in `seo.csv` (16 MB) and not yet retrievable. Title and canonical are applied. The same gap applies to all ~850 pages. |
 | OI-18 | **Page content for the other ~850 pages:** readable `.md` records for all 1,038 sitemap pages are in archive folder 02, one file each. Fetching them one by one through the connector would mean hand-copying text, which risks breaking the verbatim rule. Needs a bundle (see message to Jared). |
+
+| OI-17a | **Resolved 2026-10-31:** `seo.csv` is in folder 09; meta description, robots and OG tags are applied to all 634 generated pages (0 mismatches). `reviews.html` meta still to be restored from it. |
+| OI-18a | **Resolved 2026-10-31:** page records for all 1,038 sitemap pages are in folder 09 and hash-verified. 634 pages are generated; 200 blog posts and 200 own-listing records are next. |
+| OI-19 | 469 same-page `#fragment` link targets (e.g. `jg-overview`, `jg-market-snapshot`, `jg-related-areas`, `jg-seller-cta`, `jg-local-guide`) have no matching heading in the text record. Links work as page links but do not scroll to a section until the source ids are known. |
+| OI-20 | Guide and market pages (about 150) use components that arrive as flat text: label/value cards, school/park cards, tables, the property-check form. Text, headings and links are complete, but the layout is the generic text rendering. Bespoke components are the next design pass. |
+| OI-21 | 292 link destinations (0.2%) and 34 card-internal headings are not yet rendered: 29 image-only links with no label (e.g. "nearby area" image cards) and external links inside school/park cards. Listed per page in `docs/test-results/compare-all.json`. |
+| OI-22 | Forms in page text: 149 eight-field POST forms, 48 mailto forms, 53 twelve-field GET search forms and others. All inert until the forms Worker (BL-05). |
+| OI-23 | 16 pages exist only in discovery (no sitemap record): `/about.html`, `/bolivar-heights-guide.html`, `/bridgeview-guide.html`, `/cedar-hills-guide.html` and 12 more. Content not captured; need records from Jared. |

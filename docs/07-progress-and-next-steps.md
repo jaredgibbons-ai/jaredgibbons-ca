@@ -19,3 +19,7 @@ BL-02 (zips + CSVs), BL-03 (Trustindex), BL-04–06. Review of D-08, D-09, D-13,
 4. Remaining page families, then blog, then listing detail once IDX is decided.
 5. Images/assets from the baseline zips; Core Web Vitals with real images.
 6. Launch checklist (`06-…`). No DNS or launch without explicit approval.
+
+## Update 2026-10-31 (folder 09)
+- 634 more pages generated from the archive records (community, guide, price/type search, farm, resource and tool pages), with archive SEO applied. 562 pass the archive comparison with no differences beyond the documented drops; 72 are listed for review.
+- Still to do: 200 blog posts + blog index (needs the routing Worker for `/blog.html/<post>`), 207 own-listing pages, redirects/404 Worker (`redirects.csv`, 81 rows), forms Worker, guide-page components (OI-20), review feed, IDX decision.

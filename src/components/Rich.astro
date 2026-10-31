@@ -1,0 +1,10 @@
+---
+// Inline run of archive text fragments and links, re-joined into one sentence.
+// Wording is exactly as archived; only spacing around punctuation is normalised.
+const { parts = [] } = Astro.props;
+const local = (h: string) => h.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/';
+const gap = (prev: string, cur: string) => (/^[,.;:!?)\]”’]/.test(cur) || /[(\[“‘]$/.test(prev)) ? '' : ' ';
+---
+{parts.map((p: any, i: number) => (
+  <Fragment>{i > 0 ? gap(parts[i - 1].t, p.t) : ''}{p.h ? <a href={local(p.h)}>{p.t}</a> : p.lead ? <strong>{p.t}</strong> : p.t}</Fragment>
+))}

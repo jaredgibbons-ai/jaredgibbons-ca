@@ -7,6 +7,14 @@ from urllib.parse import urlparse, parse_qs
 
 SRC = [f'docs/archive-extracts/urls/part{i}.csv' for i in (1, 2, 3)]
 IMPLEMENTED = {'/': 'implemented-preview', '/fort-langley.html': 'implemented-preview', '/reviews.html': 'implemented-preview'}
+import glob, os, json as _json
+for _f in glob.glob('src/data/pages/*.json'):          # generic archive-driven pages (tools/import_pages.py)
+    IMPLEMENTED['/' + os.path.basename(_f)[:-5] + '.html'] = 'implemented-preview'
+CMP = {}
+if os.path.exists('docs/test-results/compare-all.json'):
+    for _p in _json.load(open('docs/test-results/compare-all.json'))['pages']:
+        _clean = not (_p['lines_missing'] or _p['headings_missing'] or _p['links_missing']) and _p['title_ok'] and _p['canonical_ok'] and _p['desc_ok']
+        CMP['/' + _p['slug'] + '.html'] = 'clean' if _clean else 'review'
 
 rows = []
 for p in SRC:
@@ -93,7 +101,7 @@ with open('routes/manifest.csv', 'w', newline='', encoding='utf-8') as f:
 
 C = collections.Counter
 canon = sorted({(o['path_query'], o['family']) for o in out if o['family'] in ('page', 'blog-post', 'blog-index', 'home') and not o['query_variant'] and o['disposition'] in ('rebuild',)})
-pages = [{'path': p, 'family': fam, 'status': IMPLEMENTED.get(p, 'not-started')} for p, fam in canon]
+pages = [{'path': p, 'family': fam, 'status': IMPLEMENTED.get(p, 'not-started'), **({'archive_compare': CMP[p]} if p in CMP else {})} for p, fam in canon]
 # unique listings
 def lid(p):
     m = re.search(r'\.(\d+)$', p); return m.group(1) if m else p

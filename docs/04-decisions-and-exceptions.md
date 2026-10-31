@@ -47,3 +47,23 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 | B-15 | Home awards: archived alt text (Award of Merit, Diamond Club, Top 100, Hall of Fame, Platinum Award, file order ww-img01/02/03/2/05) does not match the image content (Years of Service, Top 35 Under 35, Rookie of the Year, Top Ten Award, Red Diamond Award). Images were taken from the live site, not the baseline zips, so the live images may have been replaced after capture. |
 | B-16 | `reviews.html` review by Ceilidh ends "3 times now !" (space before !). Preserved. |
 | B-14 | Fort Langley and home pages both carry the line "Data was last updated …" / listing snapshot dates that are only true as of capture (2026-10-31). |
+
+
+## Decisions added with the folder-09 page import (2026-10-31)
+| ID | Decision |
+|---|---|
+| D-23 | Pages beyond the three bespoke previews are generated from the archived page records by `tools/import_pages.py` into JSON and rendered by one generic template. Wording is never edited; reading order is the visible-text order. See `09-content-pipeline.md`. |
+| D-24 | The MLS listing grid on community pages (other brokerages' listings) is not retained (A-03). Each grid becomes a "Live MLS® listings … not connected in the preview" slot linking to the archived "Search Listings" destination. 169,626 archive lines fall in these regions. Revisit with the IDX decision (BL-04). |
+| D-25 | MyRealPage login / extend / verify widget lines are dropped on every page (D-10): 6,312 lines. The IDX "Filters" control is dropped with the grid. |
+| D-26 | The archived Google-review excerpt block (six excerpts, initials only) is kept verbatim as per-page data and rendered with gold stars (D-19). It is replaced by the Google Business Profile feed once approved. |
+| D-27 | Forms found in page text (property check, contact form) render as inert stubs with an explicit "not connected" notice and disabled fields until the forms Worker and lead destinations (BL-05) exist. |
+
+## Baseline notes from the page import (recorded, not corrected)
+| ID | Note |
+|---|---|
+| B-17 | On some pages the heading outline order differs from the visible-text order (e.g. `cedar-hills.html`: "Who Cedar Hills suits" is early in the outline, late in the text). Visible-text order is used. |
+| B-18 | `lake-city-industrial.html` has no H1 in the archive (outline begins with the brand heading). |
+| B-19 | 83 of 634 generated pages carry more than one H1 (archive `##` repeated). Preserved per D-03. |
+| B-20 | 6,411 outline headings do not appear in the visible text (hidden or duplicate card headings). Not rendered. |
+| B-21 | Jump links such as `#aldergrove-guide-glance` point at section ids that are not in the text records. 1,031 of 1,500 same-page targets were attached to the matching heading; 469 are unmapped (OI-19). |
+| B-22 | Three review-excerpt variants exist across 251 pages (200 / 43 / 8 pages). |

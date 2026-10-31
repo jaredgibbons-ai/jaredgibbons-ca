@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-const { title, canonical, footerTagline, footerCell = false, current = '', brandHref = '/', description, ogTitle, ogImage } = Astro.props;
+const { title, canonical, footerTagline, footerCell = false, current = '', brandHref = '/', description, ogTitle, ogDescription, ogImage } = Astro.props;
 ---
 <!doctype html>
 <html lang="en-CA">
@@ -19,12 +19,12 @@ const { title, canonical, footerTagline, footerCell = false, current = '', brand
   <link rel="preload" href="/fonts/lato-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
   {description && <meta name="description" content={description} />}
   {ogTitle && <meta property="og:title" content={ogTitle} />}
-  {description && <meta property="og:description" content={description} />}
+  {(ogDescription ?? description) && <meta property="og:description" content={ogDescription ?? description} />}
   {ogImage && <meta property="og:image" content={ogImage} />}
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <aside class="preview-banner" aria-label="Preview notice">Private working preview — only the homepage, Fort Langley and Reviews are built. Other links will resolve as their pages are built. Not indexed.</aside>
+  <aside class="preview-banner" aria-label="Preview notice">Private working preview — pages are being rebuilt in stages, so a link may point to a page that is not built yet. Not indexed.</aside>
   <Header current={current} brandHref={brandHref} />
   <slot />
   <Footer tagline={footerTagline} cell={footerCell} />
