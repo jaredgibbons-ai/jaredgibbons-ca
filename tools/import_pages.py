@@ -226,6 +226,12 @@ def import_record(r, seo_row, reviews_ref):
             j = i
             while j < n and body[j] in VENDOR: j += 1
             dropped['vendor'] += j - i; i = j; continue
+        # --- IDX search bar: selected-area chips, Price:, type options, filters, login widget ... up to the sort control
+        if line == 'Price:' and SORT in body[i + 1:i + 80]:
+            j = body.index(SORT, i)
+            if tokens and tokens[-1][1] is None and len(tokens[-1][0]) <= 60 and not ends_sentence(tokens[-1][0]):
+                tokens.pop(); dropped['idx_grid_lines'] += 1          # the selected-area line right before it
+            dropped['idx_grid_lines'] += j - i; i = j; continue
         # --- IDX filter bar immediately before the sort control (vendor widget, part of the grid)
         if line in FILTER_UI:
             j = i

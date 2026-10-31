@@ -49,6 +49,9 @@ class Scan(HTMLParser):
 def grid_lines(body):
     out, i = set(), 0
     while i < len(body):
+        if body[i] == 'Price:' and ip.SORT in body[i + 1:i + 80]:
+            j = body.index(ip.SORT, i)
+            out.update(norm(x) for x in body[max(i - 1, 0):j]); i = j
         if body[i] in ip.FILTER_UI:
             j = i
             while j < len(body) and body[j] in ip.FILTER_UI: j += 1
