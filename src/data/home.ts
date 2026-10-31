@@ -13,7 +13,14 @@ export const reviews = [
   { text: 'Highly recommend Jared and his team. He made listing and selling my condo easy. …', name: 'Kelly', date: '20 April 2026 · Google review' },
 ];
 
-export const awards = ['Award of Merit', 'Diamond Club', 'Top 100', 'Hall of Fame', 'Platinum Award'];
+// alt = archived alt text (kept verbatim); see B-15 for the mismatch with the image content.
+export const awards = [
+  { alt: 'Award of Merit', slug: 'award-of-merit', w: 199, h: 188 },
+  { alt: 'Diamond Club', slug: 'diamond-club', w: 108, h: 198 },
+  { alt: 'Top 100', slug: 'top-100', w: 211, h: 84 },
+  { alt: 'Hall of Fame', slug: 'hall-of-fame', w: 211, h: 117 },
+  { alt: 'Platinum Award', slug: 'platinum-award', w: 170, h: 175 },
+];
 
 // "OUR LISTINGS" — 11 slides in the archive; the last (6469 Meadow Place) repeats the first (carousel clone, baseline note B-07).
 // Beds/baths shown as in the archive: numbers only, icons unlabelled. Where the archive shows a single number it is kept as `n1`.

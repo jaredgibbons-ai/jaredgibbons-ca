@@ -16,12 +16,15 @@
 |---|---|
 | OI-01 | Hash verification: 13,509/13,509 reported by the archive owner, not independently re-verified by me. |
 | OI-02 | Gap of 166 between captured URLs and record files; the explanation offered covers only about 5. |
-| OI-03 | Meta descriptions: not in the `.md` records; they are in `seo.csv`. **Home restored** (from the Drive search snippet of `seo.csv`: description, OG title, OG description, OG image). Fort Langley still missing: `seo.csv` is 16 MB and the Drive connector drops the connection on it. |
+| OI-03 | ~~Fort Langley meta~~ **Resolved.** Title, description, robots, OG title/description/image restored from `seo-home-and-fort-langley.csv`. Description keeps its trailing space. The CSV viewer shows `Langley\'s` and `\_media`; I treated the backslashes as export escaping (same pattern as `\#1` in the home row). Confirm against the raw `seo.csv` when it is available. |
 | OI-04 | Page-family counts need `seo.csv` / `urls.csv` on disk. |
-| OI-05 | Archived gold star shade (inside the CSS zip). Preview uses placeholder `#b8860b`. |
+| OI-05 | ~~Gold star shade~~ **Resolved by instruction** (D-19): `#a67c00`. |
 | OI-06 | Whether `/map-search.html` is a route in the manifest (it is linked sitewide). |
 | OI-07 | Home "OUR PROVEN PERFORMANCE" figures and award images were not captured as text. |
 | OI-08 | Portrait, logo (header), "As Seen In" logos, award images, Reciprocity logo: images are in the baseline zips. Preview shows labelled placeholders. |
 | OI-09 | Heading level mapping (D-03) to be confirmed against `source.bin`. |
 | OI-10 | Redirect row counts disagree across reports (81 rows; about 65 redirects + 16 broken by my count). Three conflicting 301-vs-404 rows listed in `01-direction-for-approval.md`. |
 | OI-11 | Hero "Search" form fields (2 fields) unknown until `source.bin` is available. |
+| OI-12 | As Seen In logo order follows the supplied file numbering (craigslist, REW, realtylink, LoopNet, Spacelist, REALTOR.ca, Royal LePage, kijiji); confirm against the live carousel. Logos are trimmed of white space and converted to WebP. |
+| OI-13 | JG monogram PNG: archive location unknown (used for favicon only). Header logo `site-logo.webp` is 370×166. |
+| OI-14 | Award image set is on dark tiles because the artwork is white on transparent; confirm the archive's tile background. |

@@ -1,0 +1,6 @@
+---
+// Gold review stars. Always gold (--star). Glyphs are decorative; the accessible name is the sr-only text.
+const { rating = 5, outOf = 5 } = Astro.props;
+const full = '★'.repeat(rating) + '☆'.repeat(Math.max(0, outOf - rating));
+---
+<p class="stars"><span aria-hidden="true">{full}</span><span class="sr-only">{rating} out of {outOf} stars</span></p>

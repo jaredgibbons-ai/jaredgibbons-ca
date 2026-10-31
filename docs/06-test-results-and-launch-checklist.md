@@ -30,3 +30,10 @@ Not yet tested: forms (none in preview), real images, INP, Safari/Firefox, scree
 - [ ] Core Web Vitals: lab and field reported separately; LCP ≤2.5 s, INP ≤200 ms, CLS ≤0.1
 - [ ] WCAG 2.2 AA audit, including manual keyboard and screen-reader passes
 - [ ] Rollback rehearsal; DNS change **only** with explicit approval
+
+## Run 2026-10-31 (after asset integration)
+- Archive-vs-render comparison: unchanged (home 1 line missing, Fort Langley known deviations only).
+- axe (home, Fort Langley; desktop + mobile): 0 serious/critical; 1 moderate `heading-order` (archive heading hierarchy preserved, D-03).
+- Lab only (local, no throttling; field data not yet available): LCP 48–112 ms, CLS ≤ 0.0005.
+- Interaction: mega-menu hover/Enter/Esc, mobile menu open/close, no horizontal overflow at 390 px.
+- Broken images: 0. All 10 review stars compute to rgb(166,124,0).

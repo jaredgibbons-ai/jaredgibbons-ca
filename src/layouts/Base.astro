@@ -11,6 +11,8 @@ const { title, canonical, footerTagline, footerCell = false, current = '', brand
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
   <link rel="canonical" href={canonical} />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <!-- PREVIEW ONLY: remove before launch -->
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preload" href="/fonts/montserrat-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
@@ -19,7 +21,6 @@ const { title, canonical, footerTagline, footerCell = false, current = '', brand
   {ogTitle && <meta property="og:title" content={ogTitle} />}
   {description && <meta property="og:description" content={description} />}
   {ogImage && <meta property="og:image" content={ogImage} />}
-  <!-- Fort Langley has no description yet: seo.csv (16 MB) can't be pulled through the Drive connector. Open item OI-03. -->
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>

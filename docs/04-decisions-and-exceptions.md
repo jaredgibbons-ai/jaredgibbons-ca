@@ -28,6 +28,9 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 | D-16 | Sticky mobile action bar ("Find a Home", "What's My Home Worth?", call) is rebuilt natively from the lead-tools script. Labels come from that script. | Approved in §10 direction. | Yes |
 | D-17 | Preview-only chrome: banner, `.preview-flag` notes, `noindex` meta. All removed by one switch before launch. | Honesty in review. | Yes |
 | D-18 | Archive "Edit sidebar contact & social media" is treated as an editor label, not visitor text, and not rendered (B-01). | Looks like admin UI text. | Yes |
+| D-19 | **Review stars are gold, everywhere** (user-directed). One token `--star:#a67c00` (3.8:1 on white, 3.2:1 on cream, passes the 3:1 graphic threshold) and one `Stars` component/`.stars` class used for every review. Glyphs are `aria-hidden`; the accessible name is the sr-only "5 out of 5 stars". A brighter gold (e.g. #d4a017) would fail contrast on white (2.4:1), so this is the lightest gold that passes. | Jared's instruction; the archive CSS has no star colour. | Yes: shade |
+| D-20 | **Award alt text vs image content (B-15).** Archived alt text kept verbatim for now. Recommend changing the alt to describe what each image shows, because screen-reader users currently hear a different award than sighted users see. | Preservation rule vs WCAG 1.1.1. | **Needs decision** |
+| D-21 | Header logo now uses the supplied logo image (`site-logo.webp`) with the archived alt text "Jared Gibbons – South Surrey Realtor", replacing my text lockup. The JG monogram PNG is used for favicon/apple-touch icon only (its archive location is unconfirmed, OI-13). | Archive header is an image. | Yes |
 
 ## Baseline notes (errors recorded, not corrected)
 | ID | Note |
@@ -40,4 +43,5 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 | B-11 | Home review text is truncated with "…" in 8 of 10 reviews, and one has a stray space ("informative , helpful"). Preserved exactly. |
 | B-12 | Fort Langley FAQ phone link is `tel:6049281361`; all others are `tel:604-928-1361`. Preserved for the one in-text link. |
 | B-13 | Home card for 116 Calgary Avenue shows one numeric value (beds vs baths unknown); not rendered. Cards for 12 5327 192 Street and 203 & 210 30610 Progressive Way show no beds/baths. |
+| B-15 | Home awards: archived alt text (Award of Merit, Diamond Club, Top 100, Hall of Fame, Platinum Award, file order ww-img01/02/03/2/05) does not match the image content (Years of Service, Top 35 Under 35, Rookie of the Year, Top Ten Award, Red Diamond Award). Images were taken from the live site, not the baseline zips, so the live images may have been replaced after capture. |
 | B-14 | Fort Langley and home pages both carry the line "Data was last updated …" / listing snapshot dates that are only true as of capture (2026-10-31). |

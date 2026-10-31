@@ -5,8 +5,10 @@
 - Project scaffold, design tokens, shared components, generated nav, two preview pages.
 - Automated archive-vs-render comparison, axe, interaction tests, screenshots (`shots/`, not committed).
 
+- Assets integrated (31 Oct): portrait, header logo, 5 award images, 8 As Seen In logos, MLS Reciprocity gif, favicon; all byte-length and decode verified. Fort Langley SEO meta restored. Gold stars (D-19).
+
 ## Waiting on Jared
-BL-01 (empty private repo name), BL-02 (zips + CSVs), BL-03 (Trustindex), BL-04–06. Review of D-08, D-09, D-13, D-15.
+D-20 (award alt text), BL-01 (empty private repo name), BL-02 (zips + CSVs), BL-03 (Trustindex), BL-04–06. Review of D-08, D-09, D-13, D-15.
 
 ## Next, after preview review
 1. Importer: archived records → content files; real route manifest; family counts.
