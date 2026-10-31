@@ -49,6 +49,11 @@ class Scan(HTMLParser):
 def grid_lines(body):
     out, i = set(), 0
     while i < len(body):
+        if body[i] in ip.FILTER_UI:
+            j = i
+            while j < len(body) and body[j] in ip.FILTER_UI: j += 1
+            if j < len(body) and body[j] == ip.SORT:
+                out.update(norm(x) for x in body[i:j]); i = j
         if body[i] == ip.SORT:
             j = i
             while j < len(body) and not body[j].startswith(ip.MLS_DISCLAIMER): j += 1

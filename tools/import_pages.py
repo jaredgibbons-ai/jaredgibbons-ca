@@ -30,6 +30,7 @@ NAV_END_PREV = 'First-Time Buyer Calculator BC | PTT, GST Rebate & FHSA'
 VENDOR = {'Login with:', 'Login with Facebook', 'Login with Google', 'Login with X (Twitter)',
           'Forgot password', 'Extend', 'Verify', 'Contact', 'Signup', 'Login'}
 SORT = '-- Sort by: --'
+FILTER_UI = {'Price:', 'Bedrooms:', 'Bathrooms:', 'Year built:', 'Sq. Feet:', 'Save search', 'Reset', 'Hide filters'}   # IDX filter bar that precedes the sort control
 MLS_DISCLAIMER = 'The data relating to real estate on this website comes in part from'
 CTA = 'Ready to get started?'
 REVIEWS_H = 'What Buyers & Sellers Say'
@@ -225,6 +226,12 @@ def import_record(r, seo_row, reviews_ref):
             j = i
             while j < n and body[j] in VENDOR: j += 1
             dropped['vendor'] += j - i; i = j; continue
+        # --- IDX filter bar immediately before the sort control (vendor widget, part of the grid)
+        if line in FILTER_UI:
+            j = i
+            while j < n and body[j] in FILTER_UI: j += 1
+            if j < n and body[j] == SORT:
+                dropped['idx_grid_lines'] += j - i; i = j; continue
         # --- IDX grid region: sort control .. MLS disclaimer (A-03: not retained)
         if line == SORT:
             flush_tokens()
