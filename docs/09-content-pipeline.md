@@ -17,10 +17,19 @@ Bulk data is **not** committed (about 29 MB of zips/CSVs). It lives in Drive and
 
 ## Reproduce
 ```
-python3 -I tools/import_pages.py --pages <cache09>/pages --seo <cache09>/seo.csv --out src/data/pages
+# pages (incl. the blog index), blog posts, own listings
+python3 -I tools/import_pages.py    --pages <cache09>/pages --seo <cache09>/seo.csv --out src/data/pages
+python3 -I tools/import_pages.py    --pages <cache09>/pages --seo <cache09>/seo.csv --out src/data/posts --kind blog
+python3 -I tools/import_listings.py --pages <cache09>/pages --seo <cache09>/seo.csv --out src/data/listings
 npx astro build
+# archive-vs-render comparison, one run per kind
 python3 -I tools/compare_all.py --pages <cache09>/pages --dist dist --out docs/test-results/compare-all.json
+python3 -I tools/compare_all.py --pages <cache09>/pages --dist dist --data src/data/posts    --kind blog    --out docs/test-results/compare-posts.json
+python3 -I tools/compare_all.py --pages <cache09>/pages --dist dist --data src/data/listings --kind listing --out docs/test-results/compare-listings.json
 python3 -I tools/build_manifest.py
+# worker + forms tests, and the full-site accessibility run (copy dist first so a rebuild cannot interfere)
+npm test
+cp -r dist /tmp/dist-snap && python3 tools/a11y_all.py --root /tmp/dist-snap --port 4333 --workers 5
 ```
 
 ## What the importer does (never edits wording)
