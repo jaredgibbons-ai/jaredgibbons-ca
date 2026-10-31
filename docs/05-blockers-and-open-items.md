@@ -4,7 +4,7 @@
 | ID | Blocker | Blocks | Who |
 |---|---|---|---|
 | BL-01 | Create an **empty private** GitHub repo (suggest `jaredgibbons-ca`, no README) and tell me its name. The sandbox GitHub token is invalid, so I can't create it. Work is committed locally and will be pushed once the repo is attached. | Source of truth | Jared |
-| BL-02 | Put the baseline zips (HTML/CSS/images) and the folder-01 CSVs (`seo.csv`, `urls.csv`, `redirects.csv`) where I can read them. The Drive connector can't pull large CSVs, zips or the 14 MB manifest. | Image/logo assets, archived CSS (star gold), meta descriptions, family counts, full redirect map | Archive owner |
+| BL-02 | **Update 2026-10-31:** files are in Drive (`baseline-part01…11.zip`, ~1.6 GB; `urls.csv` in folder 01 is newer than the zip copy). The Drive connector can't move anything over about a few MB (`urls.csv` 7 MB and `seo.csv` 16 MB both fail; zips are 107–177 MB each) and the shell can't reach Drive (403). Needs small extracts instead, see `07-…`. `redirects.csv` (11 KB) did come through. Original ask: put the baseline zips (HTML/CSS/images) and the folder-01 CSVs (`seo.csv`, `urls.csv`, `redirects.csv`) where I can read them. The Drive connector can't pull large CSVs, zips or the 14 MB manifest. | Image/logo assets, archived CSS (star gold), meta descriptions, family counts, full redirect map | Archive owner |
 | BL-03 | Trustindex: keep the widget on `reviews.html` or drop it. **Recommendation: keep it for now, loaded lazily.** Home reviews are in the archive as plain text, but `reviews.html` is not yet read. | Reviews page | Jared |
 | BL-04 | IDX route: new board feed/licence, or another provider, with Royal LePage sign-off. Is Jared leaving MyRealPage entirely? | Every listing surface, search, map, signup/login | Jared / brokerage |
 | BL-05 | Lead destinations: where should contact, home-evaluation, newsletter and the free-property-check form submissions go (email address, CRM)? | Forms go-live | Jared |
@@ -16,7 +16,7 @@
 |---|---|
 | OI-01 | Hash verification: 13,509/13,509 reported by the archive owner, not independently re-verified by me. |
 | OI-02 | Gap of 166 between captured URLs and record files; the explanation offered covers only about 5. |
-| OI-03 | Meta descriptions: not in the `.md` records. Preview emits **no** description tag. They live in `record.json` / `seo.csv`. |
+| OI-03 | Meta descriptions: not in the `.md` records; they are in `seo.csv`. **Home restored** (from the Drive search snippet of `seo.csv`: description, OG title, OG description, OG image). Fort Langley still missing: `seo.csv` is 16 MB and the Drive connector drops the connection on it. |
 | OI-04 | Page-family counts need `seo.csv` / `urls.csv` on disk. |
 | OI-05 | Archived gold star shade (inside the CSS zip). Preview uses placeholder `#b8860b`. |
 | OI-06 | Whether `/map-search.html` is a route in the manifest (it is linked sitewide). |
