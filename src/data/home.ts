@@ -13,13 +13,14 @@ export const reviews = [
   { text: 'Highly recommend Jared and his team. He made listing and selling my condo easy. …', name: 'Kelly', date: '20 April 2026 · Google review' },
 ];
 
-// alt = archived alt text (kept verbatim); see B-15 for the mismatch with the image content.
+// alt describes what each image shows (D-20, approved 31 Oct). Archived alt text is recorded in B-15.
+// Order and files follow the archive: ww-img01, 02, 03, 2, 05.
 export const awards = [
-  { alt: 'Award of Merit', slug: 'award-of-merit', w: 199, h: 188 },
-  { alt: 'Diamond Club', slug: 'diamond-club', w: 108, h: 198 },
-  { alt: 'Top 100', slug: 'top-100', w: 211, h: 84 },
-  { alt: 'Hall of Fame', slug: 'hall-of-fame', w: 211, h: 117 },
-  { alt: 'Platinum Award', slug: 'platinum-award', w: 170, h: 175 },
+  { alt: 'Royal LePage Years of Service award', slug: 'award-of-merit', w: 199, h: 188 },
+  { alt: 'Royal LePage Top 35 Under 35 award', slug: 'diamond-club', w: 108, h: 198 },
+  { alt: 'Royal LePage Rookie of the Year award', slug: 'top-100', w: 211, h: 84 },
+  { alt: 'Royal LePage Top Ten Award', slug: 'hall-of-fame', w: 211, h: 117 },
+  { alt: 'Royal LePage Red Diamond Award', slug: 'platinum-award', w: 170, h: 175 },
 ];
 
 // "OUR LISTINGS" — 11 slides in the archive; the last (6469 Meadow Place) repeats the first (carousel clone, baseline note B-07).
