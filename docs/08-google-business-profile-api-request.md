@@ -1,7 +1,7 @@
 # Google Business Profile API access request (reviews)
 
 Purpose: show Jared's own Google reviews on jaredgibbons.ca/reviews.html (replaces Trustindex, BL-03).
-Status: **ready to submit by Jared** (owner of the profile). Source of requirements: developers.google.com/my-business/content/prereqs (checked 2026-10-31).
+Status: **Submitted 2026-10-31** (by Jared, via Grok). Awaiting Google. Check Cloud Console > Business Profile API quotas: 0 QPM = pending, 300 QPM = approved. Source of requirements: developers.google.com/my-business/content/prereqs (checked 2026-10-31).
 
 ## Before submitting
 1. Business Profile is verified and active for 60+ days, and lists https://jaredgibbons.ca as its website.
