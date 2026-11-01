@@ -5,7 +5,7 @@ import { execSync } from 'node:child_process';
 import gate from '../src/data/inventory/gate.json' with { type: 'json' };
 import uniq from '../src/data/inventory/uniqueness.json' with { type: 'json' };
 
-const held = Object.entries(uniq.scores).filter(([, v]) => v < uniq.min_unique).map(([k]) => k);
+const held = uniq.enforce ? Object.entries(uniq.scores).filter(([, v]) => v < uniq.min_unique).map(([k]) => k) : [];
 
 test('every slug in the listing gate is a real page and history is dated', () => {
   for (const [slug, v] of Object.entries(gate.pages)) {

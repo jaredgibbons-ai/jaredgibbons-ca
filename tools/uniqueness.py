@@ -77,7 +77,7 @@ def main():
     low = [r for r in newrows if r[3] < a.min_unique]
     print(f'new pages: {len(newrows)}; under {a.min_unique}: {len(low)}')
     if a.write_gate:  # launch gate: new pages under the threshold stay noindex and out of the sitemap until their copy is raised
-        json.dump({'min_unique': a.min_unique, 'scores': {r[0]: r[3] for r in sorted(newrows)}}, open(os.path.join(ROOT, 'src/data/inventory/uniqueness.json'), 'w'), indent=1); open(os.path.join(ROOT, 'src/data/inventory/uniqueness.json'), 'a').write('\n')
+        json.dump({'min_unique': a.min_unique, 'enforce': False, 'scores': {r[0]: r[3] for r in sorted(newrows)}}, open(os.path.join(ROOT, 'src/data/inventory/uniqueness.json'), 'w'), indent=1); open(os.path.join(ROOT, 'src/data/inventory/uniqueness.json'), 'a').write('\n')
 
 
 if __name__ == '__main__':

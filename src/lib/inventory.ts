@@ -13,5 +13,6 @@ const listingGated = (slug: string) => {
   return h.length >= g.min_months && h.reduce((a, b) => a + b.active, 0) / h.length < g.min_active;
 };
 const u = uniq as any;
-const uniquenessHeld = (slug: string) => typeof u.scores[slug] === 'number' && u.scores[slug] < u.min_unique;
+// `enforce` is off until Jared and I have reviewed the pages under the threshold together: nothing is held out of the sitemap before then.
+const uniquenessHeld = (slug: string) => u.enforce === true && typeof u.scores[slug] === 'number' && u.scores[slug] < u.min_unique;
 export const isGated = (slug: string) => listingGated(slug) || uniquenessHeld(slug);
