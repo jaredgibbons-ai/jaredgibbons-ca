@@ -12,6 +12,26 @@ import FormStub from './FormStub.astro';
 const { page } = Astro.props as { page: any };
 const seo = page.seo || {};
 
+// Local-knowledge layer (src/data/local/<slug>.json): original sourced sections inserted before the first
+// level-2 heading, plus FAQ + breadcrumb structured data. Only used where present; archive blocks are untouched.
+const LOCAL = import.meta.glob('../data/local/*.json', { eager: true, import: 'default' }) as Record<string, any>;
+const local = LOCAL[`../data/local/${page.slug}.json`];
+const origin = 'https://jaredgibbons.ca';
+const jsonld: any[] = [];
+if (local?.faq?.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: local.faq.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
+if (local?.breadcrumbs?.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: local.breadcrumbs.map((c: any, i: number) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: origin + c.href })) });
+if (local) {
+  // `suppress`: level-2 headings whose whole section is replaced by the local layer (duplicated sibling-page text).
+  if (local.suppress?.length) {
+    let drop = false;
+    page.blocks = page.blocks.filter((b: any) => { if (b.t === 'h' && b.level <= 2) drop = b.level === 2 && local.suppress.includes(b.text); return !drop || b.t === 'reviews' || b.t === 'grid' || b.t === 'form'; });
+  }
+  const at = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 2);
+  const faqBlocks = (local.faq ?? []).length ? [{ t: 'h', level: 2, text: local.faq_heading || 'Common questions' }, ...local.faq.flatMap((f: any) => [{ t: 'h', level: 3, text: f.q }, { t: 'p', parts: [{ t: f.a }] }])] : [];
+  const cut = at < 0 ? page.blocks.length : at;
+  page.blocks = [...page.blocks.slice(0, cut), ...local.blocks.map((b: any) => b.t === 'p' && !b.parts ? { t: 'p', parts: [{ t: b.text, ...(b.h ? { h: b.h } : {}) }] } : b), ...faqBlocks, ...page.blocks.slice(cut)];
+}
+
 // Split into render sections at each level-2 heading; reviews and grid get their own sections.
 type Sec = { kind: 'text' | 'reviews' | 'grid'; blocks: any[]; block?: any };
 const sections: Sec[] = [];
@@ -34,6 +54,7 @@ let fid = 0;
   ogTitle={seo['OG title'] || undefined}
   ogDescription={seo['OG description'] || undefined}
   ogImage={seo['OG image'] || undefined}
+  jsonld={jsonld}
   footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
   footerCell={true}
   brandHref="/index.html"
@@ -71,6 +92,16 @@ let fid = 0;
                   })}
                 </a>
               );
+              if (b.t === 'notice') return <p class="notice">{b.text}</p>;
+              if (b.t === 'table') return (
+                <div class="tblwrap" tabindex="0" role="region" aria-label={b.caption}>
+                  <table class="tbl"><caption>{b.caption}</caption>
+                    <thead><tr>{b.head.map((h: string) => <th scope="col">{h}</th>)}</tr></thead>
+                    <tbody>{b.rows.map((r: string[]) => <tr>{r.map((c, ci) => ci === 0 ? <th scope="row">{c}</th> : <td>{c}</td>)}</tr>)}</tbody>
+                  </table>
+                  {b.source && <p class="tbl__src">{b.source}</p>}
+                </div>
+              );
               if (b.t === 'form') return <FormStub labels={b.labels} submit={b.submit} uid={`f${fid++}`} />;
               return null;
             })}
@@ -97,6 +128,12 @@ let fid = 0;
   .lines--links{columns:2 16rem;column-gap:var(--s6)}
   .lines--links li{break-inside:avoid}
   .pg:has(.lines--links){max-width:none}
+  .tblwrap{overflow-x:auto;border:1px solid var(--ink);background:#fff;margin:0 0 1.25rem}
+  .tbl{border-collapse:collapse;width:100%;font-size:.9375rem}
+  .tbl caption{text-align:left;font:700 .8125rem var(--f-head);padding:.6rem .85rem;border-bottom:1px solid var(--ink)}
+  .tbl th,.tbl td{text-align:left;padding:.5rem .85rem;border-bottom:1px solid var(--rule)}
+  .tbl thead th{font:700 .75rem var(--f-head);text-transform:uppercase;letter-spacing:.05em}
+  .tbl__src{font-size:.8125rem;margin:0;padding:.5rem .85rem}
   .cardlink{display:grid;gap:.35rem;border:1px solid var(--ink);background:#fff;padding:1.1rem 1.25rem;margin:0 0 var(--s4);text-decoration:none}
   .cardlink:hover,.cardlink:focus-visible{background:var(--ink);color:#fff}
   .cardlink__h{font:700 1.0625rem/1.3 var(--f-head);margin:0}
