@@ -21,7 +21,7 @@ ROWS = {
  'cloverdale-condos-under-800k': ('Cloverdale Condos for Sale Under $800K', None, None),
  'commercial': ('Fraser Valley Commercial Real Estate for Sale', None, None),
  'downtown-vw': ('Downtown Vancouver Condos for Sale', 'Downtown Vancouver Condos for Sale | Vancouver Real Estate',
-                 'Browse condos and homes for sale in Downtown Vancouver. Updated MLS® listings and neighbourhood guidance — Jared Gibbons REALTOR®.'),
+                 'Browse condos for sale in Downtown Vancouver. Updated MLS® listings and neighbourhood guidance — Jared Gibbons REALTOR®.'),
  'fraser-ve': ('Fraser Street Vancouver Homes for Sale', None, d('homes for sale', 'Fraser Street, Vancouver')),
  'homes-under-1500000': ('Homes for Sale Under $1.5 Million, South Surrey', None, None),
  'knight': ('Knight Street Vancouver Homes for Sale', 'Knight Street Homes for Sale | Vancouver Real Estate', d('homes for sale', 'Knight Street, Vancouver')),
@@ -31,20 +31,48 @@ ROWS = {
  'mobile-home-parks-fraser-valley': ('Mobile Home Parks in the Fraser Valley', 'Mobile Home Parks in the Fraser Valley', None),
  'subscribe-to-our-newsletter': ('Real Estate Newsletter: South Surrey & Langley', None, None),
  'tsawwassen-homes-over-1-8m': ('Tsawwassen Homes for Sale Over $1.8M', None, None),
- 'brentwood-park': ('Brentwood Park Burnaby Condos & Homes for Sale', 'Brentwood Park Condos & Homes for Sale | Burnaby Real Estate', d('condos and homes for sale', 'Brentwood Park, Burnaby')),
- 'cariboo': ('Cariboo Burnaby Condos & Homes for Sale', 'Cariboo Condos & Homes for Sale | Burnaby Real Estate', d('condos and homes for sale', 'Cariboo, Burnaby')),
  'central-lonsdale': ('Central Lonsdale Condos for Sale, North Vancouver', 'Central Lonsdale Condos for Sale | North Vancouver Real Estate',
-                      'Explore condos and homes for sale in Central Lonsdale, North Vancouver. View current MLS® listings, market data, and neighbourhood details.'),
- 'coal-harbour': ('Coal Harbour Condos for Sale, Vancouver', None, d('condos and homes for sale', 'Coal Harbour, Vancouver')),
- 'downtown-nw': ('Downtown New Westminster Condos for Sale', None, d('condos and homes for sale', 'Downtown New Westminster')),
- 'edmonds-be': ('Edmonds Burnaby Condos & Homes for Sale', 'Edmonds Condos & Homes for Sale | Burnaby Real Estate', d('condos and homes for sale', 'Edmonds, Burnaby')),
- 'false-creek': ('False Creek Condos for Sale, Vancouver', 'False Creek Condos for Sale | Vancouver Real Estate', d('condos and homes for sale', 'False Creek, Vancouver')),
- 'quay': ('Quay New Westminster Condos for Sale', None, d('condos and homes for sale', 'Quay, New Westminster')),
+                      'Explore condos for sale in Central Lonsdale, North Vancouver. View current MLS® listings, market data, and neighbourhood details.'),
+ 'coal-harbour': ('Coal Harbour Condos for Sale, Vancouver', None, d('condos for sale', 'Coal Harbour, Vancouver')),
+ 'downtown-nw': ('Downtown New Westminster Condos for Sale', None, d('condos for sale', 'Downtown New Westminster')),
+ 'false-creek': ('False Creek Condos for Sale, Vancouver', 'False Creek Condos for Sale | Vancouver Real Estate', d('condos for sale', 'False Creek, Vancouver')),
+ 'quay': ('Quay New Westminster Condos for Sale', None, d('condos for sale', 'Quay, New Westminster')),
  'big-bend': ('Big Bend, Burnaby Land, Farms & Homes for Sale', 'Big Bend Land, Farms & Homes for Sale | Burnaby Real Estate', d('land, farms and homes for sale', 'Big Bend, Burnaby')),
  'brownstones-at-morgan-crossing': ('Brownstones at Morgan Crossing Townhomes for Sale', None, None),
  'greentree-village': ('Greentree Village Burnaby Townhomes for Sale', 'Greentree Village Townhomes for Sale | Burnaby Real Estate', d('townhomes for sale', 'Greentree Village, Burnaby')),
 }
-# Held unchanged on purpose (see D-60): fraserview-nw, downtown-ve, gst-rebate-in-bc, privacy.
+
+# ---- second batch (wording-only rows), chosen by judgment; Muse is reference only (Jared, 2026-11-01) ----
+def band(city, kind, op, price):  # "Surrey Homes for Sale Under $1.8M"
+    return f'{city} {kind} for Sale {op} {price}'
+PRICE = [('chilliwack-homes-over-1-8m','Chilliwack','Homes','Over','$1.8M'),('chilliwack-homes-under-1-8m','Chilliwack','Homes','Under','$1.8M'),
+ ('cloverdale-homes-over-1-8m','Cloverdale','Homes','Over','$1.8M'),('cloverdale-homes-under-1-8m','Cloverdale','Homes','Under','$1.8M'),('cloverdale-townhomes-under-1-2m','Cloverdale','Townhomes','Under','$1.2M'),
+ ('ladner-homes-over-1-8m','Ladner','Homes','Over','$1.8M'),('ladner-homes-under-1-8m','Ladner','Homes','Under','$1.8M'),
+ ('langley-condos-under-499k','Langley','Condos','Under','$499K'),('langley-homes-over-1-8m','Langley Luxury','Homes','Over','$1.8M'),('langley-homes-under-1-8m','Langley','Homes','Under','$1.8M'),('langley-townhomes-under-1-2m','Langley','Townhomes','Under','$1.2M'),
+ ('mission-condos-under-800k','Mission','Condos','Under','$800K'),('mission-homes-over-1-8m','Mission','Homes','Over','$1.8M'),('mission-homes-under-1-8m','Mission','Homes','Under','$1.8M'),('mission-townhomes-under-1-2m','Mission','Townhomes','Under','$1.2M'),
+ ('surrey-homes-over-1-8m','Surrey','Homes','Over','$1.8M'),('surrey-homes-under-1-8m','Surrey','Homes','Under','$1.8M'),('surrey-townhomes-under-1-2m','Surrey','Townhomes','Under','$1.2M'),
+ ('tsawwassen-condos-under-800k','Tsawwassen','Condos','Under','$800K'),('tsawwassen-homes-under-1-8m','Tsawwassen','Homes','Under','$1.8M'),('tsawwassen-townhomes-under-1-2m','Tsawwassen','Townhomes','Under','$1.2M')]
+for slug, city, kind, op, price in PRICE: ROWS[slug] = (band(city, kind, op, price), None, None)
+FORECLOSE = [('chilliwackforeclosuresandcourtsales','Chilliwack'),('ladnerforeclosuresandcourtsales','Ladner'),('mapleridgeforeclosuresandcourtsales','Maple Ridge'),('missionforeclosuresandcourtsales','Mission'),
+ ('southsurrey-foreclosures-court-ordered-sales','South Surrey'),('surreyforeclosuresandcourtsales','Surrey'),('tsawwassen-foreclosures-court-ordered-sales','Tsawwassen')]
+for slug, city in FORECLOSE:
+    for tail in (' Foreclosures for Sale & Court-Ordered Sales', ' Foreclosures for Sale & Court Sales'):
+        if len(city + tail + BS) <= 66: ROWS[slug] = (city + tail, None, None); break
+ROWS.update({
+ 'arista-townhomes': ('Arista Townhomes for Sale, Grandview Heights', None, None),
+ 'county-line-glen-valley': ('County Line Glen Valley, Langley Homes for Sale', None, None),
+ 'otter-district': ('Otter District, Langley Homes for Sale', None, None),
+ 'hatzic': ('Hatzic Homes for Sale: Lake, Lots & Acreages', None, None),
+ 'ladner-elementary': ('Homes for Sale in the Ladner Elementary Catchment', None, None),
+ 'langley-city': ('Langley City Homes for Sale & Neighbourhood Guide', None, None),
+ 'maple-ridge-mobile-homes': ('Maple Ridge Mobile & Manufactured Homes for Sale', None, None),
+ 'port-guichon': ('Port Guichon Homes for Sale, Ladner BC', None, None),
+ 'west-meadows-pitt-meadows-guide': ('West Meadows Pitt Meadows Homes for Sale & Guide', None, None),
+ 'north-maple-ridge-guide': ('North Maple Ridge Homes for Sale & Rural Guide', None, None),
+ 'westham-island-guide': ('Westham Island Delta Farms & Homes for Sale', None, None),
+})
+# Held unchanged on purpose (D-60, D-61): fraserview-nw, downtown-ve, gst-rebate-in-bc, privacy; brentwood-park, cariboo and edmonds-be keep their archived houses titles;
+# guide pages with a matching homes page, burnaby-hospital, cityofmapleridge, mission-bc, land, zonings, recip, sold-properties, resources, GIS, granville, lower-landing.
 out = {}
 for slug, (head, h1, desc) in ROWS.items():
     e = {'title': t(head)}
