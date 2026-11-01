@@ -24,3 +24,7 @@ BL-02 (zips + CSVs), BL-03 (Trustindex), BL-04–06. Review of D-08, D-09, D-13,
 - 634 more pages generated from the archive records (community, guide, price/type search, farm, resource and tool pages), with archive SEO applied. 562 pass the archive comparison with no differences beyond the documented drops; 72 are listed for review.
 - Still to do: 200 blog posts + blog index (needs the routing Worker for `/blog.html/<post>`), 207 own-listing pages, redirects/404 Worker (`redirects.csv`, 81 rows), forms Worker, guide-page components (OI-20), review feed, IDX decision.
 - Routing Worker + 404 built and tested locally (not deployed): see `02-architecture-and-setup.md`. Blog index and 200 posts are built (`/internal/blog/`, mapped by the Worker). 200 own-listing pages are built (`/internal/listings/`). Next: guide-page components (OI-20), forms Worker, review sync, remaining 50 review pages, forms Worker.
+
+## Update 2026-10-31 (re-capture)
+- All 1,061 canonical routes are now implemented-preview: the 16 undocumented pages and 3 own listings were re-captured from the live site (D-34), and 4 live-observed redirects were added (D-35). OI-23 and OI-25 are resolved.
+- Lead emails: forms Worker sends to the Keyvera lead address and Jared's inbox (secret `LEAD_EMAIL_TO`); setup (sending domain, Turnstile) still needs approval.

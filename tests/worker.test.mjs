@@ -13,7 +13,7 @@ const idx = buildIndex(rules);
 const R = (p) => route(`https://jaredgibbons.ca${p}`, idx, exists);
 
 test('rules account for all 81 archive rows', () => {
-  const n = [...rules.hostRules, ...rules.redirects, ...rules.gone].reduce((a, x) => a + x.rows, 0)
+  const n = [...rules.hostRules, ...rules.redirects.filter((x) => x.source !== 'live-observed'), ...rules.gone].reduce((a, x) => a + x.rows, 0)
     + [...rules.conflicts, ...rules.ignored].reduce((a, x) => a + x.rows.length, 0);
   assert.equal(n, 81);
 });
@@ -100,4 +100,14 @@ test('worker: blog post and own-listing pages are served at their public URLs; /
 test('worker: only GET and HEAD', async () => {
   assert.equal((await call('/', { method: 'POST' })).status, 405);
   assert.equal((await call('/', { method: 'HEAD' })).status, 200);
+});
+
+test('live-observed redirects: alias to the full listing URL; gone listings to the MLS search page', () => {
+  assert.deepEqual(R('/our-listings.html/listing.440-15850-26-avenue-surrey.106612252'), { type: 'redirect', location: '/our-listings.html/listing.r3036816-440-15850-26-avenue-surrey-bc-v3s-2n6.106612252', status: 301 });
+  assert.equal(R('/our-listings.html/listing.145-2853-helc-place-surrey-bc-v3z-0n5-r3080492.107675553').location, '/recip.html');
+  assert.equal(R('/mylistings.html/listing.220-15735-croydon-drive-surrey-bc-v3z-2l5-r3076297.107593610').location, '/recip.html');
+});
+test('recaptured pages are served', () => {
+  for (const p of ['/about.html', '/testimonials.html', '/whalley-guide.html', '/metrotown-homes-for-sale.html', '/our-listings.html/listing.r2225442-117-14833-61-avenue-surrey-bc.102314544'])
+    assert.equal(R(p).type, 'asset', p);
 });

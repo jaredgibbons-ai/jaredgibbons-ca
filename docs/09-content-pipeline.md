@@ -42,3 +42,12 @@ cp -r dist /tmp/dist-snap && python3 tools/a11y_all.py --root /tmp/dist-snap --p
 7. Attaches each page's `seo.csv` row (meta description, OG title/description/image, robots, dates) exactly as archived, including trailing spaces.
 
 Generated: `src/data/pages/<slug>.json` (634 files, about 9 MB, rendered by `src/pages/[...slug].astro`); report in `src/data/pages-report.json`.
+
+## Re-capturing pages that have no archive record (D-34)
+In Chrome on the live site, fetch each URL, collect text nodes/links/images/headings and the `<head>`, save as `jg-recapture.json` and `jg-recapture-meta-b.json`, then:
+```
+python3 -I tools/recapture.py --text jg-recapture.json --meta jg-recapture-meta-b.json --pages <cache09>/pages --seo <cache09>/seo.csv
+python3 -I tools/import_pages.py --pages <cache09>/pages --seo <cache09>/seo.csv --out src/data/pages
+python3 -I tools/import_listings.py --pages <cache09>/pages --seo <cache09>/seo.csv --out src/data/listings
+python3 -I tools/build_rules.py && python3 -I tools/build_manifest.py
+```

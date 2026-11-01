@@ -6,7 +6,7 @@ import csv, io, json, re, collections
 from urllib.parse import urlparse, parse_qs
 
 SRC = [f'docs/archive-extracts/urls/part{i}.csv' for i in (1, 2, 3)]
-IMPLEMENTED = {'/': 'implemented-preview', '/fort-langley.html': 'implemented-preview', '/reviews.html': 'implemented-preview'}
+IMPLEMENTED = {'/': 'implemented-preview', '/index.html': 'implemented-preview', '/fort-langley.html': 'implemented-preview', '/reviews.html': 'implemented-preview'}
 import glob, os, json as _json
 for _f in glob.glob('src/data/pages/*.json'):          # generic archive-driven pages (tools/import_pages.py)
     IMPLEMENTED['/' + os.path.basename(_f)[:-5] + '.html'] = 'implemented-preview'
@@ -14,6 +14,10 @@ for _f in glob.glob('src/data/posts/*.json'):          # blog posts, emitted und
     IMPLEMENTED['/blog.html/' + os.path.basename(_f)[:-5]] = 'implemented-preview'
 for _f in glob.glob('src/data/listings/*.json'):       # own-listing pages, emitted under /internal/listings/
     IMPLEMENTED['/our-listings.html/' + os.path.basename(_f)[:-5]] = 'implemented-preview'
+import csv as _csv                                    # redirects seen on the live site (build_rules.py); rule exists and is tested
+if os.path.exists('docs/archive-extracts/live-observed-redirects.csv'):
+    for _r in _csv.DictReader(open('docs/archive-extracts/live-observed-redirects.csv', encoding='utf-8', newline='')):
+        IMPLEMENTED[_r['From URL'].replace('https://jaredgibbons.ca', '')] = 'implemented-preview'
 CMP = {}
 if os.path.exists('docs/test-results/compare-all.json'):
     for _p in _json.load(open('docs/test-results/compare-all.json'))['pages']:

@@ -4,7 +4,7 @@ Never guesses: conflicting rows (same From with both a redirect and a 404) and m
 concatenated-URL rows are listed under `conflicts` / `ignored` with the reason; the Worker
 serves 404 for conflicts until Jared decides (docs/05 OI-10).
 """
-import csv, json, re, sys
+import csv, json, os, re, sys
 from collections import defaultdict
 from urllib.parse import urlsplit
 
@@ -40,6 +40,18 @@ for frm, rs in by_from.items():
     else:
         gone.append({'rows': len(rs), 'from': path, 'archive_status': int(r['Status'])})
 
+# Redirects seen on the live site after the archive was taken (docs/05 OI-25). The archive wins on any conflict.
+LIVE = 'docs/archive-extracts/live-observed-redirects.csv'
+known = {r['from'] for r in redirects} | {g['from'] for g in gone} | {c['from'] for c in conflicts}
+live_added = 0
+if os.path.exists(LIVE):
+    for r in csv.DictReader(open(LIVE, encoding='utf-8', newline='')):
+        path, _ = key(r['From URL']); to, _ = key(r['To URL'])
+        if path in known:
+            continue
+        redirects.append({'rows': 1, 'from': path, 'to': to, 'status': int(r['Status']), 'target_blocked_idx': False, 'source': 'live-observed'})
+        live_added += 1
+
 rules = {
     'generated_from': SRC, 'rows': len(rows),
     'hostRules': host_rules, 'redirects': sorted(redirects, key=lambda x: x['from']),
@@ -48,4 +60,5 @@ rules = {
 json.dump(rules, open(OUT, 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
 print(json.dumps({k: (len(v) if isinstance(v, list) else v) for k, v in rules.items()}))
 accounted = sum(len(x['rows']) for x in conflicts + ignored) + sum(x['rows'] for x in host_rules + redirects + gone)
-print('rows accounted for', accounted, 'of', len(rows))
+print('live-observed redirects added', live_added)
+print('rows accounted for', accounted - live_added, 'of', len(rows))
