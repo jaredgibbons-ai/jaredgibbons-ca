@@ -111,3 +111,12 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 - **Maple Ridge:** Bylaw No. 7998-2024, adopted June 25, 2024, re-read by me on the City's own PDF and added to the Maple Ridge selling page.
 - **Rule:** a bylaw date or number goes on a page only if an official page states it. Gaps stay visible instead of being filled from memory.
 - **Next:** short-term rental and suite rules for Langley City, Langley Township, Surrey, Delta and Pitt Meadows have not been researched yet.
+
+## D-47 — Presale data layer and presale pages (Muse list of 2026-11-01)
+- **Source:** Muse's presale master list (134 projects completing 2027–2029; GVR 83, Fraser Valley 51) and info pack, built from public listings and developers' own pages, read 2026-11-01. Archived at `docs/research/presale-master-list-2026-11-01.csv`; the info pack's appendices (completion not stated; big projects not confirmed in the window) are not published.
+- **Generator:** `tools/build_presale.py` writes `src/data/presale/<date>.json` and the pages. New list, new run.
+- **Pricing rule:** a price is shown only when the source dates it within three months of the snapshot; otherwise the page says "Ask for current pricing". Ranges such as "the $400,000s" keep their wording, and bedroom qualifiers are kept. 15 of 134 projects pass today. Reason: several list prices are tagged to 2025 or "prior file", and a stale presale price on a public page misleads buyers.
+- **Pages (all draft):** hub `/presale-projects-fraser-valley-and-metro-vancouver.html` (all 134, Fraser Valley first) and city pages for Surrey (25), Abbotsford (8), Burnaby (21), Coquitlam (21) and Vancouver (22). The existing Langley and South Surrey presale pages get a project table through the local layer; archive wording is untouched. Cities with under eight projects appear on the hub only.
+- **Not on pages:** source URLs (several are other agents' sites), unsourced incentives, and developer or sales-centre claims. Deposit wording is shown as published.
+- **Gaps:** no Chilliwack, Mission, White Rock or Hope projects on the list; Paragon presale data (via Jared) is still to be merged; neighbourhood per project is not in the sources.
+- **Overlap to confirm with Jared:** `langleypresale.ca` is his separate Langley presale directory; the Langley table on jaredgibbons.ca overlaps it. Presale mechanics (tax, deposits, 7-day rescission) already exist on his Langley page and are linked, not repeated.

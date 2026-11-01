@@ -35,6 +35,7 @@ Written as a commercial SEO specialist would: what exists, what is missing, what
 - Page loader for new pages and sitemap inclusion.
 - `/sell-my-house-in-maple-ridge.html` (draft pilot; template for the remaining seller pages).
 - Market data layer feeding four guides and the pilot.
+- Presale pages (draft): hub of 134 projects plus Surrey, Abbotsford, Burnaby, Coquitlam and Vancouver pages, and project tables on the Langley and South Surrey presale pages (D-47). Closes most of rank 7.
 - `/fraser-valley-short-term-rental-and-suite-rules.html` (draft): verified short-term rental and multi-unit zoning rules for six eastern and Fraser Valley places (D-46).
 - `/fraser-valley-commercial-market-report.html` (draft): GVR Commercial Edge Q2 2026 and Avison Young industrial Q3 2026, three tables, linked from `/commercial.html` (D-45). Commercial is a side mission (Jared, 2026-11-01), not a main line. It is a new opportunity row: no competitor-gap research exists for it yet, so it needs a Muse pass before per-city industrial pages are built.
 
