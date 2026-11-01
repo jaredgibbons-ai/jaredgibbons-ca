@@ -10,7 +10,7 @@ Writes src/data/local/schools-in-<slug>-bc.json (new pages, status 'generated') 
 import csv, glob, json, os, re, collections
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
-CSV = os.path.join(ROOT, 'docs/research/education-inventory-2026-11-01.csv')
+CSV = os.path.join(ROOT, 'docs/research/education-inventory-v2-2026-11-01.csv')
 UPDATED = '2026-11-01'
 
 # slug, display name, csv cities, hub pages that get a link, nearby-context sentence (verifiable only)
@@ -45,6 +45,7 @@ def lvl(r):
     if c in ('college', 'university'): return 'post'
     if r['public_or_private'] != 'Public': return 'independent'
     if 'secondary' in n or 'senior sec' in n: return 'secondary'
+    if r.get('alternate_program') == 'YES' or r.get('online_program') == 'YES': return 'other'
     if re.search(r'alternate|continuing ed|online|education services|learning cent|distributed|adult', n): return 'other'
     if 'middle' in n: return 'middle'
     return {'elementary': 'elementary', 'middle': 'middle', 'secondary': 'secondary'}.get(c, 'other')
@@ -90,10 +91,18 @@ def main():
         intro = (f'The BC Ministry of Education and Child Care school list shows {num(k12)} schools with a {disp} street address: '
                  f'{plural(pub, "public school")} and {plural(ind, "independent school")}'
                  + (f'. It also shows {plural(post, "college or university campus", "college and university campuses")}.' if post else '.'))
+        n_alt = sum(1 for r in sch if r.get('alternate_program') == 'YES'); n_onl = sum(1 for r in sch if r.get('online_program') == 'YES')
+        n_fi = sum(1 for r in sch if r.get('french_immersion') == 'YES'); n_fr = sum(1 for r in sch if r.get('francophone') == 'YES')
+        extra = []
+        if n_fi: extra.append(f'{plural(n_fi, "school")} marked as offering French Immersion')
+        if n_fr: extra.append(f'{plural(n_fr, "Francophone school")} run by the Conseil scolaire francophone')
+        if n_alt: extra.append(f'{plural(n_alt, "alternate program")}')
+        if n_onl: extra.append(f'{plural(n_onl, "online school")}')
+        if extra: intro += ' In that list, ' + oxford(extra) + '.'
         blocks = [{'t': 'p', 'text': intro}]
         if main_d:
             blocks.append({'t': 'p', 'text': f'Public schools here are run by {oxford([dlong(d) for d, c in main_d])}. Count by district: {dtxt}.'})
-        blocks.append({'t': 'p', 'text': ('The list includes alternate programs, continuing education centres and online schools that have a street address, so the totals run higher than the number of neighbourhood schools. '
+        blocks.append({'t': 'p', 'text': ('The list includes alternate programs, continuing education centres and online schools that have a street address, so the totals run higher than the number of neighbourhood schools; they sit under "other public schools and programs" below. '
                                            'The Ministry\'s own level field also mislabels some secondary schools as elementary, so this page reads the level from the school\'s name.')})
         blocks.append({'t': 'p', 'text': ('If you are buying with a child in mind, the address matters more than the list. A school\'s catchment decides which children it must take, and districts change catchments and set their own rules for French immersion and other programs. '
                                            'Ask the district about the exact address before you write an offer.')})
@@ -118,10 +127,12 @@ def main():
             if key == 'independent':
                 blocks.append({'t': 'p', 'text': 'Independent schools set their own admission rules and fees, and a home\'s address gives no priority for a place. Contact each school directly.'})
             hd = (['School', 'District area', 'Street address'] if key == 'independent' else ['Campus', 'Street address'] if key == 'post' else ['School', 'District', 'Street address'])
+            fi = key in ('elementary', 'middle', 'secondary', 'other') and any(r.get('french_immersion') == 'YES' for r in g)
+            if fi: hd = hd[:-1] + ['French Immersion', hd[-1]]
             if multi: hd = hd + ['Community']
             tr = []
             for r in g:
-                row = [nm(r['name'])] + ([] if key == 'post' else [r['district_or_authority']]) + [addr(r['street_address'])] + ([r['city']] if multi else [])
+                row = [nm(r['name'])] + ([] if key == 'post' else [r['district_or_authority']]) + ([('Yes' if r.get('french_immersion') == 'YES' else '—')] if fi else []) + [addr(r['street_address'])] + ([r['city']] if multi else [])
                 tr.append(row)
             blocks.append({'t': 'table', 'caption': head.format(c=disp).replace(' in ', ' with street addresses in ', 1), 'head': hd, 'rows': tr,
                            'source': 'Source: ' + ('Locations of B.C. Post-Secondary Institutions (Province of BC)' if key == 'post' else 'BC Schools K-12 with Francophone Indicators (BC Ministry of Education and Child Care), 2025/26 file updated July 2026') + ', read 2026-11-01.'})
@@ -185,14 +196,16 @@ def south_surrey(rows):
     total = 0
     for sec, els in FAMILIES:
         sr = find(sec, False)
-        hd = ['School', 'Level', 'Street address', 'Community']
-        tr = [[sr['name'], 'Secondary', sr['street_address'], sr['city']]]
+        hd = ['School', 'Level', 'French Immersion', 'Street address', 'Community']
+        yn = lambda r: 'Yes' if r.get('french_immersion') == 'YES' else '—'
+        tr = [[sr['name'], 'Secondary', yn(sr), sr['street_address'], sr['city']]]
         for e in els:
-            er = find(e, True); tr.append([er['name'].replace('H T ', 'H.T. '), 'Elementary', er['street_address'], er['city']])
+            er = find(e, True); tr.append([er['name'].replace('H T ', 'H.T. '), 'Elementary', yn(er), er['street_address'], er['city']])
         total += len(tr)
         blocks.append({'t': 'h', 'level': 2, 'text': f'{sec} and its elementary schools ({len(tr)})'})
         blocks.append({'t': 'table', 'caption': f'{sec} family of schools with street addresses', 'head': hd, 'rows': tr, 'source': 'Source: Surrey Schools families of schools (as set out on the South Surrey catchments guide) and the BC Ministry of Education and Child Care school list, read 2026-11-01.'})
     blocks.append({'t': 'p', 'text': ('French Immersion has its own registration. Crescent Park, Jessie Lee, Laronde and Peace Arch Elementary feed French Immersion into Earl Marriott Secondary. '
+                                      'The Ministry file also marks Pacific Heights Elementary as offering French Immersion, so ask the district how that program is fed. '
                                       'White Rock is not one catchment: White Rock Elementary feeds Semiahmoo Secondary and Peace Arch Elementary feeds Earl Marriott.')})
     ir = []
     for n in INDEP:

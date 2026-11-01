@@ -21,7 +21,7 @@
   "blocks": [
     {
       "t": "p",
-      "text": "The BC Ministry of Education and Child Care school list shows 62 schools with a Langley street address: 49 public schools and 13 independent schools. It also shows 5 college and university campuses."
+      "text": "The BC Ministry of Education and Child Care school list shows 62 schools with a Langley street address: 49 public schools and 13 independent schools. It also shows 5 college and university campuses. In that list, 7 schools marked as offering French Immersion, 1 Francophone school run by the Conseil scolaire francophone, 2 alternate programs and 2 online schools."
     },
     {
       "t": "p",
@@ -29,7 +29,7 @@
     },
     {
       "t": "p",
-      "text": "The list includes alternate programs, continuing education centres and online schools that have a street address, so the totals run higher than the number of neighbourhood schools. The Ministry's own level field also mislabels some secondary schools as elementary, so this page reads the level from the school's name."
+      "text": "The list includes alternate programs, continuing education centres and online schools that have a street address, so the totals run higher than the number of neighbourhood schools; they sit under \"other public schools and programs\" below. The Ministry's own level field also mislabels some secondary schools as elementary, so this page reads the level from the school's name."
     },
     {
       "t": "p",
@@ -50,6 +50,7 @@
       "head": [
         "School",
         "District",
+        "French Immersion",
         "Street address",
         "Community"
       ],
@@ -57,192 +58,224 @@
         [
           "Alex Hope Elementary",
           "SD35 Langley",
+          "Yes",
           "21150 85 Ave",
           "Langley"
         ],
         [
           "Alice Brown Elementary",
           "SD35 Langley",
+          "—",
           "20011 44 Ave",
           "Langley"
         ],
         [
           "Belmont Elementary",
           "SD35 Langley",
+          "Yes",
           "20390 40 Ave",
           "Langley"
         ],
         [
           "Blacklock Fine Arts Elementary",
           "SD35 Langley",
+          "—",
           "5100 206 St",
           "Langley"
         ],
         [
           "des Voyageurs",
           "SD93 Conseil scolaire francophone",
+          "—",
           "8736 216 St",
           "Langley"
         ],
         [
           "Donna Gabriel Robins Elementary",
           "SD35 Langley",
+          "—",
           "7844 204b St",
           "Langley"
         ],
         [
           "Dorothy Peacock Elementary",
           "SD35 Langley",
+          "—",
           "20292 91a Ave",
           "Langley"
         ],
         [
           "Douglas Park Community",
           "SD35 Langley",
+          "—",
           "5409 206 St",
           "Langley"
         ],
         [
           "Glenwood Elementary",
           "SD35 Langley",
+          "—",
           "20785 24 Ave",
           "Langley"
         ],
         [
           "Gordon Greenwood Elementary",
           "SD35 Langley",
+          "—",
           "9175 206 St",
           "Langley"
         ],
         [
           "James Hill Elementary",
           "SD35 Langley",
+          "—",
           "22144 Old Yale Rd",
           "Langley"
         ],
         [
           "James Kennedy Elementary",
           "SD35 Langley",
+          "Yes",
           "9060 212 St",
           "Langley"
         ],
         [
           "Josette Dandurand Elementary",
           "SD35 Langley",
+          "—",
           "20143 82 Avenue",
           "Langley"
         ],
         [
           "Langley Fundamental Elementary",
           "SD35 Langley",
+          "—",
           "21789 50 Ave",
           "Langley"
         ],
         [
           "Langley Meadows Elementary",
           "SD35 Langley",
+          "—",
           "2244 Willoughby Way",
           "Langley"
         ],
         [
           "Lynn Fripps Elementary",
           "SD35 Langley",
+          "—",
           "21020 83 Ave",
           "Langley"
         ],
         [
           "Nicomekl Elementary",
           "SD35 Langley",
+          "—",
           "20050 53 Ave",
           "Langley"
         ],
         [
           "Noel Booth Elementary",
           "SD35 Langley",
+          "Yes",
           "20202 35 Ave",
           "Langley"
         ],
         [
           "Peterson Road Elementary",
           "SD35 Langley",
+          "—",
           "23422 47 Ave",
           "Langley"
         ],
         [
           "R C Garnett Demonstration Elementary",
           "SD35 Langley",
+          "—",
           "7096 201 St",
           "Langley"
         ],
         [
           "Richard Bulpitt Elementary",
           "SD35 Langley",
+          "—",
           "20965 77a Ave",
           "Langley"
         ],
         [
           "Simonds Elementary",
           "SD35 Langley",
+          "—",
           "20190 48 Ave",
           "Langley"
         ],
         [
           "Topham Elementary",
           "SD35 Langley",
+          "—",
           "21555 91 Ave",
           "Langley"
         ],
         [
           "Uplands Elementary",
           "SD35 Langley",
+          "—",
           "4471 207a St",
           "Langley"
         ],
         [
           "West Langley Elementary",
           "SD35 Langley",
+          "—",
           "9403 212 St",
           "Langley"
         ],
         [
           "Willoughby Elementary",
           "SD35 Langley",
+          "—",
           "20766 80 Ave",
           "Langley"
         ],
         [
           "Wix-Brown Elementary",
           "SD35 Langley",
+          "—",
           "23851 24 Ave",
           "Langley"
         ],
         [
           "Coghlan Fundamental Elementary",
           "SD35 Langley",
+          "—",
           "4452 256th St",
           "Aldergrove"
         ],
         [
           "North Otter Elementary",
           "SD35 Langley",
+          "—",
           "5370 248 St",
           "Aldergrove"
         ],
         [
           "Parkside Centennial Elementary",
           "SD35 Langley",
+          "—",
           "3300 270 St",
           "Aldergrove"
         ],
         [
           "Shortreed Community School",
           "SD35 Langley",
+          "—",
           "27330 28 Ave",
           "Aldergrove"
         ],
         [
           "Fort Langley Elementary",
           "SD35 Langley",
+          "—",
           "8877 Bartlett St",
           "Fort Langley"
         ]
@@ -294,7 +327,7 @@
     {
       "t": "h",
       "level": 2,
-      "text": "Public secondary schools in Langley (10)"
+      "text": "Public secondary schools in Langley (8)"
     },
     {
       "t": "table",
@@ -302,6 +335,7 @@
       "head": [
         "School",
         "District",
+        "French Immersion",
         "Street address",
         "Community"
       ],
@@ -309,60 +343,56 @@
         [
           "Brookswood Secondary",
           "SD35 Langley",
+          "Yes",
           "20902 37a Ave",
-          "Langley"
-        ],
-        [
-          "Choices Program",
-          "SD35 Langley",
-          "21405a 56 Ave",
           "Langley"
         ],
         [
           "D.W. Poppy Secondary",
           "SD35 Langley",
+          "—",
           "23752 52 Ave",
           "Langley"
         ],
         [
           "Langley Education Centre",
           "SD35 Langley",
+          "—",
           "21405a 56 Ave",
           "Langley"
         ],
         [
           "Langley Fundamental Middle/Secondary Sch",
           "SD35 Langley",
+          "—",
           "21250 42 Ave",
           "Langley"
         ],
         [
           "Langley Secondary",
           "SD35 Langley",
+          "—",
           "21405 56 Ave",
           "Langley"
         ],
         [
           "R E Mountain Secondary",
           "SD35 Langley",
+          "—",
           "7633 202a St",
-          "Langley"
-        ],
-        [
-          "Vanguard",
-          "SD35 Langley",
-          "3825 244 St",
           "Langley"
         ],
         [
           "Walnut Grove Secondary",
           "SD35 Langley",
+          "Yes",
           "8919 Walnut Grove Dr",
           "Langley"
         ],
         [
           "Aldergrove Community Secondary",
           "SD35 Langley",
+          "—",
           "26850 29 Ave",
           "Aldergrove"
         ]
@@ -372,7 +402,7 @@
     {
       "t": "h",
       "level": 2,
-      "text": "Other public schools and programs in Langley (3)"
+      "text": "Other public schools and programs in Langley (5)"
     },
     {
       "t": "table",
@@ -385,6 +415,12 @@
       ],
       "rows": [
         [
+          "Choices Program",
+          "SD35 Langley",
+          "21405a 56 Ave",
+          "Langley"
+        ],
+        [
           "Langley Online and Distributed Learning",
           "SD35 Langley",
           "21405a 56 Ave",
@@ -394,6 +430,12 @@
           "U-Connect",
           "SD35 Langley",
           "20190 48 Ave",
+          "Langley"
+        ],
+        [
+          "Vanguard",
+          "SD35 Langley",
+          "3825 244 St",
           "Langley"
         ],
         [

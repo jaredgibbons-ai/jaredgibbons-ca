@@ -1,6 +1,6 @@
 """Schools layer: turn the Muse education rollup into per-page 'Schools in <area>' sections.
 
-Input:  docs/research/education-inventory-2026-11-01.csv  (Muse; K-12 from the BC Ministry of Education and Child Care school list,
+Input:  docs/research/education-inventory-v2-2026-11-01.csv  (Muse; K-12 from the BC Ministry of Education and Child Care school list,
         post-secondary from the Province's institution locations file; area placement from Muse's research files)
 Output: src/data/schools/placements-<date>.json   (tiered placements, flags, pending pages)
         'gen: schools' blocks inside src/data/local/<slug>.json (created if absent; rebuilt on every run)
@@ -19,7 +19,7 @@ Category labels in the rollup are NOT trusted (secondary schools appear under 'E
 import glob, json, os, re
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
-SRC = os.path.join(ROOT, 'docs/research/education-inventory-2026-11-01.csv')
+SRC = os.path.join(ROOT, 'docs/research/education-inventory-v2-2026-11-01.csv')
 OUT = os.path.join(ROOT, 'src/data/schools/placements-2026-11-01.json')
 
 STOP = {'elementary', 'secondary', 'school', 'community', 'middle', 'annex', 'the', 'ecole', 'école', 'academy', 'neighbourhood', 'traditional',
