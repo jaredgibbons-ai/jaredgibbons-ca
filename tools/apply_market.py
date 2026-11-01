@@ -3,7 +3,7 @@
 A local file opts in with a top-level "market_spec":
     {"board": "gvr", "area": "Maple Ridge", "label": "Maple Ridge"}                           # GVR HPI only
     {"board": "fvreb", "area": "Abbotsford", "summary": "Abbotsford", "label": "Abbotsford"}   # HPI + MLS summary
-Optional "at": N puts the section after the first N hand-written blocks (default: end).
+A list of such specs gives one section per area. Optional "at": N puts the section after the first N hand-written blocks (default: end).
 Generated blocks carry "gen": "market"; they are removed and rebuilt on every run, so a new month's file refreshes every page.
     python3 -I tools/apply_market.py [--month 2026-09]
 """
@@ -57,8 +57,10 @@ def main():
         d = json.load(open(f, encoding='utf-8'))
         if 'market_spec' not in d: continue
         keep = [b for b in d['blocks'] if b.get('gen') != 'market']
-        at = d['market_spec'].get('at', len(keep))  # number of hand-written blocks that come before the market section
-        d['blocks'] = keep[:at] + build(d['market_spec'], data, month) + keep[at:]
+        specs = d['market_spec'] if isinstance(d['market_spec'], list) else [d['market_spec']]  # a list gives one section per area, in order
+        at = specs[0].get('at', len(keep))
+        gen = [b for sp in specs for b in build(sp, data, month)]
+        d['blocks'] = keep[:at] + gen + keep[at:]
         json.dump(d, open(f, 'w', encoding='utf-8'), indent=2, ensure_ascii=False); open(f, 'a').write('\n'); n += 1
     print('updated', n, 'local files for', month)
 
