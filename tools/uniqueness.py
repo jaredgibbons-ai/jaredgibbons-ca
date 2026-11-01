@@ -17,7 +17,9 @@ def text_of(b):
     if 'parts' in b: return ' '.join(x['t'] for x in b['parts'])
     if t == 'h': return b['text']
     if t == 'p': return b.get('text', '')
-    if t == 'list': return ' '.join(' '.join(x['t'] for x in it) for it in b['items'])
+    if t == 'list':
+        if all(len(it) == 1 and it[0].get('h') for it in b['items']): return ''  # a list of nothing but links is navigation, not body text (search engines treat it as boilerplate)
+        return ' '.join(' '.join(x['t'] for x in it) for it in b['items'])
     if t == 'table': return ' '.join([b.get('caption', '')] + b['head'] + [c for r in b['rows'] for c in r])
     if t == 'notice': return ''  # preview-only notes are not page content
     return ''
