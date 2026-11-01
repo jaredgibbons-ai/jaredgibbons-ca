@@ -33,7 +33,7 @@ Written as a commercial SEO specialist would: what exists, what is missing, what
 
 ## 5. Built so far from this audit
 - Page loader for new pages and sitemap inclusion.
-- `/sell-my-house-in-maple-ridge.html` (draft pilot; template for the remaining seller pages) and `/sell-my-house-in-pitt-meadows.html` (draft, D-52); Mission, Abbotsford and Delta followed (D-53), then Surrey, South Surrey and White Rock, and Langley (D-54); Chilliwack is the remaining city.
+- `/sell-my-house-in-maple-ridge.html` (draft pilot; template for the remaining seller pages) and `/sell-my-house-in-pitt-meadows.html` (draft, D-52); Mission, Abbotsford and Delta followed (D-53), then Surrey, South Surrey and White Rock, and Langley (D-54); Chilliwack followed, so every main city has one.
 - Market data layer feeding four guides and the pilot.
 - `/homes-with-multiplex-potential-fraser-valley.html` (draft): the matrix's biggest gap, with verified city rules and links to 21 neighbourhood guides (D-48). Backlog of 25 areas with no page recorded.
 - Presale pages (draft): hub of 134 projects plus Surrey, Abbotsford, Burnaby, Coquitlam and Vancouver pages, and project tables on the Langley and South Surrey presale pages (D-47). Closes most of rank 7.

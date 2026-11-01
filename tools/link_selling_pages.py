@@ -18,6 +18,7 @@ SELL = {
     'sell-my-house-in-surrey': ('Sell my house in Surrey: current prices, the 2024 lot rules and a free home evaluation', ['surrey-homes-for-sale', 'surrey-neighbourhood-guides', 'surrey-townhomes-for-sale', 'cloverdale-neighbourhood-guides', 'cloverdale-townhomes-for-sale']),
     'sell-my-house-in-south-surrey-white-rock': ('Sell my house in South Surrey or White Rock: current prices, each City\'s 2024 rules and a free home evaluation', ['south-surrey-homes-for-sale', 'south-surrey-townhomes-for-sale', 'white-rock', 'south-surrey-school-catchments', 'south-surrey-white-rock-ocean-view-homes-for-sale', 'south-surrey-white-rock-waterfront-homes-for-sale']),
     'sell-my-house-in-langley': ('Sell my house in Langley: current prices, what the Township and the City did about the 2024 rules, and a free home evaluation', ['langley-homes-for-sale', 'langley-neighbourhood-guides', 'langley-townhomes-for-sale', 'city-of-langley-homes-for-sale', 'city-of-langley-townhomes-for-sale']),
+    'sell-my-house-in-chilliwack': ('Sell my house in Chilliwack: the 2024 lot rules, floodplain and suite limits, and a free home evaluation', ['chilliwack-homes-for-sale', 'chilliwack-neighbourhood-guides']),
 }
 
 
