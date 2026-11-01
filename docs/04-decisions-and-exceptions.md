@@ -96,3 +96,11 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 - **Boilerplate rule:** no shared explanatory sentence is repeated across pages. Only the numbers and one short lead-in are generated, because repeated sentences lower page uniqueness and add nothing for the reader.
 - **Refresh:** October reports are expected about 4–5 November. Drop the new PDFs in, re-run both tools, review the diff, commit.
 - **Status:** Maple Ridge, Pitt Meadows and Tsawwassen use GVR; Surrey, Langley, Abbotsford, Mission, White Rock and North Delta use FVREB; Chilliwack and the east valley (CADREB) publish board-wide figures only and need Paragon exports for community numbers.
+
+## D-45 — Commercial and industrial market data; Fraser Valley commercial market report page
+- **Sources received 2026-11-01:** Greater Vancouver REALTORS® Commercial Edge Q2 2026 report (news release dated October 8, 2026) and Avison Young's Metro Vancouver industrial market report Q3 2026.
+- **Decision:** the facts (counts, dollars, vacancy, rents, construction) are stored as data in `src/data/market/commercial-gvr-2026-Q2.json` and `industrial-ay-2026-Q3.json`, each transcribed from the PDF tables and checked against the printed totals (area sales sum to 285/293/332; industrial rows sum to the Metro Vancouver row). Prose is original and computed from the data by `tools/build_commercial_page.py`; no report text, charts, tenant or buyer names are reproduced.
+- **Page:** `/fraser-valley-commercial-market-report.html` (draft), linked from `/commercial.html`. Refreshed by dropping in new JSON files and re-running the script (next: GVR Q3 around January 2027, Avison Young Q4 around January 2027).
+- **PDFs are not committed.** The Avison Young report is marked all rights reserved and the repo's privacy is still unconfirmed (B-25). Only extracted facts and the source citation are kept.
+- **Published percentages are used where the source gives them** (for example office dollar volume +68.4%) rather than recomputed from rounded chart values.
+- **Scope:** jaredgibbons.ca already carries a commercial listing page, so the market report supports it. Per-city industrial pages (Surrey, Langley, Abbotsford, Delta, Chilliwack) can follow once Jared confirms he wants to market commercial property.
