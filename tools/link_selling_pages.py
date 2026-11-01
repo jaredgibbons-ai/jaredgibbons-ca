@@ -15,6 +15,9 @@ SELL = {
     'sell-my-house-in-mission': ('Sell my house in Mission: current prices, lot rules and a free home evaluation', ['mission-homes-for-sale', 'mission-neighbourhood-guides']),
     'sell-my-house-in-abbotsford': ('Sell my house in Abbotsford: current prices, lot rules and a free home evaluation', ['abbotsford-homes-for-sale', 'abbotsford-neighbourhood-guides', 'abbotsford-townhomes-for-sale']),
     'sell-my-house-in-delta': ('Sell my house in Delta: prices for Tsawwassen, Ladner and North Delta, lot rules and a free home evaluation', ['delta-homes-for-sale', 'delta-neighbourhood-guides', 'tsawwassen-homes-for-sale', 'ladner-homes-for-sale', 'north-delta-homes-for-sale', 'tsawwassen-townhomes-for-sale', 'ladner-townhomes-for-sale']),
+    'sell-my-house-in-surrey': ('Sell my house in Surrey: current prices, the 2024 lot rules and a free home evaluation', ['surrey-homes-for-sale', 'surrey-neighbourhood-guides', 'surrey-townhomes-for-sale', 'cloverdale-neighbourhood-guides', 'cloverdale-townhomes-for-sale']),
+    'sell-my-house-in-south-surrey-white-rock': ('Sell my house in South Surrey or White Rock: current prices, each City\'s 2024 rules and a free home evaluation', ['south-surrey-homes-for-sale', 'south-surrey-townhomes-for-sale', 'white-rock', 'south-surrey-school-catchments', 'south-surrey-white-rock-ocean-view-homes-for-sale', 'south-surrey-white-rock-waterfront-homes-for-sale']),
+    'sell-my-house-in-langley': ('Sell my house in Langley: current prices, what the Township and the City did about the 2024 rules, and a free home evaluation', ['langley-homes-for-sale', 'langley-neighbourhood-guides', 'langley-townhomes-for-sale', 'city-of-langley-homes-for-sale', 'city-of-langley-townhomes-for-sale']),
 }
 
 
