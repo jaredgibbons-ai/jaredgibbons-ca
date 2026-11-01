@@ -49,7 +49,7 @@ def build(spec, data, month):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--month', default=None); a = ap.parse_args()
-    files = sorted(glob.glob(os.path.join(ROOT, 'src/data/market/*.json')))
+    files = sorted(glob.glob(os.path.join(ROOT, 'src/data/market/[0-9][0-9][0-9][0-9]-[0-9][0-9].json')))  # monthly board files only
     month = a.month or os.path.basename(files[-1])[:-5]
     data = json.load(open(os.path.join(ROOT, 'src/data/market', month + '.json'), encoding='utf-8'))
     n = 0

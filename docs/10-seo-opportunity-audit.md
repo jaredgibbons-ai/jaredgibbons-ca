@@ -35,7 +35,8 @@ Written as a commercial SEO specialist would: what exists, what is missing, what
 - Page loader for new pages and sitemap inclusion.
 - `/sell-my-house-in-maple-ridge.html` (draft pilot; template for the remaining seller pages).
 - Market data layer feeding four guides and the pilot.
-- `/fraser-valley-commercial-market-report.html` (draft): GVR Commercial Edge Q2 2026 and Avison Young industrial Q3 2026, three tables, linked from `/commercial.html` (D-45). Commercial is a new opportunity row: no competitor-gap research exists for it yet, so it needs a Muse pass before per-city industrial pages are built.
+- `/fraser-valley-short-term-rental-and-suite-rules.html` (draft): verified short-term rental and multi-unit zoning rules for six eastern and Fraser Valley places (D-46).
+- `/fraser-valley-commercial-market-report.html` (draft): GVR Commercial Edge Q2 2026 and Avison Young industrial Q3 2026, three tables, linked from `/commercial.html` (D-45). Commercial is a side mission (Jared, 2026-11-01), not a main line. It is a new opportunity row: no competitor-gap research exists for it yet, so it needs a Muse pass before per-city industrial pages are built.
 
 ## 6. Open items that block the next tier
 - A fetch of the CRA principal-residence page was declined; the tax section waits for Jared to approve a source or supply wording (OI-31).

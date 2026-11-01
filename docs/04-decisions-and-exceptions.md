@@ -103,4 +103,11 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 - **Page:** `/fraser-valley-commercial-market-report.html` (draft), linked from `/commercial.html`. Refreshed by dropping in new JSON files and re-running the script (next: GVR Q3 around January 2027, Avison Young Q4 around January 2027).
 - **PDFs are not committed.** The Avison Young report is marked all rights reserved and the repo's privacy is still unconfirmed (B-25). Only extracted facts and the source citation are kept.
 - **Published percentages are used where the source gives them** (for example office dollar volume +68.4%) rather than recomputed from rounded chart values.
-- **Scope:** jaredgibbons.ca already carries a commercial listing page, so the market report supports it. Per-city industrial pages (Surrey, Langley, Abbotsford, Delta, Chilliwack) can follow once Jared confirms he wants to market commercial property.
+- **Scope (Jared, 2026-11-01): commercial is wanted as a side mission, not the main thing, because he does receive commercial listings.** Residential work keeps priority. Commercial additions are limited to this report, its quarterly refresh and a few per-city industrial pages only when time allows.
+
+## D-46 — Verified local facts from the town-facts file; Fraser Valley short-term rental and zoning rules page
+- **Source:** "Town facts verification" file (2026-11-01), prepared for another project. Only the Fraser Valley facts were kept; they are in `docs/research/verified-local-facts-2026-11-01.md` with source URLs and unverified items.
+- **Page:** `/fraser-valley-short-term-rental-and-suite-rules.html` (draft) covers Chilliwack, Abbotsford, Mission, Maple Ridge, White Rock and the Hope/Harrison provincial exemption. Only verified facts are stated; unverified items (Chilliwack Bylaw 5395 adoption date, Abbotsford SSMUH day and bylaw number, White Rock s.5.8 conditions) are named as unconfirmed on the page.
+- **Maple Ridge:** Bylaw No. 7998-2024, adopted June 25, 2024, re-read by me on the City's own PDF and added to the Maple Ridge selling page.
+- **Rule:** a bylaw date or number goes on a page only if an official page states it. Gaps stay visible instead of being filled from memory.
+- **Next:** short-term rental and suite rules for Langley City, Langley Township, Surrey, Delta and Pitt Meadows have not been researched yet.
