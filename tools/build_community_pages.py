@@ -43,8 +43,9 @@ def slug_of(name, ak, taken):
 
 
 def title_for(name, city):
-    for t in (f'{name} Real Estate, {city}: Market Stats | Jared Gibbons REALTOR®', f'{name}, {city} Real Estate | Jared Gibbons REALTOR®', f'{name} Real Estate | Jared Gibbons REALTOR®'):
-        if len(t) <= 62: return t
+    # same pattern as the archived area pages ("Edmonds, Burnaby Homes for Sale | Jared Gibbons REALTOR®"), which is also Muse's primary keyword form
+    for t in (f'{name}, {city} Homes for Sale | Jared Gibbons REALTOR®', f'{name}, {city} Homes for Sale | Jared Gibbons', f'{name}, {city} Homes for Sale'):
+        if len(t) <= 66: return t
     return t
 
 
@@ -89,6 +90,7 @@ def main():
         mo = L.mlabel(last); mn = L.month_name(last)
         blocks = [{'t': 'notice', 'text': f'Draft for Jared\'s approval. Built only from the monthly MLS® figures (SnapStats) for {disp}. It has no local notes, street boundaries, schools or listing feed yet; see the open items below.'}]
         blocks.append({'t': 'p', 'text': f'{disp}, {city}: {L.num(ih)} houses and {L.num(ic)} condos and townhomes listed at the end of {mn}, with {L.num(sh)} and {L.num(sc)} sold in the month. It is one of {ncom} communities the {board} figures break out for {city}.', 'gen': 'community'})
+        blocks.append({'t': 'grid'})  # listing feed slot, same as the archived area pages; the preview shows the not-connected notice
         blocks += L.build(slug, False, ak, nm, months, area['name']) or []
         blocks += L.build(slug, True, ak, nm, months, area['name']) or []
         # --- monthly share of the city (decimals make this the most community-specific table on the page)
@@ -162,7 +164,7 @@ def main():
         if ch: faq.append({'q': f'Are there more or fewer homes for sale in {disp} than in {L.month_name(first)}?', 'a': f'Listings of ' + ' and '.join(ch) + f' between {L.mlabel(first)} and {mo}.'})
         data = {'status': 'draft', 'slug': slug, 'updated': '2026-11-01',
                 'community': {'area': ak, 'name': nm},
-                'new_page': {'title': title_for(disp, city), 'description': '', 'h1': f'{disp} Real Estate, {city}'},
+                'new_page': {'title': title_for(disp, city), 'description': '', 'h1': f'{disp}, {city} Homes for Sale'},
                 'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': city, 'href': f'/{HUB[ak]}.html'}, {'name': f'{disp} real estate', 'href': f'/{slug}.html'}],
                 'faq_heading': f'{disp} real estate: your questions answered', 'blocks': blocks, 'faq': faq,
                 'needs_from_muse': [f'Street boundaries of {nm} from the Paragon sub-area map, and its neighbouring communities',
@@ -171,8 +173,9 @@ def main():
         desc_bits = []
         if ih is not None: desc_bits.append(f'{L.num(ih)} houses')
         if ic is not None: desc_bits.append(f'{L.num(ic)} condos and townhomes')
-        desc = f'{disp}, {city}: ' + ' and '.join(desc_bits) + f' listed in {mn} {last[:4]}, monthly sales and sales ratio, and how it compares with {city}. Jared Gibbons, REALTOR®.'
-        if len(desc) > 158: desc = f'{disp}, {city}: listings, sales and sales ratio for {mn} {last[:4]} and how it compares with {city}. Jared Gibbons, REALTOR®.'
+        desc = f'{disp}, {city} homes for sale: ' + ' and '.join(desc_bits) + f' listed in {mn} {last[:4]}, monthly sales, and how it compares with {city}. Jared Gibbons, REALTOR®.'
+        if len(desc) > 158: desc = f'{disp}, {city} homes for sale: listings, sales and sales ratio for {mn} {last[:4]} and how it compares with {city}. Jared Gibbons, REALTOR®.'
+        if len(desc) > 158: desc = f'{disp}, {city} homes for sale and market figures for {mn} {last[:4]}. Jared Gibbons, REALTOR®.'
         data['new_page']['description'] = desc
         lf = os.path.join(ROOT, 'src/data/local', slug + '.json')
         json.dump(data, open(lf, 'w', encoding='utf-8'), indent=2, ensure_ascii=False); open(lf, 'a').write('\n'); made.append(slug)
