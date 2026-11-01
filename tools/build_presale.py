@@ -133,7 +133,16 @@ hb = [notice(), {'t': 'p', 'text': f"This is my working list of publicly markete
       {'t': 'h', 'level': 2, 'text': 'The list at a glance'},
       {'t': 'p', 'text': f"The list holds {n} projects: " + ', '.join(f"{yr[y]} completing in {y}" for y in sorted(yr)) + f". {len(fvn)} fall in the Fraser Valley Real Estate Board area and {n - len(fvn)} in the Greater Vancouver REALTORS® area. Of the {n}, {len(priced)} have a price published within the last three months and {dep} have a deposit structure published."},
       {'t': 'p', 'text': 'By city: ' + ', '.join(f"{c} {len(by[c])}" for c in order if len(by[c]) >= 3) + ', and the rest in smaller numbers.'}]
+OWN = {'Surrey': '/surrey-presale-condos-and-townhomes.html', 'Abbotsford': '/abbotsford-presale-condos-and-townhomes.html', 'Burnaby': '/burnaby-presale-condos-and-townhomes.html',
+       'Coquitlam': '/coquitlam-presale-condos-and-townhomes.html', 'Vancouver': '/vancouver-presale-condos-and-townhomes.html', 'Langley': '/new-construction-presales-in-langley-bc.html'}
+# A city that has its own presale page shows its full table there, not here (a repeated table makes both pages weaker); the hub links to it.
+hb += [{'t': 'table', 'caption': f'Presale projects by city, snapshot {a.asof}', 'head': ['City', 'Projects', 'Completing', 'Types on the list', 'Full list'],
+        'rows': [[c, str(len(by[c])), f"{min(p['year'] for p in by[c])}–{max(p['year'] for p in by[c])}" if min(p['year'] for p in by[c]) != max(p['year'] for p in by[c]) else str(by[c][0]['year']),
+                  ', '.join(f"{k.lower()} ({v})" for k, v in collections.Counter(p['type'] for p in by[c]).most_common()), 'Own page' if c in OWN else 'Table below'] for c in order],
+        'source': f'Compiled from public presale listings, read {a.asof}.'}]
+hb += [{'t': 'p', 'text': f'{c} presale projects: full table, {len(by[c])} projects', 'h': OWN[c]} for c in order if c in OWN]
 for c in order:
+    if c in OWN: continue
     ps = by[c]; hb += [{'t': 'h', 'level': 2, 'text': f'{c} presale projects ({len(ps)})'}, table(ps, f'{c} presale projects, snapshot {a.asof}')]
 hb += [HOW, CTA]
 write('presale-projects-fraser-valley-and-metro-vancouver', {'status': 'draft', 'slug': 'presale-projects-fraser-valley-and-metro-vancouver', 'updated': a.asof,

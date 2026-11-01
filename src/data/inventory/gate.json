@@ -1,21 +1,149 @@
 {
-  "as_of": "2026-11-01",
-  "source": "Paragon MLS active listings, FVREB + REBGV, supplied by Jared (docs/research/paragon-inventory-briefing-2026-11-01.md)",
-  "rule": "An inventory page needs at least 5 active listings. A page that falls short and is mostly a listing feed is set to noindex, follow and left out of the sitemap until the next monthly count reaches 5. A guide with substantial original text stays indexed and is flagged for review.",
-  "pages": {
-    "annacis-island": {"active": 0, "action": "noindex", "note": "Industrial area, no active residential listings"},
-    "tilbury": {"active": 0, "action": "noindex", "note": "Industrial area, no active residential listings"},
-    "lake-city-industrial": {"active": 0, "action": "noindex", "note": "Pure listing page"},
-    "oakdale": {"active": 3, "action": "noindex", "note": "Pure listing page"},
-    "braemar": {"active": 2, "action": "noindex", "note": "Pure listing page"},
-    "north-arm": {"active": 2, "action": "noindex", "note": "Pure listing page"},
-    "capilano-nv": {"active": 4, "action": "noindex", "note": "Pure listing page"},
-    "delbrook": {"active": 4, "action": "noindex", "note": "Pure listing page"},
-    "big-bend": {"active": 4, "action": "noindex", "note": "Pure listing page"},
-    "greentree-village": {"active": 4, "action": "noindex", "note": "Pure listing page"},
-    "westham-island-guide": {"active": 3, "action": "keep", "note": "Guide with substantial text; review"},
-    "north-maple-ridge-guide": {"active": 2, "action": "keep", "note": "Guide with substantial text; review"},
-    "west-meadows-pitt-meadows-guide": {"active": 2, "action": "keep", "note": "Guide with substantial text; review"},
-    "tsawwassen-farms": {"active": 4, "action": "keep", "note": "Acreage search count; page has substantial text; review"}
+ "as_of": "2026-11-01",
+ "source": "Paragon MLS active listings, FVREB + REBGV, supplied by Jared (docs/research/paragon-inventory-briefing-2026-11-01.md)",
+ "rule": "Feed pages (mostly a listing grid) are set to noindex, follow and left out of the sitemap only when the average of their last 3 monthly Paragon counts is under 5; one day's count never gates a page. Pages with substantial original text (kind guide) are never gated by listing count. New pages are separately held out of the index until they are at least 70% unique (uniqueness.json).",
+ "pages": {
+  "annacis-island": {
+   "kind": "feed",
+   "history": [
+    {
+     "month": "2026-11",
+     "active": 0
+    }
+   ],
+   "note": "Industrial area, no active residential listings"
+  },
+  "tilbury": {
+   "kind": "feed",
+   "history": [
+    {
+     "month": "2026-11",
+     "active": 0
+    }
+   ],
+   "note": "Industrial area, no active residential listings"
+  },
+  "lake-city-industrial": {
+   "kind": "feed",
+   "history": [
+    {
+     "month": "2026-11",
+     "active": 0
+    }
+   ],
+   "note": "Pure listing page"
+  },
+  "oakdale": {
+   "kind": "feed",
+   "history": [
+    {
+     "month": "2026-11",
+     "active": 3
+    }
+   ],
+   "note": "Pure listing page"
+  },
+  "braemar": {
+   "kind": "feed",
+   "history": [
+    {
+     "month": "2026-11",
+     "active": 2
+    }
+   ],
+   "note": "Pure listing page"
+  },
+  "north-arm": {
+   "kind": "feed",
+   "history": [
+    {
+     "month": "2026-11",
+     "active": 2
+    }
+   ],
+   "note": "Pure listing page"
+  },
+  "capilano-nv": {
+   "kind": "feed",
+   "history": [
+    {
+     "month": "2026-11",
+     "active": 4
+    }
+   ],
+   "note": "Pure listing page"
+  },
+  "delbrook": {
+   "kind": "feed",
+   "history": [
+    {
+     "month": "2026-11",
+     "active": 4
+    }
+   ],
+   "note": "Pure listing page"
+  },
+  "big-bend": {
+   "kind": "feed",
+   "history": [
+    {
+     "month": "2026-11",
+     "active": 4
+    }
+   ],
+   "note": "Pure listing page"
+  },
+  "greentree-village": {
+   "kind": "feed",
+   "history": [
+    {
+     "month": "2026-11",
+     "active": 4
+    }
+   ],
+   "note": "Pure listing page"
+  },
+  "westham-island-guide": {
+   "kind": "guide",
+   "history": [
+    {
+     "month": "2026-11",
+     "active": 3
+    }
+   ],
+   "note": "Guide with substantial text; review"
+  },
+  "north-maple-ridge-guide": {
+   "kind": "guide",
+   "history": [
+    {
+     "month": "2026-11",
+     "active": 2
+    }
+   ],
+   "note": "Guide with substantial text; review"
+  },
+  "west-meadows-pitt-meadows-guide": {
+   "kind": "guide",
+   "history": [
+    {
+     "month": "2026-11",
+     "active": 2
+    }
+   ],
+   "note": "Guide with substantial text; review"
+  },
+  "tsawwassen-farms": {
+   "kind": "guide",
+   "history": [
+    {
+     "month": "2026-11",
+     "active": 4
+    }
+   ],
+   "note": "Acreage search count; page has substantial text; review"
   }
+ },
+ "min_months": 3,
+ "min_active": 5
 }

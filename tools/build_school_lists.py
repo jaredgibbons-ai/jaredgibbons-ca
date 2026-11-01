@@ -102,10 +102,21 @@ def main():
         blocks = [{'t': 'p', 'text': intro}]
         if main_d:
             blocks.append({'t': 'p', 'text': f'Public schools here are run by {oxford([dlong(d) for d, c in main_d])}. Count by district: {dtxt}.'})
-        blocks.append({'t': 'p', 'text': ('The list includes alternate programs, continuing education centres and online schools that have a street address, so the totals run higher than the number of neighbourhood schools; they sit under "other public schools and programs" below. '
-                                           'The Ministry\'s own level field also mislabels some secondary schools as elementary, so this page reads the level from the school\'s name.')})
-        blocks.append({'t': 'p', 'text': ('If you are buying with a child in mind, the address matters more than the list. A school\'s catchment decides which children it must take, and districts change catchments and set their own rules for French immersion and other programs. '
-                                           'Ask the district about the exact address before you write an offer.')})
+        blocks.append({'t': 'p', 'text': 'Alternate programs, continuing education centres and online schools that have a street address sit under "other public schools and programs"; the level of every school is read from its name.'})
+        comm = collections.Counter(r['city'] for r in sch if lvl(r) != 'post').most_common()
+        if len(comm) > 1:
+            blocks.append({'t': 'p', 'text': f'By mailing community, the {disp} list splits as ' + oxford([f'{c} ({num(n)})' for c, n in comm]) + '.'})
+        def names(key, limit=8):
+            g = sorted({nm(r['name']) for r in groups.get(key, [])})
+            return oxford(g[:limit]) + (f' and {num(len(g) - limit)} more' if len(g) > limit else '')
+        if groups.get('secondary'):
+            blocks.append({'t': 'p', 'text': f'Public secondary schools with a {disp} address: {names("secondary")}.'})
+        fi_names = sorted({nm(r['name']) for r in sch if r.get('french_immersion') == 'YES'})
+        if fi_names:
+            blocks.append({'t': 'p', 'text': f'The Ministry file marks these {disp} schools as offering French Immersion: {oxford(fi_names[:10])}' + (f' and {num(len(fi_names) - 10)} more.' if len(fi_names) > 10 else '.')})
+        if groups.get('independent'):
+            blocks.append({'t': 'p', 'text': f'Independent schools listed for {disp} include {names("independent", 6)}.'})
+        blocks.append({'t': 'p', 'text': 'Before an offer, ask the district which school serves the exact street address.'})
         NOTE = {'surrey': 'The list covers the whole city, so schools in South Surrey, Cloverdale, Newton, Fleetwood and Guildford are in it because they carry Surrey addresses.',
                 'langley': 'Langley is two municipalities, the City of Langley and the Township of Langley. This list covers both, plus Aldergrove and Fort Langley, and the Community column shows where each school sits.',
                 'delta': 'Delta is one municipality made up of North Delta, Ladner and Tsawwassen, and this list covers all three.',
@@ -125,7 +136,7 @@ def main():
             multi = len({r['city'] for r in g}) > 1 or disp in SMALL_JOIN
             blocks.append({'t': 'h', 'level': 2, 'text': head.format(c=disp) + f' ({num(len(g))})'})
             if key == 'independent':
-                blocks.append({'t': 'p', 'text': 'Independent schools set their own admission rules and fees, and a home\'s address gives no priority for a place. Contact each school directly.'})
+                blocks.append({'t': 'p', 'text': 'An address gives no priority for a place at an independent school.'})
             hd = (['School', 'District area', 'Street address'] if key == 'independent' else ['Campus', 'Street address'] if key == 'post' else ['School', 'District', 'Street address'])
             fi = key in ('elementary', 'middle', 'secondary', 'other') and any(r.get('french_immersion') == 'YES' for r in g)
             if fi: hd = hd[:-1] + ['French Immersion', hd[-1]]
@@ -139,11 +150,10 @@ def main():
         if kids:
             blocks.append({'t': 'h', 'level': 2, 'text': f'Licensed childcare in {disp}'})
             blocks.append({'t': 'p', 'text': (f'The Ministry\'s Child Care Map registry lists {plural(len(kids), "licensed childcare facility", "licensed childcare facilities")} with a {disp} address: '
-                                              f'{num(group_n)} licensed group and {num(fam_n)} licensed family. The registry covers licensed care only. Care that does not need a licence is not listed by address, so a family may find more options than this count suggests. '
-                                              'Names and addresses change often, so check the registry before you rely on any one facility.')})
+                                              f'{num(group_n)} licensed group and {num(fam_n)} licensed family. Unlicensed care is not in the registry.')})
         faq = [{'q': f'How many schools are in {disp}, BC?', 'a': f'The BC Ministry of Education and Child Care list shows {num(k12)} schools with a {disp} street address: {plural(pub, "public school")} and {plural(ind, "independent school")}. The count includes alternate programs and online schools that have a street address.'},
                {'q': f'Which school district covers {disp}?', 'a': (f'Public schools with a {disp} address are run by {oxford([dlong(d) for d, c in main_d])}.' if main_d else 'See the district listed beside each school.')},
-               {'q': 'How do I find which school a home is zoned for?', 'a': 'Ask the school district to confirm the catchment school for the exact street address. Catchments change, and living near a school does not guarantee a place at it.'}]
+               {'q': f'How do I find the catchment school for a {disp} address?', 'a': f'Ask {oxford([dlong(d) for d, c in main_d][:2]) if main_d else "the school district"} to confirm it for the exact street address.'}]
         d = {'status': 'generated', 'slug': f'schools-in-{slug}-bc', 'updated': UPDATED,
              'new_page': {'title': title, 'description': desc, 'h1': h1},
              'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': h1, 'href': f'/schools-in-{slug}-bc.html'}],

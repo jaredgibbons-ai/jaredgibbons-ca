@@ -41,9 +41,9 @@ def words(s): return re.findall(r"[A-Za-z0-9$%'’.\-]+", s.lower())
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--slugs', default=''); ap.add_argument('--csv', default='')
-    ap.add_argument('--min-unique', type=float, default=0.7); ap.add_argument('--min-words', type=int, default=300)
+    ap.add_argument('--write-gate', action='store_true'); ap.add_argument('--min-unique', type=float, default=0.7); ap.add_argument('--min-words', type=int, default=300)
     a = ap.parse_args()
-    pages, shingles, cnt = {}, {}, Counter()
+    pages, shingles, cnt = {}, {}, Counter(); new_slugs = set()
     for f in glob.glob(os.path.join(ROOT, 'src/data/pages/*.json')):
         d = json.load(open(f)); lf = os.path.join(ROOT, 'src/data/local', d['slug'] + '.json')
         local = json.load(open(lf)) if os.path.exists(lf) else None
@@ -51,6 +51,12 @@ def main():
         sh = {' '.join(w[i:i + 8]) for i in range(max(0, len(w) - 7))}
         pages[d['slug']] = (d, len(w), local); shingles[d['slug']] = sh
         cnt.update(sh)
+    for f in glob.glob(os.path.join(ROOT, 'src/data/local/*.json')):  # brand-new pages (no archive counterpart) are measured too
+        l = json.load(open(f)); slug = os.path.basename(f)[:-5]
+        if not l.get('new_page') or slug in pages: continue
+        d = {'slug': slug, 'path': f'/{slug}.html', 'blocks': [{'t': 'h', 'level': 1, 'text': l['new_page']['h1']}]}
+        w = words(page_text(slug, d, l)); sh = {' '.join(w[i:i + 8]) for i in range(max(0, len(w) - 7))}
+        pages[slug] = (d, len(w), l); shingles[slug] = sh; cnt.update(sh); new_slugs.add(slug)
     rows = []
     for s, (d, n, local) in pages.items():
         sh = shingles[s]; ua = sum(1 for x in sh if cnt[x] == 1) / len(sh) if sh else 0
@@ -65,6 +71,11 @@ def main():
             w = csv.writer(f); w.writerow(['slug', 'path', 'words', 'unique', 'unique_all', 'layer']); w.writerows(rows)
     bad = [r for r in rows if r[0].endswith('-guide') and (r[3] < a.min_unique or r[2] < a.min_words)]
     print(f'guides under thresholds: {len(bad)}')
+    newrows = [r for r in rows if r[0] in new_slugs]
+    low = [r for r in newrows if r[3] < a.min_unique]
+    print(f'new pages: {len(newrows)}; under {a.min_unique}: {len(low)}')
+    if a.write_gate:  # launch gate: new pages under the threshold stay noindex and out of the sitemap until their copy is raised
+        json.dump({'min_unique': a.min_unique, 'scores': {r[0]: r[3] for r in sorted(newrows)}}, open(os.path.join(ROOT, 'src/data/inventory/uniqueness.json'), 'w'), indent=1); open(os.path.join(ROOT, 'src/data/inventory/uniqueness.json'), 'a').write('\n')
 
 
 if __name__ == '__main__':

@@ -22,7 +22,7 @@ export const GET: APIRoute = () => {
     }
   }
   for (const [f, l] of Object.entries(import.meta.glob('../data/local/*.json', { eager: true, import: 'default' }) as Record<string, any>)) {
-    if (l.new_page && l.status !== 'hold') urls.add(`https://jaredgibbons.ca/${f.split('/').pop()!.replace(/\.json$/, '')}.html`);
+    if (l.new_page && l.status !== 'hold' && !isGated(f.split('/').pop()!.replace(/\.json$/, ''))) urls.add(`https://jaredgibbons.ca/${f.split('/').pop()!.replace(/\.json$/, '')}.html`);
   }
   urls.add('https://jaredgibbons.ca/');
   const body = [...urls].sort().map((u) => `  <url><loc>${esc(u)}</loc></url>`).join('\n');
