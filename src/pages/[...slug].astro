@@ -1,9 +1,19 @@
 ---
 // Generic archive-driven pages. Bespoke pages (index, fort-langley, reviews) are explicit files and win.
 import GenericPage from '../components/GenericPage.astro';
+import SEO_OVERRIDES from '../data/seo-overrides.json';
 export function getStaticPaths() {
   const mods = import.meta.glob('../data/pages/*.json', { eager: true }) as Record<string, any>;
   const out = Object.values(mods).map((m) => ({ params: { slug: m.default.slug }, props: { page: m.default } }));
+  // Approved keyword titles (src/data/seo-overrides.json, tools/build_seo_overrides.py): applied over the archive record, which stays untouched.
+  for (const o of out) {
+    const ov = (SEO_OVERRIDES as Record<string, any>)[o.params.slug];
+    if (!ov) continue;
+    const pg = o.props.page; pg.seo = { ...(pg.seo || {}) };
+    if (ov.title) { pg.title = ov.title; pg.seo.Title = ov.title; pg.seo['OG title'] = ov.title; }
+    if (ov.description) { pg.seo['Meta description'] = ov.description; pg.seo['OG description'] = ov.description; }
+    if (ov.h1) { pg.seo.H1 = ov.h1; const h = pg.blocks.find((b: any) => b.t === 'h' && b.level === 1); if (h) h.text = ov.h1; }
+  }
   // New pages (no archive counterpart) are authored as src/data/local/<slug>.json with a `new_page` header.
   const taken = new Set(out.map((o) => o.params.slug));
   const locals = import.meta.glob('../data/local/*.json', { eager: true, import: 'default' }) as Record<string, any>;
