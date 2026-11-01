@@ -34,6 +34,11 @@ ALIAS = {
     'eagle-ridge-cq': ('coquitlam', 'Eagle Ridge'), 'capitol-hill-bn': ('burnaby', 'Capitol Hill'), 'edmonds-be': ('burnaby', 'Edmonds'),
     'queen-mary-park-surrey': ('surrey', 'Queen Mary Park'), 'cloverdale-bc': ('cloverdale', 'Cloverdale'), 'downtown-nw': ('new-westminster', 'Downtown'),
     'langley-city': ('langley', 'Langley City'),
+    # existing pages whose slugs carry a city code or a home-type suffix
+    'central-bn': ('burnaby', 'Central'), 'central-park-bs': ('burnaby', 'Central Park'), 'forest-glen-bs': ('burnaby', 'Forest Glen'),
+    'forest-hills-bn': ('burnaby', 'Forest Hills'), 'metrotown-homes-for-sale': ('burnaby', 'Metrotown'), 'fraserview-nw': ('new-westminster', 'Fraserview'),
+    'anmore-homes-for-sale': ('port-moody', 'Anmore'), 'grandview-surrey': ('south-surrey-white-rock', 'Grandview'),
+    'sunnyside-park-surrey': ('south-surrey-white-rock', 'Sunnyside Park'),
 }
 # the same community name exists under more than one area key: pin the area where the slug alone would be ambiguous
 AMBIG = {'central': 'burnaby', 'downtown': 'new-westminster', 'north': 'maple-ridge'}
@@ -89,11 +94,13 @@ def build(slug, guide, ak, name, months, city_name):
     area = months[last]['areas'][ak]
     blocks = []
     cur = {t: dict(S[t])[last] for t in TL}
+    act = {t: sum((r['inventory'] or 0) + (r['sales'] or 0) for r in have[t]) > 0 for t in TL}  # a home type with nothing listed or sold in any month is left out
     span = f'{month_name(first)} to {month_name(last)} {last[:4]}'
     # Template wording is identical on every page (search engines treat that as boilerplate); city names stay out of it so sibling pages in one city do not share phrases.
 
     def line(t):
         r = cur[t]
+        if not act[t]: return f'No {TL[t].lower()} were listed or sold in {name} between {month_name(first)} and {month_name(last)}.'
         if r is None: return f'{TL[t]} did not appear as a separate line for {name} in {mlabel(last)}.'
         k = kind(r['ratio'])
         return (f'{TL[t]}: {num(r["inventory"])} listed at month end and {num(r["sales"])} sold in {month_name(last)}, a sales ratio of {pct(r["ratio"])}'
@@ -101,19 +108,23 @@ def build(slug, guide, ak, name, months, city_name):
     if not guide:
         blocks.append({'t': 'h', 'level': 2, 'text': f'{name} homes listed and sold, {span}', 'gen': 'snapstats'})
         blocks.append({'t': 'p', 'text': f'{name}, {mlabel(last)}. ' + line('detached') + ' ' + line('condo_townhome'), 'gen': 'snapstats'})
+        tl_ = [t for t in TL if act[t]]; short = {'detached': 'Houses', 'condo_townhome': 'Condos and townhomes'}
+        head = ['Month']
+        for t in tl_: head += [f'{short[t]} listed', f'{short[t]} sold', f'{short[t]} ratio']
         rows = []
         for m in keys:
-            d, c = dict(S['detached'])[m], dict(S['condo_townhome'])[m]
-            rows.append([mlabel(m), num(d['inventory']) if d else '—', num(d['sales']) if d else '—', pct(d['ratio']) if d else '—',
-                         num(c['inventory']) if c else '—', num(c['sales']) if c else '—', pct(c['ratio']) if c else '—'])
-        blocks.append({'t': 'table', 'caption': f'{name} listings, sales and sales ratio by month', 'head': ['Month', 'Houses listed', 'Houses sold', 'Houses ratio', 'Condos and townhomes listed', 'Condos and townhomes sold', 'Condos and townhomes ratio'], 'rows': rows, 'source': SRC + RATIO_NOTE, 'gen': 'snapstats'})
+            row = [mlabel(m)]
+            for t in tl_:
+                r_ = dict(S[t])[m]; row += [num(r_['inventory']) if r_ else '—', num(r_['sales']) if r_ else '—', pct(r_['ratio']) if r_ else '—']
+            rows.append(row)
+        blocks.append({'t': 'table', 'caption': f'{name} listings, sales and sales ratio by month', 'head': head, 'rows': rows, 'source': SRC + RATIO_NOTE, 'gen': 'snapstats'})
         bits = []
         for t in TL:
             hv = have[t]
-            if not hv: continue
+            if not hv or not act[t]: continue
             sold = sum(r['sales'] or 0 for r in hv); inv = sum(r['inventory'] or 0 for r in hv) / len(hv)
             per = sold / len(hv)
-            sent = f'{TL[t].lower()} sold {sold} over {len(hv)} months against an average of {inv:.1f} listed'
+            sent = f'{TL[t]}: {sold} sold over {len(hv)} months against an average of {inv:.1f} listed'
             if per > 0: sent += f', about {inv / per:.1f} months of listings at that pace'
             bits.append(sent)
             top = max(S[t], key=lambda x: (x[1]['sales'] if x[1] else -1))
@@ -125,7 +136,7 @@ def build(slug, guide, ak, name, months, city_name):
         rows = []; parts = []
         for t in TL:
             r = cur[t]; tot = area[t]['total']
-            if not r or not tot['inventory']: continue
+            if not r or not tot['inventory'] or not act[t]: continue
             shareI = 100 * r['inventory'] / tot['inventory']; shareS = (100 * r['sales'] / tot['sales']) if tot['sales'] else None
             elig = sorted([c for c in area[t]['communities'] if (c['inventory'] or 0) >= 10 and c['ratio'] is not None], key=lambda c: -c['ratio'])
             rank = next((i + 1 for i, c in enumerate(elig) if c['name'] == name), None)
@@ -133,11 +144,11 @@ def build(slug, guide, ak, name, months, city_name):
             fr = dict(S[t])[first]
             if fr:
                 d = r['inventory'] - fr['inventory']
-                parts.append(f'{TL[t].lower()} listings went from {num(fr["inventory"])} to {num(r["inventory"])}' if d else f'{TL[t].lower()} listings held at {num(r["inventory"])}')
+                parts.append(f'{TL[t].lower()}: listings went from {num(fr["inventory"])} to {num(r["inventory"])}' if d else f'{TL[t].lower()}: listings held at {num(r["inventory"])}')
             cum = [(m, x) for m, x in S[t] if x]
             if cum:
                 tsales = sum(x['sales'] or 0 for _, x in cum); csales = sum(sum(c['sales'] or 0 for c in months[m]['areas'][ak][t]['communities']) for m, _ in cum)
-                if csales: parts[-1] += f', and it took {100 * tsales / csales:.1f}% of the city’s {csales} {TL[t].lower()} sales over the period' if parts else ''
+                if csales: parts[-1] += f', and it took {100 * tsales / csales:.1f}% of the city’s {csales} sales over the period' if parts else ''
         if rows:
             blocks.append({'t': 'table', 'caption': f'{name} against the whole city, {mlabel(last)}', 'head': ['Home type', 'Share of city listings', 'Share of city sales', 'Community sales ratio against city', 'Rank on sales ratio'], 'rows': rows, 'source': SRC + ' Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse.' + RATIO_NOTE, 'gen': 'snapstats'})
         if parts:
@@ -285,6 +296,9 @@ def main():
             local['updated'] = '2026-11-01'
             json.dump(local, open(lf, 'w', encoding='utf-8'), indent=2, ensure_ascii=False); open(lf, 'a').write('\n'); cn += 1; mapped[slug] = [ak, '+'.join(cuts)]
     print('city/home-type pages updated', cn)
+    for lf in glob.glob(os.path.join(ROOT, 'src/data/local/*.json')):  # community pages generated by tools/build_community_pages.py
+        l = json.load(open(lf, encoding='utf-8'))
+        if l.get('community'): used.add((l['community']['area'], l['community']['name'])); mapped[os.path.basename(lf)[:-5]] = [l['community']['area'], l['community']['name']]
     allc = {(ak, c['name']) for ak, a in d_last['areas'].items() for t in TL for c in a[t]['communities']}
     json.dump({'mapped': mapped, 'communities_without_page': sorted(allc - used)}, open(os.path.join(ROOT, 'src/data/snapstats/_mapping.json'), 'w'), indent=1)
     print('updated', n, 'pages;', len(used), 'communities matched;', len(allc - used), 'communities with no page')

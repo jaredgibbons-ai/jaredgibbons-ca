@@ -9,6 +9,8 @@ import Cta from './Cta.astro';
 import ReviewCards from './ReviewCards.astro';
 import FormStub from './FormStub.astro';
 import { isGated } from '../lib/inventory';
+import { pickReviews } from '../lib/reviews';
+import REVIEW_EXCERPTS from '../data/review-excerpts.json';
 
 const { page } = Astro.props as { page: any };
 const seo = page.seo || {};
@@ -30,7 +32,12 @@ if (local) {
   const at = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 2);
   const faqBlocks = (local.faq ?? []).length ? [{ t: 'h', level: 2, text: local.faq_heading || 'Common questions' }, ...local.faq.flatMap((f: any) => [{ t: 'h', level: 3, text: f.q }, { t: 'p', parts: [{ t: f.a }] }])] : [];
   const cut = at < 0 ? page.blocks.length : at;
-  page.blocks = [...page.blocks.slice(0, cut), ...local.blocks.map((b: any) => b.t === 'p' && !b.parts ? { t: 'p', parts: [{ t: b.text, ...(b.h ? { h: b.h } : {}) }] } : b), ...faqBlocks, ...page.blocks.slice(cut)];
+  const asPart = (b: any) => b.t === 'p' && !b.parts ? { t: 'p', parts: [{ t: b.text, ...(b.h ? { h: b.h } : {}) }] } : b;
+  // pos:'end' blocks (related-link lists) go after the archive content, so the top of the page stays as it was.
+  const endBlocks = local.blocks.filter((b: any) => b.pos === 'end').map(asPart);
+  page.blocks = [...page.blocks.slice(0, cut), ...local.blocks.filter((b: any) => b.pos !== 'end').map(asPart), ...faqBlocks, ...page.blocks.slice(cut), ...endBlocks];
+  // Pages built from the local layer alone have no archive review block: give them one.
+  if (local.new_page && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.push({ t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
 }
 
 // Split into render sections at each level-2 heading; reviews and grid get their own sections.
@@ -63,7 +70,7 @@ let fid = 0;
 >
 <main id="main">
   {sections.map((sec, si) => {
-    if (sec.kind === 'reviews') return <ReviewCards heading={sec.block.heading} intro={sec.block.intro} items={sec.block.items} id={`reviews-${si}`} />;
+    if (sec.kind === 'reviews') return <ReviewCards heading={sec.block.heading} intro={sec.block.intro} items={pickReviews(page.slug, REVIEW_EXCERPTS.items)} id={`reviews-${si}`} />;
     if (sec.kind === 'grid') return (
       <section class="section section--cream section--tight" aria-label="Listings">
         <div class="wrap">
