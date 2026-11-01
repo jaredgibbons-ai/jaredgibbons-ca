@@ -39,6 +39,7 @@ const telHref = (s: string) => 'tel:' + s;
   ogTitle={seo['OG title'] || undefined}
   ogDescription={seo['OG description'] || undefined}
   ogImage={seo['OG image'] || undefined}
+  robots={page.status === 'Expired' ? 'noindex, follow' : (seo['Meta robots'] || 'index, follow')}
   footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
   footerCell={true}
   brandHref="/index.html"

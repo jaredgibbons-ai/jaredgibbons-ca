@@ -1,0 +1,21 @@
+{
+  "as_of": "2026-11-01",
+  "source": "Paragon MLS active listings, FVREB + REBGV, supplied by Jared (docs/research/paragon-inventory-briefing-2026-11-01.md)",
+  "rule": "An inventory page needs at least 5 active listings. A page that falls short and is mostly a listing feed is set to noindex, follow and left out of the sitemap until the next monthly count reaches 5. A guide with substantial original text stays indexed and is flagged for review.",
+  "pages": {
+    "annacis-island": {"active": 0, "action": "noindex", "note": "Industrial area, no active residential listings"},
+    "tilbury": {"active": 0, "action": "noindex", "note": "Industrial area, no active residential listings"},
+    "lake-city-industrial": {"active": 0, "action": "noindex", "note": "Pure listing page"},
+    "oakdale": {"active": 3, "action": "noindex", "note": "Pure listing page"},
+    "braemar": {"active": 2, "action": "noindex", "note": "Pure listing page"},
+    "north-arm": {"active": 2, "action": "noindex", "note": "Pure listing page"},
+    "capilano-nv": {"active": 4, "action": "noindex", "note": "Pure listing page"},
+    "delbrook": {"active": 4, "action": "noindex", "note": "Pure listing page"},
+    "big-bend": {"active": 4, "action": "noindex", "note": "Pure listing page"},
+    "greentree-village": {"active": 4, "action": "noindex", "note": "Pure listing page"},
+    "westham-island-guide": {"active": 3, "action": "keep", "note": "Guide with substantial text; review"},
+    "north-maple-ridge-guide": {"active": 2, "action": "keep", "note": "Guide with substantial text; review"},
+    "west-meadows-pitt-meadows-guide": {"active": 2, "action": "keep", "note": "Guide with substantial text; review"},
+    "tsawwassen-farms": {"active": 4, "action": "keep", "note": "Acreage search count; page has substantial text; review"}
+  }
+}

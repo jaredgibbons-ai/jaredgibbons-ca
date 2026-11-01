@@ -8,6 +8,7 @@ import Rich from './Rich.astro';
 import Cta from './Cta.astro';
 import ReviewCards from './ReviewCards.astro';
 import FormStub from './FormStub.astro';
+import { isGated } from '../lib/inventory';
 
 const { page } = Astro.props as { page: any };
 const seo = page.seo || {};
@@ -55,6 +56,7 @@ let fid = 0;
   ogDescription={seo['OG description'] || undefined}
   ogImage={seo['OG image'] || undefined}
   jsonld={jsonld}
+  robots={isGated(page.slug) ? 'noindex, follow' : (seo['Meta robots'] || 'index, follow')}
   footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
   footerCell={true}
   brandHref="/index.html"

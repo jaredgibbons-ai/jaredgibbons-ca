@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "test": "node --test tests/worker.test.mjs tests/forms.test.mjs",
+    "test": "node --test tests/worker.test.mjs tests/forms.test.mjs tests/inventory.test.mjs",
     "rules": "python3 -I tools/build_rules.py"
   },
   "dependencies": {
