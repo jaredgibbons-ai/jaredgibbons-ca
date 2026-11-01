@@ -5,7 +5,7 @@
 const WANT: [RegExp, string, number][] = [
   [/condo|apartment|penthouse|presale|strata/, 'condo', 3], [/townho(me|use)/, 'townhome', 3], [/duplex/, 'duplex', 3],
   [/sell|selling|sold|evaluation|home-value|listing-presentation/, 'sell', 2.5], [/first-time|first-home|ftb|gst-rebate|ptt/, 'first', 2.5],
-  [/commercial|lease|industrial/, 'commercial', 3], [/invest|rental/, 'invest', 3],
+  [/commercial|lease|industrial|tilbury|annacis|west-chilliwack/, 'commercial', 3], [/invest|rental/, 'invest', 3],
   [/langley|aldergrove|willoughby|walnut-grove|murrayville|brookswood/, 'langley', 1.5], [/surrey|white-rock|ocean-park|crescent|cloverdale|grandview|morgan|elgin/, 'surrey', 1.5],
   [/ladner|tsawwassen|delta/, 'ladner', 1.5], [/port-coquitlam|coquitlam|poco/, 'poco', 1.5], [/vancouver|burnaby|new-westminster/, 'vancouver', 1.2],
   [/homes-for-sale|houses|real-estate|guide|acreage|waterfront|ocean-view/, 'house', 0.8], [/homes-for-sale|buy|guide|real-estate/, 'buy', 0.6],

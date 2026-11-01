@@ -40,6 +40,9 @@ if (local) {
   if (local.new_page && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.push({ t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
 }
 
+// Commercial and industrial pages carry no review block in the archive; Jared asked for the same Google excerpts there (commercial ones first, then residential).
+if (/commercial|industrial/i.test(page.slug + ' ' + (page.title || '')) && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.push({ t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
+
 // Split into render sections at each level-2 heading; reviews and grid get their own sections.
 type Sec = { kind: 'text' | 'reviews' | 'grid'; blocks: any[]; block?: any };
 const sections: Sec[] = [];
