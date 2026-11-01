@@ -111,3 +111,12 @@ test('recaptured pages are served', () => {
   for (const p of ['/about.html', '/testimonials.html', '/whalley-guide.html', '/metrotown-homes-for-sale.html', '/our-listings.html/listing.r2225442-117-14833-61-avenue-surrey-bc.102314544'])
     assert.equal(R(p).type, 'asset', p);
 });
+
+test('redirects added on the live site after the archive: old slugs reach live pages, none is a loop or a miss', () => {
+  const pairs = { '/broiler-farms.html': '/broiler-farms-for-sale-bc.html', '/contact-us': '/contact.html', '/cloverdale.html': '/cloverdale-bc.html', '/brunette.html': '/new-westminster-homes-for-sale.html', '/west-meadows-pitt-meadows.html': '/west-meadows-pitt-meadows-guide.html', '/property-search.html': '/recip.html' };
+  for (const [from, to] of Object.entries(pairs)) assert.deepEqual(R(from), { type: 'redirect', location: to, status: 301 }, from);
+  for (const x of rules.redirects.filter((y) => y.source === 'live-observed' && !y.to.includes('listing.') && y.to !== '/recip.html')) {
+    assert.ok(exists(x.to) || exists(x.to.replace(/\/?$/, '')), `${x.from} -> ${x.to} must be a built page`);
+    assert.equal(R(x.to).type, 'asset', x.to);
+  }
+});
