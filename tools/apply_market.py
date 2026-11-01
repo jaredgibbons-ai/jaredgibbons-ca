@@ -3,6 +3,7 @@
 A local file opts in with a top-level "market_spec":
     {"board": "gvr", "area": "Maple Ridge", "label": "Maple Ridge"}                           # GVR HPI only
     {"board": "fvreb", "area": "Abbotsford", "summary": "Abbotsford", "label": "Abbotsford"}   # HPI + MLS summary
+Optional "at": N puts the section after the first N hand-written blocks (default: end).
 Generated blocks carry "gen": "market"; they are removed and rebuilt on every run, so a new month's file refreshes every page.
     python3 -I tools/apply_market.py [--month 2026-09]
 """
@@ -55,7 +56,9 @@ def main():
     for f in glob.glob(os.path.join(ROOT, 'src/data/local/*.json')):
         d = json.load(open(f, encoding='utf-8'))
         if 'market_spec' not in d: continue
-        d['blocks'] = [b for b in d['blocks'] if b.get('gen') != 'market'] + build(d['market_spec'], data, month)
+        keep = [b for b in d['blocks'] if b.get('gen') != 'market']
+        at = d['market_spec'].get('at', len(keep))  # number of hand-written blocks that come before the market section
+        d['blocks'] = keep[:at] + build(d['market_spec'], data, month) + keep[at:]
         json.dump(d, open(f, 'w', encoding='utf-8'), indent=2, ensure_ascii=False); open(f, 'a').write('\n'); n += 1
     print('updated', n, 'local files for', month)
 

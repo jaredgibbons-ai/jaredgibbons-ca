@@ -3,7 +3,19 @@
 import GenericPage from '../components/GenericPage.astro';
 export function getStaticPaths() {
   const mods = import.meta.glob('../data/pages/*.json', { eager: true }) as Record<string, any>;
-  return Object.values(mods).map((m) => ({ params: { slug: m.default.slug }, props: { page: m.default } }));
+  const out = Object.values(mods).map((m) => ({ params: { slug: m.default.slug }, props: { page: m.default } }));
+  // New pages (no archive counterpart) are authored as src/data/local/<slug>.json with a `new_page` header.
+  const taken = new Set(out.map((o) => o.params.slug));
+  const locals = import.meta.glob('../data/local/*.json', { eager: true, import: 'default' }) as Record<string, any>;
+  for (const [f, l] of Object.entries(locals)) {
+    const slug = f.split('/').pop()!.replace(/\.json$/, '');
+    if (!l.new_page || taken.has(slug)) continue;
+    const n = l.new_page; const canonical = `https://jaredgibbons.ca/${slug}.html`;
+    out.push({ params: { slug }, props: { page: { slug, path: `/${slug}.html`, url: canonical, kind: 'page', title: n.title, canonical,
+      seo: { Title: n.title, 'Meta description': n.description, H1: n.h1, Canonical: canonical, 'Meta robots': 'index, follow', 'OG title': n.title, 'OG description': n.description },
+      blocks: [{ t: 'h', level: 1, text: n.h1 }], forms: [], iframes: [] } } });
+  }
+  return out;
 }
 const { page } = Astro.props as { page: any };
 ---
