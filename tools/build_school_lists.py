@@ -1,0 +1,167 @@
+"""City school lists: one 'Schools in <city>, BC' page per city, built only from education-inventory.csv.
+
+Every number and row comes from the CSV (BC Ministry of Education and Child Care school list 2025/26 updated July 2026; Province's
+post-secondary locations file; Child Care Map registry). Nothing is estimated. Level is read from the school's name where the name says
+secondary or middle, because the Ministry's own level field mislabels some secondary schools as elementary (Muse confirmed this on the raw file).
+
+Writes src/data/local/schools-in-<slug>-bc.json (new pages, status 'generated') and a link block (gen 'schoollist') on each city hub page.
+    python3 -I tools/build_school_lists.py
+"""
+import csv, glob, json, os, re, collections
+
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
+CSV = os.path.join(ROOT, 'docs/research/education-inventory-2026-11-01.csv')
+UPDATED = '2026-11-01'
+
+# slug, display name, csv cities, hub pages that get a link, nearby-context sentence (verifiable only)
+CITIES = [
+    ('surrey', 'Surrey', ['Surrey'], ['surrey-homes-for-sale', 'surrey-neighbourhood-guides', 'south-surrey-homes-for-sale'], 'surrey-homes-for-sale', 'surrey-neighbourhood-guides'),
+    ('langley', 'Langley', ['Langley', 'Aldergrove', 'Fort Langley'], ['langley-homes-for-sale', 'langley-neighbourhood-guides', 'city-of-langley-homes-for-sale'], 'langley-homes-for-sale', 'langley-neighbourhood-guides'),
+    ('abbotsford', 'Abbotsford', ['Abbotsford'], ['abbotsford-homes-for-sale', 'abbotsford-neighbourhood-guides'], 'abbotsford-homes-for-sale', 'abbotsford-neighbourhood-guides'),
+    ('chilliwack', 'Chilliwack', ['Chilliwack', 'Cultus Lake', 'Rosedale'], ['chilliwack-homes-for-sale', 'chilliwack-neighbourhood-guides'], 'chilliwack-homes-for-sale', 'chilliwack-neighbourhood-guides'),
+    ('delta', 'Delta', ['Delta'], ['delta-homes-for-sale', 'delta-neighbourhood-guides'], 'delta-homes-for-sale', 'delta-neighbourhood-guides'),
+    ('maple-ridge-pitt-meadows', 'Maple Ridge and Pitt Meadows', ['Maple Ridge', 'Pitt Meadows'], ['maple-ridge-homes-for-sale', 'maple-ridge-neighbourhood-guides', 'pitt-meadows-homes-for-sale'], 'maple-ridge-homes-for-sale', 'maple-ridge-neighbourhood-guides'),
+    ('mission', 'Mission', ['Mission', 'Dewdney', 'Deroche'], ['mission-homes-for-sale', 'mission-neighbourhood-guides'], 'mission-homes-for-sale', 'mission-neighbourhood-guides'),
+    ('hope-agassiz-harrison', 'Hope, Agassiz and Harrison Hot Springs', ['Hope', 'Agassiz', 'Harrison Hot Springs'], [], None, None),
+    ('vancouver', 'Vancouver', ['Vancouver'], ['vancouver-homes-for-sale'], 'vancouver-homes-for-sale', None),
+    ('burnaby', 'Burnaby', ['Burnaby'], ['burnaby-homes-for-sale'], 'burnaby-homes-for-sale', None),
+    ('richmond', 'Richmond', ['Richmond'], ['richmond-homes-for-sale'], 'richmond-homes-for-sale', None),
+    ('coquitlam', 'Coquitlam', ['Coquitlam'], ['coquitlam-homes-for-sale'], 'coquitlam-homes-for-sale', None),
+    ('port-coquitlam', 'Port Coquitlam', ['Port Coquitlam'], ['port-coquitlam-homes-for-sale'], 'port-coquitlam-homes-for-sale', None),
+    ('port-moody-anmore', 'Port Moody and Anmore', ['Port Moody', 'Anmore'], ['port-moody-homes-for-sale', 'anmore-homes-for-sale'], 'port-moody-homes-for-sale', None),
+    ('new-westminster', 'New Westminster', ['New Westminster'], ['new-westminster-homes-for-sale'], 'new-westminster-homes-for-sale', None),
+    ('north-vancouver', 'North Vancouver', ['North Vancouver'], ['north-vancouver-homes-for-sale'], 'north-vancouver-homes-for-sale', None),
+    ('west-vancouver', 'West Vancouver', ['West Vancouver'], ['west-vancouver-homes-for-sale'], 'west-vancouver-homes-for-sale', None),
+]
+SMALL_JOIN = {'Maple Ridge and Pitt Meadows', 'Port Moody and Anmore', 'Hope, Agassiz and Harrison Hot Springs'}
+
+
+def num(n): return f'{n:,}'
+def plural(n, one, many=None): return f'{num(n)} {one if n == 1 else (many or one + "s")}'
+
+
+def lvl(r):
+    n, c = r['name'].lower(), r['category']
+    if c in ('college', 'university'): return 'post'
+    if r['public_or_private'] != 'Public': return 'independent'
+    if 'secondary' in n or 'senior sec' in n: return 'secondary'
+    if re.search(r'alternate|continuing ed|online|education services|learning cent|distributed|adult', n): return 'other'
+    if 'middle' in n: return 'middle'
+    return {'elementary': 'elementary', 'middle': 'middle', 'secondary': 'secondary'}.get(c, 'other')
+
+
+def addr(a):
+    a = (a or '').strip()
+    return a if re.match(r'^[0-9#]', a) and re.search(r'[A-Za-z]', a) else 'Mailing address only in the source'
+
+
+def nm(n):
+    n = re.sub(r'^Ecole ', 'École ', n)
+    m = re.match(r'^(.+?) — (.+)$', n)
+    return n if not m else (m.group(1) if (m.group(1) in m.group(2) or 'Campus' in m.group(2) or 'Main' in m.group(2)) else f'{m.group(1)} ({m.group(2)})')
+
+
+def dist(r): return r['district_or_authority']
+
+
+def dlong(d): return re.sub(r'^SD(\d+) (.*)$', r'School District \1 (\2)', d)
+
+
+def main():
+    rows = list(csv.DictReader(open(CSV, encoding='utf-8')))
+    out_slugs = []
+    for slug, disp, cities, hubs, homes, guides in CITIES:
+        sch = [r for r in rows if r['city'] in cities and r['category'] != 'daycare']
+        kids = [r for r in rows if r['city'] in cities and r['category'] == 'daycare']
+        groups = collections.defaultdict(list)
+        for r in sch: groups[lvl(r)].append(r)
+        k12 = sum(len(v) for k, v in groups.items() if k != 'post')
+        pub = sum(len(groups[k]) for k in ('elementary', 'middle', 'secondary', 'other'))
+        ind = len(groups['independent']); post = len(groups['post'])
+        districts = sorted({dist(r) for r in sch if lvl(r) in ('elementary', 'middle', 'secondary', 'other')})
+        main_d = collections.Counter(dist(r) for r in sch if lvl(r) in ('elementary', 'middle', 'secondary', 'other')).most_common()
+        group_n = sum(1 for r in kids if 'Licensed Group' in r['district_or_authority']); fam_n = sum(1 for r in kids if 'Licensed Family' in r['district_or_authority'])
+        title = f'Schools in {disp}, BC | Full List by Level | Jared Gibbons'
+        desc = (f'Browse {num(k12)} public and independent schools with a {disp} address, grouped by level with street addresses. '
+                f'From the BC Ministry of Education and Child Care list.')[:158]
+        h1 = f'Schools in {disp}, BC'
+        parts = []
+        dtxt = ', '.join(f'{dlong(d)}: {num(c)}' for d, c in main_d)
+        intro = (f'The BC Ministry of Education and Child Care school list shows {num(k12)} schools with a {disp} street address: '
+                 f'{plural(pub, "public school")} and {plural(ind, "independent school")}'
+                 + (f'. It also shows {plural(post, "college or university campus", "college and university campuses")}.' if post else '.'))
+        blocks = [{'t': 'p', 'text': intro}]
+        if main_d:
+            blocks.append({'t': 'p', 'text': f'Public schools here are run by {oxford([dlong(d) for d, c in main_d])}. Count by district: {dtxt}.'})
+        blocks.append({'t': 'p', 'text': ('The list includes alternate programs, continuing education centres and online schools that have a street address, so the totals run higher than the number of neighbourhood schools. '
+                                           'The Ministry\'s own level field also mislabels some secondary schools as elementary, so this page reads the level from the school\'s name.')})
+        blocks.append({'t': 'p', 'text': ('If you are buying with a child in mind, the address matters more than the list. A school\'s catchment decides which children it must take, and districts change catchments and set their own rules for French immersion and other programs. '
+                                           'Ask the district about the exact address before you write an offer.')})
+        NOTE = {'surrey': 'The list covers the whole city, so schools in South Surrey, Cloverdale, Newton, Fleetwood and Guildford are in it because they carry Surrey addresses.',
+                'langley': 'Langley is two municipalities, the City of Langley and the Township of Langley. This list covers both, plus Aldergrove and Fort Langley, and the Community column shows where each school sits.',
+                'delta': 'Delta is one municipality made up of North Delta, Ladner and Tsawwassen, and this list covers all three.',
+                'maple-ridge-pitt-meadows': 'Maple Ridge and Pitt Meadows are separate cities served by one school district, so they share this list and the Community column shows which city each school is in.',
+                'mission': 'Dewdney and Deroche carry their own mailing communities but sit in the Mission school district, so they are listed here.',
+                'port-moody-anmore': 'Port Moody and Anmore are separate municipalities that share a school district, so they share this list.',
+                'hope-agassiz-harrison': 'These three communities share one school district, so they share this list.',
+                'chilliwack': 'Cultus Lake and Rosedale carry their own mailing communities but sit in the Chilliwack school district, so they are listed here.'}
+        if slug in NOTE: blocks.append({'t': 'p', 'text': NOTE[slug]})
+        if slug == 'surrey':
+            blocks.append({'t': 'p', 'text': 'Read how South Surrey school catchments work', 'h': '/south-surrey-school-catchments.html'})
+        SECT = [('elementary', 'Public elementary schools in {c}'), ('middle', 'Public middle schools in {c}'), ('secondary', 'Public secondary schools in {c}'),
+                ('other', 'Other public schools and programs in {c}'), ('independent', 'Independent schools in {c}'), ('post', 'Colleges and universities in {c}')]
+        for key, head in SECT:
+            g = sorted(groups.get(key, []), key=lambda r: (r['city'] != cities[0], r['city'], r['name'].lower()))
+            if not g: continue
+            multi = len({r['city'] for r in g}) > 1 or disp in SMALL_JOIN
+            blocks.append({'t': 'h', 'level': 2, 'text': head.format(c=disp) + f' ({num(len(g))})'})
+            if key == 'independent':
+                blocks.append({'t': 'p', 'text': 'Independent schools set their own admission rules and fees, and a home\'s address gives no priority for a place. Contact each school directly.'})
+            hd = (['School', 'District area', 'Street address'] if key == 'independent' else ['Campus', 'Street address'] if key == 'post' else ['School', 'District', 'Street address'])
+            if multi: hd = hd + ['Community']
+            tr = []
+            for r in g:
+                row = [nm(r['name'])] + ([] if key == 'post' else [r['district_or_authority']]) + [addr(r['street_address'])] + ([r['city']] if multi else [])
+                tr.append(row)
+            blocks.append({'t': 'table', 'caption': head.format(c=disp).replace(' in ', ' with street addresses in ', 1), 'head': hd, 'rows': tr,
+                           'source': 'Source: ' + ('Locations of B.C. Post-Secondary Institutions (Province of BC)' if key == 'post' else 'BC Schools K-12 with Francophone Indicators (BC Ministry of Education and Child Care), 2025/26 file updated July 2026') + ', read 2026-11-01.'})
+        if kids:
+            blocks.append({'t': 'h', 'level': 2, 'text': f'Licensed childcare in {disp}'})
+            blocks.append({'t': 'p', 'text': (f'The Ministry\'s Child Care Map registry lists {plural(len(kids), "licensed childcare facility", "licensed childcare facilities")} with a {disp} address: '
+                                              f'{num(group_n)} licensed group and {num(fam_n)} licensed family. The registry covers licensed care only. Care that does not need a licence is not listed by address, so a family may find more options than this count suggests. '
+                                              'Names and addresses change often, so check the registry before you rely on any one facility.')})
+        faq = [{'q': f'How many schools are in {disp}, BC?', 'a': f'The BC Ministry of Education and Child Care list shows {num(k12)} schools with a {disp} street address: {plural(pub, "public school")} and {plural(ind, "independent school")}. The count includes alternate programs and online schools that have a street address.'},
+               {'q': f'Which school district covers {disp}?', 'a': (f'Public schools with a {disp} address are run by {oxford([dlong(d) for d, c in main_d])}.' if main_d else 'See the district listed beside each school.')},
+               {'q': 'How do I find which school a home is zoned for?', 'a': 'Ask the school district to confirm the catchment school for the exact street address. Catchments change, and living near a school does not guarantee a place at it.'}]
+        d = {'status': 'generated', 'slug': f'schools-in-{slug}-bc', 'updated': UPDATED,
+             'new_page': {'title': title, 'description': desc, 'h1': h1},
+             'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': h1, 'href': f'/schools-in-{slug}-bc.html'}],
+             'faq_heading': f'{disp} schools: your questions answered', 'blocks': blocks, 'faq': faq}
+        path = os.path.join(ROOT, f'src/data/local/schools-in-{slug}-bc.json')
+        json.dump(d, open(path, 'w', encoding='utf-8'), indent=2, ensure_ascii=False); open(path, 'a').write('\n')
+        out_slugs.append((slug, disp, hubs, k12))
+    # link blocks on hub pages
+    for f in glob.glob(os.path.join(ROOT, 'src/data/local/*.json')):
+        d = json.load(open(f, encoding='utf-8'))
+        if any(b.get('gen') == 'schoollist' for b in d.get('blocks', [])):
+            d['blocks'] = [b for b in d['blocks'] if b.get('gen') != 'schoollist']
+            if not d['blocks'] and d.get('status') == 'generated': os.remove(f); continue
+            json.dump(d, open(f, 'w', encoding='utf-8'), indent=2, ensure_ascii=False); open(f, 'a').write('\n')
+    for slug, disp, hubs, k12 in out_slugs:
+        for h in hubs:
+            if not os.path.exists(os.path.join(ROOT, f'src/data/pages/{h}.json')): continue
+            f = os.path.join(ROOT, f'src/data/local/{h}.json')
+            blk = {'t': 'p', 'text': f'See all {num(k12)} schools in {disp}, BC', 'h': f'/schools-in-{slug}-bc.html', 'gen': 'schoollist'}
+            d = json.load(open(f, encoding='utf-8')) if os.path.exists(f) else {'status': 'generated', 'slug': h, 'updated': UPDATED, 'blocks': []}
+            d['blocks'].append(blk)
+            json.dump(d, open(f, 'w', encoding='utf-8'), indent=2, ensure_ascii=False); open(f, 'a').write('\n')
+    print('built', len(out_slugs), 'school list pages;', ', '.join(f'{s}:{k}' for s, _, _, k in out_slugs))
+
+
+def oxford(ns):
+    ns = list(ns)
+    return ns[0] if len(ns) == 1 else ' and '.join(ns) if len(ns) == 2 else ', '.join(ns[:-1]) + ' and ' + ns[-1]
+
+
+if __name__ == '__main__':
+    main()
