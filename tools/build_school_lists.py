@@ -140,6 +140,8 @@ def main():
         path = os.path.join(ROOT, f'src/data/local/schools-in-{slug}-bc.json')
         json.dump(d, open(path, 'w', encoding='utf-8'), indent=2, ensure_ascii=False); open(path, 'a').write('\n')
         out_slugs.append((slug, disp, hubs, k12))
+    ssw = south_surrey(rows)
+    out_slugs.append(('south-surrey-white-rock', 'South Surrey and White Rock', ['south-surrey-homes-for-sale', 'white-rock', 'south-surrey-school-catchments'], ssw))
     # link blocks on hub pages
     for f in glob.glob(os.path.join(ROOT, 'src/data/local/*.json')):
         d = json.load(open(f, encoding='utf-8'))
@@ -151,11 +153,66 @@ def main():
         for h in hubs:
             if not os.path.exists(os.path.join(ROOT, f'src/data/pages/{h}.json')): continue
             f = os.path.join(ROOT, f'src/data/local/{h}.json')
-            blk = {'t': 'p', 'text': f'See all {num(k12)} schools in {disp}, BC', 'h': f'/schools-in-{slug}-bc.html', 'gen': 'schoollist'}
+            blk = {'t': 'p', 'text': (f'See all {num(k12)} schools in {disp}, BC' if slug != 'south-surrey-white-rock' else f'See all {num(k12)} South Surrey and White Rock public schools with street addresses'), 'h': f'/schools-in-{slug}-bc.html', 'gen': 'schoollist'}
             d = json.load(open(f, encoding='utf-8')) if os.path.exists(f) else {'status': 'generated', 'slug': h, 'updated': UPDATED, 'blocks': []}
             d['blocks'].append(blk)
             json.dump(d, open(f, 'w', encoding='utf-8'), indent=2, ensure_ascii=False); open(f, 'a').write('\n')
     print('built', len(out_slugs), 'school list pages;', ', '.join(f'{s}:{k}' for s, _, _, k in out_slugs))
+
+
+# ---- South Surrey and White Rock: families of schools (from Jared's own catchment guide, which takes them from Surrey Schools) + CSV addresses
+FAMILIES = [('Earl Marriott Secondary', ['Douglas', 'Jessie Lee', 'Laronde', 'Peace Arch', 'South Meridian', "Ta'talu", "Xw'epiteng"]),
+            ('Elgin Park Secondary', ['Chantrell Creek', 'Crescent Park', 'Ocean Cliff', 'Ray Shepherd', 'Semiahmoo Trail']),
+            ('Grandview Heights Secondary', ['East Kensington', 'Edgewood', 'Morgan', 'Pacific Heights', 'Rosemary Heights', 'Sunnyside']),
+            ('Semiahmoo Secondary', ['Bayridge', 'H.T. Thrift', 'White Rock'])]
+INDEP = ['White Rock Christian Academy', 'Southridge School']
+
+
+def _k(x): return re.sub(r"[^a-z0-9]", "", x.lower().replace('\u2019', "'"))
+
+
+def south_surrey(rows):
+    pool = [r for r in rows if r['category'] in ('elementary', 'secondary', 'middle', 'private', 'elementary+secondary') and r['city'] in ('Surrey', 'White Rock')]
+    def find(name, elem):
+        want = _k(name + (' elementary' if elem else ''))
+        m = [r for r in pool if _k(r['name']) == want and r['public_or_private'] == 'Public']
+        if not m: raise SystemExit('not found in CSV: ' + name)
+        return m[0]
+    blocks = [{'t': 'p', 'text': ('South Surrey and White Rock are both in School District 36 (Surrey). The district groups each secondary school with the elementary schools that feed it, and this page lists those four families with the street address of every school, '
+                                  'taken from the BC Ministry of Education and Child Care school list.')},
+              {'t': 'p', 'text': 'Catchments are set by street address, not by neighbourhood name, so two homes a block apart can fall into different schools. Check the exact address in the district\'s School Locator and again before you remove subjects.'},
+              {'t': 'p', 'text': 'Read how South Surrey school catchments work, with the area-by-area boundary notes', 'h': '/south-surrey-school-catchments.html'}]
+    total = 0
+    for sec, els in FAMILIES:
+        sr = find(sec, False)
+        hd = ['School', 'Level', 'Street address', 'Community']
+        tr = [[sr['name'], 'Secondary', sr['street_address'], sr['city']]]
+        for e in els:
+            er = find(e, True); tr.append([er['name'].replace('H T ', 'H.T. '), 'Elementary', er['street_address'], er['city']])
+        total += len(tr)
+        blocks.append({'t': 'h', 'level': 2, 'text': f'{sec} and its elementary schools ({len(tr)})'})
+        blocks.append({'t': 'table', 'caption': f'{sec} family of schools with street addresses', 'head': hd, 'rows': tr, 'source': 'Source: Surrey Schools families of schools (as set out on the South Surrey catchments guide) and the BC Ministry of Education and Child Care school list, read 2026-11-01.'})
+    blocks.append({'t': 'p', 'text': ('French Immersion has its own registration. Crescent Park, Jessie Lee, Laronde and Peace Arch Elementary feed French Immersion into Earl Marriott Secondary. '
+                                      'White Rock is not one catchment: White Rock Elementary feeds Semiahmoo Secondary and Peace Arch Elementary feeds Earl Marriott.')})
+    ir = []
+    for n in INDEP:
+        m = [r for r in pool if _k(r['name']) == _k(n) and r['public_or_private'] != 'Public']
+        if not m: raise SystemExit('independent not found: ' + n)
+        ir.append([m[0]['name'], m[0]['street_address'], m[0]['city']])
+    blocks.append({'t': 'h', 'level': 2, 'text': f'Independent schools in the South Surrey area ({len(ir)})'})
+    blocks.append({'t': 'p', 'text': 'Independent schools set their own admission rules and fees, and a home\'s address gives no priority for a place. This is not a full list of independent schools nearby; contact each school directly.'})
+    blocks.append({'t': 'table', 'caption': 'Independent schools in the South Surrey area with street addresses', 'head': ['School', 'Street address', 'Community'], 'rows': ir,
+                   'source': 'Source: BC Ministry of Education and Child Care school list, read 2026-11-01.'})
+    faq = [{'q': 'Which school district covers South Surrey and White Rock?', 'a': 'Both are in School District 36 (Surrey).'},
+           {'q': 'Which secondary schools serve South Surrey and White Rock?', 'a': 'Earl Marriott, Elgin Park, Grandview Heights and Semiahmoo Secondary each have a group of feeder elementary schools. Which one applies depends on the exact street address.'},
+           {'q': 'Does all of White Rock go to the same secondary school?', 'a': 'No. White Rock Elementary feeds Semiahmoo Secondary, while Peace Arch Elementary feeds Earl Marriott Secondary.'}]
+    d = {'status': 'generated', 'slug': 'schools-in-south-surrey-white-rock-bc', 'updated': UPDATED,
+         'new_page': {'title': 'Schools in South Surrey & White Rock | Elementary & Secondary List', 'description': f'All {total} public schools in the four South Surrey and White Rock secondary families, with street addresses, plus independent schools. Check any address with the district.', 'h1': 'Schools in South Surrey and White Rock, BC'},
+         'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'South Surrey and White Rock schools', 'href': '/schools-in-south-surrey-white-rock-bc.html'}],
+         'faq_heading': 'South Surrey and White Rock schools: your questions answered', 'blocks': blocks, 'faq': faq}
+    path = os.path.join(ROOT, 'src/data/local/schools-in-south-surrey-white-rock-bc.json')
+    json.dump(d, open(path, 'w', encoding='utf-8'), indent=2, ensure_ascii=False); open(path, 'a').write('\n')
+    return total
 
 
 def oxford(ns):
