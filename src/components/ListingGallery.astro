@@ -1,0 +1,89 @@
+---
+// Listing photo gallery: hero + thumbnails; every photo is a plain link to the full-size image, and a
+// <dialog> viewer (prev / next / close, arrow keys, Esc) is layered on with a small script. Works without JS.
+// Images are web-size WebP derivatives made by tools/process_photos.py and served from PHOTO_BASE
+// (Worker route /listing-photos/* -> R2 in production; see src/worker/photos.js).
+const { photos, alts, title, base = import.meta.env.PUBLIC_PHOTO_BASE ?? '/listing-photos/' } = Astro.props as {
+  photos: { p: number; id: string; w: number; h: number }[]; alts: Record<number, string>; title: string; base?: string;
+};
+const alt = (p: number) => alts[p] || `Photo ${p}: ${title}`;
+const full = (id: string) => `${base}${id}-1600.webp`;
+const mid = (id: string) => `${base}${id}-960.webp`;
+const thumb = (id: string) => `${base}${id}-480.webp`;
+const hero = photos[0];
+---
+<section class="gal" aria-label={`Listing photos (${photos.length})`} data-gal>
+  <h2 class="gal__t">Listing photos ({photos.length})</h2>
+  <a class="gal__hero" href={full(hero.id)} data-i="0" style={`aspect-ratio:${hero.w}/${hero.h}`}>
+    <img src={mid(hero.id)} srcset={`${mid(hero.id)} 960w, ${full(hero.id)} 1600w`} sizes="(min-width:64rem) 60rem, 100vw" width={hero.w} height={hero.h} alt={alt(hero.p)} fetchpriority="high" decoding="async" />
+    <span class="gal__open">View {photos.length} photos</span>
+  </a>
+  {photos.length > 1 && (
+    <ul class="gal__thumbs">
+      {photos.slice(1).map((ph, i) => (
+        <li><a href={full(ph.id)} data-i={i + 1}><img src={thumb(ph.id)} width={ph.w >= ph.h ? 480 : Math.round(480 * ph.w / ph.h)} height={ph.w >= ph.h ? Math.round(480 * ph.h / ph.w) : 480} alt={alt(ph.p)} loading="lazy" decoding="async" /></a></li>
+      ))}
+    </ul>
+  )}
+  <dialog class="lb" aria-label="Photo viewer" data-lb>
+    <div class="lb__bar">
+      <p class="lb__count" aria-live="polite" data-count></p>
+      <button type="button" class="lb__btn" data-close>Close</button>
+    </div>
+    <div class="lb__stage"><img alt="" data-img /></div>
+    <div class="lb__nav">
+      <button type="button" class="lb__btn" data-prev>Previous</button>
+      <button type="button" class="lb__btn" data-next>Next</button>
+    </div>
+  </dialog>
+  <script type="application/json" data-list set:html={JSON.stringify(photos.map((ph) => ({ src: full(ph.id), alt: alt(ph.p) })))}></script>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-gal]').forEach((root) => {
+    const dlg = root.querySelector<HTMLDialogElement>('[data-lb]');
+    const list: { src: string; alt: string }[] = JSON.parse(root.querySelector('[data-list]')!.textContent || '[]');
+    if (!dlg || typeof dlg.showModal !== 'function' || !list.length) return;
+    const img = dlg.querySelector<HTMLImageElement>('[data-img]')!;
+    const count = dlg.querySelector<HTMLElement>('[data-count]')!;
+    let i = 0, opener: HTMLElement | null = null;
+    const show = (n: number) => {
+      i = (n + list.length) % list.length;
+      img.src = list[i].src; img.alt = list[i].alt; count.textContent = `Photo ${i + 1} of ${list.length}`;
+    };
+    root.querySelectorAll<HTMLAnchorElement>('a[data-i]').forEach((a) => a.addEventListener('click', (e) => {
+      e.preventDefault(); opener = a; show(Number(a.dataset.i)); dlg.showModal();
+    }));
+    dlg.querySelector('[data-close]')!.addEventListener('click', () => dlg.close());
+    dlg.querySelector('[data-prev]')!.addEventListener('click', () => show(i - 1));
+    dlg.querySelector('[data-next]')!.addEventListener('click', () => show(i + 1));
+    dlg.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') show(i - 1); else if (e.key === 'ArrowRight') show(i + 1); });
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('close', () => opener?.focus());
+  });
+</script>
+
+<style>
+  .gal{margin:0 0 var(--s5)}
+  .gal__t{font:700 .875rem var(--f-head);text-transform:uppercase;letter-spacing:.06em;margin:0 0 .6rem}
+  .gal__hero{position:relative;display:block;max-width:60rem;background:var(--cream);border:1px solid var(--ink)}
+  .gal__hero img{display:block;width:100%;height:auto}
+  .gal__open{position:absolute;right:0;bottom:0;background:#0a0a0a;color:#fff;font:700 .8125rem var(--f-head);letter-spacing:.04em;padding:.55rem .9rem}
+  .gal__hero:hover .gal__open{background:#fff;color:#0a0a0a;outline:1px solid #0a0a0a}
+  .gal__thumbs{list-style:none;margin:.75rem 0 0;padding:0;max-width:60rem;display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
+  @media (min-width:40rem){.gal__thumbs{grid-template-columns:repeat(6,1fr)}}
+  .gal__thumbs a{display:block;border:1px solid var(--ink);background:var(--cream);aspect-ratio:4/3;overflow:hidden}
+  .gal__thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+  .gal__thumbs a:hover{outline:2px solid #0a0a0a;outline-offset:2px}
+  .lb{border:0;padding:0;max-width:none;max-height:none;width:100vw;height:100vh;background:#0a0a0a;color:#fff}
+  .lb::backdrop{background:#0a0a0a}
+  .lb[open]{display:grid;grid-template-rows:auto 1fr auto}
+  .lb__bar,.lb__nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.75rem 1rem}
+  .lb__count{margin:0;font:700 .875rem var(--f-head)}
+  .lb__stage{display:flex;align-items:center;justify-content:center;min-height:0;padding:0 1rem}
+  .lb__stage img{max-width:100%;max-height:100%;object-fit:contain}
+  .lb__btn{font:700 .875rem var(--f-head);letter-spacing:.04em;background:#fff;color:#0a0a0a;border:1px solid #fff;padding:.7rem 1.2rem;min-height:2.75rem;cursor:pointer}
+  .lb__btn:hover{background:#0a0a0a;color:#fff}
+  .lb__btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+  .lb__btn:hover:focus-visible{outline-color:#f0ece4}
+</style>

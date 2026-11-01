@@ -1,9 +1,12 @@
 ---
 // Own-listing detail page. Content comes from src/data/listings/<slug>.json (tools/import_listings.py).
-// Preview note: listing photos are not imported yet (no vendor-CDN hotlinking), so the gallery slot
-// says so plainly instead of pretending to be operational.
+// Photos: web-size derivatives of the owner's photo export (never hotlinked from the vendor CDN).
 import Base from '../layouts/Base.astro';
 import Cta from './Cta.astro';
+import ListingGallery from './ListingGallery.astro';
+
+// Web-size photo lists written by tools/process_photos.py (Drive folder 10 -> src/data/listing-photos/<slug>.json)
+const PHOTO_LISTS = import.meta.glob('../data/listing-photos/*.json', { eager: true, import: 'default' }) as Record<string, any[]>;
 
 const { page } = Astro.props as { page: any };
 const seo = page.seo || {};
@@ -23,6 +26,10 @@ const rest: { k?: string; v: string }[] = [];
     else rest.push({ v: ls[i] });
   }
 }
+const photoList: { p: number; id: string; w: number; h: number }[] = PHOTO_LISTS[`../data/listing-photos/${page.slug}.json`] ?? [];
+// archive alt text per position ("Photo 3: <address> | MLS ...")
+const altByPos: Record<number, string> = {};
+for (const a of page.photos.alts ?? []) { const m = /^Photo (\d+):/.exec(a); if (m) altByPos[Number(m[1])] = a; }
 const telHref = (s: string) => 'tel:' + s;
 ---
 <Base
@@ -52,10 +59,14 @@ const telHref = (s: string) => 'tel:' + s;
         }
         return null;
       })}
-      <div class="ls__photos" role="note">
-        <p class="ls__photos-t">Listing photos{page.photos.count ? ` (${page.photos.count})` : ''}</p>
-        <p>Photos are not imported in this preview.</p>
-      </div>
+      {photoList.length > 0
+        ? <ListingGallery photos={photoList} alts={altByPos} title={page.title} />
+        : (
+          <div class="ls__photos" role="note">
+            <p class="ls__photos-t">Listing photos</p>
+            <p>No photos are on file for this listing yet.</p>
+          </div>
+        )}
       {page.status === 'Active' && (
         <p class="notice">Status is shown as captured in the archive on 2026-10-31. Live status needs the listing feed, which is not connected in the preview.</p>
       )}
