@@ -777,4 +777,98 @@ Across all top agents above, on the pages checked (URLs in §1–§2, read 2026-
 
 ## Buying a Mobile Home in BC (topic)
 
-NOT COMPLETED in this pass — the research worker for this topic section was stopped by a rate limit (429) before producing any verified material, and the section was not fabricated to fill the gap. The remaining 11 areas are complete. This topic section should be re-run as a separate pass.
+*Completed 2026-11-01 as a separate pass (the original pass was stopped by a rate limit before this section was researched). Method: agents/teams/sites identified from `browser.search` results on 2026-11-01 (queries such as "how to buy a mobile home in BC realtor guide", "buying a manufactured home in BC guide pad rent land lease", "manufactured homes for sale Langley Chilliwack BC realtor specialist"). The KeyHomes page below was opened and read in full on 2026-11-01. The other three core pages could not be opened directly — the page-fetch service returned a 429 rate limit on 2026-11-01 and those requests were not retried — so their checklists are based on the full page text returned by web search on the same date and are marked "inspected via search-index text 2026-11-01" at each entry, the same convention used elsewhere in this file. Listing portals (Strawhomes, REALTOR.ca, Zolo) and park operators (Parkbridge, which sells homes in its own parks) appear prominently in search for this topic but are not agents/teams and are excluded from the top table; every "missing" claim below is scoped to the named entries plus the also-checked items. Google ratings are shown only where a rating + review count was publicly visible in the search results reviewed; none was visible for any entry below. "Appears prominently in search" is used throughout — no search position is presented as a ranking.*
+
+### 1. TOP AGENTS / SITES
+
+**A. Janine Thomson — REALTOR®, Pemberton Holmes (Victoria)**
+- Dedicated province-wide explainer: "Understanding Manufactured Homes in BC" — covers registration vs. land title, homes on rented pads in parks, de-registration, and electrical safety compliance: https://www.janinethomson.net/blog/94952/understanding-manufactured-homes-in-british-columbia-registration-land-ownership-and-compliance — inspected via search-index text 2026-11-01 (direct open rate-limited, not retried).
+- The only individual-agent page found in this research that leads with the Manufactured Home Registry / compliance side of a BC park purchase. Victoria-based; the guide is written province-wide, not Victoria-specific.
+- Google rating / review count: none publicly visible in the search results reviewed 2026-11-01 — not reported.
+
+**B. ListingsVictoria.ca — Greater Victoria manufactured-home listings + market-report site (operator not named in the page text reviewed)**
+- Dedicated manufactured-home listing pages segmented by price band, each pairing a live MLS® feed with a long explainer and a link to a fuller manufactured-home market report: under-$300K page https://www.listingsvictoria.ca/mobilelow/ and $400K+ page https://www.listingsvictoria.ca/mobilehigh/ — inspected via search-index text 2026-11-01 (direct open rate-limited, not retried).
+- The strongest listings-plus-tenancy combination found: its explainer text covers pad rent mechanics, tenancy assignment on sale, park-closure compensation and rented-pad vs. leased-land vs. owned-lot distinctions across Greater Victoria's municipalities and parks.
+- Google rating / review count: none publicly visible in the search results reviewed 2026-11-01 — not reported.
+
+**C. KeyHomes.ca — national listings portal (KeyHomes)**
+- Dedicated BC page pairing a manufactured-on-owned-land listings feed with the longest single buying guide found in this research: https://www.keyhomes.ca/listings/bc-mobile-home-own-land — read 2026-11-01 (opened and verified in full). A companion year-round-parks page sits on the same domain: https://www.keyhomes.ca/listings/year-round-mobile-home-park — inspected via search-index text 2026-11-01.
+- Orientation is owned land (freehold / bare land strata), not pad-rental parks, and the content is national in scope with Okanagan-weighted examples — the Fraser Valley receives a single line (agricultural and floodplain overlays). No BC-local agent or brokerage is identified on the page read.
+- Google rating / review count: none publicly visible in the search results reviewed 2026-11-01 — not reported.
+
+**D. Kamloops Property For Sale (kamloopspropertyforsale.com) — Kamloops agent site (agent not named in the page text reviewed)**
+- Dedicated guide: "Buying a mobile home in BC — what do you need to know": https://www.kamloopspropertyforsale.com/blog/buying-a-mobile-home-in-bc/ — inspected via search-index text 2026-11-01 (direct open rate-limited, not retried).
+- The most financing-detailed agent guide found: it works through lender requirements for park and owned-land purchases (certification as the first check, mortgage insurance, the age / economic-life test, amortization limits by tenure, the lender–park-owner agreement, de-registration on leased land — topics described here, figures not restated). Search metadata indicates the page has not been updated in several years.
+- Google rating / review count: none publicly visible in the search results reviewed 2026-11-01 — not reported.
+
+*Also checked: **Kirk Walper PREC*, Royal LePage Island Living (Parksville)** — a current (October 2026) YouTube video on selling a manufactured home, structured around ownership types (pad rental vs. strata), park approvals and electrical inspection: https://www.youtube.com/watch?v=rlhiJZFQiw8 — observed via web search 2026-11-01; his site's manufactured-home content was not opened (browser rate limit), so he is not scored in §2. **Blue Butterfly Mortgages** (mortgage brokerage) publishes the deepest chattel-vs.-mortgage financing explainer found — https://www.bluebutterflymortgages.ca/post/mobilefinancing — inspected via search-index text 2026-11-01; it is a lender-side site with no listings presence, so it is used in §3 only as the benchmark for how far agent content lags on financing. A White Rock notary's manufactured-home transfer page (whiterocknotaries.ca, found via search 2026-11-01) covers pad fees and the property-transfer-tax position for park purchases — a conveyancer's page, not an agent's, and notable in §3 because no agent page reviewed covers that ground.*
+
+### 2. WHAT THEY PROVIDE
+
+**A. Janine Thomson — manufactured homes explainer** (URL in §1 — inspected via search-index text 2026-11-01)
+- Listings feed for manufactured homes: ✗ on the page read (the site carries neighbourhood guides and agent listings elsewhere; a manufactured-home feed was not verified — page open rate-limited)
+- Park listings: ✗ — no park directory or park pages in the text reviewed
+- Land-lease / pad-rent explainers: partial — explains that a park home sits on rented land, that the home is personal property registered in the Manufactured Home Registry rather than at the Land Title Office, and that a park purchase is a search of that registry; pad-rent amounts, increases and assignment are not covered in the text reviewed
+- Financing / chattel mortgage content: partial — flags that a de-registered home cannot be sold, financed or insured without electrical certification; no chattel-loan mechanics, lenders or down-payment content
+- MHPTA / tenancy guidance: ✗ — no Manufactured Home Park Tenancy Act content (rent-increase cap, tenancy assignment, park-closure rules) in the text reviewed
+- Taxes / PTT treatment: ✗ in the text reviewed
+- Buying-process steps: partial — buyer/seller action points (obtain the registration/title search, confirm electrical certification) rather than a full offer-to-completion process
+- FAQs: ✗ — structured explainer, no FAQ block in the text reviewed
+- Videos: ✗ on the page read
+- Downloadable guides: ✗
+- Email alerts: not verified (page open rate-limited)
+- Home-evaluation tool: not verified (page open rate-limited)
+
+**B. ListingsVictoria.ca — manufactured-home listing pages + market reports** (URLs in §1 — inspected via search-index text 2026-11-01)
+- Listings feed for manufactured homes: ✓ — MLS® manufactured/mobile listings for Greater Victoria, segmented by price band, with a map and page-level market figures (as described on the pages; figures not restated here)
+- Park listings: partial — listings and commentary are organised around named parks and areas (Westshore/Sooke/View Royal/Saanich Peninsula parks are discussed in the text), but there is no park directory with per-park profiles
+- Land-lease / pad-rent explainers: ✓ — covers how pad rent and the sale of a park home work, and distinguishes rented pads, leased First Nations land and owned lots
+- Financing / chattel mortgage content: partial — describes rented-pad purchases as chattel financing on tighter terms than a mortgage; no lender names, down payments or qualification detail in the text reviewed
+- MHPTA / tenancy guidance: ✓ — the strongest found on any agent-side site: pad-rent increase limits, assignment of the tenancy to a buyer on sale, and park-closure compensation are all explained in the text reviewed (rules described, figures not restated here)
+- Taxes / PTT treatment: partial — the federal first-time-buyer GST rebate as it applies to new mobile/modular homes is covered; the transfer-tax position on a used park purchase is not covered in the text reviewed
+- Buying-process steps: partial — process guidance is woven into the explainer sections rather than set out as a step-by-step
+- FAQs: ✗ — long-form explainer plus market reports; no FAQ block seen in the text reviewed
+- Videos: ✗ seen in the text reviewed
+- Downloadable guides: ✗ seen — the fuller market reports are web pages, not downloads, in the text reviewed
+- Email alerts: not verified in the text reviewed
+- Home-evaluation tool: not verified in the text reviewed
+
+**C. KeyHomes.ca — BC mobile homes on owned land** (URL in §1 — read 2026-11-01, opened and verified)
+- Listings feed for manufactured homes: ✓ — BC manufactured-on-owned-land listings gallery on the page (a price range is displayed in the page's structured data), plus related manufactured/park listing pages across the site
+- Park listings: partial — park content covers owned-land and bare-land-strata communities and year-round park guidance; no BC pad-rental park directory on the page read
+- Land-lease / pad-rent explainers: partial — a tenure comparison (freehold vs. bare land strata vs. co-op/leasehold vs. pad-rental park) frames the whole guide, but pad-rent mechanics (increases, assignment, closure) are not explained; the page's subject is owned land
+- Financing / chattel mortgage content: ✓ for owned land — conventional and insured mortgage conditions (certification label, permanent foundation, permits), engineer/appraisal requests and de-registration are covered; chattel financing appears only as the weaker park alternative, in passing
+- MHPTA / tenancy guidance: ✗ on the page read — no Manufactured Home Park Tenancy Act content
+- Taxes / PTT treatment: ✓ — the clearest tax section of the four, for owned land: property transfer tax on freehold/bare-land-strata purchases, GST on new homes, speculation/empty-homes taxes and strata fees are all addressed. The transfer-tax position on a chattel park purchase (no land changes hands) is not addressed on the page read
+- Buying-process steps: partial — closes with a pre-commitment checks list (title/surveys, permits and safety, zoning, budgeting) rather than an offer-to-completion process
+- FAQs: ✗ on the page read (long-form guide format)
+- Videos: ✗ on the page read
+- Downloadable guides: ✗ on the page read
+- Email alerts: ✗ seen on the page read
+- Home-evaluation tool: ✗ seen on the page read
+
+**D. Kamloops Property For Sale — "Buying a mobile home in BC" guide** (URL in §1 — inspected via search-index text 2026-11-01)
+- Listings feed for manufactured homes: not verified on the page read (the site is an agent listings site; the guide page text reviewed does not include a manufactured feed)
+- Park listings: ✗ in the text reviewed
+- Land-lease / pad-rent explainers: partial — explains park/leased-land vs. owned-land placement and land-home packages; pad-rent rules are not covered
+- Financing / chattel mortgage content: ✓ — the deepest of the four agent-side pages: certification as the first lender check, mortgage insurance, the age / economic-life test, amortization limits by tenure type, the lender's agreement with the park owner, and de-registration for homes on leased land (topics described; thresholds not restated here)
+- MHPTA / tenancy guidance: ✗ in the text reviewed — the park-owner agreement it describes is the lender's, not tenancy-Act guidance for buyers
+- Taxes / PTT treatment: ✗ in the text reviewed
+- Buying-process steps: partial — financing-first framing rather than a full buying process
+- FAQs: partial — the guide is partly structured as questions and answers in the text reviewed
+- Videos: ✗ seen in the text reviewed
+- Downloadable guides: ✗ seen in the text reviewed
+- Email alerts: not verified (page open rate-limited)
+- Home-evaluation tool: not verified (page open rate-limited)
+
+### 3. WHAT'S MISSING — what NONE of them provides for BC mobile / manufactured-home buyers
+
+- **No Fraser Valley — and specifically no Langley — manufactured-home resource from anyone.** The strongest content found is Victoria-based (Thomson; ListingsVictoria), Kamloops-based (the financing guide) or national (KeyHomes, whose Fraser Valley coverage is one sentence). Nobody covers the Langley/Aldergrove/Surrey park market park-by-park — even though that is where the demonstrated search demand sits: Jared's own Langley mobile-homes query drew 1,108 GSC impressions (per the keyword work in this programme). The demand is proven; the local content supply is zero.
+- **No park-by-park comparison product anywhere.** No entry compares parks side-by-side on the things that decide these purchases: pad rent, age restrictions, pet and rental rules, tenure (pad rental vs. bare land strata vs. leasehold), amenities, and park-sale/redevelopment risk. ListingsVictoria discusses parks in prose; nobody publishes per-park profiles or a comparison table for any region, let alone Langley's parks.
+- **No single guide that combines the whole purchase.** Each entry covers one or two legs of a four-legged purchase: Thomson = registry/compliance; Kamloops = financing; ListingsVictoria = listings + tenancy (Victoria only); KeyHomes = owned-land tenure + taxes (national). Listings + pad/tenancy rules + chattel financing + taxes in one BC guide, from one agent, does not exist in this set.
+- **The tenancy-Act leg is nearly empty.** MHPTA guidance — rent-increase cap, assignment of tenancy on sale, what happens on park closure — appears only on the Victoria listings site. The other three agent-side entries are silent on the Act that governs most park purchases, and no Fraser Valley agent page reviewed mentions it at all.
+- **The transfer-tax point for park purchases is covered only by a notary.** The fact that a park purchase transfers no land (with the tax and first-time-buyer implications that follow) is explained on a White Rock notary's page found in search — no agent page reviewed states it. It is a first-order affordability point for exactly the first-time buyers this segment serves, and agents have left it to a conveyancer.
+- **No agent-side chattel-financing depth in the Lower Mainland/Fraser Valley.** The lender mechanics live on a mortgage brokerage's explainer (Blue Butterfly) and an aging Kamloops guide. No local agent explains which lenders will finance park homes, realistic down payments, or the age/economic-life cut-offs as buyer guidance — despite financing being the most common failure point for these deals.
+- **No buyer-side video.** None of the four profiled sites offers video on the pages read. The only current manufactured-home video found in this research is seller-focused (an Island agent's October 2026 YouTube video on selling, park approvals and electrical inspection). A buyer-side walkthrough series — how a park purchase actually works — is unclaimed.
+- **No downloadable checklist or guide, no manufactured-home-specific email alert, and no park-home evaluation tool** on any page read. Every entry is a web page and a contact prompt; the lead-capture layer for this segment is unbuilt everywhere.
+- **Currency and locality gaps compound each other.** The most financing-detailed agent guide (Kamloops) has not been updated in years per search metadata, and the deepest tenure/tax guide (KeyHomes) is national content that does not name a single Fraser Valley park. There is no page that is simultaneously local (Fraser Valley), current, and complete across listings, tenancy, financing and taxes — each competitor holds at most one of those three.
