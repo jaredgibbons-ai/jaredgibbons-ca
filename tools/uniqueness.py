@@ -27,6 +27,7 @@ def text_of(b):
 
 def page_text(slug, page, local):
     blocks = list(page['blocks'])
+    if local and local.get('hide'): blocks = [b for b in blocks if not (b['t'] in ('p', 'h') and any(text_of(b).startswith(x) for x in local['hide']))]
     if local and local.get('suppress'):
         keep, drop = [], False
         for b in blocks:

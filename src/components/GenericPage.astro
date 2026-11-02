@@ -25,6 +25,8 @@ const jsonld: any[] = [];
 if (local?.faq?.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: local.faq.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
 if (local?.breadcrumbs?.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: local.breadcrumbs.map((c: any, i: number) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: origin + c.href })) });
 if (local) {
+  // `hide`: archive paragraphs/headings (matched by their opening words) that move to another page; the archive record is untouched.
+  if (local.hide?.length) page.blocks = page.blocks.filter((b: any) => { const tx = b.text ?? b.parts?.map((x: any) => x.t).join('') ?? ''; return !((b.t === 'p' || b.t === 'h') && local.hide.some((x: string) => tx.startsWith(x))); });
   // `suppress`: level-2 headings whose whole section is replaced by the local layer (duplicated sibling-page text).
   if (local.suppress?.length) {
     let drop = false;

@@ -11,8 +11,7 @@ import build_snapstats_layers as L
 ROOT = L.ROOT
 AK, CITY, T = 'burnaby', 'Burnaby', 'condo_townhome'
 # (houses-page slug, community name in the report, new condo slug, display name)
-PAGES = [('brentwood-park', 'Brentwood Park', 'brentwood-park-condos-for-sale', 'Brentwood Park'),
-         ('cariboo', 'Cariboo', 'cariboo-condos-for-sale', 'Cariboo'),
+PAGES = [('cariboo', 'Cariboo', 'cariboo-condos-for-sale', 'Cariboo'),
          ('edmonds-be', 'Edmonds', 'edmonds-condos-for-sale', 'Edmonds')]
 BR, BS = ' | Jared Gibbons REALTOR®', ' | Jared Gibbons'
 

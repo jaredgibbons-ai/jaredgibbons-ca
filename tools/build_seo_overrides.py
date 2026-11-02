@@ -59,6 +59,10 @@ for slug, city in FORECLOSE:
     for tail in (' Foreclosures for Sale & Court-Ordered Sales', ' Foreclosures for Sale & Court Sales'):
         if len(city + tail + BS) <= 66: ROWS[slug] = (city + tail, None, None); break
 ROWS.update({
+ 'brentwood-park': ('Brentwood Park Burnaby Neighbourhood Guide', 'Brentwood Park, Burnaby: Neighbourhood Guide',
+   'Brentwood Park, Burnaby neighbourhood guide: Brentwood Town Centre, SkyTrain, and how houses, condos and townhomes in the area are selling. Jared Gibbons, REALTOR®.'),
+ 'brentwood-homes-for-sale': ('Brentwood Burnaby Houses for Sale', 'Brentwood Houses for Sale | Burnaby Real Estate',
+   'Brentwood Park, Burnaby houses for sale: detached homes near Brentwood Town Centre, monthly listings and sales, and how houses compare with condos and townhomes. Jared Gibbons, REALTOR®.'),
  'arista-townhomes': ('Arista Townhomes for Sale, Grandview Heights', None, None),
  'county-line-glen-valley': ('County Line Glen Valley, Langley Homes for Sale', None, None),
  'otter-district': ('Otter District, Langley Homes for Sale', None, None),
@@ -71,7 +75,7 @@ ROWS.update({
  'north-maple-ridge-guide': ('North Maple Ridge Homes for Sale & Rural Guide', None, None),
  'westham-island-guide': ('Westham Island Delta Farms & Homes for Sale', None, None),
 })
-# Held unchanged on purpose (D-60, D-61): fraserview-nw, downtown-ve, gst-rebate-in-bc, privacy; brentwood-park, cariboo and edmonds-be keep their archived houses titles;
+# Held unchanged on purpose (D-60, D-61): fraserview-nw, downtown-ve, gst-rebate-in-bc, privacy; cariboo and edmonds-be keep their archived houses titles (Brentwood is now the guide / houses / condos / townhomes split, D-65);
 # guide pages with a matching homes page, burnaby-hospital, cityofmapleridge, mission-bc, land, zonings, recip, sold-properties, resources, GIS, granville, lower-landing.
 out = {}
 for slug, (head, h1, desc) in ROWS.items():
