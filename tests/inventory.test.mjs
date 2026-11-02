@@ -9,7 +9,7 @@ const held = uniq.enforce ? Object.entries(uniq.scores).filter(([, v]) => v < un
 
 test('every slug in the listing gate is a real page and history is dated', () => {
   for (const [slug, v] of Object.entries(gate.pages)) {
-    assert.ok(existsSync(new URL(`../src/data/pages/${slug}.json`, import.meta.url)), slug + ' exists');
+    assert.ok(existsSync(new URL(`../src/data/pages/${slug}.json`, import.meta.url)) || existsSync(new URL(`../src/data/local/${slug}.json`, import.meta.url)), slug + ' exists (archive page or local new page)');
     assert.ok(v.history.length >= 1 && v.history.every((h) => /^\d{4}-\d{2}$/.test(h.month)));
   }
 });
