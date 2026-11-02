@@ -27,12 +27,12 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the monthly MLS® figures (SnapStats) and the city's communities. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
       "gen": "gappage"
     },
     {
       "t": "p",
-      "text": "Coquitlam townhomes for sale: ground-level homes in strata buildings, from the MLS®. Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees.",
+      "text": "Coquitlam townhomes for sale: ground-level homes in strata buildings. The Greater Vancouver REALTORS® benchmark for townhomes in Coquitlam was $976,600 in September 2026 (-6.5% over a year). Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees.",
       "gen": "gappage"
     },
     {
@@ -42,71 +42,66 @@
     {
       "t": "h",
       "level": 2,
-      "text": "Coquitlam market context, June to September 2026",
-      "gen": "gappage"
-    },
-    {
-      "t": "p",
-      "text": "Coquitlam had 425 houses and 806 condos and townhomes listed at the end of September, with 44 and 89 sold in the month. Townhomes are a smaller part of those listings, so the market-wide figures below are the closest published read on the price pressure around them.",
+      "text": "Coquitlam townhomes: benchmark price and changes, September 2026",
       "gen": "gappage"
     },
     {
       "t": "table",
-      "caption": "Coquitlam listings, sales and sales ratio by month",
+      "caption": "Coquitlam townhomes, MLS® Home Price Index, September 2026",
       "head": [
-        "Month",
-        "Houses listed",
-        "Houses sold",
-        "Houses ratio",
-        "Condos and townhomes listed",
-        "Condos and townhomes sold",
-        "Condos and townhomes ratio"
+        "Area",
+        "Benchmark price",
+        "Index",
+        "1 month",
+        "3 months",
+        "6 months",
+        "1 year",
+        "3 years",
+        "5 years",
+        "10 years"
       ],
       "rows": [
         [
-          "June 2026",
-          "444",
-          "79",
-          "18%",
-          "819",
-          "166",
-          "20%"
-        ],
-        [
-          "July 2026",
-          "423",
-          "54",
-          "13%",
-          "751",
-          "126",
-          "17%"
-        ],
-        [
-          "August 2026",
-          "416",
-          "42",
-          "10%",
-          "791",
-          "94",
-          "12%"
-        ],
-        [
-          "September 2026",
-          "425",
-          "44",
-          "10%",
-          "806",
-          "89",
-          "11%"
+          "Coquitlam",
+          "$976,600",
+          "381.9",
+          "-1.2%",
+          "-3.9%",
+          "-3.1%",
+          "-6.5%",
+          "-8.7%",
+          "+6.7%",
+          "+64.7%"
         ]
       ],
-      "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal. Condos and townhomes are one line in the reports.",
+      "source": "Source: Greater Vancouver REALTORS®, MLS® Home Price Index, September 2026 (released October 2, 2026). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at 1.5% or more.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Coquitlam: the townhomes benchmark was $976,600 in September 2026. Over the past year it fell 6.5%; over three months it fell 3.9%; over the last month it was little changed (-1.2%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 8.7%; over 5 years it rose 6.7%; over 10 years it rose 64.7%.",
       "gen": "gappage"
     },
     {
       "t": "h",
       "level": 2,
-      "text": "Coquitlam communities with the most condo and townhome listings",
+      "text": "Townhomes against other home types in Coquitlam",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Coquitlam: the townhomes benchmark of $976,600 sits $607,800 below the detached houses benchmark of $1,584,400 (62% of it) and $336,500 above the apartments (condos) benchmark of $640,100 (153% of it).",
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Elementary and middle schools in Coquitlam",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "39 elementary and middle schools are located in the City of Coquitlam: 39 in SD43 Coquitlam. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district.",
       "gen": "gappage"
     },
     {
@@ -114,50 +109,152 @@
       "items": [
         [
           {
-            "t": "Coquitlam West (359 condos and townhomes listed in September)",
-            "h": "/coquitlam-west.html"
+            "t": "Alderson Elementary (elementary), 825 Gauthier Ave"
           }
         ],
         [
           {
-            "t": "North Coquitlam (149 condos and townhomes listed in September)",
-            "h": "/north-coquitlam.html"
+            "t": "Baker Drive Elementary (elementary), 885 Baker Dr"
           }
         ],
         [
           {
-            "t": "Burke Mountain (77 condos and townhomes listed in September)",
-            "h": "/burke-mountain.html"
+            "t": "Bramblewood Elementary (elementary), 2875 Panorama Dr"
           }
         ],
         [
           {
-            "t": "Westwood Plateau (47 condos and townhomes listed in September)",
-            "h": "/westwood-plateau-coquitlam.html"
+            "t": "Cabe Secondary (elementary), 1411 Foster Ave"
           }
         ],
         [
           {
-            "t": "Maillardville (41 condos and townhomes listed in September)",
-            "h": "/maillardville-coquitlam.html"
+            "t": "Cape Horn Elementary (elementary), 155 Finnigan St"
           }
         ],
         [
           {
-            "t": "Central Coquitlam (36 condos and townhomes listed in September)",
-            "h": "/central-coquitlam.html"
+            "t": "Coast Salish Elementary (elementary), 3538 Sheffield Avenue"
           }
         ],
         [
           {
-            "t": "New Horizons (29 condos and townhomes listed in September)",
-            "h": "/new-horizons-coquitlam.html"
+            "t": "Como Lake Middle School (middle), 1121 King Albert Ave"
           }
         ],
         [
           {
-            "t": "Canyon Springs (21 condos and townhomes listed in September)",
-            "h": "/canyon-springs.html"
+            "t": "Continuing ED SD 43 (elementary), 380 Montgomery St"
+          }
+        ],
+        [
+          {
+            "t": "Coquitlam Open Learning (elementary), 1432 Brunette Ave"
+          }
+        ],
+        [
+          {
+            "t": "Eagle Ridge Elementary (elementary), 1215 Falcon Dr"
+          }
+        ],
+        [
+          {
+            "t": "Ecole Banting Middle (middle), 820 Banting St"
+          }
+        ],
+        [
+          {
+            "t": "Ecole Maillard Middle (middle), 1300 Rochester Ave"
+          }
+        ],
+        [
+          {
+            "t": "Ecole Montgomery Middle (elementary), 1900 Edgewood Ave"
+          }
+        ],
+        [
+          {
+            "t": "Ecole Nestor Elementary (elementary), 1266 Nestor St"
+          }
+        ],
+        [
+          {
+            "t": "Ecole Panorama Heights Elementary (elementary), 1455 Johnson St"
+          }
+        ],
+        [
+          {
+            "t": "Ecole Porter Street Elementary (elementary), 728 Porter St"
+          }
+        ],
+        [
+          {
+            "t": "Ecole Rochester Elementary (elementary), 411 Schoolhouse St"
+          }
+        ],
+        [
+          {
+            "t": "Glen Elementary (elementary), 3064 Glen Dr"
+          }
+        ],
+        [
+          {
+            "t": "Hampton Park Elementary (elementary), 1760 Paddock Dr"
+          }
+        ],
+        [
+          {
+            "t": "Harbour View Elementary (elementary), 960 Lillian St"
+          }
+        ],
+        [
+          {
+            "t": "Hillcrest Middle School (middle), 2161 Regan Ave"
+          }
+        ],
+        [
+          {
+            "t": "Inquiry Hub (elementary), 1432 Brunette Ave"
+          }
+        ],
+        [
+          {
+            "t": "Leigh Elementary (elementary), 1230 Soball St"
+          }
+        ],
+        [
+          {
+            "t": "Lord Baden-Powell Elementary (elementary), 450 Joyce St"
+          }
+        ],
+        [
+          {
+            "t": "Meadowbrook Elementary (elementary), 900 Sharpe St"
+          }
+        ],
+        [
+          {
+            "t": "Miller Park Community School (elementary), 800 Egmont Ave"
+          }
+        ],
+        [
+          {
+            "t": "Mountain View Elementary (elementary), 740 Smith Ave"
+          }
+        ],
+        [
+          {
+            "t": "Mundy Road Elementary (elementary), 2200 Austin Ave"
+          }
+        ],
+        [
+          {
+            "t": "Parkland Elementary (elementary), 1563 Regan Ave"
+          }
+        ],
+        [
+          {
+            "t": "Pinetree Secondary (elementary), 3000 Pinewood Ave"
           }
         ]
       ],
@@ -245,6 +342,14 @@
   ],
   "faq": [
     {
+      "q": "What is the benchmark price of a townhome in Coquitlam?",
+      "a": "The Greater Vancouver REALTORS® MLS® Home Price Index benchmark for townhomes in Coquitlam was $976,600 in September 2026, a modelled price for a typical home and not an average of sales."
+    },
+    {
+      "q": "Did townhome prices fall in Coquitlam?",
+      "a": "Over the past year the benchmark fell 6.5%. Over three months it fell 3.9%. A change under 1.5% is not described as a rise or fall."
+    },
+    {
       "q": "Is Coquitlam a buyers’ or sellers’ market?",
       "a": "In September 2026 houses in Coquitlam had a sales ratio of 10%, which the reports’ scale reads as a buyers’ market, and condos and townhomes 11%, which the reports’ scale reads as a buyers’ market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers."
     },
@@ -263,10 +368,6 @@
     {
       "q": "Who is Jared Gibbons?",
       "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
-    },
-    {
-      "q": "Do these numbers separate condos from townhomes?",
-      "a": "No. The monthly reports publish condos and townhomes as one line, so any count here includes both. Jared can pull the split for a specific building or street."
     }
   ],
   "needs_from_muse": [

@@ -27,12 +27,12 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the monthly MLS® figures (SnapStats) and the city's communities. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
       "gen": "gappage"
     },
     {
       "t": "p",
-      "text": "Mission condos for sale: apartment-style homes in strata buildings, from the MLS®. Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees.",
+      "text": "Mission condos for sale: apartment-style homes in strata buildings. The Fraser Valley Real Estate Board benchmark for apartments (condos) in Mission was $411,500 in September 2026 (-4.7% over a year). Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees.",
       "gen": "gappage"
     },
     {
@@ -42,71 +42,184 @@
     {
       "t": "h",
       "level": 2,
-      "text": "Mission market context, June to September 2026",
-      "gen": "gappage"
-    },
-    {
-      "t": "p",
-      "text": "Mission had 231 houses and 122 condos and townhomes listed at the end of September, with 28 and 10 sold in the month. Condos are a smaller part of those listings, so the market-wide figures below are the closest published read on the price pressure around them.",
+      "text": "Mission apartments (condos): benchmark price and changes, September 2026",
       "gen": "gappage"
     },
     {
       "t": "table",
-      "caption": "Mission listings, sales and sales ratio by month",
+      "caption": "Mission apartments (condos), MLS® Home Price Index, September 2026",
       "head": [
-        "Month",
-        "Houses listed",
-        "Houses sold",
-        "Houses ratio",
-        "Condos and townhomes listed",
-        "Condos and townhomes sold",
-        "Condos and townhomes ratio"
+        "Area",
+        "Benchmark price",
+        "Index",
+        "1 month",
+        "3 months",
+        "6 months",
+        "1 year",
+        "3 years",
+        "5 years",
+        "10 years"
       ],
       "rows": [
         [
-          "June 2026",
-          "257",
-          "33",
-          "13%",
-          "116",
-          "7",
-          "6%"
+          "Mission",
+          "$411,500",
+          "368.1",
+          "-0.7%",
+          "-2.7%",
+          "-3.6%",
+          "-4.7%",
+          "-9.5%",
+          "+6.6%",
+          "—"
+        ]
+      ],
+      "source": "Source: Fraser Valley Real Estate Board, MLS® Home Price Index, September 2026 (released October 5, 2026). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at 1.5% or more.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Mission: the apartments (condos) benchmark was $411,500 in September 2026. Over the past year it fell 4.7%; over three months it fell 2.7%; over the last month it was little changed (-0.7%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 9.5%; over 5 years it rose 6.6%.",
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Mission apartments (condos): sales, listings and prices, September 2026",
+      "gen": "gappage"
+    },
+    {
+      "t": "table",
+      "caption": "Mission apartments (condos), September 2026 with August 2026 and September 2025",
+      "head": [
+        "Measure",
+        "September 2026",
+        "August 2026",
+        "September 2025"
+      ],
+      "rows": [
+        [
+          "Sales",
+          "5",
+          "3",
+          "7"
         ],
         [
-          "July 2026",
-          "239",
-          "36",
-          "15%",
-          "128",
-          "8",
-          "6%"
+          "New listings",
+          "20",
+          "5",
+          "9"
         ],
         [
-          "August 2026",
-          "236",
-          "27",
-          "11%",
-          "110",
-          "12",
-          "11%"
+          "Active listings",
+          "55",
+          "57",
+          "39"
         ],
         [
-          "September 2026",
-          "231",
-          "28",
-          "12%",
-          "122",
+          "Benchmark price",
+          "$411,500",
+          "$414,600",
+          "$431,900"
+        ],
+        [
+          "Median sale price",
+          "$380,000",
+          "$399,000",
+          "$410,000"
+        ],
+        [
+          "Average sale price",
+          "$428,700",
+          "$418,000",
+          "$404,914"
+        ]
+      ],
+      "source": "Source: Fraser Valley Real Estate Board MLS® statistics package, September 2026 (released October 5, 2026). Median is the middle sale price of the month and average is the total of sale prices divided by sales; both swing when few homes sell, so a month with fewer than 3 sales is not read as a trend.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "In September 2026 Mission had 5 apartments (condos) sales and 55 active listings (3 sales and 57 active in August; 7 and 39 in September 2025). Sales fell 28.6% against September 2025. Active listings rose 41.0% against September 2025.",
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Mission condos and townhomes by community, September 2026",
+      "gen": "gappage"
+    },
+    {
+      "t": "table",
+      "caption": "Mission condos and townhomes listed, sold and sales ratio by community, September 2026",
+      "head": [
+        "Community",
+        "Listed",
+        "Sold",
+        "Sales ratio"
+      ],
+      "rows": [
+        [
+          "Mission",
+          "104",
           "10",
-          "8%"
+          "10%"
+        ],
+        [
+          "Hemlock",
+          "9",
+          "0",
+          "—"
+        ],
+        [
+          "Mission West",
+          "8",
+          "0",
+          "—"
+        ],
+        [
+          "Lake Errock",
+          "1",
+          "0",
+          "—"
+        ],
+        [
+          "Dewdney Deroche",
+          "0",
+          "0",
+          "—"
+        ],
+        [
+          "Durieu",
+          "0",
+          "0",
+          "—"
+        ],
+        [
+          "Hatzic",
+          "0",
+          "0",
+          "—"
+        ],
+        [
+          "Stave Falls",
+          "0",
+          "0",
+          "—"
+        ],
+        [
+          "Steelhead",
+          "0",
+          "0",
+          "—"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal. Condos and townhomes are one line in the reports.",
       "gen": "gappage"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Mission communities with the most condo and townhome listings",
+      "t": "p",
+      "text": "Community pages for Mission:",
       "gen": "gappage"
     },
     {
@@ -114,26 +227,98 @@
       "items": [
         [
           {
-            "t": "Mission (104 condos and townhomes listed in September)",
+            "t": "Mission",
             "h": "/mission-bc.html"
           }
         ],
         [
           {
-            "t": "Hemlock (9 condos and townhomes listed in September)",
+            "t": "Hemlock",
             "h": "/hemlock.html"
           }
         ],
         [
           {
-            "t": "Mission West (8 condos and townhomes listed in September)",
+            "t": "Mission West",
             "h": "/mission-west.html"
           }
         ],
         [
           {
-            "t": "Lake Errock (1 condos and townhomes listed in September)",
+            "t": "Lake Errock",
             "h": "/lake-errock.html"
+          }
+        ],
+        [
+          {
+            "t": "Dewdney Deroche",
+            "h": "/dewdney-deroche.html"
+          }
+        ],
+        [
+          {
+            "t": "Durieu",
+            "h": "/durieu.html"
+          }
+        ],
+        [
+          {
+            "t": "Hatzic",
+            "h": "/hatzic.html"
+          }
+        ],
+        [
+          {
+            "t": "Stave Falls",
+            "h": "/stave-falls.html"
+          }
+        ],
+        [
+          {
+            "t": "Steelhead",
+            "h": "/steelhead.html"
+          }
+        ]
+      ],
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Secondary schools in Mission",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "5 secondary schools are located in the City of Mission: 4 in SD75 Mission, 1 in SD93 Conseil scolaire francophone. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district.",
+      "gen": "gappage"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Continuing Ed SD 75 (secondary), 33919 Dewdney Trunk Rd"
+          }
+        ],
+        [
+          {
+            "t": "Fraserview Learning Centre (secondary), 32444 7th Ave"
+          }
+        ],
+        [
+          {
+            "t": "Mission Online School (elementary and secondary), Portable #7 32939 7th Ave"
+          }
+        ],
+        [
+          {
+            "t": "Mission Senior Secondary (secondary), 32939 7th Ave"
+          }
+        ],
+        [
+          {
+            "t": "des Deux-Rives (elementary and secondary), 7674 Stave Lake St"
           }
         ]
       ],
@@ -221,6 +406,14 @@
   ],
   "faq": [
     {
+      "q": "What is the benchmark price of a condo in Mission?",
+      "a": "The Fraser Valley Real Estate Board MLS® Home Price Index benchmark for apartments (condos) in Mission was $411,500 in September 2026, a modelled price for a typical home and not an average of sales."
+    },
+    {
+      "q": "Did condo prices fall in Mission?",
+      "a": "Over the past year the benchmark fell 4.7%. Over three months it fell 2.7%. A change under 1.5% is not described as a rise or fall."
+    },
+    {
       "q": "Is Mission a buyers’ or sellers’ market?",
       "a": "In September 2026 houses in Mission had a sales ratio of 12%, which the reports’ scale reads as a balanced market, and condos and townhomes 8%, which the reports’ scale reads as a buyers’ market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers."
     },
@@ -239,10 +432,6 @@
     {
       "q": "Who is Jared Gibbons?",
       "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
-    },
-    {
-      "q": "Do these numbers separate condos from townhomes?",
-      "a": "No. The monthly reports publish condos and townhomes as one line, so any count here includes both. Jared can pull the split for a specific building or street."
     }
   ],
   "needs_from_muse": [

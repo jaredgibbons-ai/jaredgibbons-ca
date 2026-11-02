@@ -6,6 +6,7 @@ The existing community page keeps the houses; both pages link to each other.   p
 """
 import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import trend as TR
 import build_snapstats_layers as L
 
 ROOT = L.ROOT
@@ -42,7 +43,7 @@ def main():
         move = ''
         if first_r and cur:
             a, b = first_r['inventory'], cur['inventory']
-            move = f'Condo and townhome listings in {disp} {"rose" if b > a else "fell" if b < a else "held"} from {L.num(a)} in {L.month_name(first)} to {L.num(b)} in {mn}, while {L.num(sum((r["sales"] or 0) for _, r in S if r))} sold across the {len(keys)} months.'
+            move = f'Condo and townhome listings in {disp} ' + TR.count_move(a, b, L.month_name(first), mn) + f', while {L.num(sum((r["sales"] or 0) for _, r in S if r))} sold across the {len(keys)} months.'
         ratio_txt = f'{L.pct(cur["ratio"])}' + (f', which the reports’ scale reads as {k}' if k else f' on only {cur["inventory"]} listed, too few to read as a market type')
         bl = [{'t': 'notice', 'text': f'Draft for Jared\'s approval. Built only from the monthly MLS® figures (SnapStats) for condos and townhomes in {disp}. No building list, strata fees, street boundaries or live listing feed yet; see the open items.'}]
         bl.append({'t': 'p', 'text': f'{disp} condos and townhomes in {CITY}: {L.num(cur["inventory"])} listed at the end of {mn} {last[:4]} and {L.num(cur["sales"])} sold in the month, a sales ratio of {ratio_txt}. That makes {disp} number {rank} of {len(ranked)} {CITY} communities by condo and townhome listings. Houses in {disp} have their own page; this page is only about attached homes.', 'gen': 'condopage'})

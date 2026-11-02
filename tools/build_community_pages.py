@@ -11,6 +11,7 @@ Pages are rebuilt on every run. Set "hand_edited": true in a page's JSON to stop
 import glob, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import trend as TR
 import build_snapstats_layers as L
 
 ROOT = L.ROOT
@@ -160,8 +161,8 @@ def main():
         ch = []
         for t in L.TL:
             fr = dict(S[t])[first]; cu = cur[t]
-            if act[t] and fr and cu and fr['inventory']: ch.append(f'{L.TL[t].lower()} {"rose" if cu["inventory"] > fr["inventory"] else "fell" if cu["inventory"] < fr["inventory"] else "held"} from {L.num(fr["inventory"])} to {L.num(cu["inventory"])} ({100 * (cu["inventory"] - fr["inventory"]) / fr["inventory"]:+.1f}%)'.replace('-', '−'))
-        if ch: faq.append({'q': f'Are there more or fewer homes for sale in {disp} than in {L.month_name(first)}?', 'a': f'Listings of ' + ' and '.join(ch) + f' between {L.mlabel(first)} and {mo}.'})
+            if act[t] and fr and cu and fr['inventory']: ch.append(f'{L.TL[t].lower()} ' + TR.count_move(fr['inventory'], cu['inventory'], L.month_name(first), mo))
+        if ch: faq.append({'q': f'Are there more or fewer homes for sale in {disp} than in {L.month_name(first)}?', 'a': f'Listings of ' + '; '.join(ch) + '.'})
         data = {'status': 'draft', 'slug': slug, 'updated': '2026-11-01',
                 'community': {'area': ak, 'name': nm},
                 'new_page': {'title': title_for(disp, city), 'description': '', 'h1': f'{disp}, {city} Homes for Sale'},

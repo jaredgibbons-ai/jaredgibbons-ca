@@ -27,12 +27,12 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the monthly MLS® figures (SnapStats) and the city's communities. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
       "gen": "gappage"
     },
     {
       "t": "p",
-      "text": "Cloverdale acreages for sale: houses and land on lots of one acre or more, from the MLS®. Jared sets up a search for the size, area and use you want, and checks whether the land is in the ALR before you offer.",
+      "text": "Cloverdale acreages for sale: houses and land on lots of one acre or more. The Fraser Valley Real Estate Board benchmark for a detached house in Cloverdale was $1,317,200 in September 2026. Jared sets up a search for the size, area and use you want, and checks whether the land is in the ALR before you offer.",
       "gen": "gappage"
     },
     {
@@ -42,71 +42,159 @@
     {
       "t": "h",
       "level": 2,
-      "text": "Cloverdale market context, June to September 2026",
-      "gen": "gappage"
-    },
-    {
-      "t": "p",
-      "text": "Cloverdale had 201 houses and 194 condos and townhomes listed at the end of September, with 32 and 37 sold in the month. Acreages are a smaller part of those listings, so the market-wide figures below are the closest published read on the price pressure around them.",
+      "text": "Cloverdale detached houses: benchmark price and changes, September 2026",
       "gen": "gappage"
     },
     {
       "t": "table",
-      "caption": "Cloverdale listings, sales and sales ratio by month",
+      "caption": "Cloverdale detached houses, MLS® Home Price Index, September 2026",
       "head": [
-        "Month",
-        "Houses listed",
-        "Houses sold",
-        "Houses ratio",
-        "Condos and townhomes listed",
-        "Condos and townhomes sold",
-        "Condos and townhomes ratio"
+        "Area",
+        "Benchmark price",
+        "Index",
+        "1 month",
+        "3 months",
+        "6 months",
+        "1 year",
+        "3 years",
+        "5 years",
+        "10 years"
       ],
       "rows": [
         [
-          "June 2026",
-          "217",
-          "37",
-          "17%",
-          "217",
-          "47",
-          "22%"
-        ],
-        [
-          "July 2026",
-          "216",
-          "34",
-          "16%",
-          "213",
-          "43",
-          "20%"
-        ],
-        [
-          "August 2026",
-          "195",
-          "33",
-          "17%",
-          "192",
-          "38",
-          "20%"
-        ],
-        [
-          "September 2026",
-          "201",
-          "32",
-          "16%",
-          "194",
-          "37",
-          "19%"
+          "Cloverdale",
+          "$1,317,200",
+          "379.2",
+          "-1.7%",
+          "-2.7%",
+          "-5.3%",
+          "-6.9%",
+          "-11.3%",
+          "-5.1%",
+          "—"
         ]
       ],
-      "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal. Condos and townhomes are one line in the reports.",
+      "source": "Source: Fraser Valley Real Estate Board, MLS® Home Price Index, September 2026 (released October 5, 2026). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at 1.5% or more.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Cloverdale: the detached houses benchmark was $1,317,200 in September 2026. Over the past year it fell 6.9%; over three months it fell 2.7%; over the last month it fell 1.7%. Longer term, over 3 years it fell 11.3%; over 5 years it fell 5.1%.",
       "gen": "gappage"
     },
     {
       "t": "h",
       "level": 2,
-      "text": "Cloverdale communities with the most house listings",
+      "text": "Cloverdale detached houses: sales, listings and prices, September 2026",
+      "gen": "gappage"
+    },
+    {
+      "t": "table",
+      "caption": "Cloverdale detached houses, September 2026 with August 2026 and September 2025",
+      "head": [
+        "Measure",
+        "September 2026",
+        "August 2026",
+        "September 2025"
+      ],
+      "rows": [
+        [
+          "Sales",
+          "32",
+          "33",
+          "35"
+        ],
+        [
+          "New listings",
+          "74",
+          "62",
+          "88"
+        ],
+        [
+          "Active listings",
+          "201",
+          "201",
+          "218"
+        ],
+        [
+          "Benchmark price",
+          "$1,317,200",
+          "$1,339,700",
+          "$1,414,600"
+        ],
+        [
+          "Median sale price",
+          "$1,212,500",
+          "$1,258,000",
+          "$1,375,000"
+        ],
+        [
+          "Average sale price",
+          "$1,270,824",
+          "$1,310,575",
+          "$1,420,530"
+        ]
+      ],
+      "source": "Source: Fraser Valley Real Estate Board MLS® statistics package, September 2026 (released October 5, 2026). Median is the middle sale price of the month and average is the total of sale prices divided by sales; both swing when few homes sell, so a month with fewer than 3 sales is not read as a trend.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "In September 2026 Cloverdale had 32 detached houses sales and 201 active listings (33 sales and 201 active in August; 35 and 218 in September 2025). Sales fell 8.6% against September 2025. Active listings fell 7.8% against September 2025.",
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Detached houses against other home types in Cloverdale",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Cloverdale: the detached houses benchmark of $1,317,200 sits $562,900 above the townhomes benchmark of $754,300 (175% of it) and $810,500 above the apartments (condos) benchmark of $506,700 (260% of it).",
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Cloverdale houses by community, September 2026",
+      "gen": "gappage"
+    },
+    {
+      "t": "table",
+      "caption": "Cloverdale houses listed, sold and sales ratio by community, September 2026",
+      "head": [
+        "Community",
+        "Listed",
+        "Sold",
+        "Sales ratio"
+      ],
+      "rows": [
+        [
+          "Cloverdale",
+          "167",
+          "22",
+          "13%"
+        ],
+        [
+          "Clayton",
+          "34",
+          "10",
+          "29%"
+        ],
+        [
+          "Serpentine",
+          "0",
+          "0",
+          "—"
+        ]
+      ],
+      "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Community pages for Cloverdale:",
       "gen": "gappage"
     },
     {
@@ -114,14 +202,20 @@
       "items": [
         [
           {
-            "t": "Cloverdale (167 houses listed in September)",
+            "t": "Cloverdale",
             "h": "/cloverdale-bc.html"
           }
         ],
         [
           {
-            "t": "Clayton (34 houses listed in September)",
+            "t": "Clayton",
             "h": "/clayton.html"
+          }
+        ],
+        [
+          {
+            "t": "Serpentine",
+            "h": "/serpentine.html"
           }
         ]
       ],

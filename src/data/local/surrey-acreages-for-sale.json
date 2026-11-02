@@ -27,12 +27,12 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the monthly MLS® figures (SnapStats) and the city's communities. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
       "gen": "gappage"
     },
     {
       "t": "p",
-      "text": "Surrey acreages for sale: houses and land on lots of one acre or more, from the MLS®. Jared sets up a search for the size, area and use you want, and checks whether the land is in the ALR before you offer.",
+      "text": "Surrey acreages for sale: houses and land on lots of one acre or more. The Fraser Valley Real Estate Board benchmark for a detached house in Surrey was $1,304,100 in September 2026. Jared sets up a search for the size, area and use you want, and checks whether the land is in the ALR before you offer.",
       "gen": "gappage"
     },
     {
@@ -42,71 +42,182 @@
     {
       "t": "h",
       "level": 2,
-      "text": "Surrey market context, June to September 2026",
-      "gen": "gappage"
-    },
-    {
-      "t": "p",
-      "text": "Surrey had 1,120 houses and 1,523 condos and townhomes listed at the end of September, with 84 and 114 sold in the month. Acreages are a smaller part of those listings, so the market-wide figures below are the closest published read on the price pressure around them.",
+      "text": "Surrey detached houses: benchmark price and changes, September 2026",
       "gen": "gappage"
     },
     {
       "t": "table",
-      "caption": "Surrey listings, sales and sales ratio by month",
+      "caption": "Surrey detached houses, MLS® Home Price Index, September 2026",
       "head": [
-        "Month",
-        "Houses listed",
-        "Houses sold",
-        "Houses ratio",
-        "Condos and townhomes listed",
-        "Condos and townhomes sold",
-        "Condos and townhomes ratio"
+        "Area",
+        "Benchmark price",
+        "Index",
+        "1 month",
+        "3 months",
+        "6 months",
+        "1 year",
+        "3 years",
+        "5 years",
+        "10 years"
       ],
       "rows": [
         [
-          "June 2026",
-          "1,129",
-          "96",
-          "9%",
-          "1,515",
-          "188",
-          "12%"
+          "Surrey",
+          "$1,304,100",
+          "374.6",
+          "-1.4%",
+          "-2.5%",
+          "-4.9%",
+          "-9.0%",
+          "-17.5%",
+          "-8.0%",
+          "—"
         ],
         [
-          "July 2026",
-          "1,107",
-          "91",
-          "8%",
-          "1,490",
-          "161",
-          "11%"
-        ],
-        [
-          "August 2026",
-          "1,106",
-          "80",
-          "7%",
-          "1,449",
-          "128",
-          "9%"
-        ],
-        [
-          "September 2026",
-          "1,120",
-          "84",
-          "8%",
-          "1,523",
-          "114",
-          "7%"
+          "North Surrey",
+          "$1,252,600",
+          "387.2",
+          "-0.8%",
+          "-2.0%",
+          "-6.8%",
+          "-10.9%",
+          "-16.1%",
+          "-10.3%",
+          "—"
         ]
       ],
-      "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal. Condos and townhomes are one line in the reports.",
+      "source": "Source: Fraser Valley Real Estate Board, MLS® Home Price Index, September 2026 (released October 5, 2026). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at 1.5% or more.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Surrey: the detached houses benchmark was $1,304,100 in September 2026. Over the past year it fell 9.0%; over three months it fell 2.5%; over the last month it was little changed (-1.4%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 17.5%; over 5 years it fell 8.0%. North Surrey: the detached houses benchmark was $1,252,600 in September 2026. Over the past year it fell 10.9%; over three months it fell 2.0%; over the last month it was little changed (-0.8%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 16.1%; over 5 years it fell 10.3%.",
       "gen": "gappage"
     },
     {
       "t": "h",
       "level": 2,
-      "text": "Surrey communities with the most house listings",
+      "text": "Detached houses against other home types in Surrey",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Surrey: the detached houses benchmark of $1,304,100 sits $554,500 above the townhomes benchmark of $749,600 (174% of it) and $843,900 above the apartments (condos) benchmark of $460,200 (283% of it). North Surrey: the detached houses benchmark of $1,252,600 sits $572,200 above the townhomes benchmark of $680,400 (184% of it) and $853,700 above the apartments (condos) benchmark of $398,900 (314% of it).",
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Surrey houses by community, September 2026",
+      "gen": "gappage"
+    },
+    {
+      "t": "table",
+      "caption": "Surrey houses listed, sold and sales ratio by community, September 2026",
+      "head": [
+        "Community",
+        "Listed",
+        "Sold",
+        "Sales ratio"
+      ],
+      "rows": [
+        [
+          "Fleetwood Tynehead",
+          "137",
+          "14",
+          "10%"
+        ],
+        [
+          "East Newton",
+          "120",
+          "7",
+          "6%"
+        ],
+        [
+          "Panorama Ridge",
+          "101",
+          "5",
+          "5%"
+        ],
+        [
+          "Bear Creek Green Timbers",
+          "93",
+          "5",
+          "5%"
+        ],
+        [
+          "Sullivan Station",
+          "93",
+          "6",
+          "6%"
+        ],
+        [
+          "Fraser Heights",
+          "88",
+          "9",
+          "10%"
+        ],
+        [
+          "Whalley",
+          "86",
+          "0",
+          "—"
+        ],
+        [
+          "West Newton",
+          "83",
+          "17",
+          "20%"
+        ],
+        [
+          "Bolivar Heights",
+          "79",
+          "8",
+          "10%"
+        ],
+        [
+          "Queen Mary Park",
+          "71",
+          "2",
+          "3%"
+        ],
+        [
+          "Cedar Hills",
+          "66",
+          "7",
+          "11%"
+        ],
+        [
+          "Guildford",
+          "49",
+          "2",
+          "4%"
+        ],
+        [
+          "Bridgeview",
+          "30",
+          "0",
+          "—"
+        ],
+        [
+          "Royal Heights",
+          "20",
+          "2",
+          "10%"
+        ],
+        [
+          "Port Kells",
+          "4",
+          "0",
+          "—"
+        ]
+      ],
+      "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Community pages for Surrey:",
       "gen": "gappage"
     },
     {
@@ -114,50 +225,229 @@
       "items": [
         [
           {
-            "t": "Fleetwood Tynehead (137 houses listed in September)",
+            "t": "Fleetwood Tynehead",
             "h": "/fleetwood-tynehead.html"
           }
         ],
         [
           {
-            "t": "East Newton (120 houses listed in September)",
+            "t": "East Newton",
             "h": "/east-newton.html"
           }
         ],
         [
           {
-            "t": "Panorama Ridge (101 houses listed in September)",
+            "t": "Panorama Ridge",
             "h": "/panorama-ridge.html"
           }
         ],
         [
           {
-            "t": "Sullivan Station (93 houses listed in September)",
-            "h": "/sullivan-station.html"
-          }
-        ],
-        [
-          {
-            "t": "Bear Creek Green Timbers (93 houses listed in September)",
+            "t": "Bear Creek Green Timbers",
             "h": "/bear-creek-green-timbers.html"
           }
         ],
         [
           {
-            "t": "Fraser Heights (88 houses listed in September)",
+            "t": "Sullivan Station",
+            "h": "/sullivan-station.html"
+          }
+        ],
+        [
+          {
+            "t": "Fraser Heights",
             "h": "/fraser-heights.html"
           }
         ],
         [
           {
-            "t": "Whalley (86 houses listed in September)",
+            "t": "Whalley",
             "h": "/whalley.html"
           }
         ],
         [
           {
-            "t": "West Newton (83 houses listed in September)",
+            "t": "West Newton",
             "h": "/west-newton.html"
+          }
+        ],
+        [
+          {
+            "t": "Bolivar Heights",
+            "h": "/bolivar-heights.html"
+          }
+        ],
+        [
+          {
+            "t": "Queen Mary Park",
+            "h": "/queen-mary-park-surrey.html"
+          }
+        ]
+      ],
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Independent schools in Surrey",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "31 independent schools are located in the City of Surrey: 30 in SD36 Surrey, 1 in SD39 Vancouver. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district.",
+      "gen": "gappage"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Al-Mustafa School (private), 5441 125a Street"
+          }
+        ],
+        [
+          {
+            "t": "Anchor Point Montessori (private), 15977 28 Avenue"
+          }
+        ],
+        [
+          {
+            "t": "Bibleway Christian Academy (private), 18657 60 Ave"
+          }
+        ],
+        [
+          {
+            "t": "Cloverdale Catholic School (private), 17511 59 Ave"
+          }
+        ],
+        [
+          {
+            "t": "Cornerstone Montessori School (private), 14724 84 Ave"
+          }
+        ],
+        [
+          {
+            "t": "Crescent Heights Academy (private), 19533 64 Avenue"
+          }
+        ],
+        [
+          {
+            "t": "G.N. Sikh Elementary School (private), 7050 120th St"
+          }
+        ],
+        [
+          {
+            "t": "Gobind Sarvar School (private), 8820 168 St"
+          }
+        ],
+        [
+          {
+            "t": "Guru Angad Dev School (private), 13479 77 Ave"
+          }
+        ],
+        [
+          {
+            "t": "Holy Cross Regional High School (private), 16193 88 Ave"
+          }
+        ],
+        [
+          {
+            "t": "Honour Secondary School (private), 10453 Whalley Blvd"
+          }
+        ],
+        [
+          {
+            "t": "Iqra School (private), 14590 116a Ave"
+          }
+        ],
+        [
+          {
+            "t": "Khalsa School Newton (private), 6933 124 St"
+          }
+        ],
+        [
+          {
+            "t": "Khalsa School Old Yale Road (private), 10677 124 St"
+          }
+        ],
+        [
+          {
+            "t": "Khalsa Secondary School (Surrey) (private), 10589 124 St"
+          }
+        ],
+        [
+          {
+            "t": "Newbridge Academy (private), 246-1959 152 St"
+          }
+        ],
+        [
+          {
+            "t": "Our Lady of Good Counsel (private), 10504 139 St"
+          }
+        ],
+        [
+          {
+            "t": "Pacific Academy (private), 10238 168 St"
+          }
+        ],
+        [
+          {
+            "t": "Regent Christian Academy (private), 15100 66a Ave"
+          }
+        ],
+        [
+          {
+            "t": "Regent Christian Online Academy (private), 15100 66a Ave"
+          }
+        ],
+        [
+          {
+            "t": "Sikh Academy (private), 12895-85 Ave"
+          }
+        ],
+        [
+          {
+            "t": "Southridge School (private), 2656 160 St"
+          }
+        ],
+        [
+          {
+            "t": "St Bernadette (private), 13130 65b Ave"
+          }
+        ],
+        [
+          {
+            "t": "St John Paul II Academy (private), 2358 182nd Street"
+          }
+        ],
+        [
+          {
+            "t": "St Matthew's Elementary (private), 16065 88 Ave"
+          }
+        ],
+        [
+          {
+            "t": "Star of the Sea (private), 15024 24 Ave"
+          }
+        ],
+        [
+          {
+            "t": "Surrey Christian School (private), 8888 162 St"
+          }
+        ],
+        [
+          {
+            "t": "Surrey Muslim School (private), 119-7475 135 St"
+          }
+        ],
+        [
+          {
+            "t": "Traditional Learning Academy Online (private), 103-17688 66 Ave"
+          }
+        ],
+        [
+          {
+            "t": "White Rock Christian Academy (private), 2265 152 St"
           }
         ]
       ],

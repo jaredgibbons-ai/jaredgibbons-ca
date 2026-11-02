@@ -16,7 +16,12 @@ TYPES = [('composite', 'All home types'), ('detached', 'Detached'), ('townhouse'
 
 def money(v): return '${:,.0f}'.format(v)
 def pct(v): return ('+' if v > 0 else '') + ('{:.1f}%'.format(v)).replace('-', '−') if v != 0 else '0.0%'
-def move(v): return ('up ' if v > 0 else 'down ') + '{:.1f}%'.format(abs(v)) if v != 0 else 'unchanged'
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import trend as TR
+
+
+def move(v): return TR.pct_move(v)
 
 
 def build(spec, data, month):

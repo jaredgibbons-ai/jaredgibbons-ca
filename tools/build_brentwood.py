@@ -12,6 +12,7 @@ counts until Jared's Paragon export arrives; both say so. Run after build_snapst
 """
 import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import trend as TR
 import build_snapstats_layers as L
 
 ROOT = L.ROOT
@@ -84,7 +85,7 @@ def main():
     both = 'The monthly reports publish condos and townhomes as one line, so the figures on this page cover both and cannot be split until Jared’s sold-listing export is added.'
     move = ''
     a, b = S['condo_townhome'][first]['inventory'], c['inventory']
-    move = f'Condo and townhome listings in {NAME} {"rose" if b > a else "fell" if b < a else "held"} from {L.num(a)} in {L.month_name(first)} to {L.num(b)} in {mn}, while {L.num(sold("condo_townhome"))} sold across the {nm} months.'
+    move = f'Condo and townhome listings in {NAME} ' + TR.count_move(a, b, L.month_name(first), mn) + f', while {L.num(sold("condo_townhome"))} sold across the {nm} months.'
     cb = [notice('Condos in Brentwood Park.'),
           P(f'{NAME} condos in {CITY}: {both} {L.num(c["inventory"])} condos and townhomes were listed at the end of {mn} {yr} and {L.num(c["sales"])} sold in the month, a sales ratio of {ratio_txt(c, "condos")}. That makes {NAME} number {rank} of {len(rk)} {CITY} communities by condo and townhome listings.'),
           {'t': 'grid', 'gen': GEN},

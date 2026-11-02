@@ -8,6 +8,7 @@ import Rich from './Rich.astro';
 import Cta from './Cta.astro';
 import ReviewCards from './ReviewCards.astro';
 import FormStub from './FormStub.astro';
+import NetProceedsCalc from './NetProceedsCalc.astro';
 import { isGated } from '../lib/inventory';
 import { pickReviews } from '../lib/reviews';
 import REVIEW_EXCERPTS from '../data/review-excerpts.json';
@@ -44,7 +45,7 @@ if (local) {
 
 // Every content page shows three Google review excerpts (assigned per page in src/data/review-assign.json, no two pages share the same three).
 // Archive pages that had no review block, and pages built from the local layer alone, get one, placed before the end-of-page link lists.
-const NO_REVIEWS = new Set(['404', 'privacy', 'subscribe-to-our-newsletter', 'contact', 'reviews']);
+const NO_REVIEWS = new Set(['404', 'privacy', 'subscribe-to-our-newsletter', 'contact', 'reviews', 'data-and-methodology']);
 if (!NO_REVIEWS.has(page.slug) && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.splice(page.blocks.length - endCount, 0, { t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
 
 // Split into render sections at each level-2 heading; reviews and grid get their own sections.
@@ -115,9 +116,10 @@ let fid = 0;
                     <thead><tr>{b.head.map((h: string) => <th scope="col">{h}</th>)}</tr></thead>
                     <tbody>{b.rows.map((r: string[]) => <tr>{r.map((c, ci) => ci === 0 ? <th scope="row">{c}</th> : <td>{c}</td>)}</tr>)}</tbody>
                   </table>
-                  {b.source && <p class="tbl__src">{b.source}</p>}
+                  {b.source && <p class="tbl__src">{b.source} {/^Source:/.test(b.source) && page.slug !== 'data-and-methodology' && <a href="/data-and-methodology.html">How these figures are defined and sourced</a>}</p>}
                 </div>
               );
+              if (b.t === 'calc') return <NetProceedsCalc />;
               if (b.t === 'form') return <FormStub labels={b.labels} submit={b.submit} uid={`f${fid++}`} />;
               return null;
             })}

@@ -27,12 +27,12 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the monthly MLS® figures (SnapStats) and the city's communities. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
       "gen": "gappage"
     },
     {
       "t": "p",
-      "text": "Coquitlam lots and land for sale: vacant land and building lots listed on the MLS®. Zoning decides what can be built, so check the zone and the City’s plans for the exact lot before you offer.",
+      "text": "Coquitlam lots and land for sale: vacant land and building lots on the MLS®. Zoning decides what can be built, so check the zone and the City’s plans for the exact lot before you offer. Across all home types the Greater Vancouver REALTORS® benchmark in Coquitlam was $971,700 in September 2026.",
       "gen": "gappage"
     },
     {
@@ -42,71 +42,104 @@
     {
       "t": "h",
       "level": 2,
-      "text": "Coquitlam market context, June to September 2026",
-      "gen": "gappage"
-    },
-    {
-      "t": "p",
-      "text": "Coquitlam had 425 houses and 806 condos and townhomes listed at the end of September, with 44 and 89 sold in the month. Lots and land are a smaller part of those listings, so the market-wide figures below are the closest published read on the price pressure around them.",
+      "text": "Coquitlam all home types: benchmark price and changes, September 2026",
       "gen": "gappage"
     },
     {
       "t": "table",
-      "caption": "Coquitlam listings, sales and sales ratio by month",
+      "caption": "Coquitlam all home types, MLS® Home Price Index, September 2026",
+      "head": [
+        "Area",
+        "Benchmark price",
+        "Index",
+        "1 month",
+        "3 months",
+        "6 months",
+        "1 year",
+        "3 years",
+        "5 years",
+        "10 years"
+      ],
+      "rows": [
+        [
+          "Coquitlam",
+          "$971,700",
+          "307.2",
+          "-1.0%",
+          "-2.8%",
+          "-2.9%",
+          "-6.3%",
+          "-12.7%",
+          "-4.4%",
+          "+21.9%"
+        ]
+      ],
+      "source": "Source: Greater Vancouver REALTORS®, MLS® Home Price Index, September 2026 (released October 2, 2026). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at 1.5% or more.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Coquitlam: the all home types benchmark was $971,700 in September 2026. Over the past year it fell 6.3%; over three months it fell 2.8%; over the last month it was little changed (-1.0%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 12.7%; over 5 years it fell 4.4%; over 10 years it rose 21.9%.",
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Coquitlam houses listed and sold by month, June to September 2026",
+      "gen": "gappage"
+    },
+    {
+      "t": "table",
+      "caption": "Coquitlam houses listed, sold and sales ratio by month",
       "head": [
         "Month",
-        "Houses listed",
-        "Houses sold",
-        "Houses ratio",
-        "Condos and townhomes listed",
-        "Condos and townhomes sold",
-        "Condos and townhomes ratio"
+        "Listed",
+        "Sold",
+        "Sales ratio"
       ],
       "rows": [
         [
           "June 2026",
           "444",
           "79",
-          "18%",
-          "819",
-          "166",
-          "20%"
+          "18%"
         ],
         [
           "July 2026",
           "423",
           "54",
-          "13%",
-          "751",
-          "126",
-          "17%"
+          "13%"
         ],
         [
           "August 2026",
           "416",
           "42",
-          "10%",
-          "791",
-          "94",
-          "12%"
+          "10%"
         ],
         [
           "September 2026",
           "425",
           "44",
-          "10%",
-          "806",
-          "89",
-          "11%"
+          "10%"
         ]
       ],
-      "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal. Condos and townhomes are one line in the reports.",
+      "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Coquitlam houses listed went from 444 in June to 425 in September, a fall of 4.3%.",
       "gen": "gappage"
     },
     {
       "t": "h",
       "level": 2,
-      "text": "Coquitlam communities with the most house listings",
+      "text": "Colleges and universities in Coquitlam",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "1 colleges and universities are located in the City of Coquitlam: 1 in Public Post-Secondary. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district.",
       "gen": "gappage"
     },
     {
@@ -114,50 +147,7 @@
       "items": [
         [
           {
-            "t": "Coquitlam West (76 houses listed in September)",
-            "h": "/coquitlam-west.html"
-          }
-        ],
-        [
-          {
-            "t": "Westwood Plateau (67 houses listed in September)",
-            "h": "/westwood-plateau-coquitlam.html"
-          }
-        ],
-        [
-          {
-            "t": "Burke Mountain (65 houses listed in September)",
-            "h": "/burke-mountain.html"
-          }
-        ],
-        [
-          {
-            "t": "Central Coquitlam (64 houses listed in September)",
-            "h": "/central-coquitlam.html"
-          }
-        ],
-        [
-          {
-            "t": "Coquitlam East (28 houses listed in September)",
-            "h": "/coquitlam-east.html"
-          }
-        ],
-        [
-          {
-            "t": "Ranch Park (20 houses listed in September)",
-            "h": "/ranch-park-coquitlam.html"
-          }
-        ],
-        [
-          {
-            "t": "Cape Horn (18 houses listed in September)",
-            "h": "/cape-horn.html"
-          }
-        ],
-        [
-          {
-            "t": "Maillardville (14 houses listed in September)",
-            "h": "/maillardville-coquitlam.html"
+            "t": "Douglas College — Coquitlam Campus (college), 1250 Pinetree Way"
           }
         ]
       ],

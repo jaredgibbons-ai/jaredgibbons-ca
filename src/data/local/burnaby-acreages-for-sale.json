@@ -27,12 +27,12 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the monthly MLS® figures (SnapStats) and the city's communities. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
       "gen": "gappage"
     },
     {
       "t": "p",
-      "text": "Burnaby acreages for sale: houses and land on lots of one acre or more, from the MLS®. Jared sets up a search for the size, area and use you want, and checks whether the land is in the ALR before you offer.",
+      "text": "Burnaby acreages for sale: houses and land on lots of one acre or more. The Greater Vancouver REALTORS® benchmark for a detached house in Burnaby was $1,694,900 in September 2026. Jared sets up a search for the size, area and use you want, and checks whether the land is in the ALR before you offer.",
       "gen": "gappage"
     },
     {
@@ -42,71 +42,314 @@
     {
       "t": "h",
       "level": 2,
-      "text": "Burnaby market context, June to September 2026",
-      "gen": "gappage"
-    },
-    {
-      "t": "p",
-      "text": "Burnaby had 458 houses and 1,333 condos and townhomes listed at the end of September, with 50 and 147 sold in the month. Acreages are a smaller part of those listings, so the market-wide figures below are the closest published read on the price pressure around them.",
+      "text": "Burnaby detached houses: benchmark price and changes, September 2026",
       "gen": "gappage"
     },
     {
       "t": "table",
-      "caption": "Burnaby listings, sales and sales ratio by month",
+      "caption": "Burnaby detached houses, MLS® Home Price Index, September 2026",
       "head": [
-        "Month",
-        "Houses listed",
-        "Houses sold",
-        "Houses ratio",
-        "Condos and townhomes listed",
-        "Condos and townhomes sold",
-        "Condos and townhomes ratio"
+        "Area",
+        "Benchmark price",
+        "Index",
+        "1 month",
+        "3 months",
+        "6 months",
+        "1 year",
+        "3 years",
+        "5 years",
+        "10 years"
       ],
       "rows": [
         [
-          "June 2026",
-          "477",
-          "57",
-          "12%",
-          "1,366",
-          "221",
-          "16%"
+          "Burnaby East",
+          "$1,694,900",
+          "365.3",
+          "+0.0%",
+          "-4.3%",
+          "-6.7%",
+          "-6.7%",
+          "-7.8%",
+          "+3.7%",
+          "+26.0%"
         ],
         [
-          "July 2026",
-          "459",
-          "50",
-          "11%",
-          "1,281",
-          "206",
-          "16%"
+          "Burnaby North",
+          "$1,808,500",
+          "348.4",
+          "-0.4%",
+          "-3.2%",
+          "-5.9%",
+          "-9.2%",
+          "-9.7%",
+          "+2.4%",
+          "+15.7%"
         ],
         [
-          "August 2026",
-          "461",
-          "42",
-          "9%",
-          "1,285",
-          "176",
-          "14%"
-        ],
-        [
-          "September 2026",
-          "458",
-          "50",
-          "11%",
-          "1,333",
-          "147",
-          "11%"
+          "Burnaby South",
+          "$1,894,600",
+          "359.0",
+          "+0.4%",
+          "-3.6%",
+          "-4.7%",
+          "-10.3%",
+          "-11.4%",
+          "-0.7%",
+          "+6.2%"
         ]
       ],
-      "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal. Condos and townhomes are one line in the reports.",
+      "source": "Source: Greater Vancouver REALTORS®, MLS® Home Price Index, September 2026 (released October 2, 2026). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at 1.5% or more.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Burnaby East: the detached houses benchmark was $1,694,900 in September 2026. Over the past year it fell 6.7%; over three months it fell 4.3%; over the last month it was little changed (+0.0%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 7.8%; over 5 years it rose 3.7%; over 10 years it rose 26.0%. Burnaby North: the detached houses benchmark was $1,808,500 in September 2026. Over the past year it fell 9.2%; over three months it fell 3.2%; over the last month it was little changed (-0.4%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 9.7%; over 5 years it rose 2.4%; over 10 years it rose 15.7%. Burnaby South: the detached houses benchmark was $1,894,600 in September 2026. Over the past year it fell 10.3%; over three months it fell 3.6%; over the last month it was little changed (+0.4%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 11.4%; over 5 years it was little changed (-0.7%, under the 1.5% we need before calling it a move); over 10 years it rose 6.2%.",
       "gen": "gappage"
     },
     {
       "t": "h",
       "level": 2,
-      "text": "Burnaby communities with the most house listings",
+      "text": "Detached houses against other home types in Burnaby",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Burnaby East: the detached houses benchmark of $1,694,900 sits $837,000 above the townhomes benchmark of $857,900 (198% of it) and $986,800 above the apartments (condos) benchmark of $708,100 (239% of it). Burnaby North: the detached houses benchmark of $1,808,500 sits $928,100 above the townhomes benchmark of $880,400 (205% of it) and $1,146,100 above the apartments (condos) benchmark of $662,400 (273% of it). Burnaby South: the detached houses benchmark of $1,894,600 sits $952,500 above the townhomes benchmark of $942,100 (201% of it) and $1,171,600 above the apartments (condos) benchmark of $723,000 (262% of it).",
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Burnaby houses by community, September 2026",
+      "gen": "gappage"
+    },
+    {
+      "t": "table",
+      "caption": "Burnaby houses listed, sold and sales ratio by community, September 2026",
+      "head": [
+        "Community",
+        "Listed",
+        "Sold",
+        "Sales ratio"
+      ],
+      "rows": [
+        [
+          "Capitol Hill",
+          "40",
+          "3",
+          "8%"
+        ],
+        [
+          "South Slope",
+          "34",
+          "5",
+          "15%"
+        ],
+        [
+          "Sperling-Duthie",
+          "28",
+          "1",
+          "4%"
+        ],
+        [
+          "East Burnaby",
+          "26",
+          "2",
+          "8%"
+        ],
+        [
+          "Parkcrest",
+          "25",
+          "3",
+          "12%"
+        ],
+        [
+          "Government Road",
+          "24",
+          "0",
+          "—"
+        ],
+        [
+          "Brentwood Park",
+          "21",
+          "3",
+          "14%"
+        ],
+        [
+          "Montecito",
+          "20",
+          "2",
+          "10%"
+        ],
+        [
+          "Burnaby Lake",
+          "19",
+          "2",
+          "11%"
+        ],
+        [
+          "Forest Glen",
+          "18",
+          "1",
+          "6%"
+        ],
+        [
+          "Willingdon Heights",
+          "18",
+          "1",
+          "6%"
+        ],
+        [
+          "Upper Deer Lake",
+          "17",
+          "1",
+          "6%"
+        ],
+        [
+          "Central",
+          "14",
+          "1",
+          "7%"
+        ],
+        [
+          "Metrotown",
+          "14",
+          "7",
+          "50%"
+        ],
+        [
+          "The Crest",
+          "14",
+          "2",
+          "14%"
+        ],
+        [
+          "Burnaby Hospital",
+          "13",
+          "1",
+          "8%"
+        ],
+        [
+          "Deer Lake",
+          "13",
+          "1",
+          "8%"
+        ],
+        [
+          "Vancouver Heights",
+          "13",
+          "5",
+          "38%"
+        ],
+        [
+          "Buckingham Heights",
+          "12",
+          "0",
+          "—"
+        ],
+        [
+          "Central Park",
+          "11",
+          "2",
+          "18%"
+        ],
+        [
+          "Deer Lake Place",
+          "10",
+          "0",
+          "—"
+        ],
+        [
+          "Westridge",
+          "10",
+          "1",
+          "10%"
+        ],
+        [
+          "Edmonds",
+          "9",
+          "2",
+          "22%"
+        ],
+        [
+          "Garden Village",
+          "9",
+          "1",
+          "11%"
+        ],
+        [
+          "Highgate",
+          "6",
+          "2",
+          "33%"
+        ],
+        [
+          "Oakdale",
+          "5",
+          "0",
+          "—"
+        ],
+        [
+          "Simon Fraser University SFU",
+          "5",
+          "0",
+          "—"
+        ],
+        [
+          "Suncrest",
+          "4",
+          "0",
+          "—"
+        ],
+        [
+          "Big Bend",
+          "2",
+          "0",
+          "—"
+        ],
+        [
+          "Sullivan Heights",
+          "2",
+          "1",
+          "50%"
+        ],
+        [
+          "Forest Hills",
+          "1",
+          "0",
+          "—"
+        ],
+        [
+          "Greentree Village",
+          "1",
+          "0",
+          "—"
+        ],
+        [
+          "Cariboo",
+          "0",
+          "0",
+          "—"
+        ],
+        [
+          "Oaklands",
+          "0",
+          "0",
+          "—"
+        ],
+        [
+          "Simon Fraser Hills",
+          "0",
+          "0",
+          "—"
+        ]
+      ],
+      "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Community pages for Burnaby:",
       "gen": "gappage"
     },
     {
@@ -114,50 +357,129 @@
       "items": [
         [
           {
-            "t": "Capitol Hill (40 houses listed in September)",
+            "t": "Capitol Hill",
             "h": "/capitol-hill-bn.html"
           }
         ],
         [
           {
-            "t": "South Slope (34 houses listed in September)",
+            "t": "South Slope",
             "h": "/south-slope-burnaby.html"
           }
         ],
         [
           {
-            "t": "Sperling-Duthie (28 houses listed in September)",
+            "t": "Sperling-Duthie",
             "h": "/sperling-duthie-burnaby.html"
           }
         ],
         [
           {
-            "t": "East Burnaby (26 houses listed in September)",
+            "t": "East Burnaby",
             "h": "/east-burnaby.html"
           }
         ],
         [
           {
-            "t": "Parkcrest (25 houses listed in September)",
+            "t": "Parkcrest",
             "h": "/parkcrest.html"
           }
         ],
         [
           {
-            "t": "Government Road (24 houses listed in September)",
+            "t": "Government Road",
             "h": "/government-road.html"
           }
         ],
         [
           {
-            "t": "Brentwood Park (21 houses listed in September)",
+            "t": "Brentwood Park",
             "h": "/brentwood-park.html"
           }
         ],
         [
           {
-            "t": "Montecito (20 houses listed in September)",
+            "t": "Montecito",
             "h": "/montecito.html"
+          }
+        ],
+        [
+          {
+            "t": "Burnaby Lake",
+            "h": "/burnaby-lake.html"
+          }
+        ],
+        [
+          {
+            "t": "Forest Glen",
+            "h": "/forest-glen-bs.html"
+          }
+        ]
+      ],
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Independent schools in Burnaby",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "10 independent schools are located in the City of Burnaby: 10 in SD41 Burnaby. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district.",
+      "gen": "gappage"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Burnaby Montessori School (private), 5489 Kingsway"
+          }
+        ],
+        [
+          {
+            "t": "Deer Lake SDA School (private), 5550 Gilpin St"
+          }
+        ],
+        [
+          {
+            "t": "Holy Cross Elementary School (private), 1450 Delta Ave"
+          }
+        ],
+        [
+          {
+            "t": "John Knox Christian - Elementary Campus (private), 8260 13th Ave"
+          }
+        ],
+        [
+          {
+            "t": "Our Lady of Mercy (private), 7481 10th Ave"
+          }
+        ],
+        [
+          {
+            "t": "St. Francis de Sales (private), 6656 Balmoral St"
+          }
+        ],
+        [
+          {
+            "t": "St. Helen's (private), 3871 Pandora St."
+          }
+        ],
+        [
+          {
+            "t": "St. Michaels (private), 9387 Holmes St"
+          }
+        ],
+        [
+          {
+            "t": "St. Thomas More Collegiate (private), 7450 12th Ave"
+          }
+        ],
+        [
+          {
+            "t": "Whytecliff Agile Learning Centre-Burnaby (private), 3450 Boundary Rd"
           }
         ]
       ],

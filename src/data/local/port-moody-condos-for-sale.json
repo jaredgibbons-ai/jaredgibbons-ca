@@ -27,12 +27,12 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the monthly MLS® figures (SnapStats) and the city's communities. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
       "gen": "gappage"
     },
     {
       "t": "p",
-      "text": "Port Moody condos for sale: apartment-style homes in strata buildings, from the MLS®. Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees.",
+      "text": "Port Moody condos for sale: apartment-style homes in strata buildings. The Greater Vancouver REALTORS® benchmark for apartments (condos) in Port Moody was $676,200 in September 2026 (-4.9% over a year). Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees.",
       "gen": "gappage"
     },
     {
@@ -42,71 +42,135 @@
     {
       "t": "h",
       "level": 2,
-      "text": "Port Moody market context, June to September 2026",
-      "gen": "gappage"
-    },
-    {
-      "t": "p",
-      "text": "Port Moody had 135 houses and 192 condos and townhomes listed at the end of September, with 15 and 29 sold in the month. Condos are a smaller part of those listings, so the market-wide figures below are the closest published read on the price pressure around them.",
+      "text": "Port Moody apartments (condos): benchmark price and changes, September 2026",
       "gen": "gappage"
     },
     {
       "t": "table",
-      "caption": "Port Moody listings, sales and sales ratio by month",
+      "caption": "Port Moody apartments (condos), MLS® Home Price Index, September 2026",
       "head": [
-        "Month",
-        "Houses listed",
-        "Houses sold",
-        "Houses ratio",
-        "Condos and townhomes listed",
-        "Condos and townhomes sold",
-        "Condos and townhomes ratio"
+        "Area",
+        "Benchmark price",
+        "Index",
+        "1 month",
+        "3 months",
+        "6 months",
+        "1 year",
+        "3 years",
+        "5 years",
+        "10 years"
       ],
       "rows": [
         [
-          "June 2026",
-          "127",
-          "9",
-          "7%",
-          "216",
-          "36",
-          "17%"
+          "Port Moody",
+          "$676,200",
+          "373.4",
+          "-0.6%",
+          "-3.2%",
+          "-3.7%",
+          "-4.9%",
+          "-5.1%",
+          "+6.7%",
+          "+63.2%"
+        ]
+      ],
+      "source": "Source: Greater Vancouver REALTORS®, MLS® Home Price Index, September 2026 (released October 2, 2026). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at 1.5% or more.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Port Moody: the apartments (condos) benchmark was $676,200 in September 2026. Over the past year it fell 4.9%; over three months it fell 3.2%; over the last month it was little changed (-0.6%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 5.1%; over 5 years it rose 6.7%; over 10 years it rose 63.2%.",
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Port Moody condos and townhomes by community, September 2026",
+      "gen": "gappage"
+    },
+    {
+      "t": "table",
+      "caption": "Port Moody condos and townhomes listed, sold and sales ratio by community, September 2026",
+      "head": [
+        "Community",
+        "Listed",
+        "Sold",
+        "Sales ratio"
+      ],
+      "rows": [
+        [
+          "Port Moody Centre",
+          "120",
+          "16",
+          "13%"
         ],
         [
-          "July 2026",
-          "128",
-          "15",
-          "12%",
-          "195",
-          "38",
-          "19%"
+          "North Shore",
+          "43",
+          "7",
+          "16%"
         ],
         [
-          "August 2026",
-          "133",
-          "12",
-          "9%",
-          "177",
-          "38",
-          "21%"
+          "College Park",
+          "18",
+          "4",
+          "22%"
         ],
         [
-          "September 2026",
-          "135",
-          "15",
-          "11%",
-          "192",
-          "29",
-          "15%"
+          "Heritage Woods",
+          "6",
+          "0",
+          "—"
+        ],
+        [
+          "Heritage Mountain",
+          "5",
+          "2",
+          "40%"
+        ],
+        [
+          "Anmore",
+          "0",
+          "0",
+          "—"
+        ],
+        [
+          "Barber Street",
+          "0",
+          "0",
+          "—"
+        ],
+        [
+          "Belcarra",
+          "0",
+          "0",
+          "—"
+        ],
+        [
+          "Glenayre",
+          "0",
+          "0",
+          "—"
+        ],
+        [
+          "Ioco",
+          "0",
+          "0",
+          "—"
+        ],
+        [
+          "Mountain Meadows",
+          "0",
+          "0",
+          "—"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal. Condos and townhomes are one line in the reports.",
       "gen": "gappage"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Port Moody communities with the most condo and townhome listings",
+      "t": "p",
+      "text": "Community pages for Port Moody:",
       "gen": "gappage"
     },
     {
@@ -114,32 +178,89 @@
       "items": [
         [
           {
-            "t": "Port Moody Centre (120 condos and townhomes listed in September)",
+            "t": "Port Moody Centre",
             "h": "/port-moody-centre.html"
           }
         ],
         [
           {
-            "t": "North Shore (43 condos and townhomes listed in September)",
+            "t": "North Shore",
             "h": "/north-shore-port-moody.html"
           }
         ],
         [
           {
-            "t": "College Park (18 condos and townhomes listed in September)",
+            "t": "College Park",
             "h": "/college-park-port-moody.html"
           }
         ],
         [
           {
-            "t": "Heritage Woods (6 condos and townhomes listed in September)",
+            "t": "Heritage Woods",
             "h": "/heritage-woods-port-moody.html"
           }
         ],
         [
           {
-            "t": "Heritage Mountain (5 condos and townhomes listed in September)",
+            "t": "Heritage Mountain",
             "h": "/heritage-mountain-port-moody.html"
+          }
+        ],
+        [
+          {
+            "t": "Anmore",
+            "h": "/anmore-homes-for-sale.html"
+          }
+        ],
+        [
+          {
+            "t": "Barber Street",
+            "h": "/barber-street-port-moody.html"
+          }
+        ],
+        [
+          {
+            "t": "Belcarra",
+            "h": "/belcarra-port-moody.html"
+          }
+        ],
+        [
+          {
+            "t": "Glenayre",
+            "h": "/glenayre-port-moody.html"
+          }
+        ],
+        [
+          {
+            "t": "Mountain Meadows",
+            "h": "/mountain-meadows-port-moody.html"
+          }
+        ]
+      ],
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Secondary schools in Port Moody",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "2 secondary schools are located in the City of Port Moody: 2 in SD43 Coquitlam. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district.",
+      "gen": "gappage"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Heritage Woods Secondary (secondary), 1300 David Ave"
+          }
+        ],
+        [
+          {
+            "t": "Port Moody Secondary (secondary), 300 Albert St"
           }
         ]
       ],
@@ -227,6 +348,14 @@
   ],
   "faq": [
     {
+      "q": "What is the benchmark price of a condo in Port Moody?",
+      "a": "The Greater Vancouver REALTORS® MLS® Home Price Index benchmark for apartments (condos) in Port Moody was $676,200 in September 2026, a modelled price for a typical home and not an average of sales."
+    },
+    {
+      "q": "Did condo prices fall in Port Moody?",
+      "a": "Over the past year the benchmark fell 4.9%. Over three months it fell 3.2%. A change under 1.5% is not described as a rise or fall."
+    },
+    {
       "q": "Is Port Moody a buyers’ or sellers’ market?",
       "a": "In September 2026 houses in Port Moody had a sales ratio of 11%, which the reports’ scale reads as a buyers’ market, and condos and townhomes 15%, which the reports’ scale reads as a balanced market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers."
     },
@@ -245,10 +374,6 @@
     {
       "q": "Who is Jared Gibbons?",
       "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
-    },
-    {
-      "q": "Do these numbers separate condos from townhomes?",
-      "a": "No. The monthly reports publish condos and townhomes as one line, so any count here includes both. Jared can pull the split for a specific building or street."
     }
   ],
   "needs_from_muse": [

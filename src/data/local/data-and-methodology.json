@@ -1,0 +1,321 @@
+{
+ "status": "draft",
+ "slug": "data-and-methodology",
+ "updated": "2026-11-01",
+ "blocks": [
+  {
+   "t": "p",
+   "text": "Every number on this site comes from one of the sources below, and each table says which one and which month. This page explains what the sources are, what the terms mean and how we word a change, so you can check any figure for yourself. If a figure here or anywhere on the site looks wrong, tell Jared and he will check it against the source.",
+   "gen": "methodology"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Where the numbers come from",
+   "gen": "methodology"
+  },
+  {
+   "t": "table",
+   "caption": "Data sources used on this site",
+   "head": [
+    "Source",
+    "What we take from it",
+    "Where it shows up",
+    "Period and release read"
+   ],
+   "rows": [
+    [
+     "SnapStats® monthly community reports (MLS® data from Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board)",
+     "Homes listed at month end, homes sold in the month, sales ratio, reported sale price, days on market and sale-to-list price ratio, by city, community and home type",
+     "Neighbourhood, community and home-type pages, the \"against the whole city\" tables and the market questions in the FAQs",
+     "June, July, August and September 2026 reports"
+    ],
+    [
+     "Greater Vancouver REALTORS®, MLS® Home Price Index and monthly statistics",
+     "Benchmark price and index by area and home type, with 1-month to 10-year changes; sales and listing counts",
+     "Market stats pages for Burnaby, Coquitlam, New Westminster, Port Moody, Port Coquitlam, Pitt Meadows, Maple Ridge, Delta and others in the board’s area, and the Burnaby and Tri-Cities home-type pages",
+     "September 2026 package, released October 2, 2026"
+    ],
+    [
+     "Fraser Valley Real Estate Board, MLS® Home Price Index and monthly statistics",
+     "Benchmark price and index, plus sales, new listings, active listings, median and average prices, by area and home type",
+     "Market stats pages for Surrey, North Delta, Cloverdale, South Surrey and White Rock, Langley, Abbotsford and Mission, and the home-type pages in those areas",
+     "September 2026 package, released October 5, 2026"
+    ],
+    [
+     "BC Data Catalogue (Province of British Columbia): K-12 school locations, child care map data, post-secondary locations",
+     "Names, addresses, grade ranges and school districts of schools, child care facilities, colleges and universities",
+     "School and child care lists on neighbourhood and home-type pages",
+     "Read November 1, 2026"
+    ],
+    [
+     "Active-listing counts from the MLS® system used by Jared’s office",
+     "Only to decide whether a page for a home type in a city is worth publishing: we publish one where at least five homes of that type are currently for sale",
+     "No count from this source is shown on any page. A page does not claim a number of homes for sale; live listings are shown by the listing feed where one is connected",
+     "Snapshot of November 1, 2026"
+    ],
+    [
+     "Client reviews",
+     "Whole sentences from Google reviews of Jared, shown with the reviewer’s initials only",
+     "Review blocks on pages",
+     "Export of November 1, 2026"
+    ]
+   ],
+   "source": "Source: the sources named in the table. The monthly reports are not posted or copied here; we use the figures and write them up in our own words and tables.",
+   "gen": "methodology"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "What the terms mean",
+   "gen": "methodology"
+  },
+  {
+   "t": "table",
+   "caption": "Terms used with the figures",
+   "head": [
+    "Term",
+    "Meaning",
+    "Where it comes from"
+   ],
+   "rows": [
+    [
+     "Benchmark price",
+     "The board’s modelled price of a typical home of a given type and area, built from home features rather than from the prices of the homes that happened to sell. It is not an average or a median of sales.",
+     "MLS® Home Price Index, GVR and FVREB"
+    ],
+    [
+     "Index",
+     "The benchmark expressed against January 2005 = 100, so you can compare long-term growth between areas.",
+     "MLS® Home Price Index"
+    ],
+    [
+     "Listed (inventory)",
+     "Homes listed for sale at the end of the month.",
+     "SnapStats; board statistics call this active listings"
+    ],
+    [
+     "Sold (sales)",
+     "Homes that sold during the month.",
+     "SnapStats; board statistics"
+    ],
+    [
+     "Sales ratio",
+     "Homes sold in the month divided by homes listed, as a percentage. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so it is a rough signal.",
+     "SnapStats"
+    ],
+    [
+     "Reported sale price",
+     "The one sale-price figure the reports give each month. The reports do not say whether it is an average or a median, so it shows direction and is not a valuation of any one home.",
+     "SnapStats"
+    ],
+    [
+     "Days on market",
+     "Average days a home was listed before it sold, as the report states it.",
+     "SnapStats"
+    ],
+    [
+     "Sale-to-list price ratio",
+     "The sale price as a percentage of the last list price.",
+     "SnapStats"
+    ],
+    [
+     "Median and average price",
+     "The middle sale price and the arithmetic mean of sale prices in the month, as the board publishes them.",
+     "FVREB statistics"
+    ],
+    [
+     "Condos and townhomes combined",
+     "The SnapStats reports give condos and townhomes as one line. Where a page says it covers both, it cannot be split; the board’s own apartment and townhouse benchmark figures are used where they are available.",
+     "SnapStats; MLS® Home Price Index"
+    ]
+   ],
+   "source": "Source: SnapStats® monthly reports, GVR and FVREB statistics packages, as in the table above.",
+   "gen": "methodology"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "How we word a change",
+   "gen": "methodology"
+  },
+  {
+   "t": "p",
+   "text": "We only say a price or a count rose or fell when the data can carry it. Two rules apply everywhere on the site, and they are applied by the same code each month:",
+   "gen": "methodology"
+  },
+  {
+   "t": "list",
+   "items": [
+    [
+     {
+      "t": "A change of less than 1.5% is called \"little changed\", with the figure shown, and is never described as a rise or fall."
+     }
+    ],
+    [
+     {
+      "t": "A change in the number of listings or sales is not described as a trend when either count is under 3. One listing more or less is noise, and the page gives the two counts and says they are too few to call a rise or fall."
+     }
+    ]
+   ],
+   "gen": "methodology"
+  },
+  {
+   "t": "p",
+   "text": "Percent changes in the Home Price Index are shown as the board publishes them (1 month, 3 months, 6 months, 1 year, 3 years, 5 years, 10 years). Counts of listings and sales are compared from the first month we hold (June 2026) to the latest month, and the month is named in the sentence.",
+   "gen": "methodology"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Months, refreshes and what is not published",
+   "gen": "methodology"
+  },
+  {
+   "t": "list",
+   "items": [
+    [
+     {
+      "t": "Each table and each figure in a sentence names its month. A page is only as current as the month it names."
+     }
+    ],
+    [
+     {
+      "t": "Figures are refreshed when a month’s reports are released. Market answers that carry a date become out of date the following month until they are refreshed."
+     }
+    ],
+    [
+     {
+      "t": "We do not publish the sale price or address of an individual home from the MLS® system, and every figure we add comes from a source named on this page."
+     }
+    ],
+    [
+     {
+      "t": "Where a figure is not published for a community, a month or a home type, the page says so or shows a dash; we do not fill the gap with an estimate."
+     }
+    ],
+    [
+     {
+      "t": "Anything we could not confirm from an official page is described as unconfirmed rather than stated as a fact."
+     }
+    ]
+   ],
+   "gen": "methodology"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "What this data cannot tell you",
+   "gen": "methodology"
+  },
+  {
+   "t": "p",
+   "text": "Averages and benchmarks describe a market, not your home. A price index cannot see the condition of a house, its lot, a view, a suite or a building’s strata finances, and community figures can rest on very few sales. For a number you can use in a decision about a specific address, ask Jared for a comparable-sales review.",
+   "gen": "methodology"
+  },
+  {
+   "t": "p",
+   "text": "The data relating to real estate on this website comes in part from the MLS® Reciprocity program of Greater Vancouver REALTORS® (GVR), the Fraser Valley Real Estate Board (FVREB) or the Chilliwack and District Real Estate Board (CADREB). The boards assume no responsibility for its accuracy.",
+   "gen": "methodology"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Related",
+   "gen": "methodology"
+  },
+  {
+   "t": "p",
+   "text": "Use the free home evaluation or the net-proceeds calculator if you are thinking about selling, or the market stats pages for benchmark prices by area.",
+   "gen": "methodology"
+  },
+  {
+   "t": "list",
+   "items": [
+    [
+     {
+      "t": "Seller net proceeds calculator",
+      "h": "/seller-net-proceeds-calculator.html"
+     }
+    ],
+    [
+     {
+      "t": "Free home evaluation",
+      "h": "/home-evaluation.html"
+     }
+    ],
+    [
+     {
+      "t": "Burnaby real estate market stats",
+      "h": "/burnaby-real-estate-market-stats.html"
+     }
+    ],
+    [
+     {
+      "t": "Surrey home buyer checklist",
+      "h": "/surrey-home-buyer-checklist.html"
+     }
+    ],
+    [
+     {
+      "t": "Reviews",
+      "h": "/reviews.html"
+     }
+    ],
+    [
+     {
+      "t": "Contact Jared",
+      "h": "/contact.html"
+     }
+    ]
+   ],
+   "gen": "methodology"
+  }
+ ],
+ "faq": [
+  {
+   "q": "Where does the data on jaredgibbons.ca come from?",
+   "a": "From the monthly SnapStats® community reports, the Greater Vancouver REALTORS® and Fraser Valley Real Estate Board statistics and MLS® Home Price Index packages, and the BC Data Catalogue for schools and child care. Each table names its source and month."
+  },
+  {
+   "q": "What is a benchmark price?",
+   "a": "The board’s modelled price for a typical home of a given type and area. It is not the average or median of homes that sold, so it moves more smoothly and is not a valuation of any one home."
+  },
+  {
+   "q": "What is the sales ratio and what do 12% and 20% mean?",
+   "a": "It is homes sold in the month divided by homes listed. On the reports’ own scale, under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. Below ten listings, one sale moves it a long way."
+  },
+  {
+   "q": "When does the site call a price or count a rise or a fall?",
+   "a": "Only when the change is 1.5% or more, and for counts only when both months have at least 3 listings or sales. Smaller changes are described as little changed and thin counts are not described as a trend."
+  },
+  {
+   "q": "How often is the data updated?",
+   "a": "When each month’s reports are released. Every figure names its month, so you can see how current it is."
+  },
+  {
+   "q": "Why does a page cover condos and townhomes together?",
+   "a": "The SnapStats reports give them as one line, so community figures cannot be split. Where the boards publish apartment and townhouse benchmarks separately, those are used and labelled."
+  },
+  {
+   "q": "Do you publish sold prices for individual homes?",
+   "a": "No. The site shows market-level figures and does not show the sale price or address of an individual MLS® sale."
+  }
+ ],
+ "hand_edited": true,
+ "new_page": {
+  "title": "Data and Methodology: Where Our Numbers Come From",
+  "description": "Where every number on jaredgibbons.ca comes from: MLS® board statistics, SnapStats, the BC Data Catalogue, what each term means and how we word a change.",
+  "h1": "Data & Methodology"
+ },
+ "breadcrumbs": [
+  {
+   "name": "Home",
+   "href": "/index.html"
+  },
+  {
+   "name": "Data & methodology",
+   "href": "/data-and-methodology.html"
+  }
+ ]
+}

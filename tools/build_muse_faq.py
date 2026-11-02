@@ -12,6 +12,7 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 EXEMPT = {'testimonials', '404', 'privacy', 'subscribe-to-our-newsletter', 'reviews', 'index', 'blog', 'about', 'thank-you', 'contact', 'unsubscribe', 'terms', 'accessibility'}
 import csv
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import trend as TR
 import build_snapstats_layers as L
 import build_community_pages as C
 AREA = {r['slug']: r['area'] for r in csv.DictReader(open(os.path.join(ROOT, 'docs/research/muse-keywords-2026-11-01.csv'), encoding='utf-8'))}
@@ -97,8 +98,8 @@ def snap_faqs(slug, mapping, months, disp):
             ch = []
             for t in L.TL:
                 a, b = (S[t][first] or {}).get('inventory'), cur[t].get('inventory')
-                if act[t] and a is not None and b is not None: ch.append(f'{noun[t]} {"rose" if b > a else "fell" if b < a else "held"}' + (f' from {L.num(a)} to {L.num(b)}' if a != b else f' at {L.num(a)}'))
-            if ch: out.append((f'Are there more or fewer homes for sale in {disp} than in {L.month_name(first)}?', f'Between {L.mlabel(first)} and {L.mlabel(last)}, listings of ' + ' and '.join(ch) + f' in {disp}.'))
+                if act[t] and a is not None and b is not None: ch.append(f'{noun[t]} ' + TR.count_move(a, b, L.month_name(first), L.month_name(last)))
+            if ch: out.append((f'Are there more or fewer homes for sale in {disp} than in {L.month_name(first)}?', f'In {disp}, listings of ' + '; '.join(ch) + '.'))
             sh = []
             for t in L.TL:
                 tot = area[t]['total']

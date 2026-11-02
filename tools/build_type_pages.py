@@ -12,6 +12,7 @@ Pages are rebuilt each run; "hand_edited": true stops a page being overwritten.
 """
 import glob, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import trend as TR
 import build_snapstats_layers as L
 import build_community_pages as C
 
@@ -60,7 +61,7 @@ def main():
             avg = sum((dict(ser)[m] or {}).get('inventory') or 0 for m in last3) / 3
             if avg < MIN_AVG: skipped['thin'] += 1; continue
             stem = STEM_ALIAS.get(nm, L.norm(nm)); alt = [stem, base, L.norm(nm)]
-            if any(f'{a}-{kd["suffix"]}' in typed_exist or (t == 'condo_townhome' and any(f'{a}-{x}-for-sale' in typed_exist for x in ('condos', 'townhomes'))) for a in alt) or f'{L.norm(nm)}-condos-for-sale' in locs:
+            if not locs.get(f'{base}-{kd["suffix"]}', {}).get('type_page') and (any(f'{a}-{kd["suffix"]}' in typed_exist or (t == 'condo_townhome' and any(f'{a}-{x}-for-sale' in typed_exist for x in ('condos', 'townhomes'))) for a in alt) or f'{L.norm(nm)}-condos-for-sale' in locs):
                 skipped['exists'] += 1; continue
             plan[(ak, nm, t)] = (f'{base}-{kd["suffix"]}', psl, avg)
     slugs = {k: v[0] for k, v in plan.items()}
@@ -82,7 +83,7 @@ def main():
         fr = D[first]; move = ''
         if fr and fr['inventory'] is not None and cur['inventory'] is not None:
             a, b = fr['inventory'], cur['inventory']
-            move = f'Listings of {kd["noun"]} in {disp} {"rose" if b > a else "fell" if b < a else "held"} from {L.num(a)} in {L.month_name(first)} to {L.num(b)} in {mn}, and {tot_s} sold across the {len(keys)} months.'
+            move = f'Listings of {kd["noun"]} in {disp} ' + TR.count_move(a, b, L.month_name(first), mn) + f', and {tot_s} sold across the {len(keys)} months.'
         cross_t = kd['cross']; cx = D if False else dict(L.series(months, ak, cross_t, nm)); cx_cur = cx[last] or {}
         cross_slug = next((s for (a2, n2, t2), (s, _, _) in plan.items() if (a2, n2, t2) == (ak, nm, cross_t)), None)
         bl = [{'t': 'notice', 'text': f'Draft for Jared\'s approval. Built only from the monthly MLS® figures (SnapStats) for {kd["noun"]} in {disp}. No local notes, sold prices, building list or live listing feed yet; see the open items.'}]

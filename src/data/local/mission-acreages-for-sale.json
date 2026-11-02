@@ -27,12 +27,12 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the monthly MLS® figures (SnapStats) and the city's communities. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
       "gen": "gappage"
     },
     {
       "t": "p",
-      "text": "Mission acreages for sale: houses and land on lots of one acre or more, from the MLS®. Jared sets up a search for the size, area and use you want, and checks whether the land is in the ALR before you offer.",
+      "text": "Mission acreages for sale: houses and land on lots of one acre or more. The Fraser Valley Real Estate Board benchmark for a detached house in Mission was $889,200 in September 2026. Jared sets up a search for the size, area and use you want, and checks whether the land is in the ALR before you offer.",
       "gen": "gappage"
     },
     {
@@ -42,71 +42,195 @@
     {
       "t": "h",
       "level": 2,
-      "text": "Mission market context, June to September 2026",
-      "gen": "gappage"
-    },
-    {
-      "t": "p",
-      "text": "Mission had 231 houses and 122 condos and townhomes listed at the end of September, with 28 and 10 sold in the month. Acreages are a smaller part of those listings, so the market-wide figures below are the closest published read on the price pressure around them.",
+      "text": "Mission detached houses: benchmark price and changes, September 2026",
       "gen": "gappage"
     },
     {
       "t": "table",
-      "caption": "Mission listings, sales and sales ratio by month",
+      "caption": "Mission detached houses, MLS® Home Price Index, September 2026",
       "head": [
-        "Month",
-        "Houses listed",
-        "Houses sold",
-        "Houses ratio",
-        "Condos and townhomes listed",
-        "Condos and townhomes sold",
-        "Condos and townhomes ratio"
+        "Area",
+        "Benchmark price",
+        "Index",
+        "1 month",
+        "3 months",
+        "6 months",
+        "1 year",
+        "3 years",
+        "5 years",
+        "10 years"
       ],
       "rows": [
         [
-          "June 2026",
-          "257",
-          "33",
-          "13%",
-          "116",
-          "7",
-          "6%"
-        ],
-        [
-          "July 2026",
-          "239",
-          "36",
-          "15%",
-          "128",
-          "8",
-          "6%"
-        ],
-        [
-          "August 2026",
-          "236",
-          "27",
-          "11%",
-          "110",
-          "12",
-          "11%"
-        ],
-        [
-          "September 2026",
-          "231",
-          "28",
-          "12%",
-          "122",
-          "10",
-          "8%"
+          "Mission",
+          "$889,200",
+          "333.5",
+          "-0.4%",
+          "-5.6%",
+          "-6.9%",
+          "-13.3%",
+          "-14.2%",
+          "-10.6%",
+          "—"
         ]
       ],
-      "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal. Condos and townhomes are one line in the reports.",
+      "source": "Source: Fraser Valley Real Estate Board, MLS® Home Price Index, September 2026 (released October 5, 2026). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at 1.5% or more.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Mission: the detached houses benchmark was $889,200 in September 2026. Over the past year it fell 13.3%; over three months it fell 5.6%; over the last month it was little changed (-0.4%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 14.2%; over 5 years it fell 10.6%.",
       "gen": "gappage"
     },
     {
       "t": "h",
       "level": 2,
-      "text": "Mission communities with the most house listings",
+      "text": "Mission detached houses: sales, listings and prices, September 2026",
+      "gen": "gappage"
+    },
+    {
+      "t": "table",
+      "caption": "Mission detached houses, September 2026 with August 2026 and September 2025",
+      "head": [
+        "Measure",
+        "September 2026",
+        "August 2026",
+        "September 2025"
+      ],
+      "rows": [
+        [
+          "Sales",
+          "28",
+          "27",
+          "33"
+        ],
+        [
+          "New listings",
+          "52",
+          "59",
+          "80"
+        ],
+        [
+          "Active listings",
+          "231",
+          "239",
+          "295"
+        ],
+        [
+          "Benchmark price",
+          "$889,200",
+          "$892,700",
+          "$1,025,000"
+        ],
+        [
+          "Median sale price",
+          "$814,000",
+          "$872,000",
+          "$995,000"
+        ],
+        [
+          "Average sale price",
+          "$924,517",
+          "$923,136",
+          "$1,001,157"
+        ]
+      ],
+      "source": "Source: Fraser Valley Real Estate Board MLS® statistics package, September 2026 (released October 5, 2026). Median is the middle sale price of the month and average is the total of sale prices divided by sales; both swing when few homes sell, so a month with fewer than 3 sales is not read as a trend.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "In September 2026 Mission had 28 detached houses sales and 231 active listings (27 sales and 239 active in August; 33 and 295 in September 2025). Sales fell 15.2% against September 2025. Active listings fell 21.7% against September 2025.",
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Detached houses against other home types in Mission",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Mission: the detached houses benchmark of $889,200 sits $271,200 above the townhomes benchmark of $618,000 (144% of it) and $477,700 above the apartments (condos) benchmark of $411,500 (216% of it).",
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Mission houses by community, September 2026",
+      "gen": "gappage"
+    },
+    {
+      "t": "table",
+      "caption": "Mission houses listed, sold and sales ratio by community, September 2026",
+      "head": [
+        "Community",
+        "Listed",
+        "Sold",
+        "Sales ratio"
+      ],
+      "rows": [
+        [
+          "Mission",
+          "170",
+          "23",
+          "14%"
+        ],
+        [
+          "Hatzic",
+          "20",
+          "3",
+          "15%"
+        ],
+        [
+          "Lake Errock",
+          "16",
+          "1",
+          "6%"
+        ],
+        [
+          "Hemlock",
+          "13",
+          "0",
+          "—"
+        ],
+        [
+          "Mission West",
+          "5",
+          "1",
+          "20%"
+        ],
+        [
+          "Durieu",
+          "3",
+          "0",
+          "—"
+        ],
+        [
+          "Dewdney Deroche",
+          "2",
+          "0",
+          "—"
+        ],
+        [
+          "Stave Falls",
+          "2",
+          "0",
+          "—"
+        ],
+        [
+          "Steelhead",
+          "0",
+          "0",
+          "—"
+        ]
+      ],
+      "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Community pages for Mission:",
       "gen": "gappage"
     },
     {
@@ -114,50 +238,88 @@
       "items": [
         [
           {
-            "t": "Mission (170 houses listed in September)",
+            "t": "Mission",
             "h": "/mission-bc.html"
           }
         ],
         [
           {
-            "t": "Hatzic (20 houses listed in September)",
+            "t": "Hatzic",
             "h": "/hatzic.html"
           }
         ],
         [
           {
-            "t": "Lake Errock (16 houses listed in September)",
+            "t": "Lake Errock",
             "h": "/lake-errock.html"
           }
         ],
         [
           {
-            "t": "Hemlock (13 houses listed in September)",
+            "t": "Hemlock",
             "h": "/hemlock.html"
           }
         ],
         [
           {
-            "t": "Mission West (5 houses listed in September)",
+            "t": "Mission West",
             "h": "/mission-west.html"
           }
         ],
         [
           {
-            "t": "Durieu (3 houses listed in September)",
+            "t": "Durieu",
             "h": "/durieu.html"
           }
         ],
         [
           {
-            "t": "Stave Falls (2 houses listed in September)",
+            "t": "Dewdney Deroche",
+            "h": "/dewdney-deroche.html"
+          }
+        ],
+        [
+          {
+            "t": "Stave Falls",
             "h": "/stave-falls.html"
           }
         ],
         [
           {
-            "t": "Dewdney Deroche (2 houses listed in September)",
-            "h": "/dewdney-deroche.html"
+            "t": "Steelhead",
+            "h": "/steelhead.html"
+          }
+        ]
+      ],
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Independent schools in Mission",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "3 independent schools are located in the City of Mission: 3 in SD75 Mission. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district.",
+      "gen": "gappage"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Seminary of Christ the King (private), PO Box 3310"
+          }
+        ],
+        [
+          {
+            "t": "Valley Christian Online School (private), 8955 Cedar St"
+          }
+        ],
+        [
+          {
+            "t": "Valley Christian School (private), 8955 Cedar St"
           }
         ]
       ],

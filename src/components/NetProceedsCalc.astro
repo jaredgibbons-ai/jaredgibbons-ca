@@ -1,0 +1,108 @@
+---
+// Seller net-proceeds estimator. Runs entirely in the browser: nothing is sent, stored or logged.
+// Deliberately has NO default rates: every cost is typed in by the visitor from their listing agreement and their lawyer's or notary's statement.
+const uid = 'npc';
+const money = [
+  ['price', 'Expected sale price', 'The price you expect to sell for.'],
+  ['payout', 'Mortgage and other debts to pay out', 'Remaining mortgage balance and any liens, from your lender’s payout statement. Leave blank if none.'],
+];
+const costs = [
+  ['legal', 'Legal or notary fees', 'From your lawyer’s or notary’s estimate.'],
+  ['penalty', 'Mortgage prepayment penalty or discharge fee', 'From your lender, if your mortgage is paid out early.'],
+  ['adjust', 'Property tax, utility and strata adjustments owed', 'Amounts the statement of adjustments says you owe the buyer. Leave blank if none or if the buyer owes you.'],
+  ['other', 'Other costs of selling', 'Staging, repairs, cleaning, moving, advertising or anything else you expect to pay.'],
+];
+---
+<form class="npc" id={uid} novalidate onsubmit="return false" aria-describedby={`${uid}-note`}>
+  <p id={`${uid}-note`} class="notice">This is an estimate. It uses only the numbers you type in; no commission, legal or closing-cost rates are built in. Nothing you enter is sent or saved.</p>
+  <div class="npc__grid">
+    {money.map(([k, l, h]) => (
+      <div class="npc__row">
+        <label for={`${uid}-${k}`}>{l} ($)</label>
+        <input id={`${uid}-${k}`} data-k={k} type="text" inputmode="decimal" autocomplete="off" aria-describedby={`${uid}-${k}-h ${uid}-${k}-e`} />
+        <small id={`${uid}-${k}-h`}>{h}</small><small id={`${uid}-${k}-e`} class="npc__err" role="alert"></small>
+      </div>
+    ))}
+    <div class="npc__row">
+      <label for={`${uid}-pct`}>Commission (% of sale price)</label>
+      <input id={`${uid}-pct`} data-k="pct" type="text" inputmode="decimal" autocomplete="off" aria-describedby={`${uid}-pct-h ${uid}-pct-e`} />
+      <small id={`${uid}-pct-h`}>The total commission in your listing agreement, as a percentage. Commission is negotiable and you enter the figure that applies to you.</small><small id={`${uid}-pct-e`} class="npc__err" role="alert"></small>
+    </div>
+    <div class="npc__row">
+      <label for={`${uid}-tax`}>Tax charged on the commission (%)</label>
+      <input id={`${uid}-tax`} data-k="tax" type="text" inputmode="decimal" autocomplete="off" aria-describedby={`${uid}-tax-h ${uid}-tax-e`} />
+      <small id={`${uid}-tax-h`}>The sales tax rate shown on your listing agreement or the brokerage’s statement. Leave blank if it is already included in the percentage above.</small><small id={`${uid}-tax-e`} class="npc__err" role="alert"></small>
+    </div>
+    {costs.map(([k, l, h]) => (
+      <div class="npc__row">
+        <label for={`${uid}-${k}`}>{l} ($)</label>
+        <input id={`${uid}-${k}`} data-k={k} type="text" inputmode="decimal" autocomplete="off" aria-describedby={`${uid}-${k}-h ${uid}-${k}-e`} />
+        <small id={`${uid}-${k}-h`}>{h}</small><small id={`${uid}-${k}-e`} class="npc__err" role="alert"></small>
+      </div>
+    ))}
+  </div>
+  <div class="npc__actions"><button type="button" class="btn" id={`${uid}-clear`}>Clear all</button></div>
+  <div class="npc__out" id={`${uid}-out`} aria-live="polite" aria-atomic="true">
+    <p class="npc__empty">Enter an expected sale price to see the estimate.</p>
+  </div>
+</form>
+<script is:inline>
+(function () {
+  var f = document.getElementById('npc'); if (!f) return;
+  var out = document.getElementById('npc-out');
+  var els = {}; [].forEach.call(f.querySelectorAll('input[data-k]'), function (i) { els[i.dataset.k] = i; });
+  var fmt = function (n) { return (n < 0 ? '−' : '') + '$' + Math.abs(Math.round(n * 100) / 100).toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); };
+  function num(k, max) {
+    var i = els[k], e = document.getElementById('npc-' + k + '-e'), raw = i.value.replace(/[$,\s]/g, '');
+    e.textContent = ''; i.removeAttribute('aria-invalid');
+    if (raw === '') return { v: 0, blank: true };
+    if (!/^\d*\.?\d+$/.test(raw) && !/^\d+\.$/.test(raw)) { e.textContent = 'Enter a number, for example 1250.50.'; i.setAttribute('aria-invalid', 'true'); return { bad: true }; }
+    var v = parseFloat(raw);
+    if (max != null && v > max) { e.textContent = 'Enter a number from 0 to ' + max + '.'; i.setAttribute('aria-invalid', 'true'); return { bad: true }; }
+    return { v: v };
+  }
+  function row(label, val, cls) { return '<tr' + (cls ? ' class="' + cls + '"' : '') + '><th scope="row">' + label + '</th><td>' + val + '</td></tr>'; }
+  function calc() {
+    var r = {}, bad = false;
+    ['price', 'payout', 'legal', 'penalty', 'adjust', 'other'].forEach(function (k) { r[k] = num(k); });
+    r.pct = num('pct', 100); r.tax = num('tax', 100);
+    Object.keys(r).forEach(function (k) { if (r[k].bad) bad = true; });
+    if (bad) { out.innerHTML = '<p class="npc__empty">Fix the highlighted entries to see the estimate.</p>'; return; }
+    if (r.price.blank || r.price.v <= 0) { out.innerHTML = '<p class="npc__empty">Enter an expected sale price to see the estimate.</p>'; return; }
+    var price = r.price.v, comm = price * r.pct.v / 100, tax = comm * r.tax.v / 100;
+    var costs = comm + tax + r.legal.v + r.penalty.v + r.adjust.v + r.other.v;
+    var net = price - r.payout.v - costs;
+    var missing = []; if (r.pct.blank) missing.push('commission'); if (r.legal.blank) missing.push('legal or notary fees');
+    var h = '<table class="tbl"><caption>Estimated net proceeds</caption><tbody>' +
+      row('Sale price', fmt(price)) + row('Less mortgage and debts paid out', fmt(-r.payout.v)) +
+      row('Less commission', fmt(-comm)) + (r.tax.v ? row('Less tax on commission', fmt(-tax)) : '') +
+      row('Less legal or notary fees', fmt(-r.legal.v)) + row('Less prepayment penalty or discharge fee', fmt(-r.penalty.v)) +
+      row('Less adjustments owed', fmt(-r.adjust.v)) + row('Less other costs', fmt(-r.other.v)) +
+      row('Estimated net proceeds', fmt(net), 'npc__net') + '</tbody></table>' +
+      '<p>Selling costs entered total ' + fmt(costs) + ', which is ' + (costs / price * 100).toFixed(1) + '% of the sale price. Your estimated proceeds are ' + (net / price * 100).toFixed(1) + '% of the sale price after debts and costs.</p>';
+    if (net < 0) h += '<p class="notice">The costs and payout you entered are more than the sale price, so the estimate is negative. Check each entry.</p>';
+    if (missing.length) h += '<p class="notice">You left ' + missing.join(' and ') + ' blank, so those are counted as $0 and the real result will be lower.</p>';
+    out.innerHTML = h;
+  }
+  f.addEventListener('input', calc);
+  document.getElementById('npc-clear').addEventListener('click', function () { Object.keys(els).forEach(function (k) { els[k].value = ''; }); calc(); els.price.focus(); });
+})();
+</script>
+<style>
+  .npc{max-width:44rem;margin:var(--s5) 0}
+  .npc__grid{display:grid;gap:var(--s4)}
+  .npc__row{display:grid;gap:.3rem}
+  .npc label{font:700 .8125rem var(--f-head);letter-spacing:.04em}
+  .npc input{min-height:2.75rem;border:1px solid var(--ink);border-radius:0;background:#fff;padding:.6rem .8rem;font:inherit;max-width:18rem}
+  .npc input[aria-invalid="true"]{border-width:2px}
+  .npc small{font-size:.8125rem;color:#444}
+  .npc .npc__err{color:#8a0000;font-weight:700}
+  .npc__actions{margin:var(--s4) 0}
+  .npc__out{margin-top:var(--s5);border:1px solid var(--ink);background:#fff;padding:var(--s4)}
+  .npc__out :global(.tbl){width:100%;border-collapse:collapse;margin-bottom:1rem}
+  .npc__out :global(.tbl caption){text-align:left;font:700 .8125rem var(--f-head);padding-bottom:.5rem}
+  .npc__out :global(th),.npc__out :global(td){text-align:left;padding:.45rem .6rem;border-bottom:1px solid var(--rule)}
+  .npc__out :global(td){text-align:right;font-variant-numeric:tabular-nums}
+  .npc__out :global(.npc__net th),.npc__out :global(.npc__net td){font-weight:700;border-top:2px solid var(--ink);font-size:1.125rem}
+  .npc__empty{margin:0}
+</style>

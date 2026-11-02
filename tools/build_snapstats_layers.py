@@ -9,6 +9,8 @@ The area page and the guide for the same community carry different cuts of the n
     python3 -I tools/build_snapstats_layers.py [--report]
 """
 import glob, json, os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import trend as TR
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 MN = {'01': 'January', '02': 'February', '03': 'March', '04': 'April', '05': 'May', '06': 'June', '07': 'July', '08': 'August', '09': 'September', '10': 'October', '11': 'November', '12': 'December'}
@@ -144,7 +146,7 @@ def build(slug, guide, ak, name, months, city_name):
             fr = dict(S[t])[first]
             if fr:
                 d = r['inventory'] - fr['inventory']
-                parts.append(f'{TL[t].lower()}: listings went from {num(fr["inventory"])} to {num(r["inventory"])}' if d else f'{TL[t].lower()}: listings held at {num(r["inventory"])}')
+                parts.append(f'{TL[t].lower()}: listings ' + TR.count_move(fr['inventory'], r['inventory'], month_name(first), month_name(last)))
             cum = [(m, x) for m, x in S[t] if x]
             if cum:
                 tsales = sum(x['sales'] or 0 for _, x in cum); csales = sum(sum(c['sales'] or 0 for c in months[m]['areas'][ak][t]['communities']) for m, _ in cum)

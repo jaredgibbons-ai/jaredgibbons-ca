@@ -27,12 +27,12 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the monthly MLS® figures (SnapStats) and the city's communities. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
       "gen": "gappage"
     },
     {
       "t": "p",
-      "text": "Burnaby townhomes for sale: ground-level homes in strata buildings, from the MLS®. Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees.",
+      "text": "Burnaby townhomes for sale: ground-level homes in strata buildings. The Greater Vancouver REALTORS® benchmark for townhomes in Burnaby was $857,900 in September 2026 (-1.7% over a year). Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees.",
       "gen": "gappage"
     },
     {
@@ -42,71 +42,90 @@
     {
       "t": "h",
       "level": 2,
-      "text": "Burnaby market context, June to September 2026",
-      "gen": "gappage"
-    },
-    {
-      "t": "p",
-      "text": "Burnaby had 458 houses and 1,333 condos and townhomes listed at the end of September, with 50 and 147 sold in the month. Townhomes are a smaller part of those listings, so the market-wide figures below are the closest published read on the price pressure around them.",
+      "text": "Burnaby townhomes: benchmark price and changes, September 2026",
       "gen": "gappage"
     },
     {
       "t": "table",
-      "caption": "Burnaby listings, sales and sales ratio by month",
+      "caption": "Burnaby townhomes, MLS® Home Price Index, September 2026",
       "head": [
-        "Month",
-        "Houses listed",
-        "Houses sold",
-        "Houses ratio",
-        "Condos and townhomes listed",
-        "Condos and townhomes sold",
-        "Condos and townhomes ratio"
+        "Area",
+        "Benchmark price",
+        "Index",
+        "1 month",
+        "3 months",
+        "6 months",
+        "1 year",
+        "3 years",
+        "5 years",
+        "10 years"
       ],
       "rows": [
         [
-          "June 2026",
-          "477",
-          "57",
-          "12%",
-          "1,366",
-          "221",
-          "16%"
+          "Burnaby East",
+          "$857,900",
+          "372.7",
+          "+0.6%",
+          "-0.7%",
+          "+1.6%",
+          "-1.7%",
+          "-5.6%",
+          "+16.2%",
+          "+60.2%"
         ],
         [
-          "July 2026",
-          "459",
-          "50",
-          "11%",
-          "1,281",
-          "206",
-          "16%"
+          "Burnaby North",
+          "$880,400",
+          "357.6",
+          "-0.9%",
+          "-2.6%",
+          "-5.5%",
+          "-4.7%",
+          "-5.0%",
+          "+10.3%",
+          "+58.9%"
         ],
         [
-          "August 2026",
-          "461",
-          "42",
-          "9%",
-          "1,285",
-          "176",
-          "14%"
-        ],
-        [
-          "September 2026",
-          "458",
-          "50",
-          "11%",
-          "1,333",
-          "147",
-          "11%"
+          "Burnaby South",
+          "$942,100",
+          "354.2",
+          "+0.9%",
+          "-1.4%",
+          "-2.2%",
+          "-4.9%",
+          "-8.4%",
+          "+8.0%",
+          "+46.5%"
         ]
       ],
-      "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal. Condos and townhomes are one line in the reports.",
+      "source": "Source: Greater Vancouver REALTORS®, MLS® Home Price Index, September 2026 (released October 2, 2026). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at 1.5% or more.",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Burnaby East: the townhomes benchmark was $857,900 in September 2026. Over the past year it fell 1.7%; over three months it was little changed (-0.7%, under the 1.5% we need before calling it a move); over the last month it was little changed (+0.6%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 5.6%; over 5 years it rose 16.2%; over 10 years it rose 60.2%. Burnaby North: the townhomes benchmark was $880,400 in September 2026. Over the past year it fell 4.7%; over three months it fell 2.6%; over the last month it was little changed (-0.9%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 5.0%; over 5 years it rose 10.3%; over 10 years it rose 58.9%. Burnaby South: the townhomes benchmark was $942,100 in September 2026. Over the past year it fell 4.9%; over three months it was little changed (-1.4%, under the 1.5% we need before calling it a move); over the last month it was little changed (+0.9%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 8.4%; over 5 years it rose 8.0%; over 10 years it rose 46.5%.",
       "gen": "gappage"
     },
     {
       "t": "h",
       "level": 2,
-      "text": "Burnaby communities with the most condo and townhome listings",
+      "text": "Townhomes against other home types in Burnaby",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "Burnaby East: the townhomes benchmark of $857,900 sits $837,000 below the detached houses benchmark of $1,694,900 (51% of it) and $149,800 above the apartments (condos) benchmark of $708,100 (121% of it). Burnaby North: the townhomes benchmark of $880,400 sits $928,100 below the detached houses benchmark of $1,808,500 (49% of it) and $218,000 above the apartments (condos) benchmark of $662,400 (133% of it). Burnaby South: the townhomes benchmark of $942,100 sits $952,500 below the detached houses benchmark of $1,894,600 (50% of it) and $219,100 above the apartments (condos) benchmark of $723,000 (130% of it).",
+      "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Elementary and middle schools in Burnaby",
+      "gen": "gappage"
+    },
+    {
+      "t": "p",
+      "text": "46 elementary and middle schools are located in the City of Burnaby: 46 in SD41 Burnaby. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district.",
       "gen": "gappage"
     },
     {
@@ -114,50 +133,152 @@
       "items": [
         [
           {
-            "t": "Brentwood Park (360 condos and townhomes listed in September)",
-            "h": "/brentwood-park.html"
+            "t": "Armstrong Elementary (elementary), 8757 Armstrong Ave"
           }
         ],
         [
           {
-            "t": "Metrotown (341 condos and townhomes listed in September)",
-            "h": "/metrotown-homes-for-sale.html"
+            "t": "Aubrey Elementary (elementary), 1075 Stratford Ave"
           }
         ],
         [
           {
-            "t": "Simon Fraser University SFU (91 condos and townhomes listed in September)",
-            "h": "/simon-fraser-university-area-burnaby.html"
+            "t": "BC Provincial School for the Deaf Elementary (elementary), 4446 Watling St"
           }
         ],
         [
           {
-            "t": "Edmonds (89 condos and townhomes listed in September)",
-            "h": "/edmonds-be.html"
+            "t": "Brantford Elementary (elementary), 6512 Brantford Ave"
           }
         ],
         [
           {
-            "t": "Highgate (71 condos and townhomes listed in September)",
-            "h": "/highgate-burnaby.html"
+            "t": "Brentwood Park Elementary (elementary), 1455 Delta Ave"
           }
         ],
         [
           {
-            "t": "Sullivan Heights (69 condos and townhomes listed in September)",
-            "h": "/sullivan-heights-burnaby.html"
+            "t": "Buckingham Elementary (elementary), 6066 Buckingham Ave"
           }
         ],
         [
           {
-            "t": "Forest Glen (64 condos and townhomes listed in September)",
-            "h": "/forest-glen-bs.html"
+            "t": "Burnaby Youth Hub Secondary Program (elementary), 5291 Watling St"
           }
         ],
         [
           {
-            "t": "South Slope (40 condos and townhomes listed in September)",
-            "h": "/south-slope-burnaby.html"
+            "t": "Cameron Elementary (elementary), 9540 Erickson Dr"
+          }
+        ],
+        [
+          {
+            "t": "Capitol Hill Elementary (elementary), 350s Holdom Ave"
+          }
+        ],
+        [
+          {
+            "t": "Cascade Heights Elementary (elementary), 4343 Smith Ave"
+          }
+        ],
+        [
+          {
+            "t": "Chaffey-Burke Elementary (elementary), 4404 Sardis St"
+          }
+        ],
+        [
+          {
+            "t": "Clinton Elementary (elementary), 5858 Clinton St"
+          }
+        ],
+        [
+          {
+            "t": "Confederation Park Elementary (elementary), 4715 Pandora St"
+          }
+        ],
+        [
+          {
+            "t": "Douglas Road Elementary (elementary), 4861 Canada Way"
+          }
+        ],
+        [
+          {
+            "t": "Ecole Seaforth Elementary (elementary), 7881 Government Rd"
+          }
+        ],
+        [
+          {
+            "t": "Edmonds Community Elementary (elementary), 7651 18th Ave"
+          }
+        ],
+        [
+          {
+            "t": "Forest Grove Elementary (elementary), 8525 Forest Grove Dr"
+          }
+        ],
+        [
+          {
+            "t": "Gilmore Community Elementary (elementary), 50 S Gilmore Ave"
+          }
+        ],
+        [
+          {
+            "t": "Gilpin Elementary (elementary), 5490 Eglinton St"
+          }
+        ],
+        [
+          {
+            "t": "Glenwood Elementary (elementary), 5787 Marine Dr"
+          }
+        ],
+        [
+          {
+            "t": "Kitchener Elementary (elementary), 1351 Gilmore Ave"
+          }
+        ],
+        [
+          {
+            "t": "Lakeview Elementary (elementary), 7777 Mayfield St"
+          }
+        ],
+        [
+          {
+            "t": "Lochdale Community Elementary (elementary), 6990 Aubrey Street"
+          }
+        ],
+        [
+          {
+            "t": "Lyndhurst Elementary (elementary), 9847 Lyndhurst St"
+          }
+        ],
+        [
+          {
+            "t": "Maywood Community Elementary (elementary), 4567 Imperial St"
+          }
+        ],
+        [
+          {
+            "t": "Montecito Elementary (elementary), 2176 Duthie Ave"
+          }
+        ],
+        [
+          {
+            "t": "Morley Elementary (elementary), 7355 Morley St"
+          }
+        ],
+        [
+          {
+            "t": "Nelson Elementary (elementary), 4850 Irmin St"
+          }
+        ],
+        [
+          {
+            "t": "Outlook Secondary Program (elementary), 204-3993 Henning Dr"
+          }
+        ],
+        [
+          {
+            "t": "Parkcrest Elementary (elementary), 6055 Halifax St"
           }
         ]
       ],
@@ -245,6 +366,14 @@
   ],
   "faq": [
     {
+      "q": "What is the benchmark price of a townhome in Burnaby?",
+      "a": "The Greater Vancouver REALTORS® MLS® Home Price Index benchmark for townhomes in Burnaby (Burnaby East) was $857,900 in September 2026, a modelled price for a typical home and not an average of sales."
+    },
+    {
+      "q": "Did townhome prices fall in Burnaby?",
+      "a": "Over the past year the benchmark fell 1.7%. Over three months it was little changed (-0.7%, under the 1.5% we need before calling it a move). A change under 1.5% is not described as a rise or fall."
+    },
+    {
       "q": "Is Burnaby a buyers’ or sellers’ market?",
       "a": "In September 2026 houses in Burnaby had a sales ratio of 11%, which the reports’ scale reads as a buyers’ market, and condos and townhomes 11%, which the reports’ scale reads as a buyers’ market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers."
     },
@@ -263,10 +392,6 @@
     {
       "q": "Who is Jared Gibbons?",
       "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
-    },
-    {
-      "q": "Do these numbers separate condos from townhomes?",
-      "a": "No. The monthly reports publish condos and townhomes as one line, so any count here includes both. Jared can pull the split for a specific building or street."
     }
   ],
   "needs_from_muse": [
