@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "burnaby-hospital",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Burnaby Hospital homes listed and sold, June to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Burnaby Hospital homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Burnaby Hospital, September 2026. Detached houses: 13 listed at month end and 1 sold in September, a sales ratio of 8% (a buyers’ market). Condos and townhomes: 10 listed at month end and 0 sold in September, a sales ratio of —.",
-      "gen": "snapstats"
+      "text": "Burnaby Hospital, October 2026. Detached houses: 13 listed at month end and 1 sold in October, a sales ratio of 8% (a buyers’ market). Condos and townhomes: 4 listed at month end and 0 sold in October, a sales ratio of —."
     },
     {
-      "t": "table",
       "caption": "Burnaby Hospital listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -62,200 +59,171 @@
           "10",
           "0",
           "—"
+        ],
+        [
+          "October 2026",
+          "13",
+          "1",
+          "8%",
+          "4",
+          "0",
+          "—"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 7 sold over 4 months against an average of 13.0 listed, about 7.4 months of listings at that pace; the busiest month was July with 3 sold. Condos and townhomes: 4 sold over 4 months against an average of 11.2 listed, about 11.2 months of listings at that pace; the busiest month was August with 4 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 8 sold over 5 months against an average of 13.0 listed, about 8.1 months of listings at that pace; the busiest month was July with 3 sold. Condos and townhomes: 4 sold over 5 months against an average of 9.8 listed, about 12.2 months of listings at that pace; the busiest month was August with 4 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Burnaby Hospital by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Burnaby Hospital by home type"
     },
     {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Burnaby Hospital houses for sale",
-            "h": "/burnaby-hospital-houses-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby Hospital condos and townhomes for sale",
-            "h": "/burnaby-hospital-condos-townhomes-for-sale.html"
-          }
-        ]
-      ],
       "gen": "typepage",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "More Burnaby real estate",
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "list",
       "items": [
         [
           {
-            "t": "Burnaby homes for sale",
-            "h": "/burnaby-homes-for-sale.html"
+            "h": "/burnaby-hospital-houses-for-sale.html",
+            "t": "Burnaby Hospital houses for sale"
           }
         ],
         [
           {
-            "t": "Burnaby real estate market stats",
-            "h": "/burnaby-real-estate-market-stats.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby condos for sale",
-            "h": "/burnaby-condos-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby townhomes for sale",
-            "h": "/burnaby-townhomes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Schools in Burnaby",
-            "h": "/schools-in-burnaby-bc.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby Lake real estate",
-            "h": "/burnaby-lake.html"
-          }
-        ],
-        [
-          {
-            "t": "Capitol Hill real estate",
-            "h": "/capitol-hill-bn.html"
-          }
-        ],
-        [
-          {
-            "t": "Cariboo real estate",
-            "h": "/cariboo.html"
-          }
-        ],
-        [
-          {
-            "t": "Central real estate",
-            "h": "/central-bn.html"
-          }
-        ],
-        [
-          {
-            "t": "Central Park real estate",
-            "h": "/central-park-bs.html"
-          }
-        ],
-        [
-          {
-            "t": "Deer Lake real estate",
-            "h": "/deer-lake.html"
-          }
-        ],
-        [
-          {
-            "t": "Deer Lake Place real estate",
-            "h": "/deer-lake-place.html"
-          }
-        ],
-        [
-          {
-            "t": "East Burnaby real estate",
-            "h": "/east-burnaby.html"
-          }
-        ],
-        [
-          {
-            "t": "Edmonds real estate",
-            "h": "/edmonds-be.html"
-          }
-        ],
-        [
-          {
-            "t": "Forest Glen real estate",
-            "h": "/forest-glen-bs.html"
+            "h": "/burnaby-hospital-condos-townhomes-for-sale.html",
+            "t": "Burnaby Hospital condos and townhomes for sale"
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "h",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "More Burnaby real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Source: fraserhealth.ca (1)",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital"
+            "h": "/burnaby-homes-for-sale.html",
+            "t": "Burnaby homes for sale"
           }
         ],
         [
           {
-            "t": "Source: archive.news.gov.bc.ca",
-            "h": "https://archive.news.gov.bc.ca/releases/news_releases_2024-2028/2026INF0056-001108.pdf"
+            "h": "/burnaby-real-estate-market-stats.html",
+            "t": "Burnaby real estate market stats"
           }
         ],
         [
           {
-            "t": "Source: studentsuccess.gov.bc.ca",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "/burnaby-condos-for-sale.html",
+            "t": "Burnaby condos for sale"
           }
         ],
         [
           {
-            "t": "Source: fraserhealth.ca (4)",
-            "h": "https://www.fraserhealth.ca/news/2025/Jul/Burnaby-Hospital-redevelopment-project-Construction-notice-July-23"
+            "h": "/burnaby-townhomes-for-sale.html",
+            "t": "Burnaby townhomes for sale"
+          }
+        ],
+        [
+          {
+            "h": "/schools-in-burnaby-bc.html",
+            "t": "Schools in Burnaby"
+          }
+        ],
+        [
+          {
+            "h": "/burnaby-lake.html",
+            "t": "Burnaby Lake real estate"
+          }
+        ],
+        [
+          {
+            "h": "/capitol-hill-bn.html",
+            "t": "Capitol Hill real estate"
+          }
+        ],
+        [
+          {
+            "h": "/cariboo.html",
+            "t": "Cariboo real estate"
+          }
+        ],
+        [
+          {
+            "h": "/central-bn.html",
+            "t": "Central real estate"
+          }
+        ],
+        [
+          {
+            "h": "/central-park-bs.html",
+            "t": "Central Park real estate"
+          }
+        ],
+        [
+          {
+            "h": "/deer-lake.html",
+            "t": "Deer Lake real estate"
+          }
+        ],
+        [
+          {
+            "h": "/deer-lake-place.html",
+            "t": "Deer Lake Place real estate"
+          }
+        ],
+        [
+          {
+            "h": "/east-burnaby.html",
+            "t": "East Burnaby real estate"
+          }
+        ],
+        [
+          {
+            "h": "/edmonds-be.html",
+            "t": "Edmonds real estate"
+          }
+        ],
+        [
+          {
+            "h": "/forest-glen-bs.html",
+            "t": "Forest Glen real estate"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Lots and land in Burnaby Hospital",
       "gen": "tn",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Lots and land in Burnaby Hospital"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Fee-simple lots",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Fee-simple lots"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -264,7 +232,7 @@
         ],
         [
           {
-            "t": "Lot character: typical lot sizes are UNVERIFIED at sub-area level — no official source read states them. The only lot-size figures a source states for this area are the R1 SSMUH thresholds themselves: 280 m² and 281 m²."
+            "t": "Lot character: typical lot sizes are not verified at sub-area level — no official source read states them. The only lot-size figures a source states for this area are the R1 SSMUH thresholds themselves: 280 m² and 281 m²."
           }
         ],
         [
@@ -274,27 +242,27 @@
         ],
         [
           {
-            "t": "ALR vs non-ALR: no ALR parcel in this sub-area is confirmed in the research; ALR status is a property-specific check through the Agricultural Land Commission and is UNVERIFIED for individual lots. No ALR percentage split is stated."
+            "t": "ALR vs non-ALR: no ALR parcel in this sub-area is confirmed; ALR status is a property-specific check through the Agricultural Land Commission and is not verified for individual lots. No ALR percentage split is stated."
           }
         ],
         [
           {
-            "t": "Market context, labelled correctly: Burnaby IS a SnapStats-covered community — Detached versus \"Condos & Townhomes\" combined only. SnapStats has NO land category, and no detached figure is a land figure. September 2026 context only: Burnaby Hospital sub-area detached inventory 13 / solds 1 (8% ratio) and \"Condos & Townhomes\" 10 / 0; Burnaby community detached median $1,825,000 and attached median $686,000. Sub-area medians are UNVERIFIED (community level only)."
+            "t": "Market context, labelled correctly: Burnaby IS a SnapStats-covered community — Detached versus \"Condos & Townhomes\" combined only. SnapStats has NO land category, and no detached figure is a land figure. September 2026 context only: Burnaby Hospital sub-area detached inventory 13 / solds 1 (8% ratio) and \"Condos & Townhomes\" 10 / 0; Burnaby community detached median $1,825,000 and attached median $686,000. Sub-area medians are not verified (community level only)."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Bare-land strata",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Bare-land strata"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -302,18 +270,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Institutional redevelopment",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Institutional redevelopment"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -321,22 +289,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Burnaby Hospital",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Burnaby Hospital"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Burnaby Hospital is a City of Burnaby sub-area in central Burnaby — the residential streets around Burnaby Hospital, south of Canada Way and west of Deer Lake, with the hospital campus at 3935 Kincaid St (Fraser Health). \"Burnaby Hospital\" is the GVR board sub-area name used in the SnapStats GVR report for Burnaby; it is named for the hospital, not for a City neighbourhood plan. The City publishes no street-by-street written boundary for the MLS sub-area; exact MLS boundary streets are UNVERIFIED."
+            "t": "Burnaby Hospital is a City of Burnaby sub-area in central Burnaby — the residential streets around Burnaby Hospital, south of Canada Way and west of Deer Lake, with the hospital campus at 3935 Kincaid St (Fraser Health). \"Burnaby Hospital\" is the GVR board sub-area name used in the SnapStats GVR report for Burnaby; it is named for the hospital, not for a City neighbourhood plan. The City publishes no street-by-street written boundary for the MLS sub-area; exact MLS boundary streets are not verified."
           }
         ],
         [
@@ -346,32 +314,32 @@
         ],
         [
           {
-            "t": "Main roads: Canada Way runs east–west at the north edge; Kincaid Street serves the hospital campus; Deer Lake Parkway and Sperling Avenue link east to Deer Lake and City Hall at 4949 Canada Way. There is no SkyTrain station inside the sub-area; buses operate on Kincaid Street at the campus, and the nearest Millennium Line station is Sperling–Burnaby Lake, north-east across the Deer Lake / Burnaby Lake side — walking distance for a specific address: UNVERIFIED."
+            "t": "Main roads: Canada Way runs east–west at the north edge; Kincaid Street serves the hospital campus; Deer Lake Parkway and Sperling Avenue link east to Deer Lake and City Hall at 4949 Canada Way. There is no SkyTrain station inside the sub-area; buses operate on Kincaid Street at the campus, and the nearest Millennium Line station is Sperling–Burnaby Lake, north-east across the Deer Lake / Burnaby Lake side — walking distance for a specific address: Not verified."
           }
         ],
         [
           {
-            "t": "Civic and park anchors: Deer Lake Park, 6450 Deer Lake Ave, immediately east; Wesburn Community Centre, 4781 Parkwood Ave, south of the sub-area; the Bob Prittie Metrotown Branch is the Burnaby Public Library branch serving this quadrant. Commute times in minutes: UNVERIFIED."
+            "t": "Civic and park anchors: Deer Lake Park, 6450 Deer Lake Ave, immediately east; Wesburn Community Centre, 4781 Parkwood Ave, south of the sub-area; the Bob Prittie Metrotown Branch is the Burnaby Public Library branch serving this quadrant. Commute times in minutes: Not verified."
           }
         ],
         [
           {
-            "t": "Schools: SD41 (Burnaby) runs 41 elementary and 8 secondary schools city-wide, with no middle-school tier — elementary K–7, secondary 8–12. Ministry-listed schools in or beside this sub-area include Douglas Road Elementary (K–7), 4861 Canada Way, Cascade Heights Elementary (K–7), 4343 Smith Ave, at the south side, and Burnaby Central Secondary (8–12), 6011 Deer Lake Parkway, at the east side. One completed SD41 locator run is documented: for 4861 Canada Way, Douglas Road Elementary and Burnaby Central Secondary. Every other catchment is UNVERIFIED — check the exact address in the locator."
+            "t": "Schools: SD41 (Burnaby) runs 41 elementary and 8 secondary schools city-wide, with no middle-school tier — elementary K–7, secondary 8–12. Ministry-listed schools in or beside this sub-area include Douglas Road Elementary (K–7), 4861 Canada Way, Cascade Heights Elementary (K–7), 4343 Smith Ave, at the south side, and Burnaby Central Secondary (8–12), 6011 Deer Lake Parkway, at the east side. One completed SD41 locator run is documented: for 4861 Canada Way, Douglas Road Elementary and Burnaby Central Secondary. Every other catchment is not verified — check the exact address in the locator."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Burnaby Hospital",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Burnaby Hospital"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -384,18 +352,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Burnaby Hospital",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Burnaby Hospital"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -413,148 +381,148 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Burnaby Hospital",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Burnaby Hospital"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "fraserhealth.ca · burnaby hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital",
+            "t": "fraserhealth.ca · burnaby hospital"
           }
         ],
         [
           {
-            "t": "burnaby.ca · deer lake park",
-            "h": "https://www.burnaby.ca/explore-outdoors/parks/deer-lake-park"
+            "h": "https://www.burnaby.ca/explore-outdoors/parks/deer-lake-park",
+            "t": "burnaby.ca · deer lake park"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · Burnaby Hospital redevelopment project Construct",
-            "h": "https://www.fraserhealth.ca/news/2025/Jul/Burnaby-Hospital-redevelopment-project-Construction-notice-July-23"
+            "h": "https://www.fraserhealth.ca/news/2025/Jul/Burnaby-Hospital-redevelopment-project-Construction-notice-July-23",
+            "t": "fraserhealth.ca · Burnaby Hospital redevelopment project Construct"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "burnabyschools.ca · about sd41 overview",
-            "h": "https://burnabyschools.ca/about-sd41-overview/"
+            "h": "https://burnabyschools.ca/about-sd41-overview/",
+            "t": "burnabyschools.ca · about sd41 overview"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "burnaby.ca · residential utility fees",
-            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees"
+            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees",
+            "t": "burnaby.ca · residential utility fees"
           }
         ],
         [
           {
-            "t": "archive.news.gov.bc.ca · 2026INF0056 001108",
-            "h": "https://archive.news.gov.bc.ca/releases/news_releases_2024-2028/2026INF0056-001108.pdf"
+            "h": "https://archive.news.gov.bc.ca/releases/news_releases_2024-2028/2026INF0056-001108.pdf",
+            "t": "archive.news.gov.bc.ca · 2026INF0056 001108"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · Moving forward on renewed plan to redevelop Burn",
-            "h": "https://www.fraserhealth.ca/news/2026/Sep/Moving-forward-on-renewed-plan-to-redevelop-Burnaby-Hospital"
+            "h": "https://www.fraserhealth.ca/news/2026/Sep/Moving-forward-on-renewed-plan-to-redevelop-Burnaby-Hospital",
+            "t": "fraserhealth.ca · Moving forward on renewed plan to redevelop Burn"
           }
         ],
         [
           {
-            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun",
-            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan"
+            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan",
+            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun"
           }
         ],
         [
           {
-            "t": "pub-burnaby.escribemeetings.com · filestream.ashx",
-            "h": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=77052"
+            "h": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=77052",
+            "t": "pub-burnaby.escribemeetings.com · filestream.ashx"
           }
         ],
         [
           {
-            "t": "burnaby.ca · Servicing Improvements Guide",
-            "h": "https://www.burnaby.ca/sites/default/files/acquiadam/2025-08/Servicing-Improvements-Guide.pdf"
+            "h": "https://www.burnaby.ca/sites/default/files/acquiadam/2025-08/Servicing-Improvements-Guide.pdf",
+            "t": "burnaby.ca · Servicing Improvements Guide"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · first time home buyers",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers",
+            "t": "www2.gov.bc.ca · first time home buyers"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Burnaby Hospital",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Burnaby Hospital"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -577,18 +545,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -606,18 +574,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -635,18 +603,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -654,25 +622,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Burnaby Hospital, 3935 Kincaid St",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Cascade Heights Elementary",
@@ -699,18 +668,17 @@
           "4.2"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -718,14 +686,64 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt129.pdf",
+            "t": "infomaps.translink.ca · tt129"
+          }
+        ],
+        [
+          {
+            "h": "https://www.burnaby.ca/explore-outdoors/parks/deer-lake-park",
+            "t": "burnaby.ca · deer lake park"
+          }
+        ],
+        [
+          {
+            "h": "http://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks/Central-Park.html",
+            "t": "burnaby.ca · Central Park"
+          }
+        ],
+        [
+          {
+            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/bonsor-recreation-complex",
+            "t": "burnaby.ca · bonsor recreation complex"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.metropolisatmetrotown.com/about-metropolis/",
+            "t": "metropolisatmetrotown.com · about metropolis"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -733,46 +751,53 @@
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt129",
-            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt129.pdf"
+            "t": "Source: fraserhealth.ca",
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital"
           }
         ],
         [
           {
-            "t": "burnaby.ca · deer lake park",
-            "h": "https://www.burnaby.ca/explore-outdoors/parks/deer-lake-park"
+            "t": "Source: archive.news.gov.bc.ca",
+            "h": "https://archive.news.gov.bc.ca/releases/news_releases_2024-2028/2026INF0056-001108.pdf"
           }
         ],
         [
           {
-            "t": "burnaby.ca · Central Park",
-            "h": "http://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks/Central-Park.html"
-          }
-        ],
-        [
-          {
-            "t": "burnaby.ca · bonsor recreation complex",
-            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/bonsor-recreation-complex"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
+            "t": "Source: studentsuccess.gov.bc.ca",
             "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
-          }
-        ],
-        [
-          {
-            "t": "metropolisatmetrotown.com · about metropolis",
-            "h": "https://www.metropolisatmetrotown.com/about-metropolis/"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
+    {
+      "a": "No verified one — there is no standing bare-land market here. Land trades as fee-simple house lots on the established streets; no named bare-land subdivision, bare-land strata plan or presale lot offering was verified.",
+      "gen": "tn",
+      "q": "Can I buy a vacant lot near Burnaby Hospital?"
+    },
+    {
+      "a": "Under the R1 SSMUH district in Zoning Bylaw 2026 No. 14815: 3 units on lots up to 280 m², 4 units on larger lots, and 6 units on lots of at least 281 m² within 400 m of a frequent-transit stop — and lots with two or more primary units may be stratified. Confirm the parcel's zone and the 400 m test before pricing that potential in.",
+      "gen": "tn",
+      "q": "What can a house lot here become under the new zoning?"
+    },
+    {
+      "a": "No ALR parcel in the sub-area is confirmed; ALR status is a parcel check through the Agricultural Land Commission, not verified lot by lot here. If a parcel were in the ALR, subdivision would need ALC approval and residences could not be stratified.",
+      "gen": "tn",
+      "q": "Is any of this land in the ALR?"
+    },
+    {
+      "a": "Both, on the record: the pavilion opened in March 2026 and the Province committed $210 million on September 21, 2026 to emergency and surgical expansion, with cancer care and an acute-care tower to follow — long-term employment support, and years of Kincaid Street construction to disclose.",
+      "gen": "tn",
+      "q": "Does the hospital redevelopment help or hurt a lot purchase?"
+    },
+    {
+      "a": "Both are read, but the Burnaby 2050 OCP (adopted December 9, 2025) takes precedence over older community-plan land use maps where they conflict; the Cascade Heights Community Plan was adopted in March 2025.",
+      "gen": "tn",
+      "q": "Which plan governs a south-side lot — Cascade Heights or the new OCP?"
+    },
     {
       "q": "Is \"Burnaby Hospital\" a real neighbourhood?",
       "a": "It is a GVR MLS® sub-area named for Burnaby Hospital, 3935 Kincaid St — the residential streets around the hospital campus in central Burnaby, south of Canada Way and west of Deer Lake. It is not a separate City community-plan name.",
@@ -787,41 +812,9 @@
       "q": "Which schools serve a Burnaby Hospital-area address?",
       "a": "It depends on the address. SD41 schools in or beside the sub-area include Douglas Road Elementary (K–7), 4861 Canada Way, Cascade Heights Elementary (K–7) at the south side and Burnaby Central Secondary (8–12), 6011 Deer Lake Parkway, at the east side; catchments are address-based and must be checked in the SD41 locator.",
       "gen": "muse"
-    },
-    {
-      "q": "Is there SkyTrain in the Burnaby Hospital area?",
-      "a": "No station sits inside the sub-area. Buses serve Kincaid Street at the hospital campus, and Fraser Health directs riders to TransLink for bus information during redevelopment construction.",
-      "gen": "muse"
-    },
-    {
-      "q": "How is the market in the Burnaby Hospital sub-area?",
-      "a": "Very quiet in September 2026: 1 detached sale against 13 active listings (8% sales ratio) and no attached sales on 10 listings, so the attached sales ratio is not applicable. Burnaby-wide, the median detached sale price was $1,825,000 that month (as of September 2026, Source: SnapStats GVR September 2026 report).",
-      "gen": "muse"
-    },
-    {
-      "gen": "tn",
-      "q": "Can I buy a vacant lot near Burnaby Hospital?",
-      "a": "No verified one — there is no standing bare-land market here. Land trades as fee-simple house lots on the established streets; no named bare-land subdivision, bare-land strata plan or presale lot offering was verified."
-    },
-    {
-      "gen": "tn",
-      "q": "What can a house lot here become under the new zoning?",
-      "a": "Under the R1 SSMUH district in Zoning Bylaw 2026 No. 14815: 3 units on lots up to 280 m², 4 units on larger lots, and 6 units on lots of at least 281 m² within 400 m of a frequent-transit stop — and lots with two or more primary units may be stratified. Confirm the parcel's zone and the 400 m test before pricing that potential in."
-    },
-    {
-      "gen": "tn",
-      "q": "Is any of this land in the ALR?",
-      "a": "No ALR parcel in the sub-area is confirmed in the research; ALR status is a parcel check through the Agricultural Land Commission, UNVERIFIED lot by lot here. If a parcel were in the ALR, subdivision would need ALC approval and residences could not be stratified."
-    },
-    {
-      "gen": "tn",
-      "q": "Does the hospital redevelopment help or hurt a lot purchase?",
-      "a": "Both, on the record: the pavilion opened in March 2026 and the Province committed $210 million on September 21, 2026 to emergency and surgical expansion, with cancer care and an acute-care tower to follow — long-term employment support, and years of Kincaid Street construction to disclose."
-    },
-    {
-      "gen": "tn",
-      "q": "Which plan governs a south-side lot — Cascade Heights or the new OCP?",
-      "a": "Both are read, but the Burnaby 2050 OCP (adopted December 9, 2025) takes precedence over older community-plan land use maps where they conflict; the Cascade Heights Community Plan was adopted in March 2025."
     }
-  ]
+  ],
+  "slug": "burnaby-hospital",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

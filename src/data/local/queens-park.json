@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "queens-park",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Queens Park homes listed and sold, June to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Queens Park homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Queens Park, September 2026. Detached houses: 7 listed at month end and 0 sold in September, a sales ratio of —. Condos and townhomes: 1 listed at month end and 0 sold in September, a sales ratio of —.",
-      "gen": "snapstats"
+      "text": "Queens Park, October 2026. Detached houses: 7 listed at month end and 1 sold in October, a sales ratio of 14%. Condos and townhomes: 0 listed at month end and 0 sold in October, a sales ratio of —."
     },
     {
-      "t": "table",
       "caption": "Queens Park listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -62,201 +59,184 @@
           "1",
           "0",
           "—"
+        ],
+        [
+          "October 2026",
+          "7",
+          "1",
+          "14%",
+          "0",
+          "0",
+          "—"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 3 sold over 4 months against an average of 9.0 listed, about 12.0 months of listings at that pace; the busiest month was August with 3 sold. Condos and townhomes: 1 sold over 4 months against an average of 0.8 listed, about 3.0 months of listings at that pace; the busiest month was August with 1 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 4 sold over 5 months against an average of 8.6 listed, about 10.7 months of listings at that pace; the busiest month was August with 3 sold. Condos and townhomes: 1 sold over 5 months against an average of 0.6 listed, about 3.0 months of listings at that pace; the busiest month was August with 1 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Queens Park by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Queens Park by home type"
     },
     {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Queens Park houses for sale",
-            "h": "/queens-park-new-westminster-houses-for-sale.html"
-          }
-        ]
-      ],
       "gen": "typepage",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "More New Westminster real estate",
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "list",
       "items": [
         [
           {
-            "t": "New Westminster homes for sale",
-            "h": "/new-westminster-homes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "New Westminster real estate market stats",
-            "h": "/new-westminster-real-estate-market-stats.html"
-          }
-        ],
-        [
-          {
-            "t": "New Westminster condos for sale",
-            "h": "/new-westminster-condos-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "New Westminster townhomes for sale",
-            "h": "/new-westminster-townhomes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Schools in New Westminster",
-            "h": "/schools-in-new-westminster-bc.html"
-          }
-        ],
-        [
-          {
-            "t": "Queensborough real estate",
-            "h": "/queensborough.html"
-          }
-        ],
-        [
-          {
-            "t": "Sapperton real estate",
-            "h": "/sapperton-new-westminster.html"
-          }
-        ],
-        [
-          {
-            "t": "The Heights real estate",
-            "h": "/the-heights-new-westminster.html"
-          }
-        ],
-        [
-          {
-            "t": "Uptown real estate",
-            "h": "/uptown-new-westminster.html"
-          }
-        ],
-        [
-          {
-            "t": "West End real estate",
-            "h": "/west-end-new-westminster.html"
-          }
-        ],
-        [
-          {
-            "t": "Connaught Heights real estate",
-            "h": "/connaught-heights.html"
-          }
-        ],
-        [
-          {
-            "t": "Downtown real estate",
-            "h": "/downtown-nw.html"
-          }
-        ],
-        [
-          {
-            "t": "Fraserview real estate",
-            "h": "/fraserview-nw.html"
-          }
-        ],
-        [
-          {
-            "t": "GlenBrooke North real estate",
-            "h": "/glenbrooke-north.html"
-          }
-        ],
-        [
-          {
-            "t": "Moody Park real estate",
-            "h": "/moody-park.html"
+            "h": "/queens-park-new-westminster-houses-for-sale.html",
+            "t": "Queens Park houses for sale"
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "h",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "More New Westminster real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Source: newwestcity.ca",
-            "h": "https://www.newwestcity.ca/heritage/heritage-protection-and-development/sb_expander_articles/582.php"
+            "h": "/new-westminster-homes-for-sale.html",
+            "t": "New Westminster homes for sale"
           }
         ],
         [
           {
-            "t": "Source: newwestschools.ca",
-            "h": "https://newwestschools.ca/our-schools/registration/"
+            "h": "/new-westminster-real-estate-market-stats.html",
+            "t": "New Westminster real estate market stats"
+          }
+        ],
+        [
+          {
+            "h": "/new-westminster-condos-for-sale.html",
+            "t": "New Westminster condos for sale"
+          }
+        ],
+        [
+          {
+            "h": "/new-westminster-townhomes-for-sale.html",
+            "t": "New Westminster townhomes for sale"
+          }
+        ],
+        [
+          {
+            "h": "/schools-in-new-westminster-bc.html",
+            "t": "Schools in New Westminster"
+          }
+        ],
+        [
+          {
+            "h": "/queensborough.html",
+            "t": "Queensborough real estate"
+          }
+        ],
+        [
+          {
+            "h": "/sapperton-new-westminster.html",
+            "t": "Sapperton real estate"
+          }
+        ],
+        [
+          {
+            "h": "/the-heights-new-westminster.html",
+            "t": "The Heights real estate"
+          }
+        ],
+        [
+          {
+            "h": "/uptown-new-westminster.html",
+            "t": "Uptown real estate"
+          }
+        ],
+        [
+          {
+            "h": "/west-end-new-westminster.html",
+            "t": "West End real estate"
+          }
+        ],
+        [
+          {
+            "h": "/connaught-heights.html",
+            "t": "Connaught Heights real estate"
+          }
+        ],
+        [
+          {
+            "h": "/downtown-nw.html",
+            "t": "Downtown real estate"
+          }
+        ],
+        [
+          {
+            "h": "/fraserview-nw.html",
+            "t": "Fraserview real estate"
+          }
+        ],
+        [
+          {
+            "h": "/glenbrooke-north.html",
+            "t": "GlenBrooke North real estate"
+          }
+        ],
+        [
+          {
+            "h": "/moody-park.html",
+            "t": "Moody Park real estate"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Condo buildings in Queens Park",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "(3) Two name traps are excluded: Queen's Park Estate is in Queensborough, and Queens Terrace / Amara Terrace are in Uptown NW — neither belongs to this sub-area despite the names.",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Moody on the Hill — 232 Sixth Street",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Condo buildings in Queens Park"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A 6-storey mid-rise at the corner of 6th and Welsh Street, built in 2024; current listings record property type Apartment/Condo, year built 2024, a rooftop patio among the building features, and unit-level pets as cats OK / pets with restrictions, with parking and storage.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "(3) Two name traps are excluded: Queen's Park Estate is in Queensborough, and Queens Terrace / Amara Terrace are in Uptown NW — neither belongs to this sub-area despite the names."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Queens Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Moody on the Hill — 232 Sixth Street"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "pos": "end",
+      "t": "p",
+      "text": "A 6-storey mid-rise at the corner of 6th and Welsh Street, built in 2024; current listings record property type Apartment/Condo, year built 2024, a rooftop patio among the building features, and unit-level pets as cats OK / pets with restrictions, with parking and storage."
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Queens Park"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -274,18 +254,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Queens Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Queens Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -294,22 +274,22 @@
         ],
         [
           {
-            "t": "Flood / hazards: the governing overlay here is heritage, not floodplain — a floodplain zone for this area is UNVERIFIED in the sources read."
+            "t": "Flood / hazards: the governing overlay here is heritage, not floodplain — a floodplain zone for this area is not verified in the sources read."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Queens Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Queens Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -342,149 +322,149 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Queens Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Queens Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "bccondosandhomes.com · queen s park estate 240 jardine street",
-            "h": "https://www.bccondosandhomes.com/building/queen-s-park-estate-240-jardine-street"
+            "h": "https://www.bccondosandhomes.com/building/queen-s-park-estate-240-jardine-street",
+            "t": "bccondosandhomes.com · queen s park estate 240 jardine street"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · CHC 2019 Nov 06 Agenda",
-            "h": "https://www.newwestcity.ca/database/files/library/CHC_2019_Nov_06_Agenda.pdf"
+            "h": "https://www.newwestcity.ca/database/files/library/CHC_2019_Nov_06_Agenda.pdf",
+            "t": "newwestcity.ca · CHC 2019 Nov 06 Agenda"
           }
         ],
         [
           {
-            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for ",
-            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/"
+            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/",
+            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · subscribing for updates",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/more-help-and-support/subscribing-for-updates"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/more-help-and-support/subscribing-for-updates",
+            "t": "www2.gov.bc.ca · subscribing for updates"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "mapliv.com · 601 6th street new westminster bc v3l 3c1",
-            "h": "https://mapliv.com/ca/address/601-6th-street-new-westminster-bc-v3l-3c1"
+            "h": "https://mapliv.com/ca/address/601-6th-street-new-westminster-bc-v3l-3c1",
+            "t": "mapliv.com · 601 6th street new westminster bc v3l 3c1"
           }
         ],
         [
           {
-            "t": "equitylawgroup.ca · closing costs bc home purchase",
-            "h": "https://www.equitylawgroup.ca/news/closing-costs-bc-home-purchase"
+            "h": "https://www.equitylawgroup.ca/news/closing-costs-bc-home-purchase",
+            "t": "equitylawgroup.ca · closing costs bc home purchase"
           }
         ],
         [
           {
-            "t": "danmarusin.com · bc property transfer tax 2026",
-            "h": "https://danmarusin.com/blog/bc-property-transfer-tax-2026/"
+            "h": "https://danmarusin.com/blog/bc-property-transfer-tax-2026/",
+            "t": "danmarusin.com · bc property transfer tax 2026"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ],
         [
           {
-            "t": "homehappy.ca · bc first time buyer programs",
-            "h": "https://homehappy.ca/bc-first-time-buyer-programs/"
+            "h": "https://homehappy.ca/bc-first-time-buyer-programs/",
+            "t": "homehappy.ca · bc first time buyer programs"
           }
         ],
         [
           {
-            "t": "cmhc-schl.gc.ca · second home",
-            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home"
+            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home",
+            "t": "cmhc-schl.gc.ca · second home"
           }
         ],
         [
           {
-            "t": "patrickjohnstone.ca",
-            "h": "https://www.patrickjohnstone.ca/2018/08"
+            "h": "https://www.patrickjohnstone.ca/2018/08",
+            "t": "patrickjohnstone.ca"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Queens Park",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Clinton Place — 114 Park Row. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Queens Park"
     },
     {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Clinton Place — 114 Park Row. STRATA"
+    },
+    {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A unit listing records Property Type Townhouse, built 1974, Strata No NWS262, Complex Name Clinton Place, sub-area Queens Park, with listing copy describing a three-level townhouse in a 14-unit complex among Park Row's heritage houses. Published rental/pet/age restrictions: UNCONFIRMED — confirm on the Form B. The complex sits inside the Queen's Park HCA geography — how HCA rules reach a strata's common-property exterior work is a per-property City question; Clinton Place's parcel-level Protected/Non-protected status: UNVERIFIED.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A unit listing records Property Type Townhouse, built 1974, Strata No NWS262, Complex Name Clinton Place, sub-area Queens Park, with listing copy describing a three-level townhouse in a 14-unit complex among Park Row's heritage houses. Published rental/pet/age restrictions: Not confirmed — confirm on the Form B. The complex sits inside the Queen's Park HCA geography — how HCA rules reach a strata's common-property exterior work is a per-property City question; Clinton Place's parcel-level Protected/Non-protected status: Not verified."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Queens Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Queens Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -493,7 +473,7 @@
         ],
         [
           {
-            "t": "Schools: SD40, address-based. Per-address catchments beyond the sample: UNVERIFIED. School names use Ministry-listed names only."
+            "t": "Schools: SD40, address-based. Per-address catchments beyond the sample: Not verified. School names use Ministry-listed names only."
           }
         ],
         [
@@ -502,22 +482,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Queens Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Queens Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "THE defining diligence item for this sub-area is the Heritage Conservation Area — not floodplain: The Queen's Park HCA is currently the only HCA in New Westminster: all properties in it are classed Protected or Non-protected regardless of age. A Heritage Alteration Permit (HAP) is required for new buildings, demolition, subdivision, and changes to the front, sides or visible roofline of a Protected property — and for some Protected-property exterior changes that need no Building Permit at all. The Heritage Property Maintenance Standards Bylaw applies to Protected properties. In-kind maintenance needs no HAP. Protected-property incentives: additional density, density transfer, special Building Code provisions, relaxed laneway/carriage guidelines, and no heritage permit fees. For the counted strata (Clinton Place, built 1974, inside the HCA geography): exterior and common-property work can engage the HAP regime — confirm the parcel's Protected/Non-protected status and the strata's obligations with the City before pricing any exterior project; parcel-level status for any specific property: UNVERIFIED here."
+            "t": "THE defining diligence item for this sub-area is the Heritage Conservation Area — not floodplain: The Queen's Park HCA is currently the only HCA in New Westminster: all properties in it are classed Protected or Non-protected regardless of age. A Heritage Alteration Permit (HAP) is required for new buildings, demolition, subdivision, and changes to the front, sides or visible roofline of a Protected property — and for some Protected-property exterior changes that need no Building Permit at all. The Heritage Property Maintenance Standards Bylaw applies to Protected properties. In-kind maintenance needs no HAP. Protected-property incentives: additional density, density transfer, special Building Code provisions, relaxed laneway/carriage guidelines, and no heritage permit fees. For the counted strata (Clinton Place, built 1974, inside the HCA geography): exterior and common-property work can engage the HAP regime — confirm the parcel's Protected/Non-protected status and the strata's obligations with the City before pricing any exterior project; parcel-level status for any specific property: Not verified here."
           }
         ],
         [
@@ -526,18 +506,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Queens Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Queens Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -560,133 +540,133 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Queens Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Queens Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "translink.ca · schedule",
-            "h": "https://www.translink.ca/schedules-and-maps/station/new-westminster-station/schedule"
+            "h": "https://www.translink.ca/schedules-and-maps/station/new-westminster-station/schedule",
+            "t": "translink.ca · schedule"
           }
         ],
         [
           {
-            "t": "sd40.bc.ca · registration",
-            "h": "https://www.sd40.bc.ca/schools/registration/"
+            "h": "https://www.sd40.bc.ca/schools/registration/",
+            "t": "sd40.bc.ca · registration"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · queens park care centre",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/New-Westminster/queens-park-care-centre"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/New-Westminster/queens-park-care-centre",
+            "t": "fraserhealth.ca · queens park care centre"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · Queens Park HCA Statement of Significance and Gu",
-            "h": "https://www.newwestcity.ca/database/rte/files/Queens_Park_HCA_Statement_of_Significance_and_Guidelines_2017_11_14%20(1).pdf"
+            "h": "https://www.newwestcity.ca/database/rte/files/Queens_Park_HCA_Statement_of_Significance_and_Guidelines_2017_11_14%20(1).pdf",
+            "t": "newwestcity.ca · Queens Park HCA Statement of Significance and Gu"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · Zoning Bylaw 6680 2001 (consolidated June 8, 202",
-            "h": "https://www.newwestcity.ca/database/rte/files/Zoning_Bylaw_6680_2001%20(consolidated%20June%208,%202026).pdf"
+            "h": "https://www.newwestcity.ca/database/rte/files/Zoning_Bylaw_6680_2001%20(consolidated%20June%208,%202026).pdf",
+            "t": "newwestcity.ca · Zoning Bylaw 6680 2001 (consolidated June 8, 202"
           }
         ],
         [
           {
-            "t": "newwestcity.ca (2)",
-            "h": "https://www.newwestcity.ca/zoning-bylaw/sb_expander_articles/1618.php"
+            "h": "https://www.newwestcity.ca/zoning-bylaw/sb_expander_articles/1618.php",
+            "t": "newwestcity.ca (2)"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · secondary suites and laneway carriage houses",
-            "h": "https://www.newwestcity.ca/services/development/planning-and-development/planning/secondary-suites-and-laneway-carriage-houses"
+            "h": "https://www.newwestcity.ca/services/development/planning-and-development/planning/secondary-suites-and-laneway-carriage-houses",
+            "t": "newwestcity.ca · secondary suites and laneway carriage houses"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · property taxes",
-            "h": "https://www.newwestcity.ca/services/taxes-and-utilities/property-taxes"
+            "h": "https://www.newwestcity.ca/services/taxes-and-utilities/property-taxes",
+            "t": "newwestcity.ca · property taxes"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Queens Park",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Fee-simple lots",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Queens Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Fee-simple lots"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Established heritage house lots: predominantly single-detached houses under the Single Detached Residential Districts (RS series, s.310) of Zoning Bylaw No. 6680, 2001 — RS-1 minimum site 557.40 sq. m. (6,000 sq. ft.), floor space ratio 0.5 — overlaid by the HCA guidelines and Heritage Alteration Permit rules. The zone minimum alone does not settle what a specific lot can do, because subdivision inside the HCA also requires a Heritage Alteration Permit: UNVERIFIED for any individual lot."
+            "t": "Established heritage house lots: predominantly single-detached houses under the Single Detached Residential Districts (RS series, s.310) of Zoning Bylaw No. 6680, 2001 — RS-1 minimum site 557.40 sq. m. (6,000 sq. ft.), floor space ratio 0.5 — overlaid by the HCA guidelines and Heritage Alteration Permit rules. The zone minimum alone does not settle what a specific lot can do, because subdivision inside the HCA also requires a Heritage Alteration Permit: Not verified for any individual lot."
           }
         ],
         [
           {
-            "t": "HCA classification on every lot: the Queen's Park Heritage Conservation Area — currently the only HCA in New Westminster — places a layer of heritage protection over ALL properties in the area regardless of construction age, classed Protected or Non-protected. Parcel-level Protected vs Non-protected status for any specific property: confirm with the City per property (UNVERIFIED per parcel in the research)."
+            "t": "HCA classification on every lot: the Queen's Park Heritage Conservation Area — currently the only HCA in New Westminster — places a layer of heritage protection over ALL properties in the area regardless of construction age, classed Protected or Non-protected. Parcel-level Protected vs Non-protected status for any specific property: confirm with the City per property (Not verified per parcel)."
           }
         ],
         [
@@ -696,27 +676,27 @@
         ],
         [
           {
-            "t": "Serviced position, as the City states it: New Westminster operates its own electrical utility plus City water / sewer services; a 2026 utility dollar figure confirmed on a City source: UNVERIFIED."
+            "t": "Serviced position, as the City states it: New Westminster operates its own electrical utility plus City water / sewer services; a 2026 utility dollar figure confirmed on a City source: Not verified."
           }
         ],
         [
           {
-            "t": "ALR vs non-ALR: parcel-level ALR status: UNVERIFIED in the research; check any parcel in the ALC's ALR Property and Map Finder. No ALR percentage split is stated."
+            "t": "ALR vs non-ALR: parcel-level ALR status: Not verified; check any parcel in the ALC's ALR Property and Map Finder. No ALR percentage split is stated."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Bare-land strata",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Bare-land strata"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -724,22 +704,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Named developments / applications",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Named developments / applications"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "No named bare-land development, assembly, development site or rezoning proposal inside Queens Park is documented in the research: — none is carried as for-sale inventory."
+            "t": "No named bare-land development, assembly, development site or rezoning proposal inside Queens Park is documented: — none is carried as for-sale inventory."
           }
         ],
         [
@@ -748,18 +728,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Queens Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Queens Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -773,32 +753,32 @@
         ],
         [
           {
-            "t": "Parks and recreation: Queen's Park offers a rose garden, spray park, picnic shelters, tennis and pickleball courts, sports fields and stadium, a skate park, an off-leash dog park, Queen's Park Arena and the Queen's Park Sportsplex. The city's main aquatic centre, the təməsew̓txʷ Aquatic and Community Centre, 65 East Sixth Avenue, is in Uptown. Library: Main Branch, New Westminster Public Library, 716 6th Avenue, at the Uptown edge. Health care: Queens Park Care Centre, 315 McBride Blvd, at the east edge; Royal Columbian Hospital, 330 East Columbia Street, in Sapperton. Shopping: Sixth Street at the west edge is a commercial street serving the neighbourhood; a named shopping centre inside Queens Park confirmed on an official source: UNVERIFIED."
+            "t": "Parks and recreation: Queen's Park offers a rose garden, spray park, picnic shelters, tennis and pickleball courts, sports fields and stadium, a skate park, an off-leash dog park, Queen's Park Arena and the Queen's Park Sportsplex. The city's main aquatic centre, the təməsew̓txʷ Aquatic and Community Centre, 65 East Sixth Avenue, is in Uptown. Library: Main Branch, New Westminster Public Library, 716 6th Avenue, at the Uptown edge. Health care: Queens Park Care Centre, 315 McBride Blvd, at the east edge; Royal Columbian Hospital, 330 East Columbia Street, in Sapperton. Shopping: Sixth Street at the west edge is a commercial street serving the neighbourhood; a named shopping centre inside Queens Park confirmed on an official source: Not verified."
           }
         ],
         [
           {
-            "t": "Roads and transit: Royal Avenue, Sixth Avenue, Sixth Street and McBride Boulevard bound and cross the area; McBride Boulevard links north to East Columbia Street and Sapperton and south toward the Pattullo Bridge approach. No SkyTrain station is inside Queens Park; the nearest are Columbia Station and New Westminster Station (Expo Line); TransLink routes 105 (Uptown / New Westminster Station) and 102 (Victoria Hill / New Westminster Station) serve the adjoining corridors. Commute times in minutes: UNVERIFIED."
+            "t": "Roads and transit: Royal Avenue, Sixth Avenue, Sixth Street and McBride Boulevard bound and cross the area; McBride Boulevard links north to East Columbia Street and Sapperton and south toward the Pattullo Bridge approach. No SkyTrain station is inside Queens Park; the nearest are Columbia Station and New Westminster Station (Expo Line); TransLink routes 105 (Uptown / New Westminster Station) and 102 (Victoria Hill / New Westminster Station) serve the adjoining corridors. Commute times in minutes: Not verified."
           }
         ],
         [
           {
-            "t": "Market context, labelled correctly: September 2026 SnapStats — Queens Park sub-area detached inventory 7 / solds 0 and \"Condos & Townhomes\" combined inventory 1 / solds 0 (no sales ratio applies; the sub-area figures describe listings on the market, not a trading market); New Westminster community detached median $1,365,000 and condos & townhomes median $560,000. Sub-area medians: UNVERIFIED (community level only)."
+            "t": "Market context, labelled correctly: September 2026 SnapStats — Queens Park sub-area detached inventory 7 / solds 0 and \"Condos & Townhomes\" combined inventory 1 / solds 0 (no sales ratio applies; the sub-area figures describe listings on the market, not a trading market); New Westminster community detached median $1,365,000 and condos & townhomes median $560,000. Sub-area medians: Not verified (community level only)."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Queens Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Queens Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -816,18 +796,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Queens Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Queens Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -845,142 +825,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Queens Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Queens Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "newwestcity.ca · Schedule B to Official Community Plan SOS",
-            "h": "https://www.newwestcity.ca/database/files/library/Schedule_B_to_Official_Community_Plan___SOS.pdf"
+            "h": "https://www.newwestcity.ca/database/files/library/Schedule_B_to_Official_Community_Plan___SOS.pdf",
+            "t": "newwestcity.ca · Schedule B to Official Community Plan SOS"
           }
         ],
         [
           {
-            "t": "translink.ca · burnaby new west p155",
-            "h": "https://www.translink.ca/-/media/translink/documents/schedules-and-maps/schedules-by-region/2024-schedules/september/burnaby-new-west-p155.pdf"
+            "h": "https://www.translink.ca/-/media/translink/documents/schedules-and-maps/schedules-by-region/2024-schedules/september/burnaby-new-west-p155.pdf",
+            "t": "translink.ca · burnaby new west p155"
           }
         ],
         [
           {
-            "t": "newwestschools.ca · registration",
-            "h": "https://newwestschools.ca/our-schools/registration/"
+            "h": "https://newwestschools.ca/our-schools/registration/",
+            "t": "newwestschools.ca · registration"
           }
         ],
         [
           {
-            "t": "newwestcity.ca (2)",
-            "h": "https://www.newwestcity.ca/heritage/heritage-protection-and-development/sb_expander_articles/582.php"
+            "h": "https://www.newwestcity.ca/heritage/heritage-protection-and-development/sb_expander_articles/582.php",
+            "t": "newwestcity.ca (2)"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · page10",
-            "h": "https://www.newwestcity.ca/services/whats-happening/index/main/175/site_post/page10.php"
+            "h": "https://www.newwestcity.ca/services/whats-happening/index/main/175/site_post/page10.php",
+            "t": "newwestcity.ca · page10"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · past event materials and council reports",
-            "h": "https://www.newwestcity.ca/ocp/past-event-materials-and-council-reports"
+            "h": "https://www.newwestcity.ca/ocp/past-event-materials-and-council-reports",
+            "t": "newwestcity.ca · past event materials and council reports"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · Zoning Bylaw No 6680 2001 as of June 30 2022 (Co",
-            "h": "https://www.newwestcity.ca/database/files/library/Zoning_Bylaw_No_6680_2001_as_of_June_30_2022_(Complete).pdf"
+            "h": "https://www.newwestcity.ca/database/files/library/Zoning_Bylaw_No_6680_2001_as_of_June_30_2022_(Complete).pdf",
+            "t": "newwestcity.ca · Zoning Bylaw No 6680 2001 as of June 30 2022 (Co"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · 7142 Subdivision",
-            "h": "https://www.newwestcity.ca/database/files/library/7142_Subdivision.pdf"
+            "h": "https://www.newwestcity.ca/database/files/library/7142_Subdivision.pdf",
+            "t": "newwestcity.ca · 7142 Subdivision"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · first time home buyers",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers",
+            "t": "www2.gov.bc.ca · first time home buyers"
           }
         ],
         [
           {
-            "t": "canada.ca · sales vacant land individuals",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html",
+            "t": "canada.ca · sales vacant land individuals"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Queens Park",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Queens Park"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -998,18 +978,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1027,18 +1007,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1056,18 +1036,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1075,51 +1055,51 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Fraser River Middle, 800 Queens Ave",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
-        [
-          "the Main Branch library, 716 6th Avenue",
-          "Drive",
-          "2",
-          "1.1"
-        ],
         [
           "New Westminster Station",
           "Drive",
           "2",
           "0.7"
+        ],
+        [
+          "the Main Branch library, 716 6th Avenue",
+          "Drive",
+          "2",
+          "1.1"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1132,14 +1112,70 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt105.pdf",
+            "t": "infomaps.translink.ca · tt105"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt102.pdf",
+            "t": "infomaps.translink.ca · tt102"
+          }
+        ],
+        [
+          {
+            "h": "https://www.newwestcity.ca/parks-and-recreation/parks/community-parks/articles/5437.php",
+            "t": "newwestcity.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://www.newwestcity.ca/parks-and-recreation/facilities/queens-park-arena",
+            "t": "newwestcity.ca · queens park arena"
+          }
+        ],
+        [
+          {
+            "h": "https://www.nwpl.ca/about-us/hours-and-locations/",
+            "t": "nwpl.ca · hours and locations"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/new-westminster",
+            "t": "studentsuccess.gov.bc.ca · new westminster"
+          }
+        ],
+        [
+          {
+            "h": "https://www.safeway.ca/find-a-store/store/4917-safeway-mcbride?utm_source=Facebook&utm_medium=lpm&utm_campaign=Sobeys",
+            "t": "safeway.ca · 4917 safeway mcbride"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -1147,111 +1183,68 @@
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt105",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt105.pdf"
-          }
-        ],
-        [
-          {
-            "t": "infomaps.translink.ca · tt102",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt102.pdf"
-          }
-        ],
-        [
-          {
-            "t": "newwestcity.ca",
-            "h": "https://www.newwestcity.ca/parks-and-recreation/parks/community-parks/articles/5437.php"
-          }
-        ],
-        [
-          {
-            "t": "newwestcity.ca · queens park arena",
-            "h": "https://www.newwestcity.ca/parks-and-recreation/facilities/queens-park-arena"
-          }
-        ],
-        [
-          {
-            "t": "nwpl.ca · hours and locations",
-            "h": "https://www.nwpl.ca/about-us/hours-and-locations/"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · new westminster",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/new-westminster"
-          }
-        ],
-        [
-          {
-            "t": "safeway.ca · 4917 safeway mcbride",
-            "h": "https://www.safeway.ca/find-a-store/store/4917-safeway-mcbride?utm_source=Facebook&utm_medium=lpm&utm_campaign=Sobeys"
+            "t": "Source: newwestcity.ca",
+            "h": "https://www.newwestcity.ca/heritage/heritage-protection-and-development/sb_expander_articles/582.php"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
+    {
+      "a": "Almost only houses. The one verified apartment building is Moody on the Hill (232 Sixth Street, built 2024) at the Sixth Street edge — and even its sub-area label is disputed (see the next question).",
+      "gen": "tn",
+      "q": "Are there really condos in Queens Park, or only houses?"
+    },
+    {
+      "a": "No — it is a townhouse development at 240 Jardine Street in Queensborough, on the island across the Fraser River. The name is the trap; City records place the Jardine Street townhouse project in Queensborough.",
+      "gen": "tn",
+      "q": "Is \"Queen's Park Estate\" a Queens Park condo I can buy into?"
+    },
+    {
+      "a": "Queens Avenue the street is not the same geography as Queens Park the sub-area.",
+      "gen": "tn",
+      "q": "What about Queens Terrace and Amara Terrace on Queens Avenue?"
+    },
+    {
+      "a": "Every property in the area is classed Protected or Non-protected regardless of age; specified exterior work, new buildings, demolition and subdivision need a Heritage Alteration Permit, and Protected properties carry minimum maintenance standards plus incentives (additional density, density transfer, relaxed laneway/carriage guidelines, no permit fees). For a strata unit the practical exposure is common-property exterior work decided by the strata — ask for the building's Protected/Non-protected status and any HAP history in the strata documents.",
+      "gen": "tn",
+      "q": "What does the Heritage Conservation Area mean for a condo purchase here?"
+    },
+    {
+      "a": "Yes — strata rental-restriction bylaws have been unenforceable since November 24, 2022 anywhere in BC. Short-term rentals can still be restricted by bylaw; the registered bylaws on the Form B govern that question.",
+      "gen": "tn",
+      "q": "Can I rent out a Queens Park condo long-term?"
+    },
+    {
+      "a": "One verified complex: Clinton Place, 114 Park Row — a 14-unit strata townhouse complex (strata plan NWS262) built 1974 among Park Row's heritage houses.",
+      "gen": "tn",
+      "q": "What townhouses exist in Queens Park?"
+    },
+    {
+      "a": "No. Queen's Park Estate is at 240 Jardine Street in Queensborough. The name is the trap; the sub-area, the zoning (RT-3) and the river arm are all different.",
+      "gen": "tn",
+      "q": "\"Queen's Park Estate\" townhouses — are they in Queens Park?"
+    },
+    {
+      "a": "For a Protected property: new buildings, demolition, subdivision and any change to the front, sides or visible roofline need a Heritage Alteration Permit — some exterior changes need one even without a Building Permit. Non-protected properties face fewer controls, and in-kind maintenance needs no permit either way. Status is parcel-by-parcel: Not verified for any address until the City's HCA materials are checked against it.",
+      "gen": "tn",
+      "q": "What does the Heritage Conservation Area actually restrict?"
+    },
     {
       "q": "Is the Queens Park neighbourhood the same as Queen's Park the park?",
       "a": "No. \"Queens Park\" (no apostrophe) is the MLS® sub-area / neighbourhood name; \"Queen's Park\" is the City's spelling for the park in the neighbourhood's eastern portion and for the Queen's Park Heritage Conservation Area covering the residential streets around it.",
       "gen": "muse"
     },
     {
-      "q": "What sold in Queens Park in September 2026?",
-      "a": "Nothing — detached: 0 solds from 7 listings; condos & townhomes: 0 solds from 1 listing, so no sales ratio applies (small-sample warning: one month with zero sales says nothing about values). At the New Westminster community level the detached median sale price was $1,365,000 and the condos & townhomes median was $560,000 (as of September 2026, Source: SnapStats GVR September 2026 report).",
-      "gen": "muse"
-    },
-    {
       "q": "What does the Heritage Conservation Area mean for a homeowner?",
       "a": "Every property in the area is classed Protected or Non-protected regardless of age; new buildings, demolition, subdivision and specified exterior changes need a Heritage Alteration Permit reviewed against the design guidelines, and Protected properties are also under the Heritage Property Maintenance Standards Bylaw.",
       "gen": "muse"
-    },
-    {
-      "q": "Which schools serve Queens Park?",
-      "a": "School District 40, address-based. For the sample address 800 Queens Avenue the locator result is École Qayqayt Elementary (K–5), Fraser River Middle (6–8) and New Westminster Secondary (9–12); check the exact address in the SD40 locator.",
-      "gen": "muse"
-    },
-    {
-      "gen": "tn",
-      "q": "Are there really condos in Queens Park, or only houses?",
-      "a": "Almost only houses. The one verified apartment building is Moody on the Hill (232 Sixth Street, built 2024) at the Sixth Street edge — and even its sub-area label is disputed (see the next question)."
-    },
-    {
-      "gen": "tn",
-      "q": "Is \"Queen's Park Estate\" a Queens Park condo I can buy into?",
-      "a": "No — it is a townhouse development at 240 Jardine Street in Queensborough, on the island across the Fraser River. The name is the trap; City records place the Jardine Street townhouse project in Queensborough."
-    },
-    {
-      "gen": "tn",
-      "q": "What about Queens Terrace and Amara Terrace on Queens Avenue?",
-      "a": "Queens Avenue the street is not the same geography as Queens Park the sub-area."
-    },
-    {
-      "gen": "tn",
-      "q": "What does the Heritage Conservation Area mean for a condo purchase here?",
-      "a": "Every property in the area is classed Protected or Non-protected regardless of age; specified exterior work, new buildings, demolition and subdivision need a Heritage Alteration Permit, and Protected properties carry minimum maintenance standards plus incentives (additional density, density transfer, relaxed laneway/carriage guidelines, no permit fees). For a strata unit the practical exposure is common-property exterior work decided by the strata — ask for the building's Protected/Non-protected status and any HAP history in the strata documents."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I rent out a Queens Park condo long-term?",
-      "a": "Yes — strata rental-restriction bylaws have been unenforceable since November 24, 2022 anywhere in BC. Short-term rentals can still be restricted by bylaw; the registered bylaws on the Form B govern that question."
-    },
-    {
-      "gen": "tn",
-      "q": "What townhouses exist in Queens Park?",
-      "a": "One verified complex: Clinton Place, 114 Park Row — a 14-unit strata townhouse complex (strata plan NWS262) built 1974 among Park Row's heritage houses."
-    },
-    {
-      "gen": "tn",
-      "q": "\"Queen's Park Estate\" townhouses — are they in Queens Park?",
-      "a": "No. Queen's Park Estate is at 240 Jardine Street in Queensborough. The name is the trap; the sub-area, the zoning (RT-3) and the river arm are all different."
-    },
-    {
-      "gen": "tn",
-      "q": "What does the Heritage Conservation Area actually restrict?",
-      "a": "For a Protected property: new buildings, demolition, subdivision and any change to the front, sides or visible roofline need a Heritage Alteration Permit — some exterior changes need one even without a Building Permit. Non-protected properties face fewer controls, and in-kind maintenance needs no permit either way. Status is parcel-by-parcel: UNVERIFIED for any address until the City's HCA materials are checked against it."
     }
-  ]
+  ],
+  "slug": "queens-park",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

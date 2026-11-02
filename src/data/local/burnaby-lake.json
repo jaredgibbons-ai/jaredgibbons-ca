@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "burnaby-lake",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Burnaby Lake homes listed and sold, June to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Burnaby Lake homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Burnaby Lake, September 2026. Detached houses: 19 listed at month end and 2 sold in September, a sales ratio of 11% (a buyers’ market). Condos and townhomes: 3 listed at month end and 1 sold in September, a sales ratio of 33%.",
-      "gen": "snapstats"
+      "text": "Burnaby Lake, October 2026. Detached houses: 21 listed at month end and 2 sold in October, a sales ratio of 10% (a buyers’ market). Condos and townhomes: 3 listed at month end and 0 sold in October, a sales ratio of —."
     },
     {
-      "t": "table",
       "caption": "Burnaby Lake listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -62,212 +59,171 @@
           "3",
           "1",
           "33%"
+        ],
+        [
+          "October 2026",
+          "21",
+          "2",
+          "10%",
+          "3",
+          "0",
+          "—"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 6 sold over 4 months against an average of 21.0 listed, about 14.0 months of listings at that pace; the busiest month was July with 2 sold. Condos and townhomes: 4 sold over 4 months against an average of 4.2 listed, about 4.2 months of listings at that pace; the busiest month was August with 2 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 8 sold over 5 months against an average of 21.0 listed, about 13.1 months of listings at that pace; the busiest month was July with 2 sold. Condos and townhomes: 4 sold over 5 months against an average of 4.0 listed, about 5.0 months of listings at that pace; the busiest month was August with 2 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Burnaby Lake by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Burnaby Lake by home type"
     },
     {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Burnaby Lake houses for sale",
-            "h": "/burnaby-lake-houses-for-sale.html"
-          }
-        ]
-      ],
       "gen": "typepage",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "More Burnaby real estate",
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "list",
       "items": [
         [
           {
-            "t": "Burnaby homes for sale",
-            "h": "/burnaby-homes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby real estate market stats",
-            "h": "/burnaby-real-estate-market-stats.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby condos for sale",
-            "h": "/burnaby-condos-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby townhomes for sale",
-            "h": "/burnaby-townhomes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Schools in Burnaby",
-            "h": "/schools-in-burnaby-bc.html"
-          }
-        ],
-        [
-          {
-            "t": "Capitol Hill real estate",
-            "h": "/capitol-hill-bn.html"
-          }
-        ],
-        [
-          {
-            "t": "Cariboo real estate",
-            "h": "/cariboo.html"
-          }
-        ],
-        [
-          {
-            "t": "Central real estate",
-            "h": "/central-bn.html"
-          }
-        ],
-        [
-          {
-            "t": "Central Park real estate",
-            "h": "/central-park-bs.html"
-          }
-        ],
-        [
-          {
-            "t": "Deer Lake real estate",
-            "h": "/deer-lake.html"
-          }
-        ],
-        [
-          {
-            "t": "Deer Lake Place real estate",
-            "h": "/deer-lake-place.html"
-          }
-        ],
-        [
-          {
-            "t": "East Burnaby real estate",
-            "h": "/east-burnaby.html"
-          }
-        ],
-        [
-          {
-            "t": "Edmonds real estate",
-            "h": "/edmonds-be.html"
-          }
-        ],
-        [
-          {
-            "t": "Forest Glen real estate",
-            "h": "/forest-glen-bs.html"
-          }
-        ],
-        [
-          {
-            "t": "Forest Hills real estate",
-            "h": "/forest-hills-bn.html"
+            "h": "/burnaby-lake-houses-for-sale.html",
+            "t": "Burnaby Lake houses for sale"
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "h",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "More Burnaby real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Source: burnaby.ca (1)",
-            "h": "http://www.burnaby.ca/our-city/news/2025-02-05/city-burnaby-and-metro-vancouver-sign-burnaby-lake-regional-park"
+            "h": "/burnaby-homes-for-sale.html",
+            "t": "Burnaby homes for sale"
           }
         ],
         [
           {
-            "t": "Source: metrovancouver.org",
-            "h": "https://metrovancouver.org/services/regional-parks/park/burnaby-lake-regional-park"
+            "h": "/burnaby-real-estate-market-stats.html",
+            "t": "Burnaby real estate market stats"
           }
         ],
         [
           {
-            "t": "Source: infomaps.translink.ca (3)",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt134.pdf"
+            "h": "/burnaby-condos-for-sale.html",
+            "t": "Burnaby condos for sale"
           }
         ],
         [
           {
-            "t": "Source: infomaps.translink.ca (4)",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt144.pdf"
+            "h": "/burnaby-townhomes-for-sale.html",
+            "t": "Burnaby townhomes for sale"
           }
         ],
         [
           {
-            "t": "Source: studentsuccess.gov.bc.ca",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "/schools-in-burnaby-bc.html",
+            "t": "Schools in Burnaby"
           }
         ],
         [
           {
-            "t": "Source: burnaby.ca (6)",
-            "h": "https://www.burnaby.ca/our-city/news/2026-05-28/how-burnaby-funding-growth-through-responsible-use-reserves"
+            "h": "/capitol-hill-bn.html",
+            "t": "Capitol Hill real estate"
+          }
+        ],
+        [
+          {
+            "h": "/cariboo.html",
+            "t": "Cariboo real estate"
+          }
+        ],
+        [
+          {
+            "h": "/central-bn.html",
+            "t": "Central real estate"
+          }
+        ],
+        [
+          {
+            "h": "/central-park-bs.html",
+            "t": "Central Park real estate"
+          }
+        ],
+        [
+          {
+            "h": "/deer-lake.html",
+            "t": "Deer Lake real estate"
+          }
+        ],
+        [
+          {
+            "h": "/deer-lake-place.html",
+            "t": "Deer Lake Place real estate"
+          }
+        ],
+        [
+          {
+            "h": "/east-burnaby.html",
+            "t": "East Burnaby real estate"
+          }
+        ],
+        [
+          {
+            "h": "/edmonds-be.html",
+            "t": "Edmonds real estate"
+          }
+        ],
+        [
+          {
+            "h": "/forest-glen-bs.html",
+            "t": "Forest Glen real estate"
+          }
+        ],
+        [
+          {
+            "h": "/forest-hills-bn.html",
+            "t": "Forest Hills real estate"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Condo buildings in Burnaby Lake",
       "gen": "tn",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Condo buildings in Burnaby Lake"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "MLS listing classification uses the name \"Burnaby Lake\" differently: as a Burnaby South band around Canada Way and Rosewood Street, south of Highway 1 by Deer Lake and Robert Burnaby Park, where the current \"Burnaby Lake\" listings are detached houses, not condos.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "MLS listing classification uses the name \"Burnaby Lake\" differently: as a Burnaby South band around Canada Way and Rosewood Street, south of Highway 1 by Deer Lake and Robert Burnaby Park, where the current \"Burnaby Lake\" listings are detached houses, not condos."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Burnaby Lake",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Burnaby Lake"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -300,18 +256,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Burnaby Lake",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Burnaby Lake"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -335,153 +291,153 @@
         ],
         [
           {
-            "t": "Jared's own sold history in this sub-area is UNVERIFIED."
+            "t": "Jared's own sold history in this sub-area is not verified."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Burnaby Lake",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Burnaby Lake"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "bccondosandhomes.com · sperling heights 528 ave",
-            "h": "https://www.bccondosandhomes.com/building/sperling-heights-528-ave"
+            "h": "https://www.bccondosandhomes.com/building/sperling-heights-528-ave",
+            "t": "bccondosandhomes.com · sperling heights 528 ave"
           }
         ],
         [
           {
-            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for ",
-            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/"
+            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/",
+            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · subscribing for updates",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/more-help-and-support/subscribing-for-updates"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/more-help-and-support/subscribing-for-updates",
+            "t": "www2.gov.bc.ca · subscribing for updates"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "equitylawgroup.ca · closing costs bc home purchase",
-            "h": "https://www.equitylawgroup.ca/news/closing-costs-bc-home-purchase"
+            "h": "https://www.equitylawgroup.ca/news/closing-costs-bc-home-purchase",
+            "t": "equitylawgroup.ca · closing costs bc home purchase"
           }
         ],
         [
           {
-            "t": "danmarusin.com · bc property transfer tax 2026",
-            "h": "https://danmarusin.com/blog/bc-property-transfer-tax-2026/"
+            "h": "https://danmarusin.com/blog/bc-property-transfer-tax-2026/",
+            "t": "danmarusin.com · bc property transfer tax 2026"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ],
         [
           {
-            "t": "homehappy.ca · bc first time buyer programs",
-            "h": "https://homehappy.ca/bc-first-time-buyer-programs/"
+            "h": "https://homehappy.ca/bc-first-time-buyer-programs/",
+            "t": "homehappy.ca · bc first time buyer programs"
           }
         ],
         [
           {
-            "t": "cmhc-schl.gc.ca · second home",
-            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home"
+            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home",
+            "t": "cmhc-schl.gc.ca · second home"
           }
         ],
         [
           {
-            "t": "burnabyschools.ca · about sd41 overview",
-            "h": "https://burnabyschools.ca/about-sd41-overview/"
+            "h": "https://burnabyschools.ca/about-sd41-overview/",
+            "t": "burnabyschools.ca · about sd41 overview"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Burnaby Lake",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Both usages are stated wherever they matter.",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Savile Row — 5122–5152 Canada Way. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Burnaby Lake"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A townhouse complex built in 2018, designed by GBL Architects, freehold strata, 3 storeys, per current listings, which record Title: Freehold Strata; listing copy describes a private gym, kids' play area and clubhouse. Unit count: UNCONFIRMED. Published rental/pet restrictions: UNCONFIRMED — confirm on the Form B.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Both usages are stated wherever they matter."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Burnaby Lake",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Savile Row — 5122–5152 Canada Way. STRATA"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "pos": "end",
+      "t": "p",
+      "text": "A townhouse complex built in 2018, designed by GBL Architects, freehold strata, 3 storeys, per current listings, which record Title: Freehold Strata; listing copy describes a private gym, kids' play area and clubhouse. Unit count: Not confirmed. Published rental/pet restrictions: Not confirmed — confirm on the Form B."
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Burnaby Lake"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -509,18 +465,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Burnaby Lake",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Burnaby Lake"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -533,18 +489,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Burnaby Lake",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Burnaby Lake"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -573,98 +529,98 @@
         ],
         [
           {
-            "t": "Jared's own sold history in this sub-area is UNVERIFIED (researched Nov 1, 2026)."
+            "t": "Jared's own sold history in this sub-area is not verified (researched Nov 1, 2026)."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Burnaby Lake",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Burnaby Lake"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "bccondosandhomes.com · sperling heights 528 ave",
-            "h": "https://www.bccondosandhomes.com/building/sperling-heights-528-ave"
+            "h": "https://www.bccondosandhomes.com/building/sperling-heights-528-ave",
+            "t": "bccondosandhomes.com · sperling heights 528 ave"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Burnaby Lake",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Fee-simple lots",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Burnaby Lake"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Fee-simple lots"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -673,7 +629,7 @@
         ],
         [
           {
-            "t": "Lot character: typical lot sizes are UNVERIFIED at sub-area level — no official source read states them. The only sourced size figures are the R1 SSMUH thresholds in (280 m² / 281 m²), which are zoning thresholds, not a claim about any existing lot's size."
+            "t": "Lot character: typical lot sizes are not verified at sub-area level — no official source read states them. The only sourced size figures are the R1 SSMUH thresholds in (280 m² / 281 m²), which are zoning thresholds, not a claim about any existing lot's size."
           }
         ],
         [
@@ -683,12 +639,12 @@
         ],
         [
           {
-            "t": "Serviced position: Burnaby's 2026 residential utility notice covers annual water, annual sewer use, a cross-connection device charge where applicable and a garbage toter fee, with the detached single-family water charge at $652.33 and sewer for single-family homes billed as a sewer parcel tax — the established streets sit inside that municipal system on the City's wording; servicing for any single parcel is confirmed with the City, UNCONFIRMED parcel-by-parcel here."
+            "t": "Serviced position: Burnaby's 2026 residential utility notice covers annual water, annual sewer use, a cross-connection device charge where applicable and a garbage toter fee, with the detached single-family water charge at $652.33 and sewer for single-family homes billed as a sewer parcel tax — the established streets sit inside that municipal system on the City's wording; servicing for any single parcel is confirmed with the City, not confirmed parcel-by-parcel here."
           }
         ],
         [
           {
-            "t": "ALR vs non-ALR: no ALR parcel in Burnaby Lake is confirmed in the research; ALR status is a property-specific check through the Agricultural Land Commission. No ALR percentage split is stated."
+            "t": "ALR vs non-ALR: no ALR parcel in Burnaby Lake is confirmed; ALR status is a property-specific check through the Agricultural Land Commission. No ALR percentage split is stated."
           }
         ],
         [
@@ -697,18 +653,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Bare-land strata",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Bare-land strata"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -716,18 +672,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Burnaby Lake",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Burnaby Lake"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -741,7 +697,7 @@
         ],
         [
           {
-            "t": "Main roads: Lougheed Highway (north), Winston Street, Sperling Avenue, Kensington Avenue and Government Road; Highway 1 runs along the lake's south side. Transit: Sperling–Burnaby Lake Station (Millennium Line) at Sperling Avenue and Lougheed Highway, walkable into the park, with bus routes 110, 134 and 144 connecting there; route 110 runs past the lake's north and west sides between Lougheed Station and Metrotown Station. Commute times in minutes: UNVERIFIED."
+            "t": "Main roads: Lougheed Highway (north), Winston Street, Sperling Avenue, Kensington Avenue and Government Road; Highway 1 runs along the lake's south side. Transit: Sperling–Burnaby Lake Station (Millennium Line) at Sperling Avenue and Lougheed Highway, walkable into the park, with bus routes 110, 134 and 144 connecting there; route 110 runs past the lake's north and west sides between Lougheed Station and Metrotown Station. Commute times in minutes: Not verified."
           }
         ],
         [
@@ -755,18 +711,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Burnaby Lake",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Burnaby Lake"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -784,18 +740,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Burnaby Lake",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Burnaby Lake"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -813,148 +769,148 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Burnaby Lake",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Burnaby Lake"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "metrovancouver.org · burnaby lake regional park",
-            "h": "https://metrovancouver.org/services/regional-parks/park/burnaby-lake-regional-park"
+            "h": "https://metrovancouver.org/services/regional-parks/park/burnaby-lake-regional-park",
+            "t": "metrovancouver.org · burnaby lake regional park"
           }
         ],
         [
           {
-            "t": "burnaby.ca · town centres",
-            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres"
+            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres",
+            "t": "burnaby.ca · town centres"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt110",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt110.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt110.pdf",
+            "t": "infomaps.translink.ca · tt110"
           }
         ],
         [
           {
-            "t": "burnaby.ca · burnaby lake sports complex",
-            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/burnaby-lake-sports-complex"
+            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/burnaby-lake-sports-complex",
+            "t": "burnaby.ca · burnaby lake sports complex"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · burnaby hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital",
+            "t": "fraserhealth.ca · burnaby hospital"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "burnabyschools.ca · about sd41 overview",
-            "h": "https://burnabyschools.ca/about-sd41-overview/"
+            "h": "https://burnabyschools.ca/about-sd41-overview/",
+            "t": "burnabyschools.ca · about sd41 overview"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "burnaby.ca · city burnaby and metro vancouver sign burnaby la",
-            "h": "http://www.burnaby.ca/our-city/news/2025-02-05/city-burnaby-and-metro-vancouver-sign-burnaby-lake-regional-park"
+            "h": "http://www.burnaby.ca/our-city/news/2025-02-05/city-burnaby-and-metro-vancouver-sign-burnaby-lake-regional-park",
+            "t": "burnaby.ca · city burnaby and metro vancouver sign burnaby la"
           }
         ],
         [
           {
-            "t": "burnaby.ca · residential utility fees",
-            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees"
+            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees",
+            "t": "burnaby.ca · residential utility fees"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ],
         [
           {
-            "t": "burnaby.ca · official community plan",
-            "h": "https://www.burnaby.ca/our-city/official-community-plan"
+            "h": "https://www.burnaby.ca/our-city/official-community-plan",
+            "t": "burnaby.ca · official community plan"
           }
         ],
         [
           {
-            "t": "burnaby.ca · new home construction",
-            "h": "https://www.burnaby.ca/services-and-payments/development-permits-construction/new-home-construction"
+            "h": "https://www.burnaby.ca/services-and-payments/development-permits-construction/new-home-construction",
+            "t": "burnaby.ca · new home construction"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Burnaby Lake",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Burnaby Lake"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -977,18 +933,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1006,18 +962,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1035,18 +991,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1059,25 +1015,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Bill Copeland Sports Centre, 3676 Kensington Avenue",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Sperling–Burnaby Lake Station",
@@ -1098,14 +1055,81 @@
           "7.3"
         ]
       ],
+      "t": "table"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://www.translink.ca/schedules-and-maps/skytrain/",
+            "t": "translink.ca · skytrain"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt110.pdf",
+            "t": "infomaps.translink.ca · tt110"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt144.pdf",
+            "t": "infomaps.translink.ca · tt144"
+          }
+        ],
+        [
+          {
+            "h": "https://metrovancouver.org/services/regional-parks/park/burnaby-lake-regional-park",
+            "t": "metrovancouver.org · burnaby lake regional park"
+          }
+        ],
+        [
+          {
+            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/bill-copeland-sports-centre",
+            "t": "burnaby.ca · bill copeland sports centre"
+          }
+        ],
+        [
+          {
+            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/burnaby-lake-sports-complex",
+            "t": "burnaby.ca · burnaby lake sports complex"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.walmart.ca/en/store/3008",
+            "t": "walmart.ca · store"
+          }
+        ],
+        [
+          {
+            "h": "https://blog.londondrugs.com/elizabeth-arden-locations",
+            "t": "blog.londondrugs.com · elizabeth arden locations"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -1113,64 +1137,74 @@
       "items": [
         [
           {
-            "t": "translink.ca · skytrain",
-            "h": "https://www.translink.ca/schedules-and-maps/skytrain/"
+            "t": "Source: burnaby.ca",
+            "h": "http://www.burnaby.ca/our-city/news/2025-02-05/city-burnaby-and-metro-vancouver-sign-burnaby-lake-regional-park"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt110",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt110.pdf"
-          }
-        ],
-        [
-          {
-            "t": "infomaps.translink.ca · tt144",
-            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt144.pdf"
-          }
-        ],
-        [
-          {
-            "t": "metrovancouver.org · burnaby lake regional park",
+            "t": "Source: metrovancouver.org",
             "h": "https://metrovancouver.org/services/regional-parks/park/burnaby-lake-regional-park"
           }
         ],
         [
           {
-            "t": "burnaby.ca · bill copeland sports centre",
-            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/bill-copeland-sports-centre"
+            "t": "Source: infomaps.translink.ca (3)",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt134.pdf"
           }
         ],
         [
           {
-            "t": "burnaby.ca · burnaby lake sports complex",
-            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/burnaby-lake-sports-complex"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
-          }
-        ],
-        [
-          {
-            "t": "walmart.ca · store",
-            "h": "https://www.walmart.ca/en/store/3008"
-          }
-        ],
-        [
-          {
-            "t": "blog.londondrugs.com · elizabeth arden locations",
-            "h": "https://blog.londondrugs.com/elizabeth-arden-locations"
+            "t": "Source: infomaps.translink.ca (4)",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt144.pdf"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
+    {
+      "a": "A buyer set on strata living here is looking at townhomes, or at the neighbouring sub-areas' stock.",
+      "gen": "tn",
+      "q": "Are there any condos around Burnaby Lake at all?"
+    },
+    {
+      "a": "No. Burnaby Lake is a 360-acre Metro Vancouver regional park, managed by Metro Vancouver since 1978 under a 25-year City/Metro lease; the shoreline is parkland, not residential lots. The closest housing is on the streets around the park.",
+      "gen": "tn",
+      "q": "Can I buy a home right on the lake?"
+    },
+    {
+      "a": "One documented townhome complex: Savile Row at 5122–5152 Canada Way (built 2018, GBL Architects, freehold strata, 3 storeys) — filed by the MLS under Burnaby Lake even though its own marketing calls the location the \"heart of Deer Lake.\"",
+      "gen": "tn",
+      "q": "What strata product does exist?"
+    },
+    {
+      "a": "Because MLS sub-area naming and the research geography genuinely differ: the board's \"Burnaby Lake\" band sits in Burnaby South (Canada Way / Rosewood Street, south of Highway 1), while the park-wrap geography uses Sperling/Kensington and Government Road/Beaverbrook. Search both usages or records get missed.",
+      "gen": "tn",
+      "q": "Why do listings call the Canada Way / Rosewood streets \"Burnaby Lake\" when they're by Deer Lake?"
+    },
+    {
+      "a": "Sperling–Burnaby Lake Station, with bus routes 110, 134 and 144 — the usable transit anchor for the park's west side; the Government Road side is served along the Lougheed corridor.",
+      "gen": "tn",
+      "q": "What transit serves the area?"
+    },
+    {
+      "a": "Both bases are stated in — a buyer searching only one lake's name will miss or double-count it.",
+      "gen": "tn",
+      "q": "Is Savile Row really a Burnaby Lake complex?"
+    },
+    {
+      "a": "Strata: listings record freehold strata title, 3 storeys, built 2018, GBL Architects — so the Form B route applies in full, and its unit count and published restrictions are not confirmed until the strata documents are read.",
+      "gen": "tn",
+      "q": "Strata or fee-simple at Savile Row?"
+    },
+    {
+      "a": "No. Burnaby Lake is a 360-acre Metro Vancouver regional park, managed by Metro Vancouver since 1978 under a 25-year City/Metro lease; the shoreline is parkland, not residential lots. The closest housing is on the streets around the park.",
+      "gen": "tn",
+      "q": "Can I buy a home right on the lake?"
+    },
     {
       "q": "Is Burnaby Lake a neighbourhood or a park?",
       "a": "Both names are in use for different things: Burnaby Lake Regional Park is a 360-acre Metro Vancouver regional park around the lake, managed by Metro Vancouver since 1978 under a 25-year lease agreement with the City, and \"Burnaby Lake\" is also the GVR MLS® sub-area name for the housing on the streets around it.",
@@ -1185,56 +1219,9 @@
       "q": "How is transit at Burnaby Lake?",
       "a": "Sperling–Burnaby Lake Station (Millennium Line) sits at Sperling Avenue and Lougheed Highway at the area's north-west side, you can walk into the park directly from the station, and buses 110, 134 and 144 connect there — the 144 links the station to Metrotown and SFU.",
       "gen": "muse"
-    },
-    {
-      "q": "Which schools serve a Burnaby Lake address?",
-      "a": "It depends on which edge of the lake the address is on. Nearby SD41 schools include Sperling Elementary (K–7), 2200 Sperling Ave, École Seaforth Elementary (K–7), 7881 Government Rd, and Burnaby Central Secondary (8–12), 6011 Deer Lake Parkway; catchments are address-based and must be checked in the SD41 locator.",
-      "gen": "muse"
-    },
-    {
-      "q": "What is being built at Burnaby Lake?",
-      "a": "A new Burnaby Lake Recreation Centre beside the existing Bill Copeland Sports Centre — one of the City's four major facilities past the halfway mark in its capital program — plus a delivered pedestrian and cycling overpass across Highway 1 at the lake.",
-      "gen": "muse"
-    },
-    {
-      "gen": "tn",
-      "q": "Are there any condos around Burnaby Lake at all?",
-      "a": "A buyer set on strata living here is looking at townhomes, or at the neighbouring sub-areas' stock."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I buy a home right on the lake?",
-      "a": "No. Burnaby Lake is a 360-acre Metro Vancouver regional park, managed by Metro Vancouver since 1978 under a 25-year City/Metro lease; the shoreline is parkland, not residential lots. The closest housing is on the streets around the park."
-    },
-    {
-      "gen": "tn",
-      "q": "What strata product does exist?",
-      "a": "One documented townhome complex: Savile Row at 5122–5152 Canada Way (built 2018, GBL Architects, freehold strata, 3 storeys) — filed by the MLS under Burnaby Lake even though its own marketing calls the location the \"heart of Deer Lake.\""
-    },
-    {
-      "gen": "tn",
-      "q": "Why do listings call the Canada Way / Rosewood streets \"Burnaby Lake\" when they're by Deer Lake?",
-      "a": "Because MLS sub-area naming and the research geography genuinely differ: the board's \"Burnaby Lake\" band sits in Burnaby South (Canada Way / Rosewood Street, south of Highway 1), while the park-wrap geography uses Sperling/Kensington and Government Road/Beaverbrook. Search both usages or records get missed."
-    },
-    {
-      "gen": "tn",
-      "q": "What transit serves the area?",
-      "a": "Sperling–Burnaby Lake Station, with bus routes 110, 134 and 144 — the usable transit anchor for the park's west side; the Government Road side is served along the Lougheed corridor."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Savile Row really a Burnaby Lake complex?",
-      "a": "Both bases are stated in — a buyer searching only one lake's name will miss or double-count it."
-    },
-    {
-      "gen": "tn",
-      "q": "Strata or fee-simple at Savile Row?",
-      "a": "Strata: listings record freehold strata title, 3 storeys, built 2018, GBL Architects — so the Form B route applies in full, and its unit count and published restrictions are UNCONFIRMED until the strata documents are read."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I buy a home right on the lake?",
-      "a": "No. Burnaby Lake is a 360-acre Metro Vancouver regional park, managed by Metro Vancouver since 1978 under a 25-year City/Metro lease; the shoreline is parkland, not residential lots. The closest housing is on the streets around the park."
     }
-  ]
+  ],
+  "slug": "burnaby-lake",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

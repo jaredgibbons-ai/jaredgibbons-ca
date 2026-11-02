@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "hazelmere-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Hazelmere compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Hazelmere compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Hazelmere against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Hazelmere against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
-      "caption": "Hazelmere against the whole city, September 2026",
+      "caption": "Hazelmere against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -27,146 +24,146 @@
       "rows": [
         [
           "Detached houses",
-          "1.2%",
-          "3.3%",
-          "29% against 10%",
+          "1.4%",
+          "0.0%",
+          "— against 9%",
           "Under 10 listed"
         ],
         [
           "Condos and townhomes",
-          "0.3%",
           "0.0%",
-          "— against 15%",
+          "0.0%",
+          "— against 14%",
           "Under 10 listed"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings fell from 9 in June to 7 in September (−22.2%), and it took 1.2% of the city’s 240 sales over the period; condos and townhomes: listings was 1 in June and 2 in September, too few (under 3) to call a rise or fall, and it took 0.0% of the city’s 375 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 9 in June to 8 in October (−11.1%), and it took 1.0% of the city’s 294 sales over the period; condos and townhomes: listings was 1 in June and 0 in October, too few (under 3) to call a rise or fall, and it took 0.0% of the city’s 456 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Hazelmere for detached houses in August (a sellers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out Hazelmere for detached houses in August (a sellers’ best bet)."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More South Surrey and White Rock real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More South Surrey and White Rock real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "South Surrey and White Rock homes for sale",
-            "h": "/south-surrey-homes-for-sale.html"
+            "h": "/south-surrey-homes-for-sale.html",
+            "t": "South Surrey and White Rock homes for sale"
           }
         ],
         [
           {
-            "t": "South Surrey and White Rock real estate market stats",
-            "h": "/south-surrey-white-rock-real-estate-market-stats.html"
+            "h": "/south-surrey-white-rock-real-estate-market-stats.html",
+            "t": "South Surrey and White Rock real estate market stats"
           }
         ],
         [
           {
-            "t": "South Surrey and White Rock houses for sale",
-            "h": "/south-surrey-houses-for-sale.html"
+            "h": "/south-surrey-houses-for-sale.html",
+            "t": "South Surrey and White Rock houses for sale"
           }
         ],
         [
           {
-            "t": "South Surrey and White Rock condos for sale",
-            "h": "/south-surrey-condos-for-sale.html"
+            "h": "/south-surrey-condos-for-sale.html",
+            "t": "South Surrey and White Rock condos for sale"
           }
         ],
         [
           {
-            "t": "South Surrey and White Rock townhomes for sale",
-            "h": "/south-surrey-townhomes-for-sale.html"
+            "h": "/south-surrey-townhomes-for-sale.html",
+            "t": "South Surrey and White Rock townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in South Surrey and White Rock",
-            "h": "/sell-my-house-in-south-surrey-white-rock.html"
+            "h": "/sell-my-house-in-south-surrey-white-rock.html",
+            "t": "Sell my house in South Surrey and White Rock"
           }
         ],
         [
           {
-            "t": "Hazelmere homes and market figures",
-            "h": "/hazelmere.html"
+            "h": "/hazelmere.html",
+            "t": "Hazelmere homes and market figures"
           }
         ],
         [
           {
-            "t": "King George Corridor real estate",
-            "h": "/king-george-corridor.html"
+            "h": "/king-george-corridor.html",
+            "t": "King George Corridor real estate"
           }
         ],
         [
           {
-            "t": "Morgan Creek real estate",
-            "h": "/morgan-creek.html"
+            "h": "/morgan-creek.html",
+            "t": "Morgan Creek real estate"
           }
         ],
         [
           {
-            "t": "Pacific Douglas real estate",
-            "h": "/pacific-douglas.html"
+            "h": "/pacific-douglas.html",
+            "t": "Pacific Douglas real estate"
           }
         ],
         [
           {
-            "t": "Sunnyside Park real estate",
-            "h": "/sunnyside-park-surrey.html"
+            "h": "/sunnyside-park-surrey.html",
+            "t": "Sunnyside Park real estate"
           }
         ],
         [
           {
-            "t": "White Rock real estate",
-            "h": "/white-rock.html"
+            "h": "/white-rock.html",
+            "t": "White Rock real estate"
           }
         ],
         [
           {
-            "t": "Elgin Chantrell real estate",
-            "h": "/elgin-chantrell.html"
+            "h": "/elgin-chantrell.html",
+            "t": "Elgin Chantrell real estate"
           }
         ],
         [
           {
-            "t": "Grandview real estate",
-            "h": "/grandview-surrey.html"
+            "h": "/grandview-surrey.html",
+            "t": "Grandview real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Condo buildings in Hazelmere Guide",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Hazelmere Guide",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Condo buildings in Hazelmere Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Hazelmere Guide"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -180,7 +177,7 @@
         ],
         [
           {
-            "t": "Community context only (whole S Surrey White Rock community, NOT Hazelmere's prices): Detached median $1,628,000; Condos & Townhomes median $700,000 / $524 per sq ft / 99% sale-to-list / 33 DOM. Per-sub-area medians are not published: UNVERIFIED at sub-area level."
+            "t": "Community context only (whole S Surrey White Rock community, NOT Hazelmere's prices): Detached median $1,628,000; Condos & Townhomes median $700,000 / $524 per sq ft / 99% sale-to-list / 33 DOM. Per-sub-area medians are not published: Not verified at sub-area level."
           }
         ],
         [
@@ -194,18 +191,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Hazelmere Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Hazelmere Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -218,18 +215,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Hazelmere Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Hazelmere Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -258,147 +255,147 @@
         ],
         [
           {
-            "t": "Travel time to any hospital: UNVERIFIED."
+            "t": "Travel time to any hospital: Not verified."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Hazelmere Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Hazelmere Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · hazelmere guide",
-            "h": "https://jaredgibbons.ca/hazelmere-guide.html"
+            "h": "https://jaredgibbons.ca/hazelmere-guide.html",
+            "t": "jaredgibbons.ca · hazelmere guide"
           }
         ],
         [
           {
-            "t": "surrey.ca · SouthCampbellHeightsLocalAreaPlan",
-            "h": "https://www.surrey.ca/sites/default/files/media/documents/SouthCampbellHeightsLocalAreaPlan.pdf"
+            "h": "https://www.surrey.ca/sites/default/files/media/documents/SouthCampbellHeightsLocalAreaPlan.pdf",
+            "t": "surrey.ca · SouthCampbellHeightsLocalAreaPlan"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "surrey.ca · zoning small scale multi unit housing",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing",
+            "t": "surrey.ca · zoning small scale multi unit housing"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ],
         [
           {
-            "t": "canada.ca · first home savings account",
-            "h": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/first-home-savings-account.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/first-home-savings-account.html",
+            "t": "canada.ca · first home savings account"
           }
         ],
         [
           {
-            "t": "cmhc-schl.gc.ca · second home",
-            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home"
+            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home",
+            "t": "cmhc-schl.gc.ca · second home"
           }
         ],
         [
           {
-            "t": "surrey.ca · paying your property taxes",
-            "h": "https://www.surrey.ca/services-payments/property-taxes/paying-your-property-taxes"
+            "h": "https://www.surrey.ca/services-payments/property-taxes/paying-your-property-taxes",
+            "t": "surrey.ca · paying your property taxes"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Hazelmere Townhomes",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Hazelmere Village — 18088 8 Ave. STRATA (basis stated; title-level wording UNCONFIRMED)",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Hazelmere Townhomes"
     },
     {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Hazelmere Village — 18088 8 Ave. STRATA (basis stated; title-level wording not confirmed)"
+    },
+    {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A gated community of Craftsman-styled townhomes bordering the Hazelmere Golf and Tennis Club. RESTRICTIONS: one listing states \"No age restrictions, and 2 pets allowed, dogs to be no more than 44lbs\" (listing syndication of the complex, fresh verification Nov 2, 2026: — listing-stated only; the current bylaws on the Form B govern, and any age position should be re-read there rather than from listing copy.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A gated community of Craftsman-styled townhomes bordering the Hazelmere Golf and Tennis Club. RESTRICTIONS: one listing states \"No age restrictions, and 2 pets allowed, dogs to be no more than 44lbs\" (listing syndication of the complex, fresh verification Nov 2, 2026: — listing-stated only; the current bylaws on the Form B govern, and any age position should be re-read there rather than from listing copy."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Hazelmere Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Hazelmere Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -406,18 +403,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Hazelmere Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Hazelmere Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -440,18 +437,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Hazelmere Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Hazelmere Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -470,7 +467,7 @@
         ],
         [
           {
-            "t": "No bus is confirmed here. No route is verified on 8 Ave, 0 Ave or 184 St, and the nearest route named in page copy (531) is UNVERIFIED on a TransLink source — treat Hazelmere as drive-only until the route map says otherwise (TransLink"
+            "t": "No bus is confirmed here. No route is verified on 8 Ave, 0 Ave or 184 St, and the nearest route named in page copy (531) is not verified on a TransLink source — treat Hazelmere as drive-only until the route map says otherwise (TransLink"
           }
         ],
         [
@@ -484,136 +481,136 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Hazelmere Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Hazelmere Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "surrey.ca · neighbourhood concepts plans",
-            "h": "https://www.surrey.ca/planning-development/neighbourhood-concepts-plans"
+            "h": "https://www.surrey.ca/planning-development/neighbourhood-concepts-plans",
+            "t": "surrey.ca · neighbourhood concepts plans"
           }
         ],
         [
           {
-            "t": "bced.gov.bc.ca · Home.do):",
-            "h": "https://www.bced.gov.bc.ca/apps/imcl/imclWeb/Home.do):"
+            "h": "https://www.bced.gov.bc.ca/apps/imcl/imclWeb/Home.do):",
+            "t": "bced.gov.bc.ca · Home.do):"
           }
         ],
         [
           {
-            "t": "surreyschools.ca · school locator",
-            "h": "https://www.surreyschools.ca/our-district/school-locator"
+            "h": "https://www.surreyschools.ca/our-district/school-locator",
+            "t": "surreyschools.ca · school locator"
           }
         ],
         [
           {
-            "t": "translink.ca · schedules and maps",
-            "h": "https://www.translink.ca/schedules-and-maps"
+            "h": "https://www.translink.ca/schedules-and-maps",
+            "t": "translink.ca · schedules and maps"
           }
         ],
         [
           {
-            "t": "warlinepainting.ca",
-            "h": "https://warlinepainting.ca/?p=549"
+            "h": "https://warlinepainting.ca/?p=549",
+            "t": "warlinepainting.ca"
           }
         ],
         [
           {
-            "t": "properties.lefigaro.com · house real estate british columbia canada",
-            "h": "https://properties.lefigaro.com/announces/house-real+estate-british+columbia-canada/?page=14"
+            "h": "https://properties.lefigaro.com/announces/house-real+estate-british+columbia-canada/?page=14",
+            "t": "properties.lefigaro.com · house real estate british columbia canada"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · strata information buyers sellers",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/strata-information-buyers-sellers"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/strata-information-buyers-sellers",
+            "t": "www2.gov.bc.ca · strata information buyers sellers"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation reports",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/legislation-regulations/depreciation-reports"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/legislation-regulations/depreciation-reports",
+            "t": "www2.gov.bc.ca · depreciation reports"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · finances",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/finances"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/finances",
+            "t": "www2.gov.bc.ca · finances"
           }
         ],
         [
           {
-            "t": "bclaws.gov.bc.ca (2)",
-            "h": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/98043_08"
+            "h": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/98043_08",
+            "t": "bclaws.gov.bc.ca (2)"
           }
         ],
         [
           {
-            "t": "surrey.ca · surrey official community plan",
-            "h": "https://www.surrey.ca/planning-development/plans-strategies/surrey-official-community-plan"
+            "h": "https://www.surrey.ca/planning-development/plans-strategies/surrey-official-community-plan",
+            "t": "surrey.ca · surrey official community plan"
           }
         ],
         [
           {
-            "t": "surrey.ca · bylaws",
-            "h": "https://www.surrey.ca/bylaws-services/bylaws"
+            "h": "https://www.surrey.ca/bylaws-services/bylaws",
+            "t": "surrey.ca · bylaws"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · content.residences",
-            "h": "https://www.alc.gov.bc.ca/alc/content.residences"
+            "h": "https://www.alc.gov.bc.ca/alc/content.residences",
+            "t": "alc.gov.bc.ca · content.residences"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Hazelmere",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Hazelmere"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -622,17 +619,17 @@
         ],
         [
           {
-            "t": "Fee-simple lots are the default form: an acreage parcel here is fee-simple unless title says otherwise — no strata corporation, no Form B, no strata fees. The one built strata complex in the sub-area, Hazelmere Village, is a townhouse complex (cross-reference below), not a lot form. A sub-area-wide strata-versus-freehold split is UNVERIFIED."
+            "t": "Fee-simple lots are the default form: an acreage parcel here is fee-simple unless title says otherwise — no strata corporation, no Form B, no strata fees. The one built strata complex in the sub-area, Hazelmere Village, is a townhouse complex (cross-reference below), not a lot form. A sub-area-wide strata-versus-freehold split is not verified."
           }
         ],
         [
           {
-            "t": ": a bare-land strata lot IS strata tenure on the lot itself — Form B, strata fees for common property and registered bylaws apply to the lot; it is NOT fee-simple. No bare-land strata plan inside Hazelmere was verified in this research — no such plan is named or counted, and tenure on any specific parcel is a title question."
+            "t": ": a bare-land strata lot IS strata tenure on the lot itself — Form B, strata fees for common property and registered bylaws apply to the lot; it is NOT fee-simple. No bare-land strata plan inside Hazelmere was verified — no such plan is named or counted, and tenure on any specific parcel is a title question."
           }
         ],
         [
           {
-            "t": "Zoning character, as the page states it (UNVERIFIED on the bylaw text): A-1 General Agriculture zoning for Hazelmere Valley acreages, with Part 10 (Bylaw 12000) minimum lot areas of 4 hectares inside the ALR and 2 hectares outside it for new A-1 lots, one single-family dwelling which may contain one secondary suite under A-1, and RA Acreage Residential zoning on some nearby land with a 4,050 m² minimum. The RA figure is consistent with the City's SSMUH zone table (RA lots at over 4,050 m²); the A-1 / Part 10 figures themselves were not re-read in Bylaw 12000 in the research — confirm in the current consolidated bylaw before quoting them for a parcel."
+            "t": "Zoning character, as the page states it (Not verified on the bylaw text): A-1 General Agriculture zoning for Hazelmere Valley acreages, with Part 10 (Bylaw 12000) minimum lot areas of 4 hectares inside the ALR and 2 hectares outside it for new A-1 lots, one single-family dwelling which may contain one secondary suite under A-1, and RA Acreage Residential zoning on some nearby land with a 4,050 m² minimum. The RA figure is consistent with the City's SSMUH zone table (RA lots at over 4,050 m²); the A-1 / Part 10 figures themselves were not re-read in Bylaw 12000 — confirm in the current consolidated bylaw before quoting them for a parcel."
           }
         ],
         [
@@ -642,12 +639,12 @@
         ],
         [
           {
-            "t": "Assemblies / development sites / rezoning proposals, documented AS SUCH, never as inventory: none is documented as a named proposal in this sub-area's research. Two framing items are documented AS planning context only: (1) a feed parcel whose listing text frames it as land in a townhouse-designated plan area — a listing framing, not a plan confirmation opened in the research; and (2) the South Campbell Heights Local Area Plan ground immediately north — a City plan area, not a development site and not Hazelmere lot inventory."
+            "t": "Assemblies / development sites / rezoning proposals, documented AS SUCH, never as inventory: none is documented as a named proposal in this sub-area's research. Two framing items are documented AS planning context only: (1) a feed parcel whose listing text frames it as land in a townhouse-designated plan area — a listing framing, not a plan confirmation opened; and (2) the South Campbell Heights Local Area Plan ground immediately north — a City plan area, not a development site and not Hazelmere lot inventory."
           }
         ],
         [
           {
-            "t": "ALR vs non-ALR split: UNVERIFIED — no ALC map result for a Hazelmere parcel was opened in the research, and no share is stated. Check every parcel on the ALC maps by PID or civic address before pricing it."
+            "t": "ALR vs non-ALR split: Not verified — no ALC map result for a Hazelmere parcel was opened, and no share is stated. Check every parcel on the ALC maps by PID or civic address before pricing it."
           }
         ],
         [
@@ -656,18 +653,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Hazelmere",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Hazelmere"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -676,7 +673,7 @@
         ],
         [
           {
-            "t": "Names and history: \"Hazelmere\" (board, City heritage name and page name) and \"Hall's Prairie\" (the older local name). The City's South Campbell Heights Local Area Plan document records that Hall's Prairie was renamed Hazelmere after the rail station named for Henry Thrift's homestead, and that Hazelmere largely maintained its rural, agricultural character over the past century. That plan ground — approximately 249 hectares centred around 16 Avenue and 192 Street, immediately south of Campbell Heights Business Park — sits immediately north of Hazelmere's southern lands; the 249-hectare figure is carried from the City's display-boards document via search result and was not located in the full plan text in the research's verification pass, so it is UNVERIFIED on the plan text here."
+            "t": "Names and history: \"Hazelmere\" (board, City heritage name and page name) and \"Hall's Prairie\" (the older local name). The City's South Campbell Heights Local Area Plan document records that Hall's Prairie was renamed Hazelmere after the rail station named for Henry Thrift's homestead, and that Hazelmere largely maintained its rural, agricultural character over the past century. That plan ground — approximately 249 hectares centred around 16 Avenue and 192 Street, immediately south of Campbell Heights Business Park — sits immediately north of Hazelmere's southern lands; the 249-hectare figure is carried from the City's display-boards document via search result and was not located in the full plan text's verification pass, so it is not verified on the plan text here."
           }
         ],
         [
@@ -685,22 +682,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Hazelmere",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Hazelmere"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "ALR block (the governing frame for any Hazelmere parcel that is in the ALR): subdivision within the ALR requires ALC approval; ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)); land in the ALR may generally have no more than one residence per parcel — a principal residence up to 500 m² total floor area without ALC application, a secondary suite only inside the principal residence and only where local bylaws allow it, and at most one additional detached residence of up to 90 m² (parcels ≤40 ha) or 186 m² (parcels >40 ha); local governments may further restrict residences through zoning. Farm class is three-tier — $2,500 on 0.8–4 ha / $2,500 + 5% of value over 4 ha / $10,000 under 0.8 ha, applications by Oct 31 — a flat \"$2,500+\" line is an ERROR; whether any specific Hazelmere property carries farm-class taxation is a BC Assessment / parcel question, UNVERIFIED in the research."
+            "t": "ALR block (the governing frame for any Hazelmere parcel that is in the ALR): subdivision within the ALR requires ALC approval; ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)); land in the ALR may generally have no more than one residence per parcel — a principal residence up to 500 m² total floor area without ALC application, a secondary suite only inside the principal residence and only where local bylaws allow it, and at most one additional detached residence of up to 90 m² (parcels ≤40 ha) or 186 m² (parcels >40 ha); local governments may further restrict residences through zoning. Farm class is three-tier — $2,500 on 0.8–4 ha / $2,500 + 5% of value over 4 ha / $10,000 under 0.8 ha, applications by Oct 31 — a flat \"$2,500+\" line is an ERROR; whether any specific Hazelmere property carries farm-class taxation is a BC Assessment / parcel question, not verified."
           }
         ],
         [
@@ -709,18 +706,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Hazelmere",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Hazelmere"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -744,146 +741,146 @@
         ],
         [
           {
-            "t": "A townhouse-designation framing in a listing is not a plan document. One feed parcel is framed in its own listing text as land in a townhouse-designated plan area; the research opened no plan confirmation for that parcel, so the designation is UNVERIFIED here and is priced only after a COSMOS / plan check."
+            "t": "A townhouse-designation framing in a listing is not a plan document. One feed parcel is framed in its own listing text as land in a townhouse-designated plan area; the research opened no plan confirmation for that parcel, so the designation is not verified here and is priced only after a COSMOS / plan check."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Hazelmere",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Hazelmere"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · hazelmere",
-            "h": "https://jaredgibbons.ca/hazelmere.html"
+            "h": "https://jaredgibbons.ca/hazelmere.html",
+            "t": "jaredgibbons.ca · hazelmere"
           }
         ],
         [
           {
-            "t": "surrey.ca · our communities",
-            "h": "https://www.surrey.ca/about-surrey/our-communities"
+            "h": "https://www.surrey.ca/about-surrey/our-communities",
+            "t": "surrey.ca · our communities"
           }
         ],
         [
           {
-            "t": "news.fvreb.bc.ca · tech tip 18 map of the bc boards areas subareas",
-            "h": "https://news.fvreb.bc.ca/member-updates/tech-tip-18-map-of-the-bc-boards-areas-subareas/"
+            "h": "https://news.fvreb.bc.ca/member-updates/tech-tip-18-map-of-the-bc-boards-areas-subareas/",
+            "t": "news.fvreb.bc.ca · tech tip 18 map of the bc boards areas subareas"
           }
         ],
         [
           {
-            "t": "Surrey.ca · SouthCampbellHeightsLocalAreaPlan",
-            "h": "https://www.Surrey.ca/sites/default/files/media/documents/SouthCampbellHeightsLocalAreaPlan.pdf"
+            "h": "https://www.Surrey.ca/sites/default/files/media/documents/SouthCampbellHeightsLocalAreaPlan.pdf",
+            "t": "Surrey.ca · SouthCampbellHeightsLocalAreaPlan"
           }
         ],
         [
           {
-            "t": "surrey.ca · zoning small scale multi unit housing",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing",
+            "t": "surrey.ca · zoning small scale multi unit housing"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ],
         [
           {
-            "t": "surrey.ca · BYL Zoning 12000",
-            "h": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf"
+            "h": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf",
+            "t": "surrey.ca · BYL Zoning 12000"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "surrey.ca · building or legalizing secondary suite",
-            "h": "https://www.surrey.ca/renovating-building-development/building/building-or-legalizing-secondary-suite"
+            "h": "https://www.surrey.ca/renovating-building-development/building/building-or-legalizing-secondary-suite",
+            "t": "surrey.ca · building or legalizing secondary suite"
           }
         ],
         [
           {
-            "t": "surrey.ca · servicing agreement",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-development-application-process/servicing-agreement"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-development-application-process/servicing-agreement",
+            "t": "surrey.ca · servicing agreement"
           }
         ],
         [
           {
-            "t": "surrey.ca · CR 2025 R081",
-            "h": "https://www.surrey.ca/sites/default/files/corporate-reports/CR_2025-R081.pdf"
+            "h": "https://www.surrey.ca/sites/default/files/corporate-reports/CR_2025-R081.pdf",
+            "t": "surrey.ca · CR 2025 R081"
           }
         ],
         [
           {
-            "t": "surrey.ca · short term rentals",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/short-term-rentals"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/short-term-rentals",
+            "t": "surrey.ca · short term rentals"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 2,
-      "text": "Acreage and rural land in Hazelmere",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Hazelmere",
-      "gen": "acre",
-      "pos": "end"
+      "text": "Acreage and rural land in Hazelmere"
     },
     {
-      "t": "list",
+      "gen": "acre",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Hazelmere"
+    },
+    {
+      "gen": "acre",
       "items": [
         [
           {
@@ -896,18 +893,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Local rules that affect acreage buyers in Hazelmere",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect acreage buyers in Hazelmere"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -920,18 +917,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Good to know about Hazelmere",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Hazelmere"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -939,184 +936,152 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "acre",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below.",
-      "gen": "acre",
-      "pos": "end"
+      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "BC acreage buying rules",
-            "h": "/bc-acreage-buying-rules.html"
+            "h": "/bc-acreage-buying-rules.html",
+            "t": "BC acreage buying rules"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Sources for the acreage notes on Hazelmere",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the acreage notes on Hazelmere"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "surrey.ca · our communities",
-            "h": "https://www.surrey.ca/about-surrey/our-communities"
+            "h": "https://www.surrey.ca/about-surrey/our-communities",
+            "t": "surrey.ca · our communities"
           }
         ],
         [
           {
-            "t": "news.fvreb.bc.ca · tech tip 18 map of the bc boards areas subareas",
-            "h": "https://news.fvreb.bc.ca/member-updates/tech-tip-18-map-of-the-bc-boards-areas-subareas/"
+            "h": "https://news.fvreb.bc.ca/member-updates/tech-tip-18-map-of-the-bc-boards-areas-subareas/",
+            "t": "news.fvreb.bc.ca · tech tip 18 map of the bc boards areas subareas"
           }
         ],
         [
           {
-            "t": "Surrey.ca · SouthCampbellHeightsLocalAreaPlan",
-            "h": "https://www.Surrey.ca/sites/default/files/media/documents/SouthCampbellHeightsLocalAreaPlan.pdf"
+            "h": "https://www.Surrey.ca/sites/default/files/media/documents/SouthCampbellHeightsLocalAreaPlan.pdf",
+            "t": "Surrey.ca · SouthCampbellHeightsLocalAreaPlan"
           }
         ],
         [
           {
-            "t": "surrey.ca · zoning small scale multi unit housing",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing",
+            "t": "surrey.ca · zoning small scale multi unit housing"
           }
         ],
         [
           {
-            "t": "surrey.ca · building or legalizing secondary suite",
-            "h": "https://www.surrey.ca/renovating-building-development/building/building-or-legalizing-secondary-suite"
+            "h": "https://www.surrey.ca/renovating-building-development/building/building-or-legalizing-secondary-suite",
+            "t": "surrey.ca · building or legalizing secondary suite"
           }
         ],
         [
           {
-            "t": "surrey.ca · coach houses garden suites",
-            "h": "https://www.surrey.ca/renovating-building-development/building/residential-building/residential-building-permits/coach-houses-garden-suites"
+            "h": "https://www.surrey.ca/renovating-building-development/building/residential-building/residential-building-permits/coach-houses-garden-suites",
+            "t": "surrey.ca · coach houses garden suites"
           }
         ],
         [
           {
-            "t": "surrey.ca · short term rentals",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/short-term-rentals"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/short-term-rentals",
+            "t": "surrey.ca · short term rentals"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "surrey.ca · paying your property taxes",
-            "h": "https://www.surrey.ca/services-payments/property-taxes/paying-your-property-taxes"
+            "h": "https://www.surrey.ca/services-payments/property-taxes/paying-your-property-taxes",
+            "t": "surrey.ca · paying your property taxes"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Are there more or fewer homes for sale in Hazelmere than in June?",
-      "a": "In Hazelmere, listings of houses fell from 9 in June to 7 in September (−22.2%); condos and townhomes was 1 in June and 2 in September, too few (under 3) to call a rise or fall.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How big is Hazelmere compared with the rest of South Surrey and White Rock?",
-      "a": "In September 2026, Hazelmere held 1.2% of the 600 houses listed in South Surrey and White Rock and 0.3% of the 593 condos and townhomes listed in South Surrey and White Rock.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How many homes sold in Hazelmere from June to September 2026?",
-      "a": "3 houses and 0 condos and townhomes sold in Hazelmere over those 4 months.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How do I find out which school serves an address in Hazelmere?",
-      "a": "School catchments are set by address, so use the school district's catchment locator with the exact address. Catchment lines change, so check before you write an offer.",
-      "gen": "bank-faq"
-    },
-    {
-      "q": "Who can help me buy or sell in Hazelmere?",
-      "a": "Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, works across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361 or use the contact form on this site.",
-      "gen": "bank-faq"
-    },
-    {
+      "a": "Where a parcel is in the ALR, the ALC frame in governs: one principal residence to 500 m², a suite only inside it where local bylaws allow, and at most one additional detached residence of 90 m² or 186 m² by parcel size.",
       "gen": "tn",
-      "q": "Is there an apartment condo building in Hazelmere?",
-      "a": "No verified one."
+      "q": "Is Hazelmere in the ALR?"
     },
     {
+      "a": "Generally not on the standard framing: the allowances apply to eligible lots under 4,050 m² inside the Urban Containment Boundary on community services. An acreage lot needs a parcel-level check of zone, containment boundary and servicing before any added-unit claim.",
       "gen": "tn",
-      "q": "Is Hazelmere in the ALR?",
-      "a": "Where a parcel is in the ALR, the ALC frame in governs: one principal residence to 500 m², a suite only inside it where local bylaws allow, and at most one additional detached residence of 90 m² or 186 m² by parcel size."
+      "q": "Can a Hazelmere acreage add the usual Surrey SSMUH units?"
     },
     {
+      "a": "Catchments are still address-based and not verified for any specific address — check the exact address in the SD36 locator before relying on a school.",
       "gen": "tn",
-      "q": "Can a Hazelmere acreage add the usual Surrey SSMUH units?",
-      "a": "Generally not on the standard framing: the allowances apply to eligible lots under 4,050 m² inside the Urban Containment Boundary on community services. An acreage lot needs a parcel-level check of zone, containment boundary and servicing before any added-unit claim."
+      "q": "Which school is physically in Hazelmere?"
     },
     {
+      "a": "Not confirmed. The strata plan obtained with the Form B package is where the unit count is properly confirmed.",
       "gen": "tn",
-      "q": "Is a separate coach house allowed on an A-1 or ALR acreage here?",
-      "a": "UNVERIFIED parcel by parcel."
+      "q": "How many units are in Hazelmere Village?"
     },
     {
+      "a": "The strata basis is strong — the complex is run by an elected strata council whose president signed a published testimonial for a strata-wide painting contract ( and listings record strata-style amenities including management.",
       "gen": "tn",
-      "q": "Which school is physically in Hazelmere?",
-      "a": "Catchments are still address-based and UNVERIFIED for any specific address — check the exact address in the SD36 locator before relying on a school."
+      "q": "Is Hazelmere Village definitely strata?"
     },
     {
+      "a": "A listing states \"2 pets allowed, dogs to be no more than 44lbs\" with no age restrictions ( — listing-stated only. Pet bylaws live in the strata's bylaws attached to the Form B; confirm there before counting on a specific dog.",
       "gen": "tn",
-      "q": "How many units are in Hazelmere Village?",
-      "a": "UNCONFIRMED. The strata plan obtained with the Form B package is where the unit count is properly confirmed."
+      "q": "What pets are allowed at Hazelmere Village?"
     },
     {
-      "gen": "tn",
-      "q": "Is Hazelmere Village definitely strata?",
-      "a": "The strata basis is strong — the complex is run by an elected strata council whose president signed a published testimonial for a strata-wide painting contract ( and listings record strata-style amenities including management."
-    },
-    {
-      "gen": "tn",
-      "q": "What pets are allowed at Hazelmere Village?",
-      "a": "A listing states \"2 pets allowed, dogs to be no more than 44lbs\" with no age restrictions ( — listing-stated only. Pet bylaws live in the strata's bylaws attached to the Form B; confirm there before counting on a specific dog."
-    },
-    {
+      "a": "An individual fee-simple rural parcel at South Surrey's south-east corner — the ground the City's neighbouring plan document describes as having kept its rural, agricultural character for a century. There is no acreage subdivision product to buy instead; each parcel is judged on its own title, zone (A-1 vs RA), servicing, setbacks and ALR status.",
       "gen": "acre",
-      "q": "What am I actually buying when I buy an \"acreage\" in Hazelmere?",
-      "a": "An individual fee-simple rural parcel at South Surrey's south-east corner — the ground the City's neighbouring plan document describes as having kept its rural, agricultural character for a century. There is no acreage subdivision product to buy instead; each parcel is judged on its own title, zone (A-1 vs RA), servicing, setbacks and ALR status."
+      "q": "What am I actually buying when I buy an \"acreage\" in Hazelmere?"
     },
     {
+      "a": "Only against the zone minimums and, in the ALR, only with ALC approval. Confirm the parcel's zone and the current consolidated bylaw before pricing any split.",
       "gen": "acre",
-      "q": "Can I split a Hazelmere acreage?",
-      "a": "Only against the zone minimums and, in the ALR, only with ALC approval. Confirm the parcel's zone and the current consolidated bylaw before pricing any split."
+      "q": "Can I split a Hazelmere acreage?"
     }
-  ]
+  ],
+  "slug": "hazelmere-guide",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

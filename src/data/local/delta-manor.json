@@ -1,68 +1,27 @@
 {
-  "status": "draft",
-  "slug": "delta-manor",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: deltasd.bc.ca",
-            "h": "https://www.deltasd.bc.ca/schools/school-locator/"
-          }
-        ],
-        [
-          {
-            "t": "Source: hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com",
-            "h": "https://hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com/8917/7677/0068/OCP_2024_web.pdf"
-          }
-        ],
-        [
-          {
-            "t": "Source: maps.delta.ca",
-            "h": "https://maps.delta.ca/Utilities/ZoningPDF/RS1.pdf"
-          }
-        ],
-        [
-          {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "What's nearby Delta Manor",
       "gen": "nb",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby Delta Manor"
     },
     {
+      "gen": "nb",
+      "pos": "end",
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -90,18 +49,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -119,18 +78,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -148,18 +107,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -167,25 +126,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Delta Secondary, 4615 51 St",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Ladner Pioneer Library",
@@ -218,18 +178,17 @@
           "3.1"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -242,14 +201,76 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf",
+            "t": "infomaps.translink.ca · tt601"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt609.pdf",
+            "t": "infomaps.translink.ca · tt609"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt618.pdf",
+            "t": "infomaps.translink.ca · tt618"
+          }
+        ],
+        [
+          {
+            "h": "http://www.delta.ca/community-culture/happening-delta/news/heat-warning-issued-city-delta-august-12",
+            "t": "delta.ca · heat warning issued city delta august 12"
+          }
+        ],
+        [
+          {
+            "h": "http://delta.ca/parks-recreation/sport-recreation/indoor-facilities/ladner-leisure-centre",
+            "t": "delta.ca · ladner leisure centre"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/events/14005",
+            "t": "fvrl.bc.ca · events"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta",
+            "t": "studentsuccess.gov.bc.ca · delta"
+          }
+        ],
+        [
+          {
+            "h": "https://pharmasave.com/ladner",
+            "t": "pharmasave.com · ladner"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -257,63 +278,28 @@
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt601",
+            "t": "Source: hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com",
+            "h": "https://hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com/8917/7677/0068/OCP_2024_web.pdf"
+          }
+        ],
+        [
+          {
+            "t": "Source: maps.delta.ca",
+            "h": "https://maps.delta.ca/Utilities/ZoningPDF/RS1.pdf"
+          }
+        ],
+        [
+          {
+            "t": "Source: infomaps.translink.ca",
             "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf"
-          }
-        ],
-        [
-          {
-            "t": "infomaps.translink.ca · tt609",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt609.pdf"
-          }
-        ],
-        [
-          {
-            "t": "infomaps.translink.ca · tt618",
-            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt618.pdf"
-          }
-        ],
-        [
-          {
-            "t": "delta.ca · heat warning issued city delta august 12",
-            "h": "http://www.delta.ca/community-culture/happening-delta/news/heat-warning-issued-city-delta-august-12"
-          }
-        ],
-        [
-          {
-            "t": "delta.ca · ladner leisure centre",
-            "h": "http://delta.ca/parks-recreation/sport-recreation/indoor-facilities/ladner-leisure-centre"
-          }
-        ],
-        [
-          {
-            "t": "fvrl.bc.ca · events",
-            "h": "https://www.fvrl.bc.ca/events/14005"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · delta",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta"
-          }
-        ],
-        [
-          {
-            "t": "pharmasave.com · ladner",
-            "h": "https://pharmasave.com/ladner"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
-    {
-      "q": "Which public schools serve Delta Manor?",
-      "a": "For the sample address 4600 53 Street, the SD37 School Locator result recorded in this program is Ladner Elementary (K–7) at 5016 44 Ave. and Delta Secondary (8–12) at 4615 51 St.; catchments are address-based, so check any other address in the locator.",
-      "gen": "muse"
-    },
     {
       "q": "Is Delta Manor an official City of Delta neighbourhood?",
       "a": "No. It is the Paragon sub-area name for the central Ladner grid around Delta Secondary School and Memorial Park; the governing plan is the Delta Official Community Plan 2024, Bylaw No. 8400 — a single consolidated plan, in which the former Ladner Area Plan (Schedule B.3 of the superseded Bylaw No. 3950) no longer exists as a schedule.",
@@ -328,6 +314,14 @@
       "q": "How does transit connect Delta Manor to Richmond and Vancouver?",
       "a": "TransLink route 601 runs from South Delta to Bridgeport Station on the Canada Line, stopping at Ladner Exchange, and route 618 loops Ladner North from Ladner Exchange via Ladner Trunk Road, Central Avenue, Westminster Avenue and Crescent Drive.",
       "gen": "muse"
+    },
+    {
+      "q": "Can Jared show me homes in Delta Manor?",
+      "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
+      "gen": "muse-generic"
     }
-  ]
+  ],
+  "slug": "delta-manor",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

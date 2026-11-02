@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "aldergrove-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Aldergrove compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Aldergrove compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Aldergrove against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Aldergrove against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
-      "caption": "Aldergrove against the whole city, September 2026",
+      "caption": "Aldergrove against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -27,279 +24,235 @@
       "rows": [
         [
           "Detached houses",
-          "12.2%",
-          "14.1%",
-          "16% against 14%",
-          "4 of 8"
+          "11.9%",
+          "15.3%",
+          "17% against 13%",
+          "2 of 9"
         ],
         [
           "Condos and townhomes",
-          "4.3%",
-          "3.9%",
-          "17% against 18%",
-          "4 of 5"
+          "4.9%",
+          "2.2%",
+          "9% against 20%",
+          "5 of 6"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings fell from 58 in June to 55 in September (−5.2%), and it took 13.4% of the city’s 298 sales over the period; condos and townhomes: listings rose from 29 in June to 30 in September (+3.4%), and it took 3.4% of the city’s 558 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 58 in June to 53 in October (−8.6%), and it took 13.7% of the city’s 357 sales over the period; condos and townhomes: listings rose from 29 in June to 33 in October (+13.8%), and it took 3.2% of the city’s 694 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Aldergrove for condos and townhomes in August (a sellers’ best bet); condos and townhomes in June, July (a buyers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out Aldergrove for condos and townhomes in August (a sellers’ best bet); condos and townhomes in June, July, October (a buyers’ best bet)."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Langley real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Langley real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Langley homes for sale",
-            "h": "/langley-homes-for-sale.html"
+            "h": "/langley-homes-for-sale.html",
+            "t": "Langley homes for sale"
           }
         ],
         [
           {
-            "t": "Langley real estate market stats",
-            "h": "/langley-real-estate-market-stats.html"
+            "h": "/langley-real-estate-market-stats.html",
+            "t": "Langley real estate market stats"
           }
         ],
         [
           {
-            "t": "Langley houses for sale",
-            "h": "/langley-houses-for-sale.html"
+            "h": "/langley-houses-for-sale.html",
+            "t": "Langley houses for sale"
           }
         ],
         [
           {
-            "t": "Langley condos for sale",
-            "h": "/langley-condos-for-sale.html"
+            "h": "/langley-condos-for-sale.html",
+            "t": "Langley condos for sale"
           }
         ],
         [
           {
-            "t": "Langley townhomes for sale",
-            "h": "/langley-townhomes-for-sale.html"
+            "h": "/langley-townhomes-for-sale.html",
+            "t": "Langley townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Langley",
-            "h": "/sell-my-house-in-langley.html"
+            "h": "/sell-my-house-in-langley.html",
+            "t": "Sell my house in Langley"
           }
         ],
         [
           {
-            "t": "Schools in Langley",
-            "h": "/schools-in-langley-bc.html"
+            "h": "/schools-in-langley-bc.html",
+            "t": "Schools in Langley"
           }
         ],
         [
           {
-            "t": "Aldergrove homes and market figures",
-            "h": "/aldergrove.html"
+            "h": "/aldergrove.html",
+            "t": "Aldergrove homes and market figures"
           }
         ],
         [
           {
-            "t": "Brookswood real estate",
-            "h": "/brookswood.html"
+            "h": "/brookswood.html",
+            "t": "Brookswood real estate"
           }
         ],
         [
           {
-            "t": "Campbell Valley real estate",
-            "h": "/campbell-valley.html"
+            "h": "/campbell-valley.html",
+            "t": "Campbell Valley real estate"
           }
         ],
         [
           {
-            "t": "County Line Glen Valley real estate",
-            "h": "/county-line-glen-valley.html"
+            "h": "/county-line-glen-valley.html",
+            "t": "County Line Glen Valley real estate"
           }
         ],
         [
           {
-            "t": "Langley City real estate",
-            "h": "/langley-city.html"
+            "h": "/langley-city.html",
+            "t": "Langley City real estate"
           }
         ],
         [
           {
-            "t": "Murrayville real estate",
-            "h": "/murrayville.html"
+            "h": "/murrayville.html",
+            "t": "Murrayville real estate"
           }
         ],
         [
           {
-            "t": "Otter District real estate",
-            "h": "/otter-district.html"
+            "h": "/otter-district.html",
+            "t": "Otter District real estate"
           }
         ],
         [
           {
-            "t": "Salmon River real estate",
-            "h": "/salmon-river.html"
+            "h": "/salmon-river.html",
+            "t": "Salmon River real estate"
           }
         ],
         [
           {
-            "t": "Walnut Grove real estate",
-            "h": "/walnut-grove.html"
+            "h": "/walnut-grove.html",
+            "t": "Walnut Grove real estate"
           }
         ],
         [
           {
-            "t": "Willoughby Heights real estate",
-            "h": "/willoughby-heights.html"
+            "h": "/willoughby-heights.html",
+            "t": "Willoughby Heights real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: tol.ca (1)",
-            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx"
-          }
-        ],
-        [
-          {
-            "t": "Source: sd35.bc.ca",
-            "h": "https://www.sd35.bc.ca/school-locator"
-          }
-        ],
-        [
-          {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf"
-          }
-        ],
-        [
-          {
-            "t": "Source: tol.ca (4)",
-            "h": "https://www.tol.ca/en/services/garbage-cart.aspx"
-          }
-        ],
-        [
-          {
-            "t": "Source: tol.ca (5)",
-            "h": "https://www.tol.ca/en/building-development/development-applications.aspx"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 2,
-      "text": "Condo buildings in Aldergrove",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Condo buildings in Aldergrove"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Read this first: Aldergrove's apartment-condo stock is essentially one project. Every verified apartment-condo building below is in Aldergrove Town Centre, on the old Aldergrove Mall site at Fraser Highway and 272 Street.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Read this first: Aldergrove's apartment-condo stock is essentially one project. Every verified apartment-condo building below is in Aldergrove Town Centre, on the old Aldergrove Mall site at Fraser Highway and 272 Street."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Shortreed — 27215 Aldergrove Town Centre Dr",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Shortreed — 27215 Aldergrove Town Centre Dr"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "One of the three Phase 1 buildings, named for the Shortreed pioneering family; listings record it as built in 2025, with underground parking and two storage lockers for the unit described.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "One of the three Phase 1 buildings, named for the Shortreed pioneering family; listings record it as built in 2025, with underground parking and two storage lockers for the unit described."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Jackman — 27218 Aldergrove Town Centre Dr",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Jackman — 27218 Aldergrove Town Centre Dr"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "71 homes in 6 storeys, wood-frame construction, freehold strata, strata plan EPS7980, built 2025, managed by Remi (per a building-data source drawing on MLS and public strata records).",
-      "gen": "tn",
-      "pos": "end"
+      "text": "71 homes in 6 storeys, wood-frame construction, freehold strata, strata plan EPS7980, built 2025, managed by Remi (per a building-data source drawing on MLS and public strata records)."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Vanetta — 27254 Aldergrove Town Centre Dr",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Vanetta — 27254 Aldergrove Town Centre Dr"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A Phase 1 building named for a pioneering family; listings record it as built in 2026 and describe it, in listing language, as the Town Centre's only steel-frame building, with concrete floors — treat the construction claim as listing-stated until it is confirmed in the disclosure statement or depreciation documentation.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A Phase 1 building named for a pioneering family; listings record it as built in 2026 and describe it, in listing language, as the Town Centre's only steel-frame building, with concrete floors — treat the construction claim as listing-stated until it is confirmed in the disclosure statement or depreciation documentation."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Creekside — 27249 Aldergrove Town Centre Dr",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Creekside — 27249 Aldergrove Town Centre Dr"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The Phase 2 building, beside Bertrand Creek: 66 homes in 4 storeys, wood-frame construction, freehold strata, strata plan EPS7983, built 2025, managed by Remi Realty, with underground parking, per the same building-data source.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The Phase 2 building, beside Bertrand Creek: 66 homes in 4 storeys, wood-frame construction, freehold strata, strata plan EPS7983, built 2025, managed by Remi Realty, with underground parking, per the same building-data source."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "The Hart — Aldergrove Town Centre (civic address UNCONFIRMED)",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "The Hart — Aldergrove Town Centre (civic address not confirmed)"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The fifth building in the community, released in 2025 per the marketing firm, offering 1-bedroom, 1+flex, 2-bedroom and 2+flex homes, named for Frederick John Hart.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The fifth building in the community, released in 2025 per the marketing firm, offering 1-bedroom, 1+flex, 2-bedroom and 2+flex homes, named for Frederick John Hart."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Aldergrove",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Aldergrove"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -327,18 +280,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Aldergrove",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Aldergrove"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -386,18 +339,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Aldergrove",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Aldergrove"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -425,201 +378,201 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Aldergrove",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Aldergrove"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "tol.ca · about the township.aspx",
-            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx"
+            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx",
+            "t": "tol.ca · about the township.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · Att B Aldergrove CP Redlined",
-            "h": "https://www.tol.ca/en/connect/resources/get-involved/ocp-update/Att-B---Aldergrove-CP---Redlined.pdf"
+            "h": "https://www.tol.ca/en/connect/resources/get-involved/ocp-update/Att-B---Aldergrove-CP---Redlined.pdf",
+            "t": "tol.ca · Att B Aldergrove CP Redlined"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt503",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf",
+            "t": "infomaps.translink.ca · tt503"
           }
         ],
         [
           {
-            "t": "tol.ca · aldergrove community centre.aspx",
-            "h": "https://www.tol.ca/en/parks-recreation/aldergrove-community-centre.aspx"
+            "h": "https://www.tol.ca/en/parks-recreation/aldergrove-community-centre.aspx",
+            "t": "tol.ca · aldergrove community centre.aspx"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "fifthave.ca · the vibrant new hart of aldergrove town centre",
-            "h": "https://fifthave.ca/the-vibrant-new-hart-of-aldergrove-town-centre/"
+            "h": "https://fifthave.ca/the-vibrant-new-hart-of-aldergrove-town-centre/",
+            "t": "fifthave.ca · the vibrant new hart of aldergrove town centre"
           }
         ],
         [
           {
-            "t": "atcliving.com · creekside",
-            "h": "https://atcliving.com/creekside/"
+            "h": "https://atcliving.com/creekside/",
+            "t": "atcliving.com · creekside"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf",
+            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio"
           }
         ],
         [
           {
-            "t": "tol.ca · 2026 03 09 F.2 26 26 cpp SSMUH DP Guidelines",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/2026-03-09-F.2-26-26-cpp-SSMUH-DP-Guidelines.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/2026-03-09-F.2-26-26-cpp-SSMUH-DP-Guidelines.pdf",
+            "t": "tol.ca · 2026 03 09 F.2 26 26 cpp SSMUH DP Guidelines"
           }
         ],
         [
           {
-            "t": "tol.ca · Report to Council Small Scale, Multi Unit Housin",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/Report-to-Council----Small-Scale,-Multi-Unit-Housing,-June-10,-2024.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/Report-to-Council----Small-Scale,-Multi-Unit-Housing,-June-10,-2024.pdf",
+            "t": "tol.ca · Report to Council Small Scale, Multi Unit Housin"
           }
         ],
         [
           {
-            "t": "tol.ca · community planning.aspx",
-            "h": "https://www.tol.ca/en/the-township/community-planning.aspx"
+            "h": "https://www.tol.ca/en/the-township/community-planning.aspx",
+            "t": "tol.ca · community planning.aspx"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Condo buildings in Aldergrove Langley",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Shortreed — 27215 Aldergrove Town Centre Dr",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Condo buildings in Aldergrove Langley"
     },
     {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Shortreed — 27215 Aldergrove Town Centre Dr"
+    },
+    {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "One of the three Phase 1 buildings, named for the Shortreed pioneering family; listings record it as built in 2025, with underground parking. Unit count, storeys, construction type and published restrictions: UNCONFIRMED from a public source.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "One of the three Phase 1 buildings, named for the Shortreed pioneering family; listings record it as built in 2025, with underground parking. Unit count, storeys, construction type and published restrictions: Not confirmed from a public source."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Jackman — 27218 Aldergrove Town Centre Dr",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Jackman — 27218 Aldergrove Town Centre Dr"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "71 homes in 6 storeys, wood-frame construction, freehold strata, strata plan EPS7980, built 2025, managed by Remi (per a building-data source drawing on MLS and public strata records). Pets: a listing states \"2 dogs or 2 cats\" for the unit described — listing-stated; the registered bylaws govern.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "71 homes in 6 storeys, wood-frame construction, freehold strata, strata plan EPS7980, built 2025, managed by Remi (per a building-data source drawing on MLS and public strata records). Pets: a listing states \"2 dogs or 2 cats\" for the unit described — listing-stated; the registered bylaws govern."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Vanetta — 27254 Aldergrove Town Centre Dr",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Vanetta — 27254 Aldergrove Town Centre Dr"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A Phase 1 building named for a pioneering family; listings record it as built in 2026 and describe it, in listing language, as the Town Centre's only steel-frame building, with concrete floors — the construction claim is listing-stated until confirmed in the disclosure statement. Unit count and storeys: UNCONFIRMED.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A Phase 1 building named for a pioneering family; listings record it as built in 2026 and describe it, in listing language, as the Town Centre's only steel-frame building, with concrete floors — the construction claim is listing-stated until confirmed in the disclosure statement. Unit count and storeys: Not confirmed."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Creekside — 27249 Aldergrove Town Centre Dr",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Creekside — 27249 Aldergrove Town Centre Dr"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The Phase 2 building, beside Bertrand Creek: 66 homes in 4 storeys, wood-frame construction, freehold strata, strata plan EPS7983, built 2025, managed by Remi Realty, with underground parking. Pets: a current listing states \"Cats OK\" for that unit — listing-stated, not a bylaw.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The Phase 2 building, beside Bertrand Creek: 66 homes in 4 storeys, wood-frame construction, freehold strata, strata plan EPS7983, built 2025, managed by Remi Realty, with underground parking. Pets: a current listing states \"Cats OK\" for that unit — listing-stated, not a bylaw."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "The Hart — Aldergrove Town Centre (civic address UNCONFIRMED)",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "The Hart — Aldergrove Town Centre (civic address not confirmed)"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The fifth building, released in 2025 per the marketing firm, offering 1-bedroom, 1+flex, 2-bedroom and 2+flex homes, named for Frederick John Hart. Unit count, storeys, construction type and completion date: UNCONFIRMED — the disclosure statement is the source for all four.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The fifth building, released in 2025 per the marketing firm, offering 1-bedroom, 1+flex, 2-bedroom and 2+flex homes, named for Frederick John Hart. Unit count, storeys, construction type and completion date: Not confirmed — the disclosure statement is the source for all four."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Aldergrove Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Aldergrove Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -637,18 +590,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Aldergrove Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Aldergrove Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -666,18 +619,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Aldergrove Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Aldergrove Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -690,207 +643,207 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Aldergrove Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Aldergrove Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "tol.ca · about the township.aspx",
-            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx"
+            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx",
+            "t": "tol.ca · about the township.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · Att B Aldergrove CP Redlined",
-            "h": "https://www.tol.ca/en/connect/resources/get-involved/ocp-update/Att-B---Aldergrove-CP---Redlined.pdf"
+            "h": "https://www.tol.ca/en/connect/resources/get-involved/ocp-update/Att-B---Aldergrove-CP---Redlined.pdf",
+            "t": "tol.ca · Att B Aldergrove CP Redlined"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt503",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf",
+            "t": "infomaps.translink.ca · tt503"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "tol.ca · aldergrove community centre.aspx",
-            "h": "https://www.tol.ca/en/parks-recreation/aldergrove-community-centre.aspx"
+            "h": "https://www.tol.ca/en/parks-recreation/aldergrove-community-centre.aspx",
+            "t": "tol.ca · aldergrove community centre.aspx"
           }
         ],
         [
           {
-            "t": "fifthave.ca · the vibrant new hart of aldergrove town centre",
-            "h": "https://fifthave.ca/the-vibrant-new-hart-of-aldergrove-town-centre/"
+            "h": "https://fifthave.ca/the-vibrant-new-hart-of-aldergrove-town-centre/",
+            "t": "fifthave.ca · the vibrant new hart of aldergrove town centre"
           }
         ],
         [
           {
-            "t": "murphyrealestategroup.ca · SearchResults.form",
-            "h": "https://murphyrealestategroup.ca/recip.html/1272399.search/SearchResults.form?_pg=3"
+            "h": "https://murphyrealestategroup.ca/recip.html/1272399.search/SearchResults.form?_pg=3",
+            "t": "murphyrealestategroup.ca · SearchResults.form"
           }
         ],
         [
           {
-            "t": "seniorsadvocatebc.ca · location",
-            "h": "https://www.seniorsadvocatebc.ca/quickfacts/location/85553/"
+            "h": "https://www.seniorsadvocatebc.ca/quickfacts/location/85553/",
+            "t": "seniorsadvocatebc.ca · location"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf",
+            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio"
           }
         ],
         [
           {
-            "t": "tol.ca · community planning.aspx",
-            "h": "https://www.tol.ca/en/the-township/community-planning.aspx"
+            "h": "https://www.tol.ca/en/the-township/community-planning.aspx",
+            "t": "tol.ca · community planning.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · property taxes.aspx",
-            "h": "https://www.tol.ca/en/services/property-taxes.aspx"
+            "h": "https://www.tol.ca/en/services/property-taxes.aspx",
+            "t": "tol.ca · property taxes.aspx"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Aldergrove",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Read this first: Aldergrove's townhouse stock is the older 32 Avenue corridor stock west and south of the Fraser Highway / 272 Street core — not Aldergrove Town Centre.",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Alderwood Manor — 27090 32 Ave. STRATA — freehold strata, strata plan NWS46, self-managed",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Aldergrove"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Listings record it as a townhouse complex built in 1971 (one listing says 1973 for a later-phase unit — treat 1971 as the complex year, phase years UNCONFIRMED), Title to Land: Freehold Strata. Unit count: UNCONFIRMED from a public source. Published rental/pet/age restrictions: UNCONFIRMED — read the filed bylaws with the Form B.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Read this first: Aldergrove's townhouse stock is the older 32 Avenue corridor stock west and south of the Fraser Highway / 272 Street core — not Aldergrove Town Centre."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Creekside Estates — 27125 31A Ave. STRATA — strata plan NWS2271, managed by Fort Park Property Management",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Alderwood Manor — 27090 32 Ave. STRATA — freehold strata, strata plan NWS46, self-managed"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Published rental/pet/age restrictions: UNCONFIRMED. Do not confuse this complex with Creekside Villa (29A Ave, below) or with the Town Centre apartment building also named Creekside — three different properties share the name.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Listings record it as a townhouse complex built in 1971 (one listing says 1973 for a later-phase unit — treat 1971 as the complex year, phase years not confirmed), Title to Land: Freehold Strata. Unit count: Not confirmed from a public source. Published rental/pet/age restrictions: Not confirmed — read the filed bylaws with the Form B."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Creekside Villa — 27435 29A Ave. STRATA — freehold strata, plan LMS361, built 1992, 55 units, 55+",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Creekside Estates — 27125 31A Ave. STRATA — strata plan NWS2271, managed by Fort Park Property Management"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "This is the one Aldergrove townhouse complex a public source states is age-restricted.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Published rental/pet/age restrictions: Not confirmed. Do not confuse this complex with Creekside Villa (29A Ave, below) or with the Town Centre apartment building also named Creekside — three different properties share the name."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Cedar Park Estates — 27456 32 Ave. STRATA — freehold strata, strata plan NWS1792 (shown in an MLS data sheet's legal description as \"STRATA PLAN NW1792\"), built 1982",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Creekside Villa — 27435 29A Ave. STRATA — freehold strata, plan LMS361, built 1992, 55 units, 55+"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Listings record 2-level townhouses built 1982 (one listing says 1981 — year is 1981/1982, UNCONFIRMED to a single year); an MLS data sheet records Title to Land: Freehold – Strata, management by Dwell Property Management, and a bylaw-restrictions line of cats OK, dogs OK, number limit two, with restrictions — MLS-sheet-stated, the filed bylaws govern. Unit count: UNCONFIRMED (no non-directory public source checked states it).",
-      "gen": "tn",
-      "pos": "end"
+      "text": "This is the one Aldergrove townhouse complex a public source states is age-restricted."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Bertrand Estates — 27044 32 Ave. STRATA (listing-stated)",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Cedar Park Estates — 27456 32 Ave. STRATA — freehold strata, strata plan NWS1792 (shown in an MLS data sheet's legal description as \"STRATA PLAN NW1792\"), built 1982"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A listing describes a 3-bed/3-bath townhome at this address built in 1984 in a \"very well run strata,\" with roofs redone in recent years per that listing. Strata plan, unit count and published rental/pet/age restrictions: UNCONFIRMED — verify tenure on title and the Form B before relying on the listing's strata wording.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Listings record 2-level townhouses built 1982 (one listing says 1981 — year is 1981/1982, not confirmed to a single year); an MLS data sheet records Title to Land: Freehold – Strata, management by Dwell Property Management, and a bylaw-restrictions line of cats OK, dogs OK, number limit two, with restrictions — MLS-sheet-stated, the filed bylaws govern. Unit count: Not confirmed (no non-directory public source checked states it)."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Aldergrove",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Bertrand Estates — 27044 32 Ave. STRATA (listing-stated)"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "pos": "end",
+      "t": "p",
+      "text": "A listing describes a 3-bed/3-bath townhome at this address built in 1984 in a \"very well run strata,\" with roofs redone in recent years per that listing. Strata plan, unit count and published rental/pet/age restrictions: Not confirmed — verify tenure on title and the Form B before relying on the listing's strata wording."
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Aldergrove"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -898,18 +851,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Aldergrove",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Aldergrove"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -947,18 +900,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Aldergrove",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Aldergrove"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -986,142 +939,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Aldergrove",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Aldergrove"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "tol.ca · about the township.aspx",
-            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx"
+            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx",
+            "t": "tol.ca · about the township.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · Att B Aldergrove CP Redlined",
-            "h": "https://www.tol.ca/en/connect/resources/get-involved/ocp-update/Att-B---Aldergrove-CP---Redlined.pdf"
+            "h": "https://www.tol.ca/en/connect/resources/get-involved/ocp-update/Att-B---Aldergrove-CP---Redlined.pdf",
+            "t": "tol.ca · Att B Aldergrove CP Redlined"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt503",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf",
+            "t": "infomaps.translink.ca · tt503"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "fifthave.ca · the vibrant new hart of aldergrove town centre",
-            "h": "https://fifthave.ca/the-vibrant-new-hart-of-aldergrove-town-centre/"
+            "h": "https://fifthave.ca/the-vibrant-new-hart-of-aldergrove-town-centre/",
+            "t": "fifthave.ca · the vibrant new hart of aldergrove town centre"
           }
         ],
         [
           {
-            "t": "murphyrealestategroup.ca · SearchResults.form",
-            "h": "https://murphyrealestategroup.ca/recip.html/1272399.search/SearchResults.form?_pg=3"
+            "h": "https://murphyrealestategroup.ca/recip.html/1272399.search/SearchResults.form?_pg=3",
+            "t": "murphyrealestategroup.ca · SearchResults.form"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf",
+            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio"
           }
         ],
         [
           {
-            "t": "tol.ca · 2026 03 09 F.2 26 26 cpp SSMUH DP Guidelines",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/2026-03-09-F.2-26-26-cpp-SSMUH-DP-Guidelines.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/2026-03-09-F.2-26-26-cpp-SSMUH-DP-Guidelines.pdf",
+            "t": "tol.ca · 2026 03 09 F.2 26 26 cpp SSMUH DP Guidelines"
           }
         ],
         [
           {
-            "t": "tol.ca · community planning.aspx",
-            "h": "https://www.tol.ca/en/the-township/community-planning.aspx"
+            "h": "https://www.tol.ca/en/the-township/community-planning.aspx",
+            "t": "tol.ca · community planning.aspx"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "tol.ca · property taxes.aspx",
-            "h": "https://www.tol.ca/en/services/property-taxes.aspx"
+            "h": "https://www.tol.ca/en/services/property-taxes.aspx",
+            "t": "tol.ca · property taxes.aspx"
           }
         ],
         [
           {
-            "t": "northam-law.com · pre sale condo purchases in british columbia key",
-            "h": "https://northam-law.com/pre-sale-condo-purchases-in-british-columbia-key-legal-protections-for-buyers/"
+            "h": "https://northam-law.com/pre-sale-condo-purchases-in-british-columbia-key-legal-protections-for-buyers/",
+            "t": "northam-law.com · pre sale condo purchases in british columbia key"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Aldergrove Langley",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Aldergrove Langley",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Aldergrove Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Aldergrove Langley"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -1130,22 +1083,22 @@
         ],
         [
           {
-            "t": "Health: Langley Memorial Hospital, 22051 Fraser Highway, Langley, is a Fraser Health community hospital with 24/7 emergency service and the nearest hospital confirmed on a health authority source; the nearest Urgent and Primary Care Centre is the Langley UPCC, 202 - 20434 64th Avenue, Langley. An urgent care centre or public health unit inside Aldergrove itself: UNVERIFIED."
+            "t": "Health: Langley Memorial Hospital, 22051 Fraser Highway, Langley, is a Fraser Health community hospital with 24/7 emergency service and the nearest hospital confirmed on a health authority source; the nearest Urgent and Primary Care Centre is the Langley UPCC, 202 - 20434 64th Avenue, Langley. An urgent care centre or public health unit inside Aldergrove itself: Not verified."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Aldergrove Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Aldergrove Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -1163,18 +1116,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Aldergrove Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Aldergrove Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -1192,142 +1145,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Aldergrove Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Aldergrove Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "tol.ca · about the township.aspx",
-            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx"
+            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx",
+            "t": "tol.ca · about the township.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · Att B Aldergrove CP Redlined",
-            "h": "https://www.tol.ca/en/connect/resources/get-involved/ocp-update/Att-B---Aldergrove-CP---Redlined.pdf"
+            "h": "https://www.tol.ca/en/connect/resources/get-involved/ocp-update/Att-B---Aldergrove-CP---Redlined.pdf",
+            "t": "tol.ca · Att B Aldergrove CP Redlined"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt503",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf",
+            "t": "infomaps.translink.ca · tt503"
           }
         ],
         [
           {
-            "t": "tol.ca · aldergrove community centre.aspx",
-            "h": "https://www.tol.ca/en/parks-recreation/aldergrove-community-centre.aspx"
+            "h": "https://www.tol.ca/en/parks-recreation/aldergrove-community-centre.aspx",
+            "t": "tol.ca · aldergrove community centre.aspx"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · langley memorial hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital",
+            "t": "fraserhealth.ca · langley memorial hospital"
           }
         ],
         [
           {
-            "t": "fifthave.ca · the vibrant new hart of aldergrove town centre",
-            "h": "https://fifthave.ca/the-vibrant-new-hart-of-aldergrove-town-centre/"
+            "h": "https://fifthave.ca/the-vibrant-new-hart-of-aldergrove-town-centre/",
+            "t": "fifthave.ca · the vibrant new hart of aldergrove town centre"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf",
+            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio"
           }
         ],
         [
           {
-            "t": "tol.ca · community planning.aspx",
-            "h": "https://www.tol.ca/en/the-township/community-planning.aspx"
+            "h": "https://www.tol.ca/en/the-township/community-planning.aspx",
+            "t": "tol.ca · community planning.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · small scale multi unit housing.aspx",
-            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx"
+            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx",
+            "t": "tol.ca · small scale multi unit housing.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · property taxes.aspx",
-            "h": "https://www.tol.ca/en/services/property-taxes.aspx"
+            "h": "https://www.tol.ca/en/services/property-taxes.aspx",
+            "t": "tol.ca · property taxes.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · development applications.aspx",
-            "h": "https://www.tol.ca/en/building-development/development-applications.aspx"
+            "h": "https://www.tol.ca/en/building-development/development-applications.aspx",
+            "t": "tol.ca · development applications.aspx"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Aldergrove",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "What land actually trades here",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Aldergrove"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "What land actually trades here"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -1336,7 +1289,7 @@
         ],
         [
           {
-            "t": "Lot character (Zoning Bylaw 2500, s.110.1 ladder): SR-1 minimum lot area 3,716 m² (frontage 40 m); SR-2 8,094 m² / 45 m; SR-3 1,765 m² / 27.45 m; R-1E 930 m² / 22 m; R-1D 650 m² / 18.25 m; R-1B and R-1C 464.5 m² / 15.25 m. Zones named for Aldergrove parcels include Rural Zone RU-2, Community Commercial C-2 and Comprehensive Development CD-192 — their minimum lot areas/frontages are UNVERIFIED from a readable bylaw section, so no RU-2 subdivision figure is stated."
+            "t": "Lot character (Zoning Bylaw 2500, s.110.1 ladder): SR-1 minimum lot area 3,716 m² (frontage 40 m); SR-2 8,094 m² / 45 m; SR-3 1,765 m² / 27.45 m; R-1E 930 m² / 22 m; R-1D 650 m² / 18.25 m; R-1B and R-1C 464.5 m² / 15.25 m. Zones named for Aldergrove parcels include Rural Zone RU-2, Community Commercial C-2 and Comprehensive Development CD-192 — their minimum lot areas/frontages are not verified from a readable bylaw section, so no RU-2 subdivision figure is stated."
           }
         ],
         [
@@ -1346,12 +1299,12 @@
         ],
         [
           {
-            "t": "ALR vs non-ALR split: much of the Township's land is within the Agricultural Land Reserve; no Aldergrove-specific ALR percentage is published in the research, so no split figure is stated. The Township directs applicants to check a property's ALR designation and watercourses in GeoSource before applying. Bertrand Creek bounds the core to the north and east."
+            "t": "ALR vs non-ALR split: much of the Township's land is within the Agricultural Land Reserve; no Aldergrove-specific ALR percentage is published, so no split figure is stated. The Township directs applicants to check a property's ALR designation and watercourses in GeoSource before applying. Bertrand Creek bounds the core to the north and east."
           }
         ],
         [
           {
-            "t": "Servicing: municipal water/sewer vs well/septic for any single Aldergrove parcel: UNCONFIRMED in the research — the core is urban-serviced in character and the rural south is not documented parcel-by-parcel; confirm servicing for the specific lot with the Township before pricing a build."
+            "t": "Servicing: municipal water/sewer vs well/septic for any single Aldergrove parcel: Not confirmed — the core is urban-serviced in character and the rural south is not documented parcel-by-parcel; confirm servicing for the specific lot with the Township before pricing a build."
           }
         ],
         [
@@ -1360,22 +1313,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Aldergrove",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Aldergrove"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Core plan boundary (core only): the Aldergrove Core Area is centred on Fraser Highway and 272 Street, bounded by Bertrand Creek to the north and east, 29 Avenue to the south and 270 Street to the west. Wider community boundaries are UNVERIFIED."
+            "t": "Core plan boundary (core only): the Aldergrove Core Area is centred on Fraser Highway and 272 Street, bounded by Bertrand Creek to the north and east, 29 Avenue to the south and 270 Street to the west. Wider community boundaries are not verified."
           }
         ],
         [
@@ -1390,26 +1343,26 @@
         ],
         [
           {
-            "t": "The SD35 locator result documented in the research is for 26850 29 Avenue only: Parkside Centennial Elementary → Betty Gilbert Middle → Aldergrove Community Secondary. Any other address needs its own locator run."
+            "t": "Any other address needs its own locator run."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Aldergrove",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Aldergrove"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Zoning: Township of Langley Zoning Bylaw No. 2500: governs, with the s.110.1 minimums in. Get the parcel's zone from the Township/GeoSource first — RU-2, C-2 and CD-192 minimums are UNVERIFIED from a readable section and are not filled in here."
+            "t": "Zoning: Township of Langley Zoning Bylaw No. 2500: governs, with the s.110.1 minimums in. Get the parcel's zone from the Township/GeoSource first — RU-2, C-2 and CD-192 minimums are not verified from a readable section and are not filled in here."
           }
         ],
         [
@@ -1429,7 +1382,7 @@
         ],
         [
           {
-            "t": "Subdivision + servicing requirements beyond zone minimums: UNCONFIRMED in the research for Aldergrove parcels — never filled in from another municipality. Confirm subdivision servicing (roads, water, sewer/septic, drainage) with the Township for the specific application."
+            "t": "Subdivision + servicing requirements beyond zone minimums: Not confirmed for Aldergrove parcels — never filled in from another municipality. Confirm subdivision servicing (roads, water, sewer/septic, drainage) with the Township for the specific application."
           }
         ],
         [
@@ -1448,18 +1401,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Aldergrove",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Aldergrove"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -1482,130 +1435,130 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Aldergrove",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Aldergrove"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "tol.ca · about the township.aspx",
-            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx"
+            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx",
+            "t": "tol.ca · about the township.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · Att B Aldergrove CP Redlined",
-            "h": "https://www.tol.ca/en/connect/resources/get-involved/ocp-update/Att-B---Aldergrove-CP---Redlined.pdf"
+            "h": "https://www.tol.ca/en/connect/resources/get-involved/ocp-update/Att-B---Aldergrove-CP---Redlined.pdf",
+            "t": "tol.ca · Att B Aldergrove CP Redlined"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt503",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf",
+            "t": "infomaps.translink.ca · tt503"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf",
+            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio"
           }
         ],
         [
           {
-            "t": "tol.ca · development applications.aspx",
-            "h": "https://www.tol.ca/en/building-development/development-applications.aspx"
+            "h": "https://www.tol.ca/en/building-development/development-applications.aspx",
+            "t": "tol.ca · development applications.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · community planning.aspx",
-            "h": "https://www.tol.ca/en/the-township/community-planning.aspx"
+            "h": "https://www.tol.ca/en/the-township/community-planning.aspx",
+            "t": "tol.ca · community planning.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · 2026 03 09 F.2 26 26 cpp SSMUH DP Guidelines",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/2026-03-09-F.2-26-26-cpp-SSMUH-DP-Guidelines.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/2026-03-09-F.2-26-26-cpp-SSMUH-DP-Guidelines.pdf",
+            "t": "tol.ca · 2026 03 09 F.2 26 26 cpp SSMUH DP Guidelines"
           }
         ],
         [
           {
-            "t": "tol.ca · plans and strategies.aspx",
-            "h": "https://www.tol.ca/en/plans-reports-and-strategies/plans-and-strategies.aspx"
+            "h": "https://www.tol.ca/en/plans-reports-and-strategies/plans-and-strategies.aspx",
+            "t": "tol.ca · plans and strategies.aspx"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "tol.ca · property taxes.aspx",
-            "h": "https://www.tol.ca/en/services/property-taxes.aspx"
+            "h": "https://www.tol.ca/en/services/property-taxes.aspx",
+            "t": "tol.ca · property taxes.aspx"
           }
         ],
         [
           {
-            "t": "canada.ca · sales vacant land individuals",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html",
+            "t": "canada.ca · sales vacant land individuals"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Aldergrove Langley",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Aldergrove Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -1614,7 +1567,7 @@
         ],
         [
           {
-            "t": "Parcel-level floodplain status is UNVERIFIED, and much of the Township's land is within the Agricultural Land Reserve — the Township directs applicants to check a property's ALR designation and watercourses in GeoSource before applying."
+            "t": "Parcel-level floodplain status is not verified, and much of the Township's land is within the Agricultural Land Reserve — the Township directs applicants to check a property's ALR designation and watercourses in GeoSource before applying."
           }
         ],
         [
@@ -1623,18 +1576,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Aldergrove Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Aldergrove Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -1648,26 +1601,26 @@
         ],
         [
           {
-            "t": "How people search for it: \"Aldergrove,\" \"Aldergrove Langley,\" and the development name \"Alder Grove Town Centre\" (developer source). No other official alternate name was confirmed: UNVERIFIED."
+            "t": "How people search for it: \"Aldergrove,\" \"Aldergrove Langley,\" and the development name \"Alder Grove Town Centre\" (developer source). No other official alternate name was confirmed: Not verified."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Aldergrove Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Aldergrove Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Zoning — Township of Langley Zoning Bylaw No. 2500, Section 110.1 minimums as read out in Township council reports: SR-1 minimum lot area 3,716 m², minimum frontage 40 m; SR-2 8,094 m² / 45 m; SR-3 1,765 m² / 27.45 m; R-1E 930 m² / 22 m; R-1D 650 m² / 18.25 m; R-1B and R-1C 464.5 m² / 15.25 m. Zones named in Township documents for Aldergrove parcels include Rural Zone RU-2, Community Commercial Zone C-2 and Comprehensive Development Zone CD-192; their minimum lot areas and frontages are UNVERIFIED from a readable bylaw section — get the parcel's zone from the Township/GeoSource first."
+            "t": "Zoning — Township of Langley Zoning Bylaw No. 2500, Section 110.1 minimums as read out in Township council reports: SR-1 minimum lot area 3,716 m², minimum frontage 40 m; SR-2 8,094 m² / 45 m; SR-3 1,765 m² / 27.45 m; R-1E 930 m² / 22 m; R-1D 650 m² / 18.25 m; R-1B and R-1C 464.5 m² / 15.25 m. Zones named in Township documents for Aldergrove parcels include Rural Zone RU-2, Community Commercial Zone C-2 and Comprehensive Development Zone CD-192; their minimum lot areas and frontages are not verified from a readable bylaw section — get the parcel's zone from the Township/GeoSource first."
           }
         ],
         [
@@ -1697,22 +1650,22 @@
         ],
         [
           {
-            "t": "ALR block (where an Aldergrove parcel is ALR — status per-parcel, UNVERIFIED here): subdivision within the ALR requires Agricultural Land Commission approval; ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)). Caps: principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha). Check a parcel in GeoSource / on the ALC maps."
+            "t": "ALR block (where an Aldergrove parcel is ALR — status per-parcel, not verified here): subdivision within the ALR requires Agricultural Land Commission approval; ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)). Caps: principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha). Check a parcel in GeoSource / on the ALC maps."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Aldergrove Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Aldergrove Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -1721,380 +1674,151 @@
         ],
         [
           {
-            "t": "FreshCo is the core grocery anchor the Township itself names (Nov 1, 2026). FreshCo, 27566 Fraser Highway, Aldergrove, is named with its address on a Township page listing Extra Garbage sticker sale locations; commercial uses concentrate along Fraser Highway and 272 Street in the core. Philip Jackman Park and Aldergrove Athletic Park were not confirmed on an official source: UNVERIFIED."
+            "t": "FreshCo is the core grocery anchor the Township itself names (Nov 1, 2026). FreshCo, 27566 Fraser Highway, Aldergrove, is named with its address on a Township page listing Extra Garbage sticker sale locations; commercial uses concentrate along Fraser Highway and 272 Street in the core. Philip Jackman Park and Aldergrove Athletic Park were not confirmed on an official source: Not verified."
           }
         ],
         [
           {
-            "t": "The nearest hospital is in Langley City, not Aldergrove (Nov 1, 2026). Langley Memorial Hospital, 22051 Fraser Highway, Langley, is a Fraser Health community hospital with 24/7 emergency service and the nearest hospital confirmed on a health authority source; the nearest Urgent and Primary Care Centre is the Langley UPCC, 202 - 20434 64th Avenue, Langley. An urgent care centre or public health unit inside Aldergrove itself: UNVERIFIED."
+            "t": "The nearest hospital is in Langley City, not Aldergrove (Nov 1, 2026). Langley Memorial Hospital, 22051 Fraser Highway, Langley, is a Fraser Health community hospital with 24/7 emergency service and the nearest hospital confirmed on a health authority source; the nearest Urgent and Primary Care Centre is the Langley UPCC, 202 - 20434 64th Avenue, Langley. An urgent care centre or public health unit inside Aldergrove itself: Not verified."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Aldergrove Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Aldergrove Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "tol.ca · about the township.aspx",
-            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx"
+            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx",
+            "t": "tol.ca · about the township.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · Att B Aldergrove CP Redlined",
-            "h": "https://www.tol.ca/en/connect/resources/get-involved/ocp-update/Att-B---Aldergrove-CP---Redlined.pdf"
+            "h": "https://www.tol.ca/en/connect/resources/get-involved/ocp-update/Att-B---Aldergrove-CP---Redlined.pdf",
+            "t": "tol.ca · Att B Aldergrove CP Redlined"
           }
         ],
         [
           {
-            "t": "elections.bc.ca · election day voting places 2024",
-            "h": "https://elections.bc.ca/2024election/election-day-voting-places-2024.pdf"
+            "h": "https://elections.bc.ca/2024election/election-day-voting-places-2024.pdf",
+            "t": "elections.bc.ca · election day voting places 2024"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt503",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf",
+            "t": "infomaps.translink.ca · tt503"
           }
         ],
         [
           {
-            "t": "fifthave.ca · the vibrant new hart of aldergrove town centre",
-            "h": "https://fifthave.ca/the-vibrant-new-hart-of-aldergrove-town-centre/"
+            "h": "https://fifthave.ca/the-vibrant-new-hart-of-aldergrove-town-centre/",
+            "t": "fifthave.ca · the vibrant new hart of aldergrove town centre"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · first time owners",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/first-time-owners"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/first-time-owners",
+            "t": "www2.gov.bc.ca · first time owners"
           }
         ],
         [
           {
-            "t": "tol.ca · development applications.aspx",
-            "h": "https://www.tol.ca/en/building-development/development-applications.aspx"
+            "h": "https://www.tol.ca/en/building-development/development-applications.aspx",
+            "t": "tol.ca · development applications.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf",
+            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio"
           }
         ],
         [
           {
-            "t": "tol.ca · community planning.aspx",
-            "h": "https://www.tol.ca/en/the-township/community-planning.aspx"
+            "h": "https://www.tol.ca/en/the-township/community-planning.aspx",
+            "t": "tol.ca · community planning.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · property taxes.aspx",
-            "h": "https://www.tol.ca/en/services/property-taxes.aspx"
+            "h": "https://www.tol.ca/en/services/property-taxes.aspx",
+            "t": "tol.ca · property taxes.aspx"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 2,
-      "text": "What's nearby Aldergrove",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Mobile and manufactured homes in Aldergrove"
     },
     {
+      "gen": "mh",
+      "pos": "end",
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
+      "text": "Verified manufactured-home community: 1 — a co-operative, not a pad-rental park."
     },
     {
-      "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Nearest operating SkyTrain station by name: Surrey Central Station (Expo Line) — TransLink lists it as an operating Expo Line station, and Route 503 runs to it; King George Station is the line's Surrey terminus."
-          }
-        ],
-        [
-          {
-            "t": "Nearest bus exchange by name: Langley Centre — Route 503 serves Langley Centre Bay 1 and Bay 5."
-          }
-        ],
-        [
-          {
-            "t": "Bus route: 503, Surrey Central Station–Fraser Hwy Express, operator TransLink; it starts at 272 St at Fraser Hwy in Aldergrove."
-          }
-        ],
-        [
-          {
-            "t": "Bus route: 21, Aldergrove to Bourquin Exchange via Highstreet, operator BC Transit; it starts at 272 St at Fraser Hwy."
-          }
-        ]
-      ],
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Aldergrove Regional Park (Metro Vancouver regional park)."
-          }
-        ],
-        [
-          {
-            "t": "Aldergrove Community Centre, 27032 Fraser Highway, Langley — pools, waterpark, ice arena and fitness centre on the Township page."
-          }
-        ],
-        [
-          {
-            "t": "Aldergrove Library (Fraser Valley Regional Library), 26770 29 Avenue, Aldergrove."
-          }
-        ]
-      ],
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Aldergrove Community Secondary, 9-12, SD35 Langley, 26850 29 Ave, Aldergrove; catchment not confirmed."
-          }
-        ],
-        [
-          {
-            "t": "Betty Gilbert Middle, 6-8, SD35 Langley, 26845 27 Ave, Aldergrove; catchment not confirmed."
-          }
-        ],
-        [
-          {
-            "t": "Parkside Centennial Elementary, K-5, SD35 Langley, 3300 270 St, Aldergrove; catchment not confirmed."
-          }
-        ],
-        [
-          {
-            "t": "Shortreed Community School, K-5, SD35 Langley, 27330 28 Ave, Aldergrove; catchment not confirmed."
-          }
-        ],
-        [
-          {
-            "t": "Coghlan Fundamental Elementary, K-7, SD35 Langley, 4452 256th St, Aldergrove; catchment not confirmed."
-          }
-        ]
-      ],
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "No grocery anchor is listed in this section; see NOT CONFIRMED."
-          }
-        ]
-      ],
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "table",
-      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Aldergrove Community Centre, 27032 Fraser Highway",
-      "head": [
-        "To",
-        "How",
-        "Minutes",
-        "Distance (km)"
-      ],
-      "rows": [
-        [
-          "Aldergrove Library",
-          "Drive",
-          "2",
-          "0.9"
-        ],
-        [
-          "Parkside Centennial Elementary",
-          "Drive",
-          "3",
-          "1.7"
-        ],
-        [
-          "Aldergrove Regional Park main entrance area",
-          "Drive",
-          "7",
-          "5.4"
-        ]
-      ],
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "translink.ca · skytrain",
-            "h": "https://www.translink.ca/schedules-and-maps/skytrain/?page=1"
-          }
-        ],
-        [
-          {
-            "t": "infomaps.translink.ca · tt503",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf"
-          }
-        ],
-        [
-          {
-            "t": "bctransit.com · route overview",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=21&schedule=2026-04-05"
-          }
-        ],
-        [
-          {
-            "t": "metrovancouver.org · aldergrove regional park",
-            "h": "https://metrovancouver.org/services/regional-parks/park/aldergrove-regional-park"
-          }
-        ],
-        [
-          {
-            "t": "tol.ca · aldergrove community centre.aspx",
-            "h": "https://www.tol.ca/en/parks-recreation/aldergrove-community-centre.aspx"
-          }
-        ],
-        [
-          {
-            "t": "fvrl.bc.ca · locations",
-            "h": "https://www.fvrl.bc.ca/locations?combine=&municipality%5B237%5D=237&view=grid"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/035"
-          }
-        ]
-      ],
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Mobile and manufactured homes in Aldergrove",
       "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Verified manufactured-home community: 1 — a co-operative, not a pad-rental park.",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "h",
       "level": 3,
-      "text": "The parks and communities",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "The parks and communities"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
@@ -2122,18 +1846,18 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Streets, schools and getting around Aldergrove",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Aldergrove"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
@@ -2141,18 +1865,18 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Local rules that affect park-home buyers in Aldergrove",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect park-home buyers in Aldergrove"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
@@ -2175,18 +1899,18 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Good to know about Aldergrove",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Aldergrove"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
@@ -2204,33 +1928,348 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "mh",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules for buying a home in a park (the pad tenancy, park-owner consent, pad-rent caps, the Manufactured Home Registry and park closures) are explained once, with sources, on the page linked below.",
-      "gen": "mh",
-      "pos": "end"
+      "text": "The BC rules for buying a home in a park (the pad tenancy, park-owner consent, pad-rent caps, the Manufactured Home Registry and park closures) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
-            "t": "BC mobile home buying rules",
-            "h": "/bc-mobile-home-buying-rules.html"
+            "h": "/bc-mobile-home-buying-rules.html",
+            "t": "BC mobile home buying rules"
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "mh",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the mobile-home notes on Aldergrove"
+    },
+    {
+      "gen": "mh",
+      "items": [
+        [
+          {
+            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx",
+            "t": "tol.ca · about the township.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://www.tol.ca/en/connect/resources/get-involved/ocp-update/Att-B---Aldergrove-CP---Redlined.pdf",
+            "t": "tol.ca · Att B Aldergrove CP Redlined"
+          }
+        ],
+        [
+          {
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf",
+            "t": "infomaps.translink.ca · tt503"
+          }
+        ],
+        [
+          {
+            "h": "https://murphyrealestategroup.ca/recip.html/1272399.search/SearchResults.form",
+            "t": "murphyrealestategroup.ca · SearchResults.form"
+          }
+        ],
+        [
+          {
+            "h": "https://murphyrealestategroup.ca/recip.html/1272399.search/SearchResults.form?_pg=3",
+            "t": "murphyrealestategroup.ca · SearchResults.form (2)"
+          }
+        ],
+        [
+          {
+            "h": "https://atcliving.com/",
+            "t": "atcliving.com"
+          }
+        ],
+        [
+          {
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf",
+            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio"
+          }
+        ],
+        [
+          {
+            "h": "https://www.tol.ca/en/building-development/development-applications.aspx",
+            "t": "tol.ca · development applications.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
+          }
+        ],
+        [
+          {
+            "h": "https://info.bcassessment.ca/about/Shared%20Documents/Classification_of_Land_as_a_Farm_Regulation.pdf",
+            "t": "info.bcassessment.ca · Classification of Land as a Farm Regulation"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby Aldergrove"
+    },
+    {
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "t": "Nearest operating SkyTrain station by name: Surrey Central Station (Expo Line) — TransLink lists it as an operating Expo Line station, and Route 503 runs to it; King George Station is the line's Surrey terminus."
+          }
+        ],
+        [
+          {
+            "t": "Nearest bus exchange by name: Langley Centre — Route 503 serves Langley Centre Bay 1 and Bay 5."
+          }
+        ],
+        [
+          {
+            "t": "Bus route: 503, Surrey Central Station–Fraser Hwy Express, operator TransLink; it starts at 272 St at Fraser Hwy in Aldergrove."
+          }
+        ],
+        [
+          {
+            "t": "Bus route: 21, Aldergrove to Bourquin Exchange via Highstreet, operator BC Transit; it starts at 272 St at Fraser Hwy."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "t": "Aldergrove Regional Park (Metro Vancouver regional park)."
+          }
+        ],
+        [
+          {
+            "t": "Aldergrove Community Centre, 27032 Fraser Highway, Langley — pools, waterpark, ice arena and fitness centre on the Township page."
+          }
+        ],
+        [
+          {
+            "t": "Aldergrove Library (Fraser Valley Regional Library), 26770 29 Avenue, Aldergrove."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "t": "Aldergrove Community Secondary, 9-12, SD35 Langley, 26850 29 Ave, Aldergrove; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Betty Gilbert Middle, 6-8, SD35 Langley, 26845 27 Ave, Aldergrove; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Parkside Centennial Elementary, K-5, SD35 Langley, 3300 270 St, Aldergrove; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shortreed Community School, K-5, SD35 Langley, 27330 28 Ave, Aldergrove; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Coghlan Fundamental Elementary, K-7, SD35 Langley, 4452 256th St, Aldergrove; catchment not confirmed."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "t": "No grocery anchor is listed in this section; see NOT CONFIRMED."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Aldergrove Community Centre, 27032 Fraser Highway",
+      "gen": "nb",
+      "head": [
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Aldergrove Library",
+          "Drive",
+          "2",
+          "0.9"
+        ],
+        [
+          "Parkside Centennial Elementary",
+          "Drive",
+          "3",
+          "1.7"
+        ],
+        [
+          "Aldergrove Regional Park main entrance area",
+          "Drive",
+          "7",
+          "5.4"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://www.translink.ca/schedules-and-maps/skytrain/?page=1",
+            "t": "translink.ca · skytrain"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf",
+            "t": "infomaps.translink.ca · tt503"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=21&schedule=2026-04-05",
+            "t": "bctransit.com · route overview"
+          }
+        ],
+        [
+          {
+            "h": "https://metrovancouver.org/services/regional-parks/park/aldergrove-regional-park",
+            "t": "metrovancouver.org · aldergrove regional park"
+          }
+        ],
+        [
+          {
+            "h": "https://www.tol.ca/en/parks-recreation/aldergrove-community-centre.aspx",
+            "t": "tol.ca · aldergrove community centre.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations?combine=&municipality%5B237%5D=237&view=grid",
+            "t": "fvrl.bc.ca · locations"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/035",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for the mobile-home notes on Aldergrove",
-      "gen": "mh",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -2238,82 +2277,83 @@
       "items": [
         [
           {
-            "t": "tol.ca · about the township.aspx",
+            "t": "Source: tol.ca",
             "h": "https://www.tol.ca/en/the-township/about-the-township.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · Att B Aldergrove CP Redlined",
-            "h": "https://www.tol.ca/en/connect/resources/get-involved/ocp-update/Att-B---Aldergrove-CP---Redlined.pdf"
-          }
-        ],
-        [
-          {
-            "t": "sd35.bc.ca · school locator",
+            "t": "Source: sd35.bc.ca",
             "h": "https://www.sd35.bc.ca/school-locator"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt503",
+            "t": "Source: infomaps.translink.ca",
             "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf"
-          }
-        ],
-        [
-          {
-            "t": "murphyrealestategroup.ca · SearchResults.form",
-            "h": "https://murphyrealestategroup.ca/recip.html/1272399.search/SearchResults.form"
-          }
-        ],
-        [
-          {
-            "t": "murphyrealestategroup.ca · SearchResults.form (2)",
-            "h": "https://murphyrealestategroup.ca/recip.html/1272399.search/SearchResults.form?_pg=3"
-          }
-        ],
-        [
-          {
-            "t": "atcliving.com",
-            "h": "https://atcliving.com/"
-          }
-        ],
-        [
-          {
-            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf"
-          }
-        ],
-        [
-          {
-            "t": "tol.ca · development applications.aspx",
-            "h": "https://www.tol.ca/en/building-development/development-applications.aspx"
-          }
-        ],
-        [
-          {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
-          }
-        ],
-        [
-          {
-            "t": "info.bcassessment.ca · Classification of Land as a Farm Regulation",
-            "h": "https://info.bcassessment.ca/about/Shared%20Documents/Classification_of_Land_as_a_Farm_Regulation.pdf"
-          }
-        ],
-        [
-          {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
           }
         ]
       ],
-      "gen": "mh",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
+    {
+      "a": "The Township core plan describes the pre-Town Centre core as large-lot single-family homes with some townhouses and fourplexes on 30 Avenue west of 272 Street — so the realistic comparison set is Town Centre buildings against each other, and against townhouses, not against an older condo stock.",
+      "gen": "tn",
+      "q": "Is there an older, cheaper condo building in Aldergrove to compare against the Town Centre?"
+    },
+    {
+      "a": "Shortreed (27215), Jackman (27218, 71 homes, 6 storeys, wood-frame) and Vanetta (27254) are the Phase 1 buildings; Creekside (27249, 66 homes, 4 storeys, wood-frame, beside Bertrand Creek) is Phase 2; The Hart is the fifth building, released in 2025, with its civic address not confirmed.",
+      "gen": "tn",
+      "q": "Which Town Centre building is which?"
+    },
+    {
+      "a": "Jackman and Creekside are recorded as wood-frame; Vanetta is described in listings as steel-frame with concrete floors, the project's only steel-frame building — a listing claim to confirm in the building's own documents before paying a premium for it.",
+      "gen": "tn",
+      "q": "Are the buildings wood-frame or concrete/steel?"
+    },
+    {
+      "a": "The Form B states the unit's fee and the CRF balance, but in a first-year strata those figures come from the developer's interim budget, not from actual operating history — the first annual general meeting budget is where buyers learn the real number. Ask for the interim budget, the warranty (2-5-10) terms, and when the first depreciation report is due.",
+      "gen": "tn",
+      "q": "What do strata fees cover in a brand-new building, and can they jump?"
+    },
+    {
+      "a": "Long-term rental-restriction bylaws are void province-wide since Nov 24, 2022, so a Town Centre strata cannot ban long-term renting; short-term rentals can still be restricted by bylaw, and the registered bylaws for your building are the check.",
+      "gen": "tn",
+      "q": "Can I rent it out?"
+    },
+    {
+      "a": "The Township core plan describes the pre-Town Centre core as large-lot single-family homes with some townhouses and fourplexes on 30 Avenue west of 272 Street — the realistic comparison set is Town Centre buildings against each other, and against townhouses such as Willow Creek Estates and Creekside Villa.",
+      "gen": "tn",
+      "q": "Is there an older, cheaper condo building in Aldergrove to compare against the Town Centre?"
+    },
+    {
+      "a": "Shortreed (27215), Jackman (27218, 71 homes, 6 storeys, wood-frame) and Vanetta (27254) are the Phase 1 buildings; Creekside (27249, 66 homes, 4 storeys, wood-frame, beside Bertrand Creek) is Phase 2; The Hart is the fifth building, released in 2025, with its civic address not confirmed.",
+      "gen": "tn",
+      "q": "Which Town Centre building is which?"
+    },
+    {
+      "a": "One verified community: Pioneer Park (27111 0 Ave), a 55+ manufactured-home co-operative. No pad-rental park was verified in Aldergrove, and Langley Grove Estates is Otter District ground, not this community.",
+      "gen": "mh",
+      "q": "What manufactured homes can I actually buy in Aldergrove?"
+    },
+    {
+      "a": "Tenure. A pad park rents you a site under the MHPTA; Pioneer Park is a co-operative — listings state you must be accepted by the co-op, purchase co-op shares ($9,200 in one listing, refunded upon sale), and pay a monthly co-op fee ($510 in the same listing) instead of pad rent.",
+      "gen": "mh",
+      "q": "How is Pioneer Park different from a normal manufactured-home park?"
+    },
+    {
+      "a": "unresolved on the listings: one states \"Strictly 55plus (both occupants must be 55),\" another states only that the park is 55+ with occupancy limited to 2 occupants who are 55+. A co-op sets its own rules and the strata exemptions do not automatically apply — get the co-op's current rule in writing before offering.",
+      "gen": "mh",
+      "q": "Do both of us have to be 55 at Pioneer Park?"
+    },
+    {
+      "a": "No — the MHPTA caps (2.3% for 2026, 2.2% for 2027, plus the proportional amount) govern pad tenancies, and a co-op fee is not pad rent.",
+      "gen": "mh",
+      "q": "Does the pad-rent cap protect me at Pioneer Park?"
+    },
     {
       "q": "Which municipality is Aldergrove in?",
       "a": "Aldergrove is in the Township of Langley, whose eastern boundary is 276 Street at Abbotsford and whose southern boundary is the United States border.",
@@ -2328,82 +2368,15 @@
       "q": "What bus service runs from Aldergrove?",
       "a": "TransLink route 503 runs from 272 Street at Fraser Highway via Langley Centre to Surrey Central Station, and BC Transit route 21 connects Aldergrove with Abbotsford from the same 272 Street stop.",
       "gen": "muse"
-    },
-    {
-      "q": "Where is grocery shopping in Aldergrove?",
-      "a": "FreshCo at 27566 Fraser Highway, Aldergrove, is named with its address on a Township page listing Extra Garbage sticker sale locations.",
-      "gen": "muse"
-    },
-    {
-      "q": "Is land around Aldergrove in the Agricultural Land Reserve?",
-      "a": "Much of the Township's land is in the Agricultural Land Reserve, and the Township directs owners to check a specific property's designation in GeoSource. Parcel-level status must be checked per property.",
-      "gen": "muse"
-    },
-    {
-      "gen": "tn",
-      "q": "Is there an older, cheaper condo building in Aldergrove to compare against the Town Centre?",
-      "a": "The Township core plan describes the pre-Town Centre core as large-lot single-family homes with some townhouses and fourplexes on 30 Avenue west of 272 Street — so the realistic comparison set is Town Centre buildings against each other, and against townhouses, not against an older condo stock."
-    },
-    {
-      "gen": "tn",
-      "q": "Which Town Centre building is which?",
-      "a": "Shortreed (27215), Jackman (27218, 71 homes, 6 storeys, wood-frame) and Vanetta (27254) are the Phase 1 buildings; Creekside (27249, 66 homes, 4 storeys, wood-frame, beside Bertrand Creek) is Phase 2; The Hart is the fifth building, released in 2025, with its civic address UNCONFIRMED."
-    },
-    {
-      "gen": "tn",
-      "q": "Are the buildings wood-frame or concrete/steel?",
-      "a": "Jackman and Creekside are recorded as wood-frame; Vanetta is described in listings as steel-frame with concrete floors, the project's only steel-frame building — a listing claim to confirm in the building's own documents before paying a premium for it."
-    },
-    {
-      "gen": "tn",
-      "q": "What do strata fees cover in a brand-new building, and can they jump?",
-      "a": "The Form B states the unit's fee and the CRF balance, but in a first-year strata those figures come from the developer's interim budget, not from actual operating history — the first annual general meeting budget is where buyers learn the real number. Ask for the interim budget, the warranty (2-5-10) terms, and when the first depreciation report is due."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I rent it out?",
-      "a": "Long-term rental-restriction bylaws are void province-wide since Nov 24, 2022, so a Town Centre strata cannot ban long-term renting; short-term rentals can still be restricted by bylaw, and the registered bylaws for your building are the check."
-    },
-    {
-      "gen": "tn",
-      "q": "Is there an older, cheaper condo building in Aldergrove to compare against the Town Centre?",
-      "a": "The Township core plan describes the pre-Town Centre core as large-lot single-family homes with some townhouses and fourplexes on 30 Avenue west of 272 Street — the realistic comparison set is Town Centre buildings against each other, and against townhouses such as Willow Creek Estates and Creekside Villa."
-    },
-    {
-      "gen": "tn",
-      "q": "Which Town Centre building is which?",
-      "a": "Shortreed (27215), Jackman (27218, 71 homes, 6 storeys, wood-frame) and Vanetta (27254) are the Phase 1 buildings; Creekside (27249, 66 homes, 4 storeys, wood-frame, beside Bertrand Creek) is Phase 2; The Hart is the fifth building, released in 2025, with its civic address UNCONFIRMED."
-    },
-    {
-      "gen": "tn",
-      "q": "How did Aldergrove sell in September 2026?",
-      "a": "SnapStats FVR September 2026 report."
-    },
-    {
-      "gen": "mh",
-      "q": "What manufactured homes can I actually buy in Aldergrove?",
-      "a": "One verified community: Pioneer Park (27111 0 Ave), a 55+ manufactured-home co-operative. No pad-rental park was verified in Aldergrove, and Langley Grove Estates is Otter District ground, not this community."
-    },
-    {
-      "gen": "mh",
-      "q": "How is Pioneer Park different from a normal manufactured-home park?",
-      "a": "Tenure. A pad park rents you a site under the MHPTA; Pioneer Park is a co-operative — listings state you must be accepted by the co-op, purchase co-op shares ($9,200 in one listing, refunded upon sale), and pay a monthly co-op fee ($510 in the same listing) instead of pad rent."
-    },
-    {
-      "gen": "mh",
-      "q": "Do both of us have to be 55 at Pioneer Park?",
-      "a": "unresolved on the listings: one states \"Strictly 55plus (both occupants must be 55),\" another states only that the park is 55+ with occupancy limited to 2 occupants who are 55+. A co-op sets its own rules and the strata exemptions do not automatically apply — get the co-op's current rule in writing before offering."
-    },
-    {
-      "gen": "mh",
-      "q": "Does the pad-rent cap protect me at Pioneer Park?",
-      "a": "No — the MHPTA caps (2.3% for 2026, 2.2% for 2027, plus the proportional amount) govern pad tenancies, and a co-op fee is not pad rent."
     }
+  ],
+  "slug": "aldergrove-guide",
+  "status": "generated",
+  "suppress": [
+    "Related guides"
   ],
   "suppress_gen": [
     "Related guides"
   ],
-  "suppress": [
-    "Related guides"
-  ]
+  "updated": "2026-11-01"
 }

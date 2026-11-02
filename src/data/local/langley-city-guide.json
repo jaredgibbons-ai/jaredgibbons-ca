@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "langley-city-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Langley City compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Langley City compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Langley City against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Langley City against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
-      "caption": "Langley City against the whole city, September 2026",
+      "caption": "Langley City against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -27,249 +24,229 @@
       "rows": [
         [
           "Detached houses",
-          "14.3%",
-          "12.5%",
-          "13% against 14%",
-          "6 of 8"
+          "15.1%",
+          "8.5%",
+          "7% against 13%",
+          "8 of 9"
         ],
         [
           "Condos and townhomes",
-          "27.9%",
-          "26.6%",
-          "17% against 18%",
-          "5 of 5"
+          "27.7%",
+          "26.5%",
+          "19% against 20%",
+          "4 of 6"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings fell from 78 in June to 64 in September (−17.9%), and it took 12.4% of the city’s 298 sales over the period; condos and townhomes: listings was little changed, 193 in June and 195 in September (+1.0%), and it took 19.0% of the city’s 558 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 78 in June to 67 in October (−14.1%), and it took 11.8% of the city’s 357 sales over the period; condos and townhomes: listings fell from 193 in June to 185 in October (−4.1%), and it took 20.5% of the city’s 694 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Langley City for detached houses in July (a buyers’ best bet); condos and townhomes in June, August (a buyers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out Langley City for detached houses in July, October (a buyers’ best bet); condos and townhomes in June, August (a buyers’ best bet)."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Langley real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Langley real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Langley homes for sale",
-            "h": "/langley-homes-for-sale.html"
+            "h": "/langley-homes-for-sale.html",
+            "t": "Langley homes for sale"
           }
         ],
         [
           {
-            "t": "Langley real estate market stats",
-            "h": "/langley-real-estate-market-stats.html"
+            "h": "/langley-real-estate-market-stats.html",
+            "t": "Langley real estate market stats"
           }
         ],
         [
           {
-            "t": "Langley houses for sale",
-            "h": "/langley-houses-for-sale.html"
+            "h": "/langley-houses-for-sale.html",
+            "t": "Langley houses for sale"
           }
         ],
         [
           {
-            "t": "Langley condos for sale",
-            "h": "/langley-condos-for-sale.html"
+            "h": "/langley-condos-for-sale.html",
+            "t": "Langley condos for sale"
           }
         ],
         [
           {
-            "t": "Langley townhomes for sale",
-            "h": "/langley-townhomes-for-sale.html"
+            "h": "/langley-townhomes-for-sale.html",
+            "t": "Langley townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Langley",
-            "h": "/sell-my-house-in-langley.html"
+            "h": "/sell-my-house-in-langley.html",
+            "t": "Sell my house in Langley"
           }
         ],
         [
           {
-            "t": "Schools in Langley",
-            "h": "/schools-in-langley-bc.html"
+            "h": "/schools-in-langley-bc.html",
+            "t": "Schools in Langley"
           }
         ],
         [
           {
-            "t": "Langley City homes and market figures",
-            "h": "/langley-city.html"
+            "h": "/langley-city.html",
+            "t": "Langley City homes and market figures"
           }
         ],
         [
           {
-            "t": "Murrayville real estate",
-            "h": "/murrayville.html"
+            "h": "/murrayville.html",
+            "t": "Murrayville real estate"
           }
         ],
         [
           {
-            "t": "Otter District real estate",
-            "h": "/otter-district.html"
+            "h": "/otter-district.html",
+            "t": "Otter District real estate"
           }
         ],
         [
           {
-            "t": "Salmon River real estate",
-            "h": "/salmon-river.html"
+            "h": "/salmon-river.html",
+            "t": "Salmon River real estate"
           }
         ],
         [
           {
-            "t": "Walnut Grove real estate",
-            "h": "/walnut-grove.html"
+            "h": "/walnut-grove.html",
+            "t": "Walnut Grove real estate"
           }
         ],
         [
           {
-            "t": "Willoughby Heights real estate",
-            "h": "/willoughby-heights.html"
+            "h": "/willoughby-heights.html",
+            "t": "Willoughby Heights real estate"
           }
         ],
         [
           {
-            "t": "Aldergrove real estate",
-            "h": "/aldergrove.html"
+            "h": "/aldergrove.html",
+            "t": "Aldergrove real estate"
           }
         ],
         [
           {
-            "t": "Brookswood real estate",
-            "h": "/brookswood.html"
+            "h": "/brookswood.html",
+            "t": "Brookswood real estate"
           }
         ],
         [
           {
-            "t": "Campbell Valley real estate",
-            "h": "/campbell-valley.html"
+            "h": "/campbell-valley.html",
+            "t": "Campbell Valley real estate"
           }
         ],
         [
           {
-            "t": "County Line Glen Valley real estate",
-            "h": "/county-line-glen-valley.html"
+            "h": "/county-line-glen-valley.html",
+            "t": "County Line Glen Valley real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: langleycity.ca",
-            "h": "https://www.langleycity.ca/city-hall/reports-plans-strategies/strategic-vision"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 2,
-      "text": "Condo buildings in Langley City",
+      "text": "Condo buildings in Langley City"
+    },
+    {
       "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "h",
       "level": 3,
-      "text": "Parkway Estates — 5360 205 Street, Langley City",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parkway Estates — 5360 205 Street, Langley City"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Built 1988, 54 units (building directory, secondary source). The directory records the restrictions as: age restrictions, pets not allowed, rentals not allowed — the rental line is VOID since November 24, 2022. Amenities listed: elevator, guest suite, in-suite laundry, recreation centre, storage, wheelchair access. Listings describe the community as 55+ (Parkway).",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Built 1988, 54 units (building directory, secondary source). The directory records the restrictions as: age restrictions, pets not allowed, rentals not allowed — the rental line is VOID since November 24, 2022. Amenities listed: elevator, guest suite, in-suite laundry, recreation centre, storage, wheelchair access. Listings describe the community as 55+ (Parkway)."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Parkway II — 5363 206 Street, Langley City",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parkway II — 5363 206 Street, Langley City"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Built 1989, 42 units (building directory, secondary source). The directory records the same restriction set: age restrictions, pets not allowed, rentals not allowed — the rental line is VOID since November 24, 2022. Amenities listed: elevator, guest suite, in-suite laundry, recreation centre, wheelchair access, workshop. Listings describe it as a 55+ community (\"Parkway II\" / \"Parkway Two\") whose strata fee covers hot water, gas, electricity and heat, with a recently completed full roof replacement stated in one listing — a listing claim, not a verified strata record.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Built 1989, 42 units (building directory, secondary source). The directory records the same restriction set: age restrictions, pets not allowed, rentals not allowed — the rental line is VOID since November 24, 2022. Amenities listed: elevator, guest suite, in-suite laundry, recreation centre, wheelchair access, workshop. Listings describe it as a 55+ community (\"Parkway II\" / \"Parkway Two\") whose strata fee covers hot water, gas, electricity and heat, with a recently completed full roof replacement stated in one listing — a listing claim, not a verified strata record."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Glenmont Park — 5375 205 Street, Langley City",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Glenmont Park — 5375 205 Street, Langley City"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Built 1990, 3 storeys, wood-frame construction (listing data). A full MLS data sheet for a unit in the building records \"Units in Strata: 43,\" a 55+ age restriction, and no cats and no dogs permitted; listings describe a 55+ community whose strata fee includes electricity, gas and hot water, with a guest suite, workshop, clubhouse and RV parking. Unit count is from that MLS data sheet (secondary source), not a building directory — treat it as published-but-single-source.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Built 1990, 3 storeys, wood-frame construction (listing data). A full MLS data sheet for a unit in the building records \"Units in Strata: 43,\" a 55+ age restriction, and no cats and no dogs permitted; listings describe a 55+ community whose strata fee includes electricity, gas and hot water, with a guest suite, workshop, clubhouse and RV parking. Unit count is from that MLS data sheet (secondary source), not a building directory — treat it as published-but-single-source."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Morningside Estates — 5365 205 Street, Langley City: UNCONFIRMED",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Morningside Estates — 5365 205 Street, Langley City: Not confirmed"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "It is held here as UNCONFIRMED and is NOT counted.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "It is held here as not confirmed and is NOT counted."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": ""
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The name appears in first-page listing text on the langley-city page only (the feed led with condos at this address at reading); no Langley City complex was confirmed on a developer, strata or manager source in the research pass, so no year, unit count or restriction is stated for it here and it is NOT counted.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The name appears in first-page listing text on the langley-city page only (the feed led with condos at this address at reading); no Langley City complex was confirmed on a developer, strata or manager source pass, so no year, unit count or restriction is stated for it here and it is NOT counted."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Langley City",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Langley City"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -283,22 +260,22 @@
         ],
         [
           {
-            "t": "Langley City sub-area, September 2026 — the area's own figures (inventory / solds / sales ratio): Detached 64 / 8 / 13%; Condos & Townhomes 195 / 34 / 17% (joint with Aldergrove in the Langley set, below Murrayville 23%, Willoughby Heights 19% and Walnut Grove 18%). SnapStats publishes medians at community level only, and the only community here is the combined City + Township \"Langley\" — so there is NO published median for the City of Langley alone: per-sub-area medians are UNVERIFIED."
+            "t": "Langley City sub-area, September 2026 — the area's own figures (inventory / solds / sales ratio): Detached 64 / 8 / 13%; Condos & Townhomes 195 / 34 / 17% (joint with Aldergrove in the Langley set, below Murrayville 23%, Willoughby Heights 19% and Walnut Grove 18%). SnapStats publishes medians at community level only, and the only community here is the combined City + Township \"Langley\" — so there is NO published median for the City of Langley alone: per-sub-area medians are not verified."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Langley City",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Langley City"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -307,22 +284,22 @@
         ],
         [
           {
-            "t": "Langley City property taxes: payments received after the July 2 due date incur a penalty; the City's payment page lists City Hall at 20399 Douglas Crescent and a 2.2% processing fee on credit-card payments. The penalty percentage for Langley City 2026: UNVERIFIED — the City page read states that a penalty applies but does not state the rate."
+            "t": "Langley City property taxes: payments received after the July 2 due date incur a penalty; the City's payment page lists City Hall at 20399 Douglas Crescent and a 2.2% processing fee on credit-card payments. The penalty percentage for Langley City 2026: Not verified — the City page read states that a penalty applies but does not state the rate."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Langley City",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Langley City"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -341,7 +318,7 @@
         ],
         [
           {
-            "t": "Two addresses ten numbers apart are different buildings with different records. Glenmont Park is 5375 205 St (verified); Morningside Estates is 5365 205 St (UNCONFIRMED). Directory and listing searches blur the pair — verify the civic address on the Form B before importing any fact from one to the other."
+            "t": "Two addresses ten numbers apart are different buildings with different records. Glenmont Park is 5375 205 St (verified); Morningside Estates is 5365 205 St (Not confirmed). Directory and listing searches blur the pair — verify the civic address on the Form B before importing any fact from one to the other."
           }
         ],
         [
@@ -365,155 +342,155 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Langley City",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Langley City"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · langley city",
-            "h": "https://jaredgibbons.ca/langley-city.html"
+            "h": "https://jaredgibbons.ca/langley-city.html",
+            "t": "jaredgibbons.ca · langley city"
           }
         ],
         [
           {
-            "t": "langleycity.ca · strategic vision",
-            "h": "https://www.langleycity.ca/city-hall/reports-plans-strategies/strategic-vision"
+            "h": "https://www.langleycity.ca/city-hall/reports-plans-strategies/strategic-vision",
+            "t": "langleycity.ca · strategic vision"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · langley memorial hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital",
+            "t": "fraserhealth.ca · langley memorial hospital"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · parkway estates 5360 205 street",
-            "h": "https://www.bccondosandhomes.com/building/parkway-estates-5360-205-street"
+            "h": "https://www.bccondosandhomes.com/building/parkway-estates-5360-205-street",
+            "t": "bccondosandhomes.com · parkway estates 5360 205 street"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · parkway ii 5363 206 street",
-            "h": "https://www.bccondosandhomes.com/index.php/building/parkway-ii-5363-206-street"
+            "h": "https://www.bccondosandhomes.com/index.php/building/parkway-ii-5363-206-street",
+            "t": "bccondosandhomes.com · parkway ii 5363 206 street"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · huntsfield green langley 19649",
-            "h": "https://www.bccondosandhomes.com/building/huntsfield-green-langley-19649"
+            "h": "https://www.bccondosandhomes.com/building/huntsfield-green-langley-19649",
+            "t": "bccondosandhomes.com · huntsfield green langley 19649"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · rent increases for manufactured homes",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes",
+            "t": "www2.gov.bc.ca · rent increases for manufactured homes"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "langleycity.ca · PayPropertyTaxes",
-            "h": "https://www.langleycity.ca/PayPropertyTaxes"
+            "h": "https://www.langleycity.ca/PayPropertyTaxes",
+            "t": "langleycity.ca · PayPropertyTaxes"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · first time home buyers",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers",
+            "t": "www2.gov.bc.ca · first time home buyers"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Langley City Townhomes",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Longlea Estates — 5127 203 Street, Langley City. FREEHOLD STRATA, Plan NW 877, 58 units, built 1976, self-managed.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Langley City Townhomes"
     },
     {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Longlea Estates — 5127 203 Street, Langley City. FREEHOLD STRATA, Plan NW 877, 58 units, built 1976, self-managed."
+    },
+    {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Age restriction: none stated — UNCONFIRMED.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Age restriction: none stated — not confirmed."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Langley City Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Langley City Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -526,18 +503,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Langley City Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Langley City Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -546,7 +523,7 @@
         ],
         [
           {
-            "t": "Short-term rentals in Langley City: UNVERIFIED: Do not market a City townhouse as an STR on an uncited rule."
+            "t": "Short-term rentals in Langley City: Not verified: Do not market a City townhouse as an STR on an uncited rule."
           }
         ],
         [
@@ -556,22 +533,22 @@
         ],
         [
           {
-            "t": "Township rules where met (cross-reference ground only): SSMUH = Zoning Bylaw 6020 (adopted Nov 18, 2024; NO 6-plex tier exists in it); secondary suite cap 120 m²; coach house = a fee-simple second unit under Township Zoning Bylaw 2500 s. 102, never strata — with the live Township conflict flagged, resolved nowhere (s. 102 permitting townhouse suites at 120 m² versus the January 2025 guide saying not permitted); R-CL s. 403 = 220 m² min / 464.5 m² max; Willoughby Community Plan = Bylaw 1836 (1979), now Schedule 6 to Bylaw 6200 (adopted Dec 1, 2025); Willoughby Plan Update Bylaws 6201/6202/6203 = first/second reading May 25, 2026 ONLY (hearing directed June 15, 2026 — adoption/repeal claims UNVERIFIED)."
+            "t": "Township rules where met (cross-reference ground only): SSMUH = Zoning Bylaw 6020 (adopted Nov 18, 2024; NO 6-plex tier exists in it); secondary suite cap 120 m²; coach house = a fee-simple second unit under Township Zoning Bylaw 2500 s. 102, never strata — with the live Township conflict flagged, resolved nowhere (s. 102 permitting townhouse suites at 120 m² versus the January 2025 guide saying not permitted); R-CL s. 403 = 220 m² min / 464.5 m² max; Willoughby Community Plan = Bylaw 1836 (1979), now Schedule 6 to Bylaw 6200 (adopted Dec 1, 2025); Willoughby Plan Update Bylaws 6201/6202/6203 = first/second reading May 25, 2026 ONLY (hearing directed June 15, 2026 — adoption/repeal claims not verified)."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Langley City Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Langley City Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -599,106 +576,106 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Langley City Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Langley City Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · langley city",
-            "h": "https://jaredgibbons.ca/langley-city.html"
+            "h": "https://jaredgibbons.ca/langley-city.html",
+            "t": "jaredgibbons.ca · langley city"
           }
         ],
         [
           {
-            "t": "langleycity.ca · strategic vision",
-            "h": "https://www.langleycity.ca/city-hall/reports-plans-strategies/strategic-vision"
+            "h": "https://www.langleycity.ca/city-hall/reports-plans-strategies/strategic-vision",
+            "t": "langleycity.ca · strategic vision"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · langley memorial hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital",
+            "t": "fraserhealth.ca · langley memorial hospital"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · strata housing",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing",
+            "t": "www2.gov.bc.ca · strata housing"
           }
         ],
         [
           {
-            "t": "langleycity.ca · PayPropertyTaxes",
-            "h": "https://www.langleycity.ca/PayPropertyTaxes"
+            "h": "https://www.langleycity.ca/PayPropertyTaxes",
+            "t": "langleycity.ca · PayPropertyTaxes"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · understand",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/understand"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/understand",
+            "t": "www2.gov.bc.ca · understand"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Langley City",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Langley City"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -707,7 +684,7 @@
         ],
         [
           {
-            "t": "Morningside Estates (5365 205 St) held UNCONFIRMED, never merged with Glenmont Park: — its verified neighbour is Glenmont Park (5375 205 St); no fact about Glenmont Park may be carried across to it, and it is not land stock."
+            "t": "Morningside Estates (5365 205 St) held not confirmed, never merged with Glenmont Park: — its verified neighbour is Glenmont Park (5375 205 St); no fact about Glenmont Park may be carried across to it, and it is not land stock."
           }
         ],
         [
@@ -716,18 +693,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Langley City",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Langley City"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -735,18 +712,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Langley City",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Langley City"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -765,7 +742,7 @@
         ],
         [
           {
-            "t": "Subdivision — City: Bylaw 3300 states \"No person shall subdivide land except in accordance with this bylaw\"; subdivisions are subject to the City's Subdivision Control Bylaw and Development Cost Charge Bylaw; a lot created by subdivision must meet its zone's minimum lot area; and meeting the minimum standards does not bind the Approving Officer to approve. The Subdivision Control Bylaw's number: UNVERIFIED. City DCC Bylaw 2024 No. 3256."
+            "t": "Subdivision — City: Bylaw 3300 states \"No person shall subdivide land except in accordance with this bylaw\"; subdivisions are subject to the City's Subdivision Control Bylaw and Development Cost Charge Bylaw; a lot created by subdivision must meet its zone's minimum lot area; and meeting the minimum standards does not bind the Approving Officer to approve. The Subdivision Control Bylaw's number: Not verified. City DCC Bylaw 2024 No. 3256."
           }
         ],
         [
@@ -774,18 +751,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Langley City",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Langley City"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -799,37 +776,105 @@
         ],
         [
           {
-            "t": "Glenmont Park is 5375 205 St (verified); Morningside Estates is 5365 205 St (UNCONFIRMED) — directory and listing searches blur the pair."
+            "t": "Glenmont Park is 5375 205 St (verified); Morningside Estates is 5365 205 St (Not confirmed) — directory and listing searches blur the pair."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "tn",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Langley City"
+    },
+    {
+      "gen": "tn",
+      "items": [
+        [
+          {
+            "h": "https://jaredgibbons.ca/langley-city.html",
+            "t": "jaredgibbons.ca · langley city"
+          }
+        ],
+        [
+          {
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
+          }
+        ],
+        [
+          {
+            "h": "https://www.langleycity.ca/city-hall/reports-plans-strategies/strategic-vision",
+            "t": "langleycity.ca · strategic vision"
+          }
+        ],
+        [
+          {
+            "h": "https://www.langleycity.ca/media/file/zoning-bylaw",
+            "t": "langleycity.ca · zoning bylaw"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption",
+            "t": "www2.gov.bc.ca · newly built home exemption"
+          }
+        ],
+        [
+          {
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html",
+            "t": "canada.ca · sales vacant land individuals"
+          }
+        ],
+        [
+          {
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for the land notes on Langley City",
-      "gen": "tn",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -837,129 +882,69 @@
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · langley city",
-            "h": "https://jaredgibbons.ca/langley-city.html"
-          }
-        ],
-        [
-          {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
-          }
-        ],
-        [
-          {
-            "t": "langleycity.ca · strategic vision",
+            "t": "Source: langleycity.ca",
             "h": "https://www.langleycity.ca/city-hall/reports-plans-strategies/strategic-vision"
-          }
-        ],
-        [
-          {
-            "t": "langleycity.ca · zoning bylaw",
-            "h": "https://www.langleycity.ca/media/file/zoning-bylaw"
-          }
-        ],
-        [
-          {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
-          }
-        ],
-        [
-          {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
-          }
-        ],
-        [
-          {
-            "t": "www2.gov.bc.ca · newly built home exemption",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption"
-          }
-        ],
-        [
-          {
-            "t": "canada.ca · sales vacant land individuals",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html"
-          }
-        ],
-        [
-          {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
           }
         ]
       ],
-      "gen": "tn",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
     {
+      "a": "No — the City of Langley is a separate municipality with its own Official Community Plan (adopted November 22, 2021) and its own Zoning Bylaw, 2025, No. 3300; the Township has its own bylaws, and the two must not be mixed.",
+      "gen": "tn",
+      "q": "Is Langley City the same as the Township of Langley?"
+    },
+    {
+      "a": "Huntsfield Green is a fourth strata name buyers meet constantly, but it is townhouse-form and is not an apartment condo. Morningside Estates (5365 205 St) and the Unity Building (20769 Fraser Hwy) are not confirmed and are not counted.",
+      "gen": "tn",
+      "q": "How many apartment-condo buildings does Langley City actually have?"
+    },
+    {
+      "a": "The rental line does not — rental-restriction bylaws have been void since November 24, 2022. The 55+ line can: a 55-or-older bylaw is the one age bylaw the Strata Property Act still permits (ss. 123.1/123.2), with exemptions for legacy residents, live-in caregivers and (since May 1, 2023) younger spouses/partners and defined children. Both Parkway buildings are directory-recorded with age restrictions, pets not allowed and rentals not allowed; read only the age and pet lines as potentially live, and confirm both on the registered bylaws.",
+      "gen": "tn",
+      "q": "The Parkway directory says rentals are banned and it's 55+. Which one binds me?"
+    },
+    {
+      "a": "No — and they must never be merged. Glenmont Park is 5375 205 St, verified, 55+, 43 units in strata per an MLS data sheet.",
+      "gen": "tn",
+      "q": "Is Morningside Estates the same as Glenmont Park?"
+    },
+    {
+      "a": "Because listing text is not verification.",
+      "gen": "tn",
+      "q": "What about the Unity Building on Fraser Highway — why isn't it in the roster?"
+    },
+    {
+      "a": "No — separate municipalities, separate OCPs and zoning bylaws.",
+      "gen": "tn",
+      "q": "Is Langley City the same market as the Township of Langley?"
+    },
+    {
+      "a": "Townhouse-form — gated rancher/bungalow townhouses, strata plan NWS3354, verified 55+. Its build year is not confirmed between 1990 and 1991.",
+      "gen": "tn",
+      "q": "Is Huntsfield Green a condo or a townhouse complex?"
+    },
+    {
+      "a": "No. Fresh verification confirms apartment form: 5 floors of Apartment/Condo residences over commercial retail at 20769 Fraser Highway, built 2026 by Whitetail Homes.",
+      "gen": "tn",
+      "q": "Is the Unity Building a townhouse complex?"
+    },
+    {
       "q": "Is SkyTrain coming to Langley City?",
       "a": "The guide page states the Surrey Langley SkyTrain extension runs 16 km from King George Station to 203 Street in the City, with Langley City Centre Station east of 203 Street and Industrial Avenue and a current anticipated in-service date of late 2029; the City's vision page likewise states SkyTrain is coming by the end of 2029.",
       "gen": "muse"
-    },
-    {
-      "q": "Are there more or fewer homes for sale in Langley City than in June?",
-      "a": "In Langley City, listings of houses fell from 78 in June to 64 in September (−17.9%); condos and townhomes was little changed, 193 in June and 195 in September (+1.0%).",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How big is Langley City compared with the rest of Langley?",
-      "a": "In September 2026, Langley City held 14.3% of the 449 houses listed in Langley and 27.9% of the 699 condos and townhomes listed in Langley.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How many homes sold in Langley City from June to September 2026?",
-      "a": "37 houses and 106 condos and townhomes sold in Langley City over those 4 months.",
-      "gen": "snap-faq"
-    },
-    {
-      "gen": "tn",
-      "q": "Is Langley City the same as the Township of Langley?",
-      "a": "No — the City of Langley is a separate municipality with its own Official Community Plan (adopted November 22, 2021) and its own Zoning Bylaw, 2025, No. 3300; the Township has its own bylaws, and the two must not be mixed."
-    },
-    {
-      "gen": "tn",
-      "q": "How many apartment-condo buildings does Langley City actually have?",
-      "a": "Huntsfield Green is a fourth strata name buyers meet constantly, but it is townhouse-form and is not an apartment condo. Morningside Estates (5365 205 St) and the Unity Building (20769 Fraser Hwy) are UNCONFIRMED and are not counted."
-    },
-    {
-      "gen": "tn",
-      "q": "The Parkway directory says rentals are banned and it's 55+. Which one binds me?",
-      "a": "The rental line does not — rental-restriction bylaws have been void since November 24, 2022. The 55+ line can: a 55-or-older bylaw is the one age bylaw the Strata Property Act still permits (ss. 123.1/123.2), with exemptions for legacy residents, live-in caregivers and (since May 1, 2023) younger spouses/partners and defined children. Both Parkway buildings are directory-recorded with age restrictions, pets not allowed and rentals not allowed; read only the age and pet lines as potentially live, and confirm both on the registered bylaws."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Morningside Estates the same as Glenmont Park?",
-      "a": "No — and they must never be merged. Glenmont Park is 5375 205 St, verified, 55+, 43 units in strata per an MLS data sheet."
-    },
-    {
-      "gen": "tn",
-      "q": "What about the Unity Building on Fraser Highway — why isn't it in the roster?",
-      "a": "Because listing text is not verification."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Langley City the same market as the Township of Langley?",
-      "a": "No — separate municipalities, separate OCPs and zoning bylaws."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Huntsfield Green a condo or a townhouse complex?",
-      "a": "Townhouse-form — gated rancher/bungalow townhouses, strata plan NWS3354, verified 55+. Its build year is UNCONFIRMED between 1990 and 1991."
-    },
-    {
-      "gen": "tn",
-      "q": "Is the Unity Building a townhouse complex?",
-      "a": "No. Fresh verification confirms apartment form: 5 floors of Apartment/Condo residences over commercial retail at 20769 Fraser Highway, built 2026 by Whitetail Homes."
     }
+  ],
+  "slug": "langley-city-guide",
+  "status": "generated",
+  "suppress": [
+    "Related guides"
   ],
   "suppress_gen": [
     "Related guides"
   ],
-  "suppress": [
-    "Related guides"
-  ]
+  "updated": "2026-11-01"
 }

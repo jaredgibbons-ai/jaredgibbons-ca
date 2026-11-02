@@ -1,58 +1,33 @@
 {
-  "status": "draft",
-  "slug": "mission-townhomes-for-sale",
-  "updated": "2026-11-01",
-  "gen_gap": true,
-  "hand_edited": true,
-  "new_page": {
-    "title": "Mission Townhomes for Sale | Jared Gibbons REALTOR®",
-    "description": "Mission townhomes for sale: ground-level homes in strata buildings, with monthly listings and sales for Mission. Jared Gibbons, REALTOR®, Royal LePage Little Oak.",
-    "h1": "Mission Townhomes for Sale | Fraser Valley Real Estate"
-  },
-  "breadcrumbs": [
-    {
-      "name": "Home",
-      "href": "/index.html"
-    },
-    {
-      "name": "Mission",
-      "href": "/mission-homes-for-sale.html"
-    },
-    {
-      "name": "Townhomes",
-      "href": "/mission-townhomes-for-sale.html"
-    }
-  ],
-  "faq_heading": "Mission Townhomes for Sale: your questions answered",
   "blocks": [
     {
+      "gen": "gappage",
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
-      "gen": "gappage"
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet."
     },
     {
+      "gen": "gappage",
       "t": "p",
-      "text": "Mission townhomes for sale: ground-level homes in strata buildings. The Fraser Valley Real Estate Board benchmark for townhomes in Mission was $618,000 in September 2026 (-4.1% over a year). Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees.",
-      "gen": "gappage"
+      "text": "Mission townhomes for sale: ground-level homes in strata buildings. The Fraser Valley Real Estate Board benchmark for townhomes in Mission was $618,000 in September 2026 (-4.1% over a year). Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees."
     },
     {
-      "t": "grid",
-      "gen": "gappage"
+      "gen": "gappage",
+      "t": "grid"
     },
     {
-      "t": "h",
+      "gen": "sold",
       "level": 2,
-      "text": "Mission townhomes sold, November 2025 to October 2026",
-      "gen": "sold"
+      "t": "h",
+      "text": "Mission townhomes sold, November 2025 to October 2026"
     },
     {
+      "gen": "sold",
       "t": "p",
-      "text": "65 townhomes sold in Mission with a median price of $679,900 (the middle half sold between $635,000 and $709,900), taking a median of 25 days to sell at 98.6% of the last list price; 3% sold above list. They had a median $444 per square foot, a median year built of 2021 and a median strata fee of $349 a month.",
-      "gen": "sold"
+      "text": "65 townhomes sold in Mission with a median price of $679,900 (the middle half sold between $635,000 and $709,900), taking a median of 25 days to sell at 98.6% of the last list price; 3% sold above list. They had a median $444 per square foot, a median year built of 2021 and a median strata fee of $349 a month."
     },
     {
-      "t": "table",
       "caption": "Mission: townhomes sold by quarter",
+      "gen": "sold",
       "head": [
         "Period",
         "Sold",
@@ -81,11 +56,11 @@
         ]
       ],
       "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
-      "gen": "sold"
+      "t": "table"
     },
     {
-      "t": "table",
       "caption": "Mission: townhomes sold by community",
+      "gen": "sold",
       "head": [
         "Community",
         "Sold",
@@ -113,11 +88,11 @@
         ]
       ],
       "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
-      "gen": "sold"
+      "t": "table"
     },
     {
-      "t": "table",
       "caption": "Mission: buildings and complexes with the most townhomes sold",
+      "gen": "sold",
       "head": [
         "Building or complex",
         "Sold",
@@ -153,17 +128,17 @@
         ]
       ],
       "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
-      "gen": "sold"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "gappage",
       "level": 2,
-      "text": "Mission townhomes: benchmark price and changes, September 2026",
-      "gen": "gappage"
+      "t": "h",
+      "text": "Mission townhomes: benchmark price and changes, September 2026"
     },
     {
-      "t": "table",
       "caption": "Mission townhomes, MLS® Home Price Index, September 2026",
+      "gen": "gappage",
       "head": [
         "Area",
         "Benchmark price",
@@ -191,22 +166,22 @@
         ]
       ],
       "source": "Source: Fraser Valley Real Estate Board, MLS® Home Price Index, September 2026 (released October 5, 2026). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at 1.5% or more.",
-      "gen": "gappage"
+      "t": "table"
     },
     {
+      "gen": "gappage",
       "t": "p",
-      "text": "Mission: the townhomes benchmark was $618,000 in September 2026. Over the past year it fell 4.1%; over three months it fell 4.3%; over the last month it was little changed (-0.6%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 5.2%; over 5 years it rose 5.2%.",
-      "gen": "gappage"
+      "text": "Mission: the townhomes benchmark was $618,000 in September 2026. Over the past year it fell 4.1%; over three months it fell 4.3%; over the last month it was little changed (-0.6%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 5.2%; over 5 years it rose 5.2%."
     },
     {
-      "t": "h",
+      "gen": "gappage",
       "level": 2,
-      "text": "Mission townhomes: sales, listings and prices, September 2026",
-      "gen": "gappage"
+      "t": "h",
+      "text": "Mission townhomes: sales, listings and prices, September 2026"
     },
     {
-      "t": "table",
       "caption": "Mission townhomes, September 2026 with August 2026 and September 2025",
+      "gen": "gappage",
       "head": [
         "Measure",
         "September 2026",
@@ -251,38 +226,38 @@
           "$698,533"
         ]
       ],
-      "source": "Source: Fraser Valley Real Estate Board MLS® statistics package, September 2026 (released October 5, 2026). Median is the middle sale price of the month and average is the total of sale prices divided by sales; both swing when few homes sell, so a month with fewer than 3 sales is not read as a trend.",
-      "gen": "gappage"
+      "source": "Source: Fraser Valley Real Estate Board MLS® statistics package, September 2026 (released October 5, 2026).",
+      "t": "table"
     },
     {
+      "gen": "gappage",
       "t": "p",
-      "text": "In September 2026 Mission had 5 townhomes sales and 67 active listings (9 sales and 54 active in August; 9 and 46 in September 2025). Sales fell 44.4% against September 2025. Active listings rose 45.7% against September 2025.",
-      "gen": "gappage"
+      "text": "In September 2026 Mission had 5 townhomes sales and 67 active listings (9 sales and 54 active in August; 9 and 46 in September 2025). Sales fell 44.4% against September 2025. Active listings rose 45.7% against September 2025."
     },
     {
-      "t": "h",
+      "gen": "gappage",
       "level": 2,
-      "text": "Townhomes against other home types in Mission",
-      "gen": "gappage"
-    },
-    {
-      "t": "p",
-      "text": "Mission: the townhomes benchmark of $618,000 sits $271,200 below the detached houses benchmark of $889,200 (70% of it) and $206,500 above the apartments (condos) benchmark of $411,500 (150% of it).",
-      "gen": "gappage"
-    },
-    {
       "t": "h",
-      "level": 2,
-      "text": "Elementary and middle schools in Mission",
-      "gen": "gappage"
+      "text": "Townhomes against other home types in Mission"
     },
     {
+      "gen": "gappage",
       "t": "p",
-      "text": "13 elementary and middle schools are located in the City of Mission: 13 in SD75 Mission. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district.",
-      "gen": "gappage"
+      "text": "Mission: the townhomes benchmark of $618,000 sits $271,200 below the detached houses benchmark of $889,200 (70% of it) and $206,500 above the apartments (condos) benchmark of $411,500 (150% of it)."
     },
     {
-      "t": "list",
+      "gen": "gappage",
+      "level": 2,
+      "t": "h",
+      "text": "Elementary and middle schools in Mission"
+    },
+    {
+      "gen": "gappage",
+      "t": "p",
+      "text": "13 elementary and middle schools are located in the City of Mission: 13 in SD75 Mission. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district."
+    },
+    {
+      "gen": "gappage",
       "items": [
         [
           {
@@ -350,153 +325,178 @@
           }
         ]
       ],
-      "gen": "gappage"
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "gappage",
       "level": 2,
-      "text": "Before you buy townhomes in Mission",
-      "gen": "gappage"
+      "t": "h",
+      "text": "Before you buy townhomes in Mission"
     },
     {
+      "gen": "gappage",
       "t": "p",
-      "text": "Jared checks these with you on the exact address before you write an offer:",
-      "gen": "gappage"
+      "text": "Jared checks these with you on the exact address before you write an offer:"
     },
     {
-      "t": "list",
+      "gen": "gappage",
       "items": [
         [
           {
-            "t": "Mortgage calculator",
-            "h": "/mortgage-calculator.html"
+            "h": "/mortgage-calculator.html",
+            "t": "Mortgage calculator"
           }
         ],
         [
           {
-            "t": "Home evaluation",
-            "h": "/home-evaluation.html"
+            "h": "/home-evaluation.html",
+            "t": "Home evaluation"
           }
         ]
       ],
-      "gen": "gappage"
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "gappage",
       "level": 2,
-      "text": "More Mission real estate",
-      "gen": "gappage",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "More Mission real estate"
     },
     {
-      "t": "list",
+      "gen": "gappage",
       "items": [
         [
           {
-            "t": "Mission homes for sale",
-            "h": "/mission-homes-for-sale.html"
+            "h": "/mission-homes-for-sale.html",
+            "t": "Mission homes for sale"
           }
         ],
         [
           {
-            "t": "Mission real estate market stats",
-            "h": "/mission-real-estate-market-stats.html"
+            "h": "/mission-real-estate-market-stats.html",
+            "t": "Mission real estate market stats"
           }
         ],
         [
           {
-            "t": "Fraser Valley market stats",
-            "h": "/fraser-valley-market-stats.html"
+            "h": "/fraser-valley-market-stats.html",
+            "t": "Fraser Valley market stats"
           }
         ],
         [
           {
-            "t": "Mortgage calculator",
-            "h": "/mortgage-calculator.html"
+            "h": "/mortgage-calculator.html",
+            "t": "Mortgage calculator"
           }
         ],
         [
           {
-            "t": "Home evaluation",
-            "h": "/home-evaluation.html"
+            "h": "/home-evaluation.html",
+            "t": "Home evaluation"
           }
         ],
         [
           {
-            "t": "Contact Jared",
-            "h": "/contact.html"
+            "h": "/contact.html",
+            "t": "Contact Jared"
           }
         ]
       ],
-      "gen": "gappage",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    }
+  ],
+  "breadcrumbs": [
+    {
+      "href": "/index.html",
+      "name": "Home"
+    },
+    {
+      "href": "/mission-homes-for-sale.html",
+      "name": "Mission"
+    },
+    {
+      "href": "/mission-townhomes-for-sale.html",
+      "name": "Townhomes"
     }
   ],
   "faq": [
     {
+      "a": "65 townhomes sold in Mission between November 1, 2025 to October 22, 2026, with a median price of $679,900.",
       "gen": "sold",
-      "q": "What did townhomes in Mission sell for?",
-      "a": "65 townhomes sold in Mission between November 1, 2025 to October 22, 2026, with a median price of $679,900."
+      "q": "What did townhomes in Mission sell for?"
     },
     {
+      "a": "The median was 25 days from listing to sale, and homes sold at a median 98.6% of the last list price (3% sold above list), for sales November 1, 2025 to October 22, 2026.",
       "gen": "sold",
-      "q": "How long do townhomes take to sell in Mission?",
-      "a": "The median was 25 days from listing to sale, and homes sold at a median 98.6% of the last list price (3% sold above list), for sales November 1, 2025 to October 22, 2026."
+      "q": "How long do townhomes take to sell in Mission?"
     },
     {
+      "a": "The middle half of the 65 townhomes that sold in Mission went for between $635,000 and $709,900, around a median of $679,900.",
       "gen": "sold",
-      "q": "What price range do most townhomes in Mission sell in?",
-      "a": "The middle half of the 65 townhomes that sold in Mission went for between $635,000 and $709,900, around a median of $679,900."
+      "q": "What price range do most townhomes in Mission sell in?"
     },
     {
+      "a": "3% of the 65 townhomes sold for more than the last list price, and the median sale was 98.6% of it.",
       "gen": "sold",
-      "q": "Do townhomes in Mission sell above asking price?",
-      "a": "3% of the 65 townhomes sold for more than the last list price, and the median sale was 98.6% of it."
+      "q": "Do townhomes in Mission sell above asking price?"
     },
     {
+      "a": "Of the 65 sales, 64 listings gave a monthly fee and the median was $349.",
       "gen": "sold",
-      "q": "What is a typical strata fee for townhomes in Mission?",
-      "a": "Of the 65 sales, 64 listings gave a monthly fee and the median was $349."
+      "q": "What is a typical strata fee for townhomes in Mission?"
     },
     {
+      "a": "The median year built was 2021 for the 65 townhomes sold in Mission.",
       "gen": "sold",
-      "q": "How old are the townhomes that sold in Mission?",
-      "a": "The median year built was 2021 for the 65 townhomes sold in Mission."
+      "q": "How old are the townhomes that sold in Mission?"
     },
     {
+      "a": "The median townhome that sold in Mission had 3 bedrooms, from the 65 sales between November 1, 2025 to October 22, 2026.",
       "gen": "sold",
-      "q": "How many bedrooms do townhomes in Mission usually have?",
-      "a": "The median townhome that sold in Mission had 3 bedrooms, from the 65 sales between November 1, 2025 to October 22, 2026."
+      "q": "How many bedrooms do townhomes in Mission usually have?"
     },
     {
+      "a": "By number sold: Mission BC (55), Mission-West (9), for November 1, 2025 to October 22, 2026.",
       "gen": "sold",
-      "q": "Which Mission communities sold the most townhomes?",
-      "a": "By number sold: Mission BC (55), Mission-West (9), for November 1, 2025 to October 22, 2026."
+      "q": "Which Mission communities sold the most townhomes?"
     },
     {
+      "a": "By number sold: Skyview (10), Archer Green (8), Spencer Estates (5), for November 1, 2025 to October 22, 2026.",
       "gen": "sold",
-      "q": "Which Mission buildings sold the most townhomes?",
-      "a": "By number sold: Skyview (10), Archer Green (8), Spencer Estates (5), for November 1, 2025 to October 22, 2026."
+      "q": "Which Mission buildings sold the most townhomes?"
     },
     {
-      "q": "What is the benchmark price of a townhome in Mission?",
-      "a": "The Fraser Valley Real Estate Board MLS® Home Price Index benchmark for townhomes in Mission was $618,000 in September 2026, a modelled price for a typical home and not an average of sales."
+      "a": "The Fraser Valley Real Estate Board MLS® Home Price Index benchmark for townhomes in Mission was $618,000 in September 2026, a modelled price for a typical home and not an average of sales.",
+      "q": "What is the benchmark price of a townhome in Mission?"
     },
     {
-      "q": "Did townhome prices fall in Mission?",
-      "a": "Over the past year the benchmark fell 4.1%. Over three months it fell 4.3%. A change under 1.5% is not described as a rise or fall."
+      "a": "Over the past year the benchmark fell 4.1%. Over three months it fell 4.3%. A change under 1.5% is not described as a rise or fall.",
+      "q": "Did townhome prices fall in Mission?"
     },
     {
-      "q": "Is Mission a buyers’ or sellers’ market?",
-      "a": "In September 2026 houses in Mission had a sales ratio of 12%, which the reports’ scale reads as a balanced market, and condos and townhomes 8%, which the reports’ scale reads as a buyers’ market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers."
+      "a": "In October 2026 houses in Mission had a sales ratio of 8%, which the reports’ scale reads as a buyers’ market, and condos and townhomes 7%, which the reports’ scale reads as a buyers’ market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers.",
+      "q": "Is Mission a buyers’ or sellers’ market?"
     },
     {
-      "q": "How many townhomes are for sale in Mission?",
-      "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the townhomes in Mission that match what you want."
+      "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the townhomes in Mission that match what you want.",
+      "q": "How many townhomes are for sale in Mission?"
     }
   ],
+  "faq_heading": "Mission Townhomes for Sale: your questions answered",
+  "gen_gap": true,
+  "hand_edited": true,
   "needs_from_muse": [
     "Live listing feed filtered to townhomes in Mission",
     "Jared's own notes"
-  ]
+  ],
+  "new_page": {
+    "description": "Mission townhomes for sale: ground-level homes in strata buildings, with monthly listings and sales for Mission. Jared Gibbons, REALTOR®, Royal LePage Little Oak.",
+    "h1": "Mission Townhomes for Sale | Fraser Valley Real Estate",
+    "title": "Mission Townhomes for Sale | Jared Gibbons REALTOR®"
+  },
+  "slug": "mission-townhomes-for-sale",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

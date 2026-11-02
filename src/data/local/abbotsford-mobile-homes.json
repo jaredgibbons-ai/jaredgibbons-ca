@@ -6,32 +6,6 @@
     {
       "t": "h",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: www2.gov.bc.ca (1)",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/owning-a-home/manufactured-home-registry"
-          }
-        ],
-        [
-          {
-            "t": "Source: www2.gov.bc.ca (2)",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
       "text": "Abbotsford: how mobile and manufactured homes work here",
       "gen": "mh",
       "pos": "end"
@@ -141,9 +115,45 @@
       ],
       "gen": "mh",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Source: www2.gov.bc.ca (1)",
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/owning-a-home/manufactured-home-registry"
+          }
+        ],
+        [
+          {
+            "t": "Source: www2.gov.bc.ca (2)",
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes"
+          }
+        ]
+      ],
+      "gen": "musefaq",
+      "pos": "end"
     }
   ],
   "faq": [
+    {
+      "gen": "mh",
+      "q": "What pad rent should I expect in an Abbotsford park?",
+      "a": "The figure that governs is the specific site's tenancy agreement — confirm the current pad rent, what it includes, and its increase history with the park for the exact site before offering."
+    },
+    {
+      "gen": "mh",
+      "q": "Why does the CSA label matter?",
+      "a": "It is the home's certification decal — Z-240 series for mobile homes, A-277 series for modular homes, with a unique identifier usually near the front door or on the electrical panel. The Province states a manufactured home may not be sold unless the original legible CSA decal is attached; if it is lost, the home must be re-certified through Technical Safety BC's electrical inspection and approval-label route before it can be listed for sale."
+    },
     {
       "q": "Is there an official median price for Abbotsford manufactured homes?",
       "a": "No. SnapStats publishes no manufactured-home category, so no median, sales ratio or inventory figure for Abbotsford manufactured homes exists in the sources used, and none is stated in this file. The Abbotsford figures in Section 2 (detached median $949,000; Condos & Townhomes median $497,500) are all-residential community context only (as of September 2026, Source: SnapStats).",
@@ -158,21 +168,6 @@
       "q": "How much can pad rent go up each year?",
       "a": "Once every 12 months, on at least 3 full months' notice, and no more than the yearly limit set by the Residential Tenancy Branch: for manufactured home site tenancies the 2026 limit is 2.3% plus a proportional amount for changes in local government levies and regulated utility fees, and the 2027 limit is 2.2% plus the proportional amount.",
       "gen": "muse"
-    },
-    {
-      "q": "Why does the CSA label matter when buying a manufactured home?",
-      "a": "The CSA label is the home's certification decal — Z-240 series for mobile homes, A-277 series for modular homes, with a unique identifier usually near the front door or on the electrical panel. The Province states a manufactured home may not be sold unless the original legible CSA decal is attached; if it is lost, the home must be re-certified, with Technical Safety BC arranging an electrical inspection and an approval label that can be used in lieu of the CSA label to list the home for sale.",
-      "gen": "muse"
-    },
-    {
-      "gen": "mh",
-      "q": "What pad rent should I expect in an Abbotsford park?",
-      "a": "The figure that governs is the specific site's tenancy agreement — confirm the current pad rent, what it includes, and its increase history with the park for the exact site before offering."
-    },
-    {
-      "gen": "mh",
-      "q": "Why does the CSA label matter?",
-      "a": "It is the home's certification decal — Z-240 series for mobile homes, A-277 series for modular homes, with a unique identifier usually near the front door or on the electrical panel. The Province states a manufactured home may not be sold unless the original legible CSA decal is attached; if it is lost, the home must be re-certified through Technical Safety BC's electrical inspection and approval-label route before it can be listed for sale."
     }
   ],
   "suppress_gen": [

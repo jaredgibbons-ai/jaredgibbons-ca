@@ -2,7 +2,28 @@
   "status": "draft",
   "slug": "mission-townhomes-under-1-2m",
   "updated": "2026-11-01",
-  "blocks": [],
+  "blocks": [
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Source: mission.ca",
+            "h": "https://www.mission.ca/services/property-taxes"
+          }
+        ]
+      ],
+      "gen": "musefaq",
+      "pos": "end"
+    }
+  ],
   "faq": [
     {
       "q": "What does \"under $1.2M\" actually cover on this page?",
@@ -15,14 +36,14 @@
       "gen": "muse"
     },
     {
-      "q": "Are townhomes in Mission freehold or strata?",
-      "a": "Most are strata, either a building strata or a bare-land strata, with monthly fees and bylaws. Some are freehold row homes with no strata. The title search tells you which, and it decides which costs and rules apply.",
-      "gen": "bank-faq"
+      "q": "Which schools serve Mission townhome areas?",
+      "a": "SD75 schools confirmed by name and address against the BC Ministry K-12 file include Mission Senior Secondary, Hatzic and École Heritage Park middle schools, and elementaries such as Mission Central, Windebank, Albert McMahon and Christine Morrison — but catchments are address-based and no Mission catchment lookup is on record, so confirm the exact address with the district (~/workspace/area-research-2026-11/education/work/bc_k12_schools.csv, read 2026-11-01).",
+      "gen": "muse"
     },
     {
-      "q": "What should I check on a townhome in Mission?",
-      "a": "Read the Form B, the bylaws, the strata minutes and the depreciation report, and ask about exterior repairs, pet and rental rules and who looks after the fences, roofs and yards.",
-      "gen": "bank-faq"
+      "q": "When are Mission property taxes due, and what is the penalty?",
+      "a": "For 2026, City of Mission property taxes were due Thursday, July 2, 2026, and a 10% penalty was added to any current balances outstanding, including unclaimed home owner grants, on July 3, 2026.",
+      "gen": "muse"
     }
   ]
 }

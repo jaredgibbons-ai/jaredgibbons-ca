@@ -229,3 +229,15 @@ test("what's nearby blocks (nb): no URLs, note markup or research wording in tex
   }
   assert.ok(pages >= 200 && rows >= 500, `expected nearby blocks on 200+ pages, got ${pages} / ${rows} rows`);
 });
+
+test('no research-process wording on any page: no UNCONFIRMED / UNVERIFIED tags, sibling files, batch numbers, "in this research", locator results or "Jared\'s reports" in any block or FAQ', () => {
+  const bad = /UNCONFIRMED|UNVERIFIED|\bsiblings?\b|\bbatch[- ]?\d|\bslug\b|research file|Jared.s reports|\bthe notes\b|\bthis research\b|\blocator (?:returned|result)|\bpage text read|reading was/i;
+  const walk = (o, hits, f) => {
+    if (typeof o === 'string') { const m = o.match(bad); if (m && !(/^(unconfirmed|unverified)$/i.test(m[0]) && !/UN(?:CONFIRMED|VERIFIED)/.test(o))) hits.push(`${f}: ${o.slice(Math.max(0, m.index - 30), m.index + 60)}`); }
+    else if (Array.isArray(o)) o.forEach((x) => walk(x, hits, f));
+    else if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) if (!['h', 'slug', 'gen', 'needs_from_muse'].includes(k)) walk(v, hits, f);
+  };
+  const hits = [];
+  for (const [f, t] of texts) { const d = JSON.parse(t); walk(d.blocks || [], hits, f); walk(d.faq || [], hits, f); }
+  assert.deepEqual(hits.slice(0, 5), [], `${hits.length} strings with research wording`);
+});

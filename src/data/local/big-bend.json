@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "big-bend",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Big Bend homes listed and sold, June to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Big Bend homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Big Bend, September 2026. Detached houses: 2 listed at month end and 0 sold in September, a sales ratio of —. Condos and townhomes: 3 listed at month end and 0 sold in September, a sales ratio of —.",
-      "gen": "snapstats"
+      "text": "Big Bend, October 2026. Detached houses: 1 listed at month end and 1 sold in October, a sales ratio of 100%. Condos and townhomes: 4 listed at month end and 0 sold in October, a sales ratio of —."
     },
     {
-      "t": "table",
       "caption": "Big Bend listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -62,174 +59,145 @@
           "3",
           "0",
           "—"
+        ],
+        [
+          "October 2026",
+          "1",
+          "1",
+          "100%",
+          "4",
+          "0",
+          "—"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 1 sold over 4 months against an average of 1.5 listed, about 6.0 months of listings at that pace; the busiest month was June with 1 sold. Condos and townhomes: 1 sold over 4 months against an average of 1.5 listed, about 6.0 months of listings at that pace; the busiest month was June with 1 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 2 sold over 5 months against an average of 1.4 listed, about 3.5 months of listings at that pace; the busiest month was June with 1 sold. Condos and townhomes: 1 sold over 5 months against an average of 2.0 listed, about 10.0 months of listings at that pace; the busiest month was June with 1 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Burnaby real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Burnaby real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Burnaby homes for sale",
-            "h": "/burnaby-homes-for-sale.html"
+            "h": "/burnaby-homes-for-sale.html",
+            "t": "Burnaby homes for sale"
           }
         ],
         [
           {
-            "t": "Burnaby real estate market stats",
-            "h": "/burnaby-real-estate-market-stats.html"
+            "h": "/burnaby-real-estate-market-stats.html",
+            "t": "Burnaby real estate market stats"
           }
         ],
         [
           {
-            "t": "Burnaby condos for sale",
-            "h": "/burnaby-condos-for-sale.html"
+            "h": "/burnaby-condos-for-sale.html",
+            "t": "Burnaby condos for sale"
           }
         ],
         [
           {
-            "t": "Burnaby townhomes for sale",
-            "h": "/burnaby-townhomes-for-sale.html"
+            "h": "/burnaby-townhomes-for-sale.html",
+            "t": "Burnaby townhomes for sale"
           }
         ],
         [
           {
-            "t": "Schools in Burnaby",
-            "h": "/schools-in-burnaby-bc.html"
+            "h": "/schools-in-burnaby-bc.html",
+            "t": "Schools in Burnaby"
           }
         ],
         [
           {
-            "t": "Brentwood Park real estate",
-            "h": "/brentwood-park.html"
+            "h": "/brentwood-park.html",
+            "t": "Brentwood Park real estate"
           }
         ],
         [
           {
-            "t": "Buckingham Heights real estate",
-            "h": "/buckingham-heights.html"
+            "h": "/buckingham-heights.html",
+            "t": "Buckingham Heights real estate"
           }
         ],
         [
           {
-            "t": "Burnaby Hospital real estate",
-            "h": "/burnaby-hospital.html"
+            "h": "/burnaby-hospital.html",
+            "t": "Burnaby Hospital real estate"
           }
         ],
         [
           {
-            "t": "Burnaby Lake real estate",
-            "h": "/burnaby-lake.html"
+            "h": "/burnaby-lake.html",
+            "t": "Burnaby Lake real estate"
           }
         ],
         [
           {
-            "t": "Capitol Hill real estate",
-            "h": "/capitol-hill-bn.html"
+            "h": "/capitol-hill-bn.html",
+            "t": "Capitol Hill real estate"
           }
         ],
         [
           {
-            "t": "Cariboo real estate",
-            "h": "/cariboo.html"
+            "h": "/cariboo.html",
+            "t": "Cariboo real estate"
           }
         ],
         [
           {
-            "t": "Central real estate",
-            "h": "/central-bn.html"
+            "h": "/central-bn.html",
+            "t": "Central real estate"
           }
         ],
         [
           {
-            "t": "Central Park real estate",
-            "h": "/central-park-bs.html"
+            "h": "/central-park-bs.html",
+            "t": "Central Park real estate"
           }
         ],
         [
           {
-            "t": "Deer Lake real estate",
-            "h": "/deer-lake.html"
+            "h": "/deer-lake.html",
+            "t": "Deer Lake real estate"
           }
         ],
         [
           {
-            "t": "Deer Lake Place real estate",
-            "h": "/deer-lake-place.html"
+            "h": "/deer-lake-place.html",
+            "t": "Deer Lake Place real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: alc.gov.bc.ca",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
-          }
-        ],
-        [
-          {
-            "t": "Source: burnaby.ca (2)",
-            "h": "http://www.burnaby.ca/services-and-payments/water-and-sewers/flood-prevention"
-          }
-        ],
-        [
-          {
-            "t": "Source: yourvoice.burnaby.ca",
-            "h": "https://yourvoice.burnaby.ca/agriculture-big-bend"
-          }
-        ],
-        [
-          {
-            "t": "Source: burnaby.ca (4)",
-            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Condo buildings in Big Bend",
       "gen": "tn",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Condo buildings in Big Bend"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Big Bend",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Big Bend"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -253,26 +221,26 @@
         ],
         [
           {
-            "t": "Transit anchors: there is no SkyTrain station in Big Bend; the district is car- and truck-served, and specific TransLink bus routes serving the foreshore streets were not confirmed in the research pass — UNVERIFIED."
+            "t": "Transit anchors: there is no SkyTrain station in Big Bend; the district is car- and truck-served, and specific TransLink bus routes serving the foreshore streets were not confirmed pass — not verified."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Big Bend",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Big Bend"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "City zoning — current bylaw: Burnaby Zoning Bylaw 2026 (No. 14815) was adopted June 9, 2026 and took effect July 1, 2026, replacing the former Burnaby Zoning Bylaw 1965 (Bylaw No. 4742), which is repealed and should be flagged as such wherever a source still cites it. For Big Bend specifically: A1 is the City's agricultural zoning district (chickens may be kept in the A1 district under Zoning Bylaw rules), and the City is updating zoning regulations for agricultural districts through the 2026 rewrite — parcel-level minimum lot sizes and the current district for a specific farm parcel: UNVERIFIED, confirm in writing with the City and the ALC."
+            "t": "City zoning — current bylaw: Burnaby Zoning Bylaw 2026 (No. 14815) was adopted June 9, 2026 and took effect July 1, 2026, replacing the former Burnaby Zoning Bylaw 1965 (Bylaw No. 4742), which is repealed and should be flagged as such wherever a source still cites it. For Big Bend specifically: A1 is the City's agricultural zoning district (chickens may be kept in the A1 district under Zoning Bylaw rules), and the City is updating zoning regulations for agricultural districts through the 2026 rewrite — parcel-level minimum lot sizes and the current district for a specific farm parcel: Not verified, confirm in writing with the City and the ALC."
           }
         ],
         [
@@ -286,18 +254,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Big Bend",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Big Bend"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -326,130 +294,130 @@
         ],
         [
           {
-            "t": "There is no in-area school, library or hospital to market. None was confirmed inside the district in the research pass — services sit up the slope (Tommy Douglas Library, 7311 Kingsway; Burnaby Hospital, 3935 Kincaid St). Copy claiming in-area amenities for a Big Bend property should be treated as unverified until a source states it."
+            "t": "There is no in-area school, library or hospital to market. None was confirmed inside the district pass — services sit up the slope (Tommy Douglas Library, 7311 Kingsway; Burnaby Hospital, 3935 Kincaid St). Copy claiming in-area amenities for a Big Bend property should be treated as unverified until a source states it."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Big Bend",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Big Bend"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "vancouverhomesearch.com · big bend real estate",
-            "h": "https://www.vancouverhomesearch.com/big-bend-real-estate/"
+            "h": "https://www.vancouverhomesearch.com/big-bend-real-estate/",
+            "t": "vancouverhomesearch.com · big bend real estate"
           }
         ],
         [
           {
-            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for ",
-            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/"
+            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/",
+            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "equitylawgroup.ca · closing costs bc home purchase",
-            "h": "https://www.equitylawgroup.ca/news/closing-costs-bc-home-purchase"
+            "h": "https://www.equitylawgroup.ca/news/closing-costs-bc-home-purchase",
+            "t": "equitylawgroup.ca · closing costs bc home purchase"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ],
         [
           {
-            "t": "homecalc.ca · first time home buyer programs canada",
-            "h": "https://homecalc.ca/first-time-home-buyer-programs-canada"
+            "h": "https://homecalc.ca/first-time-home-buyer-programs-canada",
+            "t": "homecalc.ca · first time home buyer programs canada"
           }
         ],
         [
           {
-            "t": "cmhc-schl.gc.ca · second home",
-            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home"
+            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home",
+            "t": "cmhc-schl.gc.ca · second home"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Big Bend",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Big Bend",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Big Bend"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Big Bend"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Boundaries: the City publishes no street-by-street written boundary for the MLS sub-area — exact MLS boundary streets are UNVERIFIED. The City describes the lowland as nearly 800 hectares between the steep south slope and the river, along nearly 7 km of the North Arm of the Fraser River. Nearby areas: South Slope and Garden Village above the bluff to the north, Edmonds to the north-east, the Glenlyon / Byrne Creek industrial lands within the wider south Burnaby employment area, and Richmond across the North Arm to the south. Marine Way / Marine Drive runs along the top of the foreshore flats and Byrne Road and Sussex Avenue descend to the river lands."
+            "t": "Boundaries: the City publishes no street-by-street written boundary for the MLS sub-area — exact MLS boundary streets are not verified. The City describes the lowland as nearly 800 hectares between the steep south slope and the river, along nearly 7 km of the North Arm of the Fraser River. Nearby areas: South Slope and Garden Village above the bluff to the north, Edmonds to the north-east, the Glenlyon / Byrne Creek industrial lands within the wider south Burnaby employment area, and Richmond across the North Arm to the south. Marine Way / Marine Drive runs along the top of the foreshore flats and Byrne Road and Sussex Avenue descend to the river lands."
           }
         ],
         [
           {
-            "t": "Where the townhouse stock concentrates: nowhere —. As of September 2026, Source: SnapStats GVR September 2026 report."
+            "t": "Where the townhouse stock concentrates: nowhere —. (SnapStats, September 2026)"
           }
         ],
         [
           {
-            "t": "Community context (SnapStats publishes medians at community level only — there is no Big Bend sub-area median): Burnaby condos & townhomes median was $686,000 in September 2026 ($763/sqft, 98% sale-to-list, 36 days on market), cited exactly as the report states it, as \"Condos & Townhomes\" COMBINED, never as a townhome-only figure — and in Big Bend's case it prices other sub-areas' stock, not anything in this district. As of September 2026, Source: SnapStats GVR September 2026 report."
+            "t": "Community context (SnapStats publishes medians at community level only — there is no Big Bend sub-area median): Burnaby condos & townhomes median was $686,000 in September 2026 ($763/sqft, 98% sale-to-list, 36 days on market), cited exactly as the report states it, as \"Condos & Townhomes\" COMBINED, never as a townhome-only figure — and in Big Bend's case it prices other sub-areas' stock, not anything in this district. (SnapStats, September 2026)"
           }
         ],
         [
@@ -464,22 +432,22 @@
         ],
         [
           {
-            "t": "Schools, library, health, transit: no public school inside Big Bend was confirmed on the Province's SD41 list — SD41 has no middle-school tier (elementary K–7, secondary 8–12), catchments are address-based, and the specific schools for a Big Bend / Riverside address are UNVERIFIED (check the exact address in the SD41 locator). The nearest library branch is the Tommy Douglas Branch, 7311 Kingsway, up the slope in Edmonds; the city's hospital is Burnaby Hospital, 3935 Kincaid St. There is no SkyTrain station in Big Bend — the district is car- and truck-served, and specific TransLink bus routes serving the foreshore streets were not confirmed: UNVERIFIED."
+            "t": "Schools, library, health, transit: no public school inside Big Bend was confirmed on the Province's SD41 list — SD41 has no middle-school tier (elementary K–7, secondary 8–12), catchments are address-based, and the specific schools for a Big Bend / Riverside address are not verified (check the exact address in the SD41 locator). The nearest library branch is the Tommy Douglas Branch, 7311 Kingsway, up the slope in Edmonds; the city's hospital is Burnaby Hospital, 3935 Kincaid St. There is no SkyTrain station in Big Bend — the district is car- and truck-served, and specific TransLink bus routes serving the foreshore streets were not confirmed: Not verified."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Big Bend",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Big Bend"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -492,22 +460,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Big Bend",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Big Bend"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Zero is the honest market statistic. As of September 2026, Source: SnapStats GVR September 2026 report."
+            "t": "Zero is the honest market statistic. (SnapStats, September 2026)"
           }
         ],
         [
@@ -532,146 +500,146 @@
         ],
         [
           {
-            "t": "There is no population to quote. A Big Bend–only population figure is UNVERIFIED — no official source read states one, because the district is mostly farmland, park and industrial land. Any page giving Big Bend a neighbourhood population is inventing it."
+            "t": "There is no population to quote. A Big Bend–only population figure is not verified — no official source read states one, because the district is mostly farmland, park and industrial land. Any page giving Big Bend a neighbourhood population is inventing it."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Big Bend",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Big Bend"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "burnaby.ca · flood prevention",
-            "h": "http://www.burnaby.ca/services-and-payments/water-and-sewers/flood-prevention"
+            "h": "http://www.burnaby.ca/services-and-payments/water-and-sewers/flood-prevention",
+            "t": "burnaby.ca · flood prevention"
           }
         ],
         [
           {
-            "t": "burnaby.ca · town centres",
-            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres"
+            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres",
+            "t": "burnaby.ca · town centres"
           }
         ],
         [
           {
-            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun",
-            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan"
+            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan",
+            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun"
           }
         ],
         [
           {
-            "t": "yourvoice.burnaby.ca · agriculture big bend",
-            "h": "https://yourvoice.burnaby.ca/agriculture-big-bend"
+            "h": "https://yourvoice.burnaby.ca/agriculture-big-bend",
+            "t": "yourvoice.burnaby.ca · agriculture big bend"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "burnabyschools.ca · about sd41 overview",
-            "h": "https://burnabyschools.ca/about-sd41-overview/"
+            "h": "https://burnabyschools.ca/about-sd41-overview/",
+            "t": "burnabyschools.ca · about sd41 overview"
           }
         ],
         [
           {
-            "t": "burnaby.ca · burnaby public library",
-            "h": "https://www.burnaby.ca/our-city/city-departments/burnaby-public-library"
+            "h": "https://www.burnaby.ca/our-city/city-departments/burnaby-public-library",
+            "t": "burnaby.ca · burnaby public library"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · burnaby hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital",
+            "t": "fraserhealth.ca · burnaby hospital"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ],
         [
           {
-            "t": "yourvoice.burnaby.ca · economic development employment and industrial l",
-            "h": "https://yourvoice.burnaby.ca/burnaby-2050-planning-our-city-together/burnaby-2050-policy-guide-share-your-feedback/economic-development-employment-and-industrial-lands"
+            "h": "https://yourvoice.burnaby.ca/burnaby-2050-planning-our-city-together/burnaby-2050-policy-guide-share-your-feedback/economic-development-employment-and-industrial-lands",
+            "t": "yourvoice.burnaby.ca · economic development employment and industrial l"
           }
         ],
         [
           {
-            "t": "vancouverhomesearch.com · big bend real estate",
-            "h": "https://www.vancouverhomesearch.com/big-bend-real-estate/"
+            "h": "https://www.vancouverhomesearch.com/big-bend-real-estate/",
+            "t": "vancouverhomesearch.com · big bend real estate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Big Bend",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "ALR farm land",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Big Bend"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "ALR farm land"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -694,18 +662,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Industrial land",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Industrial land"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -714,22 +682,22 @@
         ],
         [
           {
-            "t": "Commercial/industrial land tax treatment: UNCONFIRMED: — the research is silent on a commercial/industrial land tax position for Big Bend parcels, and none is filled in here."
+            "t": "Commercial/industrial land tax treatment: Not confirmed: — the research is silent on a commercial/industrial land tax position for Big Bend parcels, and none is filled in here."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Bare-land strata",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Bare-land strata"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -737,18 +705,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Named developments, assemblies and proposals",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Named developments, assemblies and proposals"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -756,22 +724,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Big Bend",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Big Bend"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Big Bend is in the City of Burnaby, BC — the City's main agricultural area in south Burnaby, on the Fraser River foreshore flats below the city's steep south slope. \"Big Bend\" is the GVR board sub-area name as it appears in the SnapStats GVR September 2026 report under community \"Burnaby\", and it matches the name the City of Burnaby itself uses for its south Burnaby agricultural area. (as of September 2026, Source: SnapStats GVR September 2026 report)"
+            "t": "Big Bend is in the City of Burnaby, BC — the City's main agricultural area in south Burnaby, on the Fraser River foreshore flats below the city's steep south slope. \"Big Bend\" is the GVR board sub-area name as it appears in the SnapStats GVR September 2026 report under community \"Burnaby\", and it matches the name the City of Burnaby itself uses for its south Burnaby agricultural area. (SnapStats, September 2026)"
           }
         ],
         [
@@ -781,12 +749,12 @@
         ],
         [
           {
-            "t": "Roads and transit: Marine Way / Marine Drive runs along the top of the foreshore flats and Byrne Road and Sussex Avenue descend to the river lands; Highway 1 and the Edmonds / Metrotown town centres are north up the slope. Commute times in minutes: UNVERIFIED."
+            "t": "Roads and transit: Marine Way / Marine Drive runs along the top of the foreshore flats and Byrne Road and Sussex Avenue descend to the river lands; Highway 1 and the Edmonds / Metrotown town centres are north up the slope. Commute times in minutes: Not verified."
           }
         ],
         [
           {
-            "t": "The nearest library branch is the Tommy Douglas Branch, 7311 Kingsway, up the slope in Edmonds (Burnaby Public Library has four branches, one in each quadrant). The city's hospital is Burnaby Hospital, 3935 Kincaid St (Fraser Health), in central Burnaby. Farm-gate and nursery sales in the Big Bend farming district are promoted on the City's Burnaby Farm Tour Map; a main shopping centre in the area is not confirmed on an official source: UNVERIFIED — everyday shopping is up the slope in Edmonds and South Slope."
+            "t": "The nearest library branch is the Tommy Douglas Branch, 7311 Kingsway, up the slope in Edmonds (Burnaby Public Library has four branches, one in each quadrant). The city's hospital is Burnaby Hospital, 3935 Kincaid St (Fraser Health), in central Burnaby. Farm-gate and nursery sales in the Big Bend farming district are promoted on the City's Burnaby Farm Tour Map; a main shopping centre in the area is not confirmed on an official source: Not verified — everyday shopping is up the slope in Edmonds and South Slope."
           }
         ],
         [
@@ -796,31 +764,31 @@
         ],
         [
           {
-            "t": "Market context, labelled correctly: Burnaby IS a SnapStats-covered community, and SnapStats has NO land category — the figures here are labelled community/sub-area context only, never land figures. Burnaby community detached median $1,825,000 and condos & townhomes median $686,000. Sub-area medians are UNVERIFIED (SnapStats publishes medians at community level only)."
+            "t": "Market context, labelled correctly: Burnaby IS a SnapStats-covered community, and SnapStats has NO land category — the figures here are labelled community/sub-area context only, never land figures. Burnaby community detached median $1,825,000 and condos & townhomes median $686,000. Sub-area medians are not verified (SnapStats publishes medians at community level only)."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Big Bend",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Big Bend"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Zoning — Burnaby Zoning Bylaw 2026, No. 14815 (in effect July 1, 2026): the new Burnaby Zoning Bylaw 2026 was adopted June 9, 2026 and took effect July 1, 2026, and the City is updating zoning regulations for agricultural districts through that rewrite. A1 is the City's agricultural zoning district in Big Bend (chickens may be kept in the A1 district under Zoning Bylaw rules). Parcel-level minimum lot sizes and the current district for a specific Big Bend farm parcel: UNVERIFIED — an A1 assumption from the old bylaw is not enough for a farm purchase; verify the current zoning district in writing with the City and the ALC."
+            "t": "Zoning — Burnaby Zoning Bylaw 2026, No. 14815 (in effect July 1, 2026): the new Burnaby Zoning Bylaw 2026 was adopted June 9, 2026 and took effect July 1, 2026, and the City is updating zoning regulations for agricultural districts through that rewrite. A1 is the City's agricultural zoning district in Big Bend (chickens may be kept in the A1 district under Zoning Bylaw rules). Parcel-level minimum lot sizes and the current district for a specific Big Bend farm parcel: Not verified — an A1 assumption from the old bylaw is not enough for a farm purchase; verify the current zoning district in writing with the City and the ALC."
           }
         ],
         [
           {
-            "t": "Subdivision + servicing — process documented, base number HELD UNCONFIRMED: subdivision of a Big Bend parcel runs through the City's subdivision process under its subdivision servicing bylaw framework, with servicing standards confirmed with the City for the specific parcel and, for ALR parcels, ALC approval engaged first (below)."
+            "t": "Subdivision + servicing — process documented, base number HELD not confirmed: subdivision of a Big Bend parcel runs through the City's subdivision process under its subdivision servicing bylaw framework, with servicing standards confirmed with the City for the specific parcel and, for ALR parcels, ALC approval engaged first (below)."
           }
         ],
         [
@@ -835,22 +803,22 @@
         ],
         [
           {
-            "t": "Burnaby property taxes and farm class: City of Burnaby property taxes for 2026 were due Friday, July 3, 2026; a 5% penalty applies to outstanding current taxes after the July due date, with a further 5% penalty after the September due date. Farm-class assessment and tax treatment for a specific Big Bend parcel is a BC Assessment / tax-notice check per property: UNVERIFIED here — confirm farm-class status and what transfers with the sale, because the tax treatment drives the carrying cost. Burnaby's published 2026 residential utility notice covers annual water, sewer use and garbage fees for residential properties; farm and industrial utility charges for a specific Big Bend property: UNVERIFIED."
+            "t": "Burnaby property taxes and farm class: City of Burnaby property taxes for 2026 were due Friday, July 3, 2026; a 5% penalty applies to outstanding current taxes after the July due date, with a further 5% penalty after the September due date. Farm-class assessment and tax treatment for a specific Big Bend parcel is a BC Assessment / tax-notice check per property: Not verified here — confirm farm-class status and what transfers with the sale, because the tax treatment drives the carrying cost. Burnaby's published 2026 residential utility notice covers annual water, sewer use and garbage fees for residential properties; farm and industrial utility charges for a specific Big Bend property: Not verified."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Big Bend",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Big Bend"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -863,148 +831,148 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Big Bend",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Big Bend"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "burnaby.ca · flood prevention",
-            "h": "http://www.burnaby.ca/services-and-payments/water-and-sewers/flood-prevention"
+            "h": "http://www.burnaby.ca/services-and-payments/water-and-sewers/flood-prevention",
+            "t": "burnaby.ca · flood prevention"
           }
         ],
         [
           {
-            "t": "burnaby.ca · town centres",
-            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres"
+            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres",
+            "t": "burnaby.ca · town centres"
           }
         ],
         [
           {
-            "t": "burnaby.ca · burnaby public library",
-            "h": "https://www.burnaby.ca/our-city/city-departments/burnaby-public-library"
+            "h": "https://www.burnaby.ca/our-city/city-departments/burnaby-public-library",
+            "t": "burnaby.ca · burnaby public library"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · burnaby hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital",
+            "t": "fraserhealth.ca · burnaby hospital"
           }
         ],
         [
           {
-            "t": "yourvoice.burnaby.ca · agriculture big bend",
-            "h": "https://yourvoice.burnaby.ca/agriculture-big-bend"
+            "h": "https://yourvoice.burnaby.ca/agriculture-big-bend",
+            "t": "yourvoice.burnaby.ca · agriculture big bend"
           }
         ],
         [
           {
-            "t": "burnabyschools.ca · about sd41 overview",
-            "h": "https://burnabyschools.ca/about-sd41-overview/"
+            "h": "https://burnabyschools.ca/about-sd41-overview/",
+            "t": "burnabyschools.ca · about sd41 overview"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun",
-            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan"
+            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan",
+            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ],
         [
           {
-            "t": "burnaby.ca · residential utility fees",
-            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees"
+            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees",
+            "t": "burnaby.ca · residential utility fees"
           }
         ],
         [
           {
-            "t": "yourvoice.burnaby.ca · economic development employment and industrial l",
-            "h": "https://yourvoice.burnaby.ca/burnaby-2050-planning-our-city-together/burnaby-2050-policy-guide-share-your-feedback/economic-development-employment-and-industrial-lands"
+            "h": "https://yourvoice.burnaby.ca/burnaby-2050-planning-our-city-together/burnaby-2050-policy-guide-share-your-feedback/economic-development-employment-and-industrial-lands",
+            "t": "yourvoice.burnaby.ca · economic development employment and industrial l"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · first time home buyers",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers",
+            "t": "www2.gov.bc.ca · first time home buyers"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 2,
-      "text": "Acreage and rural land in Big Bend",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "There is NO residential subdivision market here: no named fee-simple bare-land subdivision, no bare-land strata acreage community and no presale LOT offering was verified, and no individual farm, building or complex name was confirmed on an official or developer source.",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The ground in Big Bend",
-      "gen": "acre",
-      "pos": "end"
+      "text": "Acreage and rural land in Big Bend"
     },
     {
-      "t": "list",
+      "gen": "acre",
+      "pos": "end",
+      "t": "p",
+      "text": "There is NO residential subdivision market here: no named fee-simple bare-land subdivision, no bare-land strata acreage community and no presale LOT offering was verified, and no individual farm, building or complex name was confirmed on an official or developer source."
+    },
+    {
+      "gen": "acre",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The ground in Big Bend"
+    },
+    {
+      "gen": "acre",
       "items": [
         [
           {
@@ -1022,18 +990,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Streets, schools and getting around Big Bend",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Big Bend"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -1041,18 +1009,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Local rules that affect acreage buyers in Big Bend",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect acreage buyers in Big Bend"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -1060,136 +1028,136 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "acre",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below.",
-      "gen": "acre",
-      "pos": "end"
+      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "BC acreage buying rules",
-            "h": "/bc-acreage-buying-rules.html"
+            "h": "/bc-acreage-buying-rules.html",
+            "t": "BC acreage buying rules"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Sources for the acreage notes on Big Bend",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the acreage notes on Big Bend"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "burnaby.ca · flood prevention",
-            "h": "http://www.burnaby.ca/services-and-payments/water-and-sewers/flood-prevention"
+            "h": "http://www.burnaby.ca/services-and-payments/water-and-sewers/flood-prevention",
+            "t": "burnaby.ca · flood prevention"
           }
         ],
         [
           {
-            "t": "burnaby.ca · town centres",
-            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres"
+            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres",
+            "t": "burnaby.ca · town centres"
           }
         ],
         [
           {
-            "t": "burnaby.ca · burnaby public library",
-            "h": "https://www.burnaby.ca/our-city/city-departments/burnaby-public-library"
+            "h": "https://www.burnaby.ca/our-city/city-departments/burnaby-public-library",
+            "t": "burnaby.ca · burnaby public library"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · burnaby hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital",
+            "t": "fraserhealth.ca · burnaby hospital"
           }
         ],
         [
           {
-            "t": "yourvoice.burnaby.ca · agriculture big bend",
-            "h": "https://yourvoice.burnaby.ca/agriculture-big-bend"
+            "h": "https://yourvoice.burnaby.ca/agriculture-big-bend",
+            "t": "yourvoice.burnaby.ca · agriculture big bend"
           }
         ],
         [
           {
-            "t": "burnabyschools.ca · about sd41 overview",
-            "h": "https://burnabyschools.ca/about-sd41-overview/"
+            "h": "https://burnabyschools.ca/about-sd41-overview/",
+            "t": "burnabyschools.ca · about sd41 overview"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun",
-            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan"
+            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan",
+            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun"
           }
         ],
         [
           {
-            "t": "yourvoice.burnaby.ca · economic development employment and industrial l",
-            "h": "https://yourvoice.burnaby.ca/burnaby-2050-planning-our-city-together/burnaby-2050-policy-guide-share-your-feedback/economic-development-employment-and-industrial-lands"
+            "h": "https://yourvoice.burnaby.ca/burnaby-2050-planning-our-city-together/burnaby-2050-policy-guide-share-your-feedback/economic-development-employment-and-industrial-lands",
+            "t": "yourvoice.burnaby.ca · economic development employment and industrial l"
           }
         ],
         [
           {
-            "t": "burnaby.ca · residential utility fees",
-            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees"
+            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees",
+            "t": "burnaby.ca · residential utility fees"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Big Bend",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Big Bend"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -1202,18 +1170,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1226,18 +1194,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1250,25 +1218,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Glenwood Elementary, 5787 Marine Drive, Burnaby",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Clinton Elementary",
@@ -1295,18 +1264,17 @@
           "3.9"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1314,14 +1282,52 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt116.pdf",
+            "t": "infomaps.translink.ca · tt116"
+          }
+        ],
+        [
+          {
+            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/outdoor-fitness-circuits",
+            "t": "burnaby.ca · outdoor fitness circuits"
+          }
+        ],
+        [
+          {
+            "h": "https://bpl.bc.ca/images/documents/BPL-Community-Room-Application-form-all-branches-2025-01-Code-of-Conduct-specified.pdf",
+            "t": "bpl.bc.ca · BPL Community Room Application form all branches"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -1329,34 +1335,78 @@
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt116",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt116.pdf"
+            "t": "Source: alc.gov.bc.ca",
+            "h": "https://www.alc.gov.bc.ca/alr-maps"
           }
         ],
         [
           {
-            "t": "burnaby.ca · outdoor fitness circuits",
-            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/outdoor-fitness-circuits"
+            "t": "Source: burnaby.ca",
+            "h": "http://www.burnaby.ca/services-and-payments/water-and-sewers/flood-prevention"
           }
         ],
         [
           {
-            "t": "bpl.bc.ca · BPL Community Room Application form all branches",
-            "h": "https://bpl.bc.ca/images/documents/BPL-Community-Room-Application-form-all-branches-2025-01-Code-of-Conduct-specified.pdf"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "t": "Source: yourvoice.burnaby.ca",
+            "h": "https://yourvoice.burnaby.ca/agriculture-big-bend"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
+    {
+      "a": "Working farms and nurseries on ALR land (including the historic Chinese Canadian small-scale farms the City documents), industrial properties on the river employment lands, and rural-residential homes in the Riverside pocket.",
+      "gen": "tn",
+      "q": "What actually sells here, then?"
+    },
+    {
+      "a": "That is an ALR question, not a zoning-bylaw question alone: ALR status and permitted farm / non-farm uses are checked in the Agricultural Land Commission's ALR Property and Map Finder, and the Burnaby 2050 OCP supports protecting and expanding agriculture in Big Bend. Do not price development or non-farm value into a parcel before that check.",
+      "gen": "tn",
+      "q": "Can I build homes or a non-farm business on a Big Bend farm parcel?"
+    },
+    {
+      "a": "A1 is the City's agricultural district in Big Bend, but the Burnaby Zoning Bylaw 2026 took effect July 1, 2026 and agricultural-district rules were being updated through the rewrite — an A1 assumption from the old (repealed) 1965 bylaw is not enough. Parcel-level district and minimum lot size: Not verified — confirm in writing with the City and the ALC.",
+      "gen": "tn",
+      "q": "What is the current zoning for a farm parcel?"
+    },
+    {
+      "a": "The district is ALR farmland, river industrial lands, foreshore park and a small freehold rural-residential pocket.",
+      "gen": "tn",
+      "q": "Are there any townhomes to buy in Big Bend?"
+    },
+    {
+      "a": "Working farms and nurseries on ALR land (including the historic Chinese Canadian small-scale farms the City documents), industrial properties on the river employment lands, and rural-residential homes in the Riverside pocket — plus Burnaby Fraser Foreshore Park on the river.",
+      "gen": "tn",
+      "q": "What kinds of properties are in Big Bend, then?"
+    },
+    {
+      "a": "Burnaby-wide, the combined condos & townhomes median was $686,000 — a community figure for other sub-areas' stock. (SnapStats, September 2026)",
+      "gen": "tn",
+      "q": "What sold in Big Bend in September 2026?"
+    },
+    {
+      "a": "No — on the City's own sources it is primarily an industrial and agricultural district: ALR farmland, river industrial lands, a foreshore park and a small rural-residential pocket (Riverside). There is no subdivision housing market and no verified lot offering; residential buying here means an existing Riverside home on its lot.",
+      "gen": "tn",
+      "q": "Is Big Bend a residential neighbourhood where I can buy a building lot?"
+    },
+    {
+      "a": "Farm parcels on ALR land (the core of the district), industrial parcels and buildings on the river employment lands (worked in process terms only), and rural-residential homes in the Riverside pocket.",
+      "gen": "acre",
+      "q": "What actually trades here as land?"
+    },
+    {
+      "a": "Start with the ALR, not the city: subdivision within the ALR requires ALC approval, ALR residences cannot be stratified, and residence caps apply (principal ≤500 m², suite within principal only, additional residence 90 m² on parcels 40 ha or less / 186 m² over 40 ha). Then verify the parcel's current district under Burnaby Zoning Bylaw 2026 (No. 14815, in effect July 1, 2026) in writing — agricultural-district rules were being updated through the rewrite.",
+      "gen": "acre",
+      "q": "Can I subdivide or build a second home on a Big Bend farm?"
+    },
+    {
+      "a": "In the ALC's ALR Property and Map Finder — confirm ALR status, permitted farm uses and any non-farm-use restrictions before pricing development or non-farm value into the property. The same check runs first on any industrial parcel with an ALR edge.",
+      "gen": "acre",
+      "q": "How do I check what a farm parcel is allowed to do?"
+    },
     {
       "q": "Is Big Bend farmland protected?",
       "a": "Yes — land in Big Bend is in the Agricultural Land Reserve administered by the Agricultural Land Commission, and the Burnaby 2050 Official Community Plan supports protecting and expanding agriculture there.",
@@ -1368,69 +1418,12 @@
       "gen": "muse"
     },
     {
-      "q": "What sold in Big Bend in September 2026?",
-      "a": "Nothing — 0 solds from 2 detached listings and 0 solds from 3 condos & townhomes listings, so no sales ratio is applicable and no price conclusion can be drawn from the month. Burnaby-wide, the median detached sale price was $1,825,000 and the condos & townhomes median was $686,000 (as of September 2026, Source: SnapStats GVR September 2026 report).",
-      "gen": "muse"
-    },
-    {
       "q": "What kinds of properties are in Big Bend?",
       "a": "Working farms and nurseries on ALR land, industrial properties on the river employment lands, and rural-residential homes in the Riverside pocket — plus Burnaby Fraser Foreshore Park on the river.",
       "gen": "muse"
-    },
-    {
-      "q": "Is there SkyTrain service in Big Bend?",
-      "a": "No — there is no station in the district; Big Bend is car- and truck-served, with the town centres and stations of Edmonds and Metrotown up the south slope.",
-      "gen": "muse"
-    },
-    {
-      "gen": "tn",
-      "q": "Are there any apartment condos to buy in Big Bend?",
-      "a": "None verified."
-    },
-    {
-      "gen": "tn",
-      "q": "What actually sells here, then?",
-      "a": "Working farms and nurseries on ALR land (including the historic Chinese Canadian small-scale farms the City documents), industrial properties on the river employment lands, and rural-residential homes in the Riverside pocket."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I build homes or a non-farm business on a Big Bend farm parcel?",
-      "a": "That is an ALR question, not a zoning-bylaw question alone: ALR status and permitted farm / non-farm uses are checked in the Agricultural Land Commission's ALR Property and Map Finder, and the Burnaby 2050 OCP supports protecting and expanding agriculture in Big Bend. Do not price development or non-farm value into a parcel before that check."
-    },
-    {
-      "gen": "tn",
-      "q": "What is the current zoning for a farm parcel?",
-      "a": "A1 is the City's agricultural district in Big Bend, but the Burnaby Zoning Bylaw 2026 took effect July 1, 2026 and agricultural-district rules were being updated through the rewrite — an A1 assumption from the old (repealed) 1965 bylaw is not enough. Parcel-level district and minimum lot size: UNVERIFIED — confirm in writing with the City and the ALC."
-    },
-    {
-      "gen": "tn",
-      "q": "Are there any townhomes to buy in Big Bend?",
-      "a": "The district is ALR farmland, river industrial lands, foreshore park and a small freehold rural-residential pocket."
-    },
-    {
-      "gen": "tn",
-      "q": "What kinds of properties are in Big Bend, then?",
-      "a": "Working farms and nurseries on ALR land (including the historic Chinese Canadian small-scale farms the City documents), industrial properties on the river employment lands, and rural-residential homes in the Riverside pocket — plus Burnaby Fraser Foreshore Park on the river."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Big Bend a residential neighbourhood where I can buy a building lot?",
-      "a": "No — on the City's own sources it is primarily an industrial and agricultural district: ALR farmland, river industrial lands, a foreshore park and a small rural-residential pocket (Riverside). There is no subdivision housing market and no verified lot offering; residential buying here means an existing Riverside home on its lot."
-    },
-    {
-      "gen": "tn",
-      "q": "What actually trades here as land?",
-      "a": "Farm parcels on ALR land (the core of the district), industrial parcels and buildings on the river employment lands, and rural-residential homes in the Riverside pocket."
-    },
-    {
-      "gen": "acre",
-      "q": "Can I subdivide or build a second home on a Big Bend farm?",
-      "a": "Start with the ALR, not the city: subdivision within the ALR requires ALC approval, ALR residences cannot be stratified, and residence caps apply (principal ≤500 m², suite within principal only, additional residence 90 m² on parcels 40 ha or less / 186 m² over 40 ha). Then verify the parcel's current district under Burnaby Zoning Bylaw 2026 (No. 14815, in effect July 1, 2026) in writing — agricultural-district rules were being updated through the rewrite."
-    },
-    {
-      "gen": "acre",
-      "q": "How do I check what a farm parcel is allowed to do?",
-      "a": "In the ALC's ALR Property and Map Finder — confirm ALR status, permitted farm uses and any non-farm-use restrictions before pricing development or non-farm value into the property. The same check runs first on any industrial parcel with an ALR edge."
     }
-  ]
+  ],
+  "slug": "big-bend",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

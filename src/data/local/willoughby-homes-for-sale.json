@@ -1,50 +1,27 @@
 {
-  "status": "draft",
-  "slug": "willoughby-homes-for-sale",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: tol.ca",
-            "h": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-100-Administration.pdf"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "What's nearby Willoughby",
       "gen": "nb",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby Willoughby"
     },
     {
+      "gen": "nb",
+      "pos": "end",
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -67,18 +44,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -91,18 +68,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -125,18 +102,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -144,25 +121,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Willoughby Elementary, 20766 80 Ave",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Langley Events Centre",
@@ -189,18 +167,17 @@
           "4.4"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -213,76 +190,61 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt595",
-            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt595.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt595.pdf",
+            "t": "infomaps.translink.ca · tt595"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=66&schedule=1529716378199"
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=66&schedule=1529716378199",
+            "t": "bctransit.com · route overview"
           }
         ],
         [
           {
-            "t": "tol.ca · celebrate opening the arenas at langley events c",
-            "h": "https://www.tol.ca/en/news/celebrate-opening-the-arenas-at-langley-events-centre.aspx"
+            "h": "https://www.tol.ca/en/news/celebrate-opening-the-arenas-at-langley-events-centre.aspx",
+            "t": "tol.ca · celebrate opening the arenas at langley events c"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca",
-            "h": "https://www.fvrl.bc.ca/"
+            "h": "https://www.fvrl.bc.ca/",
+            "t": "fvrl.bc.ca"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/035"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/035",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "willoughbytowncentre.ca · shops services",
-            "h": "https://willoughbytowncentre.ca/shops-services/"
+            "h": "https://willoughbytowncentre.ca/shops-services/",
+            "t": "willoughbytowncentre.ca · shops services"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
-    {
-      "q": "Is Willoughby the same as Willoughby Heights?",
-      "a": "The Township's planning name is Willoughby; the board's sub-area name — the name on every card on this page — is Willoughby Heights (~/workspace/area-research-2026-11/batch-2/willoughby-heights.md, read 2026-11-01).",
-      "gen": "muse"
-    },
-    {
-      "q": "How did Willoughby Heights sell in September 2026?",
-      "a": "Detached: 100 listings, 13 sold, 13% sales ratio. Condos & Townhomes: 369 listings, 70 sold, 19% — the largest attached inventory and the largest attached sales count of any Langley sub-area that month. No Willoughby-only median is published; the combined Langley medians (detached $1,345,000; attached $611,000) blend in the City of Langley and the other Township sub-areas and are not Willoughby figures (as of September 2026, Source: SnapStats FVR/GVR September 2026 report).",
-      "gen": "muse"
-    },
-    {
-      "q": "What is a coach house in the Township of Langley?",
-      "a": "Bylaw No. 2500, s.102 defines a coach house as an accessory dwelling unit located only within the second storey of a detached garage on a lot.",
-      "gen": "muse"
-    },
     {
       "q": "Do I need a home inspection when buying in Willoughby?",
       "a": "It is strongly recommended. Make the offer subject to an inspection so a qualified inspector can look at the roof, structure, drainage, electrical and heating before you remove conditions.",
@@ -292,6 +254,19 @@
       "q": "Can I add a suite or coach house to a house in Willoughby?",
       "a": "BC's small-scale multi-unit housing rules allow more homes on many urban lots, but each municipality sets the details and many lots are excluded. Check the lot's zoning with the municipality before you plan a suite or coach house.",
       "gen": "bank-faq"
+    },
+    {
+      "q": "Who can help me buy or sell in Willoughby?",
+      "a": "Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, works across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361 or use the contact form on this site.",
+      "gen": "bank-faq"
+    },
+    {
+      "q": "Can Jared show me homes in Willoughby?",
+      "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
+      "gen": "muse-generic"
     }
-  ]
+  ],
+  "slug": "willoughby-homes-for-sale",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

@@ -13,6 +13,7 @@ EXEMPT = {'testimonials', '404', 'privacy', 'subscribe-to-our-newsletter', 'revi
 import csv
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import trend as TR
+import scrub_research_wording as SC
 import build_snapstats_layers as L
 import build_community_pages as C
 AREA = {r['slug']: r['area'] for r in csv.DictReader(open(os.path.join(ROOT, 'docs/research/muse-keywords-2026-11-01.csv'), encoding='utf-8'))}
@@ -132,9 +133,9 @@ def main():
             m = re.match(r'Q:\s*(.*?)\nA:\s*(.*)', c or '', re.S)
             if not m: continue
             q, a = m.group(1).strip(), m.group(2).strip()
-            if BAD.search(a) or len(a) > 700 or (MARKET.search(q + a) and not DATED.search(a)): continue
-            a, urls = clean(a)
-            if 'http' in a or len(a) < 40: continue
+            if BAD.search(a) or len(a) > 700 or (MARKET.search(q + a) and not DATED.search(a)) or re.search(r'\b(?:January|February|March|April|May|June|July|August|September|October|November|December) 20\d\d\b', q): continue   # a question about one month's figures goes stale; we compute our own
+            a0 = a; a, urls = clean(a); a = SC.scrub(a); q = SC.scrub(q)   # no research wording reaches a page
+            if 'http' in a or len(a) < 40 or len(a) < 0.6 * len(a0): continue
             items.append({'q': q, 'a': a, 'gen': 'muse', 'urls': urls})
         muse[r[0]] = items
     pages = {os.path.basename(f)[:-5]: json.load(open(f, encoding='utf-8')) for f in glob.glob(os.path.join(ROOT, 'src/data/pages/*.json'))}
@@ -185,7 +186,7 @@ def main():
                          (f'How do I find out what my home{where} is worth?', 'Jared prepares a home evaluation from recent comparable sales and the condition of your home. Contact him on 604-928-1361 or through the form on this site to arrange one.')):
                 if len(faq) < 4: faq.append({'q': q, 'a': a, 'gen': 'muse-generic'})
             n_gen += 1
-        if len(own) == len(faq): continue
+        if faq == (j.get('faq') or []): continue   # rewrite when the list changed, so stale generated FAQs (a past month's figures) are cleared
         j['faq'] = faq
         urls = []
         for p in pick:

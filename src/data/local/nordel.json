@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "nordel",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Nordel homes listed and sold, June to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Nordel homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Nordel, September 2026. Detached houses: 56 listed at month end and 6 sold in September, a sales ratio of 11% (a buyers’ market). Condos and townhomes: 12 listed at month end and 2 sold in September, a sales ratio of 17% (a balanced market).",
-      "gen": "snapstats"
+      "text": "Nordel, October 2026. Detached houses: 57 listed at month end and 10 sold in October, a sales ratio of 18% (a balanced market). Condos and townhomes: 16 listed at month end and 2 sold in October, a sales ratio of 13% (a balanced market)."
     },
     {
-      "t": "table",
       "caption": "Nordel listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -62,176 +59,141 @@
           "12",
           "2",
           "17%"
+        ],
+        [
+          "October 2026",
+          "57",
+          "10",
+          "18%",
+          "16",
+          "2",
+          "13%"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 37 sold over 4 months against an average of 58.8 listed, about 6.4 months of listings at that pace; the busiest month was June with 12 sold. Condos and townhomes: 9 sold over 4 months against an average of 12.2 listed, about 5.4 months of listings at that pace; the busiest month was July with 4 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 47 sold over 5 months against an average of 58.4 listed, about 6.2 months of listings at that pace; the busiest month was June with 12 sold. Condos and townhomes: 11 sold over 5 months against an average of 13.0 listed, about 5.9 months of listings at that pace; the busiest month was July with 4 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Nordel by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Nordel by home type"
     },
     {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Nordel houses for sale",
-            "h": "/nordel-north-delta-houses-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Nordel condos and townhomes for sale",
-            "h": "/nordel-north-delta-condos-townhomes-for-sale.html"
-          }
-        ]
-      ],
       "gen": "typepage",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "More North Delta real estate",
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "list",
       "items": [
         [
           {
-            "t": "North Delta homes for sale",
-            "h": "/north-delta-homes-for-sale.html"
+            "h": "/nordel-north-delta-houses-for-sale.html",
+            "t": "Nordel houses for sale"
           }
         ],
         [
           {
-            "t": "North Delta real estate market stats",
-            "h": "/delta-real-estate-market-stats.html"
-          }
-        ],
-        [
-          {
-            "t": "North Delta condos for sale",
-            "h": "/north-delta-condos-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "North Delta townhomes for sale",
-            "h": "/north-delta-townhomes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Sell my house in North Delta",
-            "h": "/sell-my-house-in-delta.html"
-          }
-        ],
-        [
-          {
-            "t": "Nordel neighbourhood guide",
-            "h": "/nordel-guide.html"
-          }
-        ],
-        [
-          {
-            "t": "Scottsdale real estate",
-            "h": "/scottsdale.html"
-          }
-        ],
-        [
-          {
-            "t": "Sunshine Hills Woods real estate",
-            "h": "/sunshine-hills-woods.html"
-          }
-        ],
-        [
-          {
-            "t": "Annieville real estate",
-            "h": "/annieville.html"
+            "h": "/nordel-north-delta-condos-townhomes-for-sale.html",
+            "t": "Nordel condos and townhomes for sale"
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "h",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "More North Delta real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Source: hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com",
-            "h": "https://hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com/8917/7677/0068/OCP_2024_web.pdf"
+            "h": "/north-delta-homes-for-sale.html",
+            "t": "North Delta homes for sale"
           }
         ],
         [
           {
-            "t": "Source: deltasd.bc.ca",
-            "h": "https://www.deltasd.bc.ca/schools/school-locator/"
+            "h": "/delta-real-estate-market-stats.html",
+            "t": "North Delta real estate market stats"
           }
         ],
         [
           {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt312.pdf"
+            "h": "/north-delta-condos-for-sale.html",
+            "t": "North Delta condos for sale"
           }
         ],
         [
           {
-            "t": "Source: delta.ca",
-            "h": "http://www.delta.ca/community-culture/happening-delta/news/city-delta-first-adopt-new-housing-focused-official"
+            "h": "/north-delta-townhomes-for-sale.html",
+            "t": "North Delta townhomes for sale"
           }
         ],
         [
           {
-            "t": "Source: metrovancouver.org",
-            "h": "https://metrovancouver.org/services/regional-parks/park/delta-nature-reserve"
+            "h": "/sell-my-house-in-delta.html",
+            "t": "Sell my house in North Delta"
+          }
+        ],
+        [
+          {
+            "h": "/nordel-guide.html",
+            "t": "Nordel neighbourhood guide"
+          }
+        ],
+        [
+          {
+            "h": "/scottsdale.html",
+            "t": "Scottsdale real estate"
+          }
+        ],
+        [
+          {
+            "h": "/sunshine-hills-woods.html",
+            "t": "Sunshine Hills Woods real estate"
+          }
+        ],
+        [
+          {
+            "h": "/annieville.html",
+            "t": "Annieville real estate"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "What's nearby Nordel",
       "gen": "nb",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby Nordel"
     },
     {
+      "gen": "nb",
+      "pos": "end",
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -254,18 +216,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -283,18 +245,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -312,18 +274,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -331,25 +293,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from North Delta Recreation Centre, 11415 84 Avenue",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Richardson Elementary",
@@ -370,16 +333,16 @@
           "0.6"
         ],
         [
-          "Richardson Elementary",
-          "Drive",
-          "2",
-          "0.4"
-        ],
-        [
           "North Delta Secondary",
           "Drive",
           "2",
           "0.5"
+        ],
+        [
+          "Richardson Elementary",
+          "Drive",
+          "2",
+          "0.4"
         ],
         [
           "George Mackie Library",
@@ -388,18 +351,17 @@
           "0.6"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -407,14 +369,70 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt312.pdf",
+            "t": "infomaps.translink.ca · tt312"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/210/tt391.pdf",
+            "t": "infomaps.translink.ca · tt391"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/north-delta-community-park",
+            "t": "delta.ca · north delta community park"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/north-delta-recreation-centre",
+            "t": "delta.ca · north delta recreation centre"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/events/3255",
+            "t": "fvrl.bc.ca · events"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/037",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "http://www.scottsdalecentre.ca/",
+            "t": "scottsdalecentre.ca"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -422,48 +440,24 @@
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt312",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt312.pdf"
+            "t": "Source: hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com",
+            "h": "https://hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com/8917/7677/0068/OCP_2024_web.pdf"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt391",
-            "h": "https://infomaps.translink.ca/Public_Timetables/210/tt391.pdf"
+            "t": "Source: infomaps.translink.ca",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt312.pdf"
           }
         ],
         [
           {
-            "t": "delta.ca · north delta community park",
-            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/north-delta-community-park"
-          }
-        ],
-        [
-          {
-            "t": "delta.ca · north delta recreation centre",
-            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/north-delta-recreation-centre"
-          }
-        ],
-        [
-          {
-            "t": "fvrl.bc.ca · events",
-            "h": "https://www.fvrl.bc.ca/events/3255"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/037"
-          }
-        ],
-        [
-          {
-            "t": "scottsdalecentre.ca",
-            "h": "http://www.scottsdalecentre.ca/"
+            "t": "Source: metrovancouver.org",
+            "h": "https://metrovancouver.org/services/regional-parks/park/delta-nature-reserve"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
@@ -474,24 +468,27 @@
       "gen": "muse"
     },
     {
-      "q": "Which schools serve a Nordel address?",
-      "a": "It depends on the address. For the sample address 11415 84 Avenue, the SD37 locator result is Richardson Elementary (K–7) and North Delta Secondary (8–12); SD37 has no middle-school tier, and catchments are address-based.",
-      "gen": "muse"
-    },
-    {
       "q": "Which buses serve Nordel?",
       "a": "Route 312 on 112 Street and route 391 on 116 Street, both between Scottsdale Exchange and Scott Road Station (Expo Line), with stops at Nordel Way.",
-      "gen": "muse"
-    },
-    {
-      "q": "Can a Nordel house lot add a suite or garden suite?",
-      "a": "Delta's SSMUH regulations allow secondary suites, coach houses and garden suites in combination with single detached and duplex dwellings where the zoning applies.",
       "gen": "muse"
     },
     {
       "q": "What natural area borders Nordel?",
       "a": "The Delta Nature Reserve, the publicly accessible part of Burns Bog, accessed at 10388 Nordel Court; Burns Bog is protected as an Ecological Conservancy Area.",
       "gen": "muse"
+    },
+    {
+      "q": "How many homes are for sale in Nordel?",
+      "a": "At the end of October 2026 the Fraser Valley Real Estate Board figures showed 57 houses listed with 10 sold in the month and 16 condos and townhomes listed with 2 sold in the month in Nordel. Those are month-end counts and move daily; ask Jared what is on the market today.",
+      "gen": "snap-faq"
+    },
+    {
+      "q": "Is Nordel a buyers’ or sellers’ market?",
+      "a": "In October 2026, houses had a sales ratio of 18%, a balanced market; condos and townhomes had a sales ratio of 13%, a balanced market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers.",
+      "gen": "snap-faq"
     }
-  ]
+  ],
+  "slug": "nordel",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

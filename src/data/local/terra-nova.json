@@ -1,161 +1,114 @@
 {
-  "status": "draft",
-  "slug": "terra-nova",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
-      "level": 2,
-      "text": "More real estate nearby",
       "gen": "relatedlinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More real estate nearby"
     },
     {
-      "t": "list",
+      "gen": "relatedlinks",
       "items": [
         [
           {
-            "t": "Richmond homes for sale",
-            "h": "/richmond-homes-for-sale.html"
+            "h": "/richmond-homes-for-sale.html",
+            "t": "Richmond homes for sale"
           }
         ],
         [
           {
-            "t": "Richmond real estate market stats",
-            "h": "/richmond-real-estate-market-stats.html"
+            "h": "/richmond-real-estate-market-stats.html",
+            "t": "Richmond real estate market stats"
           }
         ],
         [
           {
-            "t": "Schools in Richmond",
-            "h": "/schools-in-richmond-bc.html"
+            "h": "/schools-in-richmond-bc.html",
+            "t": "Schools in Richmond"
           }
         ],
         [
           {
-            "t": "West Cambie real estate",
-            "h": "/west-cambie.html"
+            "h": "/west-cambie.html",
+            "t": "West Cambie real estate"
           }
         ],
         [
           {
-            "t": "Boyd Park real estate",
-            "h": "/boyd-park.html"
+            "h": "/boyd-park.html",
+            "t": "Boyd Park real estate"
           }
         ],
         [
           {
-            "t": "Bridgeport real estate",
-            "h": "/bridgeport-ri.html"
+            "h": "/bridgeport-ri.html",
+            "t": "Bridgeport real estate"
           }
         ],
         [
           {
-            "t": "East Cambie real estate",
-            "h": "/east-cambie.html"
+            "h": "/east-cambie.html",
+            "t": "East Cambie real estate"
           }
         ],
         [
           {
-            "t": "Granville real estate",
-            "h": "/granville.html"
+            "h": "/granville.html",
+            "t": "Granville real estate"
           }
         ],
         [
           {
-            "t": "Quilchena real estate",
-            "h": "/quilchena-ri.html"
+            "h": "/quilchena-ri.html",
+            "t": "Quilchena real estate"
           }
         ],
         [
           {
-            "t": "Riverdale real estate",
-            "h": "/riverdale-ri.html"
+            "h": "/riverdale-ri.html",
+            "t": "Riverdale real estate"
           }
         ],
         [
           {
-            "t": "Seafair real estate",
-            "h": "/seafair.html"
+            "h": "/seafair.html",
+            "t": "Seafair real estate"
           }
         ],
         [
           {
-            "t": "Sea Island real estate",
-            "h": "/seaisland.html"
+            "h": "/seaisland.html",
+            "t": "Sea Island real estate"
           }
         ]
       ],
-      "gen": "relatedlinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: sd38.bc.ca",
-            "h": "https://sd38.bc.ca/schools/locations-catchments"
-          }
-        ],
-        [
-          {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt410.pdf"
-          }
-        ],
-        [
-          {
-            "t": "Source: alc.gov.bc.ca",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
-          }
-        ],
-        [
-          {
-            "t": "Source: richmond.ca",
-            "h": "https://richmond.ca/services/water-sewer-flood/dikes.htm"
-          }
-        ],
-        [
-          {
-            "t": "Source: richmond.ca",
-            "h": "https://www.richmond.ca/parks-recreation/parks/parksearch/park.aspx?id=80"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Terra Nova 55+ homes for sale",
+      "gen": "n55link",
       "h": "/terra-nova-55-plus-homes-for-sale.html",
       "pos": "end",
-      "gen": "n55link"
+      "t": "p",
+      "text": "Terra Nova 55+ homes for sale"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Condo buildings in Terra Nova",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Terra Nova",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Condo buildings in Terra Nova"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Terra Nova"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -168,22 +121,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Terra Nova",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Terra Nova"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Age bylaws — SPA ss. 123.1 / 123.2: only a 55-or-older residency bylaw is valid in BC; any younger threshold (for example a \"45+\" label) cannot be enforced as an age-restriction bylaw under the current Act. Exemptions cover legacy residents, live-in caregivers and (from May 1, 2023) younger spouses/partners and defined children. This is why Quilchena Green's 45+ / 55+ label conflict matters and why it is carried as UNCONFIRMED pending the registered bylaws: if a 45+ figure appears anywhere in older marketing, it is not a lawful age-bylaw threshold today."
+            "t": "Age bylaws — SPA ss. 123.1 / 123.2: only a 55-or-older residency bylaw is valid in BC; any younger threshold (for example a \"45+\" label) cannot be enforced as an age-restriction bylaw under the current Act. Exemptions cover legacy residents, live-in caregivers and (from May 1, 2023) younger spouses/partners and defined children. This is why Quilchena Green's 45+ / 55+ label conflict matters and why it is carried as not confirmed pending the registered bylaws: if a 45+ figure appears anywhere in older marketing, it is not a lawful age-bylaw threshold today."
           }
         ],
         [
@@ -202,18 +155,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Terra Nova",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Terra Nova"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -241,164 +194,164 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Terra Nova",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Terra Nova"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "bccondosandhomes.com · quilchena green 5531 cornwall drive",
-            "h": "https://www.bccondosandhomes.com/building/quilchena-green-5531-cornwall-drive"
+            "h": "https://www.bccondosandhomes.com/building/quilchena-green-5531-cornwall-drive",
+            "t": "bccondosandhomes.com · quilchena green 5531 cornwall drive"
           }
         ],
         [
           {
-            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for ",
-            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/"
+            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/",
+            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "cms.richmond.ca · AssetFactory.aspx",
-            "h": "https://cms.richmond.ca/AssetFactory.aspx?did=78100"
+            "h": "https://cms.richmond.ca/AssetFactory.aspx?did=78100",
+            "t": "cms.richmond.ca · AssetFactory.aspx"
           }
         ],
         [
           {
-            "t": "luluislandenergy.ca · adeu",
-            "h": "https://luluislandenergy.ca/adeu/"
+            "h": "https://luluislandenergy.ca/adeu/",
+            "t": "luluislandenergy.ca · adeu"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "equitylawgroup.ca · closing costs bc home purchase",
-            "h": "https://www.equitylawgroup.ca/news/closing-costs-bc-home-purchase"
+            "h": "https://www.equitylawgroup.ca/news/closing-costs-bc-home-purchase",
+            "t": "equitylawgroup.ca · closing costs bc home purchase"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ],
         [
           {
-            "t": "cmhc-schl.gc.ca · second home",
-            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home"
+            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home",
+            "t": "cmhc-schl.gc.ca · second home"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Terra Nova",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Quilchena Green — 5531 Cornwall Drive. STRATA (freehold strata), 55+ label FLAGGED",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Terra Nova"
     },
     {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Quilchena Green — 5531 Cornwall Drive. STRATA (freehold strata), 55+ label FLAGGED"
+    },
+    {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A gated townhouse complex of duplex-style / 2-level townhomes: 91 homes, built 1992, frame-wood construction, Freehold Strata title, Strata Plan LMS423 (building/listing sources). Published amenities include a club house and hot tub (building directory); listings describe a live-in caretaker and club house in a gated community. Zoning recorded on a listing: RTL 1. Restrictions conflict — carried unresolved: a current listing records age restrictions, pets allowed with restrictions, rentals allowed with restrictions, and \"Age Restricted 55+,\" with pets recorded as cats and dogs OK to a maximum of one; the building directory instead records age restrictions, pets allowed with restrictions, and \"rentals not allowed\" — the directory line is VOID for long-term rentals since Nov 24, 2022 in any event.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A gated townhouse complex of duplex-style / 2-level townhomes: 91 homes, built 1992, frame-wood construction, Freehold Strata title, Strata Plan LMS423 (building/listing sources). Published amenities include a club house and hot tub (building directory); listings describe a live-in caretaker and club house in a gated community. Zoning recorded on a listing: RTL 1. Restrictions conflict — carried unresolved: a current listing records age restrictions, pets allowed with restrictions, rentals allowed with restrictions, and \"Age Restricted 55+,\" with pets recorded as cats and dogs OK to a maximum of one; the building directory instead records age restrictions, pets allowed with restrictions, and \"rentals not allowed\" — the directory line is VOID for long-term rentals since Nov 24, 2022 in any event."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Mayflower — 3880 Westminster Highway. STRATA (Polygon Homes)",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Mayflower — 3880 Westminster Highway. STRATA (Polygon Homes)"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A current listing describes the complex as pets friendly with rentals allowed (listing data — confirm on the Form B). Unit count: UNCONFIRMED from the citable sources checked.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A current listing describes the complex as pets friendly with rentals allowed (listing data — confirm on the Form B). Unit count: Not confirmed from the citable sources checked."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sonoma — 3555 Westminster Highway. STRATA (freehold strata; Polygon Homes)",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sonoma — 3555 Westminster Highway. STRATA (freehold strata; Polygon Homes)"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A gated townhouse community built 1995 (current listings): a current listing records Sub-Type Townhouse, Ownership Type Freehold Strata, frame-wood construction, with amenities including an outdoor pool, hot tub, clubhouse and fitness centre/gym and professionally landscaped grounds; another listing records a unit's sub-type as Duplex / Half Duplex — classification note: the MLS sub-type varies by unit (Townhouse vs Duplex/Half Duplex) while the built form and tenure are one gated strata townhouse community; built form governs, both sub-types are stated, and the complex is counted once, here, as a townhouse complex. Unit count: UNCONFIRMED. Published pet/rental bylaws beyond listing amenity copy: UNCONFIRMED — read the Form B and registered bylaws.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A gated townhouse community built 1995 (current listings): a current listing records Sub-Type Townhouse, Ownership Type Freehold Strata, frame-wood construction, with amenities including an outdoor pool, hot tub, clubhouse and fitness centre/gym and professionally landscaped grounds; another listing records a unit's sub-type as Duplex / Half Duplex — classification note: the MLS sub-type varies by unit (Townhouse vs Duplex/Half Duplex) while the built form and tenure are one gated strata townhouse community; built form governs, both sub-types are stated, and the complex is counted once, here, as a townhouse complex. Unit count: Not confirmed. Published pet/rental bylaws beyond listing amenity copy: Not confirmed — read the Form B and registered bylaws."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "London Mews — 6333 No. 1 Road. STRATA (freehold strata)",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "London Mews — 6333 No. 1 Road. STRATA (freehold strata)"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Published rental restrictions: UNCONFIRMED in the sources checked.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Published rental restrictions: Not confirmed in the sources checked."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Terra Nova",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Terra Nova"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -407,22 +360,22 @@
         ],
         [
           {
-            "t": "Transit and roads: bus service on No. 1 Road and Westminster Highway connects the pocket to Richmond–Brighouse Station on the Canada Line; no Canada Line station and no highway interchange is inside the sub-area. Westminster Highway, No. 1 Road and River Road are the main roads. Route-level detail beyond that connection: UNVERIFIED."
+            "t": "Transit and roads: bus service on No. 1 Road and Westminster Highway connects the pocket to Richmond–Brighouse Station on the Canada Line; no Canada Line station and no highway interchange is inside the sub-area. Westminster Highway, No. 1 Road and River Road are the main roads. Route-level detail beyond that connection: Not verified."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Terra Nova",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Terra Nova"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -455,142 +408,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Terra Nova",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Terra Nova"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "richmond.ca · park.aspx",
-            "h": "https://www.richmond.ca/parks-recreation/parks/parksearch/park.aspx?id=80"
+            "h": "https://www.richmond.ca/parks-recreation/parks/parksearch/park.aspx?id=80",
+            "t": "richmond.ca · park.aspx"
           }
         ],
         [
           {
-            "t": "richmond.ca · Details.aspx",
-            "h": "https://richmond.ca/business-development/planning/heritage/inventory/Details.aspx?ID=160"
+            "h": "https://richmond.ca/business-development/planning/heritage/inventory/Details.aspx?ID=160",
+            "t": "richmond.ca · Details.aspx"
           }
         ],
         [
           {
-            "t": "richmondmuseum.ca · Terra Nova Self Guided Historical Tour Brochure",
-            "h": "https://www.richmondmuseum.ca/wp-content/uploads/2022/04/Terra-Nova_Self-Guided-Historical-Tour-Brochure.pdf"
+            "h": "https://www.richmondmuseum.ca/wp-content/uploads/2022/04/Terra-Nova_Self-Guided-Historical-Tour-Brochure.pdf",
+            "t": "richmondmuseum.ca · Terra Nova Self Guided Historical Tour Brochure"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt410",
-            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt410.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt410.pdf",
+            "t": "infomaps.translink.ca · tt410"
           }
         ],
         [
           {
-            "t": "sd38.bc.ca · locations catchments",
-            "h": "https://sd38.bc.ca/schools/locations-catchments"
+            "h": "https://sd38.bc.ca/schools/locations-catchments",
+            "t": "sd38.bc.ca · locations catchments"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · quilchena green 5531 cornwall drive",
-            "h": "https://www.bccondosandhomes.com/building/quilchena-green-5531-cornwall-drive"
+            "h": "https://www.bccondosandhomes.com/building/quilchena-green-5531-cornwall-drive",
+            "t": "bccondosandhomes.com · quilchena green 5531 cornwall drive"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "cms.richmond.ca · AssetFactory.aspx",
-            "h": "https://cms.richmond.ca/AssetFactory.aspx?did=53061"
+            "h": "https://cms.richmond.ca/AssetFactory.aspx?did=53061",
+            "t": "cms.richmond.ca · AssetFactory.aspx"
           }
         ],
         [
           {
-            "t": "richmond.ca · sale",
-            "h": "https://richmond.ca/city-hall/strategies/sale.htm?PageMode=HTML"
+            "h": "https://richmond.ca/city-hall/strategies/sale.htm?PageMode=HTML",
+            "t": "richmond.ca · sale"
           }
         ],
         [
           {
-            "t": "richmond.ca · housing legislation",
-            "h": "https://richmond.ca/business-development/planning/housing-legislation.htm"
+            "h": "https://richmond.ca/business-development/planning/housing-legislation.htm",
+            "t": "richmond.ca · housing legislation"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "richmond.ca · dikes",
-            "h": "https://richmond.ca/services/water-sewer-flood/dikes.htm"
+            "h": "https://richmond.ca/services/water-sewer-flood/dikes.htm",
+            "t": "richmond.ca · dikes"
           }
         ],
         [
           {
-            "t": "richmond.ca · duedates taxes",
-            "h": "https://richmond.ca/city-hall/finance/rates/duedates-taxes.htm"
+            "h": "https://richmond.ca/city-hall/finance/rates/duedates-taxes.htm",
+            "t": "richmond.ca · duedates taxes"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Terra Nova",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Fee-simple lots",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Terra Nova"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Fee-simple lots"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -599,7 +552,7 @@
         ],
         [
           {
-            "t": "Serviced position, as stated: Terra Nova homes are on City water and sewer services in the residential pocket. Lot-by-lot well or septic servicing in the pocket: UNVERIFIED (wells are recorded in the provincial GWELLS registry and on-site sewerage systems are governed by the BC Sewerage System Regulation, per the research). A 2026 utility dollar figure: UNVERIFIED."
+            "t": "Serviced position, as stated: Terra Nova homes are on City water and sewer services in the residential pocket. Lot-by-lot well or septic servicing in the pocket: Not verified (wells are recorded in the provincial GWELLS registry and on-site sewerage systems are governed by the BC Sewerage System Regulation, per the research). A 2026 utility dollar figure: Not verified."
           }
         ],
         [
@@ -608,18 +561,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "ALR farm land",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "ALR farm land"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -628,7 +581,7 @@
         ],
         [
           {
-            "t": "ALR vs non-ALR split: the pocket's house lots are non-ALR residential ground; the farm land to the west and south is ALR ground under AG1. No parcel count or percentage split for Terra Nova is stated in the research — none is invented; ALR status for a specific parcel is confirmed on ALC mapping."
+            "t": "ALR vs non-ALR split: the pocket's house lots are non-ALR residential ground; the farm land to the west and south is ALR ground under AG1. No parcel count or percentage split for Terra Nova is stated — none is invented; ALR status for a specific parcel is confirmed on ALC mapping."
           }
         ],
         [
@@ -637,18 +590,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Bare-land strata",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Bare-land strata"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -656,18 +609,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Built strata ground",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Built strata ground"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -685,42 +638,42 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Development proposal",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Development proposal"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "6011 and 6031 No. 1 Road at Westminster Highway — QUEUED, counted nowhere: City panel records from 2012 note a mixed-use building proposed at that corner and townhouse developments to the west and south of No. 1 Road at Westminster Highway. That is the No. 1 Road edge (Thompson side of the boundary in the Heritage Inventory description); the record is a proposal note rather than a verified completed complex, no developer/strata source verifies a named, completed building there, and its status today is UNCONFIRMED."
+            "t": "6011 and 6031 No. 1 Road at Westminster Highway — QUEUED, counted nowhere: City panel records from 2012 note a mixed-use building proposed at that corner and townhouse developments to the west and south of No. 1 Road at Westminster Highway. That is the No. 1 Road edge (Thompson side of the boundary in the Heritage Inventory description); the record is a proposal note rather than a verified completed complex, no developer/strata source verifies a named, completed building there, and its status today is not confirmed."
           }
         ],
         [
           {
-            "t": ": A current market presale verified on a developer source: UNVERIFIED in the research."
+            "t": ": A current market presale verified on a developer source: Not verified."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Terra Nova",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Terra Nova"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -728,18 +681,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Terra Nova",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Terra Nova"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -777,18 +730,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Terra Nova",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Terra Nova"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -811,148 +764,148 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Terra Nova",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Terra Nova"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "richmond.ca · park.aspx",
-            "h": "https://www.richmond.ca/parks-recreation/parks/parksearch/park.aspx?id=80"
+            "h": "https://www.richmond.ca/parks-recreation/parks/parksearch/park.aspx?id=80",
+            "t": "richmond.ca · park.aspx"
           }
         ],
         [
           {
-            "t": "richmond.ca · Details.aspx",
-            "h": "https://richmond.ca/business-development/planning/heritage/inventory/Details.aspx?ID=160"
+            "h": "https://richmond.ca/business-development/planning/heritage/inventory/Details.aspx?ID=160",
+            "t": "richmond.ca · Details.aspx"
           }
         ],
         [
           {
-            "t": "richmondmuseum.ca · Terra Nova Self Guided Historical Tour Brochure",
-            "h": "https://www.richmondmuseum.ca/wp-content/uploads/2022/04/Terra-Nova_Self-Guided-Historical-Tour-Brochure.pdf"
+            "h": "https://www.richmondmuseum.ca/wp-content/uploads/2022/04/Terra-Nova_Self-Guided-Historical-Tour-Brochure.pdf",
+            "t": "richmondmuseum.ca · Terra Nova Self Guided Historical Tour Brochure"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt410",
-            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt410.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt410.pdf",
+            "t": "infomaps.translink.ca · tt410"
           }
         ],
         [
           {
-            "t": "sd38.bc.ca · locations catchments",
-            "h": "https://sd38.bc.ca/schools/locations-catchments"
+            "h": "https://sd38.bc.ca/schools/locations-catchments",
+            "t": "sd38.bc.ca · locations catchments"
           }
         ],
         [
           {
-            "t": "citycouncil.richmond.ca · 082212 minutes",
-            "h": "https://citycouncil.richmond.ca/agendas/archives/dpp/2012/082212_minutes.htm"
+            "h": "https://citycouncil.richmond.ca/agendas/archives/dpp/2012/082212_minutes.htm",
+            "t": "citycouncil.richmond.ca · 082212 minutes"
           }
         ],
         [
           {
-            "t": "RICHMOND.CA · housing legislation",
-            "h": "https://RICHMOND.CA/business-development/planning/housing-legislation.htm"
+            "h": "https://RICHMOND.CA/business-development/planning/housing-legislation.htm",
+            "t": "RICHMOND.CA · housing legislation"
           }
         ],
         [
           {
-            "t": "cms.richmond.ca · AssetFactory.aspx",
-            "h": "https://cms.richmond.ca/AssetFactory.aspx?did=53061"
+            "h": "https://cms.richmond.ca/AssetFactory.aspx?did=53061",
+            "t": "cms.richmond.ca · AssetFactory.aspx"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "richmond.ca · dikes",
-            "h": "https://richmond.ca/services/water-sewer-flood/dikes.htm"
+            "h": "https://richmond.ca/services/water-sewer-flood/dikes.htm",
+            "t": "richmond.ca · dikes"
           }
         ],
         [
           {
-            "t": "Richmond.Ca · sale",
-            "h": "https://Richmond.Ca/city-hall/strategies/sale.htm?PageMode=HTML"
+            "h": "https://Richmond.Ca/city-hall/strategies/sale.htm?PageMode=HTML",
+            "t": "Richmond.Ca · sale"
           }
         ],
         [
           {
-            "t": "RICHMOND.CA · alpha",
-            "h": "https://RICHMOND.CA/city-hall/bylaws/alpha.htm"
+            "h": "https://RICHMOND.CA/city-hall/bylaws/alpha.htm",
+            "t": "RICHMOND.CA · alpha"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · first time home buyers",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers",
+            "t": "www2.gov.bc.ca · first time home buyers"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Terra Nova",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Terra Nova"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -970,18 +923,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -989,18 +942,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1013,18 +966,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1032,25 +985,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Spul'u'kwuks Elementary, 5999 Blanshard Drive",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Terra Nova Village, 3671 Westminster Highway",
@@ -1071,14 +1025,51 @@
           "2.4"
         ]
       ],
+      "t": "table"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt401.pdf",
+            "t": "infomaps.translink.ca · tt401"
+          }
+        ],
+        [
+          {
+            "h": "https://www.richmond.ca/parks-recreation/parks/parksearch/park.aspx?id=80",
+            "t": "richmond.ca · park.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/038",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://images.loopnet.ca/d2/AVBP-zBack09ZTpH2clFT8ywp4I42N7pTpZ3rOSJ-I0/document.pdf",
+            "t": "images.loopnet.ca · document"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -1086,34 +1077,68 @@
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt401",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt401.pdf"
+            "t": "Source: sd38.bc.ca",
+            "h": "https://sd38.bc.ca/schools/locations-catchments"
           }
         ],
         [
           {
-            "t": "richmond.ca · park.aspx",
-            "h": "https://www.richmond.ca/parks-recreation/parks/parksearch/park.aspx?id=80"
+            "t": "Source: infomaps.translink.ca",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt410.pdf"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/038"
-          }
-        ],
-        [
-          {
-            "t": "images.loopnet.ca · document",
-            "h": "https://images.loopnet.ca/d2/AVBP-zBack09ZTpH2clFT8ywp4I42N7pTpZ3rOSJ-I0/document.pdf"
+            "t": "Source: alc.gov.bc.ca",
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
+    {
+      "a": "No verified strata apartment building was found. Terra Nova's strata stock is three townhouse complexes — Quilchena Green (5531 Cornwall Drive, 91 homes, built 1992), Mayflower (3880 Westminster Highway, Polygon) and Sonoma (3555 Westminster Highway, Polygon, built 1995).",
+      "gen": "tn",
+      "q": "Can I buy an apartment condo in Terra Nova?"
+    },
+    {
+      "a": "Read the registered bylaws and Form B before assuming either figure.",
+      "gen": "tn",
+      "q": "Is Quilchena Green 45+ or 55+?"
+    },
+    {
+      "a": "The sources conflict (directory: \"rentals not allowed\"; current listing: \"rentals allowed with restrictions\"), and the directory line is void for long-term rentals since November 24, 2022 in any event. Short-term rentals can still be restricted, and a valid 55+ bylaw would still govern who may occupy — confirm both points from the registered bylaws.",
+      "gen": "tn",
+      "q": "Can I rent out a Quilchena Green home?"
+    },
+    {
+      "a": "Published as pets allowed with restrictions; the current listing's bylaw summary records cats and dogs OK to a maximum of one. Confirm against the registered bylaws — pet bylaws remain enforceable in BC.",
+      "gen": "tn",
+      "q": "Are pets allowed at Quilchena Green?"
+    },
+    {
+      "a": "Listings conflict by one year (1996 in most, 1997 in one current listing), flagged in and not resolved here; the strata plan / Form B governs. Both figures describe the same Polygon townhouse complex at 3880 Westminster Highway.",
+      "gen": "tn",
+      "q": "Mayflower — 1996 or 1997?"
+    },
+    {
+      "a": "Four verified strata complexes: Quilchena Green (5531 Cornwall Drive, 91 units, LMS423, built 1992, age-restricted label FLAGGED), Mayflower (3880 Westminster Highway, Polygon, built 1996–1997 by unit), Sonoma (3555 Westminster Highway, Polygon, built 1995) and London Mews (6333 No. 1 Road, 66 units, LMS2933, built 1998). There are no verified fee-simple townhouse complexes and no apartment condos in the pocket. Basis: above.",
+      "gen": "tn",
+      "q": "What townhouses can I actually buy in Terra Nova?"
+    },
+    {
+      "a": "Legally no sub-55 age bylaw can be enforced today — but the registered bylaw's exact wording governs, so read it in the Form B package before relying on either label.",
+      "gen": "tn",
+      "q": "Is Quilchena Green 45+ or 55+?"
+    },
+    {
+      "a": "No. Despite the name, the complex is at 5531 Cornwall Drive in Terra Nova, north-west of the Quilchena Elementary / Moresby Drive pocket (Quilchena RI). Same first word, different sub-area — confirm which \"Quilchena\" a listing means before viewing.",
+      "gen": "tn",
+      "q": "Is Quilchena Green in Quilchena?"
+    },
     {
       "q": "Which public schools are in the Terra Nova pocket?",
       "a": "Spul'u'kwuks Elementary at 5999 Blanshard Drive is physically inside the pocket; for the sample address 5999 Blanshard Drive, the SD38 locator gives Spul'u'kwuks Elementary and Burnett Secondary, and SD38 has no middle tier — catchments are address-based, so check the exact address.",
@@ -1128,56 +1153,9 @@
       "q": "Can a farm parcel beside the pocket have a second dwelling?",
       "a": "Agricultural Land Commission guidance allows one principal residence and, if the regulation conditions are met, one additional residence per parcel in the Agricultural Land Reserve, and Richmond AG1 zoning also lists a secondary suite as a secondary use.",
       "gen": "muse"
-    },
-    {
-      "q": "What flood protection applies in Terra Nova?",
-      "a": "The City states Richmond has a perimeter dike system with drainage pump stations, designed for a 1:500 event, with dike raising from 3.5 metres to 4.7 metres under way; Bylaw 8204 also sets dike setbacks and a flood plain construction level.",
-      "gen": "muse"
-    },
-    {
-      "q": "What recreation anchors Terra Nova?",
-      "a": "Terra Nova Rural Park, 2631 Westminster Highway — a 63-acre site with trails, the Adventure Play Environment and the Sharing Farm, on the Pacific Flyway beside the Sturgeon Bank Wildlife Management Area — plus the West Dyke Trail running south from the park to Garry Point Park.",
-      "gen": "muse"
-    },
-    {
-      "gen": "tn",
-      "q": "Can I buy an apartment condo in Terra Nova?",
-      "a": "No verified strata apartment building was found. Terra Nova's strata stock is three townhouse complexes — Quilchena Green (5531 Cornwall Drive, 91 homes, built 1992), Mayflower (3880 Westminster Highway, Polygon) and Sonoma (3555 Westminster Highway, Polygon, built 1995)."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Quilchena Green 45+ or 55+?",
-      "a": "Read the registered bylaws and Form B before assuming either figure."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I rent out a Quilchena Green home?",
-      "a": "The sources conflict (directory: \"rentals not allowed\"; current listing: \"rentals allowed with restrictions\"), and the directory line is void for long-term rentals since November 24, 2022 in any event. Short-term rentals can still be restricted, and a valid 55+ bylaw would still govern who may occupy — confirm both points from the registered bylaws."
-    },
-    {
-      "gen": "tn",
-      "q": "Are pets allowed at Quilchena Green?",
-      "a": "Published as pets allowed with restrictions; the current listing's bylaw summary records cats and dogs OK to a maximum of one. Confirm against the registered bylaws — pet bylaws remain enforceable in BC."
-    },
-    {
-      "gen": "tn",
-      "q": "Mayflower — 1996 or 1997?",
-      "a": "Listings conflict by one year (1996 in most, 1997 in one current listing), flagged in and not resolved here; the strata plan / Form B governs. Both figures describe the same Polygon townhouse complex at 3880 Westminster Highway."
-    },
-    {
-      "gen": "tn",
-      "q": "What townhouses can I actually buy in Terra Nova?",
-      "a": "Four verified strata complexes: Quilchena Green (5531 Cornwall Drive, 91 units, LMS423, built 1992, age-restricted label FLAGGED), Mayflower (3880 Westminster Highway, Polygon, built 1996–1997 by unit), Sonoma (3555 Westminster Highway, Polygon, built 1995) and London Mews (6333 No. 1 Road, 66 units, LMS2933, built 1998). There are no verified fee-simple townhouse complexes and no apartment condos in the pocket. Basis: above."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Quilchena Green 45+ or 55+?",
-      "a": "Legally no sub-55 age bylaw can be enforced today — but the registered bylaw's exact wording governs, so read it in the Form B package before relying on either label."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Quilchena Green in Quilchena?",
-      "a": "No. Despite the name, the complex is at 5531 Cornwall Drive in Terra Nova, north-west of the Quilchena Elementary / Moresby Drive pocket (Quilchena RI). Same first word, different sub-area — confirm which \"Quilchena\" a listing means before viewing."
     }
-  ]
+  ],
+  "slug": "terra-nova",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

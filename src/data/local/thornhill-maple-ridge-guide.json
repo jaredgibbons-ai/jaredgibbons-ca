@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "thornhill-maple-ridge-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Thornhill compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Thornhill compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Thornhill against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Thornhill against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
-      "caption": "Thornhill against the whole city, September 2026",
+      "caption": "Thornhill against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -27,187 +24,187 @@
       "rows": [
         [
           "Detached houses",
-          "3.2%",
-          "2.5%",
-          "8% against 10%",
-          "6 of 8"
+          "3.4%",
+          "0.0%",
+          "— against 15%",
+          "Under 10 listed"
         ],
         [
           "Condos and townhomes",
-          "2.8%",
+          "3.0%",
           "0.0%",
-          "— against 12%",
+          "— against 17%",
           "Under 10 listed"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings fell from 21 in June to 13 in September (−38.1%), and it took 4.3% of the city’s 188 sales over the period; condos and townhomes: listings was little changed, 8 in June and 8 in September (+0.0%), and it took 1.1% of the city’s 184 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 21 in June to 13 in October (−38.1%), and it took 3.2% of the city’s 247 sales over the period; condos and townhomes: listings was little changed, 8 in June and 8 in October (+0.0%), and it took 0.9% of the city’s 230 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Thornhill for detached houses in June (a buyers’ best bet); condos and townhomes in June (a buyers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out Thornhill for detached houses in June (a buyers’ best bet); condos and townhomes in June (a buyers’ best bet)."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Maple Ridge real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Maple Ridge real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Maple Ridge homes for sale",
-            "h": "/maple-ridge-homes-for-sale.html"
+            "h": "/maple-ridge-homes-for-sale.html",
+            "t": "Maple Ridge homes for sale"
           }
         ],
         [
           {
-            "t": "Maple Ridge real estate market stats",
-            "h": "/maple-ridge-real-estate-market-stats.html"
+            "h": "/maple-ridge-real-estate-market-stats.html",
+            "t": "Maple Ridge real estate market stats"
           }
         ],
         [
           {
-            "t": "Maple Ridge houses for sale",
-            "h": "/maple-ridge-houses-for-sale.html"
+            "h": "/maple-ridge-houses-for-sale.html",
+            "t": "Maple Ridge houses for sale"
           }
         ],
         [
           {
-            "t": "Maple Ridge condos for sale",
-            "h": "/maple-ridge-condos-for-sale.html"
+            "h": "/maple-ridge-condos-for-sale.html",
+            "t": "Maple Ridge condos for sale"
           }
         ],
         [
           {
-            "t": "Maple Ridge townhomes for sale",
-            "h": "/maple-ridge-townhomes-for-sale.html"
+            "h": "/maple-ridge-townhomes-for-sale.html",
+            "t": "Maple Ridge townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Maple Ridge",
-            "h": "/sell-my-house-in-maple-ridge.html"
+            "h": "/sell-my-house-in-maple-ridge.html",
+            "t": "Sell my house in Maple Ridge"
           }
         ],
         [
           {
-            "t": "Thornhill homes and market figures",
-            "h": "/thornhill-mr.html"
+            "h": "/thornhill-mr.html",
+            "t": "Thornhill homes and market figures"
           }
         ],
         [
           {
-            "t": "Websters Corners real estate",
-            "h": "/websters-corners.html"
+            "h": "/websters-corners.html",
+            "t": "Websters Corners real estate"
           }
         ],
         [
           {
-            "t": "West Central real estate",
-            "h": "/west-central.html"
+            "h": "/west-central.html",
+            "t": "West Central real estate"
           }
         ],
         [
           {
-            "t": "Whonnock real estate",
-            "h": "/whonnock.html"
+            "h": "/whonnock.html",
+            "t": "Whonnock real estate"
           }
         ],
         [
           {
-            "t": "Albion real estate",
-            "h": "/albion.html"
+            "h": "/albion.html",
+            "t": "Albion real estate"
           }
         ],
         [
           {
-            "t": "Cottonwood real estate",
-            "h": "/cottonwood-mr.html"
+            "h": "/cottonwood-mr.html",
+            "t": "Cottonwood real estate"
           }
         ],
         [
           {
-            "t": "East Central real estate",
-            "h": "/east-central.html"
+            "h": "/east-central.html",
+            "t": "East Central real estate"
           }
         ],
         [
           {
-            "t": "Northeast real estate",
-            "h": "/northeast.html"
+            "h": "/northeast.html",
+            "t": "Northeast real estate"
           }
         ],
         [
           {
-            "t": "Northwest real estate",
-            "h": "/northwest-maple-ridge.html"
+            "h": "/northwest-maple-ridge.html",
+            "t": "Northwest real estate"
           }
         ],
         [
           {
-            "t": "Silver Valley real estate",
-            "h": "/silver-valley.html"
+            "h": "/silver-valley.html",
+            "t": "Silver Valley real estate"
           }
         ],
         [
           {
-            "t": "Southwest real estate",
-            "h": "/southwest-maple-ridge.html"
+            "h": "/southwest-maple-ridge.html",
+            "t": "Southwest real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Thornhill",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Thornhill"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Tenure frame, cross-referenced: fee-simple lots are the default form (rural minimums under Zoning Bylaw 7600-2019: A-1 2.0 ha, A-2 4.0 ha, A-3 8.0 ha, RS-2 0.4 ha, RS-3 0.8 ha or 2.0 ha per the zone text); bare-land strata is stated in the land home as its own form (Form B / fees / bylaws apply to the lot) with none verified on this ground. ALR split: none published, none stated — ALR status is per-parcel. Servicing is well/septic country: per-parcel servicing is UNCONFIRMED until that parcel's GWELLS and sewerage records are pulled."
+            "t": "Tenure frame, cross-referenced: fee-simple lots are the default form (rural minimums under Zoning Bylaw 7600-2019: A-1 2.0 ha, A-2 4.0 ha, A-3 8.0 ha, RS-2 0.4 ha, RS-3 0.8 ha or 2.0 ha per the zone text); bare-land strata is stated in the land home as its own form (Form B / fees / bylaws apply to the lot) with none verified on this ground. ALR split: none published, none stated — ALR status is per-parcel. Servicing is well/septic country: per-parcel servicing is not confirmed until that parcel's GWELLS and sewerage records are pulled."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Thornhill",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Thornhill"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Boundaries: the City publishes no boundary for the neighbourhood or the MLS sub-area: UNVERIFIED as an official boundary. Nearby areas: Albion to the southwest, Websters Corners to the southeast, Whonnock to the east, Ruskin further east, and the City of Mission across the eastern boundary."
+            "t": "Boundaries: the City publishes no boundary for the neighbourhood or the MLS sub-area: Not verified as an official boundary. Nearby areas: Albion to the southwest, Websters Corners to the southeast, Whonnock to the east, Ruskin further east, and the City of Mission across the eastern boundary."
           }
         ],
         [
@@ -231,22 +228,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Thornhill",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Thornhill"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Zoning — City of Maple Ridge Zoning Bylaw No. 7600-2019: the schedule lists minimum lot areas of A-1 2.0 ha, A-2 4.0 ha, A-3 8.0 ha, RS-2 0.4 ha and RS-3 0.8 ha or 2.0 ha depending on the zone text — the rural zones that cover most of this hillside. Any parcel's actual zone: per-parcel, UNVERIFIED."
+            "t": "Zoning — City of Maple Ridge Zoning Bylaw No. 7600-2019: the schedule lists minimum lot areas of A-1 2.0 ha, A-2 4.0 ha, A-3 8.0 ha, RS-2 0.4 ha and RS-3 0.8 ha or 2.0 ha depending on the zone text — the rural zones that cover most of this hillside. Any parcel's actual zone: per-parcel, not verified."
           }
         ],
         [
@@ -276,22 +273,22 @@
         ],
         [
           {
-            "t": "ALR block (applies where a Thornhill parcel is ALR — status per-parcel, UNVERIFIED here): subdivision within the ALR requires Agricultural Land Commission approval; ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)). Caps: principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha). Check a parcel on the ALC maps."
+            "t": "ALR block (applies where a Thornhill parcel is ALR — status per-parcel, not verified here): subdivision within the ALR requires Agricultural Land Commission approval; ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)). Caps: principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha). Check a parcel on the ALC maps."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Thornhill",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Thornhill"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -300,181 +297,159 @@
         ],
         [
           {
-            "t": "Guide-only claims (the Thornhill Park and Hall details, the Thornhill Trails trailhead details, and the SD42 June 2021 facilities-review statements) are UNVERIFIED site copy, not defects and not facts."
+            "t": "Guide-only claims (the Thornhill Park and Hall details, the Thornhill Trails trailhead details, and the SD42 June 2021 facilities-review statements) are not verified site copy, not defects and not facts."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Thornhill",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Thornhill"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · thornhill maple ridge guide",
-            "h": "https://jaredgibbons.ca/thornhill-maple-ridge-guide.html"
+            "h": "https://jaredgibbons.ca/thornhill-maple-ridge-guide.html",
+            "t": "jaredgibbons.ca · thornhill maple ridge guide"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · our neighbourhoods",
-            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods"
+            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods",
+            "t": "mapleridge.ca · our neighbourhoods"
           }
         ],
         [
           {
-            "t": "sd42.ca · school locator",
-            "h": "https://www.sd42.ca/school-locator/"
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "sd42.ca · school locator"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt748",
-            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt748.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt748.pdf",
+            "t": "infomaps.translink.ca · tt748"
           }
         ],
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading",
-            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading"
+            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading",
+            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · official community plan",
-            "h": "https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/official-community-plan"
+            "h": "https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/official-community-plan",
+            "t": "mapleridge.ca · official community plan"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · official community plan chapter 2",
-            "h": "https://www.mapleridge.ca/media/file/official-community-plan-chapter-2"
+            "h": "https://www.mapleridge.ca/media/file/official-community-plan-chapter-2",
+            "t": "mapleridge.ca · official community plan chapter 2"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · maple ridge council approves plan guide transit ",
-            "h": "https://www.mapleridge.ca/news/maple-ridge-council-approves-plan-guide-transit-oriented-development-around-lougheed-highway"
+            "h": "https://www.mapleridge.ca/news/maple-ridge-council-approves-plan-guide-transit-oriented-development-around-lougheed-highway",
+            "t": "mapleridge.ca · maple ridge council approves plan guide transit"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · maple ridge approves new 500 acre 256 street ind",
-            "h": "https://www.mapleridge.ca/news/maple-ridge-approves-new-500-acre-256-street-industrial-area-plan-support-jobs-and-economic"
+            "h": "https://www.mapleridge.ca/news/maple-ridge-approves-new-500-acre-256-street-industrial-area-plan-support-jobs-and-economic",
+            "t": "mapleridge.ca · maple ridge approves new 500 acre 256 street ind"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · secondary suites",
-            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites"
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites",
+            "t": "mapleridge.ca · secondary suites"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · subdivision development bylaw no 4800 1993",
-            "h": "https://www.mapleridge.ca/media/file/subdivision-development-bylaw-no-4800-1993"
+            "h": "https://www.mapleridge.ca/media/file/subdivision-development-bylaw-no-4800-1993",
+            "t": "mapleridge.ca · subdivision development bylaw no 4800 1993"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · well records registration",
-            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/information-for-property-owners/well-records-registration"
+            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/information-for-property-owners/well-records-registration",
+            "t": "www2.gov.bc.ca · well records registration"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Are there more or fewer homes for sale in Thornhill Maple Ridge than in June?",
-      "a": "In Thornhill Maple Ridge, listings of houses fell from 21 in June to 13 in September (−38.1%); condos and townhomes was little changed, 8 in June and 8 in September (+0.0%).",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How big is Thornhill Maple Ridge compared with the rest of Maple Ridge?",
-      "a": "In September 2026, Thornhill Maple Ridge held 3.2% of the 410 houses listed in Maple Ridge and 2.8% of the 286 condos and townhomes listed in Maple Ridge.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How many homes sold in Thornhill Maple Ridge from June to September 2026?",
-      "a": "8 houses and 2 condos and townhomes sold in Thornhill Maple Ridge over those 4 months.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "Who can help me buy or sell in Thornhill Maple Ridge?",
-      "a": "Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, works across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361 or use the contact form on this site.",
-      "gen": "bank-faq"
-    },
-    {
-      "q": "How do I find out which school serves an address in Thornhill Maple Ridge?",
-      "a": "School catchments are set by address, so use the school district's catchment locator with the exact address. Catchment lines change, so check before you write an offer.",
-      "gen": "bank-faq"
-    },
-    {
+      "a": "At the Maple Ridge community level — NOT Thornhill's figures — the detached median was $1,131,000 and the attached median was $525,000. Land has no SnapStats category.",
       "gen": "tn",
-      "q": "How did Thornhill sell in September 2026?",
-      "a": "At the Maple Ridge community level — NOT Thornhill's figures — the detached median was $1,131,000 and the attached median was $525,000. Land has no SnapStats category."
+      "q": "How did Thornhill sell in September 2026?"
     },
     {
+      "a": "No parcel count or price is carried from those feed cards here.",
       "gen": "tn",
-      "q": "Are the 249 Street parcels Thornhill or Albion?",
-      "a": "No parcel count or price is carried from those feed cards here."
+      "q": "Are the 249 Street parcels Thornhill or Albion?"
     },
     {
+      "a": "One secondary suite per lot inside the building in listed zones including A-1, A-2 and A-3 (max 40% of gross floor area, not in the Floodplain Area); on ALR land the ALR Use Regulation also applies, and an additional separate residence is allowed only under its s.32 conditions.",
       "gen": "tn",
-      "q": "Can a Thornhill acreage have a suite or a second dwelling?",
-      "a": "One secondary suite per lot inside the building in listed zones including A-1, A-2 and A-3 (max 40% of gross floor area, not in the Floodplain Area); on ALR land the ALR Use Regulation also applies, and an additional separate residence is allowed only under its s.32 conditions."
+      "q": "Can a Thornhill acreage have a suite or a second dwelling?"
     },
     {
+      "a": "The well and septic records (GWELLS and the Sewerage System Regulation setbacks, including 30 m from a well unless professional advice is obtained), the parcel's ALR status on the ALC maps, and whether the North 256 Street plan area touches the parcel — all per-parcel items, not verified until pulled for that parcel.",
       "gen": "tn",
-      "q": "What should I check on an acreage before removing subjects?",
-      "a": "The well and septic records (GWELLS and the Sewerage System Regulation setbacks, including 30 m from a well unless professional advice is obtained), the parcel's ALR status on the ALC maps, and whether the North 256 Street plan area touches the parcel — all per-parcel items, UNVERIFIED until pulled for that parcel."
+      "q": "What should I check on an acreage before removing subjects?"
     },
     {
+      "a": "$34,000 — 1% on the first $200,000 ($2,000) plus 2% on the next $1,600,000 ($32,000).",
       "gen": "tn",
-      "q": "How much PTT on a $1.8M Thornhill acreage?",
-      "a": "$34,000 — 1% on the first $200,000 ($2,000) plus 2% on the next $1,600,000 ($32,000)."
+      "q": "How much PTT on a $1.8M Thornhill acreage?"
     }
+  ],
+  "slug": "thornhill-maple-ridge-guide",
+  "status": "generated",
+  "suppress": [
+    "Related guides"
   ],
   "suppress_gen": [
     "Related guides"
   ],
-  "suppress": [
-    "Related guides"
-  ]
+  "updated": "2026-11-01"
 }

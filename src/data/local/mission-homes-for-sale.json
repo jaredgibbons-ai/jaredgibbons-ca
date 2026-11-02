@@ -1,34 +1,37 @@
 {
-  "status": "generated",
-  "slug": "mission-homes-for-sale",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "p",
-      "text": "Sell my house in Mission: current prices, lot rules and a free home evaluation",
+      "gen": "sellerlink",
       "h": "/sell-my-house-in-mission.html",
-      "gen": "sellerlink"
+      "t": "p",
+      "text": "Sell my house in Mission: current prices, lot rules and a free home evaluation"
     },
     {
-      "t": "p",
-      "text": "See all 23 schools in Mission, BC",
+      "gen": "schoollist",
       "h": "/schools-in-mission-bc.html",
-      "gen": "schoollist"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Mission houses by price band, September 2026",
-      "gen": "snapstats"
-    },
-    {
       "t": "p",
-      "text": "28 houses sold in September against 231 listed. The price band with the most sales was $700,001 to $800,000, with 8 sold (29% of the month). Among bands with at least ten homes listed, the highest sales ratio was $700,001 to $800,000 at 36%.",
-      "gen": "snapstats"
+      "text": "See all 23 schools in Mission, BC"
     },
     {
-      "t": "table",
-      "caption": "Mission houses: listings and sales by price band, September 2026",
+      "gen": "marketlink",
+      "h": "/mission-real-estate-market-stats.html",
+      "t": "p",
+      "text": "Mission real estate market stats for September 2026: benchmark prices and trends"
+    },
+    {
+      "gen": "snapstats",
+      "level": 2,
+      "t": "h",
+      "text": "Mission houses by price band, October 2026"
+    },
+    {
+      "gen": "snapstats",
+      "t": "p",
+      "text": "17 houses sold in October against 216 listed. The price band with the most sales was $1,000,001 to $1,250,000, with 5 sold (29% of the month). Among bands with at least ten homes listed, the highest sales ratio was $0 to $700,000 at 18%."
+    },
+    {
+      "caption": "Mission houses: listings and sales by price band, October 2026",
+      "gen": "snapstats",
       "head": [
         "Price band",
         "Listed",
@@ -38,49 +41,49 @@
       "rows": [
         [
           "$0 to $700,000",
-          "24",
-          "5",
-          "21%"
+          "22",
+          "4",
+          "18%"
         ],
         [
           "$700,001 to $800,000",
-          "22",
-          "8",
-          "36%"
+          "29",
+          "2",
+          "7%"
         ],
         [
           "$800,001 to $900,000",
-          "33",
-          "5",
-          "15%"
+          "27",
+          "2",
+          "7%"
         ],
         [
           "$900,001 to $1,000,000",
-          "34",
-          "4",
-          "12%"
+          "31",
+          "2",
+          "6%"
         ],
         [
           "$1,000,001 to $1,250,000",
-          "67",
-          "2",
-          "3%"
+          "60",
+          "5",
+          "8%"
         ],
         [
           "$1,250,001 to $1,500,000",
-          "31",
-          "3",
-          "10%"
+          "25",
+          "2",
+          "8%"
         ],
         [
           "$1,500,001 to $1,750,000",
-          "9",
+          "7",
           "0",
           "—"
         ],
         [
           "$1,750,001 to $2,000,000",
-          "4",
+          "6",
           "0",
           "—"
         ],
@@ -92,34 +95,34 @@
         ],
         [
           "$2,250,001 to $2,500,000",
-          "2",
-          "1",
-          "50%"
+          "3",
+          "0",
+          "—"
         ],
         [
           "$2,750,001 to $3,000,000",
-          "2",
+          "1",
           "0",
           "—"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Bands with nothing listed and nothing sold are left out. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Mission houses by bedroom count, September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Mission houses by bedroom count, October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Splitting September 2026 by size, the most sales came from the 3 to 4 bedrooms group, with 15 of 28 sold, against 107 of 231 listed.",
-      "gen": "snapstats"
+      "text": "Splitting October 2026 by size, the most sales came from the 5 to 6 bedrooms group, with 9 of 17 sold, against 84 of 216 listed."
     },
     {
-      "t": "table",
-      "caption": "Mission houses: listings and sales by bedroom count, September 2026",
+      "caption": "Mission houses: listings and sales by bedroom count, October 2026",
+      "gen": "snapstats",
       "head": [
         "Size",
         "Listed",
@@ -129,46 +132,46 @@
       "rows": [
         [
           "2 Bedrooms and Less",
-          "21",
-          "2",
-          "10%"
+          "20",
+          "1",
+          "5%"
         ],
         [
           "3 to 4 Bedrooms",
-          "107",
-          "15",
-          "14%"
+          "98",
+          "4",
+          "4%"
         ],
         [
           "5 to 6 Bedrooms",
-          "87",
-          "11",
-          "13%"
+          "84",
+          "9",
+          "11%"
         ],
         [
           "7 Bedrooms and More",
-          "16",
-          "0",
-          "—"
+          "14",
+          "3",
+          "21%"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Mission houses: sale price, days on market and sale-to-list, May to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Mission houses: sale price, days on market and sale-to-list, May to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "In September 2026 houses in Mission sold about 6% below list price, after 29 days on market on the reports’ measure (down from 49 in May).",
-      "gen": "snapstats"
+      "text": "In October 2026 houses in Mission sold about 1% below list price, after 54 days on market on the reports’ measure (up from 49 in May)."
     },
     {
-      "t": "table",
       "caption": "Mission houses: monthly market figures",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Reported sale price",
@@ -223,25 +226,34 @@
           "29",
           "231",
           "28"
+        ],
+        [
+          "October 2026",
+          "$910,000",
+          "$397",
+          "99%",
+          "54",
+          "216",
+          "17"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. The reports give one sale-price figure a month and do not say whether it is an average or a median, so use it for direction, not as a valuation of your own home.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Mission houses: 13 months of listings, sales and prices to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Mission houses: 13 months of listings, sales and prices to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Over the 13 months from September 2025 to September 2026, listings of houses in Mission peaked at 288 in September 2025 and bottomed at 180 in December 2025. Sales were strongest in November 2025 with 38. The reported sale price moved from $995,000 to $814,000, a change of −18.2%.",
-      "gen": "snapstats"
+      "text": "Over the 13 months from October 2025 to October 2026, listings of houses in Mission peaked at 276 in October 2025 and bottomed at 180 in December 2025. Sales were strongest in November 2025 with 38. The reported sale price moved from $880,000 to $910,000, a change of +3.4%."
     },
     {
-      "t": "table",
       "caption": "Mission houses: 13-month trend",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Reported sale price",
@@ -249,12 +261,6 @@
         "Sold"
       ],
       "rows": [
-        [
-          "September 2025",
-          "$995,000",
-          "288",
-          "33"
-        ],
         [
           "October 2025",
           "$880,000",
@@ -326,25 +332,31 @@
           "$814,000",
           "231",
           "28"
+        ],
+        [
+          "October 2026",
+          "$910,000",
+          "216",
+          "17"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. The reports give one sale-price figure a month and do not say whether it is an average or a median, so use it for direction, not as a valuation of your own home.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Mission condos and townhomes by price band, September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Mission condos and townhomes by price band, October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "10 condos and townhomes sold in September against 122 listed. The price band with the most sales was $300,001 to $400,000, with 5 sold (50% of the month). Among bands with at least ten homes listed, the highest sales ratio was $300,001 to $400,000 at 38%.",
-      "gen": "snapstats"
+      "text": "9 condos and townhomes sold in October against 125 listed. The price band with the most sales was $400,001 to $500,000, with 4 sold (44% of the month). Among bands with at least ten homes listed, the highest sales ratio was $500,001 to $600,000 at 15%."
     },
     {
-      "t": "table",
-      "caption": "Mission condos and townhomes: listings and sales by price band, September 2026",
+      "caption": "Mission condos and townhomes: listings and sales by price band, October 2026",
+      "gen": "snapstats",
       "head": [
         "Price band",
         "Listed",
@@ -354,64 +366,64 @@
       "rows": [
         [
           "$200,001 to $300,000",
-          "7",
+          "8",
           "0",
           "—"
         ],
         [
           "$300,001 to $400,000",
-          "13",
-          "5",
-          "38%"
-        ],
-        [
-          "$400,001 to $500,000",
-          "32",
-          "2",
-          "6%"
-        ],
-        [
-          "$500,001 to $600,000",
-          "12",
+          "17",
           "0",
           "—"
         ],
         [
+          "$400,001 to $500,000",
+          "32",
+          "4",
+          "13%"
+        ],
+        [
+          "$500,001 to $600,000",
+          "13",
+          "2",
+          "15%"
+        ],
+        [
           "$600,001 to $700,000",
-          "34",
+          "33",
           "3",
           "9%"
         ],
         [
           "$700,001 to $800,000",
-          "19",
+          "20",
           "0",
           "—"
         ],
         [
           "$800,001 to $900,000",
-          "5",
+          "2",
           "0",
           "—"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Bands with nothing listed and nothing sold are left out. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Mission condos and townhomes: sale price, days on market and sale-to-list, May to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Mission condos and townhomes: sale price, days on market and sale-to-list, May to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "In September 2026 condos and townhomes in Mission sold about 5% below list price, after 61 days on market on the reports’ measure (up from 15 in May).",
-      "gen": "snapstats"
+      "text": "In October 2026 condos and townhomes in Mission sold about 2% below list price, after 60 days on market on the reports’ measure (up from 15 in May)."
     },
     {
-      "t": "table",
       "caption": "Mission condos and townhomes: monthly market figures",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Reported sale price",
@@ -466,183 +478,351 @@
           "61",
           "122",
           "10"
+        ],
+        [
+          "October 2026",
+          "$525,000",
+          "$370",
+          "98%",
+          "60",
+          "125",
+          "9"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. The reports give one sale-price figure a month and do not say whether it is an average or a median, so use it for direction, not as a valuation of your own home.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Mission neighbourhoods",
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Dewdney Deroche real estate",
-            "h": "/dewdney-deroche.html"
-          }
-        ],
-        [
-          {
-            "t": "Durieu real estate",
-            "h": "/durieu.html"
-          }
-        ],
-        [
-          {
-            "t": "Hatzic real estate",
-            "h": "/hatzic.html"
-          }
-        ],
-        [
-          {
-            "t": "Hemlock real estate",
-            "h": "/hemlock.html"
-          }
-        ],
-        [
-          {
-            "t": "Lake Errock real estate",
-            "h": "/lake-errock.html"
-          }
-        ],
-        [
-          {
-            "t": "Mission real estate",
-            "h": "/mission-bc.html"
-          }
-        ],
-        [
-          {
-            "t": "Mission West real estate",
-            "h": "/mission-west.html"
-          }
-        ],
-        [
-          {
-            "t": "Stave Falls real estate",
-            "h": "/stave-falls.html"
-          }
-        ],
-        [
-          {
-            "t": "Steelhead real estate",
-            "h": "/steelhead.html"
-          }
-        ]
-      ],
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: mission.ca (1)",
-            "h": "https://www.mission.ca/council-government/plans-strategies/official-community-plan"
-          }
-        ],
-        [
-          {
-            "t": "Source: translink.ca",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
-          }
-        ],
-        [
-          {
-            "t": "Source: bctransit.com",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/"
-          }
-        ],
-        [
-          {
-            "t": "Source: mission.ca (4)",
-            "h": "https://www.mission.ca/planning/small-scale-multi-unit-housing-ssmuh"
-          }
-        ],
-        [
-          {
-            "t": "Source: fvrd.ca",
-            "h": "https://www.fvrd.ca/assets/Government/Documents/Bylaws/Planning~and~Land~Use/Area%20F%20-%20OCP%20Bylaw%20999%20-%20Hatzic%20Valley.pdf"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Mission real estate market stats for September 2026: benchmark prices and trends",
-      "h": "/mission-real-estate-market-stats.html",
-      "gen": "marketlink"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "More Mission searches by home type",
       "gen": "gaplinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Mission searches by home type"
     },
     {
-      "t": "list",
+      "gen": "gaplinks",
       "items": [
         [
           {
-            "t": "Mission Acreages for sale",
-            "h": "/mission-acreages-for-sale.html"
+            "h": "/mission-acreages-for-sale.html",
+            "t": "Mission Acreages for sale"
           }
         ],
         [
           {
-            "t": "Mission Condos for sale",
-            "h": "/mission-condos-for-sale.html"
+            "h": "/mission-condos-for-sale.html",
+            "t": "Mission Condos for sale"
           }
         ],
         [
           {
-            "t": "Mission Townhomes for sale",
-            "h": "/mission-townhomes-for-sale.html"
+            "h": "/mission-townhomes-for-sale.html",
+            "t": "Mission Townhomes for sale"
           }
         ]
       ],
-      "gen": "gaplinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "communitylinks",
       "level": 2,
-      "text": "What's nearby Mission",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
+      "text": "Mission neighbourhoods"
+    },
+    {
+      "gen": "communitylinks",
+      "items": [
+        [
+          {
+            "h": "/dewdney-deroche.html",
+            "t": "Dewdney Deroche real estate"
+          }
+        ],
+        [
+          {
+            "h": "/durieu.html",
+            "t": "Durieu real estate"
+          }
+        ],
+        [
+          {
+            "h": "/hatzic.html",
+            "t": "Hatzic real estate"
+          }
+        ],
+        [
+          {
+            "h": "/hemlock.html",
+            "t": "Hemlock real estate"
+          }
+        ],
+        [
+          {
+            "h": "/lake-errock.html",
+            "t": "Lake Errock real estate"
+          }
+        ],
+        [
+          {
+            "h": "/mission-bc.html",
+            "t": "Mission real estate"
+          }
+        ],
+        [
+          {
+            "h": "/mission-west.html",
+            "t": "Mission West real estate"
+          }
+        ],
+        [
+          {
+            "h": "/stave-falls.html",
+            "t": "Stave Falls real estate"
+          }
+        ],
+        [
+          {
+            "h": "/steelhead.html",
+            "t": "Steelhead real estate"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "mh",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Mobile and manufactured homes in Mission"
+    },
+    {
+      "gen": "mh",
       "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "The parks and communities"
     },
     {
-      "t": "list",
+      "gen": "mh",
+      "items": [
+        [
+          {
+            "t": "Strata — Cherry Lane, 32165 7th Ave: These are strata purchases — Form B, strata fees, registered bylaws — NOT pad tenancies, NOT mobile stock. Briskham Manor is also NOT Briskham Hill (7540 Briskham Street, 19 new townhomes, 2025/2026) — same street, different form, different strata."
+          }
+        ],
+        [
+          {
+            "t": "Life lease: Life-lease apartments for independent seniors, owned and operated by the Cedar Valley Manor Life Lease Society (Mission Association for Seniors Housing). The operator states the model plainly: you pay an entrance fee, you do not own the unit or the building, you purchase an interest giving you the right to live there, and at termination you receive back the original entrance fee less a set percentage for operation costs. NOT a condo purchase, NOT a park."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "mh",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Mission"
+    },
+    {
+      "gen": "mh",
+      "items": [
+        [
+          {
+            "t": "Municipality: the City of Mission, a municipality in the Fraser Valley Regional District, on the north side of the Fraser River, bounded by the Fraser River to the south, the District of Maple Ridge to the west, and FVRD electoral areas to the north and east."
+          }
+        ],
+        [
+          {
+            "t": "The City's Rural Mission Strategy covers the rural communities of the city — the same communities carried as rural sub-areas."
+          }
+        ],
+        [
+          {
+            "t": "Main roads and transit: Lougheed Highway (Highway 7) runs east–west through the city and crosses the Fraser River to Abbotsford on the Mission Bridge (Highway 11); Dewdney Trunk Road runs along the north side toward Maple Ridge. Mission City Station, 33200 North Railway Ave, is the eastern terminus of the West Coast Express, with trains to Downtown Vancouver on weekday rush hours; BC Transit's Central Fraser Valley system serves Mission with local routes including Route 31 Mission to Abbotsford."
+          }
+        ],
+        [
+          {
+            "t": "Services: Mission Leisure Centre, 7650 Grand Street; Mission Library, 33247 Second Avenue (Fraser Valley Regional Library); Mission Memorial Hospital, 7324 Hurd St; Mission Community Health Centre, 7298 Hurd Street; Mission Urgent and Primary Care Centre, 304-32555 London Ave (7 days, 9:00 a.m.–8:00 p.m.), at the main retail node on London Avenue at the Highway 7 / Highway 11 junction."
+          }
+        ],
+        [
+          {
+            "t": "SD75 runs a middle tier: elementary K–6, middle schools Grades 7–9 and Mission Senior Secondary Grades 10–12."
+          }
+        ],
+        [
+          {
+            "t": "Flood / ALR: the Fraser River floodplain runs along the city's south edge, and low areas such as Hatzic Prairie — where Mission Mobile Home Park sits — are protected by the Dewdney Dyke system; City taxes also carry a diking levy on top of the municipal, school, regional district and BC Assessment levies. ALR land sits mainly on the city's rural edges, with status parcel-specific on ALC mapping."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "mh",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Mission"
+    },
+    {
+      "gen": "mh",
+      "items": [
+        [
+          {
+            "t": "Mission's 55+ map is two geographies, not one: Almost all of the strata / life-lease / co-op stock sits within a few blocks on the 7th Avenue / Cedar Street bench (Cherry Lane, Luther Place, Cedar Valley Manor, St. Andrew's Place, plus the Briskham Street pocket west of downtown), while the only rural 55+ product is the manufactured-home parks on Lougheed Highway — a park buyer and a bench buyer are shopping different Mission entirely, with different tenure law."
+          }
+        ],
+        [
+          {
+            "t": "One listing's \"First Nations Lease\" line changes the diligence, not just the label: If the park's head tenure is a First Nations lease, the lease's term, consent and registration position sit underneath every pad tenancy in the park; confirm the head tenure from park documents, not the listing, before offering."
+          }
+        ],
+        [
+          {
+            "t": "The rural park option comes with dyke geography: Mission Mobile Home Park sits in Hatzic, behind the Dewdney Dyke system, and Mission taxes carry a diking levy — the trade for the park's price point is floodplain-adjacent land and car dependence, so confirm the parcel's flood status and the pad tenancy terms together."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "mh",
+      "pos": "end",
+      "t": "p",
+      "text": "The BC rules for buying a home in a park (the pad tenancy, park-owner consent, pad-rent caps, the Manufactured Home Registry and park closures) are explained once, with sources, on the page linked below."
+    },
+    {
+      "gen": "mh",
+      "items": [
+        [
+          {
+            "h": "/bc-mobile-home-buying-rules.html",
+            "t": "BC mobile home buying rules"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "mh",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the mobile-home notes on Mission"
+    },
+    {
+      "gen": "mh",
+      "items": [
+        [
+          {
+            "h": "https://www.mission.ca/council-government/plans-strategies/official-community-plan",
+            "t": "mission.ca · official community plan"
+          }
+        ],
+        [
+          {
+            "h": "https://careers.fraserhealth.ca/pages/mission-community-profile",
+            "t": "careers.fraserhealth.ca · mission community profile"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mission.ca/business-building/current-city-projects/rural-mission-strategy",
+            "t": "mission.ca · rural mission strategy"
+          }
+        ],
+        [
+          {
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/",
+            "t": "bctransit.com · schedules and maps"
+          }
+        ],
+        [
+          {
+            "h": "http://www.mission.ca/leisure",
+            "t": "mission.ca · leisure"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations/mission-library",
+            "t": "fvrl.bc.ca · mission library"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Mission/mission-memorial-hospital",
+            "t": "fraserhealth.ca · mission memorial hospital"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mpsd.ca",
+            "t": "mpsd.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/075",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrd.ca/assets/Government/Documents/Bylaws/Planning~and~Land~Use/Area%20F%20-%20OCP%20Bylaw%20999%20-%20Hatzic%20Valley.pdf",
+            "t": "fvrd.ca · Area F OCP Bylaw 999 Hatzic Valley"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mission.ca/services/property-taxes/tax-rates",
+            "t": "mission.ca · tax rates"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby Mission"
+    },
+    {
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -665,18 +845,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -694,18 +874,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -723,18 +903,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -742,25 +922,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Mission City Station, 33200 North Railway Ave",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Mission Library",
@@ -805,18 +986,17 @@
           "3.2"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -824,83 +1004,76 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
           }
         ],
         [
           {
-            "t": "lite.bctransit.com · 10534 CFV RG Jan2025 v9",
-            "h": "https://lite.bctransit.com/wp-content/uploads/2025/03/10534_CFV_RG_Jan2025-v9.pdf"
+            "h": "https://lite.bctransit.com/wp-content/uploads/2025/03/10534_CFV_RG_Jan2025-v9.pdf",
+            "t": "lite.bctransit.com · 10534 CFV RG Jan2025 v9"
           }
         ],
         [
           {
-            "t": "mission.ca · fraser river heritage park",
-            "h": "https://www.mission.ca/municipal-hall/departments/parks-recreation-and-culture/fraser-river-heritage-park/"
+            "h": "https://www.mission.ca/municipal-hall/departments/parks-recreation-and-culture/fraser-river-heritage-park/",
+            "t": "mission.ca · fraser river heritage park"
           }
         ],
         [
           {
-            "t": "mission.ca · parks trails facilities",
-            "h": "https://www.mission.ca/city-hall/departments/parks-recreation-and-culture/parks-trails-facilities/"
+            "h": "https://www.mission.ca/city-hall/departments/parks-recreation-and-culture/parks-trails-facilities/",
+            "t": "mission.ca · parks trails facilities"
           }
         ],
         [
           {
-            "t": "mission.ca · leisure",
-            "h": "http://www.mission.ca/leisure"
+            "h": "http://www.mission.ca/leisure",
+            "t": "mission.ca · leisure"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca · mission library",
-            "h": "https://www.fvrl.bc.ca/locations/mission-library"
+            "h": "https://www.fvrl.bc.ca/locations/mission-library",
+            "t": "fvrl.bc.ca · mission library"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/075"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/075",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "realcanadiansuperstore.ca · details",
-            "h": "https://www.realcanadiansuperstore.ca/store-locator/details/1559"
+            "h": "https://www.realcanadiansuperstore.ca/store-locator/details/1559",
+            "t": "realcanadiansuperstore.ca · details"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
       "level": 2,
-      "text": "Mobile and manufactured homes in Mission",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "The parks and communities",
-      "gen": "mh",
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -908,202 +1081,42 @@
       "items": [
         [
           {
-            "t": "Strata — Cherry Lane, 32165 7th Ave: These are strata purchases — Form B, strata fees, registered bylaws — NOT pad tenancies, NOT mobile stock. Briskham Manor is also NOT Briskham Hill (7540 Briskham Street, 19 new townhomes, 2025/2026) — same street, different form, different strata."
-          }
-        ],
-        [
-          {
-            "t": "Life lease: Life-lease apartments for independent seniors, owned and operated by the Cedar Valley Manor Life Lease Society (Mission Association for Seniors Housing). The operator states the model plainly: you pay an entrance fee, you do not own the unit or the building, you purchase an interest giving you the right to live there, and at termination you receive back the original entrance fee less a set percentage for operation costs. NOT a condo purchase, NOT a park."
-          }
-        ]
-      ],
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Mission",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Municipality: the City of Mission, a municipality in the Fraser Valley Regional District, on the north side of the Fraser River, bounded by the Fraser River to the south, the District of Maple Ridge to the west, and FVRD electoral areas to the north and east."
-          }
-        ],
-        [
-          {
-            "t": "The City's Rural Mission Strategy covers the rural communities of the city — the same communities carried as rural sub-areas."
-          }
-        ],
-        [
-          {
-            "t": "Main roads and transit: Lougheed Highway (Highway 7) runs east–west through the city and crosses the Fraser River to Abbotsford on the Mission Bridge (Highway 11); Dewdney Trunk Road runs along the north side toward Maple Ridge. Mission City Station, 33200 North Railway Ave, is the eastern terminus of the West Coast Express, with trains to Downtown Vancouver on weekday rush hours; BC Transit's Central Fraser Valley system serves Mission with local routes including Route 31 Mission to Abbotsford."
-          }
-        ],
-        [
-          {
-            "t": "Services: Mission Leisure Centre, 7650 Grand Street; Mission Library, 33247 Second Avenue (Fraser Valley Regional Library); Mission Memorial Hospital, 7324 Hurd St; Mission Community Health Centre, 7298 Hurd Street; Mission Urgent and Primary Care Centre, 304-32555 London Ave (7 days, 9:00 a.m.–8:00 p.m.), at the main retail node on London Avenue at the Highway 7 / Highway 11 junction."
-          }
-        ],
-        [
-          {
-            "t": "SD75 runs a middle tier: elementary K–6, middle schools Grades 7–9 and Mission Senior Secondary Grades 10–12."
-          }
-        ],
-        [
-          {
-            "t": "Flood / ALR: the Fraser River floodplain runs along the city's south edge, and low areas such as Hatzic Prairie — where Mission Mobile Home Park sits — are protected by the Dewdney Dyke system; City taxes also carry a diking levy on top of the municipal, school, regional district and BC Assessment levies. ALR land sits mainly on the city's rural edges, with status parcel-specific on ALC mapping."
-          }
-        ]
-      ],
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Good to know about Mission",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Mission's 55+ map is two geographies, not one: Almost all of the strata / life-lease / co-op stock sits within a few blocks on the 7th Avenue / Cedar Street bench (Cherry Lane, Luther Place, Cedar Valley Manor, St. Andrew's Place, plus the Briskham Street pocket west of downtown), while the only rural 55+ product is the manufactured-home parks on Lougheed Highway — a park buyer and a bench buyer are shopping different Mission entirely, with different tenure law."
-          }
-        ],
-        [
-          {
-            "t": "One listing's \"First Nations Lease\" line changes the diligence, not just the label: If the park's head tenure is a First Nations lease, the lease's term, consent and registration position sit underneath every pad tenancy in the park; confirm the head tenure from park documents, not the listing, before offering."
-          }
-        ],
-        [
-          {
-            "t": "The rural park option comes with dyke geography: Mission Mobile Home Park sits in Hatzic, behind the Dewdney Dyke system, and Mission taxes carry a diking levy — the trade for the park's price point is floodplain-adjacent land and car dependence, so confirm the parcel's flood status and the pad tenancy terms together."
-          }
-        ]
-      ],
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "The BC rules for buying a home in a park (the pad tenancy, park-owner consent, pad-rent caps, the Manufactured Home Registry and park closures) are explained once, with sources, on the page linked below.",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "BC mobile home buying rules",
-            "h": "/bc-mobile-home-buying-rules.html"
-          }
-        ]
-      ],
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Sources for the mobile-home notes on Mission",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "mission.ca · official community plan",
-            "h": "https://www.mission.ca/council-government/plans-strategies/official-community-plan"
-          }
-        ],
-        [
-          {
-            "t": "careers.fraserhealth.ca · mission community profile",
-            "h": "https://careers.fraserhealth.ca/pages/mission-community-profile"
-          }
-        ],
-        [
-          {
-            "t": "mission.ca · rural mission strategy",
-            "h": "https://www.mission.ca/business-building/current-city-projects/rural-mission-strategy"
-          }
-        ],
-        [
-          {
-            "t": "translink.ca · west coast express",
+            "t": "Source: translink.ca",
             "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
           }
         ],
         [
           {
-            "t": "bctransit.com · schedules and maps",
+            "t": "Source: bctransit.com",
             "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/"
           }
         ],
         [
           {
-            "t": "mission.ca · leisure",
-            "h": "http://www.mission.ca/leisure"
-          }
-        ],
-        [
-          {
-            "t": "fvrl.bc.ca · mission library",
-            "h": "https://www.fvrl.bc.ca/locations/mission-library"
-          }
-        ],
-        [
-          {
-            "t": "fraserhealth.ca · mission memorial hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Mission/mission-memorial-hospital"
-          }
-        ],
-        [
-          {
-            "t": "mpsd.ca",
-            "h": "https://www.mpsd.ca"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/075"
-          }
-        ],
-        [
-          {
-            "t": "fvrd.ca · Area F   OCP Bylaw 999   Hatzic Valley",
-            "h": "https://www.fvrd.ca/assets/Government/Documents/Bylaws/Planning~and~Land~Use/Area%20F%20-%20OCP%20Bylaw%20999%20-%20Hatzic%20Valley.pdf"
-          }
-        ],
-        [
-          {
-            "t": "mission.ca · tax rates",
-            "h": "https://www.mission.ca/services/property-taxes/tax-rates"
+            "t": "Source: mission.ca",
+            "h": "https://www.mission.ca/planning/small-scale-multi-unit-housing-ssmuh"
           }
         ]
       ],
-      "gen": "mh",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
     {
-      "q": "Is Mission a city or a district?",
-      "a": "It is the City of Mission — the municipality's own site, bylaws and Official Community Plan all use \"City of Mission\".",
-      "gen": "muse"
+      "a": "No. You own the home (a chattel) and rent the pad — that is not land ownership. Your right to the site is the assigned pad tenancy under the MHPTA, subject to park-owner consent on RTB Form 10.",
+      "gen": "mh",
+      "q": "In a Mission park, do I own the land?"
+    },
+    {
+      "a": "It matters: it decides the tax-penalty regime (City flat 10% vs the rural 5% + 5%), the servicing bylaw and the zoning authority. Confirm jurisdiction for the exact parcel before offering.",
+      "gen": "mh",
+      "q": "Is the park inside the City of Mission or the regional district?"
+    },
+    {
+      "a": "No — they are different tenures entirely, not parks: Cherry Lane is a strata townhouse purchase (Form B, registered 55+ bylaw regime); Cedar Valley Manor is a life lease (an occupancy interest — you do not own the unit); St. Andrew's Place is a housing co-op (you join and pay housing charges — you do not buy a unit). Compare the documents, not just the prices.",
+      "gen": "mh",
+      "q": "Are Cherry Lane, Cedar Valley Manor and St. Andrew's Place cheaper park alternatives?"
     },
     {
       "q": "How do I get to Vancouver from Mission?",
@@ -1114,26 +1127,9 @@
       "q": "Can I add a suite or extra units to a Mission house lot?",
       "a": "The City's SSMUH page states that zones previously restricted to single family or duplex dwellings are subject to the provincial small-scale multi-unit housing legislation the City has adopted; what is allowed on a specific lot depends on its zone under Zoning Bylaw 5949-2020.",
       "gen": "muse"
-    },
-    {
-      "q": "Does Mission flood?",
-      "a": "The city's south edge is Fraser River floodplain, and low areas such as Hatzic Prairie sit behind the Dewdney Dyke system; flood status is property-specific — check the address against City and FVRD floodplain mapping before buying.",
-      "gen": "muse"
-    },
-    {
-      "gen": "mh",
-      "q": "In a Mission park, do I own the land?",
-      "a": "No. You own the home (a chattel) and rent the pad — that is not land ownership. Your right to the site is the assigned pad tenancy under the MHPTA, subject to park-owner consent on RTB Form 10."
-    },
-    {
-      "gen": "mh",
-      "q": "Is the park inside the City of Mission or the regional district?",
-      "a": "It matters: it decides the tax-penalty regime (City flat 10% vs the rural 5% + 5%), the servicing bylaw and the zoning authority. Confirm jurisdiction for the exact parcel before offering."
-    },
-    {
-      "gen": "mh",
-      "q": "Are Cherry Lane, Cedar Valley Manor and St. Andrew's Place cheaper park alternatives?",
-      "a": "No — they are different tenures entirely, not parks: Cherry Lane is a strata townhouse purchase (Form B, registered 55+ bylaw regime); Cedar Valley Manor is a life lease (an occupancy interest — you do not own the unit); St. Andrew's Place is a housing co-op (you join and pay housing charges — you do not buy a unit). Compare the documents, not just the prices."
     }
-  ]
+  ],
+  "slug": "mission-homes-for-sale",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

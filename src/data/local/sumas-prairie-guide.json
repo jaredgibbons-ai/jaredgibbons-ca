@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "sumas-prairie-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Sumas Prairie compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Sumas Prairie compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Sumas Prairie against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Sumas Prairie against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
-      "caption": "Sumas Prairie against the whole city, September 2026",
+      "caption": "Sumas Prairie against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -29,154 +26,154 @@
           "Detached houses",
           "0.5%",
           "0.0%",
-          "— against 10%",
+          "— against 18%",
           "Under 10 listed"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings was 2 in June and 2 in September, too few (under 3) to call a rise or fall, and it took 0.0% of the city’s 215 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings was 2 in June and 2 in October, too few (under 3) to call a rise or fall, and it took 0.0% of the city’s 287 sales over the period."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Abbotsford real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Abbotsford real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Abbotsford homes for sale",
-            "h": "/abbotsford-homes-for-sale.html"
+            "h": "/abbotsford-homes-for-sale.html",
+            "t": "Abbotsford homes for sale"
           }
         ],
         [
           {
-            "t": "Abbotsford real estate market stats",
-            "h": "/abbotsford-real-estate-market-stats.html"
+            "h": "/abbotsford-real-estate-market-stats.html",
+            "t": "Abbotsford real estate market stats"
           }
         ],
         [
           {
-            "t": "Abbotsford houses for sale",
-            "h": "/abbotsford-houses-for-sale.html"
+            "h": "/abbotsford-houses-for-sale.html",
+            "t": "Abbotsford houses for sale"
           }
         ],
         [
           {
-            "t": "Abbotsford condos for sale",
-            "h": "/abbotsford-condos-for-sale.html"
+            "h": "/abbotsford-condos-for-sale.html",
+            "t": "Abbotsford condos for sale"
           }
         ],
         [
           {
-            "t": "Abbotsford townhomes for sale",
-            "h": "/abbotsford-townhomes-for-sale.html"
+            "h": "/abbotsford-townhomes-for-sale.html",
+            "t": "Abbotsford townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Abbotsford",
-            "h": "/sell-my-house-in-abbotsford.html"
+            "h": "/sell-my-house-in-abbotsford.html",
+            "t": "Sell my house in Abbotsford"
           }
         ],
         [
           {
-            "t": "Schools in Abbotsford",
-            "h": "/schools-in-abbotsford-bc.html"
+            "h": "/schools-in-abbotsford-bc.html",
+            "t": "Schools in Abbotsford"
           }
         ],
         [
           {
-            "t": "Sumas Prairie homes and market figures",
-            "h": "/sumas-prairie.html"
+            "h": "/sumas-prairie.html",
+            "t": "Sumas Prairie homes and market figures"
           }
         ],
         [
           {
-            "t": "Abbotsford East real estate",
-            "h": "/abbotsford-east.html"
+            "h": "/abbotsford-east.html",
+            "t": "Abbotsford East real estate"
           }
         ],
         [
           {
-            "t": "Abbotsford West real estate",
-            "h": "/abbotsford-west.html"
+            "h": "/abbotsford-west.html",
+            "t": "Abbotsford West real estate"
           }
         ],
         [
           {
-            "t": "Aberdeen real estate",
-            "h": "/aberdeen.html"
+            "h": "/aberdeen.html",
+            "t": "Aberdeen real estate"
           }
         ],
         [
           {
-            "t": "Bradner real estate",
-            "h": "/bradner.html"
+            "h": "/bradner.html",
+            "t": "Bradner real estate"
           }
         ],
         [
           {
-            "t": "Central Abbotsford real estate",
-            "h": "/central-abbotsford.html"
+            "h": "/central-abbotsford.html",
+            "t": "Central Abbotsford real estate"
           }
         ],
         [
           {
-            "t": "Matsqui real estate",
-            "h": "/matsqui.html"
+            "h": "/matsqui.html",
+            "t": "Matsqui real estate"
           }
         ],
         [
           {
-            "t": "Poplar real estate",
-            "h": "/poplar.html"
+            "h": "/poplar.html",
+            "t": "Poplar real estate"
           }
         ],
         [
           {
-            "t": "Sumas Mountain real estate",
-            "h": "/sumas-mountain.html"
+            "h": "/sumas-mountain.html",
+            "t": "Sumas Mountain real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Condo buildings in Sumas Prairie",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Sumas Prairie is the low agricultural prairie in southeast Abbotsford, in the City of Abbotsford, between Abbotsford and Chilliwack. Its September 2026 board row records zero attached listings and zero attached sales, no condo or townhome card appeared in its feed, and no named strata complex on the prairie was confirmed on any official or developer source. Plan currency note. Abbotsford's current Official Community Plan is Abbotsforward 2050, adopted December 2025 — the 2016 OCP is NOT current, and any document citing it as the governing plan is a plan out of date.",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Sumas Prairie",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Condo buildings in Sumas Prairie"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "pos": "end",
+      "t": "p",
+      "text": "Sumas Prairie is the low agricultural prairie in southeast Abbotsford, in the City of Abbotsford, between Abbotsford and Chilliwack. Its September 2026 board row records zero attached listings and zero attached sales, no condo or townhome card appeared in its feed, and no named strata complex on the prairie was confirmed on any official or developer source. Plan currency note. Abbotsford's current Official Community Plan is Abbotsforward 2050, adopted December 2025 — the 2016 OCP is NOT current, and any document citing it as the governing plan is a plan out of date."
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Sumas Prairie"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Sumas Prairie is an FVREB board sub-area of the City of Abbotsford — the low agricultural prairie in southeast Abbotsford between Abbotsford and Chilliwack, plus the upland fringe the feed itself surfaces (Majuba Hill / Old Yale Road cards labelled Sumas Prairie). Street-level board boundary: UNVERIFIED — FVREB publishes no street-level boundary for the sub-area, and no municipal boundary was substituted for it."
+            "t": "Sumas Prairie is an FVREB board sub-area of the City of Abbotsford — the low agricultural prairie in southeast Abbotsford between Abbotsford and Chilliwack, plus the upland fringe the feed itself surfaces (Majuba Hill / Old Yale Road cards labelled Sumas Prairie). Street-level board boundary: Not verified — FVREB publishes no street-level boundary for the sub-area, and no municipal boundary was substituted for it."
           }
         ],
         [
@@ -186,17 +183,12 @@
         ],
         [
           {
-            "t": "That is a near-empty row: no sales in either split, and no pace or price conclusion can be drawn from it. SnapStats publishes medians at community level only, so there is no Sumas Prairie median: UNVERIFIED at sub-area level."
+            "t": "That is a near-empty row: no sales in either split, and no pace or price conclusion can be drawn from it. SnapStats publishes medians at community level only, so there is no Sumas Prairie median: Not verified at sub-area level."
           }
         ],
         [
           {
-            "t": "Catchments are address-based through SD34's School Locator, and no locator run for a Sumas Prairie address is on record, so catchment schools for any specific address are UNVERIFIED."
-          }
-        ],
-        [
-          {
-            "t": "Both page claims are UNVERIFIED as stated."
+            "t": "Both page claims are not verified as stated."
           }
         ],
         [
@@ -210,27 +202,27 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Sumas Prairie",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Sumas Prairie"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "The ALC housing frame on ALR parcels: land in the ALR may generally have no more than one residence per parcel unless the owner qualifies for an additional residence; the principal residence must have a total floor area of 500 m² or less; a secondary suite is permitted in the ALR only within the principal residence; and an additional detached residence may be up to 90 m² on properties of 40 ha or less and up to 186 m² on properties over 40 ha. ALR status for any specific Sumas Prairie parcel: UNVERIFIED — check parcel by parcel."
+            "t": "The ALC housing frame on ALR parcels: land in the ALR may generally have no more than one residence per parcel unless the owner qualifies for an additional residence; the principal residence must have a total floor area of 500 m² or less; a secondary suite is permitted in the ALR only within the principal residence; and an additional detached residence may be up to 90 m² on properties of 40 ha or less and up to 186 m² on properties over 40 ha. ALR status for any specific Sumas Prairie parcel: Not verified — check parcel by parcel."
           }
         ],
         [
           {
-            "t": "Zoning frame: Abbotsford Zoning Bylaw No. 2400-2014 applies city-wide, including its agricultural zones. The City's AgRefresh parcel-size work records a minimum subdivision lot area of 8.0 ha in the Agricultural One Zone (A1) and 16.0 ha in the Agricultural Two Zone (A2) — so most prairie parcels cannot be split further in any form, strata or fee-simple. The zone of any specific parcel is a per-parcel check: UNVERIFIED for any individual parcel."
+            "t": "Zoning frame: Abbotsford Zoning Bylaw No. 2400-2014 applies city-wide, including its agricultural zones. The City's AgRefresh parcel-size work records a minimum subdivision lot area of 8.0 ha in the Agricultural One Zone (A1) and 16.0 ha in the Agricultural Two Zone (A2) — so most prairie parcels cannot be split further in any form, strata or fee-simple. The zone of any specific parcel is a per-parcel check: Not verified for any individual parcel."
           }
         ],
         [
@@ -249,18 +241,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Sumas Prairie",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Sumas Prairie"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -293,106 +285,106 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Sumas Prairie",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Sumas Prairie"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ],
         [
           {
-            "t": "homehappy.ca · bc first time buyer programs",
-            "h": "https://homehappy.ca/bc-first-time-buyer-programs/"
+            "h": "https://homehappy.ca/bc-first-time-buyer-programs/",
+            "t": "homehappy.ca · bc first time buyer programs"
           }
         ],
         [
           {
-            "t": "cmhc-schl.gc.ca · second home",
-            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home"
+            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home",
+            "t": "cmhc-schl.gc.ca · second home"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · rent increases for manufactured homes",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes",
+            "t": "www2.gov.bc.ca · rent increases for manufactured homes"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Sumas Prairie Guide",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Sumas Prairie Guide",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Sumas Prairie Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Sumas Prairie Guide"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -405,18 +397,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Sumas Prairie Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Sumas Prairie Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -430,7 +422,7 @@
         ],
         [
           {
-            "t": "SSMUH bylaw number: UNCONFIRMED — conflict stated, number never asserted"
+            "t": "SSMUH bylaw number: Not confirmed — conflict stated, number never asserted"
           }
         ],
         [
@@ -449,18 +441,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Sumas Prairie Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Sumas Prairie Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -483,128 +475,128 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Sumas Prairie Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Sumas Prairie Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · sumas prairie guide",
-            "h": "https://jaredgibbons.ca/sumas-prairie-guide.html"
+            "h": "https://jaredgibbons.ca/sumas-prairie-guide.html",
+            "t": "jaredgibbons.ca · sumas prairie guide"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · supporting flood mitigation planning sumas prair",
-            "h": "https://www.abbotsford.ca/city-hall/news-media/supporting-flood-mitigation-planning-sumas-prairie"
+            "h": "https://www.abbotsford.ca/city-hall/news-media/supporting-flood-mitigation-planning-sumas-prairie",
+            "t": "abbotsford.ca · supporting flood mitigation planning sumas prair"
           }
         ],
         [
           {
-            "t": "abbyschools.ca · catchments",
-            "h": "https://www.abbyschools.ca/schools/catchments"
+            "h": "https://www.abbyschools.ca/schools/catchments",
+            "t": "abbyschools.ca · catchments"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · abbotsford regional hospital and cancer centre",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Abbotsford/abbotsford-regional-hospital-and-cancer-centre"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Abbotsford/abbotsford-regional-hospital-and-cancer-centre",
+            "t": "fraserhealth.ca · abbotsford regional hospital and cancer centre"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · strata housing",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing",
+            "t": "www2.gov.bc.ca · strata housing"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · AgRefresh St3   Parcel Size",
-            "h": "https://www.abbotsford.ca/sites/default/files/2021-10/AgRefresh%20St3%20-%20Parcel%20Size.pdf"
+            "h": "https://www.abbotsford.ca/sites/default/files/2021-10/AgRefresh%20St3%20-%20Parcel%20Size.pdf",
+            "t": "abbotsford.ca · AgRefresh St3 Parcel Size"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · your current tax notice",
-            "h": "https://www.abbotsford.ca/city-services/property-taxes/your-current-tax-notice"
+            "h": "https://www.abbotsford.ca/city-services/property-taxes/your-current-tax-notice",
+            "t": "abbotsford.ca · your current tax notice"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · understand",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/understand"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/understand",
+            "t": "www2.gov.bc.ca · understand"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Sumas Prairie",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Sumas Prairie"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Fee-simple farm and acreage parcels are the market: the feed's cards are farm parcels and country residences — commercial farm land with barns and acreage houses, not urban housing — held fee-simple unless title says otherwise: no strata corporation, no Form B, no strata fees. An exact tenure split for the sub-area is UNVERIFIED — no official source publishes one."
+            "t": "Fee-simple farm and acreage parcels are the market: the feed's cards are farm parcels and country residences — commercial farm land with barns and acreage houses, not urban housing — held fee-simple unless title says otherwise: no strata corporation, no Form B, no strata fees. An exact tenure split for the sub-area is not verified — no official source publishes one."
           }
         ],
         [
@@ -614,7 +606,7 @@
         ],
         [
           {
-            "t": "Lot character (sizes/zones), only as the research states them: agricultural in scale where the agricultural zones apply — the City's AgRefresh parcel-size work records a minimum subdivision lot area of 8.0 ha in the Agricultural One Zone (A1) and 16.0 ha in the Agricultural Two Zone (A2) under Abbotsford Zoning Bylaw No. 2400-2014. The zone of any specific parcel is a per-parcel WebMap check: UNVERIFIED for any individual parcel."
+            "t": "Lot character (sizes/zones), only as the research states them: agricultural in scale where the agricultural zones apply — the City's AgRefresh parcel-size work records a minimum subdivision lot area of 8.0 ha in the Agricultural One Zone (A1) and 16.0 ha in the Agricultural Two Zone (A2) under Abbotsford Zoning Bylaw No. 2400-2014. The zone of any specific parcel is a per-parcel WebMap check: Not verified for any individual parcel."
           }
         ],
         [
@@ -624,12 +616,12 @@
         ],
         [
           {
-            "t": "Serviced vs unserviced ground, as the sources state it: feed cards describe septic systems and wells on individual acreage listings (listing text only) — servicing here is per-property (well/septic) on the face of the listings, and servicing for any individual Sumas Prairie property is UNVERIFIED in the research. Pull the well record and septic filings on the specific property; there is no urban servicing assumption to fall back on."
+            "t": "Serviced vs unserviced ground, as the sources state it: feed cards describe septic systems and wells on individual acreage listings (listing text only) — servicing here is per-property (well/septic) on the face of the listings, and servicing for any individual Sumas Prairie property is not verified. Pull the well record and septic filings on the specific property; there is no urban servicing assumption to fall back on."
           }
         ],
         [
           {
-            "t": "Flood sorts every parcel on the floor: the City hosts the Province's release on the Sumas River Watershed Flood Mitigation Planning Initiative, signed in April 2023 in response to widespread flooding on Sumas Prairie from heavy rainfall in November 2021; the Province is providing $3.3 million for critical design and assessment work and has provided approximately $220 million in recovery, preparedness and mitigation funding for Abbotsford and Sumas Prairie since 2021, including $76.6 million for upgrades to the Barrowtown Pump Station. The same release records that December flooding again demonstrated the corridor is highly prone to water surges, and that the initiative's hydraulic model, risk assessment, ecological assessment and pump-station studies are at various stages of completion — mitigation is active planning, not a settled fix. Parcel-level flood status (elevation, Flood Construction Level, dyke/pump position) for any specific property: UNVERIFIED — confirm with the City."
+            "t": "Flood sorts every parcel on the floor: the City hosts the Province's release on the Sumas River Watershed Flood Mitigation Planning Initiative, signed in April 2023 in response to widespread flooding on Sumas Prairie from heavy rainfall in November 2021; the Province is providing $3.3 million for critical design and assessment work and has provided approximately $220 million in recovery, preparedness and mitigation funding for Abbotsford and Sumas Prairie since 2021, including $76.6 million for upgrades to the Barrowtown Pump Station. The same release records that December flooding again demonstrated the corridor is highly prone to water surges, and that the initiative's hydraulic model, risk assessment, ecological assessment and pump-station studies are at various stages of completion — mitigation is active planning, not a settled fix. Parcel-level flood status (elevation, Flood Construction Level, dyke/pump position) for any specific property: Not verified — confirm with the City."
           }
         ],
         [
@@ -648,18 +640,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Sumas Prairie",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Sumas Prairie"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -673,11 +665,6 @@
         ],
         [
           {
-            "t": "What the feed actually showed: cards read in full were all labelled \"Sumas Prairie\" — a Majuba Hill custom acreage house, a large-acreage farm parcel offered as Land with three large barns, a hillside acreage house, a 20-acre farm property and an Arnold-community acreage rancher — an acreage-and-farm feed spanning the prairie floor and its upland edges, with no condo or townhome card in the page text read."
-          }
-        ],
-        [
-          {
             "t": "Per-sub-area medians are NOT published. (SnapStats FVR/GVR September 2026 report)"
           }
         ],
@@ -687,18 +674,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Sumas Prairie",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Sumas Prairie"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -707,7 +694,7 @@
         ],
         [
           {
-            "t": "Zoning / subdivision (Abbotsford): Abbotsford Zoning Bylaw No. 2400-2014 applies city-wide, including its agricultural zones; the City's AgRefresh parcel-size work records minimum subdivision lot areas of 8.0 ha (A1) and 16.0 ha (A2). The zone of any specific parcel is a per-parcel check: UNVERIFIED for any individual parcel."
+            "t": "Zoning / subdivision (Abbotsford): Abbotsford Zoning Bylaw No. 2400-2014 applies city-wide, including its agricultural zones; the City's AgRefresh parcel-size work records minimum subdivision lot areas of 8.0 ha (A1) and 16.0 ha (A2). The zone of any specific parcel is a per-parcel check: Not verified for any individual parcel."
           }
         ],
         [
@@ -722,7 +709,7 @@
         ],
         [
           {
-            "t": "ALR block (full — this is dyked-prairie farm ground): subdivision within the ALR requires ALC approval; ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)); land in the ALR may generally have no more than one residence per parcel unless the owner qualifies for an additional residence; caps: principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha). Farm class is THREE tiers — $2,500 on 0.8–4 ha / $2,500 + 5% of value over 4 ha / $10,000 under 0.8 ha, applications by Oct 31 — a flat \"$2,500+\" line is an ERROR. ALR status for any specific Sumas Prairie parcel: UNVERIFIED — check parcel by parcel on the ALC maps."
+            "t": "ALR block (full — this is dyked-prairie farm ground): subdivision within the ALR requires ALC approval; ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)); land in the ALR may generally have no more than one residence per parcel unless the owner qualifies for an additional residence; caps: principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha). Farm class is THREE tiers — $2,500 on 0.8–4 ha / $2,500 + 5% of value over 4 ha / $10,000 under 0.8 ha, applications by Oct 31 — a flat \"$2,500+\" line is an ERROR. ALR status for any specific Sumas Prairie parcel: Not verified — check parcel by parcel on the ALC maps."
           }
         ],
         [
@@ -731,18 +718,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Sumas Prairie",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Sumas Prairie"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -765,142 +752,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Sumas Prairie",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Sumas Prairie"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · sumas prairie",
-            "h": "https://jaredgibbons.ca/sumas-prairie.html"
+            "h": "https://jaredgibbons.ca/sumas-prairie.html",
+            "t": "jaredgibbons.ca · sumas prairie"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · supporting flood mitigation planning sumas prair",
-            "h": "https://www.abbotsford.ca/city-hall/news-media/supporting-flood-mitigation-planning-sumas-prairie"
+            "h": "https://www.abbotsford.ca/city-hall/news-media/supporting-flood-mitigation-planning-sumas-prairie",
+            "t": "abbotsford.ca · supporting flood mitigation planning sumas prair"
           }
         ],
         [
           {
-            "t": "abbyschools.ca · catchments",
-            "h": "https://www.abbyschools.ca/schools/catchments"
+            "h": "https://www.abbyschools.ca/schools/catchments",
+            "t": "abbyschools.ca · catchments"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · AgRefresh St3   Parcel Size",
-            "h": "https://www.abbotsford.ca/sites/default/files/2021-10/AgRefresh%20St3%20-%20Parcel%20Size.pdf"
+            "h": "https://www.abbotsford.ca/sites/default/files/2021-10/AgRefresh%20St3%20-%20Parcel%20Size.pdf",
+            "t": "abbotsford.ca · AgRefresh St3 Parcel Size"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · city begins implementing updated official commun",
-            "h": "https://www.abbotsford.ca/council/your-council-community/blog/city-begins-implementing-updated-official-community-plan"
+            "h": "https://www.abbotsford.ca/council/your-council-community/blog/city-begins-implementing-updated-official-community-plan",
+            "t": "abbotsford.ca · city begins implementing updated official commun"
           }
         ],
         [
           {
-            "t": "laws.abbotsford.ca · 2025bschedulea",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea"
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea",
+            "t": "laws.abbotsford.ca · 2025bschedulea"
           }
         ],
         [
           {
-            "t": "laws.abbotsford.ca · 2014b2400140",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400140"
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400140",
+            "t": "laws.abbotsford.ca · 2014b2400140"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "canada.ca · sales vacant land individuals",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html",
+            "t": "canada.ca · sales vacant land individuals"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · your current tax notice",
-            "h": "https://www.abbotsford.ca/city-services/property-taxes/your-current-tax-notice"
+            "h": "https://www.abbotsford.ca/city-services/property-taxes/your-current-tax-notice",
+            "t": "abbotsford.ca · your current tax notice"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 2,
-      "text": "Acreage and rural land in Sumas Prairie",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The ground in Sumas Prairie",
-      "gen": "acre",
-      "pos": "end"
+      "text": "Acreage and rural land in Sumas Prairie"
     },
     {
-      "t": "list",
+      "gen": "acre",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The ground in Sumas Prairie"
+    },
+    {
+      "gen": "acre",
       "items": [
         [
           {
@@ -913,18 +900,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Streets, schools and getting around Sumas Prairie",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Sumas Prairie"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -937,18 +924,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Good to know about Sumas Prairie",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Sumas Prairie"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -961,130 +948,130 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "acre",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below.",
-      "gen": "acre",
-      "pos": "end"
+      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "BC acreage buying rules",
-            "h": "/bc-acreage-buying-rules.html"
+            "h": "/bc-acreage-buying-rules.html",
+            "t": "BC acreage buying rules"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Sources for the acreage notes on Sumas Prairie",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the acreage notes on Sumas Prairie"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "abbotsford.ca · supporting flood mitigation planning sumas prair",
-            "h": "https://www.abbotsford.ca/city-hall/news-media/supporting-flood-mitigation-planning-sumas-prairie"
+            "h": "https://www.abbotsford.ca/city-hall/news-media/supporting-flood-mitigation-planning-sumas-prairie",
+            "t": "abbotsford.ca · supporting flood mitigation planning sumas prair"
           }
         ],
         [
           {
-            "t": "abbyschools.ca · catchments",
-            "h": "https://www.abbyschools.ca/schools/catchments"
+            "h": "https://www.abbyschools.ca/schools/catchments",
+            "t": "abbyschools.ca · catchments"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · abbotsford regional hospital and cancer centre",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Abbotsford/abbotsford-regional-hospital-and-cancer-centre"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Abbotsford/abbotsford-regional-hospital-and-cancer-centre",
+            "t": "fraserhealth.ca · abbotsford regional hospital and cancer centre"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · AgRefresh St3   Parcel Size",
-            "h": "https://www.abbotsford.ca/sites/default/files/2021-10/AgRefresh%20St3%20-%20Parcel%20Size.pdf"
+            "h": "https://www.abbotsford.ca/sites/default/files/2021-10/AgRefresh%20St3%20-%20Parcel%20Size.pdf",
+            "t": "abbotsford.ca · AgRefresh St3 Parcel Size"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · well records registration",
-            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/information-for-property-owners/well-records-registration"
+            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/information-for-property-owners/well-records-registration",
+            "t": "www2.gov.bc.ca · well records registration"
           }
         ],
         [
           {
-            "t": "laws.abbotsford.ca · 2025bschedulea",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea"
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea",
+            "t": "laws.abbotsford.ca · 2025bschedulea"
           }
         ],
         [
           {
-            "t": "laws.abbotsford.ca · 2014b2400140",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400140"
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400140",
+            "t": "laws.abbotsford.ca · 2014b2400140"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · your current tax notice",
-            "h": "https://www.abbotsford.ca/city-services/property-taxes/your-current-tax-notice"
+            "h": "https://www.abbotsford.ca/city-services/property-taxes/your-current-tax-notice",
+            "t": "abbotsford.ca · your current tax notice"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Sumas Prairie",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Sumas Prairie"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -1107,18 +1094,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1136,18 +1123,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1160,18 +1147,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1179,25 +1166,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Semá:th Elementary School, 36321 Vye Rd",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Upper Sumas Fields",
@@ -1212,18 +1200,17 @@
           "5.2"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1241,134 +1228,112 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "fvrd.ca · transit",
-            "h": "https://www.fvrd.ca/EN/main/services/transit.html"
+            "h": "https://www.fvrd.ca/EN/main/services/transit.html",
+            "t": "fvrd.ca · transit"
           }
         ],
         [
           {
-            "t": "bctransit.com · cfv map 3",
-            "h": "https://www.bctransit.com/central-fraser-valley/wp-content/uploads/2024/12/cfv_map_3.pdf"
+            "h": "https://www.bctransit.com/central-fraser-valley/wp-content/uploads/2024/12/cfv_map_3.pdf",
+            "t": "bctransit.com · cfv map 3"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · parks playgrounds",
-            "h": "https://www.abbotsford.ca/parks-playgrounds"
+            "h": "https://www.abbotsford.ca/parks-playgrounds",
+            "t": "abbotsford.ca · parks playgrounds"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/034"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/034",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "realcanadiansuperstore.ca · details",
-            "h": "https://www.realcanadiansuperstore.ca/store-locator/details/1558"
+            "h": "https://www.realcanadiansuperstore.ca/store-locator/details/1558",
+            "t": "realcanadiansuperstore.ca · details"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Are there more or fewer homes for sale in Sumas Prairie than in June?",
-      "a": "In Sumas Prairie, listings of houses was 2 in June and 2 in September, too few (under 3) to call a rise or fall.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How big is Sumas Prairie compared with the rest of Abbotsford?",
-      "a": "In September 2026, Sumas Prairie held 0.5% of the 440 houses listed in Abbotsford.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How many homes sold in Sumas Prairie from June to September 2026?",
-      "a": "0 houses sold in Sumas Prairie over those 4 months.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "Who can help me buy or sell in Sumas Prairie?",
-      "a": "Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, works across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361 or use the contact form on this site.",
-      "gen": "bank-faq"
-    },
-    {
-      "q": "How do I find out which school serves an address in Sumas Prairie?",
-      "a": "School catchments are set by address, so use the school district's catchment locator with the exact address. Catchment lines change, so check before you write an offer.",
-      "gen": "bank-faq"
-    },
-    {
+      "a": "Abbotsford's attached stock is in the urban sub-areas.",
       "gen": "tn",
-      "q": "Are there any condos or townhomes in Sumas Prairie?",
-      "a": "Abbotsford's attached stock is in the urban sub-areas."
+      "q": "Are there any condos or townhomes in Sumas Prairie?"
     },
     {
+      "a": "Because ALR residences cannot be stratified (ALC Bulletin 09 s. 6; Strata Property Act s. 239; Agricultural Land Commission Act s. 21(1)). On ALR land the housing frame is one principal residence up to 500 m², a suite only inside it, and at most one additional residence of 90 m² (≤40 ha) or 186 m² (>40 ha) — a house on land, never condo lots.",
       "gen": "tn",
-      "q": "Why can't a prairie farmhouse be bought as strata units?",
-      "a": "Because ALR residences cannot be stratified (ALC Bulletin 09 s. 6; Strata Property Act s. 239; Agricultural Land Commission Act s. 21(1)). On ALR land the housing frame is one principal residence up to 500 m², a suite only inside it, and at most one additional residence of 90 m² (≤40 ha) or 186 m² (>40 ha) — a house on land, never condo lots."
+      "q": "Why can't a prairie farmhouse be bought as strata units?"
     },
     {
+      "a": "Medians are published at community level only (Abbotsford detached $949,000; attached $497,500), expressly not as Sumas Prairie figures.",
       "gen": "tn",
-      "q": "How did Sumas Prairie sell in September 2026?",
-      "a": "Medians are published at community level only (Abbotsford detached $949,000; attached $497,500), expressly not as Sumas Prairie figures."
+      "q": "How did Sumas Prairie sell in September 2026?"
     },
     {
+      "a": "The Sumas River Watershed Flood Mitigation Planning Initiative — the Province, three First Nations (Semá:th, Máthxwi, Leq'á:mel) and the Cities of Abbotsford and Chilliwack — was signed in April 2023 after the November 2021 floods; the Province has provided approximately $220 million for Abbotsford and Sumas Prairie since 2021, including $76.6 million for Barrowtown Pump Station upgrades, plus $3.3 million for the initiative's design and assessment work — and the initiative's studies are still at various stages of completion. Get the parcel's elevation, Flood Construction Level position and insurance position in writing before subjects come off.",
       "gen": "tn",
-      "q": "What is being done about Sumas Prairie flooding?",
-      "a": "The Sumas River Watershed Flood Mitigation Planning Initiative — the Province, three First Nations (Semá:th, Máthxwi, Leq'á:mel) and the Cities of Abbotsford and Chilliwack — was signed in April 2023 after the November 2021 floods; the Province has provided approximately $220 million for Abbotsford and Sumas Prairie since 2021, including $76.6 million for Barrowtown Pump Station upgrades, plus $3.3 million for the initiative's design and assessment work — and the initiative's studies are still at various stages of completion. Get the parcel's elevation, Flood Construction Level position and insurance position in writing before subjects come off."
+      "q": "What is being done about Sumas Prairie flooding?"
     },
     {
+      "a": "Where the parcel is in the ALR, the ALC frame is one principal residence at a maximum of 500 m² of floor area, a secondary suite only within the principal residence, and at most one additional detached residence of 90 m² (parcels of 40 ha or less) or 186 m² (parcels over 40 ha); the City's suite cap (less than 50% of the principal unit) and coach/garden cap (15% of the lot to 100 m²) sit alongside it, and the parcel's ALR status and zone must be confirmed first.",
       "gen": "tn",
-      "q": "Can a second dwelling be built on a Sumas Prairie farm parcel?",
-      "a": "Where the parcel is in the ALR, the ALC frame is one principal residence at a maximum of 500 m² of floor area, a secondary suite only within the principal residence, and at most one additional detached residence of 90 m² (parcels of 40 ha or less) or 186 m² (parcels over 40 ha); the City's suite cap (less than 50% of the principal unit) and coach/garden cap (15% of the lot to 100 m²) sit alongside it, and the parcel's ALR status and zone must be confirmed first."
+      "q": "Can a second dwelling be built on a Sumas Prairie farm parcel?"
     },
     {
+      "a": "Two locks: ALR residences cannot be stratified (ALC Bulletin 09 s. 6; SPA s. 239; ALCA s.",
       "gen": "tn",
-      "q": "Why can't a prairie farm just be split into townhomes?",
-      "a": "Two locks: ALR residences cannot be stratified (ALC Bulletin 09 s. 6; SPA s. 239; ALCA s."
+      "q": "Why can't a prairie farm just be split into townhomes?"
     },
     {
+      "a": "Where the parcel is in the ALR: one principal residence to 500 m², a suite only within it, and at most one additional detached residence of 90 m² (≤40 ha) or 186 m² (>40 ha).",
       "gen": "tn",
-      "q": "Can I build a second dwelling on a prairie farm parcel?",
-      "a": "Where the parcel is in the ALR: one principal residence to 500 m², a suite only within it, and at most one additional detached residence of 90 m² (≤40 ha) or 186 m² (>40 ha)."
+      "q": "Can I build a second dwelling on a prairie farm parcel?"
     },
     {
-      "gen": "tn",
-      "q": "Which OCP governs — the guide cites Bylaw 2600-2016?",
-      "a": "That citation is stale."
-    },
-    {
+      "a": "Fee-simple farm parcels and acreages — commercial farm land with barns, country home sites and rural-residential acreages on the prairie floor and its upland fringe, parcel by parcel. There is no named acreage subdivision and no strata land form here at all.",
       "gen": "acre",
-      "q": "What actually trades as acreage on Sumas Prairie?",
-      "a": "Fee-simple farm parcels and acreages — commercial farm land with barns, country home sites and rural-residential acreages on the prairie floor and its upland fringe, parcel by parcel. There is no named acreage subdivision and no strata land form here at all."
+      "q": "What actually trades as acreage on Sumas Prairie?"
     },
     {
+      "a": "Generally not further: subdivision minimums are 8.0 ha in A1 and 16.0 ha in A2 in the City's parcel-size work, and subdivision within the ALR requires ALC approval in any case. Confirm the parcel's zone and ALR status before pricing any split.",
       "gen": "acre",
-      "q": "Can I subdivide a prairie parcel?",
-      "a": "Generally not further: subdivision minimums are 8.0 ha in A1 and 16.0 ha in A2 in the City's parcel-size work, and subdivision within the ALR requires ALC approval in any case. Confirm the parcel's zone and ALR status before pricing any split."
+      "q": "Can I subdivide a prairie parcel?"
     },
     {
+      "a": "Two frames sit together: the City's suite cap (under 50% of the principal unit) and coach/garden cap (15% of the lot to a maximum of 100 m²) — Abbotsford's rules only — and, on ALR land, the ALC frame (suite only within the principal residence; additional detached residence capped at 90 m² / 186 m² by parcel size). Confirm the parcel's ALR status and zone first.",
       "gen": "acre",
-      "q": "Can I add a coach house or second dwelling?",
-      "a": "Two frames sit together: the City's suite cap (under 50% of the principal unit) and coach/garden cap (15% of the lot to a maximum of 100 m²) — Abbotsford's rules only — and, on ALR land, the ALC frame (suite only within the principal residence; additional detached residence capped at 90 m² / 186 m² by parcel size). Confirm the parcel's ALR status and zone first."
+      "q": "Can I add a coach house or second dwelling?"
+    },
+    {
+      "q": "Which public schools are on Sumas Prairie itself?",
+      "a": "Two SD34 schools, confirmed by name and address against the BC Ministry K-12 file: Semá:th Elementary School at 36321 Vye Rd and Barrowtown Elementary at 5137 Tolmie Rd; the guide page names both correctly, and catchments are address-based (~/workspace/area-research-2026-11/education/work/bc_k12_schools.csv, read 2026-11-01)",
+      "gen": "muse"
     }
-  ]
+  ],
+  "slug": "sumas-prairie-guide",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

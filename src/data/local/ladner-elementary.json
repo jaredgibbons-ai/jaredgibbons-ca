@@ -1,81 +1,34 @@
 {
-  "status": "draft",
-  "slug": "ladner-elementary",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: le.deltasd.bc.ca",
-            "h": "https://le.deltasd.bc.ca/"
-          }
-        ],
-        [
-          {
-            "t": "Source: deltasd.bc.ca",
-            "h": "https://www.deltasd.bc.ca/schools/student-registration/catchment-area-maps/"
-          }
-        ],
-        [
-          {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt609.pdf"
-          }
-        ],
-        [
-          {
-            "t": "Source: maps.delta.ca",
-            "h": "https://maps.delta.ca/Utilities/ZoningPDF/RS1.pdf"
-          }
-        ],
-        [
-          {
-            "t": "Source: delta.ca",
-            "h": "http://www.delta.ca/building-development/housing-our-future"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Ladner Elementary 55+ homes for sale",
+      "gen": "n55link",
       "h": "/ladner-elementary-55-plus-homes-for-sale.html",
       "pos": "end",
-      "gen": "n55link"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "What's nearby Ladner Elementary",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
+      "text": "Ladner Elementary 55+ homes for sale"
     },
     {
+      "gen": "nb",
+      "level": 2,
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Ladner Elementary"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -103,18 +56,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -132,18 +85,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -166,18 +119,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -185,25 +138,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Ladner Elementary, 5016 44 Ave",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Ladner Library",
@@ -218,16 +172,16 @@
           "1.0"
         ],
         [
-          "Save-On-Foods (Ladner Centre)",
-          "Drive",
-          "4",
-          "1.7"
-        ],
-        [
           "Ladner Exchange",
           "Drive",
           "4",
           "2.1"
+        ],
+        [
+          "Save-On-Foods (Ladner Centre)",
+          "Drive",
+          "4",
+          "1.7"
         ],
         [
           "Ladner Leisure Centre",
@@ -236,18 +190,17 @@
           "2.2"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -260,14 +213,70 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf",
+            "t": "infomaps.translink.ca · tt601"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt606.pdf",
+            "t": "infomaps.translink.ca · tt606"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/memorial-park",
+            "t": "delta.ca · memorial park"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/parks-recreation/sport-recreation/indoor-facilities/ladner-leisure-centre",
+            "t": "delta.ca · ladner leisure centre"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations",
+            "t": "fvrl.bc.ca · locations"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta",
+            "t": "studentsuccess.gov.bc.ca · delta"
+          }
+        ],
+        [
+          {
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/936/store",
+            "t": "saveonfoods.com · store"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -275,48 +284,30 @@
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt601",
-            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf"
+            "t": "Source: le.deltasd.bc.ca",
+            "h": "https://le.deltasd.bc.ca/"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt606",
-            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt606.pdf"
+            "t": "Source: infomaps.translink.ca",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt609.pdf"
           }
         ],
         [
           {
-            "t": "delta.ca · memorial park",
-            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/memorial-park"
+            "t": "Source: maps.delta.ca",
+            "h": "https://maps.delta.ca/Utilities/ZoningPDF/RS1.pdf"
           }
         ],
         [
           {
-            "t": "delta.ca · ladner leisure centre",
-            "h": "https://www.delta.ca/parks-recreation/sport-recreation/indoor-facilities/ladner-leisure-centre"
-          }
-        ],
-        [
-          {
-            "t": "fvrl.bc.ca · locations",
-            "h": "https://www.fvrl.bc.ca/locations"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · delta",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta"
-          }
-        ],
-        [
-          {
-            "t": "saveonfoods.com · store",
-            "h": "https://www.saveonfoods.com/sm/planning/rsid/936/store"
+            "t": "Source: delta.ca",
+            "h": "http://www.delta.ca/building-development/housing-our-future"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
@@ -324,11 +315,6 @@
     {
       "q": "Is \"Ladner Elementary\" an official City of Delta neighbourhood name?",
       "a": "No — it is a Paragon sub-area name that follows Ladner Elementary School (5016 44 Ave., confirmed in the BC Ministry K-12 file); the planning area is Ladner under the Official Community Plan, Bylaw No. 8400 (~/workspace/area-research-2026-11/education/work/bc_k12_schools.csv, read 2026-11-01).",
-      "gen": "muse"
-    },
-    {
-      "q": "If I buy in this sub-area, will my kids automatically attend Ladner Elementary?",
-      "a": "Not automatically — SD37 catchments are address-based. The district publishes the Ladner Elementary catchment boundary in its Ladner Area catchment maps (elementary and secondary, updated October 2017) — a document-based source, not a locator run — and the locator result recorded in this program for the school's own address, 5016 44 Avenue, is Ladner Elementary with Delta Secondary; every home address must still be checked.",
       "gen": "muse"
     },
     {
@@ -340,6 +326,14 @@
       "q": "Are suites allowed on single detached lots here?",
       "a": "Yes, where the zone allows — the RS1 zone lists a secondary suite as an accessory use, Delta's SSMUH zoning updates allow up to four units on single-detached and duplex lots, and the amendments also cover coach houses and garden suites; confirm the lot's zone on the City zoning maps.",
       "gen": "muse"
+    },
+    {
+      "q": "Can Jared show me homes in Ladner Elementary?",
+      "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
+      "gen": "muse-generic"
     }
-  ]
+  ],
+  "slug": "ladner-elementary",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

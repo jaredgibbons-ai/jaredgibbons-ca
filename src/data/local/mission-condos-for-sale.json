@@ -1,58 +1,33 @@
 {
-  "status": "draft",
-  "slug": "mission-condos-for-sale",
-  "updated": "2026-11-01",
-  "gen_gap": true,
-  "hand_edited": true,
-  "new_page": {
-    "title": "Mission Condos for Sale | Jared Gibbons REALTOR®",
-    "description": "Mission condos for sale: apartment-style homes in strata buildings, with monthly listings and sales for Mission. Jared Gibbons, REALTOR®, Royal LePage Little Oak.",
-    "h1": "Mission Condos for Sale | Fraser Valley Real Estate"
-  },
-  "breadcrumbs": [
-    {
-      "name": "Home",
-      "href": "/index.html"
-    },
-    {
-      "name": "Mission",
-      "href": "/mission-homes-for-sale.html"
-    },
-    {
-      "name": "Condos",
-      "href": "/mission-condos-for-sale.html"
-    }
-  ],
-  "faq_heading": "Mission Condos for Sale: your questions answered",
   "blocks": [
     {
+      "gen": "gappage",
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
-      "gen": "gappage"
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet."
     },
     {
+      "gen": "gappage",
       "t": "p",
-      "text": "Mission condos for sale: apartment-style homes in strata buildings. The Fraser Valley Real Estate Board benchmark for apartments (condos) in Mission was $411,500 in September 2026 (-4.7% over a year). Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees.",
-      "gen": "gappage"
+      "text": "Mission condos for sale: apartment-style homes in strata buildings. The Fraser Valley Real Estate Board benchmark for apartments (condos) in Mission was $411,500 in September 2026 (-4.7% over a year). Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees."
     },
     {
-      "t": "grid",
-      "gen": "gappage"
+      "gen": "gappage",
+      "t": "grid"
     },
     {
-      "t": "h",
+      "gen": "sold",
       "level": 2,
-      "text": "Mission condos sold, November 2025 to October 2026",
-      "gen": "sold"
+      "t": "h",
+      "text": "Mission condos sold, November 2025 to October 2026"
     },
     {
+      "gen": "sold",
       "t": "p",
-      "text": "36 condos sold in Mission with a median price of $468,250 (the middle half sold between $400,000 and $519,750), taking a median of 32 days to sell at 97.6% of the last list price; 3% sold above list. They had a median $496 per square foot, a median year built of 2006 and a median strata fee of $433 a month.",
-      "gen": "sold"
+      "text": "36 condos sold in Mission with a median price of $468,250 (the middle half sold between $400,000 and $519,750), taking a median of 32 days to sell at 97.6% of the last list price; 3% sold above list. They had a median $496 per square foot, a median year built of 2006 and a median strata fee of $433 a month."
     },
     {
-      "t": "table",
       "caption": "Mission: condos sold by quarter",
+      "gen": "sold",
       "head": [
         "Period",
         "Sold",
@@ -81,17 +56,17 @@
         ]
       ],
       "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
-      "gen": "sold"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "gappage",
       "level": 2,
-      "text": "Mission apartments (condos): benchmark price and changes, September 2026",
-      "gen": "gappage"
+      "t": "h",
+      "text": "Mission apartments (condos): benchmark price and changes, September 2026"
     },
     {
-      "t": "table",
       "caption": "Mission apartments (condos), MLS® Home Price Index, September 2026",
+      "gen": "gappage",
       "head": [
         "Area",
         "Benchmark price",
@@ -119,22 +94,22 @@
         ]
       ],
       "source": "Source: Fraser Valley Real Estate Board, MLS® Home Price Index, September 2026 (released October 5, 2026). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at 1.5% or more.",
-      "gen": "gappage"
+      "t": "table"
     },
     {
+      "gen": "gappage",
       "t": "p",
-      "text": "Mission: the apartments (condos) benchmark was $411,500 in September 2026. Over the past year it fell 4.7%; over three months it fell 2.7%; over the last month it was little changed (-0.7%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 9.5%; over 5 years it rose 6.6%.",
-      "gen": "gappage"
+      "text": "Mission: the apartments (condos) benchmark was $411,500 in September 2026. Over the past year it fell 4.7%; over three months it fell 2.7%; over the last month it was little changed (-0.7%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 9.5%; over 5 years it rose 6.6%."
     },
     {
-      "t": "h",
+      "gen": "gappage",
       "level": 2,
-      "text": "Mission apartments (condos): sales, listings and prices, September 2026",
-      "gen": "gappage"
+      "t": "h",
+      "text": "Mission apartments (condos): sales, listings and prices, September 2026"
     },
     {
-      "t": "table",
       "caption": "Mission apartments (condos), September 2026 with August 2026 and September 2025",
+      "gen": "gappage",
       "head": [
         "Measure",
         "September 2026",
@@ -179,23 +154,23 @@
           "$404,914"
         ]
       ],
-      "source": "Source: Fraser Valley Real Estate Board MLS® statistics package, September 2026 (released October 5, 2026). Median is the middle sale price of the month and average is the total of sale prices divided by sales; both swing when few homes sell, so a month with fewer than 3 sales is not read as a trend.",
-      "gen": "gappage"
+      "source": "Source: Fraser Valley Real Estate Board MLS® statistics package, September 2026 (released October 5, 2026).",
+      "t": "table"
     },
     {
+      "gen": "gappage",
       "t": "p",
-      "text": "In September 2026 Mission had 5 apartments (condos) sales and 55 active listings (3 sales and 57 active in August; 7 and 39 in September 2025). Sales fell 28.6% against September 2025. Active listings rose 41.0% against September 2025.",
-      "gen": "gappage"
+      "text": "In September 2026 Mission had 5 apartments (condos) sales and 55 active listings (3 sales and 57 active in August; 7 and 39 in September 2025). Sales fell 28.6% against September 2025. Active listings rose 41.0% against September 2025."
     },
     {
-      "t": "h",
+      "gen": "gappage",
       "level": 2,
-      "text": "Mission condos and townhomes by community, September 2026",
-      "gen": "gappage"
+      "t": "h",
+      "text": "Mission condos and townhomes by community, October 2026"
     },
     {
-      "t": "table",
-      "caption": "Mission condos and townhomes listed, sold and sales ratio by community, September 2026",
+      "caption": "Mission condos and townhomes listed, sold and sales ratio by community, October 2026",
+      "gen": "gappage",
       "head": [
         "Community",
         "Listed",
@@ -205,18 +180,18 @@
       "rows": [
         [
           "Mission",
-          "104",
-          "10",
-          "10%"
+          "107",
+          "9",
+          "8%"
         ],
         [
-          "Hemlock",
+          "Mission West",
           "9",
           "0",
           "—"
         ],
         [
-          "Mission West",
+          "Hemlock",
           "8",
           "0",
           "—"
@@ -259,86 +234,86 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal. Condos and townhomes are one line in the reports.",
-      "gen": "gappage"
+      "t": "table"
     },
     {
+      "gen": "gappage",
       "t": "p",
-      "text": "Community pages for Mission:",
-      "gen": "gappage"
+      "text": "Community pages for Mission:"
     },
     {
-      "t": "list",
+      "gen": "gappage",
       "items": [
         [
           {
-            "t": "Mission",
-            "h": "/mission-bc.html"
+            "h": "/mission-bc.html",
+            "t": "Mission"
           }
         ],
         [
           {
-            "t": "Hemlock",
-            "h": "/hemlock.html"
+            "h": "/mission-west.html",
+            "t": "Mission West"
           }
         ],
         [
           {
-            "t": "Mission West",
-            "h": "/mission-west.html"
+            "h": "/hemlock.html",
+            "t": "Hemlock"
           }
         ],
         [
           {
-            "t": "Lake Errock",
-            "h": "/lake-errock.html"
+            "h": "/lake-errock.html",
+            "t": "Lake Errock"
           }
         ],
         [
           {
-            "t": "Dewdney Deroche",
-            "h": "/dewdney-deroche.html"
+            "h": "/dewdney-deroche.html",
+            "t": "Dewdney Deroche"
           }
         ],
         [
           {
-            "t": "Durieu",
-            "h": "/durieu.html"
+            "h": "/durieu.html",
+            "t": "Durieu"
           }
         ],
         [
           {
-            "t": "Hatzic",
-            "h": "/hatzic.html"
+            "h": "/hatzic.html",
+            "t": "Hatzic"
           }
         ],
         [
           {
-            "t": "Stave Falls",
-            "h": "/stave-falls.html"
+            "h": "/stave-falls.html",
+            "t": "Stave Falls"
           }
         ],
         [
           {
-            "t": "Steelhead",
-            "h": "/steelhead.html"
+            "h": "/steelhead.html",
+            "t": "Steelhead"
           }
         ]
       ],
-      "gen": "gappage"
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "gappage",
       "level": 2,
-      "text": "Secondary schools in Mission",
-      "gen": "gappage"
+      "t": "h",
+      "text": "Secondary schools in Mission"
     },
     {
+      "gen": "gappage",
       "t": "p",
-      "text": "5 secondary schools are located in the City of Mission: 4 in SD75 Mission, 1 in SD93 Conseil scolaire francophone. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district.",
-      "gen": "gappage"
+      "text": "5 secondary schools are located in the City of Mission: 4 in SD75 Mission, 1 in SD93 Conseil scolaire francophone. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district."
     },
     {
-      "t": "list",
+      "gen": "gappage",
       "items": [
         [
           {
@@ -366,148 +341,173 @@
           }
         ]
       ],
-      "gen": "gappage"
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "gappage",
       "level": 2,
-      "text": "Before you buy condos in Mission",
-      "gen": "gappage"
+      "t": "h",
+      "text": "Before you buy condos in Mission"
     },
     {
+      "gen": "gappage",
       "t": "p",
-      "text": "Jared checks these with you on the exact address before you write an offer:",
-      "gen": "gappage"
+      "text": "Jared checks these with you on the exact address before you write an offer:"
     },
     {
-      "t": "list",
+      "gen": "gappage",
       "items": [
         [
           {
-            "t": "Mortgage calculator",
-            "h": "/mortgage-calculator.html"
+            "h": "/mortgage-calculator.html",
+            "t": "Mortgage calculator"
           }
         ],
         [
           {
-            "t": "Home evaluation",
-            "h": "/home-evaluation.html"
+            "h": "/home-evaluation.html",
+            "t": "Home evaluation"
           }
         ]
       ],
-      "gen": "gappage"
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "gappage",
       "level": 2,
-      "text": "More Mission real estate",
-      "gen": "gappage",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "More Mission real estate"
     },
     {
-      "t": "list",
+      "gen": "gappage",
       "items": [
         [
           {
-            "t": "Mission homes for sale",
-            "h": "/mission-homes-for-sale.html"
+            "h": "/mission-homes-for-sale.html",
+            "t": "Mission homes for sale"
           }
         ],
         [
           {
-            "t": "Mission real estate market stats",
-            "h": "/mission-real-estate-market-stats.html"
+            "h": "/mission-real-estate-market-stats.html",
+            "t": "Mission real estate market stats"
           }
         ],
         [
           {
-            "t": "Fraser Valley market stats",
-            "h": "/fraser-valley-market-stats.html"
+            "h": "/fraser-valley-market-stats.html",
+            "t": "Fraser Valley market stats"
           }
         ],
         [
           {
-            "t": "Mortgage calculator",
-            "h": "/mortgage-calculator.html"
+            "h": "/mortgage-calculator.html",
+            "t": "Mortgage calculator"
           }
         ],
         [
           {
-            "t": "Home evaluation",
-            "h": "/home-evaluation.html"
+            "h": "/home-evaluation.html",
+            "t": "Home evaluation"
           }
         ],
         [
           {
-            "t": "Contact Jared",
-            "h": "/contact.html"
+            "h": "/contact.html",
+            "t": "Contact Jared"
           }
         ]
       ],
-      "gen": "gappage",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    }
+  ],
+  "breadcrumbs": [
+    {
+      "href": "/index.html",
+      "name": "Home"
+    },
+    {
+      "href": "/mission-homes-for-sale.html",
+      "name": "Mission"
+    },
+    {
+      "href": "/mission-condos-for-sale.html",
+      "name": "Condos"
     }
   ],
   "faq": [
     {
+      "a": "36 condos sold in Mission between November 1, 2025 to October 22, 2026, with a median price of $468,250.",
       "gen": "sold",
-      "q": "What did condos in Mission sell for?",
-      "a": "36 condos sold in Mission between November 1, 2025 to October 22, 2026, with a median price of $468,250."
+      "q": "What did condos in Mission sell for?"
     },
     {
+      "a": "The median was 32 days from listing to sale, and homes sold at a median 97.6% of the last list price (3% sold above list), for sales November 1, 2025 to October 22, 2026.",
       "gen": "sold",
-      "q": "How long do condos take to sell in Mission?",
-      "a": "The median was 32 days from listing to sale, and homes sold at a median 97.6% of the last list price (3% sold above list), for sales November 1, 2025 to October 22, 2026."
+      "q": "How long do condos take to sell in Mission?"
     },
     {
+      "a": "The middle half of the 36 condos that sold in Mission went for between $400,000 and $519,750, around a median of $468,250.",
       "gen": "sold",
-      "q": "What price range do most condos in Mission sell in?",
-      "a": "The middle half of the 36 condos that sold in Mission went for between $400,000 and $519,750, around a median of $468,250."
+      "q": "What price range do most condos in Mission sell in?"
     },
     {
+      "a": "3% of the 36 condos sold for more than the last list price, and the median sale was 97.6% of it.",
       "gen": "sold",
-      "q": "Do condos in Mission sell above asking price?",
-      "a": "3% of the 36 condos sold for more than the last list price, and the median sale was 97.6% of it."
+      "q": "Do condos in Mission sell above asking price?"
     },
     {
+      "a": "Of the 36 sales, 36 listings gave a monthly fee and the median was $433.",
       "gen": "sold",
-      "q": "What is a typical strata fee for condos in Mission?",
-      "a": "Of the 36 sales, 36 listings gave a monthly fee and the median was $433."
+      "q": "What is a typical strata fee for condos in Mission?"
     },
     {
+      "a": "The median year built was 2006 for the 36 condos sold in Mission.",
       "gen": "sold",
-      "q": "How old are the condos that sold in Mission?",
-      "a": "The median year built was 2006 for the 36 condos sold in Mission."
+      "q": "How old are the condos that sold in Mission?"
     },
     {
+      "a": "The median condo that sold in Mission had 2 bedrooms, from the 36 sales between November 1, 2025 to October 22, 2026.",
       "gen": "sold",
-      "q": "How many bedrooms do condos in Mission usually have?",
-      "a": "The median condo that sold in Mission had 2 bedrooms, from the 36 sales between November 1, 2025 to October 22, 2026."
+      "q": "How many bedrooms do condos in Mission usually have?"
     },
     {
+      "a": "By number sold: Mission BC (33), for November 1, 2025 to October 22, 2026.",
       "gen": "sold",
-      "q": "Which Mission communities sold the most condos?",
-      "a": "By number sold: Mission BC (33), for November 1, 2025 to October 22, 2026."
+      "q": "Which Mission communities sold the most condos?"
     },
     {
-      "q": "What is the benchmark price of a condo in Mission?",
-      "a": "The Fraser Valley Real Estate Board MLS® Home Price Index benchmark for apartments (condos) in Mission was $411,500 in September 2026, a modelled price for a typical home and not an average of sales."
+      "a": "The Fraser Valley Real Estate Board MLS® Home Price Index benchmark for apartments (condos) in Mission was $411,500 in September 2026, a modelled price for a typical home and not an average of sales.",
+      "q": "What is the benchmark price of a condo in Mission?"
     },
     {
-      "q": "Did condo prices fall in Mission?",
-      "a": "Over the past year the benchmark fell 4.7%. Over three months it fell 2.7%. A change under 1.5% is not described as a rise or fall."
+      "a": "Over the past year the benchmark fell 4.7%. Over three months it fell 2.7%. A change under 1.5% is not described as a rise or fall.",
+      "q": "Did condo prices fall in Mission?"
     },
     {
-      "q": "Is Mission a buyers’ or sellers’ market?",
-      "a": "In September 2026 houses in Mission had a sales ratio of 12%, which the reports’ scale reads as a balanced market, and condos and townhomes 8%, which the reports’ scale reads as a buyers’ market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers."
+      "a": "In October 2026 houses in Mission had a sales ratio of 8%, which the reports’ scale reads as a buyers’ market, and condos and townhomes 7%, which the reports’ scale reads as a buyers’ market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers.",
+      "q": "Is Mission a buyers’ or sellers’ market?"
     },
     {
-      "q": "How many condos are for sale in Mission?",
-      "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the condos in Mission that match what you want."
+      "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the condos in Mission that match what you want.",
+      "q": "How many condos are for sale in Mission?"
     }
   ],
+  "faq_heading": "Mission Condos for Sale: your questions answered",
+  "gen_gap": true,
+  "hand_edited": true,
   "needs_from_muse": [
     "Live listing feed filtered to condos in Mission",
     "Jared's own notes"
-  ]
+  ],
+  "new_page": {
+    "description": "Mission condos for sale: apartment-style homes in strata buildings, with monthly listings and sales for Mission. Jared Gibbons, REALTOR®, Royal LePage Little Oak.",
+    "h1": "Mission Condos for Sale | Fraser Valley Real Estate",
+    "title": "Mission Condos for Sale | Jared Gibbons REALTOR®"
+  },
+  "slug": "mission-condos-for-sale",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

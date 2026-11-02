@@ -59,7 +59,7 @@ def main():
         for t, kd in KINDS.items():
             ser = L.series(months, ak, t, nm)
             avg = sum((dict(ser)[m] or {}).get('inventory') or 0 for m in last3) / 3
-            if avg < MIN_AVG: skipped['thin'] += 1; continue
+            if avg < MIN_AVG and not locs.get(f'{base}-{kd["suffix"]}', {}).get('type_page'): skipped['thin'] += 1; continue   # a page already built stays and is refreshed (nothing leaves the sitemap before Jared's review)
             stem = STEM_ALIAS.get(nm, L.norm(nm)); alt = [stem, base, L.norm(nm)]
             if not locs.get(f'{base}-{kd["suffix"]}', {}).get('type_page') and (any(f'{a}-{kd["suffix"]}' in typed_exist or (t == 'condo_townhome' and any(f'{a}-{x}-for-sale' in typed_exist for x in ('condos', 'townhomes'))) for a in alt) or f'{L.norm(nm)}-condos-for-sale' in locs):
                 skipped['exists'] += 1; continue

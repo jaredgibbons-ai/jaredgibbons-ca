@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "thornhill-mr",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Thornhill homes listed and sold, June to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Thornhill homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Thornhill, September 2026. Detached houses: 13 listed at month end and 1 sold in September, a sales ratio of 8% (a buyers’ market). Condos and townhomes: 8 listed at month end and 0 sold in September, a sales ratio of —.",
-      "gen": "snapstats"
+      "text": "Thornhill, October 2026. Detached houses: 13 listed at month end and 0 sold in October, a sales ratio of —. Condos and townhomes: 8 listed at month end and 0 sold in October, a sales ratio of —."
     },
     {
-      "t": "table",
       "caption": "Thornhill listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -62,268 +59,251 @@
           "8",
           "0",
           "—"
+        ],
+        [
+          "October 2026",
+          "13",
+          "0",
+          "—",
+          "8",
+          "0",
+          "—"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 8 sold over 4 months against an average of 15.5 listed, about 7.8 months of listings at that pace; the busiest month was July with 3 sold. Condos and townhomes: 2 sold over 4 months against an average of 7.8 listed, about 15.5 months of listings at that pace; the busiest month was June with 1 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 8 sold over 5 months against an average of 15.0 listed, about 9.4 months of listings at that pace; the busiest month was July with 3 sold. Condos and townhomes: 2 sold over 5 months against an average of 7.8 listed, about 19.5 months of listings at that pace; the busiest month was June with 1 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Thornhill by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Thornhill by home type"
     },
     {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Thornhill houses for sale",
-            "h": "/thornhill-maple-ridge-houses-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Thornhill condos and townhomes for sale",
-            "h": "/thornhill-maple-ridge-condos-townhomes-for-sale.html"
-          }
-        ]
-      ],
       "gen": "typepage",
-      "pos": "end"
+      "items": [
+        [
+          {
+            "h": "/thornhill-maple-ridge-houses-for-sale.html",
+            "t": "Thornhill houses for sale"
+          }
+        ],
+        [
+          {
+            "h": "/thornhill-maple-ridge-condos-townhomes-for-sale.html",
+            "t": "Thornhill condos and townhomes for sale"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Maple Ridge real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Maple Ridge real estate"
     },
     {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Maple Ridge homes for sale",
-            "h": "/maple-ridge-homes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Maple Ridge real estate market stats",
-            "h": "/maple-ridge-real-estate-market-stats.html"
-          }
-        ],
-        [
-          {
-            "t": "Maple Ridge houses for sale",
-            "h": "/maple-ridge-houses-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Maple Ridge condos for sale",
-            "h": "/maple-ridge-condos-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Maple Ridge townhomes for sale",
-            "h": "/maple-ridge-townhomes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Sell my house in Maple Ridge",
-            "h": "/sell-my-house-in-maple-ridge.html"
-          }
-        ],
-        [
-          {
-            "t": "Thornhill neighbourhood guide",
-            "h": "/thornhill-maple-ridge-guide.html"
-          }
-        ],
-        [
-          {
-            "t": "Websters Corners real estate",
-            "h": "/websters-corners.html"
-          }
-        ],
-        [
-          {
-            "t": "West Central real estate",
-            "h": "/west-central.html"
-          }
-        ],
-        [
-          {
-            "t": "Whonnock real estate",
-            "h": "/whonnock.html"
-          }
-        ],
-        [
-          {
-            "t": "Albion real estate",
-            "h": "/albion.html"
-          }
-        ],
-        [
-          {
-            "t": "Cottonwood real estate",
-            "h": "/cottonwood-mr.html"
-          }
-        ],
-        [
-          {
-            "t": "East Central real estate",
-            "h": "/east-central.html"
-          }
-        ],
-        [
-          {
-            "t": "Northeast real estate",
-            "h": "/northeast.html"
-          }
-        ],
-        [
-          {
-            "t": "Northwest real estate",
-            "h": "/northwest-maple-ridge.html"
-          }
-        ],
-        [
-          {
-            "t": "Silver Valley real estate",
-            "h": "/silver-valley.html"
-          }
-        ],
-        [
-          {
-            "t": "Southwest real estate",
-            "h": "/southwest-maple-ridge.html"
-          }
-        ]
-      ],
       "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
       "items": [
         [
           {
-            "t": "Source: mapleridge.ca",
-            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods"
+            "h": "/maple-ridge-homes-for-sale.html",
+            "t": "Maple Ridge homes for sale"
           }
         ],
         [
           {
-            "t": "Source: sd42.ca",
-            "h": "https://www.sd42.ca/school-locator/"
+            "h": "/maple-ridge-real-estate-market-stats.html",
+            "t": "Maple Ridge real estate market stats"
+          }
+        ],
+        [
+          {
+            "h": "/maple-ridge-houses-for-sale.html",
+            "t": "Maple Ridge houses for sale"
+          }
+        ],
+        [
+          {
+            "h": "/maple-ridge-condos-for-sale.html",
+            "t": "Maple Ridge condos for sale"
+          }
+        ],
+        [
+          {
+            "h": "/maple-ridge-townhomes-for-sale.html",
+            "t": "Maple Ridge townhomes for sale"
+          }
+        ],
+        [
+          {
+            "h": "/sell-my-house-in-maple-ridge.html",
+            "t": "Sell my house in Maple Ridge"
+          }
+        ],
+        [
+          {
+            "h": "/thornhill-maple-ridge-guide.html",
+            "t": "Thornhill neighbourhood guide"
+          }
+        ],
+        [
+          {
+            "h": "/websters-corners.html",
+            "t": "Websters Corners real estate"
+          }
+        ],
+        [
+          {
+            "h": "/west-central.html",
+            "t": "West Central real estate"
+          }
+        ],
+        [
+          {
+            "h": "/whonnock.html",
+            "t": "Whonnock real estate"
+          }
+        ],
+        [
+          {
+            "h": "/albion.html",
+            "t": "Albion real estate"
+          }
+        ],
+        [
+          {
+            "h": "/cottonwood-mr.html",
+            "t": "Cottonwood real estate"
+          }
+        ],
+        [
+          {
+            "h": "/east-central.html",
+            "t": "East Central real estate"
+          }
+        ],
+        [
+          {
+            "h": "/northeast.html",
+            "t": "Northeast real estate"
+          }
+        ],
+        [
+          {
+            "h": "/northwest-maple-ridge.html",
+            "t": "Northwest real estate"
+          }
+        ],
+        [
+          {
+            "h": "/silver-valley.html",
+            "t": "Silver Valley real estate"
+          }
+        ],
+        [
+          {
+            "h": "/southwest-maple-ridge.html",
+            "t": "Southwest real estate"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Thornhill",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The Terraces — 10550 248 Street. STRATA (freehold strata)",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Thornhill"
     },
     {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The Terraces — 10550 248 Street. STRATA (freehold strata)"
+    },
+    {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "No age restriction appears in any source checked — not 55+.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "No age restriction appears in any source checked — not 55+."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Terraces II — 10480 248 Street. STRATA (basis stated)",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Terraces II — 10480 248 Street. STRATA (basis stated)"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Title-level wording (\"freehold strata\") is not printed in the listings checked — title-level wording UNCONFIRMED, confirm on the Form B. Build year varies by listing — 2017, 2018 and 2019 all appear in the fresh check, consistent with phased construction — so no single build year is asserted; the exact year for a specific unit is UNCONFIRMED until the strata plan is read. Unit count and published rental/pet/age restrictions: UNCONFIRMED. No age restriction appears in any source checked — not 55+.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Title-level wording (\"freehold strata\") is not printed in the listings checked — title-level wording not confirmed, confirm on the Form B. Build year varies by listing — 2017, 2018 and 2019 all appear in the fresh check, consistent with phased construction — so no single build year is asserted; the exact year for a specific unit is not confirmed until the strata plan is read. Unit count and published rental/pet/age restrictions: Not confirmed. No age restriction appears in any source checked — not 55+."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Rydge — 10640 248 Street. STRATA (freehold strata). COUNTS HERE",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Rydge — 10640 248 Street. STRATA (freehold strata). COUNTS HERE"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "(see the classification flag at the top). Townhouse complex by Raicon Developments: the developer's own site and the presale record state a nature-inspired community of 61 three- and four-bedroom townhomes at 106 Avenue & 248 Street; the presale record estimated completion in 2024, while current listings record built 2025. Published rental/pet/age restrictions: UNCONFIRMED. No age restriction appears in any source checked — not 55+. Because some units may still be developer sales (\"move-in ready and future homes available\" in current listing text), establish per unit whether a sale is a developer sale or a resale before relying on GST/REDMA treatment.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "(see the classification flag at the top). Townhouse complex by Raicon Developments: the developer's own site and the presale record state a nature-inspired community of 61 three- and four-bedroom townhomes at 106 Avenue & 248 Street; the presale record estimated completion in 2024, while current listings record built 2025. Published rental/pet/age restrictions: Not confirmed. No age restriction appears in any source checked — not 55+. Because some units may still be developer sales (\"move-in ready and future homes available\" in current listing text), establish per unit whether a sale is a developer sale or a resale before relying on GST/REDMA treatment."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Thornhill",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Thornhill"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "The City describes Thornhill as a heavily forested, mainly residential area with several farms and nurseries, with a large mountain-biking and hiking trail network on 256 Street (17 trails, typically about an hour each). The City publishes no boundary for the neighbourhood or the MLS sub-area: UNVERIFIED as an official boundary."
+            "t": "The City describes Thornhill as a heavily forested, mainly residential area with several farms and nurseries, with a large mountain-biking and hiking trail network on 256 Street (17 trails, typically about an hour each). The City publishes no boundary for the neighbourhood or the MLS sub-area: Not verified as an official boundary."
           }
         ],
         [
           {
-            "t": "Maple Ridge community medians (sub-area medians are not published: UNVERIFIED at sub-area level): detached $1,131,000; attached $525,000, $432/sq ft, 94% sale-to-list, 49 days on market."
+            "t": "Maple Ridge community medians (sub-area medians are not published: Not verified at sub-area level): detached $1,131,000; attached $525,000, $432/sq ft, 94% sale-to-list, 49 days on market."
           }
         ],
         [
           {
-            "t": "Hazards and services: the City's floodplain framework addresses flood risks from the Fraser River, the Alouette River system, steep creek watercourses and groundwater-related flooding; the City describes Thornhill as heavily forested, but a City-documented wildfire interface map for specific Thornhill streets is UNVERIFIED, as is parcel-level flood status. Rural properties may be on wells and septic — wells are recorded in the provincial GWELLS database and onsite sewerage must comply with the Sewerage System Regulation, including the 30 m setback from a well unless professional advice is obtained."
+            "t": "Hazards and services: the City's floodplain framework addresses flood risks from the Fraser River, the Alouette River system, steep creek watercourses and groundwater-related flooding; the City describes Thornhill as heavily forested, but a City-documented wildfire interface map for specific Thornhill streets is not verified, as is parcel-level flood status. Rural properties may be on wells and septic — wells are recorded in the provincial GWELLS database and onsite sewerage must comply with the Sewerage System Regulation, including the 30 m setback from a well unless professional advice is obtained."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Thornhill",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Thornhill"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -331,18 +311,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Thornhill",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Thornhill"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -355,140 +335,140 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Thornhill",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Thornhill"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "rydge.ca · register",
-            "h": "https://rydge.ca/register/"
+            "h": "https://rydge.ca/register/",
+            "t": "rydge.ca · register"
           }
         ],
         [
           {
-            "t": "mikestewart.ca · rydge by raicon developments albion presale mapl",
-            "h": "https://www.mikestewart.ca/presale/rydge-by-raicon-developments-albion-presale-maple-ridge-townhomes/"
+            "h": "https://www.mikestewart.ca/presale/rydge-by-raicon-developments-albion-presale-maple-ridge-townhomes/",
+            "t": "mikestewart.ca · rydge by raicon developments albion presale mapl"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for ",
-            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/"
+            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/",
+            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading",
-            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading"
+            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading",
+            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · official community plan chapter 2",
-            "h": "https://www.mapleridge.ca/media/file/official-community-plan-chapter-2"
+            "h": "https://www.mapleridge.ca/media/file/official-community-plan-chapter-2",
+            "t": "mapleridge.ca · official community plan chapter 2"
           }
         ],
         [
           {
-            "t": "engage.mapleridge.ca · LTCAP",
-            "h": "https://engage.mapleridge.ca/LTCAP"
+            "h": "https://engage.mapleridge.ca/LTCAP",
+            "t": "engage.mapleridge.ca · LTCAP"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · secondary suites",
-            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites"
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites",
+            "t": "mapleridge.ca · secondary suites"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · Due Dates and Penalties Late Payments",
-            "h": "https://mapleridge.ca/2329/Due-Dates-and-Penalties-Late-Payments"
+            "h": "https://mapleridge.ca/2329/Due-Dates-and-Penalties-Late-Payments",
+            "t": "mapleridge.ca · Due Dates and Penalties Late Payments"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "cmhc-schl.gc.ca · second home",
-            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home"
+            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home",
+            "t": "cmhc-schl.gc.ca · second home"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Thornhill",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Thornhill"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Fee-simple lots are the default form: The zoning base is rural: Zoning Bylaw No. 7600-2019's schedule lists minimum lot areas of A-1 2.0 ha, A-2 4.0 ha, A-3 8.0 ha, RS-2 0.4 ha and RS-3 0.8 ha or 2.0 ha depending on the zone text — the rural zones that cover most of this hillside. Its \"89% single-detached\" share is likewise UNVERIFIED."
+            "t": "Fee-simple lots are the default form: The zoning base is rural: Zoning Bylaw No. 7600-2019's schedule lists minimum lot areas of A-1 2.0 ha, A-2 4.0 ha, A-3 8.0 ha, RS-2 0.4 ha and RS-3 0.8 ha or 2.0 ha depending on the zone text — the rural zones that cover most of this hillside. Its \"89% single-detached\" share is likewise not verified."
           }
         ],
         [
@@ -498,7 +478,7 @@
         ],
         [
           {
-            "t": "Assemblies / plan holds — documented as plans, never as inventory: (1) Urban Reserve: the OCP's Urban Reserve designation identifies lands the City holds for long-term future urban services and housing, and OCP policy states development of the Urban Reserve will not happen until specific triggers and milestones have been attained. 10.2.2, with subdivision below 2.0 ha restricted until the city population exceeds 100,000 and an area plan is adopted — was NOT confirmed in the OCP chapter read for the research: UNVERIFIED as to hectarage, section number and trigger wording. (2) North 256 Street Industrial Lands Area Plan covers both sides of 256 Street north of 128 Avenue (about 500 acres, per the City release) at this area's north side; it establishes future designations and does not itself approve construction."
+            "t": "Assemblies / plan holds — documented as plans, never as inventory: (1) Urban Reserve: the OCP's Urban Reserve designation identifies lands the City holds for long-term future urban services and housing, and OCP policy states development of the Urban Reserve will not happen until specific triggers and milestones have been attained. 10.2.2, with subdivision below 2.0 ha restricted until the city population exceeds 100,000 and an area plan is adopted — was NOT confirmed in the OCP chapter read for the research: Not verified as to hectarage, section number and trigger wording. (2) North 256 Street Industrial Lands Area Plan covers both sides of 256 Street north of 128 Avenue (about 500 acres, per the City release) at this area's north side; it establishes future designations and does not itself approve construction."
           }
         ],
         [
@@ -508,7 +488,7 @@
         ],
         [
           {
-            "t": "Servicing: rural properties here may be on wells and septic — wells are recorded in the provincial GWELLS database, and onsite sewerage must comply with the Sewerage System Regulation, including the 30 m setback from a well unless professional advice is obtained. Per-parcel servicing is UNCONFIRMED until the records for that parcel are pulled."
+            "t": "Servicing: rural properties here may be on wells and septic — wells are recorded in the provincial GWELLS database, and onsite sewerage must comply with the Sewerage System Regulation, including the 30 m setback from a well unless professional advice is obtained. Per-parcel servicing is not confirmed until the records for that parcel are pulled."
           }
         ],
         [
@@ -517,18 +497,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Thornhill",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Thornhill"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -537,7 +517,7 @@
         ],
         [
           {
-            "t": "Main roads and commute: Dewdney Trunk Road and Lougheed Highway along the south side; 248, 256 and 264 Streets north–south; 100 Avenue and 112 Avenue east–west on the hillside. Commute times in minutes: UNVERIFIED."
+            "t": "Main roads and commute: Dewdney Trunk Road and Lougheed Highway along the south side; 248, 256 and 264 Streets north–south; 100 Avenue and 112 Avenue east–west on the hillside. Commute times in minutes: Not verified."
           }
         ],
         [
@@ -552,26 +532,26 @@
         ],
         [
           {
-            "t": "Recreation and services: the 256 Street trail network (City description in the first bullet); Kanaka Creek Regional Park at the west side; Whonnock Lake Park in Whonnock to the east. No recreation centre or library branch inside this sub-area — Maple Ridge Leisure Centre, 11925 Haney Place, and Maple Ridge Public Library, 130 – 22470 Dewdney Trunk Road, are in the Town Centre. No shopping centre inside Thornhill was verified on a City source: UNVERIFIED. Ridge Meadows Hospital, 11666 Laity Street (24/7 emergency); Urgent and Primary Care Centre, 121 – 11900 Haney Place, 7 days, 9:00 a.m.–8:00 p.m."
+            "t": "Recreation and services: the 256 Street trail network (City description in the first bullet); Kanaka Creek Regional Park at the west side; Whonnock Lake Park in Whonnock to the east. No recreation centre or library branch inside this sub-area — Maple Ridge Leisure Centre, 11925 Haney Place, and Maple Ridge Public Library, 130 – 22470 Dewdney Trunk Road, are in the Town Centre. No shopping centre inside Thornhill was verified on a City source: Not verified. Ridge Meadows Hospital, 11666 Laity Street (24/7 emergency); Urgent and Primary Care Centre, 121 – 11900 Haney Place, 7 days, 9:00 a.m.–8:00 p.m."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Thornhill",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Thornhill"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Flood and hazards: the City's floodplain framework addresses flood risks from the Fraser River, the Alouette River system, steep creek watercourses and groundwater-related flooding. The City describes Thornhill as heavily forested; a City-documented wildfire interface map for specific Thornhill streets: UNVERIFIED. Parcel-level flood status: UNVERIFIED."
+            "t": "Flood and hazards: the City's floodplain framework addresses flood risks from the Fraser River, the Alouette River system, steep creek watercourses and groundwater-related flooding. The City describes Thornhill as heavily forested; a City-documented wildfire interface map for specific Thornhill streets: Not verified. Parcel-level flood status: Not verified."
           }
         ],
         [
@@ -585,22 +565,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Thornhill",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Thornhill"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "The 249 Street parcels are labelled Thornhill but describe themselves as Albion. The Thornhill page's feed carries 249 Street land listings whose own text places them in Albion next to the Albion growth area — a buyer comping \"Thornhill land\" from the feed alone will mix two areas' ground, and which page owns the pocket is an open question in the research."
+            "t": "The 249 Street parcels are labelled Thornhill but describe themselves as Albion. The Thornhill page's feed carries 249 Street land listings whose own text places them in Albion next to the Albion growth area — a buyer comping \"Thornhill land\" from the feed alone will mix two areas' ground, and which page owns the pocket is an open question."
           }
         ],
         [
@@ -609,148 +589,148 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Thornhill",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Thornhill"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "mapleridge.ca · our neighbourhoods",
-            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods"
+            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods",
+            "t": "mapleridge.ca · our neighbourhoods"
           }
         ],
         [
           {
-            "t": "jaredgibbons.ca · thornhill mr",
-            "h": "https://jaredgibbons.ca/thornhill-mr.html"
+            "h": "https://jaredgibbons.ca/thornhill-mr.html",
+            "t": "jaredgibbons.ca · thornhill mr"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt748",
-            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt748.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt748.pdf",
+            "t": "infomaps.translink.ca · tt748"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt701",
-            "h": "https://infomaps.translink.ca/Public_Timetables/194/tt701.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/194/tt701.pdf",
+            "t": "infomaps.translink.ca · tt701"
           }
         ],
         [
           {
-            "t": "sd42.ca · elementary schools",
-            "h": "https://www.sd42.ca/elementary-schools/"
+            "h": "https://www.sd42.ca/elementary-schools/",
+            "t": "sd42.ca · elementary schools"
           }
         ],
         [
           {
-            "t": "sd42.ca · school locator",
-            "h": "https://www.sd42.ca/school-locator/"
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "sd42.ca · school locator"
           }
         ],
         [
           {
-            "t": "metrovancouver.org · kanaka creek regional park",
-            "h": "https://metrovancouver.org/services/regional-parks/park/kanaka-creek-regional-park"
+            "h": "https://metrovancouver.org/services/regional-parks/park/kanaka-creek-regional-park",
+            "t": "metrovancouver.org · kanaka creek regional park"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · ridge meadows hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital",
+            "t": "fraserhealth.ca · ridge meadows hospital"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading",
-            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading"
+            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading",
+            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading"
           }
         ],
         [
           {
-            "t": "rydge.ca · register",
-            "h": "https://rydge.ca/register/"
+            "h": "https://rydge.ca/register/",
+            "t": "rydge.ca · register"
           }
         ],
         [
           {
-            "t": "mikestewart.ca · rydge by raicon developments albion presale mapl",
-            "h": "https://www.mikestewart.ca/presale/rydge-by-raicon-developments-albion-presale-maple-ridge-townhomes/"
+            "h": "https://www.mikestewart.ca/presale/rydge-by-raicon-developments-albion-presale-maple-ridge-townhomes/",
+            "t": "mikestewart.ca · rydge by raicon developments albion presale mapl"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · official community plan chapter 2",
-            "h": "https://www.mapleridge.ca/media/file/official-community-plan-chapter-2"
+            "h": "https://www.mapleridge.ca/media/file/official-community-plan-chapter-2",
+            "t": "mapleridge.ca · official community plan chapter 2"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · maple ridge approves new 500 acre 256 street ind",
-            "h": "https://www.mapleridge.ca/news/maple-ridge-approves-new-500-acre-256-street-industrial-area-plan-support-jobs-and-economic"
+            "h": "https://www.mapleridge.ca/news/maple-ridge-approves-new-500-acre-256-street-industrial-area-plan-support-jobs-and-economic",
+            "t": "mapleridge.ca · maple ridge approves new 500 acre 256 street ind"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 2,
-      "text": "Acreage and rural land in Thornhill",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Acreage here trades parcel by parcel as whole fee-simple lots.",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The ground in Thornhill",
-      "gen": "acre",
-      "pos": "end"
+      "text": "Acreage and rural land in Thornhill"
     },
     {
-      "t": "list",
+      "gen": "acre",
+      "pos": "end",
+      "t": "p",
+      "text": "Acreage here trades parcel by parcel as whole fee-simple lots."
+    },
+    {
+      "gen": "acre",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The ground in Thornhill"
+    },
+    {
+      "gen": "acre",
       "items": [
         [
           {
@@ -768,18 +748,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Streets, schools and getting around Thornhill",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Thornhill"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -792,18 +772,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Local rules that affect acreage buyers in Thornhill",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect acreage buyers in Thornhill"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -821,18 +801,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Good to know about Thornhill",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Thornhill"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -840,136 +820,136 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "acre",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below.",
-      "gen": "acre",
-      "pos": "end"
+      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "BC acreage buying rules",
-            "h": "/bc-acreage-buying-rules.html"
+            "h": "/bc-acreage-buying-rules.html",
+            "t": "BC acreage buying rules"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Sources for the acreage notes on Thornhill",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the acreage notes on Thornhill"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "mapleridge.ca · our neighbourhoods",
-            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods"
+            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods",
+            "t": "mapleridge.ca · our neighbourhoods"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt748",
-            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt748.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt748.pdf",
+            "t": "infomaps.translink.ca · tt748"
           }
         ],
         [
           {
-            "t": "sd42.ca · school locator",
-            "h": "https://www.sd42.ca/school-locator/"
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "sd42.ca · school locator"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading",
-            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading"
+            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading",
+            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · official community plan chapter 2",
-            "h": "https://www.mapleridge.ca/media/file/official-community-plan-chapter-2"
+            "h": "https://www.mapleridge.ca/media/file/official-community-plan-chapter-2",
+            "t": "mapleridge.ca · official community plan chapter 2"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · well records registration",
-            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/information-for-property-owners/well-records-registration"
+            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/information-for-property-owners/well-records-registration",
+            "t": "www2.gov.bc.ca · well records registration"
           }
         ],
         [
           {
-            "t": "bclaws.gov.bc.ca",
-            "h": "https://www.bclaws.gov.bc.ca/civix/document/id/loo104/loo104/22_326_2004"
+            "h": "https://www.bclaws.gov.bc.ca/civix/document/id/loo104/loo104/22_326_2004",
+            "t": "bclaws.gov.bc.ca"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · maple ridge approves new 500 acre 256 street ind",
-            "h": "https://www.mapleridge.ca/news/maple-ridge-approves-new-500-acre-256-street-industrial-area-plan-support-jobs-and-economic"
+            "h": "https://www.mapleridge.ca/news/maple-ridge-approves-new-500-acre-256-street-industrial-area-plan-support-jobs-and-economic",
+            "t": "mapleridge.ca · maple ridge approves new 500 acre 256 street ind"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · maple ridge council approves plan guide transit ",
-            "h": "https://www.mapleridge.ca/news/maple-ridge-council-approves-plan-guide-transit-oriented-development-around-lougheed-highway"
+            "h": "https://www.mapleridge.ca/news/maple-ridge-council-approves-plan-guide-transit-oriented-development-around-lougheed-highway",
+            "t": "mapleridge.ca · maple ridge council approves plan guide transit"
           }
         ],
         [
           {
-            "t": "bclaws.gov.bc.ca (2)",
-            "h": "https://www.bclaws.gov.bc.ca/civix/document/id/loo105/loo105/30_2019"
+            "h": "https://www.bclaws.gov.bc.ca/civix/document/id/loo105/loo105/30_2019",
+            "t": "bclaws.gov.bc.ca (2)"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · secondary suites",
-            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites"
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites",
+            "t": "mapleridge.ca · secondary suites"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · city advances climate action flood resilience en",
-            "h": "https://www.mapleridge.ca/news/city-advances-climate-action-flood-resilience-environmental-protection-and-mckenney-creek"
+            "h": "https://www.mapleridge.ca/news/city-advances-climate-action-flood-resilience-environmental-protection-and-mckenney-creek",
+            "t": "mapleridge.ca · city advances climate action flood resilience en"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Thornhill",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Thornhill"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -992,18 +972,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1031,18 +1011,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1065,18 +1045,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1084,25 +1064,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Blue Mountain Elementary, 12453 248 St",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Garibaldi Secondary",
@@ -1123,18 +1104,17 @@
           "9.3"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1152,14 +1132,82 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt748.pdf",
+            "t": "infomaps.translink.ca · tt748"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf",
+            "t": "infomaps.translink.ca · tt701"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods",
+            "t": "mapleridge.ca · our neighbourhoods"
+          }
+        ],
+        [
+          {
+            "h": "https://metrovancouver.org/services/regional-parks/park/kanaka-creek-regional-park",
+            "t": "metrovancouver.org · kanaka creek regional park"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/art-parks-rec/recreation-facilities/maple-ridge-leisure-centre",
+            "t": "mapleridge.ca · maple ridge leisure centre"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations",
+            "t": "fvrl.bc.ca · locations"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/maple-ridge",
+            "t": "studentsuccess.gov.bc.ca · maple ridge"
+          }
+        ],
+        [
+          {
+            "h": "https://www.haneyplacemall.com/contact_us/",
+            "t": "haneyplacemall.com · contact us"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -1167,133 +1215,79 @@
       "items": [
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
-          }
-        ],
-        [
-          {
-            "t": "infomaps.translink.ca · tt748",
-            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt748.pdf"
-          }
-        ],
-        [
-          {
-            "t": "infomaps.translink.ca · tt701",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf"
-          }
-        ],
-        [
-          {
-            "t": "mapleridge.ca · our neighbourhoods",
+            "t": "Source: mapleridge.ca",
             "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods"
           }
         ],
         [
           {
-            "t": "metrovancouver.org · kanaka creek regional park",
-            "h": "https://metrovancouver.org/services/regional-parks/park/kanaka-creek-regional-park"
-          }
-        ],
-        [
-          {
-            "t": "mapleridge.ca · maple ridge leisure centre",
-            "h": "https://www.mapleridge.ca/art-parks-rec/recreation-facilities/maple-ridge-leisure-centre"
-          }
-        ],
-        [
-          {
-            "t": "fvrl.bc.ca · locations",
-            "h": "https://www.fvrl.bc.ca/locations"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · maple ridge",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/maple-ridge"
-          }
-        ],
-        [
-          {
-            "t": "haneyplacemall.com · contact us",
-            "h": "https://www.haneyplacemall.com/contact_us/"
+            "t": "Source: sd42.ca",
+            "h": "https://www.sd42.ca/school-locator/"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
+    {
+      "a": "None verified. Every named attached complex verified here is a townhome complex on 248 Street; the rest of the sub-area is freehold acreage.",
+      "gen": "tn",
+      "q": "Are there any apartment condos in Thornhill?"
+    },
+    {
+      "a": "Three verified, all strata, all on 248 Street at the sub-area's southwest edge: The Terraces (10550 248 Street, built 2015, freehold strata), Terraces II (10480 248 Street, years 2017–2019 by unit, strata on the fresh listing basis) and Rydge (10640 248 Street, 61 townhomes, freehold strata, listings record built 2025).",
+      "gen": "tn",
+      "q": "How many townhouse complexes are there, and where?"
+    },
+    {
+      "a": "Both claims exist in print: Raicon's own site and the presale record say Albion; its MLS listings say Thornhill MR.",
+      "gen": "tn",
+      "q": "Is Rydge in Albion or Thornhill?"
+    },
+    {
+      "a": "The listing records treat them as two: The Terraces at 10550 248 Street (built 2015) and Terraces II at 10480 248 Street (listings record build years from 2017 to 2019 across its phases), though at least one listing at the 10480 address also uses \"The Terraces.\" Confirm the strata plan number for the specific unit on the Form B rather than relying on the marketing name.",
+      "gen": "tn",
+      "q": "Terraces or Terraces II — are they one complex?"
+    },
+    {
+      "a": "Use the Maple Ridge community figures (detached median $1,131,000; attached median $525,000, combined — never townhome-only) plus comparable hillside sales.",
+      "gen": "tn",
+      "q": "How did Thornhill sell in September 2026?"
+    },
+    {
+      "a": "There is no lot product to buy — no named bare-land subdivision offering, bare-land strata plan or presale lot offering exists here. What trades is fee-simple acreage, farm parcels, Urban Reserve holds, and the 248 Street strata townhomes.",
+      "gen": "tn",
+      "q": "Can I buy a bare building lot in Thornhill?"
+    },
+    {
+      "a": "A purchase there is a strata-lot purchase with fees, bylaws and a Form B; Rydge additionally needs a per-unit developer-sale vs resale determination before GST/REDMA treatment is relied on.",
+      "gen": "tn",
+      "q": "Are The Terraces, Terraces II and Rydge land I can buy as lots?"
+    },
+    {
+      "a": "Contested: the developer says Albion, the board listings say Thornhill MR. Price a 248 Street listing against the sub-area its listing actually sits in.",
+      "gen": "tn",
+      "q": "Is Rydge in Thornhill or Albion?"
+    },
+    {
+      "a": "No named one was verified — Thornhill acreage is individual fee-simple hillside parcels (the page describes 1-to-5-acre rural estates and hobby farms between 248 and 264 Streets) trading whole, parcel by parcel. Verified named acreage developments here: 0.",
+      "gen": "acre",
+      "q": "Is there an acreage subdivision in Thornhill I can buy into?"
+    },
     {
       "q": "What and where is Thornhill, Maple Ridge?",
       "a": "Thornhill is a City of Maple Ridge neighbourhood and the board/Paragon sub-area name for the heavily forested, mainly residential hillside in east Maple Ridge, with farms and nurseries and a 17-trail mountain-biking and hiking network on 256 Street.",
       "gen": "muse"
     },
     {
-      "q": "How did Thornhill sell in September 2026?",
-      "a": "Quietly: detached recorded 13 active listings, 1 sold and an 8% sales ratio, while Condos & Townhomes recorded 8 listings and 0 solds, so no sales ratio applies to the attached split (as of September 2026, Source: SnapStats GVR September 2026 report).",
-      "gen": "muse"
-    },
-    {
       "q": "Which schools serve Thornhill?",
       "a": "The live page names Whonnock Elementary (27471 112 Avenue), Albion Elementary (10031 240 Street), Blue Mountain Elementary (12453 248 Street per the BC Ministry K-12 file), Samuel Robertson Technical Secondary (10445 245 Street) and Garibaldi Secondary (24789 Dewdney Trunk Road); catchments are address-specific — check any address in the SD42 School Locator.",
       "gen": "muse"
-    },
-    {
-      "q": "How many homes are for sale in Thornhill?",
-      "a": "At the end of September 2026 the Greater Vancouver REALTORS® figures showed 13 houses listed with 1 sold in the month and 8 condos and townhomes listed with 0 sold in the month in Thornhill. Those are month-end counts and move daily; ask Jared what is on the market today.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "Is Thornhill a buyers’ or sellers’ market?",
-      "a": "In September 2026, houses had a sales ratio of 8%, a buyers’ market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers.",
-      "gen": "snap-faq"
-    },
-    {
-      "gen": "tn",
-      "q": "Are there any apartment condos in Thornhill?",
-      "a": "None verified. Every named attached complex verified here is a townhome complex on 248 Street; the rest of the sub-area is freehold acreage."
-    },
-    {
-      "gen": "tn",
-      "q": "How many townhouse complexes are there, and where?",
-      "a": "Three verified, all strata, all on 248 Street at the sub-area's southwest edge: The Terraces (10550 248 Street, built 2015, freehold strata), Terraces II (10480 248 Street, years 2017–2019 by unit, strata on the fresh listing basis) and Rydge (10640 248 Street, 61 townhomes, freehold strata, listings record built 2025)."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Rydge in Albion or Thornhill?",
-      "a": "Both claims exist in print: Raicon's own site and the presale record say Albion; its MLS listings say Thornhill MR."
-    },
-    {
-      "gen": "tn",
-      "q": "Terraces or Terraces II — are they one complex?",
-      "a": "The listing records treat them as two: The Terraces at 10550 248 Street (built 2015) and Terraces II at 10480 248 Street (listings record build years from 2017 to 2019 across its phases), though at least one listing at the 10480 address also uses \"The Terraces.\" Confirm the strata plan number for the specific unit on the Form B rather than relying on the marketing name."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I buy a bare building lot in Thornhill?",
-      "a": "There is no lot product to buy — no named bare-land subdivision offering, bare-land strata plan or presale lot offering exists here. What trades is fee-simple acreage, farm parcels, Urban Reserve holds, and the 248 Street strata townhomes."
-    },
-    {
-      "gen": "tn",
-      "q": "Are The Terraces, Terraces II and Rydge land I can buy as lots?",
-      "a": "A purchase there is a strata-lot purchase with fees, bylaws and a Form B; Rydge additionally needs a per-unit developer-sale vs resale determination before GST/REDMA treatment is relied on."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Rydge in Thornhill or Albion?",
-      "a": "Contested: the developer says Albion, the board listings say Thornhill MR. Price a 248 Street listing against the sub-area its listing actually sits in."
-    },
-    {
-      "gen": "tn",
-      "q": "What is the Thornhill Urban Reserve, in plain terms?",
-      "a": "OCP land held for long-term future urban services and housing; OCP policy holds its development until specific triggers and milestones are met — treat it as long-term, not imminent, and do not pay a near-term-development premium on the designation alone."
-    },
-    {
-      "gen": "acre",
-      "q": "Is there an acreage subdivision in Thornhill I can buy into?",
-      "a": "No named one was verified — Thornhill acreage is individual fee-simple hillside parcels (the page describes 1-to-5-acre rural estates and hobby farms between 248 and 264 Streets) trading whole, parcel by parcel. Verified named acreage developments here: 0."
     }
-  ]
+  ],
+  "slug": "thornhill-mr",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

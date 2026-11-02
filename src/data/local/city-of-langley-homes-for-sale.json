@@ -1,62 +1,59 @@
 {
-  "status": "generated",
-  "slug": "city-of-langley-homes-for-sale",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "p",
-      "text": "Sell my house in Langley: current prices, what the Township and the City did about the 2024 rules, and a free home evaluation",
+      "gen": "sellerlink",
       "h": "/sell-my-house-in-langley.html",
-      "gen": "sellerlink"
-    },
-    {
       "t": "p",
-      "text": "See all 62 schools in Langley, BC",
+      "text": "Sell my house in Langley: current prices, what the Township and the City did about the 2024 rules, and a free home evaluation"
+    },
+    {
+      "gen": "schoollist",
       "h": "/schools-in-langley-bc.html",
-      "gen": "schoollist"
+      "t": "p",
+      "text": "See all 62 schools in Langley, BC"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: langleycity.ca",
-            "h": "https://www.langleycity.ca/media/file/bylaw-3284"
+            "h": "https://www.langleycity.ca/media/file/bylaw-3284",
+            "t": "Source: langleycity.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby City of Langley Homes for Sale",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby City of Langley Homes for Sale"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -84,18 +81,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -113,18 +110,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -152,18 +149,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -171,25 +168,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Timms Community Centre, 20399 Douglas Crescent",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Douglas Park Community",
@@ -222,18 +220,17 @@
           "2.6"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -241,104 +238,107 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt503",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf",
+            "t": "infomaps.translink.ca · tt503"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt501",
-            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt501.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt501.pdf",
+            "t": "infomaps.translink.ca · tt501"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt561",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt561.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt561.pdf",
+            "t": "infomaps.translink.ca · tt561"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt563",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt563.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt563.pdf",
+            "t": "infomaps.translink.ca · tt563"
           }
         ],
         [
           {
-            "t": "langleycity.ca · recreation facilities",
-            "h": "https://www.langleycity.ca/parks-recreation/recreation-facilities"
+            "h": "https://www.langleycity.ca/parks-recreation/recreation-facilities",
+            "t": "langleycity.ca · recreation facilities"
           }
         ],
         [
           {
-            "t": "langleycity.ca · city park",
-            "h": "https://www.langleycity.ca/parks-recreation/parks-trails/city-park"
+            "h": "https://www.langleycity.ca/parks-recreation/parks-trails/city-park",
+            "t": "langleycity.ca · city park"
           }
         ],
         [
           {
-            "t": "langleycity.ca · extreme weather stay cool langley city",
-            "h": "https://www.langleycity.ca/news/extreme-weather-stay-cool-langley-city"
+            "h": "https://www.langleycity.ca/news/extreme-weather-stay-cool-langley-city",
+            "t": "langleycity.ca · extreme weather stay cool langley city"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/035"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/035",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "safeway.ca · find a store",
-            "h": "https://www.safeway.ca/find-a-store/"
+            "h": "https://www.safeway.ca/find-a-store/",
+            "t": "safeway.ca · find a store"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Is the City of Langley the same as the Township of Langley?",
-      "a": "No — the City of Langley is its own municipality, separate from the Township of Langley, with its own Official Community Plan (adopted November 22, 2021) and its own Zoning Bylaw, 2025, No. 3300 (batch-14/langley-city.md, read 2026-11-01).",
-      "gen": "muse"
+      "a": "No — the City of Langley is its own municipality, separate from the Township of Langley, with its own Official Community Plan (adopted November 22, 2021) and its own Zoning Bylaw, 2025, No.",
+      "gen": "muse",
+      "q": "Is the City of Langley the same as the Township of Langley?"
     },
     {
-      "q": "How did Langley City detached homes sell in September 2026?",
-      "a": "The Langley City sub-area recorded 64 detached listings with 8 sold (13%, tied with Willoughby Heights in the Langley set); no City-only median is published — the combined Langley community detached median ($1,345,000) blends in the Township and is not a City figure (as of September 2026, Source: SnapStats FVR September 2026 report).",
-      "gen": "muse"
-    },
-    {
-      "q": "How is this page different from the Langley City page?",
-      "a": "This slug's feed showed 65 results with an all-detached first page at reading, while the langley-city slug showed 252 results mixing attached and detached product — two feeds for the same municipality. This file researches the city-of-langley-homes-for-sale feed; batch-14/langley-city.md researches the other (batch-14/langley-city.md, read 2026-11-01).",
-      "gen": "muse"
-    },
-    {
-      "q": "How many units can a Langley City single-family lot hold?",
       "a": "Under Bylaw No. 3284 (adopted June 17, 2024), RS1 and RS2 lots permit 4 units, and 6 units if within 400 m of a frequent bus stop.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "How many units can a Langley City single-family lot hold?"
+    },
+    {
+      "a": "It is strongly recommended. Make the offer subject to an inspection so a qualified inspector can look at the roof, structure, drainage, electrical and heating before you remove conditions.",
+      "gen": "bank-faq",
+      "q": "Do I need a home inspection when buying in City of Langley?"
+    },
+    {
+      "a": "BC's small-scale multi-unit housing rules allow more homes on many urban lots, but each municipality sets the details and many lots are excluded. Check the lot's zoning with the municipality before you plan a suite or coach house.",
+      "gen": "bank-faq",
+      "q": "Can I add a suite or coach house to a house in City of Langley?"
     }
+  ],
+  "slug": "city-of-langley-homes-for-sale",
+  "status": "generated",
+  "suppress": [
+    "Farm Markets"
   ],
   "suppress_gen": [
     "Farm Markets"
   ],
-  "suppress": [
-    "Farm Markets"
-  ]
+  "updated": "2026-11-01"
 }

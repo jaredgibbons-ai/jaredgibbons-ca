@@ -1,42 +1,39 @@
 {
-  "status": "generated",
-  "slug": "south-surrey-school-catchments",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "p",
-      "text": "Sell my house in South Surrey or White Rock: current prices, each City's 2024 rules and a free home evaluation",
+      "gen": "sellerlink",
       "h": "/sell-my-house-in-south-surrey-white-rock.html",
-      "gen": "sellerlink"
+      "t": "p",
+      "text": "Sell my house in South Surrey or White Rock: current prices, each City's 2024 rules and a free home evaluation"
     },
     {
-      "t": "p",
-      "text": "See all 25 South Surrey and White Rock public schools with street addresses",
+      "gen": "schoollist",
       "h": "/schools-in-south-surrey-white-rock-bc.html",
-      "gen": "schoollist"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "What's nearby South Surrey School Catchments",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
+      "text": "See all 25 South Surrey and White Rock public schools with street addresses"
     },
     {
+      "gen": "nb",
+      "level": 2,
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby South Surrey School Catchments"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -64,18 +61,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -93,18 +90,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -127,18 +124,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -146,25 +143,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from South Surrey Recreation & Arts Centre, 14601 20 Avenue",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "South Surrey Athletic Park",
@@ -191,18 +189,17 @@
           "2.8"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -210,70 +207,70 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt351",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt351.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt351.pdf",
+            "t": "infomaps.translink.ca · tt351"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt375",
-            "h": "https://infomaps.translink.ca/Public_Timetables/210/tt375.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/210/tt375.pdf",
+            "t": "infomaps.translink.ca · tt375"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt531",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt531.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt531.pdf",
+            "t": "infomaps.translink.ca · tt531"
           }
         ],
         [
           {
-            "t": "surrey.ca · south surrey athletic park",
-            "h": "https://www.surrey.ca/parks-recreation/parks/south-surrey-athletic-park"
+            "h": "https://www.surrey.ca/parks-recreation/parks/south-surrey-athletic-park",
+            "t": "surrey.ca · south surrey athletic park"
           }
         ],
         [
           {
-            "t": "surrey.ca · south surrey recreation arts centre",
-            "h": "https://www.surrey.ca/parks-recreation/recreation-facilities/south-surrey-recreation-arts-centre"
+            "h": "https://www.surrey.ca/parks-recreation/recreation-facilities/south-surrey-recreation-arts-centre",
+            "t": "surrey.ca · south surrey recreation arts centre"
           }
         ],
         [
           {
-            "t": "surreylibraries.ca",
-            "h": "http://www.surreylibraries.ca/"
+            "h": "http://www.surreylibraries.ca/",
+            "t": "surreylibraries.ca"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "surrey.ca · PLR 7910 0235 00",
-            "h": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7910-0235-00.pdf"
+            "h": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7910-0235-00.pdf",
+            "t": "surrey.ca · PLR 7910 0235 00"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -283,19 +280,22 @@
       "gen": "muse"
     },
     {
-      "q": "Is there a recorded catchment result for a South Surrey address in this research?",
+      "q": "Is there a recorded catchment result for a South Surrey address?",
       "a": "Yes — one: 1785-148 St (Sunnyside Park) → H.T. Thrift Elementary / Semiahmoo Secondary (SD36 School Locator, mybaragar.com, run 2026-11-01). Both schools are confirmed at 1739 148 St and 1785 148 St respectively in the BC Ministry K-12 file (~/workspace/area-research-2026-11/education/work/bc_k12_schools.csv, read 2026-11-01).",
-      "gen": "muse"
-    },
-    {
-      "q": "Is there an \"East Newton Elementary,\" and what is East Newton's catchment?",
-      "a": "No such school exists — it appears in neither the BC Ministry K-12 file (2025/2026) nor SD36's directory, and no school stands at 7235 144 St. There is also no East Newton locator result on record: the recorded address ranges jump 7069–7195 → 7263–7263, so no range contains 7235 (~/workspace/area-research-2026-11/education/work/bc_k12_schools.csv, read 2026-11-01).",
       "gen": "muse"
     },
     {
       "q": "Can Jared show me homes in South Surrey School Catchments?",
       "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
       "gen": "muse-generic"
+    },
+    {
+      "q": "How do I find out what my home in South Surrey School Catchments is worth?",
+      "a": "Jared prepares a home evaluation from recent comparable sales and the condition of your home. Contact him on 604-928-1361 or through the form on this site to arrange one.",
+      "gen": "muse-generic"
     }
-  ]
+  ],
+  "slug": "south-surrey-school-catchments",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

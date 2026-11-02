@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "government-road",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Government Road homes listed and sold, June to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Government Road homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Government Road, September 2026. Detached houses: 24 listed at month end and 0 sold in September, a sales ratio of —. Condos and townhomes: 23 listed at month end and 3 sold in September, a sales ratio of 13% (a balanced market).",
-      "gen": "snapstats"
+      "text": "Government Road, October 2026. Detached houses: 24 listed at month end and 2 sold in October, a sales ratio of 8% (a buyers’ market). Condos and townhomes: 26 listed at month end and 3 sold in October, a sales ratio of 12% (a balanced market)."
     },
     {
-      "t": "table",
       "caption": "Government Road listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -62,194 +59,171 @@
           "23",
           "3",
           "13%"
+        ],
+        [
+          "October 2026",
+          "24",
+          "2",
+          "8%",
+          "26",
+          "3",
+          "12%"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 5 sold over 4 months against an average of 27.0 listed, about 21.6 months of listings at that pace; the busiest month was August with 3 sold. Condos and townhomes: 20 sold over 4 months against an average of 24.5 listed, about 4.9 months of listings at that pace; the busiest month was August with 7 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 7 sold over 5 months against an average of 26.4 listed, about 18.9 months of listings at that pace; the busiest month was August with 3 sold. Condos and townhomes: 23 sold over 5 months against an average of 24.8 listed, about 5.4 months of listings at that pace; the busiest month was August with 7 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Government Road by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Government Road by home type"
     },
     {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Government Road houses for sale",
-            "h": "/government-road-burnaby-houses-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Government Road condos and townhomes for sale",
-            "h": "/government-road-burnaby-condos-townhomes-for-sale.html"
-          }
-        ]
-      ],
       "gen": "typepage",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "More Burnaby real estate",
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "list",
       "items": [
         [
           {
-            "t": "Burnaby homes for sale",
-            "h": "/burnaby-homes-for-sale.html"
+            "h": "/government-road-burnaby-houses-for-sale.html",
+            "t": "Government Road houses for sale"
           }
         ],
         [
           {
-            "t": "Burnaby real estate market stats",
-            "h": "/burnaby-real-estate-market-stats.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby condos for sale",
-            "h": "/burnaby-condos-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby townhomes for sale",
-            "h": "/burnaby-townhomes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Schools in Burnaby",
-            "h": "/schools-in-burnaby-bc.html"
-          }
-        ],
-        [
-          {
-            "t": "Greentree Village real estate",
-            "h": "/greentree-village.html"
-          }
-        ],
-        [
-          {
-            "t": "Highgate real estate",
-            "h": "/highgate-burnaby.html"
-          }
-        ],
-        [
-          {
-            "t": "Metrotown real estate",
-            "h": "/metrotown-homes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Montecito real estate",
-            "h": "/montecito.html"
-          }
-        ],
-        [
-          {
-            "t": "Oakdale real estate",
-            "h": "/oakdale.html"
-          }
-        ],
-        [
-          {
-            "t": "Oaklands real estate",
-            "h": "/oaklands-burnaby.html"
-          }
-        ],
-        [
-          {
-            "t": "Parkcrest real estate",
-            "h": "/parkcrest.html"
-          }
-        ],
-        [
-          {
-            "t": "Simon Fraser Hills real estate",
-            "h": "/simon-fraser-hills-burnaby.html"
-          }
-        ],
-        [
-          {
-            "t": "Simon Fraser University Area real estate",
-            "h": "/simon-fraser-university-area-burnaby.html"
-          }
-        ],
-        [
-          {
-            "t": "South Slope real estate",
-            "h": "/south-slope-burnaby.html"
+            "h": "/government-road-burnaby-condos-townhomes-for-sale.html",
+            "t": "Government Road condos and townhomes for sale"
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "h",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "More Burnaby real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Source: studentsuccess.gov.bc.ca",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "/burnaby-homes-for-sale.html",
+            "t": "Burnaby homes for sale"
           }
         ],
         [
           {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt110.pdf"
+            "h": "/burnaby-real-estate-market-stats.html",
+            "t": "Burnaby real estate market stats"
           }
         ],
         [
           {
-            "t": "Source: burnaby.ca",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "/burnaby-condos-for-sale.html",
+            "t": "Burnaby condos for sale"
+          }
+        ],
+        [
+          {
+            "h": "/burnaby-townhomes-for-sale.html",
+            "t": "Burnaby townhomes for sale"
+          }
+        ],
+        [
+          {
+            "h": "/schools-in-burnaby-bc.html",
+            "t": "Schools in Burnaby"
+          }
+        ],
+        [
+          {
+            "h": "/greentree-village.html",
+            "t": "Greentree Village real estate"
+          }
+        ],
+        [
+          {
+            "h": "/highgate-burnaby.html",
+            "t": "Highgate real estate"
+          }
+        ],
+        [
+          {
+            "h": "/metrotown-homes-for-sale.html",
+            "t": "Metrotown real estate"
+          }
+        ],
+        [
+          {
+            "h": "/montecito.html",
+            "t": "Montecito real estate"
+          }
+        ],
+        [
+          {
+            "h": "/oakdale.html",
+            "t": "Oakdale real estate"
+          }
+        ],
+        [
+          {
+            "h": "/oaklands-burnaby.html",
+            "t": "Oaklands real estate"
+          }
+        ],
+        [
+          {
+            "h": "/parkcrest.html",
+            "t": "Parkcrest real estate"
+          }
+        ],
+        [
+          {
+            "h": "/simon-fraser-hills-burnaby.html",
+            "t": "Simon Fraser Hills real estate"
+          }
+        ],
+        [
+          {
+            "h": "/simon-fraser-university-area-burnaby.html",
+            "t": "Simon Fraser University Area real estate"
+          }
+        ],
+        [
+          {
+            "h": "/south-slope-burnaby.html",
+            "t": "South Slope real estate"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Lots and land in Government Road",
       "gen": "tn",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Lots and land in Government Road"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Fee-simple lots",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Fee-simple lots"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -258,7 +232,7 @@
         ],
         [
           {
-            "t": "Lot character: typical Government Road lot sizes are UNVERIFIED at sub-area level (no official source read states them)."
+            "t": "Lot character: typical Government Road lot sizes are not verified at sub-area level (no official source read states them)."
           }
         ],
         [
@@ -273,7 +247,7 @@
         ],
         [
           {
-            "t": "ALR vs non-ALR: no ALR parcel in Government Road is confirmed in the research; parcel-level ALR status is a property-specific check through the Agricultural Land Commission. No ALR percentage split is stated."
+            "t": "ALR vs non-ALR: no ALR parcel in Government Road is confirmed; parcel-level ALR status is a property-specific check through the Agricultural Land Commission. No ALR percentage split is stated."
           }
         ],
         [
@@ -283,7 +257,7 @@
         ],
         [
           {
-            "t": "Assemblies / development sites / rezoning proposals: none documented as inventory: A specific named residential presale inside the Government Road sub-area confirmed on a City or developer source: UNVERIFIED. The Cameron Community Centre and Library replacement (estimated total construction cost $267 million, per the City) is the area's confirmed major civic project — a public facility rebuild, never for-sale land."
+            "t": "Assemblies / development sites / rezoning proposals: none documented as inventory: A specific named residential presale inside the Government Road sub-area confirmed on a City or developer source: Not verified. The Cameron Community Centre and Library replacement (estimated total construction cost $267 million, per the City) is the area's confirmed major civic project — a public facility rebuild, never for-sale land."
           }
         ],
         [
@@ -292,18 +266,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Government Road",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Government Road"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -317,7 +291,7 @@
         ],
         [
           {
-            "t": "Main roads and transit: Government Road, Lougheed Highway, Winston Street and Eastlake Drive are the main roads, with Gaglardi Way linking north to SFU. Route 110 is the area's spine bus — from Lougheed Station via Cameron, Beaverbrook, Eastlake, Production Way–University Station, Brighton, Government Road, Phillips and Winston to Sperling Station, then on to Metrotown Station; Government Road itself is on the published route. The Millennium Line stations serving the area are Lougheed Station and Production Way–University Station to the east and Sperling–Burnaby Lake Station to the west. Commute times in minutes: UNVERIFIED."
+            "t": "Main roads and transit: Government Road, Lougheed Highway, Winston Street and Eastlake Drive are the main roads, with Gaglardi Way linking north to SFU. Route 110 is the area's spine bus — from Lougheed Station via Cameron, Beaverbrook, Eastlake, Production Way–University Station, Brighton, Government Road, Phillips and Winston to Sperling Station, then on to Metrotown Station; Government Road itself is on the published route. The Millennium Line stations serving the area are Lougheed Station and Production Way–University Station to the east and Sperling–Burnaby Lake Station to the west. Commute times in minutes: Not verified."
           }
         ],
         [
@@ -331,22 +305,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Government Road",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Government Road"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Subdivision + servicing requirements — base number HELD UNCONFIRMED: Burnaby's servicing instrument is the Subdivision Control and Development Servicing Bylaw — the former Subdivision Control Bylaw as renamed by Amendment Bylaw No. 14667, 2024. The process documented here runs off the zone (new parcels must conform to the Zoning Bylaw for the zone) and the City's servicing-improvements regime for larger residential projects; parcel-level works-and-services requirements are confirmed with the City's Engineering Department for the specific lot before a split is priced."
+            "t": "Subdivision + servicing requirements — base number HELD not confirmed: Burnaby's servicing instrument is the Subdivision Control and Development Servicing Bylaw — the former Subdivision Control Bylaw as renamed by Amendment Bylaw No. 14667, 2024. The process documented here runs off the zone (new parcels must conform to the Zoning Bylaw for the zone) and the City's servicing-improvements regime for larger residential projects; parcel-level works-and-services requirements are confirmed with the City's Engineering Department for the specific lot before a split is priced."
           }
         ],
         [
@@ -360,18 +334,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Government Road",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Government Road"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -394,148 +368,148 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Government Road",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Government Road"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "burnaby.ca · town centres",
-            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres"
+            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres",
+            "t": "burnaby.ca · town centres"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt110",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt110.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt110.pdf",
+            "t": "infomaps.translink.ca · tt110"
           }
         ],
         [
           {
-            "t": "metrovancouver.org · burnaby lake regional park",
-            "h": "https://metrovancouver.org/services/regional-parks/park/burnaby-lake-regional-park"
+            "h": "https://metrovancouver.org/services/regional-parks/park/burnaby-lake-regional-park",
+            "t": "metrovancouver.org · burnaby lake regional park"
           }
         ],
         [
           {
-            "t": "burnaby.ca · council approves award contract advance construc",
-            "h": "https://www.burnaby.ca/our-city/news/2024-07-23/council-approves-award-contract-advance-construction-replacement-cameron"
+            "h": "https://www.burnaby.ca/our-city/news/2024-07-23/council-approves-award-contract-advance-construction-replacement-cameron",
+            "t": "burnaby.ca · council approves award contract advance construc"
           }
         ],
         [
           {
-            "t": "burnabyschools.ca · about sd41 overview",
-            "h": "https://burnabyschools.ca/about-sd41-overview/"
+            "h": "https://burnabyschools.ca/about-sd41-overview/",
+            "t": "burnabyschools.ca · about sd41 overview"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "burnaby.ca · residential utility fees",
-            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees"
+            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees",
+            "t": "burnaby.ca · residential utility fees"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ],
         [
           {
-            "t": "burnaby.ca · Parks",
-            "h": "https://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks.html"
+            "h": "https://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks.html",
+            "t": "burnaby.ca · Parks"
           }
         ],
         [
           {
-            "t": "burnaby.ca · community plans",
-            "h": "https://www.burnaby.ca/our-city/strategies-and-plans/official-community-plan/community-plans"
+            "h": "https://www.burnaby.ca/our-city/strategies-and-plans/official-community-plan/community-plans",
+            "t": "burnaby.ca · community plans"
           }
         ],
         [
           {
-            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun",
-            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan"
+            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan",
+            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · first time home buyers",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers",
+            "t": "www2.gov.bc.ca · first time home buyers"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Government Road",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Government Road"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -548,18 +522,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -572,18 +546,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -601,18 +575,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -625,25 +599,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from École Seaforth Elementary, 7881 Government Rd, Burnaby",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Production Way–University Station",
@@ -676,18 +651,17 @@
           "4.2"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -695,14 +669,58 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt110.pdf",
+            "t": "infomaps.translink.ca · tt110"
+          }
+        ],
+        [
+          {
+            "h": "https://metrovancouver.org/services/regional-parks/park/burnaby-lake-regional-park",
+            "t": "metrovancouver.org · burnaby lake regional park"
+          }
+        ],
+        [
+          {
+            "h": "https://www.burnaby.ca/our-city/news/2024-09-03/temporary-cameron-community-centre-now-open",
+            "t": "burnaby.ca · temporary cameron community centre now open"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.walmart.ca/en/store/3008",
+            "t": "walmart.ca · store"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -710,48 +728,50 @@
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt110",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt110.pdf"
-          }
-        ],
-        [
-          {
-            "t": "metrovancouver.org · burnaby lake regional park",
-            "h": "https://metrovancouver.org/services/regional-parks/park/burnaby-lake-regional-park"
-          }
-        ],
-        [
-          {
-            "t": "burnaby.ca · temporary cameron community centre now open",
-            "h": "https://www.burnaby.ca/our-city/news/2024-09-03/temporary-cameron-community-centre-now-open"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
+            "t": "Source: studentsuccess.gov.bc.ca",
             "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
           }
         ],
         [
           {
-            "t": "walmart.ca · store",
-            "h": "https://www.walmart.ca/en/store/3008"
+            "t": "Source: infomaps.translink.ca",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt110.pdf"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
     {
-      "q": "Where is Government Road?",
-      "a": "In north-east Burnaby, south of Lougheed Highway between Lougheed Town Centre and Burnaby Lake, named for Government Road and anchored by École Seaforth Elementary at 7881 Government Rd; it is a GVR MLS® sub-area within the City of Burnaby.",
-      "gen": "muse"
+      "a": "No verified one — the corridor is established houses, strata pockets and industrial/office land; no named bare-land subdivision, bare-land strata plan or presale lot offering was verified.",
+      "gen": "tn",
+      "q": "Is there a vacant-lot subdivision or a lot presale I can buy into on Government Road?"
     },
     {
-      "q": "How did Government Road detached homes do in September 2026?",
-      "a": "None sold — the SnapStats row shows 24 detached listings and 0 detached solds, so the detached sales ratio is not applicable for the month; the attached side recorded 23 listings and 3 solds, a 13% sales ratio (as of September 2026, Source: SnapStats GVR September 2026 report).",
+      "a": "If the lot is R1, yes — under Burnaby's R1 SSMUH District a house lot may hold 3 units on lots up to 280 m², 4 units on larger lots, and 6 units on lots of at least 281 m² within 400 m of a frequent-transit stop, and multi-unit lots may be stratified. Corridor parcels in other zones follow their own zone, so confirm the parcel's zone first.",
+      "gen": "tn",
+      "q": "Can a Government Road house lot add units?"
+    },
+    {
+      "a": "Both exist on this corridor: houses and strata sit south of Lougheed Highway, and the Lake City industrial and office lands run along the Lougheed corridor as the area's employment side. A corridor parcel's zone is confirmed parcel by parcel — never assume R1.",
+      "gen": "tn",
+      "q": "Is the lot I am looking at residential or industrial land?"
+    },
+    {
+      "a": "Stoney Creek Park and Trail System and the conservation lands are dedicated park lands running through the area's east side toward Burnaby Lake, and the setback rules travel with the creek — check watercourse setbacks early, and note no floodplain designation for the residential streets was confirmed.",
+      "gen": "tn",
+      "q": "Does the Stoney Creek edge affect a lot?"
+    },
+    {
+      "a": "The City's utility wording puts established homes on annual water and sewer billing (detached water charge $652.33 for 2026, a 5% discount if paid by the due date, sewer as a parcel tax for single-family homes) — confirm the specific parcel's connections and any servicing upgrade a subdivision will require.",
+      "gen": "tn",
+      "q": "Is a Government Road lot serviced?"
+    },
+    {
+      "q": "Where is Government Road?",
+      "a": "In north-east Burnaby, south of Lougheed Highway between Lougheed Town Centre and Burnaby Lake, named for Government Road and anchored by École Seaforth Elementary at 7881 Government Rd; it is a GVR MLS® sub-area within the City of Burnaby.",
       "gen": "muse"
     },
     {
@@ -763,31 +783,9 @@
       "q": "How is transit on Government Road?",
       "a": "Route 110 runs on Government Road itself, linking Lougheed Station and Production Way–University Station to the east with Sperling–Burnaby Lake Station and Metrotown Station to the west, via Beaverbrook, Eastlake, Brighton, Phillips and Winston.",
       "gen": "muse"
-    },
-    {
-      "q": "Can a Government Road house lot add units?",
-      "a": "If the lot is R1, yes — under Burnaby's R1 SSMUH District a house lot may hold 3 units on lots up to 280 m², 4 units on larger lots, and 6 units on lots of at least 281 m² within 400 m of a frequent-transit stop; corridor parcels in other zones follow their own zone, so confirm the parcel's zone first.",
-      "gen": "muse"
-    },
-    {
-      "gen": "tn",
-      "q": "Is there a vacant-lot subdivision or a lot presale I can buy into on Government Road?",
-      "a": "No verified one — the corridor is established houses, strata pockets and industrial/office land; no named bare-land subdivision, bare-land strata plan or presale lot offering was verified."
-    },
-    {
-      "gen": "tn",
-      "q": "Is the lot I am looking at residential or industrial land?",
-      "a": "Both exist on this corridor: houses and strata sit south of Lougheed Highway, and the Lake City industrial and office lands run along the Lougheed corridor as the area's employment side. A corridor parcel's zone is confirmed parcel by parcel — never assume R1."
-    },
-    {
-      "gen": "tn",
-      "q": "Does the Stoney Creek edge affect a lot?",
-      "a": "Stoney Creek Park and Trail System and the conservation lands are dedicated park lands running through the area's east side toward Burnaby Lake, and the setback rules travel with the creek — check watercourse setbacks early, and note no floodplain designation for the residential streets was confirmed."
-    },
-    {
-      "gen": "tn",
-      "q": "Is a Government Road lot serviced?",
-      "a": "The City's utility wording puts established homes on annual water and sewer billing (detached water charge $652.33 for 2026, a 5% discount if paid by the due date, sewer as a parcel tax for single-family homes) — confirm the specific parcel's connections and any servicing upgrade a subdivision will require."
     }
-  ]
+  ],
+  "slug": "government-road",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

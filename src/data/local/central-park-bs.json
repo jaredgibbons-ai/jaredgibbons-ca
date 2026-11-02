@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "central-park-bs",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Central Park homes listed and sold, June to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Central Park homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Central Park, September 2026. Detached houses: 11 listed at month end and 2 sold in September, a sales ratio of 18% (a balanced market). Condos and townhomes: 22 listed at month end and 6 sold in September, a sales ratio of 27% (a sellers’ market).",
-      "gen": "snapstats"
+      "text": "Central Park, October 2026. Detached houses: 9 listed at month end and 1 sold in October, a sales ratio of 11%. Condos and townhomes: 25 listed at month end and 2 sold in October, a sales ratio of 8% (a buyers’ market)."
     },
     {
-      "t": "table",
       "caption": "Central Park listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -62,309 +59,292 @@
           "22",
           "6",
           "27%"
+        ],
+        [
+          "October 2026",
+          "9",
+          "1",
+          "11%",
+          "25",
+          "2",
+          "8%"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 6 sold over 4 months against an average of 12.0 listed, about 8.0 months of listings at that pace; the busiest month was June with 2 sold. Condos and townhomes: 20 sold over 4 months against an average of 20.5 listed, about 4.1 months of listings at that pace; the busiest month was June with 7 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 7 sold over 5 months against an average of 11.4 listed, about 8.1 months of listings at that pace; the busiest month was June with 2 sold. Condos and townhomes: 22 sold over 5 months against an average of 21.4 listed, about 4.9 months of listings at that pace; the busiest month was June with 7 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Central Park by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Park by home type"
     },
     {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Central Park houses for sale",
-            "h": "/central-park-burnaby-houses-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Central Park condos and townhomes for sale",
-            "h": "/central-park-burnaby-condos-townhomes-for-sale.html"
-          }
-        ]
-      ],
       "gen": "typepage",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "More Burnaby real estate",
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "list",
       "items": [
         [
           {
-            "t": "Burnaby homes for sale",
-            "h": "/burnaby-homes-for-sale.html"
+            "h": "/central-park-burnaby-houses-for-sale.html",
+            "t": "Central Park houses for sale"
           }
         ],
         [
           {
-            "t": "Burnaby real estate market stats",
-            "h": "/burnaby-real-estate-market-stats.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby condos for sale",
-            "h": "/burnaby-condos-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby townhomes for sale",
-            "h": "/burnaby-townhomes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Schools in Burnaby",
-            "h": "/schools-in-burnaby-bc.html"
-          }
-        ],
-        [
-          {
-            "t": "Deer Lake real estate",
-            "h": "/deer-lake.html"
-          }
-        ],
-        [
-          {
-            "t": "Deer Lake Place real estate",
-            "h": "/deer-lake-place.html"
-          }
-        ],
-        [
-          {
-            "t": "East Burnaby real estate",
-            "h": "/east-burnaby.html"
-          }
-        ],
-        [
-          {
-            "t": "Edmonds real estate",
-            "h": "/edmonds-be.html"
-          }
-        ],
-        [
-          {
-            "t": "Forest Glen real estate",
-            "h": "/forest-glen-bs.html"
-          }
-        ],
-        [
-          {
-            "t": "Forest Hills real estate",
-            "h": "/forest-hills-bn.html"
-          }
-        ],
-        [
-          {
-            "t": "Garden Village real estate",
-            "h": "/garden-village.html"
-          }
-        ],
-        [
-          {
-            "t": "Government Road real estate",
-            "h": "/government-road.html"
-          }
-        ],
-        [
-          {
-            "t": "Greentree Village real estate",
-            "h": "/greentree-village.html"
-          }
-        ],
-        [
-          {
-            "t": "Highgate real estate",
-            "h": "/highgate-burnaby.html"
+            "h": "/central-park-burnaby-condos-townhomes-for-sale.html",
+            "t": "Central Park condos and townhomes for sale"
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "h",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "More Burnaby real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Source: burnaby.ca",
-            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres"
+            "h": "/burnaby-homes-for-sale.html",
+            "t": "Burnaby homes for sale"
           }
         ],
         [
           {
-            "t": "Source: studentsuccess.gov.bc.ca",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "/burnaby-real-estate-market-stats.html",
+            "t": "Burnaby real estate market stats"
+          }
+        ],
+        [
+          {
+            "h": "/burnaby-condos-for-sale.html",
+            "t": "Burnaby condos for sale"
+          }
+        ],
+        [
+          {
+            "h": "/burnaby-townhomes-for-sale.html",
+            "t": "Burnaby townhomes for sale"
+          }
+        ],
+        [
+          {
+            "h": "/schools-in-burnaby-bc.html",
+            "t": "Schools in Burnaby"
+          }
+        ],
+        [
+          {
+            "h": "/deer-lake.html",
+            "t": "Deer Lake real estate"
+          }
+        ],
+        [
+          {
+            "h": "/deer-lake-place.html",
+            "t": "Deer Lake Place real estate"
+          }
+        ],
+        [
+          {
+            "h": "/east-burnaby.html",
+            "t": "East Burnaby real estate"
+          }
+        ],
+        [
+          {
+            "h": "/edmonds-be.html",
+            "t": "Edmonds real estate"
+          }
+        ],
+        [
+          {
+            "h": "/forest-glen-bs.html",
+            "t": "Forest Glen real estate"
+          }
+        ],
+        [
+          {
+            "h": "/forest-hills-bn.html",
+            "t": "Forest Hills real estate"
+          }
+        ],
+        [
+          {
+            "h": "/garden-village.html",
+            "t": "Garden Village real estate"
+          }
+        ],
+        [
+          {
+            "h": "/government-road.html",
+            "t": "Government Road real estate"
+          }
+        ],
+        [
+          {
+            "h": "/greentree-village.html",
+            "t": "Greentree Village real estate"
+          }
+        ],
+        [
+          {
+            "h": "/highgate-burnaby.html",
+            "t": "Highgate real estate"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Condo buildings in Central Park",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Central Park House — 5987 Wilson Avenue",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Condo buildings in Central Park"
     },
     {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Park House — 5987 Wilson Avenue"
+    },
+    {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A 41-storey residential high-rise by Bosa Properties, built in 2025 per current listings, designed by Gensler Architects, steps to Patterson SkyTrain Station and Central Park. Listings describe 24/7 concierge, an indoor pool and hot tub on the 17th floor, a 2,000 sq ft fitness centre, sauna and steam rooms, co-work space and social lounge, with 1 parking and 1 locker for the units checked. Published positions in listing fields include pets: a rental listing for the building calls it pet-friendly, and one sale listing records \"Pets Allowed With Restrictions\" — registered bylaws govern; published age restrictions: UNCONFIRMED.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A 41-storey residential high-rise by Bosa Properties, built in 2025 per current listings, designed by Gensler Architects, steps to Patterson SkyTrain Station and Central Park. Listings describe 24/7 concierge, an indoor pool and hot tub on the 17th floor, a 2,000 sq ft fitness centre, sauna and steam rooms, co-work space and social lounge, with 1 parking and 1 locker for the units checked. Published positions in listing fields include pets: a rental listing for the building calls it pet-friendly, and one sale listing records \"Pets Allowed With Restrictions\" — registered bylaws govern; published age restrictions: Not confirmed."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Paramount II — 5899 Wilson Avenue",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Paramount II — 5899 Wilson Avenue"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A concrete high-rise by Bosa, built in 1996 per current listings, described as a 134-unit development in a building directory's listing record (\"134 Unit Development, Concrete\"), just minutes to Patterson and Metrotown stations and across from Central Park. The same directory record is titled \"Pets Allowed\" for this building. One listing notes the neighbouring Paramount (5833 Wilson) has an updated envelope \"unlike 5899 Wilson\" — a single listing's characterization, flagged here as a depreciation-report / envelope question to settle on the Form B, not as a verified building condition. Published rental/age restrictions: UNCONFIRMED.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A concrete high-rise by Bosa, built in 1996 per current listings, described as a 134-unit development in a building directory's listing record (\"134 Unit Development, Concrete\"), just minutes to Patterson and Metrotown stations and across from Central Park. The same directory record is titled \"Pets Allowed\" for this building. One listing notes the neighbouring Paramount (5833 Wilson) has an updated envelope \"unlike 5899 Wilson\" — a single listing's characterization, flagged here as a depreciation-report / envelope question to settle on the Form B, not as a verified building condition. Published rental/age restrictions: Not confirmed."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Paramount — 5833 Wilson Avenue",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Paramount — 5833 Wilson Avenue"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A concrete building by Bosa in the heart of Metrotown / Central Park BS per current listings, with exercise centre, steam room and bike room. Build-year conflict: listings record 1994, while a building directory and another listing record 1995 — noted, not resolved. Unit count and published rental/pet/age restrictions: UNCONFIRMED from the sources checked.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A concrete building by Bosa in the heart of Metrotown / Central Park BS per current listings, with exercise centre, steam room and bike room. Build-year conflict: listings record 1994, while a building directory and another listing record 1995 — noted, not resolved. Unit count and published rental/pet/age restrictions: Not confirmed from the sources checked."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Aldynne on the Park — 5883 Barker Avenue",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Aldynne on the Park — 5883 Barker Avenue"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A concrete tower by Polygon, built in 2017 per current listings, directly across from Central Park and minutes to Patterson SkyTrain Station, with a fitness centre and lounge. A building directory records its strata bylaws as: pets allowed with restrictions, rentals allowed. (One older building page gives a different build year (2014) and a different street address for this name; the 2017 / 5883 Barker Avenue position is the one current listings and the building directory agree on, and the older page is not relied on.)",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A concrete tower by Polygon, built in 2017 per current listings, directly across from Central Park and minutes to Patterson SkyTrain Station, with a fitness centre and lounge. A building directory records its strata bylaws as: pets allowed with restrictions, rentals allowed. (One older building page gives a different build year (2014) and a different street address for this name; the 2017 / 5883 Barker Avenue position is the one current listings and the building directory agree on, and the older page is not relied on.)"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Place Meridian — 5967 Wilson Avenue",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Place Meridian — 5967 Wilson Avenue"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "That listing's fields record pets as \"No.\" Unit count and published rental/age restrictions: UNCONFIRMED.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "That listing's fields record pets as \"No.\" Unit count and published rental/age restrictions: Not confirmed."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Central Park Place — 5652 Patterson Avenue",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Central Park Place — 5652 Patterson Avenue"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A listing for a unit at this address introduces it as \"Central Park Place,\" Central Park BS, a concrete-frame building with 2 parking stalls and 1 locker for the unit checked, recorded in that listing as built in 1981. A rental-platform building profile gives the same name and address as 408 units, 21 stories, built in 1992 — the year conflict (1981 vs 1992) and the unit count are both single-source and are treated as UNCONFIRMED beyond the name and address. Published restrictions: UNCONFIRMED.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A listing for a unit at this address introduces it as \"Central Park Place,\" Central Park BS, a concrete-frame building with 2 parking stalls and 1 locker for the unit checked, recorded in that listing as built in 1981. A rental-platform building profile gives the same name and address as 408 units, 21 stories, built in 1992 — the year conflict (1981 vs 1992) and the unit count are both single-source and are treated as not confirmed beyond the name and address. Published restrictions: Not confirmed."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Central Park Place — 4160 Sardis Street",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Central Park Place — 4160 Sardis Street"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A separate building carrying the same name, on Sardis Street north of the park: a building directory records it as built in 1977, with an exercise centre, outdoor pool, recreation centre, sauna/steam room, swirlpool/hot tub and tennis courts, and records its strata bylaws as: pets not allowed, rentals not allowed — the \"rentals not allowed\" line is VOID: strata long-term rental-restriction bylaws have been unenforceable since November 24, 2022 (Bill 44), and it is flagged again in. The pets-not-allowed line is a pet bylaw, which remains enforceable — confirm both on the Form B. Unit count: UNCONFIRMED.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A separate building carrying the same name, on Sardis Street north of the park: a building directory records it as built in 1977, with an exercise centre, outdoor pool, recreation centre, sauna/steam room, swirlpool/hot tub and tennis courts, and records its strata bylaws as: pets not allowed, rentals not allowed — the \"rentals not allowed\" line is VOID: strata long-term rental-restriction bylaws have been unenforceable since November 24, 2022 (Bill 44), and it is flagged again in. The pets-not-allowed line is a pet bylaw, which remains enforceable — confirm both on the Form B. Unit count: Not confirmed."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Grand Central Park Place — 6128 Patterson Avenue",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Grand Central Park Place — 6128 Patterson Avenue"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A building directory records Grand Central Park Place at this address, built in 1992. Unit count and published rental/pet/age restrictions: UNCONFIRMED from the sources checked.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A building directory records Grand Central Park Place at this address, built in 1992. Unit count and published rental/pet/age restrictions: Not confirmed from the sources checked."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Wimbledon Club — 6188 Patterson Avenue",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Wimbledon Club — 6188 Patterson Avenue"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Unit count and published rental/age restrictions: UNCONFIRMED.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Unit count and published rental/age restrictions: Not confirmed."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Central Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Central Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "The Central Park sub-area is the residential area around Central Park in south-west Burnaby, on the Vancouver border at Kingsway, directly west of Metrotown. The City publishes no street-by-street written boundary for the MLS sub-area; the residential area surrounds the park, between Boundary Road (the Vancouver border) and Metrotown, along Kingsway and Imperial Street — exact MLS boundary streets: UNVERIFIED. Heritage Burnaby describes the park itself as lying between 49th Avenue to the south, Kingsway to the north, Boundary Road to the west and Patterson Avenue to the east."
+            "t": "The Central Park sub-area is the residential area around Central Park in south-west Burnaby, on the Vancouver border at Kingsway, directly west of Metrotown. The City publishes no street-by-street written boundary for the MLS sub-area; the residential area surrounds the park, between Boundary Road (the Vancouver border) and Metrotown, along Kingsway and Imperial Street — exact MLS boundary streets: Not verified. Heritage Burnaby describes the park itself as lying between 49th Avenue to the south, Kingsway to the north, Boundary Road to the west and Patterson Avenue to the east."
           }
         ],
         [
@@ -383,18 +363,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Central Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Central Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -427,152 +407,152 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Central Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Central Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "search.heritageburnaby.ca · list",
-            "h": "https://search.heritageburnaby.ca/list?objectType_facet=Landmark%20Description%20&objectType_facet=Textual%20Record&ps=50&q=&place_facet=barnetroad000000%7CBarnet%20Road&place_facet=imperialstreet000000%7CImperial%20Street&p=1"
+            "h": "https://search.heritageburnaby.ca/list?objectType_facet=Landmark%20Description%20&objectType_facet=Textual%20Record&ps=50&q=&place_facet=barnetroad000000%7CBarnet%20Road&place_facet=imperialstreet000000%7CImperial%20Street&p=1",
+            "t": "search.heritageburnaby.ca · list"
           }
         ],
         [
           {
-            "t": "mikestewart.ca · wilson bluesky metrotown burnaby presale condos",
-            "h": "https://www.mikestewart.ca/presale/wilson-bluesky-metrotown-burnaby-presale-condos/"
+            "h": "https://www.mikestewart.ca/presale/wilson-bluesky-metrotown-burnaby-presale-condos/",
+            "t": "mikestewart.ca · wilson bluesky metrotown burnaby presale condos"
           }
         ],
         [
           {
-            "t": "mynextcondo.com · central park house",
-            "h": "https://mynextcondo.com/building/central-park-house/"
+            "h": "https://mynextcondo.com/building/central-park-house/",
+            "t": "mynextcondo.com · central park house"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · paramount 5833 wilson ave",
-            "h": "https://www.bccondosandhomes.com/index.php/building/paramount-5833-wilson-ave"
+            "h": "https://www.bccondosandhomes.com/index.php/building/paramount-5833-wilson-ave",
+            "t": "bccondosandhomes.com · paramount 5833 wilson ave"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · aldynne on the park 5883 barker avenue",
-            "h": "https://www.bccondosandhomes.com/building/aldynne-on-the-park-5883-barker-avenue"
+            "h": "https://www.bccondosandhomes.com/building/aldynne-on-the-park-5883-barker-avenue",
+            "t": "bccondosandhomes.com · aldynne on the park 5883 barker avenue"
           }
         ],
         [
           {
-            "t": "skytraincondo.ca · patterson",
-            "h": "https://www.skytraincondo.ca/station/patterson/?_pg=3"
+            "h": "https://www.skytraincondo.ca/station/patterson/?_pg=3",
+            "t": "skytraincondo.ca · patterson"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · central park place 4160 sardis street",
-            "h": "https://www.bccondosandhomes.com/building/central-park-place-4160-sardis-street"
+            "h": "https://www.bccondosandhomes.com/building/central-park-place-4160-sardis-street",
+            "t": "bccondosandhomes.com · central park place 4160 sardis street"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · grand central park place 6128 patterson ave",
-            "h": "https://www.bccondosandhomes.com/building/grand-central-park-place-6128-patterson-ave"
+            "h": "https://www.bccondosandhomes.com/building/grand-central-park-place-6128-patterson-ave",
+            "t": "bccondosandhomes.com · grand central park place 6128 patterson ave"
           }
         ],
         [
           {
-            "t": "images.loopnet.fr:443 · Kingsway4555",
-            "h": "https://images.loopnet.fr:443/d2/3NThwOcNaAIaBCAkBEz_tW8tZcgcIazRu073JPMlRZw/Kingsway4555.pdf"
+            "h": "https://images.loopnet.fr:443/d2/3NThwOcNaAIaBCAkBEz_tW8tZcgcIazRu073JPMlRZw/Kingsway4555.pdf",
+            "t": "images.loopnet.fr:443 · Kingsway4555"
           }
         ],
         [
           {
-            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for ",
-            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/"
+            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/",
+            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw",
-            "h": "https://www.burnaby.ca/our-city/bylaws/zoning-bylaw"
+            "h": "https://www.burnaby.ca/our-city/bylaws/zoning-bylaw",
+            "t": "burnaby.ca · zoning bylaw"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Central Park BS",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "The only townhouse-form homes found are components of two apartment projects (Central Park House and Aldynne on the Park), documented below and counted in condos accounting only, never here.",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Central Park BS",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Central Park BS"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "pos": "end",
+      "t": "p",
+      "text": "The only townhouse-form homes found are components of two apartment projects (Central Park House and Aldynne on the Park), documented below and counted in condos accounting only, never here."
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Central Park BS"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "\"Central Park BS\" is the GVR board sub-area name as used in the SnapStats GVR report for Burnaby: the residential pocket around Central Park in south-west Burnaby, from Boundary Road (the Vancouver border) to Metrotown, between Kingsway/Imperial Street and the park. Central Park itself is bounded by 49th Avenue, Kingsway, Boundary Road and Patterson Avenue. Street-by-street boundaries for the MLS sub-area are UNVERIFIED — no City or board source read publishes them."
+            "t": "\"Central Park BS\" is the GVR board sub-area name as used in the SnapStats GVR report for Burnaby: the residential pocket around Central Park in south-west Burnaby, from Boundary Road (the Vancouver border) to Metrotown, between Kingsway/Imperial Street and the park. Central Park itself is bounded by 49th Avenue, Kingsway, Boundary Road and Patterson Avenue. Street-by-street boundaries for the MLS sub-area are not verified — no City or board source read publishes them."
           }
         ],
         [
@@ -581,18 +561,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Central Park BS",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Central Park BS"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -605,121 +585,121 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Central Park BS",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Central Park BS"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "burnaby.ca · Zoning Bylaw Consolidated Without Schedules",
-            "h": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-07/Zoning-Bylaw-Consolidated-Without-Schedules.pdf"
+            "h": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-07/Zoning-Bylaw-Consolidated-Without-Schedules.pdf",
+            "t": "burnaby.ca · Zoning Bylaw Consolidated Without Schedules"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun",
-            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan"
+            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan",
+            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun"
           }
         ],
         [
           {
-            "t": "burnaby.ca · fees charges and penalties",
-            "h": "https://www.burnaby.ca/services-and-payments/property-taxes/fees-charges-and-penalties"
+            "h": "https://www.burnaby.ca/services-and-payments/property-taxes/fees-charges-and-penalties",
+            "t": "burnaby.ca · fees charges and penalties"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "cmhc-schl.gc.ca · second home",
-            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home"
+            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home",
+            "t": "cmhc-schl.gc.ca · second home"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Central Park",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Fee-simple lots",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Central Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Fee-simple lots"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Established park-side streets: (As of September 2026, Source: SnapStats GVR September 2026 report)"
+            "t": "Established park-side streets: (SnapStats, September 2026)"
           }
         ],
         [
           {
-            "t": "Lot character, only: typical Central Park lot sizes are UNVERIFIED at sub-area level — no official source read states them. The only sourced lot figures are the R1 SSMUH thresholds: a minimum lot area of 281 m² and a minimum lot width of 10 m, with the 280 m² / 281 m² unit-count thresholds in. These are zoning thresholds, not a claim about any existing lot's size."
+            "t": "Lot character, only: typical Central Park lot sizes are not verified at sub-area level — no official source read states them. The only sourced lot figures are the R1 SSMUH thresholds: a minimum lot area of 281 m² and a minimum lot width of 10 m, with the 280 m² / 281 m² unit-count thresholds in. These are zoning thresholds, not a claim about any existing lot's size."
           }
         ],
         [
@@ -729,27 +709,27 @@
         ],
         [
           {
-            "t": "ALR vs non-ALR: no ALR split is documented for this sub-area in the research, and no ALR percentage is stated. Parcel-level ALR status is checked in the Agricultural Land Commission's ALR Property and Map Finder."
+            "t": "ALR vs non-ALR: no ALR split is documented for this sub-area, and no ALR percentage is stated. Parcel-level ALR status is checked in the Agricultural Land Commission's ALR Property and Map Finder."
           }
         ],
         [
           {
-            "t": "Hazard position: no area-wide flood or hazard designation for the Central Park sub-area was found in the sources read; parcel-level hazard status is a property-specific check and is UNVERIFIED for individual lots."
+            "t": "Hazard position: no area-wide flood or hazard designation for the Central Park sub-area was found in the sources read; parcel-level hazard status is a property-specific check and is not verified for individual lots."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Bare-land strata",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Bare-land strata"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -757,22 +737,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Named developments / applications",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Named developments / applications"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "No named bare-land development, assembly, development site or rezoning proposal inside Central Park is documented in the research"
+            "t": "No named bare-land development, assembly, development site or rezoning proposal inside Central Park is documented"
           }
         ],
         [
@@ -781,18 +761,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Central Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Central Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -801,27 +781,27 @@
         ],
         [
           {
-            "t": "Roads and transit: Kingsway runs along the park's north side and Imperial Street along the south; Boundary Road forms the west edge at the City of Vancouver border and Patterson Avenue the east side of the park. Patterson Station (Expo Line) is at the park's north-east corner and Metrotown Station (Expo Line) is east of the park — two SkyTrain stations frame the sub-area. Commute times in minutes: UNVERIFIED."
+            "t": "Roads and transit: Kingsway runs along the park's north side and Imperial Street along the south; Boundary Road forms the west edge at the City of Vancouver border and Patterson Avenue the east side of the park. Patterson Station (Expo Line) is at the park's north-east corner and Metrotown Station (Expo Line) is east of the park — two SkyTrain stations frame the sub-area. Commute times in minutes: Not verified."
           }
         ],
         [
           {
-            "t": "Parks, recreation, library, health: Central Park itself is the sub-area's centre — the large City park on the Vancouver border at Kingsway, with the BC Parkway trail running through it under the SkyTrain line. Bonsor Recreation Complex, in the Metrotown area east of the park, serves this side of the city (facility detail beyond that: UNVERIFIED). The library branch serving this area is the Bob Prittie Metrotown Branch, 6100 Willingdon Ave, east of the park. The city's hospital is Burnaby Hospital, 3935 Kincaid St (Fraser Health); the Metrotown Urgent and Primary Care Centre is at 102-4555 Kingsway, east of the park."
+            "t": "Parks, recreation, library, health: Central Park itself is the sub-area's centre — the large City park on the Vancouver border at Kingsway, with the BC Parkway trail running through it under the SkyTrain line. Bonsor Recreation Complex, in the Metrotown area east of the park, serves this side of the city (facility detail beyond that: Not verified). The library branch serving this area is the Bob Prittie Metrotown Branch, 6100 Willingdon Ave, east of the park. The city's hospital is Burnaby Hospital, 3935 Kincaid St (Fraser Health); the Metrotown Urgent and Primary Care Centre is at 102-4555 Kingsway, east of the park."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Central Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Central Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -834,172 +814,172 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Central Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Central Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "The park is the sub-area, the downtown is next door: Central Park's planning frame is not a neighbourhood plan of its own in the research — it is the Metrotown town centre, Burnaby's regional city centre and downtown, directly east of the park. A lot's long-term value question here is a Metrotown-edge question."
+            "t": "The park is the sub-area, the downtown is next door: Central Park's planning frame is not a neighbourhood plan of its own — it is the Metrotown town centre, Burnaby's regional city centre and downtown, directly east of the park. A lot's long-term value question here is a Metrotown-edge question."
           }
         ],
         [
           {
-            "t": "(As of September 2026, Source: SnapStats GVR September 2026 report)"
+            "t": "(SnapStats, September 2026)"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Central Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Central Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "burnaby.ca · town centres",
-            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres"
+            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres",
+            "t": "burnaby.ca · town centres"
           }
         ],
         [
           {
-            "t": "burnaby.ca · Parks",
-            "h": "https://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks.html"
+            "h": "https://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks.html",
+            "t": "burnaby.ca · Parks"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · burnaby hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital",
+            "t": "fraserhealth.ca · burnaby hospital"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "burnabyschools.ca · about sd41 overview",
-            "h": "https://burnabyschools.ca/about-sd41-overview/"
+            "h": "https://burnabyschools.ca/about-sd41-overview/",
+            "t": "burnabyschools.ca · about sd41 overview"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "burnaby.ca · residential utility fees",
-            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees"
+            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees",
+            "t": "burnaby.ca · residential utility fees"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ],
         [
           {
-            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun",
-            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan"
+            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan",
+            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · first time home buyers",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers",
+            "t": "www2.gov.bc.ca · first time home buyers"
           }
         ],
         [
           {
-            "t": "canada.ca · sales vacant land individuals",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html",
+            "t": "canada.ca · sales vacant land individuals"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Central Park",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Central Park"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -1017,18 +997,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1046,18 +1026,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1080,18 +1060,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1099,25 +1079,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Maywood Community Elementary, 4567 Imperial St",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Metrotown Station",
@@ -1144,14 +1125,69 @@
           "1.9"
         ]
       ],
+      "t": "table"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://www.translink.ca/news/2026/october/translink%20replacing%2040-year-old%20elevator%20at%20patterson%20skytrain%20station",
+            "t": "translink.ca · translink replacing 40 year old elevator at patt"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt129.pdf",
+            "t": "infomaps.translink.ca · tt129"
+          }
+        ],
+        [
+          {
+            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/outdoor-fitness-circuits",
+            "t": "burnaby.ca · outdoor fitness circuits"
+          }
+        ],
+        [
+          {
+            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/bonsor-recreation-complex",
+            "t": "burnaby.ca · bonsor recreation complex"
+          }
+        ],
+        [
+          {
+            "h": "https://www.burnaby.ca/our-city/city-departments/burnaby-public-library",
+            "t": "burnaby.ca · burnaby public library"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.metropolisatmetrotown.com/about-metropolis/",
+            "t": "metropolisatmetrotown.com · about metropolis"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -1159,111 +1195,68 @@
       "items": [
         [
           {
-            "t": "translink.ca · translink replacing 40 year old elevator at patt",
-            "h": "https://www.translink.ca/news/2026/october/translink%20replacing%2040-year-old%20elevator%20at%20patterson%20skytrain%20station"
-          }
-        ],
-        [
-          {
-            "t": "infomaps.translink.ca · tt129",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt129.pdf"
-          }
-        ],
-        [
-          {
-            "t": "burnaby.ca · outdoor fitness circuits",
-            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/outdoor-fitness-circuits"
-          }
-        ],
-        [
-          {
-            "t": "burnaby.ca · bonsor recreation complex",
-            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/bonsor-recreation-complex"
-          }
-        ],
-        [
-          {
-            "t": "burnaby.ca · burnaby public library",
-            "h": "https://www.burnaby.ca/our-city/city-departments/burnaby-public-library"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
+            "t": "Source: studentsuccess.gov.bc.ca",
             "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
-          }
-        ],
-        [
-          {
-            "t": "metropolisatmetrotown.com · about metropolis",
-            "h": "https://www.metropolisatmetrotown.com/about-metropolis/"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
     {
+      "a": "Central Park House (5987 Wilson Avenue, Bosa, built 2025) is the newest, ahead of Aldynne on the Park (5883 Barker Avenue, Polygon, 2017). A 2025 building is inside its 2-5-10 warranty window; confirm the warranty position for the specific unit, because the 2-year and 5-year components expire before the 10-year structural component.",
+      "gen": "tn",
+      "q": "Which buildings are the newest, and does warranty remain?"
+    },
+    {
+      "a": "Three, counting the office tower. Residential: 5652 Patterson Avenue (a listing records it built in 1981; a rental-platform profile says 1992 and 408 units — unresolved) and 4160 Sardis Street (built 1977 per the building directory, with pool, tennis courts and a pets-not-allowed bylaw on record). Commercial: the 18-storey office tower at 4555 Kingsway, built by Bosa in 2000. Always quote the street address with the name.",
+      "gen": "tn",
+      "q": "Two buildings are both called Central Park Place — which is which?"
+    },
+    {
+      "a": "Half of it is void. The \"rentals not allowed\" line cannot be enforced: strata long-term rental-restriction bylaws have been unenforceable since November 24, 2022. The \"pets not allowed\" line is a pet bylaw, which remains enforceable in BC — so a buyer with a pet should treat 4160 Sardis as no-pets until the registered bylaws on the Form B say otherwise, while a buyer planning to rent the unit out can rely on the rental voidness.",
+      "gen": "tn",
+      "q": "A directory says Central Park Place (4160 Sardis) allows no rentals and no pets — is that right?"
+    },
+    {
+      "a": "Published positions differ by building: Aldynne on the Park — pets allowed with restrictions (directory); Paramount II (5899 Wilson) — \"Pets Allowed\" (directory listing title); Central Park House — pet-friendly per a rental listing, \"Pets Allowed With Restrictions\" in one sale listing's fields; Wimbledon Club — \"Cats OK\" in a listing's fields; Place Meridian — \"Pets: No\" in a listing's fields. Listing fields are not bylaws — read the registered bylaws for the specific building before writing.",
+      "gen": "tn",
+      "q": "Are pets allowed in the other towers?"
+    },
+    {
+      "a": "The one detailed published record is Place Meridian (5967 Wilson Avenue): complete repiping and boiler replacement (2023), elevator modernization (2024), swimming pool rehabilitation (2024) and updated common areas (2025), per a current listing. For Paramount II, a neighbouring building's listing claims Paramount (5833 Wilson) has an updated envelope \"unlike 5899 Wilson\" — unverified marketing copy from another building's sale, and exactly the kind of claim the Form B and depreciation report exist to settle.",
+      "gen": "tn",
+      "q": "What capital work has already been done in the older buildings?"
+    },
+    {
+      "a": "No — Central Park is the park-side sub-area on the Vancouver border west of Metrotown; \"Central\" is the separate Canada Way / Deer Lake civic sub-area to the north-east, with different stock and different numbers. (SnapStats, September 2026)",
+      "gen": "tn",
+      "q": "Is Central Park the same as \"Central\"?"
+    },
+    {
+      "a": "No verified one — no named bare-land subdivision, bare-land strata or presale lot offering was verified. The market is built houses on the park-side streets and strata product toward the stations.",
+      "gen": "tn",
+      "q": "Can I buy a vacant lot in Central Park?"
+    },
+    {
+      "a": "3 units on lots up to 280 m², 4 on larger lots, and 6 on lots of at least 281 m² within 400 m of a frequent-transit stop; minimum lot width 10 m and minimum lot area 281 m² for SSMUH lots, and lots with two or more primary units may be stratified. With Patterson and Metrotown stations framing the area, measure the 400 m test on the actual parcel.",
+      "gen": "tn",
+      "q": "How many homes can an R1 lot hold here?"
+    },
+    {
       "q": "Where is the Central Park sub-area in Burnaby?",
-      "a": "Around Central Park in south-west Burnaby, between Boundary Road (the Vancouver border) and Metrotown, along Kingsway and Imperial Street; \"Central Park\" is the GVR MLS® sub-area name and this site files it as Burnaby South (central-park-bs) (as of September 2026, Source: SnapStats GVR September 2026 report).",
-      "gen": "muse"
-    },
-    {
-      "q": "What sold in Central Park in September 2026?",
-      "a": "Condos & townhomes: 6 solds from 22 listings (27% sales ratio); detached: 2 solds from 11 listings (18% — a very small sample). Burnaby-wide, the median detached sale price was $1,825,000 and the condos & townhomes median was $686,000 that month (as of September 2026, Source: SnapStats GVR September 2026 report).",
-      "gen": "muse"
-    },
-    {
-      "q": "Which SkyTrain stations serve Central Park?",
-      "a": "Patterson Station (Expo Line) at the park's north-east corner and Metrotown Station (Expo Line) east of the park.",
+      "a": "Around Central Park in south-west Burnaby, between Boundary Road (the Vancouver border) and Metrotown, along Kingsway and Imperial Street; \"Central Park\" is the GVR MLS® sub-area name and this site files it as Burnaby South (central-park-bs) (SnapStats, September 2026)",
       "gen": "muse"
     },
     {
       "q": "Which schools are in or near the sub-area?",
       "a": "Maywood Community Elementary (K–7), 4567 Imperial St, Chaffey-Burke Elementary (K–7), 4404 Sardis St, and the École Inman Elementary French Immersion program, 3963 Brandon St, with Moscrop Secondary, 4433 Moscrop St, and Burnaby South Secondary, 5455 Rumble St, the nearest secondaries; catchments are address-based — check the SD41 locator, and note French Immersion is a choice program, not a catchment.",
       "gen": "muse"
-    },
-    {
-      "gen": "tn",
-      "q": "Which buildings are the newest, and does warranty remain?",
-      "a": "Central Park House (5987 Wilson Avenue, Bosa, built 2025) is the newest, ahead of Aldynne on the Park (5883 Barker Avenue, Polygon, 2017). A 2025 building is inside its 2-5-10 warranty window; confirm the warranty position for the specific unit, because the 2-year and 5-year components expire before the 10-year structural component."
-    },
-    {
-      "gen": "tn",
-      "q": "Two buildings are both called Central Park Place — which is which?",
-      "a": "Three, counting the office tower. Residential: 5652 Patterson Avenue (a listing records it built in 1981; a rental-platform profile says 1992 and 408 units — unresolved) and 4160 Sardis Street (built 1977 per the building directory, with pool, tennis courts and a pets-not-allowed bylaw on record). Commercial: the 18-storey office tower at 4555 Kingsway, built by Bosa in 2000. Always quote the street address with the name."
-    },
-    {
-      "gen": "tn",
-      "q": "A directory says Central Park Place (4160 Sardis) allows no rentals and no pets — is that right?",
-      "a": "Half of it is void. The \"rentals not allowed\" line cannot be enforced: strata long-term rental-restriction bylaws have been unenforceable since November 24, 2022. The \"pets not allowed\" line is a pet bylaw, which remains enforceable in BC — so a buyer with a pet should treat 4160 Sardis as no-pets until the registered bylaws on the Form B say otherwise, while a buyer planning to rent the unit out can rely on the rental voidness."
-    },
-    {
-      "gen": "tn",
-      "q": "Are pets allowed in the other towers?",
-      "a": "Published positions differ by building: Aldynne on the Park — pets allowed with restrictions (directory); Paramount II (5899 Wilson) — \"Pets Allowed\" (directory listing title); Central Park House — pet-friendly per a rental listing, \"Pets Allowed With Restrictions\" in one sale listing's fields; Wimbledon Club — \"Cats OK\" in a listing's fields; Place Meridian — \"Pets: No\" in a listing's fields. Listing fields are not bylaws — read the registered bylaws for the specific building before writing."
-    },
-    {
-      "gen": "tn",
-      "q": "What capital work has already been done in the older buildings?",
-      "a": "The one detailed published record is Place Meridian (5967 Wilson Avenue): complete repiping and boiler replacement (2023), elevator modernization (2024), swimming pool rehabilitation (2024) and updated common areas (2025), per a current listing. For Paramount II, a neighbouring building's listing claims Paramount (5833 Wilson) has an updated envelope \"unlike 5899 Wilson\" — unverified marketing copy from another building's sale, and exactly the kind of claim the Form B and depreciation report exist to settle."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Central Park the same as \"Central\"?",
-      "a": "No — Central Park is the park-side sub-area on the Vancouver border west of Metrotown; \"Central\" is the separate Canada Way / Deer Lake civic sub-area to the north-east, with different stock and different numbers. (As of September 2026, Source: SnapStats GVR September 2026 report)"
-    },
-    {
-      "gen": "tn",
-      "q": "Can I buy a vacant lot in Central Park?",
-      "a": "No verified one — no named bare-land subdivision, bare-land strata or presale lot offering was verified. The market is built houses on the park-side streets and strata product toward the stations."
-    },
-    {
-      "gen": "tn",
-      "q": "How many homes can an R1 lot hold here?",
-      "a": "3 units on lots up to 280 m², 4 on larger lots, and 6 on lots of at least 281 m² within 400 m of a frequent-transit stop; minimum lot width 10 m and minimum lot area 281 m² for SSMUH lots, and lots with two or more primary units may be stratified. With Patterson and Metrotown stations framing the area, measure the 400 m test on the actual parcel."
     }
-  ]
+  ],
+  "slug": "central-park-bs",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

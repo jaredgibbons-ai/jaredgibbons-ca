@@ -1,58 +1,31 @@
 {
-  "status": "draft",
-  "slug": "riverwood-port-coquitlam",
-  "updated": "2026-11-01",
-  "community": {
-    "area": "port-coquitlam",
-    "name": "Riverwood"
-  },
-  "new_page": {
-    "title": "Riverwood, Port Coquitlam Homes for Sale | Jared Gibbons REALTOR®",
-    "description": "Riverwood, Port Coquitlam homes for sale: listings, sales and sales ratio for September 2026 and how it compares with Port Coquitlam. Jared Gibbons, REALTOR®.",
-    "h1": "Riverwood, Port Coquitlam Homes for Sale"
-  },
-  "breadcrumbs": [
-    {
-      "name": "Home",
-      "href": "/index.html"
-    },
-    {
-      "name": "Port Coquitlam",
-      "href": "/port-coquitlam-homes-for-sale.html"
-    },
-    {
-      "name": "Riverwood real estate",
-      "href": "/riverwood-port-coquitlam.html"
-    }
-  ],
-  "faq_heading": "Riverwood real estate: your questions answered",
   "blocks": [
     {
       "t": "notice",
       "text": "Draft for Jared's approval. Built only from the monthly MLS® figures (SnapStats) for Riverwood. It has no local notes, street boundaries, schools or listing feed yet; see the open items below."
     },
     {
+      "gen": "community",
       "t": "p",
-      "text": "Riverwood, Port Coquitlam: 10 houses and 21 condos and townhomes listed at the end of September, with 2 and 8 sold in the month. It is one of 10 communities the Greater Vancouver REALTORS® figures break out for Port Coquitlam.",
-      "gen": "community"
+      "text": "Riverwood, Port Coquitlam: 8 houses and 14 condos and townhomes listed at the end of October, with 2 and 9 sold in the month. It is one of 10 communities the Greater Vancouver REALTORS® figures break out for Port Coquitlam."
     },
     {
       "t": "grid"
     },
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Riverwood homes listed and sold, June to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Riverwood homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Riverwood, September 2026. Detached houses: 10 listed at month end and 2 sold in September, a sales ratio of 20% (a balanced market). Condos and townhomes: 21 listed at month end and 8 sold in September, a sales ratio of 38% (a sellers’ market).",
-      "gen": "snapstats"
+      "text": "Riverwood, October 2026. Detached houses: 8 listed at month end and 2 sold in October, a sales ratio of 25%. Condos and townhomes: 14 listed at month end and 9 sold in October, a sales ratio of 64% (a sellers’ market)."
     },
     {
-      "t": "table",
       "caption": "Riverwood listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -98,30 +71,39 @@
           "21",
           "8",
           "38%"
+        ],
+        [
+          "October 2026",
+          "8",
+          "2",
+          "25%",
+          "14",
+          "9",
+          "64%"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 3 sold over 4 months against an average of 8.2 listed, about 11.0 months of listings at that pace; the busiest month was September with 2 sold. Condos and townhomes: 32 sold over 4 months against an average of 22.8 listed, about 2.8 months of listings at that pace; the busiest month was June with 10 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 5 sold over 5 months against an average of 8.2 listed, about 8.2 months of listings at that pace; the busiest month was September with 2 sold. Condos and townhomes: 41 sold over 5 months against an average of 21.0 listed, about 2.6 months of listings at that pace; the busiest month was June with 10 sold."
     },
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Riverwood compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Riverwood compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Riverwood against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Riverwood against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
-      "caption": "Riverwood against the whole city, September 2026",
+      "caption": "Riverwood against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -132,46 +114,46 @@
       "rows": [
         [
           "Detached houses",
-          "6.5%",
-          "7.7%",
-          "20% against 17%",
-          "4 of 7"
+          "5.8%",
+          "10.5%",
+          "25% against 14%",
+          "Under 10 listed"
         ],
         [
           "Condos and townhomes",
-          "9.4%",
-          "29.6%",
-          "38% against 12%",
+          "6.4%",
+          "17.3%",
+          "64% against 24%",
           "1 of 4"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings rose from 7 in June to 10 in September (+42.9%), and it took 4.2% of the city’s 72 sales over the period; condos and townhomes: listings fell from 29 in June to 21 in September (−27.6%), and it took 21.2% of the city’s 151 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings rose from 7 in June to 8 in October (+14.3%), and it took 5.5% of the city’s 91 sales over the period; condos and townhomes: listings fell from 29 in June to 14 in October (−51.7%), and it took 20.2% of the city’s 203 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Riverwood for condos and townhomes in June, July, August, September (a sellers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out Riverwood for detached houses in October (a sellers’ best bet); condos and townhomes in June, July, August, September, October (a sellers’ best bet)."
     },
     {
-      "t": "h",
+      "gen": "community",
       "level": 2,
-      "text": "Riverwood share of Port Coquitlam listings and sales by month",
-      "gen": "community"
+      "t": "h",
+      "text": "Riverwood share of Port Coquitlam listings and sales by month"
     },
     {
+      "gen": "community",
       "t": "p",
-      "text": "In Riverwood, its share of the houses listed in Port Coquitlam went from 4.1% in June to 6.5% in September and its share of the condos and townhomes listed went from 12.6% to 9.4%. A share that holds steady while the city moves means the community is following the city; a share that drifts means it is moving differently.",
-      "gen": "community"
+      "text": "In Riverwood, its share of the houses listed in Port Coquitlam went from 4.1% in June to 5.8% in October and its share of the condos and townhomes listed went from 12.6% to 6.4%. A share that holds steady while the city moves means the community is following the city; a share that drifts means it is moving differently."
     },
     {
-      "t": "table",
       "caption": "Riverwood as a share of Port Coquitlam, by month",
+      "gen": "community",
       "head": [
         "Month",
         "Share of city houses listed",
@@ -207,134 +189,447 @@
           "7.7%",
           "9.4%",
           "29.6%"
+        ],
+        [
+          "October 2026",
+          "5.8%",
+          "10.5%",
+          "6.4%",
+          "17.3%"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Shares are the community’s count divided by the city total for the same month and home type.",
-      "gen": "community"
+      "t": "table"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Port Coquitlam real estate",
       "gen": "community",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Port Coquitlam real estate"
     },
     {
-      "t": "list",
+      "gen": "community",
       "items": [
         [
           {
-            "t": "Port Coquitlam homes for sale",
-            "h": "/port-coquitlam-homes-for-sale.html"
+            "h": "/port-coquitlam-homes-for-sale.html",
+            "t": "Port Coquitlam homes for sale"
           }
         ],
         [
           {
-            "t": "Port Coquitlam real estate market stats",
-            "h": "/port-coquitlam-real-estate-market-stats.html"
+            "h": "/port-coquitlam-real-estate-market-stats.html",
+            "t": "Port Coquitlam real estate market stats"
           }
         ],
         [
           {
-            "t": "Port Coquitlam condos for sale",
-            "h": "/port-coquitlam-condos-for-sale.html"
+            "h": "/port-coquitlam-condos-for-sale.html",
+            "t": "Port Coquitlam condos for sale"
           }
         ],
         [
           {
-            "t": "Port Coquitlam townhomes for sale",
-            "h": "/port-coquitlam-townhomes-for-sale.html"
+            "h": "/port-coquitlam-townhomes-for-sale.html",
+            "t": "Port Coquitlam townhomes for sale"
           }
         ],
         [
           {
-            "t": "Schools in Port Coquitlam",
-            "h": "/schools-in-port-coquitlam-bc.html"
+            "h": "/schools-in-port-coquitlam-bc.html",
+            "t": "Schools in Port Coquitlam"
           }
         ],
         [
           {
-            "t": "Woodland Acres real estate",
-            "h": "/woodland-acres-port-coquitlam.html"
+            "h": "/woodland-acres-port-coquitlam.html",
+            "t": "Woodland Acres real estate"
           }
         ],
         [
           {
-            "t": "Birchland Manor real estate",
-            "h": "/birchland-manor-port-coquitlam.html"
+            "h": "/birchland-manor-port-coquitlam.html",
+            "t": "Birchland Manor real estate"
           }
         ],
         [
           {
-            "t": "Central Port Coquitlam real estate",
-            "h": "/central-port-coquitlam.html"
+            "h": "/central-port-coquitlam.html",
+            "t": "Central Port Coquitlam real estate"
           }
         ],
         [
           {
-            "t": "Citadel real estate",
-            "h": "/citadel-port-coquitlam.html"
+            "h": "/citadel-port-coquitlam.html",
+            "t": "Citadel real estate"
           }
         ],
         [
           {
-            "t": "Glenwood real estate",
-            "h": "/glenwood-port-coquitlam.html"
+            "h": "/glenwood-port-coquitlam.html",
+            "t": "Glenwood real estate"
           }
         ],
         [
           {
-            "t": "Lincoln Park real estate",
-            "h": "/lincoln-park-port-coquitlam.html"
+            "h": "/lincoln-park-port-coquitlam.html",
+            "t": "Lincoln Park real estate"
           }
         ],
         [
           {
-            "t": "Lower Mary Hill real estate",
-            "h": "/lower-mary-hill-port-coquitlam.html"
+            "h": "/lower-mary-hill-port-coquitlam.html",
+            "t": "Lower Mary Hill real estate"
           }
         ],
         [
           {
-            "t": "Mary Hill real estate",
-            "h": "/mary-hill-port-coquitlam.html"
+            "h": "/mary-hill-port-coquitlam.html",
+            "t": "Mary Hill real estate"
           }
         ],
         [
           {
-            "t": "Oxford Heights real estate",
-            "h": "/oxford-heights-port-coquitlam.html"
+            "h": "/oxford-heights-port-coquitlam.html",
+            "t": "Oxford Heights real estate"
           }
         ]
       ],
-      "gen": "community",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Riverwood by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Riverwood by home type"
     },
     {
-      "t": "list",
+      "gen": "typepage",
       "items": [
         [
           {
-            "t": "Riverwood houses for sale",
-            "h": "/riverwood-port-coquitlam-houses-for-sale.html"
+            "h": "/riverwood-port-coquitlam-houses-for-sale.html",
+            "t": "Riverwood houses for sale"
           }
         ],
         [
           {
-            "t": "Riverwood condos and townhomes for sale",
-            "h": "/riverwood-port-coquitlam-condos-townhomes-for-sale.html"
+            "h": "/riverwood-port-coquitlam-condos-townhomes-for-sale.html",
+            "t": "Riverwood condos and townhomes for sale"
           }
         ]
       ],
-      "gen": "typepage",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "tn",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Lots and land in Riverwood"
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Fee-simple lots"
+    },
+    {
+      "gen": "tn",
+      "items": [
+        [
+          {
+            "t": "Character: single-detached homes under RS1, RS2, RS3 and RS4 zones in Zoning Bylaw No. 3630, in an established neighbourhood per the OCP, with a strong built townhome component. A verified age and style breakdown is not verified."
+          }
+        ],
+        [
+          {
+            "t": "Lot sizes, as the bylaw states them: RS zone minimum lot widths run from at least 9.5 m (RS4) to at least 30 m (RS3) — RS1 at least 15 m, RS2 at least 12 m. Typical Riverwood lot dimensions beyond those bylaw minimums are not verified — no typical-size table is invented here."
+          }
+        ],
+        [
+          {
+            "t": "Tenure: detached homes are freehold; townhomes are strata titled. No fee-simple townhouse complex was verified in Riverwood — the fee-simple stock is detached houses."
+          }
+        ],
+        [
+          {
+            "t": "Serviced position: city stock is on municipal water and sewer, billed as flat annual water and sewer fees, billed separately and due March 31, 2026 on the research record. A per-lot servicing figure for a new subdivision: Not verified."
+          }
+        ],
+        [
+          {
+            "t": "ALR vs non-ALR: no ALR land was confirmed inside Riverwood — the ground is urban north-east PoCo. ALR status remains a per-parcel check on ALC mapping, and no ALR split is stated."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Bare-land strata"
+    },
+    {
+      "gen": "tn",
+      "items": [
+        [
+          {
+            "t": "No bare-land strata plan in Riverwood was verified"
+          }
+        ],
+        [
+          {
+            "t": ": No Riverwood presale project of any form was verified on a developer site or a City development page: Not verified as a category, with zero counted."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Growth-area ground"
+    },
+    {
+      "gen": "tn",
+      "items": [
+        [
+          {
+            "t": "The Dominion Avenue and Fremont growth areas further east: are named as the city's growth direction beyond Riverwood — City growth-area ground, documented here as context for where PoCo's new-form supply actually goes."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Riverwood"
+    },
+    {
+      "gen": "tn",
+      "items": [
+        [
+          {
+            "t": "Riverwood is an established residential neighbourhood on the north-east side of the City of Port Coquitlam, around Riverwood Gate and Coast Meridian Road by the Pitt River; Terry Fox Secondary School is at 1260 Riverwood Gate. \"Riverwood\" is also the board (GVR) sub-area name in the SnapStats GVR September 2026 report, and the City's Official Community Plan (Bylaw No. 3838) names Riverwood and Citadel Heights as established residential neighbourhoods. Boundary roads are not verified — no City neighbourhood map states them."
+          }
+        ],
+        [
+          {
+            "t": "Nearby areas: Citadel PQ to the west, Mary Hill to the south, the Dominion Avenue and Fremont growth areas further east, and Pitt Meadows across the Pitt River."
+          }
+        ],
+        [
+          {
+            "t": "Roads and transit: Coast Meridian Road and Riverwood Gate serve the area, connecting south to Lougheed Highway and the Pitt River Bridge corridor toward Pitt Meadows and Maple Ridge. TransLink buses connect to Port Coquitlam Station (West Coast Express) and Coquitlam Central Station (Millennium Line); specific route numbers through Riverwood are not verified. Driving commute times: Not verified."
+          }
+        ],
+        [
+          {
+            "t": "Parks, recreation and health: the Traboulay PoCo Trail passes the Pitt River side of the city near Riverwood, and City parks in the wider north-east include Fortress Park at 2698 Fortress Court; Hyde Creek Recreation Centre at 1379 Laurier Avenue serves the north side, and the Terry Fox Library is at the Port Coquitlam Community Centre, 2150 Wilson Avenue. The nearest hospital is Eagle Ridge Hospital, 475 Guildford Way, Port Moody (Fraser Health). Shopping locations serving the sub-area on official sources: Not verified."
+          }
+        ],
+        [
+          {
+            "t": "Flood position: land toward the Pitt River is low-lying, and a significant portion of the city is within the Fraser and Pitt River floodplain behind dykes; lot-level flood status for Riverwood is not verified — confirm the specific lot with the City before writing."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Riverwood"
+    },
+    {
+      "gen": "tn",
+      "items": [
+        [
+          {
+            "t": "City plan: Port Coquitlam's Official Community Plan is Bylaw No. 3838, which names Riverwood and Citadel Heights as established residential neighbourhoods; no Riverwood-specific major project was confirmed pass."
+          }
+        ],
+        [
+          {
+            "t": "Zoning and SSMUH, as the City states it: Zoning Bylaw No. 3630 (2008) governs — single-detached homes under RS1–RS4 (minimum lot widths at least 15 m RS1, 12 m RS2, 30 m RS3, 9.5 m RS4), townhouse zones RTh1, RTh2 and RTh3 in the bylaw."
+          }
+        ],
+        [
+          {
+            "t": "ALR rules (for completeness — no Riverwood ALR parcel is confirmed here): subdivision within the ALR requires ALC approval; ALR residences cannot be stratified (ALC Bulletin 09 s. 6; SPA s. 239; ALCA s. 21(1)); ALC residence caps: principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha)."
+          }
+        ],
+        [
+          {
+            "t": "Port Coquitlam property taxes and utilities: property taxes for 2026 were due July 2, 2026, with a 5% penalty on current taxes unpaid after July 2, 2026 and a further 5% after September 15, 2026; the City's 2026 increase was 1.95% for the average home, and the City states it has the lowest average property taxes and utility fees in Metro Vancouver; utility bills are flat annual water and sewer fees, billed separately and due March 31, 2026."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Riverwood"
+    },
+    {
+      "gen": "tn",
+      "items": [
+        [
+          {
+            "t": "The same developer sells and rents on the same street. Mosaic built Fremont Green (550 Seaborne Place, strata, 2014), the rental building next door at 553 Seaborne Place, and Dominion's rowhomes/townhouses at Avon Place in the same Fremont pocket — a buyer comparing \"Fremont\" or \"Dominion\" addresses has to establish which tenure each address is before comparing anything."
+          }
+        ],
+        [
+          {
+            "t": "Dominion cannot agree on its own birth year."
+          }
+        ],
+        [
+          {
+            "t": "A plan number that only one kind of source carries is not a verified plan number."
+          }
+        ],
+        [
+          {
+            "t": "Riverwood's attached market is its fast lane, but none of it is land. The sub-area's 38% attached sales ratio in September 2026 was the strongest of any Port Coquitlam sub-area that month — in general-market townhome complexes, on built strata lots."
+          }
+        ],
+        [
+          {
+            "t": "Terry Fox Secondary is named for the city's own."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "tn",
+      "pos": "end",
+      "t": "p",
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
+    },
+    {
+      "gen": "tn",
+      "items": [
+        [
+          {
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Riverwood"
+    },
+    {
+      "gen": "tn",
+      "items": [
+        [
+          {
+            "h": "https://www.portcoquitlam.ca/sites/default/files/2026-02/3838%20-%20Official%20Community%20Plan.pdf",
+            "t": "portcoquitlam.ca · 3838 Official Community Plan"
+          }
+        ],
+        [
+          {
+            "h": "https://maps.translink.ca/-/media/translink/documents/schedules-and-maps/transit-system-maps/system-maps/fwc26_regional_transit_connections.pdf",
+            "t": "maps.translink.ca · fwc26 regional transit connections"
+          }
+        ],
+        [
+          {
+            "h": "https://www.portcoquitlam.ca/recreation-parks/parks-trails/parks-directory?page=1",
+            "t": "portcoquitlam.ca · parks directory"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Port-Moody/eagle-ridge-hospital",
+            "t": "fraserhealth.ca · eagle ridge hospital"
+          }
+        ],
+        [
+          {
+            "h": "https://www.portcoquitlam.ca/our-government/media-centre/port-coquitlam-reminds-residents-prepare-possible-flooding",
+            "t": "portcoquitlam.ca · port coquitlam reminds residents prepare possibl"
+          }
+        ],
+        [
+          {
+            "h": "https://www.portcoquitlam.ca/business-development/property-development-building/small-scale-multi-unit-housing",
+            "t": "portcoquitlam.ca · small scale multi unit housing"
+          }
+        ],
+        [
+          {
+            "h": "https://www.portcoquitlam.ca/services/property-taxes",
+            "t": "portcoquitlam.ca · property taxes"
+          }
+        ],
+        [
+          {
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
+          }
+        ],
+        [
+          {
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
+          }
+        ],
+        [
+          {
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html",
+            "t": "canada.ca · sales vacant land individuals"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
@@ -419,338 +714,75 @@
       ],
       "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
       "gen": "sold"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Lots and land in Riverwood",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Fee-simple lots",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Character: single-detached homes under RS1, RS2, RS3 and RS4 zones in Zoning Bylaw No. 3630, in an established neighbourhood per the OCP, with a strong built townhome component. A verified age and style breakdown is UNVERIFIED."
-          }
-        ],
-        [
-          {
-            "t": "Lot sizes, as the bylaw states them: RS zone minimum lot widths run from at least 9.5 m (RS4) to at least 30 m (RS3) — RS1 at least 15 m, RS2 at least 12 m. Typical Riverwood lot dimensions beyond those bylaw minimums are UNVERIFIED — no typical-size table is invented here."
-          }
-        ],
-        [
-          {
-            "t": "Tenure: detached homes are freehold; townhomes are strata titled. No fee-simple townhouse complex was verified in Riverwood — the fee-simple stock is detached houses."
-          }
-        ],
-        [
-          {
-            "t": "Serviced position: city stock is on municipal water and sewer, billed as flat annual water and sewer fees, billed separately and due March 31, 2026 on the research record. A per-lot servicing figure for a new subdivision: UNVERIFIED."
-          }
-        ],
-        [
-          {
-            "t": "ALR vs non-ALR: no ALR land was confirmed inside Riverwood in the research — the ground is urban north-east PoCo. ALR status remains a per-parcel check on ALC mapping, and no ALR split is stated."
-          }
-        ]
-      ],
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Bare-land strata",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "No bare-land strata plan in Riverwood was verified"
-          }
-        ],
-        [
-          {
-            "t": ": No Riverwood presale project of any form was verified on a developer site or a City development page: UNVERIFIED as a category, with zero counted."
-          }
-        ]
-      ],
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Growth-area ground",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "The Dominion Avenue and Fremont growth areas further east: are named in the research as the city's growth direction beyond Riverwood — City growth-area ground, documented here as context for where PoCo's new-form supply actually goes."
-          }
-        ]
-      ],
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Riverwood",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Riverwood is an established residential neighbourhood on the north-east side of the City of Port Coquitlam, around Riverwood Gate and Coast Meridian Road by the Pitt River; Terry Fox Secondary School is at 1260 Riverwood Gate. \"Riverwood\" is also the board (GVR) sub-area name in the SnapStats GVR September 2026 report, and the City's Official Community Plan (Bylaw No. 3838) names Riverwood and Citadel Heights as established residential neighbourhoods. Boundary roads are UNVERIFIED — no City neighbourhood map states them."
-          }
-        ],
-        [
-          {
-            "t": "Nearby areas: Citadel PQ to the west, Mary Hill to the south, the Dominion Avenue and Fremont growth areas further east, and Pitt Meadows across the Pitt River."
-          }
-        ],
-        [
-          {
-            "t": "Roads and transit: Coast Meridian Road and Riverwood Gate serve the area, connecting south to Lougheed Highway and the Pitt River Bridge corridor toward Pitt Meadows and Maple Ridge. TransLink buses connect to Port Coquitlam Station (West Coast Express) and Coquitlam Central Station (Millennium Line); specific route numbers through Riverwood are UNVERIFIED. Driving commute times: UNVERIFIED."
-          }
-        ],
-        [
-          {
-            "t": "Parks, recreation and health: the Traboulay PoCo Trail passes the Pitt River side of the city near Riverwood, and City parks in the wider north-east include Fortress Park at 2698 Fortress Court; Hyde Creek Recreation Centre at 1379 Laurier Avenue serves the north side, and the Terry Fox Library is at the Port Coquitlam Community Centre, 2150 Wilson Avenue. The nearest hospital is Eagle Ridge Hospital, 475 Guildford Way, Port Moody (Fraser Health). Shopping locations serving the sub-area on official sources: UNVERIFIED."
-          }
-        ],
-        [
-          {
-            "t": "Flood position: land toward the Pitt River is low-lying, and a significant portion of the city is within the Fraser and Pitt River floodplain behind dykes; lot-level flood status for Riverwood is UNVERIFIED — confirm the specific lot with the City before writing."
-          }
-        ]
-      ],
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Local rules that affect land buyers in Riverwood",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "City plan: Port Coquitlam's Official Community Plan is Bylaw No. 3838, which names Riverwood and Citadel Heights as established residential neighbourhoods; no Riverwood-specific major project was confirmed in the research pass."
-          }
-        ],
-        [
-          {
-            "t": "Zoning and SSMUH, as the City states it: Zoning Bylaw No. 3630 (2008) governs — single-detached homes under RS1–RS4 (minimum lot widths at least 15 m RS1, 12 m RS2, 30 m RS3, 9.5 m RS4), townhouse zones RTh1, RTh2 and RTh3 in the bylaw."
-          }
-        ],
-        [
-          {
-            "t": "ALR rules (for completeness — no Riverwood ALR parcel is confirmed here): subdivision within the ALR requires ALC approval; ALR residences cannot be stratified (ALC Bulletin 09 s. 6; SPA s. 239; ALCA s. 21(1)); ALC residence caps: principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha)."
-          }
-        ],
-        [
-          {
-            "t": "Port Coquitlam property taxes and utilities: property taxes for 2026 were due July 2, 2026, with a 5% penalty on current taxes unpaid after July 2, 2026 and a further 5% after September 15, 2026; the City's 2026 increase was 1.95% for the average home, and the City states it has the lowest average property taxes and utility fees in Metro Vancouver; utility bills are flat annual water and sewer fees, billed separately and due March 31, 2026."
-          }
-        ]
-      ],
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Good to know about Riverwood",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "The same developer sells and rents on the same street. Mosaic built Fremont Green (550 Seaborne Place, strata, 2014), the rental building next door at 553 Seaborne Place, and Dominion's rowhomes/townhouses at Avon Place in the same Fremont pocket — a buyer comparing \"Fremont\" or \"Dominion\" addresses has to establish which tenure each address is before comparing anything."
-          }
-        ],
-        [
-          {
-            "t": "Dominion cannot agree on its own birth year."
-          }
-        ],
-        [
-          {
-            "t": "A plan number that only one kind of source carries is not a verified plan number."
-          }
-        ],
-        [
-          {
-            "t": "Riverwood's attached market is its fast lane, but none of it is land. The sub-area's 38% attached sales ratio in September 2026 was the strongest of any Port Coquitlam sub-area that month — in general-market townhome complexes, on built strata lots."
-          }
-        ],
-        [
-          {
-            "t": "Terry Fox Secondary is named for the city's own."
-          }
-        ]
-      ],
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
-          }
-        ]
-      ],
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Sources for the land notes on Riverwood",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "portcoquitlam.ca · 3838   Official Community Plan",
-            "h": "https://www.portcoquitlam.ca/sites/default/files/2026-02/3838%20-%20Official%20Community%20Plan.pdf"
-          }
-        ],
-        [
-          {
-            "t": "maps.translink.ca · fwc26 regional transit connections",
-            "h": "https://maps.translink.ca/-/media/translink/documents/schedules-and-maps/transit-system-maps/system-maps/fwc26_regional_transit_connections.pdf"
-          }
-        ],
-        [
-          {
-            "t": "portcoquitlam.ca · parks directory",
-            "h": "https://www.portcoquitlam.ca/recreation-parks/parks-trails/parks-directory?page=1"
-          }
-        ],
-        [
-          {
-            "t": "fraserhealth.ca · eagle ridge hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Port-Moody/eagle-ridge-hospital"
-          }
-        ],
-        [
-          {
-            "t": "portcoquitlam.ca · port coquitlam reminds residents prepare possibl",
-            "h": "https://www.portcoquitlam.ca/our-government/media-centre/port-coquitlam-reminds-residents-prepare-possible-flooding"
-          }
-        ],
-        [
-          {
-            "t": "portcoquitlam.ca · small scale multi unit housing",
-            "h": "https://www.portcoquitlam.ca/business-development/property-development-building/small-scale-multi-unit-housing"
-          }
-        ],
-        [
-          {
-            "t": "portcoquitlam.ca · property taxes",
-            "h": "https://www.portcoquitlam.ca/services/property-taxes"
-          }
-        ],
-        [
-          {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
-          }
-        ],
-        [
-          {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
-          }
-        ],
-        [
-          {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
-          }
-        ],
-        [
-          {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
-          }
-        ],
-        [
-          {
-            "t": "canada.ca · sales vacant land individuals",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html"
-          }
-        ]
-      ],
-      "gen": "tn",
-      "pos": "end"
     }
   ],
+  "breadcrumbs": [
+    {
+      "href": "/index.html",
+      "name": "Home"
+    },
+    {
+      "href": "/port-coquitlam-homes-for-sale.html",
+      "name": "Port Coquitlam"
+    },
+    {
+      "href": "/riverwood-port-coquitlam.html",
+      "name": "Riverwood real estate"
+    }
+  ],
+  "community": {
+    "area": "port-coquitlam",
+    "name": "Riverwood"
+  },
   "faq": [
     {
-      "q": "How many homes are for sale in Riverwood?",
-      "a": "At the end of September 2026 the Greater Vancouver REALTORS® figures showed 10 houses and 21 condos and townhomes listed in Riverwood. Those are month-end counts and they move daily, so ask Jared for a current list."
+      "a": "At the end of October 2026 the Greater Vancouver REALTORS® figures showed 8 houses and 14 condos and townhomes listed in Riverwood. Those are month-end counts and they move daily, so ask Jared for a current list.",
+      "q": "How many homes are for sale in Riverwood?"
     },
     {
-      "q": "Is Riverwood a buyers’ or sellers’ market?",
-      "a": "In September 2026, houses had a sales ratio of 20% (a balanced market); condos and townhomes had 38% (a sellers’ market). The sales ratio is homes sold divided by homes listed; on the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers. One month in one community is a small sample, so look at the monthly table above before you decide."
+      "a": "In October 2026, houses had a sales ratio of 25% on only 8 listed, too few to read as a market type; condos and townhomes had 64% (a sellers’ market). The sales ratio is homes sold divided by homes listed; on the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers. One month in one community is a small sample, so look at the monthly table above before you decide.",
+      "q": "Is Riverwood a buyers’ or sellers’ market?"
     },
     {
-      "q": "How many homes sold in Riverwood from June to September 2026?",
-      "a": "3 houses and 32 condos and townhomes sold in Riverwood over those 4 months; detached houses peaked in September with 2 sold and condos and townhomes peaked in June with 10 sold."
+      "a": "5 houses and 41 condos and townhomes sold in Riverwood over those 5 months; detached houses peaked in September with 2 sold and condos and townhomes peaked in June with 10 sold.",
+      "q": "How many homes sold in Riverwood from June to October 2026?"
     },
     {
-      "q": "How big is Riverwood compared with the rest of Port Coquitlam?",
-      "a": "In September 2026, Riverwood held 6.5% of the 153 detached houses listed in Port Coquitlam and 9.4% of the 224 condos and townhomes listed in Port Coquitlam."
+      "a": "In October 2026, Riverwood held 5.8% of the 137 detached houses listed in Port Coquitlam and 6.4% of the 219 condos and townhomes listed in Port Coquitlam.",
+      "q": "How big is Riverwood compared with the rest of Port Coquitlam?"
     },
     {
-      "q": "What mix of houses and condos is for sale in Riverwood?",
-      "a": "In September 2026, houses made up 32.3% of the 31 homes listed in Riverwood and condos and townhomes made up 67.7%; of the 10 that sold, houses were 20.0% and condos and townhomes 80.0%."
+      "a": "In October 2026, houses made up 36.4% of the 22 homes listed in Riverwood and condos and townhomes made up 63.6%; of the 11 that sold, houses were 18.2% and condos and townhomes 81.8%.",
+      "q": "What mix of houses and condos is for sale in Riverwood?"
     },
     {
-      "q": "Are there more or fewer homes for sale in Riverwood than in June?",
-      "a": "Listings of detached houses rose from 7 in June to 10 in September 2026 (+42.9%); condos and townhomes fell from 29 in June to 21 in September 2026 (−27.6%)."
+      "a": "Listings of detached houses rose from 7 in June to 8 in October 2026 (+14.3%); condos and townhomes fell from 29 in June to 14 in October 2026 (−51.7%).",
+      "q": "Are there more or fewer homes for sale in Riverwood than in June?"
+    },
+    {
+      "a": "Surrey bylaws and Surrey figures do not apply here, whatever an older brief or search snippet says.",
+      "gen": "tn",
+      "q": "Is Riverwood in Surrey or Port Coquitlam?"
+    },
+    {
+      "a": "No vacant-lot offering is verified — no named bare-land subdivision, no bare-land strata offered as lots, and presale lot offerings verified: zero.",
+      "gen": "tn",
+      "q": "Can I buy a vacant lot in Riverwood?"
+    },
+    {
+      "a": "3 to 6 small-scale multi-unit housing units without rezoning, depending on lot size, location and transit proximity, as the City states it — plus the RS zone minimum lot widths (9.5 m in RS4 up to 30 m in RS3) frame any split discussion.",
+      "gen": "tn",
+      "q": "What extra units can an RS lot hold?"
+    },
+    {
+      "a": "Land toward the Pitt River is low-lying and much of the city is floodplain behind dykes; lot-level status is not verified — check the specific lot with the City before writing, and do not import any other city's floodplain percentage.",
+      "gen": "tn",
+      "q": "Is Riverwood in the floodplain?"
+    },
+    {
+      "a": "Address-based in SD43 — the settled sample run (1260 Riverwood Gate → Blakeburn Elementary, Minnekhada Middle, Terry Fox Secondary) does not transfer to other addresses, though Terry Fox Secondary itself stands in the neighbourhood. Run the locator for the exact lot.",
+      "gen": "tn",
+      "q": "Which schools serve a Riverwood lot?"
     },
     {
       "gen": "sold",
@@ -761,37 +793,21 @@
       "gen": "sold",
       "q": "How long do townhomes take to sell in Riverwood?",
       "a": "The median was 22 days from listing to sale, and homes sold at a median 97.4% of the last list price (8% sold above list), for sales November 1, 2025 to October 22, 2026."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Riverwood in Surrey or Port Coquitlam?",
-      "a": "Surrey bylaws and Surrey figures do not apply here, whatever an older brief or search snippet says."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I buy a vacant lot in Riverwood?",
-      "a": "No vacant-lot offering is verified — no named bare-land subdivision, no bare-land strata offered as lots, and presale lot offerings verified: zero."
-    },
-    {
-      "gen": "tn",
-      "q": "What extra units can an RS lot hold?",
-      "a": "3 to 6 small-scale multi-unit housing units without rezoning, depending on lot size, location and transit proximity, as the City states it — plus the RS zone minimum lot widths (9.5 m in RS4 up to 30 m in RS3) frame any split discussion."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Riverwood in the floodplain?",
-      "a": "Land toward the Pitt River is low-lying and much of the city is floodplain behind dykes; lot-level status is UNVERIFIED — check the specific lot with the City before writing, and do not import any other city's floodplain percentage."
-    },
-    {
-      "gen": "tn",
-      "q": "Which schools serve a Riverwood lot?",
-      "a": "Address-based in SD43 — the settled sample run (1260 Riverwood Gate → Blakeburn Elementary, Minnekhada Middle, Terry Fox Secondary) does not transfer to other addresses, though Terry Fox Secondary itself stands in the neighbourhood. Run the locator for the exact lot."
     }
   ],
+  "faq_heading": "Riverwood real estate: your questions answered",
   "needs_from_muse": [
     "Street boundaries of Riverwood from the Paragon sub-area map, and its neighbouring communities",
     "Schools for Riverwood, placed by street address",
     "Jared's own notes on Riverwood: housing stock, who buys here, what to watch",
     "A live listing feed for Riverwood"
-  ]
+  ],
+  "new_page": {
+    "description": "Riverwood, Port Coquitlam homes for sale: listings, sales and sales ratio for October 2026 and how it compares with Port Coquitlam. Jared Gibbons, REALTOR®.",
+    "h1": "Riverwood, Port Coquitlam Homes for Sale",
+    "title": "Riverwood, Port Coquitlam Homes for Sale | Jared Gibbons REALTOR®"
+  },
+  "slug": "riverwood-port-coquitlam",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

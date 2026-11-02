@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "otter-district-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Otter District compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Otter District compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Otter District against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Otter District against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
-      "caption": "Otter District against the whole city, September 2026",
+      "caption": "Otter District against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -27,162 +24,162 @@
       "rows": [
         [
           "Detached houses",
-          "0.4%",
+          "0.9%",
           "0.0%",
-          "— against 14%",
+          "— against 13%",
           "Under 10 listed"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings was 3 in June and 2 in September, too few (under 3) to call a rise or fall, and it took 0.3% of the city’s 298 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings rose from 3 in June to 4 in October (+33.3%), and it took 0.3% of the city’s 357 sales over the period."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Langley real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Langley real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Langley homes for sale",
-            "h": "/langley-homes-for-sale.html"
+            "h": "/langley-homes-for-sale.html",
+            "t": "Langley homes for sale"
           }
         ],
         [
           {
-            "t": "Langley real estate market stats",
-            "h": "/langley-real-estate-market-stats.html"
+            "h": "/langley-real-estate-market-stats.html",
+            "t": "Langley real estate market stats"
           }
         ],
         [
           {
-            "t": "Langley houses for sale",
-            "h": "/langley-houses-for-sale.html"
+            "h": "/langley-houses-for-sale.html",
+            "t": "Langley houses for sale"
           }
         ],
         [
           {
-            "t": "Langley condos for sale",
-            "h": "/langley-condos-for-sale.html"
+            "h": "/langley-condos-for-sale.html",
+            "t": "Langley condos for sale"
           }
         ],
         [
           {
-            "t": "Langley townhomes for sale",
-            "h": "/langley-townhomes-for-sale.html"
+            "h": "/langley-townhomes-for-sale.html",
+            "t": "Langley townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Langley",
-            "h": "/sell-my-house-in-langley.html"
+            "h": "/sell-my-house-in-langley.html",
+            "t": "Sell my house in Langley"
           }
         ],
         [
           {
-            "t": "Schools in Langley",
-            "h": "/schools-in-langley-bc.html"
+            "h": "/schools-in-langley-bc.html",
+            "t": "Schools in Langley"
           }
         ],
         [
           {
-            "t": "Otter District homes and market figures",
-            "h": "/otter-district.html"
+            "h": "/otter-district.html",
+            "t": "Otter District homes and market figures"
           }
         ],
         [
           {
-            "t": "Salmon River real estate",
-            "h": "/salmon-river.html"
+            "h": "/salmon-river.html",
+            "t": "Salmon River real estate"
           }
         ],
         [
           {
-            "t": "Walnut Grove real estate",
-            "h": "/walnut-grove.html"
+            "h": "/walnut-grove.html",
+            "t": "Walnut Grove real estate"
           }
         ],
         [
           {
-            "t": "Willoughby Heights real estate",
-            "h": "/willoughby-heights.html"
+            "h": "/willoughby-heights.html",
+            "t": "Willoughby Heights real estate"
           }
         ],
         [
           {
-            "t": "Aldergrove real estate",
-            "h": "/aldergrove.html"
+            "h": "/aldergrove.html",
+            "t": "Aldergrove real estate"
           }
         ],
         [
           {
-            "t": "Brookswood real estate",
-            "h": "/brookswood.html"
+            "h": "/brookswood.html",
+            "t": "Brookswood real estate"
           }
         ],
         [
           {
-            "t": "Campbell Valley real estate",
-            "h": "/campbell-valley.html"
+            "h": "/campbell-valley.html",
+            "t": "Campbell Valley real estate"
           }
         ],
         [
           {
-            "t": "County Line Glen Valley real estate",
-            "h": "/county-line-glen-valley.html"
+            "h": "/county-line-glen-valley.html",
+            "t": "County Line Glen Valley real estate"
           }
         ],
         [
           {
-            "t": "Langley City real estate",
-            "h": "/langley-city.html"
+            "h": "/langley-city.html",
+            "t": "Langley City real estate"
           }
         ],
         [
           {
-            "t": "Murrayville real estate",
-            "h": "/murrayville.html"
+            "h": "/murrayville.html",
+            "t": "Murrayville real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Condo buildings in Otter District Guide",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Poppy Secondary; the tension is recorded in, not resolved, and catchments stay UNVERIFIED.",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Otter District Guide",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Condo buildings in Otter District Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "pos": "end",
+      "t": "p",
+      "text": "Poppy Secondary; the tension is recorded in, not resolved, and catchments stay not verified."
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Otter District Guide"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "It carries a \"Homes for sale in Otter District / Live MLS® listings, updated daily\" section; no feed-count header was visible in the page text read, and the cards read under Additional Details (snapshot only: eight cards, all labelled Otter District, Status: Active — on 244 Street, 30 Avenue, 21b Avenue, 248 Street, 240 Street and Fraser Highway) are a snapshot, not a statistic. The guide page's total feed count and the exact MLS feed filter behind it: UNVERIFIED."
+            "t": "The guide page's total feed count and the exact MLS feed filter behind it: Not verified."
           }
         ],
         [
@@ -192,7 +189,7 @@
         ],
         [
           {
-            "t": "The Condos & Townhomes 0/0 combination is shared by three Langley sub-areas (Campbell Valley, County Line Glen Valley and Otter District), and Otter District and Campbell Valley are the two sub-areas with zero sales in BOTH splits. An Otter District median is UNVERIFIED — SnapStats publishes medians at community level only."
+            "t": "The Condos & Townhomes 0/0 combination is shared by three Langley sub-areas (Campbell Valley, County Line Glen Valley and Otter District), and Otter District and Campbell Valley are the two sub-areas with zero sales in BOTH splits. An Otter District median is not verified — SnapStats publishes medians at community level only."
           }
         ],
         [
@@ -206,22 +203,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Otter District Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Otter District Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "The ALR frame — the governing fact for much of this district: ALR land may generally have no more than one residence per parcel unless it qualifies for an additional residence, and local governments may further regulate or restrict residences through zoning. The principal residence maximum is a total floor area of 500 m²; a secondary suite is permitted only when it is entirely contained within the principal residence (a separate or detached dwelling is not a secondary suite) and local bylaws permit it; and one additional detached residence is permitted without an ALC application at up to 90 m² on properties of 40 ha or less, or up to 186 m² on properties over 40 ha, subject to local bylaws. ALR residences cannot be stratified (ALC Bulletin 09 s. 6; SPA s. 239; ALCA s. 21(1)). Parcel-level ALR status: UNVERIFIED for any specific property — confirmed on the ALC's ALR maps, not from the sub-area name."
+            "t": "The ALR frame — the governing fact for much of this district: ALR land may generally have no more than one residence per parcel unless it qualifies for an additional residence, and local governments may further regulate or restrict residences through zoning. The principal residence maximum is a total floor area of 500 m²; a secondary suite is permitted only when it is entirely contained within the principal residence (a separate or detached dwelling is not a secondary suite) and local bylaws permit it; and one additional detached residence is permitted without an ALC application at up to 90 m² on properties of 40 ha or less, or up to 186 m² on properties over 40 ha, subject to local bylaws. ALR residences cannot be stratified (ALC Bulletin 09 s. 6; SPA s. 239; ALCA s. 21(1)). Parcel-level ALR status: Not verified for any specific property — confirmed on the ALC's ALR maps, not from the sub-area name."
           }
         ],
         [
@@ -240,18 +237,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Otter District Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Otter District Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -270,7 +267,7 @@
         ],
         [
           {
-            "t": "Zero is a statistic here, not a gap in the research."
+            "t": "Zero is a statistic here, not a gap."
           }
         ],
         [
@@ -289,149 +286,149 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Otter District Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Otter District Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · otter district guide",
-            "h": "https://jaredgibbons.ca/otter-district-guide.html"
+            "h": "https://jaredgibbons.ca/otter-district-guide.html",
+            "t": "jaredgibbons.ca · otter district guide"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · langley memorial hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital",
+            "t": "fraserhealth.ca · langley memorial hospital"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "tol.ca · small scale multi unit housing.aspx",
-            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx"
+            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx",
+            "t": "tol.ca · small scale multi unit housing.aspx"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · rent increases for manufactured homes",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes",
+            "t": "www2.gov.bc.ca · rent increases for manufactured homes"
           }
         ],
         [
           {
-            "t": "tol.ca · property taxes.aspx",
-            "h": "https://www.tol.ca/en/services/property-taxes.aspx"
+            "h": "https://www.tol.ca/en/services/property-taxes.aspx",
+            "t": "tol.ca · property taxes.aspx"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · understanding aquifers",
-            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/understanding-aquifers"
+            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/understanding-aquifers",
+            "t": "www2.gov.bc.ca · understanding aquifers"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · resources for onsite sewerage systems property o",
-            "h": "https://www.fraserhealth.ca/health-topics-a-to-z/onsite-sewerage-systems/resources-for-onsite-sewerage-systems-property-owners-and-authorized-persons"
+            "h": "https://www.fraserhealth.ca/health-topics-a-to-z/onsite-sewerage-systems/resources-for-onsite-sewerage-systems-property-owners-and-authorized-persons",
+            "t": "fraserhealth.ca · resources for onsite sewerage systems property o"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Otter District Townhomes",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Langley Grove Estates — 24330 Fraser Hwy / 3665 244 St — is checked and NOT 55+",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Otter District Townhomes"
     },
     {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Langley Grove Estates — 24330 Fraser Hwy / 3665 244 St — is checked and NOT 55+"
+    },
+    {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "listings state \"no age restrictions\" — all ages welcome.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "listings state \"no age restrictions\" — all ages welcome."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Otter District Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Otter District Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -440,7 +437,7 @@
         ],
         [
           {
-            "t": "Board geography: Otter District is one of eleven Langley sub-areas in the SnapStats data; \"Langley\" the board community combines the Township and the City, and this sub-area sits entirely on the Township side. Street-level board boundary: UNVERIFIED — GVR/FVREB publish no street-level sub-area boundaries, and no Township boundary was substituted for the board's."
+            "t": "Board geography: Otter District is one of eleven Langley sub-areas in the SnapStats data; \"Langley\" the board community combines the Township and the City, and this sub-area sits entirely on the Township side. Street-level board boundary: Not verified — GVR/FVREB publish no street-level sub-area boundaries, and no Township boundary was substituted for the board's."
           }
         ],
         [
@@ -450,27 +447,22 @@
         ],
         [
           {
-            "t": "The nearest recorded locator result (4452 256 Street, returning North Otter Elementary and D.W."
-          }
-        ],
-        [
-          {
             "t": "Health: Langley Memorial Hospital, 22051 Fraser Highway, Langley — the Fraser Health community hospital with 24/7 emergency serving the area."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Otter District Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Otter District Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -494,22 +486,22 @@
         ],
         [
           {
-            "t": "Plans (Township standing frame): the Willoughby Community Plan originates as Bylaw 1836 (1979), now Schedule 6 to Bylaw 6200 (adopted Dec 1, 2025); Willoughby Plan Update Bylaws 6201/6202/6203 had first/second reading May 25, 2026 ONLY, with a Public Hearing directed for June 15, 2026 — adoption/repeal claims are UNVERIFIED, and any page claiming the Plan was \"replaced\" by those bylaws is in error."
+            "t": "Plans (Township standing frame): the Willoughby Community Plan originates as Bylaw 1836 (1979), now Schedule 6 to Bylaw 6200 (adopted Dec 1, 2025); Willoughby Plan Update Bylaws 6201/6202/6203 had first/second reading May 25, 2026 ONLY, with a Public Hearing directed for June 15, 2026 — adoption/repeal claims are not verified, and any page claiming the Plan was \"replaced\" by those bylaws is in error."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Otter District Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Otter District Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -542,134 +534,134 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Otter District Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Otter District Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · otter district",
-            "h": "https://jaredgibbons.ca/otter-district.html"
+            "h": "https://jaredgibbons.ca/otter-district.html",
+            "t": "jaredgibbons.ca · otter district"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · langley memorial hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital",
+            "t": "fraserhealth.ca · langley memorial hospital"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · strata housing",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing",
+            "t": "www2.gov.bc.ca · strata housing"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ],
         [
           {
-            "t": "tol.ca · small scale multi unit housing.aspx",
-            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx"
+            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx",
+            "t": "tol.ca · small scale multi unit housing.aspx"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · understanding aquifers",
-            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/understanding-aquifers"
+            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/understanding-aquifers",
+            "t": "www2.gov.bc.ca · understanding aquifers"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · resources for onsite sewerage systems property o",
-            "h": "https://www.fraserhealth.ca/health-topics-a-to-z/onsite-sewerage-systems/resources-for-onsite-sewerage-systems-property-owners-and-authorized-persons"
+            "h": "https://www.fraserhealth.ca/health-topics-a-to-z/onsite-sewerage-systems/resources-for-onsite-sewerage-systems-property-owners-and-authorized-persons",
+            "t": "fraserhealth.ca · resources for onsite sewerage systems property o"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · understand",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/understand"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/understand",
+            "t": "www2.gov.bc.ca · understand"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Otter District",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Otter District"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Two first-page listings state ALR status in their own text — the South Otter Schoolhouse property \"within the ALR\" and the 5.45-acre RU-2 parcel — listing copy for those parcels only. Parcel-level ALR status for any other specific Otter District property: UNVERIFIED — confirm on the ALC's ALR maps, not from the sub-area name."
+            "t": "Two first-page listings state ALR status in their own text — the South Otter Schoolhouse property \"within the ALR\" and the 5.45-acre RU-2 parcel — listing copy for those parcels only. Parcel-level ALR status for any other specific Otter District property: Not verified — confirm on the ALC's ALR maps, not from the sub-area name."
           }
         ],
         [
@@ -684,27 +676,27 @@
         ],
         [
           {
-            "t": "Not land: Langley Grove Estates: — the feed's second stock type is manufactured homes in this pad-rental park (244 Street / Fraser Highway addresses in the cards), with pad rent stated in one card's listing text. A park home on pad rent is not owned land, not fee-simple and not strata; the park's own rules beyond individual listing text are UNVERIFIED — no park or manager source was opened."
+            "t": "Not land: Langley Grove Estates: — the feed's second stock type is manufactured homes in this pad-rental park (244 Street / Fraser Highway addresses in the cards), with pad rent stated in one card's listing text. A park home on pad rent is not owned land, not fee-simple and not strata; the park's own rules beyond individual listing text are not verified — no park or manager source was opened."
           }
         ],
         [
           {
-            "t": "Lot character — ONLY: rural acreage parcels under the RU zones, with the feed's own sizes running from about 1 acre (the Schoolhouse parcel) to 39.5 acres in listing text. No district average lot size, servicing standard or \"typical Otter lot\" is published on an official source: UNVERIFIED, and none is added."
+            "t": "Lot character — ONLY: rural acreage parcels under the RU zones, with the feed's own sizes running from about 1 acre (the Schoolhouse parcel) to 39.5 acres in listing text. No district average lot size, servicing standard or \"typical Otter lot\" is published on an official source: Not verified, and none is added."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Otter District",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Otter District"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -713,12 +705,12 @@
         ],
         [
           {
-            "t": "Board geography: Otter District is one of 11 sub-areas of the Fraser Valley board community \"Langley,\" which combines the Township and the City; this sub-area sits entirely on the Township side. Street-level board boundary: UNVERIFIED — GVR/FVREB publish no street-level sub-area boundaries, and no Township boundary was substituted for the board's."
+            "t": "Board geography: Otter District is one of 11 sub-areas of the Fraser Valley board community \"Langley,\" which combines the Township and the City; this sub-area sits entirely on the Township side. Street-level board boundary: Not verified — GVR/FVREB publish no street-level sub-area boundaries, and no Township boundary was substituted for the board's."
           }
         ],
         [
           {
-            "t": "Poppy Secondary, 23752 52 Ave; and Shortreed Community School, 27330 28 Ave — the Ministry name; the guide's \"Shortreed Community Elementary\" wording is flagged, not adopted. Catchments: UNVERIFIED for Otter District addresses — no SD35 locator result for an Otter District address is on record; the nearest recorded result (4452 256 Street → North Otter Elementary and D.W. Poppy Secondary) belongs to that address only."
+            "t": "Poppy Secondary, 23752 52 Ave; and Shortreed Community School, 27330 28 Ave — the Ministry name; the guide's \"Shortreed Community Elementary\" wording is flagged, not adopted. Poppy Secondary) belongs to that address only."
           }
         ],
         [
@@ -727,18 +719,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Otter District",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Otter District"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -751,18 +743,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Otter District",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Otter District"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -781,146 +773,146 @@
         ],
         [
           {
-            "t": "Gaps carried as UNVERIFIED: parcel-level ALR and flood status, transit, in-district facilities, park rules, and catchments."
+            "t": "Gaps carried as not verified: parcel-level ALR and flood status, transit, in-district facilities, park rules, and catchments."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Otter District",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Otter District"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · otter district",
-            "h": "https://jaredgibbons.ca/otter-district.html"
+            "h": "https://jaredgibbons.ca/otter-district.html",
+            "t": "jaredgibbons.ca · otter district"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ],
         [
           {
-            "t": "tol.ca · zoning bylaw.aspx",
-            "h": "https://www.tol.ca/en/building-development/zoning-bylaw.aspx"
+            "h": "https://www.tol.ca/en/building-development/zoning-bylaw.aspx",
+            "t": "tol.ca · zoning bylaw.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · small scale multi unit housing.aspx",
-            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx"
+            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx",
+            "t": "tol.ca · small scale multi unit housing.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · Section 400 Residential (R, MH, FH and CRE) Zone",
-            "h": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf"
+            "h": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf",
+            "t": "tol.ca · Section 400 Residential (R, MH, FH and CRE) Zone"
           }
         ],
         [
           {
-            "t": "tol.ca · subdivision.aspx",
-            "h": "https://www.tol.ca/en/building-development/subdivision.aspx"
+            "h": "https://www.tol.ca/en/building-development/subdivision.aspx",
+            "t": "tol.ca · subdivision.aspx"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · regulatory requirements for onsite sewerage syst",
-            "h": "https://www.fraserhealth.ca/health-topics-a-to-z/onsite-sewerage-systems/regulatory-requirements-for-onsite-sewerage-systems"
+            "h": "https://www.fraserhealth.ca/health-topics-a-to-z/onsite-sewerage-systems/regulatory-requirements-for-onsite-sewerage-systems",
+            "t": "fraserhealth.ca · regulatory requirements for onsite sewerage syst"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · newly built home exemption",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption",
+            "t": "www2.gov.bc.ca · newly built home exemption"
           }
         ],
         [
           {
-            "t": "canada.ca · sales vacant land individuals",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html",
+            "t": "canada.ca · sales vacant land individuals"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 2,
-      "text": "Acreage and rural land in Otter District",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The ground in Otter District",
-      "gen": "acre",
-      "pos": "end"
+      "text": "Acreage and rural land in Otter District"
     },
     {
-      "t": "list",
+      "gen": "acre",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The ground in Otter District"
+    },
+    {
+      "gen": "acre",
       "items": [
         [
           {
@@ -928,18 +920,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Streets, schools and getting around Otter District",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Otter District"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -953,122 +945,122 @@
         ],
         [
           {
-            "t": "Schools note: Ministry-listed SD35 schools on or beside the district's roads are North Otter Elementary (5370 248 St), Coghlan Fundamental Elementary (4452 256th St, a district school of choice), Wix-Brown Elementary (23851 24 Ave), Peterson Road Elementary (23422 47 Ave) and D.W. Poppy Secondary (23752 52 Ave). The nearest recorded locator result (4452 256 Street, Salmon River upland side) returned North Otter Elementary and D.W. Poppy Secondary for THAT address only and must not be extended to Otter District homes."
+            "t": "Schools note: Ministry-listed SD35 schools on or beside the district's roads are North Otter Elementary (5370 248 St), Coghlan Fundamental Elementary (4452 256th St, a district school of choice), Wix-Brown Elementary (23851 24 Ave), Peterson Road Elementary (23422 47 Ave) and D.W. Poppy Secondary (23752 52 Ave). Poppy Secondary for THAT address only and must not be extended to Otter District homes."
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "acre",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below.",
-      "gen": "acre",
-      "pos": "end"
+      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "BC acreage buying rules",
-            "h": "/bc-acreage-buying-rules.html"
+            "h": "/bc-acreage-buying-rules.html",
+            "t": "BC acreage buying rules"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Sources for the acreage notes on Otter District",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the acreage notes on Otter District"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "tol.ca · bylaws",
-            "h": "https://www.tol.ca/at-your-service/bylaw-enforcement/bylaws/"
+            "h": "https://www.tol.ca/at-your-service/bylaw-enforcement/bylaws/",
+            "t": "tol.ca · bylaws"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · understanding aquifers",
-            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/understanding-aquifers"
+            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/understanding-aquifers",
+            "t": "www2.gov.bc.ca · understanding aquifers"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · resources for onsite sewerage systems property o",
-            "h": "https://www.fraserhealth.ca/health-topics-a-to-z/onsite-sewerage-systems/resources-for-onsite-sewerage-systems-property-owners-and-authorized-persons"
+            "h": "https://www.fraserhealth.ca/health-topics-a-to-z/onsite-sewerage-systems/resources-for-onsite-sewerage-systems-property-owners-and-authorized-persons",
+            "t": "fraserhealth.ca · resources for onsite sewerage systems property o"
           }
         ],
         [
           {
-            "t": "tol.ca · zoning bylaw.aspx",
-            "h": "https://www.tol.ca/en/building-development/zoning-bylaw.aspx"
+            "h": "https://www.tol.ca/en/building-development/zoning-bylaw.aspx",
+            "t": "tol.ca · zoning bylaw.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · subdivision.aspx",
-            "h": "https://www.tol.ca/en/building-development/subdivision.aspx"
+            "h": "https://www.tol.ca/en/building-development/subdivision.aspx",
+            "t": "tol.ca · subdivision.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · small scale multi unit housing.aspx",
-            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx"
+            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx",
+            "t": "tol.ca · small scale multi unit housing.aspx"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 2,
-      "text": "Mobile and manufactured homes in Otter District",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Otter District",
-      "gen": "mh",
-      "pos": "end"
+      "text": "Mobile and manufactured homes in Otter District"
     },
     {
-      "t": "list",
+      "gen": "mh",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Otter District"
+    },
+    {
+      "gen": "mh",
       "items": [
         [
           {
@@ -1076,18 +1068,18 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Local rules that affect park-home buyers in Otter District",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect park-home buyers in Otter District"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
@@ -1100,18 +1092,18 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Good to know about Otter District",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Otter District"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
@@ -1129,201 +1121,184 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "mh",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules for buying a home in a park (the pad tenancy, park-owner consent, pad-rent caps, the Manufactured Home Registry and park closures) are explained once, with sources, on the page linked below.",
-      "gen": "mh",
-      "pos": "end"
+      "text": "The BC rules for buying a home in a park (the pad tenancy, park-owner consent, pad-rent caps, the Manufactured Home Registry and park closures) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
-            "t": "BC mobile home buying rules",
-            "h": "/bc-mobile-home-buying-rules.html"
+            "h": "/bc-mobile-home-buying-rules.html",
+            "t": "BC mobile home buying rules"
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Sources for the mobile-home notes on Otter District",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the mobile-home notes on Otter District"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · langley memorial hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital",
+            "t": "fraserhealth.ca · langley memorial hospital"
           }
         ],
         [
           {
-            "t": "murphyrealestategroup.ca · SearchResults.form",
-            "h": "https://murphyrealestategroup.ca/recip.html/1272399.search/SearchResults.form?_pg=3"
+            "h": "https://murphyrealestategroup.ca/recip.html/1272399.search/SearchResults.form?_pg=3",
+            "t": "murphyrealestategroup.ca · SearchResults.form"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · newly built home exemption",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption",
+            "t": "www2.gov.bc.ca · newly built home exemption"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "tol.ca · bylaws",
-            "h": "https://www.tol.ca/at-your-service/bylaw-enforcement/bylaws/"
+            "h": "https://www.tol.ca/at-your-service/bylaw-enforcement/bylaws/",
+            "t": "tol.ca · bylaws"
           }
         ],
         [
           {
-            "t": "tol.ca · small scale multi unit housing.aspx",
-            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx"
+            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx",
+            "t": "tol.ca · small scale multi unit housing.aspx"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "tol.ca · property taxes.aspx",
-            "h": "https://www.tol.ca/en/services/property-taxes.aspx"
+            "h": "https://www.tol.ca/en/services/property-taxes.aspx",
+            "t": "tol.ca · property taxes.aspx"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · understanding aquifers",
-            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/understanding-aquifers"
+            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/understanding-aquifers",
+            "t": "www2.gov.bc.ca · understanding aquifers"
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
+      "a": "The attached-form product the feed shows is manufactured homes in one pad-rental park, Langley Grove Estates.",
+      "gen": "tn",
+      "q": "Are there any condos in Otter District?"
+    },
+    {
+      "a": "Within the ALC frame, one additional detached residence is permitted without an ALC application at up to 90 m² on a property of 40 ha or less, or up to 186 m² on a property over 40 ha, subject to Township bylaws; the principal residence itself is capped at 500 m², and a secondary suite must be entirely inside the principal residence (and within the Township's 120 m² suite cap).",
+      "gen": "tn",
+      "q": "Can I build a second house on an Otter District acreage in the ALR?"
+    },
+    {
+      "a": "No. Township eligibility for 3–4 units under Bylaw 6020 requires Urban Containment Boundary location, municipal water and sewer, and a lot no larger than 4,050 m², and there is no 6-unit tier in the Township at all; a rural Otter lot that fails those tests falls to one unit plus a suite or accessory unit depending on zoning.",
+      "gen": "tn",
+      "q": "Can I use the urban SSMUH numbers on an Otter acreage?"
+    },
+    {
+      "a": "No — it is a manufactured-home park at 3665 244 Street (also carded at 24330 Fraser Highway).",
+      "gen": "tn",
+      "q": "Is Langley Grove Estates a condo complex?"
+    },
+    {
+      "a": "Within the ALC frame, one additional detached residence is permitted without an ALC application at up to 90 m² on a property of 40 ha or less, or up to 186 m² on a property over 40 ha, provided there is only one existing residence when construction begins and Township bylaws allow it; the principal residence itself is capped at 500 m², and a secondary suite must be entirely inside the principal residence.",
+      "gen": "tn",
+      "q": "Can I build a second house on an Otter District acreage in the ALR?"
+    },
+    {
+      "a": "Not on ALR land within the ALC frame: ALR residences cannot be stratified — a strata plan deposit is a subdivision (SPA s. 239) and subdivision of agricultural land is prohibited unless the Commission permits it (ALCA s. 21(1); ALC Bulletin 09 s.",
+      "gen": "tn",
+      "q": "Can I strata-title the second home later?"
+    },
+    {
+      "a": "Almost never on this ground: Township SSMUH eligibility requires Urban Containment Boundary location, municipal water and sewer, and a lot no larger than 4,050 m².",
+      "gen": "tn",
+      "q": "Can I put 3–4 SSMUH units on an Otter acreage?"
+    },
+    {
+      "a": "Only through the Approving Officer under the Land Title Act, to the zone minimums (RU-2 and RU-3 need 8.0 ha for a new lot; RU-1 needs 1.7 ha) — and ALR land also needs Agricultural Land Commission approval to subdivide.",
+      "gen": "acre",
+      "q": "Can I subdivide an Otter District acreage?"
+    },
+    {
+      "a": "No. You own the home (a chattel) and rent the pad — the park owns the land, and your right to the site is the assigned pad tenancy under the Manufactured Home Park Tenancy Act.",
+      "gen": "mh",
+      "q": "In Langley Grove Estates, do I own the land?"
+    },
+    {
+      "a": "No. Listings for the park state \"no age restrictions\" — it is an all-ages manufactured-home community at 24330 Fraser Hwy / 3665 244 St. The clubhouse, exercise centre and sauna/hot tub in its listing text do not make it a seniors park.",
+      "gen": "mh",
+      "q": "Is Langley Grove Estates a 55+ park? It has a clubhouse."
+    },
+    {
+      "a": "Within the ALC frame on ALR land: one additional detached residence without an ALC application at up to 90 m² (40 ha or less) or 186 m² (over 40 ha), provided Township bylaws allow it, and a suite only inside the principal residence (capped at 500 m²). Outside the ALR, Township SSMUH eligibility is narrow; most rural Otter lots fall to one unit plus a suite or accessory unit depending on zoning.",
+      "gen": "mh",
+      "q": "Can I build a second home on an Otter acreage instead?"
+    },
+    {
       "q": "What is a coach house in Langley Township?",
       "a": "Under Township of Langley Zoning Bylaw No. 2500, s.102, a coach house is an accessory dwelling unit located only within the second storey of a detached garage — the definition settled in this program's rules-gaps pass (~/workspace/area-research-2026-11/rules-gaps-2026-11-01.md, read 2026-11-01).",
       "gen": "muse"
-    },
-    {
-      "q": "Are there more or fewer homes for sale in Otter District than in June?",
-      "a": "In Otter District, listings of houses was 3 in June and 2 in September, too few (under 3) to call a rise or fall.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How big is Otter District compared with the rest of Langley?",
-      "a": "In September 2026, Otter District held 0.4% of the 449 houses listed in Langley.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How many homes sold in Otter District from June to September 2026?",
-      "a": "1 houses sold in Otter District over those 4 months.",
-      "gen": "snap-faq"
-    },
-    {
-      "gen": "tn",
-      "q": "Are there any condos in Otter District?",
-      "a": "The attached-form product the feed shows is manufactured homes in one pad-rental park, Langley Grove Estates."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I build a second house on an Otter District acreage in the ALR?",
-      "a": "Within the ALC frame, one additional detached residence is permitted without an ALC application at up to 90 m² on a property of 40 ha or less, or up to 186 m² on a property over 40 ha, subject to Township bylaws; the principal residence itself is capped at 500 m², and a secondary suite must be entirely inside the principal residence (and within the Township's 120 m² suite cap)."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I use the urban SSMUH numbers on an Otter acreage?",
-      "a": "No. Township eligibility for 3–4 units under Bylaw 6020 requires Urban Containment Boundary location, municipal water and sewer, and a lot no larger than 4,050 m², and there is no 6-unit tier in the Township at all; a rural Otter lot that fails those tests falls to one unit plus a suite or accessory unit depending on zoning."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Langley Grove Estates a condo complex?",
-      "a": "No — it is a manufactured-home park at 3665 244 Street (also carded at 24330 Fraser Highway)."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I build a second house on an Otter District acreage in the ALR?",
-      "a": "Within the ALC frame, one additional detached residence is permitted without an ALC application at up to 90 m² on a property of 40 ha or less, or up to 186 m² on a property over 40 ha, provided there is only one existing residence when construction begins and Township bylaws allow it; the principal residence itself is capped at 500 m², and a secondary suite must be entirely inside the principal residence."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I strata-title the second home later?",
-      "a": "Not on ALR land within the ALC frame: ALR residences cannot be stratified — a strata plan deposit is a subdivision (SPA s. 239) and subdivision of agricultural land is prohibited unless the Commission permits it (ALCA s. 21(1); ALC Bulletin 09 s."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Langley Grove Estates a 55+ park, or strata townhouses?",
-      "a": "Neither."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I put 3–4 SSMUH units on an Otter acreage?",
-      "a": "Almost never on this ground: Township SSMUH eligibility requires Urban Containment Boundary location, municipal water and sewer, and a lot no larger than 4,050 m²."
-    },
-    {
-      "gen": "acre",
-      "q": "Can I subdivide an Otter District acreage?",
-      "a": "Only through the Approving Officer under the Land Title Act, to the zone minimums (RU-2 and RU-3 need 8.0 ha for a new lot; RU-1 needs 1.7 ha) — and ALR land also needs Agricultural Land Commission approval to subdivide."
-    },
-    {
-      "gen": "mh",
-      "q": "In Langley Grove Estates, do I own the land?",
-      "a": "No. You own the home (a chattel) and rent the pad — the park owns the land, and your right to the site is the assigned pad tenancy under the Manufactured Home Park Tenancy Act."
-    },
-    {
-      "gen": "mh",
-      "q": "Is Langley Grove Estates a 55+ park? It has a clubhouse.",
-      "a": "No. Listings for the park state \"no age restrictions\" — it is an all-ages manufactured-home community at 24330 Fraser Hwy / 3665 244 St. The clubhouse, exercise centre and sauna/hot tub in its listing text do not make it a seniors park."
-    },
-    {
-      "gen": "mh",
-      "q": "Can I build a second home on an Otter acreage instead?",
-      "a": "Within the ALC frame on ALR land: one additional detached residence without an ALC application at up to 90 m² (40 ha or less) or 186 m² (over 40 ha), provided Township bylaws allow it, and a suite only inside the principal residence (capped at 500 m²). Outside the ALR, Township SSMUH eligibility is narrow; most rural Otter lots fall to one unit plus a suite or accessory unit depending on zoning."
     }
+  ],
+  "slug": "otter-district-guide",
+  "status": "generated",
+  "suppress": [
+    "Related guides"
   ],
   "suppress_gen": [
     "Related guides"
   ],
-  "suppress": [
-    "Related guides"
-  ]
+  "updated": "2026-11-01"
 }

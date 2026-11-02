@@ -1,30 +1,27 @@
 {
-  "status": "draft",
-  "slug": "crescent-bch-ocean-pk",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Crescent Beach Ocean Park",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Crescent Beach Ocean Park"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -52,18 +49,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -91,18 +88,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -120,18 +117,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -139,37 +136,32 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Crescent Park Elementary, 2440 128 Street, Surrey",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Crescent Park",
           "Walk",
           "16",
           "1.2"
-        ],
-        [
-          "Safeway, Ocean Park",
-          "Drive",
-          "3",
-          "1.8"
         ],
         [
           "Kwomais Point Park",
@@ -182,20 +174,25 @@
           "Drive",
           "3",
           "1.6"
+        ],
+        [
+          "Safeway, Ocean Park",
+          "Drive",
+          "3",
+          "1.8"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -203,88 +200,88 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt351",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt351.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt351.pdf",
+            "t": "infomaps.translink.ca · tt351"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt350",
-            "h": "https://infomaps.translink.ca/Public_Timetables/210/tt350.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/210/tt350.pdf",
+            "t": "infomaps.translink.ca · tt350"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt352",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt352.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt352.pdf",
+            "t": "infomaps.translink.ca · tt352"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt361",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt361.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt361.pdf",
+            "t": "infomaps.translink.ca · tt361"
           }
         ],
         [
           {
-            "t": "surrey.ca · find park",
-            "h": "https://www.surrey.ca/parks-recreation/parks/find-park?community%5B0%5D=121&page=1"
+            "h": "https://www.surrey.ca/parks-recreation/parks/find-park?community%5B0%5D=121&page=1",
+            "t": "surrey.ca · find park"
           }
         ],
         [
           {
-            "t": "surrey.ca · crescent park",
-            "h": "https://www.surrey.ca/parks-recreation/parks/crescent-park"
+            "h": "https://www.surrey.ca/parks-recreation/parks/crescent-park",
+            "t": "surrey.ca · crescent park"
           }
         ],
         [
           {
-            "t": "surrey.ca · kwomais point park",
-            "h": "https://www.surrey.ca/parks-recreation/parks/kwomais-point-park"
+            "h": "https://www.surrey.ca/parks-recreation/parks/kwomais-point-park",
+            "t": "surrey.ca · kwomais point park"
           }
         ],
         [
           {
-            "t": "surrey.ca · staying safe winter",
-            "h": "https://www.surrey.ca/news-events/news/staying-safe-winter"
+            "h": "https://www.surrey.ca/news-events/news/staying-safe-winter",
+            "t": "surrey.ca · staying safe winter"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "safeway.ca · find a store",
-            "h": "https://www.safeway.ca/find-a-store/"
+            "h": "https://www.safeway.ca/find-a-store/",
+            "t": "safeway.ca · find a store"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Are Crescent Beach and Ocean Park the same MLS® area?",
-      "a": "Yes. Both fall in the one board sub-area named Crescent Beach Ocean Park in full and labelled \"Crescent Bch Ocean Pk.\" on listing cards — the abbreviated form the page slug also uses",
+      "q": "Which schools are in and around Crescent Beach and Ocean Park?",
+      "a": "Schools confirmed by name and address against the BC Ministry K-12 file in this pocket are Crescent Park Elementary (2440 128 St), Ocean Cliff Elementary (12550 20 Ave) and Elgin Park Secondary (13484 24 Ave), with Ray Shepherd Elementary (1650 136 St) also in the pocket — but catchments are address-based, so check the exact address in the SD36 locator before relying on a school (BC Ministry K-12 file, ~/workspace/area-research-2026-11/education/work/bc_k12_schools.csv, read 2026-11-01)",
       "gen": "muse"
     },
     {
@@ -302,5 +299,8 @@
       "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
       "gen": "muse-generic"
     }
-  ]
+  ],
+  "slug": "crescent-bch-ocean-pk",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

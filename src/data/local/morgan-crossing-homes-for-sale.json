@@ -1,30 +1,27 @@
 {
-  "status": "draft",
-  "slug": "morgan-crossing-homes-for-sale",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Morgan Crossing",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Morgan Crossing"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -47,18 +44,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -71,18 +68,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -105,18 +102,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -129,97 +126,100 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt351",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt351.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt351.pdf",
+            "t": "infomaps.translink.ca · tt351"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt531",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt531.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt531.pdf",
+            "t": "infomaps.translink.ca · tt531"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt345",
-            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt345.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt345.pdf",
+            "t": "infomaps.translink.ca · tt345"
           }
         ],
         [
           {
-            "t": "surrey.ca · 14315.aspx",
-            "h": "http://www.surrey.ca/culture-recreation/14315.aspx"
+            "h": "http://www.surrey.ca/culture-recreation/14315.aspx",
+            "t": "surrey.ca · 14315.aspx"
           }
         ],
         [
           {
-            "t": "surrey.ca · south surrey recreation arts centre",
-            "h": "https://www.surrey.ca/parks-recreation/recreation-facilities/south-surrey-recreation-arts-centre"
+            "h": "https://www.surrey.ca/parks-recreation/recreation-facilities/south-surrey-recreation-arts-centre",
+            "t": "surrey.ca · south surrey recreation arts centre"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "thriftyfoods.com · 9472 thrifty foods morgan crossing",
-            "h": "https://www.thriftyfoods.com/find-a-store/store/9472-thrifty-foods-morgan-crossing"
+            "h": "https://www.thriftyfoods.com/find-a-store/store/9472-thrifty-foods-morgan-crossing",
+            "t": "thriftyfoods.com · 9472 thrifty foods morgan crossing"
           }
         ],
         [
           {
-            "t": "walmart.ca · store",
-            "h": "https://www.walmart.ca/en/store/5853"
+            "h": "https://www.walmart.ca/en/store/5853",
+            "t": "walmart.ca · store"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Is Morgan Crossing the same as Morgan Creek?",
-      "a": "No. Morgan Crossing is the retail village at 24 Ave / 160 St in Grandview Heights — residences above and beside the village shops, on Croydon Drive and 26 Avenue. Morgan Creek is the separate golf-course community. The board sub-area row for Morgan Crossing's ground is Grandview: Detached 66 / 9 / 14% and Condos & Townhomes 146 / 20 / 14% in September 2026 (as of September 2026, Source: SnapStats FVR September 2026 report).",
-      "gen": "muse"
+      "a": "No. Morgan Crossing is the retail village at 24 Ave / 160 St in Grandview Heights — residences above and beside the village shops, on Croydon Drive and 26 Avenue. Morgan Creek is the separate golf-course community. The board sub-area row for Morgan Crossing's ground is Grandview: Detached 66 / 9 / 14% and Condos & Townhomes 146 / 20 / 14% in September 2026 (SnapStats, September 2026)",
+      "gen": "muse",
+      "q": "Is Morgan Crossing the same as Morgan Creek?"
     },
     {
-      "q": "What kind of homes are for sale at Morgan Crossing?",
       "a": "At reading, the feed held 14 listings; the cards read in full were all apartment-style condos of 1–2 bedrooms and 720–941 sq ft, priced $469,000–$599,000, in buildings the page dates from 2008 to 2011, plus The Brownstones townhomes next door in the page's building table. That is a feed snapshot at reading, not a statistic.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What kind of homes are for sale at Morgan Crossing?"
     },
     {
-      "q": "The card shows two different open-house times — which one is right?",
       "a": "Neither can be treated as authoritative from the page alone: the card for 353 15850 26 Avenue shows a time block of 2:00–4:00 PM and a line beneath it of 1:00–3:00 PM for Sunday, November 1, 2026 — exactly one hour apart. Confirm the time with the listing brokerage before setting out.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "The card shows two different open-house times — which one is right?"
     },
     {
-      "q": "Can I add a suite or coach house to a house in Morgan Crossing?",
       "a": "BC's small-scale multi-unit housing rules allow more homes on many urban lots, but each municipality sets the details and many lots are excluded. Check the lot's zoning with the municipality before you plan a suite or coach house.",
-      "gen": "bank-faq"
+      "gen": "bank-faq",
+      "q": "Can I add a suite or coach house to a house in Morgan Crossing?"
     },
     {
-      "q": "Do I need a home inspection when buying in Morgan Crossing?",
       "a": "It is strongly recommended. Make the offer subject to an inspection so a qualified inspector can look at the roof, structure, drainage, electrical and heating before you remove conditions.",
-      "gen": "bank-faq"
+      "gen": "bank-faq",
+      "q": "Do I need a home inspection when buying in Morgan Crossing?"
     }
-  ]
+  ],
+  "slug": "morgan-crossing-homes-for-sale",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

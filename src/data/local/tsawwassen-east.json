@@ -1,56 +1,27 @@
 {
-  "status": "draft",
-  "slug": "tsawwassen-east",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: deltasd.bc.ca",
-            "h": "https://www.deltasd.bc.ca/schools/student-registration/catchment-area-maps/"
-          }
-        ],
-        [
-          {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "What's nearby Tsawwassen East",
       "gen": "nb",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby Tsawwassen East"
     },
     {
+      "gen": "nb",
+      "pos": "end",
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -73,18 +44,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -107,18 +78,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -141,18 +112,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -160,25 +131,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Centennial Beach, Boundary Bay Regional Park, Boundary Bay Road",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Thrifty Foods, 1207 56 St",
@@ -199,18 +171,17 @@
           "4.8"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -218,14 +189,76 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf",
+            "t": "infomaps.translink.ca · tt601"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/196/tt619.pdf",
+            "t": "infomaps.translink.ca · tt619"
+          }
+        ],
+        [
+          {
+            "h": "https://metrovancouver.org/services/regional-parks/park/boundary-bay-regional-park",
+            "t": "metrovancouver.org · boundary bay regional park"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?keywords&region=All&amenities%5B74%5D=74&page=1",
+            "t": "delta.ca · park and amenity search"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?page=3",
+            "t": "delta.ca · park and amenity search (2)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/",
+            "t": "fvrl.bc.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/037",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.thriftyfoods.com/find-a-store/store/9466-thrifty-foods-tsawwassen",
+            "t": "thriftyfoods.com · 9466 thrifty foods tsawwassen"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -233,77 +266,33 @@
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt601",
+            "t": "Source: infomaps.translink.ca",
             "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf"
-          }
-        ],
-        [
-          {
-            "t": "infomaps.translink.ca · tt619",
-            "h": "https://infomaps.translink.ca/Public_Timetables/196/tt619.pdf"
-          }
-        ],
-        [
-          {
-            "t": "metrovancouver.org · boundary bay regional park",
-            "h": "https://metrovancouver.org/services/regional-parks/park/boundary-bay-regional-park"
-          }
-        ],
-        [
-          {
-            "t": "delta.ca · park and amenity search",
-            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?keywords&region=All&amenities%5B74%5D=74&page=1"
-          }
-        ],
-        [
-          {
-            "t": "delta.ca · park and amenity search (2)",
-            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?page=3"
-          }
-        ],
-        [
-          {
-            "t": "fvrl.bc.ca",
-            "h": "https://www.fvrl.bc.ca/"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/037"
-          }
-        ],
-        [
-          {
-            "t": "thriftyfoods.com · 9466 thrifty foods tsawwassen",
-            "h": "https://www.thriftyfoods.com/find-a-store/store/9466-thrifty-foods-tsawwassen"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
     {
-      "q": "Is Tsawwassen East an official City of Delta neighbourhood?",
-      "a": "No. It is a Paragon sub-area name for the Boundary Bay side of Tsawwassen, planned under the Official Community Plan, Bylaw No. 8400 (2024) — a single consolidated plan with no area-plan schedules — and no official boundary exists for the name (adaptation source: batch-1/tsawwassen-east-guide.md, read 2026-11-01).",
-      "gen": "muse"
-    },
-    {
-      "q": "What beach and trails are on the east side?",
-      "a": "Boundary Bay Regional Park and Centennial Beach (Metro Vancouver) are on Boundary Bay Road, with the Dyke Trail and the Savannah and Raptor trails, and Cammidge House in the park (adaptation source: batch-1/tsawwassen-east-guide.md, read 2026-11-01).",
-      "gen": "muse"
-    },
-    {
-      "q": "Which schools serve the east side?",
-      "a": "Catchments are address-based in SD37. The adaptation source's locator result for the sample address 570 Boundary Bay Rd is South Park Elementary (K–7) and South Delta Secondary (8–12), with no middle-school category; SD37 also publishes Tsawwassen Area catchment maps (updated October 2017) and directs families to the Baragar locator or their local school.",
-      "gen": "muse"
-    },
-    {
       "q": "What bus serves Boundary Bay?",
       "a": "TransLink route 601 runs Boundary Bay trips via 12 Avenue, Boundary Bay Road, 3 Avenue and 67 Street to 1A Avenue, continuing through South Delta Exchange and Ladner Exchange to Bridgeport Station.",
       "gen": "muse"
+    },
+    {
+      "q": "Can Jared show me homes in Tsawwassen East?",
+      "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
+      "gen": "muse-generic"
+    },
+    {
+      "q": "How do I find out what my home in Tsawwassen East is worth?",
+      "a": "Jared prepares a home evaluation from recent comparable sales and the condition of your home. Contact him on 604-928-1361 or through the form on this site to arrange one.",
+      "gen": "muse-generic"
     }
-  ]
+  ],
+  "slug": "tsawwassen-east",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

@@ -1,43 +1,40 @@
 {
-  "status": "generated",
-  "slug": "edmonds-be",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "schools",
       "level": 2,
-      "text": "Schools in Edmonds",
-      "gen": "schools"
-    },
-    {
-      "t": "p",
-      "text": "Edmonds Community Elementary (7651 18th Ave) is an elementary school in Edmonds. This is not a complete list of the schools nearby.",
-      "gen": "schools"
-    },
-    {
-      "t": "p",
-      "text": "Living near a school does not mean a place at it. Your child's school comes from the district's catchment boundaries, and those change, so confirm the address with the district before you write an offer.",
-      "gen": "schools"
-    },
-    {
-      "t": "p",
-      "text": "Source: BC Ministry of Education and Child Care school list (2025/26, updated July 2026) and the Province's post-secondary locations list. Neighbourhood placement is from our own area research.",
-      "gen": "schools"
-    },
-    {
       "t": "h",
-      "level": 2,
-      "text": "Edmonds homes listed and sold, June to September 2026",
-      "gen": "snapstats"
+      "text": "Schools in Edmonds"
     },
     {
+      "gen": "schools",
       "t": "p",
-      "text": "Edmonds, September 2026. Detached houses: 9 listed at month end and 2 sold in September, a sales ratio of 22%. Condos and townhomes: 89 listed at month end and 7 sold in September, a sales ratio of 8% (a buyers’ market).",
-      "gen": "snapstats"
+      "text": "Edmonds Community Elementary (7651 18th Ave) is an elementary school in Edmonds. This is not a complete list of the schools nearby."
     },
     {
-      "t": "table",
+      "gen": "schools",
+      "t": "p",
+      "text": "Living near a school does not mean a place at it. Your child's school comes from the district's catchment boundaries, and those change, so confirm the address with the district before you write an offer."
+    },
+    {
+      "gen": "schools",
+      "t": "p",
+      "text": "Source: BC Ministry of Education and Child Care school list (2025/26, updated July 2026) and the Province's post-secondary locations list. Neighbourhood placement is from our own area research."
+    },
+    {
+      "gen": "snapstats",
+      "level": 2,
+      "t": "h",
+      "text": "Edmonds homes listed and sold, June to October 2026"
+    },
+    {
+      "gen": "snapstats",
+      "t": "p",
+      "text": "Edmonds, October 2026. Detached houses: 10 listed at month end and 0 sold in October, a sales ratio of —. Condos and townhomes: 85 listed at month end and 10 sold in October, a sales ratio of 12% (a balanced market)."
+    },
+    {
       "caption": "Edmonds listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -83,272 +80,243 @@
           "89",
           "7",
           "8%"
+        ],
+        [
+          "October 2026",
+          "10",
+          "0",
+          "—",
+          "85",
+          "10",
+          "12%"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 7 sold over 4 months against an average of 12.0 listed, about 6.9 months of listings at that pace; the busiest month was June with 2 sold. Condos and townhomes: 53 sold over 4 months against an average of 91.8 listed, about 6.9 months of listings at that pace; the busiest month was June with 20 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 7 sold over 5 months against an average of 11.6 listed, about 8.3 months of listings at that pace; the busiest month was June with 2 sold. Condos and townhomes: 63 sold over 5 months against an average of 90.4 listed, about 7.2 months of listings at that pace; the busiest month was June with 20 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Burnaby real estate",
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Burnaby homes for sale",
-            "h": "/burnaby-homes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby real estate market stats",
-            "h": "/burnaby-real-estate-market-stats.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby condos for sale",
-            "h": "/burnaby-condos-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby townhomes for sale",
-            "h": "/burnaby-townhomes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Schools in Burnaby",
-            "h": "/schools-in-burnaby-bc.html"
-          }
-        ],
-        [
-          {
-            "t": "Forest Glen real estate",
-            "h": "/forest-glen-bs.html"
-          }
-        ],
-        [
-          {
-            "t": "Forest Hills real estate",
-            "h": "/forest-hills-bn.html"
-          }
-        ],
-        [
-          {
-            "t": "Garden Village real estate",
-            "h": "/garden-village.html"
-          }
-        ],
-        [
-          {
-            "t": "Government Road real estate",
-            "h": "/government-road.html"
-          }
-        ],
-        [
-          {
-            "t": "Greentree Village real estate",
-            "h": "/greentree-village.html"
-          }
-        ],
-        [
-          {
-            "t": "Highgate real estate",
-            "h": "/highgate-burnaby.html"
-          }
-        ],
-        [
-          {
-            "t": "Metrotown real estate",
-            "h": "/metrotown-homes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Montecito real estate",
-            "h": "/montecito.html"
-          }
-        ],
-        [
-          {
-            "t": "Oakdale real estate",
-            "h": "/oakdale.html"
-          }
-        ],
-        [
-          {
-            "t": "Oaklands real estate",
-            "h": "/oaklands-burnaby.html"
-          }
-        ]
-      ],
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Edmonds condos and townhomes",
       "gen": "condopage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Edmonds condos and townhomes"
     },
     {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Edmonds condos for sale",
-            "h": "/edmonds-condos-for-sale.html"
-          }
-        ]
-      ],
       "gen": "condopage",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
       "items": [
         [
           {
-            "t": "Source: burnaby.ca (1)",
-            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres"
-          }
-        ],
-        [
-          {
-            "t": "Source: studentsuccess.gov.bc.ca",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
-          }
-        ],
-        [
-          {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt116.pdf"
-          }
-        ],
-        [
-          {
-            "t": "Source: burnaby.ca (4)",
-            "h": "https://www.burnaby.ca/our-city/projects/kingsway-edmonds-conceptual-master-plan"
+            "h": "/edmonds-condos-for-sale.html",
+            "t": "Edmonds condos for sale"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "communitylinks",
       "level": 2,
-      "text": "Condo buildings in Edmonds",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Kings Crossing 2 (King Crossing Tower 2) — 7358 Edmonds Street",
-      "gen": "tn",
-      "pos": "end"
+      "text": "More Burnaby real estate"
     },
     {
+      "gen": "communitylinks",
+      "items": [
+        [
+          {
+            "h": "/burnaby-homes-for-sale.html",
+            "t": "Burnaby homes for sale"
+          }
+        ],
+        [
+          {
+            "h": "/burnaby-real-estate-market-stats.html",
+            "t": "Burnaby real estate market stats"
+          }
+        ],
+        [
+          {
+            "h": "/burnaby-condos-for-sale.html",
+            "t": "Burnaby condos for sale"
+          }
+        ],
+        [
+          {
+            "h": "/burnaby-townhomes-for-sale.html",
+            "t": "Burnaby townhomes for sale"
+          }
+        ],
+        [
+          {
+            "h": "/schools-in-burnaby-bc.html",
+            "t": "Schools in Burnaby"
+          }
+        ],
+        [
+          {
+            "h": "/forest-glen-bs.html",
+            "t": "Forest Glen real estate"
+          }
+        ],
+        [
+          {
+            "h": "/forest-hills-bn.html",
+            "t": "Forest Hills real estate"
+          }
+        ],
+        [
+          {
+            "h": "/garden-village.html",
+            "t": "Garden Village real estate"
+          }
+        ],
+        [
+          {
+            "h": "/government-road.html",
+            "t": "Government Road real estate"
+          }
+        ],
+        [
+          {
+            "h": "/greentree-village.html",
+            "t": "Greentree Village real estate"
+          }
+        ],
+        [
+          {
+            "h": "/highgate-burnaby.html",
+            "t": "Highgate real estate"
+          }
+        ],
+        [
+          {
+            "h": "/metrotown-homes-for-sale.html",
+            "t": "Metrotown real estate"
+          }
+        ],
+        [
+          {
+            "h": "/montecito.html",
+            "t": "Montecito real estate"
+          }
+        ],
+        [
+          {
+            "h": "/oakdale.html",
+            "t": "Oakdale real estate"
+          }
+        ],
+        [
+          {
+            "h": "/oaklands-burnaby.html",
+            "t": "Oaklands real estate"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "tn",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Condo buildings in Edmonds"
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Kings Crossing 2 (King Crossing Tower 2) — 7358 Edmonds Street"
+    },
+    {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "By Cressey; built 2020, 37 storeys (listing-aggregator source, secondary). Current listings describe a concrete tower with air conditioning, fitness centre, basketball court, concierge, party room and rooftop garden, a 10-minute walk to Edmonds SkyTrain, and record pets as \"Cats OK.\" Unit count and other published restrictions: UNCONFIRMED from the sources checked.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "By Cressey; built 2020, 37 storeys (listing-aggregator source, secondary). Current listings describe a concrete tower with air conditioning, fitness centre, basketball court, concierge, party room and rooftop garden, a 10-minute walk to Edmonds SkyTrain, and record pets as \"Cats OK.\" Unit count and other published restrictions: Not confirmed from the sources checked."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Kings Crossing 1 — 7388 Kingsway",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Kings Crossing 1 — 7388 Kingsway"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "By Cressey; current listings describe a modern concrete tower with air conditioning, clubhouse, sauna and steam, and outdoor theatre, walking distance to SkyTrain, shopping and the community centre. Published restrictions: UNCONFIRMED.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "By Cressey; current listings describe a modern concrete tower with air conditioning, clubhouse, sauna and steam, and outdoor theatre, walking distance to SkyTrain, shopping and the community centre. Published restrictions: Not confirmed."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Toscana — 7738 Edmonds Street",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Toscana — 7738 Edmonds Street"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Built 2012; a 4-storey, 49-unit wood-frame low-rise (building-listing source, secondary). The same listing record is headlined \"No Pets or Rentals\" and a current unit listing records pets as \"No\" — a pet prohibition bylaw can still be enforced in BC, but the rental half of that headline is void since November 24, 2022. Listings record frame-wood construction with fibre-cement and glass exterior.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Built 2012; a 4-storey, 49-unit wood-frame low-rise (building-listing source, secondary). The same listing record is headlined \"No Pets or Rentals\" and a current unit listing records pets as \"No\" — a pet prohibition bylaw can still be enforced in BC, but the rental half of that headline is void since November 24, 2022. Listings record frame-wood construction with fibre-cement and glass exterior."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Azure at Southgate City — 7683 Park Crescent",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Azure at Southgate City — 7683 Park Crescent"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "(the developer's presentation address was 7662 18th Street; listings also address Azure units at 7788 18th Street — confirm the strata's address of record for the specific unit). By Ledingham McAllister, completed 2024: a 30-storey high-rise plus an adjacent 4-storey low-rise (the Teal Collection), the first phase of the 52-acre Southgate City master-planned community, two blocks from Edmonds SkyTrain Station. Unit counts differ by source: a presale record gives 282 units for the tower, while a project source describes 320 residences across the phase including 53 low-rise Teal Collection units — both figures are stated here as published; the strata plan governs. Published rental/pet restrictions: UNCONFIRMED from the sources checked.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "(the developer's presentation address was 7662 18th Street; listings also address Azure units at 7788 18th Street — confirm the strata's address of record for the specific unit). By Ledingham McAllister, completed 2024: a 30-storey high-rise plus an adjacent 4-storey low-rise (the Teal Collection), the first phase of the 52-acre Southgate City master-planned community, two blocks from Edmonds SkyTrain Station. Unit counts differ by source: a presale record gives 282 units for the tower, while a project source describes 320 residences across the phase including 53 low-rise Teal Collection units — both figures are stated here as published; the strata plan governs. Published rental/pet restrictions: Not confirmed from the sources checked."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Azure 2 at Southgate City — 7769 Park Crescent",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Azure 2 at Southgate City — 7769 Park Crescent"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "By Ledingham McAllister; built 2024, 28 storeys, concrete construction with freehold strata tenure (current listings). A presale record gives 320 units (presale source, secondary). Current listings describe air conditioning, concierge and fitness centre amenities, and record pets as \"Cats OK\" on one listing. Other published restrictions: UNCONFIRMED.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "By Ledingham McAllister; built 2024, 28 storeys, concrete construction with freehold strata tenure (current listings). A presale record gives 320 units (presale source, secondary). Current listings describe air conditioning, concierge and fitness centre amenities, and record pets as \"Cats OK\" on one listing. Other published restrictions: Not confirmed."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Cedar Creek — 7133 14th Avenue, with further buildings at 7579 / 7588 16th Street and 7599 15th Street",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Cedar Creek — 7133 14th Avenue, with further buildings at 7579 / 7588 16th Street and 7599 15th Street"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "By Ledingham McAllister; a low-rise community built 2021 at the 14th Avenue building, with listings dating the 16th Street building to 2022 and the 15th Street building to 2023 as the community phased in — treat the year as building-specific.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "By Ledingham McAllister; a low-rise community built 2021 at the 14th Avenue building, with listings dating the 16th Street building to 2022 and the 15th Street building to 2023 as the community phased in — treat the year as building-specific."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Edmonds",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Edmonds"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -376,18 +344,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Edmonds",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Edmonds"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -395,18 +363,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Edmonds",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Edmonds"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -439,279 +407,279 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Edmonds",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Edmonds"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "strawhomes.com · 1802 7358 edmonds street burnaby bc v3n 0h1",
-            "h": "https://www.strawhomes.com/1802-7358-edmonds-street-burnaby-bc-v3n-0h1/"
+            "h": "https://www.strawhomes.com/1802-7358-edmonds-street-burnaby-bc-v3n-0h1/",
+            "t": "strawhomes.com · 1802 7358 edmonds street burnaby bc v3n 0h1"
           }
         ],
         [
           {
-            "t": "skytraincondo.ca · azure at southgate city",
-            "h": "https://www.skytraincondo.ca/presale/azure-at-southgate-city/"
+            "h": "https://www.skytraincondo.ca/presale/azure-at-southgate-city/",
+            "t": "skytraincondo.ca · azure at southgate city"
           }
         ],
         [
           {
-            "t": "archive.presalesbc.com · azure",
-            "h": "https://archive.presalesbc.com/presales-listing/azure/?es-pdf=12755"
+            "h": "https://archive.presalesbc.com/presales-listing/azure/?es-pdf=12755",
+            "t": "archive.presalesbc.com · azure"
           }
         ],
         [
           {
-            "t": "archive.presalesbc.com · azure 2",
-            "h": "https://archive.presalesbc.com/presales-listing/azure-2/?es-pdf=12769"
+            "h": "https://archive.presalesbc.com/presales-listing/azure-2/?es-pdf=12769",
+            "t": "archive.presalesbc.com · azure 2"
           }
         ],
         [
           {
-            "t": "pub-burnaby.escribemeetings.com · filestream.ashx",
-            "h": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=59431"
+            "h": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=59431",
+            "t": "pub-burnaby.escribemeetings.com · filestream.ashx"
           }
         ],
         [
           {
-            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for ",
-            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/"
+            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/",
+            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "equitylawgroup.ca · closing costs bc home purchase",
-            "h": "https://www.equitylawgroup.ca/news/closing-costs-bc-home-purchase"
+            "h": "https://www.equitylawgroup.ca/news/closing-costs-bc-home-purchase",
+            "t": "equitylawgroup.ca · closing costs bc home purchase"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ],
         [
           {
-            "t": "homecalc.ca · first time home buyer programs canada",
-            "h": "https://homecalc.ca/first-time-home-buyer-programs-canada"
+            "h": "https://homecalc.ca/first-time-home-buyer-programs-canada",
+            "t": "homecalc.ca · first time home buyer programs canada"
           }
         ],
         [
           {
-            "t": "cmhc-schl.gc.ca · second home",
-            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home"
+            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home",
+            "t": "cmhc-schl.gc.ca · second home"
           }
         ],
         [
           {
-            "t": "ssaltd.com · 20 condo towers planned for new 48 acre southgat",
-            "h": "https://www.ssaltd.com/news-resources/20-condo-towers-planned-for-new-48-acre-southgate-neighbourhood-at-edmonds-station/"
+            "h": "https://www.ssaltd.com/news-resources/20-condo-towers-planned-for-new-48-acre-southgate-neighbourhood-at-edmonds-station/",
+            "t": "ssaltd.com · 20 condo towers planned for new 48 acre southgat"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Edmonds",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Element 2 (Square Nine Developments) — 7161 17th Avenue. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Edmonds"
     },
     {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Element 2 (Square Nine Developments) — 7161 17th Avenue. STRATA"
+    },
+    {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Published rental/pet restrictions: UNCONFIRMED beyond listing fee data — confirm on the Form B.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Published rental/pet restrictions: Not confirmed beyond listing fee data — confirm on the Form B."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Element 1 — 7131 17th Avenue. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Element 1 — 7131 17th Avenue. STRATA"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Current listings describe ground-level townhouse units at Element 1, built 2020, with strata fees recorded (listing data, secondary source — strata finding rests on the strata-fee and strata-complex evidence; freehold-strata wording UNCONFIRMED in the sources checked). Unit count and published rental/pet restrictions: UNCONFIRMED — confirm on the Form B.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Current listings describe ground-level townhouse units at Element 1, built 2020, with strata fees recorded (listing data, secondary source — strata finding rests on the strata-fee and strata-complex evidence; freehold-strata wording not confirmed in the sources checked). Unit count and published rental/pet restrictions: Not confirmed — confirm on the Form B."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Leeside Creek — 7128 17th Avenue. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Leeside Creek — 7128 17th Avenue. STRATA"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Current listings describe 3-storey townhouse units alongside a greenbelt, built 2005, with strata fees recorded and underground parking (listing data, secondary source — strata finding rests on that evidence). Unit count and published rental/pet restrictions: UNCONFIRMED — confirm on the Form B. Not to be confused with Riverstone at 7128 Stride Avenue — same street number, different street and complex.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Current listings describe 3-storey townhouse units alongside a greenbelt, built 2005, with strata fees recorded and underground parking (listing data, secondary source — strata finding rests on that evidence). Unit count and published rental/pet restrictions: Not confirmed — confirm on the Form B. Not to be confused with Riverstone at 7128 Stride Avenue — same street number, different street and complex."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Riverstone (Adera) — 7128 Stride Avenue. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Riverstone (Adera) — 7128 Stride Avenue. STRATA"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Current listings describe townhouse units at Riverstone by Adera, built 2003, with strata fees recorded and pets recorded as allowed with restrictions on one listing (listing data — confirm on the Form B). Unit count: UNCONFIRMED from the sources checked.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Current listings describe townhouse units at Riverstone by Adera, built 2003, with strata fees recorded and pets recorded as allowed with restrictions on one listing (listing data — confirm on the Form B). Unit count: Not confirmed from the sources checked."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Kensington — 7184 Stride Avenue. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Kensington — 7184 Stride Avenue. STRATA"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A current listing records Building Type Townhouse, Building Name Kensington, Ownership Type Freehold Strata, built 1992, in a gated complex, with Strata Restrictions recorded as pets allowed with restrictions and rentals allowed; a building-directory listing headline records a 22-unit development in wood-frame construction.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A current listing records Building Type Townhouse, Building Name Kensington, Ownership Type Freehold Strata, built 1992, in a gated complex, with Strata Restrictions recorded as pets allowed with restrictions and rentals allowed; a building-directory listing headline records a 22-unit development in wood-frame construction."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Eden at Edmonds — 7168 Stride Avenue. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Eden at Edmonds — 7168 Stride Avenue. STRATA"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Strata finding rests on the building-directory record for the complex (secondary source). Published rental/pet restrictions: UNCONFIRMED — confirm on the Form B.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Strata finding rests on the building-directory record for the complex (secondary source). Published rental/pet restrictions: Not confirmed — confirm on the Form B."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sylvan Court — 7188 Edmonds Street. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sylvan Court — 7188 Edmonds Street. STRATA"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A current listing describes a corner-unit townhouse in Sylvan Court, built 1990, in a \"56-unit strata community\" in Edmonds (listing data, secondary source). Published rental/pet restrictions: UNCONFIRMED — confirm on the Form B.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A current listing describes a corner-unit townhouse in Sylvan Court, built 1990, in a \"56-unit strata community\" in Edmonds (listing data, secondary source). Published rental/pet restrictions: Not confirmed — confirm on the Form B."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Maplewood Terrace — 7370 Stride Avenue. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Maplewood Terrace — 7370 Stride Avenue. STRATA"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Strata finding rests on the strata-fee evidence in the listings. Unit count and published rental/pet restrictions: UNCONFIRMED — confirm on the Form B.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Strata finding rests on the strata-fee evidence in the listings. Unit count and published rental/pet restrictions: Not confirmed — confirm on the Form B."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Kingsgate Gardens — 7428 14th Avenue. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Kingsgate Gardens — 7428 14th Avenue. STRATA"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Current listings record Sub-Type Townhouse, Ownership Type Freehold Strata, with one listing recording the pet rule as one medium-sized dog (under 50 lbs at full growth) or one cat unless approved by council, and rentals allowed with no restrictions (listing data — confirm on the Form B).",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Current listings record Sub-Type Townhouse, Ownership Type Freehold Strata, with one listing recording the pet rule as one medium-sized dog (under 50 lbs at full growth) or one cat unless approved by council, and rentals allowed with no restrictions (listing data — confirm on the Form B)."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Southgate townhomes — 7333 16th Avenue. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Southgate townhomes — 7333 16th Avenue. STRATA"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A current listing describes a townhouse in a 55-unit townhome complex in the Southgate community, built 2007, Sub-Type Townhouse; a current rental listing for the same address describes the unit expressly as a \"(Strata Townhouse).\" The complex's marketing name: UNCONFIRMED — Southgate City is the master-planned community name (Ledingham McAllister), not a verified name for this complex, so it is counted by address. Published rental/pet restrictions: UNCONFIRMED — confirm on the Form B.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A current listing describes a townhouse in a 55-unit townhome complex in the Southgate community, built 2007, Sub-Type Townhouse; a current rental listing for the same address describes the unit expressly as a \"(Strata Townhouse).\" The complex's marketing name: Not confirmed — Southgate City is the master-planned community name (Ledingham McAllister), not a verified name for this complex, so it is counted by address. Published rental/pet restrictions: Not confirmed — confirm on the Form B."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "The 17th Avenue sixplex cluster is NOT this entry",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "The 17th Avenue sixplex cluster is NOT this entry"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "— see Documented, NOT counted below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "— see Documented, NOT counted below."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Edmonds",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Edmonds"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -724,18 +692,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Edmonds",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Edmonds"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -743,18 +711,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Edmonds",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Edmonds"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -777,136 +745,136 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Edmonds",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Edmonds"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "burnaby.ca · town centres",
-            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres"
+            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres",
+            "t": "burnaby.ca · town centres"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt116",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt116.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt116.pdf",
+            "t": "infomaps.translink.ca · tt116"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "mikestewart.ca · element 2 burnaby presale townhomes",
-            "h": "https://www.mikestewart.ca/presale/element-2-burnaby-presale-townhomes/"
+            "h": "https://www.mikestewart.ca/presale/element-2-burnaby-presale-townhomes/",
+            "t": "mikestewart.ca · element 2 burnaby presale townhomes"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · eden at edmonds 7168 stride ave",
-            "h": "https://www.bccondosandhomes.com/building/eden-at-edmonds-7168-stride-ave"
+            "h": "https://www.bccondosandhomes.com/building/eden-at-edmonds-7168-stride-ave",
+            "t": "bccondosandhomes.com · eden at edmonds 7168 stride ave"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun",
-            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan"
+            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan",
+            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ],
         [
           {
-            "t": "burnaby.ca · kingsway edmonds conceptual master plan",
-            "h": "https://www.burnaby.ca/our-city/projects/kingsway-edmonds-conceptual-master-plan"
+            "h": "https://www.burnaby.ca/our-city/projects/kingsway-edmonds-conceptual-master-plan",
+            "t": "burnaby.ca · kingsway edmonds conceptual master plan"
           }
         ],
         [
           {
-            "t": "burnaby.ca · Parks",
-            "h": "https://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks.html"
+            "h": "https://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks.html",
+            "t": "burnaby.ca · Parks"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Edmonds",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Fee-simple lots",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Edmonds"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Fee-simple lots"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -915,7 +883,7 @@
         ],
         [
           {
-            "t": "Lot character: typical lot sizes are UNVERIFIED at sub-area level — no official source read states them. The only lot-size figures a source states are the R1 SSMUH thresholds: 280 m² and 281 m². The lot character that is documented is positional, not dimensional: Kingsway/station-node lots are planned under the March 2025 Edmonds Community Plan's six districts, and ravine-edge lots carry Byrne Creek setback diligence."
+            "t": "Lot character: typical lot sizes are not verified at sub-area level — no official source read states them. The only lot-size figures a source states are the R1 SSMUH thresholds: 280 m² and 281 m². The lot character that is documented is positional, not dimensional: Kingsway/station-node lots are planned under the March 2025 Edmonds Community Plan's six districts, and ravine-edge lots carry Byrne Creek setback diligence."
           }
         ],
         [
@@ -925,27 +893,27 @@
         ],
         [
           {
-            "t": "ALR vs non-ALR: no ALR parcel in Edmonds is confirmed in the research; ALR status is a property-specific check through the Agricultural Land Commission, UNVERIFIED for individual lots. No ALR percentage split is stated."
+            "t": "ALR vs non-ALR: no ALR parcel in Edmonds is confirmed; ALR status is a property-specific check through the Agricultural Land Commission, not verified for individual lots. No ALR percentage split is stated."
           }
         ],
         [
           {
-            "t": "Market context, labelled correctly: Burnaby IS a SnapStats-covered community — Detached versus \"Condos & Townhomes\" combined only. SnapStats has NO land category, and no detached figure is a land figure. September 2026 context only: Edmonds sub-area detached inventory 9 / solds 2 (22% ratio) and \"Condos & Townhomes\" 89 / 7 (8%); Burnaby community detached median $1,825,000 and attached median $686,000. Sub-area medians are UNVERIFIED (community level only)."
+            "t": "Market context, labelled correctly: Burnaby IS a SnapStats-covered community — Detached versus \"Condos & Townhomes\" combined only. SnapStats has NO land category, and no detached figure is a land figure. September 2026 context only: Edmonds sub-area detached inventory 9 / solds 2 (22% ratio) and \"Condos & Townhomes\" 89 / 7 (8%); Burnaby community detached median $1,825,000 and attached median $686,000. Sub-area medians are not verified (community level only)."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Bare-land strata",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Bare-land strata"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -953,18 +921,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Named development land",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Named development land"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -982,18 +950,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Edmonds",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Edmonds"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -1007,7 +975,7 @@
         ],
         [
           {
-            "t": "Main roads and transit: Kingsway and Edmonds Street are the main roads, with Griffiths Drive and 18th Avenue serving the station area and Canada Way / 10th Avenue linking east toward New Westminster. Edmonds Station is on the Expo Line; route 116 runs between Metrotown Station and Edmonds Station via Griffiths Drive, Southridge Drive and 18th Avenue. Commute times in minutes: UNVERIFIED."
+            "t": "Main roads and transit: Kingsway and Edmonds Street are the main roads, with Griffiths Drive and 18th Avenue serving the station area and Canada Way / 10th Avenue linking east toward New Westminster. Edmonds Station is on the Expo Line; route 116 runs between Metrotown Station and Edmonds Station via Griffiths Drive, Southridge Drive and 18th Avenue. Commute times in minutes: Not verified."
           }
         ],
         [
@@ -1016,18 +984,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Edmonds",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Edmonds"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -1040,18 +1008,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Edmonds",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Edmonds"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -1069,148 +1037,148 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Edmonds",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Edmonds"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "burnaby.ca · town centres",
-            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres"
+            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres",
+            "t": "burnaby.ca · town centres"
           }
         ],
         [
           {
-            "t": "city.burnaby.bc.ca · Edmonds Community Plan",
-            "h": "http://www.city.burnaby.bc.ca/sites/default/files/acquiadam/2025-04/Edmonds-Community-Plan.pdf"
+            "h": "http://www.city.burnaby.bc.ca/sites/default/files/acquiadam/2025-04/Edmonds-Community-Plan.pdf",
+            "t": "city.burnaby.bc.ca · Edmonds Community Plan"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt116",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt116.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt116.pdf",
+            "t": "infomaps.translink.ca · tt116"
           }
         ],
         [
           {
-            "t": "burnaby.ca · edmonds community centre",
-            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/edmonds-community-centre"
+            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/edmonds-community-centre",
+            "t": "burnaby.ca · edmonds community centre"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "burnabyschools.ca · about sd41 overview",
-            "h": "https://burnabyschools.ca/about-sd41-overview/"
+            "h": "https://burnabyschools.ca/about-sd41-overview/",
+            "t": "burnabyschools.ca · about sd41 overview"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "burnaby.ca · residential utility fees",
-            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees"
+            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees",
+            "t": "burnaby.ca · residential utility fees"
           }
         ],
         [
           {
-            "t": "burnaby.ca · kingsway edmonds conceptual master plan",
-            "h": "https://www.burnaby.ca/our-city/projects/kingsway-edmonds-conceptual-master-plan"
+            "h": "https://www.burnaby.ca/our-city/projects/kingsway-edmonds-conceptual-master-plan",
+            "t": "burnaby.ca · kingsway edmonds conceptual master plan"
           }
         ],
         [
           {
-            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun",
-            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan"
+            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan",
+            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun"
           }
         ],
         [
           {
-            "t": "pub-burnaby.escribemeetings.com · filestream.ashx",
-            "h": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=77052"
+            "h": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=77052",
+            "t": "pub-burnaby.escribemeetings.com · filestream.ashx"
           }
         ],
         [
           {
-            "t": "burnaby.ca · Servicing Improvements Guide",
-            "h": "https://www.burnaby.ca/sites/default/files/acquiadam/2025-08/Servicing-Improvements-Guide.pdf"
+            "h": "https://www.burnaby.ca/sites/default/files/acquiadam/2025-08/Servicing-Improvements-Guide.pdf",
+            "t": "burnaby.ca · Servicing Improvements Guide"
           }
         ],
         [
           {
-            "t": "burnaby.ca · Parks",
-            "h": "https://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks.html"
+            "h": "https://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks.html",
+            "t": "burnaby.ca · Parks"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Edmonds",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Edmonds"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -1233,18 +1201,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1257,18 +1225,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1281,25 +1249,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Edmonds Community Centre, 7433 Edmonds Street",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Edmonds Station",
@@ -1320,14 +1289,57 @@
           "2.3"
         ]
       ],
+      "t": "table"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt106.pdf",
+            "t": "infomaps.translink.ca · tt106"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt112.pdf",
+            "t": "infomaps.translink.ca · tt112"
+          }
+        ],
+        [
+          {
+            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/edmonds-community-centre",
+            "t": "burnaby.ca · edmonds community centre"
+          }
+        ],
+        [
+          {
+            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/outdoor-fitness-circuits",
+            "t": "burnaby.ca · outdoor fitness circuits"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -1335,40 +1347,63 @@
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt106",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt106.pdf"
+            "t": "Source: burnaby.ca",
+            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt112",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt112.pdf"
-          }
-        ],
-        [
-          {
-            "t": "burnaby.ca · edmonds community centre",
-            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/edmonds-community-centre"
-          }
-        ],
-        [
-          {
-            "t": "burnaby.ca · outdoor fitness circuits",
-            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/outdoor-fitness-circuits"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
+            "t": "Source: studentsuccess.gov.bc.ca",
             "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+          }
+        ],
+        [
+          {
+            "t": "Source: infomaps.translink.ca",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt116.pdf"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
+    {
+      "a": "Vintage and form. The Kingsway node is Cressey's Kings Crossing towers (Tower 2 built 2020) plus the 2012 wood-frame Toscana low-rise; South Edmonds is Ledingham McAllister's Southgate City (Azure and Azure 2, completed 2024) and its Cedar Creek low-rises (2021–2023). All of it prices off the same Burnaby attached median ($686,000, September 2026), but warranty status, construction (concrete vs wood-frame) and depreciation-report cycles differ building by building.",
+      "gen": "tn",
+      "q": "Kingsway towers or Southgate — what's the real difference?"
+    },
+    {
+      "a": "Renting, yes for a long-term tenancy: rental-restriction bylaws have been unenforceable since November 24, 2022. The pet prohibition is different — pet bylaws remain enforceable, and a current Toscana listing records pets as \"No.\" Treat the rental line as void and the pet line as live until the registered bylaws on the Form B say otherwise.",
+      "gen": "tn",
+      "q": "Toscana says \"No Pets or Rentals\" — can I rent it out? Can I bring a dog?"
+    },
+    {
+      "a": "Full pet bylaws (numbers, size, dogs) are not confirmed from public sources for all three — read the registered bylaws.",
+      "gen": "tn",
+      "q": "Are pets allowed in the newer buildings?"
+    },
+    {
+      "a": "No. Hall Towers (7264 Kingsway) is 331 units of BC Housing non-market rental housing owned by the Provincial Rental Housing Corporation — there is nothing to buy, and it is slated for replacement under the Kingsway + Edmonds master plan without displacing tenants.",
+      "gen": "tn",
+      "q": "Is Hall Towers a condo building I can buy into?"
+    },
+    {
+      "a": "Both corridors: Stride Avenue carries Riverstone (2003), Kensington (1992), Eden at Edmonds (2012) and Maplewood Terrace (2006), with Sylvan Court (1990) on Edmonds Street; 17th Avenue carries Leeside Creek (2005), Element 1 (2020) and Element 2 (2025). The Stride stock is older and larger-complex; the 17th Avenue stock is the station-side newer product.",
+      "gen": "tn",
+      "q": "Stride Avenue or 17th Avenue — where is the townhouse choice?"
+    },
+    {
+      "a": "Long-term, yes under provincial law: strata rental-restriction bylaws have been void since Nov 24, 2022. Kensington's listing data already records rentals allowed. Short-term rentals can still be restricted by bylaw — read the registered bylaws in the Form B package.",
+      "gen": "tn",
+      "q": "Can I rent out my Edmonds townhouse?"
+    },
+    {
+      "a": "Element 2's marketing puts Edmonds Station 600 m away; Leeside Creek listings put the walk at 5 minutes; Kensington is described as a short stroll to Edmonds SkyTrain Station. Edmonds Station is on the Expo Line. Measure the walk for the specific complex — the Stride Avenue addresses sit farther south than the 17th Avenue ones.",
+      "gen": "tn",
+      "q": "How far is the SkyTrain, honestly?"
+    },
     {
       "q": "Is Edmonds a town centre?",
       "a": "Yes. Edmonds is one of Burnaby's four town centres, centred on Kingsway at Edmonds Street around Edmonds Station on the Expo Line, and the City adopted a new Edmonds Community Plan in March 2025.",
@@ -1383,51 +1418,9 @@
       "q": "How is transit in Edmonds?",
       "a": "Edmonds Station is on the Expo Line with a bus loop; route 116 also links Edmonds Station to Metrotown Station through south Burnaby via Griffiths Drive, Southridge Drive and Marine Way.",
       "gen": "muse"
-    },
-    {
-      "q": "What is happening at Kingsway and Edmonds?",
-      "a": "The City and BC Housing are planning the publicly owned 4.5-acre southwest corner: replacing Hall Towers' 331 units without displacing tenants, plus over 1,400 purpose-built rental units and approximately 1,000 market strata units; the plan is under review to align with the Burnaby 2050 OCP.",
-      "gen": "muse"
-    },
-    {
-      "gen": "tn",
-      "q": "Kingsway towers or Southgate — what's the real difference?",
-      "a": "Vintage and form. The Kingsway node is Cressey's Kings Crossing towers (Tower 2 built 2020) plus the 2012 wood-frame Toscana low-rise; South Edmonds is Ledingham McAllister's Southgate City (Azure and Azure 2, completed 2024) and its Cedar Creek low-rises (2021–2023). All of it prices off the same Burnaby attached median ($686,000, September 2026), but warranty status, construction (concrete vs wood-frame) and depreciation-report cycles differ building by building."
-    },
-    {
-      "gen": "tn",
-      "q": "Toscana says \"No Pets or Rentals\" — can I rent it out? Can I bring a dog?",
-      "a": "Renting, yes for a long-term tenancy: rental-restriction bylaws have been unenforceable since November 24, 2022. The pet prohibition is different — pet bylaws remain enforceable, and a current Toscana listing records pets as \"No.\" Treat the rental line as void and the pet line as live until the registered bylaws on the Form B say otherwise."
-    },
-    {
-      "gen": "tn",
-      "q": "Are pets allowed in the newer buildings?",
-      "a": "Full pet bylaws (numbers, size, dogs) are UNCONFIRMED from public sources for all three — read the registered bylaws."
-    },
-    {
-      "gen": "tn",
-      "q": "How far is the SkyTrain, honestly?",
-      "a": "Edmonds Station is on the Expo Line."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Hall Towers a condo building I can buy into?",
-      "a": "No. Hall Towers (7264 Kingsway) is 331 units of BC Housing non-market rental housing owned by the Provincial Rental Housing Corporation — there is nothing to buy, and it is slated for replacement under the Kingsway + Edmonds master plan without displacing tenants."
-    },
-    {
-      "gen": "tn",
-      "q": "Stride Avenue or 17th Avenue — where is the townhouse choice?",
-      "a": "Both corridors: Stride Avenue carries Riverstone (2003), Kensington (1992), Eden at Edmonds (2012) and Maplewood Terrace (2006), with Sylvan Court (1990) on Edmonds Street; 17th Avenue carries Leeside Creek (2005), Element 1 (2020) and Element 2 (2025). The Stride stock is older and larger-complex; the 17th Avenue stock is the station-side newer product."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I rent out my Edmonds townhouse?",
-      "a": "Long-term, yes under provincial law: strata rental-restriction bylaws have been void since Nov 24, 2022. Kensington's listing data already records rentals allowed. Short-term rentals can still be restricted by bylaw — read the registered bylaws in the Form B package."
-    },
-    {
-      "gen": "tn",
-      "q": "How far is the SkyTrain, honestly?",
-      "a": "Element 2's marketing puts Edmonds Station 600 m away; Leeside Creek listings put the walk at 5 minutes; Kensington is described as a short stroll to Edmonds SkyTrain Station. Edmonds Station is on the Expo Line. Measure the walk for the specific complex — the Stride Avenue addresses sit farther south than the 17th Avenue ones."
     }
-  ]
+  ],
+  "slug": "edmonds-be",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

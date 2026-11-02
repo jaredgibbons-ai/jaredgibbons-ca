@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "east-newton-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How East Newton compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How East Newton compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "East Newton against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "East Newton against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
-      "caption": "East Newton against the whole city, September 2026",
+      "caption": "East Newton against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -27,208 +24,170 @@
       "rows": [
         [
           "Detached houses",
-          "10.7%",
-          "8.3%",
-          "6% against 8%",
-          "7 of 12"
+          "10.6%",
+          "14.2%",
+          "15% against 11%",
+          "3 of 13"
         ],
         [
           "Condos and townhomes",
-          "8.7%",
-          "9.6%",
-          "8% against 7%",
-          "5 of 10"
+          "7.9%",
+          "13.7%",
+          "18% against 10%",
+          "3 of 10"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings fell from 134 in June to 120 in September (−10.4%), and it took 11.1% of the city’s 351 sales over the period; condos and townhomes: listings fell from 137 in June to 132 in September (−3.6%), and it took 6.6% of the city’s 591 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 134 in June to 110 in October (−17.9%), and it took 11.9% of the city’s 464 sales over the period; condos and townhomes: listings fell from 137 in June to 113 in October (−17.5%), and it took 8.0% of the city’s 737 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out East Newton for detached houses in September (a buyers’ best bet); condos and townhomes in June, July (a buyers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out East Newton for detached houses in September (a buyers’ best bet); condos and townhomes in June, July (a buyers’ best bet)."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Surrey real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Surrey real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Surrey homes for sale",
-            "h": "/surrey-homes-for-sale.html"
+            "h": "/surrey-homes-for-sale.html",
+            "t": "Surrey homes for sale"
           }
         ],
         [
           {
-            "t": "Surrey real estate market stats",
-            "h": "/surrey-real-estate-market-stats.html"
+            "h": "/surrey-real-estate-market-stats.html",
+            "t": "Surrey real estate market stats"
           }
         ],
         [
           {
-            "t": "Surrey houses for sale",
-            "h": "/surrey-houses-for-sale.html"
+            "h": "/surrey-houses-for-sale.html",
+            "t": "Surrey houses for sale"
           }
         ],
         [
           {
-            "t": "Surrey condos for sale",
-            "h": "/surrey-condos-for-sale.html"
+            "h": "/surrey-condos-for-sale.html",
+            "t": "Surrey condos for sale"
           }
         ],
         [
           {
-            "t": "Surrey townhomes for sale",
-            "h": "/surrey-townhomes-for-sale.html"
+            "h": "/surrey-townhomes-for-sale.html",
+            "t": "Surrey townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Surrey",
-            "h": "/sell-my-house-in-surrey.html"
+            "h": "/sell-my-house-in-surrey.html",
+            "t": "Sell my house in Surrey"
           }
         ],
         [
           {
-            "t": "Schools in Surrey",
-            "h": "/schools-in-surrey-bc.html"
+            "h": "/schools-in-surrey-bc.html",
+            "t": "Schools in Surrey"
           }
         ],
         [
           {
-            "t": "East Newton homes and market figures",
-            "h": "/east-newton.html"
+            "h": "/east-newton.html",
+            "t": "East Newton homes and market figures"
           }
         ],
         [
           {
-            "t": "Fleetwood Tynehead real estate",
-            "h": "/fleetwood-tynehead.html"
+            "h": "/fleetwood-tynehead.html",
+            "t": "Fleetwood Tynehead real estate"
           }
         ],
         [
           {
-            "t": "Fraser Heights real estate",
-            "h": "/fraser-heights.html"
+            "h": "/fraser-heights.html",
+            "t": "Fraser Heights real estate"
           }
         ],
         [
           {
-            "t": "Guildford real estate",
-            "h": "/guildford.html"
+            "h": "/guildford.html",
+            "t": "Guildford real estate"
           }
         ],
         [
           {
-            "t": "Panorama Ridge real estate",
-            "h": "/panorama-ridge.html"
+            "h": "/panorama-ridge.html",
+            "t": "Panorama Ridge real estate"
           }
         ],
         [
           {
-            "t": "Port Kells real estate",
-            "h": "/port-kells-surrey.html"
+            "h": "/port-kells-surrey.html",
+            "t": "Port Kells real estate"
           }
         ],
         [
           {
-            "t": "Queen Mary Park real estate",
-            "h": "/queen-mary-park-surrey.html"
+            "h": "/queen-mary-park-surrey.html",
+            "t": "Queen Mary Park real estate"
           }
         ],
         [
           {
-            "t": "Royal Heights real estate",
-            "h": "/royal-heights.html"
+            "h": "/royal-heights.html",
+            "t": "Royal Heights real estate"
           }
         ],
         [
           {
-            "t": "Sullivan Station real estate",
-            "h": "/sullivan-station.html"
+            "h": "/sullivan-station.html",
+            "t": "Sullivan Station real estate"
           }
         ],
         [
           {
-            "t": "West Newton real estate",
-            "h": "/west-newton.html"
+            "h": "/west-newton.html",
+            "t": "West Newton real estate"
           }
         ],
         [
           {
-            "t": "Whalley real estate",
-            "h": "/whalley.html"
+            "h": "/whalley.html",
+            "t": "Whalley real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: surreyschools.ca",
-            "h": "https://www.surreyschools.ca/schools/chimneyhill/"
-          }
-        ],
-        [
-          {
-            "t": "Source: translink.ca",
-            "h": "https://www.translink.ca/schedules-and-maps/route/R1/direction/0/round-trip"
-          }
-        ],
-        [
-          {
-            "t": "Source: surrey.ca",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing"
-          }
-        ],
-        [
-          {
-            "t": "Source: alc.gov.bc.ca",
-            "h": "https://www.alc.gov.bc.ca/"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Lots and land in East Newton",
       "gen": "tn",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Lots and land in East Newton"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -242,27 +201,27 @@
         ],
         [
           {
-            "t": "Lot character — zone minimums AS THE RESEARCH STATES THEM: Surrey Zoning Bylaw No. 12000 governs; Newton zones include RA (Acreage Residential) and the R1–R6 residential series, with bylaw minimum lot areas including R1 at the 1,858 m² band, R2 at 929 m², R3 at 464 m² for a single-family home and 557 m² for a duplex, R4 at 250 m², and R5 at 200 m² for a single-family home and 225 m² for a duplex. Older larger lots sit on the acreage-residential edges. These are bylaw minimums, not a survey of lots for sale — no typical for-sale lot size is published in the research."
+            "t": "Lot character — zone minimums AS THE RESEARCH STATES THEM: Surrey Zoning Bylaw No. 12000 governs; Newton zones include RA (Acreage Residential) and the R1–R6 residential series, with bylaw minimum lot areas including R1 at the 1,858 m² band, R2 at 929 m², R3 at 464 m² for a single-family home and 557 m² for a duplex, R4 at 250 m², and R5 at 200 m² for a single-family home and 225 m² for a duplex. Older larger lots sit on the acreage-residential edges. These are bylaw minimums, not a survey of lots for sale — no typical for-sale lot size is published."
           }
         ],
         [
           {
-            "t": "ALR vs non-ALR: No ALR designation inside East Newton was confirmed on a City page in the research; the area sits in the Serpentine River watershed uplands east of the downstream lowlands, and ALR land lies south and east of Newton generally. A specific property's ALR status is confirmed in the Agricultural Land Commission's maps — check the parcel, do not rely on the sub-area generalisation."
+            "t": "ALR vs non-ALR: No ALR designation inside East Newton was confirmed on a City page; the area sits in the Serpentine River watershed uplands east of the downstream lowlands, and ALR land lies south and east of Newton generally. A specific property's ALR status is confirmed in the Agricultural Land Commission's maps — check the parcel, do not rely on the sub-area generalisation."
           }
         ],
         [
           {
-            "t": "Serviced vs unserviced: The research documents no well/septic pocket inside East Newton; the City's SSMUH page treats properties not connected to community water and sewer as an exemption category, which is the check to run on any acreage-edge (RA) parcel — servicing for a specific lot is UNCONFIRMED until confirmed with the City."
+            "t": "Serviced vs unserviced: The research documents no well/septic pocket inside East Newton; the City's SSMUH page treats properties not connected to community water and sewer as an exemption category, which is the check to run on any acreage-edge (RA) parcel — servicing for a specific lot is not confirmed until confirmed with the City."
           }
         ],
         [
           {
-            "t": ": Silva, by Wanson Group, at 13760 75A Ave — three four-storey buildings with 261 condo homes — is the sub-area's one large new development in the research."
+            "t": ": Silva, by Wanson Group, at 13760 75A Ave — three four-storey buildings with 261 condo homes — is the sub-area's one large new development."
           }
         ],
         [
           {
-            "t": "Land assemblies / development sites: Nothing else is presented here as development inventory: UNCONFIRMED beyond those two."
+            "t": "Land assemblies / development sites: Nothing else is presented here as development inventory: Not confirmed beyond those two."
           }
         ],
         [
@@ -271,18 +230,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around East Newton",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around East Newton"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -315,18 +274,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in East Newton",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in East Newton"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -355,22 +314,22 @@
         ],
         [
           {
-            "t": "First-home-on-land programs — stated precisely: The First-Time Home Buyers' GST rebate (Bill C-4, Royal Assent March 13, 2026, per CRA News No. 122) rebates 100% of GST to $1 million (maximum $50,000), phasing out to $1.5 million, for agreements March 20, 2025–2031 — but it applies to new HOUSING, not to bare land itself; a land-only purchase does not attract it. The older GST New Housing Rebate is 36% of GST, maximum $6,300, phasing out $350,000–$450,000. Home Buyers' Plan: up to $60,000 from an RRSP. First Home Savings Account: $8,000/year, $40,000 lifetime. Whether a combined land-plus-build arrangement qualifies for housing rebates is transaction-specific: UNCONFIRMED per transaction."
+            "t": "First-home-on-land programs — stated precisely: The First-Time Home Buyers' GST rebate (Bill C-4, Royal Assent March 13, 2026, per CRA News No. 122) rebates 100% of GST to $1 million (maximum $50,000), phasing out to $1.5 million, for agreements March 20, 2025–2031 — but it applies to new HOUSING, not to bare land itself; a land-only purchase does not attract it. The older GST New Housing Rebate is 36% of GST, maximum $6,300, phasing out $350,000–$450,000. Home Buyers' Plan: up to $60,000 from an RRSP. First Home Savings Account: $8,000/year, $40,000 lifetime. Whether a combined land-plus-build arrangement qualifies for housing rebates is transaction-specific: Not confirmed per transaction."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about East Newton",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about East Newton"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -393,142 +352,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on East Newton",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on East Newton"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "surrey.ca · east newton ncps",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/newton-land-use-plans/east-newton-ncps"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/newton-land-use-plans/east-newton-ncps",
+            "t": "surrey.ca · east newton ncps"
           }
         ],
         [
           {
-            "t": "surreyschools.ca · chimneyhill",
-            "h": "https://www.surreyschools.ca/schools/chimneyhill/"
+            "h": "https://www.surreyschools.ca/schools/chimneyhill/",
+            "t": "surreyschools.ca · chimneyhill"
           }
         ],
         [
           {
-            "t": "surrey.ca · east newton business park",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/newton-land-use-plans/east-newton-business-park"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/newton-land-use-plans/east-newton-business-park",
+            "t": "surrey.ca · east newton business park"
           }
         ],
         [
           {
-            "t": "translink.ca · round trip",
-            "h": "https://www.translink.ca/schedules-and-maps/route/R1/direction/0/round-trip"
+            "h": "https://www.translink.ca/schedules-and-maps/route/R1/direction/0/round-trip",
+            "t": "translink.ca · round trip"
           }
         ],
         [
           {
-            "t": "surrey.ca · RPT 2016 R228",
-            "h": "https://www.surrey.ca/sites/default/files/corporate-reports/RPT_2016-R228.pdf"
+            "h": "https://www.surrey.ca/sites/default/files/corporate-reports/RPT_2016-R228.pdf",
+            "t": "surrey.ca · RPT 2016 R228"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · strata housing",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing",
+            "t": "www2.gov.bc.ca · strata housing"
           }
         ],
         [
           {
-            "t": "surrey.ca · BYL Zoning 12000",
-            "h": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf"
+            "h": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf",
+            "t": "surrey.ca · BYL Zoning 12000"
           }
         ],
         [
           {
-            "t": "surrey.ca · serpentine nicomekl lowlands",
-            "h": "https://www.surrey.ca/services-payments/water-drainage-sewer/flood-control/lowlands-floodplains/serpentine-nicomekl-lowlands"
+            "h": "https://www.surrey.ca/services-payments/water-drainage-sewer/flood-control/lowlands-floodplains/serpentine-nicomekl-lowlands",
+            "t": "surrey.ca · serpentine nicomekl lowlands"
           }
         ],
         [
           {
-            "t": "surrey.ca · zoning small scale multi unit housing",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing",
+            "t": "surrey.ca · zoning small scale multi unit housing"
           }
         ],
         [
           {
-            "t": "rennie.com · silva",
-            "h": "https://rennie.com/developments/silva"
+            "h": "https://rennie.com/developments/silva",
+            "t": "rennie.com · silva"
           }
         ],
         [
           {
-            "t": "surrey.ca · PLR 7921 0011 00",
-            "h": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0011-00.pdf"
+            "h": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0011-00.pdf",
+            "t": "surrey.ca · PLR 7921 0011 00"
           }
         ],
         [
           {
-            "t": "surrey.ca · servicing agreement",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-development-application-process/servicing-agreement"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-development-application-process/servicing-agreement",
+            "t": "surrey.ca · servicing agreement"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby East Newton",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby East Newton"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -556,18 +515,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -595,18 +554,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -629,18 +588,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -653,18 +612,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -672,14 +631,88 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf",
+            "t": "infomaps.translink.ca · tt321"
+          }
+        ],
+        [
+          {
+            "h": "https://www.translink.ca/plans-and-projects/projects/bus-projects/rapidbus-projects",
+            "t": "translink.ca · rapidbus projects"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt324.pdf",
+            "t": "infomaps.translink.ca · tt324"
+          }
+        ],
+        [
+          {
+            "h": "https://www.surrey.ca/parks-recreation/parks/newton-athletic-park",
+            "t": "surrey.ca · newton athletic park"
+          }
+        ],
+        [
+          {
+            "h": "https://www.surrey.ca/parks-recreation/parks/park-projects",
+            "t": "surrey.ca · park projects"
+          }
+        ],
+        [
+          {
+            "h": "http://www.surrey.ca/parks-recreation/recreation-facilities/newton-recreation-centre",
+            "t": "surrey.ca · newton recreation centre"
+          }
+        ],
+        [
+          {
+            "h": "https://surreylibraries.ca/locations/newton-branch",
+            "t": "surreylibraries.ca · newton branch"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://newtontowncentre.com/",
+            "t": "newtontowncentre.com"
+          }
+        ],
+        [
+          {
+            "h": "https://www.shoppersdrugmart.ca/en/stores/2222-shoppers-drug-mart-king-george-blvd/",
+            "t": "shoppersdrugmart.ca · 2222 shoppers drug mart king george blvd"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -687,70 +720,53 @@
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt321",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf"
+            "t": "Source: surreyschools.ca",
+            "h": "https://www.surreyschools.ca/schools/chimneyhill/"
           }
         ],
         [
           {
-            "t": "translink.ca · rapidbus projects",
-            "h": "https://www.translink.ca/plans-and-projects/projects/bus-projects/rapidbus-projects"
+            "t": "Source: translink.ca",
+            "h": "https://www.translink.ca/schedules-and-maps/route/R1/direction/0/round-trip"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt324",
-            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt324.pdf"
-          }
-        ],
-        [
-          {
-            "t": "surrey.ca · newton athletic park",
-            "h": "https://www.surrey.ca/parks-recreation/parks/newton-athletic-park"
-          }
-        ],
-        [
-          {
-            "t": "surrey.ca · park projects",
-            "h": "https://www.surrey.ca/parks-recreation/parks/park-projects"
-          }
-        ],
-        [
-          {
-            "t": "surrey.ca · newton recreation centre",
-            "h": "http://www.surrey.ca/parks-recreation/recreation-facilities/newton-recreation-centre"
-          }
-        ],
-        [
-          {
-            "t": "surreylibraries.ca · newton branch",
-            "h": "https://surreylibraries.ca/locations/newton-branch"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036"
-          }
-        ],
-        [
-          {
-            "t": "newtontowncentre.com",
-            "h": "https://newtontowncentre.com/"
-          }
-        ],
-        [
-          {
-            "t": "shoppersdrugmart.ca · 2222 shoppers drug mart king george blvd",
-            "h": "https://www.shoppersdrugmart.ca/en/stores/2222-shoppers-drug-mart-king-george-blvd/"
+            "t": "Source: alc.gov.bc.ca",
+            "h": "https://www.alc.gov.bc.ca/"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
+    {
+      "a": "Rarely as a new-subdivision lot — the research verifies no bare-land subdivision here. The realistic purchase is a fee-simple house lot (usually with a house on it) bought for rebuild or added units, or Business Park ground at the north end.",
+      "gen": "tn",
+      "q": "Can I actually buy a vacant lot in East Newton?"
+    },
+    {
+      "a": "Under Surrey's SSMUH framework: 3 units on lots under 280 m², 4 on lots over 280 m², and up to 6 on eligible lots of 281 m² or more within 400 m of a frequent bus stop — confirm the lot's size band and bus-stop eligibility with the City before valuing it.",
+      "gen": "tn",
+      "q": "How many units can my lot hold?"
+    },
+    {
+      "a": "Most subdivision ground is on community services; acreage-edge (RA) parcels need a specific check, because properties not connected to community water and sewer are an SSMUH exemption category. Servicing for a specific lot: Not confirmed until the City confirms it.",
+      "gen": "tn",
+      "q": "Is the lot serviced — water and sewer, or well and septic?"
+    },
+    {
+      "a": "The City's process runs through detailing and a Servicing Agreement that sets the off-site works, services and financial securities for final approval. No City source states a dollar figure for this area — any servicing/DCC number quoted without a City estimate for the specific parcel is not confirmed.",
+      "gen": "tn",
+      "q": "What does it cost to subdivide or develop?"
+    },
+    {
+      "a": "No in-area ALR or floodplain designation was confirmed; the uplands sit east of the Serpentine lowlands. Check the parcel on the ALC maps and the City's flood mapping before subjects.",
+      "gen": "tn",
+      "q": "Is my lot in the ALR or a floodplain?"
+    },
     {
       "q": "Which schools serve East Newton?",
       "a": "SD36 schools in the area are Chimney Hill and M.B. Sanford elementary schools, and Tamanawis and Panorama Ridge secondary schools; the assigned school for a specific address is set through the SD36 School Locator.",
@@ -762,45 +778,18 @@
       "gen": "muse"
     },
     {
-      "q": "Can an East Newton lot hold a duplex or more units?",
-      "a": "Yes, within the City's SSMUH framework — up to 3 units on lots under 280 m², 4 units on lots over 280 m², and 6 units on eligible lots of 281 m² or more within 400 m of a frequent bus stop; R3 and R5 zones also set duplex minimum lot areas of 557 m² and 225 m².",
-      "gen": "muse"
-    },
-    {
       "q": "Is East Newton in a floodplain or the ALR?",
       "a": "No floodplain or ALR designation inside East Newton was confirmed on an official page; check a specific property's ALR status on the Agricultural Land Commission maps.",
       "gen": "muse"
-    },
-    {
-      "gen": "tn",
-      "q": "Can I actually buy a vacant lot in East Newton?",
-      "a": "Rarely as a new-subdivision lot — the research verifies no bare-land subdivision here. The realistic purchase is a fee-simple house lot (usually with a house on it) bought for rebuild or added units, or Business Park ground at the north end."
-    },
-    {
-      "gen": "tn",
-      "q": "How many units can my lot hold?",
-      "a": "Under Surrey's SSMUH framework: 3 units on lots under 280 m², 4 on lots over 280 m², and up to 6 on eligible lots of 281 m² or more within 400 m of a frequent bus stop — confirm the lot's size band and bus-stop eligibility with the City before valuing it."
-    },
-    {
-      "gen": "tn",
-      "q": "Is the lot serviced — water and sewer, or well and septic?",
-      "a": "Most subdivision ground is on community services; acreage-edge (RA) parcels need a specific check, because properties not connected to community water and sewer are an SSMUH exemption category. Servicing for a specific lot: UNCONFIRMED until the City confirms it."
-    },
-    {
-      "gen": "tn",
-      "q": "What does it cost to subdivide or develop?",
-      "a": "The City's process runs through detailing and a Servicing Agreement that sets the off-site works, services and financial securities for final approval. No City source in the research states a dollar figure for this area — any servicing/DCC number quoted without a City estimate for the specific parcel is UNCONFIRMED."
-    },
-    {
-      "gen": "tn",
-      "q": "Is my lot in the ALR or a floodplain?",
-      "a": "No in-area ALR or floodplain designation was confirmed in the research; the uplands sit east of the Serpentine lowlands. Check the parcel on the ALC maps and the City's flood mapping before subjects."
     }
+  ],
+  "slug": "east-newton-guide",
+  "status": "generated",
+  "suppress": [
+    "Related guides"
   ],
   "suppress_gen": [
     "Related guides"
   ],
-  "suppress": [
-    "Related guides"
-  ]
+  "updated": "2026-11-01"
 }

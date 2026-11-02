@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "quay",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Quay homes listed and sold, June to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Quay homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Quay, September 2026. No detached houses were listed or sold in Quay between June and September. Condos and townhomes: 59 listed at month end and 16 sold in September, a sales ratio of 27% (a sellers’ market).",
-      "gen": "snapstats"
+      "text": "Quay, October 2026. No detached houses were listed or sold in Quay between June and October. Condos and townhomes: 51 listed at month end and 7 sold in October, a sales ratio of 14% (a balanced market)."
     },
     {
-      "t": "table",
       "caption": "Quay listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Condos and townhomes listed",
@@ -47,194 +44,162 @@
           "59",
           "16",
           "27%"
+        ],
+        [
+          "October 2026",
+          "51",
+          "7",
+          "14%"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Condos and townhomes: 51 sold over 4 months against an average of 66.8 listed, about 5.2 months of listings at that pace; the busiest month was September with 16 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Condos and townhomes: 58 sold over 5 months against an average of 63.6 listed, about 5.5 months of listings at that pace; the busiest month was September with 16 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Quay by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Quay by home type"
     },
     {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Quay condos and townhomes for sale",
-            "h": "/quay-new-westminster-condos-townhomes-for-sale.html"
-          }
-        ]
-      ],
       "gen": "typepage",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "More New Westminster real estate",
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "list",
       "items": [
         [
           {
-            "t": "New Westminster homes for sale",
-            "h": "/new-westminster-homes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "New Westminster real estate market stats",
-            "h": "/new-westminster-real-estate-market-stats.html"
-          }
-        ],
-        [
-          {
-            "t": "New Westminster condos for sale",
-            "h": "/new-westminster-condos-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "New Westminster townhomes for sale",
-            "h": "/new-westminster-townhomes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Schools in New Westminster",
-            "h": "/schools-in-new-westminster-bc.html"
-          }
-        ],
-        [
-          {
-            "t": "Queens Park real estate",
-            "h": "/queens-park.html"
-          }
-        ],
-        [
-          {
-            "t": "Queensborough real estate",
-            "h": "/queensborough.html"
-          }
-        ],
-        [
-          {
-            "t": "Sapperton real estate",
-            "h": "/sapperton-new-westminster.html"
-          }
-        ],
-        [
-          {
-            "t": "The Heights real estate",
-            "h": "/the-heights-new-westminster.html"
-          }
-        ],
-        [
-          {
-            "t": "Uptown real estate",
-            "h": "/uptown-new-westminster.html"
-          }
-        ],
-        [
-          {
-            "t": "West End real estate",
-            "h": "/west-end-new-westminster.html"
-          }
-        ],
-        [
-          {
-            "t": "Connaught Heights real estate",
-            "h": "/connaught-heights.html"
-          }
-        ],
-        [
-          {
-            "t": "Downtown real estate",
-            "h": "/downtown-nw.html"
-          }
-        ],
-        [
-          {
-            "t": "Fraserview real estate",
-            "h": "/fraserview-nw.html"
-          }
-        ],
-        [
-          {
-            "t": "GlenBrooke North real estate",
-            "h": "/glenbrooke-north.html"
+            "h": "/quay-new-westminster-condos-townhomes-for-sale.html",
+            "t": "Quay condos and townhomes for sale"
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "h",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "More New Westminster real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Source: newwestcity.ca (1)",
-            "h": "https://www.newwestcity.ca/database/files/library/NWRFP_20_23_Addendum_1.pdf"
+            "h": "/new-westminster-homes-for-sale.html",
+            "t": "New Westminster homes for sale"
           }
         ],
         [
           {
-            "t": "Source: translink.ca",
-            "h": "https://www.translink.ca/-/media/translink/documents/schedules-and-maps/schedules-by-region/2024-schedules/september/burnaby-new-west-p155.pdf"
+            "h": "/new-westminster-real-estate-market-stats.html",
+            "t": "New Westminster real estate market stats"
           }
         ],
         [
           {
-            "t": "Source: newwestschools.ca",
-            "h": "https://newwestschools.ca/our-schools/registration/"
+            "h": "/new-westminster-condos-for-sale.html",
+            "t": "New Westminster condos for sale"
           }
         ],
         [
           {
-            "t": "Source: newwestcity.ca (4)",
-            "h": "http://www.newwestcity.ca/parks-and-recreation/parks/community-parks"
+            "h": "/new-westminster-townhomes-for-sale.html",
+            "t": "New Westminster townhomes for sale"
+          }
+        ],
+        [
+          {
+            "h": "/schools-in-new-westminster-bc.html",
+            "t": "Schools in New Westminster"
+          }
+        ],
+        [
+          {
+            "h": "/queens-park.html",
+            "t": "Queens Park real estate"
+          }
+        ],
+        [
+          {
+            "h": "/queensborough.html",
+            "t": "Queensborough real estate"
+          }
+        ],
+        [
+          {
+            "h": "/sapperton-new-westminster.html",
+            "t": "Sapperton real estate"
+          }
+        ],
+        [
+          {
+            "h": "/the-heights-new-westminster.html",
+            "t": "The Heights real estate"
+          }
+        ],
+        [
+          {
+            "h": "/uptown-new-westminster.html",
+            "t": "Uptown real estate"
+          }
+        ],
+        [
+          {
+            "h": "/west-end-new-westminster.html",
+            "t": "West End real estate"
+          }
+        ],
+        [
+          {
+            "h": "/connaught-heights.html",
+            "t": "Connaught Heights real estate"
+          }
+        ],
+        [
+          {
+            "h": "/downtown-nw.html",
+            "t": "Downtown real estate"
+          }
+        ],
+        [
+          {
+            "h": "/fraserview-nw.html",
+            "t": "Fraserview real estate"
+          }
+        ],
+        [
+          {
+            "h": "/glenbrooke-north.html",
+            "t": "GlenBrooke North real estate"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Lots and land in Quay",
       "gen": "tn",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Lots and land in Quay"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Fee-simple lots",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Fee-simple lots"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -243,12 +208,12 @@
         ],
         [
           {
-            "t": "Lot character from the zones: waterfront parcels sit in multiple-unit residential and comprehensive development districts under Zoning Bylaw No. 6680, 2001, with zone-specific minimums in the bylaw text; a Quay-specific minimum lot size is UNVERIFIED — no figure is published here."
+            "t": "Lot character from the zones: waterfront parcels sit in multiple-unit residential and comprehensive development districts under Zoning Bylaw No. 6680, 2001, with zone-specific minimums in the bylaw text; a Quay-specific minimum lot size is not verified — no figure is published here."
           }
         ],
         [
           {
-            "t": "Serviced position: the waterfront is fully urban strata stock served by City water / sewer and the City's own electrical utility; a 2026 utility dollar figure for a Quay strata unit is UNVERIFIED, and no well/septic position arises on this evidence."
+            "t": "Serviced position: the waterfront is fully urban strata stock served by City water / sewer and the City's own electrical utility; a 2026 utility dollar figure for a Quay strata unit is not verified, and no well/septic position arises on this evidence."
           }
         ],
         [
@@ -263,22 +228,22 @@
         ],
         [
           {
-            "t": "Market context, labelled correctly: New Westminster IS a SnapStats-covered community. SnapStats has NO land category, and no figure below is a land figure. Sub-area medians are UNVERIFIED (community level only)."
+            "t": "Market context, labelled correctly: New Westminster IS a SnapStats-covered community. SnapStats has NO land category, and no figure below is a land figure. Sub-area medians are not verified (community level only)."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Bare-land strata",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Bare-land strata"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -286,18 +251,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Completed strata land-form",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Completed strata land-form"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -310,22 +275,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Quay",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Quay"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "The Quay is the City of New Westminster's Downtown waterfront neighbourhood along Quayside Drive on the Fraser River; \"Quay\" is the GVR board sub-area name in the SnapStats GVR September 2026 report, and the City's context-statement name for the same waterfront is \"Quayside,\" listed among its Historic Neighbourhood Context Statements. Precise board boundary roads are UNVERIFIED."
+            "t": "The Quay is the City of New Westminster's Downtown waterfront neighbourhood along Quayside Drive on the Fraser River; \"Quay\" is the GVR board sub-area name in the SnapStats GVR September 2026 report, and the City's context-statement name for the same waterfront is \"Quayside,\" listed among its Historic Neighbourhood Context Statements. Precise board boundary roads are not verified."
           }
         ],
         [
@@ -335,7 +300,7 @@
         ],
         [
           {
-            "t": "Roads and transit: Quayside Drive is the waterfront road; Columbia Street and 8th Street link the Quay to Downtown and New Westminster Station, and Stewardson Way links west toward Marine Way and Burnaby. New Westminster Station and Columbia Station (Expo Line) serve the Quay at the top of the waterfront; TransLink route 103 is the Quayside / New Westminster Station route and route 102 serves Victoria Hill / New Westminster Station. Commute times in minutes are UNVERIFIED."
+            "t": "Roads and transit: Quayside Drive is the waterfront road; Columbia Street and 8th Street link the Quay to Downtown and New Westminster Station, and Stewardson Way links west toward Marine Way and Burnaby. New Westminster Station and Columbia Station (Expo Line) serve the Quay at the top of the waterfront; TransLink route 103 is the Quayside / New Westminster Station route and route 102 serves Victoria Hill / New Westminster Station. Commute times in minutes are not verified."
           }
         ],
         [
@@ -344,18 +309,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Quay",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Quay"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -373,18 +338,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Quay",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Quay"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -407,136 +372,136 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Quay",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Quay"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "newwestcity.ca · community parks",
-            "h": "http://www.newwestcity.ca/parks-and-recreation/parks/community-parks"
+            "h": "http://www.newwestcity.ca/parks-and-recreation/parks/community-parks",
+            "t": "newwestcity.ca · community parks"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · past event materials and council reports",
-            "h": "https://www.newwestcity.ca/ocp/past-event-materials-and-council-reports"
+            "h": "https://www.newwestcity.ca/ocp/past-event-materials-and-council-reports",
+            "t": "newwestcity.ca · past event materials and council reports"
           }
         ],
         [
           {
-            "t": "translink.ca · burnaby new west p155",
-            "h": "https://www.translink.ca/-/media/translink/documents/schedules-and-maps/schedules-by-region/2024-schedules/september/burnaby-new-west-p155.pdf"
+            "h": "https://www.translink.ca/-/media/translink/documents/schedules-and-maps/schedules-by-region/2024-schedules/september/burnaby-new-west-p155.pdf",
+            "t": "translink.ca · burnaby new west p155"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · royal columbian hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/New-Westminster/royal-columbian-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/New-Westminster/royal-columbian-hospital",
+            "t": "fraserhealth.ca · royal columbian hospital"
           }
         ],
         [
           {
-            "t": "newwestschools.ca · registration",
-            "h": "https://newwestschools.ca/our-schools/registration/"
+            "h": "https://newwestschools.ca/our-schools/registration/",
+            "t": "newwestschools.ca · registration"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · NWRFP 20 23 Addendum 1",
-            "h": "https://www.newwestcity.ca/database/files/library/NWRFP_20_23_Addendum_1.pdf"
+            "h": "https://www.newwestcity.ca/database/files/library/NWRFP_20_23_Addendum_1.pdf",
+            "t": "newwestcity.ca · NWRFP 20 23 Addendum 1"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · Zoning Bylaw No 6680 2001 as of June 30 2022 (Co",
-            "h": "https://www.newwestcity.ca/database/files/library/Zoning_Bylaw_No_6680_2001_as_of_June_30_2022_(Complete).pdf"
+            "h": "https://www.newwestcity.ca/database/files/library/Zoning_Bylaw_No_6680_2001_as_of_June_30_2022_(Complete).pdf",
+            "t": "newwestcity.ca · Zoning Bylaw No 6680 2001 as of June 30 2022 (Co"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · Housing web update   Non Market details",
-            "h": "https://newwestcity.ca/database/rte/Housing%20web%20update%20-%20Non-Market%20details.pdf"
+            "h": "https://newwestcity.ca/database/rte/Housing%20web%20update%20-%20Non-Market%20details.pdf",
+            "t": "newwestcity.ca · Housing web update Non Market details"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · flood management",
-            "h": "http://www.newwestcity.ca/services/public-safety/flood-management"
+            "h": "http://www.newwestcity.ca/services/public-safety/flood-management",
+            "t": "newwestcity.ca · flood management"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · 7142 Subdivision",
-            "h": "https://www.newwestcity.ca/database/files/library/7142_Subdivision.pdf"
+            "h": "https://www.newwestcity.ca/database/files/library/7142_Subdivision.pdf",
+            "t": "newwestcity.ca · 7142 Subdivision"
           }
         ],
         [
           {
-            "t": "newwestcity.ca · General Guide to Subdivision Process 2012 Final",
-            "h": "https://www.newwestcity.ca/database/rte/files/General%20Guide%20to%20Subdivision%20Process%202012-Final.pdf"
+            "h": "https://www.newwestcity.ca/database/rte/files/General%20Guide%20to%20Subdivision%20Process%202012-Final.pdf",
+            "t": "newwestcity.ca · General Guide to Subdivision Process 2012 Final"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Quay",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Quay"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -559,18 +524,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -588,18 +553,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -612,18 +577,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -636,25 +601,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Anvil Centre, 777 Columbia Street",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "New Westminster Station",
@@ -681,14 +647,75 @@
           "1.7"
         ]
       ],
+      "t": "table"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://anvilcentre.com/",
+            "t": "anvilcentre.com"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt103.pdf",
+            "t": "infomaps.translink.ca · tt103"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt102.pdf",
+            "t": "infomaps.translink.ca · tt102"
+          }
+        ],
+        [
+          {
+            "h": "http://www.newwestcity.ca/parks-and-recreation/parks/community-parks",
+            "t": "newwestcity.ca · community parks"
+          }
+        ],
+        [
+          {
+            "h": "https://www.nwpl.ca/about-us/hours-and-locations/",
+            "t": "nwpl.ca · hours and locations"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/040",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.shopsatnewwest.com/business-type/other/",
+            "t": "shopsatnewwest.com · other"
+          }
+        ],
+        [
+          {
+            "h": "https://www.shoppersdrugmart.ca/en/stores/2243-shoppers-drug-mart-shops-at-new-west-station/",
+            "t": "shoppersdrugmart.ca · 2243 shoppers drug mart shops at new west statio"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -696,102 +723,54 @@
       "items": [
         [
           {
-            "t": "anvilcentre.com",
-            "h": "https://anvilcentre.com/"
+            "t": "Source: newwestcity.ca (1)",
+            "h": "https://www.newwestcity.ca/database/files/library/NWRFP_20_23_Addendum_1.pdf"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt103",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt103.pdf"
-          }
-        ],
-        [
-          {
-            "t": "infomaps.translink.ca · tt102",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt102.pdf"
-          }
-        ],
-        [
-          {
-            "t": "newwestcity.ca · community parks",
+            "t": "Source: newwestcity.ca (2)",
             "h": "http://www.newwestcity.ca/parks-and-recreation/parks/community-parks"
-          }
-        ],
-        [
-          {
-            "t": "nwpl.ca · hours and locations",
-            "h": "https://www.nwpl.ca/about-us/hours-and-locations/"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/040"
-          }
-        ],
-        [
-          {
-            "t": "shopsatnewwest.com · other",
-            "h": "https://www.shopsatnewwest.com/business-type/other/"
-          }
-        ],
-        [
-          {
-            "t": "shoppersdrugmart.ca · 2243 shoppers drug mart shops at new west statio",
-            "h": "https://www.shoppersdrugmart.ca/en/stores/2243-shoppers-drug-mart-shops-at-new-west-station/"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
+    {
+      "a": "There is no fee-simple lot inventory here to buy.",
+      "gen": "tn",
+      "q": "Can I buy a lot — or a detached house — in the Quay?"
+    },
+    {
+      "a": "Confirm the unit's own floor level against the building's FCL compliance, plus the strata insurance position, in the strata documents — not the listing.",
+      "gen": "tn",
+      "q": "What does Floodplain Zone 3 mean for a ground-level unit?"
+    },
+    {
+      "a": "No — they are co-operative / non-market complexes (84 and 72 units, mixed tenures) in the City's non-market inventory; membership housing, not strata title or fee-simple land for sale.",
+      "gen": "tn",
+      "q": "Are Westminster Landing and Riverbend land I can buy into?"
+    },
+    {
+      "a": "Building-by-building pricing beats city-wide averages here, and SnapStats publishes no Quay-specific median.",
+      "gen": "tn",
+      "q": "How active is this market, honestly?"
+    },
     {
       "q": "Is the Quay in the Fraser River floodplain?",
       "a": "Yes — the City's floodplain study puts the Quay in Floodplain Zone 3, where many newer buildings have floor space above the Flood Construction Level but egress and the waterfront path sit below it; confirm the specific building's compliance and insurance.",
       "gen": "muse"
     },
     {
-      "q": "What sold in the Quay in September 2026?",
-      "a": "Condos & townhomes: 16 solds from 59 listings, a 27% sales ratio; there was no detached stock listed. At the New Westminster community level the condos & townhomes median sale price was $560,000 (as of September 2026, Source: SnapStats GVR September 2026 report).",
-      "gen": "muse"
-    },
-    {
-      "q": "Which SkyTrain stations and bus serve the Quay?",
-      "a": "New Westminster Station and Columbia Station, both on the Expo Line, at the top of the waterfront; TransLink route 103 runs between Quayside and New Westminster Station.",
-      "gen": "muse"
-    },
-    {
-      "q": "Which schools serve a Quay address?",
-      "a": "For the sample address 800 Carnarvon Street, the SD40 locator result is École Qayqayt Elementary, Fraser River Middle and New Westminster Secondary; catchments are address-based, so check the exact Quayside Drive address in the locator.",
-      "gen": "muse"
-    },
-    {
       "q": "What park anchors the Quay waterfront?",
       "a": "Westminster Pier Park, 600 Quayside Drive, connects with Quayside Park and the Waterfront Esplanade boardwalk along the Fraser River.",
       "gen": "muse"
-    },
-    {
-      "gen": "tn",
-      "q": "Can I buy a lot — or a detached house — in the Quay?",
-      "a": "There is no fee-simple lot inventory here to buy."
-    },
-    {
-      "gen": "tn",
-      "q": "What does Floodplain Zone 3 mean for a ground-level unit?",
-      "a": "Confirm the unit's own floor level against the building's FCL compliance, plus the strata insurance position, in the strata documents — not the listing."
-    },
-    {
-      "gen": "tn",
-      "q": "Are Westminster Landing and Riverbend land I can buy into?",
-      "a": "No — they are co-operative / non-market complexes (84 and 72 units, mixed tenures) in the City's non-market inventory; membership housing, not strata title or fee-simple land for sale."
-    },
-    {
-      "gen": "tn",
-      "q": "How active is this market, honestly?",
-      "a": "Building-by-building pricing beats city-wide averages here, and SnapStats publishes no Quay-specific median."
     }
-  ]
+  ],
+  "slug": "quay",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

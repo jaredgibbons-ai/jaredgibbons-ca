@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "cottonwood-mr",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Cottonwood homes listed and sold, June to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Cottonwood homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Cottonwood, September 2026. Detached houses: 55 listed at month end and 5 sold in September, a sales ratio of 9% (a buyers’ market). Condos and townhomes: 34 listed at month end and 4 sold in September, a sales ratio of 12% (a balanced market).",
-      "gen": "snapstats"
+      "text": "Cottonwood, October 2026. Detached houses: 46 listed at month end and 10 sold in October, a sales ratio of 22% (a sellers’ market). Condos and townhomes: 36 listed at month end and 5 sold in October, a sales ratio of 14% (a balanced market)."
     },
     {
-      "t": "table",
       "caption": "Cottonwood listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -62,231 +59,196 @@
           "34",
           "4",
           "12%"
+        ],
+        [
+          "October 2026",
+          "46",
+          "10",
+          "22%",
+          "36",
+          "5",
+          "14%"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 19 sold over 4 months against an average of 54.5 listed, about 11.5 months of listings at that pace; the busiest month was June with 5 sold. Condos and townhomes: 29 sold over 4 months against an average of 37.0 listed, about 5.1 months of listings at that pace; the busiest month was July with 10 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 29 sold over 5 months against an average of 52.8 listed, about 9.1 months of listings at that pace; the busiest month was October with 10 sold. Condos and townhomes: 34 sold over 5 months against an average of 36.8 listed, about 5.4 months of listings at that pace; the busiest month was July with 10 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Cottonwood by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Cottonwood by home type"
     },
     {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Cottonwood houses for sale",
-            "h": "/cottonwood-maple-ridge-houses-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Cottonwood condos and townhomes for sale",
-            "h": "/cottonwood-maple-ridge-condos-townhomes-for-sale.html"
-          }
-        ]
-      ],
       "gen": "typepage",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "More Maple Ridge real estate",
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "list",
       "items": [
         [
           {
-            "t": "Maple Ridge homes for sale",
-            "h": "/maple-ridge-homes-for-sale.html"
+            "h": "/cottonwood-maple-ridge-houses-for-sale.html",
+            "t": "Cottonwood houses for sale"
           }
         ],
         [
           {
-            "t": "Maple Ridge real estate market stats",
-            "h": "/maple-ridge-real-estate-market-stats.html"
-          }
-        ],
-        [
-          {
-            "t": "Maple Ridge houses for sale",
-            "h": "/maple-ridge-houses-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Maple Ridge condos for sale",
-            "h": "/maple-ridge-condos-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Maple Ridge townhomes for sale",
-            "h": "/maple-ridge-townhomes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Sell my house in Maple Ridge",
-            "h": "/sell-my-house-in-maple-ridge.html"
-          }
-        ],
-        [
-          {
-            "t": "Cottonwood neighbourhood guide",
-            "h": "/cottonwood-maple-ridge-guide.html"
-          }
-        ],
-        [
-          {
-            "t": "East Central real estate",
-            "h": "/east-central.html"
-          }
-        ],
-        [
-          {
-            "t": "Northeast real estate",
-            "h": "/northeast.html"
-          }
-        ],
-        [
-          {
-            "t": "Northwest real estate",
-            "h": "/northwest-maple-ridge.html"
-          }
-        ],
-        [
-          {
-            "t": "Silver Valley real estate",
-            "h": "/silver-valley.html"
-          }
-        ],
-        [
-          {
-            "t": "Southwest real estate",
-            "h": "/southwest-maple-ridge.html"
-          }
-        ],
-        [
-          {
-            "t": "Thornhill real estate",
-            "h": "/thornhill-mr.html"
-          }
-        ],
-        [
-          {
-            "t": "Websters Corners real estate",
-            "h": "/websters-corners.html"
-          }
-        ],
-        [
-          {
-            "t": "West Central real estate",
-            "h": "/west-central.html"
-          }
-        ],
-        [
-          {
-            "t": "Whonnock real estate",
-            "h": "/whonnock.html"
-          }
-        ],
-        [
-          {
-            "t": "Albion real estate",
-            "h": "/albion.html"
+            "h": "/cottonwood-maple-ridge-condos-townhomes-for-sale.html",
+            "t": "Cottonwood condos and townhomes for sale"
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "h",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "More Maple Ridge real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Source: sd42.ca",
-            "h": "https://www.sd42.ca/elementary-schools"
+            "h": "/maple-ridge-homes-for-sale.html",
+            "t": "Maple Ridge homes for sale"
           }
         ],
         [
           {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf"
+            "h": "/maple-ridge-real-estate-market-stats.html",
+            "t": "Maple Ridge real estate market stats"
           }
         ],
         [
           {
-            "t": "Source: mapleridge.ca (3)",
-            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites"
+            "h": "/maple-ridge-houses-for-sale.html",
+            "t": "Maple Ridge houses for sale"
           }
         ],
         [
           {
-            "t": "Source: metrovancouver.org",
-            "h": "https://metrovancouver.org/services/regional-parks/park/kanaka-creek-regional-park"
+            "h": "/maple-ridge-condos-for-sale.html",
+            "t": "Maple Ridge condos for sale"
           }
         ],
         [
           {
-            "t": "Source: mapleridge.ca (5)",
-            "h": "https://www.mapleridge.ca/media/file/be-flood-ready-guide-fraser-river-city-maple-ridge"
+            "h": "/maple-ridge-townhomes-for-sale.html",
+            "t": "Maple Ridge townhomes for sale"
+          }
+        ],
+        [
+          {
+            "h": "/sell-my-house-in-maple-ridge.html",
+            "t": "Sell my house in Maple Ridge"
+          }
+        ],
+        [
+          {
+            "h": "/cottonwood-maple-ridge-guide.html",
+            "t": "Cottonwood neighbourhood guide"
+          }
+        ],
+        [
+          {
+            "h": "/east-central.html",
+            "t": "East Central real estate"
+          }
+        ],
+        [
+          {
+            "h": "/northeast.html",
+            "t": "Northeast real estate"
+          }
+        ],
+        [
+          {
+            "h": "/northwest-maple-ridge.html",
+            "t": "Northwest real estate"
+          }
+        ],
+        [
+          {
+            "h": "/silver-valley.html",
+            "t": "Silver Valley real estate"
+          }
+        ],
+        [
+          {
+            "h": "/southwest-maple-ridge.html",
+            "t": "Southwest real estate"
+          }
+        ],
+        [
+          {
+            "h": "/thornhill-mr.html",
+            "t": "Thornhill real estate"
+          }
+        ],
+        [
+          {
+            "h": "/websters-corners.html",
+            "t": "Websters Corners real estate"
+          }
+        ],
+        [
+          {
+            "h": "/west-central.html",
+            "t": "West Central real estate"
+          }
+        ],
+        [
+          {
+            "h": "/whonnock.html",
+            "t": "Whonnock real estate"
+          }
+        ],
+        [
+          {
+            "h": "/albion.html",
+            "t": "Albion real estate"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "p",
-      "text": "Cottonwood 55+ homes for sale",
+      "gen": "n55link",
       "h": "/cottonwood-mr-55-plus-homes-for-sale.html",
       "pos": "end",
-      "gen": "n55link"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Townhome complexes in Cottonwood MR",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
       "t": "p",
-      "text": "Name distinction, stated near the top so the two are never conflated: \"Cottonwood MR\" is a MAPLE RIDGE board sub-area (the MR suffix is the board's distinguisher). It is NOT Cottonwood Village in Chilliwack, which is a pad-rental manufactured-home park.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Cottonwood 55+ homes for sale"
     },
     {
+      "gen": "tn",
+      "level": 2,
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Cottonwood MR",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Cottonwood MR"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "pos": "end",
+      "t": "p",
+      "text": "Name distinction, stated near the top so the two are never conflated: \"Cottonwood MR\" is a MAPLE RIDGE board sub-area (the MR suffix is the board's distinguisher). It is NOT Cottonwood Village in Chilliwack, which is a pad-rental manufactured-home park."
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Cottonwood MR"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -319,18 +281,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Cottonwood MR",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Cottonwood MR"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -368,18 +330,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Cottonwood MR",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Cottonwood MR"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -402,142 +364,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Cottonwood MR",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Cottonwood MR"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "mapleridge.ca · our neighbourhoods",
-            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods"
+            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods",
+            "t": "mapleridge.ca · our neighbourhoods"
           }
         ],
         [
           {
-            "t": "sd42.ca · elementary schools",
-            "h": "https://www.sd42.ca/elementary-schools"
+            "h": "https://www.sd42.ca/elementary-schools",
+            "t": "sd42.ca · elementary schools"
           }
         ],
         [
           {
-            "t": "metrovancouver.org · kanaka creek regional park",
-            "h": "https://metrovancouver.org/services/regional-parks/park/kanaka-creek-regional-park"
+            "h": "https://metrovancouver.org/services/regional-parks/park/kanaka-creek-regional-park",
+            "t": "metrovancouver.org · kanaka creek regional park"
           }
         ],
         [
           {
-            "t": "sd42.ca · school locator",
-            "h": "https://www.sd42.ca/school-locator/"
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "sd42.ca · school locator"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · r748",
-            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf"
+            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf",
+            "t": "infomaps.translink.ca · r748"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · cottonwood terrace 11355 drive",
-            "h": "https://www.bccondosandhomes.com/building/cottonwood-terrace-11355-drive"
+            "h": "https://www.bccondosandhomes.com/building/cottonwood-terrace-11355-drive",
+            "t": "bccondosandhomes.com · cottonwood terrace 11355 drive"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · carriage lane 11358 cottonwood drive",
-            "h": "https://www.bccondosandhomes.com/building/carriage-lane-11358-cottonwood-drive"
+            "h": "https://www.bccondosandhomes.com/building/carriage-lane-11358-cottonwood-drive",
+            "t": "bccondosandhomes.com · carriage lane 11358 cottonwood drive"
           }
         ],
         [
           {
-            "t": "stgeorgesvillage.ca · 070889 39221c746a9b483980e20a3596cdb580",
-            "h": "https://www.stgeorgesvillage.ca/_files/ugd/070889_39221c746a9b483980e20a3596cdb580.pdf"
+            "h": "https://www.stgeorgesvillage.ca/_files/ugd/070889_39221c746a9b483980e20a3596cdb580.pdf",
+            "t": "stgeorgesvillage.ca · 070889 39221c746a9b483980e20a3596cdb580"
           }
         ],
         [
           {
-            "t": "learningondemand.bchousing.org · Zone 4 Seniors and Adults with Disabilities",
-            "h": "https://learningondemand.bchousing.org/sites/default/files/media/documents/Zone-4-Seniors-and-Adults-with-Disabilities.pdf"
+            "h": "https://learningondemand.bchousing.org/sites/default/files/media/documents/Zone-4-Seniors-and-Adults-with-Disabilities.pdf",
+            "t": "learningondemand.bchousing.org · Zone 4 Seniors and Adults with Disabilities"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · Cottonwood North Park 44",
-            "h": "https://www.mapleridge.ca/Facilities/Facility/Details/Cottonwood-North-Park-44"
+            "h": "https://www.mapleridge.ca/Facilities/Facility/Details/Cottonwood-North-Park-44",
+            "t": "mapleridge.ca · Cottonwood North Park 44"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · strata housing",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing",
+            "t": "www2.gov.bc.ca · strata housing"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for ",
-            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/"
+            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/",
+            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · planning application forms procedures",
-            "h": "https://www.mapleridge.ca/build-do-business/land-development/planning-application-forms-procedures"
+            "h": "https://www.mapleridge.ca/build-do-business/land-development/planning-application-forms-procedures",
+            "t": "mapleridge.ca · planning application forms procedures"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Cottonwood MR",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Fee-simple lots",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Cottonwood MR"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Fee-simple lots"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -555,18 +517,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Bare-land strata",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Bare-land strata"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -574,18 +536,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Servicing, ALR, creek and assemblies",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Servicing, ALR, creek and assemblies"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -594,7 +556,7 @@
         ],
         [
           {
-            "t": "Serviced vs unserviced: no well/septic position and no parcel-level servicing statement is documented for Cottonwood MR lots in the research — held UNCONFIRMED parcel-by-parcel here; confirm municipal water/sewer connection with the City for the specific lot. No servicing claim is filled in."
+            "t": "Serviced vs unserviced: no well/septic position and no parcel-level servicing statement is documented for Cottonwood MR lots — held not confirmed parcel-by-parcel here; confirm municipal water/sewer connection with the City for the specific lot. No servicing claim is filled in."
           }
         ],
         [
@@ -604,32 +566,32 @@
         ],
         [
           {
-            "t": "Land assemblies / development sites / rezoning proposals: none documented in the research for Cottonwood MR — no assembly, development site or rezoning proposal is named, and none is presented as for-sale inventory. South of the area, the Lougheed Transit Corridor Area Plan directs growth around future Bus Rapid Transit stations along Lougheed Highway and Dewdney Trunk Road — a plan for corridor ground to the south, not a Cottonwood MR lot offering (adoption position)."
+            "t": "Land assemblies / development sites / rezoning proposals: none documented for Cottonwood MR — no assembly, development site or rezoning proposal is named, and none is presented as for-sale inventory. South of the area, the Lougheed Transit Corridor Area Plan directs growth around future Bus Rapid Transit stations along Lougheed Highway and Dewdney Trunk Road — a plan for corridor ground to the south, not a Cottonwood MR lot offering (adoption position)."
           }
         ],
         [
           {
-            "t": ": A presale project in Cottonwood MR is UNVERIFIED in the research (none verified)."
+            "t": ": A presale project in Cottonwood MR is not verified (none verified)."
           }
         ],
         [
           {
-            "t": "Market context, labelled correctly: Maple Ridge IS a SnapStats-covered community, cited as community context only. SnapStats has NO land category (Detached vs \"Condos & Townhomes\" combined) — no detached figure is presented as a land figure. Per-sub-area median prices: UNVERIFIED (community level only)."
+            "t": "Market context, labelled correctly: Maple Ridge IS a SnapStats-covered community, cited as community context only. SnapStats has NO land category (Detached vs \"Condos & Townhomes\" combined) — no detached figure is presented as a land figure. Per-sub-area median prices: Not verified (community level only)."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Cottonwood MR",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Cottonwood MR"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -647,18 +609,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Cottonwood MR",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Cottonwood MR"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -682,22 +644,22 @@
         ],
         [
           {
-            "t": "ALR rules (where a parcel is confirmed ALR — none identified in Cottonwood MR in the research): subdivision within the ALR requires ALC approval; ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)); ALC residence caps: principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha); BC Assessment farm class is three-tiered ($2,500 on 0.8–4 ha; $2,500 + 5% of value over 4 ha; $10,000 under 0.8 ha; applications by Oct 31) — a flat \"$2,500+\" line is an ERROR."
+            "t": "ALR rules (where a parcel is confirmed ALR — none identified in Cottonwood MR): subdivision within the ALR requires ALC approval; ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)); ALC residence caps: principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha); BC Assessment farm class is three-tiered ($2,500 on 0.8–4 ha; $2,500 + 5% of value over 4 ha; $10,000 under 0.8 ha; applications by Oct 31) — a flat \"$2,500+\" line is an ERROR."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Cottonwood MR",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Cottonwood MR"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -715,142 +677,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Cottonwood MR",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Cottonwood MR"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "mapleridge.ca · our neighbourhoods",
-            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods"
+            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods",
+            "t": "mapleridge.ca · our neighbourhoods"
           }
         ],
         [
           {
-            "t": "sd42.ca · elementary schools",
-            "h": "https://www.sd42.ca/elementary-schools"
+            "h": "https://www.sd42.ca/elementary-schools",
+            "t": "sd42.ca · elementary schools"
           }
         ],
         [
           {
-            "t": "metrovancouver.org · kanaka creek regional park",
-            "h": "https://metrovancouver.org/services/regional-parks/park/kanaka-creek-regional-park"
+            "h": "https://metrovancouver.org/services/regional-parks/park/kanaka-creek-regional-park",
+            "t": "metrovancouver.org · kanaka creek regional park"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · r748",
-            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf"
+            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf",
+            "t": "infomaps.translink.ca · r748"
           }
         ],
         [
           {
-            "t": "sd42.ca · school locator",
-            "h": "https://www.sd42.ca/school-locator/"
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "sd42.ca · school locator"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · secondary suites",
-            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites"
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites",
+            "t": "mapleridge.ca · secondary suites"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading",
-            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading"
+            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading",
+            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · planning application forms procedures",
-            "h": "https://www.mapleridge.ca/build-do-business/land-development/planning-application-forms-procedures"
+            "h": "https://www.mapleridge.ca/build-do-business/land-development/planning-application-forms-procedures",
+            "t": "mapleridge.ca · planning application forms procedures"
           }
         ],
         [
           {
-            "t": "stgeorgesvillage.ca · 070889 39221c746a9b483980e20a3596cdb580",
-            "h": "https://www.stgeorgesvillage.ca/_files/ugd/070889_39221c746a9b483980e20a3596cdb580.pdf"
+            "h": "https://www.stgeorgesvillage.ca/_files/ugd/070889_39221c746a9b483980e20a3596cdb580.pdf",
+            "t": "stgeorgesvillage.ca · 070889 39221c746a9b483980e20a3596cdb580"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · maple ridge council approves plan guide transit ",
-            "h": "https://www.mapleridge.ca/news/maple-ridge-council-approves-plan-guide-transit-oriented-development-around-lougheed-highway"
+            "h": "https://www.mapleridge.ca/news/maple-ridge-council-approves-plan-guide-transit-oriented-development-around-lougheed-highway",
+            "t": "mapleridge.ca · maple ridge council approves plan guide transit"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · housing target order",
-            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-action/housing-target-order/new"
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-action/housing-target-order/new",
+            "t": "mapleridge.ca · housing target order"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · be flood ready guide fraser river city maple rid",
-            "h": "https://www.mapleridge.ca/media/file/be-flood-ready-guide-fraser-river-city-maple-ridge"
+            "h": "https://www.mapleridge.ca/media/file/be-flood-ready-guide-fraser-river-city-maple-ridge",
+            "t": "mapleridge.ca · be flood ready guide fraser river city maple rid"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 2,
-      "text": "Acreage and rural land in Cottonwood MR",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The ground in Cottonwood MR",
-      "gen": "acre",
-      "pos": "end"
+      "text": "Acreage and rural land in Cottonwood MR"
     },
     {
-      "t": "list",
+      "gen": "acre",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The ground in Cottonwood MR"
+    },
+    {
+      "gen": "acre",
       "items": [
         [
           {
@@ -868,18 +830,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Streets, schools and getting around Cottonwood MR",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Cottonwood MR"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -912,18 +874,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Local rules that affect acreage buyers in Cottonwood MR",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect acreage buyers in Cottonwood MR"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -941,18 +903,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Good to know about Cottonwood MR",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Cottonwood MR"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -970,136 +932,136 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "acre",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below.",
-      "gen": "acre",
-      "pos": "end"
+      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "BC acreage buying rules",
-            "h": "/bc-acreage-buying-rules.html"
+            "h": "/bc-acreage-buying-rules.html",
+            "t": "BC acreage buying rules"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Sources for the acreage notes on Cottonwood MR",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the acreage notes on Cottonwood MR"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "mapleridge.ca · our neighbourhoods",
-            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods"
+            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods",
+            "t": "mapleridge.ca · our neighbourhoods"
           }
         ],
         [
           {
-            "t": "sd42.ca · elementary schools",
-            "h": "https://www.sd42.ca/elementary-schools"
+            "h": "https://www.sd42.ca/elementary-schools",
+            "t": "sd42.ca · elementary schools"
           }
         ],
         [
           {
-            "t": "metrovancouver.org · kanaka creek regional park",
-            "h": "https://metrovancouver.org/services/regional-parks/park/kanaka-creek-regional-park"
+            "h": "https://metrovancouver.org/services/regional-parks/park/kanaka-creek-regional-park",
+            "t": "metrovancouver.org · kanaka creek regional park"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · r748",
-            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf"
+            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf",
+            "t": "infomaps.translink.ca · r748"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · maple ridge leisure centre",
-            "h": "https://www.mapleridge.ca/parks-recreation/recreation-facilities/maple-ridge-leisure-centre"
+            "h": "https://www.mapleridge.ca/parks-recreation/recreation-facilities/maple-ridge-leisure-centre",
+            "t": "mapleridge.ca · maple ridge leisure centre"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca",
-            "h": "https://www.fvrl.bc.ca/"
+            "h": "https://www.fvrl.bc.ca/",
+            "t": "fvrl.bc.ca"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · ridge meadows hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital",
+            "t": "fraserhealth.ca · ridge meadows hospital"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading",
-            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading"
+            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading",
+            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · planning application forms procedures",
-            "h": "https://www.mapleridge.ca/build-do-business/land-development/planning-application-forms-procedures"
+            "h": "https://www.mapleridge.ca/build-do-business/land-development/planning-application-forms-procedures",
+            "t": "mapleridge.ca · planning application forms procedures"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · maple ridge council approves plan guide transit ",
-            "h": "https://www.mapleridge.ca/news/maple-ridge-council-approves-plan-guide-transit-oriented-development-around-lougheed-highway"
+            "h": "https://www.mapleridge.ca/news/maple-ridge-council-approves-plan-guide-transit-oriented-development-around-lougheed-highway",
+            "t": "mapleridge.ca · maple ridge council approves plan guide transit"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · secondary suites",
-            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites"
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites",
+            "t": "mapleridge.ca · secondary suites"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · housing target order",
-            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-action/housing-target-order/new"
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-action/housing-target-order/new",
+            "t": "mapleridge.ca · housing target order"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Cottonwood",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Cottonwood"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -1117,18 +1079,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1136,18 +1098,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1170,25 +1132,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Kanaka Creek Elementary, 11120 234A Street",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Alexander Robinson Elementary",
@@ -1209,18 +1172,17 @@
           "8.3"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1233,14 +1195,52 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/207/tt745.pdf",
+            "t": "infomaps.translink.ca · tt745"
+          }
+        ],
+        [
+          {
+            "h": "https://metrovancouver.org/services/regional-parks/park/kanaka-creek-regional-park",
+            "t": "metrovancouver.org · kanaka creek regional park"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/maple-ridge",
+            "t": "studentsuccess.gov.bc.ca · maple ridge"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -1248,108 +1248,78 @@
       "items": [
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
-          }
-        ],
-        [
-          {
-            "t": "infomaps.translink.ca · tt745",
-            "h": "https://infomaps.translink.ca/Public_Timetables/207/tt745.pdf"
-          }
-        ],
-        [
-          {
-            "t": "metrovancouver.org · kanaka creek regional park",
-            "h": "https://metrovancouver.org/services/regional-parks/park/kanaka-creek-regional-park"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · maple ridge",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/maple-ridge"
+            "t": "Source: infomaps.translink.ca",
+            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
     {
-      "q": "Is there a middle school tier?",
-      "a": "No. SD42 elementary schools are K–7 and secondary schools are 8–12.",
-      "gen": "muse"
+      "a": "It depends on the complex, and for six of the nine counted complexes no public source checked states the tenure — The Meadows is expressly freehold strata (BCS2464) and Cottonwood Terrace and Carriage Lane are strata on their directories' bylaw records. For Willow & Oak, Cottonwood Green, Cottonwood Grove, Maplewood Creek, Hollyhock and The Falls, confirm tenure on title before writing: strata means fees and a Form B; fee-simple means NO strata, NO Form B and NO strata fees.",
+      "gen": "tn",
+      "q": "Is a Cottonwood townhouse strata or fee-simple?"
+    },
+    {
+      "a": "That line reflects a rental-restriction bylaw, and rental-restriction bylaws are void since November 24, 2022 — a strata cannot ban long-term rentals by bylaw, though short-term rentals can still be restricted.",
+      "gen": "tn",
+      "q": "Can I rent out a Carriage Lane townhouse? The directory says rentals are not allowed."
+    },
+    {
+      "a": "No strata one — Maple Ridge has zero verified 55+ strata townhouses. The 55+ townhouse-form community at the sub-area's north edge, St. George's Village, is a co-operative: you buy shares with board approval, not a strata lot, and there is no Form B.",
+      "gen": "tn",
+      "q": "Is there a 55+ townhouse I can buy in Cottonwood?"
+    },
+    {
+      "a": "Through the depreciation report and the Form B: stratas with five or more lots must renew the report every five years since July 1, 2024 and contribute at least 10% of the operating fund to the CRF each year. On 1993–1999 wood-frame stock, the report's roofing, envelope and drainage timing is the purchase.",
+      "gen": "tn",
+      "q": "How do I judge a 1990s complex's finances?"
+    },
+    {
+      "a": "The Meadows' MLS data sheet records 2 covered parking spaces for the unit read, with a double garage in-unit; Carriage Lane listings describe a double garage and driveway. Stall and locker allocations are unit-specific and are confirmed on the Form B, not the listing.",
+      "gen": "tn",
+      "q": "What parking and storage do these complexes have?"
+    },
+    {
+      "a": "Fee-simple house lots in the single-detached subdivisions around Kanaka Creek Elementary and Alexander Robinson Elementary. No bare-land subdivision, bare-land strata or presale lot offering was verified.",
+      "gen": "tn",
+      "q": "What land actually trades in Cottonwood MR?"
+    },
+    {
+      "a": "The one minimum the research states is RS-1 at 668 m² minimum lot area; the other RS variants carry their own schedules in Zoning Bylaw No. 7600-2019. Confirm the parcel's zone and schedule — do not quote 668 m² for a non-RS-1 lot.",
+      "gen": "tn",
+      "q": "How big is a typical lot — what does the bylaw require?"
+    },
+    {
+      "a": "One secondary suite per lot, inside the single detached building, maximum 40% of gross floor area, not in the Floodplain Area, building permit required. Confirm the lot is outside the mapped floodplain before underwriting rental income.",
+      "gen": "tn",
+      "q": "Can I add a suite to a Cottonwood house lot?"
+    },
+    {
+      "a": "No. It is a single-detached subdivision area: no acreage subdivision, no bare-land strata, no farm ground and no presale lot offering was verified.",
+      "gen": "acre",
+      "q": "Is there any acreage to buy in Cottonwood MR?"
+    },
+    {
+      "a": "By zone schedule: the bylaw gives a minimum lot area of 668 m² for RS-1, and the other RS variants (RS-1a–RS-1d, RS-2, RS-3) carry their own schedules in Zoning Bylaw No. 7600-2019. That is house-lot scale — confirm the specific lot's zone before relying on a size claim.",
+      "gen": "acre",
+      "q": "How big are Cottonwood lots?"
+    },
+    {
+      "a": "Kanaka Creek Elementary (11120 234A Street) and Alexander Robinson Elementary (11849 238B Street) are in the area; there is no secondary school inside the sub-area and no middle tier in SD42 (K–7 / 8–12).",
+      "gen": "acre",
+      "q": "Which schools serve a Cottonwood address?"
     },
     {
       "q": "What bus serves the area?",
       "a": "The route named for the area is the 745 Haney Place / Cottonwood on TransLink's Haney Place route diagram, interlining with the 746 at Jackson Road at 103 Avenue.",
       "gen": "muse"
-    },
-    {
-      "q": "Can a house have a secondary suite?",
-      "a": "One suite per lot is permitted inside the single detached building, up to 40% of gross floor area, and not in the Floodplain Area.",
-      "gen": "muse"
-    },
-    {
-      "q": "Is the area in the ALR or a floodplain?",
-      "a": "No ALR land in the sub-area was identified on the sources read, and floodplain status is per-lot on the City's flood maps; Kanaka Creek setbacks apply next to the creek corridor.",
-      "gen": "muse"
-    },
-    {
-      "gen": "tn",
-      "q": "Is a Cottonwood townhouse strata or fee-simple?",
-      "a": "It depends on the complex, and for six of the nine counted complexes no public source checked states the tenure — The Meadows is expressly freehold strata (BCS2464) and Cottonwood Terrace and Carriage Lane are strata on their directories' bylaw records. For Willow & Oak, Cottonwood Green, Cottonwood Grove, Maplewood Creek, Hollyhock and The Falls, confirm tenure on title before writing: strata means fees and a Form B; fee-simple means NO strata, NO Form B and NO strata fees."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I rent out a Carriage Lane townhouse? The directory says rentals are not allowed.",
-      "a": "That line reflects a rental-restriction bylaw, and rental-restriction bylaws are void since November 24, 2022 — a strata cannot ban long-term rentals by bylaw, though short-term rentals can still be restricted."
-    },
-    {
-      "gen": "tn",
-      "q": "Is there a 55+ townhouse I can buy in Cottonwood?",
-      "a": "No strata one — Maple Ridge has zero verified 55+ strata townhouses. The 55+ townhouse-form community at the sub-area's north edge, St. George's Village, is a co-operative: you buy shares with board approval, not a strata lot, and there is no Form B."
-    },
-    {
-      "gen": "tn",
-      "q": "How do I judge a 1990s complex's finances?",
-      "a": "Through the depreciation report and the Form B: stratas with five or more lots must renew the report every five years since July 1, 2024 and contribute at least 10% of the operating fund to the CRF each year. On 1993–1999 wood-frame stock, the report's roofing, envelope and drainage timing is the purchase."
-    },
-    {
-      "gen": "tn",
-      "q": "What parking and storage do these complexes have?",
-      "a": "The Meadows' MLS data sheet records 2 covered parking spaces for the unit read, with a double garage in-unit; Carriage Lane listings describe a double garage and driveway. Stall and locker allocations are unit-specific and are confirmed on the Form B, not the listing."
-    },
-    {
-      "gen": "tn",
-      "q": "What land actually trades in Cottonwood MR?",
-      "a": "Fee-simple house lots in the single-detached subdivisions around Kanaka Creek Elementary and Alexander Robinson Elementary. No bare-land subdivision, bare-land strata or presale lot offering was verified."
-    },
-    {
-      "gen": "tn",
-      "q": "How big is a typical lot — what does the bylaw require?",
-      "a": "The one minimum the research states is RS-1 at 668 m² minimum lot area; the other RS variants carry their own schedules in Zoning Bylaw No. 7600-2019. Confirm the parcel's zone and schedule — do not quote 668 m² for a non-RS-1 lot."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I add a suite to a Cottonwood house lot?",
-      "a": "One secondary suite per lot, inside the single detached building, maximum 40% of gross floor area, not in the Floodplain Area, building permit required. Confirm the lot is outside the mapped floodplain before underwriting rental income."
-    },
-    {
-      "gen": "acre",
-      "q": "Is there any acreage to buy in Cottonwood MR?",
-      "a": "No. It is a single-detached subdivision area: no acreage subdivision, no bare-land strata, no farm ground and no presale lot offering was verified."
-    },
-    {
-      "gen": "acre",
-      "q": "How big are Cottonwood lots?",
-      "a": "By zone schedule: the bylaw gives a minimum lot area of 668 m² for RS-1, and the other RS variants (RS-1a–RS-1d, RS-2, RS-3) carry their own schedules in Zoning Bylaw No. 7600-2019. That is house-lot scale — confirm the specific lot's zone before relying on a size claim."
-    },
-    {
-      "gen": "acre",
-      "q": "Which schools serve a Cottonwood address?",
-      "a": "Kanaka Creek Elementary (11120 234A Street) and Alexander Robinson Elementary (11849 238B Street) are in the area; there is no secondary school inside the sub-area and no middle tier in SD42 (K–7 / 8–12)."
     }
-  ]
+  ],
+  "slug": "cottonwood-mr",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

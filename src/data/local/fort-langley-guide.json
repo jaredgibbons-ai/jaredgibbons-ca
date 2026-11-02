@@ -1,43 +1,40 @@
 {
-  "status": "generated",
-  "slug": "fort-langley-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "schools",
       "level": 2,
-      "text": "Schools in Fort Langley",
-      "gen": "schools"
-    },
-    {
-      "t": "p",
-      "text": "Fort Langley Elementary (8877 Bartlett St) is an elementary school in Fort Langley. This is not a complete list of the schools nearby.",
-      "gen": "schools"
-    },
-    {
-      "t": "p",
-      "text": "Living near a school does not mean a place at it. Your child's school comes from the district's catchment boundaries, and those change, so confirm the address with the district before you write an offer.",
-      "gen": "schools"
-    },
-    {
-      "t": "p",
-      "text": "Source: BC Ministry of Education and Child Care school list (2025/26, updated July 2026) and the Province's post-secondary locations list. Neighbourhood placement is from our own area research.",
-      "gen": "schools"
-    },
-    {
       "t": "h",
-      "level": 2,
-      "text": "How Fort Langley compares with the rest of its city",
-      "gen": "snapstats"
+      "text": "Schools in Fort Langley"
     },
     {
+      "gen": "schools",
       "t": "p",
-      "text": "Fort Langley against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Fort Langley Elementary (8877 Bartlett St) is an elementary school in Fort Langley. This is not a complete list of the schools nearby."
     },
     {
-      "t": "table",
-      "caption": "Fort Langley against the whole city, September 2026",
+      "gen": "schools",
+      "t": "p",
+      "text": "Living near a school does not mean a place at it. Your child's school comes from the district's catchment boundaries, and those change, so confirm the address with the district before you write an offer."
+    },
+    {
+      "gen": "schools",
+      "t": "p",
+      "text": "Source: BC Ministry of Education and Child Care school list (2025/26, updated July 2026) and the Province's post-secondary locations list. Neighbourhood placement is from our own area research."
+    },
+    {
+      "gen": "snapstats",
+      "level": 2,
+      "t": "h",
+      "text": "How Fort Langley compares with the rest of its city"
+    },
+    {
+      "gen": "snapstats",
+      "t": "p",
+      "text": "Fort Langley against its whole city, October 2026: share of listings and sales, sales ratio and rank."
+    },
+    {
+      "caption": "Fort Langley against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -48,193 +45,143 @@
       "rows": [
         [
           "Detached houses",
-          "4.2%",
-          "4.7%",
-          "16% against 14%",
-          "5 of 8"
+          "3.6%",
+          "3.4%",
+          "13% against 13%",
+          "4 of 9"
         ],
         [
           "Condos and townhomes",
-          "1.3%",
-          "0.8%",
-          "11% against 18%",
-          "Under 10 listed"
+          "1.6%",
+          "0.7%",
+          "9% against 20%",
+          "6 of 6"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings rose from 18 in June to 19 in September (+5.6%), and it took 4.0% of the city’s 298 sales over the period; condos and townhomes: listings fell from 10 in June to 9 in September (−10.0%), and it took 1.3% of the city’s 558 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 18 in June to 16 in October (−11.1%), and it took 3.9% of the city’s 357 sales over the period; condos and townhomes: listings rose from 10 in June to 11 in October (+10.0%), and it took 1.2% of the city’s 694 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Fort Langley for detached houses in June (a sellers’ best bet); detached houses in July (a buyers’ best bet); condos and townhomes in September (a buyers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out Fort Langley for detached houses in June (a sellers’ best bet); detached houses in July (a buyers’ best bet); condos and townhomes in September, October (a buyers’ best bet)."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Langley real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Langley real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Langley homes for sale",
-            "h": "/langley-homes-for-sale.html"
+            "h": "/langley-homes-for-sale.html",
+            "t": "Langley homes for sale"
           }
         ],
         [
           {
-            "t": "Langley real estate market stats",
-            "h": "/langley-real-estate-market-stats.html"
+            "h": "/langley-real-estate-market-stats.html",
+            "t": "Langley real estate market stats"
           }
         ],
         [
           {
-            "t": "Langley houses for sale",
-            "h": "/langley-houses-for-sale.html"
+            "h": "/langley-houses-for-sale.html",
+            "t": "Langley houses for sale"
           }
         ],
         [
           {
-            "t": "Langley condos for sale",
-            "h": "/langley-condos-for-sale.html"
+            "h": "/langley-condos-for-sale.html",
+            "t": "Langley condos for sale"
           }
         ],
         [
           {
-            "t": "Langley townhomes for sale",
-            "h": "/langley-townhomes-for-sale.html"
+            "h": "/langley-townhomes-for-sale.html",
+            "t": "Langley townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Langley",
-            "h": "/sell-my-house-in-langley.html"
+            "h": "/sell-my-house-in-langley.html",
+            "t": "Sell my house in Langley"
           }
         ],
         [
           {
-            "t": "Schools in Langley",
-            "h": "/schools-in-langley-bc.html"
+            "h": "/schools-in-langley-bc.html",
+            "t": "Schools in Langley"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: pc.gc.ca",
-            "h": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=66"
-          }
-        ],
-        [
-          {
-            "t": "Source: tol.ca (2)",
-            "h": "https://www.tol.ca/en/the-township/fort-langley-community-projects.aspx"
-          }
-        ],
-        [
-          {
-            "t": "Source: tol.ca (3)",
-            "h": "https://www.tol.ca/en/plans-reports-and-strategies/plans-and-strategies.aspx"
-          }
-        ],
-        [
-          {
-            "t": "Source: sd35.bc.ca",
-            "h": "https://www.sd35.bc.ca/school-locator"
-          }
-        ],
-        [
-          {
-            "t": "Source: fortlangley.sd35.bc.ca",
-            "h": "https://fortlangley.sd35.bc.ca/"
-          }
-        ],
-        [
-          {
-            "t": "Source: tol.ca (6)",
-            "h": "https://www.tol.ca/en/connect/salmon-river-pump-station-upgrades.aspx"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 2,
-      "text": "Condo buildings in Fort Langley",
+      "text": "Condo buildings in Fort Langley"
+    },
+    {
       "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "h",
       "level": 3,
-      "text": "The Village at Bedford Landing — 23285 Billy Brown Rd (the same strata plan, EPS998, also covers 23255 Billy Brown Rd)",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "The Village at Bedford Landing — 23285 Billy Brown Rd (the same strata plan, EPS998, also covers 23255 Billy Brown Rd)"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "71 homes in 4 storeys, wood-frame construction, freehold strata, built 2012, managed by Associa, with underground and visitor parking, per a building-data source drawing on MLS and public strata records; a Township page confirms the civic address 23285 Billy Brown Road, Fort Langley.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "71 homes in 4 storeys, wood-frame construction, freehold strata, built 2012, managed by Associa, with underground and visitor parking, per a building-data source drawing on MLS and public strata records; a Township page confirms the civic address 23285 Billy Brown Road, Fort Langley."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Waterfront at Bedford Landing — 23215 Billy Brown Rd",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Waterfront at Bedford Landing — 23215 Billy Brown Rd"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Strata plan BCS3620; 4 storeys, built 2009, wood-frame construction with fibre-cement, stone and wood siding, per listing construction details.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Strata plan BCS3620; 4 storeys, built 2009, wood-frame construction with fibre-cement, stone and wood siding, per listing construction details."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Lily Terrace — 23189 Francis Ave",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Lily Terrace — 23189 Francis Ave"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A small low-rise condo building at the east side of the village, built by Lanstone Homes; listings record it as an apartment/condo in a 3-storey building, with sources differing on the year — 2018 in a current listing, 2019 in building records — so the year is best stated as 2018–2019 pending the Form B / depreciation documents.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A small low-rise condo building at the east side of the village, built by Lanstone Homes; listings record it as an apartment/condo in a 3-storey building, with sources differing on the year — 2018 in a current listing, 2019 in building records — so the year is best stated as 2018–2019 pending the Form B / depreciation documents."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Fort Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Fort Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -267,18 +214,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Fort Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Fort Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -297,7 +244,7 @@
         ],
         [
           {
-            "t": "Zoning: Township of Langley Zoning Bylaw No. 2500: applies in the village; Residential Zone R-1E is named for the village in a Township public-hearing document, and minimum lot areas/frontages for the village zones are UNVERIFIED from a readable bylaw section."
+            "t": "Zoning: Township of Langley Zoning Bylaw No. 2500: applies in the village; Residential Zone R-1E is named for the village in a Township public-hearing document, and minimum lot areas/frontages for the village zones are not verified from a readable bylaw section."
           }
         ],
         [
@@ -307,7 +254,7 @@
         ],
         [
           {
-            "t": "Flood — a condo issue here, not just a house issue: Fort Langley is low-lying: the Township states the Salmon River Pump Station provides flood protection for the Fort Langley community and its flood box gates close when Fraser River levels rise. Parcel-level floodplain status for a specific building: UNVERIFIED — get it from the Township, and check the strata's insurance summary on the Form B for flood coverage and deductible terms."
+            "t": "Flood — a condo issue here, not just a house issue: Fort Langley is low-lying: the Township states the Salmon River Pump Station provides flood protection for the Fort Langley community and its flood box gates close when Fraser River levels rise. Parcel-level floodplain status for a specific building: Not verified — get it from the Township, and check the strata's insurance summary on the Form B for flood coverage and deductible terms."
           }
         ],
         [
@@ -321,18 +268,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Fort Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Fort Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -360,181 +307,181 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Fort Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Fort Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "pc.gc.ca · page nhs eng.aspx",
-            "h": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=66"
+            "h": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=66",
+            "t": "pc.gc.ca · page nhs eng.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · fort langley community projects.aspx",
-            "h": "https://www.tol.ca/en/the-township/fort-langley-community-projects.aspx"
+            "h": "https://www.tol.ca/en/the-township/fort-langley-community-projects.aspx",
+            "t": "tol.ca · fort langley community projects.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · plans and strategies.aspx",
-            "h": "https://www.tol.ca/en/plans-reports-and-strategies/plans-and-strategies.aspx"
+            "h": "https://www.tol.ca/en/plans-reports-and-strategies/plans-and-strategies.aspx",
+            "t": "tol.ca · plans and strategies.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · garbage cart.aspx",
-            "h": "https://www.tol.ca/en/services/garbage-cart.aspx"
+            "h": "https://www.tol.ca/en/services/garbage-cart.aspx",
+            "t": "tol.ca · garbage cart.aspx"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt562",
-            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt562.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt562.pdf",
+            "t": "infomaps.translink.ca · tt562"
           }
         ],
         [
           {
-            "t": "fortlangley.sd35.bc.ca",
-            "h": "https://fortlangley.sd35.bc.ca/"
+            "h": "https://fortlangley.sd35.bc.ca/",
+            "t": "fortlangley.sd35.bc.ca"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "tol.ca · property disposition.aspx",
-            "h": "https://www.tol.ca/en/services/property-disposition.aspx"
+            "h": "https://www.tol.ca/en/services/property-disposition.aspx",
+            "t": "tol.ca · property disposition.aspx"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · may 2023",
-            "h": "https://www.bccondosandhomes.com/market-report/langley/fort-langley/condos/may-2023"
+            "h": "https://www.bccondosandhomes.com/market-report/langley/fort-langley/condos/may-2023",
+            "t": "bccondosandhomes.com · may 2023"
           }
         ],
         [
           {
-            "t": "zillow.com · 465100660 zpid",
-            "h": "https://www.zillow.com/homedetails/23215-Billy-Brown-Rd-416-Langley-BC-V1M-0B7/465100660_zpid/"
+            "h": "https://www.zillow.com/homedetails/23215-Billy-Brown-Rd-416-Langley-BC-V1M-0B7/465100660_zpid/",
+            "t": "zillow.com · 465100660 zpid"
           }
         ],
         [
           {
-            "t": "conwest.com · leah townhomes",
-            "h": "https://conwest.com/residential/leah-townhomes/"
+            "h": "https://conwest.com/residential/leah-townhomes/",
+            "t": "conwest.com · leah townhomes"
           }
         ],
         [
           {
-            "t": "hexaflexagon-salmon-whfg.squarespace.com · bedford landing",
-            "h": "https://hexaflexagon-salmon-whfg.squarespace.com/bedford-landing"
+            "h": "https://hexaflexagon-salmon-whfg.squarespace.com/bedford-landing",
+            "t": "hexaflexagon-salmon-whfg.squarespace.com · bedford landing"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Fort Langley",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Leah (Lēah) — 9122 King Street. FREEHOLD STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Fort Langley"
     },
     {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Leah (Lēah) — 9122 King Street. FREEHOLD STRATA"
+    },
+    {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Rental restrictions: none may be enforced for long-term rentals in any case; no age restriction appears in the developer's description or any source checked — it is not 55+ stock.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Rental restrictions: none may be enforced for long-term rentals in any case; no age restriction appears in the developer's description or any source checked — it is not 55+ stock."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Flatiron (Bedford Landing) — 23230 Billy Brown Road. FREEHOLD STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Flatiron (Bedford Landing) — 23230 Billy Brown Road. FREEHOLD STRATA"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A listing for a unit in the complex describes a \"well run 11 unit complex — live/work built by Parklane,\" a 2-storey-with-basement townhouse form, Year Built 2012, Building Name: Flatiron, Ownership Type: Freehold Strata, strata restrictions: pets allowed with restrictions. The live/work designation is the diligence item: permitted business use, signage and any Township licence sit in the strata bylaws, the CD zoning and the unit's permitted-use documents, not in the listing. Rental/age restrictions beyond the pet line: UNCONFIRMED.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A listing for a unit in the complex describes a \"well run 11 unit complex — live/work built by Parklane,\" a 2-storey-with-basement townhouse form, Year Built 2012, Building Name: Flatiron, Ownership Type: Freehold Strata, strata restrictions: pets allowed with restrictions. The live/work designation is the diligence item: permitted business use, signage and any Township licence sit in the strata bylaws, the CD zoning and the unit's permitted-use documents, not in the listing. Rental/age restrictions beyond the pet line: Not confirmed."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Bedford Landing row homes — Billy Brown Road (the 23000 block, Bedford Landing). FEE-SIMPLE (non-strata)",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Bedford Landing row homes — Billy Brown Road (the 23000 block, Bedford Landing). FEE-SIMPLE (non-strata)"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Listing records for homes in this stock classify them as Property Type: Townhouse, Dwelling Type: Row House (Non-Strata), Complex Name: Bedford Landing, built 2007 — attached row homes on their own fee-simple lots, with no strata corporation, no strata fee and no Form B. This is a housing-form grouping within the Bedford Landing master community, not a single named complex; unit count for the row-home stock as a whole: UNCONFIRMED — no source checked publishes it. Bedford Landing as a whole is a mixed community of houses, row homes, townhomes, live/work townhomes and apartments/condos on the former McDonald Cedar Mill lands, so the tenure must be read address by address — the strata buildings and the fee-simple rows share a community name.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Listing records for homes in this stock classify them as Property Type: Townhouse, Dwelling Type: Row House (Non-Strata), Complex Name: Bedford Landing, built 2007 — attached row homes on their own fee-simple lots, with no strata corporation, no strata fee and no Form B. This is a housing-form grouping within the Bedford Landing master community, not a single named complex; unit count for the row-home stock as a whole: Not confirmed — no source checked publishes it. Bedford Landing as a whole is a mixed community of houses, row homes, townhomes, live/work townhomes and apartments/condos on the former McDonald Cedar Mill lands, so the tenure must be read address by address — the strata buildings and the fee-simple rows share a community name."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Fort Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Fort Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -547,18 +494,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Fort Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Fort Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -607,7 +554,7 @@
         ],
         [
           {
-            "t": "Flood — a townhouse issue here, not just a house issue: Fort Langley is low-lying: the Township states the Salmon River Pump Station provides flood protection for the Fort Langley community and its flood box gates close when Fraser River levels rise. Parcel-level floodplain status for a specific complex: UNVERIFIED — get it from the Township, and for strata units check the insurance summary on the Form B for flood coverage and deductible terms."
+            "t": "Flood — a townhouse issue here, not just a house issue: Fort Langley is low-lying: the Township states the Salmon River Pump Station provides flood protection for the Fort Langley community and its flood box gates close when Fraser River levels rise. Parcel-level floodplain status for a specific complex: Not verified — get it from the Township, and for strata units check the insurance summary on the Form B for flood coverage and deductible terms."
           }
         ],
         [
@@ -621,18 +568,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Fort Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Fort Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -650,145 +597,145 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Fort Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Fort Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "pc.gc.ca · page nhs eng.aspx",
-            "h": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=66"
+            "h": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=66",
+            "t": "pc.gc.ca · page nhs eng.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · fort langley community projects.aspx",
-            "h": "https://www.tol.ca/en/the-township/fort-langley-community-projects.aspx"
+            "h": "https://www.tol.ca/en/the-township/fort-langley-community-projects.aspx",
+            "t": "tol.ca · fort langley community projects.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · plans and strategies.aspx",
-            "h": "https://www.tol.ca/en/plans-reports-and-strategies/plans-and-strategies.aspx"
+            "h": "https://www.tol.ca/en/plans-reports-and-strategies/plans-and-strategies.aspx",
+            "t": "tol.ca · plans and strategies.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · garbage cart.aspx",
-            "h": "https://www.tol.ca/en/services/garbage-cart.aspx"
+            "h": "https://www.tol.ca/en/services/garbage-cart.aspx",
+            "t": "tol.ca · garbage cart.aspx"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt562",
-            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt562.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt562.pdf",
+            "t": "infomaps.translink.ca · tt562"
           }
         ],
         [
           {
-            "t": "fortlangley.sd35.bc.ca",
-            "h": "https://fortlangley.sd35.bc.ca/"
+            "h": "https://fortlangley.sd35.bc.ca/",
+            "t": "fortlangley.sd35.bc.ca"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "conwest.com · leah townhomes",
-            "h": "https://conwest.com/residential/leah-townhomes/"
+            "h": "https://conwest.com/residential/leah-townhomes/",
+            "t": "conwest.com · leah townhomes"
           }
         ],
         [
           {
-            "t": "mikestewart.ca · leah fort langley by conwest floorplans prices",
-            "h": "https://www.mikestewart.ca/presale/leah-fort-langley-by-conwest-floorplans-prices/"
+            "h": "https://www.mikestewart.ca/presale/leah-fort-langley-by-conwest-floorplans-prices/",
+            "t": "mikestewart.ca · leah fort langley by conwest floorplans prices"
           }
         ],
         [
           {
-            "t": "hexaflexagon-salmon-whfg.squarespace.com · bedford landing",
-            "h": "https://hexaflexagon-salmon-whfg.squarespace.com/bedford-landing"
+            "h": "https://hexaflexagon-salmon-whfg.squarespace.com/bedford-landing",
+            "t": "hexaflexagon-salmon-whfg.squarespace.com · bedford landing"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "tol.maps.arcgis.com · data",
-            "h": "https://tol.maps.arcgis.com/sharing/rest/content/items/0c6ddccb89034b6787c285311714b8ce/data"
+            "h": "https://tol.maps.arcgis.com/sharing/rest/content/items/0c6ddccb89034b6787c285311714b8ce/data",
+            "t": "tol.maps.arcgis.com · data"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Fort Langley",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Fort Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Village fee-simple lots (the default form): The established village stock is freehold houses on fee-simple lots under the Fort Langley Community Plan and Zoning Bylaw No. 2500; downtown-core lots also sit inside the Heritage Conservation Area. Village residential zoning includes R-1E, named for the village in a Township public-hearing document; minimum lot areas and frontages for the village zones are UNVERIFIED from a readable Bylaw No. 2500 section — no lot-size figure is invented here."
+            "t": "Village fee-simple lots (the default form): The established village stock is freehold houses on fee-simple lots under the Fort Langley Community Plan and Zoning Bylaw No. 2500; downtown-core lots also sit inside the Heritage Conservation Area. Village residential zoning includes R-1E, named for the village in a Township public-hearing document; minimum lot areas and frontages for the village zones are not verified from a readable Bylaw No. 2500 section — no lot-size figure is invented here."
           }
         ],
         [
           {
-            "t": "Bedford Landing — the fee-simple lot fabric (the named land angle for this area): Bedford Landing, on Billy Brown Road along the Bedford Channel, is a mixed master community built on the former McDonald Cedar Mill lands (mill opened 1921, 88-acre riverfront property): fee-simple row homes on their own lots (recorded as Row House (Non-Strata), built 2007) sit alongside strata buildings (The Village, EPS998; Waterfront, BCS3620; Flatiron live/work strata).: the row-home fabric is fee-simple; the strata buildings are separate — tenure is read address by address, because the community name alone tells a land buyer nothing about whether a parcel is a fee-simple lot or a strata lot. No Bedford Landing lot count or lot size is published in the sources checked: UNCONFIRMED."
+            "t": "Bedford Landing — the fee-simple lot fabric (the named land angle for this area): Bedford Landing, on Billy Brown Road along the Bedford Channel, is a mixed master community built on the former McDonald Cedar Mill lands (mill opened 1921, 88-acre riverfront property): fee-simple row homes on their own lots (recorded as Row House (Non-Strata), built 2007) sit alongside strata buildings (The Village, EPS998; Waterfront, BCS3620; Flatiron live/work strata).: the row-home fabric is fee-simple; the strata buildings are separate — tenure is read address by address, because the community name alone tells a land buyer nothing about whether a parcel is a fee-simple lot or a strata lot. No Bedford Landing lot count or lot size is published in the sources checked: Not confirmed."
           }
         ],
         [
@@ -803,12 +750,12 @@
         ],
         [
           {
-            "t": "Serviced vs unserviced — split by fabric: The village and Bedford Landing are serviced urban ground as the research presents them; on the acreage edges, wells and septic are the documented diligence track: well reports are due within 90 days of constructing, altering or decommissioning a well and wells are searchable in the provincial GWELLS system; onsite sewage follows Fraser Health filing rules through an authorized person (record of sewerage system before construction, letter of certification after). Which specific edge parcels are on well/septic vs municipal services: UNVERIFIED per parcel — pull the GWELLS record and the Fraser Health filings."
+            "t": "Serviced vs unserviced — split by fabric: The village and Bedford Landing are serviced urban ground as the research presents them; on the acreage edges, wells and septic are the documented diligence track: well reports are due within 90 days of constructing, altering or decommissioning a well and wells are searchable in the provincial GWELLS system; onsite sewage follows Fraser Health filing rules through an authorized person (record of sewerage system before construction, letter of certification after). Which specific edge parcels are on well/septic vs municipal services: Not verified per parcel — pull the GWELLS record and the Fraser Health filings."
           }
         ],
         [
           {
-            "t": "Floodplain ground: Fort Langley is low-lying: the Township states the Salmon River Pump Station provides flood protection for the Fort Langley community and its flood box gates close when Fraser River levels rise. Parcel-level floodplain mapping: UNVERIFIED — get it from the Township for the specific lot. Low ground is a land characteristic here, not a building detail."
+            "t": "Floodplain ground: Fort Langley is low-lying: the Township states the Salmon River Pump Station provides flood protection for the Fort Langley community and its flood box gates close when Fraser River levels rise. Parcel-level floodplain mapping: Not verified — get it from the Township for the specific lot. Low ground is a land characteristic here, not a building detail."
           }
         ],
         [
@@ -822,18 +769,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Fort Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Fort Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -861,18 +808,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Fort Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Fort Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -891,7 +838,7 @@
         ],
         [
           {
-            "t": "Zoning: Township of Langley Zoning Bylaw No. 2500: R-1E is named for the village; the Bedford Landing strata buildings sit in site-specific CD zones (the Waterfront's is CD-55 — a zone number, not an age designation). Village zone minimum lot areas/frontages: UNVERIFIED from a readable bylaw section — never filled in here."
+            "t": "Zoning: Township of Langley Zoning Bylaw No. 2500: R-1E is named for the village; the Bedford Landing strata buildings sit in site-specific CD zones (the Waterfront's is CD-55 — a zone number, not an age designation). Village zone minimum lot areas/frontages: Not verified from a readable bylaw section — never filled in here."
           }
         ],
         [
@@ -935,18 +882,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Fort Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Fort Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -960,7 +907,7 @@
         ],
         [
           {
-            "t": "There is no 6-plex tier in the Township — and no Fort Langley page in the research claims one."
+            "t": "There is no 6-plex tier in the Township — and no Fort Langley page claims one."
           }
         ],
         [
@@ -969,142 +916,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Fort Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Fort Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "pc.gc.ca · page nhs eng.aspx",
-            "h": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=66"
+            "h": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=66",
+            "t": "pc.gc.ca · page nhs eng.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · fort langley community projects.aspx",
-            "h": "https://www.tol.ca/en/the-township/fort-langley-community-projects.aspx"
+            "h": "https://www.tol.ca/en/the-township/fort-langley-community-projects.aspx",
+            "t": "tol.ca · fort langley community projects.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · garbage cart.aspx",
-            "h": "https://www.tol.ca/en/services/garbage-cart.aspx"
+            "h": "https://www.tol.ca/en/services/garbage-cart.aspx",
+            "t": "tol.ca · garbage cart.aspx"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt562",
-            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt562.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt562.pdf",
+            "t": "infomaps.translink.ca · tt562"
           }
         ],
         [
           {
-            "t": "fortlangley.sd35.bc.ca",
-            "h": "https://fortlangley.sd35.bc.ca/"
+            "h": "https://fortlangley.sd35.bc.ca/",
+            "t": "fortlangley.sd35.bc.ca"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "tol.maps.arcgis.com · data",
-            "h": "https://tol.maps.arcgis.com/sharing/rest/content/items/0c6ddccb89034b6787c285311714b8ce/data"
+            "h": "https://tol.maps.arcgis.com/sharing/rest/content/items/0c6ddccb89034b6787c285311714b8ce/data",
+            "t": "tol.maps.arcgis.com · data"
           }
         ],
         [
           {
-            "t": "hexaflexagon-salmon-whfg.squarespace.com · bedford landing",
-            "h": "https://hexaflexagon-salmon-whfg.squarespace.com/bedford-landing"
+            "h": "https://hexaflexagon-salmon-whfg.squarespace.com/bedford-landing",
+            "t": "hexaflexagon-salmon-whfg.squarespace.com · bedford landing"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · understanding aquifers",
-            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/understanding-aquifers"
+            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/understanding-aquifers",
+            "t": "www2.gov.bc.ca · understanding aquifers"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · resources for onsite sewerage systems property o",
-            "h": "https://www.fraserhealth.ca/health-topics-a-to-z/onsite-sewerage-systems/resources-for-onsite-sewerage-systems-property-owners-and-authorized-persons"
+            "h": "https://www.fraserhealth.ca/health-topics-a-to-z/onsite-sewerage-systems/resources-for-onsite-sewerage-systems-property-owners-and-authorized-persons",
+            "t": "fraserhealth.ca · resources for onsite sewerage systems property o"
           }
         ],
         [
           {
-            "t": "tol.ca · salmon river pump station upgrades.aspx",
-            "h": "https://www.tol.ca/en/connect/salmon-river-pump-station-upgrades.aspx"
+            "h": "https://www.tol.ca/en/connect/salmon-river-pump-station-upgrades.aspx",
+            "t": "tol.ca · salmon river pump station upgrades.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · plans and strategies.aspx",
-            "h": "https://www.tol.ca/en/plans-reports-and-strategies/plans-and-strategies.aspx"
+            "h": "https://www.tol.ca/en/plans-reports-and-strategies/plans-and-strategies.aspx",
+            "t": "tol.ca · plans and strategies.aspx"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Fort Langley",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Fort Langley"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -1122,18 +1069,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1141,18 +1088,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1170,18 +1117,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1189,25 +1136,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Glover Road at 96 Avenue, Fort Langley",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Fort Langley Library",
@@ -1228,18 +1176,17 @@
           "1.1"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1247,14 +1194,52 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://www.translink.ca/schedules-and-maps/skytrain/?page=1",
+            "t": "translink.ca · skytrain"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt562.pdf",
+            "t": "infomaps.translink.ca · tt562"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations?combine=&municipality%5B237%5D=237&view=grid",
+            "t": "fvrl.bc.ca · locations"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/035",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -1262,38 +1247,73 @@
       "items": [
         [
           {
-            "t": "translink.ca · skytrain",
-            "h": "https://www.translink.ca/schedules-and-maps/skytrain/?page=1"
+            "t": "Source: tol.ca (1)",
+            "h": "https://www.tol.ca/en/plans-reports-and-strategies/plans-and-strategies.aspx"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt562",
-            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt562.pdf"
+            "t": "Source: sd35.bc.ca",
+            "h": "https://www.sd35.bc.ca/school-locator"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca · locations",
-            "h": "https://www.fvrl.bc.ca/locations?combine=&municipality%5B237%5D=237&view=grid"
+            "t": "Source: fortlangley.sd35.bc.ca",
+            "h": "https://fortlangley.sd35.bc.ca/"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/035"
+            "t": "Source: tol.ca (4)",
+            "h": "https://www.tol.ca/en/connect/salmon-river-pump-station-upgrades.aspx"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
     {
-      "q": "Is Fort Langley a historic site?",
-      "a": "The Fort Langley National Historic Site is a Parks Canada site in the village, and the Township calls Fort Langley the birthplace of BC.",
-      "gen": "muse"
+      "a": "Three verified apartment-condo buildings: The Village at Bedford Landing (23285 Billy Brown Rd, 2012), Waterfront at Bedford Landing (23215 Billy Brown Rd, 2009) and Lily Terrace (23189 Francis Ave, 2018–2019). Everything else attached in the village is townhouses or houses.",
+      "gen": "tn",
+      "q": "How many condo buildings are there in Fort Langley, really?"
+    },
+    {
+      "a": "Current listings say yes — \"Ages 55+\" and a \"55+ community.\" A 55+ bylaw is legal in BC (it is the only age bylaw form left), but it restricts who may live there, not who may buy, and exemptions exist for a younger spouse/partner, live-in caregivers and legacy residents. Confirm the registered bylaw and your own position on the Form B.",
+      "gen": "tn",
+      "q": "Is Waterfront at Bedford Landing really 55+?"
+    },
+    {
+      "a": "Long-term rental bans are void in BC since Nov 24, 2022, and a building-data source records The Village at Bedford Landing as rentals allowed. In the 55+ Waterfront building, a tenant would still have to satisfy the age bylaw or an exemption, and short-term rentals can still be restricted.",
+      "gen": "tn",
+      "q": "Can I rent out a Bedford Landing condo?"
+    },
+    {
+      "a": "The Form B states the fee, the CRF balance and a summary of the strata's insurance. In a low-lying riverside location, read that insurance summary for flood-related coverage and the deductible amounts, and match them to your own unit-owner policy — the specific deductible figures for these buildings are not confirmed from a public source.",
+      "gen": "tn",
+      "q": "What do the strata fees cover, and what is the deductible risk in a riverside building?"
+    },
+    {
+      "a": "Those are the questions the depreciation report answers: every strata of five or more lots must now have one renewed every five years, with 30-year cost projections and three CRF funding models. Compare the CRF balance on the Form B against the report's near-term items (envelope, decks, parkade membrane) before deciding a unit is cheap or expensive.",
+      "gen": "tn",
+      "q": "Should I worry about levies in the 2009 and 2012 buildings?"
+    },
+    {
+      "a": "Two verified strata complexes (Leah, 41 homes, 2024; Flatiron, 11 live/work units, 2012), plus fee-simple non-strata row homes at Bedford Landing, plus a 3-home presale (The 1912). The village's three apartment buildings are condos, not townhouses.",
+      "gen": "tn",
+      "q": "How many townhouse complexes are there in Fort Langley, really?"
+    },
+    {
+      "a": "Tenure. A Bedford Landing row home recorded as Row House (Non-Strata) is fee-simple: your lot, your title, no strata fee, no Form B, no depreciation report — and no strata to maintain the roof or envelope either. Leah is freehold strata: monthly fees, bylaws, a Form B and shared common property. Two homes on the same street can sit on opposite tracks.",
+      "gen": "tn",
+      "q": "What is the difference between a Bedford Landing row home and a Leah townhouse?"
+    },
+    {
+      "a": "The complex is recorded as live/work, built by Parklane — but \"live/work\" in a listing is not a business licence. Check the strata bylaws, the CD zoning's permitted uses and the Township's business-licence requirements for your specific use before subjects.",
+      "gen": "tn",
+      "q": "Can I run a business from a Flatiron unit?"
     },
     {
       "q": "Do I need a heritage permit to renovate a house in the village?",
@@ -1309,57 +1329,15 @@
       "q": "Is Fort Langley in a floodplain?",
       "a": "The village is low-lying by the Fraser and Salmon Rivers; the Township states the Salmon River Pump Station provides flood protection for the Fort Langley community when Fraser River levels rise. Check parcel flood information with the Township before purchase.",
       "gen": "muse"
-    },
-    {
-      "q": "Where is grocery shopping in the village?",
-      "a": "Lee's Market, 23320 Mavis Avenue, is the village grocery store, named with its address on a Township page; Glover Road holds the village shops.",
-      "gen": "muse"
-    },
-    {
-      "gen": "tn",
-      "q": "How many condo buildings are there in Fort Langley, really?",
-      "a": "Three verified apartment-condo buildings: The Village at Bedford Landing (23285 Billy Brown Rd, 2012), Waterfront at Bedford Landing (23215 Billy Brown Rd, 2009) and Lily Terrace (23189 Francis Ave, 2018–2019). Everything else attached in the village is townhouses or houses."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Waterfront at Bedford Landing really 55+?",
-      "a": "Current listings say yes — \"Ages 55+\" and a \"55+ community.\" A 55+ bylaw is legal in BC (it is the only age bylaw form left), but it restricts who may live there, not who may buy, and exemptions exist for a younger spouse/partner, live-in caregivers and legacy residents. Confirm the registered bylaw and your own position on the Form B."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I rent out a Bedford Landing condo?",
-      "a": "Long-term rental bans are void in BC since Nov 24, 2022, and a building-data source records The Village at Bedford Landing as rentals allowed. In the 55+ Waterfront building, a tenant would still have to satisfy the age bylaw or an exemption, and short-term rentals can still be restricted."
-    },
-    {
-      "gen": "tn",
-      "q": "What do the strata fees cover, and what is the deductible risk in a riverside building?",
-      "a": "The Form B states the fee, the CRF balance and a summary of the strata's insurance. In a low-lying riverside location, read that insurance summary for flood-related coverage and the deductible amounts, and match them to your own unit-owner policy — the specific deductible figures for these buildings are UNCONFIRMED from a public source."
-    },
-    {
-      "gen": "tn",
-      "q": "Should I worry about levies in the 2009 and 2012 buildings?",
-      "a": "Those are the questions the depreciation report answers: every strata of five or more lots must now have one renewed every five years, with 30-year cost projections and three CRF funding models. Compare the CRF balance on the Form B against the report's near-term items (envelope, decks, parkade membrane) before deciding a unit is cheap or expensive."
-    },
-    {
-      "gen": "tn",
-      "q": "How many townhouse complexes are there in Fort Langley, really?",
-      "a": "Two verified strata complexes (Leah, 41 homes, 2024; Flatiron, 11 live/work units, 2012), plus fee-simple non-strata row homes at Bedford Landing, plus a 3-home presale (The 1912). The village's three apartment buildings are condos, not townhouses."
-    },
-    {
-      "gen": "tn",
-      "q": "What is the difference between a Bedford Landing row home and a Leah townhouse?",
-      "a": "Tenure. A Bedford Landing row home recorded as Row House (Non-Strata) is fee-simple: your lot, your title, no strata fee, no Form B, no depreciation report — and no strata to maintain the roof or envelope either. Leah is freehold strata: monthly fees, bylaws, a Form B and shared common property. Two homes on the same street can sit on opposite tracks."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I run a business from a Flatiron unit?",
-      "a": "The complex is recorded as live/work, built by Parklane — but \"live/work\" in a listing is not a business licence. Check the strata bylaws, the CD zoning's permitted uses and the Township's business-licence requirements for your specific use before subjects."
     }
+  ],
+  "slug": "fort-langley-guide",
+  "status": "generated",
+  "suppress": [
+    "Related guides"
   ],
   "suppress_gen": [
     "Related guides"
   ],
-  "suppress": [
-    "Related guides"
-  ]
+  "updated": "2026-11-01"
 }

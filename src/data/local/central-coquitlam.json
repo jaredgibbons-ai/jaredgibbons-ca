@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "central-coquitlam",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Central Coquitlam homes listed and sold, June to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Central Coquitlam homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Central Coquitlam, September 2026. Detached houses: 64 listed at month end and 9 sold in September, a sales ratio of 14% (a balanced market). Condos and townhomes: 36 listed at month end and 5 sold in September, a sales ratio of 14% (a balanced market).",
-      "gen": "snapstats"
+      "text": "Central Coquitlam, October 2026. Detached houses: 61 listed at month end and 9 sold in October, a sales ratio of 15% (a balanced market). Condos and townhomes: 33 listed at month end and 1 sold in October, a sales ratio of 3% (a buyers’ market)."
     },
     {
-      "t": "table",
       "caption": "Central Coquitlam listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -62,189 +59,198 @@
           "36",
           "5",
           "14%"
+        ],
+        [
+          "October 2026",
+          "61",
+          "9",
+          "15%",
+          "33",
+          "1",
+          "3%"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 52 sold over 4 months against an average of 70.0 listed, about 5.4 months of listings at that pace; the busiest month was July with 18 sold. Condos and townhomes: 17 sold over 4 months against an average of 36.5 listed, about 8.6 months of listings at that pace; the busiest month was June with 8 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 61 sold over 5 months against an average of 68.2 listed, about 5.6 months of listings at that pace; the busiest month was July with 18 sold. Condos and townhomes: 18 sold over 5 months against an average of 35.8 listed, about 9.9 months of listings at that pace; the busiest month was June with 8 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Central Coquitlam by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Coquitlam by home type"
     },
     {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Central Coquitlam houses for sale",
-            "h": "/central-coquitlam-houses-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Central Coquitlam condos and townhomes for sale",
-            "h": "/central-coquitlam-condos-townhomes-for-sale.html"
-          }
-        ]
-      ],
       "gen": "typepage",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "More Coquitlam real estate",
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "list",
       "items": [
         [
           {
-            "t": "Coquitlam homes for sale",
-            "h": "/coquitlam-homes-for-sale.html"
+            "h": "/central-coquitlam-houses-for-sale.html",
+            "t": "Central Coquitlam houses for sale"
           }
         ],
         [
           {
-            "t": "Coquitlam real estate market stats",
-            "h": "/coquitlam-real-estate-market-stats.html"
-          }
-        ],
-        [
-          {
-            "t": "Coquitlam condos for sale",
-            "h": "/coquitlam-condos-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Coquitlam townhomes for sale",
-            "h": "/coquitlam-townhomes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Schools in Coquitlam",
-            "h": "/schools-in-coquitlam-bc.html"
-          }
-        ],
-        [
-          {
-            "t": "Chineside real estate",
-            "h": "/chineside.html"
-          }
-        ],
-        [
-          {
-            "t": "Coquitlam East real estate",
-            "h": "/coquitlam-east.html"
-          }
-        ],
-        [
-          {
-            "t": "Coquitlam West real estate",
-            "h": "/coquitlam-west.html"
-          }
-        ],
-        [
-          {
-            "t": "Eagle Ridge real estate",
-            "h": "/eagle-ridge-cq.html"
-          }
-        ],
-        [
-          {
-            "t": "Harbour Chines real estate",
-            "h": "/harbour-chines.html"
-          }
-        ],
-        [
-          {
-            "t": "Harbour Place real estate",
-            "h": "/harbour-place-coquitlam.html"
-          }
-        ],
-        [
-          {
-            "t": "Hockaday real estate",
-            "h": "/hockaday.html"
-          }
-        ],
-        [
-          {
-            "t": "Maillardville real estate",
-            "h": "/maillardville-coquitlam.html"
-          }
-        ],
-        [
-          {
-            "t": "Meadow Brook real estate",
-            "h": "/meadow-brook-coquitlam.html"
-          }
-        ],
-        [
-          {
-            "t": "New Horizons real estate",
-            "h": "/new-horizons-coquitlam.html"
+            "h": "/central-coquitlam-condos-townhomes-for-sale.html",
+            "t": "Central Coquitlam condos and townhomes for sale"
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "h",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "More Coquitlam real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Source: mybaragar.com",
-            "h": "https://mybaragar.com/index.cfm?event=page.SchoolLocatorPublic&DistrictCode=bc43"
+            "h": "/coquitlam-homes-for-sale.html",
+            "t": "Coquitlam homes for sale"
+          }
+        ],
+        [
+          {
+            "h": "/coquitlam-real-estate-market-stats.html",
+            "t": "Coquitlam real estate market stats"
+          }
+        ],
+        [
+          {
+            "h": "/coquitlam-condos-for-sale.html",
+            "t": "Coquitlam condos for sale"
+          }
+        ],
+        [
+          {
+            "h": "/coquitlam-townhomes-for-sale.html",
+            "t": "Coquitlam townhomes for sale"
+          }
+        ],
+        [
+          {
+            "h": "/schools-in-coquitlam-bc.html",
+            "t": "Schools in Coquitlam"
+          }
+        ],
+        [
+          {
+            "h": "/chineside.html",
+            "t": "Chineside real estate"
+          }
+        ],
+        [
+          {
+            "h": "/coquitlam-east.html",
+            "t": "Coquitlam East real estate"
+          }
+        ],
+        [
+          {
+            "h": "/coquitlam-west.html",
+            "t": "Coquitlam West real estate"
+          }
+        ],
+        [
+          {
+            "h": "/eagle-ridge-cq.html",
+            "t": "Eagle Ridge real estate"
+          }
+        ],
+        [
+          {
+            "h": "/harbour-chines.html",
+            "t": "Harbour Chines real estate"
+          }
+        ],
+        [
+          {
+            "h": "/harbour-place-coquitlam.html",
+            "t": "Harbour Place real estate"
+          }
+        ],
+        [
+          {
+            "h": "/hockaday.html",
+            "t": "Hockaday real estate"
+          }
+        ],
+        [
+          {
+            "h": "/maillardville-coquitlam.html",
+            "t": "Maillardville real estate"
+          }
+        ],
+        [
+          {
+            "h": "/meadow-brook-coquitlam.html",
+            "t": "Meadow Brook real estate"
+          }
+        ],
+        [
+          {
+            "h": "/new-horizons-coquitlam.html",
+            "t": "New Horizons real estate"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "p",
-      "text": "Central Coquitlam 55+ homes for sale",
+      "gen": "musefaq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
+    },
+    {
+      "gen": "musefaq",
+      "items": [
+        [
+          {
+            "h": "https://mybaragar.com/index.cfm?event=page.SchoolLocatorPublic&DistrictCode=bc43",
+            "t": "Source: mybaragar.com"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "n55link",
       "h": "/central-coquitlam-55-plus-homes-for-sale.html",
       "pos": "end",
-      "gen": "n55link"
+      "t": "p",
+      "text": "Central Coquitlam 55+ homes for sale"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Central Coquitlam",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Fee-simple lots",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Central Coquitlam"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Fee-simple lots"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -263,51 +269,51 @@
         ],
         [
           {
-            "t": "Serviced vs unserviced, as the City states it: Critically for lot value: lots not connected to municipal water or sewer are outside the City's SSMUH rules — so property-level septic or well status changes what a lot can do, and that status is UNVERIFIED parcel-by-parcel in the research."
+            "t": "Serviced vs unserviced, as the City states it: Critically for lot value: lots not connected to municipal water or sewer are outside the City's SSMUH rules — so property-level septic or well status changes what a lot can do, and that status is not verified parcel-by-parcel."
           }
         ],
         [
           {
-            "t": "ALR vs non-ALR: ALR status for the sub-area is UNVERIFIED in the research; no ALR split is stated and none is invented. Check the parcel on ALC mapping before applying any ALR rule."
+            "t": "ALR vs non-ALR: ALR status for the sub-area is not verified; no ALR split is stated and none is invented. Check the parcel on ALC mapping before applying any ALR rule."
           }
         ],
         [
           {
-            "t": "Watercourse-shaped land: the Watercourse Protection Development Permit Area covers all areas within 30 metres of the top of bank or top of ravine bank of any watercourse in this part of Coquitlam; Zoning Bylaw s.519 sets flood protection setbacks from watercourses and s.523 covers riparian areas. A Fraser River floodplain designation for Central Coquitlam's residential streets: UNVERIFIED. Gross lot area is not buildable area on creek and ravine lots."
+            "t": "Watercourse-shaped land: the Watercourse Protection Development Permit Area covers all areas within 30 metres of the top of bank or top of ravine bank of any watercourse in this part of Coquitlam; Zoning Bylaw s.519 sets flood protection setbacks from watercourses and s.523 covers riparian areas. A Fraser River floodplain designation for Central Coquitlam's residential streets: Not verified. Gross lot area is not buildable area on creek and ravine lots."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Pad-rental land",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Pad-rental land"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Hideaway Park (Coquitlam Hideaway Mobile Home Park) — 4200 Dewdney Trunk Road (Ranch Park). PAD-RENTAL PARK: The same marketing document notes the site falls within a \"Shoulder Station Area\" in the City's Transit-Oriented Development Strategy with potential to be rezoned to multifamily use — a redevelopment-risk fact a park buyer must weigh. Pad rent for any specific home: UNCONFIRMED (listing figures conflict)."
+            "t": "Hideaway Park (Coquitlam Hideaway Mobile Home Park) — 4200 Dewdney Trunk Road (Ranch Park). PAD-RENTAL PARK: The same marketing document notes the site falls within a \"Shoulder Station Area\" in the City's Transit-Oriented Development Strategy with potential to be rezoned to multifamily use — a redevelopment-risk fact a park buyer must weigh. Pad rent for any specific home: Not confirmed (listing figures conflict)."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Presale",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Presale"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -316,26 +322,26 @@
         ],
         [
           {
-            "t": "No specific development application in Central Coquitlam beyond the above was verified: on a City development application page in the research: UNVERIFIED. Applications and rezoning proposals, where they exist, are documented as proposals only — never as for-sale inventory."
+            "t": "No specific development application in Central Coquitlam beyond the above was verified: on a City development application page: Not verified. Applications and rezoning proposals, where they exist, are documented as proposals only — never as for-sale inventory."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Central Coquitlam",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Central Coquitlam"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Municipality: City of Coquitlam, BC — Central Coquitlam is the established central part of the city, around Como Lake Avenue, Austin Avenue and the City Centre / Pinetree Way edge. \"Central Coquitlam\" is the GVR sub-area name as it appears in the SnapStats GVR September 2026 report; an official City neighbourhood plan name for \"Central Coquitlam\" was not confirmed — the City plans this part of Coquitlam through its City Centre and Town Centre planning and the Transit-Oriented Areas framework. Boundaries: UNVERIFIED."
+            "t": "Municipality: City of Coquitlam, BC — Central Coquitlam is the established central part of the city, around Como Lake Avenue, Austin Avenue and the City Centre / Pinetree Way edge. \"Central Coquitlam\" is the GVR sub-area name as it appears in the SnapStats GVR September 2026 report; an official City neighbourhood plan name for \"Central Coquitlam\" was not confirmed — the City plans this part of Coquitlam through its City Centre and Town Centre planning and the Transit-Oriented Areas framework. Boundaries: Not verified."
           }
         ],
         [
@@ -345,37 +351,37 @@
         ],
         [
           {
-            "t": "Main roads: Como Lake Avenue, Austin Avenue, Pinetree Way and Guildford Way. Transit: the Evergreen Extension (Millennium Line) stations Coquitlam Central, Lincoln and Lafarge Lake-Douglas serve the City Centre edge on Pinetree Way and Barnet Highway, and Coquitlam Central also has West Coast Express service; per-route bus numbers for the interior streets: UNVERIFIED. Commute times in minutes: UNVERIFIED."
+            "t": "Main roads: Como Lake Avenue, Austin Avenue, Pinetree Way and Guildford Way. Transit: the Evergreen Extension (Millennium Line) stations Coquitlam Central, Lincoln and Lafarge Lake-Douglas serve the City Centre edge on Pinetree Way and Barnet Highway, and Coquitlam Central also has West Coast Express service; per-route bus numbers for the interior streets: Not verified. Commute times in minutes: Not verified."
           }
         ],
         [
           {
-            "t": "Schools: SD43 catchments are address-based, in a three-tier district (elementary / middle / secondary). Settled locator chain for one sample address only: for 1169 Pinetree Way (Coquitlam Public Library City Centre branch), the SD43 School Locator result is Glen Elementary, École Maple Creek Middle and Pinetree Secondary. SD43 schools named for central Coquitlam on district pages include Central Elementary School, Hillcrest Middle School and École Dr. Charles Best Secondary School (their street addresses were not confirmed); catchments for other addresses must be checked in the locator."
+            "t": "Schools: SD43 catchments are address-based, in a three-tier district (elementary / middle / secondary). SD43 schools named for central Coquitlam on district pages include Central Elementary School, Hillcrest Middle School and École Dr. Charles Best Secondary School (their street addresses were not confirmed); catchments for other addresses must be checked in the locator."
           }
         ],
         [
           {
-            "t": "Parks and services: Town Centre Park and Como Lake Park are City park names in City records for this part of Coquitlam (addresses UNVERIFIED); City Centre Aquatic Complex and Evergreen Cultural Centre are in the City Centre area at the sub-area's east edge (addresses UNVERIFIED). Coquitlam Public Library City Centre branch, 1169 Pinetree Way, and Poirier branch, 575 Poirier Street, serve Coquitlam. Eagle Ridge Hospital, 475 Guildford Way, Port Moody, is the nearest hospital for this area. No shopping centre or grocery store for Central Coquitlam was verified on an official source in the research: UNVERIFIED."
+            "t": "Parks and services: Town Centre Park and Como Lake Park are City park names in City records for this part of Coquitlam (addresses not verified); City Centre Aquatic Complex and Evergreen Cultural Centre are in the City Centre area at the sub-area's east edge (addresses not verified). Coquitlam Public Library City Centre branch, 1169 Pinetree Way, and Poirier branch, 575 Poirier Street, serve Coquitlam. Eagle Ridge Hospital, 475 Guildford Way, Port Moody, is the nearest hospital for this area. No shopping centre or grocery store for Central Coquitlam was verified on an official source: Not verified."
           }
         ],
         [
           {
-            "t": "Market context, labelled correctly (September 2026, SnapStats GVR September 2026 report): Central Coquitlam sub-area detached inventory 64 / solds 9 (14% ratio) and \"Condos & Townhomes\" combined 36 / 5 (14% ratio); Coquitlam community detached median $1,455,000 ($550/sqft, 97% sale-to-list, 35 days on market) and attached median $625,000 ($687/sqft, 96%, 23 days). Sub-area medians are UNVERIFIED (community level only). SnapStats has NO land category — none of these figures is a land figure."
+            "t": "Market context, labelled correctly (September 2026, SnapStats GVR September 2026 report): Central Coquitlam sub-area detached inventory 64 / solds 9 (14% ratio) and \"Condos & Townhomes\" combined 36 / 5 (14% ratio); Coquitlam community detached median $1,455,000 ($550/sqft, 97% sale-to-list, 35 days on market) and attached median $625,000 ($687/sqft, 96%, 23 days). Sub-area medians are not verified (community level only). SnapStats has NO land category — none of these figures is a land figure."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Central Coquitlam",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Central Coquitlam"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -384,7 +390,7 @@
         ],
         [
           {
-            "t": "ALR rules (sub-area ALR status UNVERIFIED here; standing rules for completeness only): ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)); subdivision within the ALR requires ALC approval; residence caps principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha); farm class three-tier ($2,500 on 0.8–4 ha; $2,500 + 5% of value over 4 ha; $10,000 under 0.8 ha; applications by Oct 31) — asserted here only as the standing three-tier rule; the research documents no farm-class parcel in Central Coquitlam, and a flat \"$2,500+\" line is an ERROR wherever it appears."
+            "t": "ALR rules (sub-area ALR status not verified here; standing rules for completeness only): ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)); subdivision within the ALR requires ALC approval; residence caps principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha); farm class three-tier ($2,500 on 0.8–4 ha; $2,500 + 5% of value over 4 ha; $10,000 under 0.8 ha; applications by Oct 31) — asserted here only as the standing three-tier rule; the research documents no farm-class parcel in Central Coquitlam, and a flat \"$2,500+\" line is an ERROR wherever it appears."
           }
         ],
         [
@@ -393,18 +399,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Central Coquitlam",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Central Coquitlam"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -413,7 +419,7 @@
         ],
         [
           {
-            "t": "Services decide density here, not just lot size: the SSMUH unit counts (3 / 4 units) expressly exclude lots not connected to municipal water or sewer — two lots of identical size and zone on the central streets can carry different unit potential purely on servicing, and the research leaves parcel-level septic/well status UNVERIFIED."
+            "t": "Services decide density here, not just lot size: the SSMUH unit counts (3 / 4 units) expressly exclude lots not connected to municipal water or sewer — two lots of identical size and zone on the central streets can carry different unit potential purely on servicing, and the research leaves parcel-level septic/well status not verified."
           }
         ],
         [
@@ -427,136 +433,136 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Central Coquitlam",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Central Coquitlam"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "coquitlam.ca · Small Scale Multi Unit Housing in Coquit",
-            "h": "https://www.coquitlam.ca/1361/Small-Scale-Multi-Unit-Housing-in-Coquit"
+            "h": "https://www.coquitlam.ca/1361/Small-Scale-Multi-Unit-Housing-in-Coquit",
+            "t": "coquitlam.ca · Small Scale Multi Unit Housing in Coquit"
           }
         ],
         [
           {
-            "t": "coquitlam.ca.granicus.com · MetaViewer",
-            "h": "https://coquitlam.ca.granicus.com/MetaViewer.php?view_id=2&clip_id=2891&meta_id=82306"
+            "h": "https://coquitlam.ca.granicus.com/MetaViewer.php?view_id=2&clip_id=2891&meta_id=82306",
+            "t": "coquitlam.ca.granicus.com · MetaViewer"
           }
         ],
         [
           {
-            "t": "coquitlam.ca · Detail",
-            "h": "https://coquitlam.ca/m/newsflash/Home/Detail/1838"
+            "h": "https://coquitlam.ca/m/newsflash/Home/Detail/1838",
+            "t": "coquitlam.ca · Detail"
           }
         ],
         [
           {
-            "t": "translink.ca · schedule",
-            "h": "https://www.translink.ca/schedules-and-maps/station/coquitlam-central/schedule"
+            "h": "https://www.translink.ca/schedules-and-maps/station/coquitlam-central/schedule",
+            "t": "translink.ca · schedule"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · eagle ridge hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Port-Moody/eagle-ridge-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Port-Moody/eagle-ridge-hospital",
+            "t": "fraserhealth.ca · eagle ridge hospital"
           }
         ],
         [
           {
-            "t": "coquitlam.ca · Small Scale Multi Unit Housing Summary Guide",
-            "h": "https://www.coquitlam.ca/DocumentCenter/View/15337/Small-Scale-Multi-Unit-Housing-Summary-Guide?bidId="
+            "h": "https://www.coquitlam.ca/DocumentCenter/View/15337/Small-Scale-Multi-Unit-Housing-Summary-Guide?bidId=",
+            "t": "coquitlam.ca · Small Scale Multi Unit Housing Summary Guide"
           }
         ],
         [
           {
-            "t": "northeastsector.ca · Part 6 Subdivision PDF Subdivision permissions a",
-            "h": "https://northeastsector.ca/DocumentCenter/View/1171/Part-6-Subdivision-PDF--Subdivision-permissions-and-regulations"
+            "h": "https://northeastsector.ca/DocumentCenter/View/1171/Part-6-Subdivision-PDF--Subdivision-permissions-and-regulations",
+            "t": "northeastsector.ca · Part 6 Subdivision PDF Subdivision permissions a"
           }
         ],
         [
           {
-            "t": "coquitlam.ca · 2026 Budget Highlights",
-            "h": "https://www.coquitlam.ca/DocumentCenter/View/17426/2026-Budget-Highlights"
+            "h": "https://www.coquitlam.ca/DocumentCenter/View/17426/2026-Budget-Highlights",
+            "t": "coquitlam.ca · 2026 Budget Highlights"
           }
         ],
         [
           {
-            "t": "coquitlam.ca · Development Permits",
-            "h": "https://www.coquitlam.ca/254/Development-Permits"
+            "h": "https://www.coquitlam.ca/254/Development-Permits",
+            "t": "coquitlam.ca · Development Permits"
           }
         ],
         [
           {
-            "t": "mikestewart.ca · 1175 pinetree way coquitlam city centre onni pre",
-            "h": "https://www.mikestewart.ca/presale/1175-pinetree-way-coquitlam-city-centre-onni-presale-condos/"
+            "h": "https://www.mikestewart.ca/presale/1175-pinetree-way-coquitlam-city-centre-onni-presale-condos/",
+            "t": "mikestewart.ca · 1175 pinetree way coquitlam city centre onni pre"
           }
         ],
         [
           {
-            "t": "coquitlam.ca · Official Community Plan Review",
-            "h": "https://www.coquitlam.ca/1436/Official-Community-Plan-Review"
+            "h": "https://www.coquitlam.ca/1436/Official-Community-Plan-Review",
+            "t": "coquitlam.ca · Official Community Plan Review"
           }
         ],
         [
           {
-            "t": "publicdocs.coquitlam.ca · getdocIF.asp",
-            "h": "https://publicdocs.coquitlam.ca/coquitlamdoc/getdocIF.asp?doc=6328713"
+            "h": "https://publicdocs.coquitlam.ca/coquitlamdoc/getdocIF.asp?doc=6328713",
+            "t": "publicdocs.coquitlam.ca · getdocIF.asp"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Central Coquitlam",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Central Coquitlam"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -584,18 +590,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -613,18 +619,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -642,18 +648,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -661,25 +667,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Coquitlam Public Library, City Centre Branch, 1169 Pinetree Way",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Coquitlam Centre",
@@ -706,18 +713,17 @@
           "6.6"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -725,123 +731,106 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "translink.ca · schedule",
-            "h": "https://www.translink.ca/schedules-and-maps/station/coquitlam-central/schedule"
+            "h": "https://www.translink.ca/schedules-and-maps/station/coquitlam-central/schedule",
+            "t": "translink.ca · schedule"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt186",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt186.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt186.pdf",
+            "t": "infomaps.translink.ca · tt186"
           }
         ],
         [
           {
-            "t": "translink.ca · schedule (2)",
-            "h": "https://www.translink.ca/schedules-and-maps/route/187/direction/1/schedule"
+            "h": "https://www.translink.ca/schedules-and-maps/route/187/direction/1/schedule",
+            "t": "translink.ca · schedule (2)"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt160",
-            "h": "https://infomaps.translink.ca/Public_Timetables/210/tt160.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/210/tt160.pdf",
+            "t": "infomaps.translink.ca · tt160"
           }
         ],
         [
           {
-            "t": "coquitlam.ca · Picnic Outdoor Spaces",
-            "h": "https://www.coquitlam.ca/879/Picnic-Outdoor-Spaces"
+            "h": "https://www.coquitlam.ca/879/Picnic-Outdoor-Spaces",
+            "t": "coquitlam.ca · Picnic Outdoor Spaces"
           }
         ],
         [
           {
-            "t": "coquitlam.ca · Poirier Sport and Leisure Complex",
-            "h": "https://coquitlam.ca/384/Poirier-Sport-and-Leisure-Complex"
+            "h": "https://coquitlam.ca/384/Poirier-Sport-and-Leisure-Complex",
+            "t": "coquitlam.ca · Poirier Sport and Leisure Complex"
           }
         ],
         [
           {
-            "t": "coqlibrary.ca",
-            "h": "https://coqlibrary.ca/"
+            "h": "https://coqlibrary.ca/",
+            "t": "coqlibrary.ca"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/043"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/043",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "apple.com · coquitlamcentre",
-            "h": "https://www.apple.com/ca/retail/coquitlamcentre/"
+            "h": "https://www.apple.com/ca/retail/coquitlamcentre/",
+            "t": "apple.com · coquitlamcentre"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Which school district and schools serve Central Coquitlam?",
-      "a": "School District 43 (Coquitlam). For the sample address 1169 Pinetree Way, the SD43 locator result is Glen Elementary, École Maple Creek Middle and Pinetree Secondary; catchments are address-based, so check the exact address in the locator.",
-      "gen": "muse"
-    },
-    {
-      "q": "What sold in Central Coquitlam in September 2026?",
-      "a": "Detached: 9 solds from 64 listings (14% sales ratio); condos & townhomes: 5 solds from 36 listings (14%). At the Coquitlam community level the detached median sale price was $1,455,000 and the condos & townhomes median was $625,000 (as of September 2026, Source: SnapStats GVR September 2026 report).",
-      "gen": "muse"
-    },
-    {
-      "q": "How many homes are for sale in Central Coquitlam?",
-      "a": "At the end of September 2026 the Greater Vancouver REALTORS® figures showed 64 houses listed with 9 sold in the month and 36 condos and townhomes listed with 5 sold in the month in Central Coquitlam. Those are month-end counts and move daily; ask Jared what is on the market today.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "Is Central Coquitlam a buyers’ or sellers’ market?",
-      "a": "In September 2026, houses had a sales ratio of 14%, a balanced market; condos and townhomes had a sales ratio of 14%, a balanced market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers.",
-      "gen": "snap-faq"
-    },
-    {
+      "a": "No verified one — no named bare-land subdivision or presale lot offering was verified. Land trades as built house lots on the Como Lake / Austin streets, strata units at the City Centre edge, and (at Hideaway Park) a home on a rented pad.",
       "gen": "tn",
-      "q": "Is there a vacant-lot subdivision I can buy into in Central Coquitlam?",
-      "a": "No verified one — no named bare-land subdivision or presale lot offering was verified. Land trades as built house lots on the Como Lake / Austin streets, strata units at the City Centre edge, and (at Hideaway Park) a home on a rented pad."
+      "q": "Is there a vacant-lot subdivision I can buy into in Central Coquitlam?"
     },
     {
+      "a": "Yes under the City's SSMUH rules — up to 3 units on lots 280 m² or smaller and up to 4 units on lots larger than 280 m² and under 4,050 m², including secondary suites and carriage or laneway homes — but lots not connected to municipal water or sewer fall outside the rules, so confirm services and the exact zone first.",
       "gen": "tn",
-      "q": "Can a house lot add units?",
-      "a": "Yes under the City's SSMUH rules — up to 3 units on lots 280 m² or smaller and up to 4 units on lots larger than 280 m² and under 4,050 m², including secondary suites and carriage or laneway homes — but lots not connected to municipal water or sewer fall outside the rules, so confirm services and the exact zone first."
+      "q": "Can a house lot add units?"
     },
     {
+      "a": "Because listing feeds label the verified tower cluster North Coquitlam / Canyon Springs / Town Centre, not Central Coquitlam — a \"Central Coquitlam\" board filter misses them.",
       "gen": "tn",
-      "q": "Why can't I find the City Centre towers under \"Central Coquitlam\"?",
-      "a": "Because listing feeds label the verified tower cluster North Coquitlam / Canyon Springs / Town Centre, not Central Coquitlam — a \"Central Coquitlam\" board filter misses them."
+      "q": "Why can't I find the City Centre towers under \"Central Coquitlam\"?"
     },
     {
+      "a": "You never own the land, and the document itself flags potential multifamily rezoning in a Shoulder Station Area — price the redevelopment risk, not a land value.",
       "gen": "tn",
-      "q": "Is Hideaway Park a way to own cheap land in Coquitlam?",
-      "a": "You never own the land, and the document itself flags potential multifamily rezoning in a Shoulder Station Area — price the redevelopment risk, not a land value."
+      "q": "Is Hideaway Park a way to own cheap land in Coquitlam?"
     },
     {
+      "a": "No — Pine & Glen (1175 Pinetree Way, Onni) is a presale of 705 strata condominiums plus 186 market-rental apartments in three towers over a podium, estimated completion 2028. Presale LOT offerings in the sub-area: zero verified.",
       "gen": "tn",
-      "q": "Is Pine & Glen selling lots?",
-      "a": "No — Pine & Glen (1175 Pinetree Way, Onni) is a presale of 705 strata condominiums plus 186 market-rental apartments in three towers over a podium, estimated completion 2028. Presale LOT offerings in the sub-area: zero verified."
+      "q": "Is Pine & Glen selling lots?"
     }
-  ]
+  ],
+  "slug": "central-coquitlam",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

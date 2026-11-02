@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "silver-valley-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Silver Valley compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Silver Valley compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Silver Valley against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Silver Valley against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
-      "caption": "Silver Valley against the whole city, September 2026",
+      "caption": "Silver Valley against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -27,164 +24,164 @@
       "rows": [
         [
           "Detached houses",
-          "12.0%",
-          "12.5%",
-          "10% against 10%",
-          "4 of 8"
+          "11.9%",
+          "8.5%",
+          "11% against 15%",
+          "6 of 7"
         ],
         [
           "Condos and townhomes",
-          "5.2%",
-          "0.0%",
-          "— against 12%",
-          "Under 10 listed"
+          "4.9%",
+          "4.3%",
+          "15% against 17%",
+          "3 of 6"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings fell from 63 in June to 49 in September (−22.2%), and it took 15.4% of the city’s 188 sales over the period; condos and townhomes: listings was little changed, 15 in June and 15 in September (+0.0%), and it took 5.4% of the city’s 184 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 63 in June to 46 in October (−27.0%), and it took 13.8% of the city’s 247 sales over the period; condos and townhomes: listings fell from 15 in June to 13 in October (−13.3%), and it took 5.2% of the city’s 230 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Silver Valley for detached houses in July (a sellers’ best bet); condos and townhomes in June, July (a sellers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out Silver Valley for detached houses in July (a sellers’ best bet); detached houses in October (a buyers’ best bet); condos and townhomes in June, July (a sellers’ best bet)."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Maple Ridge real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Maple Ridge real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Maple Ridge homes for sale",
-            "h": "/maple-ridge-homes-for-sale.html"
+            "h": "/maple-ridge-homes-for-sale.html",
+            "t": "Maple Ridge homes for sale"
           }
         ],
         [
           {
-            "t": "Maple Ridge real estate market stats",
-            "h": "/maple-ridge-real-estate-market-stats.html"
+            "h": "/maple-ridge-real-estate-market-stats.html",
+            "t": "Maple Ridge real estate market stats"
           }
         ],
         [
           {
-            "t": "Maple Ridge houses for sale",
-            "h": "/maple-ridge-houses-for-sale.html"
+            "h": "/maple-ridge-houses-for-sale.html",
+            "t": "Maple Ridge houses for sale"
           }
         ],
         [
           {
-            "t": "Maple Ridge condos for sale",
-            "h": "/maple-ridge-condos-for-sale.html"
+            "h": "/maple-ridge-condos-for-sale.html",
+            "t": "Maple Ridge condos for sale"
           }
         ],
         [
           {
-            "t": "Maple Ridge townhomes for sale",
-            "h": "/maple-ridge-townhomes-for-sale.html"
+            "h": "/maple-ridge-townhomes-for-sale.html",
+            "t": "Maple Ridge townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Maple Ridge",
-            "h": "/sell-my-house-in-maple-ridge.html"
+            "h": "/sell-my-house-in-maple-ridge.html",
+            "t": "Sell my house in Maple Ridge"
           }
         ],
         [
           {
-            "t": "Silver Valley homes and market figures",
-            "h": "/silver-valley.html"
+            "h": "/silver-valley.html",
+            "t": "Silver Valley homes and market figures"
           }
         ],
         [
           {
-            "t": "Southwest real estate",
-            "h": "/southwest-maple-ridge.html"
+            "h": "/southwest-maple-ridge.html",
+            "t": "Southwest real estate"
           }
         ],
         [
           {
-            "t": "Thornhill real estate",
-            "h": "/thornhill-mr.html"
+            "h": "/thornhill-mr.html",
+            "t": "Thornhill real estate"
           }
         ],
         [
           {
-            "t": "Websters Corners real estate",
-            "h": "/websters-corners.html"
+            "h": "/websters-corners.html",
+            "t": "Websters Corners real estate"
           }
         ],
         [
           {
-            "t": "West Central real estate",
-            "h": "/west-central.html"
+            "h": "/west-central.html",
+            "t": "West Central real estate"
           }
         ],
         [
           {
-            "t": "Whonnock real estate",
-            "h": "/whonnock.html"
+            "h": "/whonnock.html",
+            "t": "Whonnock real estate"
           }
         ],
         [
           {
-            "t": "Albion real estate",
-            "h": "/albion.html"
+            "h": "/albion.html",
+            "t": "Albion real estate"
           }
         ],
         [
           {
-            "t": "Cottonwood real estate",
-            "h": "/cottonwood-mr.html"
+            "h": "/cottonwood-mr.html",
+            "t": "Cottonwood real estate"
           }
         ],
         [
           {
-            "t": "East Central real estate",
-            "h": "/east-central.html"
+            "h": "/east-central.html",
+            "t": "East Central real estate"
           }
         ],
         [
           {
-            "t": "Northeast real estate",
-            "h": "/northeast.html"
+            "h": "/northeast.html",
+            "t": "Northeast real estate"
           }
         ],
         [
           {
-            "t": "Northwest real estate",
-            "h": "/northwest-maple-ridge.html"
+            "h": "/northwest-maple-ridge.html",
+            "t": "Northwest real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Silver Valley",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Silver Valley"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -208,7 +205,7 @@
         ],
         [
           {
-            "t": "Lot character (sizes/zones), ONLY as the sources state them: Maple Ridge Zoning Bylaw No. 7600-2019 — RS-1 subdivision minimums are 668.0 m² lot area, 18.0 m width and 27.0 m depth, with maximum lot coverage 40%. These are zone minimums, not a claim about any existing lot's size. Which zones apply to specific Silver Valley parcels: UNVERIFIED — check parcel by parcel."
+            "t": "Lot character (sizes/zones), ONLY as the sources state them: Maple Ridge Zoning Bylaw No. 7600-2019 — RS-1 subdivision minimums are 668.0 m² lot area, 18.0 m width and 27.0 m depth, with maximum lot coverage 40%. These are zone minimums, not a claim about any existing lot's size. Which zones apply to specific Silver Valley parcels: Not verified — check parcel by parcel."
           }
         ],
         [
@@ -223,7 +220,7 @@
         ],
         [
           {
-            "t": "Slope, watercourse and floodplain diligence sorts the hillside lots: the City publishes North and South Alouette River and Fraser River floodplain maps; which Silver Valley lots are affected is per-parcel: UNVERIFIED. Hillside/watercourse Development Permit requirements are likewise parcel-level checks — pull the City's maps for the exact address before removing subjects."
+            "t": "Slope, watercourse and floodplain diligence sorts the hillside lots: the City publishes North and South Alouette River and Fraser River floodplain maps; which Silver Valley lots are affected is per-parcel: Not verified. Hillside/watercourse Development Permit requirements are likewise parcel-level checks — pull the City's maps for the exact address before removing subjects."
           }
         ],
         [
@@ -237,18 +234,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Silver Valley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Silver Valley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -257,12 +254,12 @@
         ],
         [
           {
-            "t": "Identity: this page maps to the SnapStats board sub-area \"Silver Valley\" in the Maple Ridge community, and the City's neighbourhood list names Silver Valley — the City describes it as sitting on the north side of the Alouette River and as a gateway to recreation areas with trail networks. Street-level board boundary: UNVERIFIED — no public street-level boundary was opened, and no City neighbourhood boundary was substituted for it."
+            "t": "Identity: this page maps to the SnapStats board sub-area \"Silver Valley\" in the Maple Ridge community, and the City's neighbourhood list names Silver Valley — the City describes it as sitting on the north side of the Alouette River and as a gateway to recreation areas with trail networks. Street-level board boundary: Not verified — no public street-level boundary was opened, and no City neighbourhood boundary was substituted for it."
           }
         ],
         [
           {
-            "t": "Market context at sub-area level, labelled as such and never a land figure: Silver Valley, September 2026 — Detached 49 / 5 / 10% (joint with Albion); Condos & Townhomes 15 / 0 / NA (no attached sale recorded that month). Maple Ridge community context (NOT Silver Valley's figures): Detached median $1,131,000; Condos & Townhomes median $525,000. SnapStats publishes medians at community level only, has NO land category, and publishes no Silver Valley median: UNVERIFIED at sub-area level, as of September 2026, Source: SnapStats FVR/GVR September 2026 report."
+            "t": "Market context at sub-area level, labelled as such and never a land figure: Silver Valley, September 2026 — Detached 49 / 5 / 10% (joint with Albion); Condos & Townhomes 15 / 0 / NA (no attached sale recorded that month). Maple Ridge community context (NOT Silver Valley's figures): Detached median $1,131,000; Condos & Townhomes median $525,000. SnapStats publishes medians at community level only, has NO land category, and publishes no Silver Valley median: Not verified at sub-area level, as of September 2026, Source: SnapStats FVR/GVR September 2026 report."
           }
         ],
         [
@@ -272,7 +269,7 @@
         ],
         [
           {
-            "t": "Transit: the West Coast Express stations serving Maple Ridge are Maple Meadows and Port Haney (weekday trains between Waterfront and Mission City) — both south-west of Silver Valley, not in it. Commute times in minutes: UNVERIFIED."
+            "t": "Transit: the West Coast Express stations serving Maple Ridge are Maple Meadows and Port Haney (weekday trains between Waterfront and Mission City) — both south-west of Silver Valley, not in it. Commute times in minutes: Not verified."
           }
         ],
         [
@@ -281,22 +278,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Silver Valley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Silver Valley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "SnapStats publishes no sub-area medians and no townhome-only split at all, and no Statistics Canada profile figure was opened — every one of those page figures is UNVERIFIED."
+            "t": "SnapStats publishes no sub-area medians and no townhome-only split at all, and no Statistics Canada profile figure was opened — every one of those page figures is not verified."
           }
         ],
         [
@@ -315,136 +312,136 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Silver Valley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Silver Valley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · silver valley",
-            "h": "https://jaredgibbons.ca/silver-valley.html"
+            "h": "https://jaredgibbons.ca/silver-valley.html",
+            "t": "jaredgibbons.ca · silver valley"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · our neighbourhoods",
-            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods"
+            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods",
+            "t": "mapleridge.ca · our neighbourhoods"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · official community plan",
-            "h": "https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/official-community-plan"
+            "h": "https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/official-community-plan",
+            "t": "mapleridge.ca · official community plan"
           }
         ],
         [
           {
-            "t": "sd42.ca · elementary schools",
-            "h": "https://www.sd42.ca/elementary-schools/"
+            "h": "https://www.sd42.ca/elementary-schools/",
+            "t": "sd42.ca · elementary schools"
           }
         ],
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · r748",
-            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf"
+            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf",
+            "t": "infomaps.translink.ca · r748"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading",
-            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading"
+            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading",
+            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · floodplain construction 0",
-            "h": "https://www.mapleridge.ca/media/file/floodplain-construction-0"
+            "h": "https://www.mapleridge.ca/media/file/floodplain-construction-0",
+            "t": "mapleridge.ca · floodplain construction 0"
           }
         ],
         [
           {
-            "t": "engage.mapleridge.ca · LTCAP",
-            "h": "https://engage.mapleridge.ca/LTCAP"
+            "h": "https://engage.mapleridge.ca/LTCAP",
+            "t": "engage.mapleridge.ca · LTCAP"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · secondary suites",
-            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites"
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites",
+            "t": "mapleridge.ca · secondary suites"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · housing target order",
-            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-action/housing-target-order/new"
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-action/housing-target-order/new",
+            "t": "mapleridge.ca · housing target order"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · subdivision development bylaw no 4800 1993",
-            "h": "https://www.mapleridge.ca/media/file/subdivision-development-bylaw-no-4800-1993"
+            "h": "https://www.mapleridge.ca/media/file/subdivision-development-bylaw-no-4800-1993",
+            "t": "mapleridge.ca · subdivision development bylaw no 4800 1993"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 2,
-      "text": "Acreage and rural land in Silver Valley",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Silver Valley",
-      "gen": "acre",
-      "pos": "end"
+      "text": "Acreage and rural land in Silver Valley"
     },
     {
-      "t": "list",
+      "gen": "acre",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Silver Valley"
+    },
+    {
+      "gen": "acre",
       "items": [
         [
           {
@@ -462,18 +459,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Local rules that affect acreage buyers in Silver Valley",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect acreage buyers in Silver Valley"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -481,186 +478,159 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "acre",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below.",
-      "gen": "acre",
-      "pos": "end"
+      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "BC acreage buying rules",
-            "h": "/bc-acreage-buying-rules.html"
+            "h": "/bc-acreage-buying-rules.html",
+            "t": "BC acreage buying rules"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Sources for the acreage notes on Silver Valley",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the acreage notes on Silver Valley"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "mapleridge.ca · our neighbourhoods",
-            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods"
+            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods",
+            "t": "mapleridge.ca · our neighbourhoods"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · official community plan",
-            "h": "https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/official-community-plan"
+            "h": "https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/official-community-plan",
+            "t": "mapleridge.ca · official community plan"
           }
         ],
         [
           {
-            "t": "sd42.ca · elementary schools",
-            "h": "https://www.sd42.ca/elementary-schools/"
+            "h": "https://www.sd42.ca/elementary-schools/",
+            "t": "sd42.ca · elementary schools"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · r748",
-            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf"
+            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf",
+            "t": "infomaps.translink.ca · r748"
           }
         ],
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · floodplain construction 0",
-            "h": "https://www.mapleridge.ca/media/file/floodplain-construction-0"
+            "h": "https://www.mapleridge.ca/media/file/floodplain-construction-0",
+            "t": "mapleridge.ca · floodplain construction 0"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · ridge meadows hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital",
+            "t": "fraserhealth.ca · ridge meadows hospital"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading",
-            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading"
+            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading",
+            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · secondary suites",
-            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites"
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites",
+            "t": "mapleridge.ca · secondary suites"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · housing target order",
-            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-action/housing-target-order/new"
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-action/housing-target-order/new",
+            "t": "mapleridge.ca · housing target order"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · well records registration",
-            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/information-for-property-owners/well-records-registration"
+            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/information-for-property-owners/well-records-registration",
+            "t": "www2.gov.bc.ca · well records registration"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Are there more or fewer homes for sale in Silver Valley than in June?",
-      "a": "In Silver Valley, listings of houses fell from 63 in June to 49 in September (−22.2%); condos and townhomes was little changed, 15 in June and 15 in September (+0.0%).",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How big is Silver Valley compared with the rest of Maple Ridge?",
-      "a": "In September 2026, Silver Valley held 12.0% of the 410 houses listed in Maple Ridge and 5.2% of the 286 condos and townhomes listed in Maple Ridge.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How many homes sold in Silver Valley from June to September 2026?",
-      "a": "29 houses and 10 condos and townhomes sold in Silver Valley over those 4 months.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How do I find out which school serves an address in Silver Valley?",
-      "a": "School catchments are set by address, so use the school district's catchment locator with the exact address. Catchment lines change, so check before you write an offer.",
-      "gen": "bank-faq"
-    },
-    {
-      "q": "Who can help me buy or sell in Silver Valley?",
-      "a": "Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, works across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361 or use the contact form on this site.",
-      "gen": "bank-faq"
-    },
-    {
+      "a": "Lot-by-lot only — no named subdivision currently selling serviced vacant lots was verified. The built subdivisions trade as houses; the large-lot edge trades as individual acreage parcels whose designation, ALR status and servicing are confirmed per parcel.",
       "gen": "tn",
-      "q": "Can I buy a vacant building lot in Silver Valley?",
-      "a": "Lot-by-lot only — no named subdivision currently selling serviced vacant lots was verified. The built subdivisions trade as houses; the large-lot edge trades as individual acreage parcels whose designation, ALR status and servicing are confirmed per parcel."
+      "q": "Can I buy a vacant building lot in Silver Valley?"
     },
     {
+      "a": "Medians are community-level only and are not Silver Valley's own.",
       "gen": "tn",
-      "q": "How did Silver Valley sell in September 2026?",
-      "a": "Medians are community-level only and are not Silver Valley's own."
+      "q": "How did Silver Valley sell in September 2026?"
     },
     {
+      "a": "The update was adopted November 25, 2025, and a feed card already markets an \"Eco-Cluster Residential\" designation in listing text — confirm the parcel's current designation and zone with the City before valuing subdivision or assembly potential; the listing wording is not the plan.",
       "gen": "tn",
-      "q": "Did the Silver Valley Area Plan update change what my lot can become?",
-      "a": "The update was adopted November 25, 2025, and a feed card already markets an \"Eco-Cluster Residential\" designation in listing text — confirm the parcel's current designation and zone with the City before valuing subdivision or assembly potential; the listing wording is not the plan."
+      "q": "Did the Silver Valley Area Plan update change what my lot can become?"
     },
     {
+      "a": "One secondary suite per lot inside the house, up to 40% of gross floor area and not in the floodplain area; eligible single-detached and duplex lots may have up to three, four or six units under the City's SSMUH bylaws — verify the specific lot's eligibility before valuing suite income.",
       "gen": "tn",
-      "q": "Can I add a suite or more units to a Silver Valley lot?",
-      "a": "One secondary suite per lot inside the house, up to 40% of gross floor area and not in the floodplain area; eligible single-detached and duplex lots may have up to three, four or six units under the City's SSMUH bylaws — verify the specific lot's eligibility before valuing suite income."
+      "q": "Can I add a suite or more units to a Silver Valley lot?"
     },
     {
+      "a": "Both are per-parcel checks — ALR status on the ALC mapping (a card's \"not in ALR\" line is listing text only), floodplain status on the City's Alouette/Fraser floodplain maps. Slope and watercourse permit requirements are checked the same way, by exact address.",
       "gen": "tn",
-      "q": "Is a large Silver Valley lot in the ALR or the floodplain?",
-      "a": "Both are per-parcel checks — ALR status on the ALC mapping (a card's \"not in ALR\" line is listing text only), floodplain status on the City's Alouette/Fraser floodplain maps. Slope and watercourse permit requirements are checked the same way, by exact address."
+      "q": "Is a large Silver Valley lot in the ALR or the floodplain?"
     },
     {
+      "a": "Confirm a parcel's designation and zone with the City before relying on either.",
       "gen": "acre",
-      "q": "What plan governs Silver Valley now?",
-      "a": "Confirm a parcel's designation and zone with the City before relying on either."
+      "q": "What plan governs Silver Valley now?"
     },
     {
+      "a": "One secondary suite per lot inside the house (maximum 40% of gross floor area, not in the floodplain area), with SSMUH paths to three, four or six units on eligible lots — eligibility is a parcel-level check, and ALR parcels carry the ALC frame instead.",
       "gen": "acre",
-      "q": "Can a Silver Valley house have a suite or more units?",
-      "a": "One secondary suite per lot inside the house (maximum 40% of gross floor area, not in the floodplain area), with SSMUH paths to three, four or six units on eligible lots — eligibility is a parcel-level check, and ALR parcels carry the ALC frame instead."
-    },
-    {
-      "gen": "acre",
-      "q": "Which schools serve a Silver Valley address?",
-      "a": "Yennadon Elementary (23347 128 Ave) and Garibaldi Secondary (24789 Dewdney Trunk Rd) are confirmed by Ministry name and address, in SD42's K–7 / 8–12 structure — but catchments are address-based and no Silver Valley locator result is on record, so confirm any address with the district."
+      "q": "Can a Silver Valley house have a suite or more units?"
     }
+  ],
+  "slug": "silver-valley-guide",
+  "status": "generated",
+  "suppress": [
+    "Related guides"
   ],
   "suppress_gen": [
     "Related guides"
   ],
-  "suppress": [
-    "Related guides"
-  ]
+  "updated": "2026-11-01"
 }

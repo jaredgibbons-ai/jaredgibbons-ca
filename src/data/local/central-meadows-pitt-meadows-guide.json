@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "central-meadows-pitt-meadows-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Central Meadows compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Central Meadows compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Central Meadows against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Central Meadows against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
-      "caption": "Central Meadows against the whole city, September 2026",
+      "caption": "Central Meadows against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -27,174 +24,148 @@
       "rows": [
         [
           "Detached houses",
-          "40.5%",
-          "33.3%",
-          "27% against 32%",
-          "2 of 2"
+          "31.0%",
+          "55.6%",
+          "56% against 31%",
+          "Under 10 listed"
         ],
         [
           "Condos and townhomes",
-          "48.5%",
-          "35.7%",
-          "16% against 21%",
-          "3 of 3"
+          "49.0%",
+          "42.9%",
+          "38% against 43%",
+          "2 of 2"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings fell from 21 in June to 15 in September (−28.6%), and it took 43.2% of the city’s 37 sales over the period; condos and townhomes: listings fell from 34 in June to 32 in September (−5.9%), and it took 44.6% of the city’s 56 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 21 in June to 9 in October (−57.1%), and it took 45.7% of the city’s 46 sales over the period; condos and townhomes: listings fell from 34 in June to 24 in October (−29.4%), and it took 44.2% of the city’s 77 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Central Meadows for detached houses in August, September (a sellers’ best bet); detached houses in June (a buyers’ best bet); condos and townhomes in June (a sellers’ best bet); condos and townhomes in July, September (a buyers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out Central Meadows for detached houses in August, September, October (a sellers’ best bet); detached houses in June (a buyers’ best bet); condos and townhomes in June (a sellers’ best bet); condos and townhomes in July, September, October (a buyers’ best bet)."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Pitt Meadows real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Pitt Meadows real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Pitt Meadows homes for sale",
-            "h": "/pitt-meadows-homes-for-sale.html"
+            "h": "/pitt-meadows-homes-for-sale.html",
+            "t": "Pitt Meadows homes for sale"
           }
         ],
         [
           {
-            "t": "Pitt Meadows real estate market stats",
-            "h": "/pitt-meadows-real-estate-market-stats.html"
+            "h": "/pitt-meadows-real-estate-market-stats.html",
+            "t": "Pitt Meadows real estate market stats"
           }
         ],
         [
           {
-            "t": "Pitt Meadows houses for sale",
-            "h": "/pitt-meadows-houses-for-sale.html"
+            "h": "/pitt-meadows-houses-for-sale.html",
+            "t": "Pitt Meadows houses for sale"
           }
         ],
         [
           {
-            "t": "Pitt Meadows condos for sale",
-            "h": "/pitt-meadows-condos-for-sale.html"
+            "h": "/pitt-meadows-condos-for-sale.html",
+            "t": "Pitt Meadows condos for sale"
           }
         ],
         [
           {
-            "t": "Pitt Meadows townhomes for sale",
-            "h": "/pitt-meadows-townhomes-for-sale.html"
+            "h": "/pitt-meadows-townhomes-for-sale.html",
+            "t": "Pitt Meadows townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Pitt Meadows",
-            "h": "/sell-my-house-in-pitt-meadows.html"
+            "h": "/sell-my-house-in-pitt-meadows.html",
+            "t": "Sell my house in Pitt Meadows"
           }
         ],
         [
           {
-            "t": "Central Meadows homes and market figures",
-            "h": "/central-meadows-pitt-meadows.html"
+            "h": "/central-meadows-pitt-meadows.html",
+            "t": "Central Meadows homes and market figures"
           }
         ],
         [
           {
-            "t": "Mid Meadows real estate",
-            "h": "/mid-meadows-pitt-meadows.html"
+            "h": "/mid-meadows-pitt-meadows.html",
+            "t": "Mid Meadows real estate"
           }
         ],
         [
           {
-            "t": "North Meadows real estate",
-            "h": "/north-meadows-pitt-meadows.html"
+            "h": "/north-meadows-pitt-meadows.html",
+            "t": "North Meadows real estate"
           }
         ],
         [
           {
-            "t": "South Meadows real estate",
-            "h": "/south-meadows-pitt-meadows.html"
+            "h": "/south-meadows-pitt-meadows.html",
+            "t": "South Meadows real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: pub-pittmeadows.escribemeetings.com",
-            "h": "https://pub-pittmeadows.escribemeetings.com/filestream.ashx?DocumentId=17699"
-          }
-        ],
-        [
-          {
-            "t": "Source: pittmeadows.ca",
-            "h": "https://www.pittmeadows.ca/sites/default/files/docs/homes-development/information_sheet_-_planning_-_garden_suitesv4.pdf"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 2,
-      "text": "Condo buildings in Central Meadows",
+      "text": "Condo buildings in Central Meadows"
+    },
+    {
       "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "h",
       "level": 3,
-      "text": "Solaris at Meadows Gate — 12069 Harris Road",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Solaris at Meadows Gate — 12069 Harris Road"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "(part of the complex is also addressed 12079 Harris Road). Built 2010, 144 units (building directory, secondary source). The directory records restrictions as: pets not allowed, rentals allowed. Current listings call it \"Pitt Meadows' only concrete high-rise\" and \"the only concrete and steel building\" in the city — that is listing language, attributed here as a listing claim, not an independently verified city-wide fact; a current unit listing independently records pets as \"No Cats\" at unit level, consistent with the directory's no-pets line. Directory amenities: bike room, elevator, in-suite laundry.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "(part of the complex is also addressed 12079 Harris Road). Built 2010, 144 units (building directory, secondary source). The directory records restrictions as: pets not allowed, rentals allowed. Current listings call it \"Pitt Meadows' only concrete high-rise\" and \"the only concrete and steel building\" in the city — that is listing language, attributed here as a listing claim, not an independently verified city-wide fact; a current unit listing independently records pets as \"No Cats\" at unit level, consistent with the directory's no-pets line. Directory amenities: bike room, elevator, in-suite laundry."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Origin — 11950 Harris Road",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Origin — 11950 Harris Road"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Built 2008, 4 storeys, per current listings, which board-classify the building in Central Meadows; one listing records construction as frame wood with brick exterior and vinyl siding, and current listings describe a clubhouse/amenity room with a full kitchen and a secure bike room. Pet position is listing-level only: listings show cats OK, and current listings state \"1 dog or 2 cats permitted\" — a verified building bylaw summary is UNCONFIRMED. One listing notes a new roof and gutters in 2023. Unit count: UNCONFIRMED.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Built 2008, 4 storeys, per current listings, which board-classify the building in Central Meadows; one listing records construction as frame wood with brick exterior and vinyl siding, and current listings describe a clubhouse/amenity room with a full kitchen and a secure bike room. Pet position is listing-level only: listings show cats OK, and current listings state \"1 dog or 2 cats permitted\" — a verified building bylaw summary is not confirmed. One listing notes a new roof and gutters in 2023. Unit count: Not confirmed."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Central Meadows",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -222,18 +193,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Central Meadows",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -251,18 +222,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Central Meadows",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -295,142 +266,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Central Meadows",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "bccondosandhomes.com · solaris at meadows gate 12069 harris road",
-            "h": "https://www.bccondosandhomes.com/building/solaris-at-meadows-gate-12069-harris-road"
+            "h": "https://www.bccondosandhomes.com/building/solaris-at-meadows-gate-12069-harris-road",
+            "t": "bccondosandhomes.com · solaris at meadows gate 12069 harris road"
           }
         ],
         [
           {
-            "t": "chf.bc.ca · find a co op",
-            "h": "https://www.chf.bc.ca/find-a-co-op/"
+            "h": "https://www.chf.bc.ca/find-a-co-op/",
+            "t": "chf.bc.ca · find a co op"
           }
         ],
         [
           {
-            "t": "meadowlandscoop.ca",
-            "h": "https://www.meadowlandscoop.ca/"
+            "h": "https://www.meadowlandscoop.ca/",
+            "t": "meadowlandscoop.ca"
           }
         ],
         [
           {
-            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for ",
-            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/"
+            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/",
+            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · subscribing for updates",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/more-help-and-support/subscribing-for-updates"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/more-help-and-support/subscribing-for-updates",
+            "t": "www2.gov.bc.ca · subscribing for updates"
           }
         ],
         [
           {
-            "t": "pub-pittmeadows.escribemeetings.com · filestream.ashx",
-            "h": "https://pub-pittmeadows.escribemeetings.com/filestream.ashx?DocumentId=17699"
+            "h": "https://pub-pittmeadows.escribemeetings.com/filestream.ashx?DocumentId=17699",
+            "t": "pub-pittmeadows.escribemeetings.com · filestream.ashx"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · principal residence requirement",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/short-term-rentals/principal-residence-requirement"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/short-term-rentals/principal-residence-requirement",
+            "t": "www2.gov.bc.ca · principal residence requirement"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "equitylawgroup.ca · closing costs bc home purchase",
-            "h": "https://www.equitylawgroup.ca/news/closing-costs-bc-home-purchase"
+            "h": "https://www.equitylawgroup.ca/news/closing-costs-bc-home-purchase",
+            "t": "equitylawgroup.ca · closing costs bc home purchase"
           }
         ],
         [
           {
-            "t": "danmarusin.com · bc property transfer tax 2026",
-            "h": "https://danmarusin.com/blog/bc-property-transfer-tax-2026/"
+            "h": "https://danmarusin.com/blog/bc-property-transfer-tax-2026/",
+            "t": "danmarusin.com · bc property transfer tax 2026"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ],
         [
           {
-            "t": "homehappy.ca · bc first time buyer programs",
-            "h": "https://homehappy.ca/bc-first-time-buyer-programs/"
+            "h": "https://homehappy.ca/bc-first-time-buyer-programs/",
+            "t": "homehappy.ca · bc first time buyer programs"
           }
         ],
         [
           {
-            "t": "cmhc-schl.gc.ca · second home",
-            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home"
+            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home",
+            "t": "cmhc-schl.gc.ca · second home"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Central Meadows Pitt Meadows Guide",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Central Meadows Pitt Meadows Guide",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Central Meadows Pitt Meadows Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Central Meadows Pitt Meadows Guide"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -439,7 +410,7 @@
         ],
         [
           {
-            "t": "Boundaries: no official boundary for the sub-area was found: UNVERIFIED as an official boundary."
+            "t": "Boundaries: no official boundary for the sub-area was found: Not verified as an official boundary."
           }
         ],
         [
@@ -458,18 +429,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Central Meadows Pitt Meadows Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Central Meadows Pitt Meadows Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -482,18 +453,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Central Meadows Pitt Meadows Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Central Meadows Pitt Meadows Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -516,136 +487,136 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Central Meadows Pitt Meadows Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Central Meadows Pitt Meadows Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · central meadows pitt meadows guide",
-            "h": "https://jaredgibbons.ca/central-meadows-pitt-meadows-guide.html"
+            "h": "https://jaredgibbons.ca/central-meadows-pitt-meadows-guide.html",
+            "t": "jaredgibbons.ca · central meadows pitt meadows guide"
           }
         ],
         [
           {
-            "t": "sd42.ca · school locator",
-            "h": "https://www.sd42.ca/school-locator/"
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "sd42.ca · school locator"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · bus train skytrain",
-            "h": "https://www.pittmeadows.ca/city-services/transportation-infrastructure/transportation/bus-train-skytrain"
+            "h": "https://www.pittmeadows.ca/city-services/transportation-infrastructure/transportation/bus-train-skytrain",
+            "t": "pittmeadows.ca · bus train skytrain"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt701",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf",
+            "t": "infomaps.translink.ca · tt701"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · sxwhekwns spirit square",
-            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/sxwhekwns-spirit-square"
+            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/sxwhekwns-spirit-square",
+            "t": "pittmeadows.ca · sxwhekwns spirit square"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca · pitt meadows public library",
-            "h": "https://fvrl.bc.ca/locations/pitt-meadows-public-library"
+            "h": "https://fvrl.bc.ca/locations/pitt-meadows-public-library",
+            "t": "fvrl.bc.ca · pitt meadows public library"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · ridge meadows hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital",
+            "t": "fraserhealth.ca · ridge meadows hospital"
           }
         ],
         [
           {
-            "t": "bchb.ca · 1 19236 119 avenue pitt meadows",
-            "h": "http://bchb.ca/portfolios/1-19236-119-avenue-pitt-meadows/"
+            "h": "http://bchb.ca/portfolios/1-19236-119-avenue-pitt-meadows/",
+            "t": "bchb.ca · 1 19236 119 avenue pitt meadows"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · solaris at meadows gate 12069 harris road",
-            "h": "https://www.bccondosandhomes.com/building/solaris-at-meadows-gate-12069-harris-road"
+            "h": "https://www.bccondosandhomes.com/building/solaris-at-meadows-gate-12069-harris-road",
+            "t": "bccondosandhomes.com · solaris at meadows gate 12069 harris road"
           }
         ],
         [
           {
-            "t": "chf.bc.ca · find a co op",
-            "h": "https://www.chf.bc.ca/find-a-co-op/"
+            "h": "https://www.chf.bc.ca/find-a-co-op/",
+            "t": "chf.bc.ca · find a co op"
           }
         ],
         [
           {
-            "t": "meadowlandscoop.ca",
-            "h": "https://www.meadowlandscoop.ca/"
+            "h": "https://www.meadowlandscoop.ca/",
+            "t": "meadowlandscoop.ca"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Central Meadows",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Fee-simple lots",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Fee-simple lots"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -664,12 +635,12 @@
         ],
         [
           {
-            "t": "ALR vs non-ALR, as documented: the City's 2020 Business Plan states 78% of Pitt Meadows land falls within the ALR and agriculture remains the predominant land use citywide. ALR parcels inside the Town Centre core: per-address check only (research UNVERIFIED item) — no Town Centre ALR split is stated."
+            "t": "ALR vs non-ALR, as documented: the City's 2020 Business Plan states 78% of Pitt Meadows land falls within the ALR and agriculture remains the predominant land use citywide. ALR parcels inside the Town Centre core: per-address check only (research not verified item) — no Town Centre ALR split is stated."
           }
         ],
         [
           {
-            "t": "Servicing: the research documents the diked, drained urban context (drainage Area 3 — Kennedy, including McKechnie — the urban development area serviced by ditches, culverts and storm sewers, discharging to the Alouette, Pitt and Fraser Rivers) and a separate drainage levy. A parcel-level municipal water/sewer vs well/septic statement: UNCONFIRMED in the research — confirm servicing for the specific parcel with the City."
+            "t": "Servicing: the research documents the diked, drained urban context (drainage Area 3 — Kennedy, including McKechnie — the urban development area serviced by ditches, culverts and storm sewers, discharging to the Alouette, Pitt and Fraser Rivers) and a separate drainage levy. A parcel-level municipal water/sewer vs well/septic statement: Not confirmed — confirm servicing for the specific parcel with the City."
           }
         ],
         [
@@ -679,22 +650,22 @@
         ],
         [
           {
-            "t": "Market context, labelled correctly: Pitt Meadows IS a SnapStats-covered community. SnapStats has NO land category — neither figure is a land figure, sub-area medians are UNVERIFIED (community level only), and no detached figure is presented as a land figure."
+            "t": "Market context, labelled correctly: Pitt Meadows IS a SnapStats-covered community. SnapStats has NO land category — neither figure is a land figure, sub-area medians are not verified (community level only), and no detached figure is presented as a land figure."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Bare-land strata",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Bare-land strata"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -707,18 +678,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Development ground and proposals",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Development ground and proposals"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -742,22 +713,22 @@
         ],
         [
           {
-            "t": ": The research confirms no current residential presale project in or beside Central Meadows (UNVERIFIED item 6) — so there is no presale housing count to separate lots from, and no lot presale in any case."
+            "t": ": The research confirms no current residential presale project in or beside Central Meadows (Not verified item 6) — so there is no presale housing count to separate lots from, and no lot presale in any case."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Central Meadows",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -771,7 +742,7 @@
         ],
         [
           {
-            "t": "Transit and commute: Pitt Meadows Station, on Harris Road in the urban core, gives West Coast Express service to Waterfront Station, Vancouver, Monday to Friday in peak periods — the City states the trip to downtown Vancouver is about 45 minutes; buses include route 701, route 791, the 719/722 circular service, and the R3 Lougheed Hwy RapidBus stop at Harris Road. Golden Ears Way / Golden Ears Bridge to the east serves travel toward Langley and Surrey. Driving commute times: UNVERIFIED."
+            "t": "Transit and commute: Pitt Meadows Station, on Harris Road in the urban core, gives West Coast Express service to Waterfront Station, Vancouver, Monday to Friday in peak periods — the City states the trip to downtown Vancouver is about 45 minutes; buses include route 701, route 791, the 719/722 circular service, and the R3 Lougheed Hwy RapidBus stop at Harris Road. Golden Ears Way / Golden Ears Bridge to the east serves travel toward Langley and Surrey. Driving commute times: Not verified."
           }
         ],
         [
@@ -785,18 +756,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Central Meadows",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -810,7 +781,7 @@
         ],
         [
           {
-            "t": "Property taxes and drainage levy: under the 2026 Annual Tax Rates Bylaw No. 3047, 2026 (adopted May 5, 2026), Class 1 Residential rates per $1,000 are $2.8438 general municipal and $0.1082 drainage levy; taxes were due July 2, 2026, with a 5% penalty after July 2, 2026 and a further 5% after August 1, 2026. The drainage levy is a holding cost on every lot in this diked city. A 2026 flat utility fee amount: UNVERIFIED in the research."
+            "t": "Property taxes and drainage levy: under the 2026 Annual Tax Rates Bylaw No. 3047, 2026 (adopted May 5, 2026), Class 1 Residential rates per $1,000 are $2.8438 general municipal and $0.1082 drainage levy; taxes were due July 2, 2026, with a 5% penalty after July 2, 2026 and a further 5% after August 1, 2026. The drainage levy is a holding cost on every lot in this diked city. A 2026 flat utility fee amount: Not verified."
           }
         ],
         [
@@ -819,18 +790,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Central Meadows",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -848,142 +819,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Central Meadows",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "pittmeadows.ca · 2020 11 05 2869 2020 north lougheed ocp amendmen",
-            "h": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/hearings/2020-11-05_-2869_2020_north_lougheed_ocp_amendment_bylaw.pdf"
+            "h": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/hearings/2020-11-05_-2869_2020_north_lougheed_ocp_amendment_bylaw.pdf",
+            "t": "pittmeadows.ca · 2020 11 05 2869 2020 north lougheed ocp amendmen"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · bus train skytrain",
-            "h": "https://www.pittmeadows.ca/city-services/transportation-infrastructure/transportation/bus-train-skytrain"
+            "h": "https://www.pittmeadows.ca/city-services/transportation-infrastructure/transportation/bus-train-skytrain",
+            "t": "pittmeadows.ca · bus train skytrain"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · sxwhekwns spirit square",
-            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/sxwhekwns-spirit-square"
+            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/sxwhekwns-spirit-square",
+            "t": "pittmeadows.ca · sxwhekwns spirit square"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · dmlive 155673 v1 gpra report to pitt meadows 201",
-            "h": "https://www.pittmeadows.ca/sites/default/files/docs/dmlive-155673-v1-gpra_report_to_pitt_meadows_20190405_v2_pdf.pdf"
+            "h": "https://www.pittmeadows.ca/sites/default/files/docs/dmlive-155673-v1-gpra_report_to_pitt_meadows_20190405_v2_pdf.pdf",
+            "t": "pittmeadows.ca · dmlive 155673 v1 gpra report to pitt meadows 201"
           }
         ],
         [
           {
-            "t": "sd42.ca · school locator",
-            "h": "https://www.sd42.ca/school-locator/"
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "sd42.ca · school locator"
           }
         ],
         [
           {
-            "t": "elementary.sd42.ca · pittmeadows",
-            "h": "https://elementary.sd42.ca/pittmeadows/"
+            "h": "https://elementary.sd42.ca/pittmeadows/",
+            "t": "elementary.sd42.ca · pittmeadows"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · Zoning Bylaw No. 2505, 2011   Consolidated Versi",
-            "h": "https://www.pittmeadows.ca/sites/default/files/2025-04/Zoning%20Bylaw%20No.%202505,%202011%20-%20Consolidated%20Version_0.pdf"
+            "h": "https://www.pittmeadows.ca/sites/default/files/2025-04/Zoning%20Bylaw%20No.%202505,%202011%20-%20Consolidated%20Version_0.pdf",
+            "t": "pittmeadows.ca · Zoning Bylaw No. 2505, 2011 Consolidated Versi"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · Dec 2 2025 SSMUH Transit Oriented Areas Implemen",
-            "h": "https://www.pittmeadows.ca/sites/default/files/2025-12/Dec_2_2025_SSMUH_Transit_Oriented_Areas_Implementation_Update.pdf"
+            "h": "https://www.pittmeadows.ca/sites/default/files/2025-12/Dec_2_2025_SSMUH_Transit_Oriented_Areas_Implementation_Update.pdf",
+            "t": "pittmeadows.ca · Dec 2 2025 SSMUH Transit Oriented Areas Implemen"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · pitt meadows business plan 2020 web full02",
-            "h": "https://www.pittmeadows.ca/sites/default/files/2022-03/pitt-meadows_business-plan_2020-web-full02.pdf"
+            "h": "https://www.pittmeadows.ca/sites/default/files/2022-03/pitt-meadows_business-plan_2020-web-full02.pdf",
+            "t": "pittmeadows.ca · pitt meadows business plan 2020 web full02"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · node",
-            "h": "https://www.pittmeadows.ca/node/163"
+            "h": "https://www.pittmeadows.ca/node/163",
+            "t": "pittmeadows.ca · node"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · north lougheed area plan",
-            "h": "https://www.pittmeadows.ca/homes-development/zoning-land-use/north-lougheed-area-plan"
+            "h": "https://www.pittmeadows.ca/homes-development/zoning-land-use/north-lougheed-area-plan",
+            "t": "pittmeadows.ca · north lougheed area plan"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · media",
-            "h": "https://www.pittmeadows.ca/media/8989"
+            "h": "https://www.pittmeadows.ca/media/8989",
+            "t": "pittmeadows.ca · media"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · information sheet planning garden suitesv4",
-            "h": "https://www.pittmeadows.ca/sites/default/files/docs/homes-development/information_sheet_-_planning_-_garden_suitesv4.pdf"
+            "h": "https://www.pittmeadows.ca/sites/default/files/docs/homes-development/information_sheet_-_planning_-_garden_suitesv4.pdf",
+            "t": "pittmeadows.ca · information sheet planning garden suitesv4"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 2,
-      "text": "Acreage and rural land in Central Meadows",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "No named fee-simple bare-land subdivision, no bare-land strata acreage community and no presale LOT offering was verified on an official or developer source. What trades as land here is the fee-simple urban lot inside the Town Centre — usually carrying a house, priced with its R-3 / R-4 / R-6 multi-unit potential and its Town Centre designation.",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The ground in Central Meadows",
-      "gen": "acre",
-      "pos": "end"
+      "text": "Acreage and rural land in Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "acre",
+      "pos": "end",
+      "t": "p",
+      "text": "No named fee-simple bare-land subdivision, no bare-land strata acreage community and no presale LOT offering was verified on an official or developer source. What trades as land here is the fee-simple urban lot inside the Town Centre — usually carrying a house, priced with its R-3 / R-4 / R-6 multi-unit potential and its Town Centre designation."
+    },
+    {
+      "gen": "acre",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The ground in Central Meadows"
+    },
+    {
+      "gen": "acre",
       "items": [
         [
           {
@@ -996,18 +967,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Streets, schools and getting around Central Meadows",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -1040,18 +1011,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Local rules that affect acreage buyers in Central Meadows",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect acreage buyers in Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -1059,18 +1030,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Good to know about Central Meadows",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -1083,136 +1054,136 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "acre",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below.",
-      "gen": "acre",
-      "pos": "end"
+      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "BC acreage buying rules",
-            "h": "/bc-acreage-buying-rules.html"
+            "h": "/bc-acreage-buying-rules.html",
+            "t": "BC acreage buying rules"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Sources for the acreage notes on Central Meadows",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the acreage notes on Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "pittmeadows.ca · payment options",
-            "h": "https://www.pittmeadows.ca/city-hall/property-taxes/payment-options"
+            "h": "https://www.pittmeadows.ca/city-hall/property-taxes/payment-options",
+            "t": "pittmeadows.ca · payment options"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca",
-            "h": "https://www.pittmeadows.ca/ocp"
+            "h": "https://www.pittmeadows.ca/ocp",
+            "t": "pittmeadows.ca"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · 2020 11 05 2869 2020 north lougheed ocp amendmen",
-            "h": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/hearings/2020-11-05_-2869_2020_north_lougheed_ocp_amendment_bylaw.pdf"
+            "h": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/hearings/2020-11-05_-2869_2020_north_lougheed_ocp_amendment_bylaw.pdf",
+            "t": "pittmeadows.ca · 2020 11 05 2869 2020 north lougheed ocp amendmen"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · bus train skytrain",
-            "h": "https://www.pittmeadows.ca/city-services/transportation-infrastructure/transportation/bus-train-skytrain"
+            "h": "https://www.pittmeadows.ca/city-services/transportation-infrastructure/transportation/bus-train-skytrain",
+            "t": "pittmeadows.ca · bus train skytrain"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · sxwhekwns spirit square",
-            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/sxwhekwns-spirit-square"
+            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/sxwhekwns-spirit-square",
+            "t": "pittmeadows.ca · sxwhekwns spirit square"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca · pitt meadows public library",
-            "h": "https://fvrl.bc.ca/locations/pitt-meadows-public-library"
+            "h": "https://fvrl.bc.ca/locations/pitt-meadows-public-library",
+            "t": "fvrl.bc.ca · pitt meadows public library"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · ridge meadows hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital",
+            "t": "fraserhealth.ca · ridge meadows hospital"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · dmlive 155673 v1 gpra report to pitt meadows 201",
-            "h": "https://www.pittmeadows.ca/sites/default/files/docs/dmlive-155673-v1-gpra_report_to_pitt_meadows_20190405_v2_pdf.pdf"
+            "h": "https://www.pittmeadows.ca/sites/default/files/docs/dmlive-155673-v1-gpra_report_to_pitt_meadows_20190405_v2_pdf.pdf",
+            "t": "pittmeadows.ca · dmlive 155673 v1 gpra report to pitt meadows 201"
           }
         ],
         [
           {
-            "t": "sd42.ca · school locator",
-            "h": "https://www.sd42.ca/school-locator/"
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "sd42.ca · school locator"
           }
         ],
         [
           {
-            "t": "elementary.sd42.ca · pittmeadows",
-            "h": "https://elementary.sd42.ca/pittmeadows/"
+            "h": "https://elementary.sd42.ca/pittmeadows/",
+            "t": "elementary.sd42.ca · pittmeadows"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · Zoning",
-            "h": "https://www.pittmeadows.ca/sites/default/files/2025-04/Zoning"
+            "h": "https://www.pittmeadows.ca/sites/default/files/2025-04/Zoning",
+            "t": "pittmeadows.ca · Zoning"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · Dec 2 2025 SSMUH Transit Oriented Areas Implemen",
-            "h": "https://www.pittmeadows.ca/sites/default/files/2025-12/Dec_2_2025_SSMUH_Transit_Oriented_Areas_Implementation_Update.pdf"
+            "h": "https://www.pittmeadows.ca/sites/default/files/2025-12/Dec_2_2025_SSMUH_Transit_Oriented_Areas_Implementation_Update.pdf",
+            "t": "pittmeadows.ca · Dec 2 2025 SSMUH Transit Oriented Areas Implemen"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 2,
-      "text": "Mobile and manufactured homes in Central Meadows",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Verified community inside Central Meadows: 1 — Meadow Highlands Mobile Home Co-operative, co-operative tenure form.",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The parks and communities",
-      "gen": "mh",
-      "pos": "end"
+      "text": "Mobile and manufactured homes in Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "mh",
+      "pos": "end",
+      "t": "p",
+      "text": "Verified community inside Central Meadows: 1 — Meadow Highlands Mobile Home Co-operative, co-operative tenure form."
+    },
+    {
+      "gen": "mh",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The parks and communities"
+    },
+    {
+      "gen": "mh",
       "items": [
         [
           {
@@ -1230,18 +1201,18 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Streets, schools and getting around Central Meadows",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
@@ -1264,18 +1235,18 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Local rules that affect park-home buyers in Central Meadows",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect park-home buyers in Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
@@ -1288,18 +1259,18 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Good to know about Central Meadows",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
@@ -1312,226 +1283,199 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "mh",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules for buying a home in a park (the pad tenancy, park-owner consent, pad-rent caps, the Manufactured Home Registry and park closures) are explained once, with sources, on the page linked below.",
-      "gen": "mh",
-      "pos": "end"
+      "text": "The BC rules for buying a home in a park (the pad tenancy, park-owner consent, pad-rent caps, the Manufactured Home Registry and park closures) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
-            "t": "BC mobile home buying rules",
-            "h": "/bc-mobile-home-buying-rules.html"
+            "h": "/bc-mobile-home-buying-rules.html",
+            "t": "BC mobile home buying rules"
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Sources for the mobile-home notes on Central Meadows",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the mobile-home notes on Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
-            "t": "pittmeadows.ca",
-            "h": "https://www.pittmeadows.ca/ocp"
+            "h": "https://www.pittmeadows.ca/ocp",
+            "t": "pittmeadows.ca"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · 2020 11 05 2869 2020 north lougheed ocp amendmen",
-            "h": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/hearings/2020-11-05_-2869_2020_north_lougheed_ocp_amendment_bylaw.pdf"
+            "h": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/hearings/2020-11-05_-2869_2020_north_lougheed_ocp_amendment_bylaw.pdf",
+            "t": "pittmeadows.ca · 2020 11 05 2869 2020 north lougheed ocp amendmen"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · payment options",
-            "h": "https://www.pittmeadows.ca/city-hall/property-taxes/payment-options"
+            "h": "https://www.pittmeadows.ca/city-hall/property-taxes/payment-options",
+            "t": "pittmeadows.ca · payment options"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · sxwhekwns spirit square",
-            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/sxwhekwns-spirit-square"
+            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/sxwhekwns-spirit-square",
+            "t": "pittmeadows.ca · sxwhekwns spirit square"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · bus train skytrain",
-            "h": "https://www.pittmeadows.ca/city-services/transportation-infrastructure/transportation/bus-train-skytrain"
+            "h": "https://www.pittmeadows.ca/city-services/transportation-infrastructure/transportation/bus-train-skytrain",
+            "t": "pittmeadows.ca · bus train skytrain"
           }
         ],
         [
           {
-            "t": "elementary.sd42.ca · pittmeadows",
-            "h": "https://elementary.sd42.ca/pittmeadows/"
+            "h": "https://elementary.sd42.ca/pittmeadows/",
+            "t": "elementary.sd42.ca · pittmeadows"
           }
         ],
         [
           {
-            "t": "sd42.ca · school locator",
-            "h": "https://www.sd42.ca/school-locator/"
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "sd42.ca · school locator"
           }
         ],
         [
           {
-            "t": "meadowhighlands.ca",
-            "h": "https://meadowhighlands.ca/"
+            "h": "https://meadowhighlands.ca/",
+            "t": "meadowhighlands.ca"
           }
         ],
         [
           {
-            "t": "pagesarchive.blackpress.ca · MRNN240531 A13",
-            "h": "https://pagesarchive.blackpress.ca/BC/Processed/MRN/240531/MRNN240531_A13.pdf"
+            "h": "https://pagesarchive.blackpress.ca/BC/Processed/MRN/240531/MRNN240531_A13.pdf",
+            "t": "pagesarchive.blackpress.ca · MRNN240531 A13"
           }
         ],
         [
           {
-            "t": "meadowlandscoop.ca",
-            "h": "https://www.meadowlandscoop.ca/"
+            "h": "https://www.meadowlandscoop.ca/",
+            "t": "meadowlandscoop.ca"
           }
         ],
         [
           {
-            "t": "chf.bc.ca · find a co op",
-            "h": "https://www.chf.bc.ca/find-a-co-op/"
+            "h": "https://www.chf.bc.ca/find-a-co-op/",
+            "t": "chf.bc.ca · find a co op"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · newly built home exemption",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption",
+            "t": "www2.gov.bc.ca · newly built home exemption"
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "What sold in Central Meadows in September 2026?",
-      "a": "Detached recorded 15 active listings and 4 sold (27% sales ratio), and Condos & Townhomes recorded 32 active listings and 5 sold (16%) — the largest inventory of any Pitt Meadows sub-area that month. At the Pitt Meadows community level — NOT Central Meadows' figures — the detached median sale price was $1,160,000 and the Condos & Townhomes median was $662,500 (as of September 2026, Source: SnapStats GVR September 2026 report).",
-      "gen": "muse"
-    },
-    {
-      "q": "Can I run a short-term rental or add a suite in Central Meadows?",
-      "a": "Short-term rentals are PROHIBITED in Pitt Meadows — short-term rental accommodation is not a permitted use in the Zoning Bylaw. A secondary suite is a different question: one suite per principal dwelling unit at 33 to 90 sq m inside the same building where the zone permits it, or one garden suite per lot in the zones listed in the City guide — never both on one lot.",
-      "gen": "muse"
-    },
-    {
-      "q": "Are there more or fewer homes for sale in Central Meadows Pitt Meadows than in June?",
-      "a": "In Central Meadows Pitt Meadows, listings of houses fell from 21 in June to 15 in September (−28.6%); condos and townhomes fell from 34 in June to 32 in September (−5.9%).",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How big is Central Meadows Pitt Meadows compared with the rest of Pitt Meadows?",
-      "a": "In September 2026, Central Meadows Pitt Meadows held 40.5% of the 37 houses listed in Pitt Meadows and 48.5% of the 66 condos and townhomes listed in Pitt Meadows.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How many homes sold in Central Meadows Pitt Meadows from June to September 2026?",
-      "a": "16 houses and 25 condos and townhomes sold in Central Meadows Pitt Meadows over those 4 months.",
-      "gen": "snap-faq"
-    },
-    {
+      "a": "No. Short-term rental accommodation is not a permitted use under Pitt Meadows' Zoning Bylaw at all, and the Province's principal-residence requirement also lists Pitt Meadows. Long-term rental of a strata unit is a separate question — strata rental bylaws are void since November 24, 2022.",
       "gen": "tn",
-      "q": "Can I run an Airbnb in a Central Meadows condo?",
-      "a": "No. Short-term rental accommodation is not a permitted use under Pitt Meadows' Zoning Bylaw at all, and the Province's principal-residence requirement also lists Pitt Meadows. Long-term rental of a strata unit is a separate question — strata rental bylaws are void since November 24, 2022."
+      "q": "Can I run an Airbnb in a Central Meadows condo?"
     },
     {
+      "a": "Current listings describe Solaris at Meadows Gate (12069 Harris Road, built 2010, 144 units per the building directory) as \"Pitt Meadows' only concrete high rise.\" That is listing language; the verified facts from the directory are the year, the unit count and the restriction set (pets not allowed, rentals allowed).",
       "gen": "tn",
-      "q": "Is Solaris really the city's only concrete tower?",
-      "a": "Current listings describe Solaris at Meadows Gate (12069 Harris Road, built 2010, 144 units per the building directory) as \"Pitt Meadows' only concrete high rise.\" That is listing language; the verified facts from the directory are the year, the unit count and the restriction set (pets not allowed, rentals allowed)."
+      "q": "Is Solaris really the city's only concrete tower?"
     },
     {
+      "a": "It differs by building: the directory records Solaris as pets not allowed (and a current unit listing records \"No Cats\"), while Origin listings state \"1 dog or 2 cats permitted\" with cats OK. Pet bylaws remain enforceable in BC, so the registered bylaws on the Form B govern — Origin's position is listing-level only and a verified bylaw summary is not confirmed.",
       "gen": "tn",
-      "q": "Are pets allowed in the Harris Road buildings?",
-      "a": "It differs by building: the directory records Solaris as pets not allowed (and a current unit listing records \"No Cats\"), while Origin listings state \"1 dog or 2 cats permitted\" with cats OK. Pet bylaws remain enforceable in BC, so the registered bylaws on the Form B govern — Origin's position is listing-level only and a verified bylaw summary is UNCONFIRMED."
+      "q": "Are pets allowed in the Harris Road buildings?"
     },
     {
+      "a": "No — it is a townhouse/rancher strata at 18960 Advent Road (built 1988, freehold strata), board-classified Central Meadows, with a published 55+ age restriction and pets allowed with restrictions in current listings.",
       "gen": "tn",
-      "q": "Is Meadowland Village a condo complex?",
-      "a": "No — it is a townhouse/rancher strata at 18960 Advent Road (built 1988, freehold strata), board-classified Central Meadows, with a published 55+ age restriction and pets allowed with restrictions in current listings."
+      "q": "Is Meadowland Village a condo complex?"
     },
     {
+      "a": "Not as a strata purchase. Meadowlands Housing Co-operative (19032 Advent Road) is a 55+ housing co-operative listed by CHF BC — occupancy is by co-op membership, there is no strata lot to buy in the ordinary way and no Form B.",
       "gen": "tn",
-      "q": "And the Meadowlands building on Advent Road — can I buy a unit there?",
-      "a": "Not as a strata purchase. Meadowlands Housing Co-operative (19032 Advent Road) is a 55+ housing co-operative listed by CHF BC — occupancy is by co-op membership, there is no strata lot to buy in the ordinary way and no Form B."
+      "q": "And the Meadowlands building on Advent Road — can I buy a unit there?"
     },
     {
+      "a": "Townhouse-form units also trade at 12188 Harris Road, but that complex's name is not confirmed in public sources.",
       "gen": "tn",
-      "q": "What townhouses can I actually buy in Central Meadows?",
-      "a": "Townhouse-form units also trade at 12188 Harris Road, but that complex's name is UNCONFIRMED in public sources."
+      "q": "What townhouses can I actually buy in Central Meadows?"
     },
     {
+      "a": "No. Meadowlands Housing Co-operative (19032 Advent Road) is a 55+ co-op — occupancy is by membership, there is no strata lot to buy and no Form B. Meadowland Village is the strata purchase; the co-op is excluded from the count for exactly that reason.",
       "gen": "tn",
-      "q": "Is Meadowland Village 20 homes or 26?",
-      "a": "UNCONFIRMED."
+      "q": "Is the Advent Road building beside Meadowland Village the same thing?"
     },
     {
-      "gen": "tn",
-      "q": "Is the Advent Road building beside Meadowland Village the same thing?",
-      "a": "No. Meadowlands Housing Co-operative (19032 Advent Road) is a 55+ co-op — occupancy is by membership, there is no strata lot to buy and no Form B. Meadowland Village is the strata purchase; the co-op is excluded from the count for exactly that reason."
-    },
-    {
+      "a": "Not as a product. This is the city's urban Town Centre — fee-simple house lots under RS / R-3 / R-4 / R-6 (subdivision minimums 0.2 ha in RS and 1,215 sq m in R-3/R-4/R-6) with multifamily on Harris Road. The city's farm acreage is in West Meadows, not here.",
       "gen": "acre",
-      "q": "Is there acreage to buy in Central Meadows?",
-      "a": "Not as a product. This is the city's urban Town Centre — fee-simple house lots under RS / R-3 / R-4 / R-6 (subdivision minimums 0.2 ha in RS and 1,215 sq m in R-3/R-4/R-6) with multifamily on Harris Road. The city's farm acreage is in West Meadows, not here."
+      "q": "Is there acreage to buy in Central Meadows?"
     },
     {
+      "a": "Confirm the works required with the City for the specific lot.",
       "gen": "acre",
-      "q": "Can I subdivide a Town Centre lot, and what servicing applies?",
-      "a": "Confirm the works required with the City for the specific lot."
+      "q": "Can I subdivide a Town Centre lot, and what servicing applies?"
     },
     {
+      "a": "SD42 has no middle tier and catchments are address-based, so confirm every other address in the locator.",
       "gen": "acre",
-      "q": "Which schools serve a Central Meadows address?",
-      "a": "SD42 has no middle tier and catchments are address-based, so confirm every other address in the locator."
+      "q": "Which schools serve a Central Meadows address?"
     },
     {
+      "a": "Confirm floodplain, dike and drainage details for the specific lot with the City.",
       "gen": "acre",
-      "q": "Is Central Meadows in a floodplain?",
-      "a": "Confirm floodplain, dike and drainage details for the specific lot with the City."
+      "q": "Is Central Meadows in a floodplain?"
     },
     {
+      "a": "One community: Meadow Highlands Mobile Home Co-operative on Ponderosa Blvd / Hammond Road — a co-operative manufactured-home park of 162 homes where members hold shares in the co-op that collectively owns the land. There is no verified pad-rental park in Central Meadows.",
       "gen": "mh",
-      "q": "What mobile-home buying actually exists in Central Meadows?",
-      "a": "One community: Meadow Highlands Mobile Home Co-operative on Ponderosa Blvd / Hammond Road — a co-operative manufactured-home park of 162 homes where members hold shares in the co-op that collectively owns the land. There is no verified pad-rental park in Central Meadows."
+      "q": "What mobile-home buying actually exists in Central Meadows?"
     },
     {
+      "a": "Not individually. The property — all 162 pads, roads, hall, pool, office, RV parking and infrastructure — is owned collectively by the 162 members; you purchase shares in the co-op and pay a monthly Pad Assessment based on your pad's size. That is neither a fee-simple lot nor a rented pad, and the co-op's membership and occupancy documents govern.",
       "gen": "mh",
-      "q": "In the co-op, do I own the land?",
-      "a": "Not individually. The property — all 162 pads, roads, hall, pool, office, RV parking and infrastructure — is owned collectively by the 162 members; you purchase shares in the co-op and pay a monthly Pad Assessment based on your pad's size. That is neither a fee-simple lot nor a rented pad, and the co-op's membership and occupancy documents govern."
+      "q": "In the co-op, do I own the land?"
     },
     {
+      "a": "No — affirmatively not. No source states any age restriction, the co-op maintains a kids' play area, and listings advertise that play area and school proximity. It is a family/all-age co-op park. Do not confuse it with the Meadowlands Housing Co-operative on Advent Road, which IS 55+ — but is built row-homes, not a manufactured-home park.",
       "gen": "mh",
-      "q": "Is Meadow Highlands a 55+ park?",
-      "a": "No — affirmatively not. No source states any age restriction, the co-op maintains a kids' play area, and listings advertise that play area and school proximity. It is a family/all-age co-op park. Do not confuse it with the Meadowlands Housing Co-operative on Advent Road, which IS 55+ — but is built row-homes, not a manufactured-home park."
+      "q": "Is Meadow Highlands a 55+ park?"
     },
     {
+      "a": "Yes — on the co-op's own terms: once a purchase is tentatively agreed, the purchaser must be approved for membership by meeting with the Board of Directors before closing, and that meeting is a condition that must be included in all purchase agreements. That is a different process from a rental park's RTB Form 10 assignment consent.",
       "gen": "mh",
-      "q": "Does the co-op have to approve me as a buyer?",
-      "a": "Yes — on the co-op's own terms: once a purchase is tentatively agreed, the purchaser must be approved for membership by meeting with the Board of Directors before closing, and that meeting is a condition that must be included in all purchase agreements. That is a different process from a rental park's RTB Form 10 assignment consent."
+      "q": "Does the co-op have to approve me as a buyer?"
     }
+  ],
+  "slug": "central-meadows-pitt-meadows-guide",
+  "status": "generated",
+  "suppress": [
+    "Related guides"
   ],
   "suppress_gen": [
     "Related guides"
   ],
-  "suppress": [
-    "Related guides"
-  ]
+  "updated": "2026-11-01"
 }

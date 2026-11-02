@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "garden-village",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Garden Village homes listed and sold, June to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Garden Village homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Garden Village, September 2026. Detached houses: 9 listed at month end and 1 sold in September, a sales ratio of 11%. No condos and townhomes were listed or sold in Garden Village between June and September.",
-      "gen": "snapstats"
+      "text": "Garden Village, October 2026. Detached houses: 11 listed at month end and 0 sold in October, a sales ratio of —. No condos and townhomes were listed or sold in Garden Village between June and October."
     },
     {
-      "t": "table",
       "caption": "Garden Village listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -47,188 +44,162 @@
           "9",
           "1",
           "11%"
+        ],
+        [
+          "October 2026",
+          "11",
+          "0",
+          "—"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 3 sold over 4 months against an average of 9.0 listed, about 12.0 months of listings at that pace; the busiest month was June with 1 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 3 sold over 5 months against an average of 9.4 listed, about 15.7 months of listings at that pace; the busiest month was June with 1 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Garden Village by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Garden Village by home type"
     },
     {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Garden Village houses for sale",
-            "h": "/garden-village-burnaby-houses-for-sale.html"
-          }
-        ]
-      ],
       "gen": "typepage",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "More Burnaby real estate",
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "list",
       "items": [
         [
           {
-            "t": "Burnaby homes for sale",
-            "h": "/burnaby-homes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby real estate market stats",
-            "h": "/burnaby-real-estate-market-stats.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby condos for sale",
-            "h": "/burnaby-condos-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Burnaby townhomes for sale",
-            "h": "/burnaby-townhomes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Schools in Burnaby",
-            "h": "/schools-in-burnaby-bc.html"
-          }
-        ],
-        [
-          {
-            "t": "Government Road real estate",
-            "h": "/government-road.html"
-          }
-        ],
-        [
-          {
-            "t": "Greentree Village real estate",
-            "h": "/greentree-village.html"
-          }
-        ],
-        [
-          {
-            "t": "Highgate real estate",
-            "h": "/highgate-burnaby.html"
-          }
-        ],
-        [
-          {
-            "t": "Metrotown real estate",
-            "h": "/metrotown-homes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Montecito real estate",
-            "h": "/montecito.html"
-          }
-        ],
-        [
-          {
-            "t": "Oakdale real estate",
-            "h": "/oakdale.html"
-          }
-        ],
-        [
-          {
-            "t": "Oaklands real estate",
-            "h": "/oaklands-burnaby.html"
-          }
-        ],
-        [
-          {
-            "t": "Parkcrest real estate",
-            "h": "/parkcrest.html"
-          }
-        ],
-        [
-          {
-            "t": "Simon Fraser Hills real estate",
-            "h": "/simon-fraser-hills-burnaby.html"
-          }
-        ],
-        [
-          {
-            "t": "Simon Fraser University Area real estate",
-            "h": "/simon-fraser-university-area-burnaby.html"
+            "h": "/garden-village-burnaby-houses-for-sale.html",
+            "t": "Garden Village houses for sale"
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "h",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "More Burnaby real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Source: search.heritageburnaby.ca",
-            "h": "https://search.heritageburnaby.ca/list?objectType_facet=Landmark%20Description%20&objectType_facet=Cartographic%20Material&ps=50&q=&sort=title_sort%20asc&decade_facet=1860&decade_facet=1930&p=1"
+            "h": "/burnaby-homes-for-sale.html",
+            "t": "Burnaby homes for sale"
           }
         ],
         [
           {
-            "t": "Source: burnaby.ca",
-            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres"
+            "h": "/burnaby-real-estate-market-stats.html",
+            "t": "Burnaby real estate market stats"
           }
         ],
         [
           {
-            "t": "Source: studentsuccess.gov.bc.ca",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "/burnaby-condos-for-sale.html",
+            "t": "Burnaby condos for sale"
+          }
+        ],
+        [
+          {
+            "h": "/burnaby-townhomes-for-sale.html",
+            "t": "Burnaby townhomes for sale"
+          }
+        ],
+        [
+          {
+            "h": "/schools-in-burnaby-bc.html",
+            "t": "Schools in Burnaby"
+          }
+        ],
+        [
+          {
+            "h": "/government-road.html",
+            "t": "Government Road real estate"
+          }
+        ],
+        [
+          {
+            "h": "/greentree-village.html",
+            "t": "Greentree Village real estate"
+          }
+        ],
+        [
+          {
+            "h": "/highgate-burnaby.html",
+            "t": "Highgate real estate"
+          }
+        ],
+        [
+          {
+            "h": "/metrotown-homes-for-sale.html",
+            "t": "Metrotown real estate"
+          }
+        ],
+        [
+          {
+            "h": "/montecito.html",
+            "t": "Montecito real estate"
+          }
+        ],
+        [
+          {
+            "h": "/oakdale.html",
+            "t": "Oakdale real estate"
+          }
+        ],
+        [
+          {
+            "h": "/oaklands-burnaby.html",
+            "t": "Oaklands real estate"
+          }
+        ],
+        [
+          {
+            "h": "/parkcrest.html",
+            "t": "Parkcrest real estate"
+          }
+        ],
+        [
+          {
+            "h": "/simon-fraser-hills-burnaby.html",
+            "t": "Simon Fraser Hills real estate"
+          }
+        ],
+        [
+          {
+            "h": "/simon-fraser-university-area-burnaby.html",
+            "t": "Simon Fraser University Area real estate"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Condo buildings in Garden Village",
       "gen": "tn",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Condo buildings in Garden Village"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Garden Village",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Garden Village"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -237,7 +208,7 @@
         ],
         [
           {
-            "t": "The City publishes no street-by-street written boundary for the MLS® sub-area; the historic subdivision was a 140-acre site developed from 1953, and the modern sub-area is generally the residential streets between Central Park / Boundary Road to the west, Kingsway to the north and the Metrotown side to the east — exact MLS® boundary streets: UNVERIFIED."
+            "t": "The City publishes no street-by-street written boundary for the MLS® sub-area; the historic subdivision was a 140-acre site developed from 1953, and the modern sub-area is generally the residential streets between Central Park / Boundary Road to the west, Kingsway to the north and the Metrotown side to the east — exact MLS® boundary streets: Not verified."
           }
         ],
         [
@@ -257,22 +228,22 @@
         ],
         [
           {
-            "t": "Burnaby IS covered by SnapStats: at community level (Burnaby-wide, not sub-area), Condos & Townhomes in September 2026 recorded a median sale price of $686,000, $763/sqft, 98% sale-to-list and 36 days on market (as of September 2026, Source: SnapStats GVR September 2026 report). SnapStats publishes no Garden Village sub-area median."
+            "t": "Burnaby IS covered by SnapStats: at community level (Burnaby-wide, not sub-area), Condos & Townhomes in September 2026 recorded a median sale price of $686,000, $763/sqft, 98% sale-to-list and 36 days on market (SnapStats, September 2026) SnapStats publishes no Garden Village sub-area median."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Garden Village",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Garden Village"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -295,18 +266,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Garden Village",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Garden Village"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -339,124 +310,124 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Garden Village",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Garden Village"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "strawhomes.com · 2201 6188 patterson avenue burnaby bc v5h 2n1",
-            "h": "https://www.strawhomes.com/2201-6188-patterson-avenue-burnaby-bc-v5h-2n1/"
+            "h": "https://www.strawhomes.com/2201-6188-patterson-avenue-burnaby-bc-v5h-2n1/",
+            "t": "strawhomes.com · 2201 6188 patterson avenue burnaby bc v5h 2n1"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · grand central park place 6128 patterson ave",
-            "h": "https://www.bccondosandhomes.com/building/grand-central-park-place-6128-patterson-ave"
+            "h": "https://www.bccondosandhomes.com/building/grand-central-park-place-6128-patterson-ave",
+            "t": "bccondosandhomes.com · grand central park place 6128 patterson ave"
           }
         ],
         [
           {
-            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for ",
-            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/"
+            "h": "https://www.bcrea.bc.ca/legally-speaking/strata-depreciation-report-mandates-a-guide-for-real-estate-professionals-599/",
+            "t": "bcrea.bc.ca · strata depreciation report mandates a guide for"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "equitylawgroup.ca · closing costs bc home purchase",
-            "h": "https://www.equitylawgroup.ca/news/closing-costs-bc-home-purchase"
+            "h": "https://www.equitylawgroup.ca/news/closing-costs-bc-home-purchase",
+            "t": "equitylawgroup.ca · closing costs bc home purchase"
           }
         ],
         [
           {
-            "t": "danmarusin.com · bc property transfer tax 2026",
-            "h": "https://danmarusin.com/blog/bc-property-transfer-tax-2026/"
+            "h": "https://danmarusin.com/blog/bc-property-transfer-tax-2026/",
+            "t": "danmarusin.com · bc property transfer tax 2026"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ],
         [
           {
-            "t": "homecalc.ca · first time home buyer programs canada",
-            "h": "https://homecalc.ca/first-time-home-buyer-programs-canada"
+            "h": "https://homecalc.ca/first-time-home-buyer-programs-canada",
+            "t": "homecalc.ca · first time home buyer programs canada"
           }
         ],
         [
           {
-            "t": "cmhc-schl.gc.ca · second home",
-            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home"
+            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home",
+            "t": "cmhc-schl.gc.ca · second home"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Garden Village",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Garden Village",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Garden Village"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Garden Village"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -469,18 +440,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Garden Village",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Garden Village"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -488,112 +459,112 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Garden Village",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Garden Village"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt116",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt116.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt116.pdf",
+            "t": "infomaps.translink.ca · tt116"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "strawhomes.com · 2201 6188 patterson avenue burnaby bc v5h 2n1",
-            "h": "https://www.strawhomes.com/2201-6188-patterson-avenue-burnaby-bc-v5h-2n1/"
+            "h": "https://www.strawhomes.com/2201-6188-patterson-avenue-burnaby-bc-v5h-2n1/",
+            "t": "strawhomes.com · 2201 6188 patterson avenue burnaby bc v5h 2n1"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun",
-            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan"
+            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan",
+            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Garden Village",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The named subdivision",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Garden Village"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The named subdivision"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -601,18 +572,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Fee-simple lots",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Fee-simple lots"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -621,7 +592,7 @@
         ],
         [
           {
-            "t": "Lot character: typical lot sizes are UNVERIFIED at sub-area level — no official source read states them. The only lot-size figures a source states are the R1 SSMUH thresholds: 280 m² and 281 m². The documented lot character is uniformity of origin: the interior streets read as a single planned post-war subdivision rather than piecemeal growth, which is why two similar 1950s houses can still price very differently once the 400 m frequent-transit test is applied lot by lot."
+            "t": "Lot character: typical lot sizes are not verified at sub-area level — no official source read states them. The only lot-size figures a source states are the R1 SSMUH thresholds: 280 m² and 281 m². The documented lot character is uniformity of origin: the interior streets read as a single planned post-war subdivision rather than piecemeal growth, which is why two similar 1950s houses can still price very differently once the 400 m frequent-transit test is applied lot by lot."
           }
         ],
         [
@@ -631,7 +602,7 @@
         ],
         [
           {
-            "t": "ALR vs non-ALR: no ALR parcel in Garden Village is confirmed in the research; ALR status is a property-specific check through the Agricultural Land Commission, UNVERIFIED for individual lots. No ALR percentage split is stated."
+            "t": "ALR vs non-ALR: no ALR parcel in Garden Village is confirmed; ALR status is a property-specific check through the Agricultural Land Commission, not verified for individual lots. No ALR percentage split is stated."
           }
         ],
         [
@@ -641,22 +612,22 @@
         ],
         [
           {
-            "t": "Market context, labelled correctly: Burnaby IS a SnapStats-covered community — Detached versus \"Condos & Townhomes\" combined only. SnapStats has NO land category, and no detached figure is a land figure. September 2026 context only: Garden Village sub-area detached inventory 9 / solds 1 (11% ratio) and \"Condos & Townhomes\" 0 / 0; Burnaby community detached median $1,825,000 and attached median $686,000. Sub-area medians are UNVERIFIED (community level only)."
+            "t": "Market context, labelled correctly: Burnaby IS a SnapStats-covered community — Detached versus \"Condos & Townhomes\" combined only. SnapStats has NO land category, and no detached figure is a land figure. September 2026 context only: Garden Village sub-area detached inventory 9 / solds 1 (11% ratio) and \"Condos & Townhomes\" 0 / 0; Burnaby community detached median $1,825,000 and attached median $686,000. Sub-area medians are not verified (community level only)."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Bare-land strata",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Bare-land strata"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -665,26 +636,26 @@
         ],
         [
           {
-            "t": ": No named new development project inside the sub-area was confirmed on a City of Burnaby source in the research pass: UNVERIFIED as a project."
+            "t": ": No named new development project inside the sub-area was confirmed on a City of Burnaby source pass: Not verified as a project."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Garden Village",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Garden Village"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Garden Village is a City of Burnaby sub-area in south-west Burnaby, west of Metrotown toward Boundary Road, around Central Park and Patterson Station; Heritage Burnaby places the Garden Village subdivision inside the Central Park historic neighbourhood, in the City's Maywood / Garden Village planning area. \"Garden Village\" is the GVR board sub-area name used in the SnapStats GVR report for Burnaby. The City publishes no street-by-street written boundary for the MLS sub-area; the historic subdivision was a 140-acre site developed from 1953, and the modern sub-area is generally the residential streets between Central Park / Boundary Road to the west, Kingsway to the north and the Metrotown side to the east — exact MLS boundary streets are UNVERIFIED."
+            "t": "Garden Village is a City of Burnaby sub-area in south-west Burnaby, west of Metrotown toward Boundary Road, around Central Park and Patterson Station; Heritage Burnaby places the Garden Village subdivision inside the Central Park historic neighbourhood, in the City's Maywood / Garden Village planning area. \"Garden Village\" is the GVR board sub-area name used in the SnapStats GVR report for Burnaby. The City publishes no street-by-street written boundary for the MLS sub-area; the historic subdivision was a 140-acre site developed from 1953, and the modern sub-area is generally the residential streets between Central Park / Boundary Road to the west, Kingsway to the north and the Metrotown side to the east — exact MLS boundary streets are not verified."
           }
         ],
         [
@@ -694,51 +665,51 @@
         ],
         [
           {
-            "t": "Main roads and transit: Kingsway runs east–west at the north edge; Boundary Road runs south along the Vancouver border at the west edge; Patterson Avenue and Imperial Street run through the sub-area toward Metrotown. Patterson Station, on the Expo Line at Patterson Avenue and Central Park, serves the north side; Metrotown Station, the next station east, is the main bus exchange, and route 116 links Metrotown Station south through the Sussex / Imperial streets toward Edmonds Station. Commute times in minutes: UNVERIFIED."
+            "t": "Main roads and transit: Kingsway runs east–west at the north edge; Boundary Road runs south along the Vancouver border at the west edge; Patterson Avenue and Imperial Street run through the sub-area toward Metrotown. Patterson Station, on the Expo Line at Patterson Avenue and Central Park, serves the north side; Metrotown Station, the next station east, is the main bus exchange, and route 116 links Metrotown Station south through the Sussex / Imperial streets toward Edmonds Station. Commute times in minutes: Not verified."
           }
         ],
         [
           {
-            "t": "Parks and services: Central Park, immediately north-east, is the major park (the City lists 12 tennis courts with lights and a practice wall there); the Rumble Street Urban Trail runs south of the sub-area in a network the City puts at more than 70 kilometres of urban trails. The Bob Prittie Metrotown Branch library and the Bonsor Recreation Complex serve the area from the Metrotown side; a City recreation facility inside the sub-area itself is UNVERIFIED. The Metrotown Urgent and Primary Care Centre is at 102-4555 Kingsway; the city's hospital is Burnaby Hospital, 3935 Kincaid St, north-east."
+            "t": "Parks and services: Central Park, immediately north-east, is the major park (the City lists 12 tennis courts with lights and a practice wall there); the Rumble Street Urban Trail runs south of the sub-area in a network the City puts at more than 70 kilometres of urban trails. The Bob Prittie Metrotown Branch library and the Bonsor Recreation Complex serve the area from the Metrotown side; a City recreation facility inside the sub-area itself is not verified. The Metrotown Urgent and Primary Care Centre is at 102-4555 Kingsway; the city's hospital is Burnaby Hospital, 3935 Kincaid St, north-east."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Garden Village",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Garden Village"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Age-of-stock diligence: the housing stock is post-war in origin (subdivision undertaken in 1953) with later infill and rebuilds; a street-by-street age/style profile from an official source is UNVERIFIED."
+            "t": "Age-of-stock diligence: the housing stock is post-war in origin (subdivision undertaken in 1953) with later infill and rebuilds; a street-by-street age/style profile from an official source is not verified."
           }
         ],
         [
           {
-            "t": "Hazards: no area-wide hazard designation for Garden Village's residential streets was confirmed in the sources read; parcel-level hazard status is a property-specific check: UNVERIFIED lot by lot."
+            "t": "Hazards: no area-wide hazard designation for Garden Village's residential streets was confirmed in the sources read; parcel-level hazard status is a property-specific check: Not verified lot by lot."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Garden Village",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Garden Village"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -761,148 +732,148 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Garden Village",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Garden Village"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "search.heritageburnaby.ca · list",
-            "h": "https://search.heritageburnaby.ca/list?objectType_facet=Landmark%20Description%20&objectType_facet=Cartographic%20Material&ps=50&q=&sort=title_sort%20asc&decade_facet=1860&decade_facet=1930&p=1"
+            "h": "https://search.heritageburnaby.ca/list?objectType_facet=Landmark%20Description%20&objectType_facet=Cartographic%20Material&ps=50&q=&sort=title_sort%20asc&decade_facet=1860&decade_facet=1930&p=1",
+            "t": "search.heritageburnaby.ca · list"
           }
         ],
         [
           {
-            "t": "burnaby.ca · town centres",
-            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres"
+            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres",
+            "t": "burnaby.ca · town centres"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt116",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt116.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt116.pdf",
+            "t": "infomaps.translink.ca · tt116"
           }
         ],
         [
           {
-            "t": "burnaby.ca · outdoor courts",
-            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/outdoor-courts"
+            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/outdoor-courts",
+            "t": "burnaby.ca · outdoor courts"
           }
         ],
         [
           {
-            "t": "burnaby.ca · rumble street urban trail",
-            "h": "https://www.burnaby.ca/explore-outdoors/walking-hiking-and-biking/rumble-street-urban-trail"
+            "h": "https://www.burnaby.ca/explore-outdoors/walking-hiking-and-biking/rumble-street-urban-trail",
+            "t": "burnaby.ca · rumble street urban trail"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "burnabyschools.ca · about sd41 overview",
-            "h": "https://burnabyschools.ca/about-sd41-overview/"
+            "h": "https://burnabyschools.ca/about-sd41-overview/",
+            "t": "burnabyschools.ca · about sd41 overview"
           }
         ],
         [
           {
-            "t": "burnaby.ca · zoning bylaw rewrite",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite",
+            "t": "burnaby.ca · zoning bylaw rewrite"
           }
         ],
         [
           {
-            "t": "burnaby.ca · residential utility fees",
-            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees"
+            "h": "https://www.burnaby.ca/services-and-payments/utility-fees-and-charges/residential-utility-fees",
+            "t": "burnaby.ca · residential utility fees"
           }
         ],
         [
           {
-            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun",
-            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan"
+            "h": "https://www.burnaby.ca/our-city/news/2025-12-11/city-burnaby-adopts-burnaby-2050-official-community-plan",
+            "t": "burnaby.ca · city burnaby adopts burnaby 2050 official commun"
           }
         ],
         [
           {
-            "t": "pub-burnaby.escribemeetings.com · filestream.ashx",
-            "h": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=77052"
+            "h": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=77052",
+            "t": "pub-burnaby.escribemeetings.com · filestream.ashx"
           }
         ],
         [
           {
-            "t": "burnaby.ca · Servicing Improvements Guide",
-            "h": "https://www.burnaby.ca/sites/default/files/acquiadam/2025-08/Servicing-Improvements-Guide.pdf"
+            "h": "https://www.burnaby.ca/sites/default/files/acquiadam/2025-08/Servicing-Improvements-Guide.pdf",
+            "t": "burnaby.ca · Servicing Improvements Guide"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · first time home buyers",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers",
+            "t": "www2.gov.bc.ca · first time home buyers"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Garden Village",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Garden Village"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -920,18 +891,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -939,18 +910,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -963,18 +934,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -982,51 +953,51 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Maywood Community Elementary, 4567 Imperial Street",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
-        [
-          "Metropolis at Metrotown",
-          "Drive",
-          "3",
-          "1.0"
-        ],
         [
           "Patterson Station",
           "Drive",
           "3",
           "1.9"
+        ],
+        [
+          "Metropolis at Metrotown",
+          "Drive",
+          "3",
+          "1.0"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1034,14 +1005,52 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt129.pdf",
+            "t": "infomaps.translink.ca · tt129"
+          }
+        ],
+        [
+          {
+            "h": "http://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks/Central-Park.html",
+            "t": "burnaby.ca · Central Park"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.metropolisatmetrotown.com/about-metropolis/",
+            "t": "metropolisatmetrotown.com · about metropolis"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -1049,38 +1058,51 @@
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt129",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt129.pdf"
+            "t": "Source: burnaby.ca",
+            "h": "https://www.burnaby.ca/our-city/about-burnaby/town-centres"
           }
         ],
         [
           {
-            "t": "burnaby.ca · Central Park",
-            "h": "http://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks/Central-Park.html"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
+            "t": "Source: studentsuccess.gov.bc.ca",
             "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
-          }
-        ],
-        [
-          {
-            "t": "metropolisatmetrotown.com · about metropolis",
-            "h": "https://www.metropolisatmetrotown.com/about-metropolis/"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
     {
-      "q": "Where is Garden Village?",
-      "a": "In south-west Burnaby, west of Metrotown toward Boundary Road, around Central Park and Patterson Station. Heritage Burnaby places the Garden Village subdivision inside the Central Park historic neighbourhood — a 140-acre site developed from 1953 with a plan for 500 modern homes.",
-      "gen": "muse"
+      "a": "Check the sub-area field on the listing, not the search portal's label.",
+      "gen": "tn",
+      "q": "The tower beside Central Park shows up in my search — is it Garden Village?"
+    },
+    {
+      "a": "Burnaby-wide (SnapStats publishes community level only), Condos & Townhomes recorded a median sale price of $686,000 in September 2026, at $763/sqft with 36 days on market (SnapStats, September 2026) There is no Garden Village sub-area median.",
+      "gen": "tn",
+      "q": "What does Burnaby attached housing cost, as a benchmark?"
+    },
+    {
+      "a": "Yes — under the R1 SSMUH district, lots with two or more primary units may be stratified, and a strata lot purchase carries the same Form B, depreciation report and CRF framework as an apartment condo.",
+      "gen": "tn",
+      "q": "If I buy a stratified multiplex unit here, is it a \"condo\" for strata-law purposes?"
+    },
+    {
+      "a": "For a long-term tenancy, yes — strata rental-restriction bylaws have been unenforceable since November 24, 2022 anywhere in BC. Short-term rentals are different: a strata bylaw can still restrict them.",
+      "gen": "tn",
+      "q": "Can I rent out a strata unit I buy near Patterson Station?"
+    },
+    {
+      "a": "Check the sub-area field on the listing, not the search portal's label.",
+      "gen": "tn",
+      "q": "The tower beside Central Park shows up in my search — is it Garden Village?"
+    },
+    {
+      "a": "Burnaby-wide (SnapStats publishes community level only), Condos & Townhomes recorded a median sale price of $686,000 in September 2026, at $763/sqft with 36 days on market — a combined condos-and-townhomes figure, not townhome-only, and not a Garden Village figure. There is no Garden Village sub-area median.",
+      "gen": "tn",
+      "q": "What does Burnaby attached housing cost, as a benchmark?"
     },
     {
       "q": "Is there SkyTrain in Garden Village?",
@@ -1094,48 +1116,11 @@
     },
     {
       "q": "Are there condos or townhomes in Garden Village?",
-      "a": "There are strata pockets toward Kingsway and Patterson, but in September 2026 the sub-area recorded 0 condos & townhomes listings and 0 solds, against 9 detached listings and 1 detached sale — the current market here is detached houses (as of September 2026, Source: SnapStats GVR September 2026 report).",
+      "a": "There are strata pockets toward Kingsway and Patterson, but in September 2026 the sub-area recorded 0 condos & townhomes listings and 0 solds, against 9 detached listings and 1 detached sale — the current market here is detached houses (SnapStats, September 2026)",
       "gen": "muse"
-    },
-    {
-      "gen": "tn",
-      "q": "Are there any condos actually in Garden Village?",
-      "a": "None verified."
-    },
-    {
-      "gen": "tn",
-      "q": "The tower beside Central Park shows up in my search — is it Garden Village?",
-      "a": "Check the sub-area field on the listing, not the search portal's label."
-    },
-    {
-      "gen": "tn",
-      "q": "What does Burnaby attached housing cost, as a benchmark?",
-      "a": "Burnaby-wide (SnapStats publishes community level only), Condos & Townhomes recorded a median sale price of $686,000 in September 2026, at $763/sqft with 36 days on market (as of September 2026, Source: SnapStats GVR September 2026 report). There is no Garden Village sub-area median."
-    },
-    {
-      "gen": "tn",
-      "q": "If I buy a stratified multiplex unit here, is it a \"condo\" for strata-law purposes?",
-      "a": "Yes — under the R1 SSMUH district, lots with two or more primary units may be stratified, and a strata lot purchase carries the same Form B, depreciation report and CRF framework as an apartment condo."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I rent out a strata unit I buy near Patterson Station?",
-      "a": "For a long-term tenancy, yes — strata rental-restriction bylaws have been unenforceable since November 24, 2022 anywhere in BC. Short-term rentals are different: a strata bylaw can still restrict them."
-    },
-    {
-      "gen": "tn",
-      "q": "Are there any townhomes actually in Garden Village?",
-      "a": "None verified."
-    },
-    {
-      "gen": "tn",
-      "q": "The tower beside Central Park shows up in my search — is it Garden Village?",
-      "a": "Check the sub-area field on the listing, not the search portal's label."
-    },
-    {
-      "gen": "tn",
-      "q": "What does Burnaby attached housing cost, as a benchmark?",
-      "a": "Burnaby-wide (SnapStats publishes community level only), Condos & Townhomes recorded a median sale price of $686,000 in September 2026, at $763/sqft with 36 days on market — a combined condos-and-townhomes figure, not townhome-only, and not a Garden Village figure. There is no Garden Village sub-area median."
     }
-  ]
+  ],
+  "slug": "garden-village",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

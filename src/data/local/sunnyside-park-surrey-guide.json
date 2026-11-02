@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "sunnyside-park-surrey-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Sunnyside Park compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Sunnyside Park compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Sunnyside Park against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Sunnyside Park against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
-      "caption": "Sunnyside Park against the whole city, September 2026",
+      "caption": "Sunnyside Park against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -28,145 +25,145 @@
         [
           "Detached houses",
           "7.7%",
-          "5.0%",
-          "7% against 10%",
-          "7 of 8"
+          "20.4%",
+          "25% against 9%",
+          "1 of 8"
         ],
         [
           "Condos and townhomes",
-          "4.7%",
-          "10.0%",
-          "32% against 15%",
+          "3.9%",
+          "9.9%",
+          "36% against 14%",
           "1 of 7"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings fell from 50 in June to 46 in September (−8.0%), and it took 7.5% of the city’s 240 sales over the period; condos and townhomes: listings fell from 43 in June to 28 in September (−34.9%), and it took 9.3% of the city’s 375 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 50 in June to 44 in October (−12.0%), and it took 9.9% of the city’s 294 sales over the period; condos and townhomes: listings fell from 43 in June to 22 in October (−48.8%), and it took 9.4% of the city’s 456 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Sunnyside Park for detached houses in June (a sellers’ best bet); detached houses in September (a buyers’ best bet); condos and townhomes in June, August, September (a sellers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out Sunnyside Park for detached houses in June, October (a sellers’ best bet); detached houses in September (a buyers’ best bet); condos and townhomes in June, August, September, October (a sellers’ best bet)."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More South Surrey and White Rock real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More South Surrey and White Rock real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "South Surrey and White Rock homes for sale",
-            "h": "/south-surrey-homes-for-sale.html"
+            "h": "/south-surrey-homes-for-sale.html",
+            "t": "South Surrey and White Rock homes for sale"
           }
         ],
         [
           {
-            "t": "South Surrey and White Rock real estate market stats",
-            "h": "/south-surrey-white-rock-real-estate-market-stats.html"
+            "h": "/south-surrey-white-rock-real-estate-market-stats.html",
+            "t": "South Surrey and White Rock real estate market stats"
           }
         ],
         [
           {
-            "t": "South Surrey and White Rock houses for sale",
-            "h": "/south-surrey-houses-for-sale.html"
+            "h": "/south-surrey-houses-for-sale.html",
+            "t": "South Surrey and White Rock houses for sale"
           }
         ],
         [
           {
-            "t": "South Surrey and White Rock condos for sale",
-            "h": "/south-surrey-condos-for-sale.html"
+            "h": "/south-surrey-condos-for-sale.html",
+            "t": "South Surrey and White Rock condos for sale"
           }
         ],
         [
           {
-            "t": "South Surrey and White Rock townhomes for sale",
-            "h": "/south-surrey-townhomes-for-sale.html"
+            "h": "/south-surrey-townhomes-for-sale.html",
+            "t": "South Surrey and White Rock townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in South Surrey and White Rock",
-            "h": "/sell-my-house-in-south-surrey-white-rock.html"
+            "h": "/sell-my-house-in-south-surrey-white-rock.html",
+            "t": "Sell my house in South Surrey and White Rock"
           }
         ],
         [
           {
-            "t": "Sunnyside Park homes and market figures",
-            "h": "/sunnyside-park-surrey.html"
+            "h": "/sunnyside-park-surrey.html",
+            "t": "Sunnyside Park homes and market figures"
           }
         ],
         [
           {
-            "t": "White Rock real estate",
-            "h": "/white-rock.html"
+            "h": "/white-rock.html",
+            "t": "White Rock real estate"
           }
         ],
         [
           {
-            "t": "Elgin Chantrell real estate",
-            "h": "/elgin-chantrell.html"
+            "h": "/elgin-chantrell.html",
+            "t": "Elgin Chantrell real estate"
           }
         ],
         [
           {
-            "t": "Grandview real estate",
-            "h": "/grandview-surrey.html"
+            "h": "/grandview-surrey.html",
+            "t": "Grandview real estate"
           }
         ],
         [
           {
-            "t": "Hazelmere real estate",
-            "h": "/hazelmere.html"
+            "h": "/hazelmere.html",
+            "t": "Hazelmere real estate"
           }
         ],
         [
           {
-            "t": "King George Corridor real estate",
-            "h": "/king-george-corridor.html"
+            "h": "/king-george-corridor.html",
+            "t": "King George Corridor real estate"
           }
         ],
         [
           {
-            "t": "Morgan Creek real estate",
-            "h": "/morgan-creek.html"
+            "h": "/morgan-creek.html",
+            "t": "Morgan Creek real estate"
           }
         ],
         [
           {
-            "t": "Pacific Douglas real estate",
-            "h": "/pacific-douglas.html"
+            "h": "/pacific-douglas.html",
+            "t": "Pacific Douglas real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Condo buildings in Sunnyside Park Surrey Guide",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Sunnyside Park Surrey Guide",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Condo buildings in Sunnyside Park Surrey Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Sunnyside Park Surrey Guide"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -175,12 +172,12 @@
         ],
         [
           {
-            "t": "The exact MLS feed filter criteria behind the page are UNVERIFIED."
+            "t": "The exact MLS feed filter criteria behind the page are not verified."
           }
         ],
         [
           {
-            "t": "Catchments are address-based: the settled locator result is 1785 - 148 Street (locator range 1739–1785 148 St) → H. T. Thrift Elementary and Semiahmoo Secondary (SD36 School Locator, run 2026-11-01); catchment schools for any other specific address are UNVERIFIED."
+            "t": "T. Thrift Elementary and Semiahmoo Secondary (SD36 School Locator, run 2026-11-01); catchment schools for any other specific address are not verified."
           }
         ],
         [
@@ -190,22 +187,22 @@
         ],
         [
           {
-            "t": "Transit, shopping and health: TransLink route 321 runs Surrey Central Station to White Rock Centre / White Rock South via King George Boulevard and 152 Street, confirmed against the route's own timetable document; Semiahmoo Shopping Centre, 1711 152 Street, is the named centre beside this sub-area; Peace Arch Hospital, 15521 Russell Avenue, White Rock, is the nearest hospital (Fraser Health). A grocery store name and address inside the sub-area itself: UNVERIFIED. Commute times in minutes: UNVERIFIED."
+            "t": "Transit, shopping and health: TransLink route 321 runs Surrey Central Station to White Rock Centre / White Rock South via King George Boulevard and 152 Street, confirmed against the route's own timetable document; Semiahmoo Shopping Centre, 1711 152 Street, is the named centre beside this sub-area; Peace Arch Hospital, 15521 Russell Avenue, White Rock, is the nearest hospital (Fraser Health). A grocery store name and address inside the sub-area itself: Not verified. Commute times in minutes: Not verified."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Sunnyside Park Surrey Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Sunnyside Park Surrey Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -224,22 +221,22 @@
         ],
         [
           {
-            "t": "Flood / ALR and taxes: floodplain and ALR status for a specific lot in this sub-area are UNVERIFIED — check City flood information and Agricultural Land Commission maps by parcel. Property tax or levy notes specific to this sub-area: UNVERIFIED."
+            "t": "Flood / ALR and taxes: floodplain and ALR status for a specific lot in this sub-area are not verified — check City flood information and Agricultural Land Commission maps by parcel. Property tax or levy notes specific to this sub-area: Not verified."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Sunnyside Park Surrey Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Sunnyside Park Surrey Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -268,204 +265,204 @@
         ],
         [
           {
-            "t": "No presale is verified inside the sub-area. No project in this sub-area was verified on a City development application page in the research read — presales: UNVERIFIED. Odyssey is complete (2025 per listings); do not price a Sunnyside purchase on an unnamed future project."
+            "t": "No presale is verified inside the sub-area. No project in this sub-area was verified on a City development application page read — presales: Not verified. Odyssey is complete (2025 per listings); do not price a Sunnyside purchase on an unnamed future project."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Sunnyside Park Surrey Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Sunnyside Park Surrey Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "surrey.ca · bakerview park",
-            "h": "https://www.surrey.ca/parks-recreation/parks/bakerview-park"
+            "h": "https://www.surrey.ca/parks-recreation/parks/bakerview-park",
+            "t": "surrey.ca · bakerview park"
           }
         ],
         [
           {
-            "t": "Surrey.ca · sunnyside heights ncp",
-            "h": "https://www.Surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans/sunnyside-heights-ncp"
+            "h": "https://www.Surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans/sunnyside-heights-ncp",
+            "t": "Surrey.ca · sunnyside heights ncp"
           }
         ],
         [
           {
-            "t": "jaredgibbons.ca · sunnyside park surrey guide",
-            "h": "https://jaredgibbons.ca/sunnyside-park-surrey-guide.html"
+            "h": "https://jaredgibbons.ca/sunnyside-park-surrey-guide.html",
+            "t": "jaredgibbons.ca · sunnyside park surrey guide"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt321",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf",
+            "t": "infomaps.translink.ca · tt321"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · semiahmoo estates 2239 152 street",
-            "h": "https://www.bccondosandhomes.com/building/semiahmoo-estates-2239-152-street"
+            "h": "https://www.bccondosandhomes.com/building/semiahmoo-estates-2239-152-street",
+            "t": "bccondosandhomes.com · semiahmoo estates 2239 152 street"
           }
         ],
         [
           {
-            "t": "mikestewart.ca · odyssey by forge properties south surrey luxury ",
-            "h": "https://www.mikestewart.ca/presale/odyssey-by-forge-properties-south-surrey-luxury-presale-condos/"
+            "h": "https://www.mikestewart.ca/presale/odyssey-by-forge-properties-south-surrey-luxury-presale-condos/",
+            "t": "mikestewart.ca · odyssey by forge properties south surrey luxury"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "surrey.ca · r133 plansurrey 2013 official community plan sur",
-            "h": "https://www.surrey.ca/city-government/council-meetings-documents/corporate-reports/r133-plansurrey-2013-official-community-plan-surrey-2050-official-community-plan-alignment-related-amendments"
+            "h": "https://www.surrey.ca/city-government/council-meetings-documents/corporate-reports/r133-plansurrey-2013-official-community-plan-surrey-2050-official-community-plan-alignment-related-amendments",
+            "t": "surrey.ca · r133 plansurrey 2013 official community plan sur"
           }
         ],
         [
           {
-            "t": "surrey.ca · semiahmoo town centre plan",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans/semiahmoo-town-centre-plan"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans/semiahmoo-town-centre-plan",
+            "t": "surrey.ca · semiahmoo town centre plan"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ],
         [
           {
-            "t": "canada.ca · first home savings account",
-            "h": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/first-home-savings-account.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/first-home-savings-account.html",
+            "t": "canada.ca · first home savings account"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Sunnyside Park",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Filing conflicts flagged at the top (read before the count): (1) MLS filings and directory filings do not line up on this corridor. (2) Highgrove's age status CONFLICTS between listings — one states \"no age restrictions,\" another describes a unit as a \"55+ semidetached townhome\" — carried as UNCONFIRMED in, never asserted either way.",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Bishop's Green — 2533 152 Street. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Sunnyside Park"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A gated townhouse complex of duplex-style rancher townhouses with walkout basements, a clubhouse, exercise centre and guest suite in listing amenity records, steps from the Semiahmoo Trail system. Listings describe a \"55+ gated community\" / \"highly sought after 55+ gated community of Bishop's Green\" — a published 55+ description; the registered bylaw itself is proved only on the Form B. Tenure evidence: current listings record monthly strata fees for its units, and units are classified Townhouse in Sunnyside Park Surrey. Year built: listings vary by unit — 1991 and 1992 both appear — carried as 1991–1992, phased/early-1990s in listing terms; confirm the unit's year on the strata plan. Published pet restrictions: UNCONFIRMED from the sources checked.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Filing conflicts flagged at the top (read before the count): (1) MLS filings and directory filings do not line up on this corridor. (2) Highgrove's age status CONFLICTS between listings — one states \"no age restrictions,\" another describes a unit as a \"55+ semidetached townhome\" — carried as not confirmed in, never asserted either way."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "St. Martin's Lane — 15020 27A Avenue. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Bishop's Green — 2533 152 Street. STRATA"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Polygon's gated townhouse complex of half-duplex rancher townhouses with walkout basements, in-floor radiant heat and a clubhouse in listing amenity records, built 1995. Listings describe a \"55+ gated community\" — published description only; the registered bylaw is proved on the Form B. Unit count and published pet/rental restrictions beyond the 55+ description: UNCONFIRMED.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A gated townhouse complex of duplex-style rancher townhouses with walkout basements, a clubhouse, exercise centre and guest suite in listing amenity records, steps from the Semiahmoo Trail system. Listings describe a \"55+ gated community\" / \"highly sought after 55+ gated community of Bishop's Green\" — a published 55+ description; the registered bylaw itself is proved only on the Form B. Tenure evidence: current listings record monthly strata fees for its units, and units are classified Townhouse in Sunnyside Park Surrey. Year built: listings vary by unit — 1991 and 1992 both appear — carried as 1991–1992, phased/early-1990s in listing terms; confirm the unit's year on the strata plan. Published pet restrictions: Not confirmed from the sources checked."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Highgrove — 15055 20 Avenue. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "St. Martin's Lane — 15020 27A Avenue. STRATA"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Unit count: a directory listing header records a 22-unit development (secondary source). Year built — CONFLICT: listings record 1999 and 2001 for different units — carried as 1999–2001 UNCONFIRMED pending the strata plan. Age status — DIRECT CONFLICT, carried UNCONFIRMED: an MLS listing for a Highgrove townhome states in terms \"no age restrictions\" for the complex, while another listing describes a Highgrove unit as a \"55+ semidetached townhome\" (in \"Highgrove II\" wording). Do not publish Highgrove as a 55+ complex, or as age-free, until the registered bylaws are read on the Form B.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Polygon's gated townhouse complex of half-duplex rancher townhouses with walkout basements, in-floor radiant heat and a clubhouse in listing amenity records, built 1995. Listings describe a \"55+ gated community\" — published description only; the registered bylaw is proved on the Form B. Unit count and published pet/rental restrictions beyond the 55+ description: Not confirmed."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Orchard Park — 15121 19 Avenue. STRATA",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Highgrove — 15055 20 Avenue. STRATA"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A townhouse complex whose subdivision name in MLS records is Orchard Park; a current listing classifies its units as Townhouse in Sunnyside Park Surrey, built 1987, duplex-style 2-storey townhomes backing onto greenspace and a walking path, with monthly strata fees recorded for the unit checked. Unit count and published rental/pet/age restrictions: UNCONFIRMED from the sources checked.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Unit count: a directory listing header records a 22-unit development (secondary source). Year built — CONFLICT: listings record 1999 and 2001 for different units — carried as 1999–2001 not confirmed pending the strata plan. Age status — DIRECT CONFLICT, carried not confirmed: an MLS listing for a Highgrove townhome states in terms \"no age restrictions\" for the complex, while another listing describes a Highgrove unit as a \"55+ semidetached townhome\" (in \"Highgrove II\" wording). Do not publish Highgrove as a 55+ complex, or as age-free, until the registered bylaws are read on the Form B."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Sunnyside Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Orchard Park — 15121 19 Avenue. STRATA"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "pos": "end",
+      "t": "p",
+      "text": "A townhouse complex whose subdivision name in MLS records is Orchard Park; a current listing classifies its units as Townhouse in Sunnyside Park Surrey, built 1987, duplex-style 2-storey townhomes backing onto greenspace and a walking path, with monthly strata fees recorded for the unit checked. Unit count and published rental/pet/age restrictions: Not confirmed from the sources checked."
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Sunnyside Park"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -479,7 +476,7 @@
         ],
         [
           {
-            "t": "Schools (SD36; Ministry-listed names only): Semiahmoo Secondary, 1785 - 148 Street, is physically in this sub-area per its SD36 page. Catchments are address-based: the settled locator result for the test address 1785 - 148 Street (locator range 1739–1785 148 St) is Elementary = H. T. Thrift Elementary; Secondary = Semiahmoo Secondary (SD36 School Locator, run 2026-11-01). SD36 schools are elementary Kindergarten to Grade 7 and secondary Grades 8 to 12. Catchment for any other specific address is UNVERIFIED until run in the locator."
+            "t": "Schools (SD36; Ministry-listed names only): Semiahmoo Secondary, 1785 - 148 Street, is physically in this sub-area per its SD36 page. T. Thrift Elementary; Secondary = Semiahmoo Secondary (SD36 School Locator, run 2026-11-01). SD36 schools are elementary Kindergarten to Grade 7 and secondary Grades 8 to 12. Catchment for any other specific address is not verified until run in the locator."
           }
         ],
         [
@@ -493,18 +490,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Sunnyside Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Sunnyside Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -513,22 +510,22 @@
         ],
         [
           {
-            "t": "Presales (REDMA) — live here via Elisa: a presale buyer must receive the developer's disclosure statement (REDMA s. 18, deposits in trust) and has a 7-day rescission period from the later of signing or acknowledging it (REDMA s. 21). Apply that frame to any Elisa at Sunnyside Park purchase; assignment terms are UNCONFIRMED until the disclosure statement is read."
+            "t": "Presales (REDMA) — live here via Elisa: a presale buyer must receive the developer's disclosure statement (REDMA s. 18, deposits in trust) and has a 7-day rescission period from the later of signing or acknowledging it (REDMA s. 21). Apply that frame to any Elisa at Sunnyside Park purchase; assignment terms are not confirmed until the disclosure statement is read."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Sunnyside Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Sunnyside Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -556,142 +553,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Sunnyside Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Sunnyside Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "surrey.ca · bakerview park",
-            "h": "https://www.surrey.ca/parks-recreation/parks/bakerview-park"
+            "h": "https://www.surrey.ca/parks-recreation/parks/bakerview-park",
+            "t": "surrey.ca · bakerview park"
           }
         ],
         [
           {
-            "t": "Surrey.ca · sunnyside heights ncp",
-            "h": "https://www.Surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans/sunnyside-heights-ncp"
+            "h": "https://www.Surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans/sunnyside-heights-ncp",
+            "t": "Surrey.ca · sunnyside heights ncp"
           }
         ],
         [
           {
-            "t": "mikestewart.ca · sunnyside grove townhomes plans pricing",
-            "h": "https://www.mikestewart.ca/presale/sunnyside-grove-townhomes-plans-pricing/"
+            "h": "https://www.mikestewart.ca/presale/sunnyside-grove-townhomes-plans-pricing/",
+            "t": "mikestewart.ca · sunnyside grove townhomes plans pricing"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt321",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf",
+            "t": "infomaps.translink.ca · tt321"
           }
         ],
         [
           {
-            "t": "surreyschools.ca · semiahmoo",
-            "h": "https://www.surreyschools.ca/semiahmoo/_ci/p/174781"
+            "h": "https://www.surreyschools.ca/semiahmoo/_ci/p/174781",
+            "t": "surreyschools.ca · semiahmoo"
           }
         ],
         [
           {
-            "t": "surreyschools.ca · grandviewheights",
-            "h": "https://www.surreyschools.ca/grandviewheights"
+            "h": "https://www.surreyschools.ca/grandviewheights",
+            "t": "surreyschools.ca · grandviewheights"
           }
         ],
         [
           {
-            "t": "surrey.ca · sunnyside acres urban forest park",
-            "h": "https://www.surrey.ca/parks-recreation/parks/sunnyside-acres-urban-forest-park"
+            "h": "https://www.surrey.ca/parks-recreation/parks/sunnyside-acres-urban-forest-park",
+            "t": "surrey.ca · sunnyside acres urban forest park"
           }
         ],
         [
           {
-            "t": "surrey.ca · south surrey recreation arts centre",
-            "h": "https://www.surrey.ca/parks-recreation/recreation-facilities/south-surrey-recreation-arts-centre"
+            "h": "https://www.surrey.ca/parks-recreation/recreation-facilities/south-surrey-recreation-arts-centre",
+            "t": "surrey.ca · south surrey recreation arts centre"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · Improving access to team based care for people i",
-            "h": "https://www.fraserhealth.ca/news/2026/Apr/Improving-access-to-team-based-care-for-people-in-Surrey"
+            "h": "https://www.fraserhealth.ca/news/2026/Apr/Improving-access-to-team-based-care-for-people-in-Surrey",
+            "t": "fraserhealth.ca · Improving access to team based care for people i"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · peace arch hospital",
-            "h": "https://www.fraserhealth.ca/service-directory/locations/white-rock/peace-arch-hospital"
+            "h": "https://www.fraserhealth.ca/service-directory/locations/white-rock/peace-arch-hospital",
+            "t": "fraserhealth.ca · peace arch hospital"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · semiahmoo estates 2239 152 street",
-            "h": "https://www.bccondosandhomes.com/building/semiahmoo-estates-2239-152-street"
+            "h": "https://www.bccondosandhomes.com/building/semiahmoo-estates-2239-152-street",
+            "t": "bccondosandhomes.com · semiahmoo estates 2239 152 street"
           }
         ],
         [
           {
-            "t": "mikestewart.ca · elisa at sunnyside park south surrey presale tow",
-            "h": "https://www.mikestewart.ca/presale/elisa-at-sunnyside-park-south-surrey-presale-townhomes-by-hive-development/"
+            "h": "https://www.mikestewart.ca/presale/elisa-at-sunnyside-park-south-surrey-presale-townhomes-by-hive-development/",
+            "t": "mikestewart.ca · elisa at sunnyside park south surrey presale tow"
           }
         ],
         [
           {
-            "t": "surrey.ca · development activity",
-            "h": "https://www.surrey.ca/business-economy/business-data/development-activity"
+            "h": "https://www.surrey.ca/business-economy/business-data/development-activity",
+            "t": "surrey.ca · development activity"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Sunnyside Park",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Fee-simple lots",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Sunnyside Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Fee-simple lots"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -720,7 +717,7 @@
         ],
         [
           {
-            "t": "Serviced vs unserviced: no servicing statement for a vacant lot in this sub-area is documented in the research — municipal water/sewer vs well/septic for any single parcel is UNCONFIRMED here and must be confirmed with the City. No servicing position is invented."
+            "t": "Serviced vs unserviced: no servicing statement for a vacant lot in this sub-area is documented — municipal water/sewer vs well/septic for any single parcel is not confirmed here and must be confirmed with the City. No servicing position is invented."
           }
         ],
         [
@@ -729,18 +726,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Development site",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Development site"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -748,18 +745,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Sunnyside Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Sunnyside Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -778,7 +775,7 @@
         ],
         [
           {
-            "t": "Schools: Surrey Schools (SD36) catchments are address-based through the district's School Locator. Semiahmoo Secondary, 1785 - 148 Street, is physically in this sub-area per its SD36 page. Settled locator sample (completed run documented in the research): 1785 148 St → H.T. Thrift Elementary / Semiahmoo Secondary (locator range 1739–1785 148 St; SD36 School Locator, mybaragar.com, run 2026-11-01). The Ministry-vs-locator punctuation difference — \"H T Thrift\" vs \"H.T. SD36 schools are elementary Kindergarten to Grade 7 and secondary Grades 8 to 12."
+            "t": "Schools: Surrey Schools (SD36) catchments are address-based through the district's School Locator. Semiahmoo Secondary, 1785 - 148 Street, is physically in this sub-area per its SD36 page. Settled locator sample (completed run documented): 1785 148 St → H.T. Thrift Elementary / Semiahmoo Secondary (locator range 1739–1785 148 St; SD36 School Locator, mybaragar.com, run 2026-11-01). The Ministry-vs-locator punctuation difference — \"H T Thrift\" vs \"H.T. SD36 schools are elementary Kindergarten to Grade 7 and secondary Grades 8 to 12."
           }
         ],
         [
@@ -787,18 +784,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Sunnyside Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Sunnyside Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -821,18 +818,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Sunnyside Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Sunnyside Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -860,186 +857,164 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Sunnyside Park",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Sunnyside Park"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "surrey.ca · bakerview park",
-            "h": "https://www.surrey.ca/parks-recreation/parks/bakerview-park"
+            "h": "https://www.surrey.ca/parks-recreation/parks/bakerview-park",
+            "t": "surrey.ca · bakerview park"
           }
         ],
         [
           {
-            "t": "Surrey.ca · sunnyside heights ncp",
-            "h": "https://www.Surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans/sunnyside-heights-ncp"
+            "h": "https://www.Surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans/sunnyside-heights-ncp",
+            "t": "Surrey.ca · sunnyside heights ncp"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt321",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf",
+            "t": "infomaps.translink.ca · tt321"
           }
         ],
         [
           {
-            "t": "surreyschools.ca · semiahmoo",
-            "h": "https://www.surreyschools.ca/semiahmoo/_ci/p/174781"
+            "h": "https://www.surreyschools.ca/semiahmoo/_ci/p/174781",
+            "t": "surreyschools.ca · semiahmoo"
           }
         ],
         [
           {
-            "t": "surreyschools.ca · grandviewheights",
-            "h": "https://www.surreyschools.ca/grandviewheights"
+            "h": "https://www.surreyschools.ca/grandviewheights",
+            "t": "surreyschools.ca · grandviewheights"
           }
         ],
         [
           {
-            "t": "surrey.ca · sunnyside acres urban forest park",
-            "h": "https://www.surrey.ca/parks-recreation/parks/sunnyside-acres-urban-forest-park"
+            "h": "https://www.surrey.ca/parks-recreation/parks/sunnyside-acres-urban-forest-park",
+            "t": "surrey.ca · sunnyside acres urban forest park"
           }
         ],
         [
           {
-            "t": "surrey.ca · zoning small scale multi unit housing",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing",
+            "t": "surrey.ca · zoning small scale multi unit housing"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · living in the alr information",
-            "h": "https://www.alc.gov.bc.ca/permitted-uses-in-the-alr/living-in-the-alr-information/"
+            "h": "https://www.alc.gov.bc.ca/permitted-uses-in-the-alr/living-in-the-alr-information/",
+            "t": "alc.gov.bc.ca · living in the alr information"
           }
         ],
         [
           {
-            "t": "surrey.ca · development activity",
-            "h": "https://www.surrey.ca/business-economy/business-data/development-activity"
+            "h": "https://www.surrey.ca/business-economy/business-data/development-activity",
+            "t": "surrey.ca · development activity"
           }
         ],
         [
           {
-            "t": "surrey.ca · r133 plansurrey 2013 official community plan sur",
-            "h": "https://www.surrey.ca/city-government/council-meetings-documents/corporate-reports/r133-plansurrey-2013-official-community-plan-surrey-2050-official-community-plan-alignment-related-amendments"
+            "h": "https://www.surrey.ca/city-government/council-meetings-documents/corporate-reports/r133-plansurrey-2013-official-community-plan-surrey-2050-official-community-plan-alignment-related-amendments",
+            "t": "surrey.ca · r133 plansurrey 2013 official community plan sur"
           }
         ],
         [
           {
-            "t": "surrey.ca · semiahmoo town centre plan",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans/semiahmoo-town-centre-plan"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans/semiahmoo-town-centre-plan",
+            "t": "surrey.ca · semiahmoo town centre plan"
           }
         ],
         [
           {
-            "t": "surrey.ca · short term rentals",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/short-term-rentals"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/short-term-rentals",
+            "t": "surrey.ca · short term rentals"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Are there more or fewer homes for sale in Sunnyside Park Surrey than in June?",
-      "a": "In Sunnyside Park Surrey, listings of houses fell from 50 in June to 46 in September (−8.0%); condos and townhomes fell from 43 in June to 28 in September (−34.9%).",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How big is Sunnyside Park Surrey compared with the rest of South Surrey and White Rock?",
-      "a": "In September 2026, Sunnyside Park Surrey held 7.7% of the 600 houses listed in South Surrey and White Rock and 4.7% of the 593 condos and townhomes listed in South Surrey and White Rock.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How many homes sold in Sunnyside Park Surrey from June to September 2026?",
-      "a": "18 houses and 35 condos and townhomes sold in Sunnyside Park Surrey over those 4 months.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "Who can help me buy or sell in Sunnyside Park Surrey?",
-      "a": "Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, works across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361 or use the contact form on this site.",
-      "gen": "bank-faq"
-    },
-    {
-      "q": "How do I find out which school serves an address in Sunnyside Park Surrey?",
-      "a": "School catchments are set by address, so use the school district's catchment locator with the exact address. Catchment lines change, so check before you write an offer.",
-      "gen": "bank-faq"
-    },
-    {
+      "a": "Everything else attached in the sub-area is townhouses (Peninsula Village, Bishop's Green) or detached houses.",
       "gen": "tn",
-      "q": "How many apartment-condo buildings are actually in Sunnyside Park?",
-      "a": "Everything else attached in the sub-area is townhouses (Peninsula Village, Bishop's Green) or detached houses."
+      "q": "How many apartment-condo buildings are actually in Sunnyside Park?"
     },
     {
+      "a": "No. Peninsula Village (2500 152 Street) is a gated townhouse complex built in 1993 — townhouse strata lots with a clubhouse and a private gate to the Peninsula Village Shopping Centre.",
       "gen": "tn",
-      "q": "Is Peninsula Village a condo building?",
-      "a": "No. Peninsula Village (2500 152 Street) is a gated townhouse complex built in 1993 — townhouse strata lots with a clubhouse and a private gate to the Peninsula Village Shopping Centre."
+      "q": "Is Peninsula Village a condo building?"
     },
     {
+      "a": "Rentals: a long-term rental-restriction bylaw has been unenforceable since November 24, 2022 anywhere in BC, so the directory's \"rentals not allowed\" line is old bylaw text. Pets: pet bylaws remain enforceable, and the directory records pets not allowed — read the registered bylaws. Age: the directory records age restrictions and listings describe a 55+ community; a 55+ bylaw is the one age bylaw BC law still allows.",
       "gen": "tn",
-      "q": "The directory says Semiahmoo Estates bans rentals and pets. What is actually enforceable?",
-      "a": "Rentals: a long-term rental-restriction bylaw has been unenforceable since November 24, 2022 anywhere in BC, so the directory's \"rentals not allowed\" line is old bylaw text. Pets: pet bylaws remain enforceable, and the directory records pets not allowed — read the registered bylaws. Age: the directory records age restrictions and listings describe a 55+ community; a 55+ bylaw is the one age bylaw BC law still allows."
+      "q": "The directory says Semiahmoo Estates bans rentals and pets. What is actually enforceable?"
     },
     {
+      "a": "The sources conflict: the building directory states 1991, while MLS listings and the building's MLS data sheet state 1990.",
       "gen": "tn",
-      "q": "How old is Semiahmoo Estates, exactly?",
-      "a": "The sources conflict: the building directory states 1991, while MLS listings and the building's MLS data sheet state 1990."
+      "q": "How old is Semiahmoo Estates, exactly?"
     },
     {
+      "a": "Odyssey by Forge Properties is two 4-storey wood-frame low-rises with 132 condominiums between 152 Street and King George Boulevard (presale-directory source, secondary); current listings record units as built 2025 at both addresses, so the buildings are complete and trading as resales/developer sales, not as a future presale.",
       "gen": "tn",
-      "q": "What is Odyssey, and is it finished?",
-      "a": "Odyssey by Forge Properties is two 4-storey wood-frame low-rises with 132 condominiums between 152 Street and King George Boulevard (presale-directory source, secondary); current listings record units as built 2025 at both addresses, so the buildings are complete and trading as resales/developer sales, not as a future presale."
+      "q": "What is Odyssey, and is it finished?"
     },
     {
+      "a": "No fee-simple townhouse complex was verified.",
       "gen": "tn",
-      "q": "How many townhouse complexes are actually in Sunnyside Park?",
-      "a": "No fee-simple townhouse complex was verified."
+      "q": "How many townhouse complexes are actually in Sunnyside Park?"
     },
     {
+      "a": "Not confirmed — the listings conflict in terms: one states \"no age restrictions,\" another describes a unit as a \"55+ semidetached townhome.\" The registered bylaws on the Form B decide it; do not buy, or pass, on either listing line alone.",
       "gen": "tn",
-      "q": "Is Highgrove a 55+ complex or not?",
-      "a": "UNCONFIRMED — the listings conflict in terms: one states \"no age restrictions,\" another describes a unit as a \"55+ semidetached townhome.\" The registered bylaws on the Form B decide it; do not buy, or pass, on either listing line alone."
+      "q": "Is Highgrove a 55+ complex or not?"
     },
     {
+      "a": "Provincially, a younger spouse or partner of a resident who meets the age requirement (or holds a legacy exemption) is exempt, as are live-in caregivers and legacy residents (SPA ss. 123.1/123.2, Reg 7.01 as expanded May 1, 2023). Peninsula Village listings next door state the common local form expressly — \"One person 55+\" — but each complex's own bylaw wording must be confirmed in its Form B.",
       "gen": "tn",
-      "q": "Do both of us have to be 55 to live in Bishop's Green or St. Martin's Lane?",
-      "a": "Provincially, a younger spouse or partner of a resident who meets the age requirement (or holds a legacy exemption) is exempt, as are live-in caregivers and legacy residents (SPA ss. 123.1/123.2, Reg 7.01 as expanded May 1, 2023). Peninsula Village listings next door state the common local form expressly — \"One person 55+\" — but each complex's own bylaw wording must be confirmed in its Form B."
+      "q": "Do both of us have to be 55 to live in Bishop's Green or St. Martin's Lane?"
     }
-  ]
+  ],
+  "slug": "sunnyside-park-surrey-guide",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

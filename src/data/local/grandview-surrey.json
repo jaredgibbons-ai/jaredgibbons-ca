@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "grandview-surrey",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Grandview homes listed and sold, June to September 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Grandview homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Grandview, September 2026. Detached houses: 66 listed at month end and 9 sold in September, a sales ratio of 14% (a balanced market). Condos and townhomes: 146 listed at month end and 20 sold in September, a sales ratio of 14% (a balanced market).",
-      "gen": "snapstats"
+      "text": "Grandview, October 2026. Detached houses: 67 listed at month end and 2 sold in October, a sales ratio of 3% (a buyers’ market). Condos and townhomes: 143 listed at month end and 23 sold in October, a sales ratio of 16% (a balanced market)."
     },
     {
-      "t": "table",
       "caption": "Grandview listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -62,173 +59,182 @@
           "146",
           "20",
           "14%"
+        ],
+        [
+          "October 2026",
+          "67",
+          "2",
+          "3%",
+          "143",
+          "23",
+          "16%"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 37 sold over 4 months against an average of 67.0 listed, about 7.2 months of listings at that pace; the busiest month was July with 12 sold. Condos and townhomes: 105 sold over 4 months against an average of 155.2 listed, about 5.9 months of listings at that pace; the busiest month was June with 33 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 39 sold over 5 months against an average of 67.0 listed, about 8.6 months of listings at that pace; the busiest month was July with 12 sold. Condos and townhomes: 128 sold over 5 months against an average of 152.8 listed, about 6.0 months of listings at that pace; the busiest month was June with 33 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Grandview by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Grandview by home type"
     },
     {
-      "t": "list",
+      "gen": "typepage",
       "items": [
         [
           {
-            "t": "Grandview houses for sale",
-            "h": "/grandview-south-surrey-houses-for-sale.html"
+            "h": "/grandview-south-surrey-houses-for-sale.html",
+            "t": "Grandview houses for sale"
           }
         ],
         [
           {
-            "t": "Grandview condos and townhomes for sale",
-            "h": "/grandview-south-surrey-condos-townhomes-for-sale.html"
+            "h": "/grandview-south-surrey-condos-townhomes-for-sale.html",
+            "t": "Grandview condos and townhomes for sale"
           }
         ]
       ],
-      "gen": "typepage",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More South Surrey and White Rock real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More South Surrey and White Rock real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "South Surrey and White Rock homes for sale",
-            "h": "/south-surrey-homes-for-sale.html"
+            "h": "/south-surrey-homes-for-sale.html",
+            "t": "South Surrey and White Rock homes for sale"
           }
         ],
         [
           {
-            "t": "South Surrey and White Rock real estate market stats",
-            "h": "/south-surrey-white-rock-real-estate-market-stats.html"
+            "h": "/south-surrey-white-rock-real-estate-market-stats.html",
+            "t": "South Surrey and White Rock real estate market stats"
           }
         ],
         [
           {
-            "t": "South Surrey and White Rock houses for sale",
-            "h": "/south-surrey-houses-for-sale.html"
+            "h": "/south-surrey-houses-for-sale.html",
+            "t": "South Surrey and White Rock houses for sale"
           }
         ],
         [
           {
-            "t": "South Surrey and White Rock condos for sale",
-            "h": "/south-surrey-condos-for-sale.html"
+            "h": "/south-surrey-condos-for-sale.html",
+            "t": "South Surrey and White Rock condos for sale"
           }
         ],
         [
           {
-            "t": "South Surrey and White Rock townhomes for sale",
-            "h": "/south-surrey-townhomes-for-sale.html"
+            "h": "/south-surrey-townhomes-for-sale.html",
+            "t": "South Surrey and White Rock townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in South Surrey and White Rock",
-            "h": "/sell-my-house-in-south-surrey-white-rock.html"
+            "h": "/sell-my-house-in-south-surrey-white-rock.html",
+            "t": "Sell my house in South Surrey and White Rock"
           }
         ],
         [
           {
-            "t": "Hazelmere real estate",
-            "h": "/hazelmere.html"
+            "h": "/hazelmere.html",
+            "t": "Hazelmere real estate"
           }
         ],
         [
           {
-            "t": "King George Corridor real estate",
-            "h": "/king-george-corridor.html"
+            "h": "/king-george-corridor.html",
+            "t": "King George Corridor real estate"
           }
         ],
         [
           {
-            "t": "Morgan Creek real estate",
-            "h": "/morgan-creek.html"
+            "h": "/morgan-creek.html",
+            "t": "Morgan Creek real estate"
           }
         ],
         [
           {
-            "t": "Pacific Douglas real estate",
-            "h": "/pacific-douglas.html"
+            "h": "/pacific-douglas.html",
+            "t": "Pacific Douglas real estate"
           }
         ],
         [
           {
-            "t": "Sunnyside Park real estate",
-            "h": "/sunnyside-park-surrey.html"
+            "h": "/sunnyside-park-surrey.html",
+            "t": "Sunnyside Park real estate"
           }
         ],
         [
           {
-            "t": "White Rock real estate",
-            "h": "/white-rock.html"
+            "h": "/white-rock.html",
+            "t": "White Rock real estate"
           }
         ],
         [
           {
-            "t": "Elgin Chantrell real estate",
-            "h": "/elgin-chantrell.html"
+            "h": "/elgin-chantrell.html",
+            "t": "Elgin Chantrell real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Condo buildings in Grandview Surrey",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "is a DIFFERENT area — the golf-course community — and nothing from it is imported. (2) Harlowe (presale, Genaris Properties, 16485 18 Ave, 86 homes = 25 townhomes + 61 condos, completion as the developer states it): its feed places it under Pacific Douglas but its own copy places it in Grandview Heights — the conflict is flagged, never settled; Harlowe, Calais and Rockford presales are NOT 55+ and never resale stock.",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Harlowe — 16485 18 Avenue (Genaris Properties)",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Condo buildings in Grandview Surrey"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A presale of 86 homes (25 townhomes + 61 condos) with completion as the developer states it. Its feed places it under Pacific Douglas while its own copy places it in Grandview Heights — flagged conflict, never settled, and counted in neither sub-area's resale stock. NOT 55+. GST and REDMA in are the purchase frame.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "is a DIFFERENT area — the golf-course community — and nothing from it is imported. (2) Harlowe (presale, Genaris Properties, 16485 18 Ave, 86 homes = 25 townhomes + 61 condos, completion as the developer states it): its feed places it under Pacific Douglas but its own copy places it in Grandview Heights — the conflict is flagged, never settled; Harlowe, Calais and Rockford presales are NOT 55+ and never resale stock."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Grandview Surrey",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Harlowe — 16485 18 Avenue (Genaris Properties)"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "pos": "end",
+      "t": "p",
+      "text": "A presale of 86 homes (25 townhomes + 61 condos) with completion as the developer states it. Its feed places it under Pacific Douglas while its own copy places it in Grandview Heights — flagged conflict, never settled, and counted in neither sub-area's resale stock. NOT 55+. GST and REDMA in are the purchase frame."
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Grandview Surrey"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "In the SnapStats data the row is named simply \"Grandview\", one of nine sub-areas of the Fraser Valley board community \"S Surrey White Rock\". Morgan Crossing, the retail village at 24 Avenue / 160 Street, sits INSIDE Grandview and its homes use this Grandview board row; Morgan Creek is a different sub-area with its own row, never used for Grandview. The street-level board boundary is UNVERIFIED — no public street-level boundary was opened, and no municipal boundary was substituted."
+            "t": "In the SnapStats data the row is named simply \"Grandview\", one of nine sub-areas of the Fraser Valley board community \"S Surrey White Rock\". Morgan Crossing, the retail village at 24 Avenue / 160 Street, sits INSIDE Grandview and its homes use this Grandview board row; Morgan Creek is a different sub-area with its own row, never used for Grandview. The street-level board boundary is not verified — no public street-level boundary was opened, and no municipal boundary was substituted."
           }
         ],
         [
@@ -243,31 +249,31 @@
         ],
         [
           {
-            "t": "Community context only (whole S Surrey White Rock community, NOT Grandview's prices): Detached median $1,628,000; Condos & Townhomes median $700,000 / $524 per sq ft / 99% sale-to-list / 33 DOM. Per-sub-area medians are not published: UNVERIFIED at sub-area level. NOT this area's row, stated to prevent the error: Morgan Creek — Detached 45 / 5 / 11%; Condos & Townhomes 39 / 9 / 23%."
+            "t": "Community context only (whole S Surrey White Rock community, NOT Grandview's prices): Detached median $1,628,000; Condos & Townhomes median $700,000 / $524 per sq ft / 99% sale-to-list / 33 DOM. Per-sub-area medians are not published: Not verified at sub-area level. NOT this area's row, stated to prevent the error: Morgan Creek — Detached 45 / 5 / 11%; Condos & Townhomes 39 / 9 / 23%."
           }
         ],
         [
           {
-            "t": "Transit: UNVERIFIED — no TransLink timetable for a Grandview route was opened in the research pass."
+            "t": "Transit: Not verified — no TransLink timetable for a Grandview route was opened pass."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Grandview Surrey",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Grandview Surrey"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "(1) The \"Townhome and condo complexes in Grandview Heights\" section promises \"12 Complexes\", each with its own page, but no complex list renders in the page text read — the heading is followed directly by the schools section. No wrong-email instance is documented on this page either (stated explicitly in the flag block above)."
+            "t": "No wrong-email instance is documented on this page either (stated explicitly in the flag block above)."
           }
         ],
         [
@@ -286,155 +292,155 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Grandview Surrey",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Grandview Surrey"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · grandview surrey",
-            "h": "https://jaredgibbons.ca/grandview-surrey.html"
+            "h": "https://jaredgibbons.ca/grandview-surrey.html",
+            "t": "jaredgibbons.ca · grandview surrey"
           }
         ],
         [
           {
-            "t": "surrey.ca · south surrey land use plans",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans",
+            "t": "surrey.ca · south surrey land use plans"
           }
         ],
         [
           {
-            "t": "jaredgibbons.ca · morgan crossing homes for sale",
-            "h": "https://jaredgibbons.ca/morgan-crossing-homes-for-sale.html"
+            "h": "https://jaredgibbons.ca/morgan-crossing-homes-for-sale.html",
+            "t": "jaredgibbons.ca · morgan crossing homes for sale"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · the summit house at morgan crossing 15850 26 ave",
-            "h": "https://www.bccondosandhomes.com/building/the-summit-house-at-morgan-crossing-15850-26-ave"
+            "h": "https://www.bccondosandhomes.com/building/the-summit-house-at-morgan-crossing-15850-26-ave",
+            "t": "bccondosandhomes.com · the summit house at morgan crossing 15850 26 ave"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "surrey.ca · zoning small scale multi unit housing",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing",
+            "t": "surrey.ca · zoning small scale multi unit housing"
           }
         ],
         [
           {
-            "t": "surrey.ca · bylaws",
-            "h": "https://www.surrey.ca/city-government/bylaws/12000"
+            "h": "https://www.surrey.ca/city-government/bylaws/12000",
+            "t": "surrey.ca · bylaws"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · buying presale home bc legal guide redma",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/buying-presale-home-bc-legal-guide-redma/",
+            "t": "paxlaw.ca · buying presale home bc legal guide redma"
           }
         ],
         [
           {
-            "t": "canada.ca · first home savings account",
-            "h": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/first-home-savings-account.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/first-home-savings-account.html",
+            "t": "canada.ca · first home savings account"
           }
         ],
         [
           {
-            "t": "cmhc-schl.gc.ca · second home",
-            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home"
+            "h": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/second-home",
+            "t": "cmhc-schl.gc.ca · second home"
           }
         ],
         [
           {
-            "t": "surrey.ca · paying your property taxes",
-            "h": "https://www.surrey.ca/services-payments/property-taxes/paying-your-property-taxes"
+            "h": "https://www.surrey.ca/services-payments/property-taxes/paying-your-property-taxes",
+            "t": "surrey.ca · paying your property taxes"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Grandview Surrey",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Berkeley Village — 16433 19 Avenue.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Grandview Surrey"
     },
     {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Berkeley Village — 16433 19 Avenue."
+    },
+    {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A three-level townhome complex with a resident amenity building (the \"One Club\").",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A three-level townhome complex with a resident amenity building (the \"One Club\")."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Grandview Surrey",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Grandview Surrey"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -442,18 +448,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Grandview Surrey",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Grandview Surrey"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -481,124 +487,124 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Grandview Surrey",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Grandview Surrey"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · grandview surrey",
-            "h": "https://jaredgibbons.ca/grandview-surrey.html"
+            "h": "https://jaredgibbons.ca/grandview-surrey.html",
+            "t": "jaredgibbons.ca · grandview surrey"
           }
         ],
         [
           {
-            "t": "Surrey.ca · south surrey land use plans",
-            "h": "https://www.Surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans"
+            "h": "https://www.Surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans",
+            "t": "Surrey.ca · south surrey land use plans"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · peace arch hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/White-Rock/peace-arch-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/White-Rock/peace-arch-hospital",
+            "t": "fraserhealth.ca · peace arch hospital"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · strata housing",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing",
+            "t": "www2.gov.bc.ca · strata housing"
           }
         ],
         [
           {
-            "t": "surrey.ca · zoning small scale multi unit housing",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing",
+            "t": "surrey.ca · zoning small scale multi unit housing"
           }
         ],
         [
           {
-            "t": "surrey.ca · bylaws",
-            "h": "https://www.surrey.ca/city-government/bylaws/12000"
+            "h": "https://www.surrey.ca/city-government/bylaws/12000",
+            "t": "surrey.ca · bylaws"
           }
         ],
         [
           {
-            "t": "surrey.ca · short term rentals",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/short-term-rentals"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/short-term-rentals",
+            "t": "surrey.ca · short term rentals"
           }
         ],
         [
           {
-            "t": "surrey.ca · paying your property taxes",
-            "h": "https://www.surrey.ca/services-payments/property-taxes/paying-your-property-taxes"
+            "h": "https://www.surrey.ca/services-payments/property-taxes/paying-your-property-taxes",
+            "t": "surrey.ca · paying your property taxes"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · understand",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/understand"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/understand",
+            "t": "www2.gov.bc.ca · understand"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Grandview Surrey",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Grandview Surrey"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -607,7 +613,7 @@
         ],
         [
           {
-            "t": "Tenure — fee-simple is the default for a detached lot here unless title says otherwise: no strata corporation, no Form B, no strata fees. A sub-area-wide strata-versus-freehold split is UNVERIFIED."
+            "t": "Tenure — fee-simple is the default for a detached lot here unless title says otherwise: no strata corporation, no Form B, no strata fees. A sub-area-wide strata-versus-freehold split is not verified."
           }
         ],
         [
@@ -621,22 +627,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Grandview Surrey",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Grandview Surrey"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "The page is headed \"Homes for Sale in Grandview Heights, South Surrey,\" labelled \"Monthly Market Data · FVREB & MLS® Sub-Area F57,\" with four cards appended under \"Additional Details\" at reading — a snapshot only; no total result count appears and the exact feed filter is UNVERIFIED."
+            "t": "The page is headed \"Homes for Sale in Grandview Heights, South Surrey,\" labelled \"Monthly Market Data · FVREB & MLS® Sub-Area F57,\" with four cards appended under \"Additional Details\" at reading — a snapshot only; no total result count appears and the exact feed filter is not verified."
           }
         ],
         [
@@ -650,18 +656,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Grandview Surrey",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Grandview Surrey"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -679,18 +685,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Grandview Surrey",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Grandview Surrey"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -708,122 +714,162 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Grandview Surrey",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Grandview Surrey"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · grandview surrey",
-            "h": "https://jaredgibbons.ca/grandview-surrey.html"
+            "h": "https://jaredgibbons.ca/grandview-surrey.html",
+            "t": "jaredgibbons.ca · grandview surrey"
           }
         ],
         [
           {
-            "t": "news.fvreb.bc.ca · tech tip 18 map of the bc boards areas subareas",
-            "h": "https://news.fvreb.bc.ca/member-updates/tech-tip-18-map-of-the-bc-boards-areas-subareas/"
+            "h": "https://news.fvreb.bc.ca/member-updates/tech-tip-18-map-of-the-bc-boards-areas-subareas/",
+            "t": "news.fvreb.bc.ca · tech tip 18 map of the bc boards areas subareas"
           }
         ],
         [
           {
-            "t": "Surrey.ca · south surrey land use plans",
-            "h": "https://www.Surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans"
+            "h": "https://www.Surrey.ca/renovating-building-development/land-planning-development/land-use-planning/south-surrey-land-use-plans",
+            "t": "Surrey.ca · south surrey land use plans"
           }
         ],
         [
           {
-            "t": "surrey.ca · bylaws",
-            "h": "https://www.surrey.ca/city-government/bylaws/12000"
+            "h": "https://www.surrey.ca/city-government/bylaws/12000",
+            "t": "surrey.ca · bylaws"
           }
         ],
         [
           {
-            "t": "surrey.ca · zoning small scale multi unit housing",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing",
+            "t": "surrey.ca · zoning small scale multi unit housing"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "surrey.ca · short term rentals",
-            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/short-term-rentals"
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/short-term-rentals",
+            "t": "surrey.ca · short term rentals"
           }
         ],
         [
           {
-            "t": "surrey.ca · paying your property taxes",
-            "h": "https://www.surrey.ca/services-payments/property-taxes/paying-your-property-taxes"
+            "h": "https://www.surrey.ca/services-payments/property-taxes/paying-your-property-taxes",
+            "t": "surrey.ca · paying your property taxes"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "canada.ca · sales vacant land individuals",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/gi-003/sales-vacant-land-individuals.html",
+            "t": "canada.ca · sales vacant land individuals"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · peace arch hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/White-Rock/peace-arch-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/White-Rock/peace-arch-hospital",
+            "t": "fraserhealth.ca · peace arch hospital"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
+    {
+      "a": "No. Morgan Crossing is the retail village at 24 Avenue / 160 Street inside Grandview Heights, on the Grandview board row; Morgan Creek is the separate golf-course sub-area with its own row (September 2026: Detached 45 / 5 / 11%; attached 39 / 9 / 23%) — never used for Grandview. Morgan Crossing ≠ Morgan Creek.",
+      "gen": "tn",
+      "q": "Is Morgan Crossing the same as Morgan Creek?"
+    },
+    {
+      "a": "Buy on the Form B and the strata records, not the page table.",
+      "gen": "tn",
+      "q": "How many verified condo buildings does Grandview have?"
+    },
+    {
+      "a": "No building is counted twice, and none is promoted to verified here.",
+      "gen": "tn",
+      "q": "Where is Grandview stock counted?"
+    },
+    {
+      "a": "UNRESOLVED. All three names appear at the same civic address in page-table, feed and listing text, and Summit House's year conflicts (2010 vs 2011). Confirm the strata plan number and legal description for the specific unit before comparing fees or sales history.",
+      "gen": "tn",
+      "q": "Axis, Arc or Summit House — which building is 15850 26 Avenue?"
+    },
+    {
+      "a": "Either way it is a Genaris presale (86 homes: 25 townhomes + 61 condos), not resale stock and not 55+.",
+      "gen": "tn",
+      "q": "Is Harlowe in Pacific Douglas or Grandview?"
+    },
+    {
+      "a": "Neither. Harlowe (Genaris, 16485 18 Ave) is a presale — 86 homes (25 townhomes + 61 condos) with completion \"early 2028\" as the developer states it — and it is explicitly NOT 55+.",
+      "gen": "tn",
+      "q": "Is Harlowe a resale I can move into, and is it 55+?"
+    },
+    {
+      "a": "Detached 66 / 9 / 14% and Condos & Townhomes 146 / 20 / 14% — the second-largest attached pool in S Surrey White Rock. Never quote Morgan Creek's row (45 / 5 / 11%; 39 / 9 / 23%) for Grandview.",
+      "gen": "tn",
+      "q": "How did Grandview sell in September 2026?"
+    },
+    {
+      "a": "No. grandview-surrey is the live Grandview AREA guide researched here.",
+      "gen": "tn",
+      "q": "Is grandview-surrey the deleted condos page?"
+    },
     {
       "q": "Is Grandview in South Surrey the same as Grandview-Woodland in Vancouver?",
       "a": "No. This Grandview is Grandview Heights in South Surrey, Surrey — the MLS® sub-area \"Grandview Surrey\" (F57) — while Grandview-Woodland is a separate City of Vancouver local area around Commercial Drive; the live page states the distinction directly",
@@ -833,56 +879,9 @@
       "q": "What kind of homes sell most in Grandview?",
       "a": "On the page's own Paragon past-sales table (site copy), townhouses were the most-sold type in sub-area F57 over October 1, 2025 to September 29, 2026 — 207 townhouse sales against 83 detached and 45 apartment/condo sales, at 12-month medians of $833,000, $1,775,000 and $550,000 respectively",
       "gen": "muse"
-    },
-    {
-      "q": "How many homes are for sale in Grandview?",
-      "a": "At the end of September 2026 the Fraser Valley Real Estate Board figures showed 66 houses listed with 9 sold in the month and 146 condos and townhomes listed with 20 sold in the month in Grandview. Those are month-end counts and move daily; ask Jared what is on the market today.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "Is Grandview a buyers’ or sellers’ market?",
-      "a": "In September 2026, houses had a sales ratio of 14%, a balanced market; condos and townhomes had a sales ratio of 14%, a balanced market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers.",
-      "gen": "snap-faq"
-    },
-    {
-      "gen": "tn",
-      "q": "Is Morgan Crossing the same as Morgan Creek?",
-      "a": "No. Morgan Crossing is the retail village at 24 Avenue / 160 Street inside Grandview Heights, on the Grandview board row; Morgan Creek is the separate golf-course sub-area with its own row (September 2026: Detached 45 / 5 / 11%; attached 39 / 9 / 23%) — never used for Grandview. Morgan Crossing ≠ Morgan Creek."
-    },
-    {
-      "gen": "tn",
-      "q": "How many verified condo buildings does Grandview have?",
-      "a": "Buy on the Form B and the strata records, not the page table."
-    },
-    {
-      "gen": "tn",
-      "q": "Where is Grandview stock counted?",
-      "a": "No building is counted twice, and none is promoted to verified here."
-    },
-    {
-      "gen": "tn",
-      "q": "Axis, Arc or Summit House — which building is 15850 26 Avenue?",
-      "a": "UNRESOLVED. All three names appear at the same civic address in page-table, feed and listing text, and Summit House's year conflicts (2010 vs 2011). Confirm the strata plan number and legal description for the specific unit before comparing fees or sales history."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Harlowe in Pacific Douglas or Grandview?",
-      "a": "Either way it is a Genaris presale (86 homes: 25 townhomes + 61 condos), not resale stock and not 55+."
-    },
-    {
-      "gen": "tn",
-      "q": "Is Harlowe a resale I can move into, and is it 55+?",
-      "a": "Neither. Harlowe (Genaris, 16485 18 Ave) is a presale — 86 homes (25 townhomes + 61 condos) with completion \"early 2028\" as the developer states it — and it is explicitly NOT 55+."
-    },
-    {
-      "gen": "tn",
-      "q": "How did Grandview sell in September 2026?",
-      "a": "Detached 66 / 9 / 14% and Condos & Townhomes 146 / 20 / 14% — the second-largest attached pool in S Surrey White Rock. Never quote Morgan Creek's row (45 / 5 / 11%; 39 / 9 / 23%) for Grandview."
-    },
-    {
-      "gen": "tn",
-      "q": "Is grandview-surrey the deleted condos page?",
-      "a": "No. grandview-surrey is the live Grandview AREA guide researched here."
     }
-  ]
+  ],
+  "slug": "grandview-surrey",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

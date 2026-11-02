@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "abbotsford-east-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Abbotsford East compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Abbotsford East compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Abbotsford East against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Abbotsford East against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
-      "caption": "Abbotsford East against the whole city, September 2026",
+      "caption": "Abbotsford East against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -27,222 +24,172 @@
       "rows": [
         [
           "Detached houses",
-          "37.5%",
-          "33.3%",
-          "9% against 10%",
-          "3 of 5"
+          "37.3%",
+          "48.6%",
+          "23% against 18%",
+          "2 of 4"
         ],
         [
           "Condos and townhomes",
-          "12.1%",
-          "6.9%",
-          "6% against 10%",
-          "4 of 4"
+          "11.9%",
+          "15.7%",
+          "22% against 16%",
+          "2 of 4"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings rose from 161 in June to 165 in September (+2.5%), and it took 49.8% of the city’s 215 sales over the period; condos and townhomes: listings fell from 71 in June to 69 in September (−2.8%), and it took 13.8% of the city’s 318 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 161 in June to 153 in October (−5.0%), and it took 49.5% of the city’s 287 sales over the period; condos and townhomes: listings fell from 71 in June to 65 in October (−8.5%), and it took 14.3% of the city’s 407 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Abbotsford East for detached houses in June, July, August (a sellers’ best bet); detached houses in September (a buyers’ best bet); condos and townhomes in July, August (a sellers’ best bet); condos and townhomes in June, September (a buyers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out Abbotsford East for detached houses in June, July, August, October (a sellers’ best bet); detached houses in September (a buyers’ best bet); condos and townhomes in July, August (a sellers’ best bet); condos and townhomes in June, September (a buyers’ best bet)."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Abbotsford real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Abbotsford real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Abbotsford homes for sale",
-            "h": "/abbotsford-homes-for-sale.html"
+            "h": "/abbotsford-homes-for-sale.html",
+            "t": "Abbotsford homes for sale"
           }
         ],
         [
           {
-            "t": "Abbotsford real estate market stats",
-            "h": "/abbotsford-real-estate-market-stats.html"
+            "h": "/abbotsford-real-estate-market-stats.html",
+            "t": "Abbotsford real estate market stats"
           }
         ],
         [
           {
-            "t": "Abbotsford houses for sale",
-            "h": "/abbotsford-houses-for-sale.html"
+            "h": "/abbotsford-houses-for-sale.html",
+            "t": "Abbotsford houses for sale"
           }
         ],
         [
           {
-            "t": "Abbotsford condos for sale",
-            "h": "/abbotsford-condos-for-sale.html"
+            "h": "/abbotsford-condos-for-sale.html",
+            "t": "Abbotsford condos for sale"
           }
         ],
         [
           {
-            "t": "Abbotsford townhomes for sale",
-            "h": "/abbotsford-townhomes-for-sale.html"
+            "h": "/abbotsford-townhomes-for-sale.html",
+            "t": "Abbotsford townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Abbotsford",
-            "h": "/sell-my-house-in-abbotsford.html"
+            "h": "/sell-my-house-in-abbotsford.html",
+            "t": "Sell my house in Abbotsford"
           }
         ],
         [
           {
-            "t": "Schools in Abbotsford",
-            "h": "/schools-in-abbotsford-bc.html"
+            "h": "/schools-in-abbotsford-bc.html",
+            "t": "Schools in Abbotsford"
           }
         ],
         [
           {
-            "t": "Abbotsford East homes and market figures",
-            "h": "/abbotsford-east.html"
+            "h": "/abbotsford-east.html",
+            "t": "Abbotsford East homes and market figures"
           }
         ],
         [
           {
-            "t": "Abbotsford West real estate",
-            "h": "/abbotsford-west.html"
+            "h": "/abbotsford-west.html",
+            "t": "Abbotsford West real estate"
           }
         ],
         [
           {
-            "t": "Aberdeen real estate",
-            "h": "/aberdeen.html"
+            "h": "/aberdeen.html",
+            "t": "Aberdeen real estate"
           }
         ],
         [
           {
-            "t": "Bradner real estate",
-            "h": "/bradner.html"
+            "h": "/bradner.html",
+            "t": "Bradner real estate"
           }
         ],
         [
           {
-            "t": "Central Abbotsford real estate",
-            "h": "/central-abbotsford.html"
+            "h": "/central-abbotsford.html",
+            "t": "Central Abbotsford real estate"
           }
         ],
         [
           {
-            "t": "Matsqui real estate",
-            "h": "/matsqui.html"
+            "h": "/matsqui.html",
+            "t": "Matsqui real estate"
           }
         ],
         [
           {
-            "t": "Poplar real estate",
-            "h": "/poplar.html"
+            "h": "/poplar.html",
+            "t": "Poplar real estate"
           }
         ],
         [
           {
-            "t": "Sumas Mountain real estate",
-            "h": "/sumas-mountain.html"
+            "h": "/sumas-mountain.html",
+            "t": "Sumas Mountain real estate"
           }
         ],
         [
           {
-            "t": "Sumas Prairie real estate",
-            "h": "/sumas-prairie.html"
+            "h": "/sumas-prairie.html",
+            "t": "Sumas Prairie real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: sandyhill.abbyschools.ca",
-            "h": "https://sandyhill.abbyschools.ca/"
-          }
-        ],
-        [
-          {
-            "t": "Source: bctransit.com (2)",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=2"
-          }
-        ],
-        [
-          {
-            "t": "Source: bctransit.com (3)",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=7"
-          }
-        ],
-        [
-          {
-            "t": "Source: bctransit.com (4)",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=9"
-          }
-        ],
-        [
-          {
-            "t": "Source: bctransit.com (5)",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=15"
-          }
-        ],
-        [
-          {
-            "t": "Source: bctransit.com (6)",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=66"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Lots and land in Abbotsford East",
       "gen": "tn",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Lots and land in Abbotsford East"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Fee-simple lots are the default — and effectively the only verified — land form: the research records the detached stock as freehold, under City residential zones RS3, RS5 and RS6, \"from established streets along Old Yale Road to newer subdivisions on the McKee and Eagle Mountain slopes.\" A bare lot sold in one of those subdivisions is a fee-simple parcel: no strata corporation, no Form B, no strata fees — zoning, the OCP and any registered covenants or building scheme on title govern instead. An exact strata/freehold split for the sub-area is UNVERIFIED."
+            "t": "Fee-simple lots are the default — and effectively the only verified — land form: the research records the detached stock as freehold, under City residential zones RS3, RS5 and RS6, \"from established streets along Old Yale Road to newer subdivisions on the McKee and Eagle Mountain slopes.\" A bare lot sold in one of those subdivisions is a fee-simple parcel: no strata corporation, no Form B, no strata fees — zoning, the OCP and any registered covenants or building scheme on title govern instead. An exact strata/freehold split for the sub-area is not verified."
           }
         ],
         [
           {
-            "t": "Lot character: RS3 minimum interior lot 540 m²; RS5 minimum interior lot 420 m²; RS6 is the Compact Lot Residential Zone used in newer subdivisions, with smaller compact lots (the research gives no RS6 minimum figure — UNCONFIRMED beyond \"compact\"). These are zoning-bylaw subdivision minimums as applied in City council reports, not a promise that any specific lot can be split — a lot already at or near its zone minimum has no subdivision room."
+            "t": "Lot character: RS3 minimum interior lot 540 m²; RS5 minimum interior lot 420 m²; RS6 is the Compact Lot Residential Zone used in newer subdivisions, with smaller compact lots (the research gives no RS6 minimum figure — not confirmed beyond \"compact\"). These are zoning-bylaw subdivision minimums as applied in City council reports, not a promise that any specific lot can be split — a lot already at or near its zone minimum has no subdivision room."
           }
         ],
         [
           {
-            "t": "The McKee plan area is planned ground, not lot inventory: the McKee Neighbourhood Plan (Bylaw 3400-2023) plans the mountainside, with ground-oriented designations (Urban 2 – Ground Oriented in the plan material) and an open-space network of streamside setbacks, critical habitat, geotechnical areas and slopes over 40%. No developer or City source checked names a bare-land lot release, lot count or lot price in the McKee area — any \"McKee lots\" marketing figure is UNCONFIRMED."
+            "t": "The McKee plan area is planned ground, not lot inventory: the McKee Neighbourhood Plan (Bylaw 3400-2023) plans the mountainside, with ground-oriented designations (Urban 2 – Ground Oriented in the plan material) and an open-space network of streamside setbacks, critical habitat, geotechnical areas and slopes over 40%. No developer or City source checked names a bare-land lot release, lot count or lot price in the McKee area — any \"McKee lots\" marketing figure is not confirmed."
           }
         ],
         [
@@ -252,7 +199,7 @@
         ],
         [
           {
-            "t": "Sage — 34365 Gladys Avenue (Diverse Properties) is a housing development, NOT a lot offering: confirmed on a developer source in the research as 176 apartment homes in five buildings with completion expected in 2026."
+            "t": "Sage — 34365 Gladys Avenue (Diverse Properties) is a housing development, NOT a lot offering: confirmed on a developer source as 176 apartment homes in five buildings with completion expected in 2026."
           }
         ],
         [
@@ -267,12 +214,12 @@
         ],
         [
           {
-            "t": "ALR vs non-ALR split: the built east-side neighbourhoods are urban; the OCP carries an Agricultural Land Reserve map (Map 16), but ALR status inside the built neighbourhoods is not confirmed parcel by parcel in the research — UNCONFIRMED for any single lot until the ALC map and the parcel's title are checked."
+            "t": "ALR vs non-ALR split: the built east-side neighbourhoods are urban; the OCP carries an Agricultural Land Reserve map (Map 16), but ALR status inside the built neighbourhoods is not confirmed parcel by parcel — not confirmed for any single lot until the ALC map and the parcel's title are checked."
           }
         ],
         [
           {
-            "t": "Serviced vs unserviced: the urban east side is built subdivision ground; the research confirms no septic or well position inside the urban part (that item is listed unverified in the guide research), so servicing for any single lot — municipal water/sewer connection status, or well/septic on an acreage parcel toward Whatcom / Sumas Mountain — is UNCONFIRMED until the City's records for that parcel are read."
+            "t": "Serviced vs unserviced: the urban east side is built subdivision ground; the research confirms no septic or well position inside the urban part (that item is listed unverified in the guide research), so servicing for any single lot — municipal water/sewer connection status, or well/septic on an acreage parcel toward Whatcom / Sumas Mountain — is not confirmed until the City's records for that parcel are read."
           }
         ],
         [
@@ -286,22 +233,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Abbotsford East",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Abbotsford East"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "\"Abbotsford East\" is the FVREB board sub-area name — one of nine sub-areas of the board community \"Abbotsford\" in the SnapStats data — not a single City of Abbotsford neighbourhood name. The City plans the east side through named neighbourhoods and plan areas including McMillan, Old Clayburn, East Townline, Whatcom and McKee, and the mountainside part is planned separately through the McKee Neighbourhood Plan (Bylaw 3400-2023), Schedule E of the Official Community Plan. Street-level board boundary: UNVERIFIED — FVREB publishes no public street-level boundary, and no municipal boundary was substituted for it. (as of September 2026, Source: SnapStats FVR/GVR September 2026 report)"
+            "t": "\"Abbotsford East\" is the FVREB board sub-area name — one of nine sub-areas of the board community \"Abbotsford\" in the SnapStats data — not a single City of Abbotsford neighbourhood name. The City plans the east side through named neighbourhoods and plan areas including McMillan, Old Clayburn, East Townline, Whatcom and McKee, and the mountainside part is planned separately through the McKee Neighbourhood Plan (Bylaw 3400-2023), Schedule E of the Official Community Plan. Street-level board boundary: Not verified — FVREB publishes no public street-level boundary, and no municipal boundary was substituted for it. (as of September 2026, Source: SnapStats FVR/GVR September 2026 report)"
           }
         ],
         [
@@ -311,12 +258,12 @@
         ],
         [
           {
-            "t": "Market context, labelled community context ONLY (SnapStats FVR Sep 2026; land has NO SnapStats category and no figure below is a land figure): Abbotsford East sub-area — Detached: inventory 165 (the highest detached inventory in Abbotsford), solds 15, ratio 9% (joint with Abbotsford West); \"Condos & Townhomes\" combined: 69 / 4 / 6% (the lowest published attached ratio in Abbotsford). Sub-area medians are not published (UNVERIFIED at sub-area level). Abbotsford community — Detached: 440 / 45 / median $949,000; combined attached: 572 / 58 / median $497,500."
+            "t": "Market context, labelled community context ONLY (SnapStats FVR Sep 2026; land has NO SnapStats category and no figure below is a land figure): Abbotsford East sub-area — Detached: inventory 165 (the highest detached inventory in Abbotsford), solds 15, ratio 9% (joint with Abbotsford West); \"Condos & Townhomes\" combined: 69 / 4 / 6% (the lowest published attached ratio in Abbotsford). Sub-area medians are not published (Not verified at sub-area level). Abbotsford community — Detached: 440 / 45 / median $949,000; combined attached: 572 / 58 / median $497,500."
           }
         ],
         [
           {
-            "t": "Every other Abbotsford East address's catchment is UNVERIFIED."
+            "t": "Every other Abbotsford East address's catchment is not verified."
           }
         ],
         [
@@ -325,18 +272,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Abbotsford East",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Abbotsford East"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -350,7 +297,7 @@
         ],
         [
           {
-            "t": "SSMUH / added units — NUMBER HELD UNCONFIRMED, conflict stated with both bases: Substance, as the research and City material state it: Zoning Bylaw s.140 carries the small-scale rules and s.140.3.8 permits one secondary suite in all single detached dwellings, with City-report criteria including a lot of at least 400 m², at least 12.0 m frontage, a Collector or Local road and not on a cul-de-sac bulb."
+            "t": "SSMUH / added units — NUMBER HELD not confirmed, conflict stated with both bases: Substance, as the research and City material state it: Zoning Bylaw s.140 carries the small-scale rules and s.140.3.8 permits one secondary suite in all single detached dwellings, with City-report criteria including a lot of at least 400 m², at least 12.0 m frontage, a Collector or Local road and not on a cul-de-sac bulb."
           }
         ],
         [
@@ -360,7 +307,7 @@
         ],
         [
           {
-            "t": "Subdivision and servicing — process documented, NUMBER HELD UNCONFIRMED: Never quote a servicing standard for an east-side lot from a listing."
+            "t": "Subdivision and servicing — process documented, NUMBER HELD not confirmed: Never quote a servicing standard for an east-side lot from a listing."
           }
         ],
         [
@@ -379,18 +326,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Abbotsford East",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Abbotsford East"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -409,152 +356,152 @@
         ],
         [
           {
-            "t": "Census profile: UNVERIFIED."
+            "t": "Census profile: Not verified."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Abbotsford East",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Abbotsford East"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "laws.abbotsford.ca · 2025bschedulea",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea"
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea",
+            "t": "laws.abbotsford.ca · 2025bschedulea"
           }
         ],
         [
           {
-            "t": "jaredgibbons.ca · abbotsford east",
-            "h": "https://jaredgibbons.ca/abbotsford-east.html"
+            "h": "https://jaredgibbons.ca/abbotsford-east.html",
+            "t": "jaredgibbons.ca · abbotsford east"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · evacuation orders modified additional properties",
-            "h": "https://www.abbotsford.ca/city-hall/news-media/evacuation-orders-modified-additional-properties-sumas-prairie"
+            "h": "https://www.abbotsford.ca/city-hall/news-media/evacuation-orders-modified-additional-properties-sumas-prairie",
+            "t": "abbotsford.ca · evacuation orders modified additional properties"
           }
         ],
         [
           {
-            "t": "abbyschools.ca · catchments",
-            "h": "https://www.abbyschools.ca/schools/catchments"
+            "h": "https://www.abbyschools.ca/schools/catchments",
+            "t": "abbyschools.ca · catchments"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=2"
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=2",
+            "t": "bctransit.com · route overview"
           }
         ],
         [
           {
-            "t": "abbotsford.civicweb.net · document",
-            "h": "https://abbotsford.civicweb.net/document/52433/"
+            "h": "https://abbotsford.civicweb.net/document/52433/",
+            "t": "abbotsford.civicweb.net · document"
           }
         ],
         [
           {
-            "t": "letstalkabbotsford.ca · mckee trail strategy",
-            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy"
+            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy",
+            "t": "letstalkabbotsford.ca · mckee trail strategy"
           }
         ],
         [
           {
-            "t": "lumon.com · sage abbotsford",
-            "h": "https://lumon.com/ca/professionals/insights/pro-blog/sage-abbotsford/"
+            "h": "https://lumon.com/ca/professionals/insights/pro-blog/sage-abbotsford/",
+            "t": "lumon.com · sage abbotsford"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · alr maps",
-            "h": "https://www.alc.gov.bc.ca/alr-maps"
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
           }
         ],
         [
           {
-            "t": "laws.abbotsford.ca · 2014b2400140",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400140"
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400140",
+            "t": "laws.abbotsford.ca · 2014b2400140"
           }
         ],
         [
           {
-            "t": "abbotsford.civicweb.net · document (2)",
-            "h": "https://abbotsford.civicweb.net/document/58305/"
+            "h": "https://abbotsford.civicweb.net/document/58305/",
+            "t": "abbotsford.civicweb.net · document (2)"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 2,
-      "text": "Acreage and rural land in Abbotsford East",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Acreage trades only as individual fee-simple parcels toward Whatcom Road and the Sumas Mountain foot.",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The ground in Abbotsford East",
-      "gen": "acre",
-      "pos": "end"
+      "text": "Acreage and rural land in Abbotsford East"
     },
     {
-      "t": "list",
+      "gen": "acre",
+      "pos": "end",
+      "t": "p",
+      "text": "Acreage trades only as individual fee-simple parcels toward Whatcom Road and the Sumas Mountain foot."
+    },
+    {
+      "gen": "acre",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The ground in Abbotsford East"
+    },
+    {
+      "gen": "acre",
       "items": [
         [
           {
@@ -562,18 +509,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Streets, schools and getting around Abbotsford East",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Abbotsford East"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -586,18 +533,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Local rules that affect acreage buyers in Abbotsford East",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect acreage buyers in Abbotsford East"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -610,18 +557,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Good to know about Abbotsford East",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Abbotsford East"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -634,136 +581,322 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "acre",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below.",
-      "gen": "acre",
-      "pos": "end"
+      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "BC acreage buying rules",
-            "h": "/bc-acreage-buying-rules.html"
+            "h": "/bc-acreage-buying-rules.html",
+            "t": "BC acreage buying rules"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Sources for the acreage notes on Abbotsford East",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the acreage notes on Abbotsford East"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "laws.abbotsford.ca · 2025bschedulea",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea"
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea",
+            "t": "laws.abbotsford.ca · 2025bschedulea"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · evacuation orders modified additional properties",
-            "h": "https://www.abbotsford.ca/city-hall/news-media/evacuation-orders-modified-additional-properties-sumas-prairie"
+            "h": "https://www.abbotsford.ca/city-hall/news-media/evacuation-orders-modified-additional-properties-sumas-prairie",
+            "t": "abbotsford.ca · evacuation orders modified additional properties"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=2"
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=2",
+            "t": "bctransit.com · route overview"
           }
         ],
         [
           {
-            "t": "abbotsford.civicweb.net · document",
-            "h": "https://abbotsford.civicweb.net/document/52433/"
+            "h": "https://abbotsford.civicweb.net/document/52433/",
+            "t": "abbotsford.civicweb.net · document"
           }
         ],
         [
           {
-            "t": "letstalkabbotsford.ca · mckee trail strategy",
-            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy"
+            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy",
+            "t": "letstalkabbotsford.ca · mckee trail strategy"
           }
         ],
         [
           {
-            "t": "lumon.com · sage abbotsford",
-            "h": "https://lumon.com/ca/professionals/insights/pro-blog/sage-abbotsford/"
+            "h": "https://lumon.com/ca/professionals/insights/pro-blog/sage-abbotsford/",
+            "t": "lumon.com · sage abbotsford"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · AgRefresh St3   Parcel Size",
-            "h": "https://www.abbotsford.ca/sites/default/files/2021-10/AgRefresh%20St3%20-%20Parcel%20Size.pdf"
+            "h": "https://www.abbotsford.ca/sites/default/files/2021-10/AgRefresh%20St3%20-%20Parcel%20Size.pdf",
+            "t": "abbotsford.ca · AgRefresh St3 Parcel Size"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · official community plan",
-            "h": "https://www.abbotsford.ca/planning-development/development/official-community-plan"
+            "h": "https://www.abbotsford.ca/planning-development/development/official-community-plan",
+            "t": "abbotsford.ca · official community plan"
           }
         ],
         [
           {
-            "t": "laws.abbotsford.ca · 2014b2400140",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400140"
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400140",
+            "t": "laws.abbotsford.ca · 2014b2400140"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 2,
-      "text": "What's nearby Abbotsford East",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "Mobile and manufactured homes in Abbotsford East"
     },
     {
-      "t": "list",
+      "gen": "mh",
+      "pos": "end",
+      "t": "p",
+      "text": "The Manufactured Home Park Tenancy Act therefore has no east-side park application in these notes, and no park is invented to fill the section."
+    },
+    {
+      "gen": "mh",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The parks and communities"
+    },
+    {
+      "gen": "mh",
+      "items": [
+        [
+          {
+            "t": "Townhomes and condos in the sub-area are built form, not mobile stock: One named new apartment development is confirmed on a developer source — Sage, 34365 Gladys Avenue, by Diverse Properties: 176 homes in five buildings, completion expected in 2026 (developer source). Neither is a manufactured-home park in any form."
+          }
+        ],
+        [
+          {
+            "t": "Abbotsford's three verified 55+ parks are all in other sub-areas: Paradise Park (31313 Livingstone Ave, pad rental) is Abbotsford West ground; Georgian Park (3300 Horn St, pad rental) is Central Abbotsford ground; Maplewood Estates (2035 Martens St, pad rental) is Poplar ground. Plainly, for each: a home on a rented pad is not land ownership — the buyer owns the home (a chattel) and rents the pad."
+          }
+        ],
+        [
+          {
+            "t": "Eden Court (3348 Mt Lehman Rd, strata plan BCS2347, built 2008) is a freehold strata townhouse complex described in listings as 55+."
+          }
+        ],
+        [
+          {
+            "t": "RV parks / campgrounds: no RV park or campground in this sub-area was established by any source as year-round manufactured-home tenure, so none is documented as a manufactured-home park here."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "mh",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Abbotsford East"
+    },
+    {
+      "gen": "mh",
+      "items": [
+        [
+          {
+            "t": "Roads and highway access: Highway 1 runs along the south side with access at Whatcom Road; main local roads include Whatcom Road, McKee Road, Old Yale Road, Old Clayburn Road, Bateman Road and Sumas Way; there is no SkyTrain or West Coast Express station in Abbotsford."
+          }
+        ],
+        [
+          {
+            "t": "Transit: BC Transit Central Fraser Valley routes serving the east side include 2 (Highstreet / McMillan), 7 (Sumas Mountain), 9 (McKee), 15 (Auguston), 16 (McMillan) and 26 (Sandy Hill / Bourquin school special), plus the 66 Fraser Valley Express on Highway 1."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: City parks include Bateman Park (34638 Bateman Road), Clayburn Park (34845 Clayburn Road), DeLair Park (35570 Old Yale Road), Eagle Mountain Park (2570 Eagle Mountain Way), Glenridge Park (34950 McKee Road), McKinley Park (35575 McKee Road), McMillan Park (2499 McMillan Road), Lower Sumas Mountain Park, Saddle Park (34360 Old Clayburn Road) and Upper Sumas Fields (920 Whatcom Road); Abbotsford Recreation Centre is at 2499 McMillan Road. No Fraser Valley Regional Library branch inside the sub-area was confirmed; the Clearbrook Library branch is at 32320 George Ferguson Way, west of the sub-area."
+          }
+        ],
+        [
+          {
+            "t": "Floodplain and ALR: the low land at the south and southeast edge, toward Sumas Prairie, is floodplain land by the Sumas River; City flood notices name properties south of the Sumas River and along Whatcom Road in evacuation order and alert areas, and the OCP includes a Drainage and Flood Control map (Map 12) and an Agricultural Land Reserve map (Map 16)."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "mh",
+      "pos": "end",
+      "t": "p",
+      "text": "The BC rules for buying a home in a park (the pad tenancy, park-owner consent, pad-rent caps, the Manufactured Home Registry and park closures) are explained once, with sources, on the page linked below."
+    },
+    {
+      "gen": "mh",
+      "items": [
+        [
+          {
+            "h": "/bc-mobile-home-buying-rules.html",
+            "t": "BC mobile home buying rules"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "mh",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the mobile-home notes on Abbotsford East"
+    },
+    {
+      "gen": "mh",
+      "items": [
+        [
+          {
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea",
+            "t": "laws.abbotsford.ca · 2025bschedulea"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/city-hall/news-media/evacuation-orders-modified-additional-properties-sumas-prairie",
+            "t": "abbotsford.ca · evacuation orders modified additional properties"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/parks-playgrounds",
+            "t": "abbotsford.ca · parks playgrounds"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Abbotsford/abbotsford-regional-hospital-and-cancer-centre",
+            "t": "fraserhealth.ca · abbotsford regional hospital and cancer centre"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbyschools.ca/schools/catchments",
+            "t": "abbyschools.ca · catchments"
+          }
+        ],
+        [
+          {
+            "h": "https://abbotsford.civicweb.net/document/52433/",
+            "t": "abbotsford.civicweb.net · document"
+          }
+        ],
+        [
+          {
+            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy",
+            "t": "letstalkabbotsford.ca · mckee trail strategy"
+          }
+        ],
+        [
+          {
+            "h": "https://lumon.com/ca/professionals/insights/pro-blog/sage-abbotsford/",
+            "t": "lumon.com · sage abbotsford"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption",
+            "t": "www2.gov.bc.ca · newly built home exemption"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
+          }
+        ],
+        [
+          {
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400140",
+            "t": "laws.abbotsford.ca · 2014b2400140"
+          }
+        ],
+        [
+          {
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby Abbotsford East"
+    },
+    {
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -791,18 +924,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -830,18 +963,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -874,18 +1007,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -903,25 +1036,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Abbotsford Recreation Centre, 2499 McMillan Road",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Sandy Hill Elementary",
@@ -936,95 +1070,81 @@
           "4.1"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
           }
         ],
         [
           {
-            "t": "bctransit.com · cfv map 1",
-            "h": "https://www.bctransit.com/central-fraser-valley/wp-content/uploads/sites/9/2025/12/cfv_map_1.pdf"
+            "h": "https://www.bctransit.com/central-fraser-valley/wp-content/uploads/sites/9/2025/12/cfv_map_1.pdf",
+            "t": "bctransit.com · cfv map 1"
           }
         ],
         [
           {
-            "t": "bctransit.com · riders guide",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/riders-guide/"
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/riders-guide/",
+            "t": "bctransit.com · riders guide"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · parks playgrounds",
-            "h": "https://www.abbotsford.ca/parks-playgrounds"
+            "h": "https://www.abbotsford.ca/parks-playgrounds",
+            "t": "abbotsford.ca · parks playgrounds"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · Aquatics",
-            "h": "https://www.abbotsford.ca/Aquatics"
+            "h": "https://www.abbotsford.ca/Aquatics",
+            "t": "abbotsford.ca · Aquatics"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca · abbotsford community library",
-            "h": "https://www.fvrl.bc.ca/locations/abbotsford-community-library"
+            "h": "https://www.fvrl.bc.ca/locations/abbotsford-community-library",
+            "t": "fvrl.bc.ca · abbotsford community library"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/034"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/034",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "walmart.ca · store",
-            "h": "https://www.walmart.ca/en/store/1113"
+            "h": "https://www.walmart.ca/en/store/1113",
+            "t": "walmart.ca · store"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · Planning Process for Cannabis Retail Stores   St",
-            "h": "https://www.abbotsford.ca/sites/default/files/2021-05/Planning%20Process%20for%20Cannabis%20Retail%20Stores%20-%20Stage%203%20Engagement%20Summary%20and%20Next%20Steps.pdf"
+            "h": "https://www.abbotsford.ca/sites/default/files/2021-05/Planning%20Process%20for%20Cannabis%20Retail%20Stores%20-%20Stage%203%20Engagement%20Summary%20and%20Next%20Steps.pdf",
+            "t": "abbotsford.ca · Planning Process for Cannabis Retail Stores St"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
       "level": 2,
-      "text": "Mobile and manufactured homes in Abbotsford East",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "The Manufactured Home Park Tenancy Act therefore has no east-side park application in these notes, and no park is invented to fill the section.",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "The parks and communities",
-      "gen": "mh",
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -1032,258 +1152,99 @@
       "items": [
         [
           {
-            "t": "Townhomes and condos in the sub-area are built form, not mobile stock: One named new apartment development is confirmed on a developer source — Sage, 34365 Gladys Avenue, by Diverse Properties: 176 homes in five buildings, completion expected in 2026 (developer source). Neither is a manufactured-home park in any form."
+            "t": "Source: sandyhill.abbyschools.ca",
+            "h": "https://sandyhill.abbyschools.ca/"
           }
         ],
         [
           {
-            "t": "Abbotsford's three verified 55+ parks are all in other sub-areas: Paradise Park (31313 Livingstone Ave, pad rental) is Abbotsford West ground; Georgian Park (3300 Horn St, pad rental) is Central Abbotsford ground; Maplewood Estates (2035 Martens St, pad rental) is Poplar ground. Plainly, for each: a home on a rented pad is not land ownership — the buyer owns the home (a chattel) and rents the pad."
-          }
-        ],
-        [
-          {
-            "t": "Eden Court (3348 Mt Lehman Rd, strata plan BCS2347, built 2008) is a freehold strata townhouse complex described in listings as 55+."
-          }
-        ],
-        [
-          {
-            "t": "RV parks / campgrounds: no RV park or campground in this sub-area was established by any source as year-round manufactured-home tenure, so none is documented as a manufactured-home park here."
-          }
-        ]
-      ],
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Abbotsford East",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Roads and highway access: Highway 1 runs along the south side with access at Whatcom Road; main local roads include Whatcom Road, McKee Road, Old Yale Road, Old Clayburn Road, Bateman Road and Sumas Way; there is no SkyTrain or West Coast Express station in Abbotsford."
-          }
-        ],
-        [
-          {
-            "t": "Transit: BC Transit Central Fraser Valley routes serving the east side include 2 (Highstreet / McMillan), 7 (Sumas Mountain), 9 (McKee), 15 (Auguston), 16 (McMillan) and 26 (Sandy Hill / Bourquin school special), plus the 66 Fraser Valley Express on Highway 1."
-          }
-        ],
-        [
-          {
-            "t": "Parks and recreation: City parks include Bateman Park (34638 Bateman Road), Clayburn Park (34845 Clayburn Road), DeLair Park (35570 Old Yale Road), Eagle Mountain Park (2570 Eagle Mountain Way), Glenridge Park (34950 McKee Road), McKinley Park (35575 McKee Road), McMillan Park (2499 McMillan Road), Lower Sumas Mountain Park, Saddle Park (34360 Old Clayburn Road) and Upper Sumas Fields (920 Whatcom Road); Abbotsford Recreation Centre is at 2499 McMillan Road. No Fraser Valley Regional Library branch inside the sub-area was confirmed; the Clearbrook Library branch is at 32320 George Ferguson Way, west of the sub-area."
-          }
-        ],
-        [
-          {
-            "t": "Floodplain and ALR: the low land at the south and southeast edge, toward Sumas Prairie, is floodplain land by the Sumas River; City flood notices name properties south of the Sumas River and along Whatcom Road in evacuation order and alert areas, and the OCP includes a Drainage and Flood Control map (Map 12) and an Agricultural Land Reserve map (Map 16)."
-          }
-        ]
-      ],
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "The BC rules for buying a home in a park (the pad tenancy, park-owner consent, pad-rent caps, the Manufactured Home Registry and park closures) are explained once, with sources, on the page linked below.",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "BC mobile home buying rules",
-            "h": "/bc-mobile-home-buying-rules.html"
-          }
-        ]
-      ],
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Sources for the mobile-home notes on Abbotsford East",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "laws.abbotsford.ca · 2025bschedulea",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea"
-          }
-        ],
-        [
-          {
-            "t": "abbotsford.ca · evacuation orders modified additional properties",
-            "h": "https://www.abbotsford.ca/city-hall/news-media/evacuation-orders-modified-additional-properties-sumas-prairie"
-          }
-        ],
-        [
-          {
-            "t": "abbotsford.ca · parks playgrounds",
-            "h": "https://www.abbotsford.ca/parks-playgrounds"
-          }
-        ],
-        [
-          {
-            "t": "fraserhealth.ca · abbotsford regional hospital and cancer centre",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Abbotsford/abbotsford-regional-hospital-and-cancer-centre"
-          }
-        ],
-        [
-          {
-            "t": "abbyschools.ca · catchments",
-            "h": "https://www.abbyschools.ca/schools/catchments"
-          }
-        ],
-        [
-          {
-            "t": "abbotsford.civicweb.net · document",
-            "h": "https://abbotsford.civicweb.net/document/52433/"
-          }
-        ],
-        [
-          {
-            "t": "letstalkabbotsford.ca · mckee trail strategy",
-            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy"
-          }
-        ],
-        [
-          {
-            "t": "lumon.com · sage abbotsford",
-            "h": "https://lumon.com/ca/professionals/insights/pro-blog/sage-abbotsford/"
-          }
-        ],
-        [
-          {
-            "t": "www2.gov.bc.ca · newly built home exemption",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption"
-          }
-        ],
-        [
-          {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
-          }
-        ],
-        [
-          {
-            "t": "laws.abbotsford.ca · 2014b2400140",
+            "t": "Source: laws.abbotsford.ca",
             "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400140"
           }
-        ],
-        [
-          {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
-          }
         ]
       ],
-      "gen": "mh",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
+    {
+      "a": "What trades as land is fee-simple lots inside built subdivisions and individual acreage parcels toward Whatcom / Sumas Mountain, each checked parcel by parcel with the City.",
+      "gen": "tn",
+      "q": "Can I buy a vacant building lot in Abbotsford East?"
+    },
+    {
+      "a": "At subdivision, the zone minimums the research states: RS3 interior 540 m², RS5 interior 420 m², RS6 compact (no minimum figure documented — not confirmed beyond \"compact\"). A lot already at its minimum has no subdivision room.",
+      "gen": "tn",
+      "q": "How small can an east-side lot be?"
+    },
+    {
+      "a": "A secondary suite must be less than 50% of the principal unit, and a coach/garden suite may occupy up to 15% of the lot to a maximum of 100 m², under Zoning Bylaw No. 2400-2014 — Abbotsford's rules only. Suite criteria in City reports include at least 400 m² lot, at least 12.0 m frontage, a Collector or Local road and not on a cul-de-sac bulb.",
+      "gen": "tn",
+      "q": "Can a house lot here add a suite or a coach house?"
+    },
+    {
+      "a": "The process runs through the Approving Officer against zone minimums and the City's works-and-services requirements, with a servicing agreement and Works and Services Report as the standard instruments in council reports.",
+      "gen": "tn",
+      "q": "What servicing will a subdivision have to provide?"
+    },
+    {
+      "a": "Hillside: the Steep Slope Development Permit Area and McKee geotechnical/slope-over-40% ground. Low south/southeast lots: Sumas River floodplain — City notices name properties south of the Sumas River and along Whatcom Road; check the lot in the City's WebMap.",
+      "gen": "tn",
+      "q": "What slope or flood diligence applies to a hillside or low lot?"
+    },
+    {
+      "a": "Yes — as an individual fee-simple parcel toward Whatcom Road / the Sumas Mountain foot, not from a named acreage subdivision: no named acreage subdivision, bare-land strata acreage community or presale acreage offering was verified for this sub-area on an official or developer source.",
+      "gen": "acre",
+      "q": "Can I actually buy an acreage in Abbotsford East?"
+    },
+    {
+      "a": "On urban ground: one secondary suite in all single detached dwellings (s.140.3.8), subject to the 400 m² / 12.0 m / Collector-or-Local / no-cul-de-sac-bulb criteria; suite under 50% of the principal dwelling; coach/garden suite 15% of lot area to 100 m² maximum. On ALR ground the ALC caps replace those: principal 500 m², suite inside the principal only, additional residence 90 m² / 186 m² by the 40 ha line.",
+      "gen": "acre",
+      "q": "What extra units can go on an acreage parcel?"
+    },
+    {
+      "a": "PTT at the general rates (worked anchors: $1.5M → $28,000, no exemption). GST turns on the seller, not the land: an individual's personal-use sale is generally exempt per CRA GI-003; a business sale or a more-than-two-part subdivision sale can be taxable — have the contract state the GST position.",
+      "gen": "acre",
+      "q": "What taxes do I pay on the acreage itself?"
+    },
+    {
+      "a": "Property taxes (due July 2, 2026; 5% penalty July 3, second 5% September 16, 2026), plus insurance and any covenant/servicing obligations on title. No strata fee on a fee-simple parcel.",
+      "gen": "acre",
+      "q": "What will it cost to hold the acreage while I plan?"
+    },
+    {
+      "a": "Abbotsford's verified parks are in Abbotsford West, Central Abbotsford and Poplar.",
+      "gen": "mh",
+      "q": "Is there a mobile home park in Abbotsford East?"
+    },
+    {
+      "a": "No. Pad rent exists only in a pad tenancy under the MHPTA. An own-lot owner pays property taxes (due July 2, 2026; 5% July 3; second 5% September 16, 2026) and their own servicing costs instead.",
+      "gen": "mh",
+      "q": "Does pad rent apply to an own-lot home?"
+    },
+    {
+      "a": "Once every 12 months, on at least three full months' notice, capped at 2.3% plus the proportional levy/utility amount for 2026 and 2.2% plus the proportional amount for 2027 — percentages only. Plainly, a Paradise Park home sits on a rented pad: you would own the home (a chattel) and rent the pad, not own the land.",
+      "gen": "mh",
+      "q": "If I cross-shop Paradise Park in Abbotsford West, how much can pad rent rise?"
+    },
+    {
+      "a": "Under MHPTA s.42: permits/approvals first, a 12-month notice, and $20,000 compensation on or before the effective date, with the 15-day dispute window and the additional compensation routes the provincial pages describe. That protection attaches to a pad tenancy — there is no east-side park to attach it to.",
+      "gen": "mh",
+      "q": "What protects a park buyer if a park closes?"
+    },
     {
       "q": "Which public schools are inside Abbotsford East?",
       "a": "SD34 schools inside the area include Sandy Hill Elementary, Mountain Elementary, Irene Kelleher Totí:ltawtxw Elementary, Auguston Traditional Elementary, Clayburn Middle, Robert Bateman Secondary and Yale Secondary; use the SD34 School Locator with a home address to confirm the catchment school for that address. Locator runs for two sample addresses confirm the pattern: 36367 Stephen Leacock Drive returns Auguston Traditional Elementary → Clayburn Middle → Robert Bateman Secondary, and 3836 Old Clayburn Road returns Sandy Hill Elementary → Clayburn Middle → Robert Bateman Secondary (SD34 School Locator, mybaragar.com, run 2026-11-01).",
       "gen": "muse"
     },
     {
-      "q": "Which buses serve the east side?",
-      "a": "BC Transit Central Fraser Valley routes include 2 (Highstreet / McMillan), 7 (Sumas Mountain), 9 (McKee) and 15 (Auguston), plus the 66 Fraser Valley Express on Highway 1.",
+      "q": "Can a house have a secondary suite?",
+      "a": "Zoning Bylaw s.140.3.8 permits one secondary suite in all single detached dwellings; City council reports applying the bylaw state suite criteria including a lot of at least 400 m² with at least 12.0 m frontage on a Collector or Local road, not on a cul-de-sac bulb.",
       "gen": "muse"
-    },
-    {
-      "q": "Are there more or fewer homes for sale in Abbotsford East than in June?",
-      "a": "In Abbotsford East, listings of houses rose from 161 in June to 165 in September (+2.5%); condos and townhomes fell from 71 in June to 69 in September (−2.8%).",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How big is Abbotsford East compared with the rest of Abbotsford?",
-      "a": "In September 2026, Abbotsford East held 37.5% of the 440 houses listed in Abbotsford and 12.1% of the 572 condos and townhomes listed in Abbotsford.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How many homes sold in Abbotsford East from June to September 2026?",
-      "a": "107 houses and 44 condos and townhomes sold in Abbotsford East over those 4 months.",
-      "gen": "snap-faq"
-    },
-    {
-      "gen": "tn",
-      "q": "Can I buy a vacant building lot in Abbotsford East?",
-      "a": "What trades as land is fee-simple lots inside built subdivisions and individual acreage parcels toward Whatcom / Sumas Mountain, each checked parcel by parcel with the City."
-    },
-    {
-      "gen": "tn",
-      "q": "How small can an east-side lot be?",
-      "a": "At subdivision, the zone minimums the research states: RS3 interior 540 m², RS5 interior 420 m², RS6 compact (no minimum figure documented — UNCONFIRMED beyond \"compact\"). A lot already at its minimum has no subdivision room."
-    },
-    {
-      "gen": "tn",
-      "q": "Can a house lot here add a suite or a coach house?",
-      "a": "A secondary suite must be less than 50% of the principal unit, and a coach/garden suite may occupy up to 15% of the lot to a maximum of 100 m², under Zoning Bylaw No. 2400-2014 — Abbotsford's rules only. Suite criteria in City reports include at least 400 m² lot, at least 12.0 m frontage, a Collector or Local road and not on a cul-de-sac bulb."
-    },
-    {
-      "gen": "tn",
-      "q": "What servicing will a subdivision have to provide?",
-      "a": "The process runs through the Approving Officer against zone minimums and the City's works-and-services requirements, with a servicing agreement and Works and Services Report as the standard instruments in council reports."
-    },
-    {
-      "gen": "tn",
-      "q": "What slope or flood diligence applies to a hillside or low lot?",
-      "a": "Hillside: the Steep Slope Development Permit Area and McKee geotechnical/slope-over-40% ground. Low south/southeast lots: Sumas River floodplain — City notices name properties south of the Sumas River and along Whatcom Road; check the lot in the City's WebMap."
-    },
-    {
-      "gen": "acre",
-      "q": "Can I actually buy an acreage in Abbotsford East?",
-      "a": "Yes — as an individual fee-simple parcel toward Whatcom Road / the Sumas Mountain foot, not from a named acreage subdivision: no named acreage subdivision, bare-land strata acreage community or presale acreage offering was verified for this sub-area on an official or developer source."
-    },
-    {
-      "gen": "acre",
-      "q": "What extra units can go on an acreage parcel?",
-      "a": "On urban ground: one secondary suite in all single detached dwellings (s.140.3.8), subject to the 400 m² / 12.0 m / Collector-or-Local / no-cul-de-sac-bulb criteria; suite under 50% of the principal dwelling; coach/garden suite 15% of lot area to 100 m² maximum. On ALR ground the ALC caps replace those: principal 500 m², suite inside the principal only, additional residence 90 m² / 186 m² by the 40 ha line."
-    },
-    {
-      "gen": "acre",
-      "q": "What taxes do I pay on the acreage itself?",
-      "a": "PTT at the general rates (worked anchors: $1.5M → $28,000, no exemption). GST turns on the seller, not the land: an individual's personal-use sale is generally exempt per CRA GI-003; a business sale or a more-than-two-part subdivision sale can be taxable — have the contract state the GST position."
-    },
-    {
-      "gen": "acre",
-      "q": "What will it cost to hold the acreage while I plan?",
-      "a": "Property taxes (due July 2, 2026; 5% penalty July 3, second 5% September 16, 2026), plus insurance and any covenant/servicing obligations on title. No strata fee on a fee-simple parcel."
-    },
-    {
-      "gen": "mh",
-      "q": "Is there a mobile home park in Abbotsford East?",
-      "a": "Abbotsford's verified parks are in Abbotsford West, Central Abbotsford and Poplar."
-    },
-    {
-      "gen": "mh",
-      "q": "Does pad rent apply to an own-lot home?",
-      "a": "No. Pad rent exists only in a pad tenancy under the MHPTA. An own-lot owner pays property taxes (due July 2, 2026; 5% July 3; second 5% September 16, 2026) and their own servicing costs instead."
-    },
-    {
-      "gen": "mh",
-      "q": "If I cross-shop Paradise Park in Abbotsford West, how much can pad rent rise?",
-      "a": "Once every 12 months, on at least three full months' notice, capped at 2.3% plus the proportional levy/utility amount for 2026 and 2.2% plus the proportional amount for 2027 — percentages only. Plainly, a Paradise Park home sits on a rented pad: you would own the home (a chattel) and rent the pad, not own the land."
-    },
-    {
-      "gen": "mh",
-      "q": "What protects a park buyer if a park closes?",
-      "a": "Under MHPTA s.42: permits/approvals first, a 12-month notice, and $20,000 compensation on or before the effective date, with the 15-day dispute window and the additional compensation routes the provincial pages describe. That protection attaches to a pad tenancy — there is no east-side park to attach it to."
     }
-  ]
+  ],
+  "slug": "abbotsford-east-guide",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

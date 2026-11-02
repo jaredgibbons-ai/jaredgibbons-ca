@@ -1,34 +1,4 @@
 {
-  "status": "draft",
-  "slug": "sell-my-house-in-langley",
-  "updated": "2026-11-01",
-  "new_page": {
-    "title": "Sell My House in Langley, BC | Township & City | Jared Gibbons",
-    "description": "Selling in Langley? See current MLS® benchmark prices, what the Township and the City of Langley did about the 2024 housing rules, and get a free home evaluation from Jared Gibbons.",
-    "h1": "Sell My House in Langley"
-  },
-  "breadcrumbs": [
-    {
-      "name": "Home",
-      "href": "/index.html"
-    },
-    {
-      "name": "Langley",
-      "href": "/langley-homes-for-sale.html"
-    },
-    {
-      "name": "Sell My House in Langley",
-      "href": "/sell-my-house-in-langley.html"
-    }
-  ],
-  "faq_heading": "Selling in Langley: your questions answered",
-  "market_spec": {
-    "board": "fvreb",
-    "area": "Langley",
-    "summary": "Langley",
-    "label": "Langley",
-    "at": 4
-  },
   "blocks": [
     {
       "t": "notice",
@@ -43,24 +13,24 @@
       "text": "This page gives the benchmark prices for Langley, what each government has done about the 2024 housing rules and what I need to price your home. If you need to sell on a short timeline, my page on selling fast in Langley covers the strategy."
     },
     {
+      "h": "/sell-my-house-fast-in-langley-bc.html",
       "t": "p",
-      "text": "Selling fast in Langley",
-      "h": "/sell-my-house-fast-in-langley-bc.html"
+      "text": "Selling fast in Langley"
     },
     {
-      "t": "h",
+      "gen": "market",
       "level": 2,
-      "text": "Langley home prices, September 2026",
-      "gen": "market"
+      "t": "h",
+      "text": "Langley home prices, September 2026"
     },
     {
+      "gen": "market",
       "t": "p",
-      "text": "The MLS® Home Price Index benchmark for a typical Langley home was $941,800 in September 2026, down 6.2% from a year earlier. Detached homes were $1,471,100 (down 6.7% over the year), townhouses $802,600 (down 4.4%) and apartments $525,900 (down 9.2%).",
-      "gen": "market"
+      "text": "The MLS® Home Price Index benchmark for a typical Langley home was $941,800 in September 2026, down 6.2% from a year earlier. Detached homes were $1,471,100 (down 6.7% over the year), townhouses $802,600 (down 4.4%) and apartments $525,900 (down 9.2%)."
     },
     {
-      "t": "table",
       "caption": "Langley MLS® benchmark prices, September 2026",
+      "gen": "market",
       "head": [
         "Home type",
         "Benchmark price",
@@ -99,16 +69,16 @@
         ]
       ],
       "source": "Source: Fraser Valley Real Estate Board Statistics Package, September 2026 (released October 5, 2026).",
-      "gen": "market"
+      "t": "table"
     },
     {
+      "gen": "market",
       "t": "p",
-      "text": "Sales activity in Langley for September 2026, from the board's own monthly package: sales are the homes that sold in the month and active listings are the homes for sale at month end. Small counts make the median price jump around, so lean on the benchmark for the trend.",
-      "gen": "market"
+      "text": "Sales activity in Langley for September 2026, from the board's own monthly package: sales are the homes that sold in the month and active listings are the homes for sale at month end. Small counts make the median price jump around, so lean on the benchmark for the trend."
     },
     {
-      "t": "table",
       "caption": "Langley MLS® sales activity, September 2026",
+      "gen": "market",
       "head": [
         "Home type",
         "Sales",
@@ -140,11 +110,11 @@
         ]
       ],
       "source": "Source: Fraser Valley Real Estate Board Statistics Package, September 2026 (released October 5, 2026).",
-      "gen": "market"
+      "t": "table"
     },
     {
-      "t": "h",
       "level": 2,
+      "t": "h",
       "text": "City of Langley: Plex-Homes on RS1 and RS2 lots"
     },
     {
@@ -152,7 +122,6 @@
       "text": "The City of Langley added a new use called a Plex-Home by Bylaw 3284 on June 17, 2024. It permits 4 to 6 units on RS1 and RS2 lots. A second bylaw, 3289 (Zoning Bylaw Amendment No. 209), set the parking for it. The City gave notice of first and second readings for July 8, 2024, and said no public hearing would be held under section 464(4) of the Local Government Act. The notice does not say whether 3289 was adopted, so I have not stated that it was."
     },
     {
-      "t": "table",
       "caption": "Parking the City of Langley proposed for Plex-Homes in Bylaw 3289",
       "head": [
         "Unit",
@@ -172,11 +141,12 @@
           "None required"
         ]
       ],
-      "source": "Source: City of Langley, notice of first and second readings of Bylaw 3289, read 2026-11-01. The City defines a frequent stop as a route averaging a bus every 15 minutes or better, 7 am to 7 pm Monday to Friday and 10 am to 6 pm on weekends."
+      "source": "Source: City of Langley, notice of first and second readings of Bylaw 3289, read 2026-11-01. The City defines a frequent stop as a route averaging a bus every 15 minutes or better, 7 am to 7 pm Monday to Friday and 10 am to 6 pm on weekends.",
+      "t": "table"
     },
     {
-      "t": "h",
       "level": 2,
+      "t": "h",
       "text": "Township of Langley: what I can and cannot say"
     },
     {
@@ -188,8 +158,8 @@
       "text": "The Township's own report to Council could not be read by my tools, so I have not stated the number of units per lot or the lot-size rules. Do not assume your lot qualifies for four units because a neighbouring city allows it. Send me the address and I will confirm the zone, the lot size and whether sewer and water are on the street."
     },
     {
-      "t": "h",
       "level": 2,
+      "t": "h",
       "text": "Short-term rentals"
     },
     {
@@ -205,8 +175,8 @@
       "text": "Any rental for fewer than 90 consecutive days must also be registered with the Province, one registration number per unit. The Province lists the fee as $100 a year for a host's principal residence and $450 a year for a secondary unit such as a suite or cottage, and compliance with local bylaws is a condition of registration."
     },
     {
-      "t": "h",
       "level": 2,
+      "t": "h",
       "text": "Disclosure and the title"
     },
     {
@@ -214,13 +184,13 @@
       "text": "What a seller must tell a buyer is the same across BC, and I cover it on my home sellers FAQ."
     },
     {
+      "h": "/faq-for-home-sellers.html",
       "t": "p",
-      "text": "Read the home sellers FAQ",
-      "h": "/faq-for-home-sellers.html"
+      "text": "Read the home sellers FAQ"
     },
     {
-      "t": "h",
       "level": 2,
+      "t": "h",
       "text": "What I need from you to price your home"
     },
     {
@@ -228,52 +198,74 @@
       "text": "Send me the address. I will pull recent sales in your part of Langley and the competing listings near you from the MLS®, then check whether the Township or the City holds the zoning and what the lot could hold. The benchmark above covers all of Langley, and Willoughby and Brookswood do not move together."
     },
     {
+      "h": "/home-evaluation.html",
       "t": "p",
-      "text": "Request your free home evaluation",
-      "h": "/home-evaluation.html"
+      "text": "Request your free home evaluation"
     },
     {
+      "h": "/langley-homes-for-sale.html",
       "t": "p",
-      "text": "Langley homes for sale",
-      "h": "/langley-homes-for-sale.html"
+      "text": "Langley homes for sale"
     },
     {
+      "h": "/city-of-langley-homes-for-sale.html",
       "t": "p",
-      "text": "City of Langley homes for sale",
-      "h": "/city-of-langley-homes-for-sale.html"
+      "text": "City of Langley homes for sale"
     },
     {
+      "h": "/langley-neighbourhood-guides.html",
       "t": "p",
-      "text": "Langley neighbourhood guides",
-      "h": "/langley-neighbourhood-guides.html"
+      "text": "Langley neighbourhood guides"
+    }
+  ],
+  "breadcrumbs": [
+    {
+      "href": "/index.html",
+      "name": "Home"
+    },
+    {
+      "href": "/langley-homes-for-sale.html",
+      "name": "Langley"
+    },
+    {
+      "href": "/sell-my-house-in-langley.html",
+      "name": "Sell My House in Langley"
     }
   ],
   "faq": [
     {
-      "q": "Is Langley one city?",
-      "a": "No. The Township of Langley and the City of Langley are separate governments with separate zoning bylaws. The Township is much larger; the City is the compact downtown core."
+      "a": "No. The Township of Langley and the City of Langley are separate governments with separate zoning bylaws. The Township is much larger; the City is the compact downtown core.",
+      "q": "Is Langley one city?"
     },
     {
-      "q": "What did the City of Langley do about the 2024 housing rules?",
-      "a": "By Bylaw 3284 on June 17, 2024, the City added a Plex-Home use that permits 4 to 6 units on RS1 and RS2 lots. Bylaw 3289 sets the parking for it; the City's notice gave first and second readings for July 8, 2024 and did not state an adoption."
+      "a": "By Bylaw 3284 on June 17, 2024, the City added a Plex-Home use that permits 4 to 6 units on RS1 and RS2 lots. Bylaw 3289 sets the parking for it; the City's notice gave first and second readings for July 8, 2024 and did not state an adoption.",
+      "q": "What did the City of Langley do about the 2024 housing rules?"
     },
     {
-      "q": "How much parking does a City of Langley Plex-Home need?",
-      "a": "Under Bylaw 3289 as noticed, at least 1.5 spaces for units over 90 m² and at least 1 space for units of 90 m² or less, with none required within 400 m of a frequent bus stop."
+      "a": "Under Bylaw 3289 as noticed, at least 1.5 spaces for units over 90 m² and at least 1 space for units of 90 m² or less, with none required within 400 m of a frequent bus stop.",
+      "q": "How much parking does a City of Langley Plex-Home need?"
     },
     {
-      "q": "Has the Township of Langley adopted its housing rules?",
-      "a": "A development-industry summary reports that Council adopted the zoning amendments on November 18, 2024, after readings on June 10, 2024. I could not read the Township's own report, so I have not stated its unit and lot-size rules."
+      "a": "A development-industry summary reports that Council adopted the zoning amendments on November 18, 2024, after readings on June 10, 2024.",
+      "q": "Has the Township of Langley adopted its housing rules?"
     },
     {
-      "q": "Can a buyer run an Airbnb in a Langley house?",
-      "a": "I have not confirmed a rule for either Langley. The Province requires a short-term rental in a municipality of 10,000 or more to be the host's principal residence, plus at most one suite or accessory unit, and registered with the Province."
+      "a": "I have not confirmed a rule for either Langley. The Province requires a short-term rental in a municipality of 10,000 or more to be the host's principal residence, plus at most one suite or accessory unit, and registered with the Province.",
+      "q": "Can a buyer run an Airbnb in a Langley house?"
     },
     {
-      "q": "How current are the prices on this page?",
-      "a": "The benchmark prices come from the Fraser Valley Real Estate Board's MLS® Home Price Index for the month shown. They describe a typical home across Langley, not your house."
+      "a": "The benchmark prices come from the Fraser Valley Real Estate Board's MLS® Home Price Index for the month shown. They describe a typical home across Langley, not your house.",
+      "q": "How current are the prices on this page?"
     }
   ],
+  "faq_heading": "Selling in Langley: your questions answered",
+  "market_spec": {
+    "area": "Langley",
+    "at": 4,
+    "board": "fvreb",
+    "label": "Langley",
+    "summary": "Langley"
+  },
   "needs_from_muse": [
     "Township of Langley SSMUH: units per lot, lot-size rules, adoption bylaw number, parking, suite and coach house rules from the Township's own pages (Township PDFs are robots-disallowed; Muse or Jared to supply)",
     "City of Langley Bylaw 3289 adoption date and Plex-Home lot-size rules",
@@ -281,5 +273,13 @@
     "Sold-price medians, days on market and sale-to-list ratio by home type for Langley, last 12 months (Paragon)",
     "Seller costs: Jared to confirm what he will state about commission; CRA principal-residence source once a fetch is approved (OI-31, OI-32)",
     "Jared's marketing package for sellers, in his own words"
-  ]
+  ],
+  "new_page": {
+    "description": "Selling in Langley? See current MLS® benchmark prices, what the Township and the City of Langley did about the 2024 housing rules, and get a free home evaluation from Jared Gibbons.",
+    "h1": "Sell My House in Langley",
+    "title": "Sell My House in Langley, BC | Township & City | Jared Gibbons"
+  },
+  "slug": "sell-my-house-in-langley",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

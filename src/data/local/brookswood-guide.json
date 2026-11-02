@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "brookswood-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Brookswood compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Brookswood compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Brookswood against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Brookswood against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
-      "caption": "Brookswood against the whole city, September 2026",
+      "caption": "Brookswood against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -27,164 +24,164 @@
       "rows": [
         [
           "Detached houses",
-          "21.8%",
-          "10.9%",
-          "7% against 14%",
-          "8 of 8"
+          "21.1%",
+          "18.6%",
+          "12% against 13%",
+          "5 of 9"
         ],
         [
           "Condos and townhomes",
           "0.3%",
           "0.0%",
-          "— against 18%",
+          "— against 20%",
           "Under 10 listed"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings rose from 86 in June to 98 in September (+14.0%), and it took 10.7% of the city’s 298 sales over the period; condos and townhomes: listings was 0 in June and 2 in September, too few (under 3) to call a rise or fall, and it took 0.0% of the city’s 558 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings rose from 86 in June to 94 in October (+9.3%), and it took 12.0% of the city’s 357 sales over the period; condos and townhomes: listings was 0 in June and 2 in October, too few (under 3) to call a rise or fall, and it took 0.0% of the city’s 694 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Brookswood for detached houses in June, August, September (a buyers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out Brookswood for detached houses in June, August, September (a buyers’ best bet)."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Langley real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Langley real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Langley homes for sale",
-            "h": "/langley-homes-for-sale.html"
+            "h": "/langley-homes-for-sale.html",
+            "t": "Langley homes for sale"
           }
         ],
         [
           {
-            "t": "Langley real estate market stats",
-            "h": "/langley-real-estate-market-stats.html"
+            "h": "/langley-real-estate-market-stats.html",
+            "t": "Langley real estate market stats"
           }
         ],
         [
           {
-            "t": "Langley houses for sale",
-            "h": "/langley-houses-for-sale.html"
+            "h": "/langley-houses-for-sale.html",
+            "t": "Langley houses for sale"
           }
         ],
         [
           {
-            "t": "Langley condos for sale",
-            "h": "/langley-condos-for-sale.html"
+            "h": "/langley-condos-for-sale.html",
+            "t": "Langley condos for sale"
           }
         ],
         [
           {
-            "t": "Langley townhomes for sale",
-            "h": "/langley-townhomes-for-sale.html"
+            "h": "/langley-townhomes-for-sale.html",
+            "t": "Langley townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Langley",
-            "h": "/sell-my-house-in-langley.html"
+            "h": "/sell-my-house-in-langley.html",
+            "t": "Sell my house in Langley"
           }
         ],
         [
           {
-            "t": "Schools in Langley",
-            "h": "/schools-in-langley-bc.html"
+            "h": "/schools-in-langley-bc.html",
+            "t": "Schools in Langley"
           }
         ],
         [
           {
-            "t": "Brookswood homes and market figures",
-            "h": "/brookswood.html"
+            "h": "/brookswood.html",
+            "t": "Brookswood homes and market figures"
           }
         ],
         [
           {
-            "t": "Campbell Valley real estate",
-            "h": "/campbell-valley.html"
+            "h": "/campbell-valley.html",
+            "t": "Campbell Valley real estate"
           }
         ],
         [
           {
-            "t": "County Line Glen Valley real estate",
-            "h": "/county-line-glen-valley.html"
+            "h": "/county-line-glen-valley.html",
+            "t": "County Line Glen Valley real estate"
           }
         ],
         [
           {
-            "t": "Langley City real estate",
-            "h": "/langley-city.html"
+            "h": "/langley-city.html",
+            "t": "Langley City real estate"
           }
         ],
         [
           {
-            "t": "Murrayville real estate",
-            "h": "/murrayville.html"
+            "h": "/murrayville.html",
+            "t": "Murrayville real estate"
           }
         ],
         [
           {
-            "t": "Otter District real estate",
-            "h": "/otter-district.html"
+            "h": "/otter-district.html",
+            "t": "Otter District real estate"
           }
         ],
         [
           {
-            "t": "Salmon River real estate",
-            "h": "/salmon-river.html"
+            "h": "/salmon-river.html",
+            "t": "Salmon River real estate"
           }
         ],
         [
           {
-            "t": "Walnut Grove real estate",
-            "h": "/walnut-grove.html"
+            "h": "/walnut-grove.html",
+            "t": "Walnut Grove real estate"
           }
         ],
         [
           {
-            "t": "Willoughby Heights real estate",
-            "h": "/willoughby-heights.html"
+            "h": "/willoughby-heights.html",
+            "t": "Willoughby Heights real estate"
           }
         ],
         [
           {
-            "t": "Aldergrove real estate",
-            "h": "/aldergrove.html"
+            "h": "/aldergrove.html",
+            "t": "Aldergrove real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Condo buildings in Brookswood Guide",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Brookswood Guide",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Condo buildings in Brookswood Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Brookswood Guide"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -193,12 +190,12 @@
         ],
         [
           {
-            "t": "Plan-area study boundaries (Township commercial market demand study for Booth, Fernridge and Rinn): bounded to the west by 196 Street, to the north by 33A Avenue, 200 Street, 36 Avenue, 208 Street and 43 Avenue, to the east by Murray Creek, 40 Avenue, 210 Street and 208 Street, and to the south by 20 Avenue, 198 Street and 16 Avenue. A street-level boundary for the board's Brookswood sub-area itself: UNVERIFIED — the board sub-area code is UNVERIFIED."
+            "t": "Plan-area study boundaries (Township commercial market demand study for Booth, Fernridge and Rinn): bounded to the west by 196 Street, to the north by 33A Avenue, 200 Street, 36 Avenue, 208 Street and 43 Avenue, to the east by Murray Creek, 40 Avenue, 210 Street and 208 Street, and to the south by 20 Avenue, 198 Street and 16 Avenue. A street-level boundary for the board's Brookswood sub-area itself: Not verified — the board sub-area code is not verified."
           }
         ],
         [
           {
-            "t": "Brookswood's detached ratio of 7% is the lowest published detached ratio in the Langley set that month, and its detached inventory of 98 is the second-largest in the set, behind Willoughby Heights at 100. SnapStats publishes medians at community level only (Langley = City + Township combined), so no Brookswood-only median is published: per-sub-area medians are UNVERIFIED. Combined-Langley context only (NOT Brookswood figures): Detached median $1,345,000; Condos & Townhomes median $611,000."
+            "t": "Brookswood's detached ratio of 7% is the lowest published detached ratio in the Langley set that month, and its detached inventory of 98 is the second-largest in the set, behind Willoughby Heights at 100. SnapStats publishes medians at community level only (Langley = City + Township combined), so no Brookswood-only median is published: per-sub-area medians are not verified. Combined-Langley context only (NOT Brookswood figures): Detached median $1,345,000; Condos & Townhomes median $611,000."
           }
         ],
         [
@@ -212,22 +209,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Brookswood Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Brookswood Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Township plans and zoning: the Brookswood-Fernridge Community Plan covers the area, with Booth, Fernridge and Rinn Neighbourhood Plans under it; the Township states the plan allows previously undeveloped areas to grow while protecting trees and watercourses. Zoning is Township of Langley Zoning Bylaw 1987 No. 2500: Section 110.1 as read in Township council reports sets SR-1 minimum lot area 3,716 m² (40 m frontage), SR-2 minimum 8,094 m² (45 m) and SR-3 minimum 1,765 m² (27.45 m); RU-2 minimums are UNVERIFIED from a readable bylaw section."
+            "t": "Township plans and zoning: the Brookswood-Fernridge Community Plan covers the area, with Booth, Fernridge and Rinn Neighbourhood Plans under it; the Township states the plan allows previously undeveloped areas to grow while protecting trees and watercourses. Zoning is Township of Langley Zoning Bylaw 1987 No. 2500: Section 110.1 as read in Township council reports sets SR-1 minimum lot area 3,716 m² (40 m frontage), SR-2 minimum 8,094 m² (45 m) and SR-3 minimum 1,765 m² (27.45 m); RU-2 minimums are not verified from a readable bylaw section."
           }
         ],
         [
@@ -246,18 +243,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Brookswood Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Brookswood Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -276,12 +273,12 @@
         ],
         [
           {
-            "t": "Cedar Lane is not Cedar Creek, and neither status should be borrowed. Deer Creek Estates is likewise held UNCONFIRMED. None is counted anywhere."
+            "t": "Cedar Lane is not Cedar Creek, and neither status should be borrowed. Deer Creek Estates is likewise held not confirmed. None is counted anywhere."
           }
         ],
         [
           {
-            "t": "The school locator cannot place the secondary school's own address. The SD35 School Locator returned NO RESULT for 20902 37A Avenue — Brookswood Secondary's own address — because the address falls in a gap between the locator's listed ranges for 37A Avenue. A Brookswood school claim made without a locator run for the exact address is a guess."
+            "t": "The school locator cannot place the secondary school's own address. A Brookswood school claim made without a locator run for the exact address is a guess."
           }
         ],
         [
@@ -291,146 +288,146 @@
         ],
         [
           {
-            "t": "Zoning minimums, not averages, frame Brookswood lots. Section 110.1 of Bylaw 2500 as read in Township council reports runs SR-3 at a 1,765 m² minimum up to SR-2 at 8,094 m² — a sub-area average lot size on an official source is UNVERIFIED, and a lot's subdivision story starts from its zone minimum, not from a neighbourhood average."
+            "t": "Zoning minimums, not averages, frame Brookswood lots. Section 110.1 of Bylaw 2500 as read in Township council reports runs SR-3 at a 1,765 m² minimum up to SR-2 at 8,094 m² — a sub-area average lot size on an official source is not verified, and a lot's subdivision story starts from its zone minimum, not from a neighbourhood average."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Brookswood Guide",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Brookswood Guide"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "tol.ca · brookswoodfernridge community plan adopted.aspx",
-            "h": "https://www.tol.ca/en/news/brookswoodfernridge-community-plan-adopted.aspx"
+            "h": "https://www.tol.ca/en/news/brookswoodfernridge-community-plan-adopted.aspx",
+            "t": "tol.ca · brookswoodfernridge community plan adopted.aspx"
           }
         ],
         [
           {
-            "t": "jaredgibbons.ca · brookswood guide",
-            "h": "https://jaredgibbons.ca/brookswood-guide.html"
+            "h": "https://jaredgibbons.ca/brookswood-guide.html",
+            "t": "jaredgibbons.ca · brookswood guide"
           }
         ],
         [
           {
-            "t": "tol.ca · BF NP Commercial Market Demand Study Preliminary",
-            "h": "https://www.tol.ca/en/the-township/resources/plans-reports-strategies/Community-Neighbourhood-Plans/Neighbourhood/BF-NP-Commercial-Market-Demand-Study-Preliminary.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/plans-reports-strategies/Community-Neighbourhood-Plans/Neighbourhood/BF-NP-Commercial-Market-Demand-Study-Preliminary.pdf",
+            "t": "tol.ca · BF NP Commercial Market Demand Study Preliminary"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "translink.ca · schedule",
-            "h": "https://www.translink.ca/schedules-and-maps/stop/58717/schedule"
+            "h": "https://www.translink.ca/schedules-and-maps/stop/58717/schedule",
+            "t": "translink.ca · schedule"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · langley memorial hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital",
+            "t": "fraserhealth.ca · langley memorial hospital"
           }
         ],
         [
           {
-            "t": "savypbyxvqkxwauaibxj.supabase.co · docs c2fce732 6c3b 49e4 b328 c32015e70310",
-            "h": "https://savypbyxvqkxwauaibxj.supabase.co/storage/v1/object/public/development-images/dcd35056-f96f-4678-9c97-c874f8e7337a/docs-c2fce732-6c3b-49e4-b328-c32015e70310.pdf"
+            "h": "https://savypbyxvqkxwauaibxj.supabase.co/storage/v1/object/public/development-images/dcd35056-f96f-4678-9c97-c874f8e7337a/docs-c2fce732-6c3b-49e4-b328-c32015e70310.pdf",
+            "t": "savypbyxvqkxwauaibxj.supabase.co · docs c2fce732 6c3b 49e4 b328 c32015e70310"
           }
         ],
         [
           {
-            "t": "foxridgehomesbc.com · brookswood estates",
-            "h": "https://www.foxridgehomesbc.com/community/brookswood-estates/"
+            "h": "https://www.foxridgehomesbc.com/community/brookswood-estates/",
+            "t": "foxridgehomesbc.com · brookswood estates"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "tol.ca · small scale multi unit housing.aspx",
-            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx"
+            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx",
+            "t": "tol.ca · small scale multi unit housing.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · property taxes.aspx",
-            "h": "https://www.tol.ca/en/services/property-taxes.aspx"
+            "h": "https://www.tol.ca/en/services/property-taxes.aspx",
+            "t": "tol.ca · property taxes.aspx"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · rent increases for manufactured homes",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes",
+            "t": "www2.gov.bc.ca · rent increases for manufactured homes"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Condo buildings in Brookswood Langley",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Brookswood Langley",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Condo buildings in Brookswood Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Brookswood Langley"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -439,12 +436,12 @@
         ],
         [
           {
-            "t": "Where condo stock concentrates: it does not — there is no apartment-condo stock to concentrate. SnapStats publishes medians at community level only, and the community here is the combined City + Township \"Langley\": detached median $1,345,000, $482/sq ft, 97% sale-to-list, 20 days on market; Condos & Townhomes median $611,000, $513/sq ft, 97% sale-to-list, 25 days on market. Those are Langley community figures, NOT Brookswood figures — per-sub-area medians are UNVERIFIED and neither median may be quoted as a Brookswood price."
+            "t": "Where condo stock concentrates: it does not — there is no apartment-condo stock to concentrate. SnapStats publishes medians at community level only, and the community here is the combined City + Township \"Langley\": detached median $1,345,000, $482/sq ft, 97% sale-to-list, 20 days on market; Condos & Townhomes median $611,000, $513/sq ft, 97% sale-to-list, 25 days on market. Those are Langley community figures, NOT Brookswood figures — per-sub-area medians are not verified and neither median may be quoted as a Brookswood price."
           }
         ],
         [
           {
-            "t": "Catchments are address-based; the sample address 20902 37A Avenue was run in the SD35 School Locator and returned no result, so no catchment is confirmed for any Brookswood address: UNVERIFIED per address."
+            "t": "Catchments are address-based; the sample address 20902 37A Avenue was run in the SD35 School Locator and returned no result, so no catchment is confirmed for any Brookswood address: Not verified per address."
           }
         ],
         [
@@ -453,18 +450,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Brookswood Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Brookswood Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -477,177 +474,177 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Brookswood Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Brookswood Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "tol.ca · brookswoodfernridge community plan adopted.aspx",
-            "h": "https://www.tol.ca/en/news/brookswoodfernridge-community-plan-adopted.aspx"
+            "h": "https://www.tol.ca/en/news/brookswoodfernridge-community-plan-adopted.aspx",
+            "t": "tol.ca · brookswoodfernridge community plan adopted.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · BF NP Commercial Market Demand Study Preliminary",
-            "h": "https://www.tol.ca/en/the-township/resources/plans-reports-strategies/Community-Neighbourhood-Plans/Neighbourhood/BF-NP-Commercial-Market-Demand-Study-Preliminary.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/plans-reports-strategies/Community-Neighbourhood-Plans/Neighbourhood/BF-NP-Commercial-Market-Demand-Study-Preliminary.pdf",
+            "t": "tol.ca · BF NP Commercial Market Demand Study Preliminary"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "translink.ca · schedule",
-            "h": "https://www.translink.ca/schedules-and-maps/stop/58717/schedule"
+            "h": "https://www.translink.ca/schedules-and-maps/stop/58717/schedule",
+            "t": "translink.ca · schedule"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · langley memorial hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital",
+            "t": "fraserhealth.ca · langley memorial hospital"
           }
         ],
         [
           {
-            "t": "savypbyxvqkxwauaibxj.supabase.co · docs c2fce732 6c3b 49e4 b328 c32015e70310",
-            "h": "https://savypbyxvqkxwauaibxj.supabase.co/storage/v1/object/public/development-images/dcd35056-f96f-4678-9c97-c874f8e7337a/docs-c2fce732-6c3b-49e4-b328-c32015e70310.pdf"
+            "h": "https://savypbyxvqkxwauaibxj.supabase.co/storage/v1/object/public/development-images/dcd35056-f96f-4678-9c97-c874f8e7337a/docs-c2fce732-6c3b-49e4-b328-c32015e70310.pdf",
+            "t": "savypbyxvqkxwauaibxj.supabase.co · docs c2fce732 6c3b 49e4 b328 c32015e70310"
           }
         ],
         [
           {
-            "t": "foxridgehomesbc.com · brookswood estates",
-            "h": "https://www.foxridgehomesbc.com/communities/brookswood-estates/"
+            "h": "https://www.foxridgehomesbc.com/communities/brookswood-estates/",
+            "t": "foxridgehomesbc.com · brookswood estates"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf",
+            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio"
           }
         ],
         [
           {
-            "t": "tol.ca · small scale multi unit housing.aspx",
-            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx"
+            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx",
+            "t": "tol.ca · small scale multi unit housing.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · property taxes.aspx",
-            "h": "https://www.tol.ca/en/services/property-taxes.aspx"
+            "h": "https://www.tol.ca/en/services/property-taxes.aspx",
+            "t": "tol.ca · property taxes.aspx"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · rent increases for manufactured homes",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes",
+            "t": "www2.gov.bc.ca · rent increases for manufactured homes"
           }
         ],
         [
           {
-            "t": "tol.ca · development applications.aspx",
-            "h": "https://www.tol.ca/en/building-development/development-applications.aspx"
+            "h": "https://www.tol.ca/en/building-development/development-applications.aspx",
+            "t": "tol.ca · development applications.aspx"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Brookswood Langley",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Oxford Mews — 4536 208 Street.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Brookswood Langley"
     },
     {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Oxford Mews — 4536 208 Street."
+    },
+    {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "It belongs to a future verification pass.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "It belongs to a future verification pass."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": ""
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Cedar Lane listings describe an adult-oriented park where one owner must be 55+, with leasehold non-strata title, but no park-operator source states its rule; Deer Creek's listing evidence says only \"adult oriented,\" which is not a 55+ rule, and its tenure is also UNCONFIRMED. The verified park is Cedar Creek Estates — a different name from Cedar Lane and Cedar Crest Estates, and the three must not be merged.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Cedar Lane listings describe an adult-oriented park where one owner must be 55+, with leasehold non-strata title, but no park-operator source states its rule; Deer Creek's listing evidence says only \"adult oriented,\" which is not a 55+ rule, and its tenure is also not confirmed. The verified park is Cedar Creek Estates — a different name from Cedar Lane and Cedar Crest Estates, and the three must not be merged."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Brookswood Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Brookswood Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "SnapStats publishes medians at community level only, and the community here is the combined City + Township \"Langley\": detached median $1,345,000, $482/sq ft, 97% sale-to-list, 20 days on market; attached median $611,000, $513/sq ft, 97% sale-to-list, 25 days on market. Those are Langley community figures, NOT Brookswood figures — per-sub-area medians are UNVERIFIED and neither median may be quoted as a Brookswood price."
+            "t": "SnapStats publishes medians at community level only, and the community here is the combined City + Township \"Langley\": detached median $1,345,000, $482/sq ft, 97% sale-to-list, 20 days on market; attached median $611,000, $513/sq ft, 97% sale-to-list, 25 days on market. Those are Langley community figures, NOT Brookswood figures — per-sub-area medians are not verified and neither median may be quoted as a Brookswood price."
           }
         ],
         [
           {
-            "t": "A separate middle school in Brookswood is UNVERIFIED. Catchments are address-based and UNVERIFIED for any Brookswood address — the sample address 20902 37A Avenue was run in the SD35 School Locator and returned no result (the address falls in a gap between the locator's listed ranges for 37A Avenue), and a retry could not be completed because the locator is an interactive form a page fetch cannot submit."
+            "t": "A separate middle school in Brookswood is not verified. Catchments are address-based and not verified for any Brookswood address — the sample address 20902 37A Avenue was run in the SD35 School Locator and returned no result (the address falls in a gap between the locator's listed ranges for 37A Avenue), and a retry could not be completed because the locator is an interactive form a page fetch cannot submit."
           }
         ],
         [
@@ -656,18 +653,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Brookswood Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Brookswood Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -680,18 +677,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Brookswood Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Brookswood Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -709,142 +706,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Brookswood Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Brookswood Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "tol.ca · brookswoodfernridge community plan adopted.aspx",
-            "h": "https://www.tol.ca/en/news/brookswoodfernridge-community-plan-adopted.aspx"
+            "h": "https://www.tol.ca/en/news/brookswoodfernridge-community-plan-adopted.aspx",
+            "t": "tol.ca · brookswoodfernridge community plan adopted.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · BF NP Commercial Market Demand Study Preliminary",
-            "h": "https://www.tol.ca/en/the-township/resources/plans-reports-strategies/Community-Neighbourhood-Plans/Neighbourhood/BF-NP-Commercial-Market-Demand-Study-Preliminary.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/plans-reports-strategies/Community-Neighbourhood-Plans/Neighbourhood/BF-NP-Commercial-Market-Demand-Study-Preliminary.pdf",
+            "t": "tol.ca · BF NP Commercial Market Demand Study Preliminary"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "translink.ca · schedule",
-            "h": "https://www.translink.ca/schedules-and-maps/stop/58717/schedule"
+            "h": "https://www.translink.ca/schedules-and-maps/stop/58717/schedule",
+            "t": "translink.ca · schedule"
           }
         ],
         [
           {
-            "t": "tol.ca · george preston recreation centre.aspx",
-            "h": "https://www.tol.ca/en/parks-recreation/george-preston-recreation-centre.aspx"
+            "h": "https://www.tol.ca/en/parks-recreation/george-preston-recreation-centre.aspx",
+            "t": "tol.ca · george preston recreation centre.aspx"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · langley memorial hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital",
+            "t": "fraserhealth.ca · langley memorial hospital"
           }
         ],
         [
           {
-            "t": "foxridgehomesbc.com · brookswood estates",
-            "h": "https://www.foxridgehomesbc.com/communities/brookswood-estates/"
+            "h": "https://www.foxridgehomesbc.com/communities/brookswood-estates/",
+            "t": "foxridgehomesbc.com · brookswood estates"
           }
         ],
         [
           {
-            "t": "savypbyxvqkxwauaibxj.supabase.co · docs c2fce732 6c3b 49e4 b328 c32015e70310",
-            "h": "https://savypbyxvqkxwauaibxj.supabase.co/storage/v1/object/public/development-images/dcd35056-f96f-4678-9c97-c874f8e7337a/docs-c2fce732-6c3b-49e4-b328-c32015e70310.pdf"
+            "h": "https://savypbyxvqkxwauaibxj.supabase.co/storage/v1/object/public/development-images/dcd35056-f96f-4678-9c97-c874f8e7337a/docs-c2fce732-6c3b-49e4-b328-c32015e70310.pdf",
+            "t": "savypbyxvqkxwauaibxj.supabase.co · docs c2fce732 6c3b 49e4 b328 c32015e70310"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ],
         [
           {
-            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf",
+            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio"
           }
         ],
         [
           {
-            "t": "tol.ca · small scale multi unit housing.aspx",
-            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx"
+            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx",
+            "t": "tol.ca · small scale multi unit housing.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · property taxes.aspx",
-            "h": "https://www.tol.ca/en/services/property-taxes.aspx"
+            "h": "https://www.tol.ca/en/services/property-taxes.aspx",
+            "t": "tol.ca · property taxes.aspx"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · rent increases for manufactured homes",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes",
+            "t": "www2.gov.bc.ca · rent increases for manufactured homes"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Brookswood Townhomes",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Brookswood Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Brookswood Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Brookswood Townhomes"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -867,18 +864,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Brookswood Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Brookswood Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -887,22 +884,22 @@
         ],
         [
           {
-            "t": "Township zoning for a second dwelling or coach house on non-reserve Brookswood acreage is UNVERIFIED: On ALR land the ALC frame applies: one principal residence at a maximum of 500 m², a suite only within the principal residence, plus at most one additional residence of 90 m² (parcels ≤40 ha) or 186 m² (parcels >40 ha); ALR residences cannot be stratified (ALC Bulletin 09 s. 6; SPA s. 239; ALCA s. 21(1))."
+            "t": "Township zoning for a second dwelling or coach house on non-reserve Brookswood acreage is not verified: On ALR land the ALC frame applies: one principal residence at a maximum of 500 m², a suite only within the principal residence, plus at most one additional residence of 90 m² (parcels ≤40 ha) or 186 m² (parcels >40 ha); ALR residences cannot be stratified (ALC Bulletin 09 s. 6; SPA s. 239; ALCA s. 21(1))."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Brookswood Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Brookswood Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -925,142 +922,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Brookswood Townhomes",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Brookswood Townhomes"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "jaredgibbons.ca · brookswood",
-            "h": "https://jaredgibbons.ca/brookswood.html"
+            "h": "https://jaredgibbons.ca/brookswood.html",
+            "t": "jaredgibbons.ca · brookswood"
           }
         ],
         [
           {
-            "t": "tol.ca · brookswoodfernridge community plan adopted.aspx",
-            "h": "https://www.tol.ca/en/news/brookswoodfernridge-community-plan-adopted.aspx"
+            "h": "https://www.tol.ca/en/news/brookswoodfernridge-community-plan-adopted.aspx",
+            "t": "tol.ca · brookswoodfernridge community plan adopted.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · BF NP Commercial Market Demand Study Preliminary",
-            "h": "https://www.tol.ca/en/the-township/resources/plans-reports-strategies/Community-Neighbourhood-Plans/Neighbourhood/BF-NP-Commercial-Market-Demand-Study-Preliminary.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/plans-reports-strategies/Community-Neighbourhood-Plans/Neighbourhood/BF-NP-Commercial-Market-Demand-Study-Preliminary.pdf",
+            "t": "tol.ca · BF NP Commercial Market Demand Study Preliminary"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "translink.ca · schedule",
-            "h": "https://www.translink.ca/schedules-and-maps/stop/58717/schedule"
+            "h": "https://www.translink.ca/schedules-and-maps/stop/58717/schedule",
+            "t": "translink.ca · schedule"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · langley memorial hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital",
+            "t": "fraserhealth.ca · langley memorial hospital"
           }
         ],
         [
           {
-            "t": "savypbyxvqkxwauaibxj.supabase.co · docs c2fce732 6c3b 49e4 b328 c32015e70310",
-            "h": "https://savypbyxvqkxwauaibxj.supabase.co/storage/v1/object/public/development-images/dcd35056-f96f-4678-9c97-c874f8e7337a/docs-c2fce732-6c3b-49e4-b328-c32015e70310.pdf"
+            "h": "https://savypbyxvqkxwauaibxj.supabase.co/storage/v1/object/public/development-images/dcd35056-f96f-4678-9c97-c874f8e7337a/docs-c2fce732-6c3b-49e4-b328-c32015e70310.pdf",
+            "t": "savypbyxvqkxwauaibxj.supabase.co · docs c2fce732 6c3b 49e4 b328 c32015e70310"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · strata housing",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing",
+            "t": "www2.gov.bc.ca · strata housing"
           }
         ],
         [
           {
-            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf",
+            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio"
           }
         ],
         [
           {
-            "t": "tol.ca · small scale multi unit housing.aspx",
-            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx"
+            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx",
+            "t": "tol.ca · small scale multi unit housing.aspx"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "tol.ca · property taxes.aspx",
-            "h": "https://www.tol.ca/en/services/property-taxes.aspx"
+            "h": "https://www.tol.ca/en/services/property-taxes.aspx",
+            "t": "tol.ca · property taxes.aspx"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Brookswood Langley",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Brookswood Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -1069,17 +1066,17 @@
         ],
         [
           {
-            "t": "Lot character, only: zones named in Township notices for the area include Suburban Residential SR-1, SR-2 and SR-3 and Rural Zone RU-2; read from Bylaw 2500 Section 110.1 in Township council reports, SR-1 minimum lot area is 3,716 m² (frontage 40 m), SR-2 is 8,094 m² (45 m) and SR-3 is 1,765 m² (27.45 m). RU-2 minimums are UNVERIFIED from a readable bylaw section, and a sub-area average lot size on an official source is UNVERIFIED. Brookswood is known locally for larger treed lots — that is a characterization in the research, not a measured average."
+            "t": "Lot character, only: zones named in Township notices for the area include Suburban Residential SR-1, SR-2 and SR-3 and Rural Zone RU-2; read from Bylaw 2500 Section 110.1 in Township council reports, SR-1 minimum lot area is 3,716 m² (frontage 40 m), SR-2 is 8,094 m² (45 m) and SR-3 is 1,765 m² (27.45 m). RU-2 minimums are not verified from a readable bylaw section, and a sub-area average lot size on an official source is not verified. Brookswood is known locally for larger treed lots — that is a characterization, not a measured average."
           }
         ],
         [
           {
-            "t": "Named developer project, documented as built-form context, never as land: Brookswood Estates, by Foxridge Homes — a detached single-family developer project named in the research from a developer source; the developer page states no civic address, so its civic address is UNVERIFIED."
+            "t": "Named developer project, documented as built-form context, never as land: Brookswood Estates, by Foxridge Homes — a detached single-family developer project named from a developer source; the developer page states no civic address, so its civic address is not verified."
           }
         ],
         [
           {
-            "t": "ALR vs non-ALR split: much of the Township's land is in the Agricultural Land Reserve; whether a specific Brookswood parcel is in the ALR or a floodplain is UNVERIFIED per parcel — the Township directs applicants to check designations in GeoSource. No Brookswood ALR share is stated."
+            "t": "ALR vs non-ALR split: much of the Township's land is in the Agricultural Land Reserve; whether a specific Brookswood parcel is in the ALR or a floodplain is not verified per parcel — the Township directs applicants to check designations in GeoSource. No Brookswood ALR share is stated."
           }
         ],
         [
@@ -1098,27 +1095,27 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Brookswood Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Brookswood Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Langley community figures (NOT Brookswood's): Detached median $1,345,000, $482/sq ft, 97% sale-to-list, 20 days on market; attached median $611,000, $513/sq ft, 97% sale-to-list, 25 days on market. Per-sub-area medians are not published: UNVERIFIED."
+            "t": "Langley community figures (NOT Brookswood's): Detached median $1,345,000, $482/sq ft, 97% sale-to-list, 20 days on market; attached median $611,000, $513/sq ft, 97% sale-to-list, 25 days on market. Per-sub-area medians are not published: Not verified."
           }
         ],
         [
           {
-            "t": "Catchments are address-based and UNVERIFIED for any Brookswood address — the sample address 20902 37A Avenue was run in the SD35 School Locator and returned no result, and a retry could not be completed because the locator is an interactive form a page fetch cannot submit. A separate middle school in Brookswood is UNVERIFIED."
+            "t": "Catchments are address-based and not verified for any Brookswood address — the sample address 20902 37A Avenue was run in the SD35 School Locator and returned no result, and a retry could not be completed because the locator is an interactive form a page fetch cannot submit. A separate middle school in Brookswood is not verified."
           }
         ],
         [
@@ -1127,18 +1124,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Brookswood Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Brookswood Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -1157,22 +1154,22 @@
         ],
         [
           {
-            "t": "ALR block (where ALR ground exists — parcel status in Brookswood is parcel-specific and UNVERIFIED here): subdivision within the ALR requires Agricultural Land Commission approval; ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)). Caps: principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha). Check a parcel in GeoSource / on the ALC maps."
+            "t": "ALR block (where ALR ground exists — parcel status in Brookswood is parcel-specific and not verified here): subdivision within the ALR requires Agricultural Land Commission approval; ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)). Caps: principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha). Check a parcel in GeoSource / on the ALC maps."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Brookswood Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Brookswood Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -1181,12 +1178,12 @@
         ],
         [
           {
-            "t": "Zoning minimums, not averages, frame Brookswood lots (Township council report, June 10, 2024). Section 110.1 of Bylaw 2500 runs SR-3 at a 1,765 m² minimum up to SR-2 at 8,094 m² — a sub-area average lot size on an official source is UNVERIFIED, and a lot's subdivision story starts from its zone minimum, not from a neighbourhood average."
+            "t": "Zoning minimums, not averages, frame Brookswood lots (Township council report, June 10, 2024). Section 110.1 of Bylaw 2500 runs SR-3 at a 1,765 m² minimum up to SR-2 at 8,094 m² — a sub-area average lot size on an official source is not verified, and a lot's subdivision story starts from its zone minimum, not from a neighbourhood average."
           }
         ],
         [
           {
-            "t": "The school locator cannot place the secondary school's own address (Nov 1, 2026). The SD35 School Locator returned no result for 20902 37A Avenue — Brookswood Secondary's own address — because the address falls in a gap between the locator's listed ranges for 37A Avenue. A Brookswood school claim made without a locator run for the exact address is a guess."
+            "t": "The school locator cannot place the secondary school's own address (Nov 1, 2026). A Brookswood school claim made without a locator run for the exact address is a guess."
           }
         ],
         [
@@ -1195,142 +1192,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Brookswood Langley",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Brookswood Langley"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "tol.ca · brookswoodfernridge community plan adopted.aspx",
-            "h": "https://www.tol.ca/en/news/brookswoodfernridge-community-plan-adopted.aspx"
+            "h": "https://www.tol.ca/en/news/brookswoodfernridge-community-plan-adopted.aspx",
+            "t": "tol.ca · brookswoodfernridge community plan adopted.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · BF NP Commercial Market Demand Study Preliminary",
-            "h": "https://www.tol.ca/en/the-township/resources/plans-reports-strategies/Community-Neighbourhood-Plans/Neighbourhood/BF-NP-Commercial-Market-Demand-Study-Preliminary.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/plans-reports-strategies/Community-Neighbourhood-Plans/Neighbourhood/BF-NP-Commercial-Market-Demand-Study-Preliminary.pdf",
+            "t": "tol.ca · BF NP Commercial Market Demand Study Preliminary"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "translink.ca · schedule",
-            "h": "https://www.translink.ca/schedules-and-maps/stop/58717/schedule"
+            "h": "https://www.translink.ca/schedules-and-maps/stop/58717/schedule",
+            "t": "translink.ca · schedule"
           }
         ],
         [
           {
-            "t": "tol.ca · george preston recreation centre.aspx",
-            "h": "https://www.tol.ca/en/parks-recreation/george-preston-recreation-centre.aspx"
+            "h": "https://www.tol.ca/en/parks-recreation/george-preston-recreation-centre.aspx",
+            "t": "tol.ca · george preston recreation centre.aspx"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · langley memorial hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital",
+            "t": "fraserhealth.ca · langley memorial hospital"
           }
         ],
         [
           {
-            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf",
+            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio"
           }
         ],
         [
           {
-            "t": "foxridgehomesbc.com · brookswood estates",
-            "h": "https://www.foxridgehomesbc.com/communities/brookswood-estates/"
+            "h": "https://www.foxridgehomesbc.com/communities/brookswood-estates/",
+            "t": "foxridgehomesbc.com · brookswood estates"
           }
         ],
         [
           {
-            "t": "tol.ca · development applications.aspx",
-            "h": "https://www.tol.ca/en/building-development/development-applications.aspx"
+            "h": "https://www.tol.ca/en/building-development/development-applications.aspx",
+            "t": "tol.ca · development applications.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · small scale multi unit housing.aspx",
-            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx"
+            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx",
+            "t": "tol.ca · small scale multi unit housing.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · subdivision.aspx",
-            "h": "https://www.tol.ca/en/building-development/subdivision.aspx"
+            "h": "https://www.tol.ca/en/building-development/subdivision.aspx",
+            "t": "tol.ca · subdivision.aspx"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · rent increases for manufactured homes",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/manufactured-homes/rent-increases-for-manufactured-homes",
+            "t": "www2.gov.bc.ca · rent increases for manufactured homes"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Brookswood",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Brookswood"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -1344,12 +1341,12 @@
         ],
         [
           {
-            "t": "Brookswood Estates, by Foxridge Homes — a detached single-family developer project named in the research from a developer source; the developer page states no civic address, so its civic address is UNVERIFIED."
+            "t": "Brookswood Estates, by Foxridge Homes — a detached single-family developer project named from a developer source; the developer page states no civic address, so its civic address is not verified."
           }
         ],
         [
           {
-            "t": "Lot character — ONLY: zoning named in Township notices for the area includes Suburban Residential SR-1, SR-2 and SR-3 and Rural Zone RU-2; under Bylaw 2500 s.110.1, SR-1 minimum lot area is 3,716 m², SR-2 is 8,094 m² and SR-3 is 1,765 m². RU-2 minimums are UNVERIFIED from a readable bylaw section, and a sub-area average lot size is UNVERIFIED."
+            "t": "Lot character — ONLY: zoning named in Township notices for the area includes Suburban Residential SR-1, SR-2 and SR-3 and Rural Zone RU-2; under Bylaw 2500 s.110.1, SR-1 minimum lot area is 3,716 m², SR-2 is 8,094 m² and SR-3 is 1,765 m². RU-2 minimums are not verified from a readable bylaw section, and a sub-area average lot size is not verified."
           }
         ],
         [
@@ -1358,22 +1355,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Brookswood",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Brookswood"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "Catchments: UNVERIFIED — the sample address 20902 37A Avenue was run in the SD35 School Locator and returned no result."
+            "t": "Catchments: Not verified — the sample address 20902 37A Avenue was run in the SD35 School Locator and returned no result."
           }
         ],
         [
@@ -1387,18 +1384,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Brookswood",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Brookswood"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -1411,18 +1408,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Brookswood",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Brookswood"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -1445,374 +1442,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
+    },
+    {
       "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "list",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "tn",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Brookswood"
     },
     {
-      "t": "h",
-      "level": 3,
-      "text": "Sources for the land notes on Brookswood",
       "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "list",
       "items": [
         [
           {
-            "t": "tol.ca · brookswoodfernridge community plan adopted.aspx",
-            "h": "https://www.tol.ca/en/news/brookswoodfernridge-community-plan-adopted.aspx"
+            "h": "https://www.tol.ca/en/news/brookswoodfernridge-community-plan-adopted.aspx",
+            "t": "tol.ca · brookswoodfernridge community plan adopted.aspx"
           }
         ],
         [
           {
-            "t": "jaredgibbons.ca · brookswood",
-            "h": "https://jaredgibbons.ca/brookswood.html"
+            "h": "https://jaredgibbons.ca/brookswood.html",
+            "t": "jaredgibbons.ca · brookswood"
           }
         ],
         [
           {
-            "t": "tol.ca · BF NP Commercial Market Demand Study Preliminary",
-            "h": "https://www.tol.ca/en/the-township/resources/plans-reports-strategies/Community-Neighbourhood-Plans/Neighbourhood/BF-NP-Commercial-Market-Demand-Study-Preliminary.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/plans-reports-strategies/Community-Neighbourhood-Plans/Neighbourhood/BF-NP-Commercial-Market-Demand-Study-Preliminary.pdf",
+            "t": "tol.ca · BF NP Commercial Market Demand Study Preliminary"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "translink.ca · schedule",
-            "h": "https://www.translink.ca/schedules-and-maps/stop/58717/schedule"
+            "h": "https://www.translink.ca/schedules-and-maps/stop/58717/schedule",
+            "t": "translink.ca · schedule"
           }
         ],
         [
           {
-            "t": "foxridgehomesbc.com · brookswood estates",
-            "h": "https://www.foxridgehomesbc.com/community/brookswood-estates/"
+            "h": "https://www.foxridgehomesbc.com/community/brookswood-estates/",
+            "t": "foxridgehomesbc.com · brookswood estates"
           }
         ],
         [
           {
-            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf",
+            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio"
           }
         ],
         [
           {
-            "t": "tol.ca · zoning bylaw.aspx",
-            "h": "https://www.tol.ca/en/building-development/zoning-bylaw.aspx"
+            "h": "https://www.tol.ca/en/building-development/zoning-bylaw.aspx",
+            "t": "tol.ca · zoning bylaw.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · small scale multi unit housing.aspx",
-            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx"
+            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx",
+            "t": "tol.ca · small scale multi unit housing.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · Section 400 Residential (R, MH, FH and CRE) Zone",
-            "h": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf"
+            "h": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf",
+            "t": "tol.ca · Section 400 Residential (R, MH, FH and CRE) Zone"
           }
         ],
         [
           {
-            "t": "tol.ca · subdivision.aspx",
-            "h": "https://www.tol.ca/en/building-development/subdivision.aspx"
+            "h": "https://www.tol.ca/en/building-development/subdivision.aspx",
+            "t": "tol.ca · subdivision.aspx"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "tol.ca · development applications.aspx",
-            "h": "https://www.tol.ca/en/building-development/development-applications.aspx"
+            "h": "https://www.tol.ca/en/building-development/development-applications.aspx",
+            "t": "tol.ca · development applications.aspx"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "What's nearby Brookswood",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Nearest SkyTrain station by name: King George Station (Expo Line, Surrey), the Expo Line terminus on TransLink's SkyTrain page; no station is in Langley."
-          }
-        ],
-        [
-          {
-            "t": "Nearest bus exchange: Langley Centre, terminus named on TransLink timetables for routes 531, 561, 563."
-          }
-        ],
-        [
-          {
-            "t": "Route 531 White Rock Centre / Willowbrook, TransLink: via 200 Street and Langley Centre."
-          }
-        ]
-      ],
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Brookswood Park: Township page names its spray park."
-          }
-        ],
-        [
-          {
-            "t": "Brookswood Skateboard Park: Township page names its BMX track."
-          }
-        ],
-        [
-          {
-            "t": "Noel Booth Community Park: Township project page for its field/trail/bridge upgrades."
-          }
-        ],
-        [
-          {
-            "t": "George Preston Recreation Centre, 20699 42 Avenue, in Brookswood: ice arena, main hall, Langley Curling Centre."
-          }
-        ],
-        [
-          {
-            "t": "Brookswood Library (Fraser Valley Regional Library), 20045 40 Avenue."
-          }
-        ]
-      ],
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Noel Booth Elementary, K-7, SD35, 20202 35 Ave; catchment not confirmed."
-          }
-        ],
-        [
-          {
-            "t": "Belmont Elementary, K-7, SD35, 20390 40 Ave; catchment not confirmed."
-          }
-        ],
-        [
-          {
-            "t": "Brookswood Secondary, 8-12, SD35, 20902 37a Ave; catchment not confirmed."
-          }
-        ],
-        [
-          {
-            "t": "Alice Brown Elementary, K-7, SD35, 20011 44 Ave; catchment not confirmed."
-          }
-        ],
-        [
-          {
-            "t": "Glenwood Elementary, K-7, SD35, 20785 24 Ave; catchment not confirmed."
-          }
-        ]
-      ],
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Buy-Low Foods (grocery), 4121 200 St."
-          }
-        ]
-      ],
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Walk to Noel Booth Elementary: measured 1.88 km, over the 1.5 km walk cap; no walk time quoted."
-          }
-        ]
-      ],
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "translink.ca · skytrain",
-            "h": "https://www.translink.ca/schedules-and-maps/skytrain/?page=1"
-          }
-        ],
-        [
-          {
-            "t": "infomaps.translink.ca · tt561",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt561.pdf"
-          }
-        ],
-        [
-          {
-            "t": "infomaps.translink.ca · tt531",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt531.pdf"
-          }
-        ],
-        [
-          {
-            "t": "infomaps.translink.ca · tt563",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt563.pdf"
-          }
-        ],
-        [
-          {
-            "t": "tol.ca · enjoy summer in the township of langley.aspx",
-            "h": "https://www.tol.ca/en/news/enjoy-summer-in-the-township-of-langley.aspx"
-          }
-        ],
-        [
-          {
-            "t": "tol.ca · noel booth community park.aspx",
-            "h": "https://www.tol.ca/en/building-development/noel-booth-community-park.aspx"
-          }
-        ],
-        [
-          {
-            "t": "tol.ca · george preston recreation centre.aspx",
-            "h": "https://www.tol.ca/en/parks-recreation/george-preston-recreation-centre.aspx"
-          }
-        ],
-        [
-          {
-            "t": "fvrl.bc.ca · locations",
-            "h": "https://www.fvrl.bc.ca/locations?combine=&municipality%5B237%5D=237&view=grid"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/035"
-          }
-        ],
-        [
-          {
-            "t": "buy-low.com",
-            "h": "https://buy-low.com/"
-          }
-        ]
-      ],
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Mobile and manufactured homes in Brookswood Guide",
       "gen": "mh",
-      "pos": "end"
-    },
-    {
+      "level": 2,
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The parks and communities",
-      "gen": "mh",
-      "pos": "end"
+      "text": "Mobile and manufactured homes in Brookswood Guide"
     },
     {
-      "t": "list",
+      "gen": "mh",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The parks and communities"
+    },
+    {
+      "gen": "mh",
       "items": [
         [
           {
@@ -1825,18 +1590,18 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Streets, schools and getting around Brookswood Guide",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Brookswood Guide"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
@@ -1874,18 +1639,18 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Good to know about Brookswood Guide",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Brookswood Guide"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
@@ -1893,196 +1658,406 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "mh",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules for buying a home in a park (the pad tenancy, park-owner consent, pad-rent caps, the Manufactured Home Registry and park closures) are explained once, with sources, on the page linked below.",
-      "gen": "mh",
-      "pos": "end"
+      "text": "The BC rules for buying a home in a park (the pad tenancy, park-owner consent, pad-rent caps, the Manufactured Home Registry and park closures) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
-            "t": "BC mobile home buying rules",
-            "h": "/bc-mobile-home-buying-rules.html"
+            "h": "/bc-mobile-home-buying-rules.html",
+            "t": "BC mobile home buying rules"
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Sources for the mobile-home notes on Brookswood Guide",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the mobile-home notes on Brookswood Guide"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
-            "t": "tol.ca · brookswoodfernridge community plan adopted.aspx",
-            "h": "https://www.tol.ca/en/news/brookswoodfernridge-community-plan-adopted.aspx"
+            "h": "https://www.tol.ca/en/news/brookswoodfernridge-community-plan-adopted.aspx",
+            "t": "tol.ca · brookswoodfernridge community plan adopted.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · BF NP Commercial Market Demand Study Preliminary",
-            "h": "https://www.tol.ca/en/the-township/resources/plans-reports-strategies/Community-Neighbourhood-Plans/Neighbourhood/BF-NP-Commercial-Market-Demand-Study-Preliminary.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/plans-reports-strategies/Community-Neighbourhood-Plans/Neighbourhood/BF-NP-Commercial-Market-Demand-Study-Preliminary.pdf",
+            "t": "tol.ca · BF NP Commercial Market Demand Study Preliminary"
           }
         ],
         [
           {
-            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio",
-            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf"
+            "h": "https://www.tol.ca/en/the-township/resources/social-sustainability/housing/TOL-Council-Report---Provincial-Housing-Legislation,-June-10,-2024.pdf",
+            "t": "tol.ca · TOL Council Report Provincial Housing Legislatio"
           }
         ],
         [
           {
-            "t": "sd35.bc.ca · school locator",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "sd35.bc.ca · school locator"
           }
         ],
         [
           {
-            "t": "translink.ca · schedule",
-            "h": "https://www.translink.ca/schedules-and-maps/stop/58717/schedule"
+            "h": "https://www.translink.ca/schedules-and-maps/stop/58717/schedule",
+            "t": "translink.ca · schedule"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · langley memorial hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital",
+            "t": "fraserhealth.ca · langley memorial hospital"
           }
         ],
         [
           {
-            "t": "tol.ca · property taxes.aspx",
-            "h": "https://www.tol.ca/en/services/property-taxes.aspx"
+            "h": "https://www.tol.ca/en/services/property-taxes.aspx",
+            "t": "tol.ca · property taxes.aspx"
           }
         ],
         [
           {
-            "t": "tol.ca · development applications.aspx",
-            "h": "https://www.tol.ca/en/building-development/development-applications.aspx"
+            "h": "https://www.tol.ca/en/building-development/development-applications.aspx",
+            "t": "tol.ca · development applications.aspx"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · newly built home exemption",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption",
+            "t": "www2.gov.bc.ca · newly built home exemption"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "tol.ca · small scale multi unit housing.aspx",
-            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx"
+            "h": "https://www.tol.ca/en/the-township/small-scale-multi-unit-housing.aspx",
+            "t": "tol.ca · small scale multi unit housing.aspx"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby Brookswood"
+    },
+    {
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "t": "Nearest SkyTrain station by name: King George Station (Expo Line, Surrey), the Expo Line terminus on TransLink's SkyTrain page; no station is in Langley."
+          }
+        ],
+        [
+          {
+            "t": "Nearest bus exchange: Langley Centre, terminus named on TransLink timetables for routes 531, 561, 563."
+          }
+        ],
+        [
+          {
+            "t": "Route 531 White Rock Centre / Willowbrook, TransLink: via 200 Street and Langley Centre."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "t": "Brookswood Park: Township page names its spray park."
+          }
+        ],
+        [
+          {
+            "t": "Brookswood Skateboard Park: Township page names its BMX track."
+          }
+        ],
+        [
+          {
+            "t": "Noel Booth Community Park: Township project page for its field/trail/bridge upgrades."
+          }
+        ],
+        [
+          {
+            "t": "George Preston Recreation Centre, 20699 42 Avenue, in Brookswood: ice arena, main hall, Langley Curling Centre."
+          }
+        ],
+        [
+          {
+            "t": "Brookswood Library (Fraser Valley Regional Library), 20045 40 Avenue."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "t": "Noel Booth Elementary, K-7, SD35, 20202 35 Ave; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Belmont Elementary, K-7, SD35, 20390 40 Ave; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Brookswood Secondary, 8-12, SD35, 20902 37a Ave; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Alice Brown Elementary, K-7, SD35, 20011 44 Ave; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Glenwood Elementary, K-7, SD35, 20785 24 Ave; catchment not confirmed."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "t": "Buy-Low Foods (grocery), 4121 200 St."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "t": "Walk to Noel Booth Elementary: measured 1.88 km, over the 1.5 km walk cap; no walk time quoted."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://www.translink.ca/schedules-and-maps/skytrain/?page=1",
+            "t": "translink.ca · skytrain"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt561.pdf",
+            "t": "infomaps.translink.ca · tt561"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt531.pdf",
+            "t": "infomaps.translink.ca · tt531"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt563.pdf",
+            "t": "infomaps.translink.ca · tt563"
+          }
+        ],
+        [
+          {
+            "h": "https://www.tol.ca/en/news/enjoy-summer-in-the-township-of-langley.aspx",
+            "t": "tol.ca · enjoy summer in the township of langley.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://www.tol.ca/en/building-development/noel-booth-community-park.aspx",
+            "t": "tol.ca · noel booth community park.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://www.tol.ca/en/parks-recreation/george-preston-recreation-centre.aspx",
+            "t": "tol.ca · george preston recreation centre.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations?combine=&municipality%5B237%5D=237&view=grid",
+            "t": "fvrl.bc.ca · locations"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/035",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://buy-low.com/",
+            "t": "buy-low.com"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Are there more or fewer homes for sale in Brookswood than in June?",
-      "a": "In Brookswood, listings of houses rose from 86 in June to 98 in September (+14.0%); condos and townhomes was 0 in June and 2 in September, too few (under 3) to call a rise or fall.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How big is Brookswood compared with the rest of Langley?",
-      "a": "In September 2026, Brookswood held 21.8% of the 449 houses listed in Langley and 0.3% of the 699 condos and townhomes listed in Langley.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How many homes sold in Brookswood from June to September 2026?",
-      "a": "32 houses and 0 condos and townhomes sold in Brookswood over those 4 months.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How do I find out which school serves an address in Brookswood?",
-      "a": "School catchments are set by address, so use the school district's catchment locator with the exact address. Catchment lines change, so check before you write an offer.",
-      "gen": "bank-faq"
-    },
-    {
-      "q": "Who can help me buy or sell in Brookswood?",
-      "a": "Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, works across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361 or use the contact form on this site.",
-      "gen": "bank-faq"
-    },
-    {
+      "a": "No. It is Cedar Creek Manufactured Home Park, 3031 200 Street, designated Manufactured Home Park in the Brookswood-Fernridge Community Plan; listings record the tenure as leasehold not prepaid-non-strata. You buy the home and rent the pad — no strata, no Form B.",
       "gen": "tn",
-      "q": "Cedar Creek Estates shows up in condo searches — is it a condo?",
-      "a": "No. It is Cedar Creek Manufactured Home Park, 3031 200 Street, designated Manufactured Home Park in the Brookswood-Fernridge Community Plan; listings record the tenure as leasehold not prepaid-non-strata. You buy the home and rent the pad — no strata, no Form B."
+      "q": "Cedar Creek Estates shows up in condo searches — is it a condo?"
     },
     {
+      "a": "No — the November 24, 2022 voiding applies to strata rental-restriction bylaws. Park rules sit under the Manufactured Home Park Tenancy Act and the park's own rules and tenancy agreement; a park's 55+ and no-rentals lines in listings are listing-stated park rules to confirm with the park, not void strata bylaws.",
       "gen": "tn",
-      "q": "The parks say 55+ and no rentals. Are those rules void like strata rules?",
-      "a": "No — the November 24, 2022 voiding applies to strata rental-restriction bylaws. Park rules sit under the Manufactured Home Park Tenancy Act and the park's own rules and tenancy agreement; a park's 55+ and no-rentals lines in listings are listing-stated park rules to confirm with the park, not void strata bylaws."
+      "q": "The parks say 55+ and no rentals. Are those rules void like strata rules?"
     },
     {
+      "a": "No Brookswood-only median is published; the combined Langley medians (detached $1,345,000; attached $611,000) blend in the City of Langley and the other Township sub-areas and are not Brookswood figures.",
       "gen": "tn",
-      "q": "How did Brookswood sell in September 2026?",
-      "a": "No Brookswood-only median is published; the combined Langley medians (detached $1,345,000; attached $611,000) blend in the City of Langley and the other Township sub-areas and are not Brookswood figures."
+      "q": "How did Brookswood sell in September 2026?"
     },
     {
+      "a": "No. Township SSMUH under Bylaw 6020 (adopted November 18, 2024) allows 3 units on eligible lots of 280 m² or smaller and 4 units on larger eligible lots up to 4,050 m², and there is no 6-plex tier in the Township.",
       "gen": "tn",
-      "q": "Can I put six units on a Brookswood house lot?",
-      "a": "No. Township SSMUH under Bylaw 6020 (adopted November 18, 2024) allows 3 units on eligible lots of 280 m² or smaller and 4 units on larger eligible lots up to 4,050 m², and there is no 6-plex tier in the Township."
+      "q": "Can I put six units on a Brookswood house lot?"
     },
     {
+      "a": "Bromley is not — it is a collection of 26 townhomes by Leone Homes at 4558 208 Street, selling as a presale with Phase 1 completion estimated Summer 2027.",
       "gen": "tn",
-      "q": "Is Bromley a condo building, and is Brookswood Mills one?",
-      "a": "Bromley is not — it is a collection of 26 townhomes by Leone Homes at 4558 208 Street, selling as a presale with Phase 1 completion estimated Summer 2027."
+      "q": "Is Bromley a condo building, and is Brookswood Mills one?"
     },
     {
+      "a": "No. It is Cedar Creek Manufactured Home Park, 3031 200 Street, designated Manufactured Home Park in the Brookswood-Fernridge Community Plan; listings record the tenure as leasehold not prepaid-non-strata. You buy the home and rent the pad — no strata, no Form B.",
       "gen": "tn",
-      "q": "Cedar Creek Estates shows up in condo searches — is it a condo?",
-      "a": "No. It is Cedar Creek Manufactured Home Park, 3031 200 Street, designated Manufactured Home Park in the Brookswood-Fernridge Community Plan; listings record the tenure as leasehold not prepaid-non-strata. You buy the home and rent the pad — no strata, no Form B."
+      "q": "Cedar Creek Estates shows up in condo searches — is it a condo?"
     },
     {
+      "a": "No — the November 24, 2022 voiding applies to strata rental-restriction bylaws. Park rules sit under the Manufactured Home Park Tenancy Act and the park's own rules and tenancy agreement; a park's 55+ and no-rentals lines in listings (Fernridge Park's listing states pets and rentals are not permitted, with park manager approval required) are listing-stated park rules to confirm with the park, not void strata bylaws.",
       "gen": "tn",
-      "q": "The parks say 55+ and no rentals. Are those rules void like strata rules?",
-      "a": "No — the November 24, 2022 voiding applies to strata rental-restriction bylaws. Park rules sit under the Manufactured Home Park Tenancy Act and the park's own rules and tenancy agreement; a park's 55+ and no-rentals lines in listings (Fernridge Park's listing states pets and rentals are not permitted, with park manager approval required) are listing-stated park rules to confirm with the park, not void strata bylaws."
+      "q": "The parks say 55+ and no rentals. Are those rules void like strata rules?"
     },
     {
+      "a": "No. Township SSMUH under Bylaw 6020 (adopted November 18, 2024) allows 3 units on lots up to 280 m² and 4 units on lots under 4,050 m², and there is no 6-plex tier in the Township — a claim of six as-of-right units on a Brookswood lot is wrong, and lots over 4,050 m² are ineligible for the SSMUH tiers at all.",
       "gen": "tn",
-      "q": "Can I put six units on a Brookswood house lot?",
-      "a": "No. Township SSMUH under Bylaw 6020 (adopted November 18, 2024) allows 3 units on lots up to 280 m² and 4 units on lots under 4,050 m², and there is no 6-plex tier in the Township — a claim of six as-of-right units on a Brookswood lot is wrong, and lots over 4,050 m² are ineligible for the SSMUH tiers at all."
+      "q": "Can I put six units on a Brookswood house lot?"
     },
     {
+      "a": "In a pad-rental park, no: you own the home (a chattel) and rent the pad — the park owns the land, and your right to the site is the assigned pad tenancy under the MHPTA.",
       "gen": "mh",
-      "q": "Do I own the land in a Brookswood park?",
-      "a": "In a pad-rental park, no: you own the home (a chattel) and rent the pad — the park owns the land, and your right to the site is the assigned pad tenancy under the MHPTA."
+      "q": "Do I own the land in a Brookswood park?"
     },
     {
+      "a": "Confirm its status and rules with the park, in writing, before treating it as stock.",
       "gen": "mh",
-      "q": "What about Cedar Lane Park at 2305 200 St — is it a third option?",
-      "a": "Confirm its status and rules with the park, in writing, before treating it as stock."
+      "q": "What about Cedar Lane Park at 2305 200 St — is it a third option?"
     }
+  ],
+  "slug": "brookswood-guide",
+  "status": "generated",
+  "suppress": [
+    "Related guides"
   ],
   "suppress_gen": [
     "Related guides"
   ],
-  "suppress": [
-    "Related guides"
-  ]
+  "updated": "2026-11-01"
 }

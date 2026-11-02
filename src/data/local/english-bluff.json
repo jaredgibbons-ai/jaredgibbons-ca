@@ -1,74 +1,27 @@
 {
-  "status": "draft",
-  "slug": "english-bluff",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: deltasd.bc.ca",
-            "h": "https://www.deltasd.bc.ca/schools/school-locator/"
-          }
-        ],
-        [
-          {
-            "t": "Source: hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com",
-            "h": "https://hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com/8917/7677/0068/OCP_2024_web.pdf"
-          }
-        ],
-        [
-          {
-            "t": "Source: delta.ca:443",
-            "h": "https://www.delta.ca:443/building-development/development-planning-approvals/development-considerations"
-          }
-        ],
-        [
-          {
-            "t": "Source: delta.ca (4)",
-            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?page=3"
-          }
-        ],
-        [
-          {
-            "t": "Source: delta.ca (5)",
-            "h": "http://www.delta.ca/building-development/housing-our-future"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "What's nearby English Bluff",
       "gen": "nb",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby English Bluff"
     },
     {
+      "gen": "nb",
+      "pos": "end",
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -96,18 +49,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -130,18 +83,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -159,18 +112,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -178,25 +131,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from English Bluff Elementary, 402 English Bluff Rd",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Fred Gingell Park",
@@ -205,13 +159,13 @@
           "0.5"
         ],
         [
-          "Tsawwassen Library",
+          "Save-On-Foods, 1143 56 St",
           "Drive",
           "6",
           "3.4"
         ],
         [
-          "Save-On-Foods, 1143 56 St",
+          "Tsawwassen Library",
           "Drive",
           "6",
           "3.4"
@@ -223,18 +177,17 @@
           "5.0"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -252,14 +205,82 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf",
+            "t": "infomaps.translink.ca · tt601"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt604.pdf",
+            "t": "infomaps.translink.ca · tt604"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt614.pdf",
+            "t": "infomaps.translink.ca · tt614"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?page=3",
+            "t": "delta.ca · park and amenity search"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/diefenbaker-park",
+            "t": "delta.ca · diefenbaker park"
+          }
+        ],
+        [
+          {
+            "h": "http://www.delta.ca/parks-recreation/sport-recreation/indoor-facilities/south-delta-recreation-centre",
+            "t": "delta.ca · south delta recreation centre"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations/tsawwassen-library",
+            "t": "fvrl.bc.ca · tsawwassen library"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta",
+            "t": "studentsuccess.gov.bc.ca · delta"
+          }
+        ],
+        [
+          {
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/943/store",
+            "t": "saveonfoods.com · store"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -267,77 +288,31 @@
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt601",
-            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf"
+            "t": "Source: hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com",
+            "h": "https://hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com/8917/7677/0068/OCP_2024_web.pdf"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt604",
-            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt604.pdf"
-          }
-        ],
-        [
-          {
-            "t": "infomaps.translink.ca · tt614",
-            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt614.pdf"
-          }
-        ],
-        [
-          {
-            "t": "delta.ca · park and amenity search",
+            "t": "Source: delta.ca (2)",
             "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?page=3"
           }
         ],
         [
           {
-            "t": "delta.ca · diefenbaker park",
-            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/diefenbaker-park"
-          }
-        ],
-        [
-          {
-            "t": "delta.ca · south delta recreation centre",
-            "h": "http://www.delta.ca/parks-recreation/sport-recreation/indoor-facilities/south-delta-recreation-centre"
-          }
-        ],
-        [
-          {
-            "t": "fvrl.bc.ca · tsawwassen library",
-            "h": "https://www.fvrl.bc.ca/locations/tsawwassen-library"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · delta",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta"
-          }
-        ],
-        [
-          {
-            "t": "saveonfoods.com · store",
-            "h": "https://www.saveonfoods.com/sm/planning/rsid/943/store"
+            "t": "Source: delta.ca (3)",
+            "h": "http://www.delta.ca/building-development/housing-our-future"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
     {
-      "q": "Which elementary school is in English Bluff?",
-      "a": "English Bluff Elementary School, 402 English Bluff Road; the SD37 School Locator result for that address pairs it with South Delta Secondary (750 53 St) — confirm the catchment for a specific address in the locator.",
-      "gen": "muse"
-    },
-    {
       "q": "Does the bluff affect building or renovating?",
       "a": "Yes. Development Permit Area SD2 English Bluff (Tsawwassen Escarpment), Category \"b\" in OCP Bylaw No. 8400, addresses mud flows, debris flows, erosion, land slip and subsidence, and development affected by hazardous conditions is subject to conditions set by a suitably qualified Professional Engineer.",
-      "gen": "muse"
-    },
-    {
-      "q": "Who owns the beach below a waterfront house?",
-      "a": "The foreshore below the natural boundary is Crown land, and Delta notes foreshore use is interjurisdictional — upland ownership alone does not grant foreshore use.",
       "gen": "muse"
     },
     {
@@ -349,6 +324,14 @@
       "q": "Can a lot add a suite or coach house?",
       "a": "Delta's Small-Scale Multi-Unit Housing zoning allows up to four units on single-detached and duplex lots, subject to the bylaw and to any slope or streamside permit area on the lot — on this shore, the SD2 hazard conditions are the deciding layer.",
       "gen": "muse"
+    },
+    {
+      "q": "Can Jared show me homes in English Bluff?",
+      "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
+      "gen": "muse-generic"
     }
-  ]
+  ],
+  "slug": "english-bluff",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

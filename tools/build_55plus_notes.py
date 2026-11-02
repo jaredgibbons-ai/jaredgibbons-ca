@@ -6,6 +6,7 @@ Communities whose note found no buyable 55+ stock get no page. Text is the notes
 (listing-level pages that identify a unit are not listed); MLS numbers are stripped. The provincial rules that repeat in every note live once on /bc-55-plus-strata-rules.html.
     python3 -I tools/build_55plus_notes.py        (run after build_gap_pages / build_poco_55plus / build_muse_faq)"""
 import glob, json, os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 NOTES = os.path.join(ROOT, 'docs/research/local-notes-55plus')
 LOCAL = os.path.join(ROOT, 'src/data/local'); PAGES = os.path.join(ROOT, 'src/data/pages')
@@ -36,7 +37,7 @@ NOTE_REF = re.compile(r"\b(?:see|in) (?:[\w' ]{0,40} )?Section [1-5]\b")
 DROP_SENT = re.compile(r"^Sources?:|building entries|base guide|\broundup\b|\bthe (?:note|brief)\b|\b\d[\d,]* (?:attached|detached|active) (?:listings?|sales?)|listings? (?:versus|vs\.?) |\bParagon\b|research file|in this pass|\bcounted (?:here|separately|in the|as)\b|\bhome file\b|FILE STATUS|\bsiblings?\b|\bslugs?\b|\bJerry\b|variants? (?:page|file)|\bvariant\b|adds no new|never absorbed|\bQUEUE\b|missing-areas|the position the|\bthis page (?:adds|counts|documents)|\bagent page\b|\bfiles\b|\bon disk\b|\bagent's\b|\bsources? guide\b|\bsweep\b|\blive (?:guide |site )?pages?\b|\bthe (?:guide )?page.s (?:footer|byline|own)|\bfooter\b|\bbyline\b|wrong (?:email|address)|jared@|jaredgibbons\.ca|contact (?:email|check)|filing position|cross-reference position|conforming|\bprogram\b|home file|stated (?:plainly|openly)|documented once|read first|templates?\b|zealty|zolo|estateblock|soldbycraig|realtor\.ca|this program|source guide|`|batch T\d|related-links|credit(?:s|ing) www|\b\d[\d,]* (?:listings?|sales|solds?|detached|attached)\b|\bfile\b|§|count home|\bslug\b|\bthis file\b|\bthe (?:land|condo|townhome|townhouse) (?:file|note)\b|\broster\b|\d+ active\b|active / \d+ sold|\d+ of the city's \d+ active", re.I)
 
 
-def clean(s):
+def _clean0(s):
     s = re.sub(r'\bfiles (it|this|them|the|each)\b', r'places \1', s)
     s = re.sub(r'\bfiled (it|this|them)\b', r'placed \1', s)
     s = re.sub(r'\s*(?:[,;]|\band\b|\bor\b)?\s*https?://\S+', '', s)
@@ -88,6 +89,12 @@ def parse(path):
 
 
 def bullets(sec, n): return [b for g in sec.get(n, {}).values() for b in g]
+def clean(s):
+    """Shared text cleaner for every notes builder; the research-wording scrub runs last so FAQ and list minimums are counted on the cleaned text."""
+    import scrub_research_wording as SC
+    return SC.scrub(_clean0(s))
+
+
 def split_bold(b):
     m = re.match(r'\*\*(.*?)\*\*\s*(.*)', b)
     return (m.group(1).strip().rstrip('.:'), m.group(2)) if m else (None, b)

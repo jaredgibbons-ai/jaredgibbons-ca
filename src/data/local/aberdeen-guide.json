@@ -1,43 +1,40 @@
 {
-  "status": "generated",
-  "slug": "aberdeen-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "schools",
       "level": 2,
-      "text": "Schools in Aberdeen",
-      "gen": "schools"
-    },
-    {
-      "t": "p",
-      "text": "Aberdeen Elementary (2975 Bradner Rd) is an elementary school in Aberdeen. This is not a complete list of the schools nearby.",
-      "gen": "schools"
-    },
-    {
-      "t": "p",
-      "text": "Living near a school does not mean a place at it. Your child's school comes from the district's catchment boundaries, and those change, so confirm the address with the district before you write an offer.",
-      "gen": "schools"
-    },
-    {
-      "t": "p",
-      "text": "Source: BC Ministry of Education and Child Care school list (2025/26, updated July 2026) and the Province's post-secondary locations list. Neighbourhood placement is from our own area research.",
-      "gen": "schools"
-    },
-    {
       "t": "h",
-      "level": 2,
-      "text": "How Aberdeen compares with the rest of its city",
-      "gen": "snapstats"
+      "text": "Schools in Aberdeen"
     },
     {
+      "gen": "schools",
       "t": "p",
-      "text": "Aberdeen against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Aberdeen Elementary (2975 Bradner Rd) is an elementary school in Aberdeen. This is not a complete list of the schools nearby."
     },
     {
-      "t": "table",
-      "caption": "Aberdeen against the whole city, September 2026",
+      "gen": "schools",
+      "t": "p",
+      "text": "Living near a school does not mean a place at it. Your child's school comes from the district's catchment boundaries, and those change, so confirm the address with the district before you write an offer."
+    },
+    {
+      "gen": "schools",
+      "t": "p",
+      "text": "Source: BC Ministry of Education and Child Care school list (2025/26, updated July 2026) and the Province's post-secondary locations list. Neighbourhood placement is from our own area research."
+    },
+    {
+      "gen": "snapstats",
+      "level": 2,
+      "t": "h",
+      "text": "How Aberdeen compares with the rest of its city"
+    },
+    {
+      "gen": "snapstats",
+      "t": "p",
+      "text": "Aberdeen against its whole city, October 2026: share of listings and sales, sales ratio and rank."
+    },
+    {
+      "caption": "Aberdeen against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -48,178 +45,158 @@
       "rows": [
         [
           "Detached houses",
-          "5.7%",
-          "6.7%",
-          "12% against 10%",
-          "2 of 5"
+          "5.6%",
+          "9.7%",
+          "30% against 18%",
+          "1 of 4"
         ],
         [
           "Condos and townhomes",
-          "1.2%",
-          "0.0%",
-          "— against 10%",
+          "0.7%",
+          "3.4%",
+          "75% against 16%",
           "Under 10 listed"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings fell from 29 in June to 25 in September (−13.8%), and it took 6.0% of the city’s 215 sales over the period; condos and townhomes: listings rose from 5 in June to 7 in September (+40.0%), and it took 1.3% of the city’s 318 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 29 in June to 23 in October (−20.7%), and it took 7.0% of the city’s 287 sales over the period; condos and townhomes: listings fell from 5 in June to 4 in October (−20.0%), and it took 1.7% of the city’s 407 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Aberdeen for detached houses in August (a sellers’ best bet); detached houses in July (a buyers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out Aberdeen for detached houses in August, October (a sellers’ best bet); detached houses in July (a buyers’ best bet)."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Abbotsford real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Abbotsford real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Abbotsford homes for sale",
-            "h": "/abbotsford-homes-for-sale.html"
+            "h": "/abbotsford-homes-for-sale.html",
+            "t": "Abbotsford homes for sale"
           }
         ],
         [
           {
-            "t": "Abbotsford real estate market stats",
-            "h": "/abbotsford-real-estate-market-stats.html"
+            "h": "/abbotsford-real-estate-market-stats.html",
+            "t": "Abbotsford real estate market stats"
           }
         ],
         [
           {
-            "t": "Abbotsford houses for sale",
-            "h": "/abbotsford-houses-for-sale.html"
+            "h": "/abbotsford-houses-for-sale.html",
+            "t": "Abbotsford houses for sale"
           }
         ],
         [
           {
-            "t": "Abbotsford condos for sale",
-            "h": "/abbotsford-condos-for-sale.html"
+            "h": "/abbotsford-condos-for-sale.html",
+            "t": "Abbotsford condos for sale"
           }
         ],
         [
           {
-            "t": "Abbotsford townhomes for sale",
-            "h": "/abbotsford-townhomes-for-sale.html"
+            "h": "/abbotsford-townhomes-for-sale.html",
+            "t": "Abbotsford townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Abbotsford",
-            "h": "/sell-my-house-in-abbotsford.html"
+            "h": "/sell-my-house-in-abbotsford.html",
+            "t": "Sell my house in Abbotsford"
           }
         ],
         [
           {
-            "t": "Schools in Abbotsford",
-            "h": "/schools-in-abbotsford-bc.html"
+            "h": "/schools-in-abbotsford-bc.html",
+            "t": "Schools in Abbotsford"
           }
         ],
         [
           {
-            "t": "Aberdeen homes and market figures",
-            "h": "/aberdeen.html"
+            "h": "/aberdeen.html",
+            "t": "Aberdeen homes and market figures"
           }
         ],
         [
           {
-            "t": "Bradner real estate",
-            "h": "/bradner.html"
+            "h": "/bradner.html",
+            "t": "Bradner real estate"
           }
         ],
         [
           {
-            "t": "Central Abbotsford real estate",
-            "h": "/central-abbotsford.html"
+            "h": "/central-abbotsford.html",
+            "t": "Central Abbotsford real estate"
           }
         ],
         [
           {
-            "t": "Matsqui real estate",
-            "h": "/matsqui.html"
+            "h": "/matsqui.html",
+            "t": "Matsqui real estate"
           }
         ],
         [
           {
-            "t": "Poplar real estate",
-            "h": "/poplar.html"
+            "h": "/poplar.html",
+            "t": "Poplar real estate"
           }
         ],
         [
           {
-            "t": "Sumas Mountain real estate",
-            "h": "/sumas-mountain.html"
+            "h": "/sumas-mountain.html",
+            "t": "Sumas Mountain real estate"
           }
         ],
         [
           {
-            "t": "Sumas Prairie real estate",
-            "h": "/sumas-prairie.html"
+            "h": "/sumas-prairie.html",
+            "t": "Sumas Prairie real estate"
           }
         ],
         [
           {
-            "t": "Abbotsford East real estate",
-            "h": "/abbotsford-east.html"
+            "h": "/abbotsford-east.html",
+            "t": "Abbotsford East real estate"
           }
         ],
         [
           {
-            "t": "Abbotsford West real estate",
-            "h": "/abbotsford-west.html"
+            "h": "/abbotsford-west.html",
+            "t": "Abbotsford West real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: bctransit.com",
-            "h": "https://www.bctransit.com/wp-content/uploads/2026/08/cfv_map_21.pdf"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Lots and land in Aberdeen",
       "gen": "tn",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Lots and land in Aberdeen"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -238,7 +215,7 @@
         ],
         [
           {
-            "t": "ALR vs non-ALR split: the research states rural Aberdeen parcels are in or beside the Agricultural Land Reserve, in words only — no percentage is published, so no split figure is stated. Subdivision, non-farm use and added dwellings on an ALR parcel need both City zoning compliance and, where the ALR Use Regulation requires it, Agricultural Land Commission approval; per-parcel ALR status is UNCONFIRMED until checked."
+            "t": "ALR vs non-ALR split: the research states rural Aberdeen parcels are in or beside the Agricultural Land Reserve, in words only — no percentage is published, so no split figure is stated. Subdivision, non-farm use and added dwellings on an ALR parcel need both City zoning compliance and, where the ALR Use Regulation requires it, Agricultural Land Commission approval; per-parcel ALR status is not confirmed until checked."
           }
         ],
         [
@@ -253,12 +230,12 @@
         ],
         [
           {
-            "t": "Airport overlay on the land itself: Aberdeen sits north/northeast of YXX; land covered by the Abbotsford Airport Zoning Regulations (AZR), SOR/83-253, shown on City drawing M-500, is subject to height limits, and a developer on AZR land must obtain NAV CANADA and Transport Canada approvals before the City issues a building permit. Property-level AZR status for any single lot: UNVERIFIED."
+            "t": "Airport overlay on the land itself: Aberdeen sits north/northeast of YXX; land covered by the Abbotsford Airport Zoning Regulations (AZR), SOR/83-253, shown on City drawing M-500, is subject to height limits, and a developer on AZR land must obtain NAV CANADA and Transport Canada approvals before the City issues a building permit. Property-level AZR status for any single lot: Not verified."
           }
         ],
         [
           {
-            "t": "Floodplain: Zoning Bylaw Schedule E sets floodplain boundaries; the floodplain status of any single Aberdeen lot must be checked for that lot: UNVERIFIED per parcel."
+            "t": "Floodplain: Zoning Bylaw Schedule E sets floodplain boundaries; the floodplain status of any single Aberdeen lot must be checked for that lot: Not verified per parcel."
           }
         ],
         [
@@ -267,22 +244,22 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Aberdeen",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Aberdeen"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "\"Aberdeen\" is both the board sub-area name in the SnapStats FVR September 2026 report and an official City name — profile area 6 in the City's 2020 Demographic Profiles, separate from Bradner – Mt. Lehman (area 1) and West Abbotsford (area 7). Exact boundary roads for the sub-area are not published in text form on a City source: UNVERIFIED."
+            "t": "\"Aberdeen\" is both the board sub-area name in the SnapStats FVR September 2026 report and an official City name — profile area 6 in the City's 2020 Demographic Profiles, separate from Bradner – Mt. Lehman (area 1) and West Abbotsford (area 7). Exact boundary roads for the sub-area are not published in text form on a City source: Not verified."
           }
         ],
         [
@@ -292,7 +269,7 @@
         ],
         [
           {
-            "t": "Main roads and commute: Bradner Road (north–south through the area), Fraser Highway (north edge), Mt. Lehman Road to the west, and Huntingdon Road and King Road to the south toward YXX and the Huntingdon / Sumas border crossing; Highway 1 is reached via the Mt. Lehman Road and Clearbrook Road interchanges to the north — the route west toward Langley, Surrey and Vancouver and east toward Chilliwack. Published official drive-time figures: UNVERIFIED."
+            "t": "Main roads and commute: Bradner Road (north–south through the area), Fraser Highway (north edge), Mt. Lehman Road to the west, and Huntingdon Road and King Road to the south toward YXX and the Huntingdon / Sumas border crossing; Highway 1 is reached via the Mt. Lehman Road and Clearbrook Road interchanges to the north — the route west toward Langley, Surrey and Vancouver and east toward Chilliwack. Published official drive-time figures: Not verified."
           }
         ],
         [
@@ -302,7 +279,7 @@
         ],
         [
           {
-            "t": "Schools: Aberdeen Elementary, 2975 Bradner Road, is the public elementary school physically inside the sub-area (Ministry-listed name/address). Catchment, single-address only: the recorded SD34 locator run for 2975 Bradner Road (the school's own address) returns Aberdeen Elementary → Eugene Reimer Middle → Rick Hansen Secondary; Eugene Reimer Middle's family-of-schools page lists Aberdeen Elementary among its feeder schools and names Rick Hansen Secondary (Grades 9–12) as that family's secondary school. Ministry-listed addresses for the chain: Eugene Reimer Middle School, 3433 Firhill Dr (in Abbotsford West, recorded only as the middle school's address, not as an Aberdeen sample); Rick Hansen Secondary, 31150 Blueridge Dr. Catchments for any other Aberdeen address are UNVERIFIED — run the exact address. Catchment areas are set under SD34 Policy 18."
+            "t": "Schools: Aberdeen Elementary, 2975 Bradner Road, is the public elementary school physically inside the sub-area (Ministry-listed name/address). Catchment, single-address only: the recorded SD34 locator run for 2975 Bradner Road (the school's own address) returns Aberdeen Elementary → Eugene Reimer Middle → Rick Hansen Secondary; Eugene Reimer Middle's family-of-schools page lists Aberdeen Elementary among its feeder schools and names Rick Hansen Secondary (Grades 9–12) as that family's secondary school. Ministry-listed addresses for the chain: Eugene Reimer Middle School, 3433 Firhill Dr (in Abbotsford West, recorded only as the middle school's address, not as an Aberdeen sample); Rick Hansen Secondary, 31150 Blueridge Dr. Catchments for any other Aberdeen address are not verified — run the exact address. Catchment areas are set under SD34 Policy 18."
           }
         ],
         [
@@ -311,18 +288,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Aberdeen",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Aberdeen"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -346,7 +323,7 @@
         ],
         [
           {
-            "t": "Airport Zoning Regulations: where a lot is inside the AZR area on City drawing M-500, building height may not exceed the approach, outer or transitional surfaces, and NAV CANADA and Transport Canada approvals are required before a City building permit — check before planning a tall shop or barn. Per-lot status: UNVERIFIED."
+            "t": "Airport Zoning Regulations: where a lot is inside the AZR area on City drawing M-500, building height may not exceed the approach, outer or transitional surfaces, and NAV CANADA and Transport Canada approvals are required before a City building permit — check before planning a tall shop or barn. Per-lot status: Not verified."
           }
         ],
         [
@@ -360,18 +337,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Aberdeen",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Aberdeen"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -394,142 +371,142 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Aberdeen",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Aberdeen"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "abbotsford.ca · 2020 McKee Profile   spreads final",
-            "h": "https://www.abbotsford.ca/sites/default/files/2021-02/2020%20McKee%20Profile%20-%20spreads%20final.pdf"
+            "h": "https://www.abbotsford.ca/sites/default/files/2021-02/2020%20McKee%20Profile%20-%20spreads%20final.pdf",
+            "t": "abbotsford.ca · 2020 McKee Profile spreads final"
           }
         ],
         [
           {
-            "t": "aberdeen.abbyschools.ca",
-            "h": "https://aberdeen.abbyschools.ca/"
+            "h": "https://aberdeen.abbyschools.ca/",
+            "t": "aberdeen.abbyschools.ca"
           }
         ],
         [
           {
-            "t": "jaredgibbons.ca · aberdeen",
-            "h": "https://jaredgibbons.ca/aberdeen.html"
+            "h": "https://jaredgibbons.ca/aberdeen.html",
+            "t": "jaredgibbons.ca · aberdeen"
           }
         ],
         [
           {
-            "t": "bctransit.com · cfv map 21",
-            "h": "https://www.bctransit.com/wp-content/uploads/2026/08/cfv_map_21.pdf"
+            "h": "https://www.bctransit.com/wp-content/uploads/2026/08/cfv_map_21.pdf",
+            "t": "bctransit.com · cfv map 21"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · Development Guidlines for YXX 2020",
-            "h": "https://www.abbotsford.ca/sites/default/files/docs/business-development/Development%20Guidlines%20for%20YXX%202020.pdf"
+            "h": "https://www.abbotsford.ca/sites/default/files/docs/business-development/Development%20Guidlines%20for%20YXX%202020.pdf",
+            "t": "abbotsford.ca · Development Guidlines for YXX 2020"
           }
         ],
         [
           {
-            "t": "abbyschools.ca · policy 18 school catchment areas",
-            "h": "https://www.abbyschools.ca/policy-18-school-catchment-areas"
+            "h": "https://www.abbyschools.ca/policy-18-school-catchment-areas",
+            "t": "abbyschools.ca · policy 18 school catchment areas"
           }
         ],
         [
           {
-            "t": "eugenereimer.abbyschools.ca · eugenereimer",
-            "h": "https://eugenereimer.abbyschools.ca/ourschool/ermsfamilyofschools/eugenereimer"
+            "h": "https://eugenereimer.abbyschools.ca/ourschool/ermsfamilyofschools/eugenereimer",
+            "t": "eugenereimer.abbyschools.ca · eugenereimer"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · parks playgrounds",
-            "h": "https://www.abbotsford.ca/parks-playgrounds"
+            "h": "https://www.abbotsford.ca/parks-playgrounds",
+            "t": "abbotsford.ca · parks playgrounds"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · abbotsford regional hospital and cancer centre",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Abbotsford/abbotsford-regional-hospital-and-cancer-centre"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Abbotsford/abbotsford-regional-hospital-and-cancer-centre",
+            "t": "fraserhealth.ca · abbotsford regional hospital and cancer centre"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · AgRefresh St3   Parcel Size",
-            "h": "https://www.abbotsford.ca/sites/default/files/2021-10/AgRefresh%20St3%20-%20Parcel%20Size.pdf"
+            "h": "https://www.abbotsford.ca/sites/default/files/2021-10/AgRefresh%20St3%20-%20Parcel%20Size.pdf",
+            "t": "abbotsford.ca · AgRefresh St3 Parcel Size"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · webmap",
-            "h": "https://www.abbotsford.ca/city-services/mapping-data-analytics/webmap"
+            "h": "https://www.abbotsford.ca/city-services/mapping-data-analytics/webmap",
+            "t": "abbotsford.ca · webmap"
           }
         ],
         [
           {
-            "t": "readkong.com · built 27640 lantern avenue aldergrove abbotsford",
-            "h": "https://www.readkong.com/page/built-27640-lantern-avenue-aldergrove-abbotsford-8573656"
+            "h": "https://www.readkong.com/page/built-27640-lantern-avenue-aldergrove-abbotsford-8573656",
+            "t": "readkong.com · built 27640 lantern avenue aldergrove abbotsford"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 2,
-      "text": "Acreage and rural land in Aberdeen",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "The acreage is the parcel stock itself, trading whole and fee-simple.",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The ground in Aberdeen",
-      "gen": "acre",
-      "pos": "end"
+      "text": "Acreage and rural land in Aberdeen"
     },
     {
-      "t": "list",
+      "gen": "acre",
+      "pos": "end",
+      "t": "p",
+      "text": "The acreage is the parcel stock itself, trading whole and fee-simple."
+    },
+    {
+      "gen": "acre",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The ground in Aberdeen"
+    },
+    {
+      "gen": "acre",
       "items": [
         [
           {
@@ -537,18 +514,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Streets, schools and getting around Aberdeen",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Aberdeen"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -561,18 +538,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Local rules that affect acreage buyers in Aberdeen",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect acreage buyers in Aberdeen"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -590,18 +567,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Good to know about Aberdeen",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Aberdeen"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -629,136 +606,136 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "acre",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below.",
-      "gen": "acre",
-      "pos": "end"
+      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "BC acreage buying rules",
-            "h": "/bc-acreage-buying-rules.html"
+            "h": "/bc-acreage-buying-rules.html",
+            "t": "BC acreage buying rules"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Sources for the acreage notes on Aberdeen",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the acreage notes on Aberdeen"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "abbotsford.ca · 2020 McKee Profile   spreads final",
-            "h": "https://www.abbotsford.ca/sites/default/files/2021-02/2020%20McKee%20Profile%20-%20spreads%20final.pdf"
+            "h": "https://www.abbotsford.ca/sites/default/files/2021-02/2020%20McKee%20Profile%20-%20spreads%20final.pdf",
+            "t": "abbotsford.ca · 2020 McKee Profile spreads final"
           }
         ],
         [
           {
-            "t": "aberdeen.abbyschools.ca",
-            "h": "https://aberdeen.abbyschools.ca/"
+            "h": "https://aberdeen.abbyschools.ca/",
+            "t": "aberdeen.abbyschools.ca"
           }
         ],
         [
           {
-            "t": "bctransit.com · cfv map 21",
-            "h": "https://www.bctransit.com/wp-content/uploads/2026/08/cfv_map_21.pdf"
+            "h": "https://www.bctransit.com/wp-content/uploads/2026/08/cfv_map_21.pdf",
+            "t": "bctransit.com · cfv map 21"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · Development Guidlines for YXX 2020",
-            "h": "https://www.abbotsford.ca/sites/default/files/docs/business-development/Development%20Guidlines%20for%20YXX%202020.pdf"
+            "h": "https://www.abbotsford.ca/sites/default/files/docs/business-development/Development%20Guidlines%20for%20YXX%202020.pdf",
+            "t": "abbotsford.ca · Development Guidlines for YXX 2020"
           }
         ],
         [
           {
-            "t": "eugenereimer.abbyschools.ca · eugenereimer",
-            "h": "https://eugenereimer.abbyschools.ca/ourschool/ermsfamilyofschools/eugenereimer"
+            "h": "https://eugenereimer.abbyschools.ca/ourschool/ermsfamilyofschools/eugenereimer",
+            "t": "eugenereimer.abbyschools.ca · eugenereimer"
           }
         ],
         [
           {
-            "t": "abbyschools.ca · policy 18 school catchment areas",
-            "h": "https://www.abbyschools.ca/policy-18-school-catchment-areas"
+            "h": "https://www.abbyschools.ca/policy-18-school-catchment-areas",
+            "t": "abbyschools.ca · policy 18 school catchment areas"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · zoning bylaw 2014",
-            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014"
+            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014",
+            "t": "abbotsford.ca · zoning bylaw 2014"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · AgRefresh St3   Parcel Size",
-            "h": "https://www.abbotsford.ca/sites/default/files/2021-10/AgRefresh%20St3%20-%20Parcel%20Size.pdf"
+            "h": "https://www.abbotsford.ca/sites/default/files/2021-10/AgRefresh%20St3%20-%20Parcel%20Size.pdf",
+            "t": "abbotsford.ca · AgRefresh St3 Parcel Size"
           }
         ],
         [
           {
-            "t": "readkong.com · built 27640 lantern avenue aldergrove abbotsford",
-            "h": "https://www.readkong.com/page/built-27640-lantern-avenue-aldergrove-abbotsford-8573656"
+            "h": "https://www.readkong.com/page/built-27640-lantern-avenue-aldergrove-abbotsford-8573656",
+            "t": "readkong.com · built 27640 lantern avenue aldergrove abbotsford"
           }
         ],
         [
           {
-            "t": "laws.abbotsford.ca · 2014b2400210",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400210"
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400210",
+            "t": "laws.abbotsford.ca · 2014b2400210"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · regulatory requirements for onsite sewerage syst",
-            "h": "https://www.fraserhealth.ca/health-topics-a-to-z/onsite-sewerage-systems/regulatory-requirements-for-onsite-sewerage-systems"
+            "h": "https://www.fraserhealth.ca/health-topics-a-to-z/onsite-sewerage-systems/regulatory-requirements-for-onsite-sewerage-systems",
+            "t": "fraserhealth.ca · regulatory requirements for onsite sewerage syst"
           }
         ],
         [
           {
-            "t": "laws.abbotsford.ca · 2025bschedulea",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea"
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea",
+            "t": "laws.abbotsford.ca · 2025bschedulea"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Aberdeen",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Aberdeen"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -781,18 +758,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -800,18 +777,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -819,18 +796,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -838,14 +815,52 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=21&schedule=2026-04-05",
+            "t": "bctransit.com · route overview"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/events/14993",
+            "t": "fvrl.bc.ca · events"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/034",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -853,88 +868,58 @@
       "items": [
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
-          }
-        ],
-        [
-          {
-            "t": "bctransit.com · route overview",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=21&schedule=2026-04-05"
-          }
-        ],
-        [
-          {
-            "t": "fvrl.bc.ca · events",
-            "h": "https://www.fvrl.bc.ca/events/14993"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/034"
+            "t": "Source: bctransit.com",
+            "h": "https://www.bctransit.com/wp-content/uploads/2026/08/cfv_map_21.pdf"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
   "faq": [
     {
+      "a": "There is no subdivision-lot product to buy — no named bare-land subdivision offering, bare-land strata plan or presale lot offering exists here. What trades is fee-simple farm and rural residential parcels, at agricultural scale (A1 subdivision minimum 8.0 ha; A2, 16.0 ha).",
+      "gen": "tn",
+      "q": "Can I buy a bare building lot in Aberdeen?"
+    },
+    {
+      "a": "Neither. It is a City of Abbotsford community and board sub-area: the rural ground around Bradner Road, south of Fraser Highway and west of Clearbrook, north of YXX — profile area 6 in the City's own demographic profiles, separate from Bradner – Mt. Lehman and West Abbotsford. Aldergrove (Langley) is further west along Fraser Highway.",
+      "gen": "tn",
+      "q": "Where exactly is Aberdeen — is it part of Langley or Mission?"
+    },
+    {
+      "a": "Price subdivision expectations from the zone, not the frontage: A1 lots subdivide at a minimum of 8.0 ha and A2 at 16.0 ha, and on ALR land subdivision also needs Agricultural Land Commission approval. Confirm the parcel's zone in the City WebMap and its ALR status before valuing any split.",
+      "gen": "tn",
+      "q": "Can I subdivide a farm parcel here?"
+    },
+    {
+      "a": "In the A1 zone, one Accessory Farm Dwelling Unit per lot under the ALR Use Regulation (or as approved by the ALC), on a lot of at least 0.4 ha, to 90 m² on lots of 40 ha or less and 186 m² on lots over 40 ha; one secondary suite per lot (to 100 m² in the A1 section; Abbotsford's general suite cap is under 50% of the principal unit, coach/garden 15% of lot to max 100 m²). It is a farm dwelling — it cannot be stratified or sold separately.",
+      "gen": "tn",
+      "q": "Can a second home be added for family or farm workers?"
+    },
+    {
+      "a": "Where the lot is inside the Airport Zoning Regulation area on City drawing M-500, yes: height may not exceed the approach, outer or transitional surfaces, and NAV CANADA and Transport Canada approvals are needed before a City building permit. Per-lot status must be checked — it does not follow from the street address alone.",
+      "gen": "tn",
+      "q": "Does the airport restrict building on my lot?"
+    },
+    {
+      "a": "No named one was verified — Aberdeen acreage is individual freehold farm and rural-residential parcels at agricultural scale (A1 subdivision minimum 8.0 ha; A2 16.0 ha), trading whole. Verified named acreage developments here: 0.",
+      "gen": "acre",
+      "q": "Is there an acreage subdivision in Aberdeen I can buy into?"
+    },
+    {
+      "a": "In the A1 zone, one Accessory Farm Dwelling Unit per lot in accordance with the ALR Use Regulation, B.C. Reg. 30/2019, or as approved by the ALC, on a lot of at least 0.4 ha, to a maximum of 90 m² on lots of 40 ha or less and 186 m² on lots over 40 ha; one secondary suite per lot, to 100 m², is also permitted in the City-hosted A1 section — and the City's general suite rule is under 50% of the principal unit. Check the parcel's ALR status first: the ALC frame controls on ALR land.",
+      "gen": "acre",
+      "q": "Can a second dwelling be added on an Aberdeen farm lot?"
+    },
+    {
       "q": "Is there bus service through Aberdeen?",
       "a": "BC Transit route 21 (Aldergrove / Abbotsford) runs on Fraser Highway at the north edge toward Bourquin Exchange; no route through the interior rural roads was verified on the BC Transit system map.",
       "gen": "muse"
-    },
-    {
-      "q": "Are there more or fewer homes for sale in Aberdeen than in June?",
-      "a": "In Aberdeen, listings of houses fell from 29 in June to 25 in September (−13.8%); condos and townhomes rose from 5 in June to 7 in September (+40.0%).",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How big is Aberdeen compared with the rest of Abbotsford?",
-      "a": "In September 2026, Aberdeen held 5.7% of the 440 houses listed in Abbotsford and 1.2% of the 572 condos and townhomes listed in Abbotsford.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How many homes sold in Aberdeen from June to September 2026?",
-      "a": "13 houses and 4 condos and townhomes sold in Aberdeen over those 4 months.",
-      "gen": "snap-faq"
-    },
-    {
-      "gen": "tn",
-      "q": "Can I buy a bare building lot in Aberdeen?",
-      "a": "There is no subdivision-lot product to buy — no named bare-land subdivision offering, bare-land strata plan or presale lot offering exists here. What trades is fee-simple farm and rural residential parcels, at agricultural scale (A1 subdivision minimum 8.0 ha; A2, 16.0 ha)."
-    },
-    {
-      "gen": "tn",
-      "q": "Where exactly is Aberdeen — is it part of Langley or Mission?",
-      "a": "Neither. It is a City of Abbotsford community and board sub-area: the rural ground around Bradner Road, south of Fraser Highway and west of Clearbrook, north of YXX — profile area 6 in the City's own demographic profiles, separate from Bradner – Mt. Lehman and West Abbotsford. Aldergrove (Langley) is further west along Fraser Highway."
-    },
-    {
-      "gen": "tn",
-      "q": "Can I subdivide a farm parcel here?",
-      "a": "Price subdivision expectations from the zone, not the frontage: A1 lots subdivide at a minimum of 8.0 ha and A2 at 16.0 ha, and on ALR land subdivision also needs Agricultural Land Commission approval. Confirm the parcel's zone in the City WebMap and its ALR status before valuing any split."
-    },
-    {
-      "gen": "tn",
-      "q": "Can a second home be added for family or farm workers?",
-      "a": "In the A1 zone, one Accessory Farm Dwelling Unit per lot under the ALR Use Regulation (or as approved by the ALC), on a lot of at least 0.4 ha, to 90 m² on lots of 40 ha or less and 186 m² on lots over 40 ha; one secondary suite per lot (to 100 m² in the A1 section; Abbotsford's general suite cap is under 50% of the principal unit, coach/garden 15% of lot to max 100 m²). It is a farm dwelling — it cannot be stratified or sold separately."
-    },
-    {
-      "gen": "tn",
-      "q": "Does the airport restrict building on my lot?",
-      "a": "Where the lot is inside the Airport Zoning Regulation area on City drawing M-500, yes: height may not exceed the approach, outer or transitional surfaces, and NAV CANADA and Transport Canada approvals are needed before a City building permit. Per-lot status must be checked — it does not follow from the street address alone."
-    },
-    {
-      "gen": "acre",
-      "q": "Is there an acreage subdivision in Aberdeen I can buy into?",
-      "a": "No named one was verified — Aberdeen acreage is individual freehold farm and rural-residential parcels at agricultural scale (A1 subdivision minimum 8.0 ha; A2 16.0 ha), trading whole. Verified named acreage developments here: 0."
-    },
-    {
-      "gen": "acre",
-      "q": "Can a second dwelling be added on an Aberdeen farm lot?",
-      "a": "In the A1 zone, one Accessory Farm Dwelling Unit per lot in accordance with the ALR Use Regulation, B.C. Reg. 30/2019, or as approved by the ALC, on a lot of at least 0.4 ha, to a maximum of 90 m² on lots of 40 ha or less and 186 m² on lots over 40 ha; one secondary suite per lot, to 100 m², is also permitted in the City-hosted A1 section — and the City's general suite rule is under 50% of the principal unit. Check the parcel's ALR status first: the ALC frame controls on ALR land."
     }
-  ]
+  ],
+  "slug": "aberdeen-guide",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

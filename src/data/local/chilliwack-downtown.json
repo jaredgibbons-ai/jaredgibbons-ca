@@ -1,63 +1,34 @@
 {
-  "status": "draft",
-  "slug": "chilliwack-downtown",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: chilliwack.com",
-            "h": "https://chilliwack.com/ocp"
-          }
-        ],
-        [
-          {
-            "t": "Source: cadreb.com",
-            "h": "https://www.cadreb.com/market/"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Chilliwack Downtown 55+ homes for sale",
+      "gen": "n55link",
       "h": "/chilliwack-55-plus-neighbourhood-guide.html",
       "pos": "end",
-      "gen": "n55link"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "What's nearby Chilliwack Downtown",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
+      "text": "Chilliwack Downtown 55+ homes for sale"
     },
     {
+      "gen": "nb",
+      "level": 2,
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Chilliwack Downtown"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -85,18 +56,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -114,18 +85,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -148,18 +119,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -167,25 +138,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Chilliwack Central Elementary Community, 9435 Young Rd",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Central Community Park",
@@ -194,16 +166,16 @@
           "1.2"
         ],
         [
-          "Chilliwack Library",
-          "Drive",
-          "3",
-          "1.9"
-        ],
-        [
           "Save-On-Foods",
           "Drive",
           "3",
           "1.6"
+        ],
+        [
+          "Chilliwack Library",
+          "Drive",
+          "3",
+          "1.9"
         ],
         [
           "Chilliwack Secondary",
@@ -212,18 +184,17 @@
           "2.3"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -236,14 +207,88 @@
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "nb",
-      "pos": "end"
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
+    },
+    {
+      "gen": "nb",
+      "items": [
+        [
+          {
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=66",
+            "t": "bctransit.com · route overview"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/",
+            "t": "bctransit.com · schedules and maps"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=51",
+            "t": "bctransit.com · route overview (2)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=53",
+            "t": "bctransit.com · route overview (3)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=57",
+            "t": "bctransit.com · route overview (4)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwack.com/main/page.cfm?id=1754.&dowhat=typeView&ptID=1&listView=1",
+            "t": "chilliwack.com"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations",
+            "t": "fvrl.bc.ca · locations"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwackculturalcentre.ca/",
+            "t": "chilliwackculturalcentre.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/chilliwack",
+            "t": "studentsuccess.gov.bc.ca · chilliwack"
+          }
+        ],
+        [
+          {
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/2213/store",
+            "t": "saveonfoods.com · store"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
-      "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
       "pos": "end"
     },
     {
@@ -251,66 +296,18 @@
       "items": [
         [
           {
-            "t": "bctransit.com · route overview",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=66"
+            "t": "Source: chilliwack.com",
+            "h": "https://chilliwack.com/ocp"
           }
         ],
         [
           {
-            "t": "bctransit.com · schedules and maps",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/"
-          }
-        ],
-        [
-          {
-            "t": "bctransit.com · route overview (2)",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=51"
-          }
-        ],
-        [
-          {
-            "t": "bctransit.com · route overview (3)",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=53"
-          }
-        ],
-        [
-          {
-            "t": "bctransit.com · route overview (4)",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=57"
-          }
-        ],
-        [
-          {
-            "t": "chilliwack.com",
-            "h": "https://www.chilliwack.com/main/page.cfm?id=1754.&dowhat=typeView&ptID=1&listView=1"
-          }
-        ],
-        [
-          {
-            "t": "fvrl.bc.ca · locations",
-            "h": "https://www.fvrl.bc.ca/locations"
-          }
-        ],
-        [
-          {
-            "t": "chilliwackculturalcentre.ca",
-            "h": "https://www.chilliwackculturalcentre.ca/"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · chilliwack",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/chilliwack"
-          }
-        ],
-        [
-          {
-            "t": "saveonfoods.com · store",
-            "h": "https://www.saveonfoods.com/sm/planning/rsid/2213/store"
+            "t": "Source: cadreb.com",
+            "h": "https://www.cadreb.com/market/"
           }
         ]
       ],
-      "gen": "nb",
+      "gen": "musefaq",
       "pos": "end"
     }
   ],
@@ -326,14 +323,17 @@
       "gen": "muse"
     },
     {
-      "q": "Which schools serve Chilliwack Downtown?",
-      "a": "Chilliwack is SD33, and the schools the live page names are confirmed by name and address against the BC Ministry K-12 file: Chilliwack Central Elementary Community (9435 Young Rd), Bernard Elementary (45465 Bernard Ave), Chilliwack Middle School (46354 Yale Rd) and Chilliwack Secondary (46363 Yale Rd) — but catchments are address-based and no SD33 locator result is on record in this program, so check the exact address before relying on a school (~/workspace/area-research-2026-11/education/work/bc_k12_schools.csv, read 2026-11-01).",
-      "gen": "muse"
-    },
-    {
       "q": "Can a downtown Chilliwack house add a suite?",
       "a": "Under Zoning Bylaw 2020, No. 5000, a secondary suite is one permitted accessory dwelling unit per lot, capped at the lesser of 90 m² and 40% of the building's habitable floor space, with garden suites capped at 100 m² and ADU parking at 1–2 spaces under s.5.04; the city-wide SSMUH amendment (Bylaw 5395, adopted June 18, 2024) allows 3–4 units on urban-growth-boundary parcels zoned for single-detached and duplex housing (see ~/workspace/area-research-2026-11/rules-gaps-2026-11-01.md, items 6 and 7f, read 2026-11-01).",
       "gen": "muse"
+    },
+    {
+      "q": "Can Jared show me homes in Chilliwack Downtown?",
+      "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
+      "gen": "muse-generic"
     }
-  ]
+  ],
+  "slug": "chilliwack-downtown",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

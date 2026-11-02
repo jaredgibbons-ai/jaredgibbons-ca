@@ -1,115 +1,140 @@
 {
-  "status": "draft",
-  "slug": "mission-homes-over-1-8m",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
-      "level": 2,
-      "text": "More real estate nearby",
       "gen": "relatedlinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More real estate nearby"
     },
     {
-      "t": "list",
+      "gen": "relatedlinks",
       "items": [
         [
           {
-            "t": "Mission homes for sale",
-            "h": "/mission-homes-for-sale.html"
+            "h": "/mission-homes-for-sale.html",
+            "t": "Mission homes for sale"
           }
         ],
         [
           {
-            "t": "Mission real estate market stats",
-            "h": "/mission-real-estate-market-stats.html"
+            "h": "/mission-real-estate-market-stats.html",
+            "t": "Mission real estate market stats"
           }
         ],
         [
           {
-            "t": "Sell my house in Mission",
-            "h": "/sell-my-house-in-mission.html"
+            "h": "/sell-my-house-in-mission.html",
+            "t": "Sell my house in Mission"
           }
         ],
         [
           {
-            "t": "Schools in Mission",
-            "h": "/schools-in-mission-bc.html"
+            "h": "/schools-in-mission-bc.html",
+            "t": "Schools in Mission"
           }
         ],
         [
           {
-            "t": "Durieu real estate",
-            "h": "/durieu.html"
+            "h": "/durieu.html",
+            "t": "Durieu real estate"
           }
         ],
         [
           {
-            "t": "Hatzic Lake Real Estate: Homes real estate",
-            "h": "/hatzic.html"
+            "h": "/hatzic.html",
+            "t": "Hatzic Lake Real Estate: Homes real estate"
           }
         ],
         [
           {
-            "t": "Hatzic real estate",
-            "h": "/hatzic-mission-houses-for-sale.html"
+            "h": "/hatzic-mission-houses-for-sale.html",
+            "t": "Hatzic real estate"
           }
         ],
         [
           {
-            "t": "Hemlock real estate",
-            "h": "/hemlock-mission-condos-townhomes-for-sale.html"
+            "h": "/hemlock-mission-condos-townhomes-for-sale.html",
+            "t": "Hemlock real estate"
           }
         ],
         [
           {
-            "t": "Hemlock real estate",
-            "h": "/hemlock-mission-houses-for-sale.html"
+            "h": "/hemlock-mission-houses-for-sale.html",
+            "t": "Hemlock real estate"
           }
         ],
         [
           {
-            "t": "Lake Errock real estate",
-            "h": "/lake-errock.html"
+            "h": "/lake-errock.html",
+            "t": "Lake Errock real estate"
           }
         ],
         [
           {
-            "t": "Lake Errock real estate",
-            "h": "/lake-errock-mission-houses-for-sale.html"
+            "h": "/lake-errock-mission-houses-for-sale.html",
+            "t": "Lake Errock real estate"
           }
         ],
         [
           {
-            "t": "Mission BC Real Estate real estate",
-            "h": "/mission-bc.html"
+            "h": "/mission-bc.html",
+            "t": "Mission BC Real Estate real estate"
           }
         ]
       ],
-      "gen": "relatedlinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "musefaq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
+    },
+    {
+      "gen": "musefaq",
+      "items": [
+        [
+          {
+            "h": "https://www.fvrd.ca/assets/Government/Documents/Bylaws/Planning~and~Land~Use/Area%20F%20-%20OCP%20Bylaw%20999%20-%20Hatzic%20Valley.pdf",
+            "t": "Source: fvrd.ca"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "What kind of Mission property sells over $1.8 million?",
-      "a": "From the live feed's own listings, the band is large custom detached homes and acreage estates — lakefront, hilltop and rural acreage product in sub-areas such as Mission West, Hatzic and Stave Falls — rather than attached product, whose community median is $430,000 (as of September 2026, Source: SnapStats FVR September 2026 report).",
-      "gen": "muse"
+      "a": "From the live feed's own listings, the band is large custom detached homes and acreage estates — lakefront, hilltop and rural acreage product in sub-areas such as Mission West, Hatzic and Stave Falls — rather than attached product, whose community median is $430,000 (SnapStats, September 2026)",
+      "gen": "muse",
+      "q": "What kind of Mission property sells over $1.8 million?"
     },
     {
-      "q": "Is $1.8 million \"luxury\" in Mission, or just the top of a normal market?",
-      "a": "It is the top tail: the September 2026 community medians are $814,000 detached and $430,000 for Condos & Townhomes, so the $1.8M floor sits at more than double the typical detached sale price in the city (as of September 2026, Source: SnapStats FVR September 2026 report).",
-      "gen": "muse"
+      "a": "It is the top tail: the September 2026 community medians are $814,000 detached and $430,000 for Condos & Townhomes, so the $1.8M floor sits at more than double the typical detached sale price in the city (SnapStats, September 2026)",
+      "gen": "muse",
+      "q": "Is $1.8 million \"luxury\" in Mission, or just the top of a normal market?"
     },
     {
-      "q": "Can I add a suite or coach house to a house in Mission?",
+      "a": "The city's south edge is Fraser River floodplain, and low areas such as Hatzic Prairie sit behind the Dewdney Dyke system — some of the band's acreage product sits in those rural sub-areas, so flood status is property-specific and must be checked against City and FVRD floodplain mapping before buying.",
+      "gen": "muse",
+      "q": "Does Mission flood at the high end too?"
+    },
+    {
       "a": "BC's small-scale multi-unit housing rules allow more homes on many urban lots, but each municipality sets the details and many lots are excluded. Check the lot's zoning with the municipality before you plan a suite or coach house.",
-      "gen": "bank-faq"
+      "gen": "bank-faq",
+      "q": "Can I add a suite or coach house to a house in Mission?"
     },
     {
-      "q": "Do I need a home inspection when buying in Mission?",
       "a": "It is strongly recommended. Make the offer subject to an inspection so a qualified inspector can look at the roof, structure, drainage, electrical and heating before you remove conditions.",
-      "gen": "bank-faq"
+      "gen": "bank-faq",
+      "q": "Do I need a home inspection when buying in Mission?"
     }
-  ]
+  ],
+  "slug": "mission-homes-over-1-8m",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "albion-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Albion compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Albion compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Albion against its whole city, September 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Albion against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
-      "caption": "Albion against the whole city, September 2026",
+      "caption": "Albion against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -27,164 +24,164 @@
       "rows": [
         [
           "Detached houses",
-          "15.1%",
-          "15.0%",
-          "10% against 10%",
-          "3 of 8"
+          "15.2%",
+          "20.3%",
+          "20% against 15%",
+          "2 of 7"
         ],
         [
           "Condos and townhomes",
-          "6.3%",
-          "12.1%",
-          "22% against 12%",
-          "1 of 4"
+          "3.7%",
+          "6.5%",
+          "30% against 17%",
+          "1 of 6"
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and September 2026, detached houses: listings rose from 56 in June to 62 in September (+10.7%), and it took 12.2% of the city’s 188 sales over the period; condos and townhomes: listings rose from 17 in June to 18 in September (+5.9%), and it took 8.2% of the city’s 184 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings rose from 56 in June to 59 in October (+5.4%), and it took 14.2% of the city’s 247 sales over the period; condos and townhomes: listings fell from 17 in June to 10 in October (−41.2%), and it took 7.8% of the city’s 230 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Albion for detached houses in July, August (a buyers’ best bet); condos and townhomes in June, August, September (a sellers’ best bet); condos and townhomes in July (a buyers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out Albion for detached houses in October (a sellers’ best bet); detached houses in July, August (a buyers’ best bet); condos and townhomes in June, August, September, October (a sellers’ best bet); condos and townhomes in July (a buyers’ best bet)."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Maple Ridge real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Maple Ridge real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Maple Ridge homes for sale",
-            "h": "/maple-ridge-homes-for-sale.html"
+            "h": "/maple-ridge-homes-for-sale.html",
+            "t": "Maple Ridge homes for sale"
           }
         ],
         [
           {
-            "t": "Maple Ridge real estate market stats",
-            "h": "/maple-ridge-real-estate-market-stats.html"
+            "h": "/maple-ridge-real-estate-market-stats.html",
+            "t": "Maple Ridge real estate market stats"
           }
         ],
         [
           {
-            "t": "Maple Ridge houses for sale",
-            "h": "/maple-ridge-houses-for-sale.html"
+            "h": "/maple-ridge-houses-for-sale.html",
+            "t": "Maple Ridge houses for sale"
           }
         ],
         [
           {
-            "t": "Maple Ridge condos for sale",
-            "h": "/maple-ridge-condos-for-sale.html"
+            "h": "/maple-ridge-condos-for-sale.html",
+            "t": "Maple Ridge condos for sale"
           }
         ],
         [
           {
-            "t": "Maple Ridge townhomes for sale",
-            "h": "/maple-ridge-townhomes-for-sale.html"
+            "h": "/maple-ridge-townhomes-for-sale.html",
+            "t": "Maple Ridge townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Maple Ridge",
-            "h": "/sell-my-house-in-maple-ridge.html"
+            "h": "/sell-my-house-in-maple-ridge.html",
+            "t": "Sell my house in Maple Ridge"
           }
         ],
         [
           {
-            "t": "Albion homes and market figures",
-            "h": "/albion.html"
+            "h": "/albion.html",
+            "t": "Albion homes and market figures"
           }
         ],
         [
           {
-            "t": "Cottonwood real estate",
-            "h": "/cottonwood-mr.html"
+            "h": "/cottonwood-mr.html",
+            "t": "Cottonwood real estate"
           }
         ],
         [
           {
-            "t": "East Central real estate",
-            "h": "/east-central.html"
+            "h": "/east-central.html",
+            "t": "East Central real estate"
           }
         ],
         [
           {
-            "t": "Northeast real estate",
-            "h": "/northeast.html"
+            "h": "/northeast.html",
+            "t": "Northeast real estate"
           }
         ],
         [
           {
-            "t": "Northwest real estate",
-            "h": "/northwest-maple-ridge.html"
+            "h": "/northwest-maple-ridge.html",
+            "t": "Northwest real estate"
           }
         ],
         [
           {
-            "t": "Silver Valley real estate",
-            "h": "/silver-valley.html"
+            "h": "/silver-valley.html",
+            "t": "Silver Valley real estate"
           }
         ],
         [
           {
-            "t": "Southwest real estate",
-            "h": "/southwest-maple-ridge.html"
+            "h": "/southwest-maple-ridge.html",
+            "t": "Southwest real estate"
           }
         ],
         [
           {
-            "t": "Thornhill real estate",
-            "h": "/thornhill-mr.html"
+            "h": "/thornhill-mr.html",
+            "t": "Thornhill real estate"
           }
         ],
         [
           {
-            "t": "Websters Corners real estate",
-            "h": "/websters-corners.html"
+            "h": "/websters-corners.html",
+            "t": "Websters Corners real estate"
           }
         ],
         [
           {
-            "t": "West Central real estate",
-            "h": "/west-central.html"
+            "h": "/west-central.html",
+            "t": "West Central real estate"
           }
         ],
         [
           {
-            "t": "Whonnock real estate",
-            "h": "/whonnock.html"
+            "h": "/whonnock.html",
+            "t": "Whonnock real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Albion",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "What trades here",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Albion"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "What trades here"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -213,7 +210,7 @@
         ],
         [
           {
-            "t": "Tenure records — never lot stock, stated with the reason: Park/co-op official confirmation of rules, rents and counts: UNCONFIRMED."
+            "t": "Tenure records — never lot stock, stated with the reason: Park/co-op official confirmation of rules, rents and counts: Not confirmed."
           }
         ],
         [
@@ -222,18 +219,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Albion",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Albion"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -242,7 +239,7 @@
         ],
         [
           {
-            "t": "Boundaries: the City publishes no boundary for the MLS sub-area as such: UNVERIFIED as an official boundary. The Albion Area Plan's Schedule 1 map is the closest official boundary document."
+            "t": "Boundaries: the City publishes no boundary for the MLS sub-area as such: Not verified as an official boundary. The Albion Area Plan's Schedule 1 map is the closest official boundary document."
           }
         ],
         [
@@ -252,12 +249,12 @@
         ],
         [
           {
-            "t": "Main roads and commute: Lougheed Highway (Highway 7) along the south side; 240 Street is the main north–south road; 102 Avenue and 104 Avenue run east–west through the residential area; the Golden Ears Bridge west of the city connects Maple Ridge and Pitt Meadows to Langley and Surrey. Commute times in minutes: UNVERIFIED."
+            "t": "Main roads and commute: Lougheed Highway (Highway 7) along the south side; 240 Street is the main north–south road; 102 Avenue and 104 Avenue run east–west through the residential area; the Golden Ears Bridge west of the city connects Maple Ridge and Pitt Meadows to Langley and Surrey. Commute times in minutes: Not verified."
           }
         ],
         [
           {
-            "t": "Transit: Haney Place Exchange is in the Town Centre to the west (routes include the R3, 701, 733, 741, 743, 744, 745, 746, 748, 749 and 791; the R3 runs Coquitlam Central Station to Haney Place). Which of those routes run on Albion streets was not re-verified route by route: UNVERIFIED. Port Haney Station (22300 River Road) and Maple Meadows Station (20010 Dunn Avenue) serve the west side of the city; West Coast Express trains run weekdays between Waterfront and Mission City."
+            "t": "Transit: Haney Place Exchange is in the Town Centre to the west (routes include the R3, 701, 733, 741, 743, 744, 745, 746, 748, 749 and 791; the R3 runs Coquitlam Central Station to Haney Place). Which of those routes run on Albion streets was not re-verified route by route: Not verified. Port Haney Station (22300 River Road) and Maple Meadows Station (20010 Dunn Avenue) serve the west side of the city; West Coast Express trains run weekdays between Waterfront and Mission City."
           }
         ],
         [
@@ -271,18 +268,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Albion",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Albion"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -291,7 +288,7 @@
         ],
         [
           {
-            "t": "Floodplain (south edge): the south edge of Albion sits along the Fraser River and Kanaka Creek — the flood construction level is 6.7 m geodetic (including freeboard), a covenant on title identifies construction in the floodplain, no habitable floor space may be located below the flood construction level on affected lots, and Zoning Bylaw s. 402.8(h) prohibits rental accommodation (suites) on floodplain properties. Which Albion lots are affected is per-parcel: UNVERIFIED."
+            "t": "Floodplain (south edge): the south edge of Albion sits along the Fraser River and Kanaka Creek — the flood construction level is 6.7 m geodetic (including freeboard), a covenant on title identifies construction in the floodplain, no habitable floor space may be located below the flood construction level on affected lots, and Zoning Bylaw s. 402.8(h) prohibits rental accommodation (suites) on floodplain properties. Which Albion lots are affected is per-parcel: Not verified."
           }
         ],
         [
@@ -315,18 +312,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Albion",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Albion"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -340,146 +337,146 @@
         ],
         [
           {
-            "t": "The farmland buffer is new policy with a date. The Oct 28, 2025 Area Plan update introduced buffers where urban development meets farmland — houses closest to the South Albion ALR edge now sit beside a stated buffer policy, not just a field. Whether that edge discounts or complicates those houses is Jared's Section 8 question, UNVERIFIED here."
+            "t": "The farmland buffer is new policy with a date. The Oct 28, 2025 Area Plan update introduced buffers where urban development meets farmland — houses closest to the South Albion ALR edge now sit beside a stated buffer policy, not just a field. Whether that edge discounts or complicates those houses is Jared's Section 8 question, not verified here."
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Albion",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Albion"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "mapleridge.ca · our neighbourhoods",
-            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods"
+            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods",
+            "t": "mapleridge.ca · our neighbourhoods"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · albion",
-            "h": "https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/area-neighbourhood-plans/albion?bidId="
+            "h": "https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/area-neighbourhood-plans/albion?bidId=",
+            "t": "mapleridge.ca · albion"
           }
         ],
         [
           {
-            "t": "jaredgibbons.ca · albion",
-            "h": "https://jaredgibbons.ca/albion.html"
+            "h": "https://jaredgibbons.ca/albion.html",
+            "t": "jaredgibbons.ca · albion"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · albion area plan schedule 1pdf 1",
-            "h": "https://www.mapleridge.ca/media/file/albion-area-plan-schedule-1pdf-1"
+            "h": "https://www.mapleridge.ca/media/file/albion-area-plan-schedule-1pdf-1",
+            "t": "mapleridge.ca · albion area plan schedule 1pdf 1"
           }
         ],
         [
           {
-            "t": "translink.ca · bridge projects",
-            "h": "https://www.translink.ca/plans-and-projects/projects/maintenance-and-upgrade-program/bridge-projects"
+            "h": "https://www.translink.ca/plans-and-projects/projects/maintenance-and-upgrade-program/bridge-projects",
+            "t": "translink.ca · bridge projects"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · r748",
-            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf"
+            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf",
+            "t": "infomaps.translink.ca · r748"
           }
         ],
         [
           {
-            "t": "translink.ca · rapidbus projects",
-            "h": "https://www.translink.ca/plans-and-projects/projects/bus-projects/rapidbus-projects"
+            "h": "https://www.translink.ca/plans-and-projects/projects/bus-projects/rapidbus-projects",
+            "t": "translink.ca · rapidbus projects"
           }
         ],
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
           }
         ],
         [
           {
-            "t": "sd42.ca · elementary schools",
-            "h": "https://www.sd42.ca/elementary-schools/"
+            "h": "https://www.sd42.ca/elementary-schools/",
+            "t": "sd42.ca · elementary schools"
           }
         ],
         [
           {
-            "t": "sd42.ca · school locator",
-            "h": "https://www.sd42.ca/school-locator/"
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "sd42.ca · school locator"
           }
         ],
         [
           {
-            "t": "metrovancouver.org · kanaka creek regional park",
-            "h": "https://metrovancouver.org/services/regional-parks/park/kanaka-creek-regional-park"
+            "h": "https://metrovancouver.org/services/regional-parks/park/kanaka-creek-regional-park",
+            "t": "metrovancouver.org · kanaka creek regional park"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca · maple ridge public library",
-            "h": "https://www.fvrl.bc.ca/locations/maple-ridge-public-library"
+            "h": "https://www.fvrl.bc.ca/locations/maple-ridge-public-library",
+            "t": "fvrl.bc.ca · maple ridge public library"
           }
         ],
         [
           {
-            "t": "fraserhealth.ca · ridge meadows hospital",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital"
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital",
+            "t": "fraserhealth.ca · ridge meadows hospital"
           }
         ],
         [
           {
-            "t": "healthlinkbc.ca · ridge meadows urgent and primary care centre",
-            "h": "https://www.healthlinkbc.ca/clinic/ridge-meadows-urgent-and-primary-care-centre"
+            "h": "https://www.healthlinkbc.ca/clinic/ridge-meadows-urgent-and-primary-care-centre",
+            "t": "healthlinkbc.ca · ridge meadows urgent and primary care centre"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 2,
-      "text": "Acreage and rural land in Albion",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The ground in Albion",
-      "gen": "acre",
-      "pos": "end"
+      "text": "Acreage and rural land in Albion"
     },
     {
-      "t": "list",
+      "gen": "acre",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The ground in Albion"
+    },
+    {
+      "gen": "acre",
       "items": [
         [
           {
@@ -497,18 +494,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Streets, schools and getting around Albion",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Albion"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -516,18 +513,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Local rules that affect acreage buyers in Albion",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect acreage buyers in Albion"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -545,18 +542,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Good to know about Albion",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Albion"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -569,191 +566,169 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "acre",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below.",
-      "gen": "acre",
-      "pos": "end"
+      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "BC acreage buying rules",
-            "h": "/bc-acreage-buying-rules.html"
+            "h": "/bc-acreage-buying-rules.html",
+            "t": "BC acreage buying rules"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Sources for the acreage notes on Albion",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the acreage notes on Albion"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "mapleridge.ca · our neighbourhoods",
-            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods"
+            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods",
+            "t": "mapleridge.ca · our neighbourhoods"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · albion",
-            "h": "https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/area-neighbourhood-plans/albion?bidId="
+            "h": "https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/area-neighbourhood-plans/albion?bidId=",
+            "t": "mapleridge.ca · albion"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · albion area plan schedule 1pdf 1",
-            "h": "https://www.mapleridge.ca/media/file/albion-area-plan-schedule-1pdf-1"
+            "h": "https://www.mapleridge.ca/media/file/albion-area-plan-schedule-1pdf-1",
+            "t": "mapleridge.ca · albion area plan schedule 1pdf 1"
           }
         ],
         [
           {
-            "t": "translink.ca · bridge projects",
-            "h": "https://www.translink.ca/plans-and-projects/projects/maintenance-and-upgrade-program/bridge-projects"
+            "h": "https://www.translink.ca/plans-and-projects/projects/maintenance-and-upgrade-program/bridge-projects",
+            "t": "translink.ca · bridge projects"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · r748",
-            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf"
+            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf",
+            "t": "infomaps.translink.ca · r748"
           }
         ],
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
           }
         ],
         [
           {
-            "t": "translink.ca · bus rapid transit",
-            "h": "https://www.translink.ca/plans-and-projects/projects/rapid-transit-projects/bus-rapid-transit"
+            "h": "https://www.translink.ca/plans-and-projects/projects/rapid-transit-projects/bus-rapid-transit",
+            "t": "translink.ca · bus rapid transit"
           }
         ],
         [
           {
-            "t": "sd42.ca · school locator",
-            "h": "https://www.sd42.ca/school-locator/"
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "sd42.ca · school locator"
           }
         ],
         [
           {
-            "t": "sd42.ca · elementary schools",
-            "h": "https://www.sd42.ca/elementary-schools/"
+            "h": "https://www.sd42.ca/elementary-schools/",
+            "t": "sd42.ca · elementary schools"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca",
-            "h": "https://www.alc.gov.bc.ca/"
+            "h": "https://www.alc.gov.bc.ca/",
+            "t": "alc.gov.bc.ca"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading",
-            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading"
+            "h": "http://www.mapleridge.ca/media/file/2020-07-28-zoning-bylaw-7600-2019-second-reading",
+            "t": "mapleridge.ca · 2020 07 28 zoning bylaw 7600 2019 second reading"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · maple ridge council approves plan guide transit ",
-            "h": "https://www.mapleridge.ca/news/maple-ridge-council-approves-plan-guide-transit-oriented-development-around-lougheed-highway"
+            "h": "https://www.mapleridge.ca/news/maple-ridge-council-approves-plan-guide-transit-oriented-development-around-lougheed-highway",
+            "t": "mapleridge.ca · maple ridge council approves plan guide transit"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Are there more or fewer homes for sale in Albion than in June?",
-      "a": "In Albion, listings of houses rose from 56 in June to 62 in September (+10.7%); condos and townhomes rose from 17 in June to 18 in September (+5.9%).",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How big is Albion compared with the rest of Maple Ridge?",
-      "a": "In September 2026, Albion held 15.1% of the 410 houses listed in Maple Ridge and 6.3% of the 286 condos and townhomes listed in Maple Ridge.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How many homes sold in Albion from June to September 2026?",
-      "a": "23 houses and 15 condos and townhomes sold in Albion over those 4 months.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How do I find out which school serves an address in Albion?",
-      "a": "School catchments are set by address, so use the school district's catchment locator with the exact address. Catchment lines change, so check before you write an offer.",
-      "gen": "bank-faq"
-    },
-    {
-      "q": "Who can help me buy or sell in Albion?",
-      "a": "Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, works across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361 or use the contact form on this site.",
-      "gen": "bank-faq"
-    },
-    {
+      "a": "There is no lot product to buy — no named bare-land subdivision offering, bare-land strata plan or presale lot offering exists here. What trades is built fee-simple house lots, strata townhomes at the 104/240 corner, and South Albion farm parcels.",
       "gen": "tn",
-      "q": "Can I buy a bare building lot in Albion?",
-      "a": "There is no lot product to buy — no named bare-land subdivision offering, bare-land strata plan or presale lot offering exists here. What trades is built fee-simple house lots, strata townhomes at the 104/240 corner, and South Albion farm parcels."
+      "q": "Can I buy a bare building lot in Albion?"
     },
     {
+      "a": "A purchase there is a strata-lot purchase with fees, bylaws and a Form B; The Warwick additionally needs a per-unit developer-sale vs resale determination before GST/REDMA treatment is relied on.",
       "gen": "tn",
-      "q": "Are Albion Station, Ridgemont, Spencer Brook and The Warwick land I can buy as lots?",
-      "a": "A purchase there is a strata-lot purchase with fees, bylaws and a Form B; The Warwick additionally needs a per-unit developer-sale vs resale determination before GST/REDMA treatment is relied on."
+      "q": "Are Albion Station, Ridgemont, Spencer Brook and The Warwick land I can buy as lots?"
     },
     {
+      "a": "Contested: the developer says Albion, the board listings say Thornhill MR. Price a 248 Street listing against the sub-area its listing actually sits in.",
       "gen": "tn",
-      "q": "Is Rydge in Albion?",
-      "a": "Contested: the developer says Albion, the board listings say Thornhill MR. Price a 248 Street listing against the sub-area its listing actually sits in."
+      "q": "Is Rydge in Albion?"
     },
     {
+      "a": "Council adopted the update Oct 28, 2025: enhanced walking/cycling connections, support for local commercial nodes, and buffers where urban development meets farmland, consolidating land-use policies for provincial housing legislation. Check a growth-edge lot's current designation before valuing it as a plain house lot.",
       "gen": "tn",
-      "q": "What did the October 2025 Area Plan update change for a lot?",
-      "a": "Council adopted the update Oct 28, 2025: enhanced walking/cycling connections, support for local commercial nodes, and buffers where urban development meets farmland, consolidating land-use policies for provincial housing legislation. Check a growth-edge lot's current designation before valuing it as a plain house lot."
+      "q": "What did the October 2025 Area Plan update change for a lot?"
     },
     {
+      "a": "Only a parcel-level check settles it — the research places ALR parcels in South Albion in words only, with no split figure. Check the ALC maps and title before pricing subdivision, a second dwelling or farm-class value into the parcel; on ALR ground, subdivision needs ALC approval and residences cannot be stratified.",
       "gen": "tn",
-      "q": "Is this South Albion parcel in the ALR?",
-      "a": "Only a parcel-level check settles it — the research places ALR parcels in South Albion in words only, with no split figure. Check the ALC maps and title before pricing subdivision, a second dwelling or farm-class value into the parcel; on ALR ground, subdivision needs ALC approval and residences cannot be stratified."
+      "q": "Is this South Albion parcel in the ALR?"
     },
     {
+      "a": "Council adopted the update on October 28, 2025: it enhances walking and cycling connections, supports growth of local commercial nodes, and introduces buffers where urban development meets farmland. A buffer is a plan policy on the urban side — it does not change the ALC caps, farm class or subdivision rules on the farm parcel itself. Check the lot's current designation before valuing it as a plain house lot.",
       "gen": "acre",
-      "q": "What did the October 2025 Albion Area Plan update change for a lot at the farm edge?",
-      "a": "Council adopted the update on October 28, 2025: it enhances walking and cycling connections, supports growth of local commercial nodes, and introduces buffers where urban development meets farmland. A buffer is a plan policy on the urban side — it does not change the ALC caps, farm class or subdivision rules on the farm parcel itself. Check the lot's current designation before valuing it as a plain house lot."
+      "q": "What did the October 2025 Albion Area Plan update change for a lot at the farm edge?"
     },
     {
+      "a": "Spencer Brook's plan is EPS763; that is a built townhouse strata plan, not a bare-land strata acreage plan.",
       "gen": "acre",
-      "q": "Are Albion Station, Ridgemont, Spencer Brook or The Warwick acreage or bare-land strata?",
-      "a": "Spencer Brook's plan is EPS763; that is a built townhouse strata plan, not a bare-land strata acreage plan."
+      "q": "Are Albion Station, Ridgemont, Spencer Brook or The Warwick acreage or bare-land strata?"
     },
     {
+      "a": "Price and compare it as Thornhill MR board stock, whatever the marketing says.",
       "gen": "acre",
-      "q": "Is Rydge in Albion or Thornhill?",
-      "a": "Price and compare it as Thornhill MR board stock, whatever the marketing says."
+      "q": "Is Rydge in Albion or Thornhill?"
     },
     {
+      "a": "The schools physically in the area, at Ministry addresses, are Albion Elementary (10031 240 Street), c'usqunela Elementary (24093 104 Avenue) and Samuel Robertson Technical Secondary (10445 245 Street), with Kanaka Creek Elementary (11120 234a Street) at the west edge.",
       "gen": "acre",
-      "q": "Which schools serve an Albion address?",
-      "a": "The schools physically in the area, at Ministry addresses, are Albion Elementary (10031 240 Street), c'usqunela Elementary (24093 104 Avenue) and Samuel Robertson Technical Secondary (10445 245 Street), with Kanaka Creek Elementary (11120 234a Street) at the west edge."
+      "q": "Which schools serve an Albion address?"
     }
+  ],
+  "slug": "albion-guide",
+  "status": "generated",
+  "suppress": [
+    "Related guides"
   ],
   "suppress_gen": [
     "Related guides"
   ],
-  "suppress": [
-    "Related guides"
-  ]
+  "updated": "2026-11-01"
 }
