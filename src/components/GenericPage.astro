@@ -19,6 +19,7 @@ const seo = page.seo || {};
 // level-2 heading, plus FAQ + breadcrumb structured data. Only used where present; archive blocks are untouched.
 const LOCAL = import.meta.glob('../data/local/*.json', { eager: true, import: 'default' }) as Record<string, any>;
 const local = LOCAL[`../data/local/${page.slug}.json`];
+let endCount = 0;
 const origin = 'https://jaredgibbons.ca';
 const jsonld: any[] = [];
 if (local?.faq?.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: local.faq.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
@@ -35,13 +36,14 @@ if (local) {
   const asPart = (b: any) => b.t === 'p' && !b.parts ? { t: 'p', parts: [{ t: b.text, ...(b.h ? { h: b.h } : {}) }] } : b;
   // pos:'end' blocks (related-link lists) go after the archive content, so the top of the page stays as it was.
   const endBlocks = local.blocks.filter((b: any) => b.pos === 'end').map(asPart);
+  endCount = endBlocks.length;
   page.blocks = [...page.blocks.slice(0, cut), ...local.blocks.filter((b: any) => b.pos !== 'end').map(asPart), ...faqBlocks, ...page.blocks.slice(cut), ...endBlocks];
-  // Pages built from the local layer alone have no archive review block: give them one.
-  if (local.new_page && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.push({ t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
 }
 
-// Commercial and industrial pages carry no review block in the archive; Jared asked for the same Google excerpts there (commercial ones first, then residential).
-if (/commercial|industrial/i.test(page.slug + ' ' + (page.title || '')) && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.push({ t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
+// Every content page shows three Google review excerpts (assigned per page in src/data/review-assign.json, no two pages share the same three).
+// Archive pages that had no review block, and pages built from the local layer alone, get one, placed before the end-of-page link lists.
+const NO_REVIEWS = new Set(['404', 'privacy', 'subscribe-to-our-newsletter', 'contact', 'reviews']);
+if (!NO_REVIEWS.has(page.slug) && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.splice(page.blocks.length - endCount, 0, { t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
 
 // Split into render sections at each level-2 heading; reviews and grid get their own sections.
 type Sec = { kind: 'text' | 'reviews' | 'grid'; blocks: any[]; block?: any };

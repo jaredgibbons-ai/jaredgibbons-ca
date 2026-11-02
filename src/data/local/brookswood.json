@@ -187,6 +187,55 @@
       ],
       "gen": "communitylinks",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Source: tol.ca",
+            "h": "https://www.tol.ca/en/news/brookswoodfernridge-community-plan-adopted.aspx"
+          }
+        ],
+        [
+          {
+            "t": "Source: sd35.bc.ca",
+            "h": "https://www.sd35.bc.ca/school-locator"
+          }
+        ],
+        [
+          {
+            "t": "Source: translink.ca",
+            "h": "https://www.translink.ca/schedules-and-maps/stop/58717/schedule"
+          }
+        ]
+      ],
+      "gen": "musefaq",
+      "pos": "end"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Which plan covers Brookswood?",
+      "a": "The Brookswood-Fernridge Community Plan covers Brookswood-Fernridge, with neighbourhood plans for Booth, Fernridge and Rinn.",
+      "gen": "muse"
+    },
+    {
+      "q": "How is school catchment checked in Brookswood?",
+      "a": "School District 35's School Locator returns the catchment school for a street address; the sample address 20902 37A Avenue was run in the locator and returned no result, so no catchment is confirmed for it. Schools physically in the area include Brookswood Secondary at 20902 37A Avenue, Alice Brown Elementary at 20011 44 Avenue and Noel Booth Elementary at 20202 35 Avenue (~/workspace/area-research-2026-11/education/work/bc_k12_schools.csv, read 2026-11-01).",
+      "gen": "muse"
+    },
+    {
+      "q": "What buses serve Brookswood?",
+      "a": "TransLink routes 531, 561 and 563 serve 200 Street at 37A Avenue, with 561 named Brookswood and 563 named Fernridge on the TransLink stop page, connecting to Langley Centre.",
+      "gen": "muse"
     }
   ]
 }

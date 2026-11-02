@@ -64,6 +64,48 @@
       ],
       "gen": "communitylinks",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Source: alc.gov.bc.ca",
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+          }
+        ]
+      ],
+      "gen": "musefaq",
+      "pos": "end"
+    }
+  ],
+  "faq": [
+    {
+      "q": "What rules govern the acreage parcels on this page's feed?",
+      "a": "Parcel by parcel: if a parcel is in the Agricultural Land Reserve, the ALC frame applies — a principal residence capped at 500 m² with any suite inside it, at most one additional residence of 90 m² (parcels ≤40 ha) or 186 m² (>40 ha), and ALC permission required to subdivide outside limited exceptions; urban Surrey suite, coach-house and SSMUH rules apply only to non-ALR urban lots.",
+      "gen": "muse"
+    },
+    {
+      "q": "Which schools serve the ground this feed shows?",
+      "a": "Schools confirmed by name and address against the BC Ministry K-12 file for this part of Surrey include Morgan Elementary (3366 156a St) and Earl Marriott Secondary (15751 16 Ave) — a feed card names both as catchments in its listing text, but SD36 catchments are address-based and no locator run for this ground is on record, so confirm any address before relying on a school (~/workspace/area-research-2026-11/education/work/bc_k12_schools.csv, read 2026-11-01).",
+      "gen": "muse"
+    },
+    {
+      "q": "Can Jared show me homes in Serpentine?",
+      "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
+      "gen": "muse-generic"
+    },
+    {
+      "q": "How do I find out what my home in Serpentine is worth?",
+      "a": "Jared prepares a home evaluation from recent comparable sales and the condition of your home. Contact him on 604-928-1361 or through the form on this site to arrange one.",
+      "gen": "muse-generic"
     }
   ]
 }

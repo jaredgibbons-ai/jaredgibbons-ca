@@ -11,8 +11,11 @@ const WANT: [RegExp, string, number][] = [
   [/homes-for-sale|houses|real-estate|guide|acreage|waterfront|ocean-view/, 'house', 0.8], [/homes-for-sale|buy|guide|real-estate/, 'buy', 0.6],
 ];
 function hash(s: string) { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0; return h; }
+import ASSIGN from '../data/review-assign.json';
 export function pickReviews(slug: string, items: any[], n = 3): any[] {
   if (!items?.length) return [];
+  const fixed = (ASSIGN as Record<string, number[]>)[slug];       // tools/assign_reviews.py: a different set of three on every page
+  if (fixed) return fixed.map((i) => items[i]).filter(Boolean);
   let seed = hash(slug) || 1;
   const rnd = () => { seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0; return seed / 4294967296; };
   const want = WANT.filter(([rx]) => rx.test(slug));
