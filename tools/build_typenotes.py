@@ -137,9 +137,16 @@ def main():
         j = json.load(open(p, encoding='utf-8'))
         if any(b.get('gen') == G for b in j.get('blocks', [])) or any(f.get('gen') == G for f in j.get('faq', [])):
             j['blocks'] = [b for b in j['blocks'] if b.get('gen') != G]; j['faq'] = [f for f in j.get('faq', []) if f.get('gen') != G]; save(os.path.basename(p)[:-5], j)
+    # Streets, rules and local-detail bullets are written once site-wide: the 55+ pages own theirs, and a later section skips any bullet already published.
+    seen = set()
+    for pth in glob.glob(f'{LOCAL}/*.json'):
+        jj = json.load(open(pth, encoding='utf-8'))
+        for b in jj.get('blocks', []):
+            if b.get('gen') in ('n55', 'n55mh', 'n55fold') and b.get('t') == 'list':
+                for it in b['items']: seen.add(it[0]['t'][:70])
     wrote = 0
     for tgt, ns in sorted(targets.items()):
-        j = load(tgt); bl = []; faq = []; urls_all = []; seen = set()
+        j = load(tgt); bl = []; faq = []; urls_all = []
         for n in sorted(ns, key=lambda n: ['condos', 'townhomes', 'lots-and-land'].index(n['kind'])):
             b, f, u = section(n, shared[n['kind']], seen); bl += b; faq += f; urls_all += u
         # drop junk fragments, empty lists and headings left with nothing under them
@@ -188,7 +195,7 @@ def section(n, sh, seen):
         for g, b in items:
             tx = N.J(b) if b.startswith('**') else N.clean(b)
             if tx: groups.setdefault(re.split(r' — |\s*\(', g)[0].strip() if g != '_' else 'What trades here', []).append(tx)
-        for g, txs in groups.items(): bl += [H(g, 3), LI(txs)]; cnt += len(txs)
+        for g, txs in groups.items(): bl += [H('What trades here' if re.search(r'\bfiles?\b|sibling|variant|program|position', g, re.I) else g, 3), LI(txs)]; cnt += len(txs)
     else:
         for g, b in items:
             nm, rest = N.split_bold(b); tx = N.clean(rest)

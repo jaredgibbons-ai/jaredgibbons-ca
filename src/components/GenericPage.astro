@@ -43,6 +43,9 @@ if (local) {
   page.blocks = [...page.blocks.slice(0, cut), ...local.blocks.filter((b: any) => b.pos !== 'end').map(asPart), ...faqBlocks, ...page.blocks.slice(cut), ...endBlocks];
 }
 
+// Contact fix (D-73): 148 archive pages print jared@jaredgibbons.ca, which is not Jared's address; shown as jaredgibbons@royallepage.ca. The archive record is untouched.
+page.blocks = JSON.parse(JSON.stringify(page.blocks).replaceAll('jared@jaredgibbons.ca', 'jaredgibbons@royallepage.ca'));
+
 // Every content page shows three Google review excerpts (assigned per page in src/data/review-assign.json, no two pages share the same three).
 // Archive pages that had no review block, and pages built from the local layer alone, get one, placed before the end-of-page link lists.
 const NO_REVIEWS = new Set(['404', 'privacy', 'subscribe-to-our-newsletter', 'contact', 'reviews', 'data-and-methodology']);

@@ -26,14 +26,14 @@ CITY_55 = {  # community -> existing city-level 55+ page(s) that should list it
 TOPIC = re.compile(r'(under|over)-|open-houses|foreclosure|farms|lots-land|mobile-homes|calculator|^blog$|^contact$|our-listings|sold-properties|newsletter|marketing|commercial|land-use|landplans|home-evaluation|neighbourhood-guides|school-catchments|luxury|acreages|pad-rental|homes-for-sale$|first-time')
 PARK_PAGES = {'surrey-mobile-homes': 'surrey-mobile-homes', 'south-surrey-mobile-homes': 'south-surrey-mobile-homes', 'chilliwack-mobile-homes': 'chilliwack-mobile-homes',
               'mission-mobile-homes': 'mission-mobile-homes', 'maple-ridge-mobile-homes': 'maple-ridge-mobile-homes', 'cost-of-mobile-home-pad-rental-fees-in-langley': 'cost-of-mobile-home-pad-rental-fees-in-langley'}
-FQ_BAD = re.compile(r'\bfeed\b|SnapStats|guide page|Section \d|sibling|page shows?|statistics (?:show|say)|\bthis page\b', re.I)  # questions about this site's own data feed, not buyer questions
+FQ_BAD = re.compile(r'\bfiles?\b|\bvariant\b|\bhome file\b|the position the|\bfeed\b|SnapStats|guide page|Section \d|sibling|page shows?|statistics (?:show|say)|\bthis page\b', re.I)  # questions about this site's own data feed, not buyer questions
 SHARED_Q = re.compile(r"under 55.*(investment|parent)|spouse is under 55|rent out (a|my) unit|resale buyer pool", re.I)
 SHARED_LEAD = ('Only 55+ age bylaws', 'The bylaw restricts who', 'Built-in exemptions', 'Rental-restriction bylaws')
 DROP_URL = re.compile(r'R[23]\d{6}|plsrealestate|condos\.ca/.*unit|zolo\.ca|estateblock|realtor\.ca|soldbycraig|zealty|rodfriesen|rew\.ca/properties|/listing|/property/|PropertyDetails|-mls_|surreytownhouse\.com/buildings/view|rentitfurnished|apartments\.com|mhbo\.com|housesigma|point2|strata\.ca/listing|bcrealestatefinder', re.I)
 
 
 NOTE_REF = re.compile(r"\b(?:see|in) (?:[\w' ]{0,40} )?Section [1-5]\b")
-DROP_SENT = re.compile(r"^Sources?:|building entries|base guide|\broundup\b|\bthe (?:note|brief)\b|\b\d[\d,]* (?:attached|detached|active) (?:listings?|sales?)|listings? (?:versus|vs\.?) |\bParagon\b|research file|in this pass|\bcounted (?:here|separately|in the|as)\b|\bhome file\b|FILE STATUS|\bsiblings?\b|\bslugs?\b|zealty|zolo|estateblock|soldbycraig|realtor\.ca|this program|source guide|`|batch T\d|related-links|credit(?:s|ing) www|\b\d[\d,]* (?:listings?|sales|solds?|detached|attached)\b|\bfile\b|§|count home|\bslug\b|\bthis file\b|\bthe (?:land|condo|townhome|townhouse) (?:file|note)\b|\broster\b|\d+ active\b|active / \d+ sold|\d+ of the city's \d+ active", re.I)
+DROP_SENT = re.compile(r"^Sources?:|building entries|base guide|\broundup\b|\bthe (?:note|brief)\b|\b\d[\d,]* (?:attached|detached|active) (?:listings?|sales?)|listings? (?:versus|vs\.?) |\bParagon\b|research file|in this pass|\bcounted (?:here|separately|in the|as)\b|\bhome file\b|FILE STATUS|\bsiblings?\b|\bslugs?\b|\bJerry\b|variants? (?:page|file)|\bvariant\b|adds no new|never absorbed|\bQUEUE\b|missing-areas|the position the|\bthis page (?:adds|counts|documents)|\bagent page\b|\bfiles\b|\bon disk\b|\bagent's\b|\bsources? guide\b|\bsweep\b|\blive (?:guide |site )?pages?\b|\bthe (?:guide )?page.s (?:footer|byline|own)|\bfooter\b|\bbyline\b|wrong (?:email|address)|jared@|jaredgibbons\.ca|contact (?:email|check)|filing position|cross-reference position|conforming|\bprogram\b|home file|stated (?:plainly|openly)|documented once|read first|templates?\b|zealty|zolo|estateblock|soldbycraig|realtor\.ca|this program|source guide|`|batch T\d|related-links|credit(?:s|ing) www|\b\d[\d,]* (?:listings?|sales|solds?|detached|attached)\b|\bfile\b|§|count home|\bslug\b|\bthis file\b|\bthe (?:land|condo|townhome|townhouse) (?:file|note)\b|\broster\b|\d+ active\b|active / \d+ sold|\d+ of the city's \d+ active", re.I)
 
 
 def clean(s):
@@ -406,6 +406,40 @@ def build_parks(path, slug0, written):
     j.setdefault('status', 'generated'); save(slug, j); print('wrote park section', slug, len(bl), 'blocks', len(faq), 'faq')
 
 
+def dedupe_buildings():
+    """A building that two or more community 55+ pages describe is written out in full on one home page; the others get a one-line pointer and a link."""
+    pages = {}
+    for f in glob.glob(f'{LOCAL}/*-55-plus-*.json') + [f'{LOCAL}/chilliwack-55-plus-neighbourhood-guide.json']:
+        if not os.path.exists(f): continue
+        j = json.load(open(f, encoding='utf-8')); sl = os.path.basename(f)[:-5]
+        if j.get('n55_page') and sl != HUB: pages[sl] = j
+    where = {}
+    for sl, j in pages.items():
+        for i, b in enumerate(j['blocks']):
+            if b.get('t') == 'h' and b.get('level') == 3 and b.get('gen') == G and i + 1 < len(j['blocks']) and j['blocks'][i + 1].get('t') == 'p' and j['blocks'][i + 1].get('gen') == G:
+                key = re.sub(r'\W+', '', b['text'].split(' — ')[0].split(' (')[0].lower())
+                where.setdefault(key, []).append((sl, i, b['text']))
+    n = 0
+    for key, occ in where.items():
+        if len(occ) < 2: continue
+        def score(o):
+            sl, i, tx = o; area = sl.replace('-55-plus-homes-for-sale', '').replace('-', ' ')
+            return (area in tx.lower(), len(pages[sl]['blocks']))
+        home = max(occ, key=score)
+        hname = pages[home[0]]['new_page']['h1'].split(' 55+')[0].split(' | ')[0]
+        for sl, i, tx in occ:
+            if sl == home[0]: continue
+            j = pages[sl]; nm = tx.split(' — ')[0]
+            j['blocks'][i + 1] = {'t': 'p', 'text': f'{nm} is described in full on the {hname} 55+ page, where it is filed.', 'gen': G}
+            j['blocks'].insert(i + 2, {**LK([(f'{hname} 55+ homes for sale', f'/{home[0]}.html')])}); n += 1
+            for k2 in range(len(where[key])): pass
+            # indexes after i shift by one for later entries on the same page
+            for key2, occ2 in where.items():
+                where[key2] = [(a, (b + 1 if a == sl and b > i else b), c) for a, b, c in occ2]
+    for sl, j in pages.items(): save(sl, j)
+    print('building entries pointed to a home page:', n)
+
+
 def link_back(written):
     for f in glob.glob(f'{LOCAL}/*.json'):
         j = json.load(open(f, encoding='utf-8'))
@@ -436,5 +470,5 @@ if __name__ == '__main__':
         if k in PARK_PAGES: build_parks(p, k, written)
     for slug, (city, ns) in MERGE.items(): build_merged(slug, city, ns, written)
     for prim in sorted(set(FOLD.values())): fold_in(prim, written)
-    build_hub(); build_mobile(); link_back(written)
+    build_hub(); build_mobile(); dedupe_buildings(); link_back(written)
     print(len(written), 'community 55+ pages')

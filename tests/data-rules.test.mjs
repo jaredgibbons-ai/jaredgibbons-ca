@@ -124,3 +124,11 @@ test('condo, townhome and land sections (gen tn): no MLS numbers, listing links,
   assert.ok(n >= 150, 'expected the type-note sections');
   assert.equal(hubs, 3);
 });
+
+test('no research-team chatter or the wrong contact email reaches published text', () => {
+  for (const [f, t] of texts) {
+    const d = JSON.parse(t);
+    const mine = JSON.stringify([(d.blocks || []).filter((b) => ['tn', 'n55', 'n55mh', 'n55fold'].includes(b.gen)), (d.faq || []).filter((x) => ['tn', 'n55', 'n55mh', 'n55fold'].includes(x.gen))]);
+    assert.ok(!/Jerry|sweep item|jared@jaredgibbons|\bfooter\b|\bbyline\b|Contact check|Filing position|conforming pass|home file|this file/i.test(mine), `${f}: research chatter in published text`);
+  }
+});
