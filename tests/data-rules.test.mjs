@@ -148,3 +148,19 @@ test('city-wide 55+ sections (Surrey, Burnaby, Coquitlam): ownership table or a 
     else assert.ok(mine.some(b => b.t === 'table' && b.head.includes('Evidence') && b.rows.length >= 4), `${s}: ownership table too short`);
   }
 });
+
+test('MLS 55+ flag sections (n55mls): names, type and title only; no numbers from the export; hub explains the flag', () => {
+  let pages = 0, rows = 0;
+  for (const [f, t] of texts) {
+    if (!t.includes('"n55mls"')) continue;
+    const d = JSON.parse(t);
+    const mine = (d.blocks || []).filter((b) => b.gen === 'n55mls');
+    const tbls = mine.filter((b) => b.t === 'table');
+    if (tbls.length) pages++;
+    for (const b of tbls) { assert.deepEqual(b.head, ['Building', 'Type', 'Title'], `${f}: table columns`); rows += b.rows.length; for (const r of b.rows) assert.ok(!/\d{2,}|\$|R[23]\d{6}/.test(r.join(' ')) || /\b(55|II|III)\b|\d+(st|nd|th)\b|^[\w .'&-]*\d[\w .'&-]*$/.test(r[0]), `${f}: number in a row ${r.join('|')}`); }
+    assert.ok(!/R[23]\d{6}|\$\d/.test(JSON.stringify(mine)), `${f}: MLS number or price`);
+  }
+  assert.ok(pages >= 20 && rows >= 100, `expected the flag tables on 20+ pages, got ${pages} / ${rows} rows`);
+  const hub = JSON.parse(fs.readFileSync(path.join(LOCAL, 'bc-55-plus-strata-rules.json'), 'utf8'));
+  assert.ok(hub.blocks.some((b) => b.id === 'mls-flag'), 'hub explainer missing');
+});
