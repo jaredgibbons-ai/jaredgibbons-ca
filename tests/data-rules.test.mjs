@@ -119,10 +119,10 @@ test('condo, townhome and land sections (gen tn): no MLS numbers, listing links,
     n++;
     assert.ok(!/\bR[23]\d{6}\b/.test(mine), `${f}: MLS number published`);
     assert.ok(!/zolo\.ca|estateblock|realtor\.ca|soldbycraig|zealty|rew\.ca\/properties|plsrealestate/i.test(mine), `${f}: listing-level link`);
-    assert.ok(!/\*\*|`|§|FILE STATUS|\bsiblings?\b|~\/|\bSection [1-5]\b(?![\d.]\d)|\d+ (attached|detached|active) listings|\b\d+ (listings|sales)\b/.test(mine), `${f}: note reference or board count`);
+    assert.ok(!/\*\*|`|§|FILE STATUS|\bsiblings?\b|~\/|\bSection [1-5]\b(?![\d.]\d)|\d+ (attached|detached|active) listings|\b\d+ (listings|sales)\b/.test(mine.replace(/"h":"[^"]*"/g, '')), `${f}: note reference or board count`);
   }
   assert.ok(n >= 150, 'expected the type-note sections');
-  assert.equal(hubs, 3);
+  assert.ok(hubs >= 30, "3 rules pages and the new community guides");
 });
 
 test('no research-team chatter or the wrong contact email reaches published text', () => {

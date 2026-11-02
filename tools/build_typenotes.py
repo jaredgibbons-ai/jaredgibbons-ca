@@ -25,19 +25,46 @@ ALIAS = {'aldergrove-langley': 'aldergrove', 'brookswood-langley': 'brookswood',
          'steveston-south': 'steveston-homes-for-sale', 'steveston-village': 'steveston-homes-for-sale', 'uptown-nw': 'uptown-new-westminster', 'vancouver-heights': 'vancouver-heights-burnaby',
          'west-central-maple-ridge': 'west-central', 'port-kells': 'port-kells-surrey', 'dewdney-deroche-mission': 'dewdney-deroche', 'durieu-mission': 'durieu', 'mission-west-mission': 'mission-west',
          'stave-falls-mission': 'stave-falls', 'steelhead-mission': 'steelhead', 'thornhill-maple-ridge': 'thornhill-maple-ridge-guide', 'north-maple-ridge': 'north-maple-ridge-guide',
-         'west-meadows-pitt-meadows': 'west-meadows-pitt-meadows-guide', 'crescent-beach-ocean-park': 'crescent-beach-ocean-park-guide', 'westham-island': 'westham-island-guide', 'fort-langley': 'fort-langley-guide', 'willoughby': 'willoughby-guide', 'lower-landing': 'lower-landing-guide'}
+         'west-meadows-pitt-meadows': 'west-meadows-pitt-meadows-guide', 'crescent-beach-ocean-park': 'crescent-beach-ocean-park-guide', 'westham-island': 'westham-island-guide', 'fort-langley': 'fort-langley-guide', 'willoughby': 'willoughby-guide', 'lower-landing': 'lower-landing-guide', 'crescent-bch-ocean-pk': 'crescent-beach-ocean-park-guide', 'central-pt-coquitlam': 'central-port-coquitlam', 'north-shore-pt-moody': 'north-shore-port-moody'}
 EXC = {'condos': r'townhom|townhouse|trap|exclud|not counted|cross-ref|caution|named in sources|not a strata|do not count|context|not apartment|row',
        'townhomes': r'apartment|condos|trap|exclud|presale|cross|other forms|never|caution|not counted|not townhom|do not count|named in sources',
        'lots-and-land': r'cross-ref|not land|not land stock'}
+# Names Jared asked for pages on (2026-11-02). (display name, city). Existing pages get the sections; names with no page get a new guide page.
+PLACES = {'agassiz': ('Agassiz', 'District of Kent'), 'annacis-island': ('Annacis Island', 'Delta'), 'barnston-island': ('Barnston Island', 'Surrey'), 'boulevard': ('Boulevard', 'North Vancouver'),
+          'boyd-park': ('Boyd Park', 'Richmond'), 'bridal-falls': ('Bridal Falls', 'FVRD'), 'bridgeport-ri': ('Bridgeport', 'Richmond'), 'brighouse': ('Brighouse', 'Richmond'),
+          'british-properties': ('British Properties', 'West Vancouver'), 'brunette': ('Brunette', 'New Westminster'), 'cambie': ('Cambie', 'Vancouver'), 'cedardale': ('Cedardale', 'West Vancouver'),
+          'central-lonsdale': ('Central Lonsdale', 'North Vancouver'), 'central-pt-coquitlam': ('Central Port Coquitlam', 'Port Coquitlam'), 'chilliwack-mountain': ('Chilliwack Mountain', 'Chilliwack'),
+          'collingwood-ve': ('Renfrew-Collingwood', 'Vancouver'), 'crescent-bch-ocean-pk': ('Crescent Beach and Ocean Park', 'South Surrey'), 'delbrook': ('Delbrook', 'North Vancouver'),
+          'downtown-ve': ('Downtown Vancouver', 'Vancouver'), 'dundarave': ('Dundarave', 'West Vancouver'), 'edgemont': ('Edgemont', 'North Vancouver'), 'fairview-vw': ('Fairview', 'Vancouver'),
+          'furry-creek': ('Furry Creek', 'SLRD'), 'grandview-woodland': ('Grandview-Woodland', 'Vancouver'), 'harrison-hot-springs': ('Harrison Hot Springs', 'BC'), 'hope': ('Hope', 'BC'),
+          'hyde-park-south-surrey': ('Hyde Park', 'South Surrey'), 'kent': ('Kent', 'BC'), 'kerrisdale': ('Kerrisdale', 'Vancouver'), 'lindell-beach': ('Lindell Beach', 'FVRD'), 'lynnmour': ('Lynnmour', 'North Vancouver'),
+          'mount-currie': ('Mount Currie', 'BC'), 'mount-pleasant-ve': ('Mount Pleasant', 'Vancouver'), 'mt-lehman': ('Mt. Lehman', 'Abbotsford'), 'norgate': ('Norgate', 'North Vancouver'),
+          'north-shore-pt-moody': ('North Shore', 'Port Moody'), 'oakridge-vw': ('Oakridge', 'Vancouver'), 'park-royal': ('Park Royal', 'West Vancouver'), 'pemberton-nv': ('Pemberton Heights', 'North Vancouver'),
+          'popkum': ('Popkum', 'FVRD'), 'riverdale-ri': ('Riverdale', 'Richmond'), 'sardis-east-vedder': ('Sardis East Vedder', 'Chilliwack'), 'sardis-south': ('Sardis South', 'Chilliwack'),
+          'sardis-west-vedder': ('Sardis West Vedder', 'Chilliwack'), 'shaughnessy': ('Shaughnessy', 'Vancouver'), 'south-arm': ('South Arm', 'Richmond'), 'south-cambie': ('South Cambie', 'Vancouver'),
+          'south-granville': ('South Granville', 'Vancouver'), 'surrey-city-centre': ('Surrey City Centre', 'Surrey'), 'sw-marine': ('SW Marine', 'Vancouver'), 'tilbury': ('Tilbury', 'Delta'),
+          'university-vw': ('University Endowment Lands', 'Vancouver'), 'upper-lonsdale': ('Upper Lonsdale', 'North Vancouver'), 'whitby-estates': ('Whitby Estates', 'West Vancouver')}
+CITYHUB = {'Richmond': ['richmond-homes-for-sale'], 'Vancouver': ['vancouver-homes-for-sale'], 'North Vancouver': ['north-vancouver-homes-for-sale'], 'West Vancouver': ['west-vancouver-homes-for-sale'],
+           'New Westminster': ['new-westminster-condos-for-sale', 'new-westminster-homes-for-sale'], 'Surrey': ['surrey-condos-for-sale', 'surrey-homes-for-sale'], 'South Surrey': ['south-surrey-homes-for-sale', 'surrey-homes-for-sale'],
+           'Delta': ['tsawwassen-homes-for-sale', 'ladner-homes-for-sale', 'delta-homes-for-sale'], 'Port Coquitlam': ['port-coquitlam-condos-for-sale', 'port-coquitlam-homes-for-sale'], 'Port Moody': ['port-moody-condos-for-sale', 'port-moody-homes-for-sale'],
+           'Chilliwack': ['chilliwack-condos-for-sale', 'chilliwack-homes-for-sale'], 'Abbotsford': ['abbotsford-condos-for-sale', 'abbotsford-homes-for-sale'], 'District of Kent': ['chilliwack-homes-for-sale'], 'FVRD': ['chilliwack-homes-for-sale', 'mission-homes-for-sale'],
+           'BC': ['chilliwack-homes-for-sale'], 'SLRD': ['west-vancouver-homes-for-sale']}
 SHARED_MIN = 8
 MAPPED = set(json.load(open(os.path.join(ROOT, 'src/data/snapstats/_mapping.json')))['mapped'])  # community and guide pages only; site pages like faq, privacy, selling are not communities
-COMM = set(ALIAS.values()) | MAPPED | {re.sub(r'-55-plus-homes-2026-11-01\.md$', '', os.path.basename(p)) for p in glob.glob(os.path.join(ROOT, 'docs/research/local-notes-55plus/*.md'))}  # plus every community Jared's 55+ notes name
+COMM = set(ALIAS.values()) | MAPPED | set(PLACES) | {re.sub(r'-55-plus-homes-2026-11-01\.md$', '', os.path.basename(p)) for p in glob.glob(os.path.join(ROOT, 'docs/research/local-notes-55plus/*.md'))}  # plus every community Jared's 55+ notes name
 
 
 def exists(s): return os.path.exists(f'{PAGES}/{s}.json') or os.path.exists(f'{LOCAL}/{s}.json')
 
 
+def slugify(t): return re.sub(r'-+', '-', re.sub(r'[^a-z0-9]+', '-', t.lower())).strip('-')
+
+
+NEWSLUG = {}
+
+
 def resolve(x, kind):
+    if x in NEWSLUG: return NEWSLUG[x]
     cands = [ALIAS.get(x)] if x in ALIAS else []
     cands += [x]
     if kind != 'lots-and-land':
@@ -127,11 +154,19 @@ def main():
         k = (n['kind'], n['x'])
         if k not in best or verified(n) > verified(best[k]): best[k] = n
     notes = [n for n in notes if best[(n['kind'], n['x'])] is n]
+    for x, (dn, city) in PLACES.items():
+        if not resolve(x, 'condos') and any(n['x'] == x for n in notes):
+            NEWSLUG[x] = f'{slugify(dn)}-guide' if slugify(city) in slugify(dn) else f'{slugify(dn)}-{slugify(city)}-guide' if city != 'BC' else f'{slugify(dn)}-bc-guide'
+            NEWSLUG[x] = NEWSLUG[x].replace('-district-of-kent-', '-bc-').replace('-slrd-', '-bc-').replace('-fvrd-', '-bc-')
     report = collections.defaultdict(list); targets = collections.defaultdict(list)
     for n in notes:
         tgt = resolve(n['x'], n['kind'])
         if not tgt or n['x'] in ('homepage', 'reviews') or N.TOPIC.search(n['x']): report['skipped'].append((n['kind'], n['x'])); continue
         targets[tgt].append(n)
+    # remove community guides this script made in an earlier run that are no longer wanted (renamed slug, or the community turned out to have a page)
+    for pth in glob.glob(f'{LOCAL}/*-guide.json'):
+        sl = os.path.basename(pth)[:-5]
+        if sl not in NEWSLUG.values() and json.load(open(pth, encoding='utf-8')).get('tn_page'): os.remove(pth)
     # strip old blocks everywhere
     for p in glob.glob(f'{LOCAL}/*.json'):
         j = json.load(open(p, encoding='utf-8'))
@@ -145,6 +180,7 @@ def main():
             if b.get('gen') in ('n55', 'n55mh', 'n55fold') and b.get('t') == 'list':
                 for it in b['items']: seen.add(it[0]['t'][:70])
     wrote = 0
+    for x, sl in NEWSLUG.items(): make_base(x, sl, [n for n in notes if n['x'] == x])
     for tgt, ns in sorted(targets.items()):
         j = load(tgt); bl = []; faq = []; urls_all = []
         for n in sorted(ns, key=lambda n: ['condos', 'townhomes', 'lots-and-land'].index(n['kind'])):
@@ -159,6 +195,19 @@ def main():
         have = {qkey(x['q']) for x in j.get('faq', [])}
         j['faq'] = j.get('faq', []) + [x for x in faq if qkey(x['q']) not in have][:8]
         j.setdefault('slug', tgt); save(tgt, j); wrote += 1
+    for x, sl in NEWSLUG.items(): finish_base(x, sl, shared)
+    # inbound links: each city hub lists the new guides for its city
+    for pth in glob.glob(f'{LOCAL}/*.json'):
+        jj = json.load(open(pth, encoding='utf-8'))
+        if any(b.get('gen') == 'tn_hub' for b in jj.get('blocks', [])): jj['blocks'] = [b for b in jj['blocks'] if b.get('gen') != 'tn_hub']; save(os.path.basename(pth)[:-5], jj)
+    byhub = collections.defaultdict(list)
+    for x, sl in NEWSLUG.items():
+        hs = [h for h in CITYHUB.get(PLACES[x][1], []) if exists(h)]
+        if hs: byhub[hs[0]].append((f'{PLACES[x][0]} real estate guide', f'/{sl}.html'))
+    for hub, items in byhub.items():
+        jj = load(hub); nice = hub.replace('-homes-for-sale', '').replace('-condos-for-sale', '').replace('-', ' ').title()
+        jj['blocks'] += [{**N.H(f'{nice} neighbourhood guides', 2), 'gen': 'tn_hub', 'pos': 'end'}, {**N.LK(items), 'gen': 'tn_hub', 'pos': 'end'}]
+        save(hub, jj)
     hubs(notes, shared)
     print('sections written to', wrote, 'pages;', 'notes used', sum(len(v) for v in targets.values()), 'skipped', len(report['skipped']))
     json.dump({'skipped': report['skipped']}, open(os.path.join(ROOT, 'docs/research/local-notes-types/_skipped.json'), 'w'), indent=1)
@@ -205,7 +254,7 @@ def section(n, sh, seen):
         for x in xs:
             if x and x[:70] not in seen: seen.add(x[:70]); out.append(x)
         return out
-    s1 = fresh([N.clean(b) for b in bl4(sec, 1) if N.real(b) and N.clean(b)])
+    s1 = fresh([N.clean(b) for b in bl4(sec, 1) if N.real(b) and not b.startswith('Market figures') and N.clean(b)])
     if s1: bl += [H(f'Streets, schools and getting around {name}', 3), LI(s1)]
     s3 = [b for b in bl4(sec, 3) if N.real(b) and key(b) not in sh['b']]
     s3 = fresh([N.J(b) for b in s3 if N.clean(b)])
@@ -222,6 +271,40 @@ def section(n, sh, seen):
         m = re.match(r'\*\*Q:\s*(.*?)\*\*\s*(.*)', b)
         if m and qkey(m.group(1)) not in sh['q'] and not N.FQ_BAD.search(m.group(1)) and N.clean(m.group(2)): faq.append({'gen': G, 'q': m.group(1).strip(), 'a': N.clean(m.group(2))})
     return bl, faq[:5], u
+
+
+def make_base(x, slug, ns):
+    dn, city = PLACES[x]; d = dict(status='draft', slug=slug, updated='2026-11-02', tn_page=True, hand_edited=True, blocks=[], faq=[])
+    first = None
+    for kind in ('condos', 'townhomes', 'lots-and-land'):
+        for n in ns:
+            if n['kind'] == kind and first is None:
+                for b in bl4(n['sec'], 1):
+                    t = N.clean(b)
+                    if len(t) > 60 and N.real(b) and not re.match(r'(Page scope|Market figures|Filing position)', b): first = t; break
+    place = dn if city == 'BC' or city.lower() in dn.lower() else f'{dn}, {city}'
+    has55 = os.path.exists(f'{LOCAL}/{x}-55-plus-homes-for-sale.json')
+    d['blocks'] = [{'t': 'notice', 'text': "Draft for Jared's approval. Written from Jared's verified local notes (researched November 1, 2026). Listing-stated figures are labelled; unconfirmed items say so. No live listing feed or board statistics are attached to this page yet.", 'gen': 'tn_new'}]
+    if first: d['blocks'].append({**N.P(first), 'gen': 'tn_new'})
+    d['blocks'].append({**N.P(f'This guide covers {dn}\'s condo buildings, townhome complexes and land: what each source verifies, the local rules, and what buyers ask. Anything no source states is marked unconfirmed.' + (' Seniors housing has its own page.' if has55 else '')), 'gen': 'tn_new'})
+    d['blocks'].append({'t': 'grid', 'gen': 'tn_new'})
+    d['new_page'] = dict(title=(f'{place} Real Estate Guide | Jared Gibbons' if len(f'{place} Real Estate Guide | Jared Gibbons') <= 66 else f'{place} Real Estate Guide')[:70],
+                         description=f'{place}: verified condo buildings, townhome complexes, land and local rules, with sources. Jared Gibbons, REALTOR®.'[:158], h1=f'{dn} Real Estate Guide: {city}' if city != 'BC' and city.lower() not in dn.lower() else f'{dn} Real Estate Guide')
+    d['needs_from_muse'] = [f'Jared’s own notes on {dn}: how it sells, what buyers ask', 'Live listing feed and board statistics for this area', 'Photos']
+    save(slug, d)
+
+
+def finish_base(x, slug, shared):
+    d = load(slug); dn, city = PLACES[x]
+    hubs_ = [h for h in CITYHUB.get(city, []) if exists(h)][:2]
+    links = [(f'{c.replace("-", " ").title()}', f'/{c}.html') for c in hubs_]
+    if os.path.exists(f'{LOCAL}/{x}-55-plus-homes-for-sale.json'): links.append((f'{dn} 55+ homes for sale', f'/{x}-55-plus-homes-for-sale.html'))
+    links += [('BC condo buying rules', '/bc-condo-buying-rules.html'), ('BC townhome buying rules', '/bc-townhome-buying-rules.html'), ('BC land buying rules', '/bc-land-buying-rules.html'),
+              ('Home evaluation', '/home-evaluation.html'), ('Mortgage calculator', '/mortgage-calculator.html'), ('Contact Jared', '/contact.html')]
+    d['blocks'] += [{**N.H(f'More {dn} real estate', 2), 'gen': 'tn_new', 'pos': 'end'}, {**N.LK(links), 'gen': 'tn_new', 'pos': 'end'}]
+    d['faq_heading'] = f'{dn} real estate: your questions answered'
+    d['breadcrumbs'] = [{'name': 'Home', 'href': '/index.html'}] + ([{'name': c.replace('-', ' ').title(), 'href': f'/{c}.html'} for c in hubs_[:1]]) + [{'name': dn, 'href': f'/{slug}.html'}]
+    save(slug, d)
 
 
 def hubs(notes, sh_all):

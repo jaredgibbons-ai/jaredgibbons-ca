@@ -41,6 +41,8 @@ def clean(s):
     s = re.sub(r'\s*\S*[&?]\w+=\S*', '', s)
     s = re.sub(r'\s*(?:\band\b\s+)?~/\S+', '', s)
     s = re.sub(r'\*\*(.*?)\*\*', r'\1', s)
+    s = re.sub(r',?\s*(?:AS )?(?:THE )?RESEARCH STATES? IT', '', s, flags=re.I)
+    s = re.sub(r'^(?:Page scope|Filing position|Cross-reference position):\s*', '', s)
     s = re.sub(r'\s*\((?:[^()]*?[;,] ?)?(?:see|in) [^()]*Section [1-5][^()]*\)', '', s)
     s = re.sub(r'\s*[;:,]? see [^.()]*Section [1-5]\b', '', s)
     s = re.sub(r'\s*\((?:see )?Sections? [1-5](?:[^()]*)\)', '', s)
