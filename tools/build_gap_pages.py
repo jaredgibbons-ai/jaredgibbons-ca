@@ -255,7 +255,7 @@ def main():
         n = sum(PG.get(cd, {}).get(COL[kind], 0) for cd in codes)
         if n < 5: print('skip (under 5)', slug, n); continue
         if slug in existing and not os.path.exists(lp(slug)): print('skip (page exists)', slug); continue
-        if os.path.exists(lp(slug)) and not json.load(open(lp(slug), encoding='utf-8')).get('gen_gap'): print('skip (hand page)', slug); continue
+        if os.path.exists(lp(slug)) and (not json.load(open(lp(slug), encoding='utf-8')).get('gen_gap') or json.load(open(lp(slug), encoding='utf-8')).get('notes_page')): print('skip (hand page)', slug); continue
         T = 'condos' if suf.startswith('condos') else 'townhomes'
         w = 'apartment-style homes' if T == 'condos' else 'ground-level homes'
         head = f'{N} {head0}'
