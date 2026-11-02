@@ -165,6 +165,41 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "South Meadows home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "26 houses sold in South Meadows with a median price of $1,320,000 (the middle half sold between $1,111,250 and $1,400,000), taking a median of 32 days to sell at 97.5% of the last list price; 8% sold above list. They had a median $505 per square foot, a median year built of 1981 and a median lot of 5,896 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "South Meadows: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "26",
+          "$1,320,000",
+          "32 days",
+          "97.5%",
+          "$505"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -183,10 +218,19 @@
     {
       "q": "Does this page include townhomes or duplexes in South Meadows?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in South Meadows sell for?",
+      "a": "26 houses sold in South Meadows between November 1, 2025 to October 22, 2026, with a median price of $1,320,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in South Meadows?",
+      "a": "The median was 32 days from listing to sale, and homes sold at a median 97.5% of the last list price (8% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for South Meadows houses (the reports give them for Pitt Meadows as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in South Meadows",
     "A live listing feed filtered to this type"
   ]

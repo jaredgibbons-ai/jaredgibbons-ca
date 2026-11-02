@@ -13,6 +13,7 @@ counts until Jared's Paragon export arrives; both say so. Run after build_snapst
 import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import trend as TR
+import build_sold_layer as SO
 import build_snapstats_layers as L
 
 ROOT = L.ROOT
@@ -82,7 +83,7 @@ def main():
     # ---------- condos / townhomes (one line in the reports) ----------
     rk = sorted(((x['inventory'] or 0, x['name']) for x in months[last]['areas'][AK]['condo_townhome']['communities']), reverse=True)
     rank = [n for _, n in rk].index(NAME) + 1
-    both = 'The monthly reports publish condos and townhomes as one line, so the figures on this page cover both and cannot be split until Jared’s sold-listing export is added.'
+    both = 'The monthly reports publish condos and townhomes as one line, so the month-by-month table covers both. The sold-price section further down separates them, using closed sales from Jared’s MLS® system (' + SO.WINDOW + ').'
     move = ''
     a, b = S['condo_townhome'][first]['inventory'], c['inventory']
     move = f'Condo and townhome listings in {NAME} ' + TR.count_move(a, b, L.month_name(first), mn) + f', while {L.num(sold("condo_townhome"))} sold across the {nm} months.'
@@ -137,10 +138,14 @@ def main():
         keep = [b for b in j.get('blocks', []) if b.get('gen') in ('musefaq', 'relatedlinks')]  # sources list / related links rebuilt by their own scripts
         for k in ('condo_page_for', 'needs_from_muse', 'breadcrumbs'): j.pop(k, None)
         j.update({k: v for k, v in spec.items() if k != 'blocks'})
-        j['blocks'] = spec['blocks'] + keep
+        sk = 'Burnaby North|Brentwood Park'; types = {HOMES: ['house'], CONDO: ['condo'], TOWN: ['townhome']}[slug]
+        sb = SO.page_blocks(SO.load(), sk, NAME, types)
+        j['blocks'] = spec['blocks'] + sb + keep
+        agg_g = SO.load()['sub'][sk]['groups']
+        j['faq'] = list(j.get('faq', [])) + [q for t in types if t in agg_g for q in SO.sold_faq(NAME, SO.GL[t], agg_g[t], t)]
         j['status'] = 'draft'; j['updated'] = '2026-11-01'
         j['breadcrumbs'] = [{'name': 'Home', 'href': '/index.html'}, {'name': CITY, 'href': '/burnaby-homes-for-sale.html'}, {'name': NAME, 'href': f'/{GUIDE}.html'}, {'name': {HOMES: 'Houses', CONDO: 'Condos', TOWN: 'Townhomes'}[slug], 'href': f'/{slug}.html'}]
-        j['needs_from_muse'] = [f'Separate condo and townhome counts, sold prices and days on market for {NAME} (Paragon sold export)', 'Named buildings and townhome complexes, strata fee ranges and building ages', 'A feed filtered to this home type', 'Jared\'s own notes']
+        j['needs_from_muse'] = ['Jared’s notes on the buildings and complexes in the sold-price table (names are as entered in the MLS®)', 'Street boundaries and the planned changes around Brentwood Town Centre', 'A feed filtered to this home type', 'Jared\'s own notes']
         save(slug, j)
         print('wrote', slug)
 
@@ -160,8 +165,8 @@ def main():
           H(f'Browse {NAME} by home type'),
           links([(f'{NAME} houses for sale', f'/{HOMES}.html'), (f'{NAME} condos for sale', f'/{CONDO}.html'), (f'{NAME} townhomes for sale', f'/{TOWN}.html')]),
           *moved]
-    keepg = [b for b in g['blocks'] if b.get('gen') not in ('snapstats', 'condopage', GEN)]
-    g['blocks'] = gb + keepg
+    keepg = [b for b in g['blocks'] if b.get('gen') not in ('snapstats', 'condopage', GEN, 'sold')]
+    g['blocks'] = gb + SO.page_blocks(SO.load(), 'Burnaby North|Brentwood Park', NAME, ['condo', 'townhome', 'house']) + keepg
     save(GUIDE, g); print('wrote', GUIDE)
 
 

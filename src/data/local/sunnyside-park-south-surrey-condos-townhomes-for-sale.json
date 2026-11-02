@@ -183,6 +183,49 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Sunnyside Park home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "38 townhomes sold in Sunnyside Park with a median price of $962,500 (the middle half sold between $851,750 and $1,044,250), taking a median of 40 days to sell at 96.2% of the last list price; 3% sold above list. They had a median $566 per square foot, a median year built of 1992 and a median strata fee of $503 a month. 36 condos sold in Sunnyside Park with a median price of $506,500 (the middle half sold between $416,000 and $549,250), taking a median of 41 days to sell at 96.8% of the last list price; 6% sold above list. They had a median $469 per square foot, a median year built of 1994 and a median strata fee of $544 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Sunnyside Park: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "36",
+          "$506,500",
+          "41 days",
+          "96.8%",
+          "$469"
+        ],
+        [
+          "Townhomes",
+          "38",
+          "$962,500",
+          "40 days",
+          "96.2%",
+          "$566"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -201,10 +244,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did townhomes in Sunnyside Park sell for?",
+      "a": "38 townhomes sold in Sunnyside Park between November 1, 2025 to October 22, 2026, with a median price of $962,500."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Sunnyside Park?",
+      "a": "The median was 40 days from listing to sale, and homes sold at a median 96.2% of the last list price (3% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Sunnyside Park condos and townhomes (the reports give them for South Surrey and White Rock as a whole)",
     "Named buildings and complexes in Sunnyside Park, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

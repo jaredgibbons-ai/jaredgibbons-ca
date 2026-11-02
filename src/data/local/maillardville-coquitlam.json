@@ -341,6 +341,65 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Maillardville home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "21 duplexes sold in Maillardville with a median price of $1,285,000 (the middle half sold between $1,167,000 and $1,350,000), taking a median of 13 days to sell at 97.4% of the last list price; 0% sold above list. They had a median $707 per square foot and a median year built of 2026. 17 townhomes sold in Maillardville with a median price of $763,000 (the middle half sold between $615,000 and $1,098,000), taking a median of 25 days to sell at 97.2% of the last list price; 0% sold above list. They had a median $608 per square foot, a median year built of 1998 and a median strata fee of $380 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Maillardville: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "7",
+          "$1,890,000",
+          "61 days",
+          "94.4%",
+          "$447"
+        ],
+        [
+          "Condos",
+          "15",
+          "$528,000",
+          "21 days",
+          "99.3%",
+          "$633"
+        ],
+        [
+          "Townhomes",
+          "17",
+          "$763,000",
+          "25 days",
+          "97.2%",
+          "$608"
+        ],
+        [
+          "Duplexes (half and full)",
+          "21",
+          "$1,285,000",
+          "13 days",
+          "97.4%",
+          "$707"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -367,11 +426,20 @@
     {
       "q": "Are there more or fewer homes for sale in Maillardville than in June?",
       "a": "Listings of detached houses fell from 16 in June to 14 in September 2026 (−12.5%); condos and townhomes fell from 46 in June to 41 in September 2026 (−10.9%)."
+    },
+    {
+      "gen": "sold",
+      "q": "What did duplexes in Maillardville sell for?",
+      "a": "21 duplexes sold in Maillardville between November 1, 2025 to October 22, 2026, with a median price of $1,285,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do duplexes take to sell in Maillardville?",
+      "a": "The median was 13 days from listing to sale, and homes sold at a median 97.4% of the last list price (0% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of Maillardville from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for Maillardville itself (the reports give them for Coquitlam as a whole, not per community)",
     "Schools for Maillardville, placed by street address",
     "Jared's own notes on Maillardville: housing stock, who buys here, what to watch",
     "A live listing feed for Maillardville"

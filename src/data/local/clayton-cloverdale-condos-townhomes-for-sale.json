@@ -153,6 +153,154 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Clayton home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "169 townhomes sold in Clayton with a median price of $760,000 (the middle half sold between $699,900 and $823,000), taking a median of 20 days to sell at 97.6% of the last list price; 7% sold above list. They had a median $489 per square foot, a median year built of 2012 and a median strata fee of $372 a month. 72 condos sold in Clayton with a median price of $464,400 (the middle half sold between $413,750 and $550,500), taking a median of 26 days to sell at 97.2% of the last list price; 1% sold above list. They had a median $616 per square foot, a median year built of 2013 and a median strata fee of $412 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Clayton: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "72",
+          "$464,400",
+          "26 days",
+          "97.2%",
+          "$616"
+        ],
+        [
+          "Townhomes",
+          "169",
+          "$760,000",
+          "20 days",
+          "97.6%",
+          "$489"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Clayton: townhomes sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "37",
+          "$761,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "61",
+          "$740,000"
+        ],
+        [
+          "May to Jul 2026",
+          "49",
+          "$799,800"
+        ],
+        [
+          "Aug to Oct 2026",
+          "22",
+          "$766,500"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Clayton: buildings and complexes with the most townhomes sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "Clayton Rise",
+          "8",
+          "$698,750",
+          "16 days",
+          "2012",
+          "$359 a month"
+        ],
+        [
+          "Aloha Estates",
+          "7",
+          "$842,888",
+          "25 days",
+          "2021",
+          "$381 a month"
+        ],
+        [
+          "Uptown",
+          "6",
+          "$752,000",
+          "24 days",
+          "2013",
+          "$358 a month"
+        ],
+        [
+          "Onyx",
+          "6",
+          "$855,000",
+          "23 days",
+          "2020",
+          "$313 a month"
+        ],
+        [
+          "Mackenzie Estates",
+          "5",
+          "$745,500",
+          "20 days",
+          "2013",
+          "$328 a month"
+        ],
+        [
+          "Elston",
+          "5",
+          "$918,000",
+          "34 days",
+          "2020",
+          "$461 a month"
+        ],
+        [
+          "Montana",
+          "5",
+          "$710,000",
+          "68 days",
+          "2007",
+          "$433 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -171,10 +319,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did townhomes in Clayton sell for?",
+      "a": "169 townhomes sold in Clayton between November 1, 2025 to October 22, 2026, with a median price of $760,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Clayton?",
+      "a": "The median was 20 days from listing to sale, and homes sold at a median 97.6% of the last list price (7% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Clayton condos and townhomes (the reports give them for Cloverdale as a whole)",
     "Named buildings and complexes in Clayton, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

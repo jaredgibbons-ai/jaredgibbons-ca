@@ -178,6 +178,41 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Deer Lake Place home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "8 houses sold in Deer Lake Place with a median price of $1,785,000 (the middle half sold between $1,747,500 and $1,888,750), taking a median of 12 days to sell at 97.1% of the last list price; 12% sold above list. They had a median $558 per square foot, a median year built of 1969 and a median lot of 8,000 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Deer Lake Place: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "8",
+          "$1,785,000",
+          "12 days",
+          "97.1%",
+          "$558"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -196,10 +231,19 @@
     {
       "q": "Does this page include townhomes or duplexes in Deer Lake Place?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Deer Lake Place sell for?",
+      "a": "8 houses sold in Deer Lake Place between November 1, 2025 to October 22, 2026, with a median price of $1,785,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Deer Lake Place?",
+      "a": "The median was 12 days from listing to sale, and homes sold at a median 97.1% of the last list price (12% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Deer Lake Place houses (the reports give them for Burnaby as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in Deer Lake Place",
     "A live listing feed filtered to this type"
   ]

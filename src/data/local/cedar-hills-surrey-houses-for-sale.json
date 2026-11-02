@@ -201,6 +201,74 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Cedar Hills home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "57 houses sold in Cedar Hills with a median price of $1,100,000 (the middle half sold between $1,000,000 and $1,345,500), taking a median of 44 days to sell at 94.1% of the last list price; 5% sold above list. They had a median $445 per square foot, a median year built of 1964 and a median lot of 7,560 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Cedar Hills: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "57",
+          "$1,100,000",
+          "44 days",
+          "94.1%",
+          "$445"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Cedar Hills: houses sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "18",
+          "$1,152,500"
+        ],
+        [
+          "Feb to Apr 2026",
+          "16",
+          "$1,117,500"
+        ],
+        [
+          "May to Jul 2026",
+          "10",
+          "$1,050,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "13",
+          "$1,020,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -219,10 +287,19 @@
     {
       "q": "Does this page include townhomes or duplexes in Cedar Hills?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Cedar Hills sell for?",
+      "a": "57 houses sold in Cedar Hills between November 1, 2025 to October 22, 2026, with a median price of $1,100,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Cedar Hills?",
+      "a": "The median was 44 days from listing to sale, and homes sold at a median 94.1% of the last list price (5% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Cedar Hills houses (the reports give them for Surrey as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in Cedar Hills",
     "A live listing feed filtered to this type"
   ]

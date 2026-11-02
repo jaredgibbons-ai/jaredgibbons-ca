@@ -47,3 +47,32 @@ test('net-proceeds calculator ships with no default values or built-in rates', (
   assert.ok(!/action=|method="post"/i.test(html.match(/<form class="npc"[^>]*>/)[0]), 'calculator form must not submit anywhere');
   assert.match(html, /no commission, legal or closing-cost rates are built in/i);
 });
+
+test('sold layer holds grouped figures only: no MLS numbers, addresses or single-sale prices', () => {
+  const raw = fs.readFileSync('src/data/sold/sold-12m.json', 'utf8');
+  assert.ok(!/\bR[23]\d{6}\b/.test(raw), 'an MLS number is in the sold aggregate');
+  assert.ok(!/"Sold Price"|"ML #"|"Status"/.test(raw), 'raw column names found in the sold aggregate');
+  const agg = JSON.parse(raw);
+  for (const [k, v] of Object.entries(agg.sub)) for (const [g, s] of Object.entries(v.groups)) {
+    if (s.n < 5) assert.ok(s.price === undefined || s.n >= 3, `${k} ${g}`);
+    if (s.n < 3) assert.ok(s.price === undefined, `${k} ${g} has a price on fewer than 3 sales`);
+  }
+  for (const [k, v] of Object.entries(agg.sub)) for (const c of Object.values(v.complexes)) for (const b of c) assert.ok(b.n >= 3, `${k} ${b.name}`);
+});
+
+test('sold tables never show a price for fewer than 5 sales and name buildings only with 5+', () => {
+  let tables = 0;
+  for (const [f, t] of texts) {
+    const j = JSON.parse(t);
+    for (const b of j.blocks || []) {
+      if (b.gen !== 'sold' || b.t !== 'table') continue;
+      tables++;
+      for (const r of b.rows) {
+        const n = parseInt(String(r[1]).replace(/,/g, ''), 10);
+        if (/buildings and complexes/.test(b.caption)) assert.ok(n >= 5, `${f}: building with ${n} sales named`);
+        else if (n < 5) assert.match(r[2], /Too few/, `${f}: a price is shown for ${n} sales`);
+      }
+    }
+  }
+  assert.ok(tables > 100, 'expected sold tables to check');
+});

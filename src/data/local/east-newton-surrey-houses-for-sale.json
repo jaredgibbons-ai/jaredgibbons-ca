@@ -201,6 +201,74 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "East Newton home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "80 houses sold in East Newton with a median price of $1,382,500 (the middle half sold between $1,171,875 and $1,553,750), taking a median of 38 days to sell at 95.5% of the last list price; 8% sold above list. They had a median $421 per square foot, a median year built of 2002 and a median lot of 6,038 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "East Newton: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "80",
+          "$1,382,500",
+          "38 days",
+          "95.5%",
+          "$421"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "East Newton: houses sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "14",
+          "$1,405,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "24",
+          "$1,340,000"
+        ],
+        [
+          "May to Jul 2026",
+          "28",
+          "$1,462,500"
+        ],
+        [
+          "Aug to Oct 2026",
+          "14",
+          "$1,332,500"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -219,10 +287,19 @@
     {
       "q": "Does this page include townhomes or duplexes in East Newton?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in East Newton sell for?",
+      "a": "80 houses sold in East Newton between November 1, 2025 to October 22, 2026, with a median price of $1,382,500."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in East Newton?",
+      "a": "The median was 38 days from listing to sale, and homes sold at a median 95.5% of the last list price (8% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for East Newton houses (the reports give them for Surrey as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in East Newton",
     "A live listing feed filtered to this type"
   ]

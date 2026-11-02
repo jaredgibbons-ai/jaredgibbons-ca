@@ -27,7 +27,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
       "gen": "gappage"
     },
     {
@@ -38,6 +38,122 @@
     {
       "t": "grid",
       "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Mission townhomes sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "65 townhomes sold in Mission with a median price of $679,900 (the middle half sold between $635,000 and $709,900), taking a median of 25 days to sell at 98.6% of the last list price; 3% sold above list. They had a median $444 per square foot, a median year built of 2021 and a median strata fee of $349 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Mission: townhomes sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "16",
+          "$687,500"
+        ],
+        [
+          "Feb to Apr 2026",
+          "22",
+          "$692,500"
+        ],
+        [
+          "May to Jul 2026",
+          "17",
+          "$675,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "10",
+          "$641,704"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Mission: townhomes sold by community",
+      "head": [
+        "Community",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Mission",
+          "55",
+          "$679,000",
+          "30 days",
+          "98.6%",
+          "$436"
+        ],
+        [
+          "Mission-West",
+          "9",
+          "$685,000",
+          "14 days",
+          "98.8%",
+          "$473"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Mission: buildings and complexes with the most townhomes sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "Skyview",
+          "10",
+          "$714,900",
+          "6 days",
+          "2025",
+          "$180 a month"
+        ],
+        [
+          "Archer Green",
+          "8",
+          "$682,500",
+          "16 days",
+          "2022",
+          "$381 a month"
+        ],
+        [
+          "Spencer Estates",
+          "5",
+          "$415,000",
+          "55 days",
+          "1994",
+          "$410 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     },
     {
       "t": "h",
@@ -318,6 +434,51 @@
   ],
   "faq": [
     {
+      "gen": "sold",
+      "q": "What did townhomes in Mission sell for?",
+      "a": "65 townhomes sold in Mission between November 1, 2025 to October 22, 2026, with a median price of $679,900."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Mission?",
+      "a": "The median was 25 days from listing to sale, and homes sold at a median 98.6% of the last list price (3% sold above list), for sales November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "What price range do most townhomes in Mission sell in?",
+      "a": "The middle half of the 65 townhomes that sold in Mission went for between $635,000 and $709,900, around a median of $679,900."
+    },
+    {
+      "gen": "sold",
+      "q": "Do townhomes in Mission sell above asking price?",
+      "a": "3% of the 65 townhomes sold for more than the last list price, and the median sale was 98.6% of it."
+    },
+    {
+      "gen": "sold",
+      "q": "What is a typical strata fee for townhomes in Mission?",
+      "a": "Of the 65 sales, 64 listings gave a monthly fee and the median was $349."
+    },
+    {
+      "gen": "sold",
+      "q": "How old are the townhomes that sold in Mission?",
+      "a": "The median year built was 2021 for the 65 townhomes sold in Mission."
+    },
+    {
+      "gen": "sold",
+      "q": "How many bedrooms do townhomes in Mission usually have?",
+      "a": "The median townhome that sold in Mission had 3 bedrooms, from the 65 sales between November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which Mission communities sold the most townhomes?",
+      "a": "By number sold: Mission BC (55), Mission-West (9), for November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which Mission buildings sold the most townhomes?",
+      "a": "By number sold: Skyview (10), Archer Green (8), Spencer Estates (5), for November 1, 2025 to October 22, 2026."
+    },
+    {
       "q": "What is the benchmark price of a townhome in Mission?",
       "a": "The Fraser Valley Real Estate Board MLS® Home Price Index benchmark for townhomes in Mission was $618,000 in September 2026, a modelled price for a typical home and not an average of sales."
     },
@@ -332,23 +493,10 @@
     {
       "q": "How many townhomes are for sale in Mission?",
       "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the townhomes in Mission that match what you want."
-    },
-    {
-      "q": "Can Jared alert me when townhomes come up in Mission?",
-      "a": "Yes. Tell him the area, price range and must-haves and he will alert you the day a match is listed."
-    },
-    {
-      "q": "Where can I see all Mission homes?",
-      "a": "The Mission homes for sale page covers every home type, and the Mission market stats page has the monthly figures."
-    },
-    {
-      "q": "Who is Jared Gibbons?",
-      "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
     }
   ],
   "needs_from_muse": [
     "Live listing feed filtered to townhomes in Mission",
-    "Sold prices and days on market by type (Paragon sold export)",
     "Jared's own notes"
   ]
 }

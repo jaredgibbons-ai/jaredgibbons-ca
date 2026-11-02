@@ -27,7 +27,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
       "gen": "gappage"
     },
     {
@@ -38,6 +38,17 @@
     {
       "t": "grid",
       "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Coquitlam manufactured homes sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "9 manufactured homes sold in Coquitlam with a median price of $210,000 (the middle half sold between $166,000 and $288,800), taking a median of 28 days to sell at 91.8% of the last list price; 0% sold above list. They had a median year built of 1985.",
+      "gen": "sold"
     },
     {
       "t": "h",
@@ -186,29 +197,46 @@
   ],
   "faq": [
     {
+      "gen": "sold",
+      "q": "What did mobile homes in Coquitlam sell for?",
+      "a": "9 manufactured homes sold in Coquitlam between November 1, 2025 to October 22, 2026, with a median price of $210,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do mobile homes take to sell in Coquitlam?",
+      "a": "The median was 28 days from listing to sale, and homes sold at a median 91.8% of the last list price (0% sold above list), for sales November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "What price range do most mobile homes in Coquitlam sell in?",
+      "a": "The middle half of the 9 manufactured homes that sold in Coquitlam went for between $166,000 and $288,800, around a median of $210,000."
+    },
+    {
+      "gen": "sold",
+      "q": "Do mobile homes in Coquitlam sell above asking price?",
+      "a": "0% of the 9 manufactured homes sold for more than the last list price, and the median sale was 91.8% of it."
+    },
+    {
+      "gen": "sold",
+      "q": "How old are the mobile homes that sold in Coquitlam?",
+      "a": "The median year built was 1985 for the 9 manufactured homes sold in Coquitlam."
+    },
+    {
+      "gen": "sold",
+      "q": "Which Coquitlam communities sold the most mobile homes?",
+      "a": "By number sold: Maillardville (8), for November 1, 2025 to October 22, 2026."
+    },
+    {
       "q": "Is Coquitlam a buyers’ or sellers’ market?",
       "a": "In September 2026 houses in Coquitlam had a sales ratio of 10%, which the reports’ scale reads as a buyers’ market, and condos and townhomes 11%, which the reports’ scale reads as a buyers’ market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers."
     },
     {
       "q": "How many mobile homes are for sale in Coquitlam?",
       "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the mobile homes in Coquitlam that match what you want."
-    },
-    {
-      "q": "Can Jared alert me when mobile homes come up in Coquitlam?",
-      "a": "Yes. Tell him the area, price range and must-haves and he will alert you the day a match is listed."
-    },
-    {
-      "q": "Where can I see all Coquitlam homes?",
-      "a": "The Coquitlam homes for sale page covers every home type, and the Coquitlam market stats page has the monthly figures."
-    },
-    {
-      "q": "Who is Jared Gibbons?",
-      "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
     }
   ],
   "needs_from_muse": [
     "Live listing feed filtered to mobile homes in Coquitlam",
-    "Sold prices and days on market by type (Paragon sold export)",
     "Jared's own notes"
   ]
 }

@@ -335,6 +335,82 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Ranch Park home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "32 houses sold in Ranch Park with a median price of $1,485,000 (the middle half sold between $1,384,625 and $1,796,000), taking a median of 24 days to sell at 95.6% of the last list price; 9% sold above list. They had a median $579 per square foot, a median year built of 1973 and a median lot of 8,911 square feet. 6 townhomes sold in Ranch Park with a median price of $622,500, taking a median of 11 days to sell at 95.5% of the last list price; 0% sold above list. They had a median $422 per square foot, a median year built of 1977 and a median strata fee of $307 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Ranch Park: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "32",
+          "$1,485,000",
+          "24 days",
+          "95.6%",
+          "$579"
+        ],
+        [
+          "Townhomes",
+          "6",
+          "$622,500",
+          "11 days",
+          "95.5%",
+          "$422"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Ranch Park: houses sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "7",
+          "$1,470,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "15",
+          "$1,475,000"
+        ],
+        [
+          "May to Jul 2026",
+          "5",
+          "$1,870,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "5",
+          "$1,490,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -361,11 +437,20 @@
     {
       "q": "Are there more or fewer homes for sale in Ranch Park than in June?",
       "a": "Listings of detached houses fell from 41 in June to 20 in September 2026 (−51.2%); condos and townhomes was 1 in June and 1 in September 2026, too few (under 3) to call a rise or fall."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Ranch Park sell for?",
+      "a": "32 houses sold in Ranch Park between November 1, 2025 to October 22, 2026, with a median price of $1,485,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Ranch Park?",
+      "a": "The median was 24 days from listing to sale, and homes sold at a median 95.6% of the last list price (9% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of Ranch Park from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for Ranch Park itself (the reports give them for Coquitlam as a whole, not per community)",
     "Schools for Ranch Park, placed by street address",
     "Jared's own notes on Ranch Park: housing stock, who buys here, what to watch",
     "A live listing feed for Ranch Park"

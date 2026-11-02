@@ -171,6 +171,186 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Port Moody Centre home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "195 condos sold in Port Moody Centre with a median price of $705,000 (the middle half sold between $602,000 and $797,000), taking a median of 26 days to sell at 97.7% of the last list price; 3% sold above list. They had a median $809 per square foot, a median year built of 2012 and a median strata fee of $459 a month. 31 townhomes sold in Port Moody Centre with a median price of $1,112,000 (the middle half sold between $954,500 and $1,181,750), taking a median of 26 days to sell at 97.9% of the last list price; 6% sold above list. They had a median $784 per square foot, a median year built of 2012 and a median strata fee of $430 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Port Moody Centre: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "195",
+          "$705,000",
+          "26 days",
+          "97.7%",
+          "$809"
+        ],
+        [
+          "Townhomes",
+          "31",
+          "$1,112,000",
+          "26 days",
+          "97.9%",
+          "$784"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Port Moody Centre: condos sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "42",
+          "$690,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "70",
+          "$693,500"
+        ],
+        [
+          "May to Jul 2026",
+          "57",
+          "$712,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "26",
+          "$711,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Port Moody Centre: buildings and complexes with the most condos sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "The Grande",
+          "14",
+          "$834,950",
+          "14 days",
+          "2022",
+          "$373 a month"
+        ],
+        [
+          "50 Electronic Avenue",
+          "10",
+          "$742,500",
+          "32 days",
+          "2023",
+          "$456 a month"
+        ],
+        [
+          "Hue",
+          "10",
+          "$695,900",
+          "8 days",
+          "2025",
+          "$447 a month"
+        ],
+        [
+          "The Tides",
+          "9",
+          "$692,000",
+          "36 days",
+          "2006",
+          "$467 a month"
+        ],
+        [
+          "Sonrisa",
+          "7",
+          "$658,000",
+          "12 days",
+          "2003",
+          "$562 a month"
+        ],
+        [
+          "Inglenook",
+          "6",
+          "$698,500",
+          "18 days",
+          "2005",
+          "$516 a month"
+        ],
+        [
+          "Sahalee",
+          "6",
+          "$734,500",
+          "21 days",
+          "2008",
+          "$448 a month"
+        ],
+        [
+          "The George",
+          "5",
+          "$590,000",
+          "32 days",
+          "2021",
+          "$286 a month"
+        ],
+        [
+          "50 Electronic Ave",
+          "5",
+          "$730,000",
+          "23 days",
+          "2022",
+          "$464 a month"
+        ],
+        [
+          "The Strand",
+          "5",
+          "$670,000",
+          "31 days",
+          "2018",
+          "$468 a month"
+        ],
+        [
+          "Aria 1",
+          "5",
+          "$740,000",
+          "29 days",
+          "2008",
+          "$518 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -189,10 +369,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did condos in Port Moody Centre sell for?",
+      "a": "195 condos sold in Port Moody Centre between November 1, 2025 to October 22, 2026, with a median price of $705,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do condos take to sell in Port Moody Centre?",
+      "a": "The median was 26 days from listing to sale, and homes sold at a median 97.7% of the last list price (3% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Port Moody Centre condos and townhomes (the reports give them for Port Moody as a whole)",
     "Named buildings and complexes in Port Moody Centre, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

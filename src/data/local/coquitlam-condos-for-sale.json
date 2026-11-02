@@ -27,7 +27,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
       "gen": "gappage"
     },
     {
@@ -38,6 +38,242 @@
     {
       "t": "grid",
       "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Coquitlam condos sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "768 condos sold in Coquitlam with a median price of $613,450 (the middle half sold between $505,750 and $705,000), taking a median of 24 days to sell at 97.4% of the last list price; 6% sold above list. They had a median $769 per square foot, a median year built of 2015 and a median strata fee of $432 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Coquitlam: condos sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "204",
+          "$638,500"
+        ],
+        [
+          "Feb to Apr 2026",
+          "207",
+          "$620,000"
+        ],
+        [
+          "May to Jul 2026",
+          "243",
+          "$610,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "114",
+          "$599,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Coquitlam: condos sold by community",
+      "head": [
+        "Community",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Coquitlam West",
+          "389",
+          "$620,000",
+          "27 days",
+          "97.5%",
+          "$835"
+        ],
+        [
+          "North Coquitlam",
+          "195",
+          "$600,000",
+          "23 days",
+          "97.3%",
+          "$684"
+        ],
+        [
+          "New Horizons",
+          "59",
+          "$695,000",
+          "20 days",
+          "97.4%",
+          "$761"
+        ],
+        [
+          "Westwood Plateau",
+          "44",
+          "$656,500",
+          "24 days",
+          "97.4%",
+          "$689"
+        ],
+        [
+          "Canyon Springs",
+          "31",
+          "$530,000",
+          "19 days",
+          "97.6%",
+          "$589"
+        ],
+        [
+          "Central Coquitlam",
+          "26",
+          "$426,250",
+          "21 days",
+          "97.1%",
+          "$516"
+        ],
+        [
+          "Maillardville",
+          "15",
+          "$528,000",
+          "21 days",
+          "99.3%",
+          "$633"
+        ],
+        [
+          "Coquitlam East",
+          "5",
+          "$515,000",
+          "16 days",
+          "96.6%",
+          "$511"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Coquitlam: buildings and complexes with the most condos sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "The Oaks",
+          "16",
+          "$625,000",
+          "35 days",
+          "2022",
+          "$409 a month"
+        ],
+        [
+          "Precidia",
+          "15",
+          "$727,900",
+          "19 days",
+          "2024",
+          "$372 a month"
+        ],
+        [
+          "Lakeside Terrace",
+          "14",
+          "$542,500",
+          "24 days",
+          "1994",
+          "$607 a month"
+        ],
+        [
+          "567 Clarke + Como",
+          "12",
+          "$721,500",
+          "48 days",
+          "2021",
+          "$551 a month"
+        ],
+        [
+          "Highpoint",
+          "10",
+          "$770,950",
+          "66 days",
+          "2025",
+          "$349 a month"
+        ],
+        [
+          "Lougheed Heights",
+          "8",
+          "$490,750",
+          "13 days",
+          "2020",
+          "$356 a month"
+        ],
+        [
+          "Sydney",
+          "8",
+          "$725,000",
+          "41 days",
+          "2022",
+          "$451 a month"
+        ],
+        [
+          "Soco One By Anthem",
+          "8",
+          "$599,950",
+          "26 days",
+          "2024",
+          "$392 a month"
+        ],
+        [
+          "Smith & Farrow",
+          "7",
+          "$785,500",
+          "43 days",
+          "2025",
+          "$525 a month"
+        ],
+        [
+          "Cora",
+          "7",
+          "$650,000",
+          "7 days",
+          "2008",
+          "$366 a month"
+        ],
+        [
+          "Marlborough House",
+          "7",
+          "$705,000",
+          "12 days",
+          "1997",
+          "$771 a month"
+        ],
+        [
+          "The Kennedy",
+          "6",
+          "$482,500",
+          "33 days",
+          "1996",
+          "$402 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     },
     {
       "t": "h",
@@ -450,6 +686,51 @@
   ],
   "faq": [
     {
+      "gen": "sold",
+      "q": "What did condos in Coquitlam sell for?",
+      "a": "768 condos sold in Coquitlam between November 1, 2025 to October 22, 2026, with a median price of $613,450."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do condos take to sell in Coquitlam?",
+      "a": "The median was 24 days from listing to sale, and homes sold at a median 97.4% of the last list price (6% sold above list), for sales November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "What price range do most condos in Coquitlam sell in?",
+      "a": "The middle half of the 768 condos that sold in Coquitlam went for between $505,750 and $705,000, around a median of $613,450."
+    },
+    {
+      "gen": "sold",
+      "q": "Do condos in Coquitlam sell above asking price?",
+      "a": "6% of the 768 condos sold for more than the last list price, and the median sale was 97.4% of it."
+    },
+    {
+      "gen": "sold",
+      "q": "What is a typical strata fee for condos in Coquitlam?",
+      "a": "Of the 768 sales, 767 listings gave a monthly fee and the median was $432."
+    },
+    {
+      "gen": "sold",
+      "q": "How old are the condos that sold in Coquitlam?",
+      "a": "The median year built was 2015 for the 768 condos sold in Coquitlam."
+    },
+    {
+      "gen": "sold",
+      "q": "How many bedrooms do condos in Coquitlam usually have?",
+      "a": "The median condo that sold in Coquitlam had 2 bedrooms, from the 768 sales between November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which Coquitlam communities sold the most condos?",
+      "a": "By number sold: Coquitlam West (389), North Coquitlam (195), New Horizons (59), for November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which Coquitlam buildings sold the most condos?",
+      "a": "By number sold: The Oaks (16), Precidia (15), Lakeside Terrace (14), for November 1, 2025 to October 22, 2026."
+    },
+    {
       "q": "What is the benchmark price of a condo in Coquitlam?",
       "a": "The Greater Vancouver REALTORS® MLS® Home Price Index benchmark for apartments (condos) in Coquitlam was $640,100 in September 2026, a modelled price for a typical home and not an average of sales."
     },
@@ -464,23 +745,10 @@
     {
       "q": "How many condos are for sale in Coquitlam?",
       "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the condos in Coquitlam that match what you want."
-    },
-    {
-      "q": "Can Jared alert me when condos come up in Coquitlam?",
-      "a": "Yes. Tell him the area, price range and must-haves and he will alert you the day a match is listed."
-    },
-    {
-      "q": "Where can I see all Coquitlam homes?",
-      "a": "The Coquitlam homes for sale page covers every home type, and the Coquitlam market stats page has the monthly figures."
-    },
-    {
-      "q": "Who is Jared Gibbons?",
-      "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
     }
   ],
   "needs_from_muse": [
     "Live listing feed filtered to condos in Coquitlam",
-    "Sold prices and days on market by type (Paragon sold export)",
     "Jared's own notes"
   ]
 }

@@ -131,6 +131,41 @@
     {
       "t": "h",
       "level": 2,
+      "text": "Brentwood Park home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "20 houses sold in Brentwood Park with a median price of $1,750,000 (the middle half sold between $1,644,989 and $1,958,500), taking a median of 24 days to sell at 97.2% of the last list price; 10% sold above list. They had a median $699 per square foot, a median year built of 1958 and a median lot of 6,710 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Brentwood Park: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "20",
+          "$1,750,000",
+          "24 days",
+          "97.2%",
+          "$699"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "h",
+      "level": 2,
       "text": "Sources",
       "gen": "musefaq",
       "pos": "end"
@@ -169,6 +204,16 @@
     {
       "q": "Where are the Brentwood condos and townhomes?",
       "a": "They have their own pages: the Brentwood Park condo page and the Brentwood Park townhome page. The neighbourhood guide covers the area as a whole."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Brentwood Park sell for?",
+      "a": "20 houses sold in Brentwood Park between November 1, 2025 to October 22, 2026, with a median price of $1,750,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Brentwood Park?",
+      "a": "The median was 24 days from listing to sale, and homes sold at a median 97.2% of the last list price (10% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "faq_heading": "Brentwood Park houses: your questions answered",
@@ -198,8 +243,8 @@
     }
   ],
   "needs_from_muse": [
-    "Separate condo and townhome counts, sold prices and days on market for Brentwood Park (Paragon sold export)",
-    "Named buildings and townhome complexes, strata fee ranges and building ages",
+    "Jared’s notes on the buildings and complexes in the sold-price table (names are as entered in the MLS®)",
+    "Street boundaries and the planned changes around Brentwood Town Centre",
     "A feed filtered to this home type",
     "Jared's own notes"
   ]

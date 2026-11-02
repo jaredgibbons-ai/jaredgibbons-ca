@@ -171,6 +171,49 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Central Meadows home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "30 townhomes sold in Central Meadows with a median price of $715,000 (the middle half sold between $637,000 and $827,500), taking a median of 12 days to sell at 98.0% of the last list price; 10% sold above list. They had a median $513 per square foot, a median year built of 1990 and a median strata fee of $381 a month. 20 condos sold in Central Meadows with a median price of $520,000 (the middle half sold between $471,175 and $561,500), taking a median of 28 days to sell at 96.4% of the last list price; 0% sold above list. They had a median $471 per square foot, a median year built of 1994 and a median strata fee of $509 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Central Meadows: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "20",
+          "$520,000",
+          "28 days",
+          "96.4%",
+          "$471"
+        ],
+        [
+          "Townhomes",
+          "30",
+          "$715,000",
+          "12 days",
+          "98.0%",
+          "$513"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -189,10 +232,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did townhomes in Central Meadows sell for?",
+      "a": "30 townhomes sold in Central Meadows between November 1, 2025 to October 22, 2026, with a median price of $715,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Central Meadows?",
+      "a": "The median was 12 days from listing to sale, and homes sold at a median 98.0% of the last list price (10% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Central Meadows condos and townhomes (the reports give them for Pitt Meadows as a whole)",
     "Named buildings and complexes in Central Meadows, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

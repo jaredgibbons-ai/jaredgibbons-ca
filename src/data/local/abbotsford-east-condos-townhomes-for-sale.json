@@ -177,6 +177,138 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Abbotsford East home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "117 townhomes sold in Abbotsford East with a median price of $720,000 (the middle half sold between $610,000 and $799,900), taking a median of 27 days to sell at 98.0% of the last list price; 5% sold above list. They had a median $386 per square foot, a median year built of 2003 and a median strata fee of $450 a month. 19 condos sold in Abbotsford East with a median price of $456,000 (the middle half sold between $402,500 and $527,500), taking a median of 13 days to sell at 98.6% of the last list price; 11% sold above list. They had a median $500 per square foot, a median year built of 2015 and a median strata fee of $517 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Abbotsford East: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "19",
+          "$456,000",
+          "13 days",
+          "98.6%",
+          "$500"
+        ],
+        [
+          "Townhomes",
+          "117",
+          "$720,000",
+          "27 days",
+          "98.0%",
+          "$386"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Abbotsford East: townhomes sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "24",
+          "$783,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "46",
+          "$713,250"
+        ],
+        [
+          "May to Jul 2026",
+          "36",
+          "$716,250"
+        ],
+        [
+          "Aug to Oct 2026",
+          "11",
+          "$639,900"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Abbotsford East: buildings and complexes with the most townhomes sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "East Ridge",
+          "14",
+          "$799,900",
+          "16 days",
+          "2026",
+          "$365 a month"
+        ],
+        [
+          "The Sage at Auguston",
+          "9",
+          "$638,000",
+          "50 days",
+          "2007",
+          "$450 a month"
+        ],
+        [
+          "Belmont Ridge",
+          "8",
+          "$620,000",
+          "32 days",
+          "1993",
+          "$323 a month"
+        ],
+        [
+          "The Gardens",
+          "5",
+          "$376,500",
+          "50 days",
+          "1980",
+          "$424 a month"
+        ],
+        [
+          "The Falls",
+          "5",
+          "$649,000",
+          "34 days",
+          "2004",
+          "$523 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -195,10 +327,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did townhomes in Abbotsford East sell for?",
+      "a": "117 townhomes sold in Abbotsford East between November 1, 2025 to October 22, 2026, with a median price of $720,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Abbotsford East?",
+      "a": "The median was 27 days from listing to sale, and homes sold at a median 98.0% of the last list price (5% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Abbotsford East condos and townhomes (the reports give them for Abbotsford as a whole)",
     "Named buildings and complexes in Abbotsford East, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

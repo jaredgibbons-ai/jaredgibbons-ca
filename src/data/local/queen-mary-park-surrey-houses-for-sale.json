@@ -201,6 +201,41 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Queen Mary Park home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "43 houses sold in Queen Mary Park with a median price of $1,178,500 (the middle half sold between $1,045,750 and $1,519,000), taking a median of 28 days to sell at 95.3% of the last list price; 7% sold above list. They had a median $476 per square foot, a median year built of 1984 and a median lot of 7,450 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Queen Mary Park: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "43",
+          "$1,178,500",
+          "28 days",
+          "95.3%",
+          "$476"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -219,10 +254,19 @@
     {
       "q": "Does this page include townhomes or duplexes in Queen Mary Park?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Queen Mary Park sell for?",
+      "a": "43 houses sold in Queen Mary Park between November 1, 2025 to October 22, 2026, with a median price of $1,178,500."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Queen Mary Park?",
+      "a": "The median was 28 days from listing to sale, and homes sold at a median 95.3% of the last list price (7% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Queen Mary Park houses (the reports give them for Surrey as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in Queen Mary Park",
     "A live listing feed filtered to this type"
   ]

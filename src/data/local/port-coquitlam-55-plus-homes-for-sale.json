@@ -27,7 +27,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics and the monthly SnapStats figures. No live feed filtered to this home type, and no sold-price data for 55+ homes because the sold export has no age-restriction field.",
       "gen": "gappage"
     },
     {
@@ -196,7 +196,6 @@
   ],
   "needs_from_muse": [
     "Live listing feed filtered to 55+ homes in Port Coquitlam",
-    "Sold prices and days on market by type (Paragon sold export)",
     "Jared's own notes"
   ]
 }

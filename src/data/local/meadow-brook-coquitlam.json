@@ -298,6 +298,41 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Meadow Brook home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "8 houses sold in Meadow Brook with a median price of $984,000 (the middle half sold between $858,875 and $1,195,250), taking a median of 41 days to sell at 95.9% of the last list price; 0% sold above list. They had a median $591 per square foot, a median year built of 1978 and a median lot of 4,433 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Meadow Brook: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "8",
+          "$984,000",
+          "41 days",
+          "95.9%",
+          "$591"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -320,11 +355,20 @@
     {
       "q": "Are there more or fewer homes for sale in Meadow Brook than in June?",
       "a": "Listings of detached houses fell from 7 in June to 4 in September 2026 (−42.9%)."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Meadow Brook sell for?",
+      "a": "8 houses sold in Meadow Brook between November 1, 2025 to October 22, 2026, with a median price of $984,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Meadow Brook?",
+      "a": "The median was 41 days from listing to sale, and homes sold at a median 95.9% of the last list price (0% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of Meadow Brook from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for Meadow Brook itself (the reports give them for Coquitlam as a whole, not per community)",
     "Schools for Meadow Brook, placed by street address",
     "Jared's own notes on Meadow Brook: housing stock, who buys here, what to watch",
     "A live listing feed for Meadow Brook"

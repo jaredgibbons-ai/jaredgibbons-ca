@@ -148,6 +148,41 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Hatzic home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "27 houses sold in Hatzic with a median price of $985,000 (the middle half sold between $855,000 and $1,289,500), taking a median of 29 days to sell at 96.5% of the last list price; 4% sold above list. They had a median $444 per square foot, a median year built of 1981 and a median lot of 9,800 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Hatzic: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "27",
+          "$985,000",
+          "29 days",
+          "96.5%",
+          "$444"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -166,10 +201,19 @@
     {
       "q": "Does this page include townhomes or duplexes in Hatzic?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Hatzic sell for?",
+      "a": "27 houses sold in Hatzic between November 1, 2025 to October 22, 2026, with a median price of $985,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Hatzic?",
+      "a": "The median was 29 days from listing to sale, and homes sold at a median 96.5% of the last list price (4% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Hatzic houses (the reports give them for Mission as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in Hatzic",
     "A live listing feed filtered to this type"
   ]

@@ -201,6 +201,162 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Sullivan Station home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "180 townhomes sold in Sullivan Station with a median price of $785,000 (the middle half sold between $720,000 and $850,000), taking a median of 26 days to sell at 97.9% of the last list price; 9% sold above list. They had a median $486 per square foot, a median year built of 2014 and a median strata fee of $366 a month. 5 condos sold in Sullivan Station with a median price of $574,000, taking a median of 23 days to sell at 96.2% of the last list price; 0% sold above list. They had a median $565 per square foot, a median year built of 2013 and a median strata fee of $454 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Sullivan Station: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "5",
+          "$574,000",
+          "23 days",
+          "96.2%",
+          "$565"
+        ],
+        [
+          "Townhomes",
+          "180",
+          "$785,000",
+          "26 days",
+          "97.9%",
+          "$486"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Sullivan Station: townhomes sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "50",
+          "$805,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "37",
+          "$818,000"
+        ],
+        [
+          "May to Jul 2026",
+          "73",
+          "$760,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "20",
+          "$715,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Sullivan Station: buildings and complexes with the most townhomes sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "Signature Townhomes",
+          "9",
+          "$899,900",
+          "21 days",
+          "2025",
+          "$277 a month"
+        ],
+        [
+          "Harmony",
+          "8",
+          "$870,000",
+          "22 days",
+          "2025",
+          "$297 a month"
+        ],
+        [
+          "Havenwood",
+          "7",
+          "$869,900",
+          "44 days",
+          "2024",
+          "$319 a month"
+        ],
+        [
+          "Archer Living",
+          "7",
+          "$799,900",
+          "10 days",
+          "2026",
+          "$324 a month"
+        ],
+        [
+          "Oaklands",
+          "6",
+          "$660,000",
+          "26 days",
+          "2007",
+          "$430 a month"
+        ],
+        [
+          "Altura",
+          "5",
+          "$735,000",
+          "17 days",
+          "2010",
+          "$436 a month"
+        ],
+        [
+          "Skylands",
+          "5",
+          "$778,000",
+          "26 days",
+          "2002",
+          "$502 a month"
+        ],
+        [
+          "Evoque",
+          "5",
+          "$915,000",
+          "9 days",
+          "2015",
+          "$567 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -219,10 +375,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did townhomes in Sullivan Station sell for?",
+      "a": "180 townhomes sold in Sullivan Station between November 1, 2025 to October 22, 2026, with a median price of $785,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Sullivan Station?",
+      "a": "The median was 26 days from listing to sale, and homes sold at a median 97.9% of the last list price (9% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Sullivan Station condos and townhomes (the reports give them for Surrey as a whole)",
     "Named buildings and complexes in Sullivan Station, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

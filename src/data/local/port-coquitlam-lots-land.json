@@ -27,7 +27,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
       "gen": "gappage"
     },
     {
@@ -38,6 +38,22 @@
     {
       "t": "grid",
       "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Port Coquitlam lots and land sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "Fewer than 3 lots and land sold in Port Coquitlam, too few to describe.",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "When so few sell, one sale is the whole picture, so this page does not quote a typical price. Ask Jared for the recent sales near the address you are looking at.",
+      "gen": "sold"
     },
     {
       "t": "h",
@@ -241,7 +257,6 @@
   ],
   "needs_from_muse": [
     "Live listing feed filtered to lots and land in Port Coquitlam",
-    "Sold prices and days on market by type (Paragon sold export)",
     "Jared's own notes"
   ]
 }

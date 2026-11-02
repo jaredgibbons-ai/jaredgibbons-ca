@@ -195,6 +195,74 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Coquitlam East home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "48 houses sold in Coquitlam East with a median price of $1,702,450 (the middle half sold between $1,470,000 and $1,902,500), taking a median of 12 days to sell at 97.4% of the last list price; 12% sold above list. They had a median $509 per square foot, a median year built of 1986 and a median lot of 7,398 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Coquitlam East: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "48",
+          "$1,702,450",
+          "12 days",
+          "97.4%",
+          "$509"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Coquitlam East: houses sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "10",
+          "$1,577,500"
+        ],
+        [
+          "Feb to Apr 2026",
+          "19",
+          "$1,750,000"
+        ],
+        [
+          "May to Jul 2026",
+          "14",
+          "$1,737,450"
+        ],
+        [
+          "Aug to Oct 2026",
+          "5",
+          "$1,780,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -213,10 +281,19 @@
     {
       "q": "Does this page include townhomes or duplexes in Coquitlam East?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Coquitlam East sell for?",
+      "a": "48 houses sold in Coquitlam East between November 1, 2025 to October 22, 2026, with a median price of $1,702,450."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Coquitlam East?",
+      "a": "The median was 12 days from listing to sale, and homes sold at a median 97.4% of the last list price (12% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Coquitlam East houses (the reports give them for Coquitlam as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in Coquitlam East",
     "A live listing feed filtered to this type"
   ]

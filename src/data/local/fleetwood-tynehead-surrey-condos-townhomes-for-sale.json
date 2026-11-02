@@ -201,6 +201,130 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Fleetwood Tynehead home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "158 townhomes sold in Fleetwood Tynehead with a median price of $800,000 (the middle half sold between $726,625 and $844,500), taking a median of 24 days to sell at 97.6% of the last list price; 9% sold above list. They had a median $505 per square foot, a median year built of 2008 and a median strata fee of $408 a month. 41 condos sold in Fleetwood Tynehead with a median price of $510,000 (the middle half sold between $439,900 and $590,000), taking a median of 32 days to sell at 97.8% of the last list price; 7% sold above list. They had a median $670 per square foot, a median year built of 2022 and a median strata fee of $415 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Fleetwood Tynehead: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "41",
+          "$510,000",
+          "32 days",
+          "97.8%",
+          "$670"
+        ],
+        [
+          "Townhomes",
+          "158",
+          "$800,000",
+          "24 days",
+          "97.6%",
+          "$505"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Fleetwood Tynehead: townhomes sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "44",
+          "$775,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "50",
+          "$813,450"
+        ],
+        [
+          "May to Jul 2026",
+          "50",
+          "$800,800"
+        ],
+        [
+          "Aug to Oct 2026",
+          "14",
+          "$766,750"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Fleetwood Tynehead: buildings and complexes with the most townhomes sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "Wood & Water",
+          "6",
+          "$787,500",
+          "38 days",
+          "2022",
+          "$490 a month"
+        ],
+        [
+          "Elwynn Green",
+          "6",
+          "$894,900",
+          "6 days",
+          "2026",
+          "$272 a month"
+        ],
+        [
+          "The Rockwoods",
+          "6",
+          "$724,500",
+          "26 days",
+          "2014",
+          "$377 a month"
+        ],
+        [
+          "Canopy",
+          "5",
+          "$820,000",
+          "13 days",
+          "2019",
+          "$398 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -219,10 +343,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did townhomes in Fleetwood Tynehead sell for?",
+      "a": "158 townhomes sold in Fleetwood Tynehead between November 1, 2025 to October 22, 2026, with a median price of $800,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Fleetwood Tynehead?",
+      "a": "The median was 24 days from listing to sale, and homes sold at a median 97.6% of the last list price (9% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Fleetwood Tynehead condos and townhomes (the reports give them for Surrey as a whole)",
     "Named buildings and complexes in Fleetwood Tynehead, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

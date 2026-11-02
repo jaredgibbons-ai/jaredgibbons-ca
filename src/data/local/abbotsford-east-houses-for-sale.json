@@ -177,6 +177,74 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Abbotsford East home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "261 houses sold in Abbotsford East with a median price of $1,060,000 (the middle half sold between $939,900 and $1,285,000), taking a median of 23 days to sell at 97.2% of the last list price; 8% sold above list. They had a median $387 per square foot, a median year built of 1993 and a median lot of 7,205 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Abbotsford East: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "261",
+          "$1,060,000",
+          "23 days",
+          "97.2%",
+          "$387"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Abbotsford East: houses sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "65",
+          "$1,102,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "80",
+          "$1,055,000"
+        ],
+        [
+          "May to Jul 2026",
+          "88",
+          "$1,065,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "28",
+          "$1,004,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -195,10 +263,19 @@
     {
       "q": "Does this page include townhomes or duplexes in Abbotsford East?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Abbotsford East sell for?",
+      "a": "261 houses sold in Abbotsford East between November 1, 2025 to October 22, 2026, with a median price of $1,060,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Abbotsford East?",
+      "a": "The median was 23 days from listing to sale, and homes sold at a median 97.2% of the last list price (8% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Abbotsford East houses (the reports give them for Abbotsford as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in Abbotsford East",
     "A live listing feed filtered to this type"
   ]

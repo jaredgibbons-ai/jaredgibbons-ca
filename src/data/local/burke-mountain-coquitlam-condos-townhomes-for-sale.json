@@ -201,6 +201,138 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Burke Mountain home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "149 townhomes sold in Burke Mountain with a median price of $1,100,000 (the middle half sold between $955,000 and $1,298,000), taking a median of 14 days to sell at 99.5% of the last list price; 5% sold above list. They had a median $645 per square foot, a median year built of 2023 and a median strata fee of $364 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Burke Mountain: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Townhomes",
+          "149",
+          "$1,100,000",
+          "14 days",
+          "99.5%",
+          "$645"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Burke Mountain: townhomes sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "46",
+          "$1,099,450"
+        ],
+        [
+          "Feb to Apr 2026",
+          "47",
+          "$1,125,000"
+        ],
+        [
+          "May to Jul 2026",
+          "47",
+          "$1,150,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "9",
+          "$948,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Burke Mountain: buildings and complexes with the most townhomes sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "Versant",
+          "12",
+          "$884,900",
+          "3 days",
+          "2026",
+          "$250 a month"
+        ],
+        [
+          "Partington Creek",
+          "12",
+          "$1,513,000",
+          "6 days",
+          "2026",
+          "$459 a month"
+        ],
+        [
+          "Beaumont By Polygon",
+          "11",
+          "$958,000",
+          "2 days",
+          "2026",
+          "$326 a month"
+        ],
+        [
+          "Heartwood",
+          "7",
+          "$1,069,900",
+          "27 days",
+          "2026",
+          "$293 a month"
+        ],
+        [
+          "Rocklin on the Creek",
+          "6",
+          "$969,000",
+          "56 days",
+          "2020",
+          "$331 a month"
+        ],
+        [
+          "Ballantree",
+          "5",
+          "$1,270,500",
+          "53 days",
+          "2022",
+          "$346 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -219,10 +351,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did townhomes in Burke Mountain sell for?",
+      "a": "149 townhomes sold in Burke Mountain between November 1, 2025 to October 22, 2026, with a median price of $1,100,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Burke Mountain?",
+      "a": "The median was 14 days from listing to sale, and homes sold at a median 99.5% of the last list price (5% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Burke Mountain condos and townhomes (the reports give them for Coquitlam as a whole)",
     "Named buildings and complexes in Burke Mountain, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

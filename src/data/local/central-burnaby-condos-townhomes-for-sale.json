@@ -201,6 +201,49 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Central home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "9 townhomes sold in Central with a median price of $765,000 (the middle half sold between $745,000 and $802,000), taking a median of 17 days to sell at 98.7% of the last list price; 0% sold above list. They had a median $725 per square foot, a median year built of 2011 and a median strata fee of $415 a month. 5 condos sold in Central with a median price of $575,000, taking a median of 27 days to sell at 96.0% of the last list price; 0% sold above list. They had a median $619 per square foot, a median year built of 1993 and a median strata fee of $491 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Central: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "5",
+          "$575,000",
+          "27 days",
+          "96.0%",
+          "$619"
+        ],
+        [
+          "Townhomes",
+          "9",
+          "$765,000",
+          "17 days",
+          "98.7%",
+          "$725"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -219,10 +262,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did townhomes in Central sell for?",
+      "a": "9 townhomes sold in Central between November 1, 2025 to October 22, 2026, with a median price of $765,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Central?",
+      "a": "The median was 17 days from listing to sale, and homes sold at a median 98.7% of the last list price (0% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Central condos and townhomes (the reports give them for Burnaby as a whole)",
     "Named buildings and complexes in Central, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

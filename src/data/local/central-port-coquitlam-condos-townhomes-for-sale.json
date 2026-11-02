@@ -171,6 +171,130 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Central Port Coquitlam home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "152 condos sold in Central Port Coquitlam with a median price of $572,500 (the middle half sold between $473,750 and $635,000), taking a median of 24 days to sell at 97.7% of the last list price; 5% sold above list. They had a median $627 per square foot, a median year built of 2008 and a median strata fee of $439 a month. 24 townhomes sold in Central Port Coquitlam with a median price of $999,950 (the middle half sold between $757,500 and $1,054,900), taking a median of 18 days to sell at 100.0% of the last list price; 8% sold above list. They had a median $611 per square foot, a median year built of 2024 and a median strata fee of $389 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Central Port Coquitlam: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "152",
+          "$572,500",
+          "24 days",
+          "97.7%",
+          "$627"
+        ],
+        [
+          "Townhomes",
+          "24",
+          "$999,950",
+          "18 days",
+          "100.0%",
+          "$611"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Central Port Coquitlam: condos sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "28",
+          "$628,250"
+        ],
+        [
+          "Feb to Apr 2026",
+          "47",
+          "$567,000"
+        ],
+        [
+          "May to Jul 2026",
+          "52",
+          "$567,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "25",
+          "$540,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Central Port Coquitlam: buildings and complexes with the most condos sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "Montrose Square",
+          "13",
+          "$585,000",
+          "49 days",
+          "2021",
+          "$489 a month"
+        ],
+        [
+          "Villagio Ii",
+          "5",
+          "$690,000",
+          "8 days",
+          "2009",
+          "$471 a month"
+        ],
+        [
+          "The Crescent",
+          "5",
+          "$580,000",
+          "18 days",
+          "1995",
+          "$585 a month"
+        ],
+        [
+          "Springdale",
+          "5",
+          "$585,000",
+          "51 days",
+          "1996",
+          "$450 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -189,10 +313,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did condos in Central Port Coquitlam sell for?",
+      "a": "152 condos sold in Central Port Coquitlam between November 1, 2025 to October 22, 2026, with a median price of $572,500."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do condos take to sell in Central Port Coquitlam?",
+      "a": "The median was 24 days from listing to sale, and homes sold at a median 97.7% of the last list price (5% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Central Port Coquitlam condos and townhomes (the reports give them for Port Coquitlam as a whole)",
     "Named buildings and complexes in Central Port Coquitlam, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

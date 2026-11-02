@@ -201,6 +201,82 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "South Slope home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "47 condos sold in South Slope with a median price of $621,000 (the middle half sold between $551,750 and $698,750), taking a median of 29 days to sell at 97.2% of the last list price; 9% sold above list. They had a median $672 per square foot, a median year built of 1996 and a median strata fee of $471 a month. 9 townhomes sold in South Slope with a median price of $840,000 (the middle half sold between $740,000 and $900,000), taking a median of 38 days to sell at 97.1% of the last list price; 0% sold above list. They had a median $690 per square foot, a median year built of 2003 and a median strata fee of $510 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "South Slope: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "47",
+          "$621,000",
+          "29 days",
+          "97.2%",
+          "$672"
+        ],
+        [
+          "Townhomes",
+          "9",
+          "$840,000",
+          "38 days",
+          "97.1%",
+          "$690"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "South Slope: condos sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "11",
+          "$612,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "17",
+          "$670,000"
+        ],
+        [
+          "May to Jul 2026",
+          "12",
+          "$570,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "7",
+          "$580,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -219,10 +295,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did condos in South Slope sell for?",
+      "a": "47 condos sold in South Slope between November 1, 2025 to October 22, 2026, with a median price of $621,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do condos take to sell in South Slope?",
+      "a": "The median was 29 days from listing to sale, and homes sold at a median 97.2% of the last list price (9% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for South Slope condos and townhomes (the reports give them for Burnaby as a whole)",
     "Named buildings and complexes in South Slope, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

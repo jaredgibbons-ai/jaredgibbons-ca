@@ -303,6 +303,49 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Simon Fraser Hills home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "11 townhomes sold in Simon Fraser Hills with a median price of $780,000 (the middle half sold between $720,000 and $922,500), taking a median of 27 days to sell at 97.5% of the last list price; 0% sold above list. They had a median $551 per square foot, a median year built of 1972 and a median strata fee of $412 a month. 4 condos sold in Simon Fraser Hills, too few (5 needed) to give a typical price.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Simon Fraser Hills: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "4",
+          "Too few sales for a typical price",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Townhomes",
+          "11",
+          "$780,000",
+          "27 days",
+          "97.5%",
+          "$551"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -325,11 +368,20 @@
     {
       "q": "Are there more or fewer homes for sale in Simon Fraser Hills than in June?",
       "a": "Listings of condos and townhomes rose from 10 in June to 11 in September 2026 (+10.0%)."
+    },
+    {
+      "gen": "sold",
+      "q": "What did townhomes in Simon Fraser Hills sell for?",
+      "a": "11 townhomes sold in Simon Fraser Hills between November 1, 2025 to October 22, 2026, with a median price of $780,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Simon Fraser Hills?",
+      "a": "The median was 27 days from listing to sale, and homes sold at a median 97.5% of the last list price (0% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of Simon Fraser Hills from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for Simon Fraser Hills itself (the reports give them for Burnaby as a whole, not per community)",
     "Schools for Simon Fraser Hills, placed by street address",
     "Jared's own notes on Simon Fraser Hills: housing stock, who buys here, what to watch",
     "A live listing feed for Simon Fraser Hills"

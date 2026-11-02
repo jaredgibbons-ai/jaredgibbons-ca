@@ -27,7 +27,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
       "gen": "gappage"
     },
     {
@@ -38,6 +38,106 @@
     {
       "t": "grid",
       "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Mission houses with acreage sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "76 houses with acreage sold in Mission with a median price of $1,400,500 (the middle half sold between $1,168,750 and $1,590,625), taking a median of 48 days to sell at 95.6% of the last list price; 9% sold above list. They had a median year built of 1990 and a median lot of 3.9 acres.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Mission: houses with acreage sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "19",
+          "$1,400,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "24",
+          "$1,415,000"
+        ],
+        [
+          "May to Jul 2026",
+          "28",
+          "$1,465,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "5",
+          "$1,175,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Mission: houses with acreage sold by community",
+      "head": [
+        "Community",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Mission",
+          "24",
+          "$1,405,500",
+          "42 days",
+          "96.3%",
+          "—"
+        ],
+        [
+          "Mission-West",
+          "14",
+          "$1,433,750",
+          "47 days",
+          "94.9%",
+          "—"
+        ],
+        [
+          "Dewdney Deroche",
+          "13",
+          "$1,350,000",
+          "76 days",
+          "91.2%",
+          "—"
+        ],
+        [
+          "Stave Falls",
+          "12",
+          "$1,522,000",
+          "36 days",
+          "96.9%",
+          "—"
+        ],
+        [
+          "Durieu",
+          "5",
+          "$750,000",
+          "57 days",
+          "98.6%",
+          "—"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     },
     {
       "t": "h",
@@ -413,29 +513,46 @@
   ],
   "faq": [
     {
+      "gen": "sold",
+      "q": "What did acreages in Mission sell for?",
+      "a": "76 houses with acreage sold in Mission between November 1, 2025 to October 22, 2026, with a median price of $1,400,500."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do acreages take to sell in Mission?",
+      "a": "The median was 48 days from listing to sale, and homes sold at a median 95.6% of the last list price (9% sold above list), for sales November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "What price range do most acreages in Mission sell in?",
+      "a": "The middle half of the 76 houses with acreage that sold in Mission went for between $1,168,750 and $1,590,625, around a median of $1,400,500."
+    },
+    {
+      "gen": "sold",
+      "q": "Do acreages in Mission sell above asking price?",
+      "a": "9% of the 76 houses with acreage sold for more than the last list price, and the median sale was 95.6% of it."
+    },
+    {
+      "gen": "sold",
+      "q": "How old are the acreages that sold in Mission?",
+      "a": "The median year built was 1990 for the 76 houses with acreage sold in Mission."
+    },
+    {
+      "gen": "sold",
+      "q": "Which Mission communities sold the most acreages?",
+      "a": "By number sold: Mission BC (24), Mission-West (14), Dewdney Deroche (13), for November 1, 2025 to October 22, 2026."
+    },
+    {
       "q": "Is Mission a buyers’ or sellers’ market?",
       "a": "In September 2026 houses in Mission had a sales ratio of 12%, which the reports’ scale reads as a balanced market, and condos and townhomes 8%, which the reports’ scale reads as a buyers’ market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers."
     },
     {
       "q": "How many acreages are for sale in Mission?",
       "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the acreages in Mission that match what you want."
-    },
-    {
-      "q": "Can Jared alert me when acreages come up in Mission?",
-      "a": "Yes. Tell him the area, price range and must-haves and he will alert you the day a match is listed."
-    },
-    {
-      "q": "Where can I see all Mission homes?",
-      "a": "The Mission homes for sale page covers every home type, and the Mission market stats page has the monthly figures."
-    },
-    {
-      "q": "Who is Jared Gibbons?",
-      "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
     }
   ],
   "needs_from_muse": [
     "Live listing feed filtered to acreages in Mission",
-    "Sold prices and days on market by type (Paragon sold export)",
     "Jared's own notes"
   ]
 }

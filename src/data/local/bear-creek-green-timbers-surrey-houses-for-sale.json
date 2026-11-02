@@ -201,6 +201,74 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Bear Creek Green Timbers home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "73 houses sold in Bear Creek Green Timbers with a median price of $1,272,000 (the middle half sold between $1,135,000 and $1,430,000), taking a median of 25 days to sell at 95.6% of the last list price; 5% sold above list. They had a median $461 per square foot, a median year built of 1989 and a median lot of 7,260 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Bear Creek Green Timbers: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "73",
+          "$1,272,000",
+          "25 days",
+          "95.6%",
+          "$461"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Bear Creek Green Timbers: houses sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "21",
+          "$1,360,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "19",
+          "$1,265,000"
+        ],
+        [
+          "May to Jul 2026",
+          "26",
+          "$1,292,500"
+        ],
+        [
+          "Aug to Oct 2026",
+          "7",
+          "$1,115,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -219,10 +287,19 @@
     {
       "q": "Does this page include townhomes or duplexes in Bear Creek Green Timbers?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Bear Creek Green Timbers sell for?",
+      "a": "73 houses sold in Bear Creek Green Timbers between November 1, 2025 to October 22, 2026, with a median price of $1,272,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Bear Creek Green Timbers?",
+      "a": "The median was 25 days from listing to sale, and homes sold at a median 95.6% of the last list price (5% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Bear Creek Green Timbers houses (the reports give them for Surrey as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in Bear Creek Green Timbers",
     "A live listing feed filtered to this type"
   ]

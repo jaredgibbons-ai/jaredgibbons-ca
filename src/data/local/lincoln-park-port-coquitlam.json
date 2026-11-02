@@ -329,6 +329,49 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Lincoln Park home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "13 houses sold in Lincoln Park with a median price of $1,290,000 (the middle half sold between $1,165,000 and $1,400,000), taking a median of 34 days to sell at 97.9% of the last list price; 8% sold above list. They had a median $576 per square foot, a median year built of 1975 and a median lot of 6,000 square feet. 4 townhomes sold in Lincoln Park, too few (5 needed) to give a typical price.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Lincoln Park: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "13",
+          "$1,290,000",
+          "34 days",
+          "97.9%",
+          "$576"
+        ],
+        [
+          "Townhomes",
+          "4",
+          "Too few sales for a typical price",
+          "—",
+          "—",
+          "—"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -355,11 +398,20 @@
     {
       "q": "Are there more or fewer homes for sale in Lincoln Park than in June?",
       "a": "Listings of detached houses fell from 15 in June to 12 in September 2026 (−20.0%); condos and townhomes was 2 in June and 1 in September 2026, too few (under 3) to call a rise or fall."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Lincoln Park sell for?",
+      "a": "13 houses sold in Lincoln Park between November 1, 2025 to October 22, 2026, with a median price of $1,290,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Lincoln Park?",
+      "a": "The median was 34 days from listing to sale, and homes sold at a median 97.9% of the last list price (8% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of Lincoln Park from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for Lincoln Park itself (the reports give them for Port Coquitlam as a whole, not per community)",
     "Schools for Lincoln Park, placed by street address",
     "Jared's own notes on Lincoln Park: housing stock, who buys here, what to watch",
     "A live listing feed for Lincoln Park"

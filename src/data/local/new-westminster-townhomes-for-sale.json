@@ -27,7 +27,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
       "gen": "gappage"
     },
     {
@@ -38,6 +38,98 @@
     {
       "t": "grid",
       "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "New Westminster townhomes sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "73 townhomes sold in New Westminster with a median price of $871,000 (the middle half sold between $775,000 and $1,010,000), taking a median of 22 days to sell at 97.8% of the last list price; 8% sold above list. They had a median $587 per square foot, a median year built of 2007 and a median strata fee of $496 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "New Westminster: townhomes sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "13",
+          "$910,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "23",
+          "$870,000"
+        ],
+        [
+          "May to Jul 2026",
+          "24",
+          "$878,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "13",
+          "$855,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "New Westminster: townhomes sold by community",
+      "head": [
+        "Community",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Queensborough",
+          "31",
+          "$855,000",
+          "26 days",
+          "97.8%",
+          "$589"
+        ],
+        [
+          "Fraserview",
+          "22",
+          "$1,077,000",
+          "10 days",
+          "98.5%",
+          "$460"
+        ],
+        [
+          "Uptown",
+          "10",
+          "$776,000",
+          "15 days",
+          "98.0%",
+          "$592"
+        ],
+        [
+          "GlenBrooke North",
+          "5",
+          "$710,000",
+          "85 days",
+          "97.5%",
+          "$689"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     },
     {
       "t": "h",
@@ -247,6 +339,46 @@
   ],
   "faq": [
     {
+      "gen": "sold",
+      "q": "What did townhomes in New Westminster sell for?",
+      "a": "73 townhomes sold in New Westminster between November 1, 2025 to October 22, 2026, with a median price of $871,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in New Westminster?",
+      "a": "The median was 22 days from listing to sale, and homes sold at a median 97.8% of the last list price (8% sold above list), for sales November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "What price range do most townhomes in New Westminster sell in?",
+      "a": "The middle half of the 73 townhomes that sold in New Westminster went for between $775,000 and $1,010,000, around a median of $871,000."
+    },
+    {
+      "gen": "sold",
+      "q": "Do townhomes in New Westminster sell above asking price?",
+      "a": "8% of the 73 townhomes sold for more than the last list price, and the median sale was 97.8% of it."
+    },
+    {
+      "gen": "sold",
+      "q": "What is a typical strata fee for townhomes in New Westminster?",
+      "a": "Of the 73 sales, 73 listings gave a monthly fee and the median was $496."
+    },
+    {
+      "gen": "sold",
+      "q": "How old are the townhomes that sold in New Westminster?",
+      "a": "The median year built was 2007 for the 73 townhomes sold in New Westminster."
+    },
+    {
+      "gen": "sold",
+      "q": "How many bedrooms do townhomes in New Westminster usually have?",
+      "a": "The median townhome that sold in New Westminster had 3 bedrooms, from the 73 sales between November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which New Westminster communities sold the most townhomes?",
+      "a": "By number sold: Queensborough (31), Fraserview NW (22), Uptown NW (10), for November 1, 2025 to October 22, 2026."
+    },
+    {
       "q": "What is the benchmark price of a townhome in New Westminster?",
       "a": "The Greater Vancouver REALTORS® MLS® Home Price Index benchmark for townhomes in New Westminster was $854,200 in September 2026, a modelled price for a typical home and not an average of sales."
     },
@@ -261,23 +393,10 @@
     {
       "q": "How many townhomes are for sale in New Westminster?",
       "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the townhomes in New Westminster that match what you want."
-    },
-    {
-      "q": "Can Jared alert me when townhomes come up in New Westminster?",
-      "a": "Yes. Tell him the area, price range and must-haves and he will alert you the day a match is listed."
-    },
-    {
-      "q": "Where can I see all New Westminster homes?",
-      "a": "The New Westminster homes for sale page covers every home type, and the New Westminster market stats page has the monthly figures."
-    },
-    {
-      "q": "Who is Jared Gibbons?",
-      "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
     }
   ],
   "needs_from_muse": [
     "Live listing feed filtered to townhomes in New Westminster",
-    "Sold prices and days on market by type (Paragon sold export)",
     "Jared's own notes"
   ]
 }

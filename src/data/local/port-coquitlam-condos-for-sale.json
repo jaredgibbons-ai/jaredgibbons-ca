@@ -27,7 +27,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
       "gen": "gappage"
     },
     {
@@ -38,6 +38,138 @@
     {
       "t": "grid",
       "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Port Coquitlam condos sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "202 condos sold in Port Coquitlam with a median price of $557,500 (the middle half sold between $465,625 and $628,375), taking a median of 28 days to sell at 97.6% of the last list price; 5% sold above list. They had a median $614 per square foot, a median year built of 2008 and a median strata fee of $431 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Port Coquitlam: condos sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "42",
+          "$607,500"
+        ],
+        [
+          "Feb to Apr 2026",
+          "58",
+          "$525,000"
+        ],
+        [
+          "May to Jul 2026",
+          "63",
+          "$552,500"
+        ],
+        [
+          "Aug to Oct 2026",
+          "39",
+          "$545,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Port Coquitlam: condos sold by community",
+      "head": [
+        "Community",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Central Port Coquitlam",
+          "152",
+          "$572,500",
+          "24 days",
+          "97.7%",
+          "$627"
+        ],
+        [
+          "Glenwood",
+          "45",
+          "$512,000",
+          "36 days",
+          "97.1%",
+          "$576"
+        ],
+        [
+          "Riverwood",
+          "5",
+          "$638,000",
+          "40 days",
+          "96.8%",
+          "$750"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Port Coquitlam: buildings and complexes with the most condos sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "Montrose Square",
+          "13",
+          "$585,000",
+          "49 days",
+          "2021",
+          "$489 a month"
+        ],
+        [
+          "Villagio Ii",
+          "5",
+          "$690,000",
+          "8 days",
+          "2009",
+          "$471 a month"
+        ],
+        [
+          "The Crescent",
+          "5",
+          "$580,000",
+          "18 days",
+          "1995",
+          "$585 a month"
+        ],
+        [
+          "Springdale",
+          "5",
+          "$585,000",
+          "51 days",
+          "1996",
+          "$450 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     },
     {
       "t": "h",
@@ -342,6 +474,51 @@
   ],
   "faq": [
     {
+      "gen": "sold",
+      "q": "What did condos in Port Coquitlam sell for?",
+      "a": "202 condos sold in Port Coquitlam between November 1, 2025 to October 22, 2026, with a median price of $557,500."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do condos take to sell in Port Coquitlam?",
+      "a": "The median was 28 days from listing to sale, and homes sold at a median 97.6% of the last list price (5% sold above list), for sales November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "What price range do most condos in Port Coquitlam sell in?",
+      "a": "The middle half of the 202 condos that sold in Port Coquitlam went for between $465,625 and $628,375, around a median of $557,500."
+    },
+    {
+      "gen": "sold",
+      "q": "Do condos in Port Coquitlam sell above asking price?",
+      "a": "5% of the 202 condos sold for more than the last list price, and the median sale was 97.6% of it."
+    },
+    {
+      "gen": "sold",
+      "q": "What is a typical strata fee for condos in Port Coquitlam?",
+      "a": "Of the 202 sales, 202 listings gave a monthly fee and the median was $431."
+    },
+    {
+      "gen": "sold",
+      "q": "How old are the condos that sold in Port Coquitlam?",
+      "a": "The median year built was 2008 for the 202 condos sold in Port Coquitlam."
+    },
+    {
+      "gen": "sold",
+      "q": "How many bedrooms do condos in Port Coquitlam usually have?",
+      "a": "The median condo that sold in Port Coquitlam had 2 bedrooms, from the 202 sales between November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which Port Coquitlam communities sold the most condos?",
+      "a": "By number sold: Central Pt Coquitlam (152), Glenwood PQ (45), Riverwood (5), for November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which Port Coquitlam buildings sold the most condos?",
+      "a": "By number sold: Montrose Square (13), Villagio Ii (5), The Crescent (5), for November 1, 2025 to October 22, 2026."
+    },
+    {
       "q": "What is the benchmark price of a condo in Port Coquitlam?",
       "a": "The Greater Vancouver REALTORS® MLS® Home Price Index benchmark for apartments (condos) in Port Coquitlam was $550,000 in September 2026, a modelled price for a typical home and not an average of sales."
     },
@@ -356,23 +533,10 @@
     {
       "q": "How many condos are for sale in Port Coquitlam?",
       "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the condos in Port Coquitlam that match what you want."
-    },
-    {
-      "q": "Can Jared alert me when condos come up in Port Coquitlam?",
-      "a": "Yes. Tell him the area, price range and must-haves and he will alert you the day a match is listed."
-    },
-    {
-      "q": "Where can I see all Port Coquitlam homes?",
-      "a": "The Port Coquitlam homes for sale page covers every home type, and the Port Coquitlam market stats page has the monthly figures."
-    },
-    {
-      "q": "Who is Jared Gibbons?",
-      "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
     }
   ],
   "needs_from_muse": [
     "Live listing feed filtered to condos in Port Coquitlam",
-    "Sold prices and days on market by type (Paragon sold export)",
     "Jared's own notes"
   ]
 }

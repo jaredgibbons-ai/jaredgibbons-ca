@@ -341,6 +341,98 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "South Slope home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "47 condos sold in South Slope with a median price of $621,000 (the middle half sold between $551,750 and $698,750), taking a median of 29 days to sell at 97.2% of the last list price; 9% sold above list. They had a median $672 per square foot, a median year built of 1996 and a median strata fee of $471 a month. 37 houses sold in South Slope with a median price of $1,860,000 (the middle half sold between $1,700,000 and $2,325,000), taking a median of 30 days to sell at 94.8% of the last list price; 5% sold above list. They had a median $610 per square foot, a median year built of 1979 and a median lot of 7,315 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "South Slope: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "37",
+          "$1,860,000",
+          "30 days",
+          "94.8%",
+          "$610"
+        ],
+        [
+          "Condos",
+          "47",
+          "$621,000",
+          "29 days",
+          "97.2%",
+          "$672"
+        ],
+        [
+          "Townhomes",
+          "9",
+          "$840,000",
+          "38 days",
+          "97.1%",
+          "$690"
+        ],
+        [
+          "Duplexes (half and full)",
+          "6",
+          "$1,725,000",
+          "30 days",
+          "93.5%",
+          "$616"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "South Slope: condos sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "11",
+          "$612,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "17",
+          "$670,000"
+        ],
+        [
+          "May to Jul 2026",
+          "12",
+          "$570,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "7",
+          "$580,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -367,11 +459,20 @@
     {
       "q": "Are there more or fewer homes for sale in South Slope than in June?",
       "a": "Listings of detached houses fell from 43 in June to 34 in September 2026 (−20.9%); condos and townhomes fell from 49 in June to 40 in September 2026 (−18.4%)."
+    },
+    {
+      "gen": "sold",
+      "q": "What did condos in South Slope sell for?",
+      "a": "47 condos sold in South Slope between November 1, 2025 to October 22, 2026, with a median price of $621,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do condos take to sell in South Slope?",
+      "a": "The median was 29 days from listing to sale, and homes sold at a median 97.2% of the last list price (9% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of South Slope from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for South Slope itself (the reports give them for Burnaby as a whole, not per community)",
     "Schools for South Slope, placed by street address",
     "Jared's own notes on South Slope: housing stock, who buys here, what to watch",
     "A live listing feed for South Slope"

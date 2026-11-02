@@ -10,6 +10,7 @@ Page content: city market context from the monthly SnapStats(R) lines, the commu
 import collections, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_snapstats_layers as L
+import build_sold_layer as SO
 
 ROOT = L.ROOT
 BR, BS = ' | Jared Gibbons REALTOR®', ' | Jared Gibbons'
@@ -204,6 +205,25 @@ def snap_months(months, ak, N, t, keys):
             {'t': 'table', 'caption': f'{N} {nm} listed, sold and sales ratio by month', 'head': ['Month', 'Listed', 'Sold', 'Sales ratio'], 'rows': rows, 'source': L.SRC + L.RATIO_NOTE + (' Condos and townhomes are one line in the reports.' if t == 'condo_townhome' else ''), 'gen': GEN}, P(sent)]
 
 
+SOLD_AGG = SO.load()
+SOLD_G = {'acreages': 'acreage', 'lots-land': 'land', 'mobile': 'mobile'}
+
+
+def sold_gap(c, kind, suf, N, noun):
+    g = SOLD_G.get(kind) or ('condo' if suf.startswith('condos') else 'townhome' if kind == 'attached' else None)
+    if not g: return [], []
+    cd = SOLD_AGG['city'].get(c)
+    if not cd: return [], []
+    s = cd['groups'].get(g, {'n': 0}); lab = 'November 2025 to October 2026'
+    bl = [SO.H(f'{N} {SO.GL[g]} sold, {lab}'), SO.P(SO.one_line(N, s, g))]
+    if s['n'] >= SO.MIN_MED:
+        bl += SO.quarter_table(N, s, g) + SO.sub_table(N, cd['subs'], g, SOLD_AGG)
+        if g in ('condo', 'townhome'): bl += SO.bldg_table(N, cd['complexes'].get(g, []), g)
+    else:
+        bl.append(SO.P('When so few sell, one sale is the whole picture, so this page does not quote a typical price. Ask Jared for the recent sales near the address you are looking at.'))
+    return bl, SO.sold_faq(N, noun, s, g) + SO.sold_faq_more(N, noun, s, g, cd, SOLD_AGG)
+
+
 def BN(c): return 'Greater Vancouver REALTORS®' if BOARD[c][0] == 'gvr' else 'Fraser Valley Real Estate Board'
 
 
@@ -242,7 +262,7 @@ def main():
         noun = {'acreages': 'acreages', 'lots-land': 'lots and land', '55-plus': '55+ homes', 'mobile': 'mobile homes', 'attached': T}[kind]
         ft = 'apartment' if T == 'condos' else 'townhouse'
         bm = lambda t: (hpi_rows(c, N, t) or [(None, None)])[0][1]
-        notice = {'t': 'notice', 'text': 'Draft for Jared\'s approval. Built from the boards\' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.', 'gen': GEN}
+        notice = {'t': 'notice', 'text': ('Draft for Jared\'s approval. Built from the boards\' September 2026 statistics and the monthly SnapStats figures. No live feed filtered to this home type, and no sold-price data for 55+ homes because the sold export has no age-restriction field.' if kind == '55-plus' else 'Draft for Jared\'s approval. Built from the boards\' September 2026 statistics, the monthly SnapStats figures and Jared\'s MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.'), 'gen': GEN}
         faq = []
         sn = lambda t, f: f(months, ak, N, t, *( [last, mn, yr, cslug] if f is snap_comm else [keys])) if ak else []
         if kind == 'attached':
@@ -266,7 +286,9 @@ def main():
         else:
             intro = INTRO['mobile'].format(N=N)
             body = sn('detached', snap_months)
-        bl = [notice, P(intro), {'t': 'grid', 'gen': GEN}] + body + school_blocks(c, suf)
+        sold_bl, sold_faq_ = sold_gap(c, kind, suf, N, noun)
+        bl = [notice, P(intro), {'t': 'grid', 'gen': GEN}] + sold_bl + body + school_blocks(c, suf)
+        faq = sold_faq_ + faq
         if ak:
             d = months[last]['areas'][ak]['detached']['total']; cc = months[last]['areas'][ak]['condo_townhome']['total']
             def rt(r): return f'{L.pct(r["ratio"])}, which the reports’ scale reads as {L.kind(r["ratio"])}'
@@ -278,11 +300,12 @@ def main():
                 {'q': f'Where can I see all {N} homes?', 'a': f'The {N} homes for sale page covers every home type, and the {N} market stats page has the monthly figures.'},
                 {'q': f'Who is Jared Gibbons?', 'a': 'Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361.'}]
         if kind in ('55-plus',): faq.append({'q': 'Do these numbers separate condos from townhomes?', 'a': 'The monthly SnapStats reports publish condos and townhomes as one line, so the monthly counts here include both. The boards’ benchmark prices are published separately for apartments and townhomes.'})
+        if len(sold_faq_) >= 5: faq = [q for q in faq if not q['q'].startswith(('Can Jared alert', 'Where can I see all', 'Who is Jared'))]
         j = {'status': 'draft', 'slug': slug, 'updated': '2026-11-01', 'gen_gap': True, 'hand_edited': True,
              'new_page': {'title': title(head), 'description': DESC[kind].format(N=N, T=T, w=w)[:200], 'h1': f'{head} | {region} Real Estate'},
              'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': N, 'href': f'/{home}.html'}, {'name': head0.replace(' for Sale', ''), 'href': f'/{slug}.html'}],
              'faq_heading': f'{head}: your questions answered', 'blocks': bl, 'faq': faq,
-             'needs_from_muse': [f'Live listing feed filtered to {noun} in {N}', 'Sold prices and days on market by type (Paragon sold export)', 'Jared\'s own notes']}
+             'needs_from_muse': [f'Live listing feed filtered to {noun} in {N}', 'Jared\'s own notes']}
         assert all(h_['href'].rsplit('/', 1)[1][:-5] in existing or True for h_ in j['breadcrumbs'])
         for b in bl:
             if b['t'] == 'list':

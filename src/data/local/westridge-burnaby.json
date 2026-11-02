@@ -330,6 +330,49 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Westridge home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "9 houses sold in Westridge with a median price of $1,840,000 (the middle half sold between $1,587,000 and $2,980,000), taking a median of 51 days to sell at 92.7% of the last list price; 0% sold above list. They had a median $706 per square foot, a median year built of 1994 and a median lot of 7,208 square feet. 3 townhomes sold in Westridge, too few (5 needed) to give a typical price.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Westridge: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "9",
+          "$1,840,000",
+          "51 days",
+          "92.7%",
+          "$706"
+        ],
+        [
+          "Townhomes",
+          "3",
+          "Too few sales for a typical price",
+          "—",
+          "—",
+          "—"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -356,11 +399,20 @@
     {
       "q": "Are there more or fewer homes for sale in Westridge than in June?",
       "a": "Listings of detached houses was little changed, 10 in June and 10 in September 2026 (+0.0%); condos and townhomes was 1 in June and 5 in September 2026, too few (under 3) to call a rise or fall."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Westridge sell for?",
+      "a": "9 houses sold in Westridge between November 1, 2025 to October 22, 2026, with a median price of $1,840,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Westridge?",
+      "a": "The median was 51 days from listing to sale, and homes sold at a median 92.7% of the last list price (0% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of Westridge from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for Westridge itself (the reports give them for Burnaby as a whole, not per community)",
     "Schools for Westridge, placed by street address",
     "Jared's own notes on Westridge: housing stock, who buys here, what to watch",
     "A live listing feed for Westridge"

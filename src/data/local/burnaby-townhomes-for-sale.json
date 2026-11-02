@@ -27,7 +27,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
       "gen": "gappage"
     },
     {
@@ -38,6 +38,218 @@
     {
       "t": "grid",
       "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Burnaby townhomes sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "279 townhomes sold in Burnaby with a median price of $900,000 (the middle half sold between $754,000 and $1,075,000), taking a median of 23 days to sell at 97.3% of the last list price; 6% sold above list. They had a median $672 per square foot, a median year built of 2001 and a median strata fee of $455 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Burnaby: townhomes sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "67",
+          "$928,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "81",
+          "$979,000"
+        ],
+        [
+          "May to Jul 2026",
+          "97",
+          "$850,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "34",
+          "$830,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Burnaby: townhomes sold by community",
+      "head": [
+        "Community",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Edmonds",
+          "32",
+          "$801,500",
+          "24 days",
+          "97.3%",
+          "$693"
+        ],
+        [
+          "Metrotown",
+          "31",
+          "$979,000",
+          "39 days",
+          "97.2%",
+          "$800"
+        ],
+        [
+          "Forest Hills",
+          "23",
+          "$990,000",
+          "24 days",
+          "97.4%",
+          "$548"
+        ],
+        [
+          "Highgate",
+          "23",
+          "$920,000",
+          "24 days",
+          "96.8%",
+          "$703"
+        ],
+        [
+          "Montecito",
+          "17",
+          "$790,000",
+          "21 days",
+          "96.4%",
+          "$536"
+        ],
+        [
+          "The Crest",
+          "14",
+          "$1,135,000",
+          "18 days",
+          "98.0%",
+          "$625"
+        ],
+        [
+          "Brentwood Park",
+          "14",
+          "$1,070,000",
+          "16 days",
+          "98.3%",
+          "$671"
+        ],
+        [
+          "Government Road",
+          "13",
+          "$999,900",
+          "14 days",
+          "97.3%",
+          "$652"
+        ],
+        [
+          "Greentree Village",
+          "13",
+          "$980,000",
+          "13 days",
+          "98.1%",
+          "$561"
+        ],
+        [
+          "Simon Fraser Hills",
+          "11",
+          "$780,000",
+          "27 days",
+          "97.5%",
+          "$551"
+        ],
+        [
+          "Central",
+          "9",
+          "$765,000",
+          "17 days",
+          "98.7%",
+          "$725"
+        ],
+        [
+          "Central Park",
+          "9",
+          "$870,000",
+          "44 days",
+          "96.6%",
+          "$763"
+        ],
+        [
+          "South Slope",
+          "9",
+          "$840,000",
+          "38 days",
+          "97.1%",
+          "$690"
+        ],
+        [
+          "Sullivan Heights",
+          "8",
+          "$1,044,000",
+          "40 days",
+          "97.5%",
+          "$756"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Burnaby: buildings and complexes with the most townhomes sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "Simon Fraser Village",
+          "11",
+          "$807,500",
+          "18 days",
+          "1981",
+          "$387 a month"
+        ],
+        [
+          "Greentree Village",
+          "6",
+          "$965,000",
+          "8 days",
+          "1975",
+          "$506 a month"
+        ],
+        [
+          "The Monterey",
+          "5",
+          "$715,000",
+          "24 days",
+          "2000",
+          "$381 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     },
     {
       "t": "h",
@@ -366,6 +578,51 @@
   ],
   "faq": [
     {
+      "gen": "sold",
+      "q": "What did townhomes in Burnaby sell for?",
+      "a": "279 townhomes sold in Burnaby between November 1, 2025 to October 22, 2026, with a median price of $900,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Burnaby?",
+      "a": "The median was 23 days from listing to sale, and homes sold at a median 97.3% of the last list price (6% sold above list), for sales November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "What price range do most townhomes in Burnaby sell in?",
+      "a": "The middle half of the 279 townhomes that sold in Burnaby went for between $754,000 and $1,075,000, around a median of $900,000."
+    },
+    {
+      "gen": "sold",
+      "q": "Do townhomes in Burnaby sell above asking price?",
+      "a": "6% of the 279 townhomes sold for more than the last list price, and the median sale was 97.3% of it."
+    },
+    {
+      "gen": "sold",
+      "q": "What is a typical strata fee for townhomes in Burnaby?",
+      "a": "Of the 279 sales, 272 listings gave a monthly fee and the median was $455."
+    },
+    {
+      "gen": "sold",
+      "q": "How old are the townhomes that sold in Burnaby?",
+      "a": "The median year built was 2001 for the 279 townhomes sold in Burnaby."
+    },
+    {
+      "gen": "sold",
+      "q": "How many bedrooms do townhomes in Burnaby usually have?",
+      "a": "The median townhome that sold in Burnaby had 3 bedrooms, from the 279 sales between November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which Burnaby communities sold the most townhomes?",
+      "a": "By number sold: Edmonds BE (32), Metrotown (31), Highgate (23), for November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which Burnaby buildings sold the most townhomes?",
+      "a": "By number sold: Simon Fraser Village (11), Greentree Village (6), The Monterey (5), for November 1, 2025 to October 22, 2026."
+    },
+    {
       "q": "What is the benchmark price of a townhome in Burnaby?",
       "a": "The Greater Vancouver REALTORS® MLS® Home Price Index benchmark for townhomes in Burnaby (Burnaby East) was $857,900 in September 2026, a modelled price for a typical home and not an average of sales."
     },
@@ -380,23 +637,10 @@
     {
       "q": "How many townhomes are for sale in Burnaby?",
       "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the townhomes in Burnaby that match what you want."
-    },
-    {
-      "q": "Can Jared alert me when townhomes come up in Burnaby?",
-      "a": "Yes. Tell him the area, price range and must-haves and he will alert you the day a match is listed."
-    },
-    {
-      "q": "Where can I see all Burnaby homes?",
-      "a": "The Burnaby homes for sale page covers every home type, and the Burnaby market stats page has the monthly figures."
-    },
-    {
-      "q": "Who is Jared Gibbons?",
-      "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
     }
   ],
   "needs_from_muse": [
     "Live listing feed filtered to townhomes in Burnaby",
-    "Sold prices and days on market by type (Paragon sold export)",
     "Jared's own notes"
   ]
 }

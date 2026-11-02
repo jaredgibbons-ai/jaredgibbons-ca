@@ -335,6 +335,41 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "West End home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "17 houses sold in West End with a median price of $1,484,000 (the middle half sold between $1,360,000 and $1,835,500), taking a median of 20 days to sell at 97.1% of the last list price; 6% sold above list. They had a median $581 per square foot, a median year built of 1945 and a median lot of 6,510 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "West End: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "17",
+          "$1,484,000",
+          "20 days",
+          "97.1%",
+          "$581"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -357,11 +392,20 @@
     {
       "q": "Are there more or fewer homes for sale in West End than in June?",
       "a": "Listings of detached houses fell from 18 in June to 16 in September 2026 (−11.1%); condos and townhomes was 1 in June and 2 in September 2026, too few (under 3) to call a rise or fall."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in West End sell for?",
+      "a": "17 houses sold in West End between November 1, 2025 to October 22, 2026, with a median price of $1,484,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in West End?",
+      "a": "The median was 20 days from listing to sale, and homes sold at a median 97.1% of the last list price (6% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of West End from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for West End itself (the reports give them for New Westminster as a whole, not per community)",
     "Schools for West End, placed by street address",
     "Jared's own notes on West End: housing stock, who buys here, what to watch",
     "A live listing feed for West End"

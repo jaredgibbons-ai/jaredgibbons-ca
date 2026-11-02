@@ -201,6 +201,74 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Sullivan Station home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "68 houses sold in Sullivan Station with a median price of $1,397,200 (the middle half sold between $1,249,500 and $1,551,250), taking a median of 36 days to sell at 97.0% of the last list price; 10% sold above list. They had a median $446 per square foot, a median year built of 2010 and a median lot of 3,815 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Sullivan Station: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "68",
+          "$1,397,200",
+          "36 days",
+          "97.0%",
+          "$446"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Sullivan Station: houses sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "14",
+          "$1,447,500"
+        ],
+        [
+          "Feb to Apr 2026",
+          "17",
+          "$1,510,000"
+        ],
+        [
+          "May to Jul 2026",
+          "25",
+          "$1,320,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "12",
+          "$1,224,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -219,10 +287,19 @@
     {
       "q": "Does this page include townhomes or duplexes in Sullivan Station?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Sullivan Station sell for?",
+      "a": "68 houses sold in Sullivan Station between November 1, 2025 to October 22, 2026, with a median price of $1,397,200."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Sullivan Station?",
+      "a": "The median was 36 days from listing to sale, and homes sold at a median 97.0% of the last list price (10% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Sullivan Station houses (the reports give them for Surrey as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in Sullivan Station",
     "A live listing feed filtered to this type"
   ]

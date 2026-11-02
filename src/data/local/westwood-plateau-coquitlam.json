@@ -341,6 +341,90 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Westwood Plateau home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "57 houses sold in Westwood Plateau with a median price of $1,740,000 (the middle half sold between $1,630,000 and $1,900,000), taking a median of 30 days to sell at 95.9% of the last list price; 2% sold above list. They had a median $444 per square foot, a median year built of 1994 and a median lot of 6,996 square feet. 44 condos sold in Westwood Plateau with a median price of $656,500 (the middle half sold between $617,500 and $715,575), taking a median of 24 days to sell at 97.4% of the last list price; 2% sold above list. They had a median $689 per square foot, a median year built of 2008 and a median strata fee of $487 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Westwood Plateau: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "57",
+          "$1,740,000",
+          "30 days",
+          "95.9%",
+          "$444"
+        ],
+        [
+          "Condos",
+          "44",
+          "$656,500",
+          "24 days",
+          "97.4%",
+          "$689"
+        ],
+        [
+          "Townhomes",
+          "33",
+          "$1,132,500",
+          "28 days",
+          "97.1%",
+          "$508"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Westwood Plateau: houses sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "12",
+          "$1,725,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "16",
+          "$1,846,050"
+        ],
+        [
+          "May to Jul 2026",
+          "22",
+          "$1,732,500"
+        ],
+        [
+          "Aug to Oct 2026",
+          "7",
+          "$1,700,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -367,11 +451,20 @@
     {
       "q": "Are there more or fewer homes for sale in Westwood Plateau than in June?",
       "a": "Listings of detached houses rose from 61 in June to 67 in September 2026 (+9.8%); condos and townhomes fell from 53 in June to 47 in September 2026 (−11.3%)."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Westwood Plateau sell for?",
+      "a": "57 houses sold in Westwood Plateau between November 1, 2025 to October 22, 2026, with a median price of $1,740,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Westwood Plateau?",
+      "a": "The median was 30 days from listing to sale, and homes sold at a median 95.9% of the last list price (2% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of Westwood Plateau from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for Westwood Plateau itself (the reports give them for Coquitlam as a whole, not per community)",
     "Schools for Westwood Plateau, placed by street address",
     "Jared's own notes on Westwood Plateau: housing stock, who buys here, what to watch",
     "A live listing feed for Westwood Plateau"

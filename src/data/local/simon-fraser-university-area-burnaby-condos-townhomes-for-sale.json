@@ -201,6 +201,82 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Simon Fraser University SFU home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "87 condos sold in Simon Fraser University SFU with a median price of $512,000 (the middle half sold between $437,500 and $606,500), taking a median of 39 days to sell at 96.8% of the last list price; 8% sold above list. They had a median $635 per square foot, a median year built of 2012 and a median strata fee of $491 a month. 7 townhomes sold in Simon Fraser University SFU with a median price of $825,000, taking a median of 34 days to sell at 96.9% of the last list price; 0% sold above list. They had a median $582 per square foot, a median year built of 2014 and a median strata fee of $799 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Simon Fraser University SFU: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "87",
+          "$512,000",
+          "39 days",
+          "96.8%",
+          "$635"
+        ],
+        [
+          "Townhomes",
+          "7",
+          "$825,000",
+          "34 days",
+          "96.9%",
+          "$582"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Simon Fraser University SFU: condos sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "28",
+          "$535,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "31",
+          "$558,000"
+        ],
+        [
+          "May to Jul 2026",
+          "19",
+          "$512,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "9",
+          "$450,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -219,10 +295,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did condos in Simon Fraser University SFU sell for?",
+      "a": "87 condos sold in Simon Fraser University SFU between November 1, 2025 to October 22, 2026, with a median price of $512,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do condos take to sell in Simon Fraser University SFU?",
+      "a": "The median was 39 days from listing to sale, and homes sold at a median 96.8% of the last list price (8% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Simon Fraser University SFU condos and townhomes (the reports give them for Burnaby as a whole)",
     "Named buildings and complexes in Simon Fraser University SFU, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

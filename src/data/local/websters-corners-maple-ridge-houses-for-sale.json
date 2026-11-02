@@ -184,6 +184,41 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Websters Corners home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "18 houses sold in Websters Corners with a median price of $1,042,500 (the middle half sold between $913,750 and $1,243,625), taking a median of 34 days to sell at 96.9% of the last list price; 11% sold above list. They had a median $495 per square foot, a median year built of 1981 and a median lot of 10,836 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Websters Corners: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "18",
+          "$1,042,500",
+          "34 days",
+          "96.9%",
+          "$495"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -202,10 +237,19 @@
     {
       "q": "Does this page include townhomes or duplexes in Websters Corners?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Websters Corners sell for?",
+      "a": "18 houses sold in Websters Corners between November 1, 2025 to October 22, 2026, with a median price of $1,042,500."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Websters Corners?",
+      "a": "The median was 34 days from listing to sale, and homes sold at a median 96.9% of the last list price (11% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Websters Corners houses (the reports give them for Maple Ridge as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in Websters Corners",
     "A live listing feed filtered to this type"
   ]

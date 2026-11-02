@@ -335,6 +335,90 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Riverwood home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "66 townhomes sold in Riverwood with a median price of $881,750 (the middle half sold between $816,250 and $975,000), taking a median of 22 days to sell at 97.4% of the last list price; 8% sold above list. They had a median $581 per square foot, a median year built of 2005 and a median strata fee of $395 a month. 15 houses sold in Riverwood with a median price of $1,410,000 (the middle half sold between $1,330,000 and $1,510,000), taking a median of 25 days to sell at 97.0% of the last list price; 13% sold above list. They had a median $629 per square foot, a median year built of 1997 and a median lot of 4,617 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Riverwood: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "15",
+          "$1,410,000",
+          "25 days",
+          "97.0%",
+          "$629"
+        ],
+        [
+          "Condos",
+          "5",
+          "$638,000",
+          "40 days",
+          "96.8%",
+          "$750"
+        ],
+        [
+          "Townhomes",
+          "66",
+          "$881,750",
+          "22 days",
+          "97.4%",
+          "$581"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Riverwood: townhomes sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "16",
+          "$906,250"
+        ],
+        [
+          "Feb to Apr 2026",
+          "19",
+          "$927,500"
+        ],
+        [
+          "May to Jul 2026",
+          "26",
+          "$841,650"
+        ],
+        [
+          "Aug to Oct 2026",
+          "5",
+          "$763,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -361,11 +445,20 @@
     {
       "q": "Are there more or fewer homes for sale in Riverwood than in June?",
       "a": "Listings of detached houses rose from 7 in June to 10 in September 2026 (+42.9%); condos and townhomes fell from 29 in June to 21 in September 2026 (−27.6%)."
+    },
+    {
+      "gen": "sold",
+      "q": "What did townhomes in Riverwood sell for?",
+      "a": "66 townhomes sold in Riverwood between November 1, 2025 to October 22, 2026, with a median price of $881,750."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Riverwood?",
+      "a": "The median was 22 days from listing to sale, and homes sold at a median 97.4% of the last list price (8% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of Riverwood from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for Riverwood itself (the reports give them for Port Coquitlam as a whole, not per community)",
     "Schools for Riverwood, placed by street address",
     "Jared's own notes on Riverwood: housing stock, who buys here, what to watch",
     "A live listing feed for Riverwood"

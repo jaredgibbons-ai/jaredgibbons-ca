@@ -27,7 +27,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
       "gen": "gappage"
     },
     {
@@ -38,6 +38,17 @@
     {
       "t": "grid",
       "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Surrey houses with acreage sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "18 houses with acreage sold in Surrey with a median price of $2,675,000 (the middle half sold between $2,182,500 and $3,385,000), taking a median of 22 days to sell at 91.3% of the last list price; 11% sold above list. They had a median year built of 1976 and a median lot of 1.02 acres.",
+      "gen": "sold"
     },
     {
       "t": "h",
@@ -541,29 +552,41 @@
   ],
   "faq": [
     {
+      "gen": "sold",
+      "q": "What did acreages in Surrey sell for?",
+      "a": "18 houses with acreage sold in Surrey between November 1, 2025 to October 22, 2026, with a median price of $2,675,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do acreages take to sell in Surrey?",
+      "a": "The median was 22 days from listing to sale, and homes sold at a median 91.3% of the last list price (11% sold above list), for sales November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "What price range do most acreages in Surrey sell in?",
+      "a": "The middle half of the 18 houses with acreage that sold in Surrey went for between $2,182,500 and $3,385,000, around a median of $2,675,000."
+    },
+    {
+      "gen": "sold",
+      "q": "Do acreages in Surrey sell above asking price?",
+      "a": "11% of the 18 houses with acreage sold for more than the last list price, and the median sale was 91.3% of it."
+    },
+    {
+      "gen": "sold",
+      "q": "How old are the acreages that sold in Surrey?",
+      "a": "The median year built was 1976 for the 18 houses with acreage sold in Surrey."
+    },
+    {
       "q": "Is Surrey a buyers’ or sellers’ market?",
       "a": "In September 2026 houses in Surrey had a sales ratio of 8%, which the reports’ scale reads as a buyers’ market, and condos and townhomes 7%, which the reports’ scale reads as a buyers’ market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers."
     },
     {
       "q": "How many acreages are for sale in Surrey?",
       "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the acreages in Surrey that match what you want."
-    },
-    {
-      "q": "Can Jared alert me when acreages come up in Surrey?",
-      "a": "Yes. Tell him the area, price range and must-haves and he will alert you the day a match is listed."
-    },
-    {
-      "q": "Where can I see all Surrey homes?",
-      "a": "The Surrey homes for sale page covers every home type, and the Surrey market stats page has the monthly figures."
-    },
-    {
-      "q": "Who is Jared Gibbons?",
-      "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
     }
   ],
   "needs_from_muse": [
     "Live listing feed filtered to acreages in Surrey",
-    "Sold prices and days on market by type (Paragon sold export)",
     "Jared's own notes"
   ]
 }

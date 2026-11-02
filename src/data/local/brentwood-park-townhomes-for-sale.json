@@ -10,7 +10,7 @@
     },
     {
       "t": "p",
-      "text": "Brentwood Park townhomes in Burnaby: The monthly reports publish condos and townhomes as one line, so the figures on this page cover both and cannot be split until Jared’s sold-listing export is added. The combined line showed 360 condos and townhomes listed at the end of September 2026, the most of any Burnaby community, and 39 sold in the month.",
+      "text": "Brentwood Park townhomes in Burnaby: The monthly reports publish condos and townhomes as one line, so the month-by-month table covers both. The sold-price section further down separates them, using closed sales from Jared’s MLS® system (November 1, 2025 to October 22, 2026). The combined line showed 360 condos and townhomes listed at the end of September 2026, the most of any Burnaby community, and 39 sold in the month.",
       "gen": "brentwood"
     },
     {
@@ -150,6 +150,41 @@
       ],
       "gen": "brentwood",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Brentwood Park home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "14 townhomes sold in Brentwood Park with a median price of $1,070,000 (the middle half sold between $878,350 and $1,236,000), taking a median of 16 days to sell at 98.3% of the last list price; 0% sold above list. They had a median $671 per square foot, a median year built of 2018 and a median strata fee of $367 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Brentwood Park: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Townhomes",
+          "14",
+          "$1,070,000",
+          "16 days",
+          "98.3%",
+          "$671"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -167,11 +202,21 @@
     },
     {
       "q": "Do these numbers separate townhomes from condos?",
-      "a": "The monthly reports publish condos and townhomes as one line, so the figures on this page cover both and cannot be split until Jared’s sold-listing export is added."
+      "a": "The monthly reports publish condos and townhomes as one line, so the month-by-month table covers both. The sold-price section further down separates them, using closed sales from Jared’s MLS® system (November 1, 2025 to October 22, 2026)."
     },
     {
       "q": "Where are the Brentwood Park houses and condos?",
       "a": "Houses and condos each have their own page, and the Brentwood Park guide covers the neighbourhood as a whole."
+    },
+    {
+      "gen": "sold",
+      "q": "What did townhomes in Brentwood Park sell for?",
+      "a": "14 townhomes sold in Brentwood Park between November 1, 2025 to October 22, 2026, with a median price of $1,070,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Brentwood Park?",
+      "a": "The median was 16 days from listing to sale, and homes sold at a median 98.3% of the last list price (0% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "faq_heading": "Brentwood Park townhomes: your questions answered",
@@ -200,8 +245,8 @@
     }
   ],
   "needs_from_muse": [
-    "Separate condo and townhome counts, sold prices and days on market for Brentwood Park (Paragon sold export)",
-    "Named buildings and townhome complexes, strata fee ranges and building ages",
+    "Jared’s notes on the buildings and complexes in the sold-price table (names are as entered in the MLS®)",
+    "Street boundaries and the planned changes around Brentwood Town Centre",
     "A feed filtered to this home type",
     "Jared's own notes"
   ]

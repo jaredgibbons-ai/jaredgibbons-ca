@@ -27,7 +27,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
       "gen": "gappage"
     },
     {
@@ -38,6 +38,234 @@
     {
       "t": "grid",
       "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "New Westminster condos sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "568 condos sold in New Westminster with a median price of $580,000 (the middle half sold between $485,000 and $680,150), taking a median of 28 days to sell at 97.3% of the last list price; 7% sold above list. They had a median $629 per square foot, a median year built of 2006 and a median strata fee of $547 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "New Westminster: condos sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "137",
+          "$580,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "168",
+          "$592,750"
+        ],
+        [
+          "May to Jul 2026",
+          "169",
+          "$575,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "94",
+          "$545,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "New Westminster: condos sold by community",
+      "head": [
+        "Community",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Downtown",
+          "133",
+          "$519,900",
+          "23 days",
+          "97.5%",
+          "$662"
+        ],
+        [
+          "Quay",
+          "127",
+          "$630,000",
+          "28 days",
+          "97.3%",
+          "$632"
+        ],
+        [
+          "Uptown",
+          "125",
+          "$529,000",
+          "25 days",
+          "97.0%",
+          "$548"
+        ],
+        [
+          "Fraserview",
+          "71",
+          "$645,000",
+          "21 days",
+          "97.1%",
+          "$599"
+        ],
+        [
+          "Queensborough",
+          "53",
+          "$690,000",
+          "33 days",
+          "97.7%",
+          "$655"
+        ],
+        [
+          "Sapperton",
+          "42",
+          "$526,250",
+          "37 days",
+          "97.3%",
+          "$697"
+        ],
+        [
+          "GlenBrooke North",
+          "12",
+          "$540,000",
+          "36 days",
+          "96.3%",
+          "$667"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "New Westminster: buildings and complexes with the most condos sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "Timber House",
+          "15",
+          "$790,900",
+          "12 days",
+          "2023",
+          "$547 a month"
+        ],
+        [
+          "Palace Quay",
+          "11",
+          "$645,000",
+          "18 days",
+          "1992",
+          "$580 a month"
+        ],
+        [
+          "Pier West",
+          "11",
+          "$966,000",
+          "27 days",
+          "2024",
+          "$621 a month"
+        ],
+        [
+          "The Riviera",
+          "10",
+          "$752,500",
+          "42 days",
+          "1991",
+          "$707 a month"
+        ],
+        [
+          "Copperstone",
+          "9",
+          "$558,100",
+          "54 days",
+          "2008",
+          "$405 a month"
+        ],
+        [
+          "Trapp + Holbrook",
+          "7",
+          "$460,000",
+          "35 days",
+          "2015",
+          "$395 a month"
+        ],
+        [
+          "Riversky 1",
+          "7",
+          "$491,000",
+          "55 days",
+          "2019",
+          "$388 a month"
+        ],
+        [
+          "Discovery Reach",
+          "7",
+          "$545,000",
+          "12 days",
+          "1998",
+          "$511 a month"
+        ],
+        [
+          "Azure 1",
+          "6",
+          "$586,500",
+          "19 days",
+          "2008",
+          "$499 a month"
+        ],
+        [
+          "Ovation",
+          "6",
+          "$492,000",
+          "11 days",
+          "2024",
+          "$395 a month"
+        ],
+        [
+          "Quayside",
+          "6",
+          "$587,250",
+          "36 days",
+          "1988",
+          "$581 a month"
+        ],
+        [
+          "Anchor Pointe",
+          "6",
+          "$612,500",
+          "18 days",
+          "1989",
+          "$659 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     },
     {
       "t": "h",
@@ -391,6 +619,51 @@
   ],
   "faq": [
     {
+      "gen": "sold",
+      "q": "What did condos in New Westminster sell for?",
+      "a": "568 condos sold in New Westminster between November 1, 2025 to October 22, 2026, with a median price of $580,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do condos take to sell in New Westminster?",
+      "a": "The median was 28 days from listing to sale, and homes sold at a median 97.3% of the last list price (7% sold above list), for sales November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "What price range do most condos in New Westminster sell in?",
+      "a": "The middle half of the 568 condos that sold in New Westminster went for between $485,000 and $680,150, around a median of $580,000."
+    },
+    {
+      "gen": "sold",
+      "q": "Do condos in New Westminster sell above asking price?",
+      "a": "7% of the 568 condos sold for more than the last list price, and the median sale was 97.3% of it."
+    },
+    {
+      "gen": "sold",
+      "q": "What is a typical strata fee for condos in New Westminster?",
+      "a": "Of the 568 sales, 567 listings gave a monthly fee and the median was $547."
+    },
+    {
+      "gen": "sold",
+      "q": "How old are the condos that sold in New Westminster?",
+      "a": "The median year built was 2006 for the 568 condos sold in New Westminster."
+    },
+    {
+      "gen": "sold",
+      "q": "How many bedrooms do condos in New Westminster usually have?",
+      "a": "The median condo that sold in New Westminster had 2 bedrooms, from the 568 sales between November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which New Westminster communities sold the most condos?",
+      "a": "By number sold: Downtown NW (133), Quay (127), Uptown NW (125), for November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which New Westminster buildings sold the most condos?",
+      "a": "By number sold: Timber House (15), Palace Quay (11), Pier West (11), for November 1, 2025 to October 22, 2026."
+    },
+    {
       "q": "What is the benchmark price of a condo in New Westminster?",
       "a": "The Greater Vancouver REALTORS® MLS® Home Price Index benchmark for apartments (condos) in New Westminster was $579,900 in September 2026, a modelled price for a typical home and not an average of sales."
     },
@@ -405,23 +678,10 @@
     {
       "q": "How many condos are for sale in New Westminster?",
       "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the condos in New Westminster that match what you want."
-    },
-    {
-      "q": "Can Jared alert me when condos come up in New Westminster?",
-      "a": "Yes. Tell him the area, price range and must-haves and he will alert you the day a match is listed."
-    },
-    {
-      "q": "Where can I see all New Westminster homes?",
-      "a": "The New Westminster homes for sale page covers every home type, and the New Westminster market stats page has the monthly figures."
-    },
-    {
-      "q": "Who is Jared Gibbons?",
-      "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
     }
   ],
   "needs_from_muse": [
     "Live listing feed filtered to condos in New Westminster",
-    "Sold prices and days on market by type (Paragon sold export)",
     "Jared's own notes"
   ]
 }

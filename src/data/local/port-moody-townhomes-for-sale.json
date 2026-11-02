@@ -27,7 +27,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
       "gen": "gappage"
     },
     {
@@ -38,6 +38,154 @@
     {
       "t": "grid",
       "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Port Moody townhomes sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "111 townhomes sold in Port Moody with a median price of $945,000 (the middle half sold between $826,000 and $1,179,000), taking a median of 18 days to sell at 98.0% of the last list price; 3% sold above list. They had a median $599 per square foot, a median year built of 1992 and a median strata fee of $479 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Port Moody: townhomes sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "33",
+          "$940,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "33",
+          "$938,800"
+        ],
+        [
+          "May to Jul 2026",
+          "35",
+          "$1,045,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "10",
+          "$860,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Port Moody: townhomes sold by community",
+      "head": [
+        "Community",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Port Moody Centre",
+          "31",
+          "$1,112,000",
+          "26 days",
+          "97.9%",
+          "$784"
+        ],
+        [
+          "College Park",
+          "27",
+          "$829,000",
+          "26 days",
+          "98.4%",
+          "$485"
+        ],
+        [
+          "Heritage Woods",
+          "21",
+          "$1,158,000",
+          "16 days",
+          "98.3%",
+          "$631"
+        ],
+        [
+          "North Shore Pt Moody",
+          "21",
+          "$755,000",
+          "12 days",
+          "97.5%",
+          "$606"
+        ],
+        [
+          "Heritage Mountain",
+          "11",
+          "$1,320,000",
+          "13 days",
+          "98.2%",
+          "$541"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Port Moody: buildings and complexes with the most townhomes sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "Easthill",
+          "8",
+          "$852,500",
+          "22 days",
+          "1977",
+          "$650 a month"
+        ],
+        [
+          "Woodside Village",
+          "5",
+          "$750,000",
+          "9 days",
+          "1977",
+          "$363 a month"
+        ],
+        [
+          "Eagle Point",
+          "5",
+          "$929,000",
+          "5 days",
+          "1980",
+          "$561 a month"
+        ],
+        [
+          "Indigo",
+          "5",
+          "$1,160,000",
+          "26 days",
+          "2005",
+          "$406 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     },
     {
       "t": "h",
@@ -232,6 +380,51 @@
   ],
   "faq": [
     {
+      "gen": "sold",
+      "q": "What did townhomes in Port Moody sell for?",
+      "a": "111 townhomes sold in Port Moody between November 1, 2025 to October 22, 2026, with a median price of $945,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Port Moody?",
+      "a": "The median was 18 days from listing to sale, and homes sold at a median 98.0% of the last list price (3% sold above list), for sales November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "What price range do most townhomes in Port Moody sell in?",
+      "a": "The middle half of the 111 townhomes that sold in Port Moody went for between $826,000 and $1,179,000, around a median of $945,000."
+    },
+    {
+      "gen": "sold",
+      "q": "Do townhomes in Port Moody sell above asking price?",
+      "a": "3% of the 111 townhomes sold for more than the last list price, and the median sale was 98.0% of it."
+    },
+    {
+      "gen": "sold",
+      "q": "What is a typical strata fee for townhomes in Port Moody?",
+      "a": "Of the 111 sales, 110 listings gave a monthly fee and the median was $479."
+    },
+    {
+      "gen": "sold",
+      "q": "How old are the townhomes that sold in Port Moody?",
+      "a": "The median year built was 1992 for the 111 townhomes sold in Port Moody."
+    },
+    {
+      "gen": "sold",
+      "q": "How many bedrooms do townhomes in Port Moody usually have?",
+      "a": "The median townhome that sold in Port Moody had 3 bedrooms, from the 111 sales between November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which Port Moody communities sold the most townhomes?",
+      "a": "By number sold: Port Moody Centre (31), College Park PM (27), North Shore Pt Moody (21), for November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which Port Moody buildings sold the most townhomes?",
+      "a": "By number sold: Easthill (8), Woodside Village (5), Eagle Point (5), for November 1, 2025 to October 22, 2026."
+    },
+    {
       "q": "What is the benchmark price of a townhome in Port Moody?",
       "a": "The Greater Vancouver REALTORS® MLS® Home Price Index benchmark for townhomes in Port Moody was $940,900 in September 2026, a modelled price for a typical home and not an average of sales."
     },
@@ -246,23 +439,10 @@
     {
       "q": "How many townhomes are for sale in Port Moody?",
       "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the townhomes in Port Moody that match what you want."
-    },
-    {
-      "q": "Can Jared alert me when townhomes come up in Port Moody?",
-      "a": "Yes. Tell him the area, price range and must-haves and he will alert you the day a match is listed."
-    },
-    {
-      "q": "Where can I see all Port Moody homes?",
-      "a": "The Port Moody homes for sale page covers every home type, and the Port Moody market stats page has the monthly figures."
-    },
-    {
-      "q": "Who is Jared Gibbons?",
-      "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
     }
   ],
   "needs_from_muse": [
     "Live listing feed filtered to townhomes in Port Moody",
-    "Sold prices and days on market by type (Paragon sold export)",
     "Jared's own notes"
   ]
 }

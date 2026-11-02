@@ -341,6 +341,65 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Vancouver Heights home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "19 houses sold in Vancouver Heights with a median price of $2,075,000 (the middle half sold between $1,665,000 and $2,221,500), taking a median of 21 days to sell at 97.1% of the last list price; 11% sold above list. They had a median $770 per square foot, a median year built of 1978 and a median lot of 4,049 square feet. 15 condos sold in Vancouver Heights with a median price of $565,000 (the middle half sold between $491,500 and $976,900), taking a median of 26 days to sell at 95.9% of the last list price; 7% sold above list. They had a median $790 per square foot, a median year built of 2006 and a median strata fee of $397 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Vancouver Heights: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "19",
+          "$2,075,000",
+          "21 days",
+          "97.1%",
+          "$770"
+        ],
+        [
+          "Condos",
+          "15",
+          "$565,000",
+          "26 days",
+          "95.9%",
+          "$790"
+        ],
+        [
+          "Townhomes",
+          "5",
+          "$835,000",
+          "25 days",
+          "98.0%",
+          "$794"
+        ],
+        [
+          "Duplexes (half and full)",
+          "3",
+          "Too few sales for a typical price",
+          "—",
+          "—",
+          "—"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -367,11 +426,20 @@
     {
       "q": "Are there more or fewer homes for sale in Vancouver Heights than in June?",
       "a": "Listings of detached houses fell from 16 in June to 13 in September 2026 (−18.8%); condos and townhomes rose from 16 in June to 22 in September 2026 (+37.5%)."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Vancouver Heights sell for?",
+      "a": "19 houses sold in Vancouver Heights between November 1, 2025 to October 22, 2026, with a median price of $2,075,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Vancouver Heights?",
+      "a": "The median was 21 days from listing to sale, and homes sold at a median 97.1% of the last list price (11% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of Vancouver Heights from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for Vancouver Heights itself (the reports give them for Burnaby as a whole, not per community)",
     "Schools for Vancouver Heights, placed by street address",
     "Jared's own notes on Vancouver Heights: housing stock, who buys here, what to watch",
     "A live listing feed for Vancouver Heights"

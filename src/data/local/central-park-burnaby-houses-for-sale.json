@@ -195,6 +195,41 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Central Park home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "10 houses sold in Central Park with a median price of $1,925,500 (the middle half sold between $1,617,000 and $2,200,000), taking a median of 14 days to sell at 91.3% of the last list price; 10% sold above list. They had a median $808 per square foot, a median year built of 1954 and a median lot of 7,096 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Central Park: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "10",
+          "$1,925,500",
+          "14 days",
+          "91.3%",
+          "$808"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -213,10 +248,19 @@
     {
       "q": "Does this page include townhomes or duplexes in Central Park?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Central Park sell for?",
+      "a": "10 houses sold in Central Park between November 1, 2025 to October 22, 2026, with a median price of $1,925,500."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Central Park?",
+      "a": "The median was 14 days from listing to sale, and homes sold at a median 91.3% of the last list price (10% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Central Park houses (the reports give them for Burnaby as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in Central Park",
     "A live listing feed filtered to this type"
   ]

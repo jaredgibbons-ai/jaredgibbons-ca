@@ -27,7 +27,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
       "gen": "gappage"
     },
     {
@@ -38,6 +38,250 @@
     {
       "t": "grid",
       "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Coquitlam townhomes sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "307 townhomes sold in Coquitlam with a median price of $1,000,000 (the middle half sold between $871,500 and $1,199,500), taking a median of 17 days to sell at 98.5% of the last list price; 7% sold above list. They had a median $638 per square foot, a median year built of 2020 and a median strata fee of $390 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Coquitlam: townhomes sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "63",
+          "$1,069,900"
+        ],
+        [
+          "Feb to Apr 2026",
+          "103",
+          "$999,900"
+        ],
+        [
+          "May to Jul 2026",
+          "103",
+          "$1,039,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "38",
+          "$948,950"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Coquitlam: townhomes sold by community",
+      "head": [
+        "Community",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Burke Mountain",
+          "149",
+          "$1,100,000",
+          "14 days",
+          "99.5%",
+          "$645"
+        ],
+        [
+          "Coquitlam West",
+          "46",
+          "$938,950",
+          "36 days",
+          "99.0%",
+          "$749"
+        ],
+        [
+          "Westwood Plateau",
+          "33",
+          "$1,132,500",
+          "28 days",
+          "97.1%",
+          "$508"
+        ],
+        [
+          "Maillardville",
+          "17",
+          "$763,000",
+          "25 days",
+          "97.2%",
+          "$608"
+        ],
+        [
+          "Eagle Ridge",
+          "14",
+          "$873,250",
+          "16 days",
+          "98.2%",
+          "$535"
+        ],
+        [
+          "Coquitlam East",
+          "10",
+          "$802,250",
+          "12 days",
+          "98.3%",
+          "$602"
+        ],
+        [
+          "Scott Creek",
+          "9",
+          "$1,049,900",
+          "2 days",
+          "100.0%",
+          "$696"
+        ],
+        [
+          "Upper Eagle Ridge",
+          "8",
+          "$861,000",
+          "18 days",
+          "98.5%",
+          "$551"
+        ],
+        [
+          "Ranch Park",
+          "6",
+          "$622,500",
+          "11 days",
+          "95.5%",
+          "$422"
+        ],
+        [
+          "Central Coquitlam",
+          "5",
+          "$617,500",
+          "22 days",
+          "98.8%",
+          "$617"
+        ],
+        [
+          "New Horizons",
+          "5",
+          "$1,055,000",
+          "37 days",
+          "96.9%",
+          "$666"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Coquitlam: buildings and complexes with the most townhomes sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "Versant",
+          "12",
+          "$884,900",
+          "3 days",
+          "2026",
+          "$250 a month"
+        ],
+        [
+          "Partington Creek",
+          "12",
+          "$1,513,000",
+          "6 days",
+          "2026",
+          "$459 a month"
+        ],
+        [
+          "Beaumont By Polygon",
+          "11",
+          "$958,000",
+          "2 days",
+          "2026",
+          "$326 a month"
+        ],
+        [
+          "Heartwood",
+          "7",
+          "$1,069,900",
+          "27 days",
+          "2026",
+          "$293 a month"
+        ],
+        [
+          "Rocklin on the Creek",
+          "6",
+          "$969,000",
+          "56 days",
+          "2020",
+          "$331 a month"
+        ],
+        [
+          "Sundays on Grant By Anthem",
+          "6",
+          "$979,900",
+          "0 days",
+          "2025",
+          "$501 a month"
+        ],
+        [
+          "Whitetail Lane",
+          "6",
+          "$1,002,500",
+          "14 days",
+          "2008",
+          "$349 a month"
+        ],
+        [
+          "Ballantree",
+          "5",
+          "$1,270,500",
+          "53 days",
+          "2022",
+          "$346 a month"
+        ],
+        [
+          "Farrow Ridge",
+          "5",
+          "$799,000",
+          "66 days",
+          "2004",
+          "$407 a month"
+        ],
+        [
+          "The Courtyards",
+          "5",
+          "$855,000",
+          "9 days",
+          "1985",
+          "$471 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     },
     {
       "t": "h",
@@ -342,6 +586,51 @@
   ],
   "faq": [
     {
+      "gen": "sold",
+      "q": "What did townhomes in Coquitlam sell for?",
+      "a": "307 townhomes sold in Coquitlam between November 1, 2025 to October 22, 2026, with a median price of $1,000,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Coquitlam?",
+      "a": "The median was 17 days from listing to sale, and homes sold at a median 98.5% of the last list price (7% sold above list), for sales November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "What price range do most townhomes in Coquitlam sell in?",
+      "a": "The middle half of the 307 townhomes that sold in Coquitlam went for between $871,500 and $1,199,500, around a median of $1,000,000."
+    },
+    {
+      "gen": "sold",
+      "q": "Do townhomes in Coquitlam sell above asking price?",
+      "a": "7% of the 307 townhomes sold for more than the last list price, and the median sale was 98.5% of it."
+    },
+    {
+      "gen": "sold",
+      "q": "What is a typical strata fee for townhomes in Coquitlam?",
+      "a": "Of the 307 sales, 303 listings gave a monthly fee and the median was $390."
+    },
+    {
+      "gen": "sold",
+      "q": "How old are the townhomes that sold in Coquitlam?",
+      "a": "The median year built was 2020 for the 307 townhomes sold in Coquitlam."
+    },
+    {
+      "gen": "sold",
+      "q": "How many bedrooms do townhomes in Coquitlam usually have?",
+      "a": "The median townhome that sold in Coquitlam had 3 bedrooms, from the 307 sales between November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which Coquitlam communities sold the most townhomes?",
+      "a": "By number sold: Burke Mountain (149), Coquitlam West (46), Westwood Plateau (33), for November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which Coquitlam buildings sold the most townhomes?",
+      "a": "By number sold: Versant (12), Partington Creek (12), Beaumont By Polygon (11), for November 1, 2025 to October 22, 2026."
+    },
+    {
       "q": "What is the benchmark price of a townhome in Coquitlam?",
       "a": "The Greater Vancouver REALTORS® MLS® Home Price Index benchmark for townhomes in Coquitlam was $976,600 in September 2026, a modelled price for a typical home and not an average of sales."
     },
@@ -356,23 +645,10 @@
     {
       "q": "How many townhomes are for sale in Coquitlam?",
       "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the townhomes in Coquitlam that match what you want."
-    },
-    {
-      "q": "Can Jared alert me when townhomes come up in Coquitlam?",
-      "a": "Yes. Tell him the area, price range and must-haves and he will alert you the day a match is listed."
-    },
-    {
-      "q": "Where can I see all Coquitlam homes?",
-      "a": "The Coquitlam homes for sale page covers every home type, and the Coquitlam market stats page has the monthly figures."
-    },
-    {
-      "q": "Who is Jared Gibbons?",
-      "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
     }
   ],
   "needs_from_muse": [
     "Live listing feed filtered to townhomes in Coquitlam",
-    "Sold prices and days on market by type (Paragon sold export)",
     "Jared's own notes"
   ]
 }

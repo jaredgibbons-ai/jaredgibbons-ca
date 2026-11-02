@@ -184,6 +184,154 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "North Coquitlam home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "195 condos sold in North Coquitlam with a median price of $600,000 (the middle half sold between $510,000 and $669,000), taking a median of 23 days to sell at 97.3% of the last list price; 4% sold above list. They had a median $684 per square foot, a median year built of 2009 and a median strata fee of $460 a month. 3 townhomes sold in North Coquitlam, too few (5 needed) to give a typical price.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "North Coquitlam: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "195",
+          "$600,000",
+          "23 days",
+          "97.3%",
+          "$684"
+        ],
+        [
+          "Townhomes",
+          "3",
+          "Too few sales for a typical price",
+          "—",
+          "—",
+          "—"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "North Coquitlam: condos sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "58",
+          "$622,500"
+        ],
+        [
+          "Feb to Apr 2026",
+          "48",
+          "$574,500"
+        ],
+        [
+          "May to Jul 2026",
+          "64",
+          "$597,500"
+        ],
+        [
+          "Aug to Oct 2026",
+          "25",
+          "$565,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "North Coquitlam: buildings and complexes with the most condos sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "Lakeside Terrace",
+          "14",
+          "$542,500",
+          "24 days",
+          "1994",
+          "$607 a month"
+        ],
+        [
+          "Marlborough House",
+          "7",
+          "$705,000",
+          "12 days",
+          "1997",
+          "$771 a month"
+        ],
+        [
+          "Levo",
+          "6",
+          "$620,950",
+          "11 days",
+          "2009",
+          "$392 a month"
+        ],
+        [
+          "Glenborough",
+          "6",
+          "$492,500",
+          "10 days",
+          "1990",
+          "$460 a month"
+        ],
+        [
+          "Oasis",
+          "6",
+          "$662,500",
+          "34 days",
+          "2013",
+          "$461 a month"
+        ],
+        [
+          "1123 Westwood",
+          "6",
+          "$510,000",
+          "18 days",
+          "2016",
+          "$294 a month"
+        ],
+        [
+          "The Burlington",
+          "5",
+          "$650,000",
+          "13 days",
+          "1993",
+          "$525 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -202,10 +350,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did condos in North Coquitlam sell for?",
+      "a": "195 condos sold in North Coquitlam between November 1, 2025 to October 22, 2026, with a median price of $600,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do condos take to sell in North Coquitlam?",
+      "a": "The median was 23 days from listing to sale, and homes sold at a median 97.3% of the last list price (4% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for North Coquitlam condos and townhomes (the reports give them for Coquitlam as a whole)",
     "Named buildings and complexes in North Coquitlam, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

@@ -177,6 +177,74 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Central Abbotsford home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "77 houses sold in Central Abbotsford with a median price of $980,000 (the middle half sold between $895,000 and $1,115,000), taking a median of 22 days to sell at 96.7% of the last list price; 9% sold above list. They had a median $400 per square foot, a median year built of 1980 and a median lot of 7,282 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Central Abbotsford: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "77",
+          "$980,000",
+          "22 days",
+          "96.7%",
+          "$400"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Central Abbotsford: houses sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "22",
+          "$943,500"
+        ],
+        [
+          "Feb to Apr 2026",
+          "24",
+          "$1,061,800"
+        ],
+        [
+          "May to Jul 2026",
+          "17",
+          "$918,500"
+        ],
+        [
+          "Aug to Oct 2026",
+          "14",
+          "$1,050,250"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -195,10 +263,19 @@
     {
       "q": "Does this page include townhomes or duplexes in Central Abbotsford?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Central Abbotsford sell for?",
+      "a": "77 houses sold in Central Abbotsford between November 1, 2025 to October 22, 2026, with a median price of $980,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Central Abbotsford?",
+      "a": "The median was 22 days from listing to sale, and homes sold at a median 96.7% of the last list price (9% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Central Abbotsford houses (the reports give them for Abbotsford as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in Central Abbotsford",
     "A live listing feed filtered to this type"
   ]

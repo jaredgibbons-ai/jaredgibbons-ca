@@ -310,6 +310,49 @@
       ],
       "gen": "community",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Upper Eagle Ridge home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "8 townhomes sold in Upper Eagle Ridge with a median price of $861,000 (the middle half sold between $748,750 and $917,875), taking a median of 18 days to sell at 98.5% of the last list price; 12% sold above list. They had a median $551 per square foot, a median year built of 1984 and a median strata fee of $494 a month. 6 houses sold in Upper Eagle Ridge with a median price of $1,501,500, taking a median of 41 days to sell at 94.6% of the last list price; 0% sold above list. They had a median $486 per square foot, a median year built of 1980 and a median lot of 7,232 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Upper Eagle Ridge: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "6",
+          "$1,501,500",
+          "41 days",
+          "94.6%",
+          "$486"
+        ],
+        [
+          "Townhomes",
+          "8",
+          "$861,000",
+          "18 days",
+          "98.5%",
+          "$551"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -336,11 +379,20 @@
     {
       "q": "Are there more or fewer homes for sale in Upper Eagle Ridge than in June?",
       "a": "Listings of detached houses was 1 in June and 3 in September 2026, too few (under 3) to call a rise or fall; condos and townhomes rose from 3 in June to 4 in September 2026 (+33.3%)."
+    },
+    {
+      "gen": "sold",
+      "q": "What did townhomes in Upper Eagle Ridge sell for?",
+      "a": "8 townhomes sold in Upper Eagle Ridge between November 1, 2025 to October 22, 2026, with a median price of $861,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Upper Eagle Ridge?",
+      "a": "The median was 18 days from listing to sale, and homes sold at a median 98.5% of the last list price (12% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of Upper Eagle Ridge from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for Upper Eagle Ridge itself (the reports give them for Coquitlam as a whole, not per community)",
     "Schools for Upper Eagle Ridge, placed by street address",
     "Jared's own notes on Upper Eagle Ridge: housing stock, who buys here, what to watch",
     "A live listing feed for Upper Eagle Ridge"

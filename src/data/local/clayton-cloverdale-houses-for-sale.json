@@ -153,6 +153,74 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Clayton home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "72 houses sold in Clayton with a median price of $1,295,000 (the middle half sold between $1,213,500 and $1,411,250), taking a median of 24 days to sell at 97.2% of the last list price; 10% sold above list. They had a median $434 per square foot, a median year built of 2006 and a median lot of 3,270 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Clayton: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "72",
+          "$1,295,000",
+          "24 days",
+          "97.2%",
+          "$434"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Clayton: houses sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "16",
+          "$1,375,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "19",
+          "$1,295,000"
+        ],
+        [
+          "May to Jul 2026",
+          "25",
+          "$1,299,999"
+        ],
+        [
+          "Aug to Oct 2026",
+          "12",
+          "$1,225,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -171,10 +239,19 @@
     {
       "q": "Does this page include townhomes or duplexes in Clayton?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Clayton sell for?",
+      "a": "72 houses sold in Clayton between November 1, 2025 to October 22, 2026, with a median price of $1,295,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Clayton?",
+      "a": "The median was 24 days from listing to sale, and homes sold at a median 97.2% of the last list price (10% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Clayton houses (the reports give them for Cloverdale as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in Clayton",
     "A live listing feed filtered to this type"
   ]

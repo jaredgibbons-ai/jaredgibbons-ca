@@ -49,6 +49,12 @@
      "Read November 1, 2026"
     ],
     [
+     "Closed sales from Paragon, the MLS® system used by Jared’s office",
+     "Number sold, median sale price, median days to sell, sold-versus-list price, price per square foot, year built, strata fee and bedrooms, grouped by city, community, home type and building. Only grouped figures are used: no address, MLS® number or individual sale price appears on the site",
+     "The “what sold” sections and tables on community, home-type, Brentwood Park and city pages",
+     "Closed sales from November 1, 2025 to October 22, 2026, the last closed sale in the export. Pending sales are left out"
+    ],
+    [
      "Active-listing counts from the MLS® system used by Jared’s office",
      "Only to decide whether a page for a home type in a city is worth publishing: we publish one where at least five homes of that type are currently for sale",
      "No count from this source is shown on any page. A page does not claim a number of homes for sale; live listings are shown by the listing feed where one is connected",
@@ -125,8 +131,23 @@
      "FVREB statistics"
     ],
     [
+     "Median (sold figures)",
+     "The middle value of the sales in the group: half sold for more and half for less. It is not an average, so one very high or very low sale does not move it.",
+     "Paragon closed sales"
+    ],
+    [
+     "Sold vs list",
+     "The sale price as a percentage of the last list price, as a median across the sales in the group. “Sold above list” is the share that sold for more than the last list price.",
+     "Paragon closed sales"
+    ],
+    [
+     "Median per square foot",
+     "Sale price divided by the floor area in the listing, as a median. Floor areas are as entered by the listing agent.",
+     "Paragon closed sales"
+    ],
+    [
      "Condos and townhomes combined",
-     "The SnapStats reports give condos and townhomes as one line. Where a page says it covers both, it cannot be split; the board’s own apartment and townhouse benchmark figures are used where they are available.",
+     "The SnapStats monthly reports give condos and townhomes as one line, so the month-by-month tables cover both. The “what sold” tables from the MLS® closed sales do separate them, and the boards’ own apartment and townhouse benchmarks are used where available.",
      "SnapStats; MLS® Home Price Index"
     ]
    ],
@@ -163,6 +184,11 @@
   {
    "t": "p",
    "text": "Percent changes in the Home Price Index are shown as the board publishes them (1 month, 3 months, 6 months, 1 year, 3 years, 5 years, 10 years). Counts of listings and sales are compared from the first month we hold (June 2026) to the latest month, and the month is named in the sentence.",
+   "gen": "methodology"
+  },
+  {
+   "t": "p",
+   "text": "The same thinness rule applies to sold figures. A median is published only where at least 5 homes sold in the group, a count is mentioned only where at least 3 sold, and a building or complex is named with a price only with at least 5 sales. Below that the page says there were too few sales, because one sale would be the whole figure. A quarter-by-quarter table appears only when each of the four quarters has at least 5 sales, and it is shown as figures, not described as a trend.",
    "gen": "methodology"
   },
   {
@@ -294,12 +320,12 @@
    "a": "When each month’s reports are released. Every figure names its month, so you can see how current it is."
   },
   {
-   "q": "Why does a page cover condos and townhomes together?",
-   "a": "The SnapStats reports give them as one line, so community figures cannot be split. Where the boards publish apartment and townhouse benchmarks separately, those are used and labelled."
+   "q": "Why do some tables cover condos and townhomes together?",
+   "a": "The SnapStats monthly reports give them as one line. The sold-price tables come from MLS® closed sales and show condos and townhomes separately, and the boards’ apartment and townhouse benchmarks are used where they are available."
   },
   {
    "q": "Do you publish sold prices for individual homes?",
-   "a": "No. The site shows market-level figures and does not show the sale price or address of an individual MLS® sale."
+   "a": "No. The site shows grouped figures such as the median price of the sales in a community or building, and does not show the sale price or address of an individual MLS® sale."
   }
  ],
  "hand_edited": true,

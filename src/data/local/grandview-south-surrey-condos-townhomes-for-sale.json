@@ -183,6 +183,162 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Grandview home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "203 townhomes sold in Grandview with a median price of $829,900 (the middle half sold between $770,000 and $927,500), taking a median of 24 days to sell at 97.7% of the last list price; 4% sold above list. They had a median $537 per square foot, a median year built of 2016 and a median strata fee of $397 a month. 45 condos sold in Grandview with a median price of $565,000 (the middle half sold between $497,500 and $609,000), taking a median of 28 days to sell at 97.4% of the last list price; 2% sold above list. They had a median $629 per square foot, a median year built of 2010 and a median strata fee of $439 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Grandview: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "45",
+          "$565,000",
+          "28 days",
+          "97.4%",
+          "$629"
+        ],
+        [
+          "Townhomes",
+          "203",
+          "$829,900",
+          "24 days",
+          "97.7%",
+          "$537"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Grandview: townhomes sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "41",
+          "$847,500"
+        ],
+        [
+          "Feb to Apr 2026",
+          "67",
+          "$850,000"
+        ],
+        [
+          "May to Jul 2026",
+          "63",
+          "$800,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "32",
+          "$826,500"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Grandview: buildings and complexes with the most townhomes sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "The Loop",
+          "15",
+          "$829,900",
+          "1 days",
+          "2025",
+          "$260 a month"
+        ],
+        [
+          "Soho",
+          "12",
+          "$832,500",
+          "19 days",
+          "2017",
+          "$351 a month"
+        ],
+        [
+          "Breeze",
+          "10",
+          "$696,500",
+          "21 days",
+          "2013",
+          "$384 a month"
+        ],
+        [
+          "Highland Park",
+          "10",
+          "$787,500",
+          "30 days",
+          "2010",
+          "$453 a month"
+        ],
+        [
+          "Enclave",
+          "6",
+          "$661,500",
+          "46 days",
+          "2009",
+          "$417 a month"
+        ],
+        [
+          "Glenmore",
+          "6",
+          "$839,950",
+          "36 days",
+          "2008",
+          "$462 a month"
+        ],
+        [
+          "Grandview",
+          "5",
+          "$942,000",
+          "21 days",
+          "2018",
+          "$431 a month"
+        ],
+        [
+          "Cathedral Grove",
+          "5",
+          "$905,000",
+          "24 days",
+          "2010",
+          "$610 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -201,10 +357,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did townhomes in Grandview sell for?",
+      "a": "203 townhomes sold in Grandview between November 1, 2025 to October 22, 2026, with a median price of $829,900."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Grandview?",
+      "a": "The median was 24 days from listing to sale, and homes sold at a median 97.7% of the last list price (4% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Grandview condos and townhomes (the reports give them for South Surrey and White Rock as a whole)",
     "Named buildings and complexes in Grandview, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

@@ -297,6 +297,41 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Lower Mary Hill home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "11 houses sold in Lower Mary Hill with a median price of $1,255,000 (the middle half sold between $1,139,440 and $1,337,500), taking a median of 23 days to sell at 95.5% of the last list price; 0% sold above list. They had a median $588 per square foot, a median year built of 1975 and a median lot of 6,045 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Lower Mary Hill: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "11",
+          "$1,255,000",
+          "23 days",
+          "95.5%",
+          "$588"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -319,11 +354,20 @@
     {
       "q": "Are there more or fewer homes for sale in Lower Mary Hill than in June?",
       "a": "Listings of detached houses fell from 14 in June to 11 in September 2026 (−21.4%)."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Lower Mary Hill sell for?",
+      "a": "11 houses sold in Lower Mary Hill between November 1, 2025 to October 22, 2026, with a median price of $1,255,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Lower Mary Hill?",
+      "a": "The median was 23 days from listing to sale, and homes sold at a median 95.5% of the last list price (0% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of Lower Mary Hill from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for Lower Mary Hill itself (the reports give them for Port Coquitlam as a whole, not per community)",
     "Schools for Lower Mary Hill, placed by street address",
     "Jared's own notes on Lower Mary Hill: housing stock, who buys here, what to watch",
     "A live listing feed for Lower Mary Hill"

@@ -341,6 +341,90 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "New Horizons home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "59 condos sold in New Horizons with a median price of $695,000 (the middle half sold between $640,000 and $776,400), taking a median of 20 days to sell at 97.4% of the last list price; 3% sold above list. They had a median $761 per square foot, a median year built of 2016 and a median strata fee of $441 a month. 23 houses sold in New Horizons with a median price of $1,200,000 (the middle half sold between $1,111,500 and $1,256,444), taking a median of 12 days to sell at 97.4% of the last list price; 4% sold above list. They had a median $601 per square foot, a median year built of 1980 and a median lot of 4,101 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "New Horizons: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "23",
+          "$1,200,000",
+          "12 days",
+          "97.4%",
+          "$601"
+        ],
+        [
+          "Condos",
+          "59",
+          "$695,000",
+          "20 days",
+          "97.4%",
+          "$761"
+        ],
+        [
+          "Townhomes",
+          "5",
+          "$1,055,000",
+          "37 days",
+          "96.9%",
+          "$666"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "New Horizons: condos sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "12",
+          "$748,050"
+        ],
+        [
+          "Feb to Apr 2026",
+          "17",
+          "$665,000"
+        ],
+        [
+          "May to Jul 2026",
+          "22",
+          "$702,500"
+        ],
+        [
+          "Aug to Oct 2026",
+          "8",
+          "$653,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -367,11 +451,20 @@
     {
       "q": "Are there more or fewer homes for sale in New Horizons than in June?",
       "a": "Listings of detached houses rose from 5 in June to 6 in September 2026 (+20.0%); condos and townhomes fell from 33 in June to 29 in September 2026 (−12.1%)."
+    },
+    {
+      "gen": "sold",
+      "q": "What did condos in New Horizons sell for?",
+      "a": "59 condos sold in New Horizons between November 1, 2025 to October 22, 2026, with a median price of $695,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do condos take to sell in New Horizons?",
+      "a": "The median was 20 days from listing to sale, and homes sold at a median 97.4% of the last list price (3% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of New Horizons from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for New Horizons itself (the reports give them for Coquitlam as a whole, not per community)",
     "Schools for New Horizons, placed by street address",
     "Jared's own notes on New Horizons: housing stock, who buys here, what to watch",
     "A live listing feed for New Horizons"

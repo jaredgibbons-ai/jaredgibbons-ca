@@ -335,6 +335,49 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Upper Deer Lake home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "13 houses sold in Upper Deer Lake with a median price of $1,750,000 (the middle half sold between $1,688,000 and $1,915,000), taking a median of 48 days to sell at 94.8% of the last list price; 8% sold above list. They had a median $643 per square foot, a median year built of 1979 and a median lot of 6,550 square feet. 5 duplexes sold in Upper Deer Lake with a median price of $1,700,000, taking a median of 6 days to sell at 95.1% of the last list price; 0% sold above list. They had a median $631 per square foot and a median year built of 2008.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Upper Deer Lake: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "13",
+          "$1,750,000",
+          "48 days",
+          "94.8%",
+          "$643"
+        ],
+        [
+          "Duplexes (half and full)",
+          "5",
+          "$1,700,000",
+          "6 days",
+          "95.1%",
+          "$631"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -361,11 +404,20 @@
     {
       "q": "Are there more or fewer homes for sale in Upper Deer Lake than in June?",
       "a": "Listings of detached houses rose from 9 in June to 17 in September 2026 (+88.9%); condos and townhomes was 2 in June and 2 in September 2026, too few (under 3) to call a rise or fall."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Upper Deer Lake sell for?",
+      "a": "13 houses sold in Upper Deer Lake between November 1, 2025 to October 22, 2026, with a median price of $1,750,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Upper Deer Lake?",
+      "a": "The median was 48 days from listing to sale, and homes sold at a median 94.8% of the last list price (8% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of Upper Deer Lake from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for Upper Deer Lake itself (the reports give them for Burnaby as a whole, not per community)",
     "Schools for Upper Deer Lake, placed by street address",
     "Jared's own notes on Upper Deer Lake: housing stock, who buys here, what to watch",
     "A live listing feed for Upper Deer Lake"

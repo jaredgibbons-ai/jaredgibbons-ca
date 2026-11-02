@@ -171,6 +171,82 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Riverwood home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "66 townhomes sold in Riverwood with a median price of $881,750 (the middle half sold between $816,250 and $975,000), taking a median of 22 days to sell at 97.4% of the last list price; 8% sold above list. They had a median $581 per square foot, a median year built of 2005 and a median strata fee of $395 a month. 5 condos sold in Riverwood with a median price of $638,000, taking a median of 40 days to sell at 96.8% of the last list price; 0% sold above list. They had a median $750 per square foot, a median year built of 2016 and a median strata fee of $455 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Riverwood: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "5",
+          "$638,000",
+          "40 days",
+          "96.8%",
+          "$750"
+        ],
+        [
+          "Townhomes",
+          "66",
+          "$881,750",
+          "22 days",
+          "97.4%",
+          "$581"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Riverwood: townhomes sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "16",
+          "$906,250"
+        ],
+        [
+          "Feb to Apr 2026",
+          "19",
+          "$927,500"
+        ],
+        [
+          "May to Jul 2026",
+          "26",
+          "$841,650"
+        ],
+        [
+          "Aug to Oct 2026",
+          "5",
+          "$763,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -189,10 +265,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did townhomes in Riverwood sell for?",
+      "a": "66 townhomes sold in Riverwood between November 1, 2025 to October 22, 2026, with a median price of $881,750."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in Riverwood?",
+      "a": "The median was 22 days from listing to sale, and homes sold at a median 97.4% of the last list price (8% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Riverwood condos and townhomes (the reports give them for Port Coquitlam as a whole)",
     "Named buildings and complexes in Riverwood, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

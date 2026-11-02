@@ -201,6 +201,82 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Central Coquitlam home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "26 condos sold in Central Coquitlam with a median price of $426,250 (the middle half sold between $350,000 and $604,250), taking a median of 21 days to sell at 97.1% of the last list price; 12% sold above list. They had a median $516 per square foot, a median year built of 1982 and a median strata fee of $454 a month. 5 townhomes sold in Central Coquitlam with a median price of $617,500, taking a median of 22 days to sell at 98.8% of the last list price; 20% sold above list. They had a median $617 per square foot, a median year built of 1976 and a median strata fee of $330 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Central Coquitlam: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "26",
+          "$426,250",
+          "21 days",
+          "97.1%",
+          "$516"
+        ],
+        [
+          "Townhomes",
+          "5",
+          "$617,500",
+          "22 days",
+          "98.8%",
+          "$617"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Central Coquitlam: condos sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "5",
+          "$456,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "7",
+          "$379,000"
+        ],
+        [
+          "May to Jul 2026",
+          "8",
+          "$385,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "6",
+          "$580,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -219,10 +295,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did condos in Central Coquitlam sell for?",
+      "a": "26 condos sold in Central Coquitlam between November 1, 2025 to October 22, 2026, with a median price of $426,250."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do condos take to sell in Central Coquitlam?",
+      "a": "The median was 21 days from listing to sale, and homes sold at a median 97.1% of the last list price (12% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Central Coquitlam condos and townhomes (the reports give them for Coquitlam as a whole)",
     "Named buildings and complexes in Central Coquitlam, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

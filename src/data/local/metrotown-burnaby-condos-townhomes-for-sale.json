@@ -201,6 +201,186 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Metrotown home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "410 condos sold in Metrotown with a median price of $690,000 (the middle half sold between $580,000 and $815,750), taking a median of 31 days to sell at 97.0% of the last list price; 8% sold above list. They had a median $909 per square foot, a median year built of 2017 and a median strata fee of $426 a month. 31 townhomes sold in Metrotown with a median price of $979,000 (the middle half sold between $734,000 and $1,142,500), taking a median of 39 days to sell at 97.2% of the last list price; 3% sold above list. They had a median $800 per square foot, a median year built of 2016 and a median strata fee of $369 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Metrotown: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "410",
+          "$690,000",
+          "31 days",
+          "97.0%",
+          "$909"
+        ],
+        [
+          "Townhomes",
+          "31",
+          "$979,000",
+          "39 days",
+          "97.2%",
+          "$800"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Metrotown: condos sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "95",
+          "$660,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "111",
+          "$675,000"
+        ],
+        [
+          "May to Jul 2026",
+          "140",
+          "$698,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "64",
+          "$707,500"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Metrotown: buildings and complexes with the most condos sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "The Standard",
+          "18",
+          "$842,400",
+          "10 days",
+          "2025",
+          "$442 a month"
+        ],
+        [
+          "Station Square",
+          "18",
+          "$733,500",
+          "57 days",
+          "2018",
+          "$450 a month"
+        ],
+        [
+          "Burlington Square",
+          "10",
+          "$565,000",
+          "50 days",
+          "1983",
+          "$431 a month"
+        ],
+        [
+          "Huntley Manor",
+          "9",
+          "$555,000",
+          "15 days",
+          "1982",
+          "$407 a month"
+        ],
+        [
+          "Nuvo",
+          "8",
+          "$1,002,450",
+          "0 days",
+          "2026",
+          "$529 a month"
+        ],
+        [
+          "Imperial",
+          "6",
+          "$671,000",
+          "28 days",
+          "2019",
+          "$514 a month"
+        ],
+        [
+          "Moda",
+          "6",
+          "$571,000",
+          "22 days",
+          "2014",
+          "$333 a month"
+        ],
+        [
+          "Eternity",
+          "6",
+          "$639,500",
+          "52 days",
+          "2020",
+          "$426 a month"
+        ],
+        [
+          "Central Park House",
+          "5",
+          "$690,000",
+          "26 days",
+          "2025",
+          "$457 a month"
+        ],
+        [
+          "Metroplace",
+          "5",
+          "$767,500",
+          "47 days",
+          "2014",
+          "$373 a month"
+        ],
+        [
+          "Chancellor",
+          "5",
+          "$765,000",
+          "43 days",
+          "2013",
+          "$474 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -219,10 +399,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did condos in Metrotown sell for?",
+      "a": "410 condos sold in Metrotown between November 1, 2025 to October 22, 2026, with a median price of $690,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do condos take to sell in Metrotown?",
+      "a": "The median was 31 days from listing to sale, and homes sold at a median 97.0% of the last list price (8% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Metrotown condos and townhomes (the reports give them for Burnaby as a whole)",
     "Named buildings and complexes in Metrotown, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

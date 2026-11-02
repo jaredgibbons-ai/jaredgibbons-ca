@@ -195,6 +195,41 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Simon Fraser University SFU home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "7 houses sold in Simon Fraser University SFU with a median price of $1,970,000, taking a median of 29 days to sell at 93.9% of the last list price; 0% sold above list. They had a median $516 per square foot, a median year built of 1983 and a median lot of 7,325 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Simon Fraser University SFU: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "7",
+          "$1,970,000",
+          "29 days",
+          "93.9%",
+          "$516"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -213,10 +248,19 @@
     {
       "q": "Does this page include townhomes or duplexes in Simon Fraser University Area?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Simon Fraser University SFU sell for?",
+      "a": "7 houses sold in Simon Fraser University SFU between November 1, 2025 to October 22, 2026, with a median price of $1,970,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Simon Fraser University SFU?",
+      "a": "The median was 29 days from listing to sale, and homes sold at a median 93.9% of the last list price (0% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Simon Fraser University SFU houses (the reports give them for Burnaby as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in Simon Fraser University SFU",
     "A live listing feed filtered to this type"
   ]

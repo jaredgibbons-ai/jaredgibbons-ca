@@ -165,6 +165,74 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Sunshine Hills Woods home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "69 houses sold in Sunshine Hills Woods with a median price of $1,260,000 (the middle half sold between $1,172,500 and $1,399,000), taking a median of 17 days to sell at 96.4% of the last list price; 10% sold above list. They had a median $521 per square foot, a median year built of 1979 and a median lot of 6,760 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Sunshine Hills Woods: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "69",
+          "$1,260,000",
+          "17 days",
+          "96.4%",
+          "$521"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Sunshine Hills Woods: houses sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "9",
+          "$1,365,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "20",
+          "$1,262,000"
+        ],
+        [
+          "May to Jul 2026",
+          "33",
+          "$1,251,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "7",
+          "$1,250,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -183,10 +251,19 @@
     {
       "q": "Does this page include townhomes or duplexes in Sunshine Hills Woods?",
       "a": "No. The figures are for detached houses only. Condos and townhomes are counted on their own page."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Sunshine Hills Woods sell for?",
+      "a": "69 houses sold in Sunshine Hills Woods between November 1, 2025 to October 22, 2026, with a median price of $1,260,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Sunshine Hills Woods?",
+      "a": "The median was 17 days from listing to sale, and homes sold at a median 96.4% of the last list price (10% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Sunshine Hills Woods houses (the reports give them for North Delta as a whole)",
     "Typical lot sizes and ages, and Jared's notes on the streets in Sunshine Hills Woods",
     "A live listing feed filtered to this type"
   ]

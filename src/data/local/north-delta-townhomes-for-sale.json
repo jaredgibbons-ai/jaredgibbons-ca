@@ -27,7 +27,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
       "gen": "gappage"
     },
     {
@@ -38,6 +38,98 @@
     {
       "t": "grid",
       "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "North Delta townhomes sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "43 townhomes sold in North Delta with a median price of $805,000 (the middle half sold between $726,000 and $907,500), taking a median of 21 days to sell at 97.1% of the last list price; 7% sold above list. They had a median $493 per square foot, a median year built of 2009 and a median strata fee of $422 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "North Delta: townhomes sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "8",
+          "$877,500"
+        ],
+        [
+          "Feb to Apr 2026",
+          "12",
+          "$807,500"
+        ],
+        [
+          "May to Jul 2026",
+          "14",
+          "$821,500"
+        ],
+        [
+          "Aug to Oct 2026",
+          "9",
+          "$715,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "North Delta: townhomes sold by community",
+      "head": [
+        "Community",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Nordel",
+          "17",
+          "$825,000",
+          "19 days",
+          "96.8%",
+          "$551"
+        ],
+        [
+          "Sunshine Hills Woods",
+          "16",
+          "$743,500",
+          "32 days",
+          "97.0%",
+          "$478"
+        ],
+        [
+          "Annieville",
+          "5",
+          "$725,000",
+          "21 days",
+          "98.1%",
+          "$419"
+        ],
+        [
+          "Scottsdale",
+          "5",
+          "$800,000",
+          "15 days",
+          "97.1%",
+          "$607"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     },
     {
       "t": "h",
@@ -378,6 +470,46 @@
   ],
   "faq": [
     {
+      "gen": "sold",
+      "q": "What did townhomes in North Delta sell for?",
+      "a": "43 townhomes sold in North Delta between November 1, 2025 to October 22, 2026, with a median price of $805,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do townhomes take to sell in North Delta?",
+      "a": "The median was 21 days from listing to sale, and homes sold at a median 97.1% of the last list price (7% sold above list), for sales November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "What price range do most townhomes in North Delta sell in?",
+      "a": "The middle half of the 43 townhomes that sold in North Delta went for between $726,000 and $907,500, around a median of $805,000."
+    },
+    {
+      "gen": "sold",
+      "q": "Do townhomes in North Delta sell above asking price?",
+      "a": "7% of the 43 townhomes sold for more than the last list price, and the median sale was 97.1% of it."
+    },
+    {
+      "gen": "sold",
+      "q": "What is a typical strata fee for townhomes in North Delta?",
+      "a": "Of the 43 sales, 42 listings gave a monthly fee and the median was $422."
+    },
+    {
+      "gen": "sold",
+      "q": "How old are the townhomes that sold in North Delta?",
+      "a": "The median year built was 2009 for the 43 townhomes sold in North Delta."
+    },
+    {
+      "gen": "sold",
+      "q": "How many bedrooms do townhomes in North Delta usually have?",
+      "a": "The median townhome that sold in North Delta had 3 bedrooms, from the 43 sales between November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which North Delta communities sold the most townhomes?",
+      "a": "By number sold: Nordel (17), Sunshine Hills Woods (16), Scottsdale (5), for November 1, 2025 to October 22, 2026."
+    },
+    {
       "q": "What is the benchmark price of a townhome in North Delta?",
       "a": "The Fraser Valley Real Estate Board MLS® Home Price Index benchmark for townhomes in North Delta was $845,600 in September 2026, a modelled price for a typical home and not an average of sales."
     },
@@ -392,23 +524,10 @@
     {
       "q": "How many townhomes are for sale in North Delta?",
       "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the townhomes in North Delta that match what you want."
-    },
-    {
-      "q": "Can Jared alert me when townhomes come up in North Delta?",
-      "a": "Yes. Tell him the area, price range and must-haves and he will alert you the day a match is listed."
-    },
-    {
-      "q": "Where can I see all North Delta homes?",
-      "a": "The North Delta homes for sale page covers every home type, and the North Delta market stats page has the monthly figures."
-    },
-    {
-      "q": "Who is Jared Gibbons?",
-      "a": "Jared is a REALTOR® and Personal Real Estate Corporation with Royal LePage Little Oak Realty, working across the Fraser Valley and Metro Vancouver. You can call or text him at 604-928-1361."
     }
   ],
   "needs_from_muse": [
     "Live listing feed filtered to townhomes in North Delta",
-    "Sold prices and days on market by type (Paragon sold export)",
     "Jared's own notes"
   ]
 }

@@ -341,6 +341,57 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Willingdon Heights home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "18 houses sold in Willingdon Heights with a median price of $1,704,000 (the middle half sold between $1,604,375 and $2,121,500), taking a median of 20 days to sell at 97.6% of the last list price; 33% sold above list. They had a median $694 per square foot, a median year built of 1980 and a median lot of 4,059 square feet. 8 townhomes sold in Willingdon Heights with a median price of $1,090,000 (the middle half sold between $966,750 and $1,381,250), taking a median of 12 days to sell at 97.0% of the last list price; 12% sold above list. They had a median $796 per square foot, a median year built of 2005 and a median strata fee of $623 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Willingdon Heights: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "18",
+          "$1,704,000",
+          "20 days",
+          "97.6%",
+          "$694"
+        ],
+        [
+          "Condos",
+          "4",
+          "Too few sales for a typical price",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Townhomes",
+          "8",
+          "$1,090,000",
+          "12 days",
+          "97.0%",
+          "$796"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -367,11 +418,20 @@
     {
       "q": "Are there more or fewer homes for sale in Willingdon Heights than in June?",
       "a": "Listings of detached houses rose from 17 in June to 18 in September 2026 (+5.9%); condos and townhomes was little changed, 13 in June and 13 in September 2026 (+0.0%)."
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Willingdon Heights sell for?",
+      "a": "18 houses sold in Willingdon Heights between November 1, 2025 to October 22, 2026, with a median price of $1,704,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Willingdon Heights?",
+      "a": "The median was 20 days from listing to sale, and homes sold at a median 97.6% of the last list price (33% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of Willingdon Heights from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for Willingdon Heights itself (the reports give them for Burnaby as a whole, not per community)",
     "Schools for Willingdon Heights, placed by street address",
     "Jared's own notes on Willingdon Heights: housing stock, who buys here, what to watch",
     "A live listing feed for Willingdon Heights"

@@ -330,6 +330,138 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Sullivan Heights home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "97 condos sold in Sullivan Heights with a median price of $567,500 (the middle half sold between $503,000 and $685,000), taking a median of 29 days to sell at 97.4% of the last list price; 3% sold above list. They had a median $818 per square foot, a median year built of 2017 and a median strata fee of $449 a month. 8 townhomes sold in Sullivan Heights with a median price of $1,044,000 (the middle half sold between $782,750 and $1,096,500), taking a median of 40 days to sell at 97.5% of the last list price; 0% sold above list. They had a median $756 per square foot, a median year built of 2004 and a median strata fee of $434 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Sullivan Heights: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "97",
+          "$567,500",
+          "29 days",
+          "97.4%",
+          "$818"
+        ],
+        [
+          "Townhomes",
+          "8",
+          "$1,044,000",
+          "40 days",
+          "97.5%",
+          "$756"
+        ],
+        [
+          "Duplexes (half and full)",
+          "4",
+          "Too few sales for a typical price",
+          "—",
+          "—",
+          "—"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Sullivan Heights: condos sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "20",
+          "$574,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "27",
+          "$537,500"
+        ],
+        [
+          "May to Jul 2026",
+          "34",
+          "$575,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "16",
+          "$615,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Sullivan Heights: buildings and complexes with the most condos sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "City of Lougheed",
+          "28",
+          "$722,500",
+          "30 days",
+          "2023",
+          "$526 a month"
+        ],
+        [
+          "Silhouette",
+          "7",
+          "$615,000",
+          "34 days",
+          "2008",
+          "$445 a month"
+        ],
+        [
+          "Cameron",
+          "6",
+          "$692,500",
+          "10 days",
+          "2017",
+          "$388 a month"
+        ],
+        [
+          "Edgewood Place",
+          "5",
+          "$487,000",
+          "9 days",
+          "1977",
+          "$449 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -356,11 +488,20 @@
     {
       "q": "Are there more or fewer homes for sale in Sullivan Heights than in June?",
       "a": "Listings of detached houses was 5 in June and 2 in September 2026, too few (under 3) to call a rise or fall; condos and townhomes rose from 60 in June to 69 in September 2026 (+15.0%)."
+    },
+    {
+      "gen": "sold",
+      "q": "What did condos in Sullivan Heights sell for?",
+      "a": "97 condos sold in Sullivan Heights between November 1, 2025 to October 22, 2026, with a median price of $567,500."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do condos take to sell in Sullivan Heights?",
+      "a": "The median was 29 days from listing to sale, and homes sold at a median 97.4% of the last list price (3% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of Sullivan Heights from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for Sullivan Heights itself (the reports give them for Burnaby as a whole, not per community)",
     "Schools for Sullivan Heights, placed by street address",
     "Jared's own notes on Sullivan Heights: housing stock, who buys here, what to watch",
     "A live listing feed for Sullivan Heights"

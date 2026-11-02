@@ -189,6 +189,122 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Uptown home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "125 condos sold in Uptown with a median price of $529,000 (the middle half sold between $405,000 and $627,500), taking a median of 25 days to sell at 97.0% of the last list price; 6% sold above list. They had a median $548 per square foot, a median year built of 1992 and a median strata fee of $572 a month. 10 townhomes sold in Uptown with a median price of $776,000 (the middle half sold between $678,500 and $894,375), taking a median of 15 days to sell at 98.0% of the last list price; 10% sold above list. They had a median $592 per square foot, a median year built of 1999 and a median strata fee of $616 a month.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Uptown: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Condos",
+          "125",
+          "$529,000",
+          "25 days",
+          "97.0%",
+          "$548"
+        ],
+        [
+          "Townhomes",
+          "10",
+          "$776,000",
+          "15 days",
+          "98.0%",
+          "$592"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Uptown: condos sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "27",
+          "$529,000"
+        ],
+        [
+          "Feb to Apr 2026",
+          "28",
+          "$544,500"
+        ],
+        [
+          "May to Jul 2026",
+          "45",
+          "$515,000"
+        ],
+        [
+          "Aug to Oct 2026",
+          "25",
+          "$505,000"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Uptown: buildings and complexes with the most condos sold",
+      "head": [
+        "Building or complex",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Median year built",
+        "Median strata fee"
+      ],
+      "rows": [
+        [
+          "Discovery Reach",
+          "7",
+          "$545,000",
+          "12 days",
+          "1998",
+          "$511 a month"
+        ],
+        [
+          "Berkley Place",
+          "6",
+          "$681,500",
+          "22 days",
+          "1996",
+          "$678 a month"
+        ],
+        [
+          "The Woodward",
+          "5",
+          "$732,000",
+          "21 days",
+          "1999",
+          "$654 a month"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -207,10 +323,19 @@
     {
       "q": "Do these numbers separate condos from townhomes?",
       "a": "No. The monthly reports publish condos and townhomes as one line, so every count here includes both. Jared can pull the split for a specific building or street."
+    },
+    {
+      "gen": "sold",
+      "q": "What did condos in Uptown sell for?",
+      "a": "125 condos sold in Uptown between November 1, 2025 to October 22, 2026, with a median price of $529,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do condos take to sell in Uptown?",
+      "a": "The median was 25 days from listing to sale, and homes sold at a median 97.0% of the last list price (6% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
-    "Sold prices, days on market and sale-to-list ratio for Uptown condos and townhomes (the reports give them for New Westminster as a whole)",
     "Named buildings and complexes in Uptown, strata fee ranges, building ages, rental and pet rules",
     "The split between condos and townhomes from the Paragon export",
     "A live listing feed filtered to this type"

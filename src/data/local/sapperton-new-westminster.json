@@ -341,6 +341,49 @@
       ],
       "gen": "typepage",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Sapperton home prices: what sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "42 condos sold in Sapperton with a median price of $526,250 (the middle half sold between $444,625 and $569,625), taking a median of 37 days to sell at 97.3% of the last list price; 12% sold above list. They had a median $697 per square foot, a median year built of 2008 and a median strata fee of $439 a month. 14 houses sold in Sapperton with a median price of $1,420,000 (the middle half sold between $1,252,175 and $1,536,875), taking a median of 26 days to sell at 97.4% of the last list price; 0% sold above list. They had a median $585 per square foot, a median year built of 1948 and a median lot of 5,108 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Sapperton: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "14",
+          "$1,420,000",
+          "26 days",
+          "97.4%",
+          "$585"
+        ],
+        [
+          "Condos",
+          "42",
+          "$526,250",
+          "37 days",
+          "97.3%",
+          "$697"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -367,11 +410,20 @@
     {
       "q": "Are there more or fewer homes for sale in Sapperton than in June?",
       "a": "Listings of detached houses fell from 19 in June to 10 in September 2026 (−47.4%); condos and townhomes rose from 28 in June to 33 in September 2026 (+17.9%)."
+    },
+    {
+      "gen": "sold",
+      "q": "What did condos in Sapperton sell for?",
+      "a": "42 condos sold in Sapperton between November 1, 2025 to October 22, 2026, with a median price of $526,250."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do condos take to sell in Sapperton?",
+      "a": "The median was 37 days from listing to sale, and homes sold at a median 97.3% of the last list price (12% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
   "needs_from_muse": [
     "Street boundaries of Sapperton from the Paragon sub-area map, and its neighbouring communities",
-    "Sold prices, days on market and sale-to-list ratio for Sapperton itself (the reports give them for New Westminster as a whole, not per community)",
     "Schools for Sapperton, placed by street address",
     "Jared's own notes on Sapperton: housing stock, who buys here, what to watch",
     "A live listing feed for Sapperton"

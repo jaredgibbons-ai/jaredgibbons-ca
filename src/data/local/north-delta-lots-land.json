@@ -27,7 +27,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics (MLS® Home Price Index and sales summaries) and the monthly SnapStats figures. No live feed filtered to this home type and no sold-price data yet.",
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
       "gen": "gappage"
     },
     {
@@ -38,6 +38,17 @@
     {
       "t": "grid",
       "gen": "gappage"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "North Delta lots and land sold, November 2025 to October 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "5 lots and land sold in North Delta with a median price of $1,125,000, taking a median of 83 days to sell at 86.5% of the last list price; 0% sold above list. They had a median lot of 0.17 acres.",
+      "gen": "sold"
     },
     {
       "t": "h",
@@ -241,6 +252,21 @@
   ],
   "faq": [
     {
+      "gen": "sold",
+      "q": "What did lots and land in North Delta sell for?",
+      "a": "5 lots and land sold in North Delta between November 1, 2025 to October 22, 2026, with a median price of $1,125,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do lots and land take to sell in North Delta?",
+      "a": "The median was 83 days from listing to sale, and homes sold at a median 86.5% of the last list price (0% sold above list), for sales November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Do lots and land in North Delta sell above asking price?",
+      "a": "0% of the 5 lots and land sold for more than the last list price, and the median sale was 86.5% of it."
+    },
+    {
       "q": "Is North Delta a buyers’ or sellers’ market?",
       "a": "In September 2026 houses in North Delta had a sales ratio of 11%, which the reports’ scale reads as a buyers’ market, and condos and townhomes 11%, which the reports’ scale reads as a buyers’ market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers."
     },
@@ -263,7 +289,6 @@
   ],
   "needs_from_muse": [
     "Live listing feed filtered to lots and land in North Delta",
-    "Sold prices and days on market by type (Paragon sold export)",
     "Jared's own notes"
   ]
 }
