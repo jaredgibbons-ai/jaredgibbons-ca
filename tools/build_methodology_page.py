@@ -10,7 +10,7 @@ P = lambda t: {'t': 'p', 'text': t, 'gen': G}
 def T(cap, head, rows, src=None): return {'t': 'table', 'caption': cap, 'head': head, 'rows': rows, **({'source': src} if src else {}), 'gen': G}
 def LI(items): return {'t': 'list', 'items': [[{'t': i}] for i in items], 'gen': G}
 
-LINKS = [('Seller net proceeds calculator', '/seller-net-proceeds-calculator.html'), ('Free home evaluation', '/home-evaluation.html'), ('Burnaby real estate market stats', '/burnaby-real-estate-market-stats.html'), ('Surrey home buyer checklist', '/surrey-home-buyer-checklist.html'), ('Reviews', '/reviews.html'), ('Contact Jared', '/contact.html')]
+LINKS = [('Seller net proceeds calculator', '/seller-net-proceeds-calculator.html'), ('Lawyer and notary fees', '/real-estate-lawyer-notary-fees-langley-surrey-white-rock.html'), ('Free home evaluation', '/home-evaluation.html'), ('Burnaby real estate market stats', '/burnaby-real-estate-market-stats.html'), ('Surrey home buyer checklist', '/surrey-home-buyer-checklist.html'), ('Reviews', '/reviews.html'), ('Contact Jared', '/contact.html')]
 blocks = [
  P('Every number on this site comes from one of the sources below, and each table says which one and which month. This page explains what the sources are, what the terms mean and how we word a change, so you can check any figure for yourself. If a figure here or anywhere on the site looks wrong, tell Jared and he will check it against the source.'),
  H('Where the numbers come from'),

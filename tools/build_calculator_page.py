@@ -6,7 +6,7 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 G = 'calc'
 H = lambda t, l=2: {'t': 'h', 'level': l, 'text': t, 'gen': G}
 P = lambda t: {'t': 'p', 'text': t, 'gen': G}
-LINKS = [('Free home evaluation', '/home-evaluation.html'), ('Selling your home', '/selling.html'), ('FAQ for home sellers in BC', '/faq-for-home-sellers.html'), ('Data and methodology', '/data-and-methodology.html'), ('Mortgage calculator', '/mortgage-calculator.html'), ('Contact Jared', '/contact.html')]
+LINKS = [('Lawyer and notary fees in Langley, Surrey and White Rock', '/real-estate-lawyer-notary-fees-langley-surrey-white-rock.html'), ('Free home evaluation', '/home-evaluation.html'), ('Selling your home', '/selling.html'), ('FAQ for home sellers in BC', '/faq-for-home-sellers.html'), ('Data and methodology', '/data-and-methodology.html'), ('Mortgage calculator', '/mortgage-calculator.html'), ('Contact Jared', '/contact.html')]
 blocks = [
  P('Selling a home is more than the sale price. The mortgage payout, commission, legal fees and other costs all come off before you receive anything. This calculator adds up what you tell it and shows what you would be left with. The figures come from you: your listing agreement, your lender’s payout statement and your lawyer’s or notary’s estimate.'),
  H('Estimate what you would walk away with'),
@@ -17,7 +17,7 @@ blocks = [
    ['Mortgage and debts', 'What you still owe that must be paid out when the sale completes.', 'Your lender’s payout statement.'],
    ['Commission', 'The fee to the listing and selling brokerages, entered as a percentage of the sale price.', 'Your listing agreement. Commission is negotiable.'],
    ['Tax on commission', 'Sales tax charged on the commission, if it is not already in the percentage.', 'Your listing agreement or the brokerage’s statement.'],
-   ['Legal or notary fees', 'Your lawyer’s or notary’s fee and disbursements for the sale.', 'Their written estimate.'],
+   ['Legal or notary fees', 'Your lawyer’s or notary’s fee and disbursements for the sale.', 'Their written estimate. Published fees are on the lawyer and notary fees page.'],
    ['Prepayment penalty or discharge fee', 'What your lender charges if the mortgage is closed before its term ends.', 'Your lender.'],
    ['Adjustments owed', 'Property tax, utilities and strata costs that are split between seller and buyer at the completion date.', 'The statement of adjustments your lawyer or notary prepares.'],
    ['Other costs', 'Staging, repairs, cleaning, moving, advertising and similar costs.', 'Quotes you have received.'],
