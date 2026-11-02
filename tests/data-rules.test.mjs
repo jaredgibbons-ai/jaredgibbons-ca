@@ -76,3 +76,21 @@ test('sold tables never show a price for fewer than 5 sales and name buildings o
   }
   assert.ok(tables > 100, 'expected sold tables to check');
 });
+
+test('55+ notes pages: no MLS numbers, no listing-level links, 5+ FAQ and 5+ links', () => {
+  let pages = 0;
+  for (const [f, t] of texts) {
+    const d = JSON.parse(t);
+    if (!(d.blocks || []).some((b) => b.gen === 'n55')) continue;
+    if (!d.n55_page) continue;
+    pages++;
+    assert.ok(!/\bR[23]\d{6}\b/.test(t), `${f}: MLS number published`);
+    assert.ok(!/zolo\.ca|estateblock|realtor\.ca|soldbycraig|zealty|rew\.ca\/properties|plsrealestate/i.test(t), `${f}: listing-level link`);
+    assert.ok(!/\*\*|Section [1-5]\b(?!\d)|base guide/.test(t.replace(/Zoning Bylaw[^"]{0,40}Section \d+|Section \d{3}/g, '')), `${f}: note markup left in text`);
+    assert.ok(!/\d+ (attached|detached) listings/.test(t), `${f}: board listing count published`);
+    assert.ok((d.faq || []).length >= 5, `${f}: fewer than 5 FAQ`);
+    const links = t.match(/"h": "\//g) || [];
+    assert.ok(links.length >= 5, `${f}: fewer than 5 internal links`);
+  }
+  assert.ok(pages >= 20, 'expected the 55+ notes pages');
+});
