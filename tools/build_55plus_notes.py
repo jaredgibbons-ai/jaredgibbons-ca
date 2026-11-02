@@ -11,6 +11,9 @@ NOTES = os.path.join(ROOT, 'docs/research/local-notes-55plus')
 LOCAL = os.path.join(ROOT, 'src/data/local'); PAGES = os.path.join(ROOT, 'src/data/pages')
 G = 'n55'; HUB = 'bc-55-plus-strata-rules'
 CITY = {'central-abbotsford': 'Abbotsford', 'abbotsford-west': 'Abbotsford', 'poplar': 'Abbotsford', 'ladner-elementary': 'Ladner', 'neilsen-grove': 'Ladner'}
+FOLD = {'cliff-drive': 'tsawwassen-central', 'pebble-hill': 'tsawwassen-central', 'chelsea-park': 'ambleside', 'caulfeild': 'ambleside', 'altamont': 'ambleside'}  # no 55+ building of their own: folded into the page of the building they point to
+MERGE = {'chilliwack-55-plus-neighbourhood-guide': ('Chilliwack', ['chilliwack-downtown', 'chilliwack-proper-east', 'chilliwack-proper-south', 'chilliwack-proper-west'])}
+MERGED = {n for _, (_, ns) in MERGE.items() for n in ns}
 SKIP = {'canyon-springs': 'the note covers the North Vancouver complex of that name; this site\'s Canyon Springs is the Coquitlam community'}
 CITY_55 = {  # community -> existing city-level 55+ page(s) that should list it
  'surrey': ['surrey-55-plus-homes-for-sale'], 'coquitlam': ['coquitlam-55-plus-homes-for-sale'], 'burnaby': ['burnaby-55-plus-homes-for-sale'],
@@ -138,7 +141,7 @@ def kind(g):
 
 def build_community(path, written):
     slug0 = os.path.basename(path).replace('-55-plus-homes-2026-11-01.md', '')
-    if slug0 in SKIP or slug0 in ('how-to-buy-a-mobile-home-in-bc', 'port-coquitlam') or TOPIC.search(slug0): return
+    if slug0 in SKIP or slug0 in ('how-to-buy-a-mobile-home-in-bc', 'port-coquitlam') or TOPIC.search(slug0) or slug0 in FOLD or slug0 in MERGED: return
     title, sec, raw = parse(path)
     buy = []; other = []
     for g, bs in sec.get(2, {}).items():
@@ -273,6 +276,99 @@ def build_mobile():
     save(slug, j); print('wrote mobile guide section', len(bl), 'blocks', len(faq), 'faq')
 
 
+def note(slug0): return parse(os.path.join(NOTES, f'{slug0}-55-plus-homes-2026-11-01.md'))
+
+
+def area_name(slug0):
+    return name_city(slug0, note(slug0)[0])
+
+
+def buyables(sec):
+    out = []
+    for g, bs in sec.get(2, {}).items():
+        gl = g.lower()
+        isoth = gl.startswith(('verified 55+ rental', 'retirement', 'subsidized', 'the chartwell')) or '(not ownership' in gl or 'not townhouse' in gl
+        if gl.startswith(('verified', 'life lease', 'pad-rental', 'co-operative', 'manufactured-home parks')) and not isoth and 'elsewhere' not in gl and 'roster context' not in gl and 'checked' not in gl:
+            out += [(g, b) for b in bs if b.startswith('**') and real(b)]
+    return out
+
+
+def fold_in(primary_slug0, written):
+    slug = f'{primary_slug0}-55-plus-homes-for-sale'; j = load(slug)
+    if j is None: return
+    j['blocks'] = [b for b in j['blocks'] if b.get('gen') != 'n55fold']
+    names = [area_name(k)[0] for k, v in FOLD.items() if v == primary_slug0]; pname, pcity = area_name(primary_slug0)
+    new = [{**H(f'Nearby areas with no 55+ building of their own: {" and ".join(names)}'), 'gen': 'n55fold'},
+           {**P(f'{" and ".join(names)} sit next to {pname}, and the sources found no 55+ strata, park or co-op building inside them. The 55+ homes a buyer can own in this part of {pcity} are the buildings above. What each area is like, from the same notes:'), 'gen': 'n55fold'}]
+    faq = []
+    for k, v in FOLD.items():
+        if v != primary_slug0: continue
+        title, sec, raw = note(k); nm = area_name(k)[0]
+        s1 = [clean(b) for b in bullets(sec, 1) if real(b) and clean(b)]
+        s5 = [clean(b) for b in bullets(sec, 5) if real(b) and clean(b)]
+        new += [{**H(f'{nm}: streets, schools and what to know', 3), 'gen': 'n55fold'}, {**LI(s1 + s5), 'gen': 'n55fold'}]
+        for b in bullets(sec, 4):
+            m = re.match(r'\*\*Q:\s*(.*?)\*\*\s*(.*)', b)
+            if m and clean(m.group(2)) and not SHARED_Q.search(m.group(1)): faq.append({'gen': 'n55fold', 'q': m.group(1).strip(), 'a': clean(m.group(2))})
+        comm = k if exists(k) else None
+        written.append((slug, nm, pcity, comm))
+    i = next((n for n, b in enumerate(j['blocks']) if b.get('t') == 'h' and b.get('text') == 'Sources'), len(j['blocks']))
+    j['blocks'][i:i] = new
+    have = {f['q'] for f in j['faq']}
+    j['faq'] = [f for f in j['faq'] if f.get('gen') != 'n55fold'] + [f for f in faq if f['q'] not in have][:4]
+    save(slug, j); print('folded', [k for k, v in FOLD.items() if v == primary_slug0], 'into', slug)
+
+
+def build_merged(slug, city, ns, written):
+    j0 = {}
+    parts = [(k,) + note(k) for k in ns]
+    names = [area_name(k)[0] for k in ns]
+    seenb = {}
+    for k, title, sec, raw in parts:
+        for g, b in buyables(sec):
+            key = re.sub(r'\W+', '', split_bold(b)[0].split(' — ')[0].split(' (')[0].lower())
+            seenb.setdefault(key, (g, b, k))
+    byarea = {}
+    for key, (g, b, k) in seenb.items(): byarea.setdefault(k, []).append((g, b))
+    allnames = [split_bold(b)[0].split(' — ')[0].split(' (')[0] for g, b, k in seenb.values()]
+    nl = ', '.join(allnames[:-1]) + ' and ' + allnames[-1] if len(allnames) > 1 else allnames[0]
+    bl = [{'t': 'notice', 'text': "Draft for Jared's approval. Written from Jared's verified local notes (researched November 1, 2026). Listing-stated figures are labelled; unconfirmed items say so. No live feed filtered to 55+ homes yet.", 'gen': G},
+          P(f'Across central {city} ({", ".join(names[:-1])} and {names[-1]}), the 55+ homes a buyer can own that the sources verify are {nl}. This guide takes the neighbourhoods in turn, says what type each building is, and gives the streets, schools and local rules around it. Anything no source states is marked unconfirmed.'), {'t': 'grid', 'gen': G}]
+    faq, qseen, allu = [], set(), []
+    for k, title, sec, raw in parts:
+        nm = area_name(k)[0]
+        bl.append(H(f'{nm}: 55+ homes you can buy'))
+        for g, b in byarea.get(k, []):
+            n2, rest = split_bold(b); tx = clean(rest)
+            if n2 and tx: bl += [H(clean(n2), 3), P(tx)]
+        if not byarea.get(k): bl.append(P(f'No separate 55+ building is verified inside {nm}; the buildings in the neighbouring sections are the nearest.'))
+        s1 = [clean(b) for b in bullets(sec, 1) if real(b) and clean(b)]
+        s5 = [clean(b) for b in bullets(sec, 5) if real(b) and clean(b)]
+        if s1 or s5: bl += [H(f'{nm}: streets, schools and what to know', 3), LI(s1 + s5)]
+        for b in bullets(sec, 4):
+            m = re.match(r'\*\*Q:\s*(.*?)\*\*\s*(.*)', b)
+            if not m or SHARED_Q.search(m.group(1)): continue
+            q, a = m.group(1).strip(), clean(m.group(2)); kq = re.sub(r'\W+', '', q.lower())[:40]
+            if a and kq not in qseen: qseen.add(kq); faq.append({'q': q, 'a': a})
+        allu += [u for n in (1, 2, 3, 4, 5) for b in bullets(sec, n) for u in urls(b)]
+    rules, rseen = [], set()
+    for k, title, sec, raw in parts:
+        for b in bullets(sec, 3):
+            if real(b) and not split_bold(b)[0].startswith(SHARED_LEAD) and J(b)[:50] not in rseen: rseen.add(J(b)[:50]); rules.append(J(b))
+    bl += [H(f'Local rules and plans in {city}'), LI(rules), P('The BC rules on 55+ age bylaws, who may own and who may live in a unit, the exemptions and rentals apply in every strata and are explained once, with sources, on the BC 55+ strata rules page.'), LK([('BC 55+ strata rules', f'/{HUB}.html')])]
+    sl = src_links(allu, skip=('age-restriction-bylaws', 'changes-to-legislation', '2023HOUS0038'))
+    if sl: bl += [H('Sources'), P('Facts on this page come from these public sources, read on November 1, 2026. Listing-level pages are not listed.'), LK(sl)]
+    mk = [(f'{area_name(k)[0]} real estate', f'/{k}.html') for k in ns if exists(k)]
+    mk += [(f'{city} 55+ condos for sale', '/chilliwack-55-plus-condos-for-sale.html'), (f'{city} 55+ townhomes for sale', '/chilliwack-55-plus-townhomes-for-sale.html'), ('BC 55+ strata rules', f'/{HUB}.html'), ('Home evaluation', '/home-evaluation.html'), ('Mortgage calculator', '/mortgage-calculator.html'), ('Contact Jared', '/contact.html')]
+    bl += [H(f'More {city} real estate', pos='end'), {**LK(mk), 'pos': 'end'}]
+    d = {'status': 'draft', 'slug': slug, 'updated': '2026-11-01', 'n55_page': True, 'hand_edited': True, 'blocks': bl, 'faq': faq[:12], 'faq_heading': f'{city} 55+ homes: your questions answered',
+         'new_page': {'title': f'{city} 55+ Homes by Neighbourhood | Jared Gibbons', 'description': f'{city} 55+ homes by neighbourhood: {", ".join(allnames[:3])} and more, what type each is, local rules and buyer questions. Jared Gibbons, REALTOR®.'[:158], 'h1': f'{city} 55+ Homes for Sale by Neighbourhood'},
+         'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': f'{city} 55+ homes', 'href': '/chilliwack-55-plus-condos-for-sale.html'}, {'name': 'By neighbourhood', 'href': f'/{slug}.html'}],
+         'needs_from_muse': [f'Jared’s own notes on the {city} 55+ buildings: how units sell, what buyers ask', 'Unit counts and years built marked unconfirmed in the sources', 'Live listing feed filtered to 55+ homes']}
+    save(slug, d); print('wrote merged', slug, len(bl), 'blocks', len(d['faq']), 'faq')
+    for k in ns: written.append((slug, area_name(k)[0], city, k if exists(k) else None))
+
+
 def build_parks(path, slug0, written):
     slug = PARK_PAGES[slug0]; title, sec, raw = parse(path); j = load(slug)
     if j is None: return
@@ -305,6 +401,10 @@ def build_parks(path, slug0, written):
 
 
 def link_back(written):
+    for f in glob.glob(f'{LOCAL}/*.json'):
+        j = json.load(open(f, encoding='utf-8'))
+        if any(b.get('gen') == 'n55link' for b in j.get('blocks', [])):
+            j['blocks'] = [b for b in j['blocks'] if b.get('gen') != 'n55link']; save(os.path.basename(f)[:-5], j)
     byc = {}
     for slug, name, city, comm in written:
         if comm:
@@ -328,5 +428,7 @@ if __name__ == '__main__':
     for p in sorted(glob.glob(f'{NOTES}/*.md')):
         k = os.path.basename(p).replace('-55-plus-homes-2026-11-01.md', '')
         if k in PARK_PAGES: build_parks(p, k, written)
+    for slug, (city, ns) in MERGE.items(): build_merged(slug, city, ns, written)
+    for prim in sorted(set(FOLD.values())): fold_in(prim, written)
     build_hub(); build_mobile(); link_back(written)
     print(len(written), 'community 55+ pages')
