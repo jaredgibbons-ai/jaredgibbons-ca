@@ -1,19 +1,39 @@
 {
   "blocks": [
     {
-      "gen": "snapstats",
+      "gen": "musefaq",
       "level": 2,
+      "pos": "end",
       "t": "h",
-      "text": "Central Coquitlam homes listed and sold, June to October 2026"
+      "text": "Sources"
     },
     {
-      "gen": "snapstats",
+      "gen": "musefaq",
+      "items": [
+        [
+          {
+            "h": "https://mybaragar.com/index.cfm?event=page.SchoolLocatorPublic&DistrictCode=bc43",
+            "t": "Source: mybaragar.com"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Central Coquitlam homes listed and sold, June to October 2026",
+      "gen": "snapstats"
+    },
+    {
       "t": "p",
-      "text": "Central Coquitlam, October 2026. Detached houses: 61 listed at month end and 9 sold in October, a sales ratio of 15% (a balanced market). Condos and townhomes: 33 listed at month end and 1 sold in October, a sales ratio of 3% (a buyers’ market)."
+      "text": "Central Coquitlam, October 2026. Detached houses: 61 listed at month end and 9 sold in October, a sales ratio of 15% (a balanced market). Condos and townhomes: 33 listed at month end and 1 sold in October, a sales ratio of 3% (a buyers’ market).",
+      "gen": "snapstats"
     },
     {
+      "t": "table",
       "caption": "Central Coquitlam listings, sales and sales ratio by month",
-      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -71,32 +91,12 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "t": "table"
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 61 sold over 5 months against an average of 68.2 listed, about 5.6 months of listings at that pace; the busiest month was July with 18 sold. Condos and townhomes: 18 sold over 5 months against an average of 35.8 listed, about 9.9 months of listings at that pace; the busiest month was June with 8 sold."
-    },
-    {
-      "gen": "musefaq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "Sources"
-    },
-    {
-      "gen": "musefaq",
-      "items": [
-        [
-          {
-            "h": "https://mybaragar.com/index.cfm?event=page.SchoolLocatorPublic&DistrictCode=bc43",
-            "t": "Source: mybaragar.com"
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
+      "text": "Looking across the period, Detached houses: 61 sold over 5 months against an average of 68.2 listed, about 5.6 months of listings at that pace; the busiest month was July with 18 sold. Condos and townhomes: 18 sold over 5 months against an average of 35.8 listed, about 9.9 months of listings at that pace; the busiest month was June with 8 sold.",
+      "gen": "snapstats"
     },
     {
       "t": "h",
@@ -544,6 +544,77 @@
     {
       "t": "h",
       "level": 2,
+      "text": "Duplexes and half duplexes in Central Coquitlam",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "What a duplex looks like in Central Coquitlam",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "The usual duplex form: Coquitlam's small-scale residential zones R-1, R-2 and R-3 sit under Zoning Bylaw No. 3000, 1996, and the City's small-scale multi-unit housing framework is the documented route for duplex-form infill on house lots. Central Coquitlam's duplex form class is individual duplex buildings on single lots built under the zoning of their day. A specific duplex is verified on its title (one lot, strata plan, or subdivided pair)."
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "How a half duplex can legally be sold (strata duplex or fee-simple half duplex), the strata checks, and the tax points are explained once, with sources, on the page linked below.",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "BC duplex and half-duplex buying rules",
+            "h": "/bc-duplex-half-duplex-buying-rules.html"
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for the duplex notes on Central Coquitlam",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "coquitlam.ca · Official Community Plan Review",
+            "h": "https://www.coquitlam.ca/1436/Official-Community-Plan-Review"
+          }
+        ],
+        [
+          {
+            "t": "coquitlam.ca · Small Scale Multi Unit Housing Summary Guide",
+            "h": "https://www.coquitlam.ca/DocumentCenter/View/15337/Small-Scale-Multi-Unit-Housing-Summary-Guide?bidId="
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
       "text": "What's nearby Central Coquitlam",
       "gen": "nb",
       "pos": "end"
@@ -828,6 +899,21 @@
       "gen": "tn",
       "q": "Is Pine & Glen selling lots?",
       "a": "No — Pine & Glen (1175 Pinetree Way, Onni) is a presale of 705 strata condominiums plus 186 market-rental apartments in three towers over a podium, estimated completion 2028. Presale LOT offerings in the sub-area: zero verified."
+    },
+    {
+      "gen": "dx",
+      "q": "Can I buy just one side of a duplex in Central Coquitlam?",
+      "a": "Only if that side is legally separate — a strata lot in a 2-lot strata plan, or its own fee-simple lot from a subdivision. None is verified by name here; a single-lot duplex sells whole. Check the title first."
+    },
+    {
+      "gen": "dx",
+      "q": "Is Hideaway Park a duplex or half-duplex purchase?",
+      "a": "No. It is a manufactured-home park on rented pads — you own the home and rent the site at 4200 Dewdney Trunk Road."
+    },
+    {
+      "gen": "dx",
+      "q": "Is there a named duplex development in Central Coquitlam?",
+      "a": "None verified. The duplex evidence here is the form class under Coquitlam's small-scale residential zoning."
     }
   ],
   "slug": "central-coquitlam",

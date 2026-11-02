@@ -1,19 +1,45 @@
 {
   "blocks": [
     {
-      "gen": "snapstats",
+      "gen": "musefaq",
       "level": 2,
+      "pos": "end",
       "t": "h",
-      "text": "Elgin Chantrell homes listed and sold, June to October 2026"
+      "text": "Sources"
     },
     {
-      "gen": "snapstats",
+      "gen": "musefaq",
+      "items": [
+        [
+          {
+            "h": "https://www.surrey.ca/city-government/bylaws/heritage-bylaws",
+            "t": "Source: surrey.ca (1)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.surrey.ca/parks-recreation/parks/sunnyside-acres-urban-forest-park",
+            "t": "Source: surrey.ca (2)"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Elgin Chantrell homes listed and sold, June to October 2026",
+      "gen": "snapstats"
+    },
+    {
       "t": "p",
-      "text": "Elgin Chantrell, October 2026. Detached houses: 74 listed at month end and 8 sold in October, a sales ratio of 11% (a buyers’ market). Condos and townhomes: 16 listed at month end and 2 sold in October, a sales ratio of 13% (a balanced market)."
+      "text": "Elgin Chantrell, October 2026. Detached houses: 74 listed at month end and 8 sold in October, a sales ratio of 11% (a buyers’ market). Condos and townhomes: 16 listed at month end and 2 sold in October, a sales ratio of 13% (a balanced market).",
+      "gen": "snapstats"
     },
     {
+      "t": "table",
       "caption": "Elgin Chantrell listings, sales and sales ratio by month",
-      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -71,38 +97,12 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "t": "table"
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 38 sold over 5 months against an average of 77.8 listed, about 10.2 months of listings at that pace; the busiest month was September with 10 sold. Condos and townhomes: 10 sold over 5 months against an average of 11.8 listed, about 5.9 months of listings at that pace; the busiest month was June with 4 sold."
-    },
-    {
-      "gen": "musefaq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "Sources"
-    },
-    {
-      "gen": "musefaq",
-      "items": [
-        [
-          {
-            "h": "https://www.surrey.ca/city-government/bylaws/heritage-bylaws",
-            "t": "Source: surrey.ca (1)"
-          }
-        ],
-        [
-          {
-            "h": "https://www.surrey.ca/parks-recreation/parks/sunnyside-acres-urban-forest-park",
-            "t": "Source: surrey.ca (2)"
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
+      "text": "Looking across the period, Detached houses: 38 sold over 5 months against an average of 77.8 listed, about 10.2 months of listings at that pace; the busiest month was September with 10 sold. Condos and townhomes: 10 sold over 5 months against an average of 11.8 listed, about 5.9 months of listings at that pace; the busiest month was June with 4 sold.",
+      "gen": "snapstats"
     },
     {
       "t": "h",

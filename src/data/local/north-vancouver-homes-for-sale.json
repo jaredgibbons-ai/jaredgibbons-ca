@@ -18,50 +18,6 @@
     {
       "t": "h",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: docs.dnv.org",
-            "h": "https://docs.dnv.org/documents/official-community-plan.pdf"
-          }
-        ],
-        [
-          {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt998.pdf"
-          }
-        ],
-        [
-          {
-            "t": "Source: queenmary.sd44.ca",
-            "h": "https://queenmary.sd44.ca/"
-          }
-        ],
-        [
-          {
-            "t": "Source: vch.ca",
-            "h": "https://www.vch.ca/en/location/north-vancouver-urgent-and-primary-care-centre"
-          }
-        ],
-        [
-          {
-            "t": "Source: www12.statcan.gc.ca",
-            "h": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&DGUIDlist=2021A00055915051"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
       "text": "North Vancouver neighbourhood guides",
       "gen": "tn_hub",
       "pos": "end"
@@ -101,6 +57,51 @@
         ]
       ],
       "gen": "tn_hub",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Duplexes and half duplexes in North Vancouver Homes for Sale",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "What a duplex looks like in North Vancouver Homes for Sale",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "The usual duplex form: Both municipalities carry the two-unit form in their residential frameworks (City Zoning 6700; District Zoning 3210) and both sit inside the provincial SSMUH framework, so North Vancouver's duplex form class is individual duplex buildings on single lots built under the zoning of their day, in either municipality."
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "How a half duplex can legally be sold (strata duplex or fee-simple half duplex), the strata checks, and the tax points are explained once, with sources, on the page linked below.",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "BC duplex and half-duplex buying rules",
+            "h": "/bc-duplex-half-duplex-buying-rules.html"
+          }
+        ]
+      ],
+      "gen": "dx",
       "pos": "end"
     },
     {
@@ -363,9 +364,51 @@
       ],
       "gen": "nb",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Source: docs.dnv.org",
+            "h": "https://docs.dnv.org/documents/official-community-plan.pdf"
+          }
+        ],
+        [
+          {
+            "t": "Source: infomaps.translink.ca",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt998.pdf"
+          }
+        ],
+        [
+          {
+            "t": "Source: queenmary.sd44.ca",
+            "h": "https://queenmary.sd44.ca/"
+          }
+        ]
+      ],
+      "gen": "musefaq",
+      "pos": "end"
     }
   ],
   "faq": [
+    {
+      "gen": "dx",
+      "q": "Can I buy just one side of a duplex in North Vancouver?",
+      "a": "Only if that side is legally separate — a strata lot in a 2-lot strata plan, or its own fee-simple lot from a subdivision. None is verified by name at the city-wide level; a single-lot duplex sells whole. Check the title first."
+    },
+    {
+      "gen": "dx",
+      "q": "Which municipality's rules apply to my lot — City or District?",
+      "a": "The two frames are never interchanged, and the City's servicing Bylaw 8014 is never a District position."
+    },
     {
       "q": "Is North Vancouver one city?",
       "a": "No. It is two municipalities — the District of North Vancouver, governed District-wide by OCP Bylaw 7900, and the City of North Vancouver, guided by OCP Bylaw, 2014, No. 8400 — with separate councils, bylaws and taxes.",
@@ -379,16 +422,6 @@
     {
       "q": "Which school district serves North Vancouver, and how do catchments work?",
       "a": "School District 44 serves both municipalities, with no middle tier (elementary K–7, secondary 8–12). Catchments are address-based and must be confirmed with the district for the exact address.",
-      "gen": "muse"
-    },
-    {
-      "q": "Where is the hospital?",
-      "a": "Lions Gate Hospital, 231 East 15th Street in the City of North Vancouver, operated by Vancouver Coastal Health, serves the North Shore; urgent and primary care is at 221 West Esplanade in Lower Lonsdale.",
-      "gen": "muse"
-    },
-    {
-      "q": "Why are District and City prices so different?",
-      "a": "They are different housing stocks and different income bases: the City is the condo/apartment corridor and the District is predominantly detached houses, and the 2021 Census median household income was $86,000 in the City versus $123,000 in the District (Statistics Canada, 2021 Census Profile).",
       "gen": "muse"
     }
   ]

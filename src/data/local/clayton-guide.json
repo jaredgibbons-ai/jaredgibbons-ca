@@ -1,19 +1,19 @@
 {
   "blocks": [
     {
-      "gen": "snapstats",
-      "level": 2,
       "t": "h",
-      "text": "How Clayton compares with the rest of its city"
+      "level": 2,
+      "text": "How Clayton compares with the rest of its city",
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "Clayton against its whole city, October 2026: share of listings and sales, sales ratio and rank."
+      "text": "Clayton against its whole city, October 2026: share of listings and sales, sales ratio and rank.",
+      "gen": "snapstats"
     },
     {
+      "t": "table",
       "caption": "Clayton against the whole city, October 2026",
-      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -38,17 +38,17 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "t": "table"
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and October 2026, detached houses: listings fell from 53 in June to 34 in October (−35.8%), and it took 24.6% of the city’s 167 sales over the period; condos and townhomes: listings fell from 108 in June to 99 in October (−8.3%), and it took 58.5% of the city’s 193 sales over the period."
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 53 in June to 34 in October (−35.8%), and it took 24.6% of the city’s 167 sales over the period; condos and townhomes: listings fell from 108 in June to 99 in October (−8.3%), and it took 58.5% of the city’s 193 sales over the period.",
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Clayton for detached houses in July, August, September, October (a sellers’ best bet); detached houses in June (a buyers’ best bet); condos and townhomes in June, July, August, September, October (a sellers’ best bet)."
+      "text": "The monthly write-ups singled out Clayton for detached houses in July, August, September, October (a sellers’ best bet); detached houses in June (a buyers’ best bet); condos and townhomes in June, July, August, September, October (a sellers’ best bet).",
+      "gen": "snapstats"
     },
     {
       "t": "h",
@@ -386,6 +386,100 @@
       ],
       "gen": "tn",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Duplexes and half duplexes in Clayton",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Local rules that affect duplexes in Clayton",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Where duplexes are permitted (Surrey Zoning Bylaw No. 12000): Surrey's SSMUH amendments renamed the former RF zone to R3 Urban Residential Zone (Part 15) and the former RF-SD zone to R6 Semi-Detached Residential Zone (Part 18); the former RM-D Duplex Residential Zone was removed and grouped by lot size — the current zones are R3 and R6. Permitted small-scale multi-unit forms are secondary suites, detached accessory dwelling units including garden suites and coach houses, duplexes (side-by-side or up-and-down) and houseplexes (triplexes and fourplexes). In R6, a zero-lot line semi-detached building on a lot under 280 sq. M may accommodate 2 to 3 units and a duplex on a lot over 280 sq. M may accommodate 4 to 6 units; R6 subdivision minimums are interior lot area 200 sq. M, width 7.2 m, depth 28 m and corner lot area 226 sq. M, width 8.7 m, depth 28 m, with a 0.0 m side yard permitted at the common side lot line between paired lots and maximum lot coverage of 60 percent."
+          }
+        ],
+        [
+          {
+            "t": "Subdivision / party-wall facts — Surrey's documented form: The R6 zone IS Surrey's documented fee-simple semi-detached mechanism: Paired lots subdivided to the R6 minimums above, with a 0.0 m side yard permitted at the common side lot line between paired lots — the party wall sits on that line. A fee-simple split of an existing duplex parcel still requires subdivision approval through the City's Approving Officer process; no finer process detail is stated. Party-wall maintenance obligations rest on the registered easement / party-wall agreement on the two titles — read both titles."
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "How a half duplex can legally be sold (strata duplex or fee-simple half duplex), the strata checks, and the tax points are explained once, with sources, on the page linked below.",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "BC duplex and half-duplex buying rules",
+            "h": "/bc-duplex-half-duplex-buying-rules.html"
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for the duplex notes on Clayton",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "surrey.ca · zoning small scale multi unit housing",
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · bylaws",
+            "h": "https://www.surrey.ca/city-government/bylaws/12000"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · building or legalizing secondary suite",
+            "h": "https://www.surrey.ca/renovating-building-development/building/building-or-legalizing-secondary-suite"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · coach houses garden suites",
+            "h": "https://www.surrey.ca/renovating-building-development/building/residential-building/residential-building-permits/coach-houses-garden-suites"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · short term rentals",
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/short-term-rentals"
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
     }
   ],
   "faq": [
@@ -413,6 +507,16 @@
       "gen": "tn",
       "q": "The listing says \"RF-12\" — is that the lot's zone?",
       "a": "Not currently: RF-12 / RF-12C became R4 and RF-SD became R6 on July 8, 2024. Check the lot's current zone in Bylaw 12000 before quoting potential."
+    },
+    {
+      "gen": "dx",
+      "q": "Can I buy just one side of a duplex in Clayton?",
+      "a": "Yes, where the side is legally separate — Surrey's R6 semi-detached form is exactly that (paired fee-simple lots at a zero-lot-line common side), and a strata duplex half is a strata lot. A single-lot duplex still sells whole. Check the title first."
+    },
+    {
+      "gen": "dx",
+      "q": "Who maintains the shared wall on an R6 semi-detached pair?",
+      "a": "Whatever the registered party-wall agreement / easement on the two titles says — the 0.0 m side yard at the common line is a zoning permission, not a maintenance agreement. No agreement on title = not confirmed obligations."
     }
   ],
   "slug": "clayton-guide",

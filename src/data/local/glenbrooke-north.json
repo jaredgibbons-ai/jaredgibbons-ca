@@ -1,19 +1,19 @@
 {
   "blocks": [
     {
-      "gen": "snapstats",
-      "level": 2,
       "t": "h",
-      "text": "GlenBrooke North homes listed and sold, June to October 2026"
+      "level": 2,
+      "text": "GlenBrooke North homes listed and sold, June to October 2026",
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "GlenBrooke North, October 2026. Detached houses: 12 listed at month end and 4 sold in October, a sales ratio of 33% (a sellers’ market). Condos and townhomes: 8 listed at month end and 5 sold in October, a sales ratio of 63%."
+      "text": "GlenBrooke North, October 2026. Detached houses: 12 listed at month end and 4 sold in October, a sales ratio of 33% (a sellers’ market). Condos and townhomes: 8 listed at month end and 5 sold in October, a sales ratio of 63%.",
+      "gen": "snapstats"
     },
     {
+      "t": "table",
       "caption": "GlenBrooke North listings, sales and sales ratio by month",
-      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -71,12 +71,12 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "t": "table"
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 15 sold over 5 months against an average of 15.2 listed, about 5.1 months of listings at that pace; the busiest month was October with 4 sold. Condos and townhomes: 13 sold over 5 months against an average of 9.2 listed, about 3.5 months of listings at that pace; the busiest month was October with 5 sold."
+      "text": "Looking across the period, Detached houses: 15 sold over 5 months against an average of 15.2 listed, about 5.1 months of listings at that pace; the busiest month was October with 4 sold. Condos and townhomes: 13 sold over 5 months against an average of 9.2 listed, about 3.5 months of listings at that pace; the busiest month was October with 5 sold.",
+      "gen": "snapstats"
     },
     {
       "t": "h",
@@ -508,6 +508,71 @@
         ]
       ],
       "gen": "tn",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Duplexes and half duplexes in Glenbrooke North",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Local rules that affect duplexes in Glenbrooke North",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Heritage line — stated precisely: Glenbrooke North is not in the Queen's Park Heritage Conservation Area; the HCA adjoins to the south and its Heritage Alteration Permit rules do not extend into this sub-area on any source read. Do not price HCA constraints — or HCA \"protection\" — into a Glenbrooke North duplex without a City confirmation for the specific address."
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "How a half duplex can legally be sold (strata duplex or fee-simple half duplex), the strata checks, and the tax points are explained once, with sources, on the page linked below.",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "BC duplex and half-duplex buying rules",
+            "h": "/bc-duplex-half-duplex-buying-rules.html"
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for the duplex notes on Glenbrooke North",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "newwestcity.ca · Zoning Bylaw No 6680 2001 as of June 30 2022 (Co",
+            "h": "https://www.newwestcity.ca/database/files/library/Zoning_Bylaw_No_6680_2001_as_of_June_30_2022_(Complete).pdf"
+          }
+        ]
+      ],
+      "gen": "dx",
       "pos": "end"
     },
     {

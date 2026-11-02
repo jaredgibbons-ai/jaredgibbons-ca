@@ -1,19 +1,19 @@
 {
   "blocks": [
     {
-      "gen": "snapstats",
-      "level": 2,
       "t": "h",
-      "text": "How Bear Creek Green Timbers compares with the rest of its city"
+      "level": 2,
+      "text": "How Bear Creek Green Timbers compares with the rest of its city",
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "Bear Creek Green Timbers against its whole city, October 2026: share of listings and sales, sales ratio and rank."
+      "text": "Bear Creek Green Timbers against its whole city, October 2026: share of listings and sales, sales ratio and rank.",
+      "gen": "snapstats"
     },
     {
+      "t": "table",
       "caption": "Bear Creek Green Timbers against the whole city, October 2026",
-      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -38,17 +38,17 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "t": "table"
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and October 2026, detached houses: listings rose from 84 in June to 94 in October (+11.9%), and it took 8.2% of the city’s 464 sales over the period; condos and townhomes: listings fell from 40 in June to 34 in October (−15.0%), and it took 2.6% of the city’s 737 sales over the period."
+      "text": "Between June 2026 and October 2026, detached houses: listings rose from 84 in June to 94 in October (+11.9%), and it took 8.2% of the city’s 464 sales over the period; condos and townhomes: listings fell from 40 in June to 34 in October (−15.0%), and it took 2.6% of the city’s 737 sales over the period.",
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Bear Creek Green Timbers for detached houses in June (a sellers’ best bet); detached houses in August, October (a buyers’ best bet)."
+      "text": "The monthly write-ups singled out Bear Creek Green Timbers for detached houses in June (a sellers’ best bet); detached houses in August, October (a buyers’ best bet).",
+      "gen": "snapstats"
     },
     {
       "t": "h",
@@ -466,6 +466,71 @@
       ],
       "gen": "tn",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Duplexes and half duplexes in Bear Creek Green Timbers",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "What a duplex looks like in Bear Creek Green Timbers",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "The usual duplex form: The current frame is Surrey Zoning By-law No. 12000 with its SSMUH framework (in force July 8, 2024): A maximum of 3 units on lots smaller than 280 m², 4 units on lots larger than 280 m², and up to 6 units on eligible lots of at least 281 m² within 400 m of a frequent bus stop — duplexes are the baseline two-unit form inside that framework, including the semi-detached / zero-lot-line form where a source documents it for a specific property, plus strata halves (2-lot strata plans) and fee-simple halves on subdivided lots where title shows them."
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "How a half duplex can legally be sold (strata duplex or fee-simple half duplex), the strata checks, and the tax points are explained once, with sources, on the page linked below.",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "BC duplex and half-duplex buying rules",
+            "h": "/bc-duplex-half-duplex-buying-rules.html"
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for the duplex notes on Bear Creek Green Timbers",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "surrey.ca · zoning small scale multi unit housing",
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing"
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
     }
   ],
   "faq": [
@@ -493,6 +558,21 @@
       "gen": "tn",
       "q": "Can I subdivide a lot here, or build multiple units instead?",
       "a": "Different permissions: SSMUH allows 3–4 units on most lots by size band (up to 6 near a frequent bus stop), but that does not create new lots; subdivision must meet the zone minimum in Bylaw No. 12000 and the servicing requirements under the Surrey Subdivision and Development Bylaw, 1986, No. 8830, confirmed with the City per parcel."
+    },
+    {
+      "gen": "dx",
+      "q": "A listing says \"Kings Landing\" or \"The Trails\" — is it a duplex?",
+      "a": "Neither is duplex stock. Read the address and the MLS sub-type, not just the name."
+    },
+    {
+      "gen": "dx",
+      "q": "A card shows a half duplex here — can I buy just that half?",
+      "a": "Only if that half is legally separate — a strata lot in a 2-lot strata plan, or its own fee-simple lot."
+    },
+    {
+      "gen": "dx",
+      "q": "Can I add a suite or a coach house to a house here?",
+      "a": "One secondary suite per dwelling unit (at most 40% of the principal unit's habitable floor area, never inside a coach house or garden suite), a coach house or garden suite of 35–75 m² (up to 120 m² on RA, R2, R2-O and R3 lots below maximum FAR, lane access required for a coach house on smaller lots, one extra parking space), and 3–4 SSMUH units on most lots by size band, up to 6 near a frequent bus stop. A suite built without permits is not retroactively legalized by the SSMUH changes — verify a suite's permit status rather than relying on listing text."
     }
   ],
   "slug": "bear-creek-green-timbers-guide",

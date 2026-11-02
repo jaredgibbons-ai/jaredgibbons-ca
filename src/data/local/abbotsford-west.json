@@ -1,19 +1,45 @@
 {
   "blocks": [
     {
-      "gen": "snapstats",
+      "gen": "musefaq",
       "level": 2,
+      "pos": "end",
       "t": "h",
-      "text": "Abbotsford West homes listed and sold, June to October 2026"
+      "text": "Sources"
     },
     {
-      "gen": "snapstats",
+      "gen": "musefaq",
+      "items": [
+        [
+          {
+            "h": "https://www.abbotsford.ca/sites/default/files/2021-10/AgRefresh%20St3%20-%20Parcel%20Size.pdf",
+            "t": "Source: abbotsford.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "Source: alc.gov.bc.ca"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Abbotsford West homes listed and sold, June to October 2026",
+      "gen": "snapstats"
+    },
+    {
       "t": "p",
-      "text": "Abbotsford West, October 2026. Detached houses: 115 listed at month end and 21 sold in October, a sales ratio of 18% (a balanced market). Condos and townhomes: 215 listed at month end and 23 sold in October, a sales ratio of 11% (a buyers’ market)."
+      "text": "Abbotsford West, October 2026. Detached houses: 115 listed at month end and 21 sold in October, a sales ratio of 18% (a balanced market). Condos and townhomes: 215 listed at month end and 23 sold in October, a sales ratio of 11% (a buyers’ market).",
+      "gen": "snapstats"
     },
     {
+      "t": "table",
       "caption": "Abbotsford West listings, sales and sales ratio by month",
-      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -71,38 +97,12 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "t": "table"
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 76 sold over 5 months against an average of 134.8 listed, about 8.9 months of listings at that pace; the busiest month was October with 21 sold. Condos and townhomes: 109 sold over 5 months against an average of 215.0 listed, about 9.9 months of listings at that pace; the busiest month was June with 26 sold."
-    },
-    {
-      "gen": "musefaq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "Sources"
-    },
-    {
-      "gen": "musefaq",
-      "items": [
-        [
-          {
-            "h": "https://www.abbotsford.ca/sites/default/files/2021-10/AgRefresh%20St3%20-%20Parcel%20Size.pdf",
-            "t": "Source: abbotsford.ca"
-          }
-        ],
-        [
-          {
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
-            "t": "Source: alc.gov.bc.ca"
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
+      "text": "Looking across the period, Detached houses: 76 sold over 5 months against an average of 134.8 listed, about 8.9 months of listings at that pace; the busiest month was October with 21 sold. Condos and townhomes: 109 sold over 5 months against an average of 215.0 listed, about 9.9 months of listings at that pace; the busiest month was June with 26 sold.",
+      "gen": "snapstats"
     },
     {
       "t": "h",

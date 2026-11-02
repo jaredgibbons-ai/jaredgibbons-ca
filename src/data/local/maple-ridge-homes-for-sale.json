@@ -1,40 +1,37 @@
 {
-  "status": "generated",
-  "slug": "maple-ridge-homes-for-sale",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "p",
-      "text": "Sell my house in Maple Ridge: current prices, lot rules and a free home evaluation",
+      "gen": "sellerlink",
       "h": "/sell-my-house-in-maple-ridge.html",
-      "gen": "sellerlink"
+      "t": "p",
+      "text": "Sell my house in Maple Ridge: current prices, lot rules and a free home evaluation"
     },
     {
-      "t": "p",
-      "text": "See all 38 schools in Maple Ridge and Pitt Meadows, BC",
+      "gen": "schoollist",
       "h": "/schools-in-maple-ridge-pitt-meadows-bc.html",
-      "gen": "schoollist"
+      "t": "p",
+      "text": "See all 38 schools in Maple Ridge and Pitt Meadows, BC"
     },
     {
-      "t": "p",
-      "text": "Maple Ridge real estate market stats for September 2026: benchmark prices and trends",
+      "gen": "marketlink",
       "h": "/maple-ridge-real-estate-market-stats.html",
-      "gen": "marketlink"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Maple Ridge houses: sale price, days on market and sale-to-list, May to October 2026",
-      "gen": "snapstats"
-    },
-    {
       "t": "p",
-      "text": "In October 2026 houses in Maple Ridge sold about 4% below list price, after 33 days on market on the reports’ measure (up from 17 in May).",
-      "gen": "snapstats"
+      "text": "Maple Ridge real estate market stats for September 2026: benchmark prices and trends"
     },
     {
-      "t": "table",
+      "gen": "snapstats",
+      "level": 2,
+      "t": "h",
+      "text": "Maple Ridge houses: sale price, days on market and sale-to-list, May to October 2026"
+    },
+    {
+      "gen": "snapstats",
+      "t": "p",
+      "text": "In October 2026 houses in Maple Ridge sold about 4% below list price, after 33 days on market on the reports’ measure (up from 17 in May)."
+    },
+    {
       "caption": "Maple Ridge houses: monthly market figures",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Reported sale price",
@@ -101,22 +98,22 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. The reports give one sale-price figure a month and do not say whether it is an average or a median, so use it for direction, not as a valuation of your own home.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Maple Ridge houses: 13 months of listings, sales and prices to October 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Maple Ridge houses: 13 months of listings, sales and prices to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Over the 13 months from October 2025 to October 2026, listings of houses in Maple Ridge peaked at 452 in October 2025 and bottomed at 313 in December 2025. Sales were strongest in July 2026 with 60. The reported sale price moved from $1,199,000 to $1,152,500, a change of −3.9%.",
-      "gen": "snapstats"
+      "text": "Over the 13 months from October 2025 to October 2026, listings of houses in Maple Ridge peaked at 452 in October 2025 and bottomed at 313 in December 2025. Sales were strongest in July 2026 with 60. The reported sale price moved from $1,199,000 to $1,152,500, a change of −3.9%."
     },
     {
-      "t": "table",
       "caption": "Maple Ridge houses: 13-month trend",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Reported sale price",
@@ -204,136 +201,199 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. The reports give one sale-price figure a month and do not say whether it is an average or a median, so use it for direction, not as a valuation of your own home.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "communitylinks",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Maple Ridge neighbourhoods"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Source: mapleridge.ca",
-            "h": "https://www.mapleridge.ca/your-government/property-taxes/understanding-property-taxes"
+            "h": "/albion.html",
+            "t": "Albion real estate"
           }
         ],
         [
           {
-            "t": "Source: fraserhealth.ca",
-            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital"
+            "h": "/cottonwood-mr.html",
+            "t": "Cottonwood real estate"
+          }
+        ],
+        [
+          {
+            "h": "/east-central.html",
+            "t": "East Central real estate"
+          }
+        ],
+        [
+          {
+            "h": "/northeast.html",
+            "t": "Northeast real estate"
+          }
+        ],
+        [
+          {
+            "h": "/northwest-maple-ridge.html",
+            "t": "Northwest real estate"
+          }
+        ],
+        [
+          {
+            "h": "/silver-valley.html",
+            "t": "Silver Valley real estate"
+          }
+        ],
+        [
+          {
+            "h": "/southwest-maple-ridge.html",
+            "t": "Southwest real estate"
+          }
+        ],
+        [
+          {
+            "h": "/thornhill-mr.html",
+            "t": "Thornhill real estate"
+          }
+        ],
+        [
+          {
+            "h": "/websters-corners.html",
+            "t": "Websters Corners real estate"
+          }
+        ],
+        [
+          {
+            "h": "/west-central.html",
+            "t": "West Central real estate"
+          }
+        ],
+        [
+          {
+            "h": "/whonnock.html",
+            "t": "Whonnock real estate"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "dx",
       "level": 2,
-      "text": "Maple Ridge neighbourhoods",
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Albion real estate",
-            "h": "/albion.html"
-          }
-        ],
-        [
-          {
-            "t": "Cottonwood real estate",
-            "h": "/cottonwood-mr.html"
-          }
-        ],
-        [
-          {
-            "t": "East Central real estate",
-            "h": "/east-central.html"
-          }
-        ],
-        [
-          {
-            "t": "Northeast real estate",
-            "h": "/northeast.html"
-          }
-        ],
-        [
-          {
-            "t": "Northwest real estate",
-            "h": "/northwest-maple-ridge.html"
-          }
-        ],
-        [
-          {
-            "t": "Silver Valley real estate",
-            "h": "/silver-valley.html"
-          }
-        ],
-        [
-          {
-            "t": "Southwest real estate",
-            "h": "/southwest-maple-ridge.html"
-          }
-        ],
-        [
-          {
-            "t": "Thornhill real estate",
-            "h": "/thornhill-mr.html"
-          }
-        ],
-        [
-          {
-            "t": "Websters Corners real estate",
-            "h": "/websters-corners.html"
-          }
-        ],
-        [
-          {
-            "t": "West Central real estate",
-            "h": "/west-central.html"
-          }
-        ],
-        [
-          {
-            "t": "Whonnock real estate",
-            "h": "/whonnock.html"
-          }
-        ]
-      ],
-      "gen": "communitylinks",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 2,
-      "text": "What's nearby Maple Ridge",
-      "gen": "nb",
-      "pos": "end"
+      "text": "Duplexes and half duplexes in Maple Ridge"
     },
     {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "h",
+      "gen": "dx",
       "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect duplexes in Maple Ridge"
     },
     {
-      "t": "list",
+      "gen": "dx",
+      "items": [
+        [
+          {
+            "t": "The City states OCP and area-plan updates were adopted in November 2025 (Town Centre, Hammond, Silver Valley) to align with provincial housing targets, and Albion Area Plan updates were adopted October 28, 2025."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "dx",
+      "pos": "end",
+      "t": "p",
+      "text": "How a half duplex can legally be sold (strata duplex or fee-simple half duplex), the strata checks, and the tax points are explained once, with sources, on the page linked below."
+    },
+    {
+      "gen": "dx",
+      "items": [
+        [
+          {
+            "h": "/bc-duplex-half-duplex-buying-rules.html",
+            "t": "BC duplex and half-duplex buying rules"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "dx",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the duplex notes on Maple Ridge"
+    },
+    {
+      "gen": "dx",
+      "items": [
+        [
+          {
+            "h": "https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/official-community-plan",
+            "t": "mapleridge.ca · official community plan"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/news/maple-ridge-council-approves-plan-guide-transit-oriented-development-around-lougheed-highway",
+            "t": "mapleridge.ca · maple ridge council approves plan guide transit"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/business-development/zoning-bylaws",
+            "t": "mapleridge.ca · zoning bylaws"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-action/housing-target-order/new",
+            "t": "mapleridge.ca · housing target order"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites",
+            "t": "mapleridge.ca · secondary suites"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby Maple Ridge"
+    },
+    {
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -361,18 +421,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -390,18 +450,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -419,18 +479,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -438,25 +498,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Maple Ridge Leisure Centre, 11925 Haney Place",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Maple Ridge Library",
@@ -477,103 +538,126 @@
           "1.3"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt701",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf",
+            "t": "infomaps.translink.ca · tt701"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · ttR3",
-            "h": "https://infomaps.translink.ca/Public_Timetables/194/ttR3.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/194/ttR3.pdf",
+            "t": "infomaps.translink.ca · ttR3"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt741",
-            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt741.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt741.pdf",
+            "t": "infomaps.translink.ca · tt741"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · maple ridge leisure centre",
-            "h": "https://www.mapleridge.ca/art-parks-rec/recreation-facilities/maple-ridge-leisure-centre"
+            "h": "https://www.mapleridge.ca/art-parks-rec/recreation-facilities/maple-ridge-leisure-centre",
+            "t": "mapleridge.ca · maple ridge leisure centre"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca",
-            "h": "https://www.fvrl.bc.ca/"
+            "h": "https://www.fvrl.bc.ca/",
+            "t": "fvrl.bc.ca"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · maple ridge park",
-            "h": "https://www.mapleridge.ca/art-parks-rec/recreation-facilities/maple-ridge-park?centerLat=49.24042570981189&centerLng=-122.57853396630254&zoom=15"
+            "h": "https://www.mapleridge.ca/art-parks-rec/recreation-facilities/maple-ridge-park?centerLat=49.24042570981189&centerLng=-122.57853396630254&zoom=15",
+            "t": "mapleridge.ca · maple ridge park"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · maple ridge",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/maple-ridge"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/maple-ridge",
+            "t": "studentsuccess.gov.bc.ca · maple ridge"
           }
         ],
         [
           {
-            "t": "saveonfoods.com · store",
-            "h": "https://www.saveonfoods.com/sm/planning/rsid/935/store"
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/935/store",
+            "t": "saveonfoods.com · store"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "musefaq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
+    },
+    {
+      "gen": "musefaq",
+      "items": [
+        [
+          {
+            "h": "https://www.mapleridge.ca/your-government/property-taxes/understanding-property-taxes",
+            "t": "Source: mapleridge.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital",
+            "t": "Source: fraserhealth.ca"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "When are property taxes due on a Maple Ridge home?",
+      "a": "Only if that side is legally separate — a strata lot in a 2-lot strata plan, or its own fee-simple lot from a subdivision. Check the title first.",
+      "gen": "dx",
+      "q": "Can I buy just one side of a duplex somewhere in Maple Ridge?"
+    },
+    {
+      "a": "No. It was adopted January 27, 2026 (Bylaw 7781-2021) and ends at 221 Street.",
+      "gen": "dx",
+      "q": "Is the Lougheed corridor plan still just a proposal?"
+    },
+    {
       "a": "To the City of Maple Ridge: property taxes are due on the first business day in July, which for 2026 was July 2, 2026, with a 5% penalty on balances outstanding after the due date and a further 5% on balances still outstanding around September 1–2, 2026.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "When are property taxes due on a Maple Ridge home?"
     },
     {
-      "q": "Which hospital serves Maple Ridge?",
       "a": "Ridge Meadows Hospital, 11666 Laity Street — Fraser Health's community hospital for Maple Ridge and Pitt Meadows, with 24/7 emergency, maternity, surgery, orthopedics, urology, critical care, medical imaging and laboratory services.",
-      "gen": "muse"
-    },
-    {
-      "q": "How many houses are for sale in Maple Ridge?",
-      "a": "At the end of October 2026 the Greater Vancouver REALTORS® figures showed 388 houses listed in Maple Ridge and 59 sold in the month, a sales ratio of 15%. Month-end counts move daily; ask Jared what is on the market today.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "What is the reported sale price for houses in Maple Ridge?",
-      "a": "The October report gave $1,152,500 for houses in Maple Ridge, against $1,131,000 the month before. The reports give one sale-price figure and do not say whether it is an average or a median, so use it for direction, not as a valuation of your own home.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How long do houses take to sell in Maple Ridge?",
-      "a": "The October report showed 33 days on market for houses in Maple Ridge and a sale-to-list price ratio of 96%, against 29 days the month before.",
-      "gen": "snap-faq"
+      "gen": "muse",
+      "q": "Which hospital serves Maple Ridge?"
     }
-  ]
+  ],
+  "slug": "maple-ridge-homes-for-sale",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

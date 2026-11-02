@@ -153,6 +153,17 @@ def J(b):
     return f'{nm}{rest}' if rest[:1] in ',;.' else f'{nm}: {rest}'
 
 
+NOT_AREA = re.compile(r'UTILITY|TOPIC page|parks directory|CITY-WIDE|WHOLE-LANGLEY|CITY of Langley only|Name note:|variant-slug|reuses the verified positions|serves the \*\*[\w-]+\*\* slug|Slug note:|SITE UTILITY', re.I)
+NOT_AREA_SLUG = re.compile(r'^(?:homepage|privacy|reviews|recip|selling|jared|map-search|communities)$|presales|duplexes|real-estate-agent|condos-for-sale|houses-for-sale|plans$|^city|sell-my|new-construction')
+
+
+def real_building(b):
+    nm, rest = split_bold(b)
+    t = (nm or '') + ' ' + (rest or '')
+    if re.search(r'55\+ homes for sale|^\W*(?:FLAGGED|UNCONFIRMED|ROSTER)|cross-?referenced|\bnot a 55\+\b', t[:260], re.I): return False
+    return bool(re.search(r'\d{2,5} ?(?:[A-Za-z0-9]+ ){0,3}(?:St|Street|Ave|Avenue|Rd|Road|Dr|Drive|Blvd|Boulevard|Cres|Crescent|Way|Place|Pl|Lane|Court|Ct|Hwy)\b', t[:260]))
+
+
 def kind(g):
     gl = g.lower()
     if 'manufactured' in gl or 'pad-rental' in gl or 'mobile' in gl: return 'park'
@@ -164,8 +175,9 @@ def kind(g):
 
 def build_community(path, written):
     slug0 = os.path.basename(path).replace('-55-plus-homes-2026-11-01.md', '')
-    if slug0 in SKIP or slug0 in ('how-to-buy-a-mobile-home-in-bc', 'port-coquitlam') or TOPIC.search(slug0) or slug0 in FOLD or slug0 in MERGED: return
+    if slug0 in SKIP or slug0 in ('how-to-buy-a-mobile-home-in-bc', 'port-coquitlam', 'central-pt-coquitlam', 'otter-district') or TOPIC.search(slug0) or slug0 in FOLD or slug0 in MERGED: return
     title, sec, raw = parse(path)
+    if NOT_AREA.search(raw[:3500]) or slug0.endswith('-guide') or NOT_AREA_SLUG.search(slug0): return   # utility, topic, city-wide, name-variant and guide-twin notes carry cross-references, not a neighbourhood
     buy = []; other = []
     for g, bs in sec.get(2, {}).items():
         gl = g.lower()
@@ -175,6 +187,7 @@ def build_community(path, written):
         for b in bs:
             if not real(b) or not b.startswith('**'): continue
             (buy if isbuy else other if isoth else []).append((g, b))
+    buy = [(g, b) for g, b in buy if real_building(b)]   # the newer notes also list cross-references, flagged or unconfirmed items and rosters under the same heading; only a named building with an address is stock
     if not buy: return
     name, city = name_city(slug0, title); slug = f'{slug0}-55-plus-homes-for-sale'
     if exists(slug) and not (load(slug) or {}).get('n55_page'): print('skip (page exists)', slug); return

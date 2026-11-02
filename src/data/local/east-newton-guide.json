@@ -1,19 +1,19 @@
 {
   "blocks": [
     {
-      "gen": "snapstats",
-      "level": 2,
       "t": "h",
-      "text": "How East Newton compares with the rest of its city"
+      "level": 2,
+      "text": "How East Newton compares with the rest of its city",
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "East Newton against its whole city, October 2026: share of listings and sales, sales ratio and rank."
+      "text": "East Newton against its whole city, October 2026: share of listings and sales, sales ratio and rank.",
+      "gen": "snapstats"
     },
     {
+      "t": "table",
       "caption": "East Newton against the whole city, October 2026",
-      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -38,17 +38,17 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "t": "table"
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and October 2026, detached houses: listings fell from 134 in June to 110 in October (−17.9%), and it took 11.9% of the city’s 464 sales over the period; condos and townhomes: listings fell from 137 in June to 113 in October (−17.5%), and it took 8.0% of the city’s 737 sales over the period."
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 134 in June to 110 in October (−17.9%), and it took 11.9% of the city’s 464 sales over the period; condos and townhomes: listings fell from 137 in June to 113 in October (−17.5%), and it took 8.0% of the city’s 737 sales over the period.",
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out East Newton for detached houses in September (a buyers’ best bet); condos and townhomes in June, July (a buyers’ best bet)."
+      "text": "The monthly write-ups singled out East Newton for detached houses in September (a buyers’ best bet); condos and townhomes in June, July (a buyers’ best bet).",
+      "gen": "snapstats"
     },
     {
       "t": "h",
@@ -469,6 +469,100 @@
     {
       "t": "h",
       "level": 2,
+      "text": "Duplexes and half duplexes in East Newton",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Local rules that affect duplexes in East Newton",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Zoning, SSMUH and suites (Surrey): The City's zoning allows a maximum of 3 units on lots smaller than 280 m², 4 units on lots larger than 280 m², and up to 6 units on eligible lots of at least 281 m² within 400 m of a frequent bus stop; the BC Building Code permits one secondary suite per house; properties not connected to community water and sewer are among the exemptions. A secondary suite in Surrey is capped at 40% of the principal habitable area — Surrey's own cap, never borrowed. The City states the SSMUH changes do not retroactively legalize a secondary suite or coach house built without permits — an existing unpermitted suite still needs the permit and approval process, so suite permits are verified on any East Newton listing."
+          }
+        ],
+        [
+          {
+            "t": "Flood and ALR note: No floodplain or ALR designation inside East Newton was confirmed on a City page; the area sits in the Serpentine River watershed uplands east of the downstream lowlands the City's flood page covers, and ALR land lies south and east of Newton generally — a specific property's ALR status is confirmed in the Agricultural Land Commission's maps."
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "How a half duplex can legally be sold (strata duplex or fee-simple half duplex), the strata checks, and the tax points are explained once, with sources, on the page linked below.",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "BC duplex and half-duplex buying rules",
+            "h": "/bc-duplex-half-duplex-buying-rules.html"
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for the duplex notes on East Newton",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "surrey.ca · east newton ncps",
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/newton-land-use-plans/east-newton-ncps"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · PLR 7921 0011 00",
+            "h": "https://www.surrey.ca/sites/default/files/planning-reports/PLR_7921-0011-00.pdf"
+          }
+        ],
+        [
+          {
+            "t": "rennie.com · silva",
+            "h": "https://rennie.com/developments/silva"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · zoning small scale multi unit housing",
+            "h": "https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · serpentine nicomekl lowlands",
+            "h": "https://www.surrey.ca/services-payments/water-drainage-sewer/flood-control/lowlands-floodplains/serpentine-nicomekl-lowlands"
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
       "text": "What's nearby East Newton",
       "gen": "nb",
       "pos": "end"
@@ -766,6 +860,21 @@
       "gen": "tn",
       "q": "Is my lot in the ALR or a floodplain?",
       "a": "No in-area ALR or floodplain designation was confirmed; the uplands sit east of the Serpentine lowlands. Check the parcel on the ALC maps and the City's flood mapping before subjects."
+    },
+    {
+      "gen": "dx",
+      "q": "Is there a duplex development in East Newton I can buy into?",
+      "a": "What is verified is the form class — individual duplexes on single lots, with Bylaw 12000 itself setting duplex minimum lot areas in R3 (557 m²) and R5 (225 m²)."
+    },
+    {
+      "gen": "dx",
+      "q": "How do I know which kind of duplex I am buying?",
+      "a": "From the title, not the listing: A fee-simple duplex is one title with no strata fees or bylaws; a strata duplex is two strata lots with monthly fees, bylaws and shared insurance under the Strata Property Act."
+    },
+    {
+      "gen": "dx",
+      "q": "What lot size do I need for a duplex?",
+      "a": "Under Bylaw 12000: R3 needs 557 m² for a duplex (464 m² for a single-family home) and R5 needs 225 m² for a duplex (200 m² for a single-family home); R1 sits at the 1,858 m² band and R2 at 929 m², with older larger lots on the acreage-residential edges."
     },
     {
       "q": "Which schools serve East Newton?",

@@ -18,26 +18,6 @@
     {
       "t": "h",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt250.pdf"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
       "text": "West Vancouver neighbourhood guides",
       "gen": "tn_hub",
       "pos": "end"
@@ -71,6 +51,51 @@
         ]
       ],
       "gen": "tn_hub",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Duplexes and half duplexes in West Vancouver Homes for Sale",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "What a duplex looks like in West Vancouver Homes for Sale",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "The usual duplex form: The district's duplex form class is individual duplex buildings on single lots built under the zoning of their day. A specific duplex is verified on its title (one lot, strata plan, or subdivided pair)."
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "How a half duplex can legally be sold (strata duplex or fee-simple half duplex), the strata checks, and the tax points are explained once, with sources, on the page linked below.",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "BC duplex and half-duplex buying rules",
+            "h": "/bc-duplex-half-duplex-buying-rules.html"
+          }
+        ]
+      ],
+      "gen": "dx",
       "pos": "end"
     },
     {
@@ -302,9 +327,39 @@
       ],
       "gen": "nb",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Source: infomaps.translink.ca",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt250.pdf"
+          }
+        ]
+      ],
+      "gen": "musefaq",
+      "pos": "end"
     }
   ],
   "faq": [
+    {
+      "gen": "dx",
+      "q": "Can I buy just one side of a duplex in West Vancouver?",
+      "a": "Only if that side is legally separate — a strata lot in a 2-lot strata plan, or its own fee-simple lot from a subdivision. None is verified by name at the district-wide level; a single-lot duplex sells whole. Check the title first."
+    },
+    {
+      "gen": "dx",
+      "q": "Does the provincial directive give my lot more units?",
+      "a": "The directive requires the District to provide increased density in the named areas — it is a direction to the District's framework, not a lot-level permission. Read your lot's zone."
+    },
     {
       "q": "How do buses connect West Vancouver to downtown?",
       "a": "Route 250 runs from Downtown Vancouver via Georgia Street, the Stanley Park Causeway and the Lions Gate Bridge along Marine Drive to Dundarave, with some trips continuing to Horseshoe Bay.",
@@ -318,11 +373,6 @@
     {
       "q": "Do I need a home inspection when buying in West Vancouver?",
       "a": "It is strongly recommended. Make the offer subject to an inspection so a qualified inspector can look at the roof, structure, drainage, electrical and heating before you remove conditions.",
-      "gen": "bank-faq"
-    },
-    {
-      "q": "How do I find out which school serves an address in West Vancouver?",
-      "a": "School catchments are set by address, so use the school district's catchment locator with the exact address. Catchment lines change, so check before you write an offer.",
       "gen": "bank-faq"
     }
   ]

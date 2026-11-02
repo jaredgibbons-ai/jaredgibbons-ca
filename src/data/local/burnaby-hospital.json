@@ -1,19 +1,19 @@
 {
   "blocks": [
     {
-      "gen": "snapstats",
-      "level": 2,
       "t": "h",
-      "text": "Burnaby Hospital homes listed and sold, June to October 2026"
+      "level": 2,
+      "text": "Burnaby Hospital homes listed and sold, June to October 2026",
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "Burnaby Hospital, October 2026. Detached houses: 13 listed at month end and 1 sold in October, a sales ratio of 8% (a buyers’ market). Condos and townhomes: 4 listed at month end and 0 sold in October, a sales ratio of —."
+      "text": "Burnaby Hospital, October 2026. Detached houses: 13 listed at month end and 1 sold in October, a sales ratio of 8% (a buyers’ market). Condos and townhomes: 4 listed at month end and 0 sold in October, a sales ratio of —.",
+      "gen": "snapstats"
     },
     {
+      "t": "table",
       "caption": "Burnaby Hospital listings, sales and sales ratio by month",
-      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -71,12 +71,12 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "t": "table"
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 8 sold over 5 months against an average of 13.0 listed, about 8.1 months of listings at that pace; the busiest month was July with 3 sold. Condos and townhomes: 4 sold over 5 months against an average of 9.8 listed, about 12.2 months of listings at that pace; the busiest month was August with 4 sold."
+      "text": "Looking across the period, Detached houses: 8 sold over 5 months against an average of 13.0 listed, about 8.1 months of listings at that pace; the busiest month was July with 3 sold. Condos and townhomes: 4 sold over 5 months against an average of 9.8 listed, about 12.2 months of listings at that pace; the busiest month was August with 4 sold.",
+      "gen": "snapstats"
     },
     {
       "t": "h",
@@ -504,6 +504,71 @@
     {
       "t": "h",
       "level": 2,
+      "text": "Duplexes and half duplexes in Burnaby Hospital",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "What a duplex looks like in Burnaby Hospital",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "The usual duplex form: Burnaby consolidated its single- and two-family districts into one R1 Small-Scale Multi-Unit Housing (SSMUH) District — 3 units on lots up to 280 m², 4 units on larger lots, and 6 units on lots of 281 m² or more within 400 m of a frequent-transit stop; multi-unit lots may be stratified, and permitted forms include single-family, duplexes, multiplexes, rowhouses and secondary suites. The duplex form class here is therefore individual duplex buildings on single lots built under the zoning of their day, plus new SSMUH product as it is built. A specific duplex is verified on its title (one lot, strata plan, or subdivided pair)."
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "How a half duplex can legally be sold (strata duplex or fee-simple half duplex), the strata checks, and the tax points are explained once, with sources, on the page linked below.",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "BC duplex and half-duplex buying rules",
+            "h": "/bc-duplex-half-duplex-buying-rules.html"
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for the duplex notes on Burnaby Hospital",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "burnaby.ca · zoning bylaw rewrite",
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
       "text": "What's nearby Burnaby Hospital",
       "gen": "nb",
       "pos": "end"
@@ -797,6 +862,21 @@
       "gen": "tn",
       "q": "Which plan governs a south-side lot — Cascade Heights or the new OCP?",
       "a": "Both are read, but the Burnaby 2050 OCP (adopted December 9, 2025) takes precedence over older community-plan land use maps where they conflict; the Cascade Heights Community Plan was adopted in March 2025."
+    },
+    {
+      "gen": "dx",
+      "q": "Can I buy just one side of a duplex near Burnaby Hospital?",
+      "a": "Only if that side is legally separate — a strata lot in a 2-lot strata plan, or its own fee-simple lot from a subdivision. None is verified by name here; a single-lot duplex sells whole. Check the title first."
+    },
+    {
+      "gen": "dx",
+      "q": "Is there a named duplex development in this sub-area?",
+      "a": "None verified. The duplex evidence here is the form class under Burnaby's R1 SSMUH district."
+    },
+    {
+      "gen": "dx",
+      "q": "Can a new duplex lot here be stratified so I buy one half as a strata lot?",
+      "a": "Burnaby's R1 rules allow lots with two or more primary units to be stratified — that is the route; the specific lot's position is not confirmed until its zoning is read."
     },
     {
       "q": "Is \"Burnaby Hospital\" a real neighbourhood?",

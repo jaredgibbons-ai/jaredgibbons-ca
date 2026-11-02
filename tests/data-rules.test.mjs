@@ -206,6 +206,27 @@ test('mobile-home sections (mh): no note markup or research wording, no pad-rent
   assert.ok(hub.faq.length >= 5 && hub.new_page && hub.new_page.title.length <= 66, 'rules page FAQ or title');
 });
 
+test('duplex sections (dx): no note markup or research wording, no listing counts, link to the rules page; rules page covers the two legal forms, the 5-lot depreciation threshold, the 55+ age bylaw and property transfer tax', () => {
+  let pages = 0;
+  const bad = /FILE STATUS|UNVERIFIED|UNCONFIRMED|\bsiblings?\b|\bslug\b|\bfeed\b|SnapStats|~\/|(?:see|in|\(|read) Section [1-5]\b|\bthe research\b|\bresearched\b|search miss|\bNEVER\b|\bVERIFIED\b|R[23]\d{6}|https?:\/\//;
+  for (const [f, t] of texts) {
+    if (!t.includes('"dx"')) continue;
+    const d = JSON.parse(t);
+    const mine = (d.blocks || []).filter((b) => b.gen === 'dx').concat((d.faq || []).filter((q) => q.gen === 'dx'));
+    if (f === 'bc-duplex-half-duplex-buying-rules.json') continue;
+    const txt = JSON.stringify(mine).replace(/"h":"[^"]*"/g, '');
+    assert.ok(!bad.test(txt), `${f}: duplex text leaked: ${(txt.match(bad) || [])[0]}`);
+    if (f === 'bc-55-plus-strata-rules.json' || f === 'townhomes-for-sale.json') continue;
+    assert.ok(mine.some((b) => b.t === 'list' && b.items.some((i) => i[0].h === '/bc-duplex-half-duplex-buying-rules.html')), `${f}: no link to the rules page`);
+    pages++;
+  }
+  assert.ok(pages >= 100, `expected duplex sections on 100+ pages, got ${pages}`);
+  const hub = JSON.parse(fs.readFileSync(path.join(LOCAL, 'bc-duplex-half-duplex-buying-rules.json'), 'utf8'));
+  const h = JSON.stringify(hub);
+  for (const w of ['fee-simple half duplex', 'five or more lots', '55+ age bylaw', '$800,000 is $14,000', 'Approving Officer']) assert.ok(h.includes(w), `duplex rules page missing ${w}`);
+  assert.ok(hub.faq.length >= 5 && hub.new_page && hub.new_page.title.length <= 66, 'duplex rules page FAQ or title');
+});
+
 test("what's nearby blocks (nb): no URLs, note markup or research wording in text; times only in a four-column table with a start point; plausible speeds", () => {
   let pages = 0, rows = 0;
   const bad = /FILE STATUS|UNVERIFIED|UNCONFIRMED|\bsiblings?\b|\bslug\b|SnapStats|~\/|in this (?:pass|note)|rate limit|Nominatim|geocod|R[23]\d{6}|https?:\/\//;

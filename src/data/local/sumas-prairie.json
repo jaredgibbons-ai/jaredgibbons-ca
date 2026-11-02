@@ -1,19 +1,51 @@
 {
   "blocks": [
     {
-      "gen": "snapstats",
-      "level": 2,
       "t": "h",
-      "text": "Sumas Prairie homes listed and sold, June to October 2026"
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
+      "pos": "end"
     },
     {
-      "gen": "snapstats",
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Source: abbotsford.ca (1)",
+            "h": "https://www.abbotsford.ca/city-hall/news-media/supporting-flood-mitigation-planning-sumas-prairie"
+          }
+        ],
+        [
+          {
+            "t": "Source: alc.gov.bc.ca",
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+          }
+        ],
+        [
+          {
+            "t": "Source: abbotsford.ca (3)",
+            "h": "https://www.abbotsford.ca/city-services/property-taxes/your-current-tax-notice"
+          }
+        ]
+      ],
+      "gen": "musefaq",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Sumas Prairie homes listed and sold, June to October 2026",
+      "gen": "snapstats"
+    },
+    {
       "t": "p",
-      "text": "Sumas Prairie, October 2026. Detached houses: 2 listed at month end and 0 sold in October, a sales ratio of —. No condos and townhomes were listed or sold in Sumas Prairie between June and October."
+      "text": "Sumas Prairie, October 2026. Detached houses: 2 listed at month end and 0 sold in October, a sales ratio of —. No condos and townhomes were listed or sold in Sumas Prairie between June and October.",
+      "gen": "snapstats"
     },
     {
+      "t": "table",
       "caption": "Sumas Prairie listings, sales and sales ratio by month",
-      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -53,44 +85,12 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "t": "table"
+      "gen": "snapstats"
     },
     {
-      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 0 sold over 5 months against an average of 1.8 listed."
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: abbotsford.ca (1)",
-            "h": "https://www.abbotsford.ca/city-hall/news-media/supporting-flood-mitigation-planning-sumas-prairie"
-          }
-        ],
-        [
-          {
-            "t": "Source: alc.gov.bc.ca",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
-          }
-        ],
-        [
-          {
-            "t": "Source: abbotsford.ca (3)",
-            "h": "https://www.abbotsford.ca/city-services/property-taxes/your-current-tax-notice"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
+      "text": "Looking across the period, Detached houses: 0 sold over 5 months against an average of 1.8 listed.",
+      "gen": "snapstats"
     },
     {
       "t": "h",

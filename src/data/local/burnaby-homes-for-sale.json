@@ -582,38 +582,6 @@
     {
       "t": "h",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: translink.ca",
-            "h": "https://www.translink.ca/schedules-and-maps/skytrain/?page=1"
-          }
-        ],
-        [
-          {
-            "t": "Source: burnaby.ca (2)",
-            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
-          }
-        ],
-        [
-          {
-            "t": "Source: burnaby.ca (3)",
-            "h": "https://www.burnaby.ca/our-city/official-community-plan"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
       "text": "More Burnaby searches by home type",
       "gen": "gaplinks",
       "pos": "end"
@@ -882,6 +850,77 @@
     {
       "t": "h",
       "level": 2,
+      "text": "Duplexes and half duplexes in Burnaby",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Local rules that affect duplexes in Burnaby",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "City plan and servicing (Burnaby): The current plan is Burnaby 2050 OCP (adopted December 9, 2025), reviewed and updated every five years under provincial requirements. Short-term rental rules in Burnaby: Not verified — no City STR bylaw, licence requirement or principal-residence rule was read on an official City page pass."
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "How a half duplex can legally be sold (strata duplex or fee-simple half duplex), the strata checks, and the tax points are explained once, with sources, on the page linked below.",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "BC duplex and half-duplex buying rules",
+            "h": "/bc-duplex-half-duplex-buying-rules.html"
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for the duplex notes on Burnaby",
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "burnaby.ca · zoning bylaw rewrite",
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+          }
+        ],
+        [
+          {
+            "t": "burnaby.ca · official community plan",
+            "h": "https://www.burnaby.ca/our-city/official-community-plan"
+          }
+        ]
+      ],
+      "gen": "dx",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
       "text": "What's nearby Burnaby",
       "gen": "nb",
       "pos": "end"
@@ -1126,9 +1165,46 @@
       ],
       "gen": "nb",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Sources",
+      "gen": "musefaq",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Source: translink.ca",
+            "h": "https://www.translink.ca/schedules-and-maps/skytrain/?page=1"
+          }
+        ],
+        [
+          {
+            "t": "Source: burnaby.ca (2)",
+            "h": "https://www.burnaby.ca/our-city/projects/zoning-bylaw-rewrite"
+          }
+        ],
+        [
+          {
+            "t": "Source: burnaby.ca (3)",
+            "h": "https://www.burnaby.ca/our-city/official-community-plan"
+          }
+        ]
+      ],
+      "gen": "musefaq",
+      "pos": "end"
     }
   ],
   "faq": [
+    {
+      "gen": "dx",
+      "q": "Can a new half duplex be created on a Burnaby detached lot?",
+      "a": "Whether a specific lot qualifies is a parcel read of Zoning Bylaw 2026 No. 14815 — never the repealed 4742."
+    },
     {
       "q": "Which SkyTrain lines serve Burnaby?",
       "a": "Two — the Expo Line connects downtown Vancouver with Burnaby, New Westminster and Surrey (Burnaby stops include Patterson, Metrotown, Royal Oak and Edmonds), and the Millennium Line runs through Burnaby (Brentwood Town Centre, Holdom, Sperling–Burnaby Lake, Lake City Way, Production Way–University, Lougheed Town Centre) into Port Moody and Coquitlam.",
@@ -1143,21 +1219,6 @@
       "q": "What is the Burnaby 2050 OCP?",
       "a": "Burnaby's current Official Community Plan — a long-term plan integrating land use, transportation, housing, environment, community facilities and economic planning to direct the city's growth, reviewed every five years; the companion Burnaby Zoning Bylaw 2026 was adopted June 9, 2026 and took effect July 1, 2026, replacing the 1965 bylaw.",
       "gen": "muse"
-    },
-    {
-      "q": "How many houses are for sale in Burnaby?",
-      "a": "At the end of October 2026 the Greater Vancouver REALTORS® figures showed 430 houses listed in Burnaby and 52 sold in the month, a sales ratio of 12%. Month-end counts move daily; ask Jared what is on the market today.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "What is the reported sale price for houses in Burnaby?",
-      "a": "The October report gave $1,743,750 for houses in Burnaby, against $1,825,000 the month before. The reports give one sale-price figure and do not say whether it is an average or a median, so use it for direction, not as a valuation of your own home.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "How long do houses take to sell in Burnaby?",
-      "a": "The October report showed 21 days on market for houses in Burnaby and a sale-to-list price ratio of 96%, against 37 days the month before.",
-      "gen": "snap-faq"
     }
   ]
 }
