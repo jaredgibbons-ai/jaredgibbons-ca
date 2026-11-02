@@ -86,11 +86,25 @@ test('55+ notes pages: no MLS numbers, no listing-level links, 5+ FAQ and 5+ lin
     pages++;
     assert.ok(!/\bR[23]\d{6}\b/.test(t), `${f}: MLS number published`);
     assert.ok(!/zolo\.ca|estateblock|realtor\.ca|soldbycraig|zealty|rew\.ca\/properties|plsrealestate/i.test(t), `${f}: listing-level link`);
-    assert.ok(!/\*\*|Section [1-5]\b(?!\d)|base guide/.test(t.replace(/Zoning Bylaw[^"]{0,40}Section \d+|Section \d{3}/g, '')), `${f}: note markup left in text`);
+    assert.ok(!/\*\*|Section [1-5]\b(?![\d.]\d)|base guide/.test(t.replace(/Zoning Bylaw[^"]{0,40}Section \d+|Section \d{3}/g, '')), `${f}: note markup left in text`);
     assert.ok(!/\d+ (attached|detached) listings/.test(t), `${f}: board listing count published`);
     assert.ok((d.faq || []).length >= 5, `${f}: fewer than 5 FAQ`);
     const links = t.match(/"h": "\//g) || [];
     assert.ok(links.length >= 5, `${f}: fewer than 5 internal links`);
   }
   assert.ok(pages >= 20, 'expected the 55+ notes pages');
+});
+
+test('55+ park sections on mobile-home pages: no MLS numbers, listing links, note markup or board counts', () => {
+  let n = 0;
+  for (const [f, t] of texts) {
+    if (!t.includes('"n55mh"')) continue;
+    n++;
+    const d = JSON.parse(t);
+    const mine = JSON.stringify([(d.blocks || []).filter((b) => b.gen === 'n55mh'), (d.faq || []).filter((x) => x.gen === 'n55mh')]);
+    assert.ok(!/\bR[23]\d{6}\b/.test(mine), `${f}: MLS number published`);
+    assert.ok(!/zolo\.ca|estateblock|realtor\.ca|soldbycraig|zealty|rew\.ca\/properties|plsrealestate/i.test(mine), `${f}: listing-level link`);
+    assert.ok(!/\*\*|\bSection [1-5]\b(?![\d.]\d)|base guide|\d+ (attached|detached) listings/.test(mine), `${f}: note markup or board count`);
+  }
+  assert.ok(n >= 6, 'expected the mobile-home park sections');
 });

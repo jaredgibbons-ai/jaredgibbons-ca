@@ -16,29 +16,37 @@ CITY_55 = {  # community -> existing city-level 55+ page(s) that should list it
  'surrey': ['surrey-55-plus-homes-for-sale'], 'coquitlam': ['coquitlam-55-plus-homes-for-sale'], 'burnaby': ['burnaby-55-plus-homes-for-sale'],
  'abbotsford': ['abbotsford-55-plus-condos-for-sale', 'abbotsford-55-plus-townhomes-for-sale'], 'langley': ['langley-55-plus-condos-for-sale', 'langley-55-plus-townhomes-for-sale'],
  'pitt meadows': ['pitt-meadows-55-plus-condos-for-sale', 'pitt-meadows-55-plus-townhomes-for-sale'],
+ 'maple ridge': ['maple-ridge-55-plus-condos-for-sale', 'maple-ridge-55-plus-townhomes-for-sale'],
+ 'chilliwack': ['chilliwack-55-plus-condos-for-sale', 'chilliwack-55-plus-townhomes-for-sale'],
+ 'south surrey': ['south-surrey-white-rock-55-plus-condos-for-sale', 'south-surrey-white-rock-55-plus-townhomes-for-sale'],
 }
+TOPIC = re.compile(r'(under|over)-|open-houses|foreclosure|farms|lots-land|mobile-homes|calculator|^blog$|^contact$|our-listings|sold-properties|newsletter|marketing|commercial|land-use|landplans|home-evaluation|neighbourhood-guides|school-catchments|luxury|acreages|pad-rental|homes-for-sale$|first-time')
+PARK_PAGES = {'surrey-mobile-homes': 'surrey-mobile-homes', 'south-surrey-mobile-homes': 'south-surrey-mobile-homes', 'chilliwack-mobile-homes': 'chilliwack-mobile-homes',
+              'mission-mobile-homes': 'mission-mobile-homes', 'maple-ridge-mobile-homes': 'maple-ridge-mobile-homes', 'cost-of-mobile-home-pad-rental-fees-in-langley': 'cost-of-mobile-home-pad-rental-fees-in-langley'}
 SHARED_Q = re.compile(r"under 55.*(investment|parent)|spouse is under 55|rent out (a|my) unit|resale buyer pool", re.I)
 SHARED_LEAD = ('Only 55+ age bylaws', 'The bylaw restricts who', 'Built-in exemptions', 'Rental-restriction bylaws')
 DROP_URL = re.compile(r'R[23]\d{6}|plsrealestate|condos\.ca/.*unit|zolo\.ca|estateblock|realtor\.ca|soldbycraig|zealty|rodfriesen|rew\.ca/properties|/listing|/property/|PropertyDetails|-mls_|surreytownhouse\.com/buildings/view|rentitfurnished|apartments\.com|mhbo\.com|housesigma|point2|strata\.ca/listing|bcrealestatefinder', re.I)
 
 
 NOTE_REF = re.compile(r"\b(?:see|in) (?:[\w' ]{0,40} )?Section [1-5]\b")
-DROP_SENT = re.compile(r"^Sources?:|building entries|base guide|\broundup\b|\bthe (?:note|brief)\b|\b\d[\d,]* (?:attached|detached|active) (?:listings?|sales?)|listings? (?:versus|vs\.?) |\bParagon\b|Paragon", re.I)
+DROP_SENT = re.compile(r"^Sources?:|building entries|base guide|\broundup\b|\bthe (?:note|brief)\b|\b\d[\d,]* (?:attached|detached|active) (?:listings?|sales?)|listings? (?:versus|vs\.?) |\bParagon\b|research file|in this pass|\broster\b|\d+ active\b|active / \d+ sold|\d+ of the city's \d+ active", re.I)
 
 
 def clean(s):
     s = re.sub(r'\s*(?:[,;]|\band\b|\bor\b)?\s*https?://\S+', '', s)
+    s = re.sub(r'\s*(?:\band\b\s+)?[^.]*?\S*[&?]\w+=\S*', '', s)
+    s = re.sub(r'\s*(?:\band\b\s+)?~/\S+', '', s)
     s = re.sub(r'\*\*(.*?)\*\*', r'\1', s)
     s = re.sub(r'\s*\((?:[^()]*?[;,] ?)?(?:see|in) [^()]*Section [1-5][^()]*\)', '', s)
     s = re.sub(r'\s*[;:,]? see [^.()]*Section [1-5]\b', '', s)
     s = re.sub(r'\s*\((?:see )?Sections? [1-5](?:[^()]*)\)', '', s)
     s = re.sub(r'\b(?:Read|read|See|see)[^.:]{0,60}Section [1-5]:\s*', '', s)
-    s = re.sub(r',? Section [1-5]\b(?!\d)', '', s)
+    s = re.sub(r',? Section [1-5]\b(?![\d.]\d)', '', s)
     s = re.sub(r'\(?\bMLS R\d{7}, ?', '(', s); s = re.sub(r'\s*\(MLS R\d{7}\)', '', s); s = re.sub(r'\bMLS R\d{7}\b', 'MLS®', s); s = re.sub(r'\bR[23]\d{6}\b', '', s)
     sents = re.split(r'(?<=[.!?])\s+', s.strip())
     sents = [x for x in sents if not DROP_SENT.search(x) and not NOTE_REF.search(x)]
     s = ' '.join(sents)
-    s = re.sub(r'\(\s*\)', '', s); s = re.sub(r'\s+', ' ', s).strip()
+    s = re.sub(r'\(\s*[,;\s]*\)', '', s); s = re.sub(r'\s+', ' ', s).strip()
     s = re.sub(r'\b(and|or)(\s+(and|or))+\b', r'\1', s)
     s = re.sub(r'(?:\s+(?:and|or)|[;,:])\s*$', '', s).strip()
     s = re.sub(r'(?<=[.!?])\s+(?:and|or)\s*$', '', s).strip()
@@ -114,30 +122,43 @@ def name_city(slug, title):
     return name, city
 
 
+def J(b):
+    nm, rest = split_bold(b); nm, rest = clean(nm), clean(rest)
+    return f'{nm}{rest}' if rest[:1] in ',;.' else f'{nm}: {rest}'
+
+
+def kind(g):
+    gl = g.lower()
+    if 'manufactured' in gl or 'pad-rental' in gl or 'mobile' in gl: return 'park'
+    if 'life lease' in gl: return 'life'
+    if 'co-op' in gl or 'membership' in gl or 'buyable' in gl: return 'member'
+    if 'strata' in gl: return 'strata'
+    return 'own'
+
+
 def build_community(path, written):
     slug0 = os.path.basename(path).replace('-55-plus-homes-2026-11-01.md', '')
-    if slug0 in SKIP or slug0 in ('how-to-buy-a-mobile-home-in-bc', 'port-coquitlam'): return
+    if slug0 in SKIP or slug0 in ('how-to-buy-a-mobile-home-in-bc', 'port-coquitlam') or TOPIC.search(slug0): return
     title, sec, raw = parse(path)
     buy = []; other = []
     for g, bs in sec.get(2, {}).items():
         gl = g.lower()
-        isbuy = gl.startswith(('verified 55+ strata', 'verified 55+ manufactured', 'verified 55+ — buyable', 'life lease', 'pad-rental', 'co-operative'))
-        isoth = gl.startswith(('verified 55+ rental', 'retirement', 'subsidized', 'the chartwell'))
+        isoth = gl.startswith(('verified 55+ rental', 'retirement', 'subsidized', 'the chartwell')) or '(not ownership' in gl or 'not townhouse' in gl
+        isbuy = (gl.startswith(('verified', 'life lease', 'pad-rental', 'co-operative', 'manufactured-home parks')) and not isoth
+                 and 'elsewhere' not in gl and 'roster context' not in gl and 'checked' not in gl)
         for b in bs:
             if not real(b) or not b.startswith('**'): continue
             (buy if isbuy else other if isoth else []).append((g, b))
     if not buy: return
     name, city = name_city(slug0, title); slug = f'{slug0}-55-plus-homes-for-sale'
     if exists(slug) and not (load(slug) or {}).get('n55_page'): print('skip (page exists)', slug); return
-    disp = f'{name}, {city}' if city else name
+    disp = f'{name}, {city}' if city and city.lower() not in name.lower() and name.lower() not in city.lower() else name
     names = [split_bold(b)[0].split(' — ')[0].split(' (')[0] for _, b in buy]
     nl = names[0] if len(names) == 1 else ', '.join(names[:-1]) + ' and ' + names[-1] if len(names) <= 4 else ', '.join(names[:4]) + f' and {len(names) - 4} more'
-    kinds = []
-    if any(g.lower().startswith('verified 55+ strata') for g, _ in buy): kinds.append('strata')
-    if any(g.lower().startswith(('verified 55+ manufactured', 'pad-rental', 'co-operative')) for g, _ in buy): kinds.append('manufactured-home park')
-    if any(g.lower().startswith('life lease') for g, _ in buy): kinds.append('life lease')
-    if any(g.lower().startswith('verified 55+ — buyable') for g, _ in buy): kinds.append('membership')
-    kt = ' and '.join(kinds)
+    nl = nl.replace(', ' + 'and ', ' and ')
+    KN = {'strata': 'strata', 'park': 'manufactured-home park', 'life': 'life lease', 'member': 'co-op or membership', 'own': 'ownership'}
+    kinds = [KN[k] for k in dict.fromkeys(kind(g) for g, _ in buy)]
+    kt = kinds[0] if len(kinds) == 1 else ', '.join(kinds[:-1]) + ' and ' + kinds[-1]
     others = sorted({'rental' if g.lower().startswith('verified 55+ rental') else 'retirement residence or care' if g.lower().startswith(('retirement', 'the chartwell')) else 'subsidized rental' for g, _ in other})
     intro = f'In {disp}, the 55+ homes you can buy are {nl}' + (f' ({kt})' if kt else '') + '.' + (f' The other seniors housing here, which you cannot buy into, is {", ".join(others[:-1]) + " and " + others[-1] if len(others) > 1 else others[0]}.' if others else '') + ' This page names each building, says what type it is and what the sources show, and covers local rules and the questions buyers ask. Anything no source states is marked unconfirmed.'
     bl = [{'t': 'notice', 'text': 'Draft for Jared\'s approval. Written from Jared\'s verified local notes (researched November 1, 2026). Listing-stated figures are labelled; unconfirmed items say so. No live feed filtered to 55+ homes yet.', 'gen': G},
@@ -146,20 +167,22 @@ def build_community(path, written):
     for g, b in buy: groups.setdefault(g, []).append(b)
     for g, bs in groups.items():
         gl = g.lower()
-        h = f'55+ strata buildings you can buy in {name}' if gl.startswith('verified 55+ strata') else f'55+ manufactured-home parks in {name}' if 'manufactured' in gl or 'pad-rental' in gl else f'Life lease residences in {name} (an occupancy right, not strata)' if gl.startswith('life lease') else f'55+ homes in {name} that are not strata' if 'buyable' in gl else f'Other 55+ ownership in {name}'
+        k = kind(g)
+        h = {'strata': f'55+ strata buildings you can buy in {name}', 'park': f'55+ manufactured-home parks in {name}', 'life': f'Life lease residences in {name} (an occupancy right, not strata)',
+             'member': f'55+ co-op and membership housing in {name} (not strata)', 'own': f'55+ ownership in {name}'}[k]
         bl.append(H(h))
         for b in bs:
             nm, rest = split_bold(b); tx = clean(rest)
             if nm and tx: bl += [H(clean(nm), 3), P(tx)]
     if other:
         bl.append(H(f'Rental, care and subsidized seniors housing in {name} (not for sale)'))
-        bl.append(LI([f'{clean(split_bold(b)[0])}: {clean(split_bold(b)[1])}' for _, b in other if clean(split_bold(b)[1])]))
+        bl.append(LI([J(b) for _, b in other if clean(split_bold(b)[1])]))
     s1 = [clean(b) for b in bullets(sec, 1) if real(b)]
     s1 = [x for x in s1 if x]
     if s1: bl += [H(f'Streets, schools and getting around {name}'), LI(s1)]
     s3 = [b for b in bullets(sec, 3) if real(b) and not split_bold(b)[0].startswith(SHARED_LEAD)]
     bl += [H(f'Local rules and plans in {name}')]
-    if s3: bl.append(LI([f'{clean(split_bold(b)[0])}: {clean(split_bold(b)[1])}' if split_bold(b)[0] else clean(b) for b in s3 if clean(b)]))
+    if s3: bl.append(LI([J(b) if split_bold(b)[0] else clean(b) for b in s3 if clean(b)]))
     bl.append(P('The BC rules on 55+ age bylaws, who may own and who may live in a unit, the exemptions and rentals apply in every strata and are explained once, with sources, on the BC 55+ strata rules page.'))
     bl.append(LK([('BC 55+ strata rules', f'/{HUB}.html')]))
     s5 = [clean(b) for b in bullets(sec, 5) if real(b)]
@@ -250,6 +273,37 @@ def build_mobile():
     save(slug, j); print('wrote mobile guide section', len(bl), 'blocks', len(faq), 'faq')
 
 
+def build_parks(path, slug0, written):
+    slug = PARK_PAGES[slug0]; title, sec, raw = parse(path); j = load(slug)
+    if j is None: return
+    label = title.split(' — ')[0].replace('(City of Chilliwack)', '').replace('(City + Township)', '').strip()
+    j['blocks'] = [b for b in j['blocks'] if b.get('gen') != 'n55mh']
+    buy = [(g, b) for g, bs in sec.get(2, {}).items() if g.lower().startswith('verified') and '(not ownership' not in g.lower() and 'rental' not in g.lower() and 'elsewhere' not in g.lower() and 'roster' not in g.lower() for b in bs if b.startswith('**') and real(b)]
+    if not buy: return
+    def T(t, l=2): return {**H(t, l), 'gen': 'n55mh', 'pos': 'end'}
+    def PP(t): return {**P(t), 'gen': 'n55mh', 'pos': 'end'}
+    bl = [T('Verified 55+ manufactured-home parks and co-ops: what the sources show'),
+          PP('These are the 55+ places named in public sources where you can own the home. Pad rent, shares and fees quoted below are listing-stated for one home on one date, not a park tariff, so confirm them with the park. Anything no source states is marked unconfirmed.')]
+    for g, b in buy:
+        nm, rest = split_bold(b); tx = clean(rest)
+        if nm and tx: bl += [T(clean(nm), 3), PP(tx)]
+    s3 = [b for b in bullets(sec, 3) if real(b) and not split_bold(b)[0].startswith(SHARED_LEAD)]
+    s3 = [J(b) if split_bold(b)[0] else clean(b) for b in s3 if clean(b)]
+    if s3: bl += [T('Rules that affect 55+ park homes'), {**LI(s3), 'pos': 'end', 'gen': 'n55mh'}]
+    s5 = [clean(b) for b in bullets(sec, 5) if real(b) and clean(b)]
+    if s5: bl += [T('Good to know before you buy a park home'), {**LI(s5), 'pos': 'end', 'gen': 'n55mh'}]
+    allu = [u for n in (1, 2, 3, 4, 5) for b in bullets(sec, n) for u in urls(b)]
+    sl = src_links(allu, skip=('age-restriction-bylaws', 'changes-to-legislation', '2023HOUS0038'))
+    if sl: bl += [T('Sources for this section'), {**LK(sl), 'pos': 'end', 'gen': 'n55mh'}, {**LK([('BC 55+ strata rules', f'/{HUB}.html'), ('How to buy a mobile home in BC', '/how-to-buy-a-mobile-home-in-bc-guide.html')]), 'pos': 'end', 'gen': 'n55mh'}]
+    j['blocks'] += bl
+    faq = []
+    for b in bullets(sec, 4):
+        m = re.match(r'\*\*Q:\s*(.*?)\*\*\s*(.*)', b)
+        if m and clean(m.group(2)) and not SHARED_Q.search(m.group(1)): faq.append({'gen': 'n55mh', 'q': m.group(1).strip(), 'a': clean(m.group(2))})
+    j['faq'] = [f for f in j.get('faq', []) if f.get('gen') != 'n55mh'] + faq
+    j.setdefault('status', 'generated'); save(slug, j); print('wrote park section', slug, len(bl), 'blocks', len(faq), 'faq')
+
+
 def link_back(written):
     byc = {}
     for slug, name, city, comm in written:
@@ -271,5 +325,8 @@ def link_back(written):
 if __name__ == '__main__':
     written = []
     for p in sorted(glob.glob(f'{NOTES}/*.md')): build_community(p, written)
+    for p in sorted(glob.glob(f'{NOTES}/*.md')):
+        k = os.path.basename(p).replace('-55-plus-homes-2026-11-01.md', '')
+        if k in PARK_PAGES: build_parks(p, k, written)
     build_hub(); build_mobile(); link_back(written)
     print(len(written), 'community 55+ pages')
