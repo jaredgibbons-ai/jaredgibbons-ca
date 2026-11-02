@@ -1250,16 +1250,16 @@
           "2.4"
         ],
         [
-          "Metrotown Station",
-          "Drive",
-          "5",
-          "2.2"
-        ],
-        [
           "Real Canadian Superstore, 4700 Kingsway",
           "Drive",
           "5",
           "2.3"
+        ],
+        [
+          "Metrotown Station",
+          "Drive",
+          "5",
+          "2.2"
         ]
       ],
       "t": "table"
@@ -1309,30 +1309,30 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: studentsuccess.gov.bc.ca",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "Source: studentsuccess.gov.bc.ca"
           }
         ],
         [
           {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt110.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt110.pdf",
+            "t": "Source: infomaps.translink.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1377,19 +1377,19 @@
       "q": "Can I rent out a Forest Glen strata home long-term?"
     },
     {
-      "q": "Is Forest Glen mostly houses or condos?",
       "a": "Both, with condos ahead: in September 2026 the row showed 64 condos and townhomes listed and 6 sold, against 18 detached listings and 1 detached sale — the attached stock on and off Kingsway outweighs the house streets in listings (SnapStats, September 2026)",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is Forest Glen mostly houses or condos?"
     },
     {
-      "q": "Which schools serve a Forest Glen address?",
       "a": "It depends on the address. SD41 schools in or beside the area include Clinton Elementary (K–7), 5858 Clinton St, École Inman Elementary (K–7), 3963 Brandon St, Nelson Elementary (K–7), 4850 Irmin St, and Burnaby South Secondary (8–12), 5455 Rumble St; catchments are address-based and must be checked in the SD41 locator.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which schools serve a Forest Glen address?"
     },
     {
-      "q": "How is transit in Forest Glen?",
       "a": "Strong for a house neighbourhood: Metrotown and Patterson Expo Line stations are at the west side, and route 110 runs on Bond and Nelson streets themselves, linking Metrotown Station to Sperling and Lougheed stations via Willingdon, Deer Lake Parkway, Winston and Government Road.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "How is transit in Forest Glen?"
     }
   ],
   "slug": "forest-glen-bs",

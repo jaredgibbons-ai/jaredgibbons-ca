@@ -1312,30 +1312,30 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: newwestcity.ca (1)",
-            "h": "https://www.newwestcity.ca/database/files/library/OUR_CITY_2041_Official_Community_Plan_New_Westminsters_Residential_Neighbourhoods_Map.pdf"
+            "h": "https://www.newwestcity.ca/database/files/library/OUR_CITY_2041_Official_Community_Plan_New_Westminsters_Residential_Neighbourhoods_Map.pdf",
+            "t": "Source: newwestcity.ca (1)"
           }
         ],
         [
           {
-            "t": "Source: newwestcity.ca (2)",
-            "h": "https://www.newwestcity.ca/database/files/library/NWRFP_20_23_Addendum_1.pdf"
+            "h": "https://www.newwestcity.ca/database/files/library/NWRFP_20_23_Addendum_1.pdf",
+            "t": "Source: newwestcity.ca (2)"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1353,6 +1353,11 @@
       "a": "At the New Westminster community level the condos & townhomes median was $560,000, $587/sqft, 95% sale-to-list and 27 days on market. SnapStats publishes no sub-area medians and no building-level figures.",
       "gen": "tn",
       "q": "What did the attached market do in September 2026?"
+    },
+    {
+      "a": "School District 40 catchments are address-based (elementary K–5, middle 6–8, secondary 9–12).",
+      "gen": "tn",
+      "q": "Which schools serve a Downtown address?"
     },
     {
       "a": "The waterfront is — the City's floodplain study puts the Downtown waterfront in Floodplain Zone 3, where many newer buildings sit above the Flood Construction Level while egress and the waterfront path sit below it. Confirm the building's compliance, strata insurance and deductible before subject removal.",
@@ -1375,19 +1380,14 @@
       "q": "Can I rent out my Brickstone Walk II townhouse?"
     },
     {
-      "a": "The building directory publishes \"Pets allowed\" for the complex (directory data — confirm on the Form B and registered bylaws, which govern numbers, size and type).",
-      "gen": "tn",
-      "q": "Are pets allowed at Brickstone Walk II?"
-    },
-    {
-      "q": "Is Downtown the same as the Quay?",
       "a": "No — on the board taxonomy they are separate sub-areas: Downtown is the Columbia Street core above the waterfront, and the Quay is the Quayside Drive waterfront pocket (researched separately). The City's OCP neighbourhoods map, by contrast, names one area \"Downtown (including Quayside)\".",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is Downtown the same as the Quay?"
     },
     {
-      "q": "Is Downtown in the Fraser River floodplain?",
       "a": "The waterfront is — the City's floodplain study puts the Downtown waterfront in Floodplain Zone 3, where many newer buildings have floor space above the Flood Construction Level but egress and the waterfront path sit below it; confirm the specific building's compliance and insurance.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is Downtown in the Fraser River floodplain?"
     }
   ],
   "slug": "downtown-nw",

@@ -1154,16 +1154,16 @@
           "1.1"
         ],
         [
-          "Waterfront Station",
-          "Drive",
-          "2",
-          "1.2"
-        ],
-        [
           "Burrard Station",
           "Drive",
           "2",
           "1.0"
+        ],
+        [
+          "Waterfront Station",
+          "Drive",
+          "2",
+          "1.2"
         ]
       ],
       "t": "table"
@@ -1231,36 +1231,36 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: vancouver.ca (1)",
-            "h": "https://vancouver.ca/news-calendar/areas-of-the-city.aspx"
+            "h": "https://vancouver.ca/news-calendar/areas-of-the-city.aspx",
+            "t": "Source: vancouver.ca (1)"
           }
         ],
         [
           {
-            "t": "Source: bylaws.vancouver.ca",
-            "h": "https://bylaws.vancouver.ca/ODP/odp-coal-harbour.pdf"
+            "h": "https://bylaws.vancouver.ca/ODP/odp-coal-harbour.pdf",
+            "t": "Source: bylaws.vancouver.ca"
           }
         ],
         [
           {
-            "t": "Source: vancouver.ca (3)",
-            "h": "https://Vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx"
+            "h": "https://Vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx",
+            "t": "Source: vancouver.ca (3)"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1305,19 +1305,19 @@
       "q": "Can I rent out a Coal Harbour townhouse-form unit long-term?"
     },
     {
-      "q": "Is Coal Harbour an official City of Vancouver local area?",
       "a": "No — Downtown is the official local area, one of the City's 22 distinct areas, and Coal Harbour is a neighbourhood inside it with its own Official Development Plan; \"Coal Harbour\" is the Paragon sub-area name.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is Coal Harbour an official City of Vancouver local area?"
     },
     {
-      "q": "What plan governs Coal Harbour?",
       "a": "The Coal Harbour Official Development Plan (By-law 6754), covering the continuous waterfront walkway, public open space connections from the downtown core to the shoreline, and street-end views to the water and mountains at Burrard, Thurlow, Bute, Jervis, Broughton, Nicola and Cardero Streets.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What plan governs Coal Harbour?"
     },
     {
-      "q": "Which recreation facilities are in Coal Harbour?",
       "a": "Coal Harbour Community Centre, 480 Broughton Street, with multi-purpose rooms and a gymnasium, plus Harbour Green Park on the waterfront and Devonian Harbour Park, 1929 West Georgia Street, at the Stanley Park gateway.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which recreation facilities are in Coal Harbour?"
     }
   ],
   "slug": "coal-harbour",

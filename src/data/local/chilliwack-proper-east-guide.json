@@ -1072,24 +1072,24 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: chilliwack.com",
-            "h": "https://chilliwack.com/ocp"
+            "h": "https://chilliwack.com/ocp",
+            "t": "Source: chilliwack.com"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1129,19 +1129,19 @@
       "q": "Can a Proper East house add a suite and a coach house?"
     },
     {
-      "q": "Is there an official median price for Chilliwack Proper East?",
       "a": "No figure is stated in this file: Chilliwack is a CADREB market that the SnapStats extraction used by this program does not cover, and CADREB publishes no area statistics in the sources used, so no median, sales ratio or inventory figure for this sub-area exists in these sources (as of September 2026, Source: SnapStats FVR/GVR September 2026 report, coverage limit).",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is there an official median price for Chilliwack Proper East?"
     },
     {
-      "q": "Which plan covers Chilliwack Proper East?",
       "a": "The Chilliwack Proper and Fairfield Island Neighbourhoods Plan, which guides residential infill development and is now Schedule B2 of Official Community Plan Bylaw 2025, No. 5500; it was first added to the 2040 OCP as Schedule D through Bylaw 2018, No. 4533.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which plan covers Chilliwack Proper East?"
     },
     {
-      "q": "Which schools are near Chilliwack Proper East?",
       "a": "Bernard Elementary (45465 Bernard Ave), Robertson Elementary (46106 Southlands Cres) and Strathcona Elementary (46375 Strathcona Rd), all Kindergarten to Grade 5, plus Chilliwack Middle School (46354 Yale Rd, Grades 6 to 8) and Chilliwack Secondary (46363 Yale Rd, Grades 9 to 12) — names and addresses confirmed against the BC Ministry K-12 file; catchments are set by address, so confirm a specific address with the SD33 School Locator (~/workspace/area-research-2026-11/education/work/bc_k12_schools.csv, read 2026-11-01).",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which schools are near Chilliwack Proper East?"
     }
   ],
   "slug": "chilliwack-proper-east-guide",

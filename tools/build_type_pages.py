@@ -17,7 +17,7 @@ import build_snapstats_layers as L
 import build_community_pages as C
 
 ROOT = L.ROOT
-MIN_AVG = 5
+MIN_AVG = 3   # build and keep at a 3-month average of 3+ listings (Jared, 2026-11-02: communities just under 5 get a page). Under 3 for three windows in a row = fold candidate (listed, never removed without Jared)
 KINDS = {
     'detached': dict(suffix='houses-for-sale', noun='houses', title='Houses for Sale', h1='Houses for Sale', cityrole='houses', cross='condo_townhome', short='Houses'),
     'condo_townhome': dict(suffix='condos-townhomes-for-sale', noun='condos and townhomes', title='Condos & Townhomes for Sale', h1='Condos & Townhomes for Sale', cityrole='condos', cross='detached', short='Condos and townhomes'),
@@ -142,6 +142,17 @@ def main():
         j['blocks'] += [{'t': 'h', 'level': 2, 'text': f'{disp} by home type', 'gen': 'typepage', 'pos': 'end'},
                         {'t': 'list', 'items': [[{'t': f'{disp} {KINDS[t]["noun"]} for sale', 'h': f'/{slug}.html'}] for t, slug, _ in sorted(lst, key=lambda x: x[0] != 'detached')], 'gen': 'typepage', 'pos': 'end'}]
         json.dump(j, open(pf, 'w', encoding='utf-8'), indent=2, ensure_ascii=False); open(pf, 'a').write('\n')
+    fold = []
+    if len(keys) >= 5:
+        for (ak, nm, t), (slug, psl, avg) in plan.items():
+            D = dict(L.series(months, ak, t, nm))
+            w = [sum((D.get(m) or {}).get('inventory') or 0 for m in keys[i - 3:i]) / 3 for i in (len(keys) - 2, len(keys) - 1, len(keys))]
+            if all(x < MIN_AVG for x in w): fold.append((slug, nm, t, *[round(x, 1) for x in w]))
+    os.makedirs(os.path.join(ROOT, 'docs/review'), exist_ok=True)
+    with open(os.path.join(ROOT, 'docs/review/type-pages-fold-candidates.csv'), 'w', encoding='utf-8') as fh:
+        fh.write('slug,community,type,avg_window_1,avg_window_2,avg_window_3\n')
+        for r in sorted(fold): fh.write(','.join(str(x) for x in r) + '\n')
+    print('fold candidates (3-month average under', MIN_AVG, 'in each of the last 3 windows):', len(fold))
     print('type pages written:', len(made), '| houses', sum(1 for k in plan if k[2] == 'detached'), '| condos+townhomes', sum(1 for k in plan if k[2] == 'condo_townhome'), '| skipped', skipped)
 
 

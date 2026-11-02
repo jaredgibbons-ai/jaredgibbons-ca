@@ -418,3 +418,9 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 - **Uniqueness:** 237 of 429 new pages under 0.70 (was 235 of 428; one new page and a little less text after the scrub).
 - **Monthly order (full):** `parse_snapstats.py <dir>` → `build_snapstats_layers`, `build_community_pages`, `build_snapstats_layers`, `build_type_pages`, `build_condo_pages`, `build_brentwood`, `build_gap_pages`, `build_poco_55plus`, `link_communities`, `build_muse_faq`, `build_sold_layer`, `build_55plus_notes`, `build_typenotes`, `build_acreages`, `build_mobilehomes`, `build_nearby`, `build_mls55` (no argument), `build_muse_faq`, **`scrub_research_wording`**, `build_sold_layer`, then `npm run build`, `link_pages`, build, `assign_reviews`, build, `uniqueness.py --write-gate`, build, `npm test`. Do not run `build_typenotes` again after `build_acreages` (it strips the acreage, mobile-home and nearby sections).
 - **Not updated:** the board HPI market pages (`src/data/market/2026-09.json`) stay on September; October HPI needs the board packages.
+
+## D-82 — Type pages: build and keep at a 3-month average of 3+ listings (Jared, 2026-11-02 12:26)
+- **Jared's instruction:** keep the pages that dipped just under 5 listings, and add back the communities just under 5.
+- **Rule (`tools/build_type_pages.py`, `MIN_AVG = 3`):** a house or condo-and-townhome page is built and kept while the community's 3-month average listings is 3 or more. A page already built is always kept and refreshed. A page whose average stays under 3 in each of the last three windows is a **fold candidate**: it is listed in `docs/review/type-pages-fold-candidates.csv` and nothing is removed or redirected without Jared's approval (today: 0 candidates).
+- **Effect:** 22 more type pages (204 to 226; 128 houses, 98 condos and townhomes). 1,508 pages build. Of the 22, about 10 reach 0.70 on uniqueness; 249 of 451 new pages are under 0.70 (was 237 of 429).
+- **Tests:** 48 pass.

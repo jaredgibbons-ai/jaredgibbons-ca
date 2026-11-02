@@ -505,6 +505,11 @@
       "items": [
         [
           {
+            "t": "Parcel character — and its limit: RS3 minimum interior lot 540 m²; RS5 minimum interior lot 420 m²; RS6 is the Compact Lot Residential Zone used in newer subdivisions with smaller compact lots (no RS6 minimum figure is given — not confirmed beyond \"compact\")."
+          }
+        ],
+        [
+          {
             "t": "Serviced vs unserviced ground: Do not assume an acreage parcel carries the same services as a McMillan subdivision lot."
           }
         ]
@@ -524,7 +529,7 @@
       "items": [
         [
           {
-            "t": "\"Abbotsford East\" is the FVREB sub-area name; it is not a single City of Abbotsford neighbourhood name — the City plans the east side through named neighbourhoods and plan areas including McMillan, Old Clayburn, East Townline, Whatcom and McKee, and the mountainside part is planned separately through the McKee Neighbourhood Plan (Bylaw 3400-2023), Schedule E of the Official Community Plan. Street-level board boundary: unconfirmed — FVREB publishes no street-level boundary in public text and no municipal boundary was substituted."
+            "t": "\"Abbotsford East\" is the FVREB sub-area name; it is not a single City of Abbotsford neighbourhood name — the City plans the east side through named neighbourhoods and plan areas including McMillan, Old Clayburn, East Townline, Whatcom and McKee, and the mountainside part is planned separately through the McKee Neighbourhood Plan (Bylaw 3400-2023), Schedule E of the Official Community Plan. Street-level board boundary: Not verified — FVREB publishes no street-level boundary in public text and no municipal boundary was substituted."
           }
         ],
         [
@@ -578,6 +583,11 @@
         [
           {
             "t": "Clayburn Village acreage carries heritage rules, not just zoning: The village at the west foot of Sumas Mountain is protected through a Heritage Conservation Area in the OCP — exterior changes need the heritage check as well as a building permit."
+          }
+        ],
+        [
+          {
+            "t": "The SSMUH-number assertion itself is handled as a conflict in, not repeated as fact."
           }
         ]
       ],
@@ -729,7 +739,7 @@
         ],
         [
           {
-            "t": "RV parks / campgrounds: no RV park or campground in this sub-area was established by any source as year-round manufactured-home tenure, so none is documented as a manufactured-home park here."
+            "t": "RV parks / campgrounds: no RV park or campground in this sub-area was established by any source as year-round manufactured-home tenure, so none is documented as a manufactured-home park here. Not confirmed as mobile stock."
           }
         ]
       ],
@@ -748,7 +758,7 @@
       "items": [
         [
           {
-            "t": "Roads and highway access: Highway 1 runs along the south side with access at Whatcom Road; main local roads include Whatcom Road, McKee Road, Old Yale Road, Old Clayburn Road, Bateman Road and Sumas Way; there is no SkyTrain or West Coast Express station in Abbotsford."
+            "t": "Roads and highway access: Highway 1 runs along the south side with access at Whatcom Road; main local roads include Whatcom Road, McKee Road, Old Yale Road, Old Clayburn Road, Bateman Road and Sumas Way; there is no SkyTrain or West Coast Express station in Abbotsford. Published official drive-time figures: Not verified."
           }
         ],
         [
@@ -763,7 +773,22 @@
         ],
         [
           {
-            "t": "Floodplain and ALR: the low land at the south and southeast edge, toward Sumas Prairie, is floodplain land by the Sumas River; City flood notices name properties south of the Sumas River and along Whatcom Road in evacuation order and alert areas, and the OCP includes a Drainage and Flood Control map (Map 12) and an Agricultural Land Reserve map (Map 16)."
+            "t": "Floodplain and ALR: the low land at the south and southeast edge, toward Sumas Prairie, is floodplain land by the Sumas River; City flood notices name properties south of the Sumas River and along Whatcom Road in evacuation order and alert areas, and the OCP includes a Drainage and Flood Control map (Map 12) and an Agricultural Land Reserve map (Map 16). ALR status for any specific parcel is a parcel-by-parcel check: Not verified for any individual parcel."
+          }
+        ],
+        [
+          {
+            "t": "Catchments for every other Abbotsford East address: Not verified — run the exact address."
+          }
+        ],
+        [
+          {
+            "t": "Abbotsford community medians (community level only; sub-area medians not verified): Detached $949,000; Condos & Townhomes $497,500."
+          }
+        ],
+        [
+          {
+            "t": "Census profile for Abbotsford East: Not verified — no Statistics Canada figure is stated and none was substituted."
           }
         ]
       ],
@@ -1141,30 +1166,30 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: sandyhill.abbyschools.ca",
-            "h": "https://sandyhill.abbyschools.ca/"
+            "h": "https://sandyhill.abbyschools.ca/",
+            "t": "Source: sandyhill.abbyschools.ca"
           }
         ],
         [
           {
-            "t": "Source: laws.abbotsford.ca",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400140"
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400140",
+            "t": "Source: laws.abbotsford.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1199,6 +1224,11 @@
       "q": "Can I actually buy an acreage in Abbotsford East?"
     },
     {
+      "a": "For a Whatcom-side parcel, confirm water/sewer connection status with the City parcel by parcel: Not confirmed for any single parcel until the City record is read.",
+      "gen": "acre",
+      "q": "Is an east-side acreage serviced, or on well and septic?"
+    },
+    {
       "a": "On urban ground: one secondary suite in all single detached dwellings (s.140.3.8), subject to the 400 m² / 12.0 m / Collector-or-Local / no-cul-de-sac-bulb criteria; suite under 50% of the principal dwelling; coach/garden suite 15% of lot area to 100 m² maximum. On ALR ground the ALC caps replace those: principal 500 m², suite inside the principal only, additional residence 90 m² / 186 m² by the 40 ha line.",
       "gen": "acre",
       "q": "What extra units can go on an acreage parcel?"
@@ -1209,14 +1239,14 @@
       "q": "What taxes do I pay on the acreage itself?"
     },
     {
-      "a": "Property taxes (due July 2, 2026; 5% penalty July 3, second 5% September 16, 2026), plus insurance and any covenant/servicing obligations on title. No strata fee on a fee-simple parcel.",
-      "gen": "acre",
-      "q": "What will it cost to hold the acreage while I plan?"
-    },
-    {
       "a": "Abbotsford's verified parks are in Abbotsford West, Central Abbotsford and Poplar.",
       "gen": "mh",
       "q": "Is there a mobile home park in Abbotsford East?"
+    },
+    {
+      "a": "You would own the land; the open diligence question is the home's Registry position — still registered as a chattel, or de-registered and affixed to the land — which is not confirmed until the Registry and title records are read.",
+      "gen": "mh",
+      "q": "I saw a manufactured home for sale on an east-side lot — what am I buying?"
     },
     {
       "a": "No. Pad rent exists only in a pad tenancy under the MHPTA. An own-lot owner pays property taxes (due July 2, 2026; 5% July 3; second 5% September 16, 2026) and their own servicing costs instead.",
@@ -1229,19 +1259,14 @@
       "q": "If I cross-shop Paradise Park in Abbotsford West, how much can pad rent rise?"
     },
     {
-      "a": "Under MHPTA s.42: permits/approvals first, a 12-month notice, and $20,000 compensation on or before the effective date, with the 15-day dispute window and the additional compensation routes the provincial pages describe. That protection attaches to a pad tenancy — there is no east-side park to attach it to.",
-      "gen": "mh",
-      "q": "What protects a park buyer if a park closes?"
-    },
-    {
-      "q": "Which public schools are inside Abbotsford East?",
       "a": "SD34 schools inside the area include Sandy Hill Elementary, Mountain Elementary, Irene Kelleher Totí:ltawtxw Elementary, Auguston Traditional Elementary, Clayburn Middle, Robert Bateman Secondary and Yale Secondary; use the SD34 School Locator with a home address to confirm the catchment school for that address. Locator runs for two sample addresses confirm the pattern: 36367 Stephen Leacock Drive returns Auguston Traditional Elementary → Clayburn Middle → Robert Bateman Secondary, and 3836 Old Clayburn Road returns Sandy Hill Elementary → Clayburn Middle → Robert Bateman Secondary (SD34 School Locator, mybaragar.com, run 2026-11-01).",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which public schools are inside Abbotsford East?"
     },
     {
-      "q": "Can a house have a secondary suite?",
       "a": "Zoning Bylaw s.140.3.8 permits one secondary suite in all single detached dwellings; City council reports applying the bylaw state suite criteria including a lot of at least 400 m² with at least 12.0 m frontage on a Collector or Local road, not on a cul-de-sac bulb.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Can a house have a secondary suite?"
     }
   ],
   "slug": "abbotsford-east-guide",

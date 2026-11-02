@@ -1414,7 +1414,12 @@
       "items": [
         [
           {
-            "t": "Tenure: freehold acreage on the evidence: An exact freehold/strata split: unconfirmed."
+            "t": "Tenure: freehold acreage on the evidence: An exact freehold/strata split: Not verified."
+          }
+        ],
+        [
+          {
+            "t": "Parcel sizes / zones —: Any Steelhead parcel's actual zone is per-parcel: Not verified until the City record for that parcel is read."
           }
         ],
         [
@@ -1424,7 +1429,7 @@
         ],
         [
           {
-            "t": "History that shapes the ground: hydroelectric development shaped the Stave valley from 1909 — construction of the Stave Falls Dam and Powerhouse began in 1909 and was completed by January 1, 1912. A Steelhead-specific community history on an official source: unconfirmed."
+            "t": "History that shapes the ground: hydroelectric development shaped the Stave valley from 1909 — construction of the Stave Falls Dam and Powerhouse began in 1909 and was completed by January 1, 1912. A Steelhead-specific community history on an official source: Not verified."
           }
         ]
       ],
@@ -1443,12 +1448,7 @@
       "items": [
         [
           {
-            "t": "Boundaries: no official boundary for the sub-area was found — unconfirmed as an official boundary."
-          }
-        ],
-        [
-          {
-            "t": "No bus route into Steelhead was confirmed on a transit source: unconfirmed. The city's rail link is the West Coast Express at Mission City Station, with weekday trains between Mission City and Waterfront."
+            "t": "No bus route into Steelhead was confirmed on a transit source: Not verified. The city's rail link is the West Coast Express at Mission City Station, with weekday trains between Mission City and Waterfront."
           }
         ],
         [
@@ -1661,7 +1661,12 @@
       "items": [
         [
           {
-            "t": "Nearby areas: Stave Falls to the northeast (a separate sub-area), Silverdale to the south and southwest, Mission West and the urban Mission core to the southeast, and Hayward Lake / Ruskin across the Stave River side to the south. Access runs from Lougheed Highway (Highway 7) north through Silverdale Avenue / Stave Lake Street and Steelhead Road."
+            "t": "Nearby areas: Stave Falls to the northeast (a separate sub-area), Silverdale to the south and southwest, Mission West and the urban Mission core to the southeast, and Hayward Lake / Ruskin across the Stave River side to the south. Access runs from Lougheed Highway (Highway 7) north through Silverdale Avenue / Stave Lake Street and Steelhead Road. Published commute times are not verified — a listing-text figure of about 15 minutes to downtown Mission is listing copy, not an official source."
+          }
+        ],
+        [
+          {
+            "t": "A zero row says nothing about values or demand. Per-sub-area medians: Not verified."
           }
         ]
       ],
@@ -1956,36 +1961,36 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: mission.ca (1)",
-            "h": "https://www.mission.ca/business-building/building-development/land-development/secondary-suites-program"
+            "h": "https://www.mission.ca/business-building/building-development/land-development/secondary-suites-program",
+            "t": "Source: mission.ca (1)"
           }
         ],
         [
           {
-            "t": "Source: mission.ca (2)",
-            "h": "https://www.mission.ca/media/file/information-package-rsd25-4"
+            "h": "https://www.mission.ca/media/file/information-package-rsd25-4",
+            "t": "Source: mission.ca (2)"
           }
         ],
         [
           {
-            "t": "Source: bchydro.com",
-            "h": "https://www.bchydro.com/community/recreation_areas/hayward_lake.html"
+            "h": "https://www.bchydro.com/community/recreation_areas/hayward_lake.html",
+            "t": "Source: bchydro.com"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -2060,19 +2065,19 @@
       "q": "How much can pad rent go up, if I buy in a Mission park instead?"
     },
     {
-      "q": "What and where is Steelhead?",
       "a": "Steelhead is a rural acreage community in the City of Mission, on the Stave Lake / Steelhead Road side west of the urban core — SnapStats lists it as an FVREB sub-area under Mission, and the live page describes larger rural lots and forested settings with access toward Stave Falls and Hayward Lake, distinct from the Stave Falls waterfront market (SnapStats, September 2026)",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What and where is Steelhead?"
     },
     {
-      "q": "Can a Steelhead acreage have a suite or a second dwelling?",
       "a": "An in-house secondary suite is permitted inside a single family home if it is registered with the City (new suites need a building permit; a $63 annual suite fee plus utility fees applies), but a detached coach home or garden cottage is a secondary detached dwelling — on rural lots that generally requires the secondary-dwelling (\"s\") variant of the parcel's zone, which City material shows owners obtaining by rezoning (e.g., RU16 to RU16s).",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Can a Steelhead acreage have a suite or a second dwelling?"
     },
     {
-      "q": "What recreation is Steelhead known for?",
       "a": "BC Hydro's Hayward Lake recreation area — a hydroelectric reservoir and popular recreation area near Mission, with the Stave Lake boat launch and Ruskin Dam recreation area nearby — plus the Stave Falls Powerhouse visitor facilities; the City of Mission restricts parking on the roads leading to Hayward Lake at busy times.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What recreation is Steelhead known for?"
     }
   ],
   "slug": "steelhead",

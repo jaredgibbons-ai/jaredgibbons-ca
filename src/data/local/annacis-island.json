@@ -622,36 +622,36 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com",
-            "h": "https://hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com/8917/7677/0068/OCP_2024_web.pdf"
+            "h": "https://hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com/8917/7677/0068/OCP_2024_web.pdf",
+            "t": "Source: hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com"
           }
         ],
         [
           {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt340.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt340.pdf",
+            "t": "Source: infomaps.translink.ca"
           }
         ],
         [
           {
-            "t": "Source: portvancouver.com",
-            "h": "https://www.portvancouver.com/project/annacis-auto-terminal-optimization-project"
+            "h": "https://www.portvancouver.com/project/annacis-auto-terminal-optimization-project",
+            "t": "Source: portvancouver.com"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -696,19 +696,19 @@
       "q": "I saw a strata lot for sale in the business park — is that a bare-land strata house lot?"
     },
     {
-      "q": "Is Annacis Island residential?",
       "a": "No. No residential housing mix was confirmed on the island; the Delta Official Community Plan treats the island as industrial land, home to the Annacis Business Park, the Port of Vancouver auto terminal and Metro Vancouver's wastewater treatment plant.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is Annacis Island residential?"
     },
     {
-      "q": "How is the island reached by road?",
       "a": "By Highway 91 and the Alex Fraser Bridge via the Cliveden Interchange, with park access via Chester Road / Audley Boulevard and Cliveden Avenue, as shown on the TransLink 340 route description.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "How is the island reached by road?"
     },
     {
-      "q": "What is the Annacis Auto Terminal?",
       "a": "It is the Port of Vancouver's vehicle terminal at 820 Dock Road on Annacis Island, operated by Wallenius Wilhelmsen; the port authority's optimization project consolidated the Annacis and Richmond auto terminals there, lifting capacity to 480,000 vehicles annually.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What is the Annacis Auto Terminal?"
     }
   ],
   "slug": "annacis-island",

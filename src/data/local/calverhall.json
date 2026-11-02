@@ -1018,16 +1018,16 @@
           "0.8"
         ],
         [
-          "Shoppers Drug Mart, 1306 Lonsdale Ave",
-          "Drive",
-          "4",
-          "2.0"
-        ],
-        [
           "North Vancouver City Library",
           "Drive",
           "4",
           "2.1"
+        ],
+        [
+          "Shoppers Drug Mart, 1306 Lonsdale Ave",
+          "Drive",
+          "4",
+          "2.0"
         ],
         [
           "Lonsdale Quay",
@@ -1126,36 +1126,36 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: cnv.org (1)",
-            "h": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Living-City/Integrated-Stormwater-Management-Plan.pdf"
+            "h": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Living-City/Integrated-Stormwater-Management-Plan.pdf",
+            "t": "Source: cnv.org (1)"
           }
         ],
         [
           {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt232.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt232.pdf",
+            "t": "Source: infomaps.translink.ca"
           }
         ],
         [
           {
-            "t": "Source: cnv.org (3)",
-            "h": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Housing/Zoning-Bylaw-1995-No-6700-Amendment-Bylaw-2025-No-9137-City-Initiated-Amendment-Related-to-Provincia.pdf"
+            "h": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Housing/Zoning-Bylaw-1995-No-6700-Amendment-Bylaw-2025-No-9137-City-Initiated-Amendment-Related-to-Provincia.pdf",
+            "t": "Source: cnv.org (3)"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1200,19 +1200,19 @@
       "q": "Can I buy the suite in a Calverhall house separately?"
     },
     {
-      "q": "Is Calverhall in the City or the District of North Vancouver?",
       "a": "The City of North Vancouver. The City's Integrated Stormwater Management Plan names \"the Calverhall – Cloverly neighbourhoods\" as City neighbourhoods, and City zoning (Bylaw No. 6700) and City tax rates apply — not the District's.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is Calverhall in the City or the District of North Vancouver?"
     },
     {
-      "q": "What buses serve Calverhall?",
       "a": "Route 232 runs via Brooksbank Avenue and Keith Road between Grouse Mountain and Phibbs Exchange, and route 255 runs via Grand Boulevard East and Keith Road toward Capilano University.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What buses serve Calverhall?"
     },
     {
-      "q": "How many units can a Calverhall house lot hold?",
       "a": "Under the City's GO Zone (adopted December 8, 2025): up to 3 units on a lot of 280 m² or less, up to 4 units on a larger lot in Low Rise Neighbourhood 1, and up to 6 units in Low Rise Neighbourhood 2 or Residential Level 4 designations; a secondary suite may also combine with a coach house where the lot qualifies.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "How many units can a Calverhall house lot hold?"
     }
   ],
   "slug": "calverhall",

@@ -820,6 +820,11 @@
           {
             "t": "The one City-named downtown location is not land product: It is not an acreage development, a subdivision or a lot offering on any source checked."
           }
+        ],
+        [
+          {
+            "t": "Serviced vs unserviced ground: Parcel-level servicing for any specific lot: Not confirmed until the City record for that lot is read."
+          }
         ]
       ],
       "pos": "end",
@@ -837,12 +842,17 @@
       "items": [
         [
           {
-            "t": "Main roads: Lougheed Highway (Highway 7) runs along the south side; Dewdney Trunk Road runs east–west through downtown and the residential area to the east; 224 Street and 226 Street are the main north–south streets through the downtown core; and the Haney Bypass links Lougheed Highway to Port Haney at the sub-area's southwest corner. Commute times in minutes: unconfirmed."
+            "t": "Main roads: Lougheed Highway (Highway 7) runs along the south side; Dewdney Trunk Road runs east–west through downtown and the residential area to the east; 224 Street and 226 Street are the main north–south streets through the downtown core; and the Haney Bypass links Lougheed Highway to Port Haney at the sub-area's southwest corner. Commute times in minutes: Not verified."
           }
         ],
         [
           {
             "t": "Transit: Haney Place Exchange is in this sub-area; routes on TransLink's Haney Place route diagram include the R3, 701, 733, 741, 743, 744, 745, 746, 748, 749 and 791; the R3 Lougheed Hwy RapidBus runs from Coquitlam Central Station to Haney Place. Port Haney Station, 22300 River Road, at the sub-area's southwest corner, runs weekday West Coast Express trains between Waterfront (downtown Vancouver) and Mission City. TransLink's Langley–Haney Place BRT is in detailed planning — 22 km between Willowbrook and Haney Place with peak service every 10 minutes; designs, costs and timelines are not yet determined."
+          }
+        ],
+        [
+          {
+            "t": "Schools are address-based in SD42; SD42 has no middle tier (elementary K–7, secondary 8–12, with Thomas Haney Secondary listed at Grades 7–12 on the provincial school list). Schools physically inside the sub-area (Ministry-listed): Golden Ears Elementary (K–7), 23124 118 Avenue; Harry Hooge Elementary (K–7), 12280 230 Street; Thomas Haney Secondary, 23000 116 Avenue; ci:tməxw Environmental Community (K–8), 23125 116 Avenue; District 42 Alternative Secondary (9–12), 23125 116 Avenue. Catchments for any other address: Not verified until that address is run."
           }
         ]
       ],
@@ -1418,42 +1428,42 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: studentsuccess.gov.bc.ca",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/042"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/042",
+            "t": "Source: studentsuccess.gov.bc.ca"
           }
         ],
         [
           {
-            "t": "Source: sd42.ca",
-            "h": "https://www.sd42.ca/school-locator/"
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "Source: sd42.ca"
           }
         ],
         [
           {
-            "t": "Source: mapleridge.ca",
-            "h": "https://www.mapleridge.ca/media/file/floodplain-construction-0"
+            "h": "https://www.mapleridge.ca/media/file/floodplain-construction-0",
+            "t": "Source: mapleridge.ca"
           }
         ],
         [
           {
-            "t": "Source: mapleridge.ca",
-            "h": "https://mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/area-neighbourhood-plans/town"
+            "h": "https://mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/area-neighbourhood-plans/town",
+            "t": "Source: mapleridge.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1528,24 +1538,24 @@
       "q": "Can I have a dog, or finance the purchase, in Alouette?"
     },
     {
-      "a": "No — Legion Gardens is a life-lease building of built suites at 12127 224 St, owned and operated by Royal Canadian Legion Branch 88.",
+      "a": "No — Legion Gardens is a life-lease building of built suites at 12127 224 St, owned and operated by Royal Canadian Legion Branch 88. You purchase a leasehold interest for life under the Legion's own terms; there is no pad, no manufactured home and no MHPTA tenancy, and the buy-back/resale terms are in the Legion's documents — not confirmed from public sources.",
       "gen": "mh",
       "q": "Is Legion Gardens a park I can buy a mobile home in?"
     },
     {
-      "q": "Which schools are in East Central?",
       "a": "Golden Ears Elementary and Harry Hooge Elementary (K–7), Thomas Haney Secondary (7–12), ci:tməxw Environmental Community (K–8) and District 42 Alternative Secondary are physically in the area; catchments are address-specific — for the downtown sample address used (11897 227 Street), the SD42 locator gives Eric Langton Elementary and Thomas Haney Secondary.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which schools are in East Central?"
     },
     {
-      "q": "Is flood risk a factor in East Central?",
       "a": "Along the Fraser River at the south edge (River Road / Port Haney), yes: the flood construction level is 6.7 m geodetic, no habitable floor space may sit below it on affected lots, and floodplain status is registered by covenant on title.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is flood risk a factor in East Central?"
     },
     {
-      "q": "What changed in the Town Centre plan?",
       "a": "The Town Centre Area Plan update expanded the plan boundaries to include River Bend, consolidated the land use designations, and added a Town Centre Core designation for higher densities around the Haney Transit Exchange and Port Haney Station.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What changed in the Town Centre plan?"
     }
   ],
   "slug": "east-central",

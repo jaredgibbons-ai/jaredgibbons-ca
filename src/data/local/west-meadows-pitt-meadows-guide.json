@@ -884,12 +884,12 @@
         ],
         [
           {
-            "t": "Strata position: predominantly freehold, and no strata stock at all in the data: The Fairways (Pitt Meadows) is verified condo stock on North Meadows ground in the city assembly, with its age position unconfirmed — it is never called 55+ and is not West Meadows stock."
+            "t": "Strata position: predominantly freehold, and no strata stock at all in the data: The Fairways (Pitt Meadows) is verified condo stock on North Meadows ground in the city assembly, with its age position not confirmed — it is never called 55+ and is not West Meadows stock."
           }
         ],
         [
           {
-            "t": "Serviced vs unserviced: No parcel is described as serviced, on a well, or on septic from a summary."
+            "t": "Serviced vs unserviced: septic and well servicing details for individual farm parcels: Not verified — wells are checkable in the provincial Groundwater Wells and Aquifers (GWELLS) application, and a home not connected to a community sewer must have an onsite system complying with the Sewerage System Regulation. No parcel is described as serviced, on a well, or on septic from a summary."
           }
         ]
       ],
@@ -918,7 +918,7 @@
         ],
         [
           {
-            "t": "Roads and commute: Airport Way, Ford Road, Fraser Way and Harris Road serve the area; Lougheed Highway (Highway 7) runs along the north edge, and Golden Ears Way / Golden Ears Bridge connects north toward Maple Ridge and south to Langley and Surrey. Commute times in minutes: unconfirmed."
+            "t": "Roads and commute: Airport Way, Ford Road, Fraser Way and Harris Road serve the area; Lougheed Highway (Highway 7) runs along the north edge, and Golden Ears Way / Golden Ears Bridge connects north toward Maple Ridge and south to Langley and Surrey. Commute times in minutes: Not verified."
           }
         ],
         [
@@ -1300,30 +1300,30 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: pittmeadows.ca (1)",
-            "h": "https://www.pittmeadows.ca/sites/default/files/2022-03/pitt-meadows_business-plan_2020-web-full02.pdf"
+            "h": "https://www.pittmeadows.ca/sites/default/files/2022-03/pitt-meadows_business-plan_2020-web-full02.pdf",
+            "t": "Source: pittmeadows.ca (1)"
           }
         ],
         [
           {
-            "t": "Source: pittmeadows.ca (2)",
-            "h": "https://www.pittmeadows.ca/node/163"
+            "h": "https://www.pittmeadows.ca/node/163",
+            "t": "Source: pittmeadows.ca (2)"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1368,6 +1368,11 @@
       "q": "Is the Ford Road co-op a way to buy a townhouse here cheaply?"
     },
     {
+      "a": "Not verified per parcel — check wells in the provincial GWELLS application and confirm any onsite sewerage system complies with the Sewerage System Regulation before offering.",
+      "gen": "acre",
+      "q": "Is a farm parcel serviced, on a well, or on septic?"
+    },
+    {
       "a": "A-1 homes must also sit 15.0 m from watercourses and ditches. Verify the specific parcel with the City.",
       "gen": "acre",
       "q": "Is West Meadows in a floodplain?"
@@ -1378,9 +1383,9 @@
       "q": "Can I run a farm stay or short-term rental on a farm parcel?"
     },
     {
-      "q": "Is West Meadows protected from flooding?",
       "a": "The City states the city is almost entirely protected by 60 km of dikes plus pump stations and flood boxes, and its 2020 Business Plan states over 95% of Pitt Meadows lies within the Fraser River and Pitt River floodplains; the Kennedy drainage area in this part of the city drains to the Alouette, Pitt and Fraser Rivers.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is West Meadows protected from flooding?"
     }
   ],
   "slug": "west-meadows-pitt-meadows-guide",

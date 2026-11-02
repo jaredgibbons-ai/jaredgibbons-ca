@@ -576,6 +576,11 @@
         ],
         [
           {
+            "t": "SD75's structure is elementary K–6, middle 7–9, secondary 10–12. Catchments: Not verified for any Mission West address — no catchment lookup is on record; the guide page's catchment assertions are guide-only claims."
+          }
+        ],
+        [
+          {
             "t": "Transit: TransLink's West Coast Express timetable (effective January 5, 2026) runs five weekday trains westbound from Mission City Station at 5:25, 5:55, 6:25, 6:55 and 7:25 a.m., arriving Waterfront 75 minutes later, and five eastbound trains from Waterfront at 3:50, 4:20, 4:50, 5:30 and 6:20 p.m.; no weekend or statutory-holiday service. Mission West is the far side of the city from Mission City Station; station-to-door times are not verified. Local bus service into specific Mission West streets was not confirmed on a route's own timetable document: Not verified."
           }
         ]
@@ -795,25 +800,6 @@
       "level": 3,
       "pos": "end",
       "t": "h",
-      "text": "The ground in Mission West"
-    },
-    {
-      "gen": "acre",
-      "items": [
-        [
-          {
-            "t": "What land actually trades here: fee-simple acreage and view ground: — rural-fringe parcels and estates on the City's western edge, Silverdale growth-area parcels inside a plan still in process, and Silvermere Lake shoreline ground."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "acre",
-      "level": 3,
-      "pos": "end",
-      "t": "h",
       "text": "Streets, schools and getting around Mission West"
     },
     {
@@ -827,11 +813,6 @@
         [
           {
             "t": "Mission West held only 13 board-classified listings across both splits and recorded 1 sale — one of Mission's thinnest sub-area shelves."
-          }
-        ],
-        [
-          {
-            "t": "The City's Rural Mission Strategy covers the City's rural communities — \"From Stave Falls, Steelhead and Silverdale to our other rural neighbourhoods\" — building on the new Official Community Plan."
           }
         ]
       ],
@@ -1218,30 +1199,30 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: mission.ca (1)",
-            "h": "https://www.mission.ca/council-government/plans-strategies"
+            "h": "https://www.mission.ca/council-government/plans-strategies",
+            "t": "Source: mission.ca (1)"
           }
         ],
         [
           {
-            "t": "Source: mission.ca (2)",
-            "h": "https://www.mission.ca/services/property-taxes"
+            "h": "https://www.mission.ca/services/property-taxes",
+            "t": "Source: mission.ca (2)"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1286,19 +1267,19 @@
       "q": "Are the Wilson Street park homes acreage?"
     },
     {
-      "q": "Is Mission West part of the City of Mission?",
       "a": "Yes — the Mission West board sub-area (Silverdale and the western rural fringe toward Stave Falls) sits inside the City of Mission, so City planning, zoning and tax rules apply; Silverdale is defined in the City's Official Community Plan as the 3,440-acre Silverdale Comprehensive Planning Area designated for urban growth.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is Mission West part of the City of Mission?"
     },
     {
-      "q": "What is the Silverdale Comprehensive Planning Area?",
       "a": "The City of Mission's 3,440-acre planning area in southwest Mission (sometimes known as Southwest Mission), designated in the Official Community Plan for urban growth and being planned through a Central Neighbourhood Plan and a Master Infrastructure Strategy.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What is the Silverdale Comprehensive Planning Area?"
     },
     {
-      "q": "When are property taxes due on a Mission West home?",
       "a": "To the City of Mission: for 2026, City of Mission property taxes were due Thursday, July 2, 2026, and a 10% penalty was added to any current balances outstanding, including unclaimed home owner grants, on July 3, 2026.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "When are property taxes due on a Mission West home?"
     }
   ],
   "slug": "mission-west",

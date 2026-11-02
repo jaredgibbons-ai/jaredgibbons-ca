@@ -1633,17 +1633,12 @@
         ],
         [
           {
-            "t": "ALR vs non-ALR split: most of the city's land falls within the Agricultural Land Reserve and agriculture is the dominant land use, with the Pitt Polder lands agricultural; the RR zones are expressly for land outside the ALR."
-          }
-        ],
-        [
-          {
             "t": "Second dwellings on acreage: a garden suite is permitted in the A-1, A-2, RR-1 to RR-5 and RS zones, one per lot, 33 sq m to 90 sq m, and a property may have a garden suite OR a secondary suite, not both."
           }
         ],
         [
           {
-            "t": "Serviced vs unserviced: whether a given North Meadows lot is on municipal water/sewer or on a well and septic system is not confirmed per lot on an official source: unconfirmed. Well records can be checked in the provincial GWELLS application; an onsite sewerage system must comply with the Sewerage System Regulation and only an Authorized Person can design, install, repair, maintain or inspect it."
+            "t": "Serviced vs unserviced: whether a given North Meadows lot is on municipal water/sewer or on a well and septic system is not confirmed per lot on an official source: Not verified. Well records can be checked in the provincial GWELLS application; an onsite sewerage system must comply with the Sewerage System Regulation and only an Authorized Person can design, install, repair, maintain or inspect it."
           }
         ],
         [
@@ -1677,7 +1672,7 @@
         ],
         [
           {
-            "t": "Transit and hazards in brief: R3 Lougheed Hwy RapidBus stops at Harris Road on the south edge; route 701 runs via Harris Road and Hammond Road; route 719 serves Wildwood Crescent and Hammond Road; no bus route serving the rural north itself was confirmed: unconfirmed. The city is almost entirely protected by 60 km of dikes and its land base lies in the Fraser Valley floodplain; the Pitt Polder catchment is drained by floodboxes and pump stations."
+            "t": "Transit and hazards in brief: R3 Lougheed Hwy RapidBus stops at Harris Road on the south edge; route 701 runs via Harris Road and Hammond Road; route 719 serves Wildwood Crescent and Hammond Road; no bus route serving the rural north itself was confirmed: Not verified. The city is almost entirely protected by 60 km of dikes and its land base lies in the Fraser Valley floodplain; the Pitt Polder catchment is drained by floodboxes and pump stations."
           }
         ]
       ],
@@ -1848,42 +1843,42 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: alc.gov.bc.ca",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "Source: alc.gov.bc.ca"
           }
         ],
         [
           {
-            "t": "Source: pub-pittmeadows.escribemeetings.com",
-            "h": "https://pub-pittmeadows.escribemeetings.com/filestream.ashx?DocumentId=17699"
+            "h": "https://pub-pittmeadows.escribemeetings.com/filestream.ashx?DocumentId=17699",
+            "t": "Source: pub-pittmeadows.escribemeetings.com"
           }
         ],
         [
           {
-            "t": "Source: pittmeadows.ca (3)",
-            "h": "https://www.pittmeadows.ca/sites/default/files/2022-03/pitt-meadows_business-plan_2020-web-full02.pdf"
+            "h": "https://www.pittmeadows.ca/sites/default/files/2022-03/pitt-meadows_business-plan_2020-web-full02.pdf",
+            "t": "Source: pittmeadows.ca (3)"
           }
         ],
         [
           {
-            "t": "Source: pittmeadows.ca (4)",
-            "h": "https://www.pittmeadows.ca/node/163"
+            "h": "https://www.pittmeadows.ca/node/163",
+            "t": "Source: pittmeadows.ca (4)"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1938,19 +1933,19 @@
       "q": "Can I short-term rent the farmhouse or a cabin?"
     },
     {
-      "a": "unconfirmed per lot on any official source — check GWELLS for the well record and confirm the onsite system was built and certified by an Authorized Person under the Sewerage System Regulation.",
+      "a": "Not verified per lot on any official source — check GWELLS for the well record and confirm the onsite system was built and certified by an Authorized Person under the Sewerage System Regulation.",
       "gen": "acre",
       "q": "Is the lot on city water and sewer, or well and septic?"
     },
     {
-      "q": "Can an acreage lot have a second dwelling, and can I short-term rent it?",
       "a": "A garden suite is permitted in the A-1, A-2, RR and RS zones, one per lot at 33 to 90 sq m, and on ALR land the Agricultural Land Commission also allows one additional detached residence to 90 sq m on properties 40 ha or less where the conditions are met. Short-term rentals are a different answer: they are PROHIBITED in Pitt Meadows — short-term rental accommodation is not a permitted use in the Zoning Bylaw.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Can an acreage lot have a second dwelling, and can I short-term rent it?"
     },
     {
-      "q": "Is North Meadows in a floodplain or the Agricultural Land Reserve?",
       "a": "Largely, yes to both on the City's current figures: over 95% of Pitt Meadows lies within the Fraser River and Pitt River floodplain behind 60 km of dikes, 78% of the city's land is in the Agricultural Land Reserve, and the northern Pitt Polder catchments drain to the Pitt River by floodboxes and pump stations — the guide page's \"over 85%\" Financial Plan figure is superseded and is recorded as a live-page error in Section 1.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is North Meadows in a floodplain or the Agricultural Land Reserve?"
     }
   ],
   "slug": "north-meadows-pitt-meadows-guide",

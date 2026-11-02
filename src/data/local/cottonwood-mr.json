@@ -816,7 +816,7 @@
       "items": [
         [
           {
-            "t": "Parcel character: the bylaw schedule gives a minimum lot area of 668 m² for RS-1; the other RS variants (RS-1a through RS-1d, RS-2, RS-3) carry their own schedules in the same bylaw, whose residential zones also include RST, RT-1, RT-2 and RM-1 to RM-4. A 668 m² minimum is a house-lot figure, not an acreage figure — no parcel-size statistic beyond the zone schedules is published for the sub-area: unconfirmed, and no \"typical acreage size\" is invented here."
+            "t": "Parcel character: the bylaw schedule gives a minimum lot area of 668 m² for RS-1; the other RS variants (RS-1a through RS-1d, RS-2, RS-3) carry their own schedules in the same bylaw, whose residential zones also include RST, RT-1, RT-2 and RM-1 to RM-4. A 668 m² minimum is a house-lot figure, not an acreage figure — no parcel-size statistic beyond the zone schedules is published for the sub-area: Not verified, and no \"typical acreage size\" is invented here."
           }
         ],
         [
@@ -826,7 +826,7 @@
         ],
         [
           {
-            "t": "Serviced vs unserviced ground: Servicing for any single vacant or redevelopment parcel is confirmed with the City under the servicing bylaw position: unconfirmed parcel-by-parcel."
+            "t": "Serviced vs unserviced ground: Servicing for any single vacant or redevelopment parcel is confirmed with the City under the servicing bylaw position: Not confirmed parcel-by-parcel."
           }
         ]
       ],
@@ -855,7 +855,7 @@
         ],
         [
           {
-            "t": "Main roads and commute: Lougheed Highway and Dewdney Trunk Road are the east–west corridors south and north of the area, and Haney Place in the Town Centre is the bus exchange the area's routes connect to; local streets named in TransLink routing for the area include 232 Street, 238B Street, Kanaka Way, 240 Street and 104 Avenue. Published official drive-time figures: unconfirmed."
+            "t": "Main roads and commute: Lougheed Highway and Dewdney Trunk Road are the east–west corridors south and north of the area, and Haney Place in the Town Centre is the bus exchange the area's routes connect to; local streets named in TransLink routing for the area include 232 Street, 238B Street, Kanaka Way, 240 Street and 104 Avenue. Published official drive-time figures: Not verified."
           }
         ],
         [
@@ -928,7 +928,7 @@
         ],
         [
           {
-            "t": "The sample catchment address is the school's own address: A Cottonwood listing that names a secondary school without a locator run for that address is ahead of the evidence."
+            "t": "The sample catchment address is the school's own address: The locator run used 11120 234A Street (Kanaka Creek Elementary's own address) and returned Samuel Robertson Technical Secondary (10445 245 Street), while SD42's east zone also runs Garibaldi Secondary (24789 Dewdney Trunk Road) and Thomas Haney Secondary. A Cottonwood listing that names a secondary school without a locator run for that address is ahead of the evidence."
           }
         ]
       ],
@@ -1237,24 +1237,24 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf"
+            "h": "https://infomaps.translink.ca/Route_Diagrams/194/r748.pdf",
+            "t": "Source: infomaps.translink.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1309,14 +1309,19 @@
       "q": "How big are Cottonwood lots?"
     },
     {
-      "a": "Kanaka Creek Elementary (11120 234A Street) and Alexander Robinson Elementary (11849 238B Street) are in the area; there is no secondary school inside the sub-area and no middle tier in SD42 (K–7 / 8–12).",
+      "a": "One suite per lot is permitted inside the single detached building, up to 40% of gross floor area, not in the Floodplain Area, and a building permit is required — confirm the lot is outside the mapped floodplain before underwriting rental income.",
       "gen": "acre",
-      "q": "Which schools serve a Cottonwood address?"
+      "q": "Can a house have a secondary suite?"
     },
     {
-      "q": "What bus serves the area?",
+      "a": "To the south, the Lougheed Transit Corridor Area Plan was adopted January 27, 2026 per the City record (corridor ends at 221 Street) — context, not a Cottonwood entitlement.",
+      "gen": "acre",
+      "q": "What plan governs Cottonwood — is there a neighbourhood plan coming?"
+    },
+    {
       "a": "The route named for the area is the 745 Haney Place / Cottonwood on TransLink's Haney Place route diagram, interlining with the 746 at Jackson Road at 103 Avenue.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What bus serves the area?"
     }
   ],
   "slug": "cottonwood-mr",

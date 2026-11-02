@@ -1370,11 +1370,6 @@
           {
             "t": "Market context: none quoted."
           }
-        ],
-        [
-          {
-            "t": "SD75's structure is elementary K–6, middle 7–9, secondary 10–12. School-district coverage (SD75) and municipal governance are different things — SD75 serves these FVRD communities even though the City of Mission does not govern them."
-          }
         ]
       ],
       "pos": "end",
@@ -1579,12 +1574,17 @@
       "items": [
         [
           {
+            "t": "Fee-simple acreages — the substance: No area-wide lot-size profile is published by any official source — lot sizes and age/style profile are not verified as area figures, and BC Assessment data is property-by-property. No typical size is invented."
+          }
+        ],
+        [
+          {
             "t": "Manufactured-home parks: A home on a rented pad is not lot stock / land / acreage."
           }
         ],
         [
           {
-            "t": "Serviced vs unserviced: FVRD community water systems exist for Deroche and for Dewdney in Area G, but not every lot is inside a service area — confirm water source, sewer vs septic, and any system fees for the specific parcel with the FVRD before writing. Parcel-level position: unconfirmed."
+            "t": "Serviced vs unserviced: FVRD community water systems exist for Deroche and for Dewdney in Area G, but not every lot is inside a service area — confirm water source, sewer vs septic, and any system fees for the specific parcel with the FVRD before writing. Parcel-level position: Not verified."
           }
         ]
       ],
@@ -1613,7 +1613,7 @@
         ],
         [
           {
-            "t": "Eastern edge: the FVRD Electoral Area C plan area begins east of Deroche — it “spans from the Harrison River to the east of Deroche and includes Morris Valley, Harrison Mills, Lake Errock, and the eastern portions of the Deroche Bench,” so the easternmost Deroche Bench ground sits in Area C, not Area G. Which side of the G/C line a specific parcel sits on: unconfirmed at parcel level."
+            "t": "Eastern edge: the FVRD Electoral Area C plan area begins east of Deroche — it “spans from the Harrison River to the east of Deroche and includes Morris Valley, Harrison Mills, Lake Errock, and the eastern portions of the Deroche Bench,” so the easternmost Deroche Bench ground sits in Area C, not Area G. Which side of the G/C line a specific parcel sits on: Not verified at parcel level."
           }
         ],
         [
@@ -1623,7 +1623,12 @@
         ],
         [
           {
-            "t": "Community water frame: FVRD bylaws provide for a Deroche water system and an Electoral Area G Dewdney Community Water System — servicing runs through FVRD systems where a lot is inside a service area, not through the City of Mission. Parcel-level position: unconfirmed."
+            "t": "Schools are SD75 Mission — district coverage and municipal governance are different things. Ministry-listed names only: Dewdney Elementary, 37151 Hawkins-Pickle Rd, Dewdney; Deroche Elementary, 10340 N Deroche Rd, Deroche; Hatzic Middle School, 34875 Moffat Avenue, Mission; Mission Senior Secondary, 32939 7th Ave, Mission. The FVRD's election notice places Deroche (Area G) voters in the SD75 rural trustee election."
+          }
+        ],
+        [
+          {
+            "t": "Community water frame: FVRD bylaws provide for a Deroche water system and an Electoral Area G Dewdney Community Water System — servicing runs through FVRD systems where a lot is inside a service area, not through the City of Mission. Parcel-level position: Not verified."
           }
         ]
       ],
@@ -1642,7 +1647,7 @@
       "items": [
         [
           {
-            "t": "The mailing address lies about the government: Governance is FVRD Area G and the penalty calendar is the rural Jul 2 / Oct 31 5% + 5%, not Mission's flat 10%."
+            "t": "The Deroche Bench crosses an electoral-area line: Eastern portions of the Deroche Bench are in Area C, not Area G — two parcels that read as one bench can sit under two different FVRD plan areas, and the side for a specific parcel is not verified until checked."
           }
         ],
         [
@@ -1848,16 +1853,16 @@
       "pos": "end",
       "rows": [
         [
-          "Hatzic Middle School",
-          "Drive",
-          "7",
-          "5.7"
-        ],
-        [
           "Dewdney Regional Park",
           "Drive",
           "7",
           "3.0"
+        ],
+        [
+          "Hatzic Middle School",
+          "Drive",
+          "7",
+          "5.7"
         ]
       ],
       "t": "table"
@@ -1943,24 +1948,24 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: alc.gov.bc.ca",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "Source: alc.gov.bc.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1973,6 +1978,11 @@
       "a": "No. Listings carry Mission mailing addresses, but Dewdney and Deroche are unincorporated FVRD Electoral Area G communities — the FVRD's housing-needs report lists Area G as \"Nicomen Island, Deroche, Dewdney, Hatzic Island\" — and the City of Mission does not govern them.",
       "gen": "tn",
       "q": "Are Dewdney and Deroche part of Mission?"
+    },
+    {
+      "a": "The Province: rural-area properties receive their tax notice from the Surveyor of Taxes Office and pay the Province, not the FVRD or a municipality; rural taxes are due July 2, with a 5% penalty on amounts unpaid on July 2 and a further 5% on amounts unpaid on October 31 (Taxation (Rural Area) Act, s. 11).",
+      "gen": "tn",
+      "q": "Who do I pay property tax to on a Dewdney or Deroche property?"
     },
     {
       "a": "Under the Manufactured Home Park Tenancy Act the annual limit is 2.3% plus a proportional amount for 2026, and 2.2% plus a proportional amount for 2027. Confirm the current pad rent and any park-specific amounts from the park's own documents before writing.",
@@ -1990,19 +2000,14 @@
       "q": "Are Dewdney and Deroche part of Mission?"
     },
     {
+      "a": "The Province: rural-area properties receive their tax notice from the Surveyor of Taxes Office and pay the Province, not the FVRD or a municipality; rural taxes are due July 2, with a 5% penalty on amounts unpaid on July 2 and a further 5% on amounts unpaid on October 31 (Taxation (Rural Area) Act, s. 11) — not Mission's flat 10%.",
+      "gen": "tn",
+      "q": "Who do I pay property tax to on a Dewdney or Deroche property, and what is the penalty?"
+    },
+    {
       "a": "Under the Manufactured Home Park Tenancy Act the annual limit is 2.3% plus a proportional amount for 2026, and 2.2% plus a proportional amount for 2027.",
       "gen": "tn",
       "q": "How much can pad rent go up?"
-    },
-    {
-      "a": "Lot by lot. FVRD community water systems exist for Deroche and for Dewdney in Area G, but not every lot is inside a service area — confirm water source, sewer vs septic, and any system fees for the specific parcel.",
-      "gen": "tn",
-      "q": "Is my lot on community water or a well?"
-    },
-    {
-      "a": "None verified — zero strata, zero fee-simple, and no named townhome complex confirmed on any source checked.",
-      "gen": "tn",
-      "q": "Are there any townhouses in Dewdney or Deroche?"
     },
     {
       "a": "Individual fee-simple rural acreage parcels and acreage-with-house listings along the Lougheed corridor, diligenced parcel by parcel. No named acreage subdivision, bare-land strata plan or presale lot offering was verified, so there is no lot programme to buy into.",
@@ -2015,9 +2020,9 @@
       "q": "Who do I pay property tax to, and when?"
     },
     {
-      "q": "Can I build a second home on an acreage here?",
       "a": "It depends on the parcel's FVRD zoning and, for farmland, the ALR: ALR parcels are limited to one principal residence of at most 500 m² plus at most one additional residence of 90 m² (parcels ≤40 ha) or 186 m² (parcels >40 ha), and non-ALR lots follow the FVRD zoning bylaw for the parcel — confirm both for the specific PID before relying on a second-dwelling plan.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Can I build a second home on an acreage here?"
     }
   ],
   "slug": "dewdney-deroche",

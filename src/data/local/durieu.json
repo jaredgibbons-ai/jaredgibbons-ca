@@ -1498,7 +1498,7 @@
       "items": [
         [
           {
-            "t": "Street-level board boundary: unconfirmed — FVREB publishes no street-level boundary for the Durieu sub-area, and no electoral-area boundary was substituted for it."
+            "t": "Street-level board boundary: Not verified — FVREB publishes no street-level boundary for the Durieu sub-area, and no electoral-area boundary was substituted for it."
           }
         ],
         [
@@ -1508,7 +1508,7 @@
         ],
         [
           {
-            "t": "The Mission hospital on an official Fraser Health page is Mission Memorial Hospital, 7324 Hurd Street — a 25-bed medical inpatient unit and a 20-bed PATH unit, as well as a 10-bed Christine Morrison Hospice, providing primary acute care services, outpatient and inpatient services, general medicine, laboratory and diagnostic services. Travel time from a Durieu property to the hospital: unconfirmed."
+            "t": "The Mission hospital on an official Fraser Health page is Mission Memorial Hospital, 7324 Hurd Street — a 25-bed medical inpatient unit and a 20-bed PATH unit, as well as a 10-bed Christine Morrison Hospice, providing primary acute care services, outpatient and inpatient services, general medicine, laboratory and diagnostic services. Travel time from a Durieu property to the hospital: Not verified."
           }
         ]
       ],
@@ -1831,30 +1831,30 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: fvrd.ca",
-            "h": "https://www.fvrd.ca/assets/Government/Documents/Document~Library/EA%20Housing%20Needs%20Report.pdf"
+            "h": "https://www.fvrd.ca/assets/Government/Documents/Document~Library/EA%20Housing%20Needs%20Report.pdf",
+            "t": "Source: fvrd.ca"
           }
         ],
         [
           {
-            "t": "Source: alc.gov.bc.ca",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "Source: alc.gov.bc.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1904,9 +1904,9 @@
       "q": "Who do I pay property tax to on a Durieu property?"
     },
     {
-      "q": "Can I add a suite or a second home on a Durieu acreage?",
       "a": "Two gates apply. In FVRD Electoral Area F, a secondary suite must be located within the principal dwelling — a separate detached structure such as a garden suite is not the suite route — and if the parcel is in the ALR, an additional detached residence is limited to 90 m² (parcels ≤40 ha) or 186 m² (parcels >40 ha) on top of one principal residence of at most 500 m²; confirm both the FVRD zoning and the parcel's ALR status for the specific PID before relying on a second-dwelling plan.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Can I add a suite or a second home on a Durieu acreage?"
     }
   ],
   "slug": "durieu",

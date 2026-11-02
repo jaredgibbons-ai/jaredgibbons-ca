@@ -998,6 +998,11 @@
       "items": [
         [
           {
+            "t": "The split rule, first: every rule below is labelled Bench (City of Mission), Prairie (FVRD Area F) or Island (FVRD Area G). Tax follows the jurisdiction, not the mailing address. Confirm which side of the City/FVRD line the PID sits on before quoting any rule for a listing — that line is not verified at parcel level until checked."
+          }
+        ],
+        [
+          {
             "t": "City planning frame (Bench ONLY): None of this governs the Prairie or the Island."
           }
         ],
@@ -1378,24 +1383,24 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: fvrd.ca",
-            "h": "https://www.fvrd.ca/assets/Government/Documents/Document~Library/EA%20Housing%20Needs%20Report.pdf"
+            "h": "https://www.fvrd.ca/assets/Government/Documents/Document~Library/EA%20Housing%20Needs%20Report.pdf",
+            "t": "Source: fvrd.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1420,6 +1425,11 @@
       "q": "If I buy at Mission Mobile Home Park or Green Acres, what do I own?"
     },
     {
+      "a": "It depends on which Hatzic. Bench (City): the City — due July 2, 2026, flat 10% penalty on unpaid taxes after July 2. Check the PID's jurisdiction before quoting either.",
+      "gen": "tn",
+      "q": "Who do I pay property tax to on a Hatzic property?"
+    },
+    {
       "a": "Confirm what interest actually transfers before writing.",
       "gen": "tn",
       "q": "Is an Everglades Resort lot a cheap way to own at Hatzic Lake?"
@@ -1435,19 +1445,14 @@
       "q": "Who do I pay property tax to?"
     },
     {
-      "a": "No — Everglades Resort holdings are an undivided-interest seasonal use holding (\"No year round living\" in the listing records), not a fee-simple lot and not a strata lot. Confirm what interest transfers from the resort's own documents before writing.",
-      "gen": "tn",
-      "q": "Is an Everglades \"lot\" a lot I own?"
-    },
-    {
       "a": "No — a manufactured home on a rented pad is a tenancy, not land.",
       "gen": "acre",
       "q": "Is a Green Acres pad home a cheap acreage buy?"
     },
     {
-      "q": "Is Hatzic part of Mission?",
       "a": "Partly. The Hatzic Bench is inside the City of Mission, but Hatzic Prairie is Fraser Valley Regional District Electoral Area F and Hatzic Island is Electoral Area G — the FVRD's housing-needs report lists Area F as \"McConnell Creek, Hatzic Prairie\" and Area G as \"Nicomen Island, Deroche, Dewdney, Hatzic Island\" — and all of it carries Mission mailing addresses and sits in the board's Hatzic sub-area.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is Hatzic part of Mission?"
     }
   ],
   "slug": "hatzic",

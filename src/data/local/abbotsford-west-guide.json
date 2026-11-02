@@ -565,12 +565,12 @@
       "items": [
         [
           {
-            "t": "Identity call: this is the FVREB \"Abbotsford West\" sub-area page. Street-level board boundary: unconfirmed — FVREB publishes no street-level boundary, and no municipal boundary is substituted."
+            "t": "Identity call: this is the FVREB \"Abbotsford West\" sub-area page. Street-level board boundary: Not verified — FVREB publishes no street-level boundary, and no municipal boundary is substituted."
           }
         ],
         [
           {
-            "t": "Recorded SD34 locator runs (single-address basis, reuse for those addresses only): 3614 Clearbrook Road → Clearbrook Elementary → Colleen and Gordie Howe Middle → W.J. Mouat Secondary; 2990 Oriole Crescent → John MacLure Community School → Colleen and Gordie Howe Middle → W.J. Mouat Secondary; 3433 Firhill Drive → Blue Jay Elementary → Eugene Reimer Middle → Rick Hansen Secondary. Catchments for every other Abbotsford West address: unconfirmed."
+            "t": "Recorded SD34 locator runs (single-address basis, reuse for those addresses only): 3614 Clearbrook Road → Clearbrook Elementary → Colleen and Gordie Howe Middle → W.J. Mouat Secondary; 2990 Oriole Crescent → John MacLure Community School → Colleen and Gordie Howe Middle → W.J. Mouat Secondary; 3433 Firhill Drive → Blue Jay Elementary → Eugene Reimer Middle → Rick Hansen Secondary. Catchments for every other Abbotsford West address: Not verified."
           }
         ]
       ],
@@ -726,7 +726,7 @@
         ],
         [
           {
-            "t": "Abbotsford community medians (context only, never sub-area or mobile figures): Detached $949,000; Condos & Townhomes $497,500."
+            "t": "Abbotsford community medians (context only, never sub-area or mobile figures): Detached $949,000; Condos & Townhomes $497,500. Per-sub-area medians are not published: Not verified at sub-area level."
           }
         ]
       ],
@@ -1126,24 +1126,24 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: abbotsford.ca",
-            "h": "https://www.abbotsford.ca/city-hall/projects-go/highstreet-transit-exchange"
+            "h": "https://www.abbotsford.ca/city-hall/projects-go/highstreet-transit-exchange",
+            "t": "Source: abbotsford.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1208,14 +1208,14 @@
       "q": "Is Paradise Park really 55+?"
     },
     {
-      "q": "How does transit connect Abbotsford West to the rest of the region?",
       "a": "BC Transit routes 1 and 2 run from Highstreet, route 66 Fraser Valley Express runs from Highstreet toward Lougheed Station, and the Highstreet Transit Exchange on Highstreet Access Road has six bus bays for local and regional routes.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "How does transit connect Abbotsford West to the rest of the region?"
     },
     {
-      "q": "Where is the main shopping for Abbotsford West?",
       "a": "Highstreet Shopping Centre at Mt. Lehman Road, beside Highway 1 and the Highstreet Transit Exchange, is the main centre on the west side, with daily retail also along South Fraser Way at Clearbrook Road.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Where is the main shopping for Abbotsford West?"
     }
   ],
   "slug": "abbotsford-west-guide",

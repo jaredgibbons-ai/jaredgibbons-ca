@@ -19,12 +19,7 @@
       "items": [
         [
           {
-            "t": "The ground is a fringe, not a belt of its own: The farm ground here is the southern end of Delta's agricultural land, designated Agriculture (A) in the OCP and governed by the OCP's Agriculture policies (s. 2.6), with ALC housing and use rules layered over Delta's A-zone zoning where a parcel is in the ALR."
-          }
-        ],
-        [
-          {
-            "t": "Hobby acreage vs working-farm ground: Farm classification matters to value: a parcel that keeps BC Assessment farm classification must keep meeting the minimum gross farm income thresholds, which scale with the size of the operation."
+            "t": "Hobby acreage vs working-farm ground: no specific farm operation is named on an official source, so the hobby-vs-working split for any single fringe parcel is not confirmed until its use and farm-class record are read. Farm classification matters to value: a parcel that keeps BC Assessment farm classification must keep meeting the minimum gross farm income thresholds, which scale with the size of the operation."
           }
         ],
         [
@@ -121,7 +116,7 @@
         ],
         [
           {
-            "t": "The Delta zoning bylaw number is CONTESTED (7600, 2017 vs \"8400, 2025\") and DSSS Bylaw 8288 (2024) adoption is held unconfirmed — while the tsawwassen-east-guide land home asserts 8288 in governing terms. ( disk-checked as the guide land home for that ground.)"
+            "t": "The Delta zoning bylaw number is CONTESTED (7600, 2017 vs \"8400, 2025\") and DSSS Bylaw 8288 (2024) adoption is held not confirmed — while the tsawwassen-east-guide land home asserts 8288 in governing terms. ( disk-checked as the guide land home for that ground.)"
           }
         ],
         [
@@ -239,24 +234,24 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com",
-            "h": "https://hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com/8917/7677/0068/OCP_2024_web.pdf"
+            "h": "https://hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com/8917/7677/0068/OCP_2024_web.pdf",
+            "t": "Source: hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -276,9 +271,9 @@
       "q": "What do the dike and ditch rules mean for a Southlands-side parcel?"
     },
     {
-      "q": "Is there real farmland in Tsawwassen, or is it all residential?",
       "a": "Both. Delta's Official Community Plan designates farm land on the Tsawwassen edges Agriculture (A) (Bylaw No. 8400, 2024, s. 1.5.1), and Agricultural Land Reserve rules apply where land is in the ALR; the urban neighbourhoods are residential, and the farm topic is that agricultural fringe plus the shared Delta farm belt toward Ladner.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is there real farmland in Tsawwassen, or is it all residential?"
     }
   ],
   "slug": "tsawwassen-farms",

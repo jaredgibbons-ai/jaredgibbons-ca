@@ -1164,24 +1164,24 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: sd42.ca",
-            "h": "https://www.sd42.ca/school-locator/"
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "Source: sd42.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1231,9 +1231,14 @@
       "q": "Can I buy an acreage in West Central?"
     },
     {
-      "q": "Which schools serve West Central?",
+      "a": "On the edges, potentially: no habitable floor space may sit below the 6.7 m flood construction level on floodplain-affected lots, and lots within 300 m of the escarpment crest (east boundary 224 Street) need a geotechnical report on a Section 219 covenant before a building permit. Which lots are affected is per-parcel: Not verified until title and the City record are read.",
+      "gen": "acre",
+      "q": "Is flood or escarpment risk a factor on a West Central lot?"
+    },
+    {
       "a": "The live page names Alouette Elementary (22155 Isaac Crescent), Glenwood Elementary (21410 Glenwood Avenue), Laity View Elementary (21023 123 Avenue), Maple Ridge Secondary (21911 122 Avenue) and Westview Secondary (20905 Wicklund Avenue), with names and addresses confirmed against the BC Ministry K-12 school file; catchments are address-specific — check any address in the SD42 School Locator.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which schools serve West Central?"
     }
   ],
   "slug": "west-central",

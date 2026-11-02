@@ -534,7 +534,7 @@
         ],
         [
           {
-            "t": "Main roads and transit: Bradner Road (north–south), Fraser Highway (north edge), Mt. Lehman Road (west), Huntingdon Road and King Road (south, toward YXX and the Huntingdon/Sumas border crossing); Highway 1 via the Mt. Lehman Road and Clearbrook Road interchanges. BC Transit route 21 (Aldergrove / Abbotsford) runs along Fraser Highway at the north edge toward Bourquin Exchange; no local route was verified running through the interior rural roads. Published official drive-time figures: unconfirmed."
+            "t": "Main roads and transit: Bradner Road (north–south), Fraser Highway (north edge), Mt. Lehman Road (west), Huntingdon Road and King Road (south, toward YXX and the Huntingdon/Sumas border crossing); Highway 1 via the Mt. Lehman Road and Clearbrook Road interchanges. BC Transit route 21 (Aldergrove / Abbotsford) runs along Fraser Highway at the north edge toward Bourquin Exchange; no local route was verified running through the interior rural roads. Published official drive-time figures: Not verified."
           }
         ]
       ],
@@ -559,6 +559,11 @@
         [
           {
             "t": "Suites and coach/garden suites (Abbotsford frame): On ALR land the ALC suite rule (inside the principal residence only) controls instead — the two regimes meet at the parcel's ALR line and must not be mixed."
+          }
+        ],
+        [
+          {
+            "t": "Airport (YXX): Aberdeen sits north/northeast of Abbotsford International Airport; land covered by the Abbotsford Airport Zoning Regulations (AZR), SOR/83-253, shown on City drawing M-500, is subject to height limits — building height may not exceed the approach, outer or transitional surfaces — and a developer on AZR land must obtain NAV CANADA and Transport Canada approvals before the City issues a building permit. Property-level AZR status for any single lot: Not verified until that lot is checked against drawing M-500."
           }
         ],
         [
@@ -857,24 +862,24 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: bctransit.com",
-            "h": "https://www.bctransit.com/wp-content/uploads/2026/08/cfv_map_21.pdf"
+            "h": "https://www.bctransit.com/wp-content/uploads/2026/08/cfv_map_21.pdf",
+            "t": "Source: bctransit.com"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -914,9 +919,19 @@
       "q": "Can a second dwelling be added on an Aberdeen farm lot?"
     },
     {
-      "q": "Is there bus service through Aberdeen?",
+      "a": "Price from the rural default: lots outside the urban boundary may use wells and onsite sewage instead of community water and sewer. Do the due diligence — look up the well record in GWELLS and confirm the onsite sewage system was filed under the Sewerage System Regulation by an Authorized Person through Fraser Health. Parcel-level status is not verified until pulled.",
+      "gen": "acre",
+      "q": "Is an Aberdeen acreage on city water and sewer?"
+    },
+    {
+      "a": "Only one chain is settled, single-address basis: 2975 Bradner Rd → Aberdeen Elementary → Eugene Reimer Middle → Rick Hansen Secondary. Every other address is not verified until run in the SD34 locator — catchments are address-specific under SD34 Policy 18, so run the exact address rather than assuming the same chain.",
+      "gen": "acre",
+      "q": "Which schools serve an Aberdeen address?"
+    },
+    {
       "a": "BC Transit route 21 (Aldergrove / Abbotsford) runs on Fraser Highway at the north edge toward Bourquin Exchange; no route through the interior rural roads was verified on the BC Transit system map.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is there bus service through Aberdeen?"
     }
   ],
   "slug": "aberdeen-guide",

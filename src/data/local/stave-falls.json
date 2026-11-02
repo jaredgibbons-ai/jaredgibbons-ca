@@ -1211,7 +1211,7 @@
         ],
         [
           {
-            "t": "Dock, moorage, shoreline-tenure and water-access rights for any parcel: Not verified — confirm on title and with BC Hydro."
+            "t": ": the Stave/Hayward shoreline is a BC Hydro generating system — water stored in Alouette Lake runs through Alouette Generating Station into Stave Lake, through the new Stave Falls powerhouse into Hayward Lake, and through Ruskin Dam before spilling into the Fraser River three kilometres south. Dock, moorage, shoreline-tenure and water-access rights for any parcel: Not verified — confirm on title and with BC Hydro."
           }
         ],
         [
@@ -1644,7 +1644,7 @@
       "items": [
         [
           {
-            "t": "Manufactured-home parks: A park home is a home on a rented pad — the buyer does not buy the land. Mission manufactured-home-park parcel-level City/FVRD jurisdiction: unconfirmed where met — do not assume a park parcel's jurisdiction from the community's City position without a parcel check."
+            "t": "Manufactured-home parks: A park home is a home on a rented pad — the buyer does not buy the land. Mission manufactured-home-park parcel-level City/FVRD jurisdiction: Not verified where met — do not assume a park parcel's jurisdiction from the community's City position without a parcel check."
           }
         ]
       ],
@@ -1670,6 +1670,11 @@
           {
             "t": "The name and the hydro system: “Stave Falls” is both the community name and the falls/power site on the Stave River — BC Hydro's Powerhouse at Stave Falls, built in 1912, was once B.C.'s biggest hydroelectric power source and is now a BC Hydro Visitor Centre and National Historic Site. BC Hydro describes a three-reservoir system: Alouette Lake → Alouette Generating Station → Stave Lake → new Stave Falls powerhouse → Hayward Lake → Ruskin Dam and Powerhouse → Fraser River three kilometres south. Reservoirs are used for swimming, hiking, biking, fishing and boating, with Hayward Lake busy in summer."
           }
+        ],
+        [
+          {
+            "t": "School in the community, Ministry-listed only: Stave Falls Elementary, 30204 Brackley Ave, Mission (SD75)."
+          }
         ]
       ],
       "pos": "end",
@@ -1688,6 +1693,11 @@
         [
           {
             "t": "The “waterfront” is a power system first: Alouette Lake → Stave Lake → the 1912 powerhouse (now a Visitor Centre and National Historic Site) → Hayward Lake → Ruskin Dam → the Fraser River, three kilometres south."
+          }
+        ],
+        [
+          {
+            "t": "The park beside the school is still a design, on the record: The Stave Falls Community Park on Brackley Avenue exists as engagement-page design concepts (survey closed May 11, 2025); its built/opening status is not verified — do not price an acreage on a finished park."
           }
         ]
       ],
@@ -1947,30 +1957,30 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: mission.ca",
-            "h": "https://www.mission.ca/business-building/current-city-projects/rural-mission-strategy"
+            "h": "https://www.mission.ca/business-building/current-city-projects/rural-mission-strategy",
+            "t": "Source: mission.ca"
           }
         ],
         [
           {
-            "t": "Source: bchydro.com",
-            "h": "https://www.BChydro.com/news/conservation/2023/visit-stave-falls.html?fixZoomMobile=true"
+            "h": "https://www.BChydro.com/news/conservation/2023/visit-stave-falls.html?fixZoomMobile=true",
+            "t": "Source: bchydro.com"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -2025,7 +2035,7 @@
       "q": "What acreage actually trades here?"
     },
     {
-      "a": "unconfirmed per property — the shoreline is a working BC Hydro reservoir system, listing frontage/view language is not a right, and dock/moorage/shoreline tenure must be confirmed on title and with BC Hydro before marketing water access.",
+      "a": "Not verified per property — the shoreline is a working BC Hydro reservoir system, listing frontage/view language is not a right, and dock/moorage/shoreline tenure must be confirmed on title and with BC Hydro before marketing water access.",
       "gen": "acre",
       "q": "Is a “waterfront” Stave Falls acreage really waterfront, with a dock?"
     },
@@ -2035,14 +2045,14 @@
       "q": "Is the acreage serviced by the City?"
     },
     {
-      "q": "Is Stave Falls part of Mission?",
       "a": "Yes — Stave Falls is a rural community inside the City of Mission: the City's Rural Mission Strategy names Stave Falls among the rural communities it covers and ties that work to the City's Official Community Plan, so City planning, zoning and tax rules apply here, unlike in unincorporated Dewdney-Deroche to the east.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is Stave Falls part of Mission?"
     },
     {
-      "q": "What is the Powerhouse at Stave Falls?",
       "a": "BC Hydro's original Stave Falls powerhouse, built in 1912 and once B.C.'s biggest hydroelectric power source; it operated until a new powerhouse replaced it in 2000 and now serves as a BC Hydro Visitor Centre and museum, designated a National Historic Site.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What is the Powerhouse at Stave Falls?"
     }
   ],
   "slug": "stave-falls",

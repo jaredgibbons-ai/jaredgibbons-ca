@@ -1842,7 +1842,7 @@
         ],
         [
           {
-            "t": "RV parks/campgrounds: no RV park or campground in Aldergrove was established by any source as year-round manufactured-home tenure, so none is documented as a manufactured-home park here."
+            "t": "RV parks/campgrounds: no RV park or campground in Aldergrove was established by any source as year-round manufactured-home tenure, so none is documented as a manufactured-home park here. Not confirmed as mobile stock."
           }
         ]
       ],
@@ -1861,7 +1861,7 @@
       "items": [
         [
           {
-            "t": "Pioneer Park sits outside the core, at the south edge on 0 Avenue — the border road."
+            "t": "Core frame: the Aldergrove Core Area is centred on Fraser Highway and 272 Street, bounded by Bertrand Creek to the north and east, 29 Avenue to the south and 270 Street to the west; wider community boundaries are not verified. Pioneer Park sits outside the core, at the south edge on 0 Avenue — the border road."
           }
         ]
       ],
@@ -2266,36 +2266,36 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: tol.ca",
-            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx"
+            "h": "https://www.tol.ca/en/the-township/about-the-township.aspx",
+            "t": "Source: tol.ca"
           }
         ],
         [
           {
-            "t": "Source: sd35.bc.ca",
-            "h": "https://www.sd35.bc.ca/school-locator"
+            "h": "https://www.sd35.bc.ca/school-locator",
+            "t": "Source: sd35.bc.ca"
           }
         ],
         [
           {
-            "t": "Source: infomaps.translink.ca",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf",
+            "t": "Source: infomaps.translink.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -2355,19 +2355,19 @@
       "q": "Does the pad-rent cap protect me at Pioneer Park?"
     },
     {
-      "q": "Which municipality is Aldergrove in?",
       "a": "Aldergrove is in the Township of Langley, whose eastern boundary is 276 Street at Abbotsford and whose southern boundary is the United States border.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which municipality is Aldergrove in?"
     },
     {
-      "q": "Which schools serve an Aldergrove address?",
       "a": "SD35 catchment is address-based; for the sample address 26850 29 Avenue the SD35 School Locator returns Parkside Centennial Elementary, Betty Gilbert Middle and Aldergrove Community Secondary. Other addresses may fall in different catchments, so check the exact address in the locator.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which schools serve an Aldergrove address?"
     },
     {
-      "q": "What bus service runs from Aldergrove?",
       "a": "TransLink route 503 runs from 272 Street at Fraser Highway via Langley Centre to Surrey Central Station, and BC Transit route 21 connects Aldergrove with Abbotsford from the same 272 Street stop.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What bus service runs from Aldergrove?"
     }
   ],
   "slug": "aldergrove-guide",

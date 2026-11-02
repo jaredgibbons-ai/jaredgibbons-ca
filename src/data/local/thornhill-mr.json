@@ -768,7 +768,7 @@
         ],
         [
           {
-            "t": "Transit: route 748 (Thornhill / Haney Place) loops from Haney Place via 240 Street, McClure Drive, Jackson Road, 100 Avenue, 256 Street, 98 Avenue, 264 Street and 268 Street, weekday and Saturday trips only at wide intervals; route 701 runs east on Dewdney Trunk Road along the south side. No West Coast Express station in this sub-area. Commute times: unconfirmed."
+            "t": "Transit: route 748 (Thornhill / Haney Place) loops from Haney Place via 240 Street, McClure Drive, Jackson Road, 100 Avenue, 256 Street, 98 Avenue, 264 Street and 268 Street, weekday and Saturday trips only at wide intervals; route 701 runs east on Dewdney Trunk Road along the south side. No West Coast Express station in this sub-area. Commute times: Not verified."
           }
         ]
       ],
@@ -1204,30 +1204,30 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: mapleridge.ca",
-            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods"
+            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods",
+            "t": "Source: mapleridge.ca"
           }
         ],
         [
           {
-            "t": "Source: sd42.ca",
-            "h": "https://www.sd42.ca/school-locator/"
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "Source: sd42.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1277,14 +1277,19 @@
       "q": "Is there an acreage subdivision in Thornhill I can buy into?"
     },
     {
-      "q": "What and where is Thornhill, Maple Ridge?",
-      "a": "Thornhill is a City of Maple Ridge neighbourhood and the board/Paragon sub-area name for the heavily forested, mainly residential hillside in east Maple Ridge, with farms and nurseries and a 17-trail mountain-biking and hiking network on 256 Street.",
-      "gen": "muse"
+      "a": "The well record (GWELLS) and the septic/sewerage record — sewerage systems must meet the Sewerage System Regulation's setbacks, including 30 m from a well unless professional advice is obtained. Both are subject-removal items here, and parcel-level status is not verified until pulled.",
+      "gen": "acre",
+      "q": "What must be pulled on every Thornhill acreage deal?"
     },
     {
-      "q": "Which schools serve Thornhill?",
+      "a": "Thornhill is a City of Maple Ridge neighbourhood and the board/Paragon sub-area name for the heavily forested, mainly residential hillside in east Maple Ridge, with farms and nurseries and a 17-trail mountain-biking and hiking network on 256 Street.",
+      "gen": "muse",
+      "q": "What and where is Thornhill, Maple Ridge?"
+    },
+    {
       "a": "The live page names Whonnock Elementary (27471 112 Avenue), Albion Elementary (10031 240 Street), Blue Mountain Elementary (12453 248 Street per the BC Ministry K-12 file), Samuel Robertson Technical Secondary (10445 245 Street) and Garibaldi Secondary (24789 Dewdney Trunk Road); catchments are address-specific — check any address in the SD42 School Locator.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which schools serve Thornhill?"
     }
   ],
   "slug": "thornhill-mr",

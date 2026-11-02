@@ -179,11 +179,6 @@
       "items": [
         [
           {
-            "t": "The guide page's total feed count and the exact MLS feed filter behind it: Not verified."
-          }
-        ],
-        [
-          {
             "t": "Identity, following the guide page: Otter District is the rural southeast corner of the Township of Langley, mostly south of Fraser Highway, between Campbell Valley and Aldergrove, running down to 0 Avenue at the U.S. border, with its old centre at the farm crossroads of 248 Street and Fraser Highway. Board geography: \"Otter District\" is one of eleven Langley sub-areas in the SnapStats data; \"Langley\" the board community combines the Township of Langley and the City of Langley, and this sub-area sits entirely on the Township side."
           }
         ],
@@ -916,7 +911,12 @@
       "items": [
         [
           {
-            "t": "Servicing: Whether a specific parcel has municipal water/sewer or needs a well and septic is a parcel-level check: unconfirmed per parcel."
+            "t": "Parcel-level ALR status: Not verified for any specific property: — ALR status is parcel-specific and is confirmed on the ALC's ALR maps, not from the sub-area name."
+          }
+        ],
+        [
+          {
+            "t": "Servicing: Whether a specific parcel has municipal water/sewer or needs a well and septic is a parcel-level check: Not verified per parcel."
           }
         ]
       ],
@@ -1066,6 +1066,11 @@
           {
             "t": "Otter District is a rural board sub-area on the south side of the Township of Langley — the Otter / Salmon River uplands country along 240 Street, 248 Street and 256 Street, south toward the US border side of the township. Salmon River, the neighbouring sub-area, lies directly to its north."
           }
+        ],
+        [
+          {
+            "t": "Street-level board boundaries: Not verified — the board publishes no street-level sub-area boundaries in public form, and no Township boundary was substituted."
+          }
         ]
       ],
       "pos": "end",
@@ -1088,7 +1093,7 @@
         ],
         [
           {
-            "t": "ALR housing frame: On ALR land the principal residence maximum is a total floor area of 500 m² (with no more than 1,000 m² of fill for its construction); a secondary suite is permitted only when entirely contained within the principal residence; and one additional detached residence is permitted without an ALC application at up to 90 m² on properties of 40 ha or less, or up to 186 m² on properties over 40 ha, subject to local bylaws. Two first-page listings state ALR status in their own text — listing copy for those parcels only, not a district-wide designation."
+            "t": "ALR housing frame: On ALR land the principal residence maximum is a total floor area of 500 m² (with no more than 1,000 m² of fill for its construction); a secondary suite is permitted only when entirely contained within the principal residence; and one additional detached residence is permitted without an ALC application at up to 90 m² on properties of 40 ha or less, or up to 186 m² on properties over 40 ha, subject to local bylaws. Parcel-level ALR status for any specific property: Not verified — confirmed on the ALC's ALR maps, not from the sub-area name. Two first-page listings state ALR status in their own text — listing copy for those parcels only, not a district-wide designation. Manufactured homes on farm ground are dealt with only as ALC sources support (ALR Use Regulation / ALC policy routes); a general farm-worker manufactured-housing entitlement is not confirmed and none is asserted here."
           }
         ]
       ],
@@ -1118,6 +1123,11 @@
         [
           {
             "t": "A \"coach house\" here has a narrow legal meaning: Under Township Bylaw No. 2500, s.102, a coach house sits only within the second storey of a detached garage — a ground-floor detached suite on an Otter acreage is a different accessory unit with different rules, whatever a listing calls it."
+          }
+        ],
+        [
+          {
+            "t": "Census profile for Otter District: Not verified — the board sub-area is not a census geography and no figure was substituted."
           }
         ]
       ],
@@ -1272,6 +1282,16 @@
       "q": "Can I subdivide an Otter District acreage?"
     },
     {
+      "a": "Parcel-level floodplain mapping is not verified for this district.",
+      "gen": "acre",
+      "q": "What should I check before closing on an acreage here?"
+    },
+    {
+      "a": "The park's own rules beyond individual listing text are not verified.",
+      "gen": "acre",
+      "q": "Is a Langley Grove Estates park home an acreage?"
+    },
+    {
       "a": "No. You own the home (a chattel) and rent the pad — the park owns the land, and your right to the site is the assigned pad tenancy under the Manufactured Home Park Tenancy Act.",
       "gen": "mh",
       "q": "In Langley Grove Estates, do I own the land?"
@@ -1287,9 +1307,9 @@
       "q": "Can I build a second home on an Otter acreage instead?"
     },
     {
-      "q": "What is a coach house in Langley Township?",
       "a": "Under Township of Langley Zoning Bylaw No. 2500, s.102, a coach house is an accessory dwelling unit located only within the second storey of a detached garage — the definition settled in this program's rules-gaps pass (~/workspace/area-research-2026-11/rules-gaps-2026-11-01.md, read 2026-11-01).",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What is a coach house in Langley Township?"
     }
   ],
   "slug": "otter-district-guide",

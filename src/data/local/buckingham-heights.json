@@ -1044,16 +1044,16 @@
           "1.1"
         ],
         [
-          "Metrotown Station",
-          "Drive",
-          "8",
-          "4.6"
-        ],
-        [
           "Sperling–Burnaby Lake Station",
           "Drive",
           "8",
           "4.5"
+        ],
+        [
+          "Metrotown Station",
+          "Drive",
+          "8",
+          "4.6"
         ]
       ],
       "t": "table"
@@ -1115,24 +1115,24 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: studentsuccess.gov.bc.ca",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "Source: studentsuccess.gov.bc.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1177,19 +1177,19 @@
       "q": "Could a townhouse ever be built here?"
     },
     {
-      "q": "What is Buckingham Heights?",
       "a": "The detached-house slope east and south-east of Deer Lake in south-central Burnaby, surrounding Buckingham Elementary School (6066 Buckingham Ave) between Deer Lake Park and Royal Oak Avenue. It is a separate GVR MLS® sub-area from Deer Lake, Deer Lake Place and Upper Deer Lake (SnapStats, September 2026)",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What is Buckingham Heights?"
     },
     {
-      "q": "Which schools serve a Buckingham Heights address?",
       "a": "It depends on the address. Buckingham Elementary (K–7), 6066 Buckingham Ave, sits inside the sub-area, and Burnaby Central Secondary (8–12), 6011 Deer Lake Parkway, and Moscrop Secondary (8–12), 4433 Moscrop St, are the nearest secondaries on the Province's list; catchments are address-based and must be checked in the SD41 locator.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which schools serve a Buckingham Heights address?"
     },
     {
-      "q": "Are there condos or townhomes in Buckingham Heights?",
       "a": "Effectively none in the current market: the sub-area recorded 0 condos & townhomes listings and 0 solds in September 2026, against 12 detached listings — it is a detached, freehold sub-area (SnapStats, September 2026)",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Are there condos or townhomes in Buckingham Heights?"
     }
   ],
   "slug": "buckingham-heights",

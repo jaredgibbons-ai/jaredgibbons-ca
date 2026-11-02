@@ -841,6 +841,11 @@
           {
             "t": "Civic anchors: the Waterfront Esplanade (North Arm) and Quayside Park are the waterfront parks serving the slope; the təməsew̓txʷ Aquatic and Community Centre, 65 East Sixth Avenue, is the city's main aquatic centre, up the hill in Uptown; Moody Park Arena, 701 8th Avenue, is west of the area; the Main Branch of New Westminster Public Library is at 716 6th Avenue, up the hill in Uptown; the city's hospital is Royal Columbian Hospital, 330 East Columbia Street, in Sapperton (Fraser Health). No shopping centre inside Fraserview was confirmed on an official source: Not verified for any named store."
           }
+        ],
+        [
+          {
+            "t": "Schools: SD40 catchments are address-based. School names are Ministry-listed names, spelled exactly."
+          }
         ]
       ],
       "pos": "end",
@@ -1190,16 +1195,16 @@
           "1.9"
         ],
         [
-          "New Westminster Secondary",
-          "Drive",
-          "6",
-          "2.7"
-        ],
-        [
           "Royal City Centre",
           "Drive",
           "6",
           "2.2"
+        ],
+        [
+          "New Westminster Secondary",
+          "Drive",
+          "6",
+          "2.7"
         ]
       ],
       "t": "table"
@@ -1273,24 +1278,24 @@
       "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: newwestcity.ca",
-            "h": "https://www.newwestcity.ca/database/rte/2_4"
+            "h": "https://www.newwestcity.ca/database/rte/2_4",
+            "t": "Source: newwestcity.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
@@ -1335,9 +1340,9 @@
       "q": "Which schools serve a Jamieson Court or Victoria Hill address?"
     },
     {
-      "q": "Is Fraserview NW the same as Vancouver's Fraserview?",
       "a": "No. Fraserview NW is New Westminster's Fraserview sub-area, on the south slope above the North Arm of the Fraser River in the City of New Westminster (School District 40); Vancouver's Fraserview is a separate Vancouver East sub-area covered in its own file.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is Fraserview NW the same as Vancouver's Fraserview?"
     }
   ],
   "slug": "fraserview-nw",
