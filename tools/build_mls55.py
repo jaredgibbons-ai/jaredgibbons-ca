@@ -4,8 +4,7 @@
     python3 -I tools/build_mls55.py                                              (apply the saved list; run after build_55plus_notes)
 
 Rules: a building is listed when its closed sales in the export carry the 55+ flag on at least half of its sales (the flag is typed by the listing agent,
-so a building flagged on a minority of sales is treated as noise). Only building names, type and title are published: no counts, MLS numbers, addresses,
-prices or listing remarks. Names already described on a 55+ page are not repeated. Names that clash with a building the notes checked and found NOT 55+ are held out (HOLD).
+so a building flagged on a minority of sales is treated as noise). Published: building name, type, title, year built, storeys and building amenities (from the structured Amenities field, plus a yes/no for library, gating and RV parking taken from the listing text and reworded). The listing agents' own remarks are never quoted or copied; no counts, MLS numbers, addresses or prices. Names already described on a 55+ page are not repeated. Names that clash with a building the notes checked and found NOT 55+ are held out (HOLD).
 The export itself (listing remarks, MLS numbers) is not stored in the repo; only this aggregate is."""
 import glob, json, os, re, sys
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
@@ -36,6 +35,32 @@ def save(slug, j):
     with open(f'{LOCAL}/{slug}.json', 'w', encoding='utf-8') as f: json.dump(j, f, indent=2, ensure_ascii=False); f.write('\n')
 
 
+AMEN = [('Clubhouse', r'club ?house'), ('Fitness room', r'exercise centre|fitness'), ('Recreation room', r'recreation center|rec(?:reation)? room|social room|party room|games room'), ('Indoor pool', r'pool; indoor|indoor (?:swimming )?pool|indoor lap pool'),
+        ('Outdoor pool', r'pool; outdoor|outdoor (?:swimming )?pool'), ('Hot tub', r'swirlpool|hot ?tub'), ('Sauna', r'sauna|steam room'), ('Workshop', r'workshop'), ('Guest suite', r'guest suite'),
+        ('Elevator', r'elevator'), ('Wheelchair access', r'wheelchair'), ('Bike room', r'bike room'), ('Concierge', r'concierge'), ('Tennis court', r'tennis'), ('Library', r'librar'), ('Gated', r'\bgated\b'),
+        ('RV parking', r'\brv\b|\bboat\b.{0,12}parking')]
+REMARK_ONLY = {'Library', 'Gated', 'RV parking'}  # not in the structured amenities field: taken from the building description in the listing text, only as a yes/no fact
+
+
+def facts(g):
+    import collections
+    f = g[g.flag]; n = len(f)
+    yrs = [int(y) for y in f['Approx. Year Built'].dropna() if str(y).isdigit() and 1900 < int(y) < 2030]
+    built = None
+    if yrs:
+        c = collections.Counter(yrs).most_common(1)[0][0]
+        if max(yrs) - min(yrs) <= 2: built = c
+    st = [int(x) for x in f['Storeys in Building'].dropna() if str(x).isdigit()]
+    storeys = collections.Counter(st).most_common(1)[0][0] if st and max(st) - min(st) <= 1 else None
+    field = f['Amenities'].fillna('').str.lower(); rem = f['Public Remarks'].fillna('').str.lower()
+    am = []
+    for label, rx in AMEN:
+        if label in REMARK_ONLY:
+            if rem.str.contains(rx, regex=True).sum() >= max(1, (n + 1) // 2): am.append(label)
+        elif field.str.contains(rx, regex=True).sum() >= (n + 1) // 2: am.append(label)
+    return built, storeys, am
+
+
 def from_export(csv_path):
     import pandas as pd
     d = pd.read_csv(csv_path, dtype=str, encoding_errors='replace')
@@ -48,7 +73,8 @@ def from_export(csv_path):
         names = f['Complex/Subdivision Name'].value_counts().index
         name = next((n for n in names if not n.isupper()), names[0])
         if key(name) in (key(sub), key(area)): continue
-        out.append({'area': area.replace('N. Delta', 'North Delta'), 'sub': sub, 'name': nice(name.strip()),
+        built, storeys, am = facts(g)
+        out.append({'area': area.replace('N. Delta', 'North Delta'), 'sub': sub, 'name': nice(name.strip()), 'built': built, 'storeys': storeys, 'amenities': am,
                     'dwelling': sorted({DW.get(x, x) for x in f['Type of Dwelling'].dropna()}), 'title': sorted({TITLE.get(x, x) for x in f['Title to Land'].dropna()} - {None})})
     os.makedirs(os.path.dirname(STORE), exist_ok=True)
     json.dump({'source': 'Paragon closed sales, Nov 1 2025 to Oct 31 2026; Restricted Age = 55+ on at least half of a building\'s sales', 'buildings': sorted(out, key=lambda r: (r['area'], r['sub'], r['name']))}, open(STORE, 'w'), indent=1, ensure_ascii=False)
@@ -93,7 +119,7 @@ def main():
         bl = []
         multi = None in groups and len(groups) == 1
         for sub, items in sorted(groups.items(), key=lambda kv: str(kv[0])):
-            rows = [[nice(i['name']), ' / '.join(i['dwelling']) or '—', ' / '.join(t for t in i['title'] if t) or '—'] for i in sorted(items, key=lambda i: i['name'].lower())]
+            rows = [[nice(i['name']), ' / '.join(i['dwelling']) or '—', ' / '.join(t for t in i['title'] if t) or '—', str(i.get('built') or '—'), (f"{i['storeys']}" if i.get('storeys') and 'Condo' in i['dwelling'] else '—'), ', '.join(i.get('amenities') or []) or '—'] for i in sorted(items, key=lambda i: i['name'].lower())]
             nm = sub or cityname
             if sub is None:
                 bl += [{'t': 'h', 'level': 2, 'text': f'More {cityname} buildings the MLS marks as 55+', 'gen': GM}]
@@ -101,7 +127,7 @@ def main():
                 if not bl: bl += [{'t': 'h', 'level': 2, 'text': f'More {cityname} buildings the MLS marks as 55+, by community', 'gen': GM}]
                 bl += [{'t': 'h', 'level': 3, 'text': sub, 'gen': GM}]
             bl += [{'t': 'p', 'text': f'In {nm}, closed sales of these buildings carry the 55+ restricted-age field. Confirm each building\'s bylaw in its Form B before relying on it.', 'gen': GM},
-                   {'t': 'table', 'caption': f'Buildings in {nm} the MLS marks as 55+', 'head': ['Building', 'Type', 'Title'], 'rows': rows, 'gen': GM}]
+                   {'t': 'table', 'caption': f'Buildings in {nm} the MLS marks as 55+', 'head': ['Building', 'Type', 'Title', 'Built', 'Storeys', 'Building amenities'], 'rows': rows, 'gen': GM}]
         bl += [{'t': 'list', 'items': [[{'t': 'How to read the MLS 55+ flag', 'h': f'/{HUB}.html#mls-flag'}]], 'gen': GM}]
         at = next((i for i, b in enumerate(j['blocks']) if b.get('t') == 'h' and b.get('text') == 'Sources' and b.get('gen') in ('n55', 'n55city')), None)
         if at is None: at = next((i for i, b in enumerate(j['blocks']) if b.get('pos') == 'end'), len(j['blocks']))

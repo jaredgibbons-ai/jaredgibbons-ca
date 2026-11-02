@@ -157,7 +157,7 @@ test('MLS 55+ flag sections (n55mls): names, type and title only; no numbers fro
     const mine = (d.blocks || []).filter((b) => b.gen === 'n55mls');
     const tbls = mine.filter((b) => b.t === 'table');
     if (tbls.length) pages++;
-    for (const b of tbls) { assert.deepEqual(b.head, ['Building', 'Type', 'Title'], `${f}: table columns`); rows += b.rows.length; for (const r of b.rows) assert.ok(!/\d{2,}|\$|R[23]\d{6}/.test(r.join(' ')) || /\b(55|II|III)\b|\d+(st|nd|th)\b|^[\w .'&-]*\d[\w .'&-]*$/.test(r[0]), `${f}: number in a row ${r.join('|')}`); }
+    for (const b of tbls) { assert.deepEqual(b.head, ['Building', 'Type', 'Title', 'Built', 'Storeys', 'Building amenities'], `${f}: table columns`); rows += b.rows.length; for (const r of b.rows) { assert.ok(/^(—|(19|20)\d\d)$/.test(r[3]) && /^(—|\d{1,2})$/.test(r[4]), `${f}: built or storeys ${r.join('|')}`); assert.ok(!/\d|\$/.test(r[5]), `${f}: number in amenities`); } }
     assert.ok(!/R[23]\d{6}|\$\d/.test(JSON.stringify(mine)), `${f}: MLS number or price`);
   }
   assert.ok(pages >= 20 && rows >= 100, `expected the flag tables on 20+ pages, got ${pages} / ${rows} rows`);
