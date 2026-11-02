@@ -132,3 +132,19 @@ test('no research-team chatter or the wrong contact email reaches published text
     assert.ok(!/Jerry|sweep item|jared@jaredgibbons|\bfooter\b|\bbyline\b|Contact check|Filing position|conforming pass|home file|this file/i.test(mine), `${f}: research chatter in published text`);
   }
 });
+
+test('city-wide 55+ sections (Surrey, Burnaby, Coquitlam): ownership table or a stated none, no note markup, URLs only as links, 8+ FAQ', () => {
+  const bad = /roster|re-consolidation|consolidat|\bqueue\b|this series|calibration|sibling|\bbatch\b|Section \d|~\/|FILE DEFECT|\*\*|workspace/i;
+  for (const s of ['surrey', 'burnaby', 'coquitlam']) {
+    const j = JSON.parse(fs.readFileSync(path.join(LOCAL, `${s}-55-plus-homes-for-sale.json`), 'utf8'));
+    const mine = j.blocks.filter(b => b.gen === 'n55city');
+    assert.ok(mine.length >= 8, `${s}: city section missing`);
+    const txt = JSON.stringify(mine.concat(j.faq.filter(f => f.gen === 'n55city'))).replace(/"h":"[^"]*"/g, '');
+    assert.ok(!bad.test(txt), `${s}: note text leaked: ${(txt.match(bad) || [])[0]}`);
+    assert.ok(!/https?:\/\//.test(txt), `${s}: raw URL in text`);
+    assert.ok(!/R[23]\d{6}/.test(txt), `${s}: MLS number`);
+    assert.ok(j.faq.length >= 8, `${s}: only ${j.faq.length} FAQ`);
+    if (s === 'burnaby') assert.ok(/no[tn]? .*(age-restricted|55\+ strata)|Not in an age-restricted/i.test(txt), 'burnaby must say plainly that nothing 55+ is for sale');
+    else assert.ok(mine.some(b => b.t === 'table' && b.head.includes('Evidence') && b.rows.length >= 4), `${s}: ownership table too short`);
+  }
+});
