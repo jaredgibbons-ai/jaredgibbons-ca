@@ -1,0 +1,70 @@
+# Anmore Homes for Sale — Condos: Local Notes
+
+Researched Nov 1, 2026. Every fact carries its source. Anything no source states is marked UNCONFIRMED. No sold prices, no listing addresses beyond the named buildings themselves.
+
+**Page position — read first.** This is a detached-homes feed page for the Village of Anmore, adapted here to the condo format to state a verified negative: Anmore has no apartment-condo stock in the sources checked. Anmore is NOT a SnapStats-covered community — no SnapStats figures are used in this file and no substitute figures are invented; the research file's board grouping (Anmore as a sub-area inside a neighbouring community grouping) is noted only to explain why no Anmore median exists. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+
+## 1. STREETS AND BOUNDARIES
+
+- Identity: Anmore is the Village of Anmore, its own village municipality in Metro Vancouver, north of Port Moody, with its own council, bylaws and municipal office at the Anmore Community Hub, 2697 Sunnyside Road, Anmore, BC V3H 5G9. https://anmore.com/ (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- Where condo stock concentrates: nowhere in the village in the sources checked. The research file's sub-area row for September 2026 recorded Condos & Townhomes inventory 0 / sold 0, against 28 detached listings — a detached-only segment. No Anmore median price exists and none is stated: UNVERIFIED. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- Feed snapshot (not a statistic): the live feed paginated "1-12 / 49" at reading; the first 12 cards ran from acreage and estate homes to a nearly 5-acre bare-land listing, with lot sizes in card text from 19,461 sq ft to 1.27 acres. https://jaredgibbons.ca/anmore-homes-for-sale.html (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- Feed mismatch flagged: one card — 30 Birch Wynd, civic address Port Moody, BC V3H 4Y5 — is labelled with the board sub-area "Anmore" and its listing text calls it a home "IN ANMORE": a civic/board mismatch visible in the feed itself. The feed's exact filter criteria are UNVERIFIED. https://jaredgibbons.ca/anmore-homes-for-sale.html (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- Setting and access: the Village describes a rural setting surrounded by forests, with a limited number of routes in and out that are also used by visitors travelling to recreation areas such as Buntzen Lake. https://anmore.com/living-in-anmore/emergency-preparedness/ (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- Transit: Anmore has no SkyTrain station; the nearest stations are Port Moody's (Moody Centre and Inlet Centre, Millennium Line). Specific bus route numbers and schedules serving Anmore streets: UNVERIFIED. https://maps.translink.ca/-/media/translink/documents/schedules-and-maps/transit-system-maps/system-maps/fwc26_regional_transit_connections.pdf (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- Schools physically in the village (SD43, BC Ministry K-12 file): Anmore Elementary, 30 Elementary Rd, Anmore; Eagle Mountain Middle School, 110 Dogwood Dr, Anmore. The secondary school named for the Tri-Cities side in this program's recorded work is Heritage Woods Secondary, 1300 David Ave, Port Moody. Catchment for a specific Anmore address: UNVERIFIED — no locator run for an Anmore address is on record. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- Wrong-email check: the research file records no jared@jaredgibbons.ca instance on this page — stated explicitly rather than assumed; the correct contact email is jaredgibbons@royallepage.ca. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+
+## 2. BUILDINGS AND COMPLEXES
+
+**Zero apartment condos — stated plainly at the top.** No apartment-condo building exists in the village in the sources checked, and none is counted.
+
+### Apartment condos
+
+- None. Count: 0.
+
+### Townhomes — not condos, listed here so they are not confused
+
+- None named on a developer or strata source in the research file. One feed card is a unit in a numbered development on Sunnyside Road (card text only) — its legal form was not confirmed on a strata or developer source, so it is not counted as a townhome complex or as a condo: UNCONFIRMED. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+
+### Named subdivisions — not condo stock
+
+- **Pinnacle Ridge Estates** and **Ridge Mountain** are named in feed listing text only. No Anmore subdivision was confirmed on a developer or strata source in this pass: UNVERIFIED as verified complexes, and in any case detached-estate subdivisions, not apartment condos. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+
+### Tenure traps excluded, with the reason stated
+
+- Detached acreages and estate homes on fee-simple lots are the village's stock — excluded because they are not strata apartment condos. Bare-land product in the feed is likewise land, not a building. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+
+**Count for this file: 0 verified named apartment-condo entries in-area; 0 counted.**
+
+## 3. RULES THAT AFFECT CONDOS
+
+- **Form B (BC standard block — stated because buyers ask, though no strata stock is counted here):** Strata Property Act s.59 — a strata must provide a Form B Information Certificate within 7 days, maximum $35 plus 25¢/page, with the most recent depreciation report attached. If any Anmore property is ever offered as a strata lot, this is the diligence route; no such property is verified in this file. https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate
+- **Depreciation reports:** since July 1, 2024, stratas with 5+ lots must obtain a depreciation report every 5 years. **CRF:** since November 1, 2023, at least 10% of the operating fund must be contributed to the contingency reserve fund. https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements
+- **Rental-restriction bylaws are void** since November 24, 2022 (strata only); **only 55+ age bylaws are legal**, under SPA ss.123.1/123.2 and Regulation 7.01 exemptions including the May 1, 2023 expansion (legacy residents, live-in caregivers, younger spouses/partners and defined children). https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/bylaws-and-rules/age-restriction-bylaws
+- **Village zoning and gentle density: UNVERIFIED.** No Village of Anmore zoning bylaw section or SSMUH provision was extracted in the research pass, so no Anmore minimum lot size, subdivision rule or secondary-suite/coach-house rule is stated here. Individual feed cards claiming suites or preliminary coach-house plans are listing text, not village rules — verify with the Village for the specific lot. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- **Village tax/bylaw items:** the research file states no Anmore tax due dates or penalty figures, so none are stated here: UNCONFIRMED. Village services, permits and bylaws are published at anmore.com. https://anmore.com/ (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- **GST:** 5% GST applies to new construction, not resales. First-Time Home Buyers' GST/HST Rebate (Bill C-4, Royal Assent March 13, 2026 per CRA Excise and GST/HST News No. 122 — the March 12 secondary date is superseded): 100% of GST to a $1M price, maximum $50,000, phasing to $1.5M, agreements signed March 20, 2025–2031. GST New Housing Rebate: 36% / maximum $6,300 / $350K–$450K phase-out. https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html
+- **Property Transfer Tax (BC):** 1% on the first $200,000, 2% from $200,000 to $2M, 3% above $2M, plus a further 2% on the residential portion above $3M. First-Time Home Buyers' Program: full exemption on the first $500,000 at FMV ≤$835,000, partial to $860,000. Newly Built Home Exemption: full to $1.1M, partial to $1.15M. https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax
+- **HBP / FHSA / CMHC:** Home Buyers' Plan $60,000; FHSA $40,000 lifetime / $8,000 per year; CMHC published premium range 0.60%–4.50%.
+- **Presales (REDMA):** no presale product is verified in Anmore in this file; where a developer contract arises, REDMA s.21 gives a 7-day rescission period and s.18 requires deposits in trust.
+
+## 4. WHAT BUYERS ASK
+
+- **Q: Are there any condos in Anmore?** None verified. The research file's September 2026 sub-area row recorded 0 Condos & Townhomes listings and 0 sales, against 28 detached listings — the village's shelf is detached acreages and estates. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- **Q: What is the median condo price in Anmore?** There is none — no Anmore median is published, and no neighbouring community's median is Anmore's figure; none is substituted in this file. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- **Q: Is Anmore its own municipality or part of Port Moody?** Its own: the Village of Anmore, with its own council, bylaws and municipal office at 2697 Sunnyside Road — even though one feed card shows a Port Moody civic address under an Anmore board label (Section 1), so confirm the parcel's municipality on title. https://anmore.com/ (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- **Q: Can I add a suite or coach house to an Anmore lot?** UNVERIFIED — no Village zoning or SSMUH rule was extracted in this program. Feed cards advertising suites or coach-house plans are listing text; confirm with the Village for the specific lot before valuing a second dwelling. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- **Q: Which schools are in the village?** Anmore Elementary (30 Elementary Rd) and Eagle Mountain Middle School (110 Dogwood Dr), both SD43 schools in the BC Ministry K-12 file. Catchment for a specific address is UNVERIFIED — run the SD43 locator. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- **Q: Does Anmore have SkyTrain or a bus route I can count on?** No SkyTrain station — the nearest are Moody Centre and Inlet Centre in Port Moody. Specific Anmore bus routes: UNVERIFIED, no timetable was opened. https://maps.translink.ca/-/media/translink/documents/schedules-and-maps/transit-system-maps/system-maps/fwc26_regional_transit_connections.pdf (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- **Q: How does Buntzen Lake traffic affect living here?** The Village states parking and access to Buntzen Lake are managed by BC Hydro, including its reservation system and lot capacity, while the Village enforces its own parking and traffic bylaws on surrounding streets — parking is not permitted on restricted streets, including areas on or near Sunnyside Road by the lake. https://anmore.com/2026/05/05/buntzen-lake-traffic-and-parking-in-anmore/ (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- **Q: How active is the Anmore market?** Thin in the month checked: 28 detached listings with 0 detached sales in September 2026 in the research file's sub-area row — a patience market where a single month says little about a specific acreage. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- **Q: A listing says "incredible schools" for an Anmore home — can I rely on it?** The schools named exist (Section 1), but the card's catchment assertion is listing text only: UNVERIFIED until the exact address is run in the SD43 locator. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+
+## 5. LOCAL DETAILS A BUYER WOULD NOT KNOW
+
+- **The feed crosses a municipal boundary.** A Port Moody civic address (30 Birch Wynd) appears under the Anmore board label with listing text saying "IN ANMORE" — municipality, tax jurisdiction and services follow the civic address and title, not the feed label. https://jaredgibbons.ca/anmore-homes-for-sale.html (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- **The lake's parking is not the Village's to promise.** Buntzen Lake parking and reservations are BC Hydro's; the Village's role is bylaw enforcement on the surrounding streets — a summer-weekend access fact no listing states. https://anmore.com/2026/05/05/buntzen-lake-traffic-and-parking-in-anmore/ (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- **SD43 has a middle tier.** Anmore's in-village schools run elementary then middle (Eagle Mountain Middle, grades 6–8 in the district's structure) — families coming from elementary-to-secondary districts should map the full path, with the secondary catchment confirmed per address. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- **Zero is the finding, not a gap.** Anmore's attached shelf was empty in the month checked and no strata or developer source in this program names an Anmore condo building — a buyer who wants a condo near Anmore is shopping in Port Moody, a different municipality with its own stock. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)
+- **Census profile for Anmore: UNVERIFIED** — no Statistics Canada figure is stated in the research file and none is substituted here. (Research file: ~/workspace/area-research-2026-11/batch-15/anmore-homes-for-sale.md)

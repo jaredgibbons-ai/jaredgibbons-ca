@@ -1,0 +1,118 @@
+# Geographic Information Systems (GIS) Townhomes — Local Notes
+
+Researched Nov 1, 2026. Every fact carries its source; anything that could not be confirmed is marked UNCONFIRMED rather than guessed.
+
+## 1. Streets and boundaries
+
+> **FILE STATUS — TOPIC FILE (site utility/explainer page, geographic-information-systems-gis); count home: NONE — this file carries no roster of its own; 0 complexes counted here (0 strata, 0 fee-simple).** The page is a short educational explainer headed "GIS: Mapping & Spatial Insights" with 0 listings, no map embedded and no link to any GIS portal in the body text read — it is not tied to any one municipality, neighbourhood or property. Sibling files on disk: `~/workspace/local-notes/condos/geographic-information-systems-gis-condos-2026-11-01.md` ("There is no building list for this file — 0 by design"; count 0) and `~/workspace/local-notes/55-plus/geographic-information-systems-gis-55-plus-homes-2026-11-01.md` (ZERO verified 55+ complexes attach to this utility page itself). Research file: ~/workspace/area-research-2026-11/batch-14/geographic-information-systems-gis.md. No instance of the wrong contact email (jared@jaredgibbons.ca) is documented in this slug's research file or its condos sibling — stated explicitly: **none found**; the correct email is jaredgibbons@royallepage.ca, and the known program total of 29 pages is unchanged by this file. No SnapStats figure is cited anywhere in this file — no community's figures describe a mapping explainer.
+
+- What the page actually contains, in full: one introductory paragraph defining GIS as "just a fancy term for digital maps that carry data behind them," stating that clicking a property on a GIS map can pull up "its zoning, lot dimensions, flood plain status, ALR boundaries, easements, and a lot more," and that this is how the author checks buildability, flood zones, creek setbacks and whether a "big lot" is mostly unbuildable; then an FAQ with exactly four questions — "Do I need GIS skills to buy a house?", "What's the difference between zoning and OCP?", "How do I find out if a property is in a flood plain?" and "Can GIS tell me about easements and rights-of-way?" — then the standard site footer (research file §1; https://jaredgibbons.ca/geographic-information-systems-gis.html).
+- The tools the page names, as the page names them: "Chilliwack MapOnline, Abbotsford CityMap, and Delta's map" as the municipal GIS maps most relevant in this region for flood plain layers, and "BC iMap" for provincial flood data. The page names no tool for Langley, Surrey or any other municipality, does not name the ALC's ALR mapping, the Land Title Office or BC Assessment, and gives no URLs for any tool (research file §1; https://jaredgibbons.ca/geographic-information-systems-gis.html).
+- The page's own framing of its limits, preserved rather than improved on: GIS is "rarely critical" for a standard townhome or detached home in an established neighbourhood and "matters most when you're buying land, acreage, anything near water, anything in a flood zone, or anything you plan to build on, subdivide, or significantly modify"; GIS shows easements only "sometimes"; and "the title is the source of truth" for encumbrances, with GIS as "a first look" (research file §1; https://jaredgibbons.ca/geographic-information-systems-gis.html).
+- Whether the municipal tools the page names are current products under those exact names, and what layers each carries today: UNVERIFIED in this file — no City of Chilliwack, City of Abbotsford or City of Delta GIS page was opened in this pass, so the page's tool names are recorded as the page's statements only (research file §1).
+- The one tool reference verified in this pass: the Province's mapping page describes iMapBC as "an online mapping tool that allows users to view and analyze thousands of geographic datasets," with users able to upload their own map data and print or email the results; the same page describes B.C.'s Map Hub as the official B.C. Government presence in ArcGIS Online. This confirms the page's "BC iMap" reference points at a real provincial tool (iMapBC) with the layered-data function the page describes in general terms (research file §4; https://www2.gov.bc.ca/gov/content/data/geographic-data-services/web-based-mapping).
+- Market: NO market figures are stated, deliberately — a topic explainer with no listings, no property, no neighbourhood and no geography of its own. The only places it names are three municipalities mentioned as examples of GIS providers (Chilliwack, Abbotsford, Delta), which fall in three different board areas and none of which is the page's market; a market figure for this page is UNVERIFIED / not applicable (research file §2).
+- Regulator frame: real estate trading services in BC are regulated by the BC Financial Services Authority (BCFSA), which states a licensed professional must give consumers information about commissions and fees, inform consumers of the duties owed to clients and non-clients, inform unrepresented consumers of the risks of dealing with a professional representing another party, and work for only the buyer or the seller in a transaction — the frame within which map findings become advice to a client (research file §4; https://www.bcfsa.ca/public-resources/real-estate/protecting-real-estate-consumers).
+
+## 2. Complexes
+
+**Counted by this file: 0 — 0 strata, 0 fee-simple.** This is a site TOPIC file: it states plainly that it carries no roster of its own. There are no named townhouse complexes to verify, count or cross-reference here, and zero verified townhouse stock attaches to this page — not because townhouses were checked and failed, but because the page has no geography and no inventory by design. Any townhouse a reader reaches from this topic is verified and counted in its own area file in this program, not here.
+
+### 2.1 Counted strata townhouse complexes
+
+- **None. Zero counted.** No building is listed in this file, so no strata townhouse complex is counted, and no townhouse-style unit inside any apartment strata anywhere is counted here — apartment components count in the condos program only, in their own area files.
+
+### 2.2 Fee-simple townhouse complexes
+
+- **None. Zero counted.** The fee-simple contrast still matters to this topic: a GIS parcel layer showing a fee-simple townhouse lot does not make it strata, and a strata lot's map outline does not state its title form — tenure is read off title, not off a map (condos sibling, §2).
+
+### 2.3 Queued — named, NOT counted
+
+- **None queued from this page.** The page names no complex, project or presale, so there is nothing to queue. The page's content gaps are queued as page questions instead (§5): the intro promises "a quick walkthrough of the GIS tools I use most for BC properties, and how you can use them yourself," but no tool is walked through and no how-to steps appear (research file §5).
+
+### 2.4 The 55+ position for this topic
+
+- **No 55+ stock attaches to this page.** The 55-plus sibling states it plainly: ZERO verified 55+ complexes attach to this utility page itself; the region's verified 55+ ownership stock lives in the sibling area files (`~/workspace/local-notes/55-plus/geographic-information-systems-gis-55-plus-homes-2026-11-01.md`). A GIS age-restriction layer, where a municipality publishes one, is a first look only — the valid-bylaw question is settled by the registered bylaws and the Form B (§3), never by a map layer.
+
+### 2.5 Apartment condos — documented separately, NOT counted as townhomes
+
+- **Zero, by design.** The condos sibling for this slug carries the identical position: "There is no building list for this file — 0 by design," count 0 verified named apartment-condo entries (`~/workspace/local-notes/condos/geographic-information-systems-gis-condos-2026-11-01.md`). Nothing here counts as a townhome by being an apartment, and no apartment component is imported from any area file.
+
+### 2.6 Excluded stock — tenure traps, with reasons
+
+- No building is listed in this file, so no tenure trap is counted or excluded by name here. The standing rule still applies to any property a GIS check is run on: corporation-share, undivided-interest, leasehold (including TFN, City ground lease, UniverCity SFU and First Nations lease product), co-op, life-lease, membership/non-strata and non-market rental product is not townhouse stock, and a GIS layer showing a parcel does not establish its tenure — tenure is read off title (condos sibling, §2). Pad-rental parks are NEVER townhouse stock; where pad rent is discussed in this program it is governed by the Manufactured Home Park Tenancy Act frame, not by strata law. Bare-land strata and single-family strata are documented as their own form in their area files and are not counted unless genuinely townhouse-form strata.
+
+## 3. Rules that affect townhomes
+
+**The strata block (the diligence frame a GIS check feeds into — it never replaces it).**
+
+- **Form B diligence.** SPA s. 59: Form B within 7 days, maximum $35 plus up to 25¢ per page — fees, amounts owing, special levies, CRF balance, insurance, rules, budget, Rental Disclosure Statement and depreciation report attached. A clean GIS screen is not a Form B: the page itself states the title is the source of truth for encumbrances (BC Government: https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate).
+- **Depreciation reports.** Stratas with 5+ lots must obtain a depreciation report every 5 years since July 1, 2024; a sub-5-lot strata sits UNDER the threshold. **CRF minimum:** 10% of the operating budget since November 1, 2023 (BC Government: https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing).
+- **Rentals.** Rental-restriction bylaws VOID since November 24, 2022 — any directory, listing or map-adjacent note saying "rentals not allowed" for a strata is void for long-term rentals wherever met. Short-term rentals can still be restricted by bylaw (BC Government: https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/legislation-and-changes/changes-to-legislation).
+- **Age.** Only 55+ age bylaws are valid since November 24, 2022 (SPA ss. 123.1/123.2 + Reg 7.01; spouse/caregiver/legacy exemptions including the May 1, 2023 expansion; a 45+ bylaw is void and does NOT convert to 55+) (BC Government: https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/bylaws-and-rules/age-restriction-bylaws).
+- **Fee-simple contrast.** A fee-simple townhome carries NO strata, NO Form B, NO strata fees — title, municipal rules and registered covenants/HOA only. GIS is often the fastest way to see the lot; it is never the way to learn which of these two regimes the lot sits in.
+
+**The municipal/planning frame this page teaches — carried as the page's own statements.**
+
+- **Zoning versus OCP — recorded as the page's own simplified explanation, not as bylaw-verified definitions:** "Zoning is the current rule — what you're allowed to build on the property today. OCP (Official Community Plan) is what the city wants the area to become over the next 10-30 years," with the page's worked example that a single-family-zoned property with a medium-density OCP designation "is a redevelopment opportunity." No municipal zoning bylaw or OCP was opened for this file to test those definitions; quote them only as the page's plain-language framing (research file §4; https://jaredgibbons.ca/geographic-information-systems-gis.html).
+- **Flood plain checking, as the page describes the mechanics:** "Most municipal GIS maps have a flood plain layer you can toggle on," the named regional tools are Chilliwack MapOnline, Abbotsford CityMap and Delta's map, BC iMap holds provincial flood data, and a flood plain location "doesn't mean you can't buy it — but insurance, lending, and rebuilding rules change." Whether any named municipal tool in fact carries a toggleable flood layer under that name today, and the flood status of any specific property: UNVERIFIED in this file — no municipal GIS tool was opened and no property was looked up (research file §4).
+- **Easements and rights-of-way, as the page states them:** GIS layers "often show registered easements and obvious utility right-of-ways, but not every encumbrance shows up on the map," and "for a complete picture, pull the title search — the title is the source of truth." No Land Title and Survey Authority source was opened in this pass to confirm the title-search mechanics behind that advice, so those mechanics are UNVERIFIED in this file (research file §4).
+- **Which specific iMapBC layers carry BC flood plain, ALR boundary, zoning or easement data, and how current any of those layers are: UNVERIFIED** — the Province page opened describes iMapBC's datasets in the thousands without itemizing the property layers the site page lists, and no layer catalogue was opened (research file §4).
+
+**Purchase taxes, rebates and financing.**
+
+- **FTHB GST rebate (new housing only).** Bill C-4, Royal Assent **March 13, 2026** per CRA News No. 122 (March 13 governs; no sibling for this slug carries March 12 as its own date): 100% of GST to $1,000,000, maximum $50,000, phasing to $1,500,000, agreements March 20, 2025–2031 (CRA: https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html). GST applies to new construction, not resales.
+- **New Housing Rebate:** 36% / maximum $6,300 / $350,000–$450,000 phase-out (CRA: https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html).
+- **PTT:** 1% on the first $200,000, 2% on the portion above $200,000 to $2,000,000, 3% on the portion above $2,000,000, plus a further 2% on the residential portion above $3,000,000 — an "Over $3M — 5%" row is flagged as a compression of the 3% + further 2% structure wherever met. **Worked examples (general PTT, before any exemption):** $700,000 → $2,000 + $10,000 = **$12,000**; $1,000,000 → $2,000 + $16,000 = **$18,000**; $1,500,000 → $2,000 + $26,000 = **$28,000**; $1,800,000 → $2,000 + $32,000 = **$34,000**. Exemptions: first-time buyers full on first $500,000 at ≤$835,000, phasing to $860,000; newly built full to $1,100,000, eliminated at $1,150,000 (BC Government: https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/understand).
+- **HBP $60,000; FHSA $40,000 lifetime / $8,000 per year; CMHC premiums 0.6%–4.5%** (CMHC homeowner premium schedule). No CMHC page error is asserted for this slug — this file's research does not document the 2.80%–4.00% error for the geographic-information-systems-gis page, so it is NOT documented for this slug and NOT asserted here. The Vancouver Empty Homes Tax does NOT apply as a topic matter — it is a City of Vancouver tax only, and this page has no Vancouver geography of its own.
+- **Presales / REDMA.** 7-day rescission under s. 21 and deposits held in trust under s. 18 — the frame for any presale a GIS check is run on; no presale is named or counted in this file (https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/04066_01).
+- **Page defects / claims / contact.** This slug's research documents three content gaps from the page's own text only, precisely: (1) the intro promises a walkthrough of "the GIS tools I use most" that the body never delivers — the body is a definition plus a four-question FAQ, with no tool walked through and no how-to steps; (2) the municipal tools are named without links and without verifiable product names from the page — "Delta's map" in particular gives a reader nothing to search with confidence; (3) the page names "BC iMap" for flood data but never gives the provincial tool's actual product name as the Province styles it (iMapBC), and never mentions the ALC's own ALR mapping even though ALR boundaries are one of its headline GIS uses (research file §5). No credential-claim variant against the owner-approved set (REALTOR since 2015; 10 straight years FVREB Medallion Club; Top 1%; #1 in South Surrey/White Rock by MLS points 2025 + 2026 YTD; $500M+ sales) is documented for this slug, and no wrong-email instance is documented (see §1 FILE STATUS).
+
+## 4. What buyers ask
+
+**Q: What is GIS, in plain language?**
+A: As this site's own page puts it, Geographic Information Systems are "digital maps that carry data behind them" — click a property and, on the page's description, you can pull up zoning, lot dimensions, flood plain status, ALR boundaries and easements. The one tool reference this file verified is the Province's: iMapBC lets users view and analyze thousands of geographic datasets and upload, print or email their work. Which specific layers any one tool carries is UNVERIFIED in this file (research file §7; https://www2.gov.bc.ca/gov/content/data/geographic-data-services/web-based-mapping).
+
+**Q: Do I need GIS skills to buy a townhouse?**
+A: On the page's own answer: no — for a standard townhome or detached home in an established neighbourhood GIS is rarely critical, and it matters most for land, acreage, property near water or in a flood zone, and anything you plan to build on, subdivide or significantly modify (research file §7; https://jaredgibbons.ca/geographic-information-systems-gis.html).
+
+**Q: Does a clean GIS screen mean a clean title?**
+A: No — on the page's own account, not every encumbrance shows up on a map, so an easement or right-of-way question is settled by the title search, not by the absence of a line on a map. GIS is a first look; the title is the source of truth (§3).
+
+**Q: What is the difference between zoning and an OCP?**
+A: In the page's plain-language framing: zoning is the current rule for what may be built today, while the Official Community Plan is the municipality's long-term direction over the next 10–30 years. Those are the page's simplified definitions, recorded as site copy, not as bylaw-verified definitions (§3).
+
+**Q: How do I find out if a property is in a flood plain?**
+A: The page's route: toggle the flood plain layer on a municipal GIS map — it names Chilliwack MapOnline, Abbotsford CityMap and Delta's map — with BC iMap (iMapBC) holding provincial flood data; and it warns that flood plain status affects insurance, lending and rebuilding rules. The current names, layers and mechanics of those municipal tools are UNVERIFIED in this file — none was opened in this pass (§3).
+
+**Q: Can a GIS map tell me whether a townhouse is strata or fee-simple?**
+A: No. A map shows the parcel, not the title. Strata versus fee-simple is read off title and, for strata, the Form B package — fees, CRF balance against the 10% minimum in force since Nov 1, 2023, the current depreciation report, levies and the registered bylaws (§2.2, §3).
+
+**Q: This page names no townhouse complexes — where is the townhouse stock verified?**
+A: In the area files of this program, one file per area, each counting named complexes once in its home file. This topic file counts 0 by design and imports no roster from any area (§2).
+
+**Q: What will a purchase actually cost me in transfer tax?**
+A: General PTT before any exemption, worked in §3: $12,000 on $700,000; $18,000 on $1,000,000; $28,000 on $1,500,000; $34,000 on $1,800,000 — 1% on the first $200,000 and 2% on the balance at those price points, with 3% applying only above $2,000,000 and a further 2% on the residential portion above $3,000,000 (§3).
+
+**Q: A map layer says a complex is "55+" or "rentals not allowed" — can I rely on it?**
+A: No. Only a 55+ bylaw is a valid age bylaw since Nov 24, 2022 (a 45+ bylaw is void and does not convert), and every strata rental-restriction bylaw is void for long-term rentals since the same date. A map or directory line is a first look; the registered bylaws on the Form B govern (§3).
+
+## 5. Local details a buyer would not know
+
+- **The page promises a walkthrough it never gives.** The intro offers "a quick walkthrough of the GIS tools I use most for BC properties, and how you can use them yourself" — the body that follows is a definition plus four FAQ answers, with no tool opened, no steps and no link. A reader finishes knowing what GIS is, with no route from the page into any actual map (research file §5).
+- **The page's provincial tool has a slightly different real name.** The page says "BC iMap"; the Province styles its own tool iMapBC — the one reference in this file that could be confirmed against its owner's own description, which credits it with thousands of datasets plus upload, print and email functions (research file §4; https://www2.gov.bc.ca/gov/content/data/geographic-data-services/web-based-mapping).
+- **The page's core-market tools are the ones it doesn't name.** No Langley, Surrey, South Surrey or White Rock tool is named anywhere on the page, and the ALC's own ALR mapping is never mentioned — even though ALR boundaries are one of the page's headline GIS uses and most of Jared's listings sit in Langley/Surrey (research file §5).
+- **"Delta's map" is not a searchable product name.** Of the three municipal tools named, two carry product-style names (Chilliwack MapOnline, Abbotsford CityMap) and one is a possessive phrase — a reader cannot search it with confidence, and this file could not verify any of the three as current products because no municipal GIS page was opened (research file §§1, 5).
+- **The hierarchy is the whole lesson of the page.** GIS as first look, title as source of truth: the page states it for easements, and this file extends it to tenure, age bylaws and rental bylaws — every one of those is settled by title, bylaws and the Form B, never by a layer (§3).
+
+**UNCONFIRMED / open items** (every in-body UNVERIFIED flag, paired):
+1. A market figure for this page — a topic explainer with no listings and no geography of its own; no SnapStats community's figures describe it and none are stated (§1; research file §2).
+2. Jared's sold history — requires Jared's Paragon sold-history export (research file §3).
+3. The municipal GIS tools the page names — Chilliwack MapOnline, Abbotsford CityMap and "Delta's map" — as current products under those exact names, and the layers each carries today; no municipal GIS page was opened in this pass (§1; research file §1).
+4. The specific iMapBC layers carrying flood plain, ALR boundary, zoning or easement data for a property, and the currency of any such layer; no layer catalogue was opened (§3; research file §4).
+5. The flood plain status of any specific property, by any tool — no municipal GIS tool was opened and no property was looked up (research file §4).
+6. The site page's list of clickable GIS attributes (zoning, lot dimensions, flood plain status, ALR boundaries, easements) as an inventory of any single tool's actual layers — recorded as the page's general description of GIS only (research file §4).
+7. The page's zoning-versus-OCP definitions as bylaw-accurate definitions — recorded as the page's plain-language site copy; no municipal bylaw or OCP was opened to test them (§3).
+8. Title-search mechanics behind the page's "the title is the source of truth" advice — no Land Title and Survey Authority source was opened in this pass (§3).
+9. Which GIS tools Jared uses most in practice, and how a reader would access any of them — the page names tools in text only, with no links, steps or worked example (§2.3).
+10. Census / demographic profile for this page — not applicable to a topic explainer; no Statistics Canada figure opened and none substituted (research file §4).

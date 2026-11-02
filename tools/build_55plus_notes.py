@@ -26,18 +26,19 @@ CITY_55 = {  # community -> existing city-level 55+ page(s) that should list it
 TOPIC = re.compile(r'(under|over)-|open-houses|foreclosure|farms|lots-land|mobile-homes|calculator|^blog$|^contact$|our-listings|sold-properties|newsletter|marketing|commercial|land-use|landplans|home-evaluation|neighbourhood-guides|school-catchments|luxury|acreages|pad-rental|homes-for-sale$|first-time')
 PARK_PAGES = {'surrey-mobile-homes': 'surrey-mobile-homes', 'south-surrey-mobile-homes': 'south-surrey-mobile-homes', 'chilliwack-mobile-homes': 'chilliwack-mobile-homes',
               'mission-mobile-homes': 'mission-mobile-homes', 'maple-ridge-mobile-homes': 'maple-ridge-mobile-homes', 'cost-of-mobile-home-pad-rental-fees-in-langley': 'cost-of-mobile-home-pad-rental-fees-in-langley'}
+FQ_BAD = re.compile(r'\bfeed\b|SnapStats|guide page|Section \d|sibling|page shows?|statistics (?:show|say)|\bthis page\b', re.I)  # questions about this site's own data feed, not buyer questions
 SHARED_Q = re.compile(r"under 55.*(investment|parent)|spouse is under 55|rent out (a|my) unit|resale buyer pool", re.I)
 SHARED_LEAD = ('Only 55+ age bylaws', 'The bylaw restricts who', 'Built-in exemptions', 'Rental-restriction bylaws')
 DROP_URL = re.compile(r'R[23]\d{6}|plsrealestate|condos\.ca/.*unit|zolo\.ca|estateblock|realtor\.ca|soldbycraig|zealty|rodfriesen|rew\.ca/properties|/listing|/property/|PropertyDetails|-mls_|surreytownhouse\.com/buildings/view|rentitfurnished|apartments\.com|mhbo\.com|housesigma|point2|strata\.ca/listing|bcrealestatefinder', re.I)
 
 
 NOTE_REF = re.compile(r"\b(?:see|in) (?:[\w' ]{0,40} )?Section [1-5]\b")
-DROP_SENT = re.compile(r"^Sources?:|building entries|base guide|\broundup\b|\bthe (?:note|brief)\b|\b\d[\d,]* (?:attached|detached|active) (?:listings?|sales?)|listings? (?:versus|vs\.?) |\bParagon\b|research file|in this pass|\broster\b|\d+ active\b|active / \d+ sold|\d+ of the city's \d+ active", re.I)
+DROP_SENT = re.compile(r"^Sources?:|building entries|base guide|\broundup\b|\bthe (?:note|brief)\b|\b\d[\d,]* (?:attached|detached|active) (?:listings?|sales?)|listings? (?:versus|vs\.?) |\bParagon\b|research file|in this pass|\bcounted (?:here|separately|in the|as)\b|\bhome file\b|FILE STATUS|\bsiblings?\b|\bslugs?\b|zealty|zolo|estateblock|soldbycraig|realtor\.ca|this program|source guide|`|batch T\d|related-links|credit(?:s|ing) www|\b\d[\d,]* (?:listings?|sales|solds?|detached|attached)\b|\bfile\b|§|count home|\bslug\b|\bthis file\b|\bthe (?:land|condo|townhome|townhouse) (?:file|note)\b|\broster\b|\d+ active\b|active / \d+ sold|\d+ of the city's \d+ active", re.I)
 
 
 def clean(s):
     s = re.sub(r'\s*(?:[,;]|\band\b|\bor\b)?\s*https?://\S+', '', s)
-    s = re.sub(r'\s*(?:\band\b\s+)?[^.]*?\S*[&?]\w+=\S*', '', s)
+    s = re.sub(r'\s*\S*[&?]\w+=\S*', '', s)
     s = re.sub(r'\s*(?:\band\b\s+)?~/\S+', '', s)
     s = re.sub(r'\*\*(.*?)\*\*', r'\1', s)
     s = re.sub(r'\s*\((?:[^()]*?[;,] ?)?(?:see|in) [^()]*Section [1-5][^()]*\)', '', s)
@@ -53,6 +54,7 @@ def clean(s):
     s = re.sub(r'\b(and|or)(\s+(and|or))+\b', r'\1', s)
     s = re.sub(r'(?:\s+(?:and|or)|[;,:])\s*$', '', s).strip()
     s = re.sub(r'(?<=[.!?])\s+(?:and|or)\s*$', '', s).strip()
+    s = re.sub(r'(?:\s+(?:and|or))?\s*\(\s*$', '', s).strip()
     s = re.sub(r'\s+([.,;])', r'\1', s)
     s = re.sub(r':\s*(?=,)', '', s)
     return s
@@ -70,6 +72,8 @@ def parse(path):
         m = re.match(r'^### (.*)', ln)
         if m and cur: grp = m.group(1).strip(); sec[cur][grp] = []; continue
         if ln.startswith('- ') and cur: sec[cur].setdefault(grp, []).append(ln[2:])
+        elif cur == 4 and ln.startswith('**Q:'): sec[cur].setdefault(grp, []).append(ln.strip())
+        elif cur == 4 and ln.startswith('A:') and sec[cur].get(grp): sec[cur][grp][-1] += ' ' + ln[2:].strip()
     return title, sec, t
 
 
@@ -126,7 +130,9 @@ def name_city(slug, title):
 
 
 def J(b):
-    nm, rest = split_bold(b); nm, rest = clean(nm), clean(rest)
+    nm, rest = split_bold(b)
+    if nm is None: return clean(b)
+    nm, rest = clean(nm), clean(rest)
     return f'{nm}{rest}' if rest[:1] in ',;.' else f'{nm}: {rest}'
 
 
@@ -206,7 +212,7 @@ def build_community(path, written):
         m = re.match(r'\*\*Q:\s*(.*?)\*\*\s*(.*)', b)
         if not m: continue
         q, a = m.group(1).strip(), clean(m.group(2))
-        if a and not SHARED_Q.search(q): faq.append({'q': q, 'a': a})
+        if a and not SHARED_Q.search(q) and not FQ_BAD.search(q): faq.append({'q': q, 'a': a})
     if len(faq) < 5:
         for b in bullets(sec, 4):
             m = re.match(r'\*\*Q:\s*(.*?)\*\*\s*(.*)', b)
@@ -309,7 +315,7 @@ def fold_in(primary_slug0, written):
         new += [{**H(f'{nm}: streets, schools and what to know', 3), 'gen': 'n55fold'}, {**LI(s1 + s5), 'gen': 'n55fold'}]
         for b in bullets(sec, 4):
             m = re.match(r'\*\*Q:\s*(.*?)\*\*\s*(.*)', b)
-            if m and clean(m.group(2)) and not SHARED_Q.search(m.group(1)): faq.append({'gen': 'n55fold', 'q': m.group(1).strip(), 'a': clean(m.group(2))})
+            if m and clean(m.group(2)) and not SHARED_Q.search(m.group(1)) and not FQ_BAD.search(m.group(1)): faq.append({'gen': 'n55fold', 'q': m.group(1).strip(), 'a': clean(m.group(2))})
         comm = k if exists(k) else None
         written.append((slug, nm, pcity, comm))
     i = next((n for n, b in enumerate(j['blocks']) if b.get('t') == 'h' and b.get('text') == 'Sources'), len(j['blocks']))
@@ -395,7 +401,7 @@ def build_parks(path, slug0, written):
     faq = []
     for b in bullets(sec, 4):
         m = re.match(r'\*\*Q:\s*(.*?)\*\*\s*(.*)', b)
-        if m and clean(m.group(2)) and not SHARED_Q.search(m.group(1)): faq.append({'gen': 'n55mh', 'q': m.group(1).strip(), 'a': clean(m.group(2))})
+        if m and clean(m.group(2)) and not SHARED_Q.search(m.group(1)) and not FQ_BAD.search(m.group(1)): faq.append({'gen': 'n55mh', 'q': m.group(1).strip(), 'a': clean(m.group(2))})
     j['faq'] = [f for f in j.get('faq', []) if f.get('gen') != 'n55mh'] + faq
     j.setdefault('status', 'generated'); save(slug, j); print('wrote park section', slug, len(bl), 'blocks', len(faq), 'faq')
 

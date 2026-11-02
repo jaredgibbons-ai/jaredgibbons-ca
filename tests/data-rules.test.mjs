@@ -108,3 +108,19 @@ test('55+ park sections on mobile-home pages: no MLS numbers, listing links, not
   }
   assert.ok(n >= 6, 'expected the mobile-home park sections');
 });
+
+test('condo, townhome and land sections (gen tn): no MLS numbers, listing links, note references or board counts', () => {
+  let n = 0, hubs = 0;
+  for (const [f, t] of texts) {
+    const d = JSON.parse(t);
+    const mine = JSON.stringify([(d.blocks || []).filter((b) => b.gen === 'tn'), (d.faq || []).filter((x) => x.gen === 'tn')]);
+    if (d.tn_page) { hubs++; assert.ok((d.faq || []).length >= 5, `${f}: fewer than 5 FAQ`); assert.ok((t.match(/"h": "\//g) || []).length >= 5, `${f}: fewer than 5 links`); }
+    if (mine.length < 30) continue;
+    n++;
+    assert.ok(!/\bR[23]\d{6}\b/.test(mine), `${f}: MLS number published`);
+    assert.ok(!/zolo\.ca|estateblock|realtor\.ca|soldbycraig|zealty|rew\.ca\/properties|plsrealestate/i.test(mine), `${f}: listing-level link`);
+    assert.ok(!/\*\*|`|§|FILE STATUS|\bsiblings?\b|~\/|\bSection [1-5]\b(?![\d.]\d)|\d+ (attached|detached|active) listings|\b\d+ (listings|sales)\b/.test(mine), `${f}: note reference or board count`);
+  }
+  assert.ok(n >= 150, 'expected the type-note sections');
+  assert.equal(hubs, 3);
+});
