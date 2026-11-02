@@ -319,7 +319,7 @@ def hubs(notes, sh_all):
         urls_all = []
         for k in ks[:14]:
             b = sh['bb'][k]; nm, rest = N.split_bold(b)
-            if nm and N.clean(rest): bl += [{**N.H(N.clean(nm), 2), 'gen': G}, {**N.P(N.clean(rest)), 'gen': G}]
+            if nm and len(N.clean(rest)) > 60 and not re.search(r'documented in the research|none imported|-specific position', N.clean(rest)): bl += [{**N.H(N.clean(nm), 2), 'gen': G}, {**N.P(N.clean(rest)), 'gen': G}]
             urls_all += N.urls(b)
         sl = N.src_links(urls_all)
         links = [('Home evaluation', '/home-evaluation.html'), ('Mortgage calculator', '/mortgage-calculator.html'), ('BC 55+ strata rules', '/bc-55-plus-strata-rules.html'), ('Data and methodology', '/data-and-methodology.html'), ('Contact Jared', '/contact.html')]

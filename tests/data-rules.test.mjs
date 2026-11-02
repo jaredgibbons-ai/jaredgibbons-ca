@@ -164,3 +164,24 @@ test('MLS 55+ flag sections (n55mls): names, type and title only; no numbers fro
   const hub = JSON.parse(fs.readFileSync(path.join(LOCAL, 'bc-55-plus-strata-rules.json'), 'utf8'));
   assert.ok(hub.blocks.some((b) => b.id === 'mls-flag'), 'hub explainer missing');
 });
+
+test('acreage sections (acre): rural areas only, no note markup, no board counts, no listing-feed text; rules page explains the ALR, farm class and GST', () => {
+  let pages = 0;
+  const bad = /FILE STATUS|UNVERIFIED|UNCONFIRMED|\bsiblings?\b|\bslug\b|\bfeed\b|SnapStats|~\/|(?:see|in|\(|read) Section [1-5]\b|\bthe research\b|lots-and-land|\b\d+ \/ \d+ \/ (?:\d+%|NA)|R[23]\d{6}|https?:\/\//;
+  for (const [f, t] of texts) {
+    if (!t.includes('"acre"')) continue;
+    const d = JSON.parse(t);
+    const mine = (d.blocks || []).filter((b) => b.gen === 'acre').concat((d.faq || []).filter((q) => q.gen === 'acre'));
+    if (f === 'bc-acreage-buying-rules.json') continue;
+    const txt = JSON.stringify(mine).replace(/"h":"[^"]*"/g, '');
+    assert.ok(!bad.test(txt), `${f}: acreage text leaked: ${(txt.match(bad) || [])[0]}`);
+    assert.ok(mine.some((b) => b.t === 'list' && b.items.some((i) => i[0].h === '/bc-acreage-buying-rules.html')), `${f}: no link to the rules page`);
+    pages++;
+  }
+  assert.ok(pages >= 60, `expected acreage sections on 60+ pages, got ${pages}`);
+  const hub = JSON.parse(fs.readFileSync(path.join(LOCAL, 'bc-acreage-buying-rules.json'), 'utf8'));
+  const h = JSON.stringify(hub);
+  for (const w of ['Agricultural Land Reserve', '500 m²', '90 m²', '186 m²', '$10,000', 'October 31', 'GI-003']) assert.ok(h.includes(w), `rules page missing ${w}`);
+  assert.ok(hub.faq.length >= 5 && hub.new_page && hub.new_page.title.length <= 66, 'rules page FAQ or title');
+  assert.ok(!bad.test(h.replace(/"slug"/g, '"s"').replace(/https?:\/\/[^"]*/g, '')), 'rules page has note markup');
+});
