@@ -37,6 +37,21 @@ OWN = [
  ('chilliwack-proper-east', 'own-R2908661-31', '0f440cdb80257f60', 'Aerial view over Chilliwack Proper East toward downtown with the mountains behind'),
  ('clayton', 'own-R3017977-26', 'f0f4911f133bf307', 'Wetland pond and green space with a path and fence beside a Clayton Heights complex in Surrey'),
 ]
+# Originals Jared sent on 2026-11-03 (zip 'Originals for Jerry, 12 photos'); read from --orig as <MLS>-<photo number>.jpg
+OWN2 = [
+ ('abbotsford-east', 'own-R2506376-22', 'R2506376-22.jpg', 'Aerial view of townhome rows with white-fenced front yards on a hillside street in Abbotsford East'),
+ ('abbotsford-east', 'own-R2506376-27', 'R2506376-27.jpg', 'Aerial view of townhome streets on the forested hillside in Abbotsford East'),
+ ('abbotsford-east', 'own-R2506376-29', 'R2506376-29.jpg', 'Aerial view of a soccer field, playground and school building with homes on the hillside in Abbotsford East'),
+ ('central-abbotsford', 'own-R2647118-24', 'R2647118-24.jpg', 'Aerial view of Central Abbotsford apartment blocks with snow-capped Mount Baker and the mountains behind'),
+ ('central-abbotsford', 'own-R2647118-32', 'R2647118-32.jpg', 'Aerial view over Central Abbotsford apartment blocks and the valley toward Mount Baker'),
+ ('sapperton-new-westminster', 'own-R2634795-27', 'R2634795-27.jpg', 'Aerial view over Sapperton rooftops and trees toward the Fraser River and the New Westminster towers'),
+ ('sapperton-new-westminster', 'own-R2634795-32', 'R2634795-32.jpg', 'Aerial view of Sapperton streets and low-rise buildings with the Fraser River and construction cranes beyond'),
+ ('sapperton-new-westminster', 'own-R2634795-33', 'R2634795-33.jpg', 'Aerial view along a Sapperton street toward the Fraser River and the bridges'),
+ ('morgan-creek', 'own-R2480023-02', 'R2480023-02.jpg', 'Street-level view of the Kingston House condo building on a Morgan Creek street in South Surrey'),
+ ('walnut-grove', 'own-R2565306-19', 'R2565306-19.jpg', 'Condo blocks with stone chimneys and landscaped frontage seen across the road in Walnut Grove'),
+ ('whalley', 'own-R2560675-01', 'R2560675-01.jpg', 'Mid-rise condo building at a Whalley street corner with traffic lights, seen from the road'),
+ ('whalley', 'own-R2632300-01', 'R2632300-01.jpg', 'Corner of a five-storey condo building on 107A Avenue in Whalley, Surrey'),
+]
 LIC = {'CC BY 2.0': 'https://creativecommons.org/licenses/by/2.0/', 'CC BY 2.5': 'https://creativecommons.org/licenses/by/2.5/', 'CC BY 3.0': 'https://creativecommons.org/licenses/by/3.0/',
        'CC BY 4.0': 'https://creativecommons.org/licenses/by/4.0/', 'CC BY-SA 2.0': 'https://creativecommons.org/licenses/by-sa/2.0/', 'CC BY-SA 2.5': 'https://creativecommons.org/licenses/by-sa/2.5/',
        'CC BY-SA 2.5 CA': 'https://creativecommons.org/licenses/by-sa/2.5/ca/', 'CC BY-SA 3.0': 'https://creativecommons.org/licenses/by-sa/3.0/', 'CC BY-SA 4.0': 'https://creativecommons.org/licenses/by-sa/4.0/',
@@ -83,7 +98,7 @@ def credits_page(pages):
 def main():
     ap = argparse.ArgumentParser()
     for k in ('src', 'check', 'log', 'titles'): ap.add_argument('--' + k, required=True)
-    ap.add_argument('--own', default='')
+    ap.add_argument('--own', default=''); ap.add_argument('--orig', default='')
     a = ap.parse_args()
     check = {r['file']: r for r in csv.DictReader(open(a.check, encoding='utf-8'))}
     log = {r['filename'][:-4]: r for r in csv.DictReader(open(a.log, encoding='utf-8-sig'))}
@@ -111,6 +126,12 @@ def main():
     if a.own:
         for page, key, hid, alt in OWN:
             im = Image.open(f'{a.own}/{hid}-1600.webp').convert('RGB'); w, h = im.size
+            for tw in (640, 1280):
+                im.resize((tw, round(h * tw / w)), Image.LANCZOS).save(f'{OUT_IMG}/{key}-{tw}.webp', 'WEBP', quality=76, method=6)
+            pages.setdefault(page, []).append({'id': key, 'alt': alt, 'w': 1280, 'h': round(h * 1280 / w), 'own': True, 'cropped': False, 'wide': False})
+    if a.orig:
+        for page, key, fn, alt in OWN2:
+            im = Image.open(f'{a.orig}/{fn}').convert('RGB'); w, h = im.size
             for tw in (640, 1280):
                 im.resize((tw, round(h * tw / w)), Image.LANCZOS).save(f'{OUT_IMG}/{key}-{tw}.webp', 'WEBP', quality=76, method=6)
             pages.setdefault(page, []).append({'id': key, 'alt': alt, 'w': 1280, 'h': round(h * 1280 / w), 'own': True, 'cropped': False, 'wide': False})
