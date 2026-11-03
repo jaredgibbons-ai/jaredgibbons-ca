@@ -21,11 +21,16 @@ Building: Eight West, 85 Eighth Avenue (glenbrooke-north; condos).
 - Save-On-Foods, Royal City Centre, 610 6th St #198, New Westminster (retailer's own site search result, disclosed fallback). https://www.saveonfoods.com/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 85 Eighth Avenue (City of New Westminster NAR Addresses point for 85 Eighth Ave). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to École Glenbrook Middle School: 5.8 min, 0.43 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Queen's Park: 14.0 min, 1.05 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Moody Park: 17.5 min, 1.31 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Save-On-Foods, Royal City Centre, 610 6th St: 4.2 min, 1.63 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to New Westminster Station: 6.0 min, 3.16 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
 - School catchments for this address: no district locator run.
 - Bus frequencies: no operator page read states headways.
 - A bus exchange/loop name near this building: no operator page read names one.
-- Origin failure: Nominatim returned no house-number point for 85 Eighth Avenue in repeated foreground variants; the street points returned reverse-geocoded to 211 Eighth Avenue, a different address, and were discarded, so no reliable origin exists for this building in this pass.
+- Travel times re-measured in the cleanup pass, measured 2026-11-02: origin is the NAR Addresses for New Westminster point in the City of New Westminster Webmap WFL1 service (layer 2), LOC_GUID c8290410-7666-4be1-b509-22aeda6896bc, Full_Address 85 Eighth Ave, at 49.22092, -122.91547; the City Addresses layer (layer 3) in the same service holds unit records 101-…-85 EIGHTH AVE at the same point (within 1 m). Reverse-geocoding the point returns the Ovens Avenue road — a municipal-point artefact, disclosed. Measured but excluded over the 1.5 km walk cap: walk to Save-On-Foods, Royal City Centre (1.57 km).
 - Save-On-Foods point note: the 610 6th St point reverse-geocoded to a unit in Royal City Centre at the same address.

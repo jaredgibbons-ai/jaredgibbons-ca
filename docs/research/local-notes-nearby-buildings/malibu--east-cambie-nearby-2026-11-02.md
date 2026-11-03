@@ -18,14 +18,14 @@ Building: Malibu, 12900 Jack Bell Drive (east-cambie; townhomes).
 - No grocery or shopping anchor within about 1 km was confirmed in this pass; see NOT CONFIRMED.
 
 ## 5. MEASURED TRAVEL TIMES
-- From-point: 12900 Jack Bell Drive. Origin used: the Jack Bell Drive street-segment point (49.1783, -123.0838) that Nominatim returns for Jack Bell Drive addresses in this pocket; the civic-address interpolation fell on the East-West Connector and was not used. OSRM (router.project-osrm.org) for driving and OpenStreetMap DE routed-foot for walking; measured 2026-11-02; OSM data date not published by the service.
-- Walk to Kathleen McNeely Elementary: 8.7 minutes, 0.66 km, routed-foot, measured 2026-11-02.
-- Walk to King George/Cambie Community Park: 10.4 minutes, 0.78 km, routed-foot, measured 2026-11-02.
-- Walk to H.J. Cambie Secondary: 10.1 minutes, 0.76 km, routed-foot, measured 2026-11-02.
-- Walk to Cambie Community Centre: 10.8 minutes, 0.81 km, routed-foot, measured 2026-11-02.
+- From-point: 12900 Jack Bell Drive. Origin used: City of Richmond RIM Property Address layer 110 point for the unitless record "12900 JACK BELL DR" (OBJECTID 25005, ADDRKEY 69981), at 49.181720, -123.081879 (upgraded in cleanup pass; previously the Jack Bell Drive street-segment point — see NOT CONFIRMED). OSRM (router.project-osrm.org) for driving and OpenStreetMap DE routed-foot for walking; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Kathleen McNeely Elementary: 4.3 minutes, 0.32 km, routed-foot, measured 2026-11-02.
+- Walk to King George/Cambie Community Park: 7.0 minutes, 0.53 km, routed-foot, measured 2026-11-02.
+- Walk to H.J. Cambie Secondary: 4.1 minutes, 0.30 km, routed-foot, measured 2026-11-02.
+- Walk to Cambie Community Centre: 5.6 minutes, 0.42 km, routed-foot, measured 2026-11-02.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run was done in this pass.
 - Bus frequencies: not stated — no frequency was read from an operator timetable in this pass.
 - Grocery/shopping anchor within about 1 km: not confirmed — no retailer or centre address within the radius was read on a retailer's or centre's own page in this pass.
-- Origin point: a street-segment point on Jack Bell Drive, not a building point — Nominatim's interpolation of the civic address fell on the East-West Connector (Highway 91) and routed implausibly.
+- Origin upgraded (cleanup pass, 2026-11-02): previously a street-segment point on Jack Bell Drive (Nominatim's civic-address interpolation fell on the East-West Connector and was not used); now the City of Richmond RIM Property Address layer 110 point for the unitless record "12900 JACK BELL DR" (OBJECTID 25005, ADDRKEY 69981), at 49.181720, -123.081879. It reverse-geocodes to 12920 Jack Bell Drive (a neighbouring house number — an artefact; the point is the municipal record's own point and the record carries the roster address). All §5 pairs re-measured; none dropped.

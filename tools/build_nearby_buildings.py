@@ -23,7 +23,7 @@ def parse(path):
     if len(parts) < 2 or not re.match(r'\d', parts[1]): return None
     sec = NB.sections(t); frm, rows = NB.times(sec.get(5, []))
     rows = [r for r in rows if NB.plausible(r[1], r[2], r[3])]
-    seg = bool(re.search(r'segment|street point|not a building point|nearest point on', ' '.join(sec.get(5, [])[:1] + [x for x in sec.get(9, []) if re.search(r'origin|building-point|building point', x, re.I)]), re.I))
+    o = ' '.join(sec.get(5, [])[:1]); seg = bool(re.search(r'segment|street point|not a building point|nearest point on', o, re.I)) and not re.search(r'upgraded|previously segment|Address Points|civic point|building point of|structure point', o, re.I)
     return dict(name=re.sub(r'\s*\(.*?\)', '', parts[0]).strip() or parts[0], addr=parts[1], home=m.group(1), progs=m.group(2), sec=sec, rows=rows, seg=seg, size=len(t), file=os.path.basename(path))
 
 

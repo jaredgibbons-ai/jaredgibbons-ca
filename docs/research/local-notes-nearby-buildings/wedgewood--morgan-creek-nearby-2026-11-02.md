@@ -23,7 +23,7 @@ Building: Wedgewood, 15715 34 Avenue, Morgan Creek, Surrey, BC (morgan-creek; to
 ## 5. MEASURED TRAVEL TIMES
 - Measured 2026-11-02 from 15715 34 Avenue, Surrey, BC; OSRM driving, OSM DE routed-foot walking; OSM data date not published by the service.
 - Walk to Morgan Elementary: 4.1 minutes, 0.31 km, routed-foot.
-- Walk to Morgan Creek Park: 5.3 minutes, 0.40 km, routed-foot.
+- Walk to Morgan Creek Park: 7.1 minutes, 0.54 km, routed-foot.
 - Drive to Rosemary Heights Elementary: 2.9 minutes, 1.24 km, OSRM.
 - Drive to Save-On-Foods, 3033 152 Street: 4.5 minutes, 2.21 km, OSRM.
 - Drive to Walmart Supercentre, 2355 160 St: 5.2 minutes, 2.93 km, OSRM.
@@ -34,3 +34,4 @@ Building: Wedgewood, 15715 34 Avenue, Morgan Creek, Surrey, BC (morgan-creek; to
 - A recreation centre or library serving the area: none confirmed on a City of Surrey page read in this pass.
 - Origin point: verified house point for 15715 34 Avenue; reverse-geocode returned 15715, 34 Avenue, Morgan Creek, Surrey.
 - The Walmart destination point reverse-geocoded to a co-located business at the same address, 2355 160 Street; the named Walmart point at that address was used.
+- Morgan Creek Park point (cleanup pass, 2026-11-02): re-routed to the named park way's centroid (the park feature), replacing the 3302 156A Street address node; other pairs unchanged.

@@ -21,10 +21,23 @@ Building: Delta Gardens, 11501 84 Avenue (also listed as 11507 84 Avenue) (norde
 - Save-On-Foods, 7015 120 Street (address from a retailer own-domain search result, disclosed as such). https://www.saveonfoods.com/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 11501 84 Avenue (City of Delta Property Parcels "CMPLX" record for 11501 84 Ave, OBJECTID 36076, polygon centroid). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to North Delta Recreation Centre, 11415 84 Avenue: 3.4 min, 0.25 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to North Delta Recreation Centre, 11415 84 Avenue: 0.8 min, 0.27 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Walk to North Delta Community Park, 11311 84 Avenue: 7.5 min, 0.56 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to North Delta Community Park, 11311 84 Avenue: 2.5 min, 1.04 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Walk to George Mackie Library, 8440 112th Street: 8.7 min, 0.65 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to George Mackie Library, 8440 112th Street: 1.0 min, 0.56 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Walk to Richardson Elementary: 5.9 min, 0.44 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Richardson Elementary: 1.4 min, 0.52 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Walk to North Delta Secondary: 12.8 min, 0.96 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to North Delta Secondary: 2.0 min, 0.70 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Scottsdale Exchange: 5.5 min, 3.43 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Scottsdale Centre, 7031 120 St: 6.4 min, 3.90 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Save-On-Foods, 7015 120 Street: 6.5 min, 4.15 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
 - Measurement anchor: the first rostered address, 11501 84 Avenue, is used in the title; the header carries both rostered addresses.
-- Travel times not measured: Nominatim returned only 84 Avenue road segments for both 11501 and 11507 84 Avenue — no verifying house point for either rostered address — so no origin was used.
+- Travel times re-measured in the cleanup pass, 2026-11-02: origin is the polygon centroid of the City of Delta Property Parcels "CMPLX" record for 11501 84 Ave (OBJECTID 36076), a municipal parcel record carrying the exact roster address. Nominatim reverse-geocoding of that centroid returns Social Heart loop, a road at the complex, not the roster address — that reverse artefact is disclosed here; no neighbouring point was substituted.
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated — no operator page read states them.

@@ -17,10 +17,20 @@ Building: Kings Crossing, 1641 King Crescent (poplar-guide; townhomes).
 ## 4. GROCERY AND SHOPPING ANCHORS
 - Real Canadian Superstore, 2855 Gladwin Rd, Abbotsford (retailer's own site). https://www.realcanadiansuperstore.ca/store-locator/details/1558
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 1641 King Crescent (City of Abbotsford open-data Address Points point for this address). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Berry Park: 19.4 min, 1.45 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Jackson Elementary, 33165 King Rd: 3.1 min, 1.73 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Bourquin Exchange: 6.6 min, 3.71 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Clearbrook Library, 32320 George Ferguson Way: 10.0 min, 7.19 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Real Canadian Superstore, 2855 Gladwin Rd: 9.2 min, 4.89 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to MRC Sports Complex (Matsqui Recreation Centre), 3106 Clearbrook Road: 10.6 min, 7.24 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to South Poplar Traditional Elementary, 32746 Huntingdon Rd: 6.2 min, 4.11 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to ASIA - North Poplar, 32041 Marshall Rd: 6.0 min, 5.13 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Abbotsford Traditional School, 2272 Windsor St: 9.9 min, 7.31 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Huntingdon Park, 34779 3rd Avenue: 7.8 min, 4.74 km, OSRM, 2026-11-02; OSM data date not published by the service.
 ## NOT CONFIRMED
 - This Kings Crossing (1641 King Crescent, Abbotsford/Poplar) is a separate building from the Kings Crossing 1/2 files produced earlier under edmonds-be; they are not the same complex.
-- Origin not measured: free-form, name and structured Nominatim searches for 1641 King Crescent returned only the King Crescent road segment, never a house/building point for this address, so no origin point was used.
+- Travel times re-measured in the cleanup pass (measured 2026-11-02): origin is the City of Abbotsford open-data Address Points record for 1641 King Cr (OBJECTID 5898; a second city point for the same address sits about 11 m away). Nominatim reverse-geocode of the point returned the neighbouring 1639 King Crescent — a reverse artefact; the city record itself carries this building's address.
 - School catchment for 1641 King Crescent: not confirmed — no district locator run in this pass.
 - Bus stop nearest the building and its routes/frequency: not confirmed from an operator stop page in this pass.
 - No tenure claim is made for this building; its tenure is UNCONFIRMED in the program notes.

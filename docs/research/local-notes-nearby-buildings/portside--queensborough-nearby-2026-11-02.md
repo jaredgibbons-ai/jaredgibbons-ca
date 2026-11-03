@@ -21,15 +21,15 @@ Building: Portside, 488 Furness Street (queensborough; townhomes).
 - Walmart Supercentre #5777, 805 Boyd Street, New Westminster. https://www.walmart.ca/en/store/5777
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: 488 Furness Street, New Westminster — Nominatim has no house point for this address; the origin is the northern Furness Street segment point, which reverse-geocodes to Furness Street, New Westminster (segment-grade; see NOT CONFIRMED).
-- Walk to Port Royal Park: 6.6 minutes, 0.49 km, routed-foot.
-- Drive to Walmart Supercentre (805 Boyd Street): 3.8 minutes, 1.75 km, OSRM.
-- Drive to Queen Elizabeth Elementary (921 Salter Street): 5.8 minutes, 2.82 km, OSRM.
-- Drive to Queensborough Community Centre (920 Ewen Avenue): 6.0 minutes, 2.86 km, OSRM.
-- Drive to 22nd Street Station: 7.7 minutes, 4.46 km, OSRM.
+- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: City of New Westminster Webmap WFL1 NAR Addresses layer point for 488 Furness Street (LOC_GUID 6250d37f-37e1-48c7-a632-d42f8b8a358d; 163 unit records at this one point), at 49.195557, -122.929393 (upgraded in cleanup pass; previously a segment point — see NOT CONFIRMED); reverse-geocodes to Duncan Street, New Westminster (nearest OSM road).
+- Walk to Port Royal Park: 8.7 minutes, 0.65 km, routed-foot.
+- Drive to Walmart Supercentre (805 Boyd Street): 3.5 minutes, 1.65 km, OSRM.
+- Drive to Queen Elizabeth Elementary (921 Salter Street): 5.2 minutes, 2.60 km, OSRM.
+- Drive to Queensborough Community Centre (920 Ewen Avenue): 5.4 minutes, 2.65 km, OSRM.
+- Drive to 22nd Street Station: 7.1 minutes, 4.25 km, OSRM.
 
 ## NOT CONFIRMED
-- Origin grade: segment point on Furness Street, not a house point — Nominatim returned street segments only for this address in every variant tried.
-- Walks over the 1.5 km cap, excluded: Queen Elizabeth Elementary (1.98 km), Queensborough Community Centre (1.96 km), Walmart (1.75 km).
+- Origin upgraded (cleanup pass, 2026-11-02): previously a segment point on Furness Street; now the City of New Westminster Webmap WFL1 NAR Addresses layer point for 488 Furness Street (LOC_GUID 6250d37f-37e1-48c7-a632-d42f8b8a358d), at 49.195557, -122.929393. It reverse-geocodes to Duncan Street (nearest OSM road — an artefact; the municipal record carries the roster address). All §5 pairs re-measured; none dropped.
+- Walks over the 1.5 km cap, excluded (re-measured from the upgraded origin, cleanup pass 2026-11-02): Queen Elizabeth Elementary (2.11 km), Queensborough Community Centre (2.09 km), Walmart (1.99 km).
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated — no frequency was read from an operator timetable in this pass.

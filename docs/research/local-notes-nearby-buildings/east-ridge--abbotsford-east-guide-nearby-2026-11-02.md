@@ -25,12 +25,12 @@ Building: East Ridge (Cooper Meadows, by Polygon), 3025 McMillan Road (abbotsfor
 
 ## 5. MEASURED TRAVEL TIMES
 - Measured 2026-11-02, starting at 3025 McMillan Road; OSM data date not published by the service.
-- Walk to Abbotsford Recreation Centre: 5.4 minutes, 0.40 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Walk to Yale Secondary: 5.7 minutes, 0.43 km, routed-foot, measured 2026-11-02.
-- Walk to William A. Fraser Middle School: 11.7 minutes, 0.88 km, routed-foot, measured 2026-11-02.
-- Drive to Margaret Stenersen Elementary: 3.5 minutes, 2.19 km, OSRM (router.project-osrm.org), measured 2026-11-02.
+- Walk to Abbotsford Recreation Centre: 17.5 minutes, 1.31 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Walk to Yale Secondary: 17.8 minutes, 1.33 km, routed-foot, measured 2026-11-02.
+- Drive to Margaret Stenersen Elementary: 2.9 minutes, 1.36 km, OSRM (router.project-osrm.org), measured 2026-11-02.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address in this pass; a district page read in this pass describes a proposed boundary review for the Cooper Meadows development, not an address-level confirmation. https://princecharles.abbyschools.ca/news/proposed-boundary-review-cooper-meadows-high-street-village
-- Nominatim returned a McMillan Road street point for 3025 McMillan Road, not a building footprint; measurements start at that point.
+- Origin upgraded in the cleanup pass (2026-11-02): McMillan Road street point (original pass) → City of Abbotsford Address Points civic point for 3025 McMillan Road (Address_pnts OBJECTID 104661). The street point sat well south of the building, so the re-measured walk times are longer.
+- Walk to William A. Fraser Middle School: dropped in the cleanup pass — from the upgraded origin it routes 1.78 km, over the 1.5 km cap (it was listed from the street point).
 - Bus frequencies: not stated.

@@ -24,10 +24,10 @@ Building: Cypress Park, 32145 Old Yale Rd (abbotsford-west; 55-plus).
 
 ## 5. MEASURED TRAVEL TIMES
 - All measurements start at 32145 Old Yale Rd. Measured 2026-11-02; OSM data date not published by the service.
-- Walk to Dormick Park Elementary: 12.2 minutes, 0.90 km, OpenStreetMap routed-foot (routing.openstreetmap.de), Measured 2026-11-02; OSM data date not published by the service.
-- Drive to Matsqui Recreation Centre, 3106 Clearbrook Road: 3.6 minutes, 1.54 km, OSRM (router.project-osrm.org), Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Dormick Park Elementary: 12.7 minutes, 0.95 km, OpenStreetMap routed-foot (routing.openstreetmap.de), Measured 2026-11-02; OSM data date not published by the service.
+- Drive to Matsqui Recreation Centre, 3106 Clearbrook Road: 3.8 minutes, 1.52 km, OSRM (router.project-osrm.org), Measured 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run in this pass.
 - Bus stop nearest the building and frequencies: not confirmed on an operator page read in this pass.
-- Geocode: the house-number query returned a western Old Yale Road segment inconsistent with Dormick Park Elementary (32161 Dormick Ave); measurements use the Clearbrook segment of Old Yale Road — flagged, not corrected in the roster.
+- Origin upgraded in the cleanup pass (2026-11-02): the original pass used the Clearbrook segment of Old Yale Road (the house-number query returned a western segment inconsistent with Dormick Park Elementary at 32161 Dormick Ave); §5 is now measured from the centroid of the OSM landuse way named Cypress Park carrying addr 32145 Old Yale Road (way 356064383) — a polygon centroid; the City of Abbotsford Address Points civic point for the same address (OBJECTID 10759) sits about 20 m away.

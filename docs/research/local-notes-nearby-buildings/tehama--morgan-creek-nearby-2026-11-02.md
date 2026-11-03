@@ -23,7 +23,7 @@ Building: Tehama, 3355 Rosemary Heights Drive, Surrey, BC (morgan-creek; condos)
 
 ## 5. MEASURED TRAVEL TIMES
 - Measured 2026-11-02 from 3355 Rosemary Heights Drive, Surrey, BC; OSRM driving, OSM DE routed-foot walking; OSM data date not published by the service.
-- Walk to Morgan Creek Park: 9.5 minutes, 0.71 km, routed-foot.
+- Walk to Morgan Creek Park: 10.1 minutes, 0.75 km, routed-foot.
 - Walk to Morgan Elementary: 10.4 minutes, 0.78 km, routed-foot.
 - Walk to Rosemary Heights Elementary: 8.0 minutes, 0.60 km, routed-foot.
 - Drive to Walmart Supercentre, 2355 160 St: 5.6 minutes, 3.04 km, OSRM.
@@ -35,3 +35,4 @@ Building: Tehama, 3355 Rosemary Heights Drive, Surrey, BC (morgan-creek; condos)
 - Unit count: not stated — a building-directory figure for this building is unconfirmed in the home program file.
 - Measurement origin: §5 re-measured in a correction pass from the building's verified footprint point (building way tagged 3355 Rosemary Heights Drive) after the first-pass origin failed reverse-geocoding, returning 3336 155 Street.
 - A Rosemary Heights Park address-point geocode returned points in North Surrey and was discarded; the named park point was used.
+- Morgan Creek Park point (cleanup pass, 2026-11-02): re-routed to the named park way's centroid (the park feature), replacing the 3302 156A Street address node; other pairs unchanged.

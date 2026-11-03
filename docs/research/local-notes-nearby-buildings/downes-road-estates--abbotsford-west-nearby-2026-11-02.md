@@ -23,11 +23,11 @@ Building: Downes Road Estates, 32250 Downes Rd (abbotsford-west; 55-plus).
 
 ## 5. MEASURED TRAVEL TIMES
 - All measurements start at 32250 Downes Rd. Measured 2026-11-02; OSM data date not published by the service.
-- Drive to Real Canadian Superstore, 2855 Gladwin Road: 6.3 minutes, 3.40 km, OSRM (router.project-osrm.org), Measured 2026-11-02; OSM data date not published by the service.
-- Walks to Downes Bowl Park (0.63 km, 2.5 min) and Clearbrook Elementary (1.21 km, 8.1 min) failed the 4–6 km/h walk-speed check on re-measurement and were discarded.
+- Drive to Real Canadian Superstore, 2855 Gladwin Road: 6.7 minutes, 3.70 km, OSRM (router.project-osrm.org), Measured 2026-11-02; OSM data date not published by the service.
+- Walks to Downes Bowl Park (0.46 km, 1.4 min) and Clearbrook Elementary (1.04 km, 6.9 min) failed the 4–6 km/h walk-speed check on re-measurement from the upgraded origin (cleanup pass, 2026-11-02) and were discarded.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run in this pass.
 - Bus stop nearest the building and frequencies: not confirmed on an operator page read in this pass.
-- Geocode: Nominatim returned multiple Downes Road segments; measurements use the eastern segment consistent with Pacific Christian School at 29623 Downes Rd (Ministry list) and the home file's V4X 2R1 postal code — flagged, not corrected in the roster.
+- Origin upgraded in the cleanup pass (2026-11-02): the original pass used the eastern Downes Road segment point (Nominatim returned multiple segments); §5 is now measured from the centroid of the OSM landuse way named Downes Road Estates carrying addr 32250 Downes Road (way 392851812) — a polygon centroid; the City of Abbotsford Address Points civic point for the same address (OBJECTID 19943) sits about 150 m north, on the same complex.
 - Roster/home note: the building is filed in Abbotsford West on the MLS sub-area label, although Downes Road reads as an east-side street.

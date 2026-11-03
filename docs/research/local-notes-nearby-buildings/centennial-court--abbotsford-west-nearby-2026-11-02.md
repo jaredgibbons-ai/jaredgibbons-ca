@@ -23,11 +23,11 @@ Building: Centennial Court, 2451 Gladwin Rd (abbotsford-west; 55-plus).
 
 ## 5. MEASURED TRAVEL TIMES
 - All measurements start at 2451 Gladwin Rd. Measured 2026-11-02; OSM data date not published by the service.
-- Walk to Sevenoaks Shopping Centre: 6.2 minutes, 0.46 km, OpenStreetMap routed-foot (routing.openstreetmap.de), Measured 2026-11-02; OSM data date not published by the service.
-- Drive to Real Canadian Superstore, 2855 Gladwin Road: 1.5 minutes, 0.51 km, OSRM (router.project-osrm.org), Measured 2026-11-02; OSM data date not published by the service.
-- Walk to Mill Lake Park measured 1.55 km — over the 1.5 km cap, excluded.
+- Walk to Sevenoaks Shopping Centre: 9.9 minutes, 0.74 km, OpenStreetMap routed-foot (routing.openstreetmap.de), Measured 2026-11-02; OSM data date not published by the service.
+- Drive to Real Canadian Superstore, 2855 Gladwin Road: 2.5 minutes, 1.10 km, OSRM (router.project-osrm.org), Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Mill Lake Park: 13.3 minutes, 1.01 km, OpenStreetMap routed-foot (routing.openstreetmap.de), Measured 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run in this pass.
 - Bus stop nearest the building and frequencies: not confirmed on an operator page read in this pass.
-- Geocode: the plain house-number query returned northern Gladwin Road segments; measurements use the Mill Lake segment point (postal V2T 4V1), consistent with Centennial Park Elementary at 2527 Gladwin Rd on the Ministry list.
+- Origin upgraded in the cleanup pass (2026-11-02): Mill Lake segment point on Gladwin Road (original pass; plain queries returned northern Gladwin Road segments) → centroid of the OSM landuse way named Centennial Court carrying addr 2451 Gladwin Road (way 362670443), a polygon centroid; the City of Abbotsford Address Points civic point for the same address (OBJECTID 12362) sits about 60 m away. The Mill Lake Park walk, excluded in the original pass at 1.55 km, routes 1.01 km from the upgraded origin and is now listed in §5.

@@ -20,15 +20,16 @@ Building: Luxia at Yorkson, 7947 209 Street (willoughby-heights; townhomes).
 - Hakam's Your Independent Grocer, Unit D100, 20678 Willoughby Town Centre Drive, Langley, in Willoughby Town Centre, per the centre's directory. https://willoughbytowncentre.ca/shops-services/
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; driving OSRM (router.project-osrm.org), walking routing.openstreetmap.de routed-foot; OSM data date not published by the service. Origin: segment point on 209 Street (see NOT CONFIRMED).
-- Walk to Hakam's Your Independent Grocer, 20678 Willoughby Town Centre Drive: 9.2 minutes, 0.69 km, routed-foot.
-- Walk to Yorkson Community Park: 18.4 minutes, 1.38 km, routed-foot.
-- Drive to Richard Bulpitt Elementary, 20965 77A Avenue: 2.3 minutes, 0.96 km, OSRM.
-- Drive to Smith Athletic Park: 1.3 minutes, 0.81 km, OSRM.
-- Drive to Yorkson Creek Middle School, 20686 84 Avenue: 2.7 minutes, 1.60 km, OSRM.
+- Measured 2026-11-02; driving OSRM (router.project-osrm.org), walking routing.openstreetmap.de routed-foot; OSM data date not published by the service. Origin: Township of Langley civic address point for 7947 209 Street (see NOT CONFIRMED).
+- Walk to Hakam's Your Independent Grocer, 20678 Willoughby Town Centre Drive: 9.1 minutes, 0.68 km, routing.openstreetmap.de routed-foot.
+- Walk to Yorkson Community Park: 19.2 minutes, 1.44 km, routing.openstreetmap.de routed-foot.
+- Drive to Richard Bulpitt Elementary, 20965 77A Avenue: 2.2 minutes, 0.90 km, OSRM.
+- Drive to Smith Athletic Park: 1.8 minutes, 0.97 km, OSRM.
+- Drive to Yorkson Creek Middle School, 20686 84 Avenue: 2.7 minutes, 1.66 km, OSRM.
+
 
 ## NOT CONFIRMED
 - School catchments for 7947 209 Street: not confirmed; no SD35 locator run in this pass.
-- Origin: no OSM point carries 7947 209 Street; the measurement origin is a segment point on 209 Street at the 7947 position, reverse-geocoding to 209 Street — segment-grade.
+- Origin: upgraded in the cleanup pass — the Township of Langley civic address point for 7947 209 Street (TOL Addresses service, OBJECTID 45111; 49.14708, -122.64375) replaces the 209 Street segment point used originally. Its Nominatim reverse returns the nearest feature (Willoughby Trail), a known artefact; the municipal record carries the roster address.
 - Carvolth Exchange street address: not stated on the TransLink timetable read.
 - Bus frequencies: not stated in this file.

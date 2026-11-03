@@ -20,11 +20,12 @@ Building: Maple Villas, 21707 Dewdney Trunk Road (west-central; townhomes).
 - Save-On-Foods, 22703 Lougheed Highway, Maple Ridge (retailer's own site, search result), in Valley Fair Mall. https://www.saveonfoods.com/sm/planning/rsid/935/store
 
 ## 5. MEASURED TRAVEL TIMES
-- From-point: segment point on Dewdney Trunk Road at the address position of 21707, interpolated between OSM address points 21404 and 22195 Dewdney Trunk Road and reverse-geocoded to Dewdney Trunk Road (segment-grade; no OSM house point exists for this address). Measured 2026-11-02; OSM data date not published by the service.
-- Walk to Glenwood Elementary: 13.2 minutes, 0.99 km, routing.openstreetmap.de routed-foot, measured 2026-11-02; OSM data date not published by the service.
-- Drive to Merkley Park: 2.8 minutes, 1.85 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Alouette Elementary: 3.9 minutes, 2.65 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Valley Fair Mall (Save-On-Foods): 3.6 minutes, 2.42 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- From-point: City of Maple Ridge parcel centroid for 21707 Dewdney Trunk Road (Parcel layer: Address 21707 / DEWDNEY TRUNK RD, PIN 103629), at 49.22157, -122.61999 — upgraded in the cleanup pass from the segment-interpolated Dewdney Trunk Road point used originally; a parcel centroid reverse-geocodes to the nearest road, a known artefact. Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Glenwood Elementary: 14.9 minutes, 1.12 km, routing.openstreetmap.de routed-foot, measured 2026-11-02; OSM data date not published by the service.
+- Drive to Merkley Park: 2.9 minutes, 1.38 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- Drive to Alouette Elementary: 4.3 minutes, 2.80 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- Drive to Valley Fair Mall (Save-On-Foods): 3.7 minutes, 2.40 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no SD42 locator run for this address in this pass.

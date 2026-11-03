@@ -4,6 +4,8 @@
 - Nearest rapid-transit station: Richmond-Brighouse Station (Canada Line), reached by bus. https://www.translink.ca/schedules-and-maps/station/richmond-brighouse/schedule
 - 401 One Road, TransLink — Steveston Village via No. 1 Rd to Richmond-Brighouse Station, stopping beside Hugh Boyd Community Park. https://infomaps.translink.ca/Public_Timetables/218/tt401.pdf
 - 406 Railway, TransLink — Steveston Village via Railway Ave to Richmond-Brighouse Station, at the area's south edge. https://infomaps.translink.ca/Public_Timetables/218/tt406.pdf
+- 402 Brighouse Station / Two Road, TransLink — Steveston Village via Chatham, No. 1 Rd and Moncton, then No. 2 Rd, Blundell and No. 3 Rd to Richmond-Brighouse Station. https://infomaps.translink.ca/Public_Timetables/218/tt402.pdf
+- 407 Bridgeport / Gilbert, TransLink — Steveston Village via Chatham, 4 Ave and Steveston Hwy, at the area's south edge, then Gilbert to Lansdowne Station and Bridgeport Station, continuing to Marine at Knight. https://infomaps.translink.ca/Public_Timetables/218/tt407.pdf
 
 ## 2. PARKS AND RECREATION
 - Hugh Boyd Community Park, 9200 No. 1 Road — pitch and putt, artificial turf fields, sports fields, basketball, tennis, playground. https://www.richmond.ca/parks-recreation/parks/parksearch/park.aspx?ID=8

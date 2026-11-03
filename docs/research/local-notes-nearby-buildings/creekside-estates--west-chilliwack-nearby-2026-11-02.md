@@ -21,12 +21,12 @@ Building: Creekside Estates, 7694 Evans Road (west-chilliwack; condos).
 - Save-On-Foods, 46020 Yale Rd W, Chilliwack (retailer's own site search result). https://www.saveonfoods.com/sm/planning/rsid/2213/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Origin: a disclosed segment point on Evans Road at the building's block (segment-grade; see NOT CONFIRMED). Measured 2026-11-02; OSM data date not published by the service.
-- Walk to Evans Elementary: 1.5 minutes, 0.11 km, routing.openstreetmap.de routed-foot, measured 2026-11-02; OSM data date not published by the service.
-- Drive to Sardis Secondary: 4.7 minutes, 2.60 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Chilliwack Library: 6.3 minutes, 4.35 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- Origin: City of Chilliwack civic address point for 7694 Evans Road (Address Points (NextGen911), opendata.chilliwack.com, data updated 2026-11-01) — Structure point OBJECTID 9627 (unit 302), the record nearest the centroid of the dataset's 88 Structure points carrying this address, at 49.141815, -121.976741; Nominatim reverse-geocode of the point returns Luckakuck Creek Trail, Sardis (nearest OSM feature, no house number — the municipal record itself carries the exact roster address). Cleanup pass 2026-11-02: origin upgraded from the previous Evans Road segment point (see NOT CONFIRMED). Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Evans Elementary: 5.8 minutes, 0.43 km, routing.openstreetmap.de routed-foot, measured 2026-11-02; OSM data date not published by the service.
+- Drive to Sardis Secondary: 5.3 minutes, 3.05 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- Drive to Chilliwack Library: 6.0 minutes, 4.06 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Origin point: Nominatim holds no house point for 7694 Evans Road (road segments only, checked repeatedly in this pass); the origin used is an Evans Road segment point that reverse-geocodes to Evans Road, Sardis — segment-grade, not the building's own point.
+- Origin point: upgraded in the cleanup pass 2026-11-02 — previously an Evans Road segment point (Nominatim holds no house point for 7694 Evans Road, road segments only); the origin is now the building's own City of Chilliwack civic Structure point, OBJECTID 9627 (see §5), whose Nominatim reverse-geocode returns Luckakuck Creek Trail, Sardis as disclosed in §5. The neighbouring Evans Elementary point at 7600 Evans Road was not used as an origin.
 - School catchments: not confirmed for this address — no district locator run in this pass.
 - Bus frequencies: not stated on the operator pages read.

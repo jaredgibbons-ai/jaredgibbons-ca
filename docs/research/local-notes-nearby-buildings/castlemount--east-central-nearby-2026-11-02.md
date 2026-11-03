@@ -25,13 +25,11 @@ Building: Castlemount, 11601 227 Street (east-central; 55-plus + condos).
 - Save-On-Foods, 22703 Lougheed Highway (address from the retailer's own-domain search result). https://www.saveonfoods.com/sm/planning/rsid/935/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at 11601 227 Street; OSM data date not published by the service. Origin: the 227 Street (Town Centre) segment point returned by Nominatim for the roster address (no building point in OpenStreetMap).
-- Walk to Haney Place Mall: 7.3 minutes, 0.55 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Walk to Maple Ridge Leisure Centre: 10.5 minutes, 0.78 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Walk to Eric Langton Elementary: 14.4 minutes, 1.04 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Drive to Port Haney Station: 2.4 minutes, 1.83 km, OSRM (router.project-osrm.org), measured 2026-11-02.
+- From-point: City of Maple Ridge parcel centroid for 11601 227 Street (Parcel layer, DataCatalog/Property MapServer layer 3: Address 11601 / 227 ST, PIN 110163), at 49.21174, -122.59566 — upgraded in the cleanup pass (2026-11-02) from the street-segment point used originally; a parcel centroid reverse-geocodes to the nearest road, a known artefact. Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Haney Place Mall: 18.4 minutes, 1.38 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Drive to Port Haney Station: 2.2 minutes, 1.37 km, OSRM (router.project-osrm.org), measured 2026-11-02.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address in this pass.
-- Building-point geocode: none exists; measurements use the disclosed 227 Street segment point, the same point returned for 11601, 11609 and 11641 227 Street.
+- Origin upgraded in the cleanup pass (2026-11-02): the shared disclosed 227 Street segment point (original pass, same point for 11601, 11609 and 11641 227 Street) → City of Maple Ridge Parcel record for 11601 227 ST (PIN 110163; centroid — see §5). The roster address is not proven wrong. From the upgraded origin the walks to Maple Ridge Leisure Centre (1.52 km) and Eric Langton Elementary (1.63 km) exceed the 1.5 km walk cap, so those two pairs were removed from §5 in this pass.
 - Bus frequencies: not stated.

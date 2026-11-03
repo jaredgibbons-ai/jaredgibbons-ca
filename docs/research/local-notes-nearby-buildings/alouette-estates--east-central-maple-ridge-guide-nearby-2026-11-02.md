@@ -22,14 +22,15 @@ Building: Alouette Estates, 11870 232 Street (east-central-maple-ridge-guide; to
 - Haney Place Mall, 11900 Haney Place. https://www.haneyplacemall.com/contact_us/
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSM data date not published by the service. Origin: 11870 232 Street (segment point).
-- Walk to Golden Ears Elementary: 6.8 minutes, 0.51 km, routing.openstreetmap.de routed-foot.
-- Walk to Thomas Haney Secondary: 7.6 minutes, 0.57 km, routing.openstreetmap.de routed-foot.
-- Drive to Harry Hooge Park: 3.7 minutes, 2.16 km, OSRM (router.project-osrm.org).
-- Drive to Haney Place Mall: 3.8 minutes, 2.05 km, OSRM (router.project-osrm.org).
-- Drive to Save-On-Foods: 3.2 minutes, 1.66 km, OSRM (router.project-osrm.org).
+- From-point: City of Maple Ridge parcel centroid for 11870 232 Street (Parcel layer, DataCatalog/Property MapServer layer 3: Address 11870 / 232 ST, PIN 104684), at 49.21784, -122.57838 — upgraded in the cleanup pass (2026-11-02) from the segment point used originally. The centroid reverse-geocodes to 11851 Hawthorne Street — the nearest OSM-addressed feature; the City of Maple Ridge parcel record for this building carries the roster address and the origin is that parcel's centroid, so the reverse result is a disclosed artefact, not the building's address. Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Golden Ears Elementary: 7.8 minutes, 0.58 km, routing.openstreetmap.de routed-foot.
+- Walk to Thomas Haney Secondary: 12.6 minutes, 0.95 km, routing.openstreetmap.de routed-foot.
+- Drive to Harry Hooge Park: 4.0 minutes, 2.10 km, OSRM (router.project-osrm.org).
+- Drive to Haney Place Mall: 3.5 minutes, 2.08 km, OSRM (router.project-osrm.org).
+- Drive to Save-On-Foods: 3.2 minutes, 1.84 km, OSRM (router.project-osrm.org).
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run in this pass.
 - Bus frequencies: not stated — no operator page read stated them.
+- Origin upgraded in the cleanup pass (2026-11-02): the segment point (original pass) → City of Maple Ridge Parcel record for 11870 232 ST (PIN 104684; centroid — see §5, including the disclosed reverse-geocode artefact). The roster address is not proven wrong.
 - This building is not the Alouette Retirement Mobile Home Park at 12868 229 Street; no anchor above was sourced for that park.

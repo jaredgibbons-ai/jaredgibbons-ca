@@ -21,15 +21,15 @@ Building: 45753 Stevenson Road, 45753 Stevenson Road (sardis-east-vedder-guide; 
 - Save-On-Foods, 6014 Vedder Rd — address from the retailer's own site search result. https://www.saveonfoods.com/sm/planning/rsid/952/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSRM driving, routed-foot walking; OSM data date not published by the service. Origin: 45753 Stevenson Road — Nominatim has no house point for this address; the origin is Nominatim's segment interpolation on Stevenson Road, whose reverse-geocode returns a neighbouring business point on Stevenson Road rather than the building itself.
-- Walk to Sardis Park: 9.2 minutes, 0.69 km, routed-foot.
-- Walk to Sardis Elementary (45775 Manuel Rd): 9.2 minutes, 0.69 km, routed-foot.
-- Drive to Sardis Secondary (45460 Stevenson Rd): 1.0 minutes, 0.61 km, OSRM.
-- Drive to Save-On-Foods (6014 Vedder Rd): 3.1 minutes, 1.66 km, OSRM.
-- Drive to Sardis Library (5819 Tyson Rd): 5.7 minutes, 3.40 km, OSRM.
+- Measured 2026-11-02; OSRM driving, routed-foot walking; OSM data date not published by the service. Origin: City of Chilliwack NextGen911 Address Points civic point for 45753 Stevenson Road (dataset updated 2026-11-01; OBJECTID 9461, unit 306 structure point nearest the centroid of the address's 60 structure points), at 49.124733, -121.958329 (upgraded in cleanup pass; previously segment-interpolated — see NOT CONFIRMED); reverse-geocodes to Stevenson Road (nearest OSM road).
+- Walk to Sardis Park: 12.8 minutes, 0.96 km, routed-foot.
+- Walk to Sardis Elementary (45775 Manuel Rd): 14.2 minutes, 1.06 km, routed-foot.
+- Drive to Sardis Secondary (45460 Stevenson Rd): 2.5 minutes, 1.02 km, OSRM.
+- Drive to Save-On-Foods (6014 Vedder Rd): 4.1 minutes, 1.96 km, OSRM.
+- Drive to Sardis Library (5819 Tyson Rd): 6.3 minutes, 3.55 km, OSRM.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated — operator pages read did not state a frequency for these stops.
 - Building name: none in the notes — the building is identified by its street address only.
-- Building origin: no OSM house point exists for 45753 Stevenson Road; the segment interpolation used is disclosed in §5, and its reverse-geocode does not name the building.
+- Origin upgraded (cleanup pass, 2026-11-02): previously Nominatim's segment interpolation on Stevenson Road; now the City of Chilliwack NextGen911 Address Points civic point for 45753 Stevenson Road (dataset updated 2026-11-01; OBJECTID 9461, unit 306 structure point nearest the centroid of the address's 60 structure points), at 49.124733, -121.958329. It reverse-geocodes to Stevenson Road (nearest OSM road — an artefact; the municipal record carries the roster address). All §5 pairs re-measured; none dropped.

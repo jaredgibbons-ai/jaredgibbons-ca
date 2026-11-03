@@ -21,9 +21,13 @@ Building: Westbrooke, 12020 207A Street (northwest-maple-ridge; condos).
 - Save-On-Foods, 20395 Lougheed Highway (retailer's own site search result). https://www.saveonfoods.com/sm/planning/rsid/928/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 12020 207A Street (City of Maple Ridge open-data Parcel centroid; Address/StreetName exact match). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Fairview Elementary, 12209 206 St: 16.0 min, 1.18 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Save-On-Foods, 20395 Lougheed Highway: 12.2 min, 0.91 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Maple Meadows Station, 20010 Dunn Ave: 3.8 min, 2.22 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Maple Ridge Leisure Centre, 11925 Haney Place: 6.5 min, 4.10 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times: not measured — free-form, structured and building-name Nominatim searches returned only 207A Street road segments (Haney and Port Hammond); no house/building point at 12020 207A Street exists in the service, and no neighbouring point was substituted.
+- Cleanup pass, 2026-11-02: travel times re-measured from the City of Maple Ridge open-data Parcel centroid for this address (Address/StreetName exact match); Overpass found no OSM element carrying this street and number.
 - School catchments: not confirmed — no district locator run for this address.
 - Bus frequencies: not stated — none read from an operator timetable in this pass.

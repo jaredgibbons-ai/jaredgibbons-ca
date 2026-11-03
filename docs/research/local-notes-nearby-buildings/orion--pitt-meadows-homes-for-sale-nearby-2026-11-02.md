@@ -21,19 +21,19 @@ Building: Orion, 12460 191 Street (pitt-meadows-homes-for-sale; condos).
 - Real Canadian Superstore, Meadowtown, 19800 Lougheed Highway. https://www.realcanadiansuperstore.ca/store-locator/details/1555
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: 12460 191 Street, point from the OSM 191 Street segment for the 12400 block (V3Y 2B0), reverse-geocoded to 191 Street, Pitt Meadows.
-- Walk to Save-On-Foods: 4.9 minutes, 0.37 km, routed-foot.
-- Drive to Save-On-Foods: 1.2 minutes, 0.37 km, OSRM.
-- Walk to Pitt Meadows Station: 9.7 minutes, 0.72 km, routed-foot.
-- Drive to Pitt Meadows Station: 1.7 minutes, 0.89 km, OSRM.
-- Walk to Pitt Meadows Public Library: 14.3 minutes, 1.07 km, routed-foot.
-- Drive to Pitt Meadows Public Library: 1.4 minutes, 0.95 km, OSRM.
-- Walk to Pitt Meadows Family Recreation Centre: 16.9 minutes, 1.27 km, routed-foot.
-- Drive to Pitt Meadows Family Recreation Centre: 2.2 minutes, 1.21 km, OSRM.
-- Drive to Real Canadian Superstore, Meadowtown: 4.3 minutes, 2.50 km, OSRM.
+- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: 12460 191 Street, the City of Pitt Meadows civic address point (Address Point layer, Maple Ridge GIS; cleanup-pass upgrade from the 191 Street segment point), reverse-geocoded to 191 Street, Pitt Meadows (V3Y 2B0).
+- Walk to Save-On-Foods: 4.3 minutes, 0.32 km, routed-foot.
+- Drive to Save-On-Foods: 1.2 minutes, 0.33 km, OSRM.
+- Walk to Pitt Meadows Station: 10.1 minutes, 0.76 km, routed-foot.
+- Drive to Pitt Meadows Station: 1.8 minutes, 0.93 km, OSRM.
+- Walk to Pitt Meadows Public Library: 14.8 minutes, 1.11 km, routed-foot.
+- Drive to Pitt Meadows Public Library: 1.4 minutes, 0.99 km, OSRM.
+- Walk to Pitt Meadows Family Recreation Centre: 17.4 minutes, 1.30 km, routed-foot.
+- Drive to Pitt Meadows Family Recreation Centre: 2.2 minutes, 1.25 km, OSRM.
+- Drive to Real Canadian Superstore, Meadowtown: 4.3 minutes, 2.46 km, OSRM.
 
 ## NOT CONFIRMED
 - School catchments for this address: not confirmed — no SD42 locator run in this pass.
-- Origin: Nominatim returned only the 191 Street segment (no building point); the segment point above was used, reverse-geocoded to 191 Street.
-- Over-cap walk, measured but excluded: Real Canadian Superstore, 2.64 km.
+- Origin upgrade (cleanup pass): §5 re-measured from the City of Pitt Meadows civic address point for 12460 191 Street (Address Point layer via Maple Ridge GIS, OBJECTID 3234), replacing the 191 Street segment point; the layer's separate 12460 Harris Road point was not used.
+- Over-cap walk, measured but excluded: Real Canadian Superstore, 2.68 km.
 - Harris Road Park: no OpenStreetMap point found in this pass; not measured.

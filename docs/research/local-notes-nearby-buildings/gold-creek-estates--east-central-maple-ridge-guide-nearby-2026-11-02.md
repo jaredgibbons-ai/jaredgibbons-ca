@@ -22,15 +22,15 @@ Building: Gold Creek Estates, 12191 228 Street (east-central-maple-ridge-guide; 
 - Haney Place Mall, 11900 Haney Place. https://www.haneyplacemall.com/contact_us/
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at a 228 Street segment point in Town Centre returned by Nominatim for the roster address (no house-number point exists — see NOT CONFIRMED); times are approximate. OSRM for driving, OpenStreetMap DE routed-foot for walking; OSM data date not published by the service.
-- Walk to Eric Langton Elementary: 12.1 minutes, 0.86 km, routed-foot.
-- Walk to Harry Hooge Elementary: 12.4 minutes, 0.93 km, routed-foot.
-- Walk to St Patrick's: 12.5 minutes, 0.94 km, routed-foot.
-- Walk to Save-On-Foods / Valley Fair, 22703 Lougheed Highway: 7.8 minutes, 0.58 km, routed-foot.
-- Drive to Haney Place Mall: 2.2 minutes, 1.14 km, OSRM.
-- Drive to Maple Ridge Leisure Centre: 3.0 minutes, 1.55 km, OSRM.
+- From-point: City of Maple Ridge parcel centroid for 12191 228 Street (Parcel layer, DataCatalog/Property MapServer layer 3: Address 12191 / 228 ST, PIN 129432), at 49.22398, -122.59118 — upgraded in the cleanup pass (2026-11-02) from the 228 Street segment point used originally. The centroid reverse-geocodes to 12194 Fletcher Street — the nearest OSM-addressed feature; the City of Maple Ridge parcel record for this building carries the roster address and the origin is that parcel's centroid, so the reverse result is a disclosed artefact, not the building's address. Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Eric Langton Elementary: 14.9 minutes, 1.07 km, routed-foot.
+- Walk to Harry Hooge Elementary: 11.7 minutes, 0.88 km, routed-foot.
+- Walk to St Patrick's: 15.3 minutes, 1.15 km, routed-foot.
+- Walk to Save-On-Foods / Valley Fair, 22703 Lougheed Highway: 14.6 minutes, 1.10 km, routed-foot.
+- Drive to Haney Place Mall: 2.6 minutes, 1.37 km, OSRM.
+- Drive to Maple Ridge Leisure Centre: 3.1 minutes, 1.60 km, OSRM.
 
 ## NOT CONFIRMED
-- No house-number geocode exists for 12191 228 Street: repeated foreground Nominatim variants (free-form, structured, name search) returned only 228 Street segment points. §5 uses the Town Centre segment point at 49.2225553, -122.5903251, on the 228 Street stretch at about 121 Avenue; times approximate. The roster address is not proven wrong.
+- Origin upgraded in the cleanup pass (2026-11-02): the Town Centre 228 Street segment point at 49.2225553, -122.5903251 (original pass) → City of Maple Ridge Parcel record for 12191 228 ST (PIN 129432; centroid — see §5, including the disclosed reverse-geocode artefact). The roster address is not proven wrong.
 - School catchments: not confirmed (no district locator run for this address).
 - Bus frequencies: not stated on the TransLink pages read.

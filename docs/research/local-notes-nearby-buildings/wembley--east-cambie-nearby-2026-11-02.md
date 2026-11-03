@@ -19,9 +19,15 @@ Building: Wembley, 4991 No. 5 Road (east-cambie; townhomes).
 - Shoppers Drug Mart (No. 5 Road & Cambie), 11800 Cambie Road. https://www.shoppersdrugmart.ca/en/stores/2237-shoppers-5-road-and-cambie/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 4991 No. 5 Road (City of Richmond Property Address point, RIM layer 110, OBJECTID 97711). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to King George/Cambie Community Park: 13.1 min, 0.98 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Cambie Community Centre: 18.1 min, 1.36 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Mitchell Elementary: 13.9 min, 1.04 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to H.J. Cambie Secondary: 18.3 min, 1.37 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Shoppers Drug Mart (No. 5 Road & Cambie): 11.4 min, 0.86 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Richmond-Brighouse Station: 7.3 min, 4.51 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times: not measured — Nominatim returned no civic point for 4991 No. 5 Road across repeated query variants (plain, postal-code, and "Number 5 Road" forms); its No. 5 Road street-segment points reverse-geocode to Highway 99 and route implausibly (11 km-plus loops), so no reliable origin exists in this pass.
+- Travel times: re-measured in the cleanup pass, 2026-11-02 — origin is the City of Richmond Property Address point for the exact roster address (RIM Public_RIM_Map_ESRI MapServer, layer 110 "Property Address", OBJECTID 97711, ADDRKEY 13386, unitless property record, postal V6X 0S9; a second legacy unitless record for the same address at a different point was not used). Nominatim reverse-geocode of the point returns East-West Connector, East Cambie — the nearest OSM-named road, not the roster address; that reverse artefact is disclosed here, and the municipal record itself carries the roster address.
 - School catchments: not confirmed — no district locator run was done in this pass.
 - Bus frequencies: not stated — no frequency was read from an operator timetable in this pass.

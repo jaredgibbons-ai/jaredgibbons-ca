@@ -23,13 +23,13 @@ Building: Sage, 34365 Gladys Avenue (abbotsford-east; condos).
 
 ## 5. MEASURED TRAVEL TIMES
 - Measured 2026-11-02, starting at 34365 Gladys Avenue; OSM data date not published by the service.
-- Walk to Save-On-Foods, 2140 Sumas Way: 11.5 minutes, 0.86 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Drive to Walmart Supercenter, 1812 Vedder Way: 3.1 minutes, 1.59 km, OSRM (router.project-osrm.org), measured 2026-11-02.
-- Drive to Montrose Exchange: 2.7 minutes, 1.34 km, OSRM, measured 2026-11-02.
+- Walk to Save-On-Foods, 2140 Sumas Way: 4.7 minutes, 0.35 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Drive to Walmart Supercenter, 1812 Vedder Way: 2.9 minutes, 1.33 km, OSRM (router.project-osrm.org), measured 2026-11-02.
+- Drive to Montrose Exchange: 3.9 minutes, 1.96 km, OSRM, measured 2026-11-02.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address in this pass.
-- Walk to Walmart Supercenter: dropped — the routed walk was 1.65 km, over the 1.5 km cap (4.49 km/h); the drive is measured instead.
-- Nominatim returned a Gladys Avenue street point for 34365 Gladys Avenue, not a building footprint; measurements start at that point.
+- Walk to Walmart Supercenter: not listed — from the upgraded origin (below) the routed walk is 1.15 km / 15.3 min (4.50 km/h, within the 1.5 km cap), re-measured in the cleanup pass; the drive remains the listed pair, as originally published (from the original street point the walk routed 1.65 km, over cap).
+- Origin upgraded in the cleanup pass (2026-11-02): the original pass used a Nominatim Gladys Avenue street point; §5 is now measured from the City of Abbotsford Address Points civic point for 34365 Gladys Avenue (Address_pnts OBJECTID 34887).
 - Current listings use 34375 and 34395 Gladys Avenue for individual buildings (condos home file); the roster address 34365 is used as the anchor.
 - Bus frequencies: not stated.

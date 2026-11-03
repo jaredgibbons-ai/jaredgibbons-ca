@@ -23,9 +23,18 @@ Building: Winchester, 21867 50 Avenue (murrayville; townhomes).
 - Shoppers Drug Mart, Murrayville Square (pharmacy), 22196 50 Ave (retailer's own site search result). https://www.shoppersdrugmart.ca/en/stores/258-shoppers-drug-mart-murrayville-square/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 21867 50 Avenue (centroid of the Township of Langley Parcels records for this address). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Langley Fundamental Elementary: 3.2 min, 0.24 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Murrayville Outdoor Activity Park: 11.6 min, 0.87 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Murrayville Library: 11.6 min, 0.87 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to W.C. Blair Recreation Centre: 10.3 min, 0.77 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to IGA, 22259 48 Ave: 13.9 min, 1.05 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Shoppers Drug Mart, 22196 50 Ave: 13.8 min, 1.04 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Murrayville Academy: 13.8 min, 1.04 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to James Hill Elementary, 22144 Old Yale Rd: 3.1 min, 1.62 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to McLeod Athletic Park: 3.6 min, 2.13 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times: not measured — Nominatim returned no house or building point for 21867 50 Avenue across five query variants; the points returned were 50 Avenue road segments in the City of Langley (wrong municipality segment for this Township of Langley address) and were discarded.
+- Travel times re-measured in the cleanup pass (measured 2026-11-02): origin is the centroid of the 71 Township of Langley open-data Parcels records (Parcels FeatureServer) that carry 21867 50 Ave — one record per unit of this complex. Nominatim reverse-geocode of the centroid returned 50 Avenue (street only) — a reverse artefact; the parcel records themselves carry this building's address.
 - School catchments: not confirmed — no SD35 locator run for this address in this pass.
 - Bus frequencies: not stated on the timetables read.

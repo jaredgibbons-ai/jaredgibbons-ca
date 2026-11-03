@@ -23,16 +23,16 @@ Building: Mayfair Terrace, 2266 Atkins Avenue (port-coquitlam-homes-for-sale; 55
 - Costco, Port Coquitlam Warehouse, 2370 Ottawa St. https://www.costco.ca/w/-/bc/port-coquitlam/255
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: 2266 Atkins Avenue, Nominatim Atkins Avenue segment point reverse-geocoding to 2265 Atkins Avenue, the frontage at the building's address (see NOT CONFIRMED).
-- Walk to Port Coquitlam Community Centre, 2150 Wilson Avenue: 6.3 minutes, 0.48 km, routed-foot.
-- Walk to Port Coquitlam Station: 8.8 minutes, 0.66 km, routed-foot.
-- Walk to Central Elementary, 2260 Central Ave: 11.3 minutes, 0.85 km, routed-foot.
-- Drive to Save-On-Foods, 2385 Ottawa St: 6.4 minutes, 3.80 km, OSRM.
-- Drive to Costco, 2370 Ottawa St: 7.0 minutes, 4.11 km, OSRM.
+- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: 2266 Atkins Avenue, the City of Port Coquitlam civic address point for that address (City open data Addresses layer; cleanup-pass upgrade from the Atkins Avenue segment point — see NOT CONFIRMED).
+- Walk to Port Coquitlam Community Centre, 2150 Wilson Avenue: 6.6 minutes, 0.50 km, routed-foot.
+- Walk to Port Coquitlam Station: 8.7 minutes, 0.65 km, routed-foot.
+- Walk to Central Elementary, 2260 Central Ave: 10.7 minutes, 0.80 km, routed-foot.
+- Drive to Save-On-Foods, 2385 Ottawa St: 6.3 minutes, 3.77 km, OSRM.
+- Drive to Costco, 2370 Ottawa St: 6.9 minutes, 4.07 km, OSRM.
 
 ## NOT CONFIRMED
 - COUNT-HOME DISAGREEMENT (recorded, not resolved): condos counts it in port-coquitlam-homes-for-sale; 55-plus counts it through the standalone exemplar file, not an in-folder sub-area file.
-- Origin: a name search returned no Nominatim result; the structured search returned the Atkins Avenue segment point used above, reverse-geocoding to 2265 Atkins Avenue, across from 2266.
+- Origin upgrade (cleanup pass): production measured from the Atkins Avenue segment point (reverse: 2265 Atkins Avenue); §5 is re-measured from the City of Port Coquitlam civic address point for 2266 Atkins Ave (open data Addresses layer, OBJECTID 11044) — the City layer carries that address; a Nominatim reverse of the point returns the neighbouring Kelly Avenue building.
 - School catchments: not confirmed — no district locator run for this address.
 - Bus frequencies: not stated — none read from an operator page.
 - A Lions Park point was discarded: the geocode returned a Lions Way segment point near Shaughnessy Street, not the park at 2300 Lions Way; no Lions Park time is measured.

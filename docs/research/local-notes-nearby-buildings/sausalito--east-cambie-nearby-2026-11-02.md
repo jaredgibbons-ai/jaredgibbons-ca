@@ -18,15 +18,15 @@ Building: Sausalito, 12311 and 12331 McNeely Drive (east-cambie; townhomes).
 - No grocery or shopping anchor within about 1 km was confirmed in this pass; see NOT CONFIRMED.
 
 ## 5. MEASURED TRAVEL TIMES
-- From-point: 12311 McNeely Drive. Origin used: the McNeely Drive street-segment point (49.1796, -123.0884) that Nominatim returns for both roster addresses; the service holds no building point for this address. OpenStreetMap DE routed-foot for walking; measured 2026-11-02; OSM data date not published by the service.
-- Walk to Kathleen McNeely Elementary: 5.3 minutes, 0.40 km, routed-foot, measured 2026-11-02.
-- Walk to King George/Cambie Community Park: 7.0 minutes, 0.53 km, routed-foot, measured 2026-11-02.
-- Walk to Cambie Community Centre: 11.4 minutes, 0.85 km, routed-foot, measured 2026-11-02.
-- Walk to H.J. Cambie Secondary: 11.6 minutes, 0.87 km, routed-foot, measured 2026-11-02.
+- From-point: 12311 McNeely Drive. Origin used: City of Richmond RIM Property Address layer 110 point for the unitless record "12311 MCNEELY DR" (OBJECTID 97506, ADDRKEY 67741), at 49.179917, -123.087867 (upgraded in cleanup pass; previously the McNeely Drive street-segment point — see NOT CONFIRMED). The anchor is the first roster address, 12311 McNeely Drive. OpenStreetMap DE routed-foot for walking; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Kathleen McNeely Elementary: 4.6 minutes, 0.34 km, routed-foot, measured 2026-11-02.
+- Walk to King George/Cambie Community Park: 6.2 minutes, 0.47 km, routed-foot, measured 2026-11-02.
+- Walk to Cambie Community Centre: 10.7 minutes, 0.80 km, routed-foot, measured 2026-11-02.
+- Walk to H.J. Cambie Secondary: 10.8 minutes, 0.81 km, routed-foot, measured 2026-11-02.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run was done in this pass.
 - Bus frequencies: not stated — no frequency was read from an operator timetable in this pass.
 - Grocery/shopping anchor within about 1 km: not confirmed — no retailer or centre address within the radius was read on a retailer's or centre's own page in this pass.
 - Measurement anchor: the title and travel times use the first roster address, 12311 McNeely Drive; the complex is also addressed 12331 McNeely Drive.
-- Origin point: a street-segment point on McNeely Drive, not a building point — Nominatim returns the same segment point for both roster addresses.
+- Origin upgraded (cleanup pass, 2026-11-02): previously a street-segment point on McNeely Drive; now the City of Richmond RIM Property Address layer 110 point for the unitless record "12311 MCNEELY DR" (OBJECTID 97506, ADDRKEY 67741), at 49.179917, -123.087867. It reverse-geocodes to McNeely Drive (nearest OSM road — an artefact; the municipal record carries the roster address). All §5 pairs re-measured; none dropped.

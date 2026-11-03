@@ -22,13 +22,13 @@ Building: Auburn, 32528 Simon Avenue (abbotsford-west; condos).
 - Walmart Supercenter #1113 (grocery), 3122 Mt Lehman Rd. https://www.walmart.ca/en/store/1113
 
 ## 5. MEASURED TRAVEL TIMES
-- All measurements start at 32528 Simon Avenue. Measured 2026-11-02; OSM data date not published by the service. Origin geocode: Nominatim returned the Simon Avenue street segment for this address, not a building point.
-- Walk to Clearbrook Library, 32320 George Ferguson Way: 5.5 minutes, 0.41 km, OpenStreetMap routed-foot (routing.openstreetmap.de), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Matsqui Recreation Centre, 3106 Clearbrook Road: 4.6 minutes, 1.99 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Clearbrook Elementary, 3614 Clearbrook Road: 4.2 minutes, 2.64 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- All measurements start at 32528 Simon Avenue. Measured 2026-11-02; OSM data date not published by the service. Origin: City of Abbotsford Address Points civic point for 32528 Simon Avenue (Address_pnts OBJECTID 49302), adopted in the cleanup pass (2026-11-02) — the original pass used the Nominatim Simon Avenue street-segment point.
+- Walk to Clearbrook Library, 32320 George Ferguson Way: 6.2 minutes, 0.46 km, OpenStreetMap routed-foot (routing.openstreetmap.de), measured 2026-11-02; OSM data date not published by the service.
+- Drive to Matsqui Recreation Centre, 3106 Clearbrook Road: 4.6 minutes, 2.04 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- Drive to Clearbrook Elementary, 3614 Clearbrook Road: 4.3 minutes, 2.69 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated on the operator pages read in this pass.
-- Building-point geocode: not confirmed — Nominatim found no building point for 32528 Simon Avenue; measurements use its Simon Avenue street-segment point.
+- Origin upgraded in the cleanup pass (2026-11-02): Simon Avenue street-segment point (original pass) → City of Abbotsford Address Points civic point for 32528 Simon Avenue (OBJECTID 49302).
 - Save-On-Foods street address: not confirmed — no readable street address on the retailer page carried from the phase-1 pass.

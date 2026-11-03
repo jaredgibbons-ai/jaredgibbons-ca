@@ -19,15 +19,15 @@ Building: The Grove, 8929 202 Street (walnut-grove-guide; condos).
 - Section omitted: no supermarket or shopping centre inside the ~1 km pocket was confirmed from an allowed source in this pass (see NOT CONFIRMED).
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSRM driving (router.project-osrm.org), routed-foot walking (routing.openstreetmap.de); OSM data date not published by the service. Origin: interpolated point on 202 Street for 8929 202 Street, bracketed by the real OSM address points for 8912 and 8948 202 Street; it reverse-geocodes to 8912 202 Street — segment-grade, not house-point-grade (disclosed).
-- Walk to Dorothy Peacock Park: 8.9 min, 0.67 km, routed-foot, measured 2026-11-02.
-- Walk to Dorothy Peacock Elementary, 20292 91a Ave: 9.0 min, 0.68 km, routed-foot, measured 2026-11-02.
-- Drive to Save-On-Foods, 8840 210 St: 3.6 min, 2.11 km, OSRM, measured 2026-11-02.
-- Drive to Walnut Grove Secondary, 8919 Walnut Grove Dr: 3.8 min, 2.13 km, OSRM, measured 2026-11-02.
+- Measured 2026-11-02; OSRM driving (router.project-osrm.org), routed-foot walking (routing.openstreetmap.de); OSM data date not published by the service. Origin: centroid of the Township of Langley Parcels complex (CMPLX) polygon for 8929 202 Street (OBJECTID 41989) — cleanup-pass upgrade from the segment-interpolated point (see NOT CONFIRMED).
+- Walk to Dorothy Peacock Park: 9.7 min, 0.73 km, routed-foot, measured 2026-11-02.
+- Walk to Dorothy Peacock Elementary, 20292 91a Ave: 9.9 min, 0.74 km, routed-foot, measured 2026-11-02.
+- Drive to Save-On-Foods, 8840 210 St: 3.8 min, 2.16 km, OSRM, measured 2026-11-02.
+- Drive to Walnut Grove Secondary, 8919 Walnut Grove Dr: 3.7 min, 2.10 km, OSRM, measured 2026-11-02.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no locator run in this pass.
 - Bus frequencies: not stated.
 - Grocery: Save-On-Foods, 8840 210 St, is the area supermarket confirmed in the phase-1 file (retailer's own-domain search result), but it lies outside the ~1 km pocket (drive measured above), so §4 is omitted for this building.
-- Origin: no OSM house point for 8929 202 Street; plain-address results returned 202 Street road segments in the City of Langley and a neighbouring point (The Keg, 9020 202 Street), both discarded; the segment interpolation above was used.
+- Origin (cleanup-pass upgrade): previously segment-interpolated on 202 Street between the real 8912 and 8948 points (plain-address results returned road segments and a neighbouring point, The Keg, 9020 202 Street, discarded); now the centroid of the Township of Langley Parcels polygon for the complex (CMPLX) record at 8929 202 Street (OBJECTID 41989). Township addressPoints holds unit points only for this address. The centroid reverse-geocodes to 88 Avenue, the nearest OSM-named road; the parcel record itself carries the roster address.
 - Drive to Carvolth Exchange: not measured — the OSRM query returned an error in this pass.

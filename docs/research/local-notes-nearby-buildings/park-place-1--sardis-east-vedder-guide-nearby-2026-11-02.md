@@ -21,16 +21,16 @@ Building: Park Place 1, 45769 Stevenson Road (sardis-east-vedder-guide; condos).
 - Cottonwood Centre (shopping centre), 45585 Luckakuck Way (centre's own site search result). http://cottonwoodcentre.ca/
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: interpolated point on Stevenson Road for 45769 Stevenson Road (method in NOT CONFIRMED); reverse-geocodes to Stevenson Road.
-- Walk to Sardis Park: 10.8 minutes, 0.81 km, routed-foot.
-- Walk to Sardis Elementary (45775 Manuel Road): 12.2 minutes, 0.91 km, routed-foot.
-- Walk to Sardis Secondary (45460 Stevenson Road): 11.3 minutes, 0.85 km, routed-foot.
-- Walk to Vedder Middle School (45560 South Sumas Road): 14.9 minutes, 1.11 km, routed-foot.
-- Drive to Save-On-Foods (6014 Vedder Road): 3.3 minutes, 1.75 km, OSRM.
-- Drive to Sardis Library (5819 Tyson Road): 5.6 minutes, 3.33 km, OSRM.
+- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: City of Chilliwack NextGen911 Address Points civic point for 45769 Stevenson Road (dataset updated 2026-11-01; OBJECTID 9508, unit 306 structure point nearest the centroid of the address's 80 structure points), at 49.125215, -121.958210 (upgraded in cleanup pass; previously segment-interpolated — see NOT CONFIRMED); reverse-geocodes to Higginson Road (nearest OSM road).
+- Walk to Sardis Park: 13.5 minutes, 1.01 km, routed-foot.
+- Walk to Sardis Elementary (45775 Manuel Road): 14.9 minutes, 1.11 km, routed-foot.
+- Walk to Sardis Secondary (45460 Stevenson Road): 13.4 minutes, 1.00 km, routed-foot.
+- Walk to Vedder Middle School (45560 South Sumas Road): 19.8 minutes, 1.48 km, routed-foot.
+- Drive to Save-On-Foods (6014 Vedder Road): 3.6 minutes, 1.96 km, OSRM.
+- Drive to Sardis Library (5819 Tyson Road): 5.9 minutes, 3.54 km, OSRM.
 
 ## NOT CONFIRMED
-- Origin: Nominatim has no house point for 45769 Stevenson Road; the origin was interpolated along the Stevenson Road segment between the OSM points for 45460 Stevenson Road and 45775 Manuel Road and placed on Stevenson Road.
+- Origin upgraded (cleanup pass, 2026-11-02): previously interpolated along the Stevenson Road segment between the OSM points for 45460 Stevenson Road and 45775 Manuel Road; now the City of Chilliwack NextGen911 Address Points civic point for 45769 Stevenson Road (dataset updated 2026-11-01; OBJECTID 9508, unit 306 structure point nearest the centroid of the address's 80 structure points), at 49.125215, -121.958210. It reverse-geocodes to Higginson Road (nearest OSM road — an artefact; the municipal record carries the roster address). All §5 pairs re-measured; none dropped.
 - Sardis Park destination: OSM park point; reverse-geocodes to School Lane.
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated — operator pages read did not state a frequency for these stops.

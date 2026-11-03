@@ -25,12 +25,12 @@
 - Nearest shopping centre: Newton Town Centre, at 72nd Avenue and 138th Street, anchored by a Chalo FreshCo grocery store; north of the area. (https://newtontowncentre.com/)
 
 ## 5. MEASURED TRAVEL TIMES
-- OSRM (router.project-osrm.org); OSM data date not published by the service; measured 2026-11-02. From: 64 Avenue and 144 Street (named intersection at Sullivan Heights Park). To: École Panorama Ridge Secondary, 13220 64 Avenue. Drive: 3.5 min, 2.41 km.
-- OSRM (router.project-osrm.org); OSM data date not published by the service; measured 2026-11-02. From: 64 Avenue and 144 Street. To: Newton Exchange. Drive: 5.4 min, 3.10 km.
+- OSRM (router.project-osrm.org); OSM data date not published; measured 2026-11-02. From: 64 Avenue and 144 Street (named intersection at Sullivan Heights Park). To: École Panorama Ridge Secondary, 13220 64 Avenue. Drive: 3.5 min, 2.41 km.
+- OSRM (router.project-osrm.org); OSM data date not published; measured 2026-11-02. From: 64 Avenue and 144 Street. To: Newton Exchange. Drive: 5.4 min, 3.10 km.
 
 ## NOT CONFIRMED
-- Grocery store inside Panorama Ridge: none confirmed on a retailer's own site.
+- Grocery store inside Panorama Ridge: none confirmed on a retailer's site.
 - Recreation centre or library inside Panorama Ridge: none confirmed on a municipal page.
 - Official City boundary for Panorama Ridge: no stand-alone boundary found.
-- School catchments for a specific address: not confirmed in this pass; SD36 assignment is by address.
+- School catchments for an address: not confirmed in this pass; SD36 assignment is by address.
 - Walking times: not stated — the OSRM foot profile returned car-speed durations in this pass, so no walk time is quoted.

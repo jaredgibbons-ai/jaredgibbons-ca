@@ -23,10 +23,14 @@ Building: Mason by Cressey, 2070 Curling Road (pemberton-nv; townhomes).
 - Capilano Mall, 935 Marine Drive. https://capilanomall.com/find-us/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 2070 Curling Road (DNV GEOweb BldAddress base-address record + BldBuilding footprint 'MASON' (BLDG25624) centroid). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Lions Gate Community Recreation Centre, 1733 Lions Gate Lane: 3.4 min, 0.25 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Capilano Elementary, 1230 West 20th Street: 18.1 min, 1.35 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Save-On-Foods, #140 - 879 Marine Drive: 3.9 min, 2.45 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Capilano Mall, 935 Marine Drive: 3.6 min, 2.38 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times: not measured — Nominatim holds no house or building point for 2070 Curling Road; repeated foreground variants (free-form, structured, District wording, viewbox-bounded, name search, and a postal-code variant using V7P 0C9 from the home file) returned only Curling Road road segments, which were discarded; no neighbouring building's point was substituted.
+- Travel times re-measured in the cleanup pass, 2026-11-02: origin = centroid of the District of North Vancouver GEOweb BldBuilding footprint named 'MASON' (asset BLDG25624), linked from the DNV BldAddress base-address record for 2070 Curling Road; the centroid reverse-geocodes to Curling Road (a footprint centroid reverse-geocodes to the nearest road, not the polygon — disclosed artefact). Destinations are OSM points for anchors named in §§2–4, each reverse-checked in this pass.
 - School catchments: not confirmed — no district locator run in this pass.
 - Bus frequencies other than the R2's: not stated — none read from a timetable in this pass.
 - Grocery within ~1 km: not confirmed — the §4 anchors are the area's confirmed anchors, beyond ~1 km on Marine Drive.

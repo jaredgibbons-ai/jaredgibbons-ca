@@ -18,9 +18,16 @@ Building: Citadel Pointe, 678/688 Citadel Drive (port-coquitlam-homes-for-sale; 
 ## 4. GROCERY AND SHOPPING ANCHORS
 - Costco, Port Coquitlam Warehouse, 2370 Ottawa St. https://www.costco.ca/w/-/bc/port-coquitlam/255
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 678 Citadel Drive (centroid of OSM way 1157307120, named Citadel Pointe, carrying 678 Citadel Drive). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Castle Park Elementary, 1144 Confederation Dr: 19.4 min, 1.45 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Port Coquitlam Community Centre, 2150 Wilson Avenue: 6.9 min, 4.42 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Port Coquitlam Station: 7.8 min, 4.76 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Ecole Citadel Middle, 1265 Citadel Dr: 5.2 min, 2.35 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Central Elementary, 2260 Central Ave: 5.7 min, 3.54 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Ecole Riverside Secondary, 2215 Reeve St: 6.2 min, 3.95 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Costco, Port Coquitlam Warehouse, 2370 Ottawa St: 11.9 min, 7.48 km, OSRM, 2026-11-02; OSM data date not published by the service.
 ## NOT CONFIRMED
-- Measurement anchor: neither 678 nor 688 Citadel Drive produced a verifying house/building point — free-form, name and structured Nominatim searches for both addresses returned only the Citadel Drive road segment, so no anchor was used and no times were measured.
+- Travel times re-measured in the cleanup pass, 2026-11-02: origin is the centroid of OSM way 1157307120, the named Citadel Pointe way carrying 678 Citadel Drive; companion way 1157307119 carries 688 Citadel Drive the same way. Nominatim reverse of the 678 centroid returns Citadel Drive.
 - School catchment for 678/688 Citadel Drive: not confirmed — no SD43 locator run in this pass.
-- Bus routes at the stop nearest the building and frequencies: not confirmed from a TransLink stop page in this pass; §1 lists the station-area routes carried from the phase-1 file.
-- Save-On-Foods, Port Coquitlam: not listed in §4 — the phase-1 pass found its retailer page did not display a street address.
+- Bus routes/frequencies at the nearest stop: not confirmed from a TransLink stop page; §1 lists station-area routes from the phase-1 file.
+- Save-On-Foods: not listed in §4 — its retailer page showed no street address in the phase-1 pass.

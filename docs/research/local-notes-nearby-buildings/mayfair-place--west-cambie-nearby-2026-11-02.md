@@ -19,14 +19,14 @@ Building: Mayfair Place, 9399 Odlin Road; 9388 McKim Way; also addressed 9288 an
 - Walmart Supercentre, 9251 Alderbridge Way, Richmond, from Walmart's own store listing. https://www.walmart.ca/en/store/3652
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at 9399 Odlin Road; OSM data date not published by the service. Anchor: segment-interpolated point on Odlin Road between real OSM address points 9233 and 9600 Odlin Road; it reverse-geocodes to Odlin Road.
-- Walk to Alexandra Neighbourhood Park, 9600 Odlin Road: 0.25 km, 3.3 minutes, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Walk to Tomsett Elementary, 9671 Odlin Road: 0.33 km, 4.4 minutes, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Walk to Walmart Supercentre, 9251 Alderbridge Way: 0.61 km, 8.1 minutes, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Drive to Aberdeen Station: 1.88 km, 3.6 minutes, OSRM, measured 2026-11-02.
-- Drive to A.R. MacNeill Secondary, 6611 No. 4 Road: 2.61 km, 5.3 minutes, OSRM, measured 2026-11-02.
+- Measured 2026-11-02, starting at 9399 Odlin Road; OSM data date not published by the service. Anchor: City of Richmond Property Address point (RIM layer 110) for the unitless STRATA COMMON record at 9399 Odlin Road (OBJECTID 7928, ADDRKEY 94772) — cleanup-pass upgrade from a segment-interpolated point (see NOT CONFIRMED).
+- Walk to Alexandra Neighbourhood Park, 9600 Odlin Road: 0.31 km, 4.1 minutes, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Walk to Tomsett Elementary, 9671 Odlin Road: 0.44 km, 5.9 minutes, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Walk to Walmart Supercentre, 9251 Alderbridge Way: 0.57 km, 7.5 minutes, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Drive to Aberdeen Station: 1.77 km, 3.3 minutes, OSRM, measured 2026-11-02.
+- Drive to A.R. MacNeill Secondary, 6611 No. 4 Road: 2.72 km, 5.6 minutes, OSRM, measured 2026-11-02.
 
 ## NOT CONFIRMED
-- Anchor: first address 9399 Odlin Road used; the header carries all rostered addresses, including the "also addressed" listing addresses, exactly as rostered. The named OSM point "Mayfair Place" reverse-geocoded to McKim Way (a rostered component street) with no address, and the interpolation above was preferred.
+- Anchor (cleanup-pass upgrade): first address 9399 Odlin Road used; the header carries all rostered addresses, including the "also addressed" listing addresses, exactly as rostered. Previously segment-interpolated between the real 9233 and 9600 Odlin Road points; now the City of Richmond RIM Property Address point for the unitless STRATA COMMON record at 9399 Odlin Road (OBJECTID 7928). The point reverse-geocodes to Odlin Road only; the municipal record itself carries the roster address. The named OSM point "Mayfair Place" reverse-geocodes to McKim Way with no address.
 - School catchments for this address: not confirmed in this pass; no district locator run was done.
 - Bus frequencies: not stated; no operator frequency was read in this pass.

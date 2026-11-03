@@ -22,14 +22,10 @@ Building: Connect at Nature's Edge, 757 Orwell Street (lynnmour; townhomes).
 - Park & Tilford, 333 Brooksbank Ave: shopping centre, 35 shops and services (centre's own-domain search result). https://parkandtilford.com/
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02 from 757 Orwell Street; OSRM driving, OSM DE routed-foot walking; OSM data date not published by the service.
-- Walk to Lynnmour Elementary School, 800 Forsman Ave: 1.4 minutes, 0.10 km, routed-foot.
-- Walk to Inter River Park, 1301 Lillooet Road: 16.2 minutes, 1.21 km, routed-foot.
-- Drive to Phibbs Exchange: 3.2 minutes, 1.90 km, OSRM.
-- Drive to Save-On-Foods Park & Tilford, 333 Brooksbank Avenue: 4.0 minutes, 2.29 km, OSRM.
+- Travel times: not measured in this pass.
 
 ## NOT CONFIRMED
 - School catchments for 757 Orwell Street: not confirmed; no SD44 locator run for this address in this pass.
-- Origin point: civic-address geocodes for 757 Orwell Street fell on the separate southern Orwell Street segment near Phibbs Exchange and were discarded; measurements use the OpenStreetMap named feature "Connect at Nature's Edge" on the northern Orwell Street alignment, whose reverse-geocode names Lynnmour Elementary School, Forsman Avenue (the adjacent addressed feature).
+- Origin point (cleanup pass, 2026-11-02): §5 converted to not measured. The previous origin — the OpenStreetMap landuse way named "Connect at Nature's Edge" — carries the building's name but no 757 Orwell Street address, and its point reverse-geocodes to Lynnmour Elementary School, an adjacent feature, so it fails the cleanup pass's strict own-point rule. No verified own-point was found: no OSM address point or building footprint carries 757 Orwell Street on the northern Orwell Street alignment (the only nearby OSM Orwell Street address points are 864 and 984, so no bracketed interpolation is possible), the District of North Vancouver's open Building layer names four "CONNECT AT NATURE'S EDGE" footprints but carries no civic address (its parcel layer has no address field), and a District footprint centroid reverse-geocodes to East Keith Road.
 - Bus frequencies other than the R2: not stated — none read from a timetable.
 - A supermarket inside Lynnmour itself: not sourced; §4 anchors are across Lynn Creek, in the City of North Vancouver.

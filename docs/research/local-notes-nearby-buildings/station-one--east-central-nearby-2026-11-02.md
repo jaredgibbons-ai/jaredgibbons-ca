@@ -23,13 +23,13 @@ Building: Station One, 12070 227 Street (east-central; condos).
 - Walmart Supercenter #1206 (grocery), 11850 224 St, Maple Ridge. https://www.walmart.ca/en/store/1206
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at 12070 227 Street; OSM data date not published by the service. Origin: the Nominatim street-segment point for this address block (no building point exists in OpenStreetMap).
-- Walk to Save-On-Foods (Valley Fair Mall): 4.4 minutes, 0.33 km, routing.openstreetmap.de routed-foot.
-- Walk to Haney Place Mall: 7.1 minutes, 0.53 km, routing.openstreetmap.de routed-foot.
-- Walk to Eric Langton Elementary: 7.9 minutes, 0.54 km, routing.openstreetmap.de routed-foot.
-- Drive to Maple Ridge Secondary: 3.7 minutes, 2.22 km, OSRM (router.project-osrm.org).
+- From-point: City of Maple Ridge parcel centroid for 12070 227 Street (Parcel layer, DataCatalog/Property MapServer layer 3: Address 12070 / 227 ST, PIN 131872), at 49.22180, -122.59346 — upgraded in the cleanup pass (2026-11-02) from the street-segment point used originally. The centroid reverse-geocodes to Maple Ridge Fire Hall No. 1, 22708 Brown Avenue — the nearest OSM-addressed feature; the City of Maple Ridge parcel record for this building carries the roster address and the origin is that parcel's centroid, so the reverse result is a disclosed artefact, not the building's address. Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Save-On-Foods (Valley Fair Mall): 9.3 minutes, 0.70 km, routing.openstreetmap.de routed-foot.
+- Walk to Haney Place Mall: 10.9 minutes, 0.82 km, routing.openstreetmap.de routed-foot.
+- Walk to Eric Langton Elementary: 6.7 minutes, 0.46 km, routing.openstreetmap.de routed-foot.
+- Drive to Maple Ridge Secondary: 4.3 minutes, 2.33 km, OSRM (router.project-osrm.org).
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated.
-- Building-point geocode: none exists in OpenStreetMap; §5 uses the disclosed segment point.
+- Origin upgraded in the cleanup pass (2026-11-02): the Nominatim street-segment point (original pass) → City of Maple Ridge Parcel record for 12070 227 ST (PIN 131872; centroid — see §5, including the disclosed reverse-geocode artefact). The roster address is not proven wrong.

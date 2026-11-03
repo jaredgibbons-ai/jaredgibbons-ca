@@ -25,7 +25,7 @@ Building: Prescott Commons, 15137 33 Avenue and 15138 34 Avenue, Surrey, BC (mor
 - Measured 2026-11-02 from 15137 33 Avenue, Surrey, BC; OSRM driving, OSM DE routed-foot walking; OSM data date not published by the service.
 - Walk to Rosemary Heights Park: 10.8 minutes, 0.81 km, routed-foot.
 - Walk to Rosemary Heights Elementary: 14.8 minutes, 1.11 km, routed-foot.
-- Drive to Morgan Creek Park: 2.5 minutes, 1.35 km, OSRM.
+- Drive to Morgan Creek Park: 2.7 minutes, 1.37 km, OSRM.
 - Drive to Walmart Supercentre, 2355 160 St: 5.4 minutes, 3.19 km, OSRM.
 - Drive to White Rock Centre: 7.2 minutes, 4.16 km, OSRM.
 
@@ -35,3 +35,4 @@ Building: Prescott Commons, 15137 33 Avenue and 15138 34 Avenue, Surrey, BC (mor
 - School catchments: not confirmed — no SD36 locator run for this address.
 - Measurement origin: street-segment point on 33 Avenue on this building's own block (the 15100 block, between 151 Street and 152 Street), because the building has no house point in the geocoder; a correction pass replaced the first-pass origin, which failed reverse-geocoding.
 - A Rosemary Heights Park address-point geocode returned points in North Surrey and was discarded; the named park point was used.
+- Morgan Creek Park point (cleanup pass, 2026-11-02): re-routed to the named park way's centroid (the park feature), replacing the 3302 156A Street address node; other pairs unchanged.

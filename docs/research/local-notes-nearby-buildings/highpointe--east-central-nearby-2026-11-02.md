@@ -25,13 +25,13 @@ Building: Highpointe, 11641 227 Street (east-central; condos).
 - Save-On-Foods, 22703 Lougheed Highway (address from the retailer's own-domain search result). https://www.saveonfoods.com/sm/planning/rsid/935/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at 11641 227 Street; OSM data date not published by the service. Origin: the 227 Street (Town Centre) segment point returned by Nominatim for the roster address (no building point in OpenStreetMap).
-- Walk to Haney Place Mall: 7.3 minutes, 0.55 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Walk to Maple Ridge Leisure Centre: 10.5 minutes, 0.78 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Walk to Eric Langton Elementary: 14.4 minutes, 1.04 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Drive to Port Haney Station: 2.4 minutes, 1.83 km, OSRM (router.project-osrm.org), measured 2026-11-02.
+- From-point: City of Maple Ridge parcel centroid for 11641 227 Street (Parcel layer, DataCatalog/Property MapServer layer 3: Address 11641 / 227 ST, PIN 133845), at 49.21323, -122.59566 — upgraded in the cleanup pass (2026-11-02) from the street-segment point used originally; a parcel centroid reverse-geocodes to the nearest road, a known artefact. Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Haney Place Mall: 14.9 minutes, 1.11 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Walk to Maple Ridge Leisure Centre: 16.8 minutes, 1.26 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Walk to Eric Langton Elementary: 18.9 minutes, 1.37 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Drive to Port Haney Station: 2.3 minutes, 1.56 km, OSRM (router.project-osrm.org), measured 2026-11-02.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address in this pass.
-- Building-point geocode: none exists; measurements use the disclosed 227 Street segment point, the same point returned for 11601, 11609 and 11641 227 Street.
+- Origin upgraded in the cleanup pass (2026-11-02): the shared disclosed 227 Street segment point (original pass, same point for 11601, 11609 and 11641 227 Street) → City of Maple Ridge Parcel record for 11641 227 ST (PIN 133845; centroid — see §5). The roster address is not proven wrong.
 - Bus frequencies: not stated.

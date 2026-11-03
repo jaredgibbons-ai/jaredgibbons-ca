@@ -21,9 +21,16 @@ Building: Seafair West, 3088 Francis Road (seafair; townhomes).
 - Safeway (Seafair), 8671 No. 1 Road, Richmond. https://www.safeway.ca/find-a-store/store/4967-safeway-seafair
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 3088 Francis Road (City of Richmond Property Address point, RIM layer 110, OBJECTID 9725). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Hugh Boyd Community Park: 18.2 min, 1.37 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to West Richmond Community Centre: 18.7 min, 1.40 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Safeway (Seafair): 13.0 min, 0.98 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Alfred B. Dixon Elementary: 15.3 min, 1.15 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Hugh Boyd Secondary, 9200 No. 1 Rd: 3.1 min, 1.66 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to John G. Diefenbaker Elementary, 4511 Hermitage Dr: 6.4 min, 3.16 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Richmond-Brighouse Station: 9.0 min, 6.37 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times: not measured — no reliable origin point exists for 3088 Francis Road in this pass: Nominatim returned only Francis Road street segments (in other Richmond neighbourhoods, discarded), and the lowest OSM address point on Francis Road is 3120, so 3088 is not bracketed by real OSM address points for the segment-interpolation method.
+- Travel times: re-measured in the cleanup pass, 2026-11-02 — origin is the City of Richmond Property Address point for the exact roster address (RIM Public_RIM_Map_ESRI MapServer, layer 110 "Property Address", OBJECTID 9725, ADDRKEY 77714, unitless strata-common record). Nominatim reverse-geocode of the point returns 3128 Francis Road — the nearest OSM address point, not the roster address; that reverse artefact is disclosed here, and the municipal record itself carries the roster address.
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated — no operator-stated frequency was read for these routes in this pass.

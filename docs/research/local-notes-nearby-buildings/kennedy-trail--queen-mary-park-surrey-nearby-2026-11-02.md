@@ -17,16 +17,17 @@ Building: Kennedy Trail (Kennedy Trails), 8358 121A Street (queen-mary-park-surr
 - Real Canadian Superstore, 8195 120 Street, Delta — address from the retailer's own store-locator search result (fallback source, disclosed). https://www.realcanadiansuperstore.ca/store-locator/details/1554
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: 8358 121A Street has no house point in Nominatim (street segments only); the origin is an interpolated point on the building's own 121A Street segment, bracketed by the OSM address points for 8343 and 8363 121A Street and reverse-geocoding to 8343 121A Street — segment-grade, not house-point-grade (P2-30 method, disclosed).
+- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: 8358 121A Street, the City of Surrey civic address point (Address Points Feature Service; cleanup-pass upgrade from the P2-30 segment-interpolated point). The point reverse-geocodes to 8363 121A Street, the nearest OSM address point on the same street.
 - Walk to Kennedy Trail Elementary, 8305 121A St: 4.9 minutes, 0.37 km, routed-foot.
-- Drive to Kennedy Trail Elementary, 8305 121A St: 1.7 minutes, 0.75 km, OSRM.
-- Walk to Kennedy Trail Park, 12237 82 Ave: 7.3 minutes, 0.55 km, routed-foot.
-- Drive to Kennedy Trail Park, 12237 82 Ave: 1.1 minutes, 0.53 km, OSRM.
-- Drive to Strawberry Hill Park, 7676 122 St: 3.9 minutes, 2.04 km, OSRM.
+- Drive to Kennedy Trail Elementary, 8305 121A St: 1.8 minutes, 0.76 km, OSRM.
+- Walk to Kennedy Trail Park, 12237 82 Ave: 6.3 minutes, 0.47 km, routed-foot.
+- Drive to Kennedy Trail Park, 12237 82 Ave: 1.7 minutes, 0.69 km, OSRM.
+- Drive to Strawberry Hill Park, 7676 122 St: 4.1 minutes, 2.06 km, OSRM.
 - Walk to Real Canadian Superstore, 8195 120 St: 10.4 minutes, 0.78 km, routed-foot.
-- Drive to Real Canadian Superstore, 8195 120 St: 2.4 minutes, 0.97 km, OSRM.
+- Drive to Real Canadian Superstore, 8195 120 St: 2.6 minutes, 1.00 km, OSRM.
 
 ## NOT CONFIRMED
+- Origin upgrade (cleanup pass): §5 re-measured from the City of Surrey civic address point for 8358 121A St (Address Points Feature Service), replacing the P2-30 segment-interpolated origin.
 - Measured but not listed: the walk to Strawberry Hill Park, 7676 122 St (1.95 km) exceeded the 1.5 km walk cap, so only the drive is listed.
 - School catchments for this address were not confirmed: no SD36 locator run was done in this pass.
 - Bus frequencies were not stated on the operator pages read; the timetables read list trip times.

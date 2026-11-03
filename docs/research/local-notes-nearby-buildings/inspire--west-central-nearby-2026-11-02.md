@@ -25,10 +25,13 @@ Building: Inspire, 12109, 12133 and 12143 223 Street (west-central; condos).
 - Haney Place Mall, 11900 Haney Place. https://www.haneyplacemall.com/contact_us/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 12109 223 Street (City of Maple Ridge open-data Parcel centroid; Address/StreetName exact match). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Eric Langton Elementary, 12138 Edge St: 11.2 min, 0.82 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Maple Ridge Leisure Centre, 11925 Haney Place: 10.6 min, 0.79 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Port Haney Station: 2.5 min, 1.64 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Measurement anchor attempted: the first rostered address, 12109 223 Street. Travel times not measured: all three rostered addresses (12109, 12133 and 12143 223 Street) geocoded only to 223 Street road-segment results with no house number; the building-name query returned no result, and a bracketing sweep of neighbouring 223 Street addresses found no real OSM house points on the street, so no reliable origin point exists for any component address.
+- Cleanup pass, 2026-11-02: travel times re-measured from the City of Maple Ridge open-data Parcel centroid for the first rostered address, 12109 223 Street (Address/StreetName exact match); Overpass found no OSM element carrying this street and number.
 - School catchments: not confirmed (no district locator run for these addresses in this pass).
 - Bus frequencies: not stated (no operator page read states them).
-- Save-On-Foods (22703 Lougheed Hwy) is listed in §4 unmeasured: its geocode returned a Lougheed Highway road segment in Ruskin and the name query returned no result.
+- Save-On-Foods (22703 Lougheed Hwy), §4, is unmeasured: its geocode returned a road segment in Ruskin.

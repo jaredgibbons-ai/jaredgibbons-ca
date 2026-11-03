@@ -20,14 +20,15 @@ Building: Yorkson Park (Quadra Homes), 20328 86 Avenue, 20290 86 Avenue, 20376 8
 
 ## 5. MEASURED TRAVEL TIMES
 Measured 2026-11-02; OSM data date not published by the service. Walking routed with routing.openstreetmap.de routed-foot; driving with OSRM (router.project-osrm.org).
-- Origin: a street-segment point on 86 Avenue at the 20328 position, reverse-geocoding to 86 Avenue. Segment-grade origin. Measurements anchor on the first rostered address, 20328 86 Avenue; the other rostered addresses were not separately measured.
-- Walk to Yorkson Creek Middle School, 20686 84 Ave: 14.4 min, 1.08 km.
-- Drive to Yorkson Creek Middle School, 20686 84 Ave: 2.0 min, 1.05 km.
-- Walk to Carvolth Exchange, 200 St / Hwy 1: 2.7 min, 0.2 km.
-- Drive to Lynn Fripps Elementary, 21020 83 Ave: 3.7 min, 2.13 km.
-- Drive to R.E. Mountain Secondary, 7633 202A St: 4.3 min, 2.58 km.
-- Drive to Langley Events Centre, 7888 200 St: 4.0 min, 2.34 km.
-- Drive to Hakam's Your Independent Grocer, 20678 Willoughby Town Centre Dr: 3.8 min, 2.34 km.
+- Origin: Township of Langley civic address point for 20328 86 Avenue (TOL Addresses service, OBJECTID 9084), at 49.15806, -122.65867 — upgraded in the cleanup pass from the street-segment point used originally; its Nominatim reverse returns the nearest feature (Goldview Trail), a known artefact. Measurements anchor on the first rostered address; the other rostered addresses were not separately measured.
+- Walk to Yorkson Creek Middle School, 20686 84 Ave: 12.6 min, 0.95 km.
+- Drive to Yorkson Creek Middle School, 20686 84 Ave: 2.0 min, 0.94 km.
+- Walk to Carvolth Exchange, 200 St / Hwy 1: 5.5 min, 0.42 km.
+- Drive to Lynn Fripps Elementary, 21020 83 Ave: 3.7 min, 2.02 km.
+- Drive to R.E. Mountain Secondary, 7633 202A St: 3.9 min, 2.16 km.
+- Drive to Langley Events Centre, 7888 200 St: 3.9 min, 1.94 km.
+- Drive to Hakam's Your Independent Grocer, 20678 Willoughby Town Centre Dr: 3.6 min, 2.06 km.
+
 
 ## NOT CONFIRMED
 - School catchments: not confirmed in this pass (no SD35 locator run for this address).

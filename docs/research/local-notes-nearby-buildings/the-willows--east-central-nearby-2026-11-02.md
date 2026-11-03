@@ -21,14 +21,15 @@ Building: The Willows, 11578 225 Street (east-central; 55-plus + condos).
 - Save-On-Foods, 22703 Lougheed Highway (address from a retailer own-domain search result, disclosed as such). https://www.saveonfoods.com/sm/planning/rsid/935/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSM data date not published by the service. Origin: 11578 225 Street (segment point).
-- Walk to Brickwood Park: 2.2 minutes, 0.16 km, routing.openstreetmap.de routed-foot.
-- Walk to Jim Hadgkiss Park: 5.2 minutes, 0.39 km, routing.openstreetmap.de routed-foot.
-- Drive to Haney Place Mall: 2.0 minutes, 0.70 km, OSRM (router.project-osrm.org).
-- Drive to Save-On-Foods: 3.6 minutes, 1.58 km, OSRM (router.project-osrm.org).
-- Drive to Port Haney Station: 1.9 minutes, 0.96 km, OSRM (router.project-osrm.org).
-- Drive to Thomas Haney Secondary: 4.3 minutes, 1.92 km, OSRM (router.project-osrm.org).
+- From-point: City of Maple Ridge parcel centroid for 11578 225 Street (Parcel layer, DataCatalog/Property MapServer layer 3: Address 11578 / 225 ST, PIN 110147), at 49.21214, -122.59860 — upgraded in the cleanup pass (2026-11-02) from the street-segment point used originally; a parcel centroid reverse-geocodes to the nearest road, a known artefact. Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Brickwood Park: 2.5 minutes, 0.19 km, routing.openstreetmap.de routed-foot.
+- Walk to Jim Hadgkiss Park: 5.0 minutes, 0.38 km, routing.openstreetmap.de routed-foot.
+- Drive to Haney Place Mall: 1.5 minutes, 0.63 km, OSRM (router.project-osrm.org).
+- Drive to Save-On-Foods: 2.7 minutes, 1.18 km, OSRM (router.project-osrm.org).
+- Drive to Port Haney Station: 1.4 minutes, 0.84 km, OSRM (router.project-osrm.org).
+- Drive to Thomas Haney Secondary: 4.2 minutes, 1.92 km, OSRM (router.project-osrm.org).
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run in this pass.
 - Bus frequencies: not stated — no operator page read stated them.
+- Origin upgraded in the cleanup pass (2026-11-02): 225 Street segment point (original pass) → City of Maple Ridge Parcel record for 11578 225 ST (PIN 110147; centroid — see §5). The roster address is not proven wrong.

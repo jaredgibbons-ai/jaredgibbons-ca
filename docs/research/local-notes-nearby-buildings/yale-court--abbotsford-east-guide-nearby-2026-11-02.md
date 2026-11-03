@@ -21,11 +21,12 @@ Building: Yale Court, 2525 Yale Court, off Old Yale Road (McMillan) (abbotsford-
 - Walmart Supercenter, 1812 Vedder Way. https://www.walmart.ca/en/store/1113
 
 ## 5. MEASURED TRAVEL TIMES
-- All measurements start at 2525 Yale Court. Measured 2026-11-02; OSM data date not published by the service. Origin geocode: Nominatim returns the Yale Court street segment, not a building point; that segment point was used.
-- Walk to Yale Secondary, 34620 Old Yale Road: 5.0 minutes, 0.37 km, OpenStreetMap routed-foot (routing.openstreetmap.de), measured 2026-11-02; OSM data date not published by the service.
-- Walk to Abbotsford Recreation Centre, 2499 McMillan Road: 6.5 minutes, 0.49 km, OpenStreetMap routed-foot (routing.openstreetmap.de), measured 2026-11-02; OSM data date not published by the service.
+- All measurements start at 2525 Yale Court. Measured 2026-11-02; OSM data date not published by the service. Origin: City of Abbotsford Address Points civic point for 2525 Yale Court (Address_pnts OBJECTID 14765), adopted in the cleanup pass (2026-11-02) — the original pass used the Nominatim Yale Court street-segment point.
+- Walk to Yale Secondary, 34620 Old Yale Road: 4.4 minutes, 0.33 km, OpenStreetMap routed-foot (routing.openstreetmap.de), measured 2026-11-02; OSM data date not published by the service.
+- Walk to Abbotsford Recreation Centre, 2499 McMillan Road: 5.9 minutes, 0.44 km, OpenStreetMap routed-foot (routing.openstreetmap.de), measured 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated on the operator pages read in this pass.
 - Exact nearest-stop assignment: not confirmed — routes are the McMillan-corridor routes named by BC Transit.
+- Origin upgraded in the cleanup pass (2026-11-02): Yale Court street-segment point (original pass) → City of Abbotsford Address Points civic point for 2525 Yale Court (OBJECTID 14765).

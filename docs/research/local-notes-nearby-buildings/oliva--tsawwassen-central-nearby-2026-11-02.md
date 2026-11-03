@@ -23,16 +23,16 @@ Building: Oliva, 1315 56 Street (tsawwassen-central; condos).
 - Save-On-Foods, 1143 56th Street, Delta (retailer own-domain search result, accepted fallback). https://www.saveonfoods.com/sm/planning/rsid/943/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Origin: 1315 56 Street — segment-interpolated point on 56 Street between the real OSM address points at 1299 and 1345 56 Street (segment-grade; see NOT CONFIRMED). Tools: OSRM (router.project-osrm.org) driving, OpenStreetMap DE routed-foot walking; measured 2026-11-02; OSM data date not published by the service.
+- Origin: 1315 56 Street — centroid of the City of Delta Property Parcels polygon for the unitless primary record at 1315 56 Street (OBJECTID 35248; cleanup-pass upgrade from a segment-interpolated point; see NOT CONFIRMED). Tools: OSRM (router.project-osrm.org) driving, OpenStreetMap DE routed-foot walking; measured 2026-11-02; OSM data date not published by the service.
 - Walk to Tsawwassen Library, 1321A 56th Street: 1.8 minutes, 0.13 km, routed-foot.
-- Walk to Thrifty Foods, 1207 56 Street: 2.3 minutes, 0.17 km, routed-foot.
-- Walk to Save-On-Foods, 1143 56 Street: 7.0 minutes, 0.52 km, routed-foot.
-- Walk to Winskill Park: 10.6 minutes, 0.79 km, routed-foot.
-- Walk to South Delta Recreation Centre, 1720 56 Street: 18.8 minutes, 1.40 km, routed-foot.
-- Drive to South Delta Exchange: 3.3 minutes, 1.41 km, OSRM.
+- Walk to Thrifty Foods, 1207 56 Street: 2.4 minutes, 0.18 km, routed-foot.
+- Walk to Save-On-Foods, 1143 56 Street: 6.4 minutes, 0.48 km, routed-foot.
+- Walk to Winskill Park: 10.7 minutes, 0.80 km, routed-foot.
+- Walk to South Delta Recreation Centre, 1720 56 Street: 18.9 minutes, 1.42 km, routed-foot.
+- Drive to South Delta Exchange: 3.2 minutes, 1.38 km, OSRM.
 
 ## NOT CONFIRMED
-- Origin: no OSM point carries the Oliva building itself; the address query returned ground-floor shop nodes at 1315 56 Street (The Run Inn; Beauty Babe Studio), discarded as neighbouring business points, and a first interpolation against the 1321A library point landed on the library and was discarded. The origin used is segment-interpolated between the real 1299 and 1345 56 Street address points; its reverse-geocode returned Rotary Square, Tsawwassen Town Centre Mall.
+- Origin (cleanup-pass upgrade): previously segment-interpolated between the real 1299 and 1345 56 Street points; now the centroid of the City of Delta Property Parcels polygon for the unitless primary record '1315 56 ST' (OBJECTID 35248). OSM still returns only ground-floor shop nodes at 1315, discarded as business points. The centroid reverse-geocodes to Rotary Square, Tsawwassen Town Centre Mall, the nearest named OSM feature; the parcel record itself carries the roster address.
 - School catchments: no district locator run in this pass.
 - Bus frequencies: not stated.
 - Winskill Park point: the park's named OSM landuse point; reverse-geocode returned 54A Street (grounds edge), disclosed.

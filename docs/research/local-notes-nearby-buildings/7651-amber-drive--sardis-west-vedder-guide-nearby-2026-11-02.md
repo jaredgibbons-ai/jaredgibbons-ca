@@ -7,7 +7,7 @@ Building: 7651 Amber Drive, 7651 Amber Drive (sardis-west-vedder-guide; condos).
 - Route 51 Vedder: UFV Chilliwack Campus to Downtown Chilliwack via Vedder Rd at Luckakuck Way. https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=51
 
 ## 2. PARKS AND RECREATION
-- Webster Park: City park with skateboard park, playground and spray zone at 44524 Keith Wilson Road. https://www.chilliwack.com/main/page.cfm?id=1754&dowhat=locationView&plID=154&backTo=%26dowhat%3DamenityView%26paID%3D28%26plID%3D55
+- Webster Park (skateboard park, playground, spray zone), 44524 Keith Wilson Road. https://www.chilliwack.com/main/page.cfm?id=1754&dowhat=locationView&plID=154&backTo=%26dowhat%3DamenityView%26paID%3D28%26plID%3D55
 - Sardis Sports Complex, 5725 Tyson Road. https://www.chilliwack.com/main/page.cfm?id=37&prshow=details&prID=409
 - Sardis Library (Fraser Valley Regional Library), 5819 Tyson Road. https://www.fvrl.bc.ca/locations
 
@@ -17,13 +17,19 @@ Building: 7651 Amber Drive, 7651 Amber Drive (sardis-west-vedder-guide; condos).
 - Sardis Secondary, 9-12, SD33, 45460 Stevenson Rd. https://studentsuccess.gov.bc.ca/schools/in-school-district/033
 
 ## 4. GROCERY AND SHOPPING ANCHORS
-- Cottonwood Centre (shopping centre), 45585 Luckakuck Way (centre's own site search result). http://cottonwoodcentre.ca/
+- Cottonwood Centre (shopping centre), 45585 Luckakuck Way (centre's own search result). http://cottonwoodcentre.ca/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 7651 Amber Drive (City of Chilliwack NextGen911 Address Points civic point, OBJECTID 9769). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Evans Elementary, 7600 Evans Rd: 19.2 min, 1.44 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Cottonwood Centre, 45585 Luckakuck Way: 8.1 min, 0.60 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Sardis Secondary, 45460 Stevenson Rd: 5.9 min, 3.34 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Unsworth Elementary, 5685 Unsworth Rd: 12.1 min, 7.13 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Sardis Library, 5819 Tyson Road: 8.8 min, 5.12 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Sardis Sports Complex, 5725 Tyson Road: 9.2 min, 5.19 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times not measured: Nominatim returns no house point for 7651 Amber Drive — only the Amber Drive street point, which reverse-geocodes to 7680 Amber Drive (Esso), a different address — and Amber Drive has no second OSM address point to bracket a segment interpolation, so no reliable origin exists for this building in this pass.
-- Building name: none in the notes — the building is identified by its street address only.
-- School catchments: not confirmed — no district locator run for this address in this pass.
-- Bus frequencies: not stated — operator pages read did not state a frequency for these stops.
+- Cleanup pass, 2026-11-02: travel times re-measured from a City of Chilliwack NextGen911 Address Points civic point for this address (updated 2026-11-01; OBJECTID 9769, unit 201 structure point), reverse-geocoded by Nominatim to Amber Drive; Overpass found no OSM address point for it.
+- Building name: none in the notes — identified by street address only.
+- School catchments: not confirmed — no district locator run in this pass.
+- Bus frequencies: not stated — operator pages read state none for these stops.

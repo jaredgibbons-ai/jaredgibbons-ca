@@ -12,14 +12,14 @@
 - Cultus Lake Community Hall, 4220 Columbia Valley Highway, Cultus Lake, V2R 5B6: Park Board hall, north end. https://www.cultuslake.bc.ca/community-hall/
 
 ## 3. SCHOOLS
-- Cultus Lake Swílhcha Community School, grades K-5, 71 Sunnyside Blvd, Cultus Lake, School District 33 (Chilliwack); shared basis: only school at the lake on the Ministry SD33 list read; none listed on the east shore; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/033
-- Mount Slesse Middle School, grades 6-8, 5871 Tyson Rd, Chilliwack, School District 33; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/033
-- GW Graham Secondary, grades 9-12, 45955 Thomas Rd, Chilliwack, School District 33; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/033
+- Cultus Lake Swílhcha Community School, grades K-5, 71 Sunnyside Blvd, Cultus Lake, SD33 (Chilliwack); shared basis: only school at the lake on the Ministry SD33 list read; none listed on the east shore; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/033
+- Mount Slesse Middle School, grades 6-8, 5871 Tyson Rd, Chilliwack, SD33; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/033
+- GW Graham Secondary, grades 9-12, 45955 Thomas Rd, Chilliwack, SD33; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/033
 
 ## 5. MEASURED TRAVEL TIMES
-- From-point: Entrance Bay day-use area, Cultus Lake Provincial Park (east shore). Tools: OSRM driving; OSM data date not published by the service; measured 2026-11-02.
-- Drive to Maple Bay day-use area: 6.6 minutes, 3.18 km, OSRM, measured 2026-11-02; OSM data date not published by the service.
-- Drive to Cultus Lake Community Hall, 4220 Columbia Valley Highway: 6.0 minutes, 2.92 km, OSRM, measured 2026-11-02; OSM data date not published by the service.
+- From-point: Entrance Bay day-use area, Cultus Lake Provincial Park (east shore). Tools: OSRM driving; OSM data date not published; measured 2026-11-02.
+- Drive to Maple Bay day-use area: 6.6 minutes, 3.18 km, OSRM, measured 2026-11-02; OSM data date not published.
+- Drive to Cultus Lake Community Hall, 4220 Columbia Valley Highway: 6.0 minutes, 2.92 km, OSRM, measured 2026-11-02; OSM data date not published.
 
 ## NOT CONFIRMED
 - Section 4 omitted: no east-shore grocery sourced on an allowed source; no Chilliwack store imported as in-area.

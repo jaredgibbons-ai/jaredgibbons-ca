@@ -15,21 +15,21 @@
 - Lower Seymour Conservation Reserve: Metro Vancouver regional park, 5,668 hectares, Rice Lake, 100+ km of trails. https://metrovancouver.org/services/regional-parks/park/Pages/Lower-Seymour-Conservation-Reserve.aspx
 
 ## 3. SCHOOLS
-- Lynnmour Elementary School, grades K-7, 800 Forsman Ave, School District 44; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/044
-- Windsor Secondary, grades 8-12, 931 Broadview Dr, School District 44; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/044
-- Sutherland Secondary, grades 8-12, 1860 Sutherland Ave, School District 44; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/044
+- Lynnmour Elementary School, grades K-7, 800 Forsman Ave, SD44; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/044
+- Windsor Secondary, grades 8-12, 931 Broadview Dr, SD44; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/044
+- Sutherland Secondary, grades 8-12, 1860 Sutherland Ave, SD44; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/044
 
 ## 4. GROCERY AND SHOPPING ANCHORS
 - Save-On-Foods Park & Tilford, 333 Brooksbank Avenue: supermarket (retailer's own-domain search result and media release). https://blog.saveonfoods.com/wp-content/uploads/Park-Tilford-Media-Release.pdf
 - Park & Tilford, 333 Brooksbank Ave: shopping centre, 35 shops and services (centre's own-domain search result). https://parkandtilford.com/
 
 ## 5. MEASURED TRAVEL TIMES
-- From-point: Lynn Creek Community Recreation Centre, 1491 Hunter Street. Tools: OSRM driving, OSM DE routed-foot walking; OSM data date not published by the service; measured 2026-11-02.
-- Walk to Lynnmour Elementary School, 800 Forsman Ave: 9.8 minutes, 0.73 km, routed-foot, measured 2026-11-02; OSM data date not published by the service.
-- Drive to Phibbs Exchange: 3.8 minutes, 2.71 km, OSRM, measured 2026-11-02; OSM data date not published by the service.
-- Drive to Save-On-Foods Park & Tilford, 333 Brooksbank Avenue: 3.1 minutes, 1.50 km, OSRM, measured 2026-11-02; OSM data date not published by the service.
+- From-point: Lynn Creek Community Recreation Centre, 1491 Hunter Street. Tools: OSRM driving, OSM DE routed-foot walking; OSM data date not published; measured 2026-11-02.
+- Walk to Lynnmour Elementary School, 800 Forsman Ave: 9.8 minutes, 0.73 km, routed-foot, measured 2026-11-02.
+- Drive to Phibbs Exchange: 3.8 minutes, 2.71 km, OSRM, measured 2026-11-02.
+- Drive to Save-On-Foods Park & Tilford, 333 Brooksbank Avenue: 3.1 minutes, 1.50 km, OSRM, measured 2026-11-02.
 
 ## NOT CONFIRMED
-- School catchments: not confirmed; no locator run. Secondary schools named from the Ministry list only.
+- School catchments: not confirmed; no locator run. Secondary schools named from the Ministry list.
 - Bus frequencies other than the R2: not stated — none read from a timetable.
-- A supermarket inside Lynnmour itself: not sourced; §4 anchors are across Lynn Creek, in the City.
+- A supermarket inside Lynnmour: not sourced; §4 anchors are across Lynn Creek, in the City.

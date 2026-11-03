@@ -21,17 +21,17 @@ Building: Cedar Downs, 12565 190A Street (pitt-meadows-homes-for-sale; condos).
 - Real Canadian Superstore, Meadowtown, 19800 Lougheed Highway. https://www.realcanadiansuperstore.ca/store-locator/details/1555
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: 12565 190A Street, point interpolated on 190A Street from OSM cross-street positions (McMyn Road at lat 49.2294; Lougheed Highway at lat 49.2312) and reverse-geocoded to 190A Street, Pitt Meadows.
-- Walk to Save-On-Foods: 6.0 minutes, 0.45 km, routed-foot.
-- Drive to Save-On-Foods: 1.5 minutes, 0.34 km, OSRM.
-- Walk to Pitt Meadows Station: 15.5 minutes, 1.16 km, routed-foot.
-- Drive to Pitt Meadows Station: 3.0 minutes, 1.34 km, OSRM.
-- Drive to Pitt Meadows Public Library: 2.6 minutes, 1.41 km, OSRM.
-- Drive to Pitt Meadows Family Recreation Centre: 3.4 minutes, 1.66 km, OSRM.
-- Drive to Real Canadian Superstore, Meadowtown: 4.9 minutes, 2.55 km, OSRM.
+- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: 12565 190A Street, the City of Pitt Meadows civic address point (Address Point layer, Maple Ridge GIS; cleanup-pass upgrade from the interpolated segment point), reverse-geocoded to 190A Street, Pitt Meadows.
+- Walk to Save-On-Foods: 5.5 minutes, 0.41 km, routed-foot.
+- Drive to Save-On-Foods: 2.2 minutes, 0.68 km, OSRM.
+- Walk to Pitt Meadows Station: 16.3 minutes, 1.22 km, routed-foot.
+- Drive to Pitt Meadows Station: 2.9 minutes, 1.38 km, OSRM.
+- Drive to Pitt Meadows Public Library: 2.6 minutes, 1.44 km, OSRM.
+- Drive to Pitt Meadows Family Recreation Centre: 3.4 minutes, 1.70 km, OSRM.
+- Drive to Real Canadian Superstore, Meadowtown: 5.3 minutes, 2.81 km, OSRM.
 
 ## NOT CONFIRMED
 - School catchments for this address: not confirmed — no SD42 locator run in this pass.
-- Origin: Nominatim returned only 190A Street segments (no building point); segments centred elsewhere on 190A Street discarded — point above interpolated and reverse-geocoded instead.
-- Over-cap walks, measured but excluded: Pitt Meadows Public Library 1.51 km; Pitt Meadows Family Recreation Centre 1.70 km; Real Canadian Superstore 3.08 km.
+- Origin upgrade (cleanup pass): §5 re-measured from the City of Pitt Meadows civic address point for 12565 190A Street (Address Point layer via Maple Ridge GIS, OBJECTID 3210), replacing the interpolated segment point (Nominatim holds no building point).
+- Over-cap walks, measured but excluded: Pitt Meadows Public Library 1.57 km; Pitt Meadows Family Recreation Centre 1.76 km; Real Canadian Superstore 3.14 km.
 - Harris Road Park: no OpenStreetMap point found in this pass; not measured.

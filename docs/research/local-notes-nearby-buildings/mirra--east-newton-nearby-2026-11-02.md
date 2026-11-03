@@ -24,16 +24,16 @@ Building: Mirra, 13740 75A Ave (east-newton; condos).
 - Save-On-Foods (grocery), #100-7320 King George Boulevard (retailer's own site search result). https://www.saveonfoods.com/sm/planning/rsid/910/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at a 75A Avenue segment point in Newton returned by Nominatim for the roster address (no house-number point exists — see NOT CONFIRMED); times are approximate. OSRM for driving, OpenStreetMap DE routed-foot for walking; OSM data date not published by the service.
-- Walk to Frank Hurt Secondary: 6.4 minutes, 0.48 km, routed-foot.
-- Walk to Save-On-Foods, #100-7320 King George Boulevard: 9.5 minutes, 0.71 km, routed-foot.
-- Walk to Newton Exchange: 11.3 minutes, 0.85 km, routed-foot.
-- Walk to Chalo FreshCo, 7165 138 St: 13.1 minutes, 0.98 km, routed-foot.
-- Walk to Bear Creek Elementary: 15.0 minutes, 1.12 km, routed-foot.
-- Drive to Newton Recreation Centre: 1.8 minutes, 1.13 km, OSRM.
+- Measured 2026-11-02, starting at the City of Surrey Address Points civic point for 13740 75A Ave (OBJECTID 61356), adopted in the cleanup pass — the original pass used a 75A Avenue segment point (see NOT CONFIRMED). OSRM for driving, OpenStreetMap DE routed-foot for walking; OSM data date not published by the service.
+- Walk to Frank Hurt Secondary: 8.6 minutes, 0.64 km, routed-foot.
+- Walk to Save-On-Foods, #100-7320 King George Boulevard: 8.1 minutes, 0.60 km, routed-foot.
+- Walk to Newton Exchange: 10.0 minutes, 0.74 km, routed-foot.
+- Walk to Chalo FreshCo, 7165 138 St: 12.5 minutes, 0.94 km, routed-foot.
+- Walk to Bear Creek Elementary: 17.1 minutes, 1.28 km, routed-foot.
+- Drive to Newton Recreation Centre: 2.0 minutes, 0.75 km, OSRM.
 
 ## NOT CONFIRMED
-- No house-number geocode exists for 13740 75A Ave: repeated foreground Nominatim variants (free-form, structured, name search) returned only 75A Avenue segment points. §5 uses the Newton segment point at 49.1395355, -122.8409845, on the 75A Avenue stretch by 137 Street; times approximate. The roster address is not proven wrong.
+- Origin upgraded in the cleanup pass (2026-11-02): 75A Avenue segment point (original pass, at 49.1395355, -122.8409845; no OSM house-number point exists — Nominatim variants returned only segment points) → City of Surrey Address Points civic point for 13740 75A Ave (FeatureServer layer 0, OBJECTID 61356). The roster address is not proven wrong.
 - School catchments: not confirmed (no district locator run for this address).
 - No City of Surrey park was confirmed within about 1 km on a municipal page read in this pass; §2 lists the recreation centre and library.
 - The Bear Creek Elementary destination point was the house point Nominatim returns for 13780 80 Avenue; the Guru Angad Dev walk (14.2 minutes, 1.06 km) was measured but is not listed in §5 to keep the section to the closest anchors.

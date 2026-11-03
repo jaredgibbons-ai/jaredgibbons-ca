@@ -11,14 +11,14 @@
 - Cultus Lake Community Hall, 4220 Columbia Valley Highway, Cultus Lake, V2R 5B6: Park Board hall, north end. https://www.cultuslake.bc.ca/community-hall/
 
 ## 3. SCHOOLS
-- No public school at the south end on the Ministry SD33 list read; the only lake school listed is Cultus Lake Swílhcha Community School, grades K-5, 71 Sunnyside Blvd, Cultus Lake, School District 33 (Chilliwack), north end; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/033
-- Mount Slesse Middle School, grades 6-8, 5871 Tyson Rd, Chilliwack, School District 33; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/033
-- GW Graham Secondary, grades 9-12, 45955 Thomas Rd, Chilliwack, School District 33; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/033
+- No public school at the south end on the Ministry SD33 list read; the only lake school listed is Cultus Lake Swílhcha Community School, grades K-5, 71 Sunnyside Blvd, Cultus Lake, SD33 (Chilliwack), north end; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/033
+- Mount Slesse Middle School, grades 6-8, 5871 Tyson Rd, Chilliwack, SD33; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/033
+- GW Graham Secondary, grades 9-12, 45955 Thomas Rd, Chilliwack, SD33; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/033
 
 ## 5. MEASURED TRAVEL TIMES
-- From-point: Delta Grove Campground, Cultus Lake Provincial Park (southeast end). Tools: OSRM driving; OSM data date not published by the service; measured 2026-11-02.
-- Drive to Lindell Beach: 2.6 minutes, 1.33 km, OSRM, measured 2026-11-02; OSM data date not published by the service.
-- Drive to Maple Bay day-use area: 1.9 minutes, 1.26 km, OSRM, measured 2026-11-02; OSM data date not published by the service.
+- From-point: Delta Grove Campground, Cultus Lake Provincial Park (southeast end). Tools: OSRM driving; OSM data date not published; measured 2026-11-02.
+- Drive to Lindell Beach: 2.6 minutes, 1.33 km, OSRM, measured 2026-11-02; OSM data date not published.
+- Drive to Maple Bay day-use area: 1.9 minutes, 1.26 km, OSRM, measured 2026-11-02; OSM data date not published.
 
 ## NOT CONFIRMED
 - Section 4 omitted: no south-end grocery sourced on an allowed source; no Chilliwack store imported as in-area.

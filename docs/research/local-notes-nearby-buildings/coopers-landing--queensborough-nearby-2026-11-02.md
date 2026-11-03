@@ -21,16 +21,16 @@ Building: Coopers Landing, 935 Ewen Avenue (queensborough; townhomes).
 - Walmart Supercentre #5777, 805 Boyd Street, New Westminster (retailer's own store page). https://www.walmart.ca/en/store/5777
 
 ## 5. MEASURED TRAVEL TIMES
-- From-point: 935 Ewen Avenue, by segment interpolation (see NOT CONFIRMED). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
-- Walk to Queensborough Community Centre: 5.7 min, 0.42 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- From-point: 935 Ewen Avenue — centre of OSM way 92367114, the landuse polygon named Coopers Landing, itself carrying addr:housenumber 935, addr:street Ewen Avenue (cleanup-pass upgrade; see NOT CONFIRMED). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Queensborough Community Centre: 5.6 min, 0.42 km, routed-foot, 2026-11-02; OSM data date not published by the service.
 - Walk to Queen Elizabeth Elementary: 5.9 min, 0.44 km, routed-foot, 2026-11-02; OSM data date not published by the service.
 - Walk to Queensborough Middle School: 6.8 min, 0.51 km, routed-foot, 2026-11-02; OSM data date not published by the service.
-- Drive to Walmart Supercentre, 805 Boyd Street: 3.2 min, 1.01 km, OSRM, 2026-11-02; OSM data date not published by the service.
-- Drive to 22nd Street Station: 5.6 min, 2.85 km, OSRM, 2026-11-02; OSM data date not published by the service.
-- Drive to Port Royal Park: 6.5 min, 2.24 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Walmart Supercentre, 805 Boyd Street: 3.0 min, 1.03 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to 22nd Street Station: 5.4 min, 2.84 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Port Royal Park: 6.3 min, 2.23 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Origin method: Nominatim has no house point for 935 Ewen Avenue; its road-segment result reverse-geocoded to 823 Ewen Avenue and was discarded. The origin used was interpolated on the Ewen Avenue segment bracketed by the verified OSM address points for 843 and 1111 Ewen Avenue; the interpolated point reverse-geocodes to Coopers Landing itself.
+- Origin upgrade (cleanup pass): previously a segment-interpolated point bracketed by OSM address points for 843 and 1111 Ewen Avenue. Now the centre of OSM way 92367114, the landuse polygon named Coopers Landing, itself carrying addr:housenumber 935, addr:street Ewen Avenue; its Nominatim reverse-geocode returns Coopers Landing.
 - School catchments for 935 Ewen Avenue: not confirmed; no district locator run in this pass.
-- Bus frequencies: not stated; no frequency was read from an operator page in this pass.
-- A second grocery/shopping anchor on the island: none sourced beyond the Walmart above in this pass.
+- Bus frequencies: not stated; none read from an operator page.
+- Second grocery/shopping anchor on the island: none sourced beyond Walmart.

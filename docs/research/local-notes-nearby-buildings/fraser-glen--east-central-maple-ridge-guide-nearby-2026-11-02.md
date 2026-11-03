@@ -23,12 +23,13 @@ Building: Fraser Glen, 22740 116 Avenue (east-central-maple-ridge-guide; townhom
 - Save-On-Foods, 22703 Lougheed Highway (address from a retailer own-domain search result, disclosed as such). https://www.saveonfoods.com/sm/planning/rsid/935/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSM data date not published by the service. Origin: 22740 116 Avenue (segment point).
-- Walk to Jim Hadgkiss Park: 7.9 minutes, 0.59 km, routing.openstreetmap.de routed-foot.
-- Walk to Thomas Haney Secondary: 14.0 minutes, 1.05 km, routing.openstreetmap.de routed-foot.
-- Drive to Golden Ears Elementary: 2.3 minutes, 1.08 km, OSRM (router.project-osrm.org).
-- Drive to Haney Place Mall: 2.7 minutes, 1.45 km, OSRM (router.project-osrm.org).
+- From-point: City of Maple Ridge parcel centroid for 22740 116 Avenue (Parcel layer, DataCatalog/Property MapServer layer 3: Address 22740 / 116 AVE, PIN 110178), at 49.21025, -122.59321 — upgraded in the cleanup pass (2026-11-02) from the street-segment point used originally; a parcel centroid reverse-geocodes to the nearest road, a known artefact. Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Jim Hadgkiss Park: 6.5 minutes, 0.49 km, routing.openstreetmap.de routed-foot.
+- Walk to Thomas Haney Secondary: 17.3 minutes, 1.30 km, routing.openstreetmap.de routed-foot.
+- Drive to Golden Ears Elementary: 2.5 minutes, 1.18 km, OSRM (router.project-osrm.org).
+- Drive to Haney Place Mall: 2.5 minutes, 1.35 km, OSRM (router.project-osrm.org).
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run in this pass.
 - Bus frequencies: not stated — no operator page read stated them.
+- Origin upgraded in the cleanup pass (2026-11-02): 116 Avenue segment point (original pass) → City of Maple Ridge Parcel record for 22740 116 AVE (PIN 110178; centroid — see §5). The roster address is not proven wrong.

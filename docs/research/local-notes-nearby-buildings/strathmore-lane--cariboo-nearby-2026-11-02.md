@@ -21,18 +21,18 @@ Building: Strathmore Lane, 3379 and 3368 Morrey Court (cariboo; townhomes).
 - Walmart Supercentre, 9855 Austin Rd, Burnaby. https://www.walmart.ca/en/store/3008
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at 3379 Morrey Court (anchor address); OSRM (router.project-osrm.org) for driving and OpenStreetMap DE routed-foot for walking; OSM data date not published by the service.
-- Walk to Cameron Park: 5.1 minutes, 0.38 km, routed-foot, measured 2026-11-02; OSM data date not published by the service.
-- Drive to Cameron Park: 1.1 minutes, 0.39 km, OSRM, measured 2026-11-02; OSM data date not published by the service.
-- Walk to Lyndhurst Elementary: 11.2 minutes, 0.84 km, routed-foot, measured 2026-11-02; OSM data date not published by the service.
-- Drive to Lyndhurst Elementary: 3.6 minutes, 1.49 km, OSRM, measured 2026-11-02; OSM data date not published by the service.
-- Walk to Lougheed Town Centre Station: 13.2 minutes, 0.99 km, routed-foot, measured 2026-11-02; OSM data date not published by the service.
-- Drive to Lougheed Town Centre Station: 2.0 minutes, 1.47 km, OSRM, measured 2026-11-02; OSM data date not published by the service.
-- Drive to The City of Lougheed Shopping Centre: 3.2 minutes, 0.71 km, OSRM, measured 2026-11-02; OSM data date not published by the service.
+- Measured 2026-11-02, starting at 3368 Morrey Court (City of Burnaby Strata Address point, OBJECTID 1118; see NOT CONFIRMED); OSRM (router.project-osrm.org) for driving and OpenStreetMap DE routed-foot for walking; OSM data date not published by the service.
+- Walk to Cameron Park: 5.7 minutes, 0.43 km, routed-foot, measured 2026-11-02; OSM data date not published by the service.
+- Drive to Cameron Park: 1.2 minutes, 0.44 km, OSRM, measured 2026-11-02; OSM data date not published by the service.
+- Walk to Lyndhurst Elementary: 9.2 minutes, 0.69 km, routed-foot, measured 2026-11-02; OSM data date not published by the service.
+- Drive to Lyndhurst Elementary: 3.7 minutes, 1.53 km, OSRM, measured 2026-11-02; OSM data date not published by the service.
+- Walk to Lougheed Town Centre Station: 13.8 minutes, 1.04 km, routed-foot, measured 2026-11-02; OSM data date not published by the service.
+- Drive to Lougheed Town Centre Station: 2.1 minutes, 1.51 km, OSRM, measured 2026-11-02; OSM data date not published by the service.
+- Drive to The City of Lougheed Shopping Centre: 3.3 minutes, 0.75 km, OSRM, measured 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Multi-address building: the roster carries 3379 and 3368 Morrey Court; the title and measurement anchor use the first address, 3379 Morrey Court.
-- Origin point: a Morrey Court segment point (no house-number point in the foreground Nominatim result); an earlier backgrounded segment point ~90 m east differed, and the foreground segment point governs.
+- Multi-address building: the roster carries 3379 and 3368 Morrey Court; the title uses the first address, 3379 Morrey Court, and the measurements are anchored on 3368 Morrey Court (see the origin point item below).
+- Origin point — upgraded in the phase-2 cleanup pass (2026-11-02): measurements are anchored on the 3368 Morrey Court City of Burnaby open-data Strata Address point (OpenData4 MapServer layer 4, OBJECTID 1118, strata BCS1217) at 49.25418, -122.89568, because the first rostered address, 3379 Morrey Court, has no verifying house point in OSM or in the Burnaby civic layers (Address, Legal Address Alias and Strata Address, checked in this pass); the Morrey Court segment point used originally was replaced by this municipal point, reverse-geocoding of which returns the Morrey Court road itself, and all §5 pairs were re-measured from it.
 - School catchments: not confirmed — no district locator run was done for this address in this pass.
 - Bus frequencies: not stated — no frequency was read from an operator timetable in this pass.
 - Cameron Park street address: not confirmed on a City page read in this pass.

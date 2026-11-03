@@ -21,9 +21,17 @@ Building: Platform by Aragon, 83 Moody Street (port-moody-centre; condos).
 - Thrifty Foods, 170 Brew St (Suter Brook) — address from the retailer's own-domain search result; its store page could not be opened in the phase-1 pass. https://www.thriftyfoods.com/find-a-store/store/9470-thrifty-foods-port-moody
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 83 Moody Street (centroid of the City of Port Moody Parcel Information parcel carrying 83 MOODY ST). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Rocky Point Park: 5.4 min, 0.41 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Moody Centre Station: 7.0 min, 0.52 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to École Moody Middle: 14.9 min, 1.12 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Moody Elementary, 110 Buller St: 15.9 min, 1.20 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Port Moody Secondary, 300 Albert St: 3.3 min, 1.64 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Thrifty Foods, 170 Brew St: 4.7 min, 2.33 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Port Moody Public Library, 100 Newport Drive: 4.8 min, 2.52 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Port Moody Recreation Complex, 300 Ioco Road: 5.3 min, 2.72 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- No reliable origin point: free-form, name and structured Nominatim geocodes of 83 Moody Street returned only a Moody Street road segment (reverse-geocode: "Moody Street, Pleasantside, Port Moody") or no result, and name searches for the building returned no result; the road-segment point was discarded, so no travel times were measured.
-- School catchments for this address were not confirmed from a district locator or policy in this pass.
-- Bus frequencies were not stated on the operator pages read.
+- Travel times re-measured in the cleanup pass, 2026-11-02: origin is the centroid of the City of Port Moody Parcel Information (WGS) parcel carrying 83 MOODY ST (strata plan EPS7197); Nominatim reverse of the centroid returns a component building on the same parcel, addressed 2700 Spring Street.
+- School catchments: not confirmed — no district locator run.
+- Bus frequencies: not stated on operator pages read.

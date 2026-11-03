@@ -23,13 +23,13 @@ Building: Barclay Woods, 9847 / 9857 / 9867 Manchester Drive (cariboo; condos).
 - Walmart Supercentre, 9855 Austin Rd, Burnaby. https://www.walmart.ca/en/store/3008
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at 9847 Manchester Drive (street-segment point; see NOT CONFIRMED); OSRM for driving, OpenStreetMap DE routed-foot for walking; OSM data date not published by the service.
-- Walk to Lougheed Town Centre Station: 7.0 minutes, 0.52 km, routed-foot.
-- Drive to Lougheed Town Centre Station: 1.7 minutes, 1.20 km, OSRM.
-- Drive to The City of Lougheed Shopping Centre: 5.4 minutes, 2.06 km, OSRM.
+- Measured 2026-11-02, starting at 9847 Manchester Drive (City of Burnaby Strata Address point, OBJECTID 901; see NOT CONFIRMED); OSRM for driving, OpenStreetMap DE routed-foot for walking; OSM data date not published by the service.
+- Walk to Lougheed Town Centre Station: 8.6 minutes, 0.64 km, routed-foot.
+- Drive to Lougheed Town Centre Station: 2.1 minutes, 1.27 km, OSRM.
+- Drive to The City of Lougheed Shopping Centre: 3.5 minutes, 1.67 km, OSRM.
 
 ## NOT CONFIRMED
-- Measurement anchor: the first address, 9847 Manchester Drive, is used as the anchor for this multi-address building; the foreground re-run geocode returned a Manchester Drive street-segment point, not an exact house point, and it governs — an earlier geocode pass returned different coordinates for the Manchester Drive addresses and was discarded and re-measured.
+- Measurement anchor: the first address, 9847 Manchester Drive, is used as the anchor for this multi-address building — upgraded in the phase-2 cleanup pass (2026-11-02) from the Manchester Drive street-segment point to the City of Burnaby open-data Strata Address point carrying 9847 (OpenData4 MapServer layer 4, OBJECTID 901, strata NWS1459) at 49.24688, -122.89635; reverse-geocoding that point returns Barclay Woods itself, and all §5 pairs were re-measured from it.
 - School catchments for this address: not confirmed — no district locator run was done in this pass.
 - Bus frequencies: not stated — no frequency was read from an operator timetable in this pass.
 - Walks to Lyndhurst Elementary and Stoney Creek Park: measured 1.80 km and 1.72 km, beyond the 1.5 km walk cap, so they were dropped.

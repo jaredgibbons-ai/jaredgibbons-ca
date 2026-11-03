@@ -25,15 +25,15 @@ Building: McCartney Lane, 2912 Mount Seymour Parkway (seymour-nv; townhomes).
 - Shoppers Drug Mart Parkgate Shopping Centre, 3650 Mt Seymour Pkwy (retailer's own-domain search result). https://www.shoppersdrugmart.ca/en/stores/252-shoppers-drug-mart-parkgate-shopping-centre/
 
 ## 5. MEASURED TRAVEL TIMES
-- Origin: 2912 Mount Seymour Parkway (segment basis — see NOT CONFIRMED). OSRM driving; routing.openstreetmap.de routed-foot walking; measured 2026-11-02; OSM data date not published by the service.
-- Walk to Seymour Heights Elementary, 2640 Carnation St: 9.6 minutes, 0.72 km, routed-foot.
-- Walk to Windsor Secondary, 931 Broadview Dr: 7.18 minutes, 0.54 km, routed-foot.
-- Drive to Parkgate Village, 3650 Mount Seymour Parkway: 4.93 minutes, 2.82 km, OSRM.
-- Drive to Windsor Secondary, 931 Broadview Dr: 2.36 minutes, 1.08 km, OSRM.
-- Drive to Seymour Heights Elementary, 2640 Carnation St: 2.08 minutes, 1.00 km, OSRM.
+- Origin: 2912 Mount Seymour Parkway (District of North Vancouver building point — see NOT CONFIRMED). OSRM driving; routing.openstreetmap.de routed-foot walking; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Seymour Heights Elementary, 2640 Carnation St: 13.3 minutes, 0.98 km, routed-foot.
+- Walk to Windsor Secondary, 931 Broadview Dr: 14.8 minutes, 1.09 km, routed-foot.
+- Drive to Parkgate Village, 3650 Mount Seymour Parkway: 3.6 minutes, 1.84 km, OSRM.
+- Drive to Windsor Secondary, 931 Broadview Dr: 1.3 minutes, 0.48 km, OSRM.
+- Drive to Seymour Heights Elementary, 2640 Carnation St: 1.9 minutes, 0.79 km, OSRM.
 
 ## NOT CONFIRMED
 - DISCLOSED-BASIS address: 2912 Mount Seymour Parkway is the complex address per the research file; listings use individual unit addresses along the Parkway, e.g. the 2870–2994 block.
-- Origin basis: Nominatim returned only the Mount Seymour Parkway road segment for 2912 (no house point); it sits on, and reverse-geocodes to, the building's own street.
+- Origin upgraded (cleanup pass): previously the Mount Seymour Parkway road-segment point (no Nominatim house point for 2912). Now the centroid of the District of North Vancouver GeoWeb building polygon "MCCARTNEY LANE" (Asset_Id BLDG18452), at 49.317068, -122.993273; the District's BldAddress record for that Asset_Id is 2912 MT SEYMOUR PKWY. The centroid reverse-geocodes to McCartney Lane (nearest OSM road — an artefact; the municipal records carry the roster address). All §5 pairs re-measured; none dropped.
 - School catchments: not confirmed; no locator run.
 - Safeway's page gives 1175 Mt.Seymour Road; §5 drove to Parkgate Village, 3650 Mt Seymour Parkway.

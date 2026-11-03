@@ -13,7 +13,7 @@
 - Kitsilano Branch, Vancouver Public Library, 2425 Macdonald Street — https://www.vpl.ca/location/kitsilano-branch
 
 ## 3. SCHOOLS
-- Public elementary schools (School District 39, Vancouver), from the Ministry school list: Bayview Community Elementary (K–7), 2251 Collingwood Street; General Gordon Elementary (K–7), 2268 Bayswater Street; Henry Hudson Elementary (K–7), 1530 Maple Street; Lord Tennyson Elementary (K–7), 1936 West 10th Avenue — https://studentsuccess.gov.bc.ca/schools/in-school-district/039
+- Public elementary schools (School District 39, Vancouver), from the Ministry school list: Bayview Community Elementary (K–7), 3505 West 7th Avenue; General Gordon Elementary (K–7), 2268 Bayswater Street; Henry Hudson Elementary (K–7), 1530 Maple Street; Lord Tennyson Elementary (K–7), 1936 West 10th Avenue — https://studentsuccess.gov.bc.ca/schools/in-school-district/039 ; Bayview address per the Vancouver School Board's own school page: https://www.vsb.bc.ca/bayview
 - Kitsilano Secondary (grades 8–12, School District 39), 2706 Trafalgar Street — https://studentsuccess.gov.bc.ca/schools/in-school-district/039
 - Catchments: not confirmed — no district locator or policy page confirming these schools' catchments for Kitsilano addresses was read this pass.
 
@@ -29,6 +29,7 @@
 - Drive to Burrard Station: about 9 minutes, 5.3 km.
 
 ## NOT CONFIRMED
+- Bayview address: official sources conflict — the Ministry list above still shows 2251 Collingwood Street, while the Vancouver School Board's own school page and neighbourhood list show 3505 West 7th Ave; §3 follows the School Board's own page in this cleanup pass.
 - School catchments — see §3.
 - Bus frequencies: not stated; the timetables read list trip times, not a single frequency figure.
 - The Safeway store on West 4th Avenue: its own store page read this pass did not show a street address, so it is not listed in §4.

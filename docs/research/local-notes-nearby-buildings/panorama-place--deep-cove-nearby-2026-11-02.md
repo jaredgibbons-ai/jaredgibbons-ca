@@ -20,16 +20,16 @@ Building: Panorama Place, 2181 Panorama Drive (deep-cove; condos).
 - Stong's Market, North Vancouver store, 2150 Dollarton Hwy, per the retailer's own site. https://www.stongs.com/local-vendor
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at 2181 Panorama Drive; OSM data date not published by the service.
-- Walk to Panorama Park, Panorama Drive: 1.9 minutes, 0.14 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Walk to Deep Cove Park, 2156 Banbury Rd: 7.2 minutes, 0.54 km, routed-foot, measured 2026-11-02.
-- Walk to Cove Cliff Elementary, 1818 Banbury Rd: 15.0 minutes, 1.12 km, routed-foot, measured 2026-11-02.
-- Walk to Seycove Secondary, 1204 Caledonia Ave: 16.2 minutes, 1.20 km, routed-foot, measured 2026-11-02.
-- Drive to Stong's Market, 2150 Dollarton Hwy: 10.6 minutes, 6.95 km, OSRM (router.project-osrm.org), measured 2026-11-02.
-- Drive to Phibbs Exchange: 12.1 minutes, 8.18 km, OSRM, measured 2026-11-02.
+- Measured 2026-11-02, starting at 2181 Panorama Drive. Origin used: centroid of the District of North Vancouver GeoWeb BldBuilding footprint BLDG13991 (named "COVESIDE MANOR / PANORAMA PLACE" in the dataset), linked by ASSET_ID to the ACTIVE BldAddress base-address record for 2181 Panorama Drive (OBJECTID 28701), centroid at 49.326591, -122.950879 (upgraded in cleanup pass; previously a Panorama Drive street point — see NOT CONFIRMED); OSM data date not published by the service.
+- Walk to Panorama Park, Panorama Drive: 2.8 minutes, 0.21 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Walk to Deep Cove Park, 2156 Banbury Rd: 3.4 minutes, 0.25 km, routed-foot, measured 2026-11-02.
+- Walk to Cove Cliff Elementary, 1818 Banbury Rd: 13.3 minutes, 1.00 km, routed-foot, measured 2026-11-02.
+- Walk to Seycove Secondary, 1204 Caledonia Ave: 14.3 minutes, 1.06 km, routed-foot, measured 2026-11-02.
+- Drive to Stong's Market, 2150 Dollarton Hwy: 10.4 minutes, 6.86 km, OSRM (router.project-osrm.org), measured 2026-11-02.
+- Drive to Phibbs Exchange: 12.0 minutes, 8.09 km, OSRM, measured 2026-11-02.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated — no frequency was read from an operator timetable in this pass.
 - Village supermarket: not confirmed — no village supermarket address was read on a retailer's own page; Stong's is the nearest read.
-- Origin: Nominatim returns a Panorama Drive street point for this address, not a named building point; that point was used.
+- Origin upgraded (cleanup pass, 2026-11-02): previously a Panorama Drive street point; now the centroid of the District of North Vancouver GeoWeb BldBuilding footprint BLDG13991 (named "COVESIDE MANOR / PANORAMA PLACE" in the dataset), linked by ASSET_ID to the ACTIVE BldAddress base-address record for 2181 Panorama Drive (OBJECTID 28701), at 49.326591, -122.950879. It reverse-geocodes to Deep Cove Osaka, 4355 Gallant Avenue (the nearest addressed OSM feature — an artefact; the centroid is the footprint's own and the municipal linkage carries the roster address). All §5 pairs re-measured; none dropped.

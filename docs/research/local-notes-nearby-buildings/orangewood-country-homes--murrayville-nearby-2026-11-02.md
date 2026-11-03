@@ -23,9 +23,18 @@ Building: Orangewood Country Homes (Orangewood), 21937 48 Avenue (murrayville; t
 - Shoppers Drug Mart, Murrayville Square (pharmacy), 22196 50 Ave (retailer's own site search result). https://www.shoppersdrugmart.ca/en/stores/258-shoppers-drug-mart-murrayville-square/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 21937 48 Avenue (centroid of the Township of Langley Parcels records for this address). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Murrayville Outdoor Activity Park: 8.2 min, 0.62 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Murrayville Library: 6.1 min, 0.46 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to W.C. Blair Recreation Centre: 9.1 min, 0.68 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to James Hill Elementary: 13.1 min, 0.98 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to IGA, 22259 48 Ave: 11.0 min, 0.83 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Shoppers Drug Mart, 22196 50 Ave: 15.3 min, 1.15 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Langley Fundamental Elementary: 12.5 min, 0.94 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Murrayville Academy: 14.0 min, 1.05 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to McLeod Athletic Park: 4.6 min, 2.77 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times: not measured — Nominatim returned only 48 Avenue road-segment points for 21937 48 Avenue across six query variants (no house or building point at the address); City of Langley segment points also returned were discarded as the wrong municipality segment.
+- Travel times re-measured in the cleanup pass (measured 2026-11-02): origin is the centroid of the 112 Township of Langley open-data Parcels records (Parcels FeatureServer) that carry 21937 48 Ave — one record per unit of this complex. Nominatim reverse-geocode of the centroid returned 49 Avenue, the street along the complex's north side — a reverse artefact; the parcel records themselves carry this building's address.
 - School catchments: not confirmed — no SD35 locator run for this address in this pass.
 - Bus frequencies: not stated on the timetables read.

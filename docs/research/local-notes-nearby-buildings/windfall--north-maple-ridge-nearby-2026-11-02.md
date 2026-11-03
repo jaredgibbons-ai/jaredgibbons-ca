@@ -24,10 +24,12 @@ Building: Windfall, 23183 136 Avenue (north-maple-ridge; townhomes).
 - Save-On-Foods, 23981 Dewdney Trunk Road, Maple Ridge (retailer's own site search result, carried from the phase-1 file). https://www.saveonfoods.com/sm/planning/rsid/938/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 23183 136 Avenue (centre of OSM way 1540363193, named Windfall, carrying this address). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Maple Ridge Park, 13180 232 Street: 18.9 min, 1.40 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Harry Hooge Elementary, 12280 230 St: 5.5 min, 3.48 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times: not measured — no reliable origin exists. Free-form, building-name, structured and sourced-postal-code (V4R 0H9) Nominatim variants returned only 136 Avenue road segments; no house/building point at 23183 136 Avenue was verified, and no segment or neighbouring point was substituted.
+- Cleanup pass, 2026-11-02: travel times re-measured from the centre of OSM way 1540363193, named Windfall (addr:housenumber 23183, addr:street 136 Avenue); the City of Maple Ridge open-data Parcel record for this address matches within metres.
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated — none read from a timetable.
 - No grocery within ~1 km was confirmed; the anchor in §4 is the phase-1-confirmed anchor for the area.

@@ -21,13 +21,13 @@ Building: Saturna, 5988 Hastings Street (capitol-hill-bn; condos).
 - Safeway, Kensington Square, 6564 East Hastings Street. https://www.safeway.ca/stores/safeway-kensington-square/
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at 5988 Hastings Street (Hastings Street segment point; see NOT CONFIRMED); OSRM for driving, OpenStreetMap DE routed-foot for walking; OSM data date not published by the service.
-- Walk to Safeway, Kensington Square: 5.2 minutes, 0.39 km, routed-foot.
-- Walk to Burnaby North Secondary: 6.8 minutes, 0.49 km, routed-foot.
-- Walk to Capitol Hill Elementary: 10.2 minutes, 0.76 km, routed-foot.
-- Walk to Kensington Park: 11.2 minutes, 0.82 km, routed-foot.
+- Measured 2026-11-02, starting at 5988 Hastings Street (City of Burnaby Strata Address point, OBJECTID 101; see NOT CONFIRMED); OSRM for driving, OpenStreetMap DE routed-foot for walking; OSM data date not published by the service.
+- Walk to Safeway, Kensington Square: 9.4 minutes, 0.70 km, routed-foot.
+- Walk to Burnaby North Secondary: 9.4 minutes, 0.71 km, routed-foot.
+- Walk to Capitol Hill Elementary: 4.8 minutes, 0.36 km, routed-foot.
+- Walk to Kensington Park: 8.2 minutes, 0.60 km, routed-foot.
 
 ## NOT CONFIRMED
-- Measurement origin: Nominatim returned only Hastings Street segment points for this address; the segment point in the building's block was used. An earlier measurement set taken from a different, superseded point was discarded and re-measured; the foreground re-run governs.
+- Measurement origin — upgraded in the phase-2 cleanup pass (2026-11-02): the Hastings Street segment point used originally was replaced by the City of Burnaby open-data Strata Address point carrying 5988 (OpenData4 MapServer layer 4, OBJECTID 101, strata LMS946) at 49.27976, -122.97715; reverse-geocoding that point returns the Hastings Street road in Lochdale — the disclosed municipal-point artefact; the municipal record itself carries the exact roster address, and all §5 pairs were re-measured from it. The Safeway destination point is the Kensington Square point (the square the store anchors; no separate Safeway point was returned by the geocoder).
 - School catchments for this address: not confirmed — no district locator run was done in this pass.
 - Bus frequencies: not stated — no frequency was read from an operator timetable in this pass.

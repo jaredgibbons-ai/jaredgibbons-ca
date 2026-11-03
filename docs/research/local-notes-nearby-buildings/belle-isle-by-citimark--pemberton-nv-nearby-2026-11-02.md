@@ -23,9 +23,13 @@ Building: Belle Isle by Citimark, 2060 Curling Road (pemberton-nv; townhomes).
 - Park Royal shopping centre, 2002 Park Royal South, West Vancouver, across the Capilano River. https://parkroyal.ca/contact/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 2060 Curling Road (DNV GEOweb BldAddress base-address record + BldBuilding footprint 'BELLE ISLE' (BLDG25598) centroid). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Lions Gate Community Recreation Centre, 1733 Lions Gate Lane: 2.2 min, 0.16 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Capilano Elementary, 1230 West 20th Street: 17.6 min, 1.32 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Save-On-Foods, 140 - 879 Marine Drive: 3.8 min, 2.41 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Park Royal shopping centre, 2002 Park Royal South: 2.3 min, 1.53 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times: no origin point verified to the building — repeated foreground Nominatim variants for 2060 Curling Road (free-form, name, postal-code and structured) returned only Curling Road road segments (reverse-geocoding to 2020 Curling Road), all discarded; no neighbouring building's point was substituted.
+- Travel times re-measured in the cleanup pass, 2026-11-02: origin = centroid of the District of North Vancouver GEOweb BldBuilding footprint named 'BELLE ISLE' (asset BLDG25598), linked from the DNV BldAddress base-address record for 2060 Curling Road; the centroid reverse-geocodes to Curling Road (a footprint centroid reverse-geocodes to the nearest road, not the polygon — disclosed artefact). Destinations are OSM points for anchors named in §§2–4, each reverse-checked in this pass.
 - School catchments for this address: not confirmed; no SD44 locator run in this pass.
 - Bus frequencies beyond the R2 and SeaBus figures above: not stated — none read from an operator timetable in this pass.

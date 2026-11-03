@@ -21,10 +21,16 @@ Building: Douglas Point, 17516 4 Avenue (pacific-douglas; townhomes).
 - Peninsula Village, 15355 24 Avenue, Surrey; the Safeway store there is at 700-15355 24 Avenue. https://www.surrey.ca/sites/default/files/planning-reports/PLR_7910-0235-00.pdf
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 17516 4 Avenue (City of Surrey Address Points point, OBJECTID 70391). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Dufferin Park: 7.2 min, 0.54 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Douglas Elementary: 11.0 min, 0.82 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to White Rock Centre: 9.2 min, 6.90 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to South Surrey Recreation & Arts Centre, 14601 20 Avenue: 11.7 min, 8.54 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Earl Marriott Secondary: 7.4 min, 5.66 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Peninsula Village, 15355 24 Avenue: 9.5 min, 7.41 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times: not measured — free-form, structured, abbreviated and building-name Nominatim searches returned only 4 Avenue road segments in Douglas; no house/building point at 17516 4 Avenue exists in the service, and no neighbouring point was substituted.
+- Travel times: re-measured in the cleanup pass, 2026-11-02 — origin is the City of Surrey open-data Address Points point for the exact roster address (Address Points FeatureServer, layer 0 "Addresses", OBJECTID 70391, FULL_ADDRESS "17516 4 Ave", ISSUING_AGENCY "CITY OF SURREY"). Nominatim reverse-geocode of the point returns 4 Avenue, Douglas, South Surrey — the road only, with no OSM house number; that reverse artefact is disclosed here, and the municipal record itself carries the roster address.
 - School catchments: not confirmed — no district locator run for this address.
 - Bus frequencies: not stated — none read from an operator timetable in this pass.
 - No supermarket inside the Douglas ground itself was confirmed on an allowed source in this pass; section 4 lists the nearest confirmed centre.

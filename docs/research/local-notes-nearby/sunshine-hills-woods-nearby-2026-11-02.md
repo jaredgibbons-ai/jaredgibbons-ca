@@ -17,7 +17,7 @@
 - Seaquam Secondary, 8-12, 11584 Lyon Rd, School District 37 Delta; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/037
 
 ## 4. GROCERY AND SHOPPING ANCHORS
-- Walmart Supercentre, 7155 120 St, Delta. https://www.walmart.ca/en/store/5853
+- Walmart Supercentre, 7155 120 St, Delta. https://www.walmart.ca/en/store/1207
 
 ## 5. MEASURED TRAVEL TIMES
 - From-point: Sunshine Hills Elementary, 11285 Bond Blvd, Delta. Tools: OSRM (router.project-osrm.org) for driving, OpenStreetMap routed-foot for walking; OSM data date not published by the service; measured 2026-11-02.

@@ -19,14 +19,14 @@ Building: Museo, 9680 Alexandra Road (west-cambie; townhomes).
 - Walmart Supercentre, 9251 Alderbridge Way, Richmond, from Walmart's own store listing. https://www.walmart.ca/en/store/3652
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at 9680 Alexandra Road; OSM data date not published by the service. Anchor: segment-interpolated point on Alexandra Road between real OSM address points 9560 and 9800 Alexandra Road; it reverse-geocodes to Alexandra Road.
-- Walk to Alexandra Neighbourhood Park, 9600 Odlin Road: 0.39 km, 5.2 minutes, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Walk to Tomsett Elementary, 9671 Odlin Road: 0.58 km, 7.7 minutes, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Walk to Walmart Supercentre, 9251 Alderbridge Way: 0.40 km, 5.4 minutes, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Drive to Aberdeen Station: 2.69 km, 4.5 minutes, OSRM, measured 2026-11-02.
-- Drive to A.R. MacNeill Secondary, 6611 No. 4 Road: 2.07 km, 4.3 minutes, OSRM, measured 2026-11-02.
+- Measured 2026-11-02, starting at 9680 Alexandra Road; OSM data date not published by the service. Anchor: City of Richmond Property Address point (RIM layer 110) for the unitless STRATA COMMON record at 9680 Alexandra Road (OBJECTID 11454, ADDRKEY 54252) — cleanup-pass upgrade from a segment-interpolated point (see NOT CONFIRMED).
+- Walk to Alexandra Neighbourhood Park, 9600 Odlin Road: 0.39 km, 5.1 minutes, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Walk to Tomsett Elementary, 9671 Odlin Road: 0.52 km, 7.0 minutes, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Walk to Walmart Supercentre, 9251 Alderbridge Way: 0.35 km, 4.6 minutes, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Drive to Aberdeen Station: 2.75 km, 4.6 minutes, OSRM, measured 2026-11-02.
+- Drive to A.R. MacNeill Secondary, 6611 No. 4 Road: 2.12 km, 4.5 minutes, OSRM, measured 2026-11-02.
 
 ## NOT CONFIRMED
-- No OSM house point or named building point for 9680 Alexandra Road was found in this pass; the interpolation above was used and is disclosed.
+- Origin (cleanup-pass upgrade): previously segment-interpolated between the real 9560 and 9800 Alexandra Road points; now the City of Richmond RIM Property Address point for the unitless STRATA COMMON record at 9680 Alexandra Road (OBJECTID 11454). An OSM landuse way named 'Museo' (way 462876629) also carries this address. The point reverse-geocodes to 9560 Alexandra Road, the nearest OSM house point; the municipal record itself carries the roster address.
 - School catchments for this address: not confirmed in this pass; no district locator run was done.
 - Bus frequencies: not stated; no operator frequency was read in this pass.

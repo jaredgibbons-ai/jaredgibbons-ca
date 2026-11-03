@@ -21,12 +21,12 @@ Building: Immel Ridge, 34332 Maclure Road (abbotsford-east-guide; townhomes).
 - Walmart Supercenter, 1812 Vedder Way. https://www.walmart.ca/en/store/1113
 
 ## 5. MEASURED TRAVEL TIMES
-- All measurements start at 34332 Maclure Road. Measured 2026-11-02; OSM data date not published by the service. Origin geocode: Nominatim has no building point for this address; the Maclure Road segment point in the roster postal-code area was used.
-- Walk to Clayburn Shopping Centre, 3033 Immel Street: 5.7 minutes, 0.43 km, OpenStreetMap routed-foot (routing.openstreetmap.de), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Abbotsford Recreation Centre, 2499 McMillan Road: 5.3 minutes, 3.05 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- All measurements start at 34332 Maclure Road. Measured 2026-11-02; OSM data date not published by the service. Origin: City of Abbotsford Address Points civic point for 34332 Maclure Road (Address_pnts OBJECTID 27621), adopted in the cleanup pass (2026-11-02) — the original pass used a Maclure Road segment point in the roster postal-code area, as Nominatim has no building point for this address.
+- Walk to Clayburn Shopping Centre, 3033 Immel Street: 6.6 minutes, 0.49 km, OpenStreetMap routed-foot (routing.openstreetmap.de), measured 2026-11-02; OSM data date not published by the service.
+- Drive to Abbotsford Recreation Centre, 2499 McMillan Road: 5.4 minutes, 3.13 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated on the operator pages read in this pass.
 - Exact nearest-stop assignment: not confirmed — routes are the McMillan-corridor routes named by BC Transit.
-- Building-point geocode: not confirmed — see §5 origin note.
+- Origin upgraded in the cleanup pass (2026-11-02): Maclure Road segment point (original pass) → City of Abbotsford Address Points civic point for 34332 Maclure Road (OBJECTID 27621); see §5 origin note.

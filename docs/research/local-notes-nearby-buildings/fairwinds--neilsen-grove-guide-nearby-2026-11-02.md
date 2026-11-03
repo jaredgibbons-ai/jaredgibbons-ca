@@ -21,8 +21,17 @@ Building: Fairwinds, 5550 Admiral Way (neilsen-grove-guide; townhomes).
 - Pharmasave Ladner, pharmacy, 4857 Elliott Street, Delta, BC V4K 2X7. https://pharmasave.com/ladner/about/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 5550 Admiral Way (City of Delta Property Parcels "CMPLX" record for 5550 Admiral Way, OBJECTID 34332, polygon centroid). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Neilson Grove Elementary, 5500 Admiral Blvd: 12.7 min, 0.95 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Neilson Grove Elementary, 5500 Admiral Blvd: 2.2 min, 1.14 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Ladner Harbour Park, 4905 Mcneelys Way: 5.7 min, 3.23 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Ladner Exchange: 5.8 min, 3.56 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Ladner Leisure Centre, 4600 Clarence Taylor Crescent: 6.8 min, 4.04 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Ladner Pioneer Library, 4683 51st Street: 6.1 min, 3.52 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Delta Secondary, 4615 51 St: 7.2 min, 3.84 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Save-On-Foods, 5186 48th Avenue: 6.2 min, 3.50 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Pharmasave Ladner, 4857 Elliott Street: 5.2 min, 3.13 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times: not measured — Nominatim returned only the Admiral Way road segment for 5550 Admiral Way across repeated free-form, name, and structured queries; no house or named building point for this address exists in the service, so no verified origin was available.
+- Travel times re-measured in the cleanup pass, 2026-11-02: origin is the polygon centroid of the City of Delta Property Parcels "CMPLX" record for 5550 Admiral Way (OBJECTID 34332), a municipal parcel record carrying the exact roster address. Nominatim reverse-geocoding of that centroid returns 137 Millennium Trail, a neighbouring addressed point, not the roster address — that reverse artefact is disclosed here; no neighbouring point was substituted.
 - School catchment for 5550 Admiral Way: not confirmed in this pass — no SD37 locator run was made for this address.

@@ -22,13 +22,13 @@ Building: Riverside, 11510 225 Street (east-central; condos).
 - Save-On-Foods, 22703 Lougheed Highway, Maple Ridge (address from the retailer's own-domain search result). https://www.saveonfoods.com/sm/planning/rsid/935/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at 11510 225 Street; OSM data date not published by the service. Origin: the Nominatim street-segment point for this address block (no building point exists in OpenStreetMap).
-- Walk to Brickwood Park: 2.8 minutes, 0.21 km, routing.openstreetmap.de routed-foot.
-- Walk to Haney Place Mall: 10.1 minutes, 0.76 km, routing.openstreetmap.de routed-foot.
-- Drive to Maple Ridge Leisure Centre: 2.8 minutes, 1.47 km, OSRM (router.project-osrm.org).
-- Drive to Eric Langton Elementary: 4.1 minutes, 2.17 km, OSRM (router.project-osrm.org).
+- From-point: City of Maple Ridge parcel centroid for 11510 225 Street (Parcel layer, DataCatalog/Property MapServer layer 3: Address 11510 / 225 ST, PIN 110170), at 49.21115, -122.59855 — upgraded in the cleanup pass (2026-11-02) from the street-segment point used originally; a parcel centroid reverse-geocodes to the nearest road, a known artefact. Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Brickwood Park: 3.9 minutes, 0.29 km, routing.openstreetmap.de routed-foot.
+- Walk to Haney Place Mall: 13.7 minutes, 1.03 km, routing.openstreetmap.de routed-foot.
+- Drive to Maple Ridge Leisure Centre: 2.7 minutes, 1.41 km, OSRM (router.project-osrm.org).
+- Drive to Eric Langton Elementary: 3.9 minutes, 2.11 km, OSRM (router.project-osrm.org).
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated.
-- Building-point geocode: none exists in OpenStreetMap; §5 uses the disclosed segment point.
+- Origin upgraded in the cleanup pass (2026-11-02): Nominatim street-segment point (original pass) → City of Maple Ridge Parcel record for 11510 225 ST (PIN 110170; centroid — see §5). The roster address is not proven wrong.

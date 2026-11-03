@@ -21,15 +21,15 @@ Building: Tsawwassen Mews, 5622 16 Avenue (tsawwassen-east; condos).
 - Thrifty Foods Tsawwassen, 1207 56th Street, Delta (retailer's own store page). https://www.thriftyfoods.com/find-a-store/store/9466-thrifty-foods-tsawwassen
 
 ## 5. MEASURED TRAVEL TIMES
-- Origin: 5622 16 Avenue — segment-interpolated point on 16 Avenue, bracketed by the real OSM address points at 5575 and 5630 16 Avenue (no numbered OSM point and no named building point exists for 5622; the interpolated point reverse-geocodes to a Canada Post amenity on 16 Avenue, no civic number). Tools: OSRM (router.project-osrm.org) for driving, OpenStreetMap DE routed-foot for walking; measured 2026-11-02; OSM data date not published by the service.
-- Walk to South Delta Exchange: 6.6 minutes, 0.49 km, routed-foot.
-- Walk to South Delta Recreation Centre, 1720 56 Street: 9.5 minutes, 0.71 km, routed-foot.
-- Walk to Thrifty Foods, 1207 56th Street: 12.5 minutes, 0.94 km, routed-foot.
-- Walk to Beach Grove Elementary, 5955 17a Ave: 13.5 minutes, 1.01 km, routed-foot.
-- Drive to South Park Elementary, 735 Gilchrist Dr: 3.5 minutes, 2.03 km, OSRM.
+- Origin: 5622 16 Avenue — centroid of the City of Delta Property Parcels polygon for the complex record 'CMPLX 5622 16 AVE' (OBJECTID 29799, primary; cleanup-pass upgrade from a segment-interpolated point; see NOT CONFIRMED). Tools: OSRM (router.project-osrm.org) for driving, OpenStreetMap DE routed-foot for walking; measured 2026-11-02; OSM data date not published by the service.
+- Walk to South Delta Exchange: 6.7 minutes, 0.50 km, routed-foot.
+- Walk to South Delta Recreation Centre, 1720 56 Street: 9.7 minutes, 0.72 km, routed-foot.
+- Walk to Thrifty Foods, 1207 56th Street: 11.4 minutes, 0.86 km, routed-foot.
+- Walk to Beach Grove Elementary, 5955 17a Ave: 14.6 minutes, 1.09 km, routed-foot.
+- Drive to South Park Elementary, 735 Gilchrist Dr: 3.4 minutes, 1.94 km, OSRM.
 
 ## NOT CONFIRMED
-- Origin is segment-grade (see §5): 16 Avenue road points returned by address queries reverse-geocoded to 5447, 5544, 5640 and 5882 16 Avenue and were discarded, not substituted.
+- Origin (cleanup-pass upgrade): previously segment-interpolated between the real 5575 and 5630 16 Avenue points; now the centroid of the City of Delta Property Parcels polygon for the complex record 'CMPLX 5622 16 AVE' (OBJECTID 29799). No OSM point carries 5622 16 Avenue (a site node carries 5622 56 Street, a different address, not used). The centroid reverse-geocodes to 5622 56 Street, the nearest OSM address point; the parcel record itself carries the roster address.
 - School catchments: no district locator run in this pass.
 - Beach Grove Elementary destination is the OSM named school point; its reverse-geocode returned 17A Avenue only (school grounds), disclosed.
 - South Delta Recreation Centre destination point reverse-geocodes to the Ice Chip Lounge amenity at the same civic address, 1720 56 Street.

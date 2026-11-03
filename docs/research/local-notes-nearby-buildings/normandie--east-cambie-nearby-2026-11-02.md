@@ -20,13 +20,13 @@ Building: Normandie, 11571 Thorpe Road (east-cambie; townhomes).
 - Shoppers Drug Mart (No. 5 Road & Cambie), 11800 Cambie Road. https://www.shoppersdrugmart.ca/en/stores/2237-shoppers-5-road-and-cambie/
 
 ## 5. MEASURED TRAVEL TIMES
-- From-point: 11571 Thorpe Road. Origin used: the Thorpe Road street-segment point (49.1833, -123.0965) returned by Nominatim for Thorpe Road at the building's postal-code area; the civic-address interpolation fell about 1 km south on Bog Forest Trail and was not used. OpenStreetMap DE routed-foot for walking; measured 2026-11-02; OSM data date not published by the service.
-- Walk to Cambie Library: 2.5 minutes, 0.19 km, routed-foot, measured 2026-11-02.
-- Walk to Shoppers Drug Mart, 11800 Cambie Road: 5.6 minutes, 0.42 km, routed-foot, measured 2026-11-02.
-- Walk to King George/Cambie Community Park: 10.2 minutes, 0.77 km, routed-foot, measured 2026-11-02.
-- Walk to Cambie Community Centre: 15.8 minutes, 1.19 km, routed-foot, measured 2026-11-02.
+- From-point: 11571 Thorpe Road. Origin used: City of Richmond RIM Property Address layer 110 point for the unitless STRATA COMMON record "11571 THORPE RD" (OBJECTID 85238, ADDRKEY 64327), at 49.183791, -123.096267 (upgraded in cleanup pass; previously the Thorpe Road street-segment point — see NOT CONFIRMED). OpenStreetMap DE routed-foot for walking; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Cambie Library: 2.3 minutes, 0.17 km, routed-foot, measured 2026-11-02.
+- Walk to Shoppers Drug Mart, 11800 Cambie Road: 5.4 minutes, 0.41 km, routed-foot, measured 2026-11-02.
+- Walk to King George/Cambie Community Park: 10.0 minutes, 0.75 km, routed-foot, measured 2026-11-02.
+- Walk to Cambie Community Centre: 15.6 minutes, 1.17 km, routed-foot, measured 2026-11-02.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run was done in this pass.
 - Bus frequencies: not stated — no frequency was read from an operator timetable in this pass.
-- Origin point: a street-segment point on Thorpe Road, not a building point — Nominatim's interpolation of the civic address fell on Bog Forest Trail and routed via the East-West Connector.
+- Origin upgraded (cleanup pass, 2026-11-02): previously a street-segment point on Thorpe Road (Nominatim's civic-address interpolation fell on Bog Forest Trail and was not used); now the City of Richmond RIM Property Address layer 110 point for the unitless STRATA COMMON record "11571 THORPE RD" (OBJECTID 85238, ADDRKEY 64327), at 49.183791, -123.096267. It reverse-geocodes to East Cambie, Richmond with no house number (nearest OSM features — an artefact; the municipal record carries the roster address). All §5 pairs re-measured; none dropped.

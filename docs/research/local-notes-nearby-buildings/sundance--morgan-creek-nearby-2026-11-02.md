@@ -25,7 +25,7 @@ Building: Sundance, 15233 34 Avenue, Surrey, BC (morgan-creek; townhomes).
 - Measured 2026-11-02 from 15233 34 Avenue, Surrey, BC; OSRM driving, OSM DE routed-foot walking; OSM data date not published by the service.
 - Walk to Rosemary Heights Park: 6.1 minutes, 0.46 km, routed-foot.
 - Walk to Rosemary Heights Elementary: 10.5 minutes, 0.79 km, routed-foot.
-- Walk to Morgan Creek Park: 13.2 minutes, 0.99 km, routed-foot.
+- Walk to Morgan Creek Park: 13.8 minutes, 1.03 km, routed-foot.
 - Drive to Morgan Elementary: 2.8 minutes, 1.01 km, OSRM.
 - Drive to Walmart Supercentre, 2355 160 St: 5.5 minutes, 3.26 km, OSRM.
 
@@ -35,3 +35,4 @@ Building: Sundance, 15233 34 Avenue, Surrey, BC (morgan-creek; townhomes).
 - Unit count: not stated — unconfirmed in the home program file.
 - Measurement origin: §5 re-measured in a correction pass from the building's verified footprint point (house node tagged 15233 34 Avenue) after the first-pass origin failed reverse-geocoding, returning the Rosemary Greenway.
 - A Rosemary Heights Park address-point geocode returned points in North Surrey and was discarded; the named park point was used.
+- Morgan Creek Park point (cleanup pass, 2026-11-02): re-routed to the named park way's centroid (the park feature), replacing the 3302 156A Street address node; other pairs unchanged.

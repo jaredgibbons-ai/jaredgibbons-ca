@@ -21,15 +21,16 @@ Building: Kensington Lofts (Vesta Properties), 8371 202B Street (willoughby-heig
 - Hakam's Your Independent Grocer, Unit D100, 20678 Willoughby Town Centre Drive, Langley, in Willoughby Town Centre (centre directory). https://willoughbytowncentre.ca/shops-services/
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; driving OSRM (router.project-osrm.org), walking routing.openstreetmap.de routed-foot; OSM data date not published by the service. Origin: segment point on 202B Street (see NOT CONFIRMED).
-- Walk to Josette Dandurand Elementary, 20143 82 Avenue: 7.4 minutes, 0.55 km, routed-foot.
-- Walk to Donna Gabriel Robins Elementary, 7844 204B Street: 18.5 minutes, 1.38 km, routed-foot.
-- Drive to Langley Events Centre, 7888 200 Street: 3.0 minutes, 1.34 km, OSRM.
-- Drive to Peter Ewart Middle School, 7755 202A Street: 2.9 minutes, 1.32 km, OSRM.
-- Drive to Hakam's Your Independent Grocer, 20678 Willoughby Town Centre Drive: 3.2 minutes, 1.77 km, OSRM.
+- Measured 2026-11-02; driving OSRM (router.project-osrm.org), walking routing.openstreetmap.de routed-foot; OSM data date not published by the service. Origin: Township of Langley civic address point for 8371 202B Street (see NOT CONFIRMED).
+- Walk to Josette Dandurand Elementary, 20143 82 Avenue: 7.7 minutes, 0.58 km, routing.openstreetmap.de routed-foot.
+- Walk to Donna Gabriel Robins Elementary, 7844 204B Street: 20.0 minutes, 1.50 km, routing.openstreetmap.de routed-foot.
+- Drive to Langley Events Centre, 7888 200 Street: 3.8 minutes, 1.70 km, OSRM.
+- Drive to Peter Ewart Middle School, 7755 202A Street: 3.7 minutes, 1.67 km, OSRM.
+- Drive to Hakam's Your Independent Grocer, 20678 Willoughby Town Centre Drive: 3.9 minutes, 2.09 km, OSRM.
+
 
 ## NOT CONFIRMED
 - School catchments for 8371 202B Street: not confirmed; no SD35 locator run in this pass.
-- Origin: no OSM point carries 8371 202B Street; measurements start at a segment point on 202B Street at the 8371 position, reverse-geocoding to 202B Street — segment-grade.
+- Origin: upgraded in the cleanup pass — the Township of Langley civic address point for 8371 202B Street (TOL Addresses service, OBJECTID 48551; 49.15458, -122.66096) replaces the 202B Street segment point used originally. Its Nominatim reverse returns the nearest road, a known artefact; the municipal record carries the roster address.
 - Carvolth Exchange street address: not stated on the TransLink timetables read.
 - Bus frequencies: not stated in this file.

@@ -18,7 +18,8 @@
 - Langley Secondary, 9-12, SD35, 21405 56 Ave; catchment not confirmed. (https://studentsuccess.gov.bc.ca/schools/in-school-district/035)
 
 ## 4. GROCERY AND SHOPPING ANCHORS
-- Safeway Willowbrook Park (grocery), 6153 200 St (retailer's own site search result). (https://www.safeway.ca/stores/safeway-willowbrook-park/)
+- Safeway (grocery and pharmacy), 20871 Fraser Highway (retailer's own site search result). (https://www.safeway.ca/find-a-store/)
+- Save-On-Foods (grocery), 20151 Fraser Highway (retailer's own site search result). (https://www.saveonfoods.com/sm/planning/rsid/2242/store)
 - Shoppers Drug Mart Valley Centre (pharmacy), 20151 Fraser Highway (retailer's own site search result). (https://www.shoppersdrugmart.ca/en/stores/2115-shoppers-drug-mart-valley-centre/)
 
 ## 5. MEASURED TRAVEL TIMES

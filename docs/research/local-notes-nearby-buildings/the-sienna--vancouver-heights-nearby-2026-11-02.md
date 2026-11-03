@@ -21,10 +21,16 @@ Building: The Sienna, 3939 Hastings Street (vancouver-heights; condos).
 - Safeway (supermarket), 4440 Hastings Street, Burnaby (retailer's own store page). https://www.safeway.ca/stores/safeway-burnaby-heights
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 3939 Hastings Street (City of Burnaby open-data Strata Address point, OBJECTID 836, ADDRESS 3939, on Hastings Street). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to St. Helen's: 4.6 min, 0.35 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Rosser Elementary: 13.6 min, 1.02 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Safeway (supermarket): 14.4 min, 1.08 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Eileen Dailly Leisure Pool and Fitness Centre: 18.5 min, 1.39 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Burnaby Public Library, McGill Branch: 18.9 min, 1.42 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Confederation Park, 250 Willingdon Ave: 3.9 min, 1.90 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times not measured: OSM holds no house/building point for The Sienna at 3939 Hastings Street — the only point at that address is a retail POI ("Time Centre, 3939 Hastings Street"), not the building's own point, so it was not used as an origin. Hastings Street address lookups nearby (3886, 3908, 3955) returned road-interpolation points that reverse-geocoded to other addresses (4638 and 5010 Hastings Street) and were discarded; the one verified house point found, 3971 Hastings Street, does not bracket 3939 on both sides, so segment interpolation was not applied.
+- Travel times re-measured in the cleanup pass, measured 2026-11-02: origin is the City of Burnaby open-data Strata Address point OBJECTID 836 (ADDRESS 3939, STRATANO LMS3262) at 49.28137, -123.01766, the only Burnaby strata address point numbered 3939 and located on Hastings Street; reverse-geocoding it returns the Hastings Street road / a shop node with no house number — a municipal-point artefact, disclosed. The OSM retail POI at 3939 Hastings Street ("Time Centre") was not used as the origin.
 - School catchments: not confirmed — no SD41 locator run for this address in this pass.
 - Nearest SkyTrain station by name: not confirmed on a TransLink page read this pass; service at the building is bus/RapidBus.
 - Capitol Hill Elementary excluded: its Ministry-list address reads "350s Holdom Ave," an apparent artifact, and was not guessed.

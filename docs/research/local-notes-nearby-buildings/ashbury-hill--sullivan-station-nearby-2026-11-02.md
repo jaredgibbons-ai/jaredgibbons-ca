@@ -22,15 +22,16 @@ Building: Ashbury Hill, 14833 61 Ave (sullivan-station; townhomes).
 - Panorama Village, 15127 Highway 10, at 152 Street (centre's own site search result, carried from the phase-1 file). Centre-only entry. http://panorama-village.ca/
 
 ## 5. MEASURED TRAVEL TIMES
-- Origin: Nominatim point for 14833 61 Avenue, reverse-geocoded to 61 Avenue, Sullivan (no numbered OSM address point). Measured 2026-11-02; OSM data date not published by the service.
-- Walk to Goldstone Park Elementary: 10.9 min, 0.82 km, routed-foot.
-- Walk to Cambridge Elementary: 11.3 min, 0.85 km, routed-foot.
-- Walk to Goldstone Park: 12.3 min, 0.92 km, routed-foot.
-- Walk to Sullivan Heights Secondary: 12.9 min, 0.97 km, routed-foot.
-- Walk to Sullivan Elementary: 15.9 min, 1.19 km, routed-foot.
-- Walk to Panorama Village: 19.5 min, 1.46 km, routed-foot.
+- Origin: City of Surrey Address Points civic point for 14833 61 Avenue (upgraded in cleanup pass; previously the Nominatim street point — see NOT CONFIRMED). Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Goldstone Park Elementary: 10.5 min, 0.79 km, routed-foot.
+- Walk to Cambridge Elementary: 9.8 min, 0.73 km, routed-foot.
+- Walk to Goldstone Park: 12.6 min, 0.95 km, routed-foot.
+- Walk to Sullivan Heights Secondary: 13.7 min, 1.03 km, routed-foot.
+- Walk to Sullivan Elementary: 14.9 min, 1.11 km, routed-foot.
+- Walk to Panorama Village: 19.0 min, 1.43 km, routed-foot.
 
 ## NOT CONFIRMED
 - A supermarket at Panorama Village: not confirmed on a retailer's own source in this pass.
 - School catchments for this address: not confirmed — no district locator run in this pass.
 - Bus frequencies: not stated.
+- Origin upgraded (cleanup pass): previously the Nominatim street point for 61 Avenue (no numbered OSM point); now the City of Surrey Address Points civic point for 14833 61 Avenue (FULL_ADDRESS "14833 61 Ave"), at 49.113873, -122.811730. It reverse-geocodes to 61 Avenue, Sullivan (nearest OSM feature — an artefact; the municipal point carries the roster address). All §5 pairs re-measured; none dropped.

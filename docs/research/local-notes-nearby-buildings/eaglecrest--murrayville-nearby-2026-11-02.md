@@ -22,9 +22,16 @@ Building: Eaglecrest, 22150 48 Avenue (murrayville; condos).
 - Shoppers Drug Mart, Murrayville Square (pharmacy), 22196 50 Ave (retailer's own site search result). (https://www.shoppersdrugmart.ca/en/stores/258-shoppers-drug-mart-murrayville-square/)
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 22150 48 Avenue (centroid of the Township of Langley Parcels records for this address). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Murrayville Outdoor Activity Park: 3.4 min, 0.25 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Murrayville Library: 2.0 min, 0.15 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to W.C. Blair Recreation Centre: 5.9 min, 0.44 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to James Hill Elementary: 10.8 min, 0.80 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to IGA, 22259 48 Ave: 4.2 min, 0.31 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Shoppers Drug Mart, 22196 50 Ave: 8.5 min, 0.64 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Langley Fundamental Elementary: 15.0 min, 1.13 km, routed-foot, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
 - Bus frequencies: not stated on the timetables read.
 - School catchments: not confirmed — no district locator run in this pass.
-- Travel times not measured: no named-building or house point was returned for 22150 48 Avenue, and the only 48 Avenue street-segment point spanning the building's block reverse-geocoded to FVRL: Murrayville Library, a different feature, so it was discarded rather than used as the origin.
+- Travel times re-measured in the cleanup pass (measured 2026-11-02): origin is the centroid of the 89 Township of Langley open-data Parcels records (Parcels FeatureServer) that carry 22150 48 Ave — one record per unit of this complex. Nominatim reverse-geocode of the centroid returned 48 Avenue (street only) — a reverse artefact; the parcel records themselves carry this building's address.

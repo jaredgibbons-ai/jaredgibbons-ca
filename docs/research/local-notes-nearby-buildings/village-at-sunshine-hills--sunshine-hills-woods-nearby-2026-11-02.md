@@ -22,14 +22,14 @@ Building: Village at Sunshine Hills, 11996 70 Avenue (sunshine-hills-woods; cond
 - Scottsdale Centre, 7031 120 St, Delta (address from the centre's own-domain search result; its site did not render text in this pass). http://www.scottsdalecentre.ca/
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSM data date not published by the service. Origin: the Nominatim street point for 70 Avenue, Delta, reverse-geocoded to 70 Avenue (no numbered OSM address point exists for 11996 70 Avenue). Tools: OSRM (router.project-osrm.org) for driving, OpenStreetMap routed-foot for walking.
-- Walk to Walmart Supercentre, 7155 120 St: 4.0 minutes, 0.30 km, routed-foot.
-- Walk to Scottsdale Centre, 7031 120 St: 8.7 minutes, 0.66 km, routed-foot.
-- Drive to Heath Elementary, 11364 72 Ave: 3.0 minutes, 1.78 km, OSRM.
-- Drive to Sungod Recreation Centre, 7815 112 St: 6.5 minutes, 4.10 km, OSRM.
+- Measured 2026-11-02; OSM data date not published by the service. Origin: centroid of the City of Delta Property Parcels polygon for the unitless primary record at 11996 70 Avenue (OBJECTID 14991; upgraded in cleanup pass — see NOT CONFIRMED). Tools: OSRM (router.project-osrm.org) for driving, OpenStreetMap routed-foot for walking.
+- Walk to Walmart Supercentre, 7155 120 St: 5.1 minutes, 0.38 km, routed-foot.
+- Walk to Scottsdale Centre, 7031 120 St: 9.8 minutes, 0.74 km, routed-foot.
+- Drive to Heath Elementary, 11364 72 Ave: 3.3 minutes, 1.87 km, OSRM.
+- Drive to Sungod Recreation Centre, 7815 112 St: 6.8 minutes, 4.19 km, OSRM.
 
 ## NOT CONFIRMED
-- Origin point: Nominatim returned no numbered address point and no named building point for 11996 70 Avenue; the 70 Avenue street point was used and is disclosed in §5. No neighbouring point was substituted.
+- Origin upgraded (cleanup pass, 2026-11-02): previously the Nominatim street point for 70 Avenue, Delta (no numbered address point and no named building point for 11996 70 Avenue; no neighbouring point was substituted); now the centroid, at 49.13000, -122.89091, of the City of Delta Property Parcels polygon for the unitless primary record "11996 70 AVE" (OBJECTID 14991, IS_PRIMARY Y). The centroid reverse-geocodes to 120 Street, North Delta (nearest OSM feature — an artefact; the parcel record itself carries the roster address). All §5 pairs re-measured; none dropped.
 - School catchments for this address: not confirmed in this pass (no district locator run).
 - Bus frequencies: not stated in this pass.
 - Safeway Sunshine Hills, 120 St: address not read on the retailer's own page in this pass.

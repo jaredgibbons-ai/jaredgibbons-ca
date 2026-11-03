@@ -999,6 +999,49 @@
       "level": 3,
       "pos": "end",
       "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Shaughnessy Park",
+          "Shaughnessy Offleash Dog Park",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Shaughnessy Park",
+          "Save-On-Foods (Prairie), 1470 Prairie Ave",
+          "Drive",
+          "4",
+          "2.4"
+        ],
+        [
+          "Shaughnessy Park",
+          "École Maple Creek Middle",
+          "Drive",
+          "4",
+          "2.8"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
       "text": "Sources for what’s nearby each building"
     },
     {

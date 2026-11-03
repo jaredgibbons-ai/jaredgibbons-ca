@@ -20,14 +20,18 @@ Building: Fremont Green, 550 Seaborne Place (riverwood; condos).
 - Save-On-Foods, 2385 Ottawa St, Port Coquitlam — address from the retailer's own store page. https://www.saveonfoods.com/sm/planning/rsid/957/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSM data date not published by the service. Geocoded with Nominatim; driving via OSRM demo; walking via routing.openstreetmap.de routed-foot. Origin: Nominatim's structured-search point on Seaborne Place for this address (see NOT CONFIRMED).
-- Drive to Save-On-Foods, 2385 Ottawa St: 2.8 min, 1.81 km.
-- Drive to Blakeburn Elementary, 1040 Riverside Drive: 3.4 min, 2.41 km.
-- Drive to Terry Fox Secondary, 1260 Riverwood Gate: 3.9 min, 2.46 km.
-- Drive to Coquitlam Central Station: 8.7 min, 6.38 km.
+- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: 550 Seaborne Place, the City of Port Coquitlam civic address point for that address (City open data Addresses layer; cleanup-pass top-up re-measurement — see NOT CONFIRMED).
+- Drive to Save-On-Foods, 2385 Ottawa St: 2.9 minutes, 1.81 km, OSRM.
+- Drive to Blakeburn Elementary: 3.4 minutes, 2.42 km, OSRM.
+- Drive to Terry Fox Secondary, 1260 Riverwood Gate: 3.9 minutes, 2.46 km, OSRM.
+- Drive to Terry Fox Park: 3.6 minutes, 2.32 km, OSRM.
+- Drive to Minnekhada Middle School: 6.3 minutes, 4.06 km, OSRM.
+- Drive to Hyde Creek Recreation Centre: 7.5 minutes, 4.79 km, OSRM.
+- Drive to Port Coquitlam Station: 6.4 minutes, 4.79 km, OSRM.
+- Drive to Coquitlam Central Station: 8.7 minutes, 6.39 km, OSRM.
 
 ## NOT CONFIRMED
-- Origin point: OSM carries no house point for 550 Seaborne Place; the §5 origin point reverse-geocodes to 553 Seaborne Place, the rental building next door and the only OSM address point on the street. The two buildings adjoin on the same short street.
-- Walks to Blakeburn Elementary (1.91 km) and Save-On-Foods (1.77 km) exceeded the 1.5 km walk cap and are not listed in §5.
+- Origin point (cleanup pass top-up, 2026-11-02): §5 is now measured from the City of Port Coquitlam civic address point for 550 Seaborne Pl (open data Addresses layer, OBJECTID 340). History, kept honest: production's origin reverse-geocoded to 553 Seaborne Place (the adjoining Fremont Living building), a different building, so production's drive times and over-cap walk distances were withdrawn and §5 was converted to not measured in cleanup Part B, when no Port Coquitlam civic address point for 550 Seaborne Place had been obtained (OpenStreetMap carries exactly one Seaborne Place address point, 553, and no feature carries 550 Seaborne Place or the name Fremont Green); the civic point was verified in this top-up and §5 re-measured from it. A Nominatim reverse-geocode of the civic point returns the neighbouring 553 Seaborne Place address point, about 43 m away — a reverse artefact; the City layer itself carries 550 Seaborne Place, and the 553 point was not used.
+- Walks to every §§2–4 anchor exceeded the 1.5 km walk cap (shortest: Save-On-Foods, 1.77 km) and are not listed in §5; the drives are listed.
 - School catchments for 550 Seaborne Place: not confirmed; the SD43 locator run on record was for 1260 Riverwood Gate, not this address.
 - Bus frequencies: not stated; none read from an operator page in this pass. No bus exchange or loop name is confirmed for this building.

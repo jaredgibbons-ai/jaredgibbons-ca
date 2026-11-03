@@ -14,21 +14,21 @@
 - Maple Ridge Library, 130-22470 Dewdney Trunk Road. https://www.fvrl.bc.ca/locations
 
 ## 3. SCHOOLS
-- Alouette Elementary, K-7, School District 42, 22155 Isaac Cres; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in/maple-ridge
-- Glenwood Elementary, K-7, School District 42, 21410 Glenwood Ave; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in/maple-ridge
-- Laity View Elementary, K-7, School District 42, 21023 123 Ave; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in/maple-ridge
-- Westview Secondary, 8-12, School District 42, 20905 Wicklund Ave; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in/maple-ridge
+- Alouette Elementary, K-7, SD42, 22155 Isaac Cres; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in/maple-ridge
+- Glenwood Elementary, K-7, SD42, 21410 Glenwood Ave; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in/maple-ridge
+- Laity View Elementary, K-7, SD42, 21023 123 Ave; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in/maple-ridge
+- Westview Secondary, 8-12, SD42, 20905 Wicklund Ave; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in/maple-ridge
 
 ## 4. GROCERY AND SHOPPING ANCHORS
 - Save-On-Foods, 22703 Lougheed Highway, Maple Ridge (retailer's own site search result). https://www.saveonfoods.com/sm/planning/rsid/935/store
 - Haney Place Mall, 11900 Haney Place, Maple Ridge. https://www.haneyplacemall.com/contact_us/
 
 ## 5. MEASURED TRAVEL TIMES
-- From-point: Alouette Elementary, 22155 Isaac Crescent. Measured 2026-11-02; OSM data date not published by the service.
-- Drive to Maple Ridge Leisure Centre: 4.1 minutes, 2.04 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Haney Place Mall: 4.8 minutes, 2.47 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Westview Secondary: 5.6 minutes, 2.95 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Maple Meadows Station: 7.0 minutes, 5.23 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- From-point: Alouette Elementary, 22155 Isaac Crescent. Measured 2026-11-02; OSM data date not published.
+- Drive to Maple Ridge Leisure Centre: 4.1 minutes, 2.04 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published.
+- Drive to Haney Place Mall: 4.8 minutes, 2.47 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published.
+- Drive to Westview Secondary: 5.6 minutes, 2.95 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published.
+- Drive to Maple Meadows Station: 7.0 minutes, 5.23 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published.
 
 ## NOT CONFIRMED
 - Drive to Save-On-Foods (22703 Lougheed Hwy): not measured: address geocode landed in Ruskin; name query returned no result.

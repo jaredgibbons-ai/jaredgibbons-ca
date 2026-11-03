@@ -14,17 +14,17 @@
 - Capilano River Regional Park: Metro Vancouver regional park with the Capilano Pacific Trail and 1 km Coho Loop Trail. https://metrovancouver.org/services/regional-parks/park/capilano-river-regional-park
 
 ## 3. SCHOOLS
-- Capilano Elementary, grades K-7, 1230 20th St W, School District 44; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/044
-- Carson Graham Secondary, grades 8-12, 2145 Jones Ave, School District 44; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/044
+- Capilano Elementary, grades K-7, 1230 20th St W, SD44; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/044
+- Carson Graham Secondary, grades 8-12, 2145 Jones Ave, SD44; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in-school-district/044
 
 ## 4. GROCERY AND SHOPPING ANCHORS
 - Save-On-Foods, #140 - 879 Marine Drive: supermarket (retailer's own-domain search result, this pass). https://www.saveonfoods.com/sm/planning/rsid/2249/store
 - Shoppers Drug Mart, 879 Marine Dr Unit 110: pharmacy (retailer's own-domain search result, this pass). https://www.shoppersdrugmart.ca/en/stores/2225-shoppers-drug-mart-village-on-marine/
 
 ## 5. MEASURED TRAVEL TIMES
-- From-point: Capilano Elementary, 1230 20th St W. Tools: OSRM driving, OSM DE routed-foot walking; OSM data date not published by the service; measured 2026-11-02.
-- Walk to Sowden Park: 12.7 minutes, 0.95 km, routed-foot, measured 2026-11-02; OSM data date not published by the service.
-- Drive to Lions Gate Community Recreation Centre, 1733 Lions Gate Lane: 3.8 minutes, 1.85 km, OSRM, measured 2026-11-02; OSM data date not published by the service.
+- From-point: Capilano Elementary, 1230 20th St W. Tools: OSRM driving, OSM DE routed-foot walking; OSM data date not published; measured 2026-11-02.
+- Walk to Sowden Park: 12.7 minutes, 0.95 km, routed-foot, measured 2026-11-02; OSM data date not published.
+- Drive to Lions Gate Community Recreation Centre, 1733 Lions Gate Lane: 3.8 minutes, 1.85 km, OSRM, measured 2026-11-02; OSM data date not published.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed; no locator run.

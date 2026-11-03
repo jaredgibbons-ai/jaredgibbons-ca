@@ -18,18 +18,18 @@ Building: Flatiron (Bedford Landing), 23230 Billy Brown Road (fort-langley-guide
 - Lee's Market, 23320 Mavis Avenue, Fort Langley (Township of Langley page naming the store and address). https://www.tol.ca/en/services/garbage-cart.aspx
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at 23230 Billy Brown Road; OSRM (router.project-osrm.org) for driving, OpenStreetMap DE routed-foot for walking; OSM data date not published by the service.
-- Walk to Lee's Market: 4.7 minutes, 0.36 km, routed-foot.
-- Walk to Fort Langley Library: 9.1 minutes, 0.68 km, routed-foot.
-- Walk to Fort Langley Elementary: 17.5 minutes, 1.31 km, routed-foot.
-- Walk to Langley Fine Arts School: 17.5 minutes, 1.31 km, routed-foot.
-- Drive to Lee's Market: 0.7 minutes, 0.34 km, OSRM.
-- Drive to Fort Langley Library: 1.9 minutes, 0.86 km, OSRM.
-- Drive to Fort Langley Elementary: 2.7 minutes, 1.30 km, OSRM.
-- Drive to Langley Fine Arts School: 2.5 minutes, 1.32 km, OSRM.
+- Measured 2026-11-02, starting at 23230 Billy Brown Road (Township of Langley Addresses civic point, OBJECTID 24834, adopted in the cleanup pass — see NOT CONFIRMED); OSRM (router.project-osrm.org) for driving, OpenStreetMap DE routed-foot for walking; OSM data date not published by the service.
+- Walk to Lee's Market: 5.8 minutes, 0.44 km, routed-foot.
+- Walk to Fort Langley Library: 7.3 minutes, 0.55 km, routed-foot.
+- Walk to Fort Langley Elementary: 17.4 minutes, 1.31 km, routed-foot.
+- Walk to Langley Fine Arts School: 18.3 minutes, 1.49 km, routed-foot.
+- Drive to Lee's Market: 1.2 minutes, 0.45 km, OSRM.
+- Drive to Fort Langley Library: 1.6 minutes, 0.63 km, OSRM.
+- Drive to Fort Langley Elementary: 2.8 minutes, 1.33 km, OSRM.
+- Drive to Langley Fine Arts School: 2.9 minutes, 1.52 km, OSRM.
 
 ## NOT CONFIRMED
-- Origin point: the geocoded point for 23230 Billy Brown Road reverse-geocodes to Billy Brown Road with no house number — the correct street at the roster address; no other building's point was used.
+- Origin upgraded in the cleanup pass (2026-11-02): the original point reverse-geocoded to Billy Brown Road with no house number; §5 now uses the Township of Langley Addresses civic point for 23230 Billy Brown Rd (TOL_Addresses_UTM OBJECTID 24834); no other building's point was used.
 - Fort Langley Elementary destination: the first geocoded school point reverse-geocoded to Mowat Street and was discarded; a point reverse-geocoding exactly to 8877 Bartlett Street was used instead.
 - Named parks near the building: no Township of Langley parks page was read in this pass.
 - School catchments for this address: not confirmed — no district locator run in this pass.

@@ -4,7 +4,8 @@
 - Nearest rapid-transit station: Richmond–Brighouse Station, the end of TransLink route 401 from Steveston Village. https://infomaps.translink.ca/Public_Timetables/218/tt401.pdf
 - Bus exchange: Steveston Exchange, on Chatham Street — route 401 uses its bays. https://infomaps.translink.ca/Public_Timetables/218/tt401.pdf
 - Route 401, One Road / Brighouse Station, TransLink. https://infomaps.translink.ca/Public_Timetables/218/tt401.pdf
-- Route 402, Brighouse Station/Two Road, TransLink. https://www.translink.ca/schedules-and-maps/route/402/direction/1/map
+- Route 402, Brighouse Station / Two Road, TransLink — Steveston Village via Chatham, No. 1 Rd and Moncton, then No. 2 Rd, Blundell and No. 3 Rd to Richmond-Brighouse Station. https://infomaps.translink.ca/Public_Timetables/218/tt402.pdf
+- Route 407, Bridgeport / Gilbert, TransLink — Steveston Village (Steveston Exchange) via Chatham, 4 Ave, Steveston Hwy and Gilbert to Lansdowne Station and Bridgeport Station, continuing to Marine at Knight. https://infomaps.translink.ca/Public_Timetables/218/tt407.pdf
 
 ## 2. PARKS AND RECREATION
 - Garry Point Park, 12011 7th Avenue. https://www.richmond.ca/parks-recreation/parks/system.htm

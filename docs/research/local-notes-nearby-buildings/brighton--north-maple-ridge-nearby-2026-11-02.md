@@ -24,10 +24,12 @@ Building: Brighton, 13819 232 Street (north-maple-ridge; townhomes).
 - Save-On-Foods, 23981 Dewdney Trunk Road, Maple Ridge (retailer's own site search result, carried from the phase-1 file). https://www.saveonfoods.com/sm/planning/rsid/938/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 13819 232 Street (City of Maple Ridge open-data Parcel centroid; Address/StreetName exact match). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Drive to Maple Ridge Park, 13180 232 Street: 3.3 min, 1.68 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Harry Hooge Elementary, 12280 230 St: 6.3 min, 3.91 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times: not measured — no reliable origin exists. Free-form, building-name, structured and sourced-postal-code (V4R 0C7) Nominatim variants returned only 232 Street road segments; a name search also returned a Brighton, Michigan result, discarded unused. No house/building point at 13819 232 Street was verified, and no segment or neighbouring point was substituted.
+- Cleanup pass, 2026-11-02: travel times re-measured from the City of Maple Ridge open-data Parcel centroid for this address (Address/StreetName exact match); Overpass found no OSM element carrying this street and number.
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated — none read from a timetable.
 - No grocery within ~1 km was confirmed; the anchor in §4 is the phase-1-confirmed anchor for the area.

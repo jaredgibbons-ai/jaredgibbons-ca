@@ -7,7 +7,7 @@ Building: Edgemont Villa, 3151 Connaught Crescent (edgemont; 55-plus + condos).
 - Route 246, TransLink: Downtown to Highland via Capilano, Ridgewood, Edgemont and Highland. (https://infomaps.translink.ca/Public_Timetables/221/tt246.pdf)
 
 ## 2. PARKS AND RECREATION
-- Murdo Frazer Park, District park listed among the District's Community Park Zone parks. (https://councilarchive.dnv.org/upload/documents/council_reports/128989.pdf)
+- Murdo Frazer Park, District park on the District's Community Park Zone list. (https://councilarchive.dnv.org/upload/documents/council_reports/128989.pdf)
 - Capilano Library, 3045 Highland Blvd. (https://www.nvdpl.ca/capilano-library)
 - Delbrook Community Recreation Centre, 851 West Queens Road. (http://www.nvrc.ca/facilities-fields/accessibility)
 
@@ -21,10 +21,14 @@ Building: Edgemont Villa, 3151 Connaught Crescent (edgemont; 55-plus + condos).
 - Shoppers Drug Mart (pharmacy), 3260 Edgemont Blvd (retailer's own-domain search result, this pass). (https://www.shoppersdrugmart.ca/en/stores/2100-shoppers-drug-mart-connaught-and-edgemont/)
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 3151 Connaught Crescent (DNV GeoWeb footprint BLDG09451, EDGEMONT VILLA, for 3151 Connaught Cres; centroid). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Capilano Library: 4.5 min, 0.33 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Thrifty Foods Edgemont Market: 1.5 min, 0.11 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Delbrook Community Recreation Centre, 851 West Queens Road: 1.9 min, 0.94 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Lonsdale Quay Station: 7.5 min, 4.09 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Home-area ambiguity: within the 55-plus program this complex is presented as verified in both the edgemont and capilano-nv files; edgemont is the home used here — the ambiguity is recorded, not resolved.
-- Travel times not measured: repeated foreground Nominatim variants for 3151 Connaught Crescent returned no point that reverse-geocodes to that address (nearest candidates reverse-geocoded to 3233 Connaught Crescent and to Connaught Crescent with no house number), so no reliable origin exists in this pass.
+- Home-area ambiguity: the 55-plus program presents this complex as verified in both the edgemont and capilano-nv files; edgemont is used here — recorded, not resolved.
+- Cleanup pass re-measurement, 2026-11-02: origin = centroid of this building's own DNV GeoWeb footprint (BldAddress 3151 Connaught Cres → BldBuilding BLDG09451, named EDGEMONT VILLA); Nominatim reverse returns Edgemont Boulevard, no house number — OSM holds no address point for this building, so the municipal linkage verifies the origin. Destinations: OSM elements carrying each name/address (Overpass, this pass).
 - School catchments for this address: not confirmed; no SD44 locator run in this pass.
 - Bus frequencies: not stated; none read from an operator timetable in this pass.

@@ -21,15 +21,15 @@ Building: First & Royal, 82 First Street (downtown-nw; condos).
 - Save-On-Foods, Columbia Square, 1025 Columbia Street, New Westminster, per a search result on the retailer's own domain. https://www.saveonfoods.com/sm/planning/rsid/941/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Measurements from 82 First Street (see NOT CONFIRMED); OSRM (router.project-osrm.org) for driving, OpenStreetMap DE routed-foot for walking; measured 2026-11-02; OSM data date not published by the service.
-- Walk to École Qayqayt Elementary, 85 Merivale St: 6.7 minutes, 0.50 km, routed-foot.
-- Walk to Westminster Pier Park, 600 Quayside Dr: 12.0 minutes, 0.89 km, routed-foot.
-- Walk to Fraser River Middle, 800 Queens Ave: 19.6 minutes, 1.47 km, routed-foot.
-- Drive to New Westminster Station: 3.5 minutes, 1.70 km, OSRM.
-- Drive to New Westminster Secondary, 820 6th St: 6.4 minutes, 2.98 km, OSRM.
+- Measurements from 82 First Street. Origin used: City of New Westminster Webmap WFL1 NAR Addresses layer point for 82 First Street (LOC_GUID 42ec6537-fb88-4cec-97d5-9eeaeac27fc0; 3 unit records at this one point), at 49.209820, -122.902816 (upgraded in cleanup pass; previously a First Street segment point — see NOT CONFIRMED); OSRM (router.project-osrm.org) for driving, OpenStreetMap DE routed-foot for walking; measured 2026-11-02; OSM data date not published by the service.
+- Walk to École Qayqayt Elementary, 85 Merivale St: 5.1 minutes, 0.38 km, routed-foot.
+- Walk to Westminster Pier Park, 600 Quayside Dr: 13.9 minutes, 1.04 km, routed-foot.
+- Walk to Fraser River Middle, 800 Queens Ave: 17.8 minutes, 1.33 km, routed-foot.
+- Drive to New Westminster Station: 2.9 minutes, 1.54 km, OSRM.
+- Drive to New Westminster Secondary, 820 6th St: 5.1 minutes, 2.62 km, OSRM.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address.
 - Bus frequencies: not stated — none was read from an operator timetable.
-- Origin point: Nominatim returned no building point for 82 First Street; unbounded results pointed to a different First Street in Glenbrooke North, not used. Measurements start from its First Street segment point in Downtown, near Royal Avenue.
+- Origin upgraded (cleanup pass, 2026-11-02): previously a First Street segment point in Downtown, near Royal Avenue; now the City of New Westminster Webmap WFL1 NAR Addresses layer point for 82 First Street (LOC_GUID 42ec6537-fb88-4cec-97d5-9eeaeac27fc0), at 49.209820, -122.902816. It reverse-geocodes to Redwood, 101 Royal Avenue (the nearest addressed OSM feature — an artefact; the point is the municipal record's own point and the record carries the roster address). All §5 pairs re-measured; none dropped.
 - Grocery anchors: both stores are over 1 km by road; none within 1 km confirmed.

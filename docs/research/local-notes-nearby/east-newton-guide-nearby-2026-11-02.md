@@ -25,9 +25,9 @@
 - Shoppers Drug Mart (pharmacy), 7322 King George Boulevard; west edge of the area. (https://www.shoppersdrugmart.ca/en/stores/2222-shoppers-drug-mart-king-george-blvd/)
 
 ## 5. MEASURED TRAVEL TIMES
-- OSRM (router.project-osrm.org); OSM data date not published by the service; measured 2026-11-02. From: 74 Avenue and 144 Street (named intersection in the Chimney Hill part of the area). To: Newton Exchange. Drive: 4.6 min, 2.46 km.
-- OSRM (router.project-osrm.org); OSM data date not published by the service; measured 2026-11-02. From: 74 Avenue and 144 Street. To: Newton Recreation Centre, 13730 72 Avenue. Drive: 4.7 min, 2.48 km.
-- OSRM (router.project-osrm.org); OSM data date not published by the service; measured 2026-11-02. From: 74 Avenue and 144 Street. To: Shoppers Drug Mart, 7322 King George Boulevard. Drive: 5.4 min, 2.73 km.
+- OSRM (router.project-osrm.org); OSM data date not published; measured 2026-11-02. From: 74 Avenue and 144 Street (named intersection in the Chimney Hill part of the area). To: Newton Exchange. Drive: 4.6 min, 2.46 km.
+- OSRM (router.project-osrm.org); OSM data date not published; measured 2026-11-02. From: 74 Avenue and 144 Street. To: Newton Recreation Centre, 13730 72 Avenue. Drive: 4.7 min, 2.48 km.
+- OSRM (router.project-osrm.org); OSM data date not published; measured 2026-11-02. From: 74 Avenue and 144 Street. To: Shoppers Drug Mart, 7322 King George Boulevard. Drive: 5.4 min, 2.73 km.
 
 ## NOT CONFIRMED
 - Grocery store east of King George Boulevard inside East Newton: none confirmed on a retailer's own site.

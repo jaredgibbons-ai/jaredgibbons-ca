@@ -25,10 +25,13 @@ Building: Emerson (The Emerson), 22315 122 Avenue (west-central; condos).
 - Haney Place Mall, 11900 Haney Place. https://www.haneyplacemall.com/contact_us/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 22315 122 Avenue (City of Maple Ridge open-data Parcel centroid; Address/StreetName exact match). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Eric Langton Elementary, 12138 Edge St: 8.6 min, 0.63 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Maple Ridge Leisure Centre, 11925 Haney Place: 12.4 min, 0.93 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Port Haney Station: 2.9 min, 1.82 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times not measured: Nominatim returned only 122 Avenue road-segment results for 22315 122 Avenue (one reverse-geocoded to 23809 122 Avenue, a different address, and was discarded); the building-name query returned no result, and a bracketing sweep of neighbouring 122 Avenue addresses found no real OSM house points on the street, so no reliable origin point exists.
+- Cleanup pass, 2026-11-02: travel times re-measured from the City of Maple Ridge open-data Parcel centroid for this address (Address/StreetName exact match); Overpass found no OSM element carrying this street and number.
 - School catchments: not confirmed (no district locator run for this address in this pass).
 - Bus frequencies: not stated (no operator page read states them).
 - Save-On-Foods (22703 Lougheed Hwy) is listed in §4 unmeasured: its geocode returned a Lougheed Highway road segment in Ruskin and the name query returned no result.

@@ -16,13 +16,14 @@ Building: Cascadia, 6951 204 Street (willoughby-heights; townhomes).
 - Safeway Willowbrook Park, 6153-200 Street, Langley: supermarket, address on the retailer's own store page. https://www.safeway.ca/stores/safeway-willowbrook-park/
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSM data date not published by the service. Origin: segment-grade point on 204 Street at the building's address segment (see NOT CONFIRMED).
-- Walk to R C Garnett Demonstration Elementary, 7096 201 St: 12.1 minutes, 0.91 km, routing.openstreetmap.de routed-foot.
-- Walk to Routley Park, 71 Avenue & 198B Street: 15.3 minutes, 1.34 km, routing.openstreetmap.de routed-foot.
-- Drive to Safeway Willowbrook Park, 6153-200 Street: 4.7 minutes, 2.98 km, OSRM.
+- Measured 2026-11-02; OSM data date not published by the service. Origin: Township of Langley civic address point for 6951 204 Street (see NOT CONFIRMED).
+- Walk to R C Garnett Demonstration Elementary, 7096 201 St: 8.6 minutes, 0.64 km, routing.openstreetmap.de routed-foot.
+- Walk to Routley Park, 71 Avenue & 198B Street: 14.6 minutes, 1.29 km, routing.openstreetmap.de routed-foot.
+- Drive to Safeway Willowbrook Park, 6153-200 Street: 4.6 minutes, 2.62 km, OSRM.
+
 
 ## NOT CONFIRMED
 - School catchments: not confirmed in this pass.
-- Origin point: no OSM house point carries 6951 204 Street; a segment point on 204 Street (49.1288, -122.6566) was interpolated from the OSM 204 Street way and the address numbering between 68 and 70 Avenues, and it reverse-geocodes to 204 Street — segment-grade, disclosed.
+- Origin point: upgraded in the cleanup pass — the Township of Langley civic address point for 6951 204 Street (TOL Addresses service, OBJECTID 40999; 49.12861, -122.65844) replaces the segment-grade interpolated 204 Street point (49.1288, -122.6566) used originally. Its Nominatim reverse returns only the township/postal area, a known artefact; the municipal record carries the roster address.
 - Bus frequencies: not stated in this pass.
 - Library: no branch address read on a library page in this pass.

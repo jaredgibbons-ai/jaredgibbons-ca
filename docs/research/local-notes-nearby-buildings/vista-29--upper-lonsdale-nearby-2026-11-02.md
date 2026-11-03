@@ -22,10 +22,14 @@ Building: Vista 29, 188 West 29th Street (upper-lonsdale; 55-plus + condos + tow
 - Queensdale Market (grocery store), 3030 Lonsdale Ave, North Vancouver. https://www.queensdalemarket.ca/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 188 West 29th Street (DNV GeoWeb footprint BLDG23454, VISTA 29, for 188 W 29th St; centroid). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Holy Trinity School: 5.7 min, 0.43 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Queensdale Market: 4.1 min, 0.31 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Delbrook Community Recreation Centre, 851 West Queens Road: 2.7 min, 1.47 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Carson Graham Secondary, 2145 Jones Ave: 3.6 min, 1.79 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- §5 fallback: no reliable origin exists for 188 West 29th Street in this pass. Nominatim returned only a West 29th Street road point far west of the building (discarded). A segment-interpolated point between the real OSM address points at 121 and 216 West 29th Street reverse-geocoded to 2809 Chesterfield Avenue — a different street address — and was discarded; street-segment points nearer Lonsdale Ave reverse-geocoded to 121 West 29th Street, the neighbouring building's address, and were not substituted. Routes run from the discarded point were discarded with it.
-- School catchments: not confirmed — no district locator run for this address.
-- Bus frequencies: not stated; no operator frequency was read for routes 229/230.
-- Queensdale Market: no verifying OSM point was found for 3030 Lonsdale Ave in this pass, so it is listed in §4 only.
+- Cleanup pass re-measurement, 2026-11-02: origin = centroid of this building's own DNV GeoWeb footprint (BldAddress 188 W 29th St → BldBuilding BLDG23454, named VISTA 29); Nominatim reverse returns West 29th Street, no house number — OSM holds no address point for this building, so the municipal linkage verifies the origin; the earlier discarded interpolation is superseded, not used. Destinations: OSM elements carrying each name/address (Overpass, this pass).
+- School catchments: not confirmed — no locator run for this address.
+- Bus frequencies: not stated; none read for routes 229/230.
+- Queensdale Market point, cleanup pass 2026-11-02: DNV BldAddress lists 3030 Lonsdale Ave (ACTIVE) → BldBuilding footprint BLDG10336; its centroid is the destination point (Nominatim reverse returns a differently named nearby market, so the municipal linkage is the verification).

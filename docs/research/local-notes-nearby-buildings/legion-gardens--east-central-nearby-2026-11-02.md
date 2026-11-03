@@ -24,13 +24,13 @@ Building: Legion Gardens, 12127 224 St (east-central; 55-plus).
 - Save-On-Foods, 22703 Lougheed Highway (address from the retailer's own-domain search result). https://www.saveonfoods.com/sm/planning/rsid/935/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at 12127 224 St; OSM data date not published by the service. Origin: the 224 Street (Town Centre) segment point returned by Nominatim for the roster address (no building point in OpenStreetMap).
-- Walk to Eric Langton Elementary: 7.8 minutes, 0.57 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Walk to Maple Ridge Library: 6.9 minutes, 0.52 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- From-point: City of Maple Ridge parcel centroid for 12127 224 St (Parcel layer, DataCatalog/Property MapServer layer 3: Address 12127 / 224 ST, PIN 103358), at 49.22262, -122.60200 — upgraded in the cleanup pass (2026-11-02) from the 224 Street segment point used originally. The centroid reverse-geocodes to the Royal Canadian Legion, 12101 224 Street — the nearest OSM-addressed feature; the City of Maple Ridge parcel record for this building carries the roster address and the origin is that parcel's centroid, so the reverse result is a disclosed artefact, not the building's address. Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Eric Langton Elementary: 8.8 minutes, 0.65 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Walk to Maple Ridge Library: 7.1 minutes, 0.53 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
 - Walk to Maple Ridge Leisure Centre: 7.9 minutes, 0.59 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Drive to Port Haney Station: 2.9 minutes, 1.83 km, OSRM (router.project-osrm.org), measured 2026-11-02.
+- Drive to Port Haney Station: 2.4 minutes, 1.66 km, OSRM (router.project-osrm.org), measured 2026-11-02.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address in this pass.
-- Building-point geocode: none exists; measurements use the disclosed 224 Street segment point.
+- Origin upgraded in the cleanup pass (2026-11-02): the 224 Street (Town Centre) segment point (original pass) → City of Maple Ridge Parcel record for 12127 224 ST (PIN 103358; centroid — see §5, including the disclosed reverse-geocode artefact). The roster address is not proven wrong.
 - Bus frequencies: not stated.

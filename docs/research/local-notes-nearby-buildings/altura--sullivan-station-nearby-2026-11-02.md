@@ -20,15 +20,16 @@ Building: Altura, 6299 144 Street (sullivan-station; townhomes).
 - Panorama Village, 15127 Highway 10, at 152 Street (centre's own site search result, carried from the phase-1 file). Centre-only entry. http://panorama-village.ca/
 
 ## 5. MEASURED TRAVEL TIMES
-- Origin: segment-interpolated point for 6299 144 Street, bracketed by the real OSM address points for 6248 and 6786 144 Street; the interpolated point reverse-geocodes to 144 Street, Sullivan. Measured 2026-11-02; OSM data date not published by the service.
-- Walk to Sullivan Heights Park: 3.2 min, 0.24 km, routed-foot.
-- Walk to Sullivan Heights Secondary: 4.9 min, 0.37 km, routed-foot.
-- Walk to Goldstone Park Elementary: 8.4 min, 0.63 km, routed-foot.
-- Drive to Panorama Village: 3.8 min, 2.91 km, OSRM.
-- Drive to Newton Exchange: 5.5 min, 3.57 km, OSRM.
-- Drive to King George Station: 12.0 min, 9.16 km, OSRM.
+- Origin: City of Surrey Address Points civic point for 6299 144 Street (upgraded in cleanup pass; previously segment-interpolated — see NOT CONFIRMED); the point reverse-geocodes to 144 Street, Sullivan. Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Sullivan Heights Park: 5.2 min, 0.39 km, routed-foot.
+- Walk to Sullivan Heights Secondary: 6.7 min, 0.50 km, routed-foot.
+- Walk to Goldstone Park Elementary: 9.1 min, 0.69 km, routed-foot.
+- Drive to Panorama Village: 4.3 min, 2.57 km, OSRM.
+- Drive to Newton Exchange: 5.4 min, 3.49 km, OSRM.
+- Drive to King George Station: 12.0 min, 9.08 km, OSRM.
 
 ## NOT CONFIRMED
 - A supermarket at Panorama Village: not confirmed on a retailer's own source in this pass.
 - School catchments for this address: not confirmed — no district locator run in this pass.
 - Bus frequencies: not stated.
+- Origin upgraded (cleanup pass): previously segment-interpolated on 144 Street between the OSM points for 6248 and 6786; now the City of Surrey Address Points civic point for 6299 144 Street (FULL_ADDRESS "6299 144 St"), at 49.116385, -122.823715. It reverse-geocodes to 144 Street, Sullivan (nearest OSM feature — an artefact; the municipal point carries the roster address). All §5 pairs re-measured; none dropped.

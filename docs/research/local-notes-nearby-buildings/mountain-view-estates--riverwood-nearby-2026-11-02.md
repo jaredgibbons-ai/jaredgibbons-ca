@@ -17,10 +17,18 @@ Building: Mountain View Estates, 1055 Riverwood Gate (riverwood; townhomes).
 - Minnekhada Middle School, 6-8, SD43, 1390 Laurier Ave. https://www.sd43.bc.ca/minnekhada/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: 1055 Riverwood Gate, the City of Port Coquitlam civic address point for that address (City open data Addresses layer; cleanup-pass top-up re-measurement — see NOT CONFIRMED).
+- Walk to Blakeburn Elementary: 5.7 minutes, 0.50 km, routed-foot.
+- Walk to Terry Fox Secondary (1260 Riverwood Gate): 3.8 minutes, 0.36 km, routed-foot.
+- Walk to Terry Fox Park: 10.0 minutes, 0.82 km, routed-foot.
+- Drive to Hyde Creek Recreation Centre: 5.1 minutes, 2.86 km, OSRM.
+- Drive to Minnekhada Middle School: 4.0 minutes, 2.35 km, OSRM.
+- Drive to Port Coquitlam Station: 5.4 minutes, 3.64 km, OSRM.
+- Drive to Coquitlam Central Station: 7.5 minutes, 5.18 km, OSRM.
 
 ## NOT CONFIRMED
-- Travel times not measured: OSM carries no house point for 1055 Riverwood Gate. The only OSM address point on Riverwood Gate is 1141 (a different building), which was not used as an origin; Nominatim's street point sits on the street's west segment, contradicted by the 1141 and 1260 address points; an unnamed OSM terrace cluster near the street could not be verified as this complex.
+- Travel times re-measured in the cleanup pass top-up (2026-11-02): earlier in the pass §5 was left unmeasured — OSM carries no house point for 1055 Riverwood Gate, the only OSM address point on Riverwood Gate is 1141 (a different building, not used), and no civic point had been obtained. The City of Port Coquitlam civic address point for 1055 Riverwood Gate (open data Addresses layer, OBJECTID 3538) now verifies the origin; a Nominatim reverse-geocode of the point returns the Riverwood Gate road point — the City layer itself carries the exact roster address.
+- Walks to Hyde Creek Recreation Centre (1.95 km) and Minnekhada Middle School (2.15 km) exceeded the 1.5 km walk cap and are not listed in §5; the drives are listed. A walk to Blakeburn Elementary via the school's civic address point measured 0.25 km at 6.4 km/h, outside the 4–6 km/h sanity band, and was discarded; the §5 walk uses the school's own OSM point (reverse-geocode: 1040 Riverside Drive).
 - Section 4 (grocery and shopping anchors) omitted: no grocery store or shopping centre within roughly 1 km was confirmed on an allowed source in this pass.
 - School catchments for 1055 Riverwood Gate: not confirmed; the SD43 locator run on record was for 1260 Riverwood Gate, not this address.
 - Bus frequencies: not stated; none read from an operator page in this pass. No bus exchange or loop name is confirmed for this building.

@@ -20,15 +20,16 @@ Building: Yorkson Creek, 8328 207A Street (willoughby-heights; condos).
 
 ## 5. MEASURED TRAVEL TIMES
 Measured 2026-11-02; OSM data date not published by the service. Walking routed with routing.openstreetmap.de routed-foot; driving with OSRM (router.project-osrm.org).
-- Origin: a street-segment point on 207A Street at the 8328 grid position; no house-number point for this address exists in the geocoder results of this pass, and the segment point reverse-geocodes to 207A Street. Segment-grade origin.
-- Walk to Yorkson Creek Middle School, 20686 84 Ave: 5.6 min, 0.42 km.
-- Drive to Yorkson Creek Middle School, 20686 84 Ave: 1.6 min, 0.65 km.
-- Walk to Lynn Fripps Elementary, 21020 83 Ave: 12.4 min, 0.93 km.
-- Drive to Lynn Fripps Elementary, 21020 83 Ave: 2.0 min, 0.98 km.
-- Drive to R.E. Mountain Secondary, 7633 202A St: 4.1 min, 2.33 km.
-- Drive to Langley Events Centre, 7888 200 St: 4.1 min, 2.09 km.
-- Walk to Hakam's Your Independent Grocer, 20678 Willoughby Town Centre Dr: 15.6 min, 1.17 km.
-- Drive to Hakam's Your Independent Grocer, 20678 Willoughby Town Centre Dr: 2.0 min, 1.22 km.
+- Origin: Township of Langley civic address point for 8328 207A Street (TOL Addresses service, OBJECTID 48204), at 49.15335, -122.64708 — upgraded in the cleanup pass from the street-segment point used originally; its Nominatim reverse returns the nearest feature (Yorkson Greenlink), a known artefact.
+- Walk to Yorkson Creek Middle School, 20686 84 Ave: 5.8 min, 0.43 km.
+- Drive to Yorkson Creek Middle School, 20686 84 Ave: 1.9 min, 0.69 km.
+- Walk to Lynn Fripps Elementary, 21020 83 Ave: 12.6 min, 0.95 km.
+- Drive to Lynn Fripps Elementary, 21020 83 Ave: 2.6 min, 1.14 km.
+- Drive to R.E. Mountain Secondary, 7633 202A St: 4.8 min, 2.49 km.
+- Drive to Langley Events Centre, 7888 200 St: 4.7 min, 2.25 km.
+- Walk to Hakam's Your Independent Grocer, 20678 Willoughby Town Centre Dr: 16.6 min, 1.25 km.
+- Drive to Hakam's Your Independent Grocer, 20678 Willoughby Town Centre Dr: 2.9 min, 1.48 km.
+
 
 ## NOT CONFIRMED
 - School catchments: not confirmed in this pass (no SD35 locator run for this address).

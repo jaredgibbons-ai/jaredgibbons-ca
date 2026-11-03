@@ -19,13 +19,14 @@ Building: Matteo (ML Emporio), 7588 198B Street at 76 Avenue (willoughby-heights
 - Real Canadian Superstore, 19851 Willowbrook Drive, Langley (address from a retailer own-domain search result, the retailer's store-locator page). https://www.realcanadiansuperstore.ca/store-locator/details/1561
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; driving OSRM (router.project-osrm.org), walking routing.openstreetmap.de routed-foot; OSM data date not published by the service. Origin: segment point on 198B Street at 76 Avenue (see NOT CONFIRMED).
-- Walk to Routley Park, 71 Avenue and 198B Street: 17.2 minutes, 1.35 km, routed-foot.
-- Drive to Real Canadian Superstore, 19851 Willowbrook Drive: 5.0 minutes, 3.19 km, OSRM.
-- Drive to Muriel Arnason Library, 20338 65 Avenue: 5.4 minutes, 3.61 km, OSRM.
+- Measured 2026-11-02; driving OSRM (router.project-osrm.org), walking routing.openstreetmap.de routed-foot; OSM data date not published by the service. Origin: Township of Langley civic address point for 7588 198B Street (see NOT CONFIRMED).
+- Walk to Routley Park, 71 Avenue and 198B Street: 14.9 minutes, 1.18 km, routing.openstreetmap.de routed-foot.
+- Drive to Real Canadian Superstore, 19851 Willowbrook Drive: 4.8 minutes, 3.12 km, OSRM.
+- Drive to Muriel Arnason Library, 20338 65 Avenue: 4.8 minutes, 3.20 km, OSRM.
+
 
 ## NOT CONFIRMED
 - School catchments for 7588 198B Street: not confirmed; no SD35 locator run in this pass.
-- Origin: no OSM point carries 7588 198B Street; the measurement origin is a segment point on 198B Street at the 76 Avenue corner, reverse-geocoding to 198B Street with the nearest addressed neighbour shown as 7635 198B Street — segment-grade.
+- Origin: upgraded in the cleanup pass — the Township of Langley civic address point for 7588 198B Street (TOL Addresses service, OBJECTID 43089; 49.14047, -122.67174) replaces the 198B Street segment point at the 76 Avenue corner used originally (its reverse showed the nearest neighbour, 7635 198B Street). The new point's reverse returns the nearest road (76 Avenue), a known artefact; the municipal record carries the roster address.
 - Bus frequencies: not stated in this file.
 - No bus exchange or loop name is confirmed for the stops nearest this building in the operator pages read.

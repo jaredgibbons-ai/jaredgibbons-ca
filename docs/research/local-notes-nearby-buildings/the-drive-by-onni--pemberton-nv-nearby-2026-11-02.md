@@ -23,10 +23,14 @@ Building: The Drive by Onni, 1330 Marine Drive (pemberton-nv; condos).
 - Capilano Mall, 935 Marine Drive. https://capilanomall.com/find-us/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 1330 Marine Drive (DNV GEOweb BldAddress base-address record + BldBuilding footprint 'THE DRIVE 1300' (BLDG24463) centroid). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Lions Gate Community Recreation Centre, 1733 Lions Gate Lane: 14.7 min, 1.10 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Save-On-Foods, #140 - 879 Marine Drive: 16.5 min, 1.24 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Save-On-Foods, #140 - 879 Marine Drive: 2.6 min, 1.36 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Capilano Mall, 935 Marine Drive: 2.3 min, 1.29 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times: not measured — Nominatim holds no house or building point for 1330 Marine Drive; repeated foreground variants (free-form, structured, District wording, viewbox-bounded) returned only Marine Drive road segments, which were discarded; no neighbouring building's point was substituted. This building is a different building from The Drive at 1177 Marine Drive (norgate), produced separately.
+- Travel times re-measured in the cleanup pass, 2026-11-02: origin = centroid of the District of North Vancouver GEOweb BldBuilding footprint named 'THE DRIVE 1300' (asset BLDG24463), linked from the DNV BldAddress base-address record for 1330 Marine Drive; the centroid reverse-geocodes to a neighbouring business address, 1323 Marine Drive (a footprint centroid reverse-geocodes to the nearest addressed feature, not the polygon — disclosed artefact). Destinations are OSM points for anchors named in §§2–4, each reverse-checked in this pass.
 - School catchments: not confirmed — no district locator run in this pass.
 - Bus frequencies other than the R2's: not stated — none read from a timetable in this pass.
 - Grocery within ~1 km: not confirmed — the §4 anchors are the area's confirmed anchors, beyond ~1 km east on Marine Drive.

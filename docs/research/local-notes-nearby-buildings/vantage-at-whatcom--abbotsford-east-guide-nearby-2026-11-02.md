@@ -21,13 +21,13 @@ Building: Vantage at Whatcom, 36099 Waterleaf Place, at Whatcom Road / Old Yale 
 - Walmart Supercenter, 1812 Vedder Way. https://www.walmart.ca/en/store/1113
 
 ## 5. MEASURED TRAVEL TIMES
-- All measurements start at 36099 Waterleaf Place. Measured 2026-11-02; OSM data date not published by the service. Origin geocode: Waterleaf Place is absent from OpenStreetMap/Nominatim (address and street queries returned no result); the Whatcom Road segment point nearest the Waterleaf Place junction was used as the origin.
-- Drive to Lower Sumas Mountain Park, 2850 Whatcom Road: 2.6 minutes, 1.84 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Semá:th Elementary School, 36321 Vye Road: 1.7 minutes, 1.57 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Walmart Supercenter, 1812 Vedder Way: 5.0 minutes, 4.64 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- All measurements start at 36099 Waterleaf Place. Measured 2026-11-02; OSM data date not published by the service. Origin: City of Abbotsford Address Points civic point for 36099 Waterleaf Place (Address_pnts OBJECTID 28502), adopted in the cleanup pass (2026-11-02) — the original pass used the Whatcom Road segment point nearest the Waterleaf Place junction, as the street is absent from Nominatim under this name.
+- Drive to Lower Sumas Mountain Park, 2850 Whatcom Road: 3.5 minutes, 1.85 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- Drive to Semá:th Elementary School, 36321 Vye Road: 4.3 minutes, 3.09 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- Drive to Walmart Supercenter, 1812 Vedder Way: 5.7 minutes, 4.66 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated on the operator pages read in this pass.
 - Save-On-Foods on Whatcom Road: no street address was displayed on the retailer page carried from the phase-1 pass, so it is not listed as an anchor.
-- Building-point geocode: not confirmed — see §5 origin note.
+- Origin upgraded in the cleanup pass (2026-11-02): Whatcom Road segment point (original pass) → City of Abbotsford Address Points civic point for 36099 Waterleaf Place (OBJECTID 28502); see §5 origin note.

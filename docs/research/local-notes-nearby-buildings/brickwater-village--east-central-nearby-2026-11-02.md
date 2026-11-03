@@ -25,14 +25,14 @@ Building: Brickwater Village, 22633 Selkirk Avenue, 11865 227 Street, 11893 227 
 - Save-On-Foods, 22703 Lougheed Highway (address from the retailer's own-domain search result). https://www.saveonfoods.com/sm/planning/rsid/935/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at 22633 Selkirk Avenue; OSM data date not published by the service. Origin: the Selkirk Avenue segment point returned by Nominatim for the roster address (no building point in OpenStreetMap).
-- Walk to Haney Place Mall: 4.0 minutes, 0.30 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Walk to Maple Ridge Library: 8.4 minutes, 0.63 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Walk to Eric Langton Elementary: 12.4 minutes, 0.88 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
-- Drive to Port Haney Station: 2.6 minutes, 1.30 km, OSRM (router.project-osrm.org), measured 2026-11-02.
+- From-point: combined centroid of the two City of Maple Ridge Parcel records carrying 22633 Selkirk Avenue exactly (Parcel layer, DataCatalog/Property MapServer layer 3: Address 22633 / SELKIRK AVE, PINs 133111 and 133109), at 49.21832, -122.59522 — upgraded in the cleanup pass (2026-11-02) from the Selkirk Avenue segment point used originally; a parcel centroid reverse-geocodes to the nearest OSM feature (Sammy J's Grill & Bar, 119 Avenue), a known artefact. Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Haney Place Mall: 5.8 minutes, 0.43 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Walk to Maple Ridge Library: 7.2 minutes, 0.54 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Walk to Eric Langton Elementary: 11.6 minutes, 0.82 km, routing.openstreetmap.de routed-foot, measured 2026-11-02.
+- Drive to Port Haney Station: 2.9 minutes, 1.36 km, OSRM (router.project-osrm.org), measured 2026-11-02.
 
 ## NOT CONFIRMED
 - Measurement anchor: the first roster address, 22633 Selkirk Avenue, was used for the title and all measurements; the other three roster addresses were not measured from.
 - School catchments: not confirmed — no district locator run for this address in this pass.
-- Building-point geocode: none exists; measurements use the disclosed Selkirk Avenue segment point.
+- Origin upgraded in the cleanup pass (2026-11-02): Selkirk Avenue segment point (original pass) → the two City of Maple Ridge Parcel records carrying 22633 SELKIRK AVE (PINs 133111 and 133109; combined centroid — see §5). The roster address is not proven wrong.
 - Bus frequencies: not stated.

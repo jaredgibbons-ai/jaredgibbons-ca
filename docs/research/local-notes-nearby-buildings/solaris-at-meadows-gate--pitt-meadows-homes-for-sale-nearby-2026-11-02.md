@@ -21,21 +21,21 @@ Building: Solaris at Meadows Gate, 12069 Harris Road (pitt-meadows-homes-for-sal
 - Real Canadian Superstore, Meadowtown, 19800 Lougheed Highway. https://www.realcanadiansuperstore.ca/store-locator/details/1555
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: 12069 Harris Road, interpolated on Harris Road from OSM address points probed along the road (12007 Harris at lat 49.2203; 12099 Harris at lat 49.2220) and reverse-geocoded to Harris Road, Pitt Meadows (V3Y 0E5, its own civic block).
-- Walk to Pitt Meadows Family Recreation Centre: 2.7 minutes, 0.20 km, routed-foot.
-- Drive to Pitt Meadows Family Recreation Centre: 0.8 minutes, 0.18 km, OSRM.
-- Walk to Pitt Meadows Public Library: 2.4 minutes, 0.18 km, routed-foot.
-- Walk to Pitt Meadows Elementary: 4.8 minutes, 0.35 km, routed-foot.
-- Drive to Pitt Meadows Elementary: 1.7 minutes, 0.43 km, OSRM.
-- Walk to Pitt Meadows Station: 9.2 minutes, 0.69 km, routed-foot.
-- Drive to Pitt Meadows Station: 1.3 minutes, 0.66 km, OSRM.
-- Walk to Davie Jones Elementary: 9.3 minutes, 0.70 km, routed-foot.
-- Walk to Save-On-Foods: 15.4 minutes, 1.16 km, routed-foot.
-- Drive to Save-On-Foods: 2.6 minutes, 1.27 km, OSRM.
-- Drive to Real Canadian Superstore, Meadowtown: 5.2 minutes, 3.20 km, OSRM.
+- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: 12069 Harris Road, the City of Pitt Meadows civic address point (Address Point layer, Maple Ridge GIS; cleanup-pass upgrade from the interpolated segment point).
+- Walk to Pitt Meadows Family Recreation Centre: 3.5 minutes, 0.26 km, routed-foot.
+- Drive to Pitt Meadows Family Recreation Centre: 1.1 minutes, 0.39 km, OSRM.
+- Walk to Pitt Meadows Public Library: 1.1 minutes, 0.08 km, routed-foot.
+- Walk to Pitt Meadows Elementary: 5.8 minutes, 0.43 km, routed-foot.
+- Drive to Pitt Meadows Elementary: 1.6 minutes, 0.67 km, OSRM.
+- Walk to Pitt Meadows Station: 8.9 minutes, 0.67 km, routed-foot.
+- Drive to Pitt Meadows Station: 1.1 minutes, 0.56 km, OSRM.
+- Walk to Davie Jones Elementary: 10.0 minutes, 0.75 km, routed-foot.
+- Walk to Save-On-Foods: 14.9 minutes, 1.12 km, routed-foot.
+- Drive to Save-On-Foods: 2.4 minutes, 1.18 km, OSRM.
+- Drive to Real Canadian Superstore, Meadowtown: 5.0 minutes, 3.10 km, OSRM.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no SD42 locator run in this pass.
-- Origin: Nominatim returned only Harris Road segments (no building point); far-north segments (V3Y 2R9, V3P 1B6) discarded — point above interpolated and reverse-geocoded instead; the complex's second address, 12079 Harris Road (condos file), was not used as origin.
+- Origin upgrade (cleanup pass): §5 re-measured from the City of Pitt Meadows civic address point for 12069 Harris Road (Address Point layer via Maple Ridge GIS, OBJECTID 3177, beside the layer's 12079 Harris Road point for the same complex), replacing the interpolated segment point; the second address was not used as origin.
 - Bus frequencies: not stated on operator pages read.
-- Over-cap walk excluded: Real Canadian Superstore, 2.53 km.
+- Over-cap walk excluded: Real Canadian Superstore, 2.58 km.

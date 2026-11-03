@@ -25,17 +25,17 @@ Building: Queensbrook, 678 West Queens Road (delbrook; 55-plus + condos).
 - Queensdale Market, 3030 Lonsdale Ave, North Vancouver. https://www.queensdalemarket.ca/
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02 from 678 West Queens Road; OSM data date not published by the service. Origin: Nominatim street-segment point (see NOT CONFIRMED).
-- Walk to Delbrook Park: 3.6 minutes, 0.27 km, routed-foot, measured 2026-11-02.
-- Walk to Delbrook Community Recreation Centre: 5.4 minutes, 0.40 km, routed-foot, measured 2026-11-02.
-- Walk to Westview Shopping Centre: 7.5 minutes, 0.56 km, routed-foot, measured 2026-11-02.
-- Walk to William Griffin Park: 7.7 minutes, 0.58 km, routed-foot, measured 2026-11-02.
-- Walk to Belhouse Park: 8.9 minutes, 0.66 km, routed-foot, measured 2026-11-02.
-- Drive to Queensdale Market: 2.5 minutes, 1.39 km, OSRM, measured 2026-11-02.
-- Drive to Braemar Elementary: 2.4 minutes, 1.43 km, OSRM, measured 2026-11-02.
+- Measured 2026-11-02 from 678 West Queens Road; OSM data date not published by the service. Origin: centroid of the District of North Vancouver GeoWeb BldBuilding footprint BLDG10333 (named "QUEENSBROOK" in the dataset), linked by ASSET_ID to the ACTIVE BldAddress base-address record for 678 W Queens Road (OBJECTID 24063), centroid at 49.336844, -123.087166 (upgraded in cleanup pass; previously a Nominatim street-segment point — see NOT CONFIRMED).
+- Walk to Delbrook Park: 4.8 minutes, 0.36 km, routed-foot, measured 2026-11-02.
+- Walk to Delbrook Community Recreation Centre: 7.9 minutes, 0.59 km, routed-foot, measured 2026-11-02.
+- Walk to Westview Shopping Centre: 7.0 minutes, 0.52 km, routed-foot, measured 2026-11-02.
+- Walk to William Griffin Park: 10.2 minutes, 0.76 km, routed-foot, measured 2026-11-02.
+- Walk to Belhouse Park: 7.3 minutes, 0.55 km, routed-foot, measured 2026-11-02.
+- Drive to Queensdale Market: 2.1 minutes, 1.18 km, OSRM, measured 2026-11-02.
+- Drive to Braemar Elementary: 2.0 minutes, 1.23 km, OSRM, measured 2026-11-02.
 
 ## NOT CONFIRMED
-- Origin: Nominatim returns only street-segment points for this address; §5 distances are approximate.
+- Origin upgraded (cleanup pass, 2026-11-02): previously a Nominatim street-segment point; now the centroid of the District of North Vancouver GeoWeb BldBuilding footprint BLDG10333 (named "QUEENSBROOK" in the dataset), linked by ASSET_ID to the ACTIVE BldAddress base-address record for 678 W Queens Road (OBJECTID 24063), at 49.336844, -123.087166. It reverse-geocodes to the West Queens Road bus stop at Delbrook Avenue (nearest OSM feature — an artefact; the municipal linkage carries the roster address). All §5 pairs re-measured; none dropped.
 - School catchments: not confirmed — no district locator run for this address.
 - Bus frequencies: not stated, except the SeaBus daytime frequency above.
 - Delbrook Park and William Griffin Park street addresses: not confirmed — the NVRC field list gives none.

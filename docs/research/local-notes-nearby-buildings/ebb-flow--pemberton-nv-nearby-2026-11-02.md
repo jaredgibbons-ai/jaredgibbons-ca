@@ -23,10 +23,13 @@ Building: Ebb & Flow, 2035 Glenaire Drive (pemberton-nv; townhomes).
 - Capilano Mall, 935 Marine Drive. https://capilanomall.com/find-us/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 2035 Glenaire Drive (DNV GEOweb BldAddress base-address record + BldBuilding footprint 'EBB + FLOW' (BLDG26418) centroid). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Lions Gate Community Recreation Centre, 1733 Lions Gate Lane: 3.4 min, 0.26 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Save-On-Foods, #140 - 879 Marine Drive: 4.3 min, 2.71 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Capilano Mall, 935 Marine Drive: 4.0 min, 2.64 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times: not measured — Nominatim holds no house or building point for 2035 Glenaire Drive; repeated foreground variants (free-form, structured, District wording, viewbox-bounded, name search) returned only Glenaire Drive road segments, which were discarded; no neighbouring building's point was substituted.
+- Travel times re-measured in the cleanup pass, 2026-11-02: origin = centroid of the District of North Vancouver GEOweb BldBuilding footprint named 'EBB + FLOW' (asset BLDG26418), linked from the DNV BldAddress base-address record for 2035 Glenaire Drive; the centroid reverse-geocodes to Glenaire Drive (a footprint centroid reverse-geocodes to the nearest road, not the polygon — disclosed artefact). Destinations are OSM points for anchors named in §§2–4, each reverse-checked in this pass.
 - Roster basis: this entry is flagged DISCLOSED-BASIS on the roster; the basis is disclosed in the townhomes home file.
 - School catchments: not confirmed — no district locator run in this pass.
 - Bus frequencies other than the R2's: not stated — none read from a timetable in this pass.

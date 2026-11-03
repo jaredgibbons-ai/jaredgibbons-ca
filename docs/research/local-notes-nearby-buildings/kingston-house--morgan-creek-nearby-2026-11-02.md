@@ -22,10 +22,17 @@ Building: Kingston House, 3323 151 Street, Surrey, BC (morgan-creek; condos).
 - Real Canadian Superstore, 2332 160 St, Surrey (retailer's own-domain search result). (https://www.realcanadiansuperstore.ca/store-locator/details/1551)
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 3323 151 Street, Surrey, BC (City of Surrey Address Points civic point for 3323 151 St; reverse-geocodes to 151 Street). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Rosemary Heights Park: 10.6 min, 0.80 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Rosemary Heights Elementary: 14.7 min, 1.10 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Morgan Creek Park: 17.9 min, 1.34 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Morgan Elementary, 3366 156A St: 3.4 min, 1.62 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Walmart Supercentre, 2355 160 St: 5.6 min, 3.24 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to White Rock Centre: 7.4 min, 4.20 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Grandview Heights Aquatic Centre, 16855 24 Avenue: 8.0 min, 5.27 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
 - Bus frequencies: not stated on the timetables read.
 - School catchments: not confirmed — no SD36 locator run for this address.
 - Unit count: not stated — a building-directory figure for this building is unconfirmed in the home program file.
-- Measurement origin: not confirmed — no house point exists for 3323 151 Street, and no block-verifiable street-segment point could be obtained on 151 Street for the 3300 block (between 32 Avenue and 33 Avenue); the first-pass measurements were withdrawn in a correction pass because their origin failed reverse-geocoding.
+- Measurement origin (cleanup pass, 2026-11-02): §5 measured in this pass from the City of Surrey Address Points civic point for 3323 151 St, which reverse-geocodes to 151 Street, replacing the earlier not-measured fallback. Morgan Creek Park is measured to the named park way's centroid (the park feature itself), not the 3302 156A Street address node. The Bridgeport Station drive (33.11 km) exceeds the 10 km drive cap and is not listed.

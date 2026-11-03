@@ -5,6 +5,8 @@
 - Steveston Exchange is the terminus named in the TransLink timetables below. https://infomaps.translink.ca/Public_Timetables/218/tt401.pdf
 - 401 One Road, TransLink — Steveston Village via No. 1 Rd to Richmond-Brighouse Station. https://infomaps.translink.ca/Public_Timetables/218/tt401.pdf
 - 406 Railway, TransLink — Steveston Village via Railway Ave and Williams Rd to Richmond-Brighouse Station. https://infomaps.translink.ca/Public_Timetables/218/tt406.pdf
+- 402 Brighouse Station / Two Road, TransLink — Steveston Village via Chatham, No. 1 Rd and Moncton, then No. 2 Rd, Blundell and No. 3 Rd to Richmond-Brighouse Station. https://infomaps.translink.ca/Public_Timetables/218/tt402.pdf
+- 407 Bridgeport / Gilbert, TransLink — Steveston Village (Steveston Exchange) via Chatham, 4 Ave, Steveston Hwy and Gilbert to Lansdowne Station and Bridgeport Station, continuing to Marine at Knight. https://infomaps.translink.ca/Public_Timetables/218/tt407.pdf
 
 ## 2. PARKS AND RECREATION
 - Garry Point Park, 12011 7th Avenue — waterfront park at Richmond's southwest tip. https://www.richmond.ca/parks-recreation/parks/parksearch/park.aspx?ID=17

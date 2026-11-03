@@ -22,12 +22,12 @@ Building: Cottonwood Village, 7610 Evans Road (west-chilliwack; 55-plus).
 - Save-On-Foods, 46020 Yale Rd W, Chilliwack (retailer's own site, search result). https://www.saveonfoods.com/sm/planning/rsid/2213/store
 
 ## 5. MEASURED TRAVEL TIMES
-- From-point: segment point on Evans Road north of Evans Elementary's grounds, placed from the Evans Road address progression (OSM points 6899 and 7600 Evans Road) and reverse-geocoded to Evans Road (segment-grade; no OSM house point exists for 7610, and the neighbouring school's point was not used). Measured 2026-11-02; OSM data date not published by the service.
-- Walk to Evans Elementary: 4.4 minutes, 0.33 km, routing.openstreetmap.de routed-foot, measured 2026-11-02; OSM data date not published by the service.
-- Drive to Cottonwood Centre: 4.1 minutes, 1.58 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Sardis Secondary: 5.3 minutes, 3.00 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Chilliwack Library: 5.6 minutes, 3.95 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Save-On-Foods (46020 Yale Rd W): 5.7 minutes, 4.10 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- From-point: City of Chilliwack civic address point for 7610 Evans Road (Address Points (NextGen911), opendata.chilliwack.com, data updated 2026-11-01) — Structure point OBJECTID 2431 (unit 126), the record nearest the centroid of the dataset's 207 Structure points carrying this address, at 49.139796, -121.975851; Nominatim reverse-geocode of the point returns Knight Road, Sardis (nearest OSM feature, no house number — the municipal record itself carries the exact roster address). Cleanup pass 2026-11-02: origin upgraded from the previous segment point on Evans Road (placed from the Evans Road address progression, OSM points 6899 and 7600 Evans Road); the neighbouring Evans Elementary point at 7600 Evans Road was not used. Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Evans Elementary: 4.6 minutes, 0.34 km, routing.openstreetmap.de routed-foot, measured 2026-11-02; OSM data date not published by the service.
+- Drive to Cottonwood Centre: 2.9 minutes, 1.25 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- Drive to Sardis Secondary: 5.2 minutes, 2.97 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- Drive to Chilliwack Library: 6.6 minutes, 4.40 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- Drive to Save-On-Foods (46020 Yale Rd W): 6.5 minutes, 4.44 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
 - Board classification: board data classifies 7610 Evans Road as Sardis West Vedder while the roster files it under west-chilliwack — recorded as stated, not resolved.

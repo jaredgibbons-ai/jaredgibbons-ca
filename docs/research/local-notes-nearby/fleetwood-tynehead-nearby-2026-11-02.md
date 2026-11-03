@@ -22,10 +22,10 @@
 - Fleetwood Park Village (shopping centre), 15950 Fraser Hwy (centre's own site search result). Centre-only section. (http://fleetwoodparkvillage.ca/photos/)
 
 ## 5. MEASURED TRAVEL TIMES
-- From-point: Fleetwood Park Secondary, 7940 156 Street. Measured 2026-11-02; OSM data date not published by the service.
-- Walk to Fleetwood Park: 8.8 minutes, 0.66 km, OpenStreetMap routed-foot (routing.openstreetmap.de), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Surrey Sport & Leisure Complex: 4.5 minutes, 2.57 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
-- Drive to Tynehead Regional Park (96 Avenue entrance): 8.2 minutes, 5.96 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- From-point: Fleetwood Park Secondary, 7940 156 Street. Measured 2026-11-02; OSM data date not published.
+- Walk to Fleetwood Park: 8.8 minutes, 0.66 km, OpenStreetMap routed-foot (routing.openstreetmap.de), measured 2026-11-02; OSM data date not published.
+- Drive to Surrey Sport & Leisure Complex: 4.5 minutes, 2.57 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published.
+- Drive to Tynehead Regional Park (96 Avenue entrance): 8.2 minutes, 5.96 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published.
 
 ## NOT CONFIRMED
 - Save-On-Foods Fleetwood grocery address: not readable on the retailer's own page in this pass, so no grocery address is stated.

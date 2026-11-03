@@ -25,11 +25,12 @@ Building: Wildwood Terrace, 12170 222 Street (west-central; condos).
 - Haney Place Mall, 11900 Haney Place, Maple Ridge: centre's own contact page. https://www.haneyplacemall.com/contact_us/
 
 ## 5. MEASURED TRAVEL TIMES
-- From-point: segment point on 222 Street at the address position of 12170, placed on the 222 Street OSM way from the street's address grid (OSM point 12310 222 Street) and reverse-geocoded to 222 Street (segment-grade; no OSM house point exists for this address). Measured 2026-11-02; OSM data date not published by the service.
-- Walk to Haney Nokai Park: 3.8 minutes, 0.28 km, routing.openstreetmap.de routed-foot, measured 2026-11-02; OSM data date not published by the service.
-- Walk to Memorial Peace Park: 12.6 minutes, 0.95 km, routing.openstreetmap.de routed-foot, measured 2026-11-02; OSM data date not published by the service.
-- Walk to Maple Ridge Library: 13.2 minutes, 0.99 km, routing.openstreetmap.de routed-foot, measured 2026-11-02; OSM data date not published by the service.
-- Drive to Eric Langton Elementary: 2.2 minutes, 1.20 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+- From-point: City of Maple Ridge parcel centroid for 12170 222 Street (Parcel layer: Address 12170 / 222 ST, PIN 103065), at 49.22367, -122.60625 — upgraded in the cleanup pass from the 222 Street way point at the address-grid position used originally; a parcel centroid reverse-geocodes to the nearest road, a known artefact. Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Haney Nokai Park: 5.4 minutes, 0.41 km, routing.openstreetmap.de routed-foot, measured 2026-11-02; OSM data date not published by the service.
+- Walk to Memorial Peace Park: 14.3 minutes, 1.07 km, routing.openstreetmap.de routed-foot, measured 2026-11-02; OSM data date not published by the service.
+- Walk to Maple Ridge Library: 14.8 minutes, 1.11 km, routing.openstreetmap.de routed-foot, measured 2026-11-02; OSM data date not published by the service.
+- Drive to Eric Langton Elementary: 2.3 minutes, 1.01 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no SD42 locator run for this address in this pass.

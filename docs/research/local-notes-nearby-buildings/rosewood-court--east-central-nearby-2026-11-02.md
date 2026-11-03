@@ -22,13 +22,13 @@ Building: Rosewood Court, 22611 116 Avenue (east-central; 55-plus + condos).
 - Save-On-Foods, 22703 Lougheed Highway, Maple Ridge (address from the retailer's own-domain search result). https://www.saveonfoods.com/sm/planning/rsid/935/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02, starting at 22611 116 Avenue; OSM data date not published by the service. Origin: the Nominatim street-segment point for this address block (no building point exists in OpenStreetMap).
-- Walk to Brickwood Park: 4.8 minutes, 0.36 km, routing.openstreetmap.de routed-foot.
-- Walk to Haney Place Mall: 11.8 minutes, 0.89 km, routing.openstreetmap.de routed-foot.
-- Drive to Eric Langton Elementary: 3.5 minutes, 2.00 km, OSRM (router.project-osrm.org).
-- Drive to Save-On-Foods (Valley Fair Mall): 2.2 minutes, 1.23 km, OSRM (router.project-osrm.org).
+- From-point: City of Maple Ridge parcel centroid for 22611 116 Avenue (Parcel layer, DataCatalog/Property MapServer layer 3: Address 22611 / 116 AVE, PIN 110176), at 49.21109, -122.59565 — upgraded in the cleanup pass (2026-11-02) from the street-segment point used originally; a parcel centroid reverse-geocodes to the nearest road, a known artefact. Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Brickwood Park: 7.5 minutes, 0.56 km, routing.openstreetmap.de routed-foot.
+- Walk to Haney Place Mall: 16.9 minutes, 1.27 km, routing.openstreetmap.de routed-foot.
+- Drive to Eric Langton Elementary: 3.5 minutes, 1.91 km, OSRM (router.project-osrm.org).
+- Drive to Save-On-Foods (Valley Fair Mall): 2.2 minutes, 1.11 km, OSRM (router.project-osrm.org).
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated.
-- Building-point geocode: none exists in OpenStreetMap; §5 uses the disclosed segment point.
+- Origin upgraded in the cleanup pass (2026-11-02): Nominatim street-segment point (original pass) → City of Maple Ridge Parcel record for 22611 116 AVE (PIN 110176; centroid — see §5). The roster address is not proven wrong.

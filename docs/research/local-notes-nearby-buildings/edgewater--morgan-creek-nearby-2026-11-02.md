@@ -25,7 +25,7 @@ Building: Edgewater, 15195 36 Avenue, Surrey, BC (morgan-creek; condos).
 - Measured 2026-11-02 from 15195 36 Avenue, Surrey, BC; OSRM driving, OSM DE routed-foot walking; OSM data date not published by the service.
 - Walk to Rosemary Heights Park: 9.7 minutes, 0.73 km, routed-foot.
 - Walk to Rosemary Heights Elementary: 10.1 minutes, 0.76 km, routed-foot.
-- Drive to Morgan Creek Park: 3.1 minutes, 1.80 km, OSRM.
+- Drive to Morgan Creek Park: 3.3 minutes, 1.81 km, OSRM.
 - Drive to Walmart Supercentre, 2355 160 St: 6.0 minutes, 3.64 km, OSRM.
 - Drive to White Rock Centre: 6.8 minutes, 4.13 km, OSRM.
 - Drive to Grandview Heights Aquatic Centre: 8.4 minutes, 5.67 km, OSRM.
@@ -36,3 +36,4 @@ Building: Edgewater, 15195 36 Avenue, Surrey, BC (morgan-creek; condos).
 - Unit count: not stated — a building-directory figure for this building is unconfirmed in the home program file.
 - Measurement origin: §5 re-measured in a correction pass from the building's verified footprint point (building way tagged 15195 36 Avenue) after the first-pass origin failed reverse-geocoding, returning 3569 150A Street.
 - A Rosemary Heights Park address-point geocode returned points in North Surrey and was discarded; the named park point was used.
+- Morgan Creek Park point (cleanup pass, 2026-11-02): re-routed to the named park way's centroid (the park feature), replacing the 3302 156A Street address node; other pairs unchanged.

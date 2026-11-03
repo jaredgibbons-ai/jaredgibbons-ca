@@ -23,15 +23,14 @@ Building: Panorama Station, 5957 152 Street (sullivan-station; townhomes).
 
 ## 5. MEASURED TRAVEL TIMES
 - Measured 2026-11-02; OSM data date not published by the service. Walk: OpenStreetMap routed-foot (routing.openstreetmap.de). Drive: OSRM (router.project-osrm.org).
-- Walk to Sullivan Elementary: 2.6 minutes, 0.20 km.
-- Walk to Cambridge Elementary: 9.3 minutes, 0.69 km.
-- Walk to Panorama Village: 11.0 minutes, 0.82 km.
-- Drive to Tong Louie Family YMCA: 1.8 minutes, 0.95 km.
-- Drive to Sullivan Park: 3.3 minutes, 1.27 km.
-- Drive to Sullivan Heights Secondary: 4.7 minutes, 3.73 km.
+- Walk to Sullivan Elementary: 3.5 minutes, 0.26 km.
+- Walk to Cambridge Elementary: 10.2 minutes, 0.76 km.
+- Walk to Panorama Village: 10.5 minutes, 0.79 km.
+- Drive to Tong Louie Family YMCA: 2.4 minutes, 1.02 km.
+- Drive to Sullivan Park: 2.0 minutes, 0.87 km.
+- Drive to Sullivan Heights Secondary: 4.6 minutes, 2.31 km.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated.
-- Origin: no OSM house point for 5957 152 Street; the origin was interpolated on 152 Street between real OSM address points 5953 and 6016 152 Street (P2-30 segment method, disclosed); the interpolated point reverse-geocodes to 5953, 152 Street — the building's own street.
-- Drive to King George Station measured 15.3 minutes, 11.50 km, over the 10 km drive cap, and dropped.
+- Origin upgraded (cleanup pass): previously interpolated on 152 Street between the OSM points 5953 and 6016 (P2-30 segment method); now the City of Surrey Address Points civic point for 5957 152 Street (FULL_ADDRESS "5957 152 St"), at 49.110560, -122.801346. It reverse-geocodes to 5939 152 Street (nearest OSM node — an artefact; the municipal point carries the roster address). All §5 pairs re-measured; none dropped. The old origin's over-cap King George Station drive note (15.3 minutes, 11.50 km) is superseded — that pair was not in §5.

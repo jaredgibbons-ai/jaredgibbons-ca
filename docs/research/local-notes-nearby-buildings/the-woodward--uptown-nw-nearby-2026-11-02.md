@@ -23,9 +23,16 @@ Building: The Woodward, 612 Sixth Street (uptown-nw; condos).
 - Save-On-Foods, 610 6th St #198, New Westminster, per a search result on the retailer's own domain, this pass. https://www.saveonfoods.com/
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 612 Sixth Street (City of New Westminster NAR Addresses point for 612 Sixth St). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to New Westminster Public Library, Main Branch: 4.7 min, 0.35 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Royal City Centre: 5.7 min, 0.43 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Moody Park Arena: 7.5 min, 0.56 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to New Westminster Secondary: 9.7 min, 0.73 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Moody Park: 10.7 min, 0.80 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to New Westminster Station: 3.8 min, 1.96 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to təməsew̓txʷ Aquatic and Community Centre, 65 E Sixth Ave: 5.7 min, 2.86 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Measurement origin failure: no OSM point for 612 Sixth Street verified in this pass. Address queries returned Sixth Street road points reverse-geocoding to other addresses (7885 Sixth Street in Burnaby; 331 Sixth Street; 633 Sixth Street), all discarded, and a name query for the building returned no point. A segment-interpolated point between the real 610 and 633 Sixth Street address points reverse-geocoded to 610 Sixth Street (Royal City Centre), a neighbouring address, so it was not used and no neighbouring point was substituted; §5 is the fallback bullet.
+- Travel times re-measured in the cleanup pass, measured 2026-11-02: origin is the NAR Addresses for New Westminster point in the City of New Westminster Webmap WFL1 service (layer 2), LOC_GUID 24df6698-a7e1-4f92-b8f2-18c996a1cbb7, Full_Address 612 Sixth St, at 49.21378, -122.92123; the City Addresses layer (layer 3) in the same service holds unit records 501-…-612 SIXTH ST at a parcel point ~68 m south. Reverse-geocoding the NAR point returns the Princess Street road (nearest addressed feature 610 Sixth Street) — a municipal-point artefact, disclosed. The production pass's segment-interpolated point was not reused. Measured but excluded over the 1.5 km walk cap: walk to təməsew̓txʷ Aquatic and Community Centre (1.61 km).
 - School catchments: not confirmed — no district locator run was done for this address in this pass.
 - Bus frequencies: not stated — no frequency was read from an operator page in this pass.

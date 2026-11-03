@@ -21,14 +21,14 @@ Building: Morningside, 45520 Knight Road (sardis-west-vedder-guide; condos).
 - Save-On-Foods (grocery), 6014 Vedder Rd (retailer's own site search result). https://www.saveonfoods.com/sm/planning/rsid/952/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: interpolated point on Knight Road for 45520 Knight Road (method in NOT CONFIRMED); reverse-geocodes to Knight Road.
-- Walk to Cottonwood Centre (45585 Luckakuck Way): 11.1 minutes, 0.83 km, routed-foot.
-- Walk to Evans Elementary (7600 Evans Road): 15.9 minutes, 1.18 km, routed-foot.
-- Drive to Sardis Secondary (45460 Stevenson Road): 4.3 minutes, 2.70 km, OSRM.
-- Drive to Save-On-Foods (6014 Vedder Road): 6.3 minutes, 3.74 km, OSRM.
-- Drive to Sardis Library (5819 Tyson Road): 8.1 minutes, 4.78 km, OSRM.
+- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: City of Chilliwack NextGen911 Address Points civic point for 45520 Knight Road (upgraded in cleanup pass; previously segment-interpolated — see NOT CONFIRMED); reverse-geocodes to Coqualeetza Trail (nearest OSM feature).
+- Walk to Cottonwood Centre (45585 Luckakuck Way): 7.7 minutes, 0.58 km, routed-foot.
+- Walk to Evans Elementary (7600 Evans Road): 16.7 minutes, 1.24 km, routed-foot.
+- Drive to Sardis Secondary (45460 Stevenson Road): 4.8 minutes, 2.82 km, OSRM.
+- Drive to Save-On-Foods (6014 Vedder Road): 6.2 minutes, 3.76 km, OSRM.
+- Drive to Sardis Library (5819 Tyson Road): 7.9 minutes, 4.84 km, OSRM.
 
 ## NOT CONFIRMED
-- Origin: Nominatim has no house point for 45520 Knight Road; the origin was interpolated on the Knight Road segment between the OSM address points for 45515 and 45543 Knight Road (number fraction 5/28) and reverse-geocodes to Knight Road. Nominatim's road-segment result for the bare query (a point east near 45750 Knight Road) was discarded as the wrong segment.
+- Origin upgraded (cleanup pass, 2026-11-02): previously interpolated on Knight Road between the OSM points for 45515 and 45543; now the City of Chilliwack NextGen911 Address Points civic point for 45520 Knight Road (dataset updated 2026-11-01; OBJECTID 10046, unit 214 structure point nearest the centroid of the address's 60 structure points), at 49.138320, -121.964799. It reverse-geocodes to Coqualeetza Trail (nearest OSM feature — an artefact; the municipal record carries the roster address). All §5 pairs re-measured; none dropped.
 - School catchments: not confirmed — no district locator run for this address in this pass.
 - Bus frequencies: not stated — operator pages read did not state a frequency for these stops.

@@ -22,8 +22,16 @@ Building: The Ivy, 1273 Marine Drive (norgate; condos).
 - Save-On-Foods, #140 - 879 Marine Drive (retailer's own-domain search result, carried from the phase-1 file). https://www.saveonfoods.com/sm/planning/rsid/2249/store
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 1273 Marine Drive (centroid of the District of North Vancouver GeoWeb BldBuilding footprint named THE IVY, ASSET_ID BLDG24625). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Norgate Community Elementary: 6.7 min, 0.50 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Norgate Park: 9.7 min, 0.73 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Capilano Mall: 14.6 min, 1.09 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Save-On-Foods: 14.7 min, 1.10 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Lions Gate Community Recreation Centre: 16.5 min, 1.24 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Drive to Carson Graham Secondary, 2145 Jones Ave: 3.7 min, 2.29 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to Park Royal Exchange: 3.7 min, 2.55 km, OSRM, 2026-11-02; OSM data date not published by the service.
+- Drive to SeaBus, Lonsdale Quay: 4.6 min, 2.90 km, OSRM, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
 - School catchments: not confirmed — no district locator run in this pass.
-- Travel times: not measured — Nominatim returned only Marine Drive road segments, centred east of Capilano Mall and inconsistent with the 1273 address numbering west of 1177 Marine Drive; no house or building point for 1273 Marine Drive was found after repeated variants, so no origin was used.
+- Travel times re-measured (cleanup pass, 2026-11-02) from the centroid of the District of North Vancouver BldBuilding footprint named THE IVY, ASSET_ID BLDG24625 (DNV BldAddress base address: 1273 Marine Dr); Nominatim reverse of the centroid returns the Marine Drive road, way 476041910, postcode V7P 1T3 — not the building itself.

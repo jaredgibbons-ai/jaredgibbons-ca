@@ -19,10 +19,15 @@ Building: The Loop, 2350 165 Street (grandview-corners-condos-townhomes-for-sale
 - Walmart Supercenter, 2355-160 St, Surrey, at Grandview Corners. https://www.walmart.ca/en/store/5853
 
 ## 5. MEASURED TRAVEL TIMES
-- Travel times: not measured in this pass.
+- From-point: 2350 165 Street (City of Surrey Address Points point for this address). Driving: OSRM demo; walking: routing.openstreetmap.de routed-foot; measured 2026-11-02; OSM data date not published by the service.
+- Walk to Edgewood Elementary: 7.2 min, 0.54 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Orchard Grove Park: 8.7 min, 0.65 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Grandview Heights Aquatic Centre: 11.7 min, 0.88 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Grandview Heights Secondary: 19.6 min, 1.47 km, routed-foot, 2026-11-02; OSM data date not published by the service.
+- Walk to Walmart Supercenter, 2355-160 St: 18.1 min, 1.35 km, routed-foot, 2026-11-02; OSM data date not published by the service.
 
 ## NOT CONFIRMED
-- Travel times not measured: Nominatim returned no point for 2350 165 Street, Surrey in repeated foreground variants (name, structured and viewbox-bounded searches). The points it did return reverse-geocoded to other 165 Street segments — 839 165 Street, 2205 165 Street, 2439 165 Street and 2847 165 Street — and were all discarded as different segments from the roster address, so no reliable origin existed and §5 uses the brief's fallback.
+- Travel times re-measured in the cleanup pass (measured 2026-11-02): origin is the City of Surrey Address Points Feature Service record for 2350 165 St (OBJECTID 98489; a second city point for the same address, OBJECTID 102613, sits about 100 m south on the same lot). Nominatim reverse-geocode of the point returned 165 Street (street only) — a reverse artefact; the city record itself carries this building's address.
 - School catchment for this address: not confirmed — no district locator run in this pass.
 - Bus frequencies: not stated — no frequency figure was taken from the timetables read.
 - Nearest rapid-transit station by name: no TransLink page read in this pass names one for this area.
