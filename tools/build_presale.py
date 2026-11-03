@@ -146,7 +146,7 @@ for c in order:
     ps = by[c]; hb += [{'t': 'h', 'level': 2, 'text': f'{c} presale projects ({len(ps)})'}, table(ps, f'{c} presale projects, snapshot {a.asof}')]
 hb += [HOW, CTA]
 write('presale-projects-fraser-valley-and-metro-vancouver', {'status': 'draft', 'slug': 'presale-projects-fraser-valley-and-metro-vancouver', 'updated': a.asof,
-  'new_page': {'title': f'Presale Projects Fraser Valley & Metro Vancouver {min(yr)}–{max(yr)} | Jared Gibbons', 'description': f'{n} presale condo and townhome projects completing {min(yr)}–{max(yr)} across the Fraser Valley and Metro Vancouver, with developers, deposits and current published prices. Updated {ASOF}.',
+  'new_page': {'title': f'Fraser Valley & Metro Vancouver Presales {min(yr)}–{max(yr)} | Jared Gibbons', 'description': f'{n} presale condo and townhome projects completing {min(yr)}–{max(yr)} across the Fraser Valley and Metro Vancouver, with developers, deposits and current published prices. Updated {ASOF}.',
                 'h1': f'Presale Projects in the Fraser Valley and Metro Vancouver, Completing {min(yr)}–{max(yr)}'},
   'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': HUBN, 'href': HUB}], 'faq_heading': 'Presale list: your questions answered', 'blocks': hb,
   'faq': [{'q': 'Is this every presale project in the region?', 'a': f"No. It covers projects marketed publicly through presale listings and developers' own pages as of {ASOF}. Projects sold only through private or brokerage-exclusive channels may be missing, and Paragon presale data is still to be added."},

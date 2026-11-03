@@ -308,9 +308,9 @@ def finish_base(x, slug, shared):
 
 
 def hubs(notes, sh_all):
-    meta = {'condos': ('BC Condo Buying Rules: Strata Fees, Depreciation Reports and Form B | Jared Gibbons', 'BC condo buying rules: strata fees, depreciation reports, Form B, rentals and pets, explained with provincial sources. Jared Gibbons, REALTOR®.', 'BC Condo Buying Rules: What Every Buyer Should Check'),
+    meta = {'condos': ('BC Condo Buying Rules: Strata Fees and Form B | Jared Gibbons', 'BC condo buying rules: strata fees, depreciation reports, Form B, rentals and pets, explained with provincial sources. Jared Gibbons, REALTOR®.', 'BC Condo Buying Rules: What Every Buyer Should Check'),
             'townhomes': ('BC Townhome Buying Rules: Strata vs Fee Simple | Jared Gibbons', 'BC townhome buying rules: strata townhouses versus fee-simple row homes, fees, bylaws and what to check, with provincial sources. Jared Gibbons, REALTOR®.', 'BC Townhome Buying Rules: Strata vs Fee Simple'),
-            'lots-and-land': ('BC Land Buying Rules: ALR, Bare-Land Strata and Fee Simple | Jared Gibbons', 'BC land buying rules: fee-simple lots, bare-land strata, Agricultural Land Reserve limits and what to check before buying land. Jared Gibbons, REALTOR®.', 'BC Land Buying Rules: ALR, Bare-Land Strata, Fee Simple')}
+            'lots-and-land': ('BC Land Buying Rules: ALR and Bare-Land Strata | Jared Gibbons', 'BC land buying rules: fee-simple lots, bare-land strata, Agricultural Land Reserve limits and what to check before buying land. Jared Gibbons, REALTOR®.', 'BC Land Buying Rules: ALR, Bare-Land Strata, Fee Simple')}
     for kind, K in KIND.items():
         sh = sh_all[kind]; ks = sorted(sh['b'], key=lambda k: -sh['cb'][k])
         if not ks: continue

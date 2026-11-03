@@ -102,7 +102,7 @@ import { reviews, awards, listings, areas, southSurreyLinks, langleyLinks, langl
     <div class="wrap">
       <h2 id="h-seen" class="h2 h2--caps">As Seen In</h2>
       <ul class="seen">
-        {[1,2,3,4,5,6,7,8].map((n) => <li class="seen__tile"><img src={`/img/as-seen-in-${n}.webp`} alt="" loading="lazy" decoding="async" /></li>)}
+        {[['Craigslist',164],['REW.ca',147],['Realtylink',122],['LoopNet',150],['Spacelist',99],['REALTOR.ca',225],['Royal LePage',206],['Kijiji',338]].map(([name, h], i) => <li class="seen__tile"><img src={`/img/as-seen-in-${i + 1}.webp`} alt={name} width="640" height={h} loading="lazy" decoding="async" /></li>)}
       </ul>
       <p class="preview-flag">Archive note B-08: these 8 logo slides are image links to “/” with empty alt text (no accessible name). Rendered unlinked pending your decision D-08. Logo order follows the supplied file numbering; confirm against the live carousel (OI-12).</p>
     </div>

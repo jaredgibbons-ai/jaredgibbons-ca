@@ -97,7 +97,7 @@ def main():
         if cx_cur and (cx_cur.get('inventory') or cx_cur.get('sales')):
             cnoun = KINDS[cross_t]['noun']
             bl.append({'t': 'h', 'level': 2, 'text': f'{kd["short"]} or {cnoun} in {disp}?', 'gen': 'typepage'})
-            link = f' The {disp} {cnoun} page has those figures.' if cross_slug else ''
+            link = f" {disp if disp.lower().startswith('the ') else 'The ' + disp} {cnoun} page has those figures." if cross_slug else ''
             bl.append({'t': 'p', 'text': f'{disp} also had {L.num(cx_cur.get("inventory"))} {cnoun} listed and {L.num(cx_cur.get("sales"))} sold in {mn}, against {L.num(cur["inventory"])} {kd["noun"]} listed.' + link, 'gen': 'typepage'})
         pre = C.CITY[ak][1] if ak != 'south-surrey-white-rock' else 'south-surrey'
         exists = lambda s: s in pages or s in locs or s in slugs.values()

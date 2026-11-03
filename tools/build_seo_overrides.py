@@ -84,5 +84,30 @@ for slug, (head, h1, desc) in ROWS.items():
     if desc: e['description'] = desc
     out[slug] = e
     assert len(e['title']) <= 66, (slug, len(e['title']))
+# Added 2026-11-03 (site pass): archive pages that had no meta description (and one with no H1). Nothing else about these pages changes.
+EXTRA = {
+ "langleycity": {
+  "description": "Langley City land use plans and zoning maps explained: what the City's plans allow and what buyers should confirm for a lot. Jared Gibbons, REALTOR®."
+ },
+ "holly": {
+  "description": "Holly, Ladner homes for sale in Delta, BC: houses, townhomes and condos, streets, schools and what to know before you buy. Jared Gibbons, REALTOR®."
+ },
+ "langley-homes-for-sale": {
+  "description": "Langley homes for sale: MLS® listings across Willoughby, Walnut Grove, Murrayville, Brookswood and Fort Langley, with local advice. Jared Gibbons, REALTOR®."
+ },
+ "subscribe-to-our-newsletter": {
+  "description": "Get South Surrey, White Rock and Langley real estate updates by email: new listings, market stats and local news from Jared Gibbons, REALTOR®."
+ },
+ "cheap-mobile-homes-langley-under-500k": {
+  "description": "Mobile homes for sale in Langley under $500,000: parks, pad rent and what to check before buying a manufactured home. Jared Gibbons, REALTOR®."
+ },
+ "our-listings": {
+  "description": "Jared Gibbons' active and sold listings in South Surrey, White Rock, Langley and the Fraser Valley, with photos and details. Call 604-928-1361."
+ },
+ "lake-city-industrial": {
+  "h1": "Lake City Industrial, Burnaby: Industrial Property for Sale"
+ }
+}
+for slug, e in EXTRA.items(): out.setdefault(slug, {}).update(e)
 json.dump(out, open('src/data/seo-overrides.json', 'w'), indent=1, ensure_ascii=False)
 print(len(out), 'overrides')

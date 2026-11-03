@@ -82,7 +82,7 @@ def main():
         districts = sorted({dist(r) for r in sch if lvl(r) in ('elementary', 'middle', 'secondary', 'other')})
         main_d = collections.Counter(dist(r) for r in sch if lvl(r) in ('elementary', 'middle', 'secondary', 'other')).most_common()
         group_n = sum(1 for r in kids if 'Licensed Group' in r['district_or_authority']); fam_n = sum(1 for r in kids if 'Licensed Family' in r['district_or_authority'])
-        title = f'Schools in {disp}, BC | Full List by Level | Jared Gibbons'
+        title = next(x for x in (f'Schools in {disp}, BC | Full List by Level | Jared Gibbons', f'Schools in {disp}, BC | Full List | Jared Gibbons', f'Schools in {disp}, BC | Jared Gibbons') if len(x) <= 66)
         desc = (f'Browse {num(k12)} public and independent schools with a {disp} address, grouped by level with street addresses. '
                 f'From the BC Ministry of Education and Child Care list.')[:158]
         h1 = f'Schools in {disp}, BC'

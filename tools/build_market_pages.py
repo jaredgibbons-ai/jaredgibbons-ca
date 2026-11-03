@@ -155,7 +155,7 @@ def main():
         faq = [{'q': f'What is the benchmark price of a home in {disp}?', 'a': ' '.join(f'In {when}, a typical {x[2]} home was {money((data["gvr"] if x[0] == "gvr" else data["fvreb"])["hpi"][x[1]]["composite"]["benchmark"])}, with detached at {money((data["gvr"] if x[0] == "gvr" else data["fvreb"])["hpi"][x[1]]["detached"]["benchmark"])}.' for x in areas)},
                {'q': f'Are {disp} home prices rising or falling?', 'a': ' '.join(f'{x[2]} is {mv((data["gvr"] if x[0] == "gvr" else data["fvreb"])["hpi"][x[1]]["composite"]["chg_1y"])} over twelve months and {mv((data["gvr"] if x[0] == "gvr" else data["fvreb"])["hpi"][x[1]]["composite"]["chg_3m"])} over three months.' for x in areas)},
                ]
-        title = f'{disp} Real Estate Market Stats {when} | Benchmark Prices | Jared Gibbons'
+        title = next(x for x in (f'{disp} Real Estate Market Stats {when} | Jared Gibbons', f'{disp} Market Stats {when} | Jared Gibbons', f'{disp} Market Stats {when}') if len(x) <= 66 or x.count('|') == 0 and len(x) <= 80)
         desc = f'{disp} MLS® benchmark prices for {when}: {money(c["benchmark"])} for a typical {first[2]} home, {mv(c["chg_1y"])} in a year, with detached, townhouse and apartment trends.'[:158]
         d = {'status': 'generated', 'slug': page, 'updated': UPDATED, 'new_page': {'title': title, 'description': desc, 'h1': f'{disp} Real Estate Market Stats, {when}'},
              'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': f'{disp} market stats', 'href': f'/{page}.html'}],

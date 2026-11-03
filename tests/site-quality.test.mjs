@@ -1,0 +1,37 @@
+// Checks the built pages in dist/ (run after `npm run build`): every internal link lands on a page, one H1 per page, heading levels in order,
+// a title and a meta description, image alt text and dimensions. Skipped when dist/ is not built.
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const DIST = path.join(path.dirname(new URL(import.meta.url).pathname), '..', 'dist');
+const built = fs.existsSync(path.join(DIST, 'index.html'));
+const WORKER_SERVED = /^\/(?:listing-photos\/|blog\.html\/|our-listings\.html\/|recip\.html\/|mylistings\.html\/|fort-langley\.html\/listing\.|[a-z0-9-]+\.html\/listing\.)/;
+const pages = built ? fs.readdirSync(DIST).filter((f) => f.endsWith('.html') && f !== '404.html') : [];
+const html = (f) => fs.readFileSync(path.join(DIST, f), 'utf8');
+const exists = (p) => { const q = decodeURI(p).replace(/^\//, ''); return !q || fs.existsSync(path.join(DIST, q)) || fs.existsSync(path.join(DIST, q + '.html')); };
+
+test('built pages: every internal link lands on a page the site serves', { skip: !built }, () => {
+  const bad = [];
+  for (const f of pages) for (const m of html(f).matchAll(/<a\b[^>]*\shref="(\/[^"#?]*)/g)) if (!m[1].startsWith('//') && !WORKER_SERVED.test(m[1]) && !exists(m[1])) bad.push(`${f} -> ${m[1]}`);
+  assert.equal(bad.length, 0, `broken internal links: ${bad.slice(0, 8).join('; ')}`);
+});
+
+test('built pages: one H1, heading levels in order, title and meta description present', { skip: !built }, () => {
+  const bad = [];
+  for (const f of pages) {
+    const t = html(f); const main = t.slice(t.indexOf('<main'), t.indexOf('</main>') + 1);
+    if ((main.match(/<h1\b/g) || []).length !== 1) bad.push(`${f}: h1 count`);
+    let prev = 0; for (const m of main.matchAll(/<h([1-6])\b/g)) { const l = +m[1]; if (prev && l > prev + 1) { bad.push(`${f}: h${prev} to h${l}`); break; } prev = l; }
+    if (!/<title>[^<]{5,}<\/title>/.test(t)) bad.push(`${f}: title`);
+    if (!/<meta name="description" content="[^"]{40,}"/.test(t)) bad.push(`${f}: meta`);
+  }
+  assert.equal(bad.length, 0, bad.slice(0, 8).join('; '));
+});
+
+test('built pages: every image has alt text and dimensions (listing photos excepted)', { skip: !built }, () => {
+  const bad = [];
+  for (const f of pages) for (const m of html(f).matchAll(/<img\b([^>]*)>/g)) { const a = m[1]; if (!/\balt=/.test(a) || (!/\bwidth=/.test(a) && !/listing-photos/.test(a))) bad.push(`${f}: ${a.slice(0, 60)}`); }
+  assert.equal(bad.length, 0, bad.slice(0, 5).join('; '));
+});
