@@ -26,3 +26,9 @@ Field names may differ slightly. Paste:
 2. Create an OAuth client ID. Jared authorizes once; the refresh token goes into Cloudflare secrets through the secure setup, never in chat or the repo.
 3. Scheduled Worker pulls reviews, stores them, and the reviews page renders from the stored copy.
 Interim: reviews.html uses the archived reviews as static content. No star-rating structured data for the business's own reviews (Google treats it as self-serving).
+
+## Status 2026-11-03
+- OAuth client "Jared Gibbons website reviews" (Web application) exists; Jared authorised `business.manage` once through the OAuth Playground with his own client.
+- Worker secrets `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REFRESH_TOKEN` are set by Jared on the Worker `jg-reviews` (placeholder Hello World Worker; the reviews code deploys over it and the secrets stay). No values are in the repo or docs.
+- Jared to-do in Google Cloud: delete the older client secrets (keep only the one now in Cloudflare) and set the consent screen to In production so the refresh token does not expire after 7 days.
+- The reviews Worker is not built yet. It is built and switched on only once the API quota shows 300 QPM.
