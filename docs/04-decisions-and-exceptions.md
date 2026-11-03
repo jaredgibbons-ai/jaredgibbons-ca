@@ -487,3 +487,9 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 - Held back on purpose: virtually staged shots, unit-specific decks/balconies, shop signs and shots with people, readable plates or tradespeople (R2506376-25, R2632300-02).
 - Own-photo rows in `tools/build_area_photos.py` (`OWN2`) take the PAGE slug directly (e.g. `grandview-heights-guide`), not the photo-area slug.
 - Open: confirm Jared's photographer licence covers website use of listing photos.
+
+### D-90 (2026-11-03): "Area Thoughts" published as "Jared's take"
+- Source: Jared's PDF "Area Thoughts" (219 neighbourhood and city entries, his own words). Parsed by `tools/build_area_thoughts.py` into `src/data/area-thoughts.json` (the source of truth; the PDF is not needed to rebuild). `python3 -I tools/build_area_thoughts.py --apply` writes a "Jared's take on <area>" block (gen `jtake`) onto ONE page per area (houses-for-sale first, then the area page/guide) so the paragraph is not repeated on sibling pages.
+- 185 entries are published. 34 state a year, number, distance or a superlative ("largest", "only", "oldest", "named for") and are held in `docs/review/area-thoughts-to-verify-2026-11-03.csv` until checked against an official page (standing rule: only numbers and dates an official page states).
+- Effect on the uniqueness score is small (about 60 words per page): 92 pages improved, under-0.70 count 27 -> 24 of 458 scored. The bigger gains still need the facts research and Muse question sheets.
+- Run `--apply` after the other build_* generators; they only remove their own `gen` blocks, so `jtake` survives either way.

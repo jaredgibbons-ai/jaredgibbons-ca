@@ -1,1128 +1,1139 @@
 {
-  "blocks": [
-    {
-      "gen": "gappage",
-      "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet."
-    },
-    {
-      "gen": "gappage",
-      "t": "p",
-      "text": "New Westminster condos for sale: apartment-style homes in strata buildings. The Greater Vancouver REALTORS® benchmark for apartments (condos) in New Westminster was $579,900 in September 2026 (-7.5% over a year). Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees."
-    },
-    {
-      "gen": "gappage",
-      "t": "grid"
-    },
-    {
-      "gen": "sold",
-      "level": 2,
-      "t": "h",
-      "text": "New Westminster condos sold, November 2025 to October 2026"
-    },
-    {
-      "gen": "sold",
-      "t": "p",
-      "text": "568 condos sold in New Westminster with a median price of $580,000 (the middle half sold between $485,000 and $680,150), taking a median of 28 days to sell at 97.3% of the last list price; 7% sold above list. They had a median $629 per square foot, a median year built of 2006 and a median strata fee of $547 a month."
-    },
-    {
-      "caption": "New Westminster: condos sold by quarter",
-      "gen": "sold",
-      "head": [
-        "Period",
-        "Sold",
-        "Median price"
-      ],
-      "rows": [
-        [
-          "Nov 2025 to Jan 2026",
-          "137",
-          "$580,000"
-        ],
-        [
-          "Feb to Apr 2026",
-          "168",
-          "$592,750"
-        ],
-        [
-          "May to Jul 2026",
-          "169",
-          "$575,000"
-        ],
-        [
-          "Aug to Oct 2026",
-          "94",
-          "$545,000"
-        ]
-      ],
-      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
-      "t": "table"
-    },
-    {
-      "caption": "New Westminster: condos sold by community",
-      "gen": "sold",
-      "head": [
-        "Community",
-        "Sold",
-        "Median price",
-        "Median days to sell",
-        "Sold vs list",
-        "Median per sq ft"
-      ],
-      "rows": [
-        [
-          "Downtown",
-          "133",
-          "$519,900",
-          "23 days",
-          "97.5%",
-          "$662"
-        ],
-        [
-          "Quay",
-          "127",
-          "$630,000",
-          "28 days",
-          "97.3%",
-          "$632"
-        ],
-        [
-          "Uptown",
-          "125",
-          "$529,000",
-          "25 days",
-          "97.0%",
-          "$548"
-        ],
-        [
-          "Fraserview",
-          "71",
-          "$645,000",
-          "21 days",
-          "97.1%",
-          "$599"
-        ],
-        [
-          "Queensborough",
-          "53",
-          "$690,000",
-          "33 days",
-          "97.7%",
-          "$655"
-        ],
-        [
-          "Sapperton",
-          "42",
-          "$526,250",
-          "37 days",
-          "97.3%",
-          "$697"
-        ],
-        [
-          "GlenBrooke North",
-          "12",
-          "$540,000",
-          "36 days",
-          "96.3%",
-          "$667"
-        ]
-      ],
-      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
-      "t": "table"
-    },
-    {
-      "caption": "New Westminster: buildings and complexes with the most condos sold",
-      "gen": "sold",
-      "head": [
-        "Building or complex",
-        "Sold",
-        "Median price",
-        "Median days to sell",
-        "Median year built",
-        "Median strata fee"
-      ],
-      "rows": [
-        [
-          "Timber House",
-          "15",
-          "$790,900",
-          "12 days",
-          "2023",
-          "$547 a month"
-        ],
-        [
-          "Palace Quay",
-          "11",
-          "$645,000",
-          "18 days",
-          "1992",
-          "$580 a month"
-        ],
-        [
-          "Pier West",
-          "11",
-          "$966,000",
-          "27 days",
-          "2024",
-          "$621 a month"
-        ],
-        [
-          "The Riviera",
-          "10",
-          "$752,500",
-          "42 days",
-          "1991",
-          "$707 a month"
-        ],
-        [
-          "Copperstone",
-          "9",
-          "$558,100",
-          "54 days",
-          "2008",
-          "$405 a month"
-        ],
-        [
-          "Trapp + Holbrook",
-          "7",
-          "$460,000",
-          "35 days",
-          "2015",
-          "$395 a month"
-        ],
-        [
-          "Riversky 1",
-          "7",
-          "$491,000",
-          "55 days",
-          "2019",
-          "$388 a month"
-        ],
-        [
-          "Discovery Reach",
-          "7",
-          "$545,000",
-          "12 days",
-          "1998",
-          "$511 a month"
-        ],
-        [
-          "Azure 1",
-          "6",
-          "$586,500",
-          "19 days",
-          "2008",
-          "$499 a month"
-        ],
-        [
-          "Ovation",
-          "6",
-          "$492,000",
-          "11 days",
-          "2024",
-          "$395 a month"
-        ],
-        [
-          "Quayside",
-          "6",
-          "$587,250",
-          "36 days",
-          "1988",
-          "$581 a month"
-        ],
-        [
-          "Anchor Pointe",
-          "6",
-          "$612,500",
-          "18 days",
-          "1989",
-          "$659 a month"
-        ]
-      ],
-      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
-      "t": "table"
-    },
-    {
-      "gen": "gappage",
-      "level": 2,
-      "t": "h",
-      "text": "New Westminster apartments (condos): benchmark price and changes, September 2026"
-    },
-    {
-      "caption": "New Westminster apartments (condos), MLS® Home Price Index, September 2026",
-      "gen": "gappage",
-      "head": [
-        "Area",
-        "Benchmark price",
-        "Index",
-        "1 month",
-        "3 months",
-        "6 months",
-        "1 year",
-        "3 years",
-        "5 years",
-        "10 years"
-      ],
-      "rows": [
-        [
-          "New Westminster",
-          "$579,900",
-          "355.8",
-          "+0.7%",
-          "-1.1%",
-          "-2.0%",
-          "-7.5%",
-          "-12.6%",
-          "+2.3%",
-          "+55.9%"
-        ]
-      ],
-      "source": "Source: Greater Vancouver REALTORS®, MLS® Home Price Index, September 2026 (released October 2, 2026). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at 1.5% or more.",
-      "t": "table"
-    },
-    {
-      "gen": "gappage",
-      "t": "p",
-      "text": "New Westminster: the apartments (condos) benchmark was $579,900 in September 2026. Over the past year it fell 7.5%; over three months it was little changed (-1.1%, under the 1.5% we need before calling it a move); over the last month it was little changed (+0.7%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 12.6%; over 5 years it rose 2.3%; over 10 years it rose 55.9%."
-    },
-    {
-      "gen": "gappage",
-      "level": 2,
-      "t": "h",
-      "text": "New Westminster condos and townhomes by community, October 2026"
-    },
-    {
-      "caption": "New Westminster condos and townhomes listed, sold and sales ratio by community, October 2026",
-      "gen": "gappage",
-      "head": [
-        "Community",
-        "Listed",
-        "Sold",
-        "Sales ratio"
-      ],
-      "rows": [
-        [
-          "Uptown",
-          "97",
-          "23",
-          "24%"
-        ],
-        [
-          "Downtown",
-          "96",
-          "15",
-          "16%"
-        ],
-        [
-          "Queensborough",
-          "71",
-          "7",
-          "10%"
-        ],
-        [
-          "Fraserview",
-          "57",
-          "7",
-          "12%"
-        ],
-        [
-          "Quay",
-          "51",
-          "7",
-          "14%"
-        ],
-        [
-          "Sapperton",
-          "30",
-          "1",
-          "3%"
-        ],
-        [
-          "GlenBrooke North",
-          "8",
-          "5",
-          "63%"
-        ],
-        [
-          "West End",
-          "2",
-          "0",
-          "—"
-        ],
-        [
-          "Moody Park",
-          "1",
-          "1",
-          "100%"
-        ],
-        [
-          "Brunette",
-          "0",
-          "0",
-          "—"
-        ],
-        [
-          "Connaught Heights",
-          "0",
-          "0",
-          "—"
-        ],
-        [
-          "North Arm",
-          "0",
-          "0",
-          "—"
-        ],
-        [
-          "Queens Park",
-          "0",
-          "0",
-          "—"
-        ],
-        [
-          "The Heights",
-          "0",
-          "0",
-          "—"
-        ]
-      ],
-      "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal. Condos and townhomes are one line in the reports.",
-      "t": "table"
-    },
-    {
-      "gen": "gappage",
-      "t": "p",
-      "text": "Community pages for New Westminster:"
-    },
-    {
-      "gen": "gappage",
-      "items": [
-        [
-          {
-            "h": "/uptown-new-westminster.html",
-            "t": "Uptown"
-          }
-        ],
-        [
-          {
-            "h": "/downtown-nw.html",
-            "t": "Downtown"
-          }
-        ],
-        [
-          {
-            "h": "/queensborough.html",
-            "t": "Queensborough"
-          }
-        ],
-        [
-          {
-            "h": "/fraserview-nw.html",
-            "t": "Fraserview"
-          }
-        ],
-        [
-          {
-            "h": "/quay.html",
-            "t": "Quay"
-          }
-        ],
-        [
-          {
-            "h": "/sapperton-new-westminster.html",
-            "t": "Sapperton"
-          }
-        ],
-        [
-          {
-            "h": "/glenbrooke-north.html",
-            "t": "GlenBrooke North"
-          }
-        ],
-        [
-          {
-            "h": "/west-end-new-westminster.html",
-            "t": "West End"
-          }
-        ],
-        [
-          {
-            "h": "/moody-park.html",
-            "t": "Moody Park"
-          }
-        ],
-        [
-          {
-            "h": "/connaught-heights.html",
-            "t": "Connaught Heights"
-          }
-        ]
-      ],
-      "t": "list"
-    },
-    {
-      "gen": "gappage",
-      "level": 2,
-      "t": "h",
-      "text": "Secondary schools in New Westminster"
-    },
-    {
-      "gen": "gappage",
-      "t": "p",
-      "text": "7 secondary schools are located in the City of New Westminster: 7 in SD40 New Westminster. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district."
-    },
-    {
-      "gen": "gappage",
-      "items": [
-        [
-          {
-            "t": "Home Learners Program (elementary and secondary), 521 Fader St"
-          }
-        ],
-        [
-          {
-            "t": "New Westminster Continuing Education (secondary), 820 6th St"
-          }
-        ],
-        [
-          {
-            "t": "New Westminster Secondary (secondary), 820 6th St"
-          }
-        ],
-        [
-          {
-            "t": "Power Alternate Secondary School (secondary), 200-1065 Columbia St"
-          }
-        ],
-        [
-          {
-            "t": "Queensborough Middle School (elementary and secondary), 833 Salter St"
-          }
-        ],
-        [
-          {
-            "t": "Royal City Alternate Program (secondary), 200 - 1065 Columbia Street"
-          }
-        ],
-        [
-          {
-            "t": "Sigma (secondary), 820 Sixth Street"
-          }
-        ]
-      ],
-      "t": "list"
-    },
-    {
-      "gen": "gappage",
-      "level": 2,
-      "t": "h",
-      "text": "Before you buy condos in New Westminster"
-    },
-    {
-      "gen": "gappage",
-      "t": "p",
-      "text": "Jared checks these with you on the exact address before you write an offer:"
-    },
-    {
-      "gen": "gappage",
-      "items": [
-        [
-          {
-            "h": "/mortgage-calculator.html",
-            "t": "Mortgage calculator"
-          }
-        ],
-        [
-          {
-            "h": "/home-evaluation.html",
-            "t": "Home evaluation"
-          }
-        ]
-      ],
-      "t": "list"
-    },
-    {
-      "gen": "gappage",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "More New Westminster real estate"
-    },
-    {
-      "gen": "gappage",
-      "items": [
-        [
-          {
-            "h": "/new-westminster-homes-for-sale.html",
-            "t": "New Westminster homes for sale"
-          }
-        ],
-        [
-          {
-            "h": "/new-westminster-real-estate-market-stats.html",
-            "t": "New Westminster real estate market stats"
-          }
-        ],
-        [
-          {
-            "h": "/fraser-valley-market-stats.html",
-            "t": "Fraser Valley market stats"
-          }
-        ],
-        [
-          {
-            "h": "/mortgage-calculator.html",
-            "t": "Mortgage calculator"
-          }
-        ],
-        [
-          {
-            "h": "/home-evaluation.html",
-            "t": "Home evaluation"
-          }
-        ],
-        [
-          {
-            "h": "/contact.html",
-            "t": "Contact Jared"
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "tn_hub",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "New Westminster neighbourhood guides"
-    },
-    {
-      "gen": "tn_hub",
-      "items": [
-        [
-          {
-            "h": "/brunette-new-westminster-guide.html",
-            "t": "Brunette real estate guide"
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "New Westminster Condos: streets and boundaries"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "t": "New Westminster's condo stock is organized around its five SkyTrain stations, because the City states Transit Oriented Development (TOD) Areas enable density within 800 metres of the City's five SkyTrain stations. Downtown, the Quay, Sapperton and Uptown each sit in relation to one of those mainland station areas, while Queensborough is planned under its own community plan."
-          }
-        ],
-        [
-          {
-            "t": "Downtown's condo core clusters around New Westminster Station and Columbia Station, because developer EDGAR's own project writing states New Westminster already has many transit-oriented developments primarily clustered around New Westminster Station and Columbia Station in the downtown core, such as the Plaza 88 mixed-use complex built around New Westminster Station."
-          }
-        ],
-        [
-          {
-            "t": "Sapperton's condo node is the Brewery District on Keary Street, because Wesgroup states its Brewery District is in the Sapperton neighbourhood, on the former Labatt brewery site, steps from the Sapperton SkyTrain Station. Keary Street and Brunette Avenue are the streets that node is addressed from."
-          }
-        ],
-        [
-          {
-            "t": "Queensborough is planned under its own community plan, because the City states the Queensborough Community Plan is the key guiding document for new development in Queensborough, with its own land use designations and development permit guidelines. The Queensborough Eastern Neighbourhood Node inside that plan is defined by Stanley Street to the west, Duncan Street to the north and east, and Ewen Avenue to the south."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "New Westminster Condos: the housing stock"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "t": "Downtown holds the city's tower stock around its two stations, because EDGAR states transit-oriented developments in New Westminster are primarily clustered around New Westminster Station and Columbia Station in the downtown core, with Plaza 88 built around New Westminster Station as the named example. Tower condos elsewhere in the city are the exception to that downtown pattern."
-          }
-        ],
-        [
-          {
-            "t": "Sapperton's stock is a single master-planned district's buildings, because Wesgroup states the Brewery District is a completed community of residential highrises, shops and office buildings on the former brewery site, and that The Keary is the final ownership opportunity in that district. A Sapperton condo search is therefore largely a search within one developer's district on Keary Street."
-          }
-        ],
-        [
-          {
-            "t": "Queensborough's multi-family stock is governed by named development permit areas, because the City lists Queensborough residential Development Permit Areas including Ewen Avenue Multi-Family, Compact Lot, East Queensborough, Port Royal and Queensborough Eastern Node. The form of a Queensborough condo or multi-family building is set by which of those permit areas the parcel falls in."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "New Westminster Condos: rules that affect buyers"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "t": "The zoning document is Zoning Bylaw No. 6680, 2001, consolidated as of June 8, 2026, according to the City's zoning bylaw page. The City states amendment bylaws have been combined with the original bylaw for convenience only and the consolidation is not a legal document, so a condo buyer checking a building's zone should cite the consolidation date, not treat the web copy as the legal text."
-          }
-        ],
-        [
-          {
-            "t": "Station-area density still requires a rezoning, because the City states that in February 2026 Council amended the Official Community Plan (OCP) designations in the Transit Oriented Development Areas to allow the minimum provincial densities, but no changes were made to zoning, meaning a rezoning application is still required before the new heights and densities can be built. An OCP designation on a condo site is not a building approval."
-          }
-        ],
-        [
-          {
-            "t": "New multi-unit buildings must include in-unit or common storage, because the City states Council in May 2025 approved requirements that residential storage space of at least 3.7 square metres (39.8 square feet) be provided for all new dwelling units, within the unit or in a common storage room, applying to applications received on or after May 5, 2025. That rule changes what a new condo unit includes compared with the existing stock."
-          }
-        ],
-        [
-          {
-            "t": "Family-sized units are now a bylaw requirement in new multi-unit buildings, because the City states the updated Family-Friendly Housing Policy, implemented by Zoning Bylaw changes in November 2024, increases the minimum number of two- and three-bedroom units required and establishes minimum unit sizes. For rental projects, after a two-year transition, a minimum of 35 percent two- and three-bedroom units, with at least 10 percent three-bedroom or more, is required effective November 18, 2026."
-          }
-        ],
-        [
-          {
-            "t": "Townhouse zoning now has named districts, because the City's Interim Development Review Framework, updated June 22, 2026, states townhouses are expected to rezone to Residential Townhouse (RT)-A or RT-B zoning districts, and infill housing to Residential Ground-Oriented Infill (RGO)-A or RGO-B districts. The Zoning Bylaw's multi-unit residential volume states the intent of RT-A (district 405, Bylaw 8524, 2025) and RT-B (district 406) directly, which settles the district names in the current bylaw text."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "New Westminster Condos: local details a buyer would not know"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "t": "Plaza 88 is built around New Westminster Station itself, because EDGAR describes it as the Plaza 88 mixed-use complex built around New Westminster Station in the downtown core. A downtown condo's station access can therefore be internal to its own complex, which is a different condition from the walk-to-station access in Sapperton or Uptown."
-          }
-        ],
-        [
-          {
-            "t": "The Keary's name is a Sapperton street history, because Wesgroup states Royal Engineer James Keary and his family arrived in New Westminster, his son William later became Mayor of New Westminster, and Keary Street and The Keary continue to honour the family name. The building at 230 Keary Street is named for the street's own family, not a marketing invention."
-          }
-        ],
-        [
-          {
-            "t": "A riverfront connection is proposed between the city's two river parks, because the City states it proposes completing the Brunette-Fraser Regional Greenway with a floating greenway between Westminster Pier Park and Sapperton Landing Park, passing under the New Westminster Rail Bridge and the new Pattullo Bridge. Quay and Sapperton condos sit at the two ends of that proposed link."
-          }
-        ],
-        [
-          {
-            "t": "Queensborough condo parcels can carry a flood permit layer the downtown towers do not, because the City lists a Flood Hazard Development Permit Area among Queensborough's Development Permit Areas, and states single detached dwellings on lots of 371.6 square metres or more are exempt from the other Queensborough guidelines but not from the Flood Hazard guidelines."
-          }
-        ],
-        [
-          {
-            "t": "The 22nd Street station area is under a City-led planning hold, because the City states that while the reGENERATE Vision planning work continues, expected through 2025 and into mid-2027, most development applications around the SkyTrain station and Transit Village will be considered premature. West End and 22nd Street area condo proposals therefore face a stated pause that downtown proposals do not."
-          }
-        ],
-        [
-          {
-            "t": "School District No. 40 (New Westminster) has exactly one secondary school for the whole city, New Westminster Secondary School at 820 6th Street, so a condo buyer's secondary catchment does not change between Downtown, the Quay, Sapperton, Uptown and Queensborough. Elementary and middle catchments do change, with Fraser River Middle School at 800 Queens Avenue and Queensborough Middle School at 833 Salter Street serving different parts of the city."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "New Westminster Condos: development and new projects"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "t": "Columbia Square, 88 Tenth Street, New Westminster; developer: EDGAR Development; home type: mixed-use community of eight towers with strata condos, market rental and affordable rental homes, plus daycare, office, retail and green space; unit count: approximately 2,400 homes in EDGAR's June 12, 2023 unveiling release, described as 3,800 homes in EDGAR's later transit-oriented development release. STATUS: rezoning application submitted to the City in February 2023, per the developer — read 2026-11-03."
-          }
-        ],
-        [
-          {
-            "t": "65 First Street, New Westminster; developer: Merchant Housing Capital; home type: 31-storey tower and 35-storey tower; unit count: 304 strata units, 299 market rental units and 30 below-market rental units, as stated by EDGAR's project summary of applications near Columbia Station. STATUS: rezoning application received by the City, per the developer summary — read 2026-11-03."
-          }
-        ],
-        [
-          {
-            "t": "STATUS: proposal considered by Council earlier in the year described by the developer summary — read 2026-11-03."
-          }
-        ],
-        [
-          {
-            "t": "STATUS: presented by Wesgroup as the final opportunity to own a home in the Brewery District, steps from Sapperton SkyTrain Station — read 2026-11-03."
-          }
-        ],
-        [
-          {
-            "t": "STATUS: Official Community Plan amendments adopted May 2026 — read 2026-11-03."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "New Westminster Condos: costs and taxes"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "t": "New condo projects carry the Amenity Cost Charge, because the City states Amenity Cost Charge Bylaw No. 8540, 2025, adopted December 1, 2025, requires development applications to assist in funding new amenities such as community centres, libraries and child care. The City directs readers to its Financing Growth webpage for current rates, which are the rates a presale buyer should check against the developer's disclosure."
-          }
-        ],
-        [
-          {
-            "t": "Development Cost Charges were widened in 2026, because the City states Development Cost Charge Bylaw Amendment Bylaw No. 8539, 2025, adopted January 12, 2026, updated the charges to include additional categories for fire protection and police facilities permitted by provincial legislation, and that updated rates are in effect. A project approved before that date and a project approved after it do not carry the same charge categories."
-          }
-        ],
-        [
-          {
-            "t": "Inclusionary housing is a stated cost of added density, because the City states its Inclusionary Housing Policy, updated September 8, 2025, sets the expectation that applicable multiple unit residential or mixed-use applications seeking increases in development entitlements will contribute towards below market housing units. That contribution is part of a new condo project's economics in New Westminster, separate from the two charge bylaws above."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "New Westminster Condos: getting around"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "t": "Five SkyTrain stations serve the city, because the City states its Transit Oriented Development Areas enable density within 800 metres of the City's five SkyTrain stations. TransLink's Expo Line timetable lists the in-city sequence as 22nd Street, New Westminster and Columbia on the King George branch, and Columbia, Sapperton and Braid on the Production Way–University branch."
-          }
-        ],
-        [
-          {
-            "t": "22nd Street Station is addressed at 649 22nd Street, because TransLink's station map for 22nd Street Station gives that address in New Westminster, with bus bays for routes including the 410 to Richmond-Brighouse, the 101 to Lougheed Station, the 104 to Annacis Island and the 100 to Marpole Loop. A West End condo's transit is that station's bus grid as much as the Expo Line itself."
-          }
-        ],
-        [
-          {
-            "t": "Queensborough has no station in TransLink's in-city Expo Line list, which names 22nd Street, New Westminster, Columbia, Sapperton and Braid stations, so its condo transit runs to those mainland stations. The City's Queensborough planning documents treat Queensborough under its own community plan, separate from the mainland station areas, which is why Queensborough development is reviewed against the Queensborough Community Plan rather than a station-area designation."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "New Westminster Condos: risks and due diligence"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "t": "Do not price a site on provincial TOD heights alone, because the City's speculation disclaimer states the transit oriented development area tiers and maps do not create development rights, that development rights are determined by the Zoning Bylaw, and that the City cautions against speculation based on anticipating Council's decisions. A rezoning is the step that changes a condo site's rights."
-          }
-        ],
-        [
-          {
-            "t": "A redevelopment assembly with sitting rental units carries both policies."
-          }
-        ],
-        [
-          {
-            "t": "For Queensborough purchases, read the Development Permit Area for the parcel, because the City lists six categories of Queensborough Development Permit Areas, including the Flood Hazard area, and states that where a parcel falls within more than one area, one Development Permit may be issued if the guidelines for each area are addressed. A Queensborough condo's flood and form rules are parcel-specific."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "How New Westminster Condos compares"
-    },
-    {
-      "caption": "New Westminster Condos compared",
-      "gen": "uq",
-      "head": [
-        "Fact",
-        "New Westminster",
-        "Burnaby (Metrotown)",
-        "Surrey (City Centre)"
-      ],
-      "pos": "end",
-      "rows": [
-        [
-          "SkyTrain line serving the city centre",
-          "Expo Line",
-          "Expo Line",
-          "Expo Line"
-        ],
-        [
-          "Town / city centre status",
-          "—",
-          "Regional city centre and Burnaby's downtown",
-          "—"
-        ],
-        [
-          "Provincial housing target order stated by the municipality",
-          "4,432 net new units over five years, Housing Target Order July 2024",
-          "—",
-          "—"
-        ]
-      ],
-      "t": "table"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "Sources for New Westminster Condos"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "h": "https://www.newwestcity.ca/devprojects",
-            "t": "newwestcity.ca · devprojects"
-          }
-        ],
-        [
-          {
-            "h": "https://edgardevelopment.com/transit-oriented-developments-set-to-usher-in-a-new-new-westminster/",
-            "t": "edgardevelopment.com · transit oriented developments set to usher in a"
-          }
-        ],
-        [
-          {
-            "h": "https://wesgroup.ca/thekeary/neighbourhood/",
-            "t": "wesgroup.ca · neighbourhood"
-          }
-        ],
-        [
-          {
-            "h": "https://www.newwestcity.ca/planning-building-and-development/projects-on-the-go/articles/3475.php?status=complete",
-            "t": "newwestcity.ca"
-          }
-        ],
-        [
-          {
-            "h": "https://wesgroup.ca/residential/page/2/",
-            "t": "wesgroup.ca · page"
-          }
-        ],
-        [
-          {
-            "h": "https://www.newwestcity.ca/development-policies-and-process/development-permit-areas/sb_expander_articles/1184.php",
-            "t": "newwestcity.ca (2)"
-          }
-        ],
-        [
-          {
-            "h": "https://www.newwestcity.ca/zoning-bylaw/sb_expander_articles/1618.php",
-            "t": "newwestcity.ca (3)"
-          }
-        ],
-        [
-          {
-            "h": "https://www.newwestcity.ca/database/files/library/400_Multi_Unit_Residential___As_of_June_8_2026.pdf",
-            "t": "newwestcity.ca · 400 Multi Unit Residential As of June 8 2026"
-          }
-        ],
-        [
-          {
-            "h": "https://www.newwestcity.ca/riverfrontvision/articles/5969.php",
-            "t": "newwestcity.ca (4)"
-          }
-        ],
-        [
-          {
-            "h": "https://www.newwestcity.ca/planning-building-and-development/new-westminsters-official-community-plan/ocp-implementation-projects/22nd-street-station-area-bold-vision/sb_expander_articles/7272.php",
-            "t": "newwestcity.ca (5)"
-          }
-        ],
-        [
-          {
-            "h": "https://www.newwestcity.ca/new-provincial-housing-legislation",
-            "t": "newwestcity.ca · new provincial housing legislation"
-          }
-        ],
-        [
-          {
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/new-westminster",
-            "t": "studentsuccess.gov.bc.ca · new westminster"
-          }
-        ],
-        [
-          {
-            "h": "https://edgardevelopment.com/edgar-unveils-new-pedestrian-only-comprehensive-planned-community-in-new-westminster/",
-            "t": "edgardevelopment.com · edgar unveils new pedestrian only comprehensive"
-          }
-        ],
-        [
-          {
-            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt991.pdf",
-            "t": "infomaps.translink.ca · tt991"
-          }
-        ],
-        [
-          {
-            "h": "http://infomaps.translink.ca/system_maps/skytrain_station_maps/22nd_street_station.pdf",
-            "t": "infomaps.translink.ca · 22nd street station"
-          }
-        ],
-        [
-          {
-            "h": "https://www.newwestcity.ca/new-provincial-housing-legislation/transit-oriented-development-areas/sb_expander_articles/6750.php",
-            "t": "newwestcity.ca (6)"
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    }
-  ],
-  "breadcrumbs": [
-    {
-      "href": "/index.html",
-      "name": "Home"
-    },
-    {
-      "href": "/new-westminster-homes-for-sale.html",
-      "name": "New Westminster"
-    },
-    {
-      "href": "/new-westminster-condos-for-sale.html",
-      "name": "Condos"
-    }
-  ],
-  "faq": [
-    {
-      "a": "568 condos sold in New Westminster between November 1, 2025 to October 22, 2026, with a median price of $580,000.",
-      "gen": "sold",
-      "q": "What did condos in New Westminster sell for?"
-    },
-    {
-      "a": "The median was 28 days from listing to sale, and homes sold at a median 97.3% of the last list price (7% sold above list), for sales November 1, 2025 to October 22, 2026.",
-      "gen": "sold",
-      "q": "How long do condos take to sell in New Westminster?"
-    },
-    {
-      "a": "The middle half of the 568 condos that sold in New Westminster went for between $485,000 and $680,150, around a median of $580,000.",
-      "gen": "sold",
-      "q": "What price range do most condos in New Westminster sell in?"
-    },
-    {
-      "a": "7% of the 568 condos sold for more than the last list price, and the median sale was 97.3% of it.",
-      "gen": "sold",
-      "q": "Do condos in New Westminster sell above asking price?"
-    },
-    {
-      "a": "Of the 568 sales, 567 listings gave a monthly fee and the median was $547.",
-      "gen": "sold",
-      "q": "What is a typical strata fee for condos in New Westminster?"
-    },
-    {
-      "a": "The median year built was 2006 for the 568 condos sold in New Westminster.",
-      "gen": "sold",
-      "q": "How old are the condos that sold in New Westminster?"
-    },
-    {
-      "a": "The median condo that sold in New Westminster had 2 bedrooms, from the 568 sales between November 1, 2025 to October 22, 2026.",
-      "gen": "sold",
-      "q": "How many bedrooms do condos in New Westminster usually have?"
-    },
-    {
-      "a": "By number sold: Downtown NW (133), Quay (127), Uptown NW (125), for November 1, 2025 to October 22, 2026.",
-      "gen": "sold",
-      "q": "Which New Westminster communities sold the most condos?"
-    },
-    {
-      "a": "By number sold: Timber House (15), Palace Quay (11), Pier West (11), for November 1, 2025 to October 22, 2026.",
-      "gen": "sold",
-      "q": "Which New Westminster buildings sold the most condos?"
-    },
-    {
-      "a": "The Greater Vancouver REALTORS® MLS® Home Price Index benchmark for apartments (condos) in New Westminster was $579,900 in September 2026, a modelled price for a typical home and not an average of sales.",
-      "q": "What is the benchmark price of a condo in New Westminster?"
-    },
-    {
-      "a": "Over the past year the benchmark fell 7.5%. Over three months it was little changed (-1.1%, under the 1.5% we need before calling it a move). A change under 1.5% is not described as a rise or fall.",
-      "q": "Did condo prices fall in New Westminster?"
-    },
-    {
-      "a": "In October 2026 houses in New Westminster had a sales ratio of 10%, which the reports’ scale reads as a buyers’ market, and condos and townhomes 16%, which the reports’ scale reads as a balanced market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers.",
-      "q": "Is New Westminster a buyers’ or sellers’ market?"
-    },
-    {
-      "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the condos in New Westminster that match what you want.",
-      "q": "How many condos are for sale in New Westminster?"
-    }
-  ],
-  "faq_heading": "New Westminster Condos for Sale: your questions answered",
-  "gen_gap": true,
-  "hand_edited": true,
-  "needs_from_muse": [
-    "Live listing feed filtered to condos in New Westminster",
-    "Jared's own notes"
-  ],
-  "new_page": {
-    "description": "New Westminster condos for sale: apartment-style homes in strata buildings, with monthly listings and sales for New Westminster. Jared Gibbons, REALTOR®, Royal LePage Little Oak.",
-    "h1": "New Westminster Condos for Sale | Metro Vancouver Real Estate",
-    "title": "New Westminster Condos for Sale | Jared Gibbons REALTOR®"
+ "blocks": [
+  {
+   "gen": "gappage",
+   "t": "notice",
+   "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet."
   },
-  "slug": "new-westminster-condos-for-sale",
-  "status": "draft",
-  "updated": "2026-11-01"
+  {
+   "gen": "gappage",
+   "t": "p",
+   "text": "New Westminster condos for sale: apartment-style homes in strata buildings. The Greater Vancouver REALTORS® benchmark for apartments (condos) in New Westminster was $579,900 in September 2026 (-7.5% over a year). Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees."
+  },
+  {
+   "gen": "gappage",
+   "t": "grid"
+  },
+  {
+   "gen": "sold",
+   "level": 2,
+   "t": "h",
+   "text": "New Westminster condos sold, November 2025 to October 2026"
+  },
+  {
+   "gen": "sold",
+   "t": "p",
+   "text": "568 condos sold in New Westminster with a median price of $580,000 (the middle half sold between $485,000 and $680,150), taking a median of 28 days to sell at 97.3% of the last list price; 7% sold above list. They had a median $629 per square foot, a median year built of 2006 and a median strata fee of $547 a month."
+  },
+  {
+   "caption": "New Westminster: condos sold by quarter",
+   "gen": "sold",
+   "head": [
+    "Period",
+    "Sold",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Nov 2025 to Jan 2026",
+     "137",
+     "$580,000"
+    ],
+    [
+     "Feb to Apr 2026",
+     "168",
+     "$592,750"
+    ],
+    [
+     "May to Jul 2026",
+     "169",
+     "$575,000"
+    ],
+    [
+     "Aug to Oct 2026",
+     "94",
+     "$545,000"
+    ]
+   ],
+   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+   "t": "table"
+  },
+  {
+   "caption": "New Westminster: condos sold by community",
+   "gen": "sold",
+   "head": [
+    "Community",
+    "Sold",
+    "Median price",
+    "Median days to sell",
+    "Sold vs list",
+    "Median per sq ft"
+   ],
+   "rows": [
+    [
+     "Downtown",
+     "133",
+     "$519,900",
+     "23 days",
+     "97.5%",
+     "$662"
+    ],
+    [
+     "Quay",
+     "127",
+     "$630,000",
+     "28 days",
+     "97.3%",
+     "$632"
+    ],
+    [
+     "Uptown",
+     "125",
+     "$529,000",
+     "25 days",
+     "97.0%",
+     "$548"
+    ],
+    [
+     "Fraserview",
+     "71",
+     "$645,000",
+     "21 days",
+     "97.1%",
+     "$599"
+    ],
+    [
+     "Queensborough",
+     "53",
+     "$690,000",
+     "33 days",
+     "97.7%",
+     "$655"
+    ],
+    [
+     "Sapperton",
+     "42",
+     "$526,250",
+     "37 days",
+     "97.3%",
+     "$697"
+    ],
+    [
+     "GlenBrooke North",
+     "12",
+     "$540,000",
+     "36 days",
+     "96.3%",
+     "$667"
+    ]
+   ],
+   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
+   "t": "table"
+  },
+  {
+   "caption": "New Westminster: buildings and complexes with the most condos sold",
+   "gen": "sold",
+   "head": [
+    "Building or complex",
+    "Sold",
+    "Median price",
+    "Median days to sell",
+    "Median year built",
+    "Median strata fee"
+   ],
+   "rows": [
+    [
+     "Timber House",
+     "15",
+     "$790,900",
+     "12 days",
+     "2023",
+     "$547 a month"
+    ],
+    [
+     "Palace Quay",
+     "11",
+     "$645,000",
+     "18 days",
+     "1992",
+     "$580 a month"
+    ],
+    [
+     "Pier West",
+     "11",
+     "$966,000",
+     "27 days",
+     "2024",
+     "$621 a month"
+    ],
+    [
+     "The Riviera",
+     "10",
+     "$752,500",
+     "42 days",
+     "1991",
+     "$707 a month"
+    ],
+    [
+     "Copperstone",
+     "9",
+     "$558,100",
+     "54 days",
+     "2008",
+     "$405 a month"
+    ],
+    [
+     "Trapp + Holbrook",
+     "7",
+     "$460,000",
+     "35 days",
+     "2015",
+     "$395 a month"
+    ],
+    [
+     "Riversky 1",
+     "7",
+     "$491,000",
+     "55 days",
+     "2019",
+     "$388 a month"
+    ],
+    [
+     "Discovery Reach",
+     "7",
+     "$545,000",
+     "12 days",
+     "1998",
+     "$511 a month"
+    ],
+    [
+     "Azure 1",
+     "6",
+     "$586,500",
+     "19 days",
+     "2008",
+     "$499 a month"
+    ],
+    [
+     "Ovation",
+     "6",
+     "$492,000",
+     "11 days",
+     "2024",
+     "$395 a month"
+    ],
+    [
+     "Quayside",
+     "6",
+     "$587,250",
+     "36 days",
+     "1988",
+     "$581 a month"
+    ],
+    [
+     "Anchor Pointe",
+     "6",
+     "$612,500",
+     "18 days",
+     "1989",
+     "$659 a month"
+    ]
+   ],
+   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+   "t": "table"
+  },
+  {
+   "gen": "gappage",
+   "level": 2,
+   "t": "h",
+   "text": "New Westminster apartments (condos): benchmark price and changes, September 2026"
+  },
+  {
+   "caption": "New Westminster apartments (condos), MLS® Home Price Index, September 2026",
+   "gen": "gappage",
+   "head": [
+    "Area",
+    "Benchmark price",
+    "Index",
+    "1 month",
+    "3 months",
+    "6 months",
+    "1 year",
+    "3 years",
+    "5 years",
+    "10 years"
+   ],
+   "rows": [
+    [
+     "New Westminster",
+     "$579,900",
+     "355.8",
+     "+0.7%",
+     "-1.1%",
+     "-2.0%",
+     "-7.5%",
+     "-12.6%",
+     "+2.3%",
+     "+55.9%"
+    ]
+   ],
+   "source": "Source: Greater Vancouver REALTORS®, MLS® Home Price Index, September 2026 (released October 2, 2026). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at 1.5% or more.",
+   "t": "table"
+  },
+  {
+   "gen": "gappage",
+   "t": "p",
+   "text": "New Westminster: the apartments (condos) benchmark was $579,900 in September 2026. Over the past year it fell 7.5%; over three months it was little changed (-1.1%, under the 1.5% we need before calling it a move); over the last month it was little changed (+0.7%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 12.6%; over 5 years it rose 2.3%; over 10 years it rose 55.9%."
+  },
+  {
+   "gen": "gappage",
+   "level": 2,
+   "t": "h",
+   "text": "New Westminster condos and townhomes by community, October 2026"
+  },
+  {
+   "caption": "New Westminster condos and townhomes listed, sold and sales ratio by community, October 2026",
+   "gen": "gappage",
+   "head": [
+    "Community",
+    "Listed",
+    "Sold",
+    "Sales ratio"
+   ],
+   "rows": [
+    [
+     "Uptown",
+     "97",
+     "23",
+     "24%"
+    ],
+    [
+     "Downtown",
+     "96",
+     "15",
+     "16%"
+    ],
+    [
+     "Queensborough",
+     "71",
+     "7",
+     "10%"
+    ],
+    [
+     "Fraserview",
+     "57",
+     "7",
+     "12%"
+    ],
+    [
+     "Quay",
+     "51",
+     "7",
+     "14%"
+    ],
+    [
+     "Sapperton",
+     "30",
+     "1",
+     "3%"
+    ],
+    [
+     "GlenBrooke North",
+     "8",
+     "5",
+     "63%"
+    ],
+    [
+     "West End",
+     "2",
+     "0",
+     "—"
+    ],
+    [
+     "Moody Park",
+     "1",
+     "1",
+     "100%"
+    ],
+    [
+     "Brunette",
+     "0",
+     "0",
+     "—"
+    ],
+    [
+     "Connaught Heights",
+     "0",
+     "0",
+     "—"
+    ],
+    [
+     "North Arm",
+     "0",
+     "0",
+     "—"
+    ],
+    [
+     "Queens Park",
+     "0",
+     "0",
+     "—"
+    ],
+    [
+     "The Heights",
+     "0",
+     "0",
+     "—"
+    ]
+   ],
+   "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal. Condos and townhomes are one line in the reports.",
+   "t": "table"
+  },
+  {
+   "gen": "gappage",
+   "t": "p",
+   "text": "Community pages for New Westminster:"
+  },
+  {
+   "gen": "gappage",
+   "items": [
+    [
+     {
+      "h": "/uptown-new-westminster.html",
+      "t": "Uptown"
+     }
+    ],
+    [
+     {
+      "h": "/downtown-nw.html",
+      "t": "Downtown"
+     }
+    ],
+    [
+     {
+      "h": "/queensborough.html",
+      "t": "Queensborough"
+     }
+    ],
+    [
+     {
+      "h": "/fraserview-nw.html",
+      "t": "Fraserview"
+     }
+    ],
+    [
+     {
+      "h": "/quay.html",
+      "t": "Quay"
+     }
+    ],
+    [
+     {
+      "h": "/sapperton-new-westminster.html",
+      "t": "Sapperton"
+     }
+    ],
+    [
+     {
+      "h": "/glenbrooke-north.html",
+      "t": "GlenBrooke North"
+     }
+    ],
+    [
+     {
+      "h": "/west-end-new-westminster.html",
+      "t": "West End"
+     }
+    ],
+    [
+     {
+      "h": "/moody-park.html",
+      "t": "Moody Park"
+     }
+    ],
+    [
+     {
+      "h": "/connaught-heights.html",
+      "t": "Connaught Heights"
+     }
+    ]
+   ],
+   "t": "list"
+  },
+  {
+   "gen": "gappage",
+   "level": 2,
+   "t": "h",
+   "text": "Secondary schools in New Westminster"
+  },
+  {
+   "gen": "gappage",
+   "t": "p",
+   "text": "7 secondary schools are located in the City of New Westminster: 7 in SD40 New Westminster. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district."
+  },
+  {
+   "gen": "gappage",
+   "items": [
+    [
+     {
+      "t": "Home Learners Program (elementary and secondary), 521 Fader St"
+     }
+    ],
+    [
+     {
+      "t": "New Westminster Continuing Education (secondary), 820 6th St"
+     }
+    ],
+    [
+     {
+      "t": "New Westminster Secondary (secondary), 820 6th St"
+     }
+    ],
+    [
+     {
+      "t": "Power Alternate Secondary School (secondary), 200-1065 Columbia St"
+     }
+    ],
+    [
+     {
+      "t": "Queensborough Middle School (elementary and secondary), 833 Salter St"
+     }
+    ],
+    [
+     {
+      "t": "Royal City Alternate Program (secondary), 200 - 1065 Columbia Street"
+     }
+    ],
+    [
+     {
+      "t": "Sigma (secondary), 820 Sixth Street"
+     }
+    ]
+   ],
+   "t": "list"
+  },
+  {
+   "gen": "gappage",
+   "level": 2,
+   "t": "h",
+   "text": "Before you buy condos in New Westminster"
+  },
+  {
+   "gen": "gappage",
+   "t": "p",
+   "text": "Jared checks these with you on the exact address before you write an offer:"
+  },
+  {
+   "gen": "gappage",
+   "items": [
+    [
+     {
+      "h": "/mortgage-calculator.html",
+      "t": "Mortgage calculator"
+     }
+    ],
+    [
+     {
+      "h": "/home-evaluation.html",
+      "t": "Home evaluation"
+     }
+    ]
+   ],
+   "t": "list"
+  },
+  {
+   "gen": "gappage",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "More New Westminster real estate"
+  },
+  {
+   "gen": "gappage",
+   "items": [
+    [
+     {
+      "h": "/new-westminster-homes-for-sale.html",
+      "t": "New Westminster homes for sale"
+     }
+    ],
+    [
+     {
+      "h": "/new-westminster-real-estate-market-stats.html",
+      "t": "New Westminster real estate market stats"
+     }
+    ],
+    [
+     {
+      "h": "/fraser-valley-market-stats.html",
+      "t": "Fraser Valley market stats"
+     }
+    ],
+    [
+     {
+      "h": "/mortgage-calculator.html",
+      "t": "Mortgage calculator"
+     }
+    ],
+    [
+     {
+      "h": "/home-evaluation.html",
+      "t": "Home evaluation"
+     }
+    ],
+    [
+     {
+      "h": "/contact.html",
+      "t": "Contact Jared"
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "tn_hub",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "New Westminster neighbourhood guides"
+  },
+  {
+   "gen": "tn_hub",
+   "items": [
+    [
+     {
+      "h": "/brunette-new-westminster-guide.html",
+      "t": "Brunette real estate guide"
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "New Westminster Condos: streets and boundaries"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "t": "New Westminster's condo stock is organized around its five SkyTrain stations, because the City states Transit Oriented Development (TOD) Areas enable density within 800 metres of the City's five SkyTrain stations. Downtown, the Quay, Sapperton and Uptown each sit in relation to one of those mainland station areas, while Queensborough is planned under its own community plan."
+     }
+    ],
+    [
+     {
+      "t": "Downtown's condo core clusters around New Westminster Station and Columbia Station, because developer EDGAR's own project writing states New Westminster already has many transit-oriented developments primarily clustered around New Westminster Station and Columbia Station in the downtown core, such as the Plaza 88 mixed-use complex built around New Westminster Station."
+     }
+    ],
+    [
+     {
+      "t": "Sapperton's condo node is the Brewery District on Keary Street, because Wesgroup states its Brewery District is in the Sapperton neighbourhood, on the former Labatt brewery site, steps from the Sapperton SkyTrain Station. Keary Street and Brunette Avenue are the streets that node is addressed from."
+     }
+    ],
+    [
+     {
+      "t": "Queensborough is planned under its own community plan, because the City states the Queensborough Community Plan is the key guiding document for new development in Queensborough, with its own land use designations and development permit guidelines. The Queensborough Eastern Neighbourhood Node inside that plan is defined by Stanley Street to the west, Duncan Street to the north and east, and Ewen Avenue to the south."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "New Westminster Condos: the housing stock"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "t": "Downtown holds the city's tower stock around its two stations, because EDGAR states transit-oriented developments in New Westminster are primarily clustered around New Westminster Station and Columbia Station in the downtown core, with Plaza 88 built around New Westminster Station as the named example. Tower condos elsewhere in the city are the exception to that downtown pattern."
+     }
+    ],
+    [
+     {
+      "t": "Sapperton's stock is a single master-planned district's buildings, because Wesgroup states the Brewery District is a completed community of residential highrises, shops and office buildings on the former brewery site, and that The Keary is the final ownership opportunity in that district. A Sapperton condo search is therefore largely a search within one developer's district on Keary Street."
+     }
+    ],
+    [
+     {
+      "t": "Queensborough's multi-family stock is governed by named development permit areas, because the City lists Queensborough residential Development Permit Areas including Ewen Avenue Multi-Family, Compact Lot, East Queensborough, Port Royal and Queensborough Eastern Node. The form of a Queensborough condo or multi-family building is set by which of those permit areas the parcel falls in."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "New Westminster Condos: rules that affect buyers"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "t": "The zoning document is Zoning Bylaw No. 6680, 2001, consolidated as of June 8, 2026, according to the City's zoning bylaw page. The City states amendment bylaws have been combined with the original bylaw for convenience only and the consolidation is not a legal document, so a condo buyer checking a building's zone should cite the consolidation date, not treat the web copy as the legal text."
+     }
+    ],
+    [
+     {
+      "t": "Station-area density still requires a rezoning, because the City states that in February 2026 Council amended the Official Community Plan (OCP) designations in the Transit Oriented Development Areas to allow the minimum provincial densities, but no changes were made to zoning, meaning a rezoning application is still required before the new heights and densities can be built. An OCP designation on a condo site is not a building approval."
+     }
+    ],
+    [
+     {
+      "t": "New multi-unit buildings must include in-unit or common storage, because the City states Council in May 2025 approved requirements that residential storage space of at least 3.7 square metres (39.8 square feet) be provided for all new dwelling units, within the unit or in a common storage room, applying to applications received on or after May 5, 2025. That rule changes what a new condo unit includes compared with the existing stock."
+     }
+    ],
+    [
+     {
+      "t": "Family-sized units are now a bylaw requirement in new multi-unit buildings, because the City states the updated Family-Friendly Housing Policy, implemented by Zoning Bylaw changes in November 2024, increases the minimum number of two- and three-bedroom units required and establishes minimum unit sizes. For rental projects, after a two-year transition, a minimum of 35 percent two- and three-bedroom units, with at least 10 percent three-bedroom or more, is required effective November 18, 2026."
+     }
+    ],
+    [
+     {
+      "t": "Townhouse zoning now has named districts, because the City's Interim Development Review Framework, updated June 22, 2026, states townhouses are expected to rezone to Residential Townhouse (RT)-A or RT-B zoning districts, and infill housing to Residential Ground-Oriented Infill (RGO)-A or RGO-B districts. The Zoning Bylaw's multi-unit residential volume states the intent of RT-A (district 405, Bylaw 8524, 2025) and RT-B (district 406) directly, which settles the district names in the current bylaw text."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "New Westminster Condos: local details a buyer would not know"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "t": "Plaza 88 is built around New Westminster Station itself, because EDGAR describes it as the Plaza 88 mixed-use complex built around New Westminster Station in the downtown core. A downtown condo's station access can therefore be internal to its own complex, which is a different condition from the walk-to-station access in Sapperton or Uptown."
+     }
+    ],
+    [
+     {
+      "t": "The Keary's name is a Sapperton street history, because Wesgroup states Royal Engineer James Keary and his family arrived in New Westminster, his son William later became Mayor of New Westminster, and Keary Street and The Keary continue to honour the family name. The building at 230 Keary Street is named for the street's own family, not a marketing invention."
+     }
+    ],
+    [
+     {
+      "t": "A riverfront connection is proposed between the city's two river parks, because the City states it proposes completing the Brunette-Fraser Regional Greenway with a floating greenway between Westminster Pier Park and Sapperton Landing Park, passing under the New Westminster Rail Bridge and the new Pattullo Bridge. Quay and Sapperton condos sit at the two ends of that proposed link."
+     }
+    ],
+    [
+     {
+      "t": "Queensborough condo parcels can carry a flood permit layer the downtown towers do not, because the City lists a Flood Hazard Development Permit Area among Queensborough's Development Permit Areas, and states single detached dwellings on lots of 371.6 square metres or more are exempt from the other Queensborough guidelines but not from the Flood Hazard guidelines."
+     }
+    ],
+    [
+     {
+      "t": "The 22nd Street station area is under a City-led planning hold, because the City states that while the reGENERATE Vision planning work continues, expected through 2025 and into mid-2027, most development applications around the SkyTrain station and Transit Village will be considered premature. West End and 22nd Street area condo proposals therefore face a stated pause that downtown proposals do not."
+     }
+    ],
+    [
+     {
+      "t": "School District No. 40 (New Westminster) has exactly one secondary school for the whole city, New Westminster Secondary School at 820 6th Street, so a condo buyer's secondary catchment does not change between Downtown, the Quay, Sapperton, Uptown and Queensborough. Elementary and middle catchments do change, with Fraser River Middle School at 800 Queens Avenue and Queensborough Middle School at 833 Salter Street serving different parts of the city."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "New Westminster Condos: development and new projects"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "t": "Columbia Square, 88 Tenth Street, New Westminster; developer: EDGAR Development; home type: mixed-use community of eight towers with strata condos, market rental and affordable rental homes, plus daycare, office, retail and green space; unit count: approximately 2,400 homes in EDGAR's June 12, 2023 unveiling release, described as 3,800 homes in EDGAR's later transit-oriented development release. STATUS: rezoning application submitted to the City in February 2023, per the developer — read 2026-11-03."
+     }
+    ],
+    [
+     {
+      "t": "65 First Street, New Westminster; developer: Merchant Housing Capital; home type: 31-storey tower and 35-storey tower; unit count: 304 strata units, 299 market rental units and 30 below-market rental units, as stated by EDGAR's project summary of applications near Columbia Station. STATUS: rezoning application received by the City, per the developer summary — read 2026-11-03."
+     }
+    ],
+    [
+     {
+      "t": "STATUS: proposal considered by Council earlier in the year described by the developer summary — read 2026-11-03."
+     }
+    ],
+    [
+     {
+      "t": "STATUS: presented by Wesgroup as the final opportunity to own a home in the Brewery District, steps from Sapperton SkyTrain Station — read 2026-11-03."
+     }
+    ],
+    [
+     {
+      "t": "STATUS: Official Community Plan amendments adopted May 2026 — read 2026-11-03."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "New Westminster Condos: costs and taxes"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "t": "New condo projects carry the Amenity Cost Charge, because the City states Amenity Cost Charge Bylaw No. 8540, 2025, adopted December 1, 2025, requires development applications to assist in funding new amenities such as community centres, libraries and child care. The City directs readers to its Financing Growth webpage for current rates, which are the rates a presale buyer should check against the developer's disclosure."
+     }
+    ],
+    [
+     {
+      "t": "Development Cost Charges were widened in 2026, because the City states Development Cost Charge Bylaw Amendment Bylaw No. 8539, 2025, adopted January 12, 2026, updated the charges to include additional categories for fire protection and police facilities permitted by provincial legislation, and that updated rates are in effect. A project approved before that date and a project approved after it do not carry the same charge categories."
+     }
+    ],
+    [
+     {
+      "t": "Inclusionary housing is a stated cost of added density, because the City states its Inclusionary Housing Policy, updated September 8, 2025, sets the expectation that applicable multiple unit residential or mixed-use applications seeking increases in development entitlements will contribute towards below market housing units. That contribution is part of a new condo project's economics in New Westminster, separate from the two charge bylaws above."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "New Westminster Condos: getting around"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "t": "Five SkyTrain stations serve the city, because the City states its Transit Oriented Development Areas enable density within 800 metres of the City's five SkyTrain stations. TransLink's Expo Line timetable lists the in-city sequence as 22nd Street, New Westminster and Columbia on the King George branch, and Columbia, Sapperton and Braid on the Production Way–University branch."
+     }
+    ],
+    [
+     {
+      "t": "22nd Street Station is addressed at 649 22nd Street, because TransLink's station map for 22nd Street Station gives that address in New Westminster, with bus bays for routes including the 410 to Richmond-Brighouse, the 101 to Lougheed Station, the 104 to Annacis Island and the 100 to Marpole Loop. A West End condo's transit is that station's bus grid as much as the Expo Line itself."
+     }
+    ],
+    [
+     {
+      "t": "Queensborough has no station in TransLink's in-city Expo Line list, which names 22nd Street, New Westminster, Columbia, Sapperton and Braid stations, so its condo transit runs to those mainland stations. The City's Queensborough planning documents treat Queensborough under its own community plan, separate from the mainland station areas, which is why Queensborough development is reviewed against the Queensborough Community Plan rather than a station-area designation."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "New Westminster Condos: risks and due diligence"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "t": "Do not price a site on provincial TOD heights alone, because the City's speculation disclaimer states the transit oriented development area tiers and maps do not create development rights, that development rights are determined by the Zoning Bylaw, and that the City cautions against speculation based on anticipating Council's decisions. A rezoning is the step that changes a condo site's rights."
+     }
+    ],
+    [
+     {
+      "t": "A redevelopment assembly with sitting rental units carries both policies."
+     }
+    ],
+    [
+     {
+      "t": "For Queensborough purchases, read the Development Permit Area for the parcel, because the City lists six categories of Queensborough Development Permit Areas, including the Flood Hazard area, and states that where a parcel falls within more than one area, one Development Permit may be issued if the guidelines for each area are addressed. A Queensborough condo's flood and form rules are parcel-specific."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "How New Westminster Condos compares"
+  },
+  {
+   "caption": "New Westminster Condos compared",
+   "gen": "uq",
+   "head": [
+    "Fact",
+    "New Westminster",
+    "Burnaby (Metrotown)",
+    "Surrey (City Centre)"
+   ],
+   "pos": "end",
+   "rows": [
+    [
+     "SkyTrain line serving the city centre",
+     "Expo Line",
+     "Expo Line",
+     "Expo Line"
+    ],
+    [
+     "Town / city centre status",
+     "—",
+     "Regional city centre and Burnaby's downtown",
+     "—"
+    ],
+    [
+     "Provincial housing target order stated by the municipality",
+     "4,432 net new units over five years, Housing Target Order July 2024",
+     "—",
+     "—"
+    ]
+   ],
+   "t": "table"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "Sources for New Westminster Condos"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "h": "https://www.newwestcity.ca/devprojects",
+      "t": "newwestcity.ca · devprojects"
+     }
+    ],
+    [
+     {
+      "h": "https://edgardevelopment.com/transit-oriented-developments-set-to-usher-in-a-new-new-westminster/",
+      "t": "edgardevelopment.com · transit oriented developments set to usher in a"
+     }
+    ],
+    [
+     {
+      "h": "https://wesgroup.ca/thekeary/neighbourhood/",
+      "t": "wesgroup.ca · neighbourhood"
+     }
+    ],
+    [
+     {
+      "h": "https://www.newwestcity.ca/planning-building-and-development/projects-on-the-go/articles/3475.php?status=complete",
+      "t": "newwestcity.ca"
+     }
+    ],
+    [
+     {
+      "h": "https://wesgroup.ca/residential/page/2/",
+      "t": "wesgroup.ca · page"
+     }
+    ],
+    [
+     {
+      "h": "https://www.newwestcity.ca/development-policies-and-process/development-permit-areas/sb_expander_articles/1184.php",
+      "t": "newwestcity.ca (2)"
+     }
+    ],
+    [
+     {
+      "h": "https://www.newwestcity.ca/zoning-bylaw/sb_expander_articles/1618.php",
+      "t": "newwestcity.ca (3)"
+     }
+    ],
+    [
+     {
+      "h": "https://www.newwestcity.ca/database/files/library/400_Multi_Unit_Residential___As_of_June_8_2026.pdf",
+      "t": "newwestcity.ca · 400 Multi Unit Residential As of June 8 2026"
+     }
+    ],
+    [
+     {
+      "h": "https://www.newwestcity.ca/riverfrontvision/articles/5969.php",
+      "t": "newwestcity.ca (4)"
+     }
+    ],
+    [
+     {
+      "h": "https://www.newwestcity.ca/planning-building-and-development/new-westminsters-official-community-plan/ocp-implementation-projects/22nd-street-station-area-bold-vision/sb_expander_articles/7272.php",
+      "t": "newwestcity.ca (5)"
+     }
+    ],
+    [
+     {
+      "h": "https://www.newwestcity.ca/new-provincial-housing-legislation",
+      "t": "newwestcity.ca · new provincial housing legislation"
+     }
+    ],
+    [
+     {
+      "h": "https://studentsuccess.gov.bc.ca/schools/in/new-westminster",
+      "t": "studentsuccess.gov.bc.ca · new westminster"
+     }
+    ],
+    [
+     {
+      "h": "https://edgardevelopment.com/edgar-unveils-new-pedestrian-only-comprehensive-planned-community-in-new-westminster/",
+      "t": "edgardevelopment.com · edgar unveils new pedestrian only comprehensive"
+     }
+    ],
+    [
+     {
+      "h": "https://infomaps.translink.ca/Public_Timetables/213/tt991.pdf",
+      "t": "infomaps.translink.ca · tt991"
+     }
+    ],
+    [
+     {
+      "h": "http://infomaps.translink.ca/system_maps/skytrain_station_maps/22nd_street_station.pdf",
+      "t": "infomaps.translink.ca · 22nd street station"
+     }
+    ],
+    [
+     {
+      "h": "https://www.newwestcity.ca/new-provincial-housing-legislation/transit-oriented-development-areas/sb_expander_articles/6750.php",
+      "t": "newwestcity.ca (6)"
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Jared's take on New Westminster",
+   "gen": "jtake"
+  },
+  {
+   "t": "p",
+   "text": "New Westminster is mostly attached homes, with some detached pockets. Uptown and Downtown condo buyers get some of the region’s lower attached prices, Queensborough families accept the river crossing, and Sapperton buyers tend to be tied to the hospital and the station.",
+   "gen": "jtake"
+  }
+ ],
+ "breadcrumbs": [
+  {
+   "href": "/index.html",
+   "name": "Home"
+  },
+  {
+   "href": "/new-westminster-homes-for-sale.html",
+   "name": "New Westminster"
+  },
+  {
+   "href": "/new-westminster-condos-for-sale.html",
+   "name": "Condos"
+  }
+ ],
+ "faq": [
+  {
+   "a": "568 condos sold in New Westminster between November 1, 2025 to October 22, 2026, with a median price of $580,000.",
+   "gen": "sold",
+   "q": "What did condos in New Westminster sell for?"
+  },
+  {
+   "a": "The median was 28 days from listing to sale, and homes sold at a median 97.3% of the last list price (7% sold above list), for sales November 1, 2025 to October 22, 2026.",
+   "gen": "sold",
+   "q": "How long do condos take to sell in New Westminster?"
+  },
+  {
+   "a": "The middle half of the 568 condos that sold in New Westminster went for between $485,000 and $680,150, around a median of $580,000.",
+   "gen": "sold",
+   "q": "What price range do most condos in New Westminster sell in?"
+  },
+  {
+   "a": "7% of the 568 condos sold for more than the last list price, and the median sale was 97.3% of it.",
+   "gen": "sold",
+   "q": "Do condos in New Westminster sell above asking price?"
+  },
+  {
+   "a": "Of the 568 sales, 567 listings gave a monthly fee and the median was $547.",
+   "gen": "sold",
+   "q": "What is a typical strata fee for condos in New Westminster?"
+  },
+  {
+   "a": "The median year built was 2006 for the 568 condos sold in New Westminster.",
+   "gen": "sold",
+   "q": "How old are the condos that sold in New Westminster?"
+  },
+  {
+   "a": "The median condo that sold in New Westminster had 2 bedrooms, from the 568 sales between November 1, 2025 to October 22, 2026.",
+   "gen": "sold",
+   "q": "How many bedrooms do condos in New Westminster usually have?"
+  },
+  {
+   "a": "By number sold: Downtown NW (133), Quay (127), Uptown NW (125), for November 1, 2025 to October 22, 2026.",
+   "gen": "sold",
+   "q": "Which New Westminster communities sold the most condos?"
+  },
+  {
+   "a": "By number sold: Timber House (15), Palace Quay (11), Pier West (11), for November 1, 2025 to October 22, 2026.",
+   "gen": "sold",
+   "q": "Which New Westminster buildings sold the most condos?"
+  },
+  {
+   "a": "The Greater Vancouver REALTORS® MLS® Home Price Index benchmark for apartments (condos) in New Westminster was $579,900 in September 2026, a modelled price for a typical home and not an average of sales.",
+   "q": "What is the benchmark price of a condo in New Westminster?"
+  },
+  {
+   "a": "Over the past year the benchmark fell 7.5%. Over three months it was little changed (-1.1%, under the 1.5% we need before calling it a move). A change under 1.5% is not described as a rise or fall.",
+   "q": "Did condo prices fall in New Westminster?"
+  },
+  {
+   "a": "In October 2026 houses in New Westminster had a sales ratio of 10%, which the reports’ scale reads as a buyers’ market, and condos and townhomes 16%, which the reports’ scale reads as a balanced market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers.",
+   "q": "Is New Westminster a buyers’ or sellers’ market?"
+  },
+  {
+   "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the condos in New Westminster that match what you want.",
+   "q": "How many condos are for sale in New Westminster?"
+  }
+ ],
+ "faq_heading": "New Westminster Condos for Sale: your questions answered",
+ "gen_gap": true,
+ "hand_edited": true,
+ "needs_from_muse": [
+  "Live listing feed filtered to condos in New Westminster",
+  "Jared's own notes"
+ ],
+ "new_page": {
+  "description": "New Westminster condos for sale: apartment-style homes in strata buildings, with monthly listings and sales for New Westminster. Jared Gibbons, REALTOR®, Royal LePage Little Oak.",
+  "h1": "New Westminster Condos for Sale | Metro Vancouver Real Estate",
+  "title": "New Westminster Condos for Sale | Jared Gibbons REALTOR®"
+ },
+ "slug": "new-westminster-condos-for-sale",
+ "status": "draft",
+ "updated": "2026-11-01"
 }

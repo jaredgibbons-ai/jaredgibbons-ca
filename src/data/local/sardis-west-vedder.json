@@ -1,547 +1,558 @@
 {
-  "blocks": [
-    {
-      "gen": "nbb",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "What's nearby, building by building"
-    },
-    {
-      "gen": "nbb",
-      "pos": "end",
-      "t": "p",
-      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
-    },
-    {
-      "gen": "nbb",
-      "level": 3,
-      "pos": "end",
-      "t": "h",
-      "text": "Knight Lodge, 45660 Knight Road"
-    },
-    {
-      "gen": "nbb",
-      "items": [
-        [
-          {
-            "t": "Transit: No rapid-transit station in Chilliwack. Nearest by bus: Lougheed Town Centre Stn, Route 66 terminus, reached from Vedder Rd at Luckakuck Way. Route 51 Vedder: UFV Chilliwack Campus to Downtown Chilliwack via Vedder Rd at Luckakuck Way. Route 52 Evans: Cottonwood Mall to Downtown Chilliwack via Evans Rd at Yale Rd and Hodgins Ave at Ashwell Rd."
-          }
-        ],
-        [
-          {
-            "t": "Parks and recreation: Webster Park: City park with skateboard park, playground and spray zone at 44524 Keith Wilson Road. Sardis Sports Complex, 5725 Tyson Road."
-          }
-        ],
-        [
-          {
-            "t": "Schools: Evans Elementary, K-5, SD33, 7600 Evans Rd. Sardis Secondary, 9-12, SD33, 45460 Stevenson Rd. Vedder Middle School, 6-8, SD33, 45560 South Sumas Rd."
-          }
-        ],
-        [
-          {
-            "t": "Shopping: Cottonwood Centre (shopping centre), 45585 Luckakuck Way. Save-On-Foods (grocery), 6014 Vedder Rd."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "nbb",
-      "level": 3,
-      "pos": "end",
-      "t": "h",
-      "text": "Measured walking and driving times from each building"
-    },
-    {
-      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
-      "gen": "nbb",
-      "head": [
-        "Building",
-        "To",
-        "How",
-        "Minutes",
-        "Distance (km)"
-      ],
-      "pos": "end",
-      "rows": [
-        [
-          "Knight Lodge",
-          "Cottonwood Centre (45585 Luckakuck Way)",
-          "Walk",
-          "10",
-          "0.7"
-        ],
-        [
-          "Knight Lodge",
-          "Evans Elementary (7600 Evans Road)",
-          "Drive",
-          "3",
-          "1.6"
-        ],
-        [
-          "Knight Lodge",
-          "Sardis Secondary (45460 Stevenson Road)",
-          "Drive",
-          "5",
-          "2.4"
-        ]
-      ],
-      "t": "table"
-    },
-    {
-      "gen": "nbb",
-      "level": 3,
-      "pos": "end",
-      "t": "h",
-      "text": "Sources for what’s nearby each building"
-    },
-    {
-      "gen": "nbb",
-      "items": [
-        [
-          {
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=66",
-            "t": "bctransit.com · route overview"
-          }
-        ],
-        [
-          {
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=51",
-            "t": "bctransit.com · route overview (2)"
-          }
-        ],
-        [
-          {
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=52",
-            "t": "bctransit.com · route overview (3)"
-          }
-        ],
-        [
-          {
-            "h": "https://www.chilliwack.com/main/page.cfm?id=1754&dowhat=locationView&plID=154&backTo=%26dowhat%3DamenityView%26paID%3D28%26plID%3D55",
-            "t": "chilliwack.com"
-          }
-        ],
-        [
-          {
-            "h": "https://www.chilliwack.com/main/page.cfm?id=37&prshow=details&prID=409",
-            "t": "chilliwack.com (2)"
-          }
-        ],
-        [
-          {
-            "h": "https://www.fvrl.bc.ca/locations",
-            "t": "fvrl.bc.ca · locations"
-          }
-        ],
-        [
-          {
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/033",
-            "t": "studentsuccess.gov.bc.ca · in school district"
-          }
-        ],
-        [
-          {
-            "h": "http://cottonwoodcentre.ca/",
-            "t": "cottonwoodcentre.ca"
-          }
-        ],
-        [
-          {
-            "h": "https://www.saveonfoods.com/sm/planning/rsid/952/store",
-            "t": "saveonfoods.com · store"
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "Sardis West Vedder: streets and boundaries"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "t": "Sardis West Vedder is the part of Sardis west of Vedder Road, and Vedder Road is the line that separates it from Sardis East Vedder and Promontory."
-          }
-        ],
-        [
-          {
-            "t": "The plan's own sub-areas on this side are North Evans and Wells Landing, and the plan states these sub-area boundaries do not formally exist and were created only to characterise parts of the neighbourhood."
-          }
-        ],
-        [
-          {
-            "t": "North Evans extends along Evans Road, north of Wells Road and south of Knight Road."
-          }
-        ],
-        [
-          {
-            "t": "Wells Landing is south of Wells Road, between the ALR lands and Vedder Road, with access to the Valley Rail Trail and to Vedder Road shops and services."
-          }
-        ],
-        [
-          {
-            "t": "West Evans, at the west edge, is ALR land between Stevenson Road and Evans Road, along the boundary of urban development."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "Sardis West Vedder: the housing stock"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "t": "The housing on the Evans Road side is a mix of forms, not one subdivision type: North Evans is characterised in the plan by single-detached homes, townhouses, secondary suites, mobile home parks and seniors' housing."
-          }
-        ],
-        [
-          {
-            "t": "Wells Landing is described as a mix of residential uses of varying age and form, rather than a single building era."
-          }
-        ],
-        [
-          {
-            "t": "Sardis as a whole has no vacant greenfield land, so new housing here comes from infill and redevelopment: subdivision of standard lots into two smaller single-detached lots and small-scale multi-unit housing are the anticipated forms in the plan."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "Sardis West Vedder: rules that affect buyers"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "t": "5500, adopted October 2020 and updated 2025."
-          }
-        ],
-        [
-          {
-            "t": "A drinking-water development permit can be required on this side because the Sardis-Vedder Aquifer protection area is Development Permit Area (DPA) 1: a permit is required for work including a new private well, a septic field, fuel storage tanks, or excavation larger than 20 square metres and deeper than 0.5 metres inside the aquifer or Vedder River Fan protection areas."
-          }
-        ],
-        [
-          {
-            "t": "Expansion of urban development into the West Evans ALR land is not contemplated by the Sardis plan and would require further discussion with the Agricultural Land Commission and a comprehensive plan."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "Sardis West Vedder: local details a buyer would not know"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "t": "Luckakuck Creek runs through the north side of this area, and the plan describes the creek and its riparian area, along the Coqualeetza Lands, as having a trail system that is a major asset to North Sardis / Luckakuck."
-          }
-        ],
-        [
-          {
-            "t": "The Coqualeetza Lands are a 23-hectare (58-acre) property in the centre of Sardis, managed by Stó:lō Nation, with public access welcomed and walking trails valued as a neighbourhood asset; the lands are not subject to the Sardis Neighbourhood Plan."
-          }
-        ],
-        [
-          {
-            "t": "The City's Sardis-Vedder parks list for this side includes the Luckakuck Creek Trail, the Valley Rail Trail and the Sheffield Dog Off-Leash Park."
-          }
-        ],
-        [
-          {
-            "t": "Sardis growth is contained by the ALR between Evans Road to the west and Chilliwack River Road to the east, a pattern the plan says continues to shape development here."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "Sardis West Vedder: costs and taxes"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "t": "The cost item specific to this side is the DPA 1 permit step: work such as a new well or septic field inside the Sardis-Vedder Aquifer protection area needs a development permit, which is an application a buyer should budget time for before planning the work."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "Sardis West Vedder: getting around"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "t": "Route 52 Evans is the bus route for the Evans Road corridor, and Route 51 Vedder runs the Vedder Road edge; both are listed in the BC Transit Chilliwack Rider's Guide route list."
-          }
-        ],
-        [
-          {
-            "t": "Highway 1 is the north boundary of Sardis, and Vedder Road is the main north-south connection within and out of Sardis, per the plan's Vedder Corridor description."
-          }
-        ],
-        [
-          {
-            "t": "The Valley Rail Trail serves the Wells Landing part of this side for walking and cycling, per the Sardis plan."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "Sardis West Vedder: risks and due diligence"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "t": "Check the aquifer layer first on this side: the Sardis-Vedder Aquifer, Vedder River Fan and other protection areas are mapped as DPA 1 in Schedule D-1 of the OCP, and the map for a specific lot is read through the City's OCP and webmap resources."
-          }
-        ],
-        [
-          {
-            "t": "Check ALR status parcel by parcel at the west edge near Evans Road and Stevenson Road, using the Agricultural Land Commission map, because the plan places ALR land directly against urban lots there."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "How Sardis West Vedder compares"
-    },
-    {
-      "caption": "Sardis West Vedder compared",
-      "gen": "uq",
-      "head": [
-        "Fact",
-        "Sardis West Vedder",
-        "Sardis South",
-        "Promontory"
-      ],
-      "pos": "end",
-      "rows": [
-        [
-          "Plan cover",
-          "Sardis Neighbourhood Plan, Schedule B5",
-          "Sardis Neighbourhood Plan, Schedule B5",
-          "—"
-        ],
-        [
-          "Named BC Transit route",
-          "Route 52 Evans",
-          "Route 58 Tyson",
-          "Route 54 Promontory"
-        ],
-        [
-          "School district",
-          "School District No. 33",
-          "School District No. 33",
-          "School District No. 33"
-        ]
-      ],
-      "t": "table"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "Related pages"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "h": "/sardis-houses-for-sale.html",
-            "t": "Sardis Houses for Sale | Detached Chilliwack Homes MLS®"
-          }
-        ],
-        [
-          {
-            "h": "/sardis-east-vedder.html",
-            "t": "Sardis East Vedder Homes for Sale | Chilliwack MLS®"
-          }
-        ],
-        [
-          {
-            "h": "/vedder-crossing.html",
-            "t": "Vedder Crossing Homes for Sale | Chilliwack Real Estate"
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "uq",
-      "level": 2,
-      "pos": "end",
-      "t": "h",
-      "text": "Sources for Sardis West Vedder"
-    },
-    {
-      "gen": "uq",
-      "items": [
-        [
-          {
-            "h": "https://www.chilliwack.com/main/attachments/attachView.cfm?attachID=6230",
-            "t": "chilliwack.com · attachView.cfm"
-          }
-        ],
-        [
-          {
-            "h": "https://www.chilliwack.com/main/page.cfm?id=2387",
-            "t": "chilliwack.com"
-          }
-        ],
-        [
-          {
-            "h": "https://www.chilliwack.com/main/attachments/attachView.cfm?attachID=8128",
-            "t": "chilliwack.com · attachView.cfm (2)"
-          }
-        ],
-        [
-          {
-            "h": "https://www.chilliwack.com/main/attachments/Files/377/ZBA%5F5000%5F%2D%5FZoning%5FBylaw%5F2020%2Epdf",
-            "t": "chilliwack.com · ZBA 5000 Zoning Bylaw 2020 pdf"
-          }
-        ],
-        [
-          {
-            "h": "https://www.sd33.bc.ca/sites/sd33.bc.ca/files/2026-09/Chilliwack%20School%20District%20Directory%202026-27.pdf",
-            "t": "sd33.bc.ca · Chilliwack School District Directory 2026 27"
-          }
-        ],
-        [
-          {
-            "h": "https://www.bctransit.com/wp-content/uploads/2024/03/chw_rg_jan2024-V1.1.pdf",
-            "t": "bctransit.com · chw rg jan2024 V1.1"
-          }
-        ],
-        [
-          {
-            "h": "https://www.chilliwack.com/main/page.cfm?id=1754&dowhat=areaView&plID=165&backTo&areaID=6",
-            "t": "chilliwack.com (2)"
-          }
-        ],
-        [
-          {
-            "h": "https://sd33.bc.ca/index.php/find-your-school",
-            "t": "sd33.bc.ca · find your school"
-          }
-        ],
-        [
-          {
-            "h": "https://www.chilliwack.com/main/page.cfm?id=3008",
-            "t": "chilliwack.com (3)"
-          }
-        ],
-        [
-          {
-            "h": "https://www.chilliwack.com/main/page.cfm?id=2522",
-            "t": "chilliwack.com (4)"
-          }
-        ],
-        [
-          {
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/speculation-and-vacancy-tax/declaration",
-            "t": "www2.gov.bc.ca · declaration"
-          }
-        ],
-        [
-          {
-            "h": "https://www.alc.gov.bc.ca/alr-maps",
-            "t": "alc.gov.bc.ca · alr maps"
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    }
-  ],
-  "faq": [
-    {
-      "a": "No City boundary exists for the name Sardis West Vedder itself. The City's Sardis Neighbourhood Plan covers Sardis as one neighbourhood south of Highway 1, and its Evans Road sub-areas — North Evans, Wells Landing and West Evans — are described in the plan as informal character areas whose boundaries do not formally exist. Use Vedder Road as the practical east line and the plan map for the Sardis boundary.",
-      "gen": "uq",
-      "q": "Is Sardis West Vedder a City-drawn neighbourhood?"
-    },
-    {
-      "a": "Evans Elementary is the school named inside North Evans in the Sardis plan, and Unsworth Elementary at 5685 Unsworth Road is the second elementary on this side in School District No. 33 (SD33) listings. Catchments are set by home address, so a buyer should run the exact address in the SD33 School Locator rather than assume the nearest school is the catchment school.",
-      "gen": "uq",
-      "q": "Which elementary schools sit on this side?"
-    },
-    {
-      "a": "Because this side sits over the Sardis-Vedder Aquifer, which the City protects as DPA 1 for drinking water supply. The City's DPA 1 text lists a new private well, a septic field installation and larger excavation inside the aquifer protection area as activities requiring a development permit, so a buyer planning those works should confirm the permit before subjects are removed.",
-      "gen": "uq",
-      "q": "Why does a well or septic change need a permit here?"
-    },
-    {
-      "a": "Yes, Route 52 Evans is the Evans Road route in the BC Transit Chilliwack Rider's Guide, listed between downtown and Cottonwood Mall via Evans Road in the guide's route list. The same guide lists Route 51 Vedder on Vedder Road at the east edge of this area, so most west-side homes are served from either Evans Road or Vedder Road rather than from interior streets.",
-      "gen": "uq",
-      "q": "Is there a bus on Evans Road?"
-    }
-  ],
-  "slug": "sardis-west-vedder",
-  "status": "draft",
-  "updated": "2026-11-01"
+ "blocks": [
+  {
+   "gen": "nbb",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "What's nearby, building by building"
+  },
+  {
+   "gen": "nbb",
+   "pos": "end",
+   "t": "p",
+   "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+  },
+  {
+   "gen": "nbb",
+   "level": 3,
+   "pos": "end",
+   "t": "h",
+   "text": "Knight Lodge, 45660 Knight Road"
+  },
+  {
+   "gen": "nbb",
+   "items": [
+    [
+     {
+      "t": "Transit: No rapid-transit station in Chilliwack. Nearest by bus: Lougheed Town Centre Stn, Route 66 terminus, reached from Vedder Rd at Luckakuck Way. Route 51 Vedder: UFV Chilliwack Campus to Downtown Chilliwack via Vedder Rd at Luckakuck Way. Route 52 Evans: Cottonwood Mall to Downtown Chilliwack via Evans Rd at Yale Rd and Hodgins Ave at Ashwell Rd."
+     }
+    ],
+    [
+     {
+      "t": "Parks and recreation: Webster Park: City park with skateboard park, playground and spray zone at 44524 Keith Wilson Road. Sardis Sports Complex, 5725 Tyson Road."
+     }
+    ],
+    [
+     {
+      "t": "Schools: Evans Elementary, K-5, SD33, 7600 Evans Rd. Sardis Secondary, 9-12, SD33, 45460 Stevenson Rd. Vedder Middle School, 6-8, SD33, 45560 South Sumas Rd."
+     }
+    ],
+    [
+     {
+      "t": "Shopping: Cottonwood Centre (shopping centre), 45585 Luckakuck Way. Save-On-Foods (grocery), 6014 Vedder Rd."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "nbb",
+   "level": 3,
+   "pos": "end",
+   "t": "h",
+   "text": "Measured walking and driving times from each building"
+  },
+  {
+   "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+   "gen": "nbb",
+   "head": [
+    "Building",
+    "To",
+    "How",
+    "Minutes",
+    "Distance (km)"
+   ],
+   "pos": "end",
+   "rows": [
+    [
+     "Knight Lodge",
+     "Cottonwood Centre (45585 Luckakuck Way)",
+     "Walk",
+     "10",
+     "0.7"
+    ],
+    [
+     "Knight Lodge",
+     "Evans Elementary (7600 Evans Road)",
+     "Drive",
+     "3",
+     "1.6"
+    ],
+    [
+     "Knight Lodge",
+     "Sardis Secondary (45460 Stevenson Road)",
+     "Drive",
+     "5",
+     "2.4"
+    ]
+   ],
+   "t": "table"
+  },
+  {
+   "gen": "nbb",
+   "level": 3,
+   "pos": "end",
+   "t": "h",
+   "text": "Sources for what’s nearby each building"
+  },
+  {
+   "gen": "nbb",
+   "items": [
+    [
+     {
+      "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=66",
+      "t": "bctransit.com · route overview"
+     }
+    ],
+    [
+     {
+      "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=51",
+      "t": "bctransit.com · route overview (2)"
+     }
+    ],
+    [
+     {
+      "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=52",
+      "t": "bctransit.com · route overview (3)"
+     }
+    ],
+    [
+     {
+      "h": "https://www.chilliwack.com/main/page.cfm?id=1754&dowhat=locationView&plID=154&backTo=%26dowhat%3DamenityView%26paID%3D28%26plID%3D55",
+      "t": "chilliwack.com"
+     }
+    ],
+    [
+     {
+      "h": "https://www.chilliwack.com/main/page.cfm?id=37&prshow=details&prID=409",
+      "t": "chilliwack.com (2)"
+     }
+    ],
+    [
+     {
+      "h": "https://www.fvrl.bc.ca/locations",
+      "t": "fvrl.bc.ca · locations"
+     }
+    ],
+    [
+     {
+      "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/033",
+      "t": "studentsuccess.gov.bc.ca · in school district"
+     }
+    ],
+    [
+     {
+      "h": "http://cottonwoodcentre.ca/",
+      "t": "cottonwoodcentre.ca"
+     }
+    ],
+    [
+     {
+      "h": "https://www.saveonfoods.com/sm/planning/rsid/952/store",
+      "t": "saveonfoods.com · store"
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "Sardis West Vedder: streets and boundaries"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "t": "Sardis West Vedder is the part of Sardis west of Vedder Road, and Vedder Road is the line that separates it from Sardis East Vedder and Promontory."
+     }
+    ],
+    [
+     {
+      "t": "The plan's own sub-areas on this side are North Evans and Wells Landing, and the plan states these sub-area boundaries do not formally exist and were created only to characterise parts of the neighbourhood."
+     }
+    ],
+    [
+     {
+      "t": "North Evans extends along Evans Road, north of Wells Road and south of Knight Road."
+     }
+    ],
+    [
+     {
+      "t": "Wells Landing is south of Wells Road, between the ALR lands and Vedder Road, with access to the Valley Rail Trail and to Vedder Road shops and services."
+     }
+    ],
+    [
+     {
+      "t": "West Evans, at the west edge, is ALR land between Stevenson Road and Evans Road, along the boundary of urban development."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "Sardis West Vedder: the housing stock"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "t": "The housing on the Evans Road side is a mix of forms, not one subdivision type: North Evans is characterised in the plan by single-detached homes, townhouses, secondary suites, mobile home parks and seniors' housing."
+     }
+    ],
+    [
+     {
+      "t": "Wells Landing is described as a mix of residential uses of varying age and form, rather than a single building era."
+     }
+    ],
+    [
+     {
+      "t": "Sardis as a whole has no vacant greenfield land, so new housing here comes from infill and redevelopment: subdivision of standard lots into two smaller single-detached lots and small-scale multi-unit housing are the anticipated forms in the plan."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "Sardis West Vedder: rules that affect buyers"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "t": "5500, adopted October 2020 and updated 2025."
+     }
+    ],
+    [
+     {
+      "t": "A drinking-water development permit can be required on this side because the Sardis-Vedder Aquifer protection area is Development Permit Area (DPA) 1: a permit is required for work including a new private well, a septic field, fuel storage tanks, or excavation larger than 20 square metres and deeper than 0.5 metres inside the aquifer or Vedder River Fan protection areas."
+     }
+    ],
+    [
+     {
+      "t": "Expansion of urban development into the West Evans ALR land is not contemplated by the Sardis plan and would require further discussion with the Agricultural Land Commission and a comprehensive plan."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "Sardis West Vedder: local details a buyer would not know"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "t": "Luckakuck Creek runs through the north side of this area, and the plan describes the creek and its riparian area, along the Coqualeetza Lands, as having a trail system that is a major asset to North Sardis / Luckakuck."
+     }
+    ],
+    [
+     {
+      "t": "The Coqualeetza Lands are a 23-hectare (58-acre) property in the centre of Sardis, managed by Stó:lō Nation, with public access welcomed and walking trails valued as a neighbourhood asset; the lands are not subject to the Sardis Neighbourhood Plan."
+     }
+    ],
+    [
+     {
+      "t": "The City's Sardis-Vedder parks list for this side includes the Luckakuck Creek Trail, the Valley Rail Trail and the Sheffield Dog Off-Leash Park."
+     }
+    ],
+    [
+     {
+      "t": "Sardis growth is contained by the ALR between Evans Road to the west and Chilliwack River Road to the east, a pattern the plan says continues to shape development here."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "Sardis West Vedder: costs and taxes"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "t": "The cost item specific to this side is the DPA 1 permit step: work such as a new well or septic field inside the Sardis-Vedder Aquifer protection area needs a development permit, which is an application a buyer should budget time for before planning the work."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "Sardis West Vedder: getting around"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "t": "Route 52 Evans is the bus route for the Evans Road corridor, and Route 51 Vedder runs the Vedder Road edge; both are listed in the BC Transit Chilliwack Rider's Guide route list."
+     }
+    ],
+    [
+     {
+      "t": "Highway 1 is the north boundary of Sardis, and Vedder Road is the main north-south connection within and out of Sardis, per the plan's Vedder Corridor description."
+     }
+    ],
+    [
+     {
+      "t": "The Valley Rail Trail serves the Wells Landing part of this side for walking and cycling, per the Sardis plan."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "Sardis West Vedder: risks and due diligence"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "t": "Check the aquifer layer first on this side: the Sardis-Vedder Aquifer, Vedder River Fan and other protection areas are mapped as DPA 1 in Schedule D-1 of the OCP, and the map for a specific lot is read through the City's OCP and webmap resources."
+     }
+    ],
+    [
+     {
+      "t": "Check ALR status parcel by parcel at the west edge near Evans Road and Stevenson Road, using the Agricultural Land Commission map, because the plan places ALR land directly against urban lots there."
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "How Sardis West Vedder compares"
+  },
+  {
+   "caption": "Sardis West Vedder compared",
+   "gen": "uq",
+   "head": [
+    "Fact",
+    "Sardis West Vedder",
+    "Sardis South",
+    "Promontory"
+   ],
+   "pos": "end",
+   "rows": [
+    [
+     "Plan cover",
+     "Sardis Neighbourhood Plan, Schedule B5",
+     "Sardis Neighbourhood Plan, Schedule B5",
+     "—"
+    ],
+    [
+     "Named BC Transit route",
+     "Route 52 Evans",
+     "Route 58 Tyson",
+     "Route 54 Promontory"
+    ],
+    [
+     "School district",
+     "School District No. 33",
+     "School District No. 33",
+     "School District No. 33"
+    ]
+   ],
+   "t": "table"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "Related pages"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "h": "/sardis-houses-for-sale.html",
+      "t": "Sardis Houses for Sale | Detached Chilliwack Homes MLS®"
+     }
+    ],
+    [
+     {
+      "h": "/sardis-east-vedder.html",
+      "t": "Sardis East Vedder Homes for Sale | Chilliwack MLS®"
+     }
+    ],
+    [
+     {
+      "h": "/vedder-crossing.html",
+      "t": "Vedder Crossing Homes for Sale | Chilliwack Real Estate"
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "gen": "uq",
+   "level": 2,
+   "pos": "end",
+   "t": "h",
+   "text": "Sources for Sardis West Vedder"
+  },
+  {
+   "gen": "uq",
+   "items": [
+    [
+     {
+      "h": "https://www.chilliwack.com/main/attachments/attachView.cfm?attachID=6230",
+      "t": "chilliwack.com · attachView.cfm"
+     }
+    ],
+    [
+     {
+      "h": "https://www.chilliwack.com/main/page.cfm?id=2387",
+      "t": "chilliwack.com"
+     }
+    ],
+    [
+     {
+      "h": "https://www.chilliwack.com/main/attachments/attachView.cfm?attachID=8128",
+      "t": "chilliwack.com · attachView.cfm (2)"
+     }
+    ],
+    [
+     {
+      "h": "https://www.chilliwack.com/main/attachments/Files/377/ZBA%5F5000%5F%2D%5FZoning%5FBylaw%5F2020%2Epdf",
+      "t": "chilliwack.com · ZBA 5000 Zoning Bylaw 2020 pdf"
+     }
+    ],
+    [
+     {
+      "h": "https://www.sd33.bc.ca/sites/sd33.bc.ca/files/2026-09/Chilliwack%20School%20District%20Directory%202026-27.pdf",
+      "t": "sd33.bc.ca · Chilliwack School District Directory 2026 27"
+     }
+    ],
+    [
+     {
+      "h": "https://www.bctransit.com/wp-content/uploads/2024/03/chw_rg_jan2024-V1.1.pdf",
+      "t": "bctransit.com · chw rg jan2024 V1.1"
+     }
+    ],
+    [
+     {
+      "h": "https://www.chilliwack.com/main/page.cfm?id=1754&dowhat=areaView&plID=165&backTo&areaID=6",
+      "t": "chilliwack.com (2)"
+     }
+    ],
+    [
+     {
+      "h": "https://sd33.bc.ca/index.php/find-your-school",
+      "t": "sd33.bc.ca · find your school"
+     }
+    ],
+    [
+     {
+      "h": "https://www.chilliwack.com/main/page.cfm?id=3008",
+      "t": "chilliwack.com (3)"
+     }
+    ],
+    [
+     {
+      "h": "https://www.chilliwack.com/main/page.cfm?id=2522",
+      "t": "chilliwack.com (4)"
+     }
+    ],
+    [
+     {
+      "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/speculation-and-vacancy-tax/declaration",
+      "t": "www2.gov.bc.ca · declaration"
+     }
+    ],
+    [
+     {
+      "h": "https://www.alc.gov.bc.ca/alr-maps",
+      "t": "alc.gov.bc.ca · alr maps"
+     }
+    ]
+   ],
+   "pos": "end",
+   "t": "list"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Jared's take on Sardis West Vedder",
+   "gen": "jtake"
+  },
+  {
+   "t": "p",
+   "text": "West of Vedder Road, along the Evans Road and Unsworth Road corridors, sits Sardis West Vedder. Families come for the Evans and Unsworth schools, alongside suite-income buyers and downsizers.",
+   "gen": "jtake"
+  }
+ ],
+ "faq": [
+  {
+   "a": "No City boundary exists for the name Sardis West Vedder itself. The City's Sardis Neighbourhood Plan covers Sardis as one neighbourhood south of Highway 1, and its Evans Road sub-areas — North Evans, Wells Landing and West Evans — are described in the plan as informal character areas whose boundaries do not formally exist. Use Vedder Road as the practical east line and the plan map for the Sardis boundary.",
+   "gen": "uq",
+   "q": "Is Sardis West Vedder a City-drawn neighbourhood?"
+  },
+  {
+   "a": "Evans Elementary is the school named inside North Evans in the Sardis plan, and Unsworth Elementary at 5685 Unsworth Road is the second elementary on this side in School District No. 33 (SD33) listings. Catchments are set by home address, so a buyer should run the exact address in the SD33 School Locator rather than assume the nearest school is the catchment school.",
+   "gen": "uq",
+   "q": "Which elementary schools sit on this side?"
+  },
+  {
+   "a": "Because this side sits over the Sardis-Vedder Aquifer, which the City protects as DPA 1 for drinking water supply. The City's DPA 1 text lists a new private well, a septic field installation and larger excavation inside the aquifer protection area as activities requiring a development permit, so a buyer planning those works should confirm the permit before subjects are removed.",
+   "gen": "uq",
+   "q": "Why does a well or septic change need a permit here?"
+  },
+  {
+   "a": "Yes, Route 52 Evans is the Evans Road route in the BC Transit Chilliwack Rider's Guide, listed between downtown and Cottonwood Mall via Evans Road in the guide's route list. The same guide lists Route 51 Vedder on Vedder Road at the east edge of this area, so most west-side homes are served from either Evans Road or Vedder Road rather than from interior streets.",
+   "gen": "uq",
+   "q": "Is there a bus on Evans Road?"
+  }
+ ],
+ "slug": "sardis-west-vedder",
+ "status": "draft",
+ "updated": "2026-11-01"
 }
