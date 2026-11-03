@@ -26,7 +26,7 @@ PAGE = {
  'woodland-acres': 'woodland-acres-port-coquitlam', 'surrey': 'surrey',
 }
 # Jared's own listing photos (aerials and street views from his sold listings; no people, plates or interiors). id = first 16 hex of the original's SHA-256 (tools/process_photos.py),
-# read from --own (the folder of <id>-1600.webp). key = 'own-<MLS>-<photo number>'. Credit: Jared Gibbons Real Estate Group; no licence line.
+# read from --own (the folder of <id>-1600.webp). key = 'own-<MLS>-<photo number>'. Credit: Jared Gibbons, REALTOR®; no licence line.
 OWN = [
  ('central-abbotsford', 'own-R2915105-23', 'abc944c6c66786dc', 'Aerial view over the treed complexes of Central Abbotsford toward Mill Lake and the city'),
  ('central-port-coquitlam', 'own-R3116542-33', '860e7bc34d2b16e0', 'Aerial view along Central Port Coquitlam townhomes and condo blocks with forest and hills behind'),
