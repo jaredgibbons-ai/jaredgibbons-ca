@@ -14,6 +14,12 @@ def d(what, where): return f'Explore {what} in {where}.' + TAIL
 
 # slug: (title head, h1 or None, description or None)
 ROWS = {
+ 'mission-lots-land': ('Mission Lots & Land for Sale | Building Sites', None, None),
+ 'mission-west': ('Mission West Homes for Sale | Acreages & Views', None, None),
+ 'tsawwassen-east': ('Tsawwassen East Homes for Sale | Larger Lots', None, None),
+ 'sell-my-house-in-delta': ('Sell My House in Delta, BC | Tsawwassen & Ladner', None, None),
+ 'glenbrooke-north': ('GlenBrooke North, New Westminster Homes for Sale', None, None),
+ 'homes-with-multiplex-potential-fraser-valley': ('Multiplex & Suite Potential: Fraser Valley Rules', None, None),
  'arbutus': ('Arbutus Ridge, Vancouver Homes for Sale', 'Arbutus Ridge Homes for Sale | Vancouver Real Estate', d('homes for sale', 'Arbutus Ridge, Vancouver')),
  'bc-landlord-tenant-resources': ('BC Landlord & Tenant Resources: RTB Forms Guide', None, None),
  'cheap-mobile-homes-langley-under-500k': ('Cheap Mobile Homes for Sale in Langley Under $500K', None, None),
