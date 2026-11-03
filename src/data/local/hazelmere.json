@@ -407,6 +407,123 @@
       ],
       "gen": "nb",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Hazelmere Village, 18088 8 Ave",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange named on a TransLink timetable: White Rock Centre, the terminus of route 531. Route 531, White Rock Centre / Willowbrook, TransLink, via 152 St, 24 Ave, 192 St and 200 St; its published routing does not include 8 Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Campbell Valley Regional Park, Langley; its South Valley parking lot is on 8th Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Xw'epiteng Elementary, K-7, SD36 Surrey, 18035 8 Ave. East Kensington Elementary, K-7, SD36 Surrey, 2795 184 St. Douglas Elementary, K-7, SD36 Surrey, 17325 2 Ave."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Hazelmere Village",
+          "Xw'epiteng Elementary",
+          "Walk",
+          "3",
+          "0.2"
+        ],
+        [
+          "Hazelmere Village",
+          "Douglas Elementary",
+          "Drive",
+          "5",
+          "3.3"
+        ],
+        [
+          "Hazelmere Village",
+          "Campbell Valley Regional Park",
+          "Drive",
+          "7",
+          "4.7"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt531",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt531.pdf"
+          }
+        ],
+        [
+          {
+            "t": "metrovancouver.org · park locations",
+            "h": "https://metrovancouver.org/services/regional-parks/park-locations"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

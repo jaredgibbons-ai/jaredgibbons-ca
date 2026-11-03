@@ -437,6 +437,231 @@
       ],
       "gen": "n55",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Charleston Green, 6537 138 St",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Newton Exchange, named on TransLink route 324 timetable. Nearest SkyTrain station: King George Station, on the route 321 corridor through Newton Exchange. Route 324 (TransLink): Newton Exchange to Surrey Central Station via 72 Ave, 138 St, 68 Ave and 132 St."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Pioneer Park, 6572 133 Street (City of Surrey); the park stretches from 64 Ave to Unwin Park at 68 Ave. Unwin Park, 13313 68 Avenue (City of Surrey)."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Hyland Elementary, K-7, SD36, 6677 140 St; catchment not confirmed. Henry Bose Elementary, K-7, SD36, 6550 134 St; catchment not confirmed. École Panorama Ridge Secondary, 8-12, SD36, 13220 64 Ave; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Chalo FreshCo (grocery), 7165 138 St."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Chelsea Gardens, 13860 70 Ave",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: R1 King George Boulevard RapidBus (TransLink): Newton Exchange to Guildford; every 10 minutes peak, 15 minutes off-peak."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Newton Recreation Centre, 13730 72 Avenue. Surrey Libraries Newton Branch, 13795 70 Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Georges Vanier Elementary, K-7, SD36, 6985 142 St; catchment not confirmed. M B Sanford Elementary, K-7, SD36, 7318 143 St; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods (grocery), #100-7320 King George Boulevard."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Charleston Green",
+          "Hyland Elementary",
+          "Walk",
+          "10",
+          "0.8"
+        ],
+        [
+          "Charleston Green",
+          "Henry Bose Elementary",
+          "Walk",
+          "18",
+          "1.4"
+        ],
+        [
+          "Charleston Green",
+          "École Panorama Ridge Secondary",
+          "Walk",
+          "19",
+          "1.4"
+        ],
+        [
+          "Chelsea Gardens",
+          "Surrey Libraries Newton Branch",
+          "Walk",
+          "5",
+          "0.3"
+        ],
+        [
+          "Chelsea Gardens",
+          "Chalo FreshCo, 7165 138 St",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "Chelsea Gardens",
+          "Newton Recreation Centre",
+          "Walk",
+          "10",
+          "0.7"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt324",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt324.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt321",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · pioneer park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/pioneer-park"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · unwin park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/unwin-park"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · newton recreation centre",
+            "h": "https://www.surrey.ca/parks-recreation/recreation-facilities/newton-recreation-centre"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036"
+          }
+        ],
+        [
+          {
+            "t": "chalofreshco.com · chalo freshco 138 st 72 ave",
+            "h": "https://chalofreshco.com/stores/chalo-freshco-138-st-72-ave/"
+          }
+        ],
+        [
+          {
+            "t": "translink.ca · rapidbus projects",
+            "h": "https://www.translink.ca/plans-and-projects/projects/bus-projects/rapidbus-projects"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt335",
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt335.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surreylibraries.ca · newton branch",
+            "h": "https://surreylibraries.ca/locations/newton-branch"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/910/store"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

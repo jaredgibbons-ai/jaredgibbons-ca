@@ -623,6 +623,204 @@
       ],
       "pos": "end",
       "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The Lexington, 1150 54A Street"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: No rapid-transit station is in Delta. Nearest rapid-transit station: Bridgeport Station (Canada Line), terminus of TransLink routes 601 and 602 from South Delta. Nearest bus exchange: South Delta Exchange, on 56 St, served by routes 601 and 602. Route 601 Bridgeport Station / South Delta, via 12 Ave and 56 St (South Delta Exchange), TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Winskill Park, Delta, per the City of Delta park page. KinVillage Community Centre, 5430 10th Ave, Delta (City of Delta seniors recreation facility)."
+          }
+        ],
+        [
+          {
+            "t": "Schools: South Park Elementary, K–7, School District 37, 735 Gilchrist Dr; catchment not confirmed. Cliff Drive Elementary, K–7, School District 37, 5025 12 Ave; catchment not confirmed. South Delta Secondary, 8–12, School District 37, 750 53 St; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Thrifty Foods, 1207 56th Street, Delta (retailer's own store page). Save-On-Foods, 1143 56th Street, Delta."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Tsawwassen Greene, 1140 55 Street"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Parks and recreation: South Delta Recreation Centre, 1720 56 Street, Delta: arena, curling rink and gymnasium."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "The Lexington",
+          "Save-On-Foods, 1143 56 Street",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "The Lexington",
+          "Thrifty Foods, 1207 56 Street",
+          "Walk",
+          "5",
+          "0.3"
+        ],
+        [
+          "The Lexington",
+          "Tsawwassen Library, 1321A 56th Street",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Tsawwassen Greene",
+          "Save-On-Foods, 1143 56 Street",
+          "Walk",
+          "2",
+          "0.2"
+        ],
+        [
+          "Tsawwassen Greene",
+          "Thrifty Foods, 1207 56 Street",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "Tsawwassen Greene",
+          "Winskill Park",
+          "Walk",
+          "5",
+          "0.4"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf",
+            "t": "infomaps.translink.ca · tt601"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt602.pdf",
+            "t": "infomaps.translink.ca · tt602"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/winskill-park",
+            "t": "delta.ca · winskill park"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/city-hall/working-delta/volunteering/kinvillage-community-centre",
+            "t": "delta.ca · kinvillage community centre"
+          }
+        ],
+        [
+          {
+            "h": "http://www.delta.ca/parks-recreation/sport-recreation/indoor-facilities/south-delta-recreation-centre",
+            "t": "delta.ca · south delta recreation centre"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations",
+            "t": "fvrl.bc.ca · locations"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta",
+            "t": "studentsuccess.gov.bc.ca · delta"
+          }
+        ],
+        [
+          {
+            "h": "https://www.thriftyfoods.com/find-a-store/store/9466-thrifty-foods-tsawwassen",
+            "t": "thriftyfoods.com · 9466 thrifty foods tsawwassen"
+          }
+        ],
+        [
+          {
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/943/store",
+            "t": "saveonfoods.com · store"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "breadcrumbs": [

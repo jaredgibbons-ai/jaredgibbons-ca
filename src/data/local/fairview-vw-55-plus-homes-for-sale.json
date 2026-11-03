@@ -434,6 +434,147 @@
       ],
       "gen": "n55",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Terraces on 7th, 1570 West 7th Avenue",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid station: Broadway-City Hall Station (Canada Line), a stop on route 99. Route 99 B-Line, Commercial-Broadway Station / UBC, via Broadway, TransLink. Route 9, Granville/Alma St/UBC, via Broadway, TransLink; its timetable lists a westbound stop at W Broadway at Granville St."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Granville Loop Park, 1435 W 5th Ave, per the City park finder. Granville Park, 3001 Fir St, per the City park finder."
+          }
+        ],
+        [
+          {
+            "t": "Schools: False Creek Elementary, grades K-7, 900 School Green, School District 39 Vancouver; catchment not confirmed. L'école Bilingue Elementary, grades K-7, 1166 W 14th Ave, School District 39 Vancouver; catchment not confirmed."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Terraces on 7th",
+          "Granville Loop Park, 1435 W 5th Ave",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Terraces on 7th",
+          "Firehall Branch library, 1455 West 10th Ave",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "Terraces on 7th",
+          "Granville Park, 3001 Fir St",
+          "Walk",
+          "11",
+          "0.8"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt099",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt099.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt009",
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt009.pdf"
+          }
+        ],
+        [
+          {
+            "t": "covapp.vancouver.ca · parkdetail.aspx",
+            "h": "https://covapp.vancouver.ca/parkfinder/parkdetail.aspx?inparkid=45"
+          }
+        ],
+        [
+          {
+            "t": "covapp.vancouver.ca · parkdetail.aspx (2)",
+            "h": "https://covapp.vancouver.ca/ParkFinder/parkdetail.aspx?inparkid=44"
+          }
+        ],
+        [
+          {
+            "t": "vpl.ca · firehall branch",
+            "h": "http://www.vpl.ca/location/firehall-branch"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/039"
+          }
+        ],
+        [
+          {
+            "t": "granvilleisland.com · public market",
+            "h": "https://granvilleisland.com/public-market"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

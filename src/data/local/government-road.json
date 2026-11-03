@@ -719,6 +719,368 @@
     {
       "t": "h",
       "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Concorde Place, 9521 Cardston Court",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Route 110 Lougheed Station / Metrotown Station, TransLink, runs via Cameron, Beaverbrook, Eastlake, Production Station, Brighton and Government Rd. Route 136 Lougheed Station / Brentwood Station, TransLink, runs via Production Station, Lougheed Hwy, Austin Rd and Gatineau to Lougheed Station."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Burnaby Lake Regional Park, a Metro Vancouver regional park on Burnaby Lake, south-west of the building. Stoney Creek Park, City of Burnaby park, north of the building by Beaverbrook Dr."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Stoney Creek Community Elementary, K–7, 2740 Beaverbrook Cres, School District 41 (Burnaby). École Seaforth Elementary, K–7, 7881 Government Rd, School District 41 (Burnaby). Burnaby Mountain Secondary, 8–12, 8800 Eastlake Dr, School District 41 (Burnaby)."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: The City of Lougheed Shopping Centre, 9855 Austin Ave. Walmart Supercentre (store 3008), 9855 Austin Rd."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Lougheed Estates, 9202 Horne Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Parks and recreation: Burnaby Lake Regional Park, a Metro Vancouver regional park on Burnaby Lake, south of the building. Stoney Creek Park, City of Burnaby park, north-east of the building by Beaverbrook Dr."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sandlewood, 9233 Government Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Route 110 Lougheed Station / Metrotown Station, TransLink, runs via Government Rd, Beaverbrook Cres, Eastlake Dr, Production Station and Sperling Station. Lougheed Station is the terminus of route 110."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Temporary Cameron Community Centre and Library, inside The City of Lougheed Shopping Centre, 9855 Austin Ave."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Cameron Elementary, K–7, 9540 Erickson Dr, School District 41 (Burnaby). Lyndhurst Elementary, K–7, 9847 Lyndhurst St, School District 41. Burnaby Mountain Secondary, grades 8–12, 8800 Eastlake Dr, School District 41."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Concorde Place",
+          "Lougheed Town Centre Station",
+          "Walk",
+          "8",
+          "0.6"
+        ],
+        [
+          "Concorde Place",
+          "The City of Lougheed / Walmart Supercentre, 9855 Austin Ave",
+          "Walk",
+          "15",
+          "1.1"
+        ],
+        [
+          "Concorde Place",
+          "Production Way–University Station",
+          "Drive",
+          "4",
+          "2.0"
+        ],
+        [
+          "Discovery Place I",
+          "Lougheed Town Centre Station",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Discovery Place I",
+          "The City of Lougheed / Walmart Supercentre, 9855 Austin Ave",
+          "Walk",
+          "16",
+          "1.2"
+        ],
+        [
+          "Discovery Place I",
+          "Stoney Creek Park",
+          "Walk",
+          "18",
+          "1.3"
+        ],
+        [
+          "Discovery Place II, marketed as The Harrington",
+          "Lougheed Town Centre Station",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Discovery Place II, marketed as The Harrington",
+          "The City of Lougheed / Walmart Supercentre, 9855 Austin Ave",
+          "Walk",
+          "16",
+          "1.2"
+        ],
+        [
+          "Discovery Place II, marketed as The Harrington",
+          "Stoney Creek Park",
+          "Walk",
+          "19",
+          "1.4"
+        ],
+        [
+          "Lougheed Estates (from the street)",
+          "Burnaby Mountain Secondary",
+          "Walk",
+          "13",
+          "0.9"
+        ],
+        [
+          "Lougheed Estates (from the street)",
+          "Lougheed Town Centre Station",
+          "Walk",
+          "14",
+          "1.1"
+        ],
+        [
+          "Lougheed Estates (from the street)",
+          "Production Way–University Station",
+          "Walk",
+          "15",
+          "1.1"
+        ],
+        [
+          "Lougheed Estates II (from the street)",
+          "Lougheed Town Centre Station",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Lougheed Estates II (from the street)",
+          "The City of Lougheed / Walmart Supercentre, 9855 Austin Ave",
+          "Walk",
+          "16",
+          "1.2"
+        ],
+        [
+          "Lougheed Estates II (from the street)",
+          "Stoney Creek Park",
+          "Walk",
+          "18",
+          "1.3"
+        ],
+        [
+          "Sandlewood",
+          "Burnaby Mountain Secondary",
+          "Walk",
+          "12",
+          "0.8"
+        ],
+        [
+          "Sandlewood",
+          "Production Way–University Station",
+          "Walk",
+          "16",
+          "1.2"
+        ],
+        [
+          "Sandlewood",
+          "Cameron Elementary",
+          "Walk",
+          "16",
+          "1.2"
+        ],
+        [
+          "Terramor",
+          "Cameron Elementary",
+          "Walk",
+          "16",
+          "1.2"
+        ],
+        [
+          "Terramor",
+          "Burnaby Mountain Secondary",
+          "Walk",
+          "17",
+          "1.3"
+        ],
+        [
+          "Terramor",
+          "Production Way–University Station",
+          "Walk",
+          "19",
+          "1.4"
+        ],
+        [
+          "Tudor Village",
+          "Cameron Elementary",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "Tudor Village",
+          "Burnaby Mountain Secondary",
+          "Walk",
+          "13",
+          "0.9"
+        ],
+        [
+          "Tudor Village",
+          "Production Way–University Station",
+          "Walk",
+          "15",
+          "1.1"
+        ],
+        [
+          "Woodstone Place",
+          "Cameron Elementary",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "Woodstone Place",
+          "Burnaby Mountain Secondary",
+          "Walk",
+          "16",
+          "1.2"
+        ],
+        [
+          "Woodstone Place",
+          "Production Way–University Station",
+          "Walk",
+          "18",
+          "1.4"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt110",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt110.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt136",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt136.pdf"
+          }
+        ],
+        [
+          {
+            "t": "metrovancouver.org · burnaby lake regional park",
+            "h": "https://metrovancouver.org/services/regional-parks/park/burnaby-lake-regional-park"
+          }
+        ],
+        [
+          {
+            "t": "burnaby.ca · Parks",
+            "h": "https://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks.html"
+          }
+        ],
+        [
+          {
+            "t": "burnaby.ca · temporary cameron community centre now open",
+            "h": "https://www.burnaby.ca/our-city/news/2024-09-03/temporary-cameron-community-centre-now-open"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+          }
+        ],
+        [
+          {
+            "t": "walmart.ca · store",
+            "h": "https://www.walmart.ca/en/store/3008"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
       "text": "Sources",
       "gen": "musefaq",
       "pos": "end"

@@ -370,6 +370,158 @@
       ],
       "pos": "end",
       "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Mission Mobile Home Park, 34519 Lougheed Hwy"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid-transit station: Mission City Station, West Coast Express, Mission — terminus on the Route 35 timetable. Nearest bus exchange: Mission City Station terminal; BC Transit states buses use it while Mission Exchange is closed. Route 35 Hatzic (BC Transit): loop from Mission City Station via Hatzic Elementary and Hatzic Middle School."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Neilson Regional Park, 8746 Edwards Street, Mission; FVRD states it borders Hatzic Lake. Mission Leisure Centre, 7650 Grand Street, Mission."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Hatzic Elementary, grades K-6, School District 75 Mission, 8465 Draper St. Catchment not confirmed. Hatzic Middle School, grades 7-9, School District 75 Mission, 34875 Moffat Avenue. Catchment not confirmed. Mission Senior Secondary, grades 10-12, School District 75 Mission, 32939 7th Ave. Catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Real Canadian Superstore, 32136 Lougheed Highway, Mission. Shoppers Drug Mart, The Shops at Mission Hills, 32530 Lougheed Highway, Mission."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Mission Mobile Home Park (from the street)",
+          "Hatzic Middle School, 34875 Moffat Avenue",
+          "Drive",
+          "2",
+          "2.2"
+        ],
+        [
+          "Mission Mobile Home Park (from the street)",
+          "Mission Leisure Centre, 7650 Grand Street",
+          "Drive",
+          "5",
+          "3.2"
+        ],
+        [
+          "Mission Mobile Home Park (from the street)",
+          "Neilson Regional Park, 8746 Edwards Street",
+          "Drive",
+          "5",
+          "3.2"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://www.bctransit.com/agassiz-harrison/schedules-and-maps/route-overview/?route=35&schedule=2025-06-29",
+            "t": "bctransit.com · route overview"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/mission-exchange-set-to-temporarily-close-08-22-2024/",
+            "t": "bctransit.com · mission exchange set to temporarily close 08 22"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrd.ca/EN/main/parks-recreation/parks-trails/neilson.html",
+            "t": "fvrd.ca · neilson"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mission.ca/council-government/news/mission-partners-servicebc-deliver-new-pilot-program-locally",
+            "t": "mission.ca · mission partners servicebc deliver new pilot pro"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/",
+            "t": "fvrl.bc.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/075",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.realcanadiansuperstore.ca/store-locator/details/1559",
+            "t": "realcanadiansuperstore.ca · details"
+          }
+        ],
+        [
+          {
+            "h": "https://www.shoppersdrugmart.ca/en/stores/2208-shoppers-drug-mart-the-shops-at-mission-hills/",
+            "t": "shoppersdrugmart.ca · 2208 shoppers drug mart the shops at mission hil"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "breadcrumbs": [

@@ -191,16 +191,16 @@
           "1.2"
         ],
         [
-          "Chilliwack Library",
-          "Drive",
-          "3",
-          "1.9"
-        ],
-        [
           "Save-On-Foods",
           "Drive",
           "3",
           "1.6"
+        ],
+        [
+          "Chilliwack Library",
+          "Drive",
+          "3",
+          "1.9"
         ],
         [
           "Chilliwack Secondary",
@@ -308,6 +308,314 @@
         ]
       ],
       "gen": "nb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "9000 Birch Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Downtown Exchange, Chilliwack, BC Transit. Route 51 Vedder (BC Transit): Downtown Chilliwack to UFV Chilliwack via Yale Rd at Menzies St. Route 53 Fairfield (BC Transit): Downtown Chilliwack loop via Menzies St at Riverside Dr and Young Rd at Clare Ave."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Central Community Park, 45943 Victoria Ave, City of Chilliwack. Chilliwack Library, 45860 First Avenue, Fraser Valley Regional Library."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Bernard Elementary, K–5, School District 33 Chilliwack, 45465 Bernard Ave. Chilliwack Central Elementary Community, K–5, SD33, 9435 Young Rd. Chilliwack Middle School, 6–8, SD33, 46354 Yale Rd."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods, 46020 Yale Rd W, Chilliwack."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "9060 Birch Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Schools: Chilliwack Central Elementary Community, K–5, School District 33 Chilliwack, 9435 Young Rd. Chilliwack Middle School, 6–8, School District 33 Chilliwack, 46354 Yale Rd."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Chilliwack Gardens, 45749 Spadina Avenue",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: No rapid transit in Chilliwack. Route 66 Fraser Valley Express (BC Transit) runs Downtown Chilliwack to Lougheed Town Centre Station. Nearest bus exchange: Downtown Exchange, Chilliwack."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Central Community Park, City of Chilliwack parks list. Salish Park, City of Chilliwack parks list."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Bernard Elementary, K-5, School District 33 Chilliwack, 45465 Bernard Ave. Chilliwack Middle School, 6-8, School District 33 Chilliwack, 46354 Yale Rd. Chilliwack Secondary, 9-12, School District 33 Chilliwack, 46363 Yale Rd."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "9000 Birch Street",
+          "Chilliwack Library",
+          "Walk",
+          "5",
+          "0.3"
+        ],
+        [
+          "9000 Birch Street",
+          "Save-On-Foods",
+          "Walk",
+          "8",
+          "0.6"
+        ],
+        [
+          "9000 Birch Street",
+          "Central Community Park",
+          "Walk",
+          "14",
+          "1.1"
+        ],
+        [
+          "9060 Birch Street",
+          "Chilliwack Library",
+          "Walk",
+          "3",
+          "0.2"
+        ],
+        [
+          "9060 Birch Street",
+          "Save-On-Foods",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "9060 Birch Street",
+          "Central Community Park",
+          "Walk",
+          "13",
+          "1.0"
+        ],
+        [
+          "Cedar Court",
+          "Chilliwack Library",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Cedar Court",
+          "Save-On-Foods",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Cedar Court",
+          "Chilliwack Cultural Centre",
+          "Walk",
+          "11",
+          "0.8"
+        ],
+        [
+          "Chilliwack Gardens",
+          "Downtown Exchange",
+          "Walk",
+          "3",
+          "0.2"
+        ],
+        [
+          "Chilliwack Gardens",
+          "Save-On-Foods",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "Chilliwack Gardens",
+          "Chilliwack Cultural Centre",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "The Willows (from the street)",
+          "Salish Park",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "The Willows (from the street)",
+          "Chilliwack Library",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "The Willows (from the street)",
+          "Downtown Exchange",
+          "Walk",
+          "9",
+          "0.7"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "bctransit.com · schedules and maps",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/"
+          }
+        ],
+        [
+          {
+            "t": "bctransit.com · route overview",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=51"
+          }
+        ],
+        [
+          {
+            "t": "bctransit.com · route overview (2)",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=53"
+          }
+        ],
+        [
+          {
+            "t": "bctransit.com · route overview (3)",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=57"
+          }
+        ],
+        [
+          {
+            "t": "bctransit.com · route overview (4)",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=66"
+          }
+        ],
+        [
+          {
+            "t": "chilliwack.com",
+            "h": "https://chilliwack.com/main/page.cfm?id=1754&dowhat=locationView&plID=23"
+          }
+        ],
+        [
+          {
+            "t": "fvrl.bc.ca · locations",
+            "h": "https://www.fvrl.bc.ca/locations"
+          }
+        ],
+        [
+          {
+            "t": "chilliwackculturalcentre.ca",
+            "h": "https://www.chilliwackculturalcentre.ca/"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · chilliwack",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/chilliwack"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/2213/store"
+          }
+        ],
+        [
+          {
+            "t": "chilliwack.com (2)",
+            "h": "https://www.chilliwack.com/main/page.cfm?id=1754.&dowhat=typeView&ptID=1&listView=1"
+          }
+        ],
+        [
+          {
+            "t": "chilliwack.com (3)",
+            "h": "https://www.chilliwack.com/main/page.cfm?id=37&prid=544&prshow=details"
+          }
+        ]
+      ],
+      "gen": "nbb",
       "pos": "end"
     }
   ],

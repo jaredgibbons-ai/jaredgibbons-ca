@@ -421,6 +421,164 @@
       ],
       "gen": "n55",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Delta Green, 4686 51 Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: No rapid-transit station is in Delta. Nearest bus exchange: Ladner Exchange, served by Routes 601, 606 and 608 (TransLink). Route 601 Bridgeport Station / South Delta, via Arthur Drive, Ladner Trunk Road and Harvest Drive to Ladner Exchange, then Highway 99 to Bridgeport Station (TransLink). Route 620 Bridgeport Station / Tsawwassen Ferry, via Ladner Exchange, Harvest Drive and Ladner Trunk Road (TransLink)."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Memorial Park, 5010 47 Avenue, Delta (City of Delta). Ladner Pioneer Library, 4683 51 Street, Delta (Fraser Valley Regional Library)."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Ladner Elementary, K–7, School District 37 Delta, 5016 44 Avenue (BC Ministry school list). Delta Secondary, 8–12, School District 37 Delta, 4615 51 Street (BC Ministry school list). Delta Christian School, independent, K–7, School District 37 Delta, 4789 53 Street (BC Ministry school list)."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods, 5186 48 Avenue, Delta."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Delta Green (from the street)",
+          "Ladner Pioneer Library, 4683 51 Street",
+          "Walk",
+          "1",
+          "0.1"
+        ],
+        [
+          "Delta Green (from the street)",
+          "Delta Secondary, 4615 51 Street",
+          "Walk",
+          "2",
+          "0.1"
+        ],
+        [
+          "Delta Green (from the street)",
+          "McKee Seniors Recreation Centre, 5155 47 Avenue",
+          "Walk",
+          "3",
+          "0.2"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt601",
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt620",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt620.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt609",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt609.pdf"
+          }
+        ],
+        [
+          {
+            "t": "delta.ca · memorial park",
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/memorial-park"
+          }
+        ],
+        [
+          {
+            "t": "fvrl.bc.ca · locations",
+            "h": "https://www.fvrl.bc.ca/locations"
+          }
+        ],
+        [
+          {
+            "t": "delta.ca · 01 Jan",
+            "h": "https://www.delta.ca/sites/default/files/2022-12/01%20Jan.pdf"
+          }
+        ],
+        [
+          {
+            "t": "delta.ca · ladner leisure centre",
+            "h": "https://www.delta.ca/parks-recreation/sport-recreation/indoor-facilities/ladner-leisure-centre"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · delta",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/936/store"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

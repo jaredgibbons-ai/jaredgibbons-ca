@@ -1238,6 +1238,152 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Kings Crossing, 1641 King Crescent"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: No SkyTrain or West Coast Express station is in Abbotsford; BC Transit serves Poplar on routes 3, 5, 6 and 12. Route 3 Clearbrook/Huntingdon runs via Bourquin Exchange, Montrose Exchange and Marshall Road. Bourquin Exchange is a terminus on BC Transit Routes 31 and 21."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Berry Park, 33928 Fern Street, on the City parks list. Huntingdon Park, 34779 3rd Avenue, on the City parks list."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Jackson Elementary, K-5, SD34 Abbotsford, 33165 King Rd. South Poplar Traditional Elementary, K-5, SD34 Abbotsford, 32746 Huntingdon Rd. Abbotsford Traditional School, 6-12, SD34 Abbotsford, 2272 Windsor St."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Real Canadian Superstore, 2855 Gladwin Rd, Abbotsford."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "The Argyle",
+          "Jackson Elementary",
+          "Drive",
+          "4",
+          "2.1"
+        ],
+        [
+          "The Argyle",
+          "South Poplar Traditional Elementary",
+          "Drive",
+          "7",
+          "4.5"
+        ],
+        [
+          "The Argyle",
+          "Real Canadian Superstore, 2855 Gladwin Rd",
+          "Drive",
+          "9",
+          "5.2"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://www.bctransit.com/wp-content/uploads/2026/08/cfv_map_21.pdf",
+            "t": "bctransit.com · cfv map 21"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=3",
+            "t": "bctransit.com · route overview"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=31",
+            "t": "bctransit.com · route overview (2)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/parks-playgrounds",
+            "t": "abbotsford.ca · parks playgrounds"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations/clearbrook-library",
+            "t": "fvrl.bc.ca · clearbrook library"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/034",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.realcanadiansuperstore.ca/store-locator/details/1558",
+            "t": "realcanadiansuperstore.ca · details"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

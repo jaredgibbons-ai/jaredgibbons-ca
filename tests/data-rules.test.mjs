@@ -227,6 +227,29 @@ test('duplex sections (dx): no note markup or research wording, no listing count
   assert.ok(hub.faq.length >= 5 && hub.new_page && hub.new_page.title.length <= 66, 'duplex rules page FAQ or title');
 });
 
+test("building-by-building nearby sections (nbb): no URLs, note markup or research wording; a 5-column table with plausible speeds; walks up to 1.5 km, drives up to 10 km", () => {
+  let pages = 0, rows = 0;
+  const bad = /FILE STATUS|UNVERIFIED|UNCONFIRMED|\bsiblings?\b|\bslug\b|SnapStats|~\/|in this (?:pass|note)|rate limit|Nominatim|geocod|ADDRESS NOT|ADDRESS CONFLICT|R[23]\d{6}|https?:\/\//;
+  for (const [f, t] of texts) {
+    if (!t.includes('"nbb"')) continue;
+    const d = JSON.parse(t);
+    const mine = (d.blocks || []).filter((b) => b.gen === 'nbb');
+    const txt = JSON.stringify(mine).replace(/"h":"[^"]*"/g, '');
+    assert.ok(!bad.test(txt), `${f}: building nearby text leaked: ${(txt.match(bad) || [])[0]}`);
+    for (const b of mine.filter((x) => x.t === 'table')) {
+      assert.deepEqual(b.head, ['Building', 'To', 'How', 'Minutes', 'Distance (km)'], `${f}: table columns`);
+      for (const r of b.rows) {
+        const m = +r[3], km = +r[4]; rows++;
+        assert.ok(m >= 1 && m <= 90 && km > 0, `${f}: ${r.join('|')}`);
+        const sp = km / (m / 60);
+        assert.ok(r[2] === 'Walk' ? km <= 1.6 && sp >= 3 && sp <= 7 : km <= 10.1 && sp >= 4 && sp <= 95, `${f}: speed ${r.join('|')}`);
+      }
+    }
+    pages++;
+  }
+  assert.ok(pages >= 150 && rows >= 1800, `expected 150+ pages and 1800+ rows, got ${pages} / ${rows}`);
+});
+
 test("what's nearby blocks (nb): no URLs, note markup or research wording in text; times only in a four-column table with a start point; plausible speeds", () => {
   let pages = 0, rows = 0;
   const bad = /FILE STATUS|UNVERIFIED|UNCONFIRMED|\bsiblings?\b|\bslug\b|SnapStats|~\/|in this (?:pass|note)|rate limit|Nominatim|geocod|R[23]\d{6}|https?:\/\//;

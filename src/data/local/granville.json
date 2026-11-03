@@ -1061,6 +1061,319 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "FORM by Anthem, 1530 West 6th Avenue"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid-transit station: Broadway–City Hall Station (Canada Line), at W Broadway and Cambie St, per TransLink's Vancouver transit system map. Route 10 Waterfront Station / Marine Drive Station, via Granville St, TransLink. Route 14 Hastings / UBC, via W 5th Ave at Granville St and W 10th Ave, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Granville Park, 3001 Fir St: Vancouver Park Board park in Fairview. Vancouver Public Library, Firehall Branch, 1455 W 10th Ave."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Lord Tennyson Elementary, 1936 W 10th Ave, School District 39 (Vancouver). L'école Bilingue Elementary, grades K–7, 1166 W 14th Ave, School District 39."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Meinhardt Fine Foods, 3002 Granville St."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Landmark Sunset, 1412 West 14th Avenue"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Route 14 Hastings / UBC, via W 10th Ave at the corridor's north end, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Schools: L'école Bilingue Elementary, grades K–7, 1166 W 14th Ave, School District 39 (Vancouver). Lord Tennyson Elementary, 1936 W 10th Ave, School District 39."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Pintura, 1530 West 8th Avenue"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid station: Broadway–City Hall Station (Canada Line), at W Broadway and Cambie St, per TransLink's Vancouver transit system map. Route 99 B-Line, Commercial-Broadway Station / UBC, via Broadway, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Granville Loop Park, 1435 W 5th Ave, per the City park finder."
+          }
+        ],
+        [
+          {
+            "t": "Schools: False Creek Elementary, grades K-7, 900 School Green, School District 39 Vancouver; catchment not confirmed. L'école Bilingue Elementary, grades K-7, 1166 W 14th Ave, School District 39 Vancouver; catchment not confirmed."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "FORM by Anthem (from the street)",
+          "Vancouver Public Library, Firehall Branch, 1455 W 10th Ave",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "FORM by Anthem (from the street)",
+          "Meinhardt Fine Foods, 3002 Granville St",
+          "Walk",
+          "14",
+          "1.1"
+        ],
+        [
+          "FORM by Anthem (from the street)",
+          "Whole Foods Market, 510 W 8th Ave",
+          "Drive",
+          "3",
+          "1.8"
+        ],
+        [
+          "Landmark Sunset",
+          "Meinhardt Fine Foods, 3002 Granville St",
+          "Walk",
+          "2",
+          "0.2"
+        ],
+        [
+          "Landmark Sunset",
+          "L'école Bilingue Elementary, 1166 W 14th Ave",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "Landmark Sunset",
+          "Vancouver Public Library, Firehall Branch, 1455 W 10th Ave",
+          "Walk",
+          "8",
+          "0.6"
+        ],
+        [
+          "Pintura",
+          "Firehall Branch library, 1455 West 10th Ave",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Pintura",
+          "Granville Loop Park, 1435 W 5th Ave",
+          "Walk",
+          "6",
+          "0.4"
+        ],
+        [
+          "Pintura",
+          "Meinhardt Fine Foods, 3002 Granville St",
+          "Walk",
+          "10",
+          "0.7"
+        ],
+        [
+          "Pintura townhouses",
+          "Granville Loop Park, 1435 W 5th Ave",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Pintura townhouses",
+          "Firehall Branch library, 1455 West 10th Ave",
+          "Walk",
+          "6",
+          "0.4"
+        ],
+        [
+          "Pintura townhouses",
+          "Meinhardt Fine Foods, 3002 Granville St",
+          "Walk",
+          "10",
+          "0.8"
+        ],
+        [
+          "The Avedon",
+          "Meinhardt Fine Foods, 3002 Granville St",
+          "Walk",
+          "1",
+          "0.1"
+        ],
+        [
+          "The Avedon",
+          "Vancouver Public Library, Firehall Branch, 1455 W 10th Ave",
+          "Walk",
+          "8",
+          "0.6"
+        ],
+        [
+          "The Avedon",
+          "L'école Bilingue Elementary, 1166 W 14th Ave",
+          "Walk",
+          "8",
+          "0.6"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://www.translink.ca/-/media/translink/documents/schedules-and-maps/transit-system-maps/regional-maps/2026/january/vancouver.pdf",
+            "t": "translink.ca · vancouver"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt010.pdf",
+            "t": "infomaps.translink.ca · tt010"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt014.pdf",
+            "t": "infomaps.translink.ca · tt014"
+          }
+        ],
+        [
+          {
+            "h": "https://covapp.vancouver.ca/ParkFinder/parkdetail.aspx?inparkid=44",
+            "t": "covapp.vancouver.ca · parkdetail.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://www.vpl.ca/about/news/2020/vpl-reopen-five-locations-and-expand-takeout-service-july-14",
+            "t": "vpl.ca · vpl reopen five locations and expand takeout ser"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/039",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.meinhardtfinefoods.com/privacy-policy/",
+            "t": "meinhardtfinefoods.com · privacy policy"
+          }
+        ],
+        [
+          {
+            "h": "https://www.wholefoodsmarket.com/stores/cambie",
+            "t": "wholefoodsmarket.com · cambie"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt099.pdf",
+            "t": "infomaps.translink.ca · tt099"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt009.pdf",
+            "t": "infomaps.translink.ca · tt009"
+          }
+        ],
+        [
+          {
+            "h": "https://covapp.vancouver.ca/parkfinder/parkdetail.aspx?inparkid=45",
+            "t": "covapp.vancouver.ca · parkdetail.aspx (2)"
+          }
+        ],
+        [
+          {
+            "h": "http://www.vpl.ca/location/firehall-branch",
+            "t": "vpl.ca · firehall branch"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

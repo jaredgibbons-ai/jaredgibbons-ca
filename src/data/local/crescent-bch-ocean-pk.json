@@ -30,22 +30,22 @@
         ],
         [
           {
-            "t": "Nearest bus exchange: White Rock Centre, served by routes 350, 351, 352 and 361."
+            "t": "Nearest bus exchange: White Rock Centre (routes 350, 351, 352, 361)."
           }
         ],
         [
           {
-            "t": "Route 350, TransLink: Crescent Beach to White Rock Centre via Crescent Rd, 128 St and 16 Ave."
+            "t": "Route 350, TransLink: Crescent Beach to White Rock Centre via Crescent Rd, 128 St, 16 Ave."
           }
         ],
         [
           {
-            "t": "Route 352, TransLink: Ocean Park to Bridgeport Station via Crescent Rd and 128 St."
+            "t": "Route 352, TransLink: Ocean Park to Bridgeport Station via Crescent Rd, 128 St."
           }
         ],
         [
           {
-            "t": "Route 361, TransLink: Ocean Park to White Rock Centre via Marine, Russell, Johnston and 152 St."
+            "t": "Route 361, TransLink: Ocean Park to White Rock Centre via Marine, Russell, Johnston, 152 St."
           }
         ]
       ],
@@ -64,17 +64,17 @@
       "items": [
         [
           {
-            "t": "Crescent Beach, South Surrey: swimming, beach volleyball, beachfront pathway."
+            "t": "Crescent Beach, South Surrey: swimming, volleyball, beachfront pathway."
           }
         ],
         [
           {
-            "t": "Blackie Spit Park, South Surrey: picnic areas, nature trails, two fully fenced dog off-leash spaces."
+            "t": "Blackie Spit Park, South Surrey: picnic areas, trails, two fenced dog off-leash areas."
           }
         ],
         [
           {
-            "t": "Crescent Park, South Surrey: 52-hectare park, forest trails, ponds, picnic shelters, tennis and pickleball courts, playground."
+            "t": "Crescent Park, South Surrey: 52-hectare park; forest trails, ponds, shelters, tennis/pickleball courts, playground."
           }
         ],
         [
@@ -198,6 +198,16 @@
           {
             "t": "Bus frequencies: not stated."
           }
+        ],
+        [
+          {
+            "t": "Street-level boundary: not published; places stated by address."
+          }
+        ],
+        [
+          {
+            "t": "Second grocery anchor in the sub-area: none confirmed on a retailer's own site."
+          }
         ]
       ],
       "gen": "nb",
@@ -275,6 +285,164 @@
         ]
       ],
       "gen": "nb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Ocean Park Place, 12890 17 Avenue",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid-transit station: Bridgeport Station (Canada Line), via White Rock Centre on route 351. Nearest bus exchange: White Rock Centre (routes 350, 351, 352, 361). Route 361 Ocean Park/White Rock Centre, TransLink: its timetable lists 17 Avenue at 128 Street and 128 Street at 16 Avenue as timing points, at the building's corner."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Surrey Libraries Ocean Park Branch, 12854 17 Avenue, Surrey. Kwomais Point Park, 1367 128 Street, Surrey: ocean lookout over Semiahmoo Bay."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Ocean Cliff Elementary, K-7, SD36, 12550 20 Avenue, Surrey; catchment not confirmed. Crescent Park Elementary, K-7, SD36, 2440 128 Street, Surrey; catchment not confirmed. Elgin Park Secondary, 8-12, SD36, 13484 24 Avenue, Surrey; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Safeway (grocery and pharmacy), Ocean Park, 12825 16 Avenue, Surrey."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Ocean Park Place",
+          "Surrey Libraries Ocean Park Branch, 12854 17 Avenue",
+          "Walk",
+          "2",
+          "0.1"
+        ],
+        [
+          "Ocean Park Place",
+          "Safeway, 12825 16 Avenue",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "Ocean Park Place",
+          "Kwomais Point Park",
+          "Walk",
+          "13",
+          "0.9"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt351",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt351.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt350",
+            "h": "https://infomaps.translink.ca/Public_Timetables/210/tt350.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt361",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt361.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt352",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt352.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · staying safe winter",
+            "h": "https://www.surrey.ca/news-events/news/staying-safe-winter"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · kwomais point park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/kwomais-point-park"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · crescent park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/crescent-park"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036"
+          }
+        ],
+        [
+          {
+            "t": "safeway.ca · find a store",
+            "h": "https://www.safeway.ca/find-a-store/"
+          }
+        ]
+      ],
+      "gen": "nbb",
       "pos": "end"
     }
   ],

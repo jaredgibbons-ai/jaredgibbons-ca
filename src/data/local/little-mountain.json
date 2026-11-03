@@ -313,6 +313,152 @@
       ],
       "gen": "nb",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Little Mountain Meadows, 9855 Quarry Road",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: No SkyTrain, West Coast Express or SeaBus station is in Chilliwack. Route 66 Fraser Valley Express (BC Transit) runs Downtown Chilliwack to Lougheed Town Centre Station, the nearest rapid-transit station. Nearest bus exchange: Downtown Exchange, Chilliwack. Route 57 Broadway (BC Transit): Downtown Chilliwack to Cottonwood Mall via Young Rd and Yale Rd at Menzies St, at the west base of the hill."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Little Mountain Park: loop trail connecting Chartwell Drive to Swallow Crescent and Hillcrest Drive, with picnic tables, playground and view platform. Chilliwack Library, 45860 First Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Little Mountain Elementary, K-5, School District 33 Chilliwack, 9900 Carleton St; catchment not confirmed. Strathcona Elementary, K-5, School District 33 Chilliwack, 46375 Strathcona Rd; catchment not confirmed. Chilliwack Secondary, 9-12, School District 33 Chilliwack, 46363 Yale Rd; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods, 46020 Yale Rd W, Chilliwack."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Little Mountain Meadows (from the street)",
+          "Little Mountain Elementary",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Little Mountain Meadows (from the street)",
+          "Little Mountain Elementary",
+          "Drive",
+          "2",
+          "0.8"
+        ],
+        [
+          "Little Mountain Meadows (from the street)",
+          "Chilliwack Secondary",
+          "Drive",
+          "4",
+          "2.1"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "bctransit.com · route overview",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=66"
+          }
+        ],
+        [
+          {
+            "t": "bctransit.com · schedules and maps",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/"
+          }
+        ],
+        [
+          {
+            "t": "bctransit.com · route overview (2)",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=57"
+          }
+        ],
+        [
+          {
+            "t": "chilliwack.com",
+            "h": "https://www.chilliwack.com/main/page.cfm?id=1754&dowhat=locationView&plID=80&backTo=%26dowhat%3DareaView%26areaID%3D19"
+          }
+        ],
+        [
+          {
+            "t": "fvrl.bc.ca · locations",
+            "h": "https://www.fvrl.bc.ca/locations"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · chilliwack",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/chilliwack"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/2213/store"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

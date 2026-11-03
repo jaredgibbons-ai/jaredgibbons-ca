@@ -1,0 +1,31 @@
+# Crystal Place — 4603 Hazel Street — What's Nearby: Local Notes
+Building: Crystal Place, 4603 Hazel Street (forest-glen-bs; condos).
+
+## 1. TRANSIT
+- Nearest rapid station: Metrotown Station (Expo Line), the terminus of route 19. (https://www.translink.ca/schedules-and-maps/route/19/direction/1/map)
+- Route 19, TransLink: Stanley Park / Metrotown Station, via Kingsway. (https://www.translink.ca/schedules-and-maps/route/19/direction/1/map)
+- Route 49, TransLink: Metrotown Station / UBC, via Central Blvd and Imperial. (https://infomaps.translink.ca/Public_Timetables/218/tt049.pdf)
+
+## 2. PARKS AND RECREATION
+- Bonsor Recreation Complex, 6550 Bonsor Avenue. (https://www.burnaby.ca/recreation-and-arts/recreation-facilities/bonsor-recreation-complex)
+- Forest Glen Park, 4855 Bond St, on the City's parks list. (https://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks.html)
+
+## 3. SCHOOLS
+- École Marlborough Elementary, K-7, SD41 Burnaby, 6060 Marlborough Ave; catchment not confirmed. (https://studentsuccess.gov.bc.ca/schools/in-school-district/041)
+- École Inman Elementary, K-7, SD41 Burnaby, 3963 Brandon St; catchment not confirmed. (https://studentsuccess.gov.bc.ca/schools/in-school-district/041)
+
+## 4. GROCERY AND SHOPPING ANCHORS
+- Save-On-Foods, 4469 Kingsway, Burnaby (address from a search result on the retailer's own saveonfoods.com domain). (https://www.saveonfoods.com/sm/planning/rsid/2225/store)
+- Real Canadian Superstore, 4700 Kingsway, Burnaby, per a search result on the retailer's own domain. (https://www.realcanadiansuperstore.ca/store-locator/details/1518)
+
+## 5. MEASURED TRAVEL TIMES
+- Origin: 4603 Hazel Street (Nominatim named building point, "Crystal Place", reverse-geocoded to the same address). Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Save-On-Foods, 4469 Kingsway: 5.8 minutes, 0.43 km, routed-foot (routing.openstreetmap.de).
+- Walk to Real Canadian Superstore, 4700 Kingsway: 5.9 minutes, 0.44 km, routed-foot.
+- Walk to Metrotown Station: 9.6 minutes, 0.72 km, routed-foot.
+- Walk to École Marlborough Elementary: 11.7 minutes, 0.88 km, routed-foot.
+- Drive to Bonsor Recreation Complex: 2.2 minutes, 1.30 km, OSRM (router.project-osrm.org).
+
+## NOT CONFIRMED
+- School catchments: not confirmed — no district locator run in this pass.
+- Bus frequencies: not stated.

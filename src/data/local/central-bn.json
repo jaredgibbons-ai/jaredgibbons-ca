@@ -1151,6 +1151,298 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "3058 Smith Avenue"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Route 129 Patterson Station / Holdom Station runs via Smith Ave and Kincaid St, TransLink. Route 129 runs from Patterson Station via Moscrop, Smith, Kincaid, Sanderson and Gilmore Ave (Gilmore Station) to Holdom Station, TransLink. Nearest SkyTrain station: Patterson Station (Expo Line), on the route 129 corridor."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Deer Lake Park, 6450 Deer Lake Ave, City of Burnaby park. Bob Prittie Metrotown Branch is one of four Burnaby Public Library branches, per the City of Burnaby."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Cascade Heights Elementary, K-7, School District 41 Burnaby, 4343 Smith Ave; catchment not confirmed. Burnaby Central Secondary, 8-12, School District 41 Burnaby, 6011 Deer Lake Parkway; catchment not confirmed. Douglas Road Elementary, K-7, School District 41 Burnaby, 4861 Canada Way; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Metropolis at Metrotown, 4700 Kingsway, Burnaby."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Norfolk Terrace, 4025 Norfolk Street"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: No SkyTrain station is in this area; route 123 runs via Canada Way between Brentwood Station and New Westminster Station, TransLink. Route 129 Patterson Station / Holdom Station, TransLink, runs via Smith Ave and Kincaid St, west of the building."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Broadview Park, City of Burnaby park, north of the building across Canada Way. Deer Lake Park, 6450 Deer Lake Ave, City of Burnaby park with lake trails, Shadbolt Centre and Burnaby Village Museum."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Cascade Heights Elementary, K–7, School District 41 Burnaby, 4343 Smith Ave. Moscrop Secondary, 8–12, School District 41 Burnaby, 4433 Moscrop St."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods, Madison Centre, 4399 Lougheed Highway, Burnaby."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Parkside Greene, 3888 Norfolk Street"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Parks and recreation: Broadview Park, City of Burnaby park, facing the building across Canada Way."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Winchelsea, 3738 Norfolk Street"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Route 129 Patterson Station / Holdom Station, TransLink, runs via Smith Ave and Kincaid St, east of the building."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Broadview Park, City of Burnaby park, east of the building across Canada Way."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Norfolk Terrace (from the street)",
+          "Broadview Park",
+          "Walk",
+          "3",
+          "0.2"
+        ],
+        [
+          "Norfolk Terrace (from the street)",
+          "Save-On-Foods, Madison Centre",
+          "Drive",
+          "4",
+          "2.0"
+        ],
+        [
+          "Norfolk Terrace (from the street)",
+          "Moscrop Secondary",
+          "Drive",
+          "4",
+          "2.2"
+        ],
+        [
+          "Parkside Greene",
+          "Broadview Park",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "Parkside Greene",
+          "Cascade Heights Elementary",
+          "Walk",
+          "18",
+          "1.3"
+        ],
+        [
+          "Parkside Greene",
+          "Save-On-Foods, Madison Centre",
+          "Drive",
+          "5",
+          "2.8"
+        ],
+        [
+          "Smith + Norfolk (from the street)",
+          "Broadview Park",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "Smith + Norfolk (from the street)",
+          "Cascade Heights Elementary",
+          "Walk",
+          "17",
+          "1.2"
+        ],
+        [
+          "Smith + Norfolk (from the street)",
+          "Save-On-Foods, Madison Centre",
+          "Drive",
+          "5",
+          "2.7"
+        ],
+        [
+          "Winchelsea",
+          "Broadview Park",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Winchelsea",
+          "Cascade Heights Elementary",
+          "Walk",
+          "16",
+          "1.2"
+        ],
+        [
+          "Winchelsea",
+          "Moscrop Secondary",
+          "Drive",
+          "5",
+          "2.8"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt129.pdf",
+            "t": "infomaps.translink.ca · tt129"
+          }
+        ],
+        [
+          {
+            "h": "https://www.burnaby.ca/explore-outdoors/parks/deer-lake-park",
+            "t": "burnaby.ca · deer lake park"
+          }
+        ],
+        [
+          {
+            "h": "https://www.burnaby.ca/our-city/city-departments/burnaby-public-library",
+            "t": "burnaby.ca · burnaby public library"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.metropolisatmetrotown.com/about-metropolis/",
+            "t": "metropolisatmetrotown.com · about metropolis"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt123.pdf",
+            "t": "infomaps.translink.ca · tt123"
+          }
+        ],
+        [
+          {
+            "h": "https://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks.html",
+            "t": "burnaby.ca · Parks"
+          }
+        ],
+        [
+          {
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/996/store",
+            "t": "saveonfoods.com · store"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

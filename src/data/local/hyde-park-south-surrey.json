@@ -750,6 +750,186 @@
       ],
       "pos": "end",
       "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Hyde Park, 2888 156 Street"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid-transit station: King George Station, named on TransLink route 321. Route 531 White Rock Centre / Willowbrook, TransLink, via 152 St, 24 Ave and 192 St. Route 321 Surrey Central Station / White Rock Centre, TransLink, via 152 St, King George Blvd, South Surrey Park & Ride."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Sunnyside Park, 15455 26 Avenue, Surrey. Grandview Heights Aquatic Centre, 16855 24 Avenue, Surrey."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Sunnyside Elementary, K-7, 2828 159 St, School District 36 Surrey. Grandview Heights Secondary, 8-12, 16987 25 Ave, School District 36 Surrey. Edgewood Elementary, K-7, 16666 23 Ave, School District 36 Surrey."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Walmart Supercenter, 2355-160 St, Surrey."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Hyde Park Corner, 2828 156 Street"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Schools: Southridge School, K-12, 2656 160 St, SD36 list, independent."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Hyde Park",
+          "Sunnyside Elementary",
+          "Walk",
+          "11",
+          "0.8"
+        ],
+        [
+          "Hyde Park",
+          "Sunnyside Park, 15455 26 Ave",
+          "Walk",
+          "16",
+          "1.2"
+        ],
+        [
+          "Hyde Park",
+          "Walmart, 2355 160 St",
+          "Drive",
+          "3",
+          "1.4"
+        ],
+        [
+          "Hyde Park Corner",
+          "Sunnyside Elementary, 2828 159 St",
+          "Walk",
+          "11",
+          "0.8"
+        ],
+        [
+          "Hyde Park Corner",
+          "Sunnyside Park, 15455 26 Ave",
+          "Walk",
+          "14",
+          "1.0"
+        ],
+        [
+          "Hyde Park Corner",
+          "Walmart, 2355 160 St",
+          "Walk",
+          "20",
+          "1.5"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf",
+            "t": "infomaps.translink.ca · tt321"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt531.pdf",
+            "t": "infomaps.translink.ca · tt531"
+          }
+        ],
+        [
+          {
+            "h": "https://www.surrey.ca/parks-recreation/parks/sunnyside-park",
+            "t": "surrey.ca · sunnyside park"
+          }
+        ],
+        [
+          {
+            "h": "https://www.Surrey.ca/sites/default/files/media/documents/Summer-2025-Pool-Drop-in-Schedule.pdf",
+            "t": "Surrey.ca · Summer 2025 Pool Drop in Schedule"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.walmart.ca/en/store/5853",
+            "t": "walmart.ca · store"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [

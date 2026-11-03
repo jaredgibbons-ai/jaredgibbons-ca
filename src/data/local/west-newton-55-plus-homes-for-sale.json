@@ -430,6 +430,278 @@
       ],
       "gen": "n55",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Glenwood Village, 7156 121 St",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Scottsdale Exchange, named on TransLink timetables for routes serving 72 Ave and 122 St. Route 301, TransLink: Newton Exchange to Brighouse Station via 122 St and 72 Ave, serving Scottsdale Exchange. Route 322, TransLink: Scottsdale Exchange to Newton Exchange via Mall Access Rd, 122 St and 72 Ave."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Strawberry Hill Elementary, K-7, SD36, 7633 124 St; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods (grocery), 7015 120 Street, Delta, in Scottsdale Centre, 7031 120 Street, Delta (centre leasing brochure lists the store at 7015 and the centre address as 7031 120 Street)."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Lakeview Estates, 6090 W Boundary Drive",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Route 322, TransLink: Scottsdale Exchange to Newton Exchange via 60 Ave, 124 St and Hwy 10, the corridor at the north end of Boundary Drive West. Nearest bus exchange: Newton Exchange, the terminus of route 322."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Boundary Park, 6058 Boundary Drive West, Surrey (City of Surrey parks page). Mud Bay Park, 13030 48 Ave, Surrey (City of Surrey parks listing)."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Colebrook Elementary, K-7, SD36, 5404 125a St, Surrey; catchment not confirmed."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Newton Mobile Home Park, 6571 King George Blvd",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Newton Exchange, north on King George Boulevard, served by the R1 and R6 RapidBus routes. Nearest SkyTrain station: King George Station, via Newton Exchange on route 321 and the R1 RapidBus. Route 321, TransLink: Surrey Central Station / Newton Exchange / White Rock via King George Boulevard, the street this park is on."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Tamanawis Park, 12601 64 Avenue. Newton Recreation Centre, 13730 72 Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Tamanawis Secondary, 8-12, SD36, 12600 66 Ave; catchment not confirmed. Martha Jane Norris Elementary, K-7, SD36, 12928 66a Ave; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Fruiticana (grocery), 13174 64 Ave. Real Canadian Superstore (grocery), 7550 King George Blvd (retailer's own store locator)."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Glenwood Village",
+          "Scottsdale Exchange",
+          "Walk",
+          "10",
+          "0.7"
+        ],
+        [
+          "Glenwood Village",
+          "Strawberry Hill Elementary",
+          "Walk",
+          "20",
+          "1.5"
+        ],
+        [
+          "Glenwood Village",
+          "Newton Exchange",
+          "Drive",
+          "6",
+          "3.4"
+        ],
+        [
+          "Lakeview Estates",
+          "Colebrook Elementary",
+          "Drive",
+          "5",
+          "3.0"
+        ],
+        [
+          "Lakeview Estates",
+          "Mud Bay Park",
+          "Drive",
+          "9",
+          "5.2"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt301",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt301.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt322",
+            "h": "https://infomaps.translink.ca/Public_Timetables/192/tt322.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · find park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/find-park?community%5B0%5D=106&page=1"
+          }
+        ],
+        [
+          {
+            "t": "surreyschools.ca · strawberryhill",
+            "h": "https://www.surreyschools.ca/strawberryhill"
+          }
+        ],
+        [
+          {
+            "t": "commercialsearch.com · Brochure",
+            "h": "https://commercialsearch.com/pdfs/Brochure/921/2742038"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · boundary park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/boundary-park"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · 2023.aspx",
+            "h": "http://www.surrey.ca/culture-recreation/2023.aspx"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · surrey",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/surrey"
+          }
+        ],
+        [
+          {
+            "t": "translink.ca · rapidbus projects",
+            "h": "https://www.translink.ca/plans-and-projects/projects/bus-projects/rapidbus-projects"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt321",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt364",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt364.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · tamanawis park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/tamanawis-park"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · newton recreation centre",
+            "h": "https://www.surrey.ca/parks-recreation/recreation-facilities/newton-recreation-centre"
+          }
+        ],
+        [
+          {
+            "t": "surreylibraries.ca · newton branch",
+            "h": "https://surreylibraries.ca/locations/newton-branch"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036"
+          }
+        ],
+        [
+          {
+            "t": "fruiticana.com · storefinder",
+            "h": "https://www.fruiticana.com/storefinder?city=Surrey"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

@@ -1102,6 +1102,158 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sundial, 5421 10 Avenue"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid-transit station: Bridgeport Station, Richmond, reached from South Delta Exchange on TransLink routes 601 and 602. Nearest bus exchange: South Delta Exchange, at 56 Street, named as a stop on TransLink timetables for routes 601, 602 and 609. Route 601 Bridgeport Station / South Delta, via South Delta Exchange, 56 Street and 12 Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Winskill Park, Tsawwassen: City of Delta park next to Winskill Aquatic and Fitness Centre. South Delta Recreation Centre, 1720 56 Street, Delta: arena, curling rink and gymnasium."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Cliff Drive Elementary, K–7, School District 37, 5025 12 Ave; catchment not confirmed. Pebble Hill Traditional Elementary, K–7, School District 37, 246 52a St; catchment not confirmed. South Delta Secondary, 8–12, School District 37, 750 53 St; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Thrifty Foods Tsawwassen, 1207 56th Street, Delta (retailer's own store page)."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Sundial",
+          "Winskill Park",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Sundial",
+          "Thrifty Foods, 1207 56th Street",
+          "Walk",
+          "7",
+          "0.6"
+        ],
+        [
+          "Sundial",
+          "Tsawwassen Library, 1321A 56th Street",
+          "Walk",
+          "9",
+          "0.7"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf",
+            "t": "infomaps.translink.ca · tt601"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt602.pdf",
+            "t": "infomaps.translink.ca · tt602"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt609.pdf",
+            "t": "infomaps.translink.ca · tt609"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/winskill-park",
+            "t": "delta.ca · winskill park"
+          }
+        ],
+        [
+          {
+            "h": "http://www.delta.ca/parks-recreation/sport-recreation/indoor-facilities/south-delta-recreation-centre",
+            "t": "delta.ca · south delta recreation centre"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations/tsawwassen-library",
+            "t": "fvrl.bc.ca · tsawwassen library"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/037",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.thriftyfoods.com/find-a-store/store/9466-thrifty-foods-tsawwassen",
+            "t": "thriftyfoods.com · 9466 thrifty foods tsawwassen"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

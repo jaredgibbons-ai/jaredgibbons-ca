@@ -369,6 +369,134 @@
       ],
       "gen": "n55",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Quilchena Green, 5531 Cornwall Drive, Richmond BC",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid-transit station: Richmond-Brighouse Station (Canada Line), terminus of route 401, which stops at No. 1 Road and Westminster Highway. Route 401 One Road / Brighouse Station, via Westminster Highway and No. 1 Road, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Terra Nova Rural Park, 2631 Westminster Highway, City of Richmond park at the west end of Westminster Highway west of No. 1 Road."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Spul'u'kwuks Elementary, grades K-7, 5999 Blanshard Drive, School District 38 Richmond; catchment not confirmed. J.N. Burnett Secondary, grades 8-12, 5011 Granville Avenue, School District 38 Richmond; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Terra Nova Village, 3671 Westminster Highway: open-air centre anchored by Save-On-Foods, per the centre owner's (First Capital) leasing site plan."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Quilchena Green",
+          "Spul'u'kwuks Elementary",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "Quilchena Green",
+          "Terra Nova Village, 3671 Westminster Highway",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Quilchena Green",
+          "Terra Nova Rural Park",
+          "Walk",
+          "18",
+          "1.5"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt401",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt401.pdf"
+          }
+        ],
+        [
+          {
+            "t": "richmond.ca · park.aspx",
+            "h": "https://www.richmond.ca/parks-recreation/parks/parksearch/park.aspx?id=80"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/038"
+          }
+        ],
+        [
+          {
+            "t": "images.loopnet.ca · document",
+            "h": "https://images.loopnet.ca/d2/AVBP-zBack09ZTpH2clFT8ywp4I42N7pTpZ3rOSJ-I0/document.pdf"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

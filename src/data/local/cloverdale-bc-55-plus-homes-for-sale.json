@@ -463,6 +463,216 @@
       ],
       "gen": "n55",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Carriage House, 17695 58 Ave",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: No rapid-transit station is in Cloverdale; nearest is King George Station (Expo Line), where TransLink's Surrey-Langley extension begins (anticipated 2029). Route 342 Newton Exchange/Langley Centre (TransLink): via Hwy 10, 176 St and 58 Ave, past this building; its termini are the nearest bus exchanges. Route 370 Cloverdale/Willowbrook (TransLink): via 180 St, Hwy 10, 184 St and 64 Ave."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Cloverdale Library, 5642 176A St, Surrey. Cloverdale Recreation Centre, 6188 176 St, Surrey (City of Surrey)."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Cloverdale Traditional, K-7, SD 36 Surrey, 17857 56 Ave; catchment not confirmed. Cloverdale Catholic School, K-7, independent, 17511 59 Ave; catchment not confirmed. Lord Tweedsmuir Secondary, 8-12, SD 36 Surrey, 6151 180 St; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods, 17745 64 Ave, Surrey."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "The Estates at Manor Ridge, 6140 192 St",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: No rapid-transit station is in Cloverdale. Nearest: King George Station (Expo Line), where TransLink's Surrey-Langley extension begins (anticipated 2029). Route 342 Newton Exchange/Langley Centre (TransLink): via 192 St, Hwy 10, 58 Ave and 176 St — the 192 St segment passes this address. Route 370 Cloverdale/Willowbrook (TransLink): via 64 Ave, 192 St (72–68 Ave), 188 St and 184 St."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Clayton Community Centre, 7155 187A St, Surrey, City facility combining recreation, library, arts and parks (City of Surrey)."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Latimer Road Elementary, K-7, SD 36 Surrey, 19233 60 Ave; catchment not confirmed. Don Christian Elementary, K-7, SD 36 Surrey, 6256 184 St; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods, 18710 Fraser Highway, Surrey (retailer's own store page)."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "The Estates at Manor Ridge",
+          "Latimer Road Elementary",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "The Estates at Manor Ridge",
+          "Save-On-Foods, 18710 Fraser Highway",
+          "Drive",
+          "4",
+          "1.8"
+        ],
+        [
+          "The Estates at Manor Ridge",
+          "Save-On-Foods, 17745 64 Ave",
+          "Drive",
+          "6",
+          "3.6"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "translink.ca · surrey langley skytrain",
+            "h": "https://www.translink.ca/plans-and-projects/projects/rapid-transit-projects/surrey-langley-skytrain"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt342",
+            "h": "https://infomaps.translink.ca/Public_Timetables/196/tt342.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt370",
+            "h": "https://infomaps.translink.ca/Public_Timetables/192/tt370.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surreylibraries.ca",
+            "h": "https://www.surreylibraries.ca/"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · cloverdale recreation centre",
+            "h": "https://www.surrey.ca/parks-recreation/recreation-facilities/cloverdale-recreation-centre?hootPostID=024a053750e4c62a6801daa4ce34e11d"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · cloverdale youth park",
+            "h": "http://www.surrey.ca/parks-recreation/parks/cloverdale-youth-park"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · park projects",
+            "h": "https://www.surrey.ca/parks-recreation/parks/park-projects"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · surrey",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/surrey"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com",
+            "h": "https://www.saveonfoods.com/"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt364",
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt364.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · clayton community centre",
+            "h": "https://www.surrey.ca/about-surrey/our-communities/cloverdale/clayton-community-centre"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/2263/store"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

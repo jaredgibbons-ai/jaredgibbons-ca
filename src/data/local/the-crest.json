@@ -751,6 +751,234 @@
     {
       "t": "h",
       "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Chancery Lane, 8533 Cumberland Place, Burnaby BC",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: No SkyTrain station is in The Crest; route 106 runs through the area to Edmonds Station (Expo Line), the nearest rapid-transit station. Route 106 Edmonds Station / New Westminster Station, via 6 St, Edmonds St, Griffiths and 18 Ave, TransLink. Route 133 Edmonds Station / Holdom Station, via Canada Way, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Robert Burnaby Park, 8155 Wedgewood Street, City of Burnaby park south of Burnaby Lake, with trails, an outdoor pool and tennis courts. Rosemary Brown Recreation Centre, 7789 18th Street, a two-rink facility, per the City of Burnaby."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Second Street Community Elementary, grades K-7, 7502 2nd Street, School District 41 Burnaby; catchment not confirmed. Morley Elementary, grades K-7, 7355 Morley Street, School District 41 Burnaby; catchment not confirmed. Byrne Creek Community Secondary, grades 8-12, 7777 18th Street, School District 41 Burnaby; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: PriceSmart Foods Kings Crossing, 7380 Edmonds Street, Burnaby."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Wildflower, 7500 Cumberland Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid-transit station: Edmonds Station (Expo Line); route 106 runs through the area to Edmonds Station."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Robert Burnaby Park, 8155 Wedgewood St, Burnaby, per the City of Burnaby park page."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Second Street Community Elementary, K–7, School District 41, 7502 2nd St; catchment not confirmed. Morley Elementary, K–7, School District 41, 7355 Morley St; catchment not confirmed. Byrne Creek Community Secondary, 8–12, School District 41, 7777 18th St; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: PriceSmart Foods Kings Crossing, 7380 Edmonds St, Burnaby."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Chancery Lane",
+          "Second Street Community Elementary",
+          "Walk",
+          "15",
+          "1.1"
+        ],
+        [
+          "Chancery Lane",
+          "Robert Burnaby Park",
+          "Drive",
+          "5",
+          "1.8"
+        ],
+        [
+          "Chancery Lane",
+          "PriceSmart Foods, 7380 Edmonds Street",
+          "Drive",
+          "7",
+          "3.5"
+        ],
+        [
+          "Deerfield",
+          "Second Street Community Elementary",
+          "Walk",
+          "13",
+          "1.0"
+        ],
+        [
+          "Deerfield",
+          "Robert Burnaby Park",
+          "Drive",
+          "5",
+          "1.9"
+        ],
+        [
+          "Deerfield",
+          "PriceSmart Foods, 7380 Edmonds Street",
+          "Drive",
+          "8",
+          "3.6"
+        ],
+        [
+          "Wildflower",
+          "Second Street Community Elementary, 7502 2nd St",
+          "Walk",
+          "13",
+          "0.9"
+        ],
+        [
+          "Wildflower",
+          "PriceSmart Foods, 7380 Edmonds St",
+          "Drive",
+          "6",
+          "3.3"
+        ],
+        [
+          "Wildflower",
+          "Rosemary Brown Recreation Centre, 7789 18th Street",
+          "Drive",
+          "8",
+          "4.5"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt106",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt106.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt133",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt133.pdf"
+          }
+        ],
+        [
+          {
+            "t": "burnaby.ca · robert burnaby park",
+            "h": "https://www.burnaby.ca/explore-outdoors/parks/robert-burnaby-park"
+          }
+        ],
+        [
+          {
+            "t": "burnaby.ca · rosemary brown recreation centre",
+            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/rosemary-brown-recreation-centre"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+          }
+        ],
+        [
+          {
+            "t": "pricesmartfoods.com",
+            "h": "https://www.pricesmartfoods.com/"
+          }
+        ],
+        [
+          {
+            "t": "bpl.bc.ca · BPL Board 2026 04 16 Regular Minutes",
+            "h": "https://bpl.bc.ca/images/documents/board-meetings/BPL-Board-2026-04-16-Regular-Minutes.pdf"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · burnaby",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/burnaby"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
       "text": "Sources",
       "gen": "musefaq",
       "pos": "end"

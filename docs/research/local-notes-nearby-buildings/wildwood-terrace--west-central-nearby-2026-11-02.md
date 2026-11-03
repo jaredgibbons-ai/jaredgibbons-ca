@@ -1,0 +1,36 @@
+# Wildwood Terrace — 12170 222 Street — What's Nearby: Local Notes
+
+Building: Wildwood Terrace, 12170 222 Street (west-central; condos).
+
+## 1. TRANSIT
+- Nearest West Coast Express station: Port Haney Station, named on TransLink's West Coast Express page. https://www.translink.ca/schedules-and-maps/west-coast-express
+- Nearest bus exchange: Haney Place, per TransLink's route 701 timetable. https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf
+- Route 701 Haney Place / Coquitlam Central Station, via Maple Meadows Station, TransLink. https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf
+- Route 741 Anderson Creek, Haney Place via Dewdney Trunk Road and 227 Street, TransLink. https://infomaps.translink.ca/Public_Timetables/214/tt741.pdf
+- Route 791 Haney Place / Braid Station, via Maple Meadows Station, TransLink. https://infomaps.translink.ca/Public_Timetables/214/tt791.pdf
+
+## 2. PARKS AND RECREATION
+- Haney Nokai Park, 12075 222 Street, Maple Ridge: City of Maple Ridge facility listing. https://www.mapleridge.ca/Facilities/Facility/Details/Haney-Nokai-Park-61
+- Memorial Peace Park, 11930 224 Street, Maple Ridge: City of Maple Ridge park. https://www.mapleridge.ca/art-parks-rec/recreation-facilities/memorial-peace-park
+- Maple Ridge Leisure Centre, 11925 Haney Place, Maple Ridge: City of Maple Ridge recreation facility. https://www.mapleridge.ca/art-parks-rec/recreation-facilities/maple-ridge-leisure-centre
+- Maple Ridge Library, 130-22470 Dewdney Trunk Road, Maple Ridge: Fraser Valley Regional Library location listing. https://www.fvrl.bc.ca/locations
+
+## 3. SCHOOLS
+- Eric Langton Elementary, K-7, 12138 Edge St, Maple Ridge, School District 42; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in/maple-ridge
+- Maple Ridge Secondary, 8-12, 21911 122 Ave, Maple Ridge, School District 42; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in/maple-ridge
+- St Patrick's, K-7, 22589 121 Ave, Maple Ridge, independent; catchment not confirmed. https://studentsuccess.gov.bc.ca/schools/in/maple-ridge
+
+## 4. GROCERY AND SHOPPING ANCHORS
+- Save-On-Foods, 22703 Lougheed Highway, Maple Ridge (retailer's own site, search result). https://www.saveonfoods.com/sm/planning/rsid/935/store
+- Haney Place Mall, 11900 Haney Place, Maple Ridge: centre's own contact page. https://www.haneyplacemall.com/contact_us/
+
+## 5. MEASURED TRAVEL TIMES
+- From-point: segment point on 222 Street at the address position of 12170, placed on the 222 Street OSM way from the street's address grid (OSM point 12310 222 Street) and reverse-geocoded to 222 Street (segment-grade; no OSM house point exists for this address). Measured 2026-11-02; OSM data date not published by the service.
+- Walk to Haney Nokai Park: 3.8 minutes, 0.28 km, routing.openstreetmap.de routed-foot, measured 2026-11-02; OSM data date not published by the service.
+- Walk to Memorial Peace Park: 12.6 minutes, 0.95 km, routing.openstreetmap.de routed-foot, measured 2026-11-02; OSM data date not published by the service.
+- Walk to Maple Ridge Library: 13.2 minutes, 0.99 km, routing.openstreetmap.de routed-foot, measured 2026-11-02; OSM data date not published by the service.
+- Drive to Eric Langton Elementary: 2.2 minutes, 1.20 km, OSRM (router.project-osrm.org), measured 2026-11-02; OSM data date not published by the service.
+
+## NOT CONFIRMED
+- School catchments: not confirmed — no SD42 locator run for this address in this pass.
+- Bus frequencies: not stated — none read from an operator page in this pass.

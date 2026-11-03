@@ -931,6 +931,164 @@
       ],
       "gen": "nb",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sunridge Estates, 6712 Baker Road",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest SkyTrain station: Scott Road Station; the R6 connects it with Newton Exchange, TransLink. Nearest bus exchange: Scottsdale Exchange, on route 319, TransLink. Route R6 Scott Rd: every 7.5 minutes at peak, 15 minutes off-peak, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Sunshine Hills Park, 11195 Bond Blvd, Delta. Watershed Park, 11600 Kittson Pkwy, Delta."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Sunshine Hills Elementary, K-7, 11285 Bond Blvd, SD37 Delta; catchment not confirmed. Cougar Canyon Elementary, K-7, 11664 Lyon Rd, SD37 Delta; catchment not confirmed. Heath Elementary, K-7, 11364 72 Ave, SD37 Delta; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Scottsdale Centre, 7031 120 St. Save-On-Foods, 7015 120 Street."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Sunridge Estates",
+          "Cougar Canyon Elementary",
+          "Walk",
+          "11",
+          "0.8"
+        ],
+        [
+          "Sunridge Estates",
+          "Seaquam Secondary",
+          "Walk",
+          "16",
+          "1.2"
+        ],
+        [
+          "Sunridge Estates",
+          "Scottsdale Centre",
+          "Walk",
+          "19",
+          "1.4"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "translink.ca · r6 scott road rapidbus",
+            "h": "https://www.translink.ca/plans-and-projects/projects/bus-projects/r6-scott-road-rapidbus"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt319",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt319.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt312",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt312.pdf"
+          }
+        ],
+        [
+          {
+            "t": "delta.ca · sunshine hills park",
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/sunshine-hills-park"
+          }
+        ],
+        [
+          {
+            "t": "delta.ca · watershed park",
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/watershed-park"
+          }
+        ],
+        [
+          {
+            "t": "delta.ca:443 · park and amenity search",
+            "h": "https://www.delta.ca:443/parks-recreation/parks-trails/park-and-amenity-search?page=8"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/037"
+          }
+        ],
+        [
+          {
+            "t": "scottsdalecentre.ca",
+            "h": "http://www.scottsdalecentre.ca/"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com",
+            "h": "https://www.saveonfoods.com/"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

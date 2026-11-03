@@ -1131,6 +1131,152 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Arbutus Village, 2202 McBain Avenue"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid station BY NAME: King Edward Station, Canada Line — named on TransLink's route 25 timetable. Nearest bus exchange BY NAME: UBC Exchange, terminus of route 25, per TransLink's timetable. Route 25 King Edward, Brentwood Station / UBC Exchange, via King Edward Avenue and Dunbar Street, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Arbutus Greenway: City of Vancouver path, 8.5 km along Arbutus Street and West Boulevard, Fir Street to Milton Street. Kerrisdale Community Centre, 5851 West Blvd, Vancouver: City of Vancouver community centre."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Shaughnessy Elementary, grades K-7, 4250 Marguerite St, Vancouver, SD39 (Vancouver); catchment not confirmed. York House School, grades K-12, 4176 Alexandra St, Vancouver, independent (Ministry SD39 list); catchment not confirmed. Prince of Wales Secondary, grades 8-12, 2250 Eddington Dr, Vancouver, SD39 (Vancouver); catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Arbutus Shopping Centre lands, 4255 Arbutus Street, Vancouver: the village's shopping node, per the CD-1 (78) bylaw summary. Safeway King Edward Mall, 990 King Edward Avenue, Vancouver: from Safeway's own store locator."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Arbutus Village (from the street)",
+          "Prince of Wales Secondary, 2250 Eddington Dr",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Arbutus Village (from the street)",
+          "Shaughnessy Elementary, 4250 Marguerite St",
+          "Walk",
+          "18",
+          "1.3"
+        ],
+        [
+          "Arbutus Village (from the street)",
+          "Kerrisdale Community Centre, 5851 West Blvd",
+          "Drive",
+          "4",
+          "2.6"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt025.pdf",
+            "t": "infomaps.translink.ca · tt025"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt016.pdf",
+            "t": "infomaps.translink.ca · tt016"
+          }
+        ],
+        [
+          {
+            "h": "https://vancouver.ca/streets-transportation/explore-the-arbutus-greenway.aspx",
+            "t": "vancouver.ca · explore the arbutus greenway.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://Vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx",
+            "t": "Vancouver.ca · community and cultural centres.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/039",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "http://cd1-bylaws.vancouver.ca/ByCD-1Number/cd1s/iCD-1(078)_SummaryAndBackupNotes.pdf",
+            "t": "cd1-bylaws.vancouver.ca · iCD 1(078) SummaryAndBackupNotes"
+          }
+        ],
+        [
+          {
+            "h": "http://www.safeway.ca/find-a-store/store/4947-Safeway-Arbutus/",
+            "t": "safeway.ca · 4947 Safeway Arbutus"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

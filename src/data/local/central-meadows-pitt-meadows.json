@@ -475,6 +475,170 @@
       ],
       "gen": "nb",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Meadowland Village, 18960 Advent Road",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid-transit station: Pitt Meadows Station, West Coast Express, 12280 Harris Road. Route 722 Bonson / Meadowtown, TransLink, runs via 122 Ave, 189A St, Ford Rd, 190A St, 119 Ave and Harris Rd, serving streets near the building. Route 701 Coquitlam Central Station, via Harris Road and Pitt Meadows Station, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Hoffmann Park, City of Pitt Meadows: park entrance on 122 Avenue at 191B Street and 19130 Advent Road, with pedestrian trails and an off-leash dog area. Advent Park, 12297 188 Street, Pitt Meadows, accessible from Advent Road and 188 Street, per the City."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Highland Park Elementary, grades K-7, 18961 Advent Rd, Pitt Meadows, School District 42 Maple Ridge-Pitt Meadows. Davie Jones Elementary, grades K-7, 12030 Blakely Rd, Pitt Meadows, School District 42. Pitt Meadows Secondary, grades 8-12, 19438 116b Ave, Pitt Meadows, School District 42."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods, 19150 Lougheed Highway, Pitt Meadows. Real Canadian Superstore, Meadowtown, 19800 Lougheed Highway, Pitt Meadows."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Meadowland Village (from the street)",
+          "Hoffmann Park",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Meadowland Village (from the street)",
+          "Highland Park Elementary",
+          "Walk",
+          "6",
+          "0.4"
+        ],
+        [
+          "Meadowland Village (from the street)",
+          "Advent Park",
+          "Walk",
+          "9",
+          "0.7"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "translink.ca · west coast express",
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt722",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt722.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt701",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf"
+          }
+        ],
+        [
+          {
+            "t": "pittmeadows.ca · hoffmann park",
+            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/hoffmann-park"
+          }
+        ],
+        [
+          {
+            "t": "pittmeadows.ca · advent park",
+            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/advent-park"
+          }
+        ],
+        [
+          {
+            "t": "pittmeadows.ca · drop schedules hours rates",
+            "h": "https://www.pittmeadows.ca/parks-recreation/drop-schedules-hours-rates"
+          }
+        ],
+        [
+          {
+            "t": "fvrl.bc.ca",
+            "h": "https://www.fvrl.bc.ca/"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/042"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/995/store"
+          }
+        ],
+        [
+          {
+            "t": "realcanadiansuperstore.ca · details",
+            "h": "https://www.realcanadiansuperstore.ca/store-locator/details/1555"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

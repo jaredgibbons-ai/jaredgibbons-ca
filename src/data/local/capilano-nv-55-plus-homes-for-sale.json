@@ -418,6 +418,158 @@
       ],
       "gen": "n55",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Highland House, 3088 Highland Blvd",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid transit: SeaBus at Lonsdale Quay; TransLink lists Lonsdale Quay departures, 12-minute crossing to Waterfront. Nearest bus exchange: Lonsdale Quay, terminus of route 236. Route 246 Downtown / Highland, via Marine Dr, Capilano Rd, Ridgewood Dr, Edgemont Blvd and Highland Blvd, with an Edgemont timing point on Highland Blvd, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Capilano Library, 3045 Highland Blvd. Murdo Frazer Park, a District of North Vancouver park west of Highland Blvd."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Highlands Elementary, grades K-7, School District 44 North Vancouver, 3150 Colwood Dr. Canyon Heights Elementary, grades K-7, School District 44 North Vancouver, 4501 Highland Blvd. Handsworth Secondary, grades 8-12, School District 44 North Vancouver, 1033 Handsworth Rd."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Thrifty Foods Edgemont Market, 3210 Edgemont Blvd."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Highland House",
+          "Capilano Library",
+          "Walk",
+          "2",
+          "0.1"
+        ],
+        [
+          "Highland House",
+          "Thrifty Foods Edgemont Market",
+          "Walk",
+          "3",
+          "0.2"
+        ],
+        [
+          "Highland House",
+          "Highlands Elementary",
+          "Walk",
+          "8",
+          "0.6"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "translink.ca · seabus",
+            "h": "https://translink.ca/translink/schedules-and-maps/seabus"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt236",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt236.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt246",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt246.pdf"
+          }
+        ],
+        [
+          {
+            "t": "nvdpl.ca",
+            "h": "http://www.nvdpl.ca/"
+          }
+        ],
+        [
+          {
+            "t": "councilarchive.dnv.org",
+            "h": "https://councilarchive.dnv.org/upload/documents/council_reports/128989.pdf"
+          }
+        ],
+        [
+          {
+            "t": "metrovancouver.org · capilano river regional park",
+            "h": "https://metrovancouver.org/services/regional-parks/park/capilano-river-regional-park"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/044"
+          }
+        ],
+        [
+          {
+            "t": "thriftyfoods.com · 9483 thrifty foods edgemont market",
+            "h": "https://www.thriftyfoods.com/find-a-store/store/9483-thrifty-foods-edgemont-market"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

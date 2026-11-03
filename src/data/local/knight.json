@@ -1133,6 +1133,158 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Knight 18, 3430 Knight Street"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Route 22 Knight / Downtown (Burrard Station), via Knight Street and Clark Drive (TransLink). Route 25 Brentwood Station / UBC, via King Edward Avenue, crossing Knight Street (TransLink). Route 20 Victoria / Downtown, via Victoria Drive (TransLink)."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Clark Park, 1500 East 14th Avenue, Vancouver (City of Vancouver Park Finder). Trout Lake Community Centre, in John Hendry Park, 3360 Victoria Drive, Vancouver (City of Vancouver)."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Charles Dickens Elementary, K–7, School District 39 Vancouver, 1010 East 17th Avenue (BC Ministry school list). Charles Dickens Annex, K–3, School District 39 Vancouver, 3877 Glen Drive (BC Ministry school list)."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Famous Foods, 1595 Kingsway, Vancouver. Save-On-Foods, 1403 East King Edward Avenue, Vancouver."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Knight 18 (from the street)",
+          "Clark Park, 1500 East 14th Avenue",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "Knight 18 (from the street)",
+          "Charles Dickens Elementary, 1010 East 17th Avenue",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Knight 18 (from the street)",
+          "Save-On-Foods, 1403 East King Edward Avenue",
+          "Walk",
+          "10",
+          "0.7"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt025.pdf",
+            "t": "infomaps.translink.ca · tt025"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt022.pdf",
+            "t": "infomaps.translink.ca · tt022"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt020.pdf",
+            "t": "infomaps.translink.ca · tt020"
+          }
+        ],
+        [
+          {
+            "h": "https://app.vancouver.ca/ParkFinder/parks/81?redirect",
+            "t": "app.vancouver.ca · redirect"
+          }
+        ],
+        [
+          {
+            "h": "http://vancouver.ca/parks-recreation-culture/trout-lake-community-centre.aspx",
+            "t": "vancouver.ca · trout lake community centre.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/039",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "http://www.famousfoods.ca/",
+            "t": "famousfoods.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/940/store",
+            "t": "saveonfoods.com · store"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

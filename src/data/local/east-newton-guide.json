@@ -805,6 +805,346 @@
     {
       "t": "h",
       "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Chelsea Gardens, 13888 70 Ave",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Newton Exchange, named on TransLink route 324 timetable. Nearest SkyTrain station: King George Station, on the route 321 corridor through Newton Exchange. R1 King George Boulevard RapidBus (TransLink): Newton Exchange to Guildford; every 10 minutes peak, 15 minutes off-peak."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Newton Recreation Centre, 13730 72 Avenue. Surrey Libraries Newton Branch, 13795 70 Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Georges Vanier Elementary, SD36, 6985 142 St; catchment not confirmed. M B Sanford Elementary, K-7, SD36, 7318 143 St; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Chalo FreshCo (grocery), 7165 138 St. Save-On-Foods (grocery), #100-7320 King George Boulevard."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Chimney Ridge, 7250 144 St",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Newton Exchange, named on TransLink route 342 timetable."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Chimney Heights Park, 14677 74 Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Chimney Hill Elementary, K-7, SD36, 14755 74 Ave; catchment not confirmed."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Newton Park I, 13915 72 Ave",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Newton Exchange, named on TransLink route 335 timetable."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "The Summit, 14468 73A Ave",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Newton Exchange, south terminus of the R1 King George Boulevard RapidBus. Route 341, TransLink: Newton Exchange to Guildford Exchange via 72 Ave and 144 St, serving 144 St near 73A Ave. Route 324, TransLink: Newton Exchange to Surrey Central Station via 132 Street."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Chimney Hill Elementary, K-7, 14755 74 Ave, SD36 Surrey; catchment not confirmed. Tamanawis Secondary, 8-12, SD36 Surrey; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Newton Town Centre, 72nd Avenue and 138th Street, anchored by a Chalo FreshCo grocery store. Shoppers Drug Mart (pharmacy), 7322 King George Boulevard."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Chelsea Gardens",
+          "Surrey Libraries Newton Branch",
+          "Walk",
+          "5",
+          "0.3"
+        ],
+        [
+          "Chelsea Gardens",
+          "Chalo FreshCo, 7165 138 St",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "Chelsea Gardens",
+          "Newton Recreation Centre",
+          "Walk",
+          "10",
+          "0.7"
+        ],
+        [
+          "Chimney Ridge",
+          "M B Sanford Elementary",
+          "Walk",
+          "3",
+          "0.2"
+        ],
+        [
+          "Chimney Ridge",
+          "Georges Vanier Elementary",
+          "Walk",
+          "10",
+          "0.8"
+        ],
+        [
+          "Chimney Ridge",
+          "Chimney Heights Park",
+          "Walk",
+          "13",
+          "1.0"
+        ],
+        [
+          "Newton Park I",
+          "Chalo FreshCo, 7165 138 St",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Newton Park I",
+          "Newton Recreation Centre",
+          "Walk",
+          "6",
+          "0.4"
+        ],
+        [
+          "Newton Park I",
+          "Newton Exchange",
+          "Walk",
+          "6",
+          "0.4"
+        ],
+        [
+          "The Summit",
+          "Chimney Heights Park, 14677 74 Avenue",
+          "Walk",
+          "8",
+          "0.6"
+        ],
+        [
+          "The Summit",
+          "Chimney Hill Elementary, 14755 74 Ave",
+          "Walk",
+          "13",
+          "0.9"
+        ],
+        [
+          "The Summit",
+          "Chimney Hill Elementary, 14755 74 Ave",
+          "Drive",
+          "2",
+          "0.9"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt324",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt324.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt321",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf"
+          }
+        ],
+        [
+          {
+            "t": "translink.ca · rapidbus projects",
+            "h": "https://www.translink.ca/plans-and-projects/projects/bus-projects/rapidbus-projects"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt335",
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt335.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · newton recreation centre",
+            "h": "https://www.surrey.ca/parks-recreation/recreation-facilities/newton-recreation-centre"
+          }
+        ],
+        [
+          {
+            "t": "surreylibraries.ca · newton branch",
+            "h": "https://surreylibraries.ca/locations/newton-branch"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · unwin park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/unwin-park"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036"
+          }
+        ],
+        [
+          {
+            "t": "chalofreshco.com · chalo freshco 138 st 72 ave",
+            "h": "https://chalofreshco.com/stores/chalo-freshco-138-st-72-ave/"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/910/store"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt342",
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt342.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · chimney heights park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/chimney-heights-park"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · newton athletic park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/newton-athletic-park"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt341",
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt341.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · park projects",
+            "h": "https://www.surrey.ca/parks-recreation/parks/park-projects"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · newton recreation centre (2)",
+            "h": "http://www.surrey.ca/parks-recreation/recreation-facilities/newton-recreation-centre"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
       "text": "Sources",
       "gen": "musefaq",
       "pos": "end"

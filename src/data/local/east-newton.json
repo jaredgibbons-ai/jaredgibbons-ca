@@ -424,16 +424,16 @@
           "0.2"
         ],
         [
-          "Surrey Libraries Newton Branch",
-          "Drive",
-          "5",
-          "3.0"
-        ],
-        [
           "Newton Exchange",
           "Drive",
           "5",
           "2.8"
+        ],
+        [
+          "Surrey Libraries Newton Branch",
+          "Drive",
+          "5",
+          "3.0"
         ]
       ],
       "gen": "nb",
@@ -535,6 +535,282 @@
         ]
       ],
       "gen": "nb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Earl's Court, 13780 76 Ave",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Newton Exchange, named on TransLink route 324 timetable. Nearest SkyTrain station: King George Station, on the route 321 corridor through Newton Exchange. R1 King George Boulevard RapidBus (TransLink): Newton Exchange to Guildford; every 10 minutes peak, 15 minutes off-peak."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Newton Recreation Centre, 13730 72 Avenue. Surrey Libraries Newton Branch, 13795 70 Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Frank Hurt Secondary, 8-12, SD36, 13940 77 Ave; catchment not confirmed. Bear Creek Elementary, K-7, SD36, 13780 80 Ave; catchment not confirmed. Guru Angad Dev School, K-10, SD36 independent, 13479 77 Ave; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Chalo FreshCo (grocery), 7165 138 St. Save-On-Foods (grocery), #100-7320 King George Boulevard."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Silva, 13760 75A Ave",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Newton Exchange, named on TransLink route 321 timetable."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Chimney Hill Elementary, K-7, SD36, 14755 74 Ave; catchment not confirmed."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Wedgewood Estates, 13880 74 Ave",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Schools: Georges Vanier Elementary, SD36, 6985 142 St; catchment not confirmed. M B Sanford Elementary, K-7, SD36, 7318 143 St; catchment not confirmed."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Earl's Court",
+          "Frank Hurt Secondary",
+          "Walk",
+          "7",
+          "0.6"
+        ],
+        [
+          "Earl's Court",
+          "Save-On-Foods, #100-7320 King George Boulevard",
+          "Walk",
+          "10",
+          "0.7"
+        ],
+        [
+          "Earl's Court",
+          "Newton Exchange",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "Mirra (from the street)",
+          "Frank Hurt Secondary",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Mirra (from the street)",
+          "Save-On-Foods, #100-7320 King George Boulevard",
+          "Walk",
+          "10",
+          "0.7"
+        ],
+        [
+          "Mirra (from the street)",
+          "Newton Exchange",
+          "Walk",
+          "11",
+          "0.8"
+        ],
+        [
+          "Silva",
+          "Frank Hurt Secondary",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Silva",
+          "Save-On-Foods, 7320 King George Boulevard",
+          "Walk",
+          "10",
+          "0.7"
+        ],
+        [
+          "Silva",
+          "Newton Exchange",
+          "Walk",
+          "11",
+          "0.8"
+        ],
+        [
+          "Wedgewood Estates",
+          "Chalo FreshCo, 7165 138 St",
+          "Walk",
+          "10",
+          "0.7"
+        ],
+        [
+          "Wedgewood Estates",
+          "Georges Vanier Elementary",
+          "Walk",
+          "10",
+          "0.8"
+        ],
+        [
+          "Wedgewood Estates",
+          "Frank Hurt Secondary",
+          "Walk",
+          "11",
+          "0.8"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt324",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt324.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt321",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf"
+          }
+        ],
+        [
+          {
+            "t": "translink.ca · rapidbus projects",
+            "h": "https://www.translink.ca/plans-and-projects/projects/bus-projects/rapidbus-projects"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt341",
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt341.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · newton recreation centre",
+            "h": "https://www.surrey.ca/parks-recreation/recreation-facilities/newton-recreation-centre"
+          }
+        ],
+        [
+          {
+            "t": "surreylibraries.ca · newton branch",
+            "h": "https://surreylibraries.ca/locations/newton-branch"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036"
+          }
+        ],
+        [
+          {
+            "t": "chalofreshco.com · chalo freshco 138 st 72 ave",
+            "h": "https://chalofreshco.com/stores/chalo-freshco-138-st-72-ave/"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/910/store"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt323",
+            "h": "https://infomaps.translink.ca/Public_Timetables/210/tt323.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · chimney heights park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/chimney-heights-park"
+          }
+        ]
+      ],
+      "gen": "nbb",
       "pos": "end"
     }
   ],

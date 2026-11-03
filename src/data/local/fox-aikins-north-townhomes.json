@@ -848,6 +848,158 @@
       ],
       "pos": "end",
       "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Fox & Aikins North, 1871 165A Street"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: White Rock Centre, terminus named in the TransLink timetables below. Route 531, TransLink: White Rock Centre–Willowbrook via 24 Avenue. Route 345, TransLink: King George Station–White Rock Centre via 152 Street."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Edgewood Park, 2284 - 165 Street, South Surrey. Grandview Heights Aquatic Centre, 16855 24 Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Ta'talu Elementary, K-7, SD36, 1970 165a St, Surrey. Earl Marriott Secondary, 8-12, SD36, 15751 16 Ave, Surrey. Southridge School, K-12, independent, 2656 160 St, Surrey."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Real Canadian Superstore, 2332 160 St, Surrey. Thrifty Foods, 15745 Croydon Dr #102, at Morgan Crossing."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Fox & Aikins North (from the street)",
+          "Ta'talu Elementary, 1970 165A Street",
+          "Walk",
+          "5",
+          "0.3"
+        ],
+        [
+          "Fox & Aikins North (from the street)",
+          "Edgewood Park, 2284 165 Street",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "Fox & Aikins North (from the street)",
+          "Grandview Heights Aquatic Centre, 16855 24 Avenue",
+          "Drive",
+          "4",
+          "2.1"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt531.pdf",
+            "t": "infomaps.translink.ca · tt531"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt345.pdf",
+            "t": "infomaps.translink.ca · tt345"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/210/tt375.pdf",
+            "t": "infomaps.translink.ca · tt375"
+          }
+        ],
+        [
+          {
+            "h": "https://www.surrey.ca/parks-recreation/parks/edgewood-park",
+            "t": "surrey.ca · edgewood park"
+          }
+        ],
+        [
+          {
+            "h": "https://www.Surrey.ca/sites/default/files/media/documents/Summer-2025-Pool-Drop-in-Schedule.pdf",
+            "t": "Surrey.ca · Summer 2025 Pool Drop in Schedule"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.realcanadiansuperstore.ca/store-locator/details/1551",
+            "t": "realcanadiansuperstore.ca · details"
+          }
+        ],
+        [
+          {
+            "h": "https://www.thriftyfoods.com/find-a-store/store/9472-thrifty-foods-morgan-crossing",
+            "t": "thriftyfoods.com · 9472 thrifty foods morgan crossing"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [

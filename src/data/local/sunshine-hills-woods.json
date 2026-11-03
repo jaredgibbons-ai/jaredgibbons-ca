@@ -475,6 +475,373 @@
       ],
       "gen": "nb",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Chelsea Gate, 11188 72 Avenue",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest SkyTrain station: Scott Road Station, TransLink. Nearest bus exchange: Scottsdale Exchange, TransLink. Route 312 Scott Road Station / Scottsdale, TransLink, via Scott Rd, 72 Ave and 112 St."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Sunshine Hills Park, 11195 Bond Blvd, Delta. Sungod Recreation Centre, 7815 112 Street, Delta."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Sunshine Hills Elementary, K-7, 11285 Bond Blvd, School District 37 Delta. Richardson Elementary, K-7, 11339 83 Ave, School District 37 Delta. Seaquam Secondary, 8-12, 11584 Lyon Rd, School District 37 Delta."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Walmart Supercentre, 7155 120 St, Delta. Scottsdale Centre, 7031 120 St, Delta."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Cyrus Hill, 7167 116 Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Scottsdale Exchange, TransLink, the route 316 terminus. Route 316 Surrey Central Station / Scottsdale, TransLink, via 116 St."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Nicholson Green, 6866 Nicholson Road",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Route 319 Scott Road Station / Newton Exchange, TransLink, via Scott Rd and Scottsdale Exchange."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: R.A. Nicholson Park, 12140 75A Avenue, Surrey."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sunshine Woods, 6300 Cottonwood Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Parks and recreation: Watershed Park, 11600 Kittson Pkwy, Delta."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Pinewood Elementary, K-7, 11777 Pinewood Dr, School District 37 Delta. Cougar Canyon Elementary, K-7, 11664 Lyon Rd, School District 37 Delta."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Village at Sunshine Hills, 11996 70 Avenue",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Schools: Heath Elementary, K-7, 11364 72 Ave, School District 37 Delta."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Chelsea Gate",
+          "Walmart Supercentre, 7155 120 St",
+          "Drive",
+          "3",
+          "1.7"
+        ],
+        [
+          "Chelsea Gate",
+          "Sungod Recreation Centre, 7815 112 St",
+          "Drive",
+          "4",
+          "2.2"
+        ],
+        [
+          "Chelsea Gate",
+          "Sunshine Hills Elementary, 11285 Bond Blvd",
+          "Drive",
+          "5",
+          "2.7"
+        ],
+        [
+          "Cyrus Hill (from the street)",
+          "Walmart Supercentre, 7155 120 St",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "Cyrus Hill (from the street)",
+          "Sungod Recreation Centre, 7815 112 St",
+          "Drive",
+          "5",
+          "3.1"
+        ],
+        [
+          "Cyrus Hill (from the street)",
+          "Sunshine Hills Park, 11195 Bond Blvd",
+          "Drive",
+          "5",
+          "2.8"
+        ],
+        [
+          "Nicholson Green",
+          "Walmart Supercentre, 7155 120 St",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Nicholson Green",
+          "Seaquam Secondary, 11584 Lyon Rd",
+          "Drive",
+          "3",
+          "1.2"
+        ],
+        [
+          "Nicholson Green",
+          "Sungod Recreation Centre, 7815 112 St",
+          "Drive",
+          "7",
+          "4.3"
+        ],
+        [
+          "Scott & Nicholson",
+          "Walmart Supercentre, 7155 120 St",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "Scott & Nicholson",
+          "Seaquam Secondary, 11584 Lyon Rd",
+          "Drive",
+          "3",
+          "1.5"
+        ],
+        [
+          "Scott & Nicholson",
+          "Sungod Recreation Centre, 7815 112 St",
+          "Drive",
+          "7",
+          "4.1"
+        ],
+        [
+          "Sunshine Woods",
+          "Pinewood Elementary, 11777 Pinewood Dr",
+          "Walk",
+          "9",
+          "0.6"
+        ],
+        [
+          "Sunshine Woods",
+          "Walmart Supercentre, 7155 120 St",
+          "Drive",
+          "4",
+          "2.4"
+        ],
+        [
+          "Sunshine Woods",
+          "Cougar Canyon Elementary, 11664 Lyon Rd",
+          "Drive",
+          "4",
+          "1.9"
+        ],
+        [
+          "Village at Sunshine Hills (from the street)",
+          "Walmart Supercentre, 7155 120 St",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "Village at Sunshine Hills (from the street)",
+          "Scottsdale Centre, 7031 120 St",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Village at Sunshine Hills (from the street)",
+          "Heath Elementary, 11364 72 Ave",
+          "Drive",
+          "3",
+          "1.8"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "translink.ca · schedule",
+            "h": "https://www.translink.ca/schedules-and-maps/station/scott-road/schedule"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt312",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt312.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt319",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt319.pdf"
+          }
+        ],
+        [
+          {
+            "t": "delta.ca · sunshine hills park",
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/sunshine-hills-park"
+          }
+        ],
+        [
+          {
+            "t": "delta.ca · sungod recreation centre",
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/sungod-recreation-centre"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/037"
+          }
+        ],
+        [
+          {
+            "t": "walmart.ca · store",
+            "h": "https://www.walmart.ca/en/store/5838"
+          }
+        ],
+        [
+          {
+            "t": "scottsdalecentre.ca",
+            "h": "http://www.scottsdalecentre.ca/"
+          }
+        ],
+        [
+          {
+            "t": "translink.ca · direction",
+            "h": "https://www.translink.ca/schedules-and-maps/route/316/direction/1/map"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · ra nicholson park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/ra-nicholson-park"
+          }
+        ],
+        [
+          {
+            "t": "delta.ca · watershed park",
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/watershed-park"
+          }
+        ],
+        [
+          {
+            "t": "walmart.ca · store (2)",
+            "h": "https://www.walmart.ca/en/store/5853"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

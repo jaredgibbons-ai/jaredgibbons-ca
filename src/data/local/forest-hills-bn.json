@@ -1158,6 +1158,222 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Ashbrook Place, 9000 Ash Grove Crescent"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid station: Production Way–University Station (Millennium Line), on route 136, which runs on Forest Grove Dr. Nearest bus exchange: Lougheed Station bus exchange, terminus of route 136. Route 136 Lougheed Station / Brentwood Station, via Forest Grove Dr, Underhill Ave and Production Way, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Forest Grove Park, 8505 Forest Grove Dr: City of Burnaby park. Temporary Cameron Community Centre and Library, in The City of Lougheed Shopping Centre, 9855 Austin Ave: City of Burnaby facility during the Cameron rebuild."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Forest Grove Elementary, K-7, 8525 Forest Grove Dr, SD41 Burnaby. Stoney Creek Community Elementary, K-7, 2740 Beaverbrook Cres, SD41 Burnaby. Burnaby Mountain Secondary, 8-12, 8800 Eastlake Dr, SD41 Burnaby."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: The City of Lougheed Shopping Centre, 9855 Austin Rd: per the centre's own site."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Henley Estate, 8210 Forest Grove Drive"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Parks and recreation: Temporary Cameron Community Centre and Library, The City of Lougheed Shopping Centre, 9855 Austin Ave: City of Burnaby facility."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Ashbrook Place",
+          "Forest Grove Elementary",
+          "Walk",
+          "14",
+          "1.0"
+        ],
+        [
+          "Ashbrook Place",
+          "Forest Grove Park",
+          "Walk",
+          "18",
+          "1.4"
+        ],
+        [
+          "Ashbrook Place",
+          "Stoney Creek Community Elementary",
+          "Walk",
+          "18",
+          "1.4"
+        ],
+        [
+          "Henley Estate (from the street)",
+          "Forest Grove Park",
+          "Walk",
+          "2",
+          "0.2"
+        ],
+        [
+          "Henley Estate (from the street)",
+          "Forest Grove Elementary",
+          "Walk",
+          "7",
+          "0.6"
+        ],
+        [
+          "Henley Estate (from the street)",
+          "Production Way–University Station",
+          "Drive",
+          "4",
+          "3.0"
+        ],
+        [
+          "Rossmoor",
+          "Stoney Creek Community Elementary",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "Rossmoor",
+          "Forest Grove Elementary",
+          "Walk",
+          "19",
+          "1.4"
+        ],
+        [
+          "Rossmoor",
+          "Forest Grove Park",
+          "Drive",
+          "3",
+          "1.6"
+        ],
+        [
+          "Wembley Estates (from the street)",
+          "Forest Grove Park",
+          "Walk",
+          "2",
+          "0.2"
+        ],
+        [
+          "Wembley Estates (from the street)",
+          "Forest Grove Elementary",
+          "Walk",
+          "7",
+          "0.6"
+        ],
+        [
+          "Wembley Estates (from the street)",
+          "Production Way–University Station",
+          "Drive",
+          "4",
+          "3.0"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt136.pdf",
+            "t": "infomaps.translink.ca · tt136"
+          }
+        ],
+        [
+          {
+            "h": "http://www.burnaby.ca/Things-To-Do/Explore-Outdoors/Parks.html",
+            "t": "burnaby.ca · Parks"
+          }
+        ],
+        [
+          {
+            "h": "http://burnaby.ca/CameronLougheed",
+            "t": "burnaby.ca · CameronLougheed"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://thecityoflougheed.com/shopping-and-dining/",
+            "t": "thecityoflougheed.com · shopping and dining"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

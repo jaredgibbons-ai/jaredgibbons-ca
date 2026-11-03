@@ -473,6 +473,257 @@
       ],
       "gen": "nb",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Glenmont Park, 5375 205 Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Langley Centre, terminus of route 501, TransLink: Surrey Central Station / Langley Centre via Fraser Highway. Nearest rapid transit: King George Station, via route 503 from Langley Centre. Route 531, TransLink: White Rock Centre / Willowbrook, via Langley Centre, 200 Street."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Douglas Park, on the City's parks page. City Park, 207 Street, 48–51 Avenue, with Al Anderson Memorial Pool."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Douglas Park Community, K-5, SD35, 5409 206 St; catchment not confirmed. Blacklock Fine Arts Elementary, K-5, SD35, 5100 206 St; catchment not confirmed. H D Stafford Middle, 6-8, SD35, 20441 Grade Cres; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods (grocery), 20151 Fraser Highway. Safeway (grocery and pharmacy), 20871 Fraser Highway."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Huntsfield Green, 19649 53 Ave",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Parks and recreation: Brydon Park, 198 Street & 53 Avenue, on the City's parks page. Timms Community Centre and City of Langley Library, 20399 Douglas Crescent."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Nicomekl Elementary, K-5, SD35, 20050 53 Ave; catchment not confirmed."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Glenmont Park",
+          "Douglas Park Community School",
+          "Walk",
+          "3",
+          "0.2"
+        ],
+        [
+          "Glenmont Park",
+          "Blacklock Fine Arts Elementary",
+          "Walk",
+          "10",
+          "0.8"
+        ],
+        [
+          "Glenmont Park",
+          "City Park / Al Anderson Memorial Pool",
+          "Walk",
+          "14",
+          "1.0"
+        ],
+        [
+          "Huntsfield Green (from the street)",
+          "Brydon Park",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "Huntsfield Green (from the street)",
+          "Nicomekl Elementary",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Huntsfield Green (from the street)",
+          "Timms Community Centre",
+          "Drive",
+          "3",
+          "1.8"
+        ],
+        [
+          "Parkway Estates (from the street)",
+          "Douglas Park Community School",
+          "Walk",
+          "3",
+          "0.2"
+        ],
+        [
+          "Parkway Estates (from the street)",
+          "Blacklock Fine Arts Elementary",
+          "Walk",
+          "10",
+          "0.7"
+        ],
+        [
+          "Parkway Estates (from the street)",
+          "Langley Centre (Bay 3, Logan Avenue)",
+          "Walk",
+          "14",
+          "1.1"
+        ],
+        [
+          "Parkway II (from the street)",
+          "Douglas Park Community School",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "Parkway II (from the street)",
+          "Blacklock Fine Arts Elementary",
+          "Walk",
+          "11",
+          "0.8"
+        ],
+        [
+          "Parkway II (from the street)",
+          "Langley Centre (Bay 3, Logan Avenue)",
+          "Walk",
+          "13",
+          "1.0"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt501",
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt501.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt503",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt531",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt531.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt364",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt364.pdf"
+          }
+        ],
+        [
+          {
+            "t": "langleycity.ca · parks trails",
+            "h": "https://www.langleycity.ca/parks-recreation/parks-trails"
+          }
+        ],
+        [
+          {
+            "t": "langleycity.ca · city park",
+            "h": "https://www.langleycity.ca/parks-recreation/parks-trails/city-park"
+          }
+        ],
+        [
+          {
+            "t": "langleycity.ca · extreme weather stay cool langley city",
+            "h": "https://www.langleycity.ca/news/extreme-weather-stay-cool-langley-city"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/035"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/2242/store"
+          }
+        ],
+        [
+          {
+            "t": "safeway.ca · find a store",
+            "h": "https://www.safeway.ca/find-a-store/"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

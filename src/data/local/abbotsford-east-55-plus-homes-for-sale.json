@@ -435,6 +435,152 @@
       ],
       "gen": "n55",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Cascade Court, 35230 Delair Rd",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: No rapid-transit station is in Abbotsford; the building is served by BC Transit buses. Nearest bus exchange: Montrose Exchange, the endpoint of Route 16. Route 16 McMillan/Montrose (BC Transit) serves Delair Rd at Everett Rd, a timing point on its schedule."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: DeLair Park, 35570 Old Yale Road. McMillan Park, 2499 McMillan Road."
+          }
+        ],
+        [
+          {
+            "t": "Schools: McMillan Elementary, K-5, School District 34 Abbotsford, 34830 Oakhill Dr; catchment not confirmed. William A. Fraser Middle School, 6-8, School District 34 Abbotsford, 34695 Blatchford Way; catchment not confirmed. Yale Secondary, 8-12, School District 34 Abbotsford, 34620 Old Yale Rd; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Walmart Supercenter #3019 (Abbotsford East), 1812 Vedder Way. Save-On-Foods, 2140 Sumas Way."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Cascade Court",
+          "DeLair Park",
+          "Walk",
+          "15",
+          "1.0"
+        ],
+        [
+          "Cascade Court",
+          "Walmart Supercenter, 1812 Vedder Way",
+          "Drive",
+          "4",
+          "2.1"
+        ],
+        [
+          "Cascade Court",
+          "Abbotsford Recreation Centre",
+          "Drive",
+          "6",
+          "3.1"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "bctransit.com · route overview",
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=16"
+          }
+        ],
+        [
+          {
+            "t": "bctransit.com · route overview (2)",
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=7"
+          }
+        ],
+        [
+          {
+            "t": "abbotsford.ca · parks playgrounds",
+            "h": "https://www.abbotsford.ca/parks-playgrounds"
+          }
+        ],
+        [
+          {
+            "t": "abbotsford.ca · Aquatics",
+            "h": "https://www.abbotsford.ca/Aquatics"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · abbotsford",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/abbotsford"
+          }
+        ],
+        [
+          {
+            "t": "walmart.ca · store",
+            "h": "https://www.walmart.ca/en/store/1113"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/904/store"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

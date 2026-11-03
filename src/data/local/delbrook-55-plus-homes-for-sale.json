@@ -293,6 +293,170 @@
       ],
       "gen": "n55",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Queensbrook, 678 West Queens Road",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid transit: SeaBus at Lonsdale Quay, Downtown Vancouver–North Vancouver, 12 minutes, every 15 minutes during the day, TransLink. Nearest bus exchange: Lonsdale Quay, terminus of route 249. Route 249 Delbrook / Lonsdale Quay, via Delbrook Ave, Westview Dr and Larson Rd, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Belhouse Park, 600 W Queens Rd: tennis courts, playground, picnic shelter, water park (NVRC). Delbrook Community Recreation Centre, 851 West Queens Road, North Vancouver."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Braemar Elementary, K-7, 3600 Mahon Ave, SD44 North Vancouver; catchment not confirmed. Carisbrooke Elementary, K-7, 510 Carisbrooke Rd E, SD44 North Vancouver; catchment not confirmed. Carson Graham Secondary, 8-12, 2145 Jones Ave, SD44 North Vancouver; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Westview Shopping Centre, 2601 Westview Dr, North Vancouver. Queensdale Market, 3030 Lonsdale Ave, North Vancouver."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Queensbrook (from the street)",
+          "Delbrook Park",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "Queensbrook (from the street)",
+          "Delbrook Community Recreation Centre",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Queensbrook (from the street)",
+          "Westview Shopping Centre",
+          "Walk",
+          "8",
+          "0.6"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "translink.ca · seabus",
+            "h": "https://www.translink.ca/translink/schedules-and-maps/seabus"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt249",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt249.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt232",
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt232.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt246",
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt246.pdf"
+          }
+        ],
+        [
+          {
+            "t": "nvrc.perfectmind.com · Facility",
+            "h": "https://nvrc.perfectmind.com/23734/Clients/BookMe4LandingPages/Facility?arrivalDate=2026-03-01T00%3A00%3A00.256Z&calendarId=0a3b3399-567c-4b4e-9eb7-5ba174ec00e9&facilityId=f34fe311-f11d-4678-85d3-a7a2abe3aeeb&landingPageBackUrl=https%3A%2F%2Fnvrc.perfectmind.com%2F23734%2FClients%2FBookMe4FacilityList%2FList%3FwidgetId%3D4e1fc0f6-6217-48a6-8554-edf2a1309028%26calendarId%3D0a3b3399-567c-4b4e-9eb7-5ba174ec00e9&widgetId=4e1fc0f6-6217-48a6-8554-edf2a1309028"
+          }
+        ],
+        [
+          {
+            "t": "nvrc.ca · accessibility",
+            "h": "http://www.nvrc.ca/facilities-fields/accessibility"
+          }
+        ],
+        [
+          {
+            "t": "nvrc.ca · field status locations",
+            "h": "http://www.nvrc.ca/facilities-fields/field-status-locations"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/044"
+          }
+        ],
+        [
+          {
+            "t": "shopwestview.ca",
+            "h": "http://shopwestview.ca/"
+          }
+        ],
+        [
+          {
+            "t": "queensdalemarket.ca",
+            "h": "https://www.queensdalemarket.ca/"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

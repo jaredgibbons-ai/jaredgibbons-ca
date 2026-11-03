@@ -1,0 +1,29 @@
+# The Argyle — 34248 King Road — What's Nearby: Local Notes
+Building: The Argyle, 34248 King Road (poplar-guide; townhomes).
+## 1. TRANSIT
+- No SkyTrain or West Coast Express station is in Abbotsford; BC Transit serves Poplar on routes 3, 5, 6 and 12. https://www.bctransit.com/wp-content/uploads/2026/08/cfv_map_21.pdf
+- Route 3 Clearbrook/Huntingdon runs via Bourquin Exchange, Montrose Exchange and Marshall Road. https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=3
+- Bourquin Exchange is a terminus on BC Transit Routes 31 and 21. https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=31
+## 2. PARKS AND RECREATION
+- Berry Park, 33928 Fern Street, on the City parks list. https://www.abbotsford.ca/parks-playgrounds
+- Huntingdon Park, 34779 3rd Avenue, on the City parks list. https://www.abbotsford.ca/parks-playgrounds
+- MRC Sports Complex (Matsqui Recreation Centre), 3106 Clearbrook Road. https://www.abbotsford.ca/parks-playgrounds
+- Clearbrook Library, 32320 George Ferguson Way. https://www.fvrl.bc.ca/locations/clearbrook-library
+## 3. SCHOOLS
+- Jackson Elementary, K-5, SD34 Abbotsford, 33165 King Rd. https://studentsuccess.gov.bc.ca/schools/in-school-district/034
+- South Poplar Traditional Elementary, K-5, SD34 Abbotsford, 32746 Huntingdon Rd. https://studentsuccess.gov.bc.ca/schools/in-school-district/034
+- Abbotsford Traditional School, 6-12, SD34 Abbotsford, 2272 Windsor St. https://studentsuccess.gov.bc.ca/schools/in-school-district/034
+- ASIA - North Poplar, K-5, SD34 Abbotsford, 32041 Marshall Rd. https://studentsuccess.gov.bc.ca/schools/in-school-district/034
+## 4. GROCERY AND SHOPPING ANCHORS
+- Real Canadian Superstore, 2855 Gladwin Rd, Abbotsford (retailer's own site). https://www.realcanadiansuperstore.ca/store-locator/details/1558
+## 5. MEASURED TRAVEL TIMES
+- Measured 2026-11-02; OSRM driving and routed-foot walking; OSM data date not published by the service. Origin: 34248 King Road, verified — reverse-geocode returned "34248, King Road, Abbotsford" (house point for this address).
+- Drive to Jackson Elementary: 3.6 minutes, 2.15 km, OSRM.
+- Drive to South Poplar Traditional Elementary: 6.6 minutes, 4.52 km, OSRM.
+- Drive to Real Canadian Superstore, 2855 Gladwin Rd: 9.2 minutes, 5.21 km, OSRM.
+- Drive to Clearbrook Library: 10.5 minutes, 7.60 km, OSRM.
+- Drive to Matsqui Recreation Centre: 11.1 minutes, 7.65 km, OSRM.
+## NOT CONFIRMED
+- School catchment for 34248 King Road: not confirmed — no district locator run in this pass.
+- Bus stop nearest the building and its routes/frequency: not confirmed from an operator stop page in this pass.
+- Walk to Jackson Elementary measured 29.4 minutes, 2.20 km, routed-foot (4.5 km/h, in band) — over the 1.5 km walk cap, so not listed in §5.

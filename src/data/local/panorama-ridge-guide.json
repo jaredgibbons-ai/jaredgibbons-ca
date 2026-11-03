@@ -850,6 +850,275 @@
     {
       "t": "h",
       "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Nora, 12830 62 Ave",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Newton Exchange, terminus of the R1 King George Boulevard and R6 Scott Road RapidBus routes. Nearest SkyTrain station: King George Station, reached via Newton Exchange on routes 321 and R1. Route 323 Newton Exchange/Surrey Central Station (TransLink): via 72 Ave, 76 Ave and 128 St."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Panorama Park, 12863 60 Avenue, Surrey. Colebrook Park, 5419 King George Boulevard, Surrey."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Panorama Park Elementary, K-7, School District 36 Surrey, 12878 62 Ave; catchment not confirmed. Colebrook Elementary, K-7, School District 36 Surrey, 5404 125A St; catchment not confirmed. North Ridge Elementary, K-7, School District 36 Surrey, 13460 62 Ave; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Panorama Village shopping centre, 15127 Highway 10, Surrey; the centre's tenant list includes Fresh St. Market (centre's leasing brochure)."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Panorama Mews, 5867 129 St",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Schools: École Panorama Ridge Secondary, 8-12, School District 36 Surrey, 13220 64 Ave; catchment not confirmed."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Steller Panorama, 5858 132 St",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Newton Exchange, terminus of the R1 King George Boulevard RapidBus. Route 324, TransLink: Newton Exchange to Surrey Central Station via 132 Street. Route 322, TransLink: Newton Exchange / Scottsdale, running via 64 Avenue and 132 Street."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Colebrook Park, 5419 King George Boulevard, south-west of the building. Tamanawis Park, 12601 64 Avenue, north of the building."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Colebrook Elementary, K-7, SD36 Surrey. École Panorama Ridge Secondary, 8-12, SD36 Surrey, 13220 64 Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Panorama Village shopping centre, 15127 Highway 10, at 152 Street and Highway 10, east of the building."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "The Uplands, 15152 62A Ave",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Route 321, TransLink: White Rock / Newton Exchange / Surrey Central Station via 152 Street. Route 322, TransLink: Newton Exchange / Scottsdale, running via 64 Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Sullivan Heights Park, 14426 64 Avenue, west of the building. Tamanawis Park, 12601 64 Avenue, west of the building."
+          }
+        ],
+        [
+          {
+            "t": "Schools: North Ridge Elementary, K-7, SD36 Surrey."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Panorama Village shopping centre, 15127 Highway 10, at 152 Street and Highway 10, south of the building."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "The Uplands",
+          "Sullivan Heights Park",
+          "Drive",
+          "5",
+          "2.4"
+        ],
+        [
+          "The Uplands",
+          "Newton Exchange",
+          "Drive",
+          "8",
+          "5.1"
+        ],
+        [
+          "The Uplands",
+          "North Ridge Elementary",
+          "Drive",
+          "8",
+          "4.5"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "translink.ca · rapidbus projects",
+            "h": "https://www.translink.ca/plans-and-projects/projects/bus-projects/rapidbus-projects"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt321",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt323",
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt323.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt324",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt324.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · panorama park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/panorama-park"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · park projects",
+            "h": "https://www.surrey.ca/parks-recreation/parks/park-projects"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · surrey",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/surrey"
+          }
+        ],
+        [
+          {
+            "t": "mallmaverick.imgix.net · Panorama Village Brochure",
+            "h": "https://mallmaverick.imgix.net/web/property_managers/8/properties/776/all/20240612181051/Panorama_Village_Brochure.pdf"
+          }
+        ],
+        [
+          {
+            "t": "translink.ca · schedule",
+            "h": "https://www.translink.ca/schedules-and-maps/route/322/direction/0/schedule"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · newton recreation centre",
+            "h": "http://www.surrey.ca/parks-recreation/recreation-facilities/newton-recreation-centre"
+          }
+        ],
+        [
+          {
+            "t": "surreylibraries.ca · newton branch",
+            "h": "https://surreylibraries.ca/locations/newton-branch"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · sullivan heights park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/sullivan-heights-park"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
       "text": "Sources",
       "gen": "musefaq",
       "pos": "end"

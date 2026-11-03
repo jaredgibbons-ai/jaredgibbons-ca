@@ -958,6 +958,129 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Lantern Park, 27640 Lantern Avenue"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: No rapid-transit station is in Abbotsford; TransLink lists West Coast Express stations from Mission City to Waterfront only. Nearest rapid-transit station: Mission City Station (West Coast Express), in Mission. Nearest bus exchange: Highstreet Exchange, a timing point on BC Transit route 21."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Aberdeen Elementary, K-5, SD34, 2975 Bradner Road; catchment not confirmed."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Lantern Park (from the street)",
+          "Aberdeen Elementary",
+          "Drive",
+          "4",
+          "2.9"
+        ],
+        [
+          "Lantern Park (from the street)",
+          "Save-On-Foods Aldergrove",
+          "Drive",
+          "6",
+          "3.2"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=21&schedule=2026-04-05",
+            "t": "bctransit.com · route overview"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/parks-playgrounds",
+            "t": "abbotsford.ca · parks playgrounds"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/events/14993",
+            "t": "fvrl.bc.ca · events"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/034",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/902/store",
+            "t": "saveonfoods.com · store"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

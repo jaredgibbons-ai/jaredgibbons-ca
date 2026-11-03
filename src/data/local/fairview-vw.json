@@ -1188,6 +1188,360 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Fairview Village, 1330 / 1314 West 7th Avenue"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid station: Broadway-City Hall Station (Canada Line), a stop on route 99. Route 99 B-Line, TransLink: Commercial-Broadway Station / UBC, via Broadway. Route 17, TransLink: Oak / Downtown, from Marine Drive Station via Cambie, Oak, 12 Ave, Cambie to Robson."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Charleson Park, 999 Charleson Street. Douglas Park Community Centre, 801 West 22nd Avenue, with a gymnasium and fitness room."
+          }
+        ],
+        [
+          {
+            "t": "Schools: False Creek Elementary, grades K-7, 900 School Green, School District 39 Vancouver; catchment not confirmed. L'école Bilingue Elementary, grades K-7, 1166 W 14th Ave, School District 39 Vancouver; catchment not confirmed. Simon Fraser Elementary, grades K-7, 100 15th Ave W, School District 39 Vancouver; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Whole Foods Market, Cambie store, 510 W 8th Ave. City Square Shopping Centre, 555 W 12th Ave."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Manhattan West, 1590 West 8th Avenue"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Route 99 B-Line, Commercial-Broadway Station / UBC, via Broadway, TransLink. Route 9, Granville/Alma St/UBC, via Broadway, TransLink; its timetable lists a westbound stop at W Broadway at Granville St."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Granville Loop Park, 1435 W 5th Ave, per the City park finder. Granville Park, 3001 Fir St, per the City park finder."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Marvista, 1214 West 7th Avenue"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Route 9, Granville/Alma St/UBC, via Broadway, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Charleson Park, 999 Charleson Street, per the City park finder."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The Oaks, 3089 Oak Street"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Route 17, Downtown, from Marine Drive Station via Cambie, Marine, Oak and 12 Ave, TransLink."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Fairview Village",
+          "False Creek Elementary",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "Fairview Village",
+          "Charleson Park",
+          "Walk",
+          "14",
+          "1.1"
+        ],
+        [
+          "Fairview Village",
+          "Whole Foods Market, Cambie",
+          "Walk",
+          "19",
+          "1.4"
+        ],
+        [
+          "Hycroft Towers",
+          "L'école Bilingue Elementary",
+          "Walk",
+          "10",
+          "0.7"
+        ],
+        [
+          "Hycroft Towers",
+          "City Square Shopping Centre",
+          "Drive",
+          "4",
+          "2.0"
+        ],
+        [
+          "Hycroft Towers",
+          "Simon Fraser Elementary",
+          "Drive",
+          "4",
+          "2.3"
+        ],
+        [
+          "Manhattan West",
+          "Firehall Branch library, 1455 West 10th Ave",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Manhattan West",
+          "Granville Loop Park, 1435 W 5th Ave",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "Manhattan West",
+          "Granville Park, 3001 Fir St",
+          "Walk",
+          "10",
+          "0.8"
+        ],
+        [
+          "Marvista",
+          "Firehall Branch library, 1455 West 10th Ave",
+          "Walk",
+          "8",
+          "0.6"
+        ],
+        [
+          "Marvista",
+          "False Creek Elementary, 900 School Green",
+          "Walk",
+          "10",
+          "0.7"
+        ],
+        [
+          "Marvista",
+          "L'école Bilingue Elementary, 1166 W 14th Ave",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "The Oaks",
+          "L'école Bilingue Elementary, 1166 W 14th Ave",
+          "Walk",
+          "6",
+          "0.4"
+        ],
+        [
+          "The Oaks",
+          "Douglas Park Community Centre, 801 W 22nd Ave",
+          "Walk",
+          "14",
+          "1.1"
+        ],
+        [
+          "The Oaks",
+          "Granville Park, 3001 Fir St",
+          "Walk",
+          "15",
+          "1.1"
+        ],
+        [
+          "Tisdall Row",
+          "L'école Bilingue Elementary, 1166 W 14th Ave",
+          "Walk",
+          "8",
+          "0.6"
+        ],
+        [
+          "Tisdall Row",
+          "Douglas Park Community Centre, 801 W 22nd Ave",
+          "Walk",
+          "11",
+          "0.8"
+        ],
+        [
+          "Tisdall Row",
+          "City Square Shopping Centre, 555 W 12th Ave",
+          "Walk",
+          "13",
+          "1.0"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt099.pdf",
+            "t": "infomaps.translink.ca · tt099"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt017.pdf",
+            "t": "infomaps.translink.ca · tt017"
+          }
+        ],
+        [
+          {
+            "h": "https://covapp.vancouver.ca/parkfinder/parkdetail.aspx?inparkid=43",
+            "t": "covapp.vancouver.ca · parkdetail.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://Vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx",
+            "t": "Vancouver.ca · community and cultural centres.aspx"
+          }
+        ],
+        [
+          {
+            "h": "http://www.vpl.ca/location/firehall-branch",
+            "t": "vpl.ca · firehall branch"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/039",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.wholefoodsmarket.com/stores/cambie",
+            "t": "wholefoodsmarket.com · cambie"
+          }
+        ],
+        [
+          {
+            "h": "https://citysquarevan.com/",
+            "t": "citysquarevan.com"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt009.pdf",
+            "t": "infomaps.translink.ca · tt009"
+          }
+        ],
+        [
+          {
+            "h": "https://covapp.vancouver.ca/parkfinder/parkdetail.aspx?inparkid=45",
+            "t": "covapp.vancouver.ca · parkdetail.aspx (2)"
+          }
+        ],
+        [
+          {
+            "h": "https://covapp.vancouver.ca/ParkFinder/parkdetail.aspx?inparkid=44",
+            "t": "covapp.vancouver.ca · parkdetail.aspx (3)"
+          }
+        ],
+        [
+          {
+            "h": "https://granvilleisland.com/public-market",
+            "t": "granvilleisland.com · public market"
+          }
+        ],
+        [
+          {
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/937/store",
+            "t": "saveonfoods.com · store"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

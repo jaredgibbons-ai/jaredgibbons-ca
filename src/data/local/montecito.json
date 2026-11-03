@@ -775,6 +775,199 @@
     {
       "t": "h",
       "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "The Ambassador, 7321 Halifax Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid-transit station: Sperling–Burnaby Lake Station, SkyTrain Millennium Line. Route 144 SFU / Metrotown Station, TransLink, runs via Duthie Ave at Halifax St. Route 136, TransLink, runs via Halifax St, per the TransLink Burnaby system map."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Halifax Park, 6925 Halifax Street, on the City of Burnaby parks list. Montecito Park, 2040 Augusta Avenue, on the City of Burnaby parks list."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Montecito Elementary, K-7, 2176 Duthie Avenue, SD41 Burnaby, Ministry-listed."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Villa Montecito, 7307 Montecito Drive",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Route 144 SFU / Metrotown Station, TransLink, runs via Duthie Ave through the area and via Sperling Station. Routes 110 and 134, TransLink, serve Sperling–Burnaby Lake Station."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "The Ambassador",
+          "Halifax Park",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "The Ambassador",
+          "Montecito Elementary",
+          "Drive",
+          "2",
+          "0.8"
+        ],
+        [
+          "The Ambassador",
+          "Sperling–Burnaby Lake Station",
+          "Drive",
+          "4",
+          "2.4"
+        ],
+        [
+          "Villa Montecito",
+          "Montecito Elementary",
+          "Walk",
+          "3",
+          "0.2"
+        ],
+        [
+          "Villa Montecito",
+          "Halifax Park",
+          "Walk",
+          "14",
+          "1.2"
+        ],
+        [
+          "Villa Montecito",
+          "Sperling–Burnaby Lake Station",
+          "Drive",
+          "4",
+          "1.8"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt110",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt110.pdf"
+          }
+        ],
+        [
+          {
+            "t": "translink.ca · schedule",
+            "h": "https://www.translink.ca/schedules-and-maps/route/144/direction/1/schedule"
+          }
+        ],
+        [
+          {
+            "t": "translink.ca · burnaby and new westminster map",
+            "h": "https://translink.ca/-/media/translink/documents/schedules-and-maps/transit-system-maps/regional-maps/2026/september-2026/burnaby-and-new-westminster-map.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt134",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt134.pdf"
+          }
+        ],
+        [
+          {
+            "t": "burnaby.widen.net · parks listings",
+            "h": "https://burnaby.widen.net/s/2sfswpzvkg/parks-listings"
+          }
+        ],
+        [
+          {
+            "t": "burnaby.ca · bill copeland sports centre",
+            "h": "https://www.burnaby.ca/recreation-and-arts/recreation-facilities/bill-copeland-sports-centre"
+          }
+        ],
+        [
+          {
+            "t": "metrovancouver.org · burnaby lake regional park",
+            "h": "https://metrovancouver.org/services/regional-parks/park/burnaby-lake-regional-park"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/041"
+          }
+        ],
+        [
+          {
+            "t": "safeway.ca · safeway kensington square",
+            "h": "https://www.safeway.ca/stores/safeway-kensington-square/"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
       "text": "Sources",
       "gen": "musefaq",
       "pos": "end"

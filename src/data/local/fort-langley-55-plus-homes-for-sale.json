@@ -421,6 +421,140 @@
       ],
       "pos": "end",
       "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Waterfront at Bedford Landing, 23215 Billy Brown Road"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest operating SkyTrain station by name: Surrey Central Station (Expo Line) — TransLink lists it as an operating Expo Line station. Nearest bus exchanges by name: Langley Centre and Carvolth Exchange — the two ends of TransLink Route 562. Bus route: 562, Walnut Grove / Langley Centre, operator TransLink; its routing includes Glover Rd and 96 Ave in Fort Langley."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Fort Langley Library (Fraser Valley Regional Library), 23430 Mavis Avenue, Fort Langley."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Fort Langley Elementary, K-7, SD35 Langley, 8877 Bartlett St, Fort Langley; catchment not confirmed. Langley Fine Arts School, K-12, SD35 Langley, 9096 Trattle St, Fort Langley; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Lee's Market, 23320 Mavis Avenue, Fort Langley (Township of Langley page naming the store and address)."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Waterfront at Bedford Landing",
+          "Lee's Market",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "Waterfront at Bedford Landing",
+          "Fort Langley Library",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Waterfront at Bedford Landing",
+          "Fort Langley Elementary",
+          "Walk",
+          "17",
+          "1.3"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://www.translink.ca/schedules-and-maps/skytrain/?page=1",
+            "t": "translink.ca · skytrain"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt562.pdf",
+            "t": "infomaps.translink.ca · tt562"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations?combine=&municipality%5B237%5D=237&view=grid",
+            "t": "fvrl.bc.ca · locations"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/035",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.tol.ca/en/services/garbage-cart.aspx",
+            "t": "tol.ca · garbage cart.aspx"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "breadcrumbs": [

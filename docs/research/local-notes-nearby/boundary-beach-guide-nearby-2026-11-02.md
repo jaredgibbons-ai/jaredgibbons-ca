@@ -3,10 +3,10 @@
 ## 1. TRANSIT
 - Nearest rapid-transit station: Bridgeport Station (Canada Line), via South Delta Exchange and Ladner Exchange on route 601. (https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf)
 - Nearest bus exchange: South Delta Exchange, on 56 Street, served by route 601. (https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf)
-- Route 601, TransLink: selected Boundary Bay trips via Boundary Bay Rd, 12 Ave and 56 St, then via South Delta Exchange and Ladner Exchange to Bridgeport Station. (https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf)
+- Route 601, TransLink: selected Boundary Bay trips via Boundary Bay Rd, 12 Ave, 56 St, South Delta and Ladner exchanges to Bridgeport Station. (https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf)
 
 ## 2. PARKS AND RECREATION
-- Boundary Bay Regional Park and Centennial Beach, Delta (Metro Vancouver): Centennial Beach, Cammidge House, Dyke Trail, Savannah and Raptor trails. (https://metrovancouver.org/services/regional-parks/park/boundary-bay-regional-park)
+- Boundary Bay Regional Park and Centennial Beach, Delta (Metro Vancouver): Centennial Beach, Cammidge House, Dyke and Raptor trails. (https://metrovancouver.org/services/regional-parks/park/boundary-bay-regional-park)
 - Diefenbaker Park, 5579 1 Ave, Delta. (https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?keywords&region=All&amenities%5B74%5D=74&page=1)
 - Winskill Park, 5585 9 Ave, Delta, next to Winskill Aquatic and Fitness Centre (City of Delta site search result on delta.ca). (https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/winskill-park)
 - South Delta Recreation Centre, 1720 56 Street, Delta. (http://www.delta.ca/parks-recreation/sport-recreation/indoor-facilities/south-delta-recreation-centre)
@@ -31,4 +31,4 @@
 - School catchments: not confirmed — no district locator run in this pass.
 - Bus frequencies: not stated.
 - Grocery or pharmacy in the Boundary Beach streets themselves: none confirmed; the confirmed anchors are in Tsawwassen town centre.
-- Walking times: no item in sections 1–4 fell within the 1.5 km walk cap from the from-point, so no walk time is quoted.
+- Walking times: nothing in sections 1–4 within the 1.5 km walk cap from the from-point; none quoted.

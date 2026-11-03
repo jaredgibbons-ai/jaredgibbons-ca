@@ -498,6 +498,271 @@
       ],
       "pos": "end",
       "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Heights Manor, 33535 King Rd"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: No rapid-transit station is in Abbotsford; nearest is Mission City Station, West Coast Express terminus in Mission. Nearest named stops: UFV Abbotsford Campus and McCallum Park & Ride, both served by BC Transit routes 1 and 12. Route 1 Highstreet/UFV: Highstreet to UFV Abbotsford via Bourquin and Montrose exchanges and McCallum Park & Ride."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Rogers Forum (arena), 33800 King Road. Hoon Park, 33279 Lynn Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Jackson Elementary, K-5, School District 34 Abbotsford, 33165 King Rd. Abbotsford Traditional School, 6-12, School District 34 Abbotsford, 2272 Windsor St."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Real Canadian Superstore, 2855 Gladwin Rd, Abbotsford."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Crown Point, 1450 McCallum Road"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Parks and recreation: Kaslo Park, 1435 Kaslo Court."
+          }
+        ],
+        [
+          {
+            "t": "Schools: South Poplar Traditional Elementary, K-5, School District 34 Abbotsford, 32746 Huntingdon Rd."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Maplewood Estates, 2035 Martens St"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: No SkyTrain or West Coast Express station is in Abbotsford; BC Transit serves Poplar on routes 3, 5, 6 and 12. Route 3 Clearbrook/Huntingdon runs via Bourquin Exchange, Montrose Exchange and Marshall Road. Bourquin Exchange and Montrose Exchange are stops on Route 3."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Berry Park, 33928 Fern Street, on the City parks list. Huntingdon Park, 34779 3rd Avenue, on the City parks list."
+          }
+        ],
+        [
+          {
+            "t": "Schools: South Poplar Traditional Elementary, K-5, SD34 Abbotsford, 32746 Huntingdon Rd. Jackson Elementary, K-5, SD34 Abbotsford, 33165 King Rd. Abbotsford Traditional School, 6-12, SD34 Abbotsford, 2272 Windsor St."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Central Heights Manor (from the street)",
+          "McCallum Park & Ride",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "Central Heights Manor (from the street)",
+          "Rogers Forum (33800 King Road)",
+          "Walk",
+          "8",
+          "0.6"
+        ],
+        [
+          "Central Heights Manor (from the street)",
+          "Jackson Elementary (33165 King Road)",
+          "Walk",
+          "11",
+          "0.8"
+        ],
+        [
+          "Crown Point",
+          "University of the Fraser Valley (33844 King Road)",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Crown Point",
+          "Rogers Forum (33800 King Road)",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Crown Point",
+          "McCallum Park & Ride",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "Maplewood Estates",
+          "Jackson Elementary",
+          "Drive",
+          "6",
+          "4.1"
+        ],
+        [
+          "Maplewood Estates",
+          "Clearbrook Library",
+          "Drive",
+          "7",
+          "3.6"
+        ],
+        [
+          "Maplewood Estates",
+          "Matsqui Recreation Centre",
+          "Drive",
+          "8",
+          "4.0"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=1",
+            "t": "bctransit.com · route overview"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=12",
+            "t": "bctransit.com · route overview (2)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/sites/default/files/2026-02/2026-02-05%20-%20Canucks%20Sports%20and%20Entertainment%20and%20the%20City%20of%20Abbotsford%20agree%20to%20five-year%20facility%20exention%20at%20Rogers%20Forum.pdf",
+            "t": "abbotsford.ca · 2026 02 05 Canucks Sports and Entertainment an"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/parks-playgrounds",
+            "t": "abbotsford.ca · parks playgrounds"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/sites/default/files/docs/community-events/Park%20Amenities.pdf",
+            "t": "abbotsford.ca · Park Amenities"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/034",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.realcanadiansuperstore.ca/store-locator/details/1558",
+            "t": "realcanadiansuperstore.ca · details"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/wp-content/uploads/2026/08/cfv_map_21.pdf",
+            "t": "bctransit.com · cfv map 21"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=3",
+            "t": "bctransit.com · route overview (3)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations/clearbrook-library",
+            "t": "fvrl.bc.ca · clearbrook library"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "breadcrumbs": [

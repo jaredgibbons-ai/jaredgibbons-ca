@@ -1089,6 +1089,161 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Bordeaux at Champlain Gardens, 3265 Clermont Mews"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid-transit station: Joyce–Collingwood Station, a terminus of route 26, TransLink. Route 26 Joyce Station / 29th Avenue Station, via Kerr St, Maquinna Dr, Champlain Cres and Matheson Cres, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Everett Crowley Park, 8200 Kerr St, in the Champlain Heights area of Vancouver, City of Vancouver park finder. Champlain Heights Community Centre, 3350 Maquinna Dr, City of Vancouver."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Captain James Cook Elementary, grades K–7, 3340 54th Ave E, School District 39 Vancouver. Champlain Heights Community Elementary, grades K–7, 6955 Frontenac St, School District 39 Vancouver. Champlain Heights Annex, grades K–3, 7835 Champlain Cres, School District 39 Vancouver."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Your Independent Grocer (Champlain Square), 7190 Kerr St."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Bordeaux at Champlain Gardens",
+          "Captain James Cook Elementary",
+          "Walk",
+          "2",
+          "0.2"
+        ],
+        [
+          "Bordeaux at Champlain Gardens",
+          "Your Independent Grocer (Champlain Square)",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Bordeaux at Champlain Gardens",
+          "Champlain Heights Community Centre",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Highgate",
+          "Your Independent Grocer (Champlain Square)",
+          "Walk",
+          "6",
+          "0.4"
+        ],
+        [
+          "Highgate",
+          "Captain James Cook Elementary",
+          "Walk",
+          "8",
+          "0.6"
+        ],
+        [
+          "Highgate",
+          "Champlain Heights Community Centre",
+          "Walk",
+          "11",
+          "0.8"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt026.pdf",
+            "t": "infomaps.translink.ca · tt026"
+          }
+        ],
+        [
+          {
+            "h": "http://covapp.vancouver.ca/parkfinder/parkdetail.aspx?inparkid=101",
+            "t": "covapp.vancouver.ca · parkdetail.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://vancouver.ca/parks-recreation-culture/champlain-heights-community-centre.aspx",
+            "t": "vancouver.ca · champlain heights community centre.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/039",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.yourindependentgrocer.ca/store-locator/details/1697",
+            "t": "yourindependentgrocer.ca · details"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

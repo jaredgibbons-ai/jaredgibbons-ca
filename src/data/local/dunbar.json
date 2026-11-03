@@ -1126,6 +1126,229 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "3590 West 39th Avenue"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus loop: Dunbar Loop, at Dunbar St and W 41st Ave, terminus of route 7, TransLink. Route 7 Nanaimo Station / Dunbar, via Dunbar St and W 4th Ave, TransLink. Route 25 Brentwood Station / UBC, via King Edward Ave and Dunbar St, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Memorial West Park, 4701 Dunbar St: City of Vancouver park. Dunbar Community Centre, 4747 Dunbar St."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Lord Kitchener Elementary, K–7, 3455 W King Edward Ave, School District 39. Catchment not confirmed. Lord Byng Secondary, 8–12, 3939 W 16th Ave, School District 39. Catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Stong's Market, 4221 Dunbar St."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Fifty-Five 55 Dunbar, 5555 Dunbar Street"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid station: King Edward Station (Canada Line), reached on route 25, which runs via W King Edward Ave and Dunbar St. Nearest bus loop: Dunbar Loop, at Dunbar St and W 41st Ave, terminus of route 7. Route 7 Nanaimo Station / Dunbar, via Dunbar St, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Southlands Elementary, grades K-7, 5351 Camosun St, School District 39 Vancouver; catchment not confirmed. Lord Kitchener Elementary, grades K-7, 3455 W King Edward Ave, School District 39 Vancouver; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Shoppers Drug Mart Dunbar, 4326 Dunbar St."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "3590 West 39th Avenue",
+          "Memorial West Park, 4701 Dunbar St",
+          "Walk",
+          "13",
+          "1.0"
+        ],
+        [
+          "3590 West 39th Avenue",
+          "Dunbar Community Centre, 4747 Dunbar St",
+          "Walk",
+          "14",
+          "1.0"
+        ],
+        [
+          "3590 West 39th Avenue",
+          "Vancouver Public Library, Dunbar Branch, 4515 Dunbar St",
+          "Walk",
+          "15",
+          "1.1"
+        ],
+        [
+          "Fifty-Five 55 Dunbar",
+          "Memorial West Park, 4701 Dunbar St",
+          "Walk",
+          "14",
+          "1.0"
+        ],
+        [
+          "Fifty-Five 55 Dunbar",
+          "Dunbar Community Centre, 4747 Dunbar St",
+          "Walk",
+          "14",
+          "1.0"
+        ],
+        [
+          "Fifty-Five 55 Dunbar",
+          "Southlands Elementary, 5351 Camosun St",
+          "Walk",
+          "15",
+          "1.1"
+        ],
+        [
+          "West Pointe",
+          "Dunbar Community Centre, 4747 Dunbar St",
+          "Walk",
+          "14",
+          "1.1"
+        ],
+        [
+          "West Pointe",
+          "Memorial West Park, 4701 Dunbar St",
+          "Walk",
+          "14",
+          "1.1"
+        ],
+        [
+          "West Pointe",
+          "Southlands Elementary, 5351 Camosun St",
+          "Walk",
+          "15",
+          "1.1"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt007.pdf",
+            "t": "infomaps.translink.ca · tt007"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt025.pdf",
+            "t": "infomaps.translink.ca · tt025"
+          }
+        ],
+        [
+          {
+            "h": "https://covapp.vancouver.ca/parkfinder/parkdetail.aspx?inparkid=39",
+            "t": "covapp.vancouver.ca · parkdetail.aspx"
+          }
+        ],
+        [
+          {
+            "h": "http://vancouver.ca/parks-recreation-culture/dunbar-community-centre.aspx",
+            "t": "vancouver.ca · dunbar community centre.aspx"
+          }
+        ],
+        [
+          {
+            "h": "http://www.vpl.ca/location/dunbar-branch",
+            "t": "vpl.ca · dunbar branch"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/039",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.stongs.com/local-vendor",
+            "t": "stongs.com · local vendor"
+          }
+        ],
+        [
+          {
+            "h": "https://www.shoppersdrugmart.ca/en/stores/288-shoppers-drug-mart-dunbar/",
+            "t": "shoppersdrugmart.ca · 288 shoppers drug mart dunbar"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

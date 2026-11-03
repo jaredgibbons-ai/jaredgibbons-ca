@@ -384,6 +384,164 @@
       ],
       "pos": "end",
       "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Cottonwood Village, 7610 Evans Road"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Downtown Exchange, Chilliwack, per BC Transit's Chilliwack schedules page. Route 52 Evans (BC Transit): Cottonwood Mall to Downtown Chilliwack via Evans Rd at Yale Rd and Hodgins Ave at Ashwell Rd. Route 59 Industrial (BC Transit): peak-period weekday trips between Downtown Chilliwack, Cottonwood Mall and Lickman Park & Ride."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Chilliwack Landing Leisure Centre, 9145 Corbould St, Chilliwack: City of Chilliwack facility page. Chilliwack Library, 45860 First Avenue, Chilliwack: Fraser Valley Regional Library location listing."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Evans Elementary, K-5, 7600 Evans Rd, Chilliwack, School District 33; catchment not confirmed for this address. Vedder Middle School, 6-8, 45560 South Sumas Rd, Chilliwack, School District 33; catchment not confirmed. Sardis Secondary, 9-12, 45460 Stevenson Rd, Chilliwack, School District 33; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Cottonwood Centre, 45585 Luckakuck Way, Chilliwack: centre's own site. Save-On-Foods, 46020 Yale Rd W, Chilliwack."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Cottonwood Village (from the street)",
+          "Evans Elementary",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "Cottonwood Village (from the street)",
+          "Cottonwood Centre",
+          "Drive",
+          "4",
+          "1.6"
+        ],
+        [
+          "Cottonwood Village (from the street)",
+          "Sardis Secondary",
+          "Drive",
+          "5",
+          "3.0"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/",
+            "t": "bctransit.com · schedules and maps"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=52",
+            "t": "bctransit.com · route overview"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=59",
+            "t": "bctransit.com · route overview (2)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=66",
+            "t": "bctransit.com · route overview (3)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwack.com/main/page.cfm?id=2246",
+            "t": "chilliwack.com"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations",
+            "t": "fvrl.bc.ca · locations"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/chilliwack",
+            "t": "studentsuccess.gov.bc.ca · chilliwack"
+          }
+        ],
+        [
+          {
+            "h": "http://cottonwoodcentre.ca/",
+            "t": "cottonwoodcentre.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/2213/store",
+            "t": "saveonfoods.com · store"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "breadcrumbs": [

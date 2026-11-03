@@ -427,6 +427,204 @@
       ],
       "gen": "nb",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Delta Cedars, 8635 120 Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest SkyTrain station: Scott Road Station — routes 319 and 391 run from Scott Road Station via Scott Road (120 Street), TransLink. Nearest bus exchange BY NAME: Scottsdale Exchange, named as a terminus in both timetables. Route 319 Scott Road Station / Newton Exchange, via Scott Rd and Scottsdale Exchange, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Annieville Lions Park, with a seasonal water park, City of Delta. North Delta Recreation Centre, 11415 84 Avenue, Delta."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Hellings Elementary, grades K-7, 11655 86 Ave, Delta, School District 37 (Delta); catchment not confirmed. Immaculate Conception School, grades K-7, 8840 119 St, Delta, independent, School District 37 list; catchment not confirmed. Delview Secondary, grades 8-12, 9111 116 St, Delta, School District 37 (Delta); catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Scottsdale Centre, 7019 120 Street, Delta. Shoppers Drug Mart (pharmacy), 7538 120th Street, Surrey, at the Scottsdale end of 120 Street."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Muse North Delta, 9015 120 Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Schools: Gibson Elementary, grades K-7, 11451 90 Ave, Delta, School District 37 (Delta); catchment not confirmed. Annieville Elementary, grades K-7, 9240 112 St, Delta, School District 37 (Delta); catchment not confirmed."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Delta Cedars",
+          "Hellings Elementary, 11655 86 Ave",
+          "Walk",
+          "9",
+          "0.6"
+        ],
+        [
+          "Delta Cedars",
+          "Immaculate Conception School, 8840 119 St",
+          "Walk",
+          "10",
+          "0.7"
+        ],
+        [
+          "Delta Cedars",
+          "North Delta Recreation Centre, 11415 84 Avenue",
+          "Drive",
+          "3",
+          "1.8"
+        ],
+        [
+          "Muse North Delta",
+          "Gibson Elementary, 11451 90 Ave",
+          "Walk",
+          "16",
+          "1.2"
+        ],
+        [
+          "Muse North Delta",
+          "Delview Secondary, 9111 116 St",
+          "Walk",
+          "16",
+          "1.2"
+        ],
+        [
+          "Muse North Delta",
+          "Scott Road Station",
+          "Drive",
+          "6",
+          "4.9"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt319",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt319.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt391",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt391.pdf"
+          }
+        ],
+        [
+          {
+            "t": "delta.ca · annieville lions park",
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/annieville-lions-park"
+          }
+        ],
+        [
+          {
+            "t": "delta.ca · north delta recreation centre",
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/north-delta-recreation-centre"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/037"
+          }
+        ],
+        [
+          {
+            "t": "delta.civicweb.net · document",
+            "h": "https://delta.civicweb.net/document/205486/"
+          }
+        ],
+        [
+          {
+            "t": "shoppersdrugmart.ca · 2235 shoppers drug mart 120th street",
+            "h": "https://www.shoppersdrugmart.ca/en/stores/2235-shoppers-drug-mart-120th-street/"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt312",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt312.pdf"
+          }
+        ],
+        [
+          {
+            "t": "fvrl.bc.ca · locations",
+            "h": "https://www.fvrl.bc.ca/locations"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

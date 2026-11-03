@@ -454,16 +454,16 @@
           "0.3"
         ],
         [
-          "Pitt Meadows Station",
-          "Drive",
-          "1",
-          "0.7"
-        ],
-        [
           "Pitt Meadows Elementary",
           "Drive",
           "1",
           "0.6"
+        ],
+        [
+          "Pitt Meadows Station",
+          "Drive",
+          "1",
+          "0.7"
         ],
         [
           "Real Canadian Superstore, Meadowtown",
@@ -559,6 +559,343 @@
         ]
       ],
       "gen": "nb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "12350 Harris Road",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Rapid transit in the city: Pitt Meadows Station, West Coast Express, 12280 Harris Road, TransLink. Route R3 Lougheed Highway RapidBus, Coquitlam Central to Haney Place, with a stop on Harris Road, TransLink. Route 791 Braid Station / Haney Place, via Harris Road and Pitt Meadows Station, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Harris Landing Pitt River Greenway, Harris Road at Fraser Way: City of Pitt Meadows park. Pitt Meadows Family Recreation Centre, 12027 Harris Road."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Pitt Meadows Elementary, grades K-7, School District 42 Maple Ridge–Pitt Meadows; catchment not confirmed. Davie Jones Elementary, grades K-7, 12030 Blakely Road, School District 42 Maple Ridge–Pitt Meadows; catchment not confirmed. Pitt Meadows Secondary, grades 8-12, 19438 116B Avenue, School District 42 Maple Ridge–Pitt Meadows; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Real Canadian Superstore, Meadowtown, 19800 Lougheed Hwy."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Cedar Downs, 12565 190A Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid transit: Pitt Meadows Station, West Coast Express, 12280 Harris Road. Route R3 Lougheed Highway RapidBus, Coquitlam Central to Haney Place; TransLink states RapidBus runs at least every 10 minutes peak, 15 minutes off-peak. Route 701 Coquitlam Central Station / Haney Place, via Lougheed Highway and Harris Road (Pitt Meadows Station), TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Harris Road Park, 12474 Lougheed Hwy — diamonds, spray park, skate park, playground, outdoor pool, City of Pitt Meadows."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Highland Park Elementary, K-7, SD42 Maple Ridge-Pitt Meadows, 18961 Advent Road. Pitt Meadows Elementary, K-7, SD42 Maple Ridge-Pitt Meadows, 11941 Harris Road."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods, 19150 Lougheed Highway. Real Canadian Superstore, Meadowtown, 19800 Lougheed Highway."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Liv42, 12409 Harris Road",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Schools: Davie Jones Elementary, K-7, SD42 Maple Ridge-Pitt Meadows, 12030 Blakely Road."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Origin, 11950 Harris Road",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Parks and recreation: Pitt Meadows Public Library, 200-12099 Harris Road."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Pitt Meadows Secondary, 8-12, SD42 Maple Ridge-Pitt Meadows, 19438 116B Avenue."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Cedar Downs (from the street)",
+          "Save-On-Foods",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Cedar Downs (from the street)",
+          "Pitt Meadows Station",
+          "Walk",
+          "16",
+          "1.2"
+        ],
+        [
+          "Cedar Downs (from the street)",
+          "Save-On-Foods",
+          "Drive",
+          "2",
+          "0.3"
+        ],
+        [
+          "Liv42 (from the street)",
+          "Save-On-Foods",
+          "Walk",
+          "6",
+          "0.4"
+        ],
+        [
+          "Liv42 (from the street)",
+          "Pitt Meadows Station",
+          "Walk",
+          "6",
+          "0.4"
+        ],
+        [
+          "Liv42 (from the street)",
+          "Pitt Meadows Public Library",
+          "Walk",
+          "10",
+          "0.8"
+        ],
+        [
+          "Origin (from the street)",
+          "Pitt Meadows Elementary",
+          "Walk",
+          "3",
+          "0.2"
+        ],
+        [
+          "Origin (from the street)",
+          "Pitt Meadows Family Recreation Centre",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "Origin (from the street)",
+          "Pitt Meadows Public Library",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Orion (from the street)",
+          "Save-On-Foods",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Orion (from the street)",
+          "Pitt Meadows Station",
+          "Walk",
+          "10",
+          "0.7"
+        ],
+        [
+          "Orion (from the street)",
+          "Pitt Meadows Public Library",
+          "Walk",
+          "14",
+          "1.1"
+        ],
+        [
+          "Solaris at Meadows Gate (from the street)",
+          "Pitt Meadows Public Library",
+          "Walk",
+          "2",
+          "0.2"
+        ],
+        [
+          "Solaris at Meadows Gate (from the street)",
+          "Pitt Meadows Family Recreation Centre",
+          "Walk",
+          "3",
+          "0.2"
+        ],
+        [
+          "Solaris at Meadows Gate (from the street)",
+          "Pitt Meadows Elementary",
+          "Walk",
+          "5",
+          "0.3"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "translink.ca · west coast express",
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+          }
+        ],
+        [
+          {
+            "t": "translink.ca · rapidbus projects",
+            "h": "https://www.translink.ca/plans-and-projects/projects/bus-projects/rapidbus-projects"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt791",
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt791.pdf"
+          }
+        ],
+        [
+          {
+            "t": "pittmeadows.ca · harris landing pitt river greenway",
+            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/harris-landing-pitt-river-greenway"
+          }
+        ],
+        [
+          {
+            "t": "pittmeadows.ca · drop schedules hours rates",
+            "h": "https://www.pittmeadows.ca/parks-recreation/drop-schedules-hours-rates"
+          }
+        ],
+        [
+          {
+            "t": "fvrl.bc.ca",
+            "h": "https://www.fvrl.bc.ca/"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/042"
+          }
+        ],
+        [
+          {
+            "t": "realcanadiansuperstore.ca · details",
+            "h": "https://www.realcanadiansuperstore.ca/store-locator/details/1555"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt701",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf"
+          }
+        ],
+        [
+          {
+            "t": "pittmeadows.ca · harris road park",
+            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/harris-road-park"
+          }
+        ],
+        [
+          {
+            "t": "fvrl.bc.ca · pitt meadows public library",
+            "h": "https://www.fvrl.bc.ca/locations/pitt-meadows-public-library"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/995/store"
+          }
+        ]
+      ],
+      "gen": "nbb",
       "pos": "end"
     }
   ],

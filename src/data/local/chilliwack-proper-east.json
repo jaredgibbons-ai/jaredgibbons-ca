@@ -188,16 +188,16 @@
       ],
       "rows": [
         [
-          "Townsend Park",
-          "Drive",
-          "3",
-          "1.5"
-        ],
-        [
           "Save-On-Foods",
           "Drive",
           "3",
           "1.6"
+        ],
+        [
+          "Townsend Park",
+          "Drive",
+          "3",
+          "1.5"
         ],
         [
           "Chilliwack Secondary",
@@ -294,6 +294,254 @@
         ]
       ],
       "gen": "nb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "46693 Yale Road",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: There is no rapid transit in Chilliwack; Route 66 Fraser Valley Express (BC Transit) runs Downtown Chilliwack to Lougheed Town Centre Station, the nearest rapid-transit station. Nearest bus exchange: Downtown Exchange, Chilliwack, BC Transit. Route 57 Broadway (BC Transit): Downtown Chilliwack to Cottonwood Mall via Yale Rd at Menzies St and Young Rd."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Kinsmen Park on Portage (City of Chilliwack parks list). Gwynne Vaughan Park (City of Chilliwack parks list)."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Chilliwack Middle School, grades 6-8, School District 33 Chilliwack, 46354 Yale Rd; catchment not confirmed. Chilliwack Secondary, grades 9-12, School District 33 Chilliwack, 46363 Yale Rd; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods, 46020 Yale Rd W, Chilliwack."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Mountainview Estates, 46966 Yale Road",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: There is no rapid transit in Chilliwack. Route 66 Fraser Valley Express (BC Transit) runs Downtown Chilliwack to Lougheed Town Centre Station, the nearest rapid-transit station. Nearest bus exchange: Downtown Exchange, Chilliwack. Route 71 Agassiz-Harrison (BC Transit): Downtown Chilliwack to Harrison Hot Springs via Yale Rd at McGrath Rd and Yale Rd at Hwy 9."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Chilliwack Middle School, 6-8, School District 33 Chilliwack, 46354 Yale Rd; catchment not confirmed. Chilliwack Secondary, 9-12, School District 33 Chilliwack, 46363 Yale Rd; catchment not confirmed. Little Mountain Elementary, K-5, School District 33 Chilliwack, 9900 Carleton St; catchment not confirmed."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Newmark, 46289 Yale Road",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Parks and recreation: Townsend Park (City of Chilliwack parks list)."
+          }
+        ],
+        [
+          {
+            "t": "Schools: McCammon Elementary, K-5, School District 33 Chilliwack, 9601 Hamilton St; catchment not confirmed."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Mountainview Estates (from the street)",
+          "Little Mountain Elementary",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Mountainview Estates (from the street)",
+          "Chilliwack Secondary",
+          "Drive",
+          "2",
+          "1.2"
+        ],
+        [
+          "Mountainview Estates (from the street)",
+          "Chilliwack Middle School",
+          "Drive",
+          "2",
+          "1.2"
+        ],
+        [
+          "Newmark",
+          "Chilliwack Secondary",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "Newmark",
+          "Central Community Park",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "Newmark",
+          "Save-On-Foods",
+          "Drive",
+          "1",
+          "0.6"
+        ],
+        [
+          "Thornberry Lane",
+          "Save-On-Foods",
+          "Drive",
+          "2",
+          "0.7"
+        ],
+        [
+          "Thornberry Lane",
+          "Chilliwack Library",
+          "Drive",
+          "3",
+          "1.6"
+        ],
+        [
+          "Thornberry Lane",
+          "Townsend Park",
+          "Drive",
+          "6",
+          "3.1"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "bctransit.com · route overview",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=66"
+          }
+        ],
+        [
+          {
+            "t": "bctransit.com · schedules and maps",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/"
+          }
+        ],
+        [
+          {
+            "t": "bctransit.com · route overview (2)",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=57"
+          }
+        ],
+        [
+          {
+            "t": "bctransit.com · route overview (3)",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=51"
+          }
+        ],
+        [
+          {
+            "t": "chilliwack.com",
+            "h": "https://www.chilliwack.com/main/page.cfm?id=1754.&dowhat=typeView&ptID=1&listView=1"
+          }
+        ],
+        [
+          {
+            "t": "fvrl.bc.ca · locations",
+            "h": "https://www.fvrl.bc.ca/locations"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · chilliwack",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/chilliwack"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/2213/store"
+          }
+        ],
+        [
+          {
+            "t": "bctransit.com · route overview (4)",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=71"
+          }
+        ]
+      ],
+      "gen": "nbb",
       "pos": "end"
     }
   ],

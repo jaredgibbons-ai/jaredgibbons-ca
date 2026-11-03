@@ -1251,16 +1251,16 @@
           "0.6"
         ],
         [
-          "Fort Langley Elementary",
-          "Drive",
-          "2",
-          "1.0"
-        ],
-        [
           "Langley Fine Arts School",
           "Drive",
           "2",
           "1.1"
+        ],
+        [
+          "Fort Langley Elementary",
+          "Drive",
+          "2",
+          "1.0"
         ]
       ],
       "gen": "nb",
@@ -1321,6 +1321,255 @@
         ]
       ],
       "gen": "nb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Flatiron, 23230 Billy Brown Road",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest operating SkyTrain station by name: Surrey Central Station (Expo Line) — TransLink lists it as an operating Expo Line station. Nearest bus exchanges by name: Langley Centre and Carvolth Exchange — the two ends of TransLink Route 562. Bus route: 562, Walnut Grove / Langley Centre, operator TransLink; its routing includes Glover Rd and 96 Ave in Fort Langley."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Fort Langley Library (Fraser Valley Regional Library), 23430 Mavis Avenue, Fort Langley."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Fort Langley Elementary, K-7, SD35 Langley, 8877 Bartlett St, Fort Langley; catchment not confirmed. Langley Fine Arts School, K-12, SD35 Langley, 9096 Trattle St, Fort Langley; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Lee's Market, 23320 Mavis Avenue, Fort Langley (Township of Langley page naming the store and address)."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Lily Terrace, 23189 Francis Ave",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Bus exchanges named on the timetable: Langley Centre and Carvolth Exchange, the two ends of TransLink route 562. Route 562, Walnut Grove / Langley Centre, TransLink; its routing includes Glover Rd and 96 Ave in Fort Langley. Nearest operating SkyTrain station by name: Surrey Central Station (Expo Line), listed by TransLink as an operating Expo Line station."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Fort Langley Community Park, at St. Andrews Avenue and Nash Street: Township of Langley page on its spray park in the park."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Fort Langley Elementary, K-7, 8877 Bartlett St, SD35 Langley. Langley Fine Arts School, K-12, 9096 Trattle St, SD35 Langley. D.W. Poppy Secondary, 8-12, 23752 52 Ave, SD35 Langley."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Lee's Market, 23320 Mavis Ave, Langley: address on the store's own site."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Flatiron",
+          "Lee's Market",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Flatiron",
+          "Fort Langley Library",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Flatiron",
+          "Fort Langley Elementary",
+          "Walk",
+          "18",
+          "1.3"
+        ],
+        [
+          "Leah",
+          "Fort Langley Library",
+          "Walk",
+          "2",
+          "0.1"
+        ],
+        [
+          "Leah",
+          "Lee's Market",
+          "Walk",
+          "6",
+          "0.4"
+        ],
+        [
+          "Leah",
+          "Fort Langley Elementary",
+          "Walk",
+          "13",
+          "0.9"
+        ],
+        [
+          "Lily Terrace",
+          "Lee's Market",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Lily Terrace",
+          "Fort Langley Community Park (9089 Nash St point)",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "Lily Terrace",
+          "Fort Langley Library",
+          "Walk",
+          "8",
+          "0.6"
+        ],
+        [
+          "The Village at Bedford Landing",
+          "Lee's Market",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "The Village at Bedford Landing",
+          "Fort Langley Library",
+          "Walk",
+          "8",
+          "0.6"
+        ],
+        [
+          "The Village at Bedford Landing",
+          "Langley Fine Arts School",
+          "Walk",
+          "17",
+          "1.2"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "translink.ca · skytrain",
+            "h": "https://www.translink.ca/schedules-and-maps/skytrain/?page=1"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt562",
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt562.pdf"
+          }
+        ],
+        [
+          {
+            "t": "fvrl.bc.ca · locations",
+            "h": "https://www.fvrl.bc.ca/locations?combine=&municipality%5B237%5D=237&view=grid"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/035"
+          }
+        ],
+        [
+          {
+            "t": "tol.ca · garbage cart.aspx",
+            "h": "https://www.tol.ca/en/services/garbage-cart.aspx"
+          }
+        ],
+        [
+          {
+            "t": "tol.ca · introducing the fort langley spray park.aspx",
+            "h": "https://www.tol.ca/en/news/introducing-the-fort-langley-spray-park.aspx"
+          }
+        ],
+        [
+          {
+            "t": "fvrl.bc.ca · fort langley library",
+            "h": "https://www.fvrl.bc.ca/locations/fort-langley-library"
+          }
+        ],
+        [
+          {
+            "t": "leesmarket.ca",
+            "h": "https://www.leesmarket.ca/"
+          }
+        ]
+      ],
+      "gen": "nbb",
       "pos": "end"
     },
     {

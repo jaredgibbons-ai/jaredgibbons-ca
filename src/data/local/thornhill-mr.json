@@ -1418,6 +1418,195 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Rydge, 10640 248 Street"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Haney Place, served by TransLink routes 701 and 748. Route 748 Thornhill / Haney Place (TransLink): loop via 240 St, McClure, Jackson, 100 Ave, 256 St, 98 Ave, 264 St and 268 St. Route 701 Coquitlam Central Station (TransLink): trips from Dewdney Trunk at 248 St via Haney Place."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Albion Community Centre, 24165 104 Avenue, City of Maple Ridge. Thornhill trails on 256 Street: 17 trails for biking and hiking (City of Maple Ridge)."
+          }
+        ],
+        [
+          {
+            "t": "Schools: c̓əsqənelə Elementary, K–7, School District 42, 24093 104 Ave; catchment not confirmed. Albion Elementary, K–7, School District 42, 10031 240 St; catchment not confirmed. Samuel Robertson Technical Secondary, 8–12, School District 42, 10445 245 St; catchment not confirmed."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Rydge",
+          "Samuel Robertson Technical Secondary, 10445 245 St",
+          "Walk",
+          "15",
+          "1.1"
+        ],
+        [
+          "Rydge",
+          "Albion Community Centre, 24165 104 Avenue",
+          "Drive",
+          "3",
+          "1.7"
+        ],
+        [
+          "Rydge",
+          "c̓əsqənelə Elementary, 24093 104 Ave",
+          "Drive",
+          "3",
+          "1.8"
+        ],
+        [
+          "Terraces II",
+          "Samuel Robertson Technical Secondary, 10445 245 St",
+          "Walk",
+          "15",
+          "1.1"
+        ],
+        [
+          "Terraces II",
+          "Albion Community Centre, 24165 104 Avenue",
+          "Drive",
+          "3",
+          "1.7"
+        ],
+        [
+          "Terraces II",
+          "c̓əsqənelə Elementary, 24093 104 Ave",
+          "Drive",
+          "3",
+          "1.7"
+        ],
+        [
+          "The Terraces",
+          "Samuel Robertson Technical Secondary, 10445 245 St",
+          "Walk",
+          "15",
+          "1.1"
+        ],
+        [
+          "The Terraces",
+          "Albion Community Centre, 24165 104 Avenue",
+          "Drive",
+          "3",
+          "1.7"
+        ],
+        [
+          "The Terraces",
+          "c̓əsqənelə Elementary, 24093 104 Ave",
+          "Drive",
+          "3",
+          "1.7"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt748.pdf",
+            "t": "infomaps.translink.ca · tt748"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf",
+            "t": "infomaps.translink.ca · tt701"
+          }
+        ],
+        [
+          {
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/2536/Albion-Community-Centre",
+            "t": "mapleridge.ca · Albion Community Centre"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/explore-maple-ridge/our-neighbourhoods",
+            "t": "mapleridge.ca · our neighbourhoods"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/art-parks-rec/recreation-facilities/maple-ridge-leisure-centre",
+            "t": "mapleridge.ca · maple ridge leisure centre"
+          }
+        ],
+        [
+          {
+            "h": "https://elementary.sd42.ca/cusqunela/page/18/?post_type=tribe_events&eventDisplay=day&tribe_events_cat=district-calendar&eventDate=2026-10-11",
+            "t": "elementary.sd42.ca · page"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/maple-ridge",
+            "t": "studentsuccess.gov.bc.ca · maple ridge"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

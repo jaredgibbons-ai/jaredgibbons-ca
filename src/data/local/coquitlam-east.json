@@ -687,6 +687,253 @@
     {
       "t": "h",
       "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Bromley Manor, 450 Bromley Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid station: Coquitlam Central Station (SkyTrain), terminus of routes 188 and 191, per TransLink's timetables. Route 153 Coquitlam Central Station / Braid Station, TransLink. Route 151 Como Lake Ave, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Mundy Park Outdoor Pool, 655 Hillcrest Street, Coquitlam, a subfacility of Mundy Park, City of Coquitlam. Poirier Sport and Leisure Complex, 633 Poirier Street, Coquitlam: City recreation complex."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Mundy Road Elementary, grades K-5, 2200 Austin Ave, School District 43 Coquitlam; catchment not confirmed. École Rochester Elementary, grades K-5, 411 Schoolhouse St, School District 43 Coquitlam; catchment not confirmed. École Maillard Middle, grades 6-8, 1300 Rochester Ave, School District 43 Coquitlam; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Safeway Austin–Marmont, 1033 Austin Ave, Coquitlam, per Safeway's own store page."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Cedar Green, 2736 Atlin Place",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid-transit station: Coquitlam Central Station (SkyTrain), terminus of route 153, per TransLink. Route 156 Braid Station / Lougheed Station, via Hillcrest, Austin and Mundy, TransLink. Route 153 Coquitlam Central Station / Braid Station, via Austin, Poirier, Foster, Linton and Como Lake, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Mundy Park, 641 Hillcrest Street, Coquitlam: City of Coquitlam park. Mundy Park Outdoor Pool, 655 Hillcrest Street, Coquitlam: City of Coquitlam pool, subfacility of Mundy Park."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Riverview Park Elementary, grades K-5, 700 Clearwater Way, School District 43 Coquitlam; catchment not confirmed. Hillcrest Middle School, grades 6-8, 2161 Regan Ave, School District 43 Coquitlam; catchment not confirmed. École Dr. Charles Best Secondary, grades 9-12, 2525 Como Lake Ave, School District 43 Coquitlam; catchment not confirmed."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Bromley Manor",
+          "Mundy Road Elementary, 2200 Austin Ave",
+          "Walk",
+          "17",
+          "1.3"
+        ],
+        [
+          "Bromley Manor",
+          "Safeway Austin–Marmont, 1033 Austin Ave",
+          "Drive",
+          "3",
+          "1.6"
+        ],
+        [
+          "Bromley Manor",
+          "Coquitlam Public Library, Poirier branch, 575 Poirier Street",
+          "Drive",
+          "6",
+          "2.8"
+        ],
+        [
+          "Cedar Green (from the street)",
+          "Save-On-Foods Austin, 2662 Austin Avenue",
+          "Walk",
+          "6",
+          "0.4"
+        ],
+        [
+          "Cedar Green (from the street)",
+          "Riverview Park Elementary, 700 Clearwater Way",
+          "Drive",
+          "4",
+          "1.6"
+        ],
+        [
+          "Cedar Green (from the street)",
+          "École Dr. Charles Best Secondary, 2525 Como Lake Ave",
+          "Drive",
+          "4",
+          "2.4"
+        ],
+        [
+          "The Terraces (from the street)",
+          "Save-On-Foods Austin, 2662 Austin Avenue",
+          "Walk",
+          "6",
+          "0.4"
+        ],
+        [
+          "The Terraces (from the street)",
+          "Riverview Park Elementary, 700 Clearwater Way",
+          "Drive",
+          "4",
+          "1.6"
+        ],
+        [
+          "The Terraces (from the street)",
+          "École Dr. Charles Best Secondary, 2525 Como Lake Ave",
+          "Drive",
+          "4",
+          "2.4"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt188",
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt188.pdf"
+          }
+        ],
+        [
+          {
+            "t": "translink.ca · direction",
+            "h": "https://www.translink.ca/schedules-and-maps/route/153/direction/0/map"
+          }
+        ],
+        [
+          {
+            "t": "translink.ca · direction (2)",
+            "h": "https://www.translink.ca/schedules-and-maps/route/151/direction/0/map"
+          }
+        ],
+        [
+          {
+            "t": "coquitlam.ca · Mundy Park Outdoor Pool 184",
+            "h": "https://coquitlam.ca/Facilities/Facility/Details/Mundy-Park-Outdoor-Pool-184"
+          }
+        ],
+        [
+          {
+            "t": "coquitlam.ca · Poirier Sport and Leisure Complex",
+            "h": "https://coquitlam.ca/384/Poirier-Sport-and-Leisure-Complex"
+          }
+        ],
+        [
+          {
+            "t": "coqlibrary.ca",
+            "h": "https://www.coqlibrary.ca/"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/043"
+          }
+        ],
+        [
+          {
+            "t": "safeway.ca · 4927 safeway austin marmont",
+            "h": "https://www.safeway.ca/find-a-store/store/4927-safeway-austin---marmont?utm_source=Facebook&utm_medium=lpm&utm_campaign=Sobeys"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt153",
+            "h": "https://infomaps.translink.ca/Public_Timetables/207/tt153.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt156",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt156.pdf"
+          }
+        ],
+        [
+          {
+            "t": "coquitlam.ca · mundypark 59",
+            "h": "https://www.coquitlam.ca/facilities/facility/details/mundypark-59"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/991/store"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
       "text": "Sources",
       "gen": "musefaq",
       "pos": "end"

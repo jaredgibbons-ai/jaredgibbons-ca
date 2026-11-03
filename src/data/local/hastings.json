@@ -1096,6 +1096,250 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "L'Atelier, 2556 East Hastings Street"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: No SkyTrain station is in Hastings-Sunrise; the R5 links it west to Burrard Station. R5 Hastings St RapidBus, TransLink, Burrard Station to SFU Exchange, with area stops at Nanaimo, Renfrew and Kootenay Loop, per its route diagram; the Renfrew stop is the nearest R5 stop to this building. Kootenay Loop, at Hastings St and Boundary Rd, is an R5 terminus on that diagram."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Hastings Community Centre, 3096 E Hastings St, per the City of Vancouver. Hastings Park, home of the Pacific National Exhibition, per the City of Vancouver."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Hastings Community Elementary, K-7, School District 39, 2625 Franklin St. Templeton Secondary, 8-12, School District 39, 727 Templeton Dr. Dr A R Lord Elementary, K-7, School District 39, 555 Lillooet St."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Donald's Market, 2342 E Hastings St, Vancouver."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sunrise Heights Apartments, 2215 East Hastings Street"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: No SkyTrain station in Hastings-Sunrise; the R5 links it west to Burrard Station. R5 Hastings St RapidBus, Burrard Station to SFU Exchange, area stops at Nanaimo, Renfrew and Kootenay Loop (TransLink diagram). Kootenay Loop, Hastings St at Boundary Rd, is an R5 terminus on that diagram."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: New Brighton Park, on the Burrard Inlet shoreline, per the City."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Hastings Community Elementary, K–7, School District 39, 2625 Franklin St. Catchment not confirmed. Dr A R Lord Elementary, K–7, School District 39, 555 Lillooet St. Catchment not confirmed. Chief Maquinna Elementary, K–7, School District 39, 2684 2nd Ave E. Catchment not confirmed."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "L'Atelier",
+          "Hastings Branch library, 2674 E Hastings St",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "L'Atelier",
+          "Donald's Market, 2342 E Hastings St",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "L'Atelier",
+          "Hastings Community Elementary, 2625 Franklin St",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "Sugar",
+          "Hastings Branch library, 2674 E Hastings St",
+          "Walk",
+          "2",
+          "0.1"
+        ],
+        [
+          "Sugar",
+          "Hastings Community Elementary, 2625 Franklin St",
+          "Walk",
+          "4",
+          "0.3"
+        ],
+        [
+          "Sugar",
+          "Donald's Market, 2342 E Hastings St",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Sunrise Heights Apartments",
+          "Donald's Market, 2342 E Hastings St",
+          "Walk",
+          "2",
+          "0.2"
+        ],
+        [
+          "Sunrise Heights Apartments",
+          "Hastings Community Elementary, 2625 Franklin St",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Sunrise Heights Apartments",
+          "Hastings Branch library, 2674 E Hastings St",
+          "Walk",
+          "11",
+          "0.8"
+        ],
+        [
+          "Trinity Manor",
+          "Donald's Market, 2342 E Hastings St",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "Trinity Manor",
+          "Hastings Branch library, 2674 E Hastings St",
+          "Drive",
+          "3",
+          "1.5"
+        ],
+        [
+          "Trinity Manor",
+          "Hastings Community Centre, 3096 E Hastings St",
+          "Drive",
+          "4",
+          "2.3"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Route_Diagrams/213/rR5.pdf",
+            "t": "infomaps.translink.ca · rR5"
+          }
+        ],
+        [
+          {
+            "h": "https://buzzer.translink.ca/2026/05/how-were-making-bus-transit-on-hastings-street-more-reliable/",
+            "t": "buzzer.translink.ca · how were making bus transit on hastings street m"
+          }
+        ],
+        [
+          {
+            "h": "https://Vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx",
+            "t": "Vancouver.ca · community and cultural centres.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://vancouver.ca/news-calendar/hastings-sunrise.aspx",
+            "t": "vancouver.ca · hastings sunrise.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://app.vancouver.ca/ParkFinder/parks/57?redirect",
+            "t": "app.vancouver.ca · redirect"
+          }
+        ],
+        [
+          {
+            "h": "http://www.vpl.ca/location/hastings-branch",
+            "t": "vpl.ca · hastings branch"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/039",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "http://www.donaldsmarkethastings.com/",
+            "t": "donaldsmarkethastings.com"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

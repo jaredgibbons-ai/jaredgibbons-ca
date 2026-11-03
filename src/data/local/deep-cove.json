@@ -958,6 +958,186 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Deep Cove Estates, 4390 Gallant Avenue"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Phibbs Exchange, the terminus of routes 211 and 212. Nearest rapid station: Burrard Station, the downtown terminus of selected route 211 trips from Deep Cove via Phibbs Exchange, per TransLink's timetable. Route 211 Phibbs Exchange / Burrard Station, via Dollarton Highway, Deep Cove Road, Gallant Avenue and Panorama Drive, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Panorama Park, Panorama Drive, North Vancouver (V7G 1L2): District waterfront park in Deep Cove, per North Vancouver Recreation and Culture. Deep Cove Park, 2156 Banbury Rd, North Vancouver: District seaside park, per North Vancouver Recreation and Culture."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Cove Cliff Elementary, grades K-7, 1818 Banbury Rd, School District 44 North Vancouver; catchment not confirmed. Seycove Secondary Community, grades 8-12, 1204 Caledonia Ave, School District 44 North Vancouver; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Stong's Market, North Vancouver store, 2150 Dollarton Hwy, per the retailer's own site."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Panorama Place, 2181 Panorama Drive"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Parks and recreation: Panorama Park, Panorama Drive, North Vancouver (V7G 1L2): District waterfront park, per North Vancouver Recreation and Culture."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Deep Cove Estates",
+          "Panorama Park, Panorama Drive",
+          "Walk",
+          "2",
+          "0.2"
+        ],
+        [
+          "Deep Cove Estates",
+          "Deep Cove Park, 2156 Banbury Rd",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Deep Cove Estates",
+          "Cove Cliff Elementary, 1818 Banbury Rd",
+          "Walk",
+          "13",
+          "1.0"
+        ],
+        [
+          "Panorama Place (from the street)",
+          "Panorama Park, Panorama Drive",
+          "Walk",
+          "2",
+          "0.1"
+        ],
+        [
+          "Panorama Place (from the street)",
+          "Deep Cove Park, 2156 Banbury Rd",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "Panorama Place (from the street)",
+          "Cove Cliff Elementary, 1818 Banbury Rd",
+          "Walk",
+          "15",
+          "1.1"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/206/tt212.pdf",
+            "t": "infomaps.translink.ca · tt212"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt211.pdf",
+            "t": "infomaps.translink.ca · tt211"
+          }
+        ],
+        [
+          {
+            "h": "https://www.nvrc.ca/facilities-fields/locations-hours/community-recreation-centres/panorama-park-picnic-shelter",
+            "t": "nvrc.ca · panorama park picnic shelter"
+          }
+        ],
+        [
+          {
+            "h": "http://www.nvrc.ca/facilities-fields/locations-hours/community-recreation-centres/deep-cove-park-picnic-shelter",
+            "t": "nvrc.ca · deep cove park picnic shelter"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/044",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.stongs.com/local-vendor",
+            "t": "stongs.com · local vendor"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

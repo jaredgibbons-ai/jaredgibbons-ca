@@ -1108,6 +1108,158 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Cates Landing, 3825 Cates Landing Way"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: No rapid-transit station is in Dollarton, District of North Vancouver; the bus anchor is Phibbs Exchange, named as terminus in TransLink's North Vancouver timetable. Route 212 Phibbs Exchange/Deep Cove, TransLink, runs along Dollarton Highway, per that timetable. Route 211 Phibbs Exchange/Burrard Station, TransLink, runs from Deep Cove via Dollarton, Mt Seymour Parkway and Phibbs Exchange to Burrard Station."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Cates Park/Whey-ah-Wichen, 4141 Dollarton Hwy: waterfront park with trails, playgrounds, beaches, tennis courts and a boat launch, per North Vancouver Recreation & Culture. Cates Park trails are listed in the NVRC walking guide."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Cove Cliff Elementary, K-7, School District 44, 1818 Banbury Rd. Seycove Secondary Community, 8-12, School District 44, 1204 Caledonia Ave."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Nesters Market, 415 Dollarton Hwy, North Vancouver. Stong's Market, 2150 Dollarton Hwy, North Vancouver."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Cates Landing",
+          "Cates Park/Whey-ah-Wichen, 4141 Dollarton Hwy",
+          "Walk",
+          "11",
+          "0.8"
+        ],
+        [
+          "Cates Landing",
+          "Nesters Market, 415 Dollarton Hwy",
+          "Walk",
+          "18",
+          "1.4"
+        ],
+        [
+          "Cates Landing",
+          "Seycove Secondary, 1204 Caledonia Ave",
+          "Drive",
+          "5",
+          "2.7"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://www.translink.ca/-/media/translink/documents/schedules-and-maps/schedules-by-region/2026-schedules/september/nvanp155.pdf",
+            "t": "translink.ca · nvanp155"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt211.pdf",
+            "t": "infomaps.translink.ca · tt211"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/196/tt215.pdf",
+            "t": "infomaps.translink.ca · tt215"
+          }
+        ],
+        [
+          {
+            "h": "https://www.nvrc.ca/facilities-fields/locations-hours/community-recreation-centres/cates-whey-ah-wichen-picnic-shelter",
+            "t": "nvrc.ca · cates whey ah wichen picnic shelter"
+          }
+        ],
+        [
+          {
+            "h": "https://www.nvrc.ca/programs-memberships/program-directory/walk-hike-run/walking-guide/cates-park",
+            "t": "nvrc.ca · cates park"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/north-vancouver",
+            "t": "studentsuccess.gov.bc.ca · north vancouver"
+          }
+        ],
+        [
+          {
+            "h": "https://nestersmarket.com/",
+            "t": "nestersmarket.com"
+          }
+        ],
+        [
+          {
+            "h": "https://stongs.com/",
+            "t": "stongs.com"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

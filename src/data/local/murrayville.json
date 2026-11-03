@@ -485,6 +485,258 @@
       ],
       "gen": "nb",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Autumn Ridge, 22015 48 Avenue",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Langley Centre, the Bay 6 terminus on the route 560 timetable. Nearest SkyTrain stations: Surrey Central Station and King George Station, both on route 503, TransLink. Route 560 Murrayville / Langley Centre, TransLink: via Fraser Hwy, 216 St, 52 Ave, 221A St, 50 Ave, 222 St, 48 Ave and Old Yale Rd."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Murrayville Outdoor Activity Park, at 48A Avenue and 221 Street, Township of Langley. W.C. Blair Recreation Centre, 22200 Fraser Highway, Township of Langley."
+          }
+        ],
+        [
+          {
+            "t": "Schools: James Hill Elementary, K-5, SD35, 22144 Old Yale Rd; catchment not confirmed. Langley Fundamental Elementary, K-5, SD35, 21789 50 Ave; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: IGA (grocery), 22259 48 Ave. Shoppers Drug Mart, Murrayville Square (pharmacy), 22196 50 Ave."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Orangewood Country Homes, 21937 48 Avenue",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Langley Centre, the Bay 6 terminus on the route 560 timetable, TransLink. Route 503, TransLink: Surrey Central Station – Fraser Hwy Express, via Fraser Hwy, 216 St, 56 Ave and Logan (Langley Centre); nearest SkyTrain stations Surrey Central and King George, both on route 503."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Murrayville Academy, K-7, independent, SD35 list, 21488 Old Yale Road; catchment not confirmed."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Autumn Ridge",
+          "Murrayville Library",
+          "Walk",
+          "2",
+          "0.2"
+        ],
+        [
+          "Autumn Ridge",
+          "IGA, 22259 48 Ave",
+          "Walk",
+          "7",
+          "0.6"
+        ],
+        [
+          "Autumn Ridge",
+          "W.C. Blair Recreation Centre",
+          "Drive",
+          "2",
+          "0.5"
+        ],
+        [
+          "Cedar Crest Estates (from the street)",
+          "Langley Fundamental Elementary",
+          "Walk",
+          "1",
+          "0.1"
+        ],
+        [
+          "Cedar Crest Estates (from the street)",
+          "W.C. Blair Recreation Centre",
+          "Drive",
+          "2",
+          "1.1"
+        ],
+        [
+          "Cedar Crest Estates (from the street)",
+          "Shoppers Drug Mart, 22196 50 Ave",
+          "Drive",
+          "2",
+          "1.4"
+        ],
+        [
+          "Fraser (from the street)",
+          "Murrayville Library",
+          "Walk",
+          "2",
+          "0.1"
+        ],
+        [
+          "Fraser (from the street)",
+          "Murrayville Outdoor Activity Park",
+          "Walk",
+          "2",
+          "0.1"
+        ],
+        [
+          "Murray's Landing (from the street)",
+          "Shoppers Drug Mart, 22196 50 Ave",
+          "Walk",
+          "3",
+          "0.2"
+        ],
+        [
+          "Murray's Landing (from the street)",
+          "IGA, 22259 48 Ave",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "Murray's Landing (from the street)",
+          "W.C. Blair Recreation Centre",
+          "Drive",
+          "2",
+          "0.7"
+        ],
+        [
+          "Murrayville House (from the street)",
+          "W.C. Blair Recreation Centre",
+          "Walk",
+          "11",
+          "0.8"
+        ],
+        [
+          "Murrayville House (from the street)",
+          "Murrayville Library",
+          "Drive",
+          "2",
+          "1.1"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt560",
+            "h": "https://infomaps.translink.ca/Public_Timetables/206/tt560.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt503",
+            "h": "https://infomaps.translink.ca/Public_Timetables/206/tt503.pdf"
+          }
+        ],
+        [
+          {
+            "t": "tol.ca · park closure murrayville spray park september 14",
+            "h": "https://www.tol.ca/en/news/park-closure-murrayville-spray-park_-september-14.aspx"
+          }
+        ],
+        [
+          {
+            "t": "tol.ca · community and recreation centres.aspx",
+            "h": "https://www.tol.ca/en/parks-recreation/community-and-recreation-centres.aspx?_mid_=41331"
+          }
+        ],
+        [
+          {
+            "t": "fvrl.bc.ca",
+            "h": "https://www.fvrl.bc.ca/"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/035"
+          }
+        ],
+        [
+          {
+            "t": "igastoresbc.com · langley 48th ave. iga",
+            "h": "https://www.igastoresbc.com/find-a-store/langley-48th-ave.-iga"
+          }
+        ],
+        [
+          {
+            "t": "shoppersdrugmart.ca · 258 shoppers drug mart murrayville square",
+            "h": "https://www.shoppersdrugmart.ca/en/stores/258-shoppers-drug-mart-murrayville-square/"
+          }
+        ],
+        [
+          {
+            "t": "tol.ca · canada day festivities return to mcleod athletic",
+            "h": "https://www.tol.ca/en/news/canada-day-festivities-return-to-mcleod-athletic-park.aspx"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

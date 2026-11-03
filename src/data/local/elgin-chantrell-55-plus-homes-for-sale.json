@@ -347,6 +347,152 @@
       ],
       "gen": "n55",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "The Crescent, 3500 144 St",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Bus anchor on TransLink timetables: South Surrey Park & Ride, routes 321, 351, 352. Route 352, TransLink: Bridgeport Station / Ocean Park, via 128 St, Crescent Rd, King George Blvd, South Surrey Park & Ride. Route 351, TransLink: White Rock Centre / Bridgeport Station, via South Surrey Park & Ride, King George Blvd, 152 St, 16 Ave."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Sunnyside Acres Urban Forest Park, 2598 144 Street. South Surrey Recreation & Arts Centre, 14601 20 Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Chantrell Creek Elementary, K-7, SD36, 2575 137 St; catchment not confirmed. Elgin Park Secondary, 8-12, SD36, 13484 24 Ave; catchment not confirmed. Crescent Park Elementary, K-7, SD36, 2440 128 St; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods, 3033 152nd Street."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "The Crescent",
+          "Save-On-Foods, 3033 152 St",
+          "Drive",
+          "5",
+          "2.8"
+        ],
+        [
+          "The Crescent",
+          "Chantrell Creek Elementary",
+          "Drive",
+          "6",
+          "3.7"
+        ],
+        [
+          "The Crescent",
+          "South Surrey Recreation & Arts Centre",
+          "Drive",
+          "7",
+          "3.9"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt352",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt352.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt351",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt351.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt321",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · sunnyside acres urban forest park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/sunnyside-acres-urban-forest-park"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · south surrey recreation arts centre",
+            "h": "https://www.surrey.ca/parks-recreation/recreation-facilities/south-surrey-recreation-arts-centre"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/903/store"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

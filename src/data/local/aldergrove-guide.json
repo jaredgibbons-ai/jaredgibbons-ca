@@ -2374,6 +2374,305 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Alderwood Manor, 27090 32 Ave"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest SkyTrain station: Surrey Central Station, reached by TransLink route 503 from 272 St at Fraser Hwy. Nearest bus exchange: Langley Centre — route 503 serves Langley Centre Bay 1. Route 503 Surrey Central Station–Fraser Hwy Express (TransLink): 272 St at Fraser Hwy via Langley Centre and King George Station to Surrey Central Station."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Aldergrove Community Centre, 27032 Fraser Highway: pools, waterpark, ice arena, fitness centre (Township page). Aldergrove Library (Fraser Valley Regional Library), 26770 29 Ave."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Parkside Centennial Elementary, K-5, SD35 Langley, 3300 270 St; catchment not confirmed. Shortreed Community School, K-5, SD35 Langley, 27330 28 Ave; catchment not confirmed. Aldergrove Community Secondary, 9-12, SD35 Langley, 26850 29 Ave; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: FreshCo, 27566 Fraser Hwy. Save-On-Foods, 26310 Fraser Hwy."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Bertrand Estates, 27044 32 Ave"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest SkyTrain station: Surrey Central Station (Expo Line), reached by TransLink route 503 from 272 St at Fraser Hwy. Nearest bus exchange: Langley Centre — route 503 serves Langley Centre Bay 1 and Bay 5. Route 503 (TransLink), Surrey Central Station–Fraser Hwy Express: starts at 272 St at Fraser Hwy in Aldergrove."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Betty Gilbert Middle, 6-8, SD35 Langley, 26845 27 Ave; catchment not confirmed."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Alderwood Manor",
+          "Parkside Centennial Elementary",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "Alderwood Manor",
+          "Aldergrove Community Centre",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "Alderwood Manor",
+          "Shortreed Community School",
+          "Walk",
+          "19",
+          "1.4"
+        ],
+        [
+          "Bertrand Estates (from the street)",
+          "Parkside Centennial Elementary",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Bertrand Estates (from the street)",
+          "Aldergrove Community Centre",
+          "Walk",
+          "13",
+          "0.9"
+        ],
+        [
+          "Bertrand Estates (from the street)",
+          "Aldergrove Community Secondary",
+          "Walk",
+          "17",
+          "1.3"
+        ],
+        [
+          "Cedar Park Estates (from the street)",
+          "FreshCo",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "Cedar Park Estates (from the street)",
+          "Aldergrove Community Centre",
+          "Walk",
+          "17",
+          "1.3"
+        ],
+        [
+          "Cedar Park Estates (from the street)",
+          "Save-On-Foods",
+          "Drive",
+          "4",
+          "2.5"
+        ],
+        [
+          "Creekside Estates (from the street)",
+          "Aldergrove Community Centre",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Creekside Estates (from the street)",
+          "Parkside Centennial Elementary",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Creekside Estates (from the street)",
+          "Shortreed Community School",
+          "Walk",
+          "16",
+          "1.2"
+        ],
+        [
+          "Creekside Villa (from the street)",
+          "Shortreed Community School",
+          "Walk",
+          "8",
+          "0.6"
+        ],
+        [
+          "Creekside Villa (from the street)",
+          "FreshCo",
+          "Walk",
+          "16",
+          "1.2"
+        ],
+        [
+          "Creekside Villa (from the street)",
+          "Aldergrove Community Centre",
+          "Walk",
+          "18",
+          "1.4"
+        ],
+        [
+          "Twin Firs (from the street)",
+          "Parkside Centennial Elementary",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "Twin Firs (from the street)",
+          "Aldergrove Community Centre",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "Twin Firs (from the street)",
+          "Shortreed Community School",
+          "Walk",
+          "16",
+          "1.2"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt503.pdf",
+            "t": "infomaps.translink.ca · tt503"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=21&schedule=2026-04-05",
+            "t": "bctransit.com · route overview"
+          }
+        ],
+        [
+          {
+            "h": "https://www.tol.ca/en/parks-recreation/aldergrove-community-centre.aspx",
+            "t": "tol.ca · aldergrove community centre.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations",
+            "t": "fvrl.bc.ca · locations"
+          }
+        ],
+        [
+          {
+            "h": "https://www.tol.ca/en/news/township-of-langley-parks-receive-federal-support.aspx",
+            "t": "tol.ca · township of langley parks receive federal suppor"
+          }
+        ],
+        [
+          {
+            "h": "https://metrovancouver.org/services/regional-parks/park/aldergrove-regional-park",
+            "t": "metrovancouver.org · aldergrove regional park"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/035",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://freshco.com/?s=27566+Fraser+Hwy",
+            "t": "freshco.com"
+          }
+        ],
+        [
+          {
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/902/store",
+            "t": "saveonfoods.com · store"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/wp-content/uploads/2026/08/cfv_map_21.pdf",
+            "t": "bctransit.com · cfv map 21"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations?combine=&municipality%5B237%5D=237&view=grid",
+            "t": "fvrl.bc.ca · locations (2)"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

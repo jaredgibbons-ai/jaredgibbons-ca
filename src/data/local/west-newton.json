@@ -535,6 +535,250 @@
       ],
       "gen": "nb",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "College Park, 12633 72 Ave",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Newton Exchange, named on TransLink timetables for routes serving 72 Avenue. Nearest SkyTrain station: King George Station, via Newton Exchange (route 321, R1 RapidBus). Route 301, TransLink: Newton Exchange to Brighouse Station via 72 Ave, with stops at 126 St and 128 St."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Newton Athletic Park, 7395 128 St. Newton Recreation Centre, 13730 72 Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Princess Margaret Secondary, 8-12, SD36, 12870 72 Ave; catchment not confirmed. Strawberry Hill Elementary, K-7, SD36, 7633 124 St; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Chalo FreshCo (grocery), 7165 138 St."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "The Savoy, 12739 72 Ave",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Newton Exchange, east on 72 Avenue, served by the R1 and R6 RapidBus routes. Nearest SkyTrain station: King George Station, via Newton Exchange on route 321 and the R1 RapidBus. Route 323, TransLink: Surrey Central Station to Newton Exchange via 72 Ave, 138 St, 76 Ave and 128 St."
+          }
+        ],
+        [
+          {
+            "t": "Schools: W E Kinvig Elementary, K-7, SD36, 13266 70b Ave; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Real Canadian Superstore (grocery), 7550 King George Blvd (retailer's own store locator)."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "College Park",
+          "Princess Margaret Secondary",
+          "Walk",
+          "9",
+          "0.7"
+        ],
+        [
+          "College Park",
+          "Newton Exchange",
+          "Drive",
+          "5",
+          "2.8"
+        ],
+        [
+          "College Park",
+          "Newton Recreation Centre",
+          "Drive",
+          "6",
+          "2.8"
+        ],
+        [
+          "Newton Court",
+          "Princess Margaret Secondary",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Newton Court",
+          "Newton Recreation Centre",
+          "Drive",
+          "5",
+          "2.5"
+        ],
+        [
+          "Newton Court",
+          "Newton Exchange",
+          "Drive",
+          "5",
+          "2.5"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt301",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt301.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt321",
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt321.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt322",
+            "h": "https://infomaps.translink.ca/Public_Timetables/192/tt322.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · newton athletic park",
+            "h": "https://www.surrey.ca/parks-recreation/parks/newton-athletic-park"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · newton recreation centre",
+            "h": "https://www.surrey.ca/parks-recreation/recreation-facilities/newton-recreation-centre"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · in school district",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/036"
+          }
+        ],
+        [
+          {
+            "t": "surreyschools.ca · strawberryhill",
+            "h": "https://www.surreyschools.ca/strawberryhill"
+          }
+        ],
+        [
+          {
+            "t": "chalofreshco.com · chalo freshco 138 st 72 ave",
+            "h": "https://chalofreshco.com/stores/chalo-freshco-138-st-72-ave/"
+          }
+        ],
+        [
+          {
+            "t": "translink.ca · rapidbus projects",
+            "h": "https://www.translink.ca/plans-and-projects/projects/bus-projects/rapidbus-projects"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt323",
+            "h": "https://infomaps.translink.ca/Public_Timetables/210/tt323.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt324",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt324.pdf"
+          }
+        ],
+        [
+          {
+            "t": "surrey.ca · park projects",
+            "h": "http://www.surrey.ca/parks-recreation/parks/park-projects"
+          }
+        ],
+        [
+          {
+            "t": "surreylibraries.ca · newton branch",
+            "h": "https://surreylibraries.ca/locations/newton-branch"
+          }
+        ],
+        [
+          {
+            "t": "realcanadiansuperstore.ca · details",
+            "h": "https://www.realcanadiansuperstore.ca/store-locator/details/1521"
+          }
+        ],
+        [
+          {
+            "t": "shoppersdrugmart.ca · 2222 shoppers drug mart king george blvd",
+            "h": "https://www.shoppersdrugmart.ca/en/stores/2222-shoppers-drug-mart-king-george-blvd/"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

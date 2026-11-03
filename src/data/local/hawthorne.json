@@ -355,6 +355,247 @@
       ],
       "gen": "nb",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Green Gables, 4885 53 Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: No SkyTrain, West Coast Express or SeaBus station in Delta. Nearest rapid-transit station: Bridgeport Station (Canada Line), via Ladner Exchange on route 620. Nearest bus exchange: Ladner Exchange, 4645 Harvest Drive. Route 616 Ladner South / Ladner Exchange, loop via Harvest Drive, Arthur Drive, Clarence Taylor Crescent (TransLink)."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Hawthorne Park, 5151 56 St, Delta: picnic tables, sports fields, tennis courts, washrooms (City of Delta park search). Hawthorne Grove Park, 4140 Arthur Dr, Delta (City of Delta park search)."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Delta Christian School, independent, K-7, School District 37 Delta, 4789 53 St. Catchment not confirmed. Hawthorne Elementary, K-7, School District 37, 5160 Central Ave. Catchment not confirmed. Delta Secondary, 8-12, School District 37, 4615 51 St. Catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods Ladner, 5186 48 Ave, Delta."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "The Pointe, 4815 55B Street",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest bus exchange: Ladner Exchange, 4645 Harvest Drive, Delta. Nearest rapid-transit station: Bridgeport Station (Canada Line), reached from Ladner Exchange on route 620. Route 618 Ladner North / Ladner Exchange loop via Ladner Trunk Road, Central Avenue and Linden Drive, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Hawthorne Park, 5151 56 St, Delta. Ladner Leisure Centre, 4600 Clarence Taylor Cres, Delta."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Hawthorne Elementary, K-7, School District 37, 5160 Central Ave, Delta. Delta Secondary, 8-12, School District 37, 4615 51 St, Delta."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Green Gables (from the street)",
+          "Delta Christian School, 4789 53 St",
+          "Walk",
+          "1",
+          "0.1"
+        ],
+        [
+          "Green Gables (from the street)",
+          "Ladner Pioneer Library, 4683 51 St",
+          "Walk",
+          "10",
+          "0.7"
+        ],
+        [
+          "Green Gables (from the street)",
+          "Hawthorne Elementary, 5160 Central Ave",
+          "Walk",
+          "11",
+          "0.8"
+        ],
+        [
+          "Ladner Pointe",
+          "Delta Christian School, 4789 53 St",
+          "Walk",
+          "2",
+          "0.2"
+        ],
+        [
+          "Ladner Pointe",
+          "Hawthorne Elementary, 5160 Central Ave",
+          "Walk",
+          "10",
+          "0.7"
+        ],
+        [
+          "Ladner Pointe",
+          "Ladner Pioneer Library, 4683 51 St",
+          "Walk",
+          "11",
+          "0.8"
+        ],
+        [
+          "The Pointe",
+          "Hawthorne Park",
+          "Walk",
+          "10",
+          "0.7"
+        ],
+        [
+          "The Pointe",
+          "Hawthorne Elementary",
+          "Walk",
+          "18",
+          "1.4"
+        ],
+        [
+          "The Pointe",
+          "Ladner Exchange",
+          "Drive",
+          "2",
+          "0.7"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "infomaps.translink.ca · tt620",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt620.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · ladner",
+            "h": "http://infomaps.translink.ca/system_maps/exchange_maps/ladner.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt616",
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt616.pdf"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt618",
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt618.pdf"
+          }
+        ],
+        [
+          {
+            "t": "delta.ca · park and amenity search",
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?page=3"
+          }
+        ],
+        [
+          {
+            "t": "delta.ca · media",
+            "h": "https://www.delta.ca/media/5154"
+          }
+        ],
+        [
+          {
+            "t": "fvrl.bc.ca",
+            "h": "https://www.fvrl.bc.ca/"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · delta",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/936/store"
+          }
+        ],
+        [
+          {
+            "t": "infomaps.translink.ca · tt601",
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf"
+          }
+        ],
+        [
+          {
+            "t": "delta.ca · hawthorne park",
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/hawthorne-park"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [

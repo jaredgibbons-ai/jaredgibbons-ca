@@ -1090,6 +1090,146 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Caulfeild Cove, 4957 Marine Drive"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: No SkyTrain, West Coast Express or SeaBus terminal is in West Vancouver; nearest rapid transit is the SeaBus at Lonsdale Quay, listed on TransLink's SeaBus page. Bus terminus used by the area route: Park Royal, the route 253 terminus. Route 253 Caulfeild / Vancouver / Park Royal, via Caulfeild Drive, Cherbourg Drive, Keith Road and Marine Drive, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Caulfeild Park, shoreline park with the Caulfeild Trail, District of West Vancouver. Lighthouse Park, District of West Vancouver, at the area's west edge."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Caulfeild Elementary, grades K-7, 4685 Keith Road, School District 45 West Vancouver; catchment not confirmed. Rockridge Secondary, grades 8-12, 5350 Headland Dr, School District 45 West Vancouver; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Caulfeild Village Shopping Centre, 5375 Headland Dr, West Vancouver."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Caulfeild Cove (from the street)",
+          "Lighthouse Park",
+          "Drive",
+          "3",
+          "1.2"
+        ],
+        [
+          "Caulfeild Cove (from the street)",
+          "Caulfeild Park",
+          "Drive",
+          "4",
+          "1.9"
+        ],
+        [
+          "Caulfeild Cove (from the street)",
+          "Rockridge Secondary",
+          "Drive",
+          "5",
+          "2.8"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://translink.ca/translink/schedules-and-maps/seabus",
+            "t": "translink.ca · seabus"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/192/tt253.pdf",
+            "t": "infomaps.translink.ca · tt253"
+          }
+        ],
+        [
+          {
+            "h": "https://westvancouver.ca/parks-recreation/parks-trails/caulfeild-park",
+            "t": "westvancouver.ca · caulfeild park"
+          }
+        ],
+        [
+          {
+            "h": "https://westvancouver.ca/parks-recreation/parks-trails/lighthouse-park",
+            "t": "westvancouver.ca · lighthouse park"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/045",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.caulfeildvillageshoppingcentre.com/",
+            "t": "caulfeildvillageshoppingcentre.com"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

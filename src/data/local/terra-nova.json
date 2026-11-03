@@ -1066,6 +1066,205 @@
       "t": "list"
     },
     {
+      "gen": "nbb",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby, building by building"
+    },
+    {
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "London Mews, 6333 No. 1 Road"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid station: Richmond-Brighouse Station (Canada Line), the terminus of route 401, which stops at No. 1 Road and Westminster Highway at the area's east edge. Route 401 One Road / Brighouse Station, via Westminster Highway and No. 1 Road, TransLink."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Terra Nova Rural Park, 2631 Westminster Highway, at the west end of Westminster Highway west of No. 1 Road: City of Richmond park."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Spul'u'kwuks Elementary, grades K-7, 5999 Blanshard Drive, School District 38 Richmond; catchment not confirmed. J.N. Burnett Secondary, grades 8-12, 5011 Granville Avenue, School District 38 Richmond; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Terra Nova Village, 3671 Westminster Highway: open-air centre anchored by Save-On-Foods, per the centre owner's (First Capital) leasing site plan (carried from phase 1)."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Mayflower, 3880 Westminster Highway, Richmond BC"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "t": "Transit: Nearest rapid-transit station: Richmond-Brighouse Station (Canada Line), terminus of route 401, which stops at No. 1 Road and Westminster Highway."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Terra Nova Rural Park, 2631 Westminster Highway, City of Richmond park at the west end of Westminster Highway west of No. 1 Road."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Terra Nova Village, 3671 Westminster Highway: open-air centre anchored by Save-On-Foods, per the centre owner's (First Capital) leasing site plan."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
+    },
+    {
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "London Mews",
+          "Terra Nova Village, 3671 Westminster Highway",
+          "Walk",
+          "8",
+          "0.6"
+        ],
+        [
+          "London Mews",
+          "Spul'u'kwuks Elementary",
+          "Walk",
+          "12",
+          "0.9"
+        ],
+        [
+          "London Mews",
+          "J.N. Burnett Secondary",
+          "Drive",
+          "4",
+          "1.7"
+        ],
+        [
+          "Mayflower",
+          "Terra Nova Village, 3671 Westminster Highway",
+          "Walk",
+          "3",
+          "0.2"
+        ],
+        [
+          "Mayflower",
+          "Spul'u'kwuks Elementary",
+          "Walk",
+          "6",
+          "0.5"
+        ],
+        [
+          "Mayflower",
+          "Terra Nova Rural Park",
+          "Walk",
+          "17",
+          "1.4"
+        ],
+        [
+          "Sonoma",
+          "Spul'u'kwuks Elementary",
+          "Walk",
+          "3",
+          "0.2"
+        ],
+        [
+          "Sonoma",
+          "Terra Nova Village, 3671 Westminster Highway",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Sonoma",
+          "Terra Nova Rural Park",
+          "Walk",
+          "13",
+          "1.1"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
+    },
+    {
+      "gen": "nbb",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt401.pdf",
+            "t": "infomaps.translink.ca · tt401"
+          }
+        ],
+        [
+          {
+            "h": "https://www.richmond.ca/parks-recreation/parks/parksearch/park.aspx?id=80",
+            "t": "richmond.ca · park.aspx"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/038",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://images.loopnet.ca/d2/AVBP-zBack09ZTpH2clFT8ywp4I42N7pTpZ3rOSJ-I0/document.pdf",
+            "t": "images.loopnet.ca · document"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",

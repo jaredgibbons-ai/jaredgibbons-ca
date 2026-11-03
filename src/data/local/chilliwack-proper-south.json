@@ -290,6 +290,286 @@
       ],
       "gen": "nb",
       "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "What's nearby, building by building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Cottage Grove, 8500 Young Road",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: There is no rapid transit in Chilliwack. Route 66 Fraser Valley Express (BC Transit) runs Downtown Chilliwack to Lougheed Town Centre Station, the nearest rapid-transit station. Nearest bus exchange: Downtown Exchange, Chilliwack. Route 57 Broadway (BC Transit): Downtown Chilliwack to Cottonwood Mall via Yale Rd at Menzies St and Young Rd at Olds Dr, along Young Road."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Central Community Park (City of Chilliwack parks list). Townsend Park (City of Chilliwack parks list)."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Robertson Elementary, K-5, School District 33 Chilliwack, 46106 Southlands Cres; catchment not confirmed. Bernard Elementary, K-5, School District 33 Chilliwack, 45465 Bernard Ave; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods, 45585 Luckakuck Way, Chilliwack."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Elmwood Terrace, 8725 Elm Drive",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Transit: No rapid transit in Chilliwack. Route 66 Fraser Valley Express (BC Transit) runs Downtown Chilliwack to Lougheed Town Centre Station. Route 51 Vedder (BC Transit): Downtown Chilliwack to UFV Chilliwack via Yale Rd at Menzies St and Vedder Rd."
+          }
+        ],
+        [
+          {
+            "t": "Parks and recreation: Chilliwack Library, 45860 First Avenue."
+          }
+        ],
+        [
+          {
+            "t": "Schools: Kw'íyeqel Secondary, 9-12, School District 33 Chilliwack, 8855 Elm Dr; catchment not confirmed. Chilliwack Middle School, 6-8, School District 33 Chilliwack, 46354 Yale Rd; catchment not confirmed."
+          }
+        ],
+        [
+          {
+            "t": "Shopping: Save-On-Foods, 46020 Yale Rd W, Chilliwack."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "The Vibe, 45555 Yale Road",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Schools: Chilliwack Secondary, 9-12, School District 33 Chilliwack, 46363 Yale Rd; catchment not confirmed."
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Measured walking and driving times from each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "table",
+      "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "head": [
+        "Building",
+        "To",
+        "How",
+        "Minutes",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          "Cottage Grove",
+          "Robertson Elementary",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Cottage Grove",
+          "Bernard Elementary",
+          "Drive",
+          "4",
+          "1.9"
+        ],
+        [
+          "Cottage Grove",
+          "Save-On-Foods, Luckakuck Way",
+          "Drive",
+          "6",
+          "3.3"
+        ],
+        [
+          "Elmwood Terrace",
+          "Kw'íyeqel Secondary",
+          "Walk",
+          "5",
+          "0.4"
+        ],
+        [
+          "Elmwood Terrace",
+          "Robertson Elementary",
+          "Walk",
+          "7",
+          "0.5"
+        ],
+        [
+          "Elmwood Terrace",
+          "Central Community Park",
+          "Drive",
+          "3",
+          "1.8"
+        ],
+        [
+          "The Elliot",
+          "Bernard Elementary",
+          "Walk",
+          "19",
+          "1.4"
+        ],
+        [
+          "The Elliot",
+          "Robertson Elementary",
+          "Walk",
+          "20",
+          "1.5"
+        ],
+        [
+          "The Elliot",
+          "Chilliwack Library",
+          "Drive",
+          "3",
+          "1.8"
+        ],
+        [
+          "The Vibe (from the street)",
+          "Chilliwack Cultural Centre",
+          "Walk",
+          "13",
+          "1.0"
+        ],
+        [
+          "The Vibe (from the street)",
+          "Chilliwack Landing Leisure Centre",
+          "Walk",
+          "14",
+          "1.1"
+        ],
+        [
+          "The Vibe (from the street)",
+          "Townsend Park",
+          "Walk",
+          "16",
+          "1.2"
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Sources for what’s nearby each building",
+      "gen": "nbb",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "bctransit.com · route overview",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=66"
+          }
+        ],
+        [
+          {
+            "t": "bctransit.com · schedules and maps",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/"
+          }
+        ],
+        [
+          {
+            "t": "bctransit.com · route overview (2)",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=57"
+          }
+        ],
+        [
+          {
+            "t": "bctransit.com · route overview (3)",
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=51"
+          }
+        ],
+        [
+          {
+            "t": "chilliwack.com",
+            "h": "https://www.chilliwack.com/main/page.cfm?id=1754.&dowhat=typeView&ptID=1&listView=1"
+          }
+        ],
+        [
+          {
+            "t": "fvrl.bc.ca · locations",
+            "h": "https://www.fvrl.bc.ca/locations"
+          }
+        ],
+        [
+          {
+            "t": "studentsuccess.gov.bc.ca · chilliwack",
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/chilliwack"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/2237/store"
+          }
+        ],
+        [
+          {
+            "t": "saveonfoods.com · store (2)",
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/2213/store"
+          }
+        ],
+        [
+          {
+            "t": "chilliwack.com (2)",
+            "h": "https://www.chilliwack.com/main/page.cfm?id=2039"
+          }
+        ]
+      ],
+      "gen": "nbb",
+      "pos": "end"
     }
   ],
   "faq": [
