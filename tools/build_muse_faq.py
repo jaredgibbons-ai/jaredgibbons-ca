@@ -9,7 +9,7 @@ import glob, json, os, re, sys
 from urllib.parse import urlparse
 import openpyxl
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
-EXEMPT = {'testimonials', '404', 'privacy', 'subscribe-to-our-newsletter', 'reviews', 'index', 'blog', 'about', 'thank-you', 'contact', 'unsubscribe', 'terms', 'accessibility'}
+EXEMPT = {'testimonials', '404', 'privacy', 'subscribe-to-our-newsletter', 'reviews', 'index', 'blog', 'about', 'thank-you', 'contact', 'unsubscribe', 'terms', 'accessibility', 'lower-landing'}  # lower-landing: the Muse FAQs describe London Landing in Richmond (wrong place; our page is Chilliwack), held until redone
 import csv
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import trend as TR

@@ -1,50 +1,27 @@
 {
-  "status": "draft",
-  "slug": "holly",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: delta.ca",
-            "h": "http://www.delta.ca/building-development/housing-our-future"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "What's nearby Holly",
       "gen": "nb",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby Holly"
     },
     {
+      "gen": "nb",
+      "pos": "end",
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -67,18 +44,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -101,18 +78,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -125,18 +102,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -144,25 +121,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Holly Elementary, 4625 62 St",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Holly Park",
@@ -189,18 +167,17 @@
           "2.5"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -213,87 +190,603 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt601",
-            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf",
+            "t": "infomaps.translink.ca · tt601"
           }
         ],
         [
           {
-            "t": "buzzer.translink.ca · fall service changes cya later",
-            "h": "https://buzzer.translink.ca/2018/08/fall-service-changes-cya-later/"
+            "h": "https://buzzer.translink.ca/2018/08/fall-service-changes-cya-later/",
+            "t": "buzzer.translink.ca · fall service changes cya later"
           }
         ],
         [
           {
-            "t": "delta.ca · park and amenity search",
-            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?page=3"
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?page=3",
+            "t": "delta.ca · park and amenity search"
           }
         ],
         [
           {
-            "t": "delta.ca · park and amenity search (2)",
-            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?keywords&region=All&amenities%5B74%5D=74&page=1"
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?keywords&region=All&amenities%5B74%5D=74&page=1",
+            "t": "delta.ca · park and amenity search (2)"
           }
         ],
         [
           {
-            "t": "delta.ca · ladner leisure centre",
-            "h": "http://delta.ca/parks-recreation/sport-recreation/indoor-facilities/ladner-leisure-centre"
+            "h": "http://delta.ca/parks-recreation/sport-recreation/indoor-facilities/ladner-leisure-centre",
+            "t": "delta.ca · ladner leisure centre"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca · ladner pioneer library",
-            "h": "https://www.fvrl.bc.ca/locations/ladner-pioneer-library"
+            "h": "https://www.fvrl.bc.ca/locations/ladner-pioneer-library",
+            "t": "fvrl.bc.ca · ladner pioneer library"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · delta",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta",
+            "t": "studentsuccess.gov.bc.ca · delta"
           }
         ],
         [
           {
-            "t": "saveonfoods.com · store",
-            "h": "https://www.saveonfoods.com/sm/planning/rsid/936/store"
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/936/store",
+            "t": "saveonfoods.com · store"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Holly, Ladner: streets and boundaries"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Holly Elementary, Kindergarten to Grade 7 in School District 37 (Delta), is at 4625 62 Street, Delta, V4K 3L8."
+          }
+        ],
+        [
+          {
+            "t": "The City's Ladner page says \"East Ladner\" is the common name for the part of Ladner east of Highway 17A. Highway 17A runs north-south from Highway 99 to the BC Ferries terminal, and Ladner Trunk Road is the main east-west artery."
+          }
+        ],
+        [
+          {
+            "t": "Delta publishes no Holly boundary. The Official Community Plan (OCP) Bylaw No. 8400 page lists no planning areas or neighbourhoods, and the City's 2024 OCP fact sheet never mentions Holly, so Holly is not an official City of Delta planning area."
+          }
+        ],
+        [
+          {
+            "t": "The City's parks map lists a Holly Park in Ladner, with no address given."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Holly, Ladner: the housing stock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Delta's small-scale multi-unit housing rules cover lots zoned RS or RD \"as well as some CD zones\"."
+          }
+        ],
+        [
+          {
+            "t": "Delta allows one secondary suite per single detached dwelling; suites cannot be strata-titled or sold."
+          }
+        ],
+        [
+          {
+            "t": "Elsewhere in Ladner, April 2026 permits include a duplex with two garden suites at 5042 59 Street."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Holly, Ladner: rules that affect buyers"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Under Bill 44, Delta had to change its zoning before June 30, 2024. Council gave the amendments first to third readings on June 3, 2024, and cannot hold a public hearing on them."
+          }
+        ],
+        [
+          {
+            "t": "Limits are three units on lots up to 280 m² and four units on lots over 280 m². Six units apply only within 400 m of frequent transit along Scott Road, which is in North Delta, so that tier does not reach Ladner."
+          }
+        ],
+        [
+          {
+            "t": "Each unit needs one on-site parking space, except units under 33 m². Compliant projects skip rezoning and Council, but covenants on title, steep slopes and nearby streams can still limit a lot."
+          }
+        ],
+        [
+          {
+            "t": "Council adopted the OCP on July 8, 2024."
+          }
+        ],
+        [
+          {
+            "t": "Delta applies a Development Permit Area for Streamside Protection and Enhancement in some areas."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Holly, Ladner: local details a buyer would not know"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The Highway 17A overpass at Highway 99 was struck by an over-height vehicle on July 18, 2023, and repaired from January 8, 2024."
+          }
+        ],
+        [
+          {
+            "t": "During Highway 99 southbound closures, traffic is detoured via Highway 17A to Ladner Trunk Road, so Ladner streets carry through traffic on those nights."
+          }
+        ],
+        [
+          {
+            "t": "West of Arthur Drive the road is 47A Avenue, which links Ladner with Tsawwassen."
+          }
+        ],
+        [
+          {
+            "t": "Ladner Exchange is at 4645 Harvest Drive."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Holly, Ladner: development and new projects"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "4739 and 4749 60B Street, Bassi Properties: 16 four-bedroom townhouses in two 3-storey buildings, rezoning to CDZ65. STATUS: 3rd Reading Conditions, feedback closed October 30, 2025, Council dates to be determined (check current)."
+          }
+        ],
+        [
+          {
+            "t": "Fraser River Tunnel Project: an eight-lane immersed tube tunnel replacing the George Massey Tunnel on Highway 99 between Richmond and Delta."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Holly, Ladner: costs and taxes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "2026 property tax was due July 2, 2026, with a 2.9 percent City increase; penalties are 5 percent after July 2 and a further 5 percent after September 2."
+          }
+        ],
+        [
+          {
+            "t": "Flat-rate utilities for a single-family home are $1,658 in 2026, up from $1,607. Metered water is $1.47 per m³ for the first 125 m³ and $1.97 above that. Sewer is $2.13 per m³ on 80 percent of water use, with $25 quarterly minimums."
+          }
+        ],
+        [
+          {
+            "t": "Home Owner Grant: basic maximum $570, additional $275."
+          }
+        ],
+        [
+          {
+            "t": "A new secondary suite requires a water meter, so the house moves to quarterly metered billing."
+          }
+        ],
+        [
+          {
+            "t": "The Speculation and Vacancy Tax lists the City of Delta as a taxable area."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Holly, Ladner: getting around"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Ladner Exchange serves routes 310, 601, 606, 608, 609, 616, 618, 620, 640 and 900 (map dated April 2025)."
+          }
+        ],
+        [
+          {
+            "t": "Route 601 (South Delta/Bridgeport Station) runs on Ladner Trunk Road and Highway 17A and calls at Massey Exchange on Highway 99 and Bridgeport Station, per the timetable effective January 1, 2024."
+          }
+        ],
+        [
+          {
+            "t": "Highway 17A links Ladner to Highway 99 by road, and Ladner Trunk Road continues east as Highway 10."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Holly, Ladner: risks and due diligence"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The 1894 flood is the design flood for the Fraser River dikes."
+          }
+        ],
+        [
+          {
+            "t": "Delta's building permit guide requires the Minimum Building Elevation on the Geodetic Survey of Canada datum and geotechnical input for soft soil, and charges a covenant fee where sanitary or storm pumping is used."
+          }
+        ],
+        [
+          {
+            "t": "Delta's three sloped-lands permit areas are ND1, ND10 and SD2; none is a Ladner area."
+          }
+        ],
+        [
+          {
+            "t": "Check title for covenants and ask the City about stream proximity before relying on an addition or suite."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "How Holly, Ladner compares"
+    },
+    {
+      "caption": "Holly, Ladner compared",
+      "gen": "uq",
+      "head": [
+        "Fact",
+        "Holly",
+        "Hawthorne",
+        "Ladner Village"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Elementary school",
+          "Holly, 4625 62 Street",
+          "Hawthorne, 5160 Central Avenue",
+          "Ladner, 5016 44 Avenue"
+        ],
+        [
+          "City-listed park",
+          "Holly Park, no address given",
+          "Hawthorne Park, 5151 56 Street",
+          "—"
+        ],
+        [
+          "—",
+          "Townhouses in East Ladner, LU009770",
+          "None named for Hawthorne",
+          "4501 Arthur Drive, Chisholm Street"
+        ],
+        [
+          "2026 flat utilities",
+          "$1,658",
+          "$1,658",
+          "$1,658"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What is not confirmed about Holly, Ladner"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Holly's boundaries, the year-built range of its houses, and the zoning of its lots: no official source found."
+          }
+        ],
+        [
+          {
+            "t": "Holly Park's address and amenities: the City map gives the name only."
+          }
+        ],
+        [
+          {
+            "t": "Which bus stop is closest to Holly Elementary: the route 616 and 618 timetables list no 62 Street."
+          }
+        ],
+        [
+          {
+            "t": "Whether Holly is east of Highway 17A: no official source places it."
+          }
+        ],
+        [
+          {
+            "t": "The Streamside Protection distance, the SSMUH final adoption date, and the Bylaw No. 8400 text on planning areas."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Related pages"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "/hawthorne.html",
+            "t": "Hawthorne Ladner Homes for Sale | Delta BC"
+          }
+        ],
+        [
+          {
+            "h": "/ladner-houses-for-sale.html",
+            "t": "Ladner Houses for Sale"
+          }
+        ],
+        [
+          {
+            "h": "/ladner-townhomes-for-sale.html",
+            "t": "Ladner Townhomes for Sale"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for Holly, Ladner"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/school/03737035",
+            "t": "studentsuccess.gov.bc.ca · school"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/Ladner",
+            "t": "delta.ca · Ladner"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/city-hall/bylaws/official-community-plan-bylaw",
+            "t": "delta.ca · official community plan bylaw"
+          }
+        ],
+        [
+          {
+            "h": "https://delta.ca/sites/default/files/2021-09/parks_map.pdf",
+            "t": "delta.ca · parks map"
+          }
+        ],
+        [
+          {
+            "h": "https://letstalk.delta.ca/lu009770",
+            "t": "letstalk.delta.ca · lu009770"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/building-development/building-renovating/residential/small-scale-multi-unit-housing",
+            "t": "delta.ca · small scale multi unit housing"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/building-development/building-renovating/secondary-suites",
+            "t": "delta.ca · secondary suites"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/media/5029",
+            "t": "delta.ca · media"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/community-culture/happening-delta/news/zoning-amendment-bylaws-introduced-permit-small-scale-multi",
+            "t": "delta.ca · zoning amendment bylaws introduced permit small"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/community-culture/happening-delta/news/city-delta-first-adopt-new-housing-focused-official",
+            "t": "delta.ca · city delta first adopt new housing focused offic"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/community-culture/environment-conservation/environmentally-sensitive-areas",
+            "t": "delta.ca · environmentally sensitive areas"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta",
+            "t": "studentsuccess.gov.bc.ca · delta"
+          }
+        ],
+        [
+          {
+            "h": "http://www.delta.ca/services/water-sewer-drainage/sanitary-sewer-drainage",
+            "t": "delta.ca · sanitary sewer drainage"
+          }
+        ],
+        [
+          {
+            "h": "https://news.gov.bc.ca/releases/2024MOTI0001-000003",
+            "t": "news.gov.bc.ca · 2024MOTI0001 000003"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/system_maps/exchange_maps/ladner.pdf",
+            "t": "infomaps.translink.ca · ladner"
+          }
+        ],
+        [
+          {
+            "h": "https://letstalk.delta.ca/projects",
+            "t": "letstalk.delta.ca · projects"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "musefaq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
+    },
+    {
+      "gen": "musefaq",
+      "items": [
+        [
+          {
+            "h": "http://www.delta.ca/building-development/housing-our-future",
+            "t": "Source: delta.ca"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Is Holly an official City of Delta planning area?",
+      "a": "Holly Elementary, 4625 62 Street, Kindergarten to Grade 7. Confirm the catchment for the exact address with School District 37 before an offer relies on it.",
+      "gen": "uq",
+      "q": "Which school is Holly's?"
+    },
+    {
+      "a": "Usually by building permit. Delta allows a garden suite and/or coach house (maximum two) plus suites, with one single detached or duplex per lot, subject to title covenants and streams.",
+      "gen": "uq",
+      "q": "Can I add a suite or coach house?"
+    },
+    {
+      "a": "Delta runs over 63 km of flood protection and 31 drainage pump stations, and the Province maps Delta's dikes under the Corporation of Delta. Ask what floor elevation applied to the house.",
+      "gen": "uq",
+      "q": "Do dikes protect this part of Ladner?"
+    },
+    {
       "a": "This file does not treat it as one. Holly is the MLS sub-area name on the live page; the governing plan is the Delta Official Community Plan 2024, Bylaw No. 8400 — a single consolidated plan with land-use designations in its Land Use Plan (s. 1.5) and no area-plan schedule for this part of Ladner.",
-      "gen": "muse"
-    },
-    {
-      "q": "Can Jared show me homes in Holly?",
-      "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
-      "gen": "muse-generic"
-    },
-    {
-      "q": "How do I find out what my home in Holly is worth?",
-      "a": "Jared prepares a home evaluation from recent comparable sales and the condition of your home. Contact him on 604-928-1361 or through the form on this site to arrange one.",
-      "gen": "muse-generic"
+      "gen": "muse",
+      "q": "Is Holly an official City of Delta planning area?"
     }
-  ]
+  ],
+  "slug": "holly",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

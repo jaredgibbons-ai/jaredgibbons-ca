@@ -286,14 +286,15 @@ test('no research-process wording on any page: no UNCONFIRMED / UNVERIFIED tags,
   assert.deepEqual(hits.slice(0, 5), [], `${hits.length} strings with research wording`);
 });
 
-test("uniqueness sections (uq): no URLs outside links, no research wording, no slug-style cross-references; the three wrong-place notes are not published", () => {
+test("uniqueness sections (uq): no URLs outside links, no research wording, no slug-style cross-references; the wrong-place note (lower-landing) is not published; Holly and Hawthorne notes name Ladner or Delta and never Langley", () => {
   let pages = 0, faqs = 0;
   const bad = /UNVERIFIED|UNCONFIRMED|\bunconfirmed\b|\bsiblings?\b|\bslug\b|\bbrief\b|this pass|Read: 20\d\d|~\/|Jared to confirm|https?:\/\//;
   for (const [f, t] of texts) {
     if (!t.includes('"uq"')) continue;
     const d = JSON.parse(t);
-    assert.ok(!['holly.json', 'hawthorne-guide.json', 'lower-landing.json'].includes(f.split('/').pop()), `${f}: wrong-place note published`);
+    assert.ok(!['lower-landing.json'].includes(f.split('/').pop()), `${f}: wrong-place note published`);
     const mine = (d.blocks || []).filter((b) => b.gen === 'uq');
+    if (/(^|\/)(holly|hawthorne-guide)\.json$/.test(f)) assert.ok(/Ladner|Delta/.test(JSON.stringify(mine)) && !/Langley/.test(JSON.stringify(mine)), `${f}: wrong place`);
     const txt = JSON.stringify(mine).replace(/"h":"[^"]*"/g, '');
     assert.ok(!bad.test(txt), `${f}: uq text leaked: ${(txt.match(bad) || [])[0]}`);
     for (const q of (d.faq || []).filter((x) => x.gen === 'uq')) { faqs++; assert.ok(!bad.test(q.q + ' ' + q.a), `${f}: uq FAQ leaked`); }

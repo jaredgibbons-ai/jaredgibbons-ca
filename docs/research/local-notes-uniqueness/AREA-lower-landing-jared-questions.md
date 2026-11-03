@@ -1,15 +1,15 @@
-# Lower Landing (London Landing, Steveston) — Questions for Jared
+# Lower Landing, Chilliwack — Questions for Jared
 
-For Jared to answer by voice memo. Muse does not answer these.
+Area: Lower Landing, Chilliwack (Chilliwack). Five questions only Jared can answer from deals he has actually done or shown in the area. Do not answer these from research.
 
-1. Confirm the ground: when this page says "lower-landing," is London Landing in Steveston the ground you mean — and do buyers ever use the name London Landing themselves, or do they find these buildings through Steveston?
-2. Who buys in the London Landing buildings — The Pier at 6160 London Road, Harbour Walk at 13040 No. 2 Road, the Princess Street townhouses — downsizers, Steveston locals moving within the village, or buyers priced out of the village core?
-3. What sells fast and what sits in this pocket — the waterfront strata units, the townhouses, or the detached houses at the edges — and what makes the difference?
-4. Jim Pattison Developments' application would put a five- and six-storey mixed-use project on No. 2 Road (12771–13131). Has that file changed seller expectations or buyer questions on that strip yet?
-5. Tell one story: a deal in or near London Landing that taught you something about dyke-side Steveston living — the pier, fishing season, or the industrial neighbours on No. 2 Road — that buyers only learn after they move in.
+## Questions
+1. What do you tell a buyer "Lower Landing" means, and which streets do you actually include when you say it?
+2. Who is buying in Lower Landing: families wanting space near the Landing recreation, first-time buyers into townhomes, or downsizers?
+3. What surprises buyers here that is not on the listing: floodplain and dyke questions, the semi-rural feel, or the distance to Hwy 1?
+4. How do Lower Landing homes move for you compared with Chilliwack Proper West and Sardis, and what makes one sit?
+5. Tell one Lower Landing story: a deal, a showing or a listing moment that captures this part of Chilliwack.
 
-## Shot list for Jared
-
-1. London's Wharf Park and the No. 2 Road Pier at 6062 Dyke Road, shot from the pier looking back at the waterfront buildings — golden hour, river and Steveston Island in frame.
-2. London Road at No. 2 Road, looking east along The Pier at London Landing at 6160 London Road — mid-morning, showing the mixed-use street wall.
-3. Dyke Road looking west from the No. 2 Road foot toward Steveston Village along the South Arm Dyke Trail — late afternoon, trail users and the harbour direction in frame.
+## Shot list (Jared's own photos)
+1. Chilliwack Landing Leisure Centre (9145 Corbould Street) from the public road, wide landscape, daylight.
+2. Landing Sports Centre (45530 Spadina Avenue) from the public street, straight-on.
+3. A Lower Landing residential street along the road at golden hour, mature trees in frame (no house numbers).

@@ -1,13 +1,15 @@
-# Holly — Questions for Jared
+# Holly, Ladner — Questions for Jared
+
+Area: Holly, Ladner (Ladner (City of Delta)). Five questions only Jared can answer from deals he has actually done or shown in the area. Do not answer these from research.
 
 ## Questions
-1. When buyers say "Holly," what pocket do they actually mean, and what kinds of homes do you sell there?
-2. Who is buying in this Langley City pocket: first-time buyers, downsizers, or families wanting Nicomekl Elementary?
-3. What sells fast versus slow near 200 Street and 53 Avenue — townhomes, older detached homes, or condos?
-4. What surprises buyers most: that Holly is not an official City neighbourhood, the Nicomekl floodplain edge, or the metered water bills?
-5. Tell one story from this pocket — a sale near Brydon Park/Lagoon or on the 200 Street corridor — that shows the area.
+1. When buyers ask about Holly, are they mostly families wanting Holly Elementary and quiet streets, or people priced out of Ladner Village and Tsawwassen?
+2. Who is buying in Holly in your experience: move-up families, downsizers staying in Ladner, or investors adding a suite?
+3. What surprises buyers in Holly that they do not see on a listing: lot drainage, how far it is from Ladner Village, traffic on 17A, or something else?
+4. How do Holly homes sell for you compared with Hawthorne and the Village: faster, slower, and what makes one sit?
+5. Tell one Holly story: a deal, a showing or a listing moment that shows what this part of Ladner is like to buy or sell in.
 
-## Shot list
-- Brydon Lagoon perimeter walk — shot across the water toward the trail.
-- 200 Street corridor at 53 Avenue looking north to Willowbrook — street-level angle.
-- Nicomekl River trail near Portage Park — shot along the floodplain greenway.
+## Shot list (Jared's own photos)
+1. Holly Park from the street entrance, wide landscape, daylight, no people's faces.
+2. A typical Holly residential street looking along the road at golden hour, mature trees and the 1980s-era homes in frame (no house numbers).
+3. Holly Elementary from the public road across the street, straight-on, school sign visible.

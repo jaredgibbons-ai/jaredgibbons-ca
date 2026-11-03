@@ -12,10 +12,8 @@ def _load(name, fn):
     spec = importlib.util.spec_from_file_location(name, os.path.join(HERE, fn)); m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m); return m
 NB = _load('nbmod', 'build_nearby.py'); T = NB.T; N = NB.N; LOCAL = N.LOCAL; PAGES = N.PAGES
 NOTES = os.path.join(ROOT, 'docs/research/local-notes-uniqueness'); G = 'uq'; SFX = '-extra-2026-11-03.md'
-# The note describes another place than our page (checked against the note's Page: line and the page title). Held until Jared or the research team confirms which place is meant.
-QUARANTINE = {'holly': 'note describes Holly in Langley City; our page is Holly in Ladner (Delta)',
-              'hawthorne-guide': 'note describes Latimer/Yorkson in the Township of Langley; our page is Hawthorne in Ladner (Delta)',
-              'lower-landing': 'note describes London Landing in Steveston, Richmond; our page is Lower Landing in Chilliwack'}
+# A note that describes another place than our page (checked against the note's Page: line and the page title) is held here. Holly and Hawthorne (Ladner) were redone on 2026-11-03 and now publish.
+QUARANTINE = {'lower-landing': 'every note filed under this slug (uniqueness, nearby, types, acreages, 55+, Muse FAQs, 5 buildings) described London Landing in Steveston, Richmond; our page is Lower Landing, Chilliwack (a Paragon sub-area with no City-published boundary). Held until Jared supplies the Paragon sub-area boundary or streets.'}
 SECS = {1: 'streets and boundaries', 2: 'the housing stock', 3: 'rules that affect buyers', 4: 'what buyers ask', 5: 'local details a buyer would not know', 6: 'development and new projects',
         7: 'costs and taxes', 8: 'getting around', 9: 'risks and due diligence', 10: 'how it compares'}
 META = re.compile(r"\b(?:city|house|condo|townhome|area|guide|earlier|other|sibling|shared) notes?\b|\b(?:this|that|the) (?:note|file)\b|\b[a-z0-9]+(?:-[a-z0-9]+)+ (?:note|page|guide note)\b|\bnotes? for [a-z0-9]+(?:-[a-z0-9]+)+|\bfull entry in\b|\bcovered in full in\b|\b(?:brief|program(?:me)?|slug|this pass|in this pass|assigned|assignment|sibling|earlier file|earlier note|settled|Jared to confirm|Jared should|roster|batch|follows? the|was not followed|this note|the note|this file|see NOT CONFIRMED|NOT CONFIRMED|returned in this|no .{0,30} was returned|search (?:result|returned))\b", re.I)
