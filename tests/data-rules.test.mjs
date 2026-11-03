@@ -310,14 +310,16 @@ test('area photos (D-89): only open licences, a credit, alt text and a real file
   for (const [slug, list] of Object.entries(data)) {
     assert.ok(fs.existsSync(`src/data/pages/${slug}.json`) || fs.existsSync(`src/data/local/${slug}.json`), `${slug}: page does not exist`);
     for (const p of list) {
+      for (const w of [640, 1280]) assert.ok(fs.existsSync(`public/img/areas/${p.id}-${w}.webp`), `${p.id}: missing ${w}px file`);
+      assert.ok(p.alt && p.alt.length >= 20 && p.alt.length <= 150, `${p.id}: alt text length`);
+      assert.ok(!seen.has(p.id), `${p.id}: used on two pages`); seen.add(p.id);
+      if (p.own) continue;
       n++;
       assert.ok(OK.has(p.license), `${p.id}: licence ${p.license} is not on the approved list`);
       assert.ok(p.author && p.author.length > 1, `${p.id}: no author`);
       assert.match(p.source, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/, `${p.id}: source is not a Commons file page`);
       if (p.license !== 'Public domain') assert.match(p.licenseUrl, /^https:\/\/creativecommons\.org\//, `${p.id}: no licence link`);
-      assert.ok(p.alt && p.alt.length >= 20 && p.alt.length <= 150 && !/^(image|photo|picture)/i.test(p.alt), `${p.id}: alt text length or wording`);
-      for (const w of [640, 1280]) assert.ok(fs.existsSync(`public/img/areas/${p.id}-${w}.webp`), `${p.id}: missing ${w}px file`);
-      assert.ok(!seen.has(p.id), `${p.id}: used on two pages`); seen.add(p.id);
+      assert.ok(!/^(image|photo|picture)/i.test(p.alt), `${p.id}: alt wording`);
     }
   }
   assert.ok(n >= 130, `expected 130+ photos, got ${n}`);

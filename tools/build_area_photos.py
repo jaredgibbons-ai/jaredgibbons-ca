@@ -25,6 +25,18 @@ PAGE = {
  'upper-deer-lake': 'upper-deer-lake-burnaby', 'west-vancouver': 'west-vancouver-homes-for-sale', 'westridge': 'westridge-burnaby', 'westwood-plateau': 'westwood-plateau-coquitlam',
  'woodland-acres': 'woodland-acres-port-coquitlam', 'surrey': 'surrey',
 }
+# Jared's own listing photos (aerials and street views from his sold listings; no people, plates or interiors). id = first 16 hex of the original's SHA-256 (tools/process_photos.py),
+# read from --own (the folder of <id>-1600.webp). key = 'own-<MLS>-<photo number>'. Credit: Jared Gibbons Real Estate Group; no licence line.
+OWN = [
+ ('central-abbotsford', 'own-R2915105-23', 'abc944c6c66786dc', 'Aerial view over the treed complexes of Central Abbotsford toward Mill Lake and the city'),
+ ('central-port-coquitlam', 'own-R3116542-33', '860e7bc34d2b16e0', 'Aerial view along Central Port Coquitlam townhomes and condo blocks with forest and hills behind'),
+ ('central-port-coquitlam', 'own-R3116542-37', 'c3398b43a0e27778', 'Aerial view of Central Port Coquitlam streets and townhome rows with the North Shore mountains behind'),
+ ('central-port-coquitlam', 'own-R3116542-38', 'f455169969810b25', 'Aerial view across Central Port Coquitlam townhomes and a main road toward the mountains'),
+ ('chilliwack-proper-east', 'own-R2908661-25', '9fa7132f967a5a13', 'Aerial view over Chilliwack Proper East streets and low-rise buildings with the mountains behind'),
+ ('chilliwack-proper-east', 'own-R2908661-28', 'b3e466ea4be71d80', 'Aerial view of Chilliwack Proper East apartment blocks, Mount Cheam and the valley'),
+ ('chilliwack-proper-east', 'own-R2908661-31', '0f440cdb80257f60', 'Aerial view over Chilliwack Proper East toward downtown with the mountains behind'),
+ ('clayton', 'own-R3017977-26', 'f0f4911f133bf307', 'Wetland pond and green space with a path and fence beside a Clayton Heights complex in Surrey'),
+]
 LIC = {'CC BY 2.0': 'https://creativecommons.org/licenses/by/2.0/', 'CC BY 2.5': 'https://creativecommons.org/licenses/by/2.5/', 'CC BY 3.0': 'https://creativecommons.org/licenses/by/3.0/',
        'CC BY 4.0': 'https://creativecommons.org/licenses/by/4.0/', 'CC BY-SA 2.0': 'https://creativecommons.org/licenses/by-sa/2.0/', 'CC BY-SA 2.5': 'https://creativecommons.org/licenses/by-sa/2.5/',
        'CC BY-SA 2.5 CA': 'https://creativecommons.org/licenses/by-sa/2.5/ca/', 'CC BY-SA 3.0': 'https://creativecommons.org/licenses/by-sa/3.0/', 'CC BY-SA 4.0': 'https://creativecommons.org/licenses/by-sa/4.0/',
@@ -52,6 +64,7 @@ def credits_page(pages):
     items = []
     for slug in sorted(pages, key=lambda k: page_title(k).lower()):
         for ph in pages[slug]:
+            if ph.get('own'): continue  # Jared's own photos need no credit entry
             lic = [{'t': ph['license'], 'h': ph['licenseUrl']}] if ph['licenseUrl'] else [{'t': 'public domain'}]
             items.append([{'t': page_title(slug), 'h': f'/{slug}.html'}, {'t': ': ' + ph['alt'] + '. Photo by '}, {'t': ph['author'], 'h': ph['source']}, {'t': ', '}, *lic, {'t': '.'}])
     blocks = [
@@ -70,6 +83,7 @@ def credits_page(pages):
 def main():
     ap = argparse.ArgumentParser()
     for k in ('src', 'check', 'log', 'titles'): ap.add_argument('--' + k, required=True)
+    ap.add_argument('--own', default='')
     a = ap.parse_args()
     check = {r['file']: r for r in csv.DictReader(open(a.check, encoding='utf-8'))}
     log = {r['filename'][:-4]: r for r in csv.DictReader(open(a.log, encoding='utf-8-sig'))}
@@ -94,7 +108,13 @@ def main():
         lic = row['license'].strip()
         if lic not in LIC: problems.append(f'{f}: unknown licence {lic}'); continue
         pages.setdefault(page, []).append({'id': f, 'alt': ALT[f], 'w': 1280, 'h': round(h * 1280 / w), 'author': author(row['author']), 'license': lic, 'licenseUrl': LIC[lic], 'source': commons, 'cropped': cropped, 'wide': (w / h) > 2.2})
-    for p in pages.values(): p.sort(key=lambda x: (x['wide'], x['id']))  # first entry = the page's main photo (never a panorama when an ordinary photo exists)
+    if a.own:
+        for page, key, hid, alt in OWN:
+            im = Image.open(f'{a.own}/{hid}-1600.webp').convert('RGB'); w, h = im.size
+            for tw in (640, 1280):
+                im.resize((tw, round(h * tw / w)), Image.LANCZOS).save(f'{OUT_IMG}/{key}-{tw}.webp', 'WEBP', quality=76, method=6)
+            pages.setdefault(page, []).append({'id': key, 'alt': alt, 'w': 1280, 'h': round(h * 1280 / w), 'own': True, 'cropped': False, 'wide': False})
+    for p in pages.values(): p.sort(key=lambda x: (not x.get('own', False), x['wide'], x['id']))  # first entry = the page's main photo (never a panorama when an ordinary photo exists)
     json.dump(pages, open(OUT_JSON, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     credits_page(pages)
     print('pages', len(pages), 'photos', sum(len(v) for v in pages.values()))

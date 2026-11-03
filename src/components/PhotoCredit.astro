@@ -7,9 +7,9 @@ const pd = photo.license === 'Public domain';
 ---
 <figure class:list={['ph', { 'ph--hero': hero }]}>
   <img src={`${base}-1280.webp`} srcset={`${base}-640.webp 640w, ${base}-1280.webp 1280w`} sizes={sizes} width={photo.w} height={photo.h} alt={photo.alt} loading={hero ? 'eager' : 'lazy'} decoding="async" />
-  <figcaption>
+  {photo.own ? <figcaption>Photo: Jared Gibbons Real Estate Group.</figcaption> : <figcaption>
     Photo: <a href={photo.source} rel="noopener">{photo.author}</a>{pd ? ' (public domain)' : <>, <a href={photo.licenseUrl} rel="noopener license">{photo.license}</a></>}, via Wikimedia Commons. {photo.cropped ? 'Resized, cropped and compressed.' : 'Resized and compressed.'}
-  </figcaption>
+  </figcaption>}
 </figure>
 <style>
   .ph{margin:0 0 1.25rem}
