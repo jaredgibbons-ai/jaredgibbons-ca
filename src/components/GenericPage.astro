@@ -12,6 +12,8 @@ import NetProceedsCalc from './NetProceedsCalc.astro';
 import { isGated } from '../lib/inventory';
 import { pickReviews } from '../lib/reviews';
 import REVIEW_EXCERPTS from '../data/review-excerpts.json';
+import AREA_PHOTOS from '../data/area-photos.json';
+import PhotoCredit from './PhotoCredit.astro';
 
 const { page } = Astro.props as { page: any };
 const seo = page.seo || {};
@@ -33,7 +35,9 @@ if (local) {
     let drop = false;
     page.blocks = page.blocks.filter((b: any) => { if (b.t === 'h' && b.level <= 2) drop = b.level === 2 && local.suppress.includes(b.text); return !drop || b.t === 'reviews' || b.t === 'grid' || b.t === 'form'; });
   }
-  const at = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 2);
+  // The first level-2 heading AFTER the H1: 38 archive pages open with an H2 above the H1, which used to put the local sections above the H1.
+  const h1At = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
+  const at = page.blocks.findIndex((b: any, i: number) => i > h1At && b.t === 'h' && b.level === 2);
   const faqBlocks = (local.faq ?? []).length ? [{ t: 'h', level: 2, text: local.faq_heading || 'Common questions' }, ...local.faq.flatMap((f: any) => [{ t: 'h', level: 3, text: f.q }, { t: 'p', parts: [{ t: f.a }] }])] : [];
   const cut = at < 0 ? page.blocks.length : at;
   const asPart = (b: any) => b.t === 'p' && !b.parts ? { t: 'p', parts: [{ t: b.text, ...(b.h ? { h: b.h } : {}) }] } : b;
@@ -46,19 +50,31 @@ if (local) {
 // Contact fix (D-73): 148 archive pages print jared@jaredgibbons.ca, which is not Jared's address; shown as jaredgibbons@royallepage.ca. The archive record is untouched.
 page.blocks = JSON.parse(JSON.stringify(page.blocks).replaceAll('jared@jaredgibbons.ca', 'jaredgibbons@royallepage.ca'));
 
+// Area photos (D-89, src/data/area-photos.json, tools/build_area_photos.py): public-licence photos with the credit shown under each one.
+// The main photo goes after the first paragraph under the H1; any others form a gallery section before the closing link lists.
+const photos: any[] = (AREA_PHOTOS as Record<string, any[]>)[page.slug] ?? [];
+if (photos.length) {
+  const h1 = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
+  const p1 = page.blocks.findIndex((b: any, i: number) => i > h1 && b.t === 'p');
+  const first = p1 >= 0 ? p1 + 1 : Math.max(h1 + 1, 0);
+  page.blocks.splice(first, 0, { t: 'photo', photo: photos[0] });
+  if (photos.length > 1) page.blocks.splice(page.blocks.length - endCount, 0, { t: 'photos', photos: photos.slice(1) });
+}
+
 // Every content page shows three Google review excerpts (assigned per page in src/data/review-assign.json, no two pages share the same three).
 // Archive pages that had no review block, and pages built from the local layer alone, get one, placed before the end-of-page link lists.
-const NO_REVIEWS = new Set(['404', 'privacy', 'subscribe-to-our-newsletter', 'contact', 'reviews', 'data-and-methodology']);
+const NO_REVIEWS = new Set(['404', 'privacy', 'subscribe-to-our-newsletter', 'contact', 'reviews', 'data-and-methodology', 'photo-credits']);
 if (!NO_REVIEWS.has(page.slug) && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.splice(page.blocks.length - endCount, 0, { t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
 
 // Split into render sections at each level-2 heading; reviews and grid get their own sections.
-type Sec = { kind: 'text' | 'reviews' | 'grid'; blocks: any[]; block?: any };
+type Sec = { kind: 'text' | 'reviews' | 'grid' | 'photos'; blocks: any[]; block?: any };
 const sections: Sec[] = [];
 let cur: Sec = { kind: 'text', blocks: [] };
 const push = () => { if (cur.blocks.length) sections.push(cur); cur = { kind: 'text', blocks: [] }; };
 for (const b of page.blocks) {
   if (b.t === 'reviews') { push(); sections.push({ kind: 'reviews', blocks: [], block: b }); continue; }
   if (b.t === 'grid') { push(); sections.push({ kind: 'grid', blocks: [] }); continue; }
+  if (b.t === 'photos') { push(); sections.push({ kind: 'photos', blocks: [], block: b }); continue; }
   if (b.t === 'h' && b.level === 2) push();
   cur.blocks.push(b);
 }
@@ -82,6 +98,16 @@ let fid = 0;
 <main id="main">
   {sections.map((sec, si) => {
     if (sec.kind === 'reviews') return <ReviewCards heading={sec.block.heading} intro={sec.block.intro} items={pickReviews(page.slug, REVIEW_EXCERPTS.items)} id={`reviews-${si}`} />;
+    if (sec.kind === 'photos') return (
+      <section class="section section--tight" aria-labelledby={`photos-${si}`}>
+        <div class="wrap">
+          <h2 class="h2" id={`photos-${si}`}>Photos from the area</h2>
+          <ul class="phgrid">
+            {sec.block.photos.map((ph: any) => <li class={ph.wide ? 'phgrid__wide' : undefined}><PhotoCredit photo={ph} sizes={ph.wide ? '(min-width:64rem) 72rem, 100vw' : '(min-width:64rem) 24rem, (min-width:40rem) 45vw, 100vw'} /></li>)}
+          </ul>
+        </div>
+      </section>
+    );
     if (sec.kind === 'grid') return (
       <section class="section section--cream section--tight" aria-label="Listings">
         <div class="wrap">
@@ -99,6 +125,7 @@ let fid = 0;
                 return <Tag id={b.id} class={b.level === 1 ? 'pg__h1' : b.level === 2 ? 'h2' : 'pg__h'}>{b.href ? <Rich parts={[{ t: b.text, h: b.href }]} /> : b.text}</Tag>;
               }
               if (b.t === 'p') return <p class={b.cls}><Rich parts={b.parts} /></p>;
+              if (b.t === 'photo') return <PhotoCredit photo={b.photo} hero sizes="(min-width:48rem) 40rem, 100vw" />;
               if (b.t === 'list') return (
                 <ul class:list={['lines', { 'lines--links': linkOnly(b.items) }]}>
                   {b.items.map((it: any) => <li><Rich parts={it} /></li>)}
@@ -159,4 +186,6 @@ let fid = 0;
   .cardlink:hover,.cardlink:focus-visible{background:var(--ink);color:#fff}
   .cardlink__h{font:700 1.0625rem/1.3 var(--f-head);margin:0}
   .cardlink__t{font-size:.9375rem}
+  .phgrid__wide{grid-column:1/-1}
+  .phgrid{list-style:none;margin:1.25rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,18rem),1fr));gap:var(--s4)}
 </style>

@@ -1,0 +1,20 @@
+---
+// One area photo with its credit directly under it (D-89). CC BY / CC BY-SA need the author, licence name and link and a note that the image was changed.
+const { photo, hero = false, sizes = '100vw' } = Astro.props as { photo: any; hero?: boolean; sizes?: string };
+const base = `/img/areas/${photo.id}`;
+const h640 = Math.round(photo.h * 640 / photo.w);
+const pd = photo.license === 'Public domain';
+---
+<figure class:list={['ph', { 'ph--hero': hero }]}>
+  <img src={`${base}-1280.webp`} srcset={`${base}-640.webp 640w, ${base}-1280.webp 1280w`} sizes={sizes} width={photo.w} height={photo.h} alt={photo.alt} loading={hero ? 'eager' : 'lazy'} decoding="async" />
+  <figcaption>
+    Photo: <a href={photo.source} rel="noopener">{photo.author}</a>{pd ? ' (public domain)' : <>, <a href={photo.licenseUrl} rel="noopener license">{photo.license}</a></>}, via Wikimedia Commons. {photo.cropped ? 'Resized, cropped and compressed.' : 'Resized and compressed.'}
+  </figcaption>
+</figure>
+<style>
+  .ph{margin:0 0 1.25rem}
+  .ph img{display:block;width:100%;height:auto;background:var(--cream,#f4f0e8)}
+  .ph figcaption{font-size:.75rem;line-height:1.45;margin-top:.4rem;color:#444;overflow-wrap:anywhere}
+  .ph figcaption a{color:inherit;text-decoration:underline}
+  .ph--hero{max-width:var(--measure)}
+</style>

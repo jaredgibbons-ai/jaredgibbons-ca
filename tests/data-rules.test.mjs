@@ -302,3 +302,25 @@ test("uniqueness sections (uq): no URLs outside links, no research wording, no s
   }
   assert.ok(pages >= 450 && faqs >= 1200, `expected 450+ pages and 1200+ FAQ entries, got ${pages} / ${faqs}`);
 });
+
+test('area photos (D-89): only open licences, a credit, alt text and a real file on every photo; no image on two pages', () => {
+  const data = JSON.parse(fs.readFileSync('src/data/area-photos.json', 'utf8'));
+  const OK = new Set(['CC BY 2.0', 'CC BY 2.5', 'CC BY 3.0', 'CC BY 4.0', 'CC BY-SA 2.0', 'CC BY-SA 2.5', 'CC BY-SA 2.5 CA', 'CC BY-SA 3.0', 'CC BY-SA 4.0', 'CC0', 'Public domain']);
+  const seen = new Set(); let n = 0;
+  for (const [slug, list] of Object.entries(data)) {
+    assert.ok(fs.existsSync(`src/data/pages/${slug}.json`) || fs.existsSync(`src/data/local/${slug}.json`), `${slug}: page does not exist`);
+    for (const p of list) {
+      n++;
+      assert.ok(OK.has(p.license), `${p.id}: licence ${p.license} is not on the approved list`);
+      assert.ok(p.author && p.author.length > 1, `${p.id}: no author`);
+      assert.match(p.source, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/, `${p.id}: source is not a Commons file page`);
+      if (p.license !== 'Public domain') assert.match(p.licenseUrl, /^https:\/\/creativecommons\.org\//, `${p.id}: no licence link`);
+      assert.ok(p.alt && p.alt.length >= 20 && p.alt.length <= 150 && !/^(image|photo|picture)/i.test(p.alt), `${p.id}: alt text length or wording`);
+      for (const w of [640, 1280]) assert.ok(fs.existsSync(`public/img/areas/${p.id}-${w}.webp`), `${p.id}: missing ${w}px file`);
+      assert.ok(!seen.has(p.id), `${p.id}: used on two pages`); seen.add(p.id);
+    }
+  }
+  assert.ok(n >= 130, `expected 130+ photos, got ${n}`);
+  const credits = JSON.parse(fs.readFileSync('src/data/local/photo-credits.json', 'utf8'));
+  assert.equal(credits.blocks.find((b) => b.t === 'list').items.length, n, 'photo-credits page must list every photo');
+});

@@ -15,4 +15,6 @@ const listingGated = (slug: string) => {
 const u = uniq as any;
 // `enforce` is off until Jared and I have reviewed the pages under the threshold together: nothing is held out of the sitemap before then.
 const uniquenessHeld = (slug: string) => u.enforce === true && typeof u.scores[slug] === 'number' && u.scores[slug] < u.min_unique;
-export const isGated = (slug: string) => listingGated(slug) || uniquenessHeld(slug);
+// Utility pages that stay reachable and linked but are never indexed or put in the sitemap.
+const UTILITY = new Set(['photo-credits']);
+export const isGated = (slug: string) => UTILITY.has(slug) || listingGated(slug) || uniquenessHeld(slug);
