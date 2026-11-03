@@ -493,3 +493,5 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 - 185 entries are published. 34 state a year, number, distance or a superlative ("largest", "only", "oldest", "named for") and are held in `docs/review/area-thoughts-to-verify-2026-11-03.csv` until checked against an official page (standing rule: only numbers and dates an official page states).
 - Effect on the uniqueness score is small (about 60 words per page): 92 pages improved, under-0.70 count 27 -> 24 of 458 scored. The bigger gains still need the facts research and Muse question sheets.
 - Run `--apply` after the other build_* generators; they only remove their own `gen` blocks, so `jtake` survives either way.
+
+**D-89 resolved (2026-11-03):** Jared confirmed his listing photos may be used throughout the website. Photographer-licence question closed.
