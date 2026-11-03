@@ -481,3 +481,9 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 - **Fix found on the way:** on 38 archive pages that open with an H2 above the H1, the local sections were inserted above the H1. They now go after the first H2 that follows the H1. Archive order is otherwise unchanged.
 - **Next:** Jared's own photos replace these as they come in (478 shots still have no photo). Nothing is published to the live site; the preview stays noindex.
 - **Tests:** a photo guard (approved licences only, author, Commons link, alt text, files exist, no image on two pages, credits page lists all). 55 pass.
+
+### D-89 addendum (2026-11-03): own listing photos and credit wording
+- Jared's own sold-listing photos (MLS `R…-nn`) are used on area pages with no credit-page entry; the on-page credit reads "Photo: Jared Gibbons, REALTOR®." (no licence line). 30 own photos on 10 pages (candidates PDF + two zips of full-size originals).
+- Held back on purpose: virtually staged shots, unit-specific decks/balconies, shop signs and shots with people, readable plates or tradespeople (R2506376-25, R2632300-02).
+- Own-photo rows in `tools/build_area_photos.py` (`OWN2`) take the PAGE slug directly (e.g. `grandview-heights-guide`), not the photo-area slug.
+- Open: confirm Jared's photographer licence covers website use of listing photos.
