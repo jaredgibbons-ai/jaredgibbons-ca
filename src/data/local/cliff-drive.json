@@ -1,66 +1,66 @@
 {
   "blocks": [
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com",
-            "h": "https://hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com/8917/7677/0068/OCP_2024_web.pdf"
+            "h": "https://hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com/8917/7677/0068/OCP_2024_web.pdf",
+            "t": "Source: hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com"
           }
         ],
         [
           {
-            "t": "Source: cd.deltasd.bc.ca",
-            "h": "https://cd.deltasd.bc.ca/"
+            "h": "https://cd.deltasd.bc.ca/",
+            "t": "Source: cd.deltasd.bc.ca"
           }
         ],
         [
           {
-            "t": "Source: delta.ca",
-            "h": "https://www.delta.ca/building-development/housing-our-future"
+            "h": "https://www.delta.ca/building-development/housing-our-future",
+            "t": "Source: delta.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "p",
-      "text": "Cliff Drive (Tsawwassen) 55+ homes for sale",
+      "gen": "n55link",
       "h": "/tsawwassen-central-55-plus-homes-for-sale.html",
       "pos": "end",
-      "gen": "n55link"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "What's nearby Cliff Drive",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
+      "text": "Cliff Drive (Tsawwassen) 55+ homes for sale"
     },
     {
+      "gen": "nb",
+      "level": 2,
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Cliff Drive"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -83,18 +83,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -112,18 +112,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -141,18 +141,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -160,25 +160,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Cliff Drive Elementary, 5025 12 Ave",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Brandrith Park",
@@ -205,18 +206,17 @@
           "2.7"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -229,86 +229,556 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt601",
-            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf",
+            "t": "infomaps.translink.ca · tt601"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt614",
-            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt614.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt614.pdf",
+            "t": "infomaps.translink.ca · tt614"
           }
         ],
         [
           {
-            "t": "delta.ca · brandrith park",
-            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/brandrith-park"
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/brandrith-park",
+            "t": "delta.ca · brandrith park"
           }
         ],
         [
           {
-            "t": "delta.ca · park and amenity search",
-            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?page=3"
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?page=3",
+            "t": "delta.ca · park and amenity search"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca · tsawwassen library",
-            "h": "https://www.fvrl.bc.ca/locations/tsawwassen-library"
+            "h": "https://www.fvrl.bc.ca/locations/tsawwassen-library",
+            "t": "fvrl.bc.ca · tsawwassen library"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · delta",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta",
+            "t": "studentsuccess.gov.bc.ca · delta"
           }
         ],
         [
           {
-            "t": "saveonfoods.com · store",
-            "h": "https://www.saveonfoods.com/sm/planning/rsid/943/store"
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/943/store",
+            "t": "saveonfoods.com · store"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Cliff Drive: streets and boundaries"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Cliff Drive is a pocket of north-west Tsawwassen in the City of Delta, and the City publishes no official boundary for the name."
+          }
+        ],
+        [
+          {
+            "t": "The City plans this ground as part of Tsawwassen, one of Delta's three communities (Ladner, Tsawwassen and North Delta), under the Official Community Plan (OCP), Bylaw No. 8400 (2024)"
+          }
+        ],
+        [
+          {
+            "t": "Brandrith Park, 5093 12 Ave, sits inside the pocket on the City's park search, which places the working centre of the area on 12 Avenue west of 56 Street"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Cliff Drive: the housing stock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The stock here is freehold single detached houses and duplexes, because zoning is parcel by parcel under Delta Zoning Bylaw No. 7600 and the zones found in Tsawwassen are the RS single detached and RD duplex families"
+          }
+        ],
+        [
+          {
+            "t": "Subdivision minimums in those zones run from RS7 at 335 m² and RS6 at 390 m² up to RS4 at 610 m² and RD1 duplex at 836 m², so lot pattern is set by the parcel's zone, not by the sub-area name"
+          }
+        ],
+        [
+          {
+            "t": "No condo or townhome complex with a street address in Cliff Drive was confirmed on a City, developer or strata source"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Cliff Drive: rules that affect buyers"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Delta's zoning umbrella is Zoning Bylaw No. The bylaw's zone sheets set each zone's uses and minimum lot sizes, and the parcel's zone is read off the City zoning maps"
+          }
+        ],
+        [
+          {
+            "t": "Delta's small-scale multi-unit housing (SSMUH) updates allow up to four units on all single-detached and duplex lots where the zoning applies"
+          }
+        ],
+        [
+          {
+            "t": "There is no Tsawwassen Area Plan in the current OCP: Bylaw No. 8400 (2024) is a single consolidated plan, and the former Tsawwassen Area Plan was Schedule D.1 under the superseded OCP, Bylaw No. 3950"
+          }
+        ],
+        [
+          {
+            "t": "On the pocket's western edge, hazard Development Permit Area SD2 English Bluff (Tsawwassen Escarpment) applies to parcels shown on the OCP maps, so escarpment-edge lots need a parcel-level check before building plans are priced"
+          }
+        ],
+        [
+          {
+            "t": "Any Delta property within 30 m of a stream, slough or ditch is in the Streamside Protection and Enhancement Development Permit Area"
+          }
+        ],
+        [
+          {
+            "t": "Delta permits 2 to 4 hens for personal use on a lot in any RS or RD zone, with coop and run at most 10 m², no roosters, and an annual licence under the Animal Control Bylaw"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Cliff Drive: local details a buyer would not know"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The school physically in the pocket is Cliff Drive Elementary, 5025 12 Ave, a Kindergarten to Grade 7 school in School District 37"
+          }
+        ],
+        [
+          {
+            "t": "Brandrith Park, 5093 12 Ave, is listed by the City with pickleball, picnic tables, sport courts, sports fields, tennis courts and washrooms"
+          }
+        ],
+        [
+          {
+            "t": "Green Can organics are collected weekly in Delta, with material curbside by 7:00 a.m. on the household's collection day"
+          }
+        ],
+        [
+          {
+            "t": "South Delta Recreation Centre, 1720 56 St, beside South Delta Exchange, is the main Tsawwassen recreation facility on the City's facility pages"
+          }
+        ],
+        [
+          {
+            "t": "Tsawwassen Library (Fraser Valley Regional Library) is at 1321A 56 St at Tsawwassen Town Centre"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Cliff Drive: costs and taxes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Delta Council approved a 2.9 per cent property tax increase for 2026 on December 8, 2025, and the 2026 tax due date was July 2, 2026, with a 5% penalty after that date and a further 5% after September 2, 2026"
+          }
+        ],
+        [
+          {
+            "t": "The 2026 flat rate utility bill for a single-family home is $1,658, up $51 from $1,607 in 2025; residential owners receive the annual flat rate bill at the end of February for garbage and recycling, with water and sewer on that bill or on separate quarterly metered bills"
+          }
+        ],
+        [
+          {
+            "t": "Delta's utility bylaws are Bylaw No. 8537 (water service), Bylaw No. 8538 (sewer rates) and Bylaw No. 8539 (garbage collection)"
+          }
+        ],
+        [
+          {
+            "t": "The Speculation and Vacancy Tax applies here: the Province lists the City of Delta among the Metro Vancouver Regional District taxable areas, and residential owners in a taxable area must complete the annual declaration"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Cliff Drive: getting around"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "There is no rapid transit in Tsawwassen; buses from South Delta Exchange are the transit link. TransLink route 601 runs South Delta / Boundary Bay to Bridgeport Station (Canada Line) via 56 Street, and route 602 runs Tsawwassen Heights to Bridgeport Station, both via South Delta Exchange at 56 Street and 18 Avenue"
+          }
+        ],
+        [
+          {
+            "t": "Route 620 links the BC Ferries Tsawwassen terminal to Bridgeport Station via Highway 17, Highway 17A, Ladner Exchange and Highway 99"
+          }
+        ],
+        [
+          {
+            "t": "The BC Ferries Vancouver (Tsawwassen) terminal is at the end of Highway 17, with sailings to Swartz Bay (Victoria), Duke Point and Departure Bay (Nanaimo) and the Southern Gulf Islands"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Cliff Drive: risks and due diligence"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Check the parcel against hazard Development Permit Area SD2 English Bluff on the OCP maps before buying on the western edge — the map, not the listing, shows whether the lot is in the escarpment area"
+          }
+        ],
+        [
+          {
+            "t": "Check streamside status: any lot within 30 m of a stream, slough or ditch is in the Streamside Protection and Enhancement Development Permit Area, which can limit building placement"
+          }
+        ],
+        [
+          {
+            "t": "Check the parcel's zone and flood construction level with the City: zoning is parcel by parcel under Bylaw No. 7600, and the City is the diking authority for Delta's flood protection system"
+          }
+        ],
+        [
+          {
+            "t": "The OCP and zoning maps do not tell a buyer a lot's soil, drainage history or a building's condition — those need a survey, a geotechnical report and an inspection, none of which a map layer replaces"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "How Cliff Drive compares"
+    },
+    {
+      "caption": "Cliff Drive compared",
+      "gen": "uq",
+      "head": [
+        "Fact",
+        "Cliff Drive",
+        "Tsawwassen Central",
+        "Beach Grove"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Municipality",
+          "City of Delta",
+          "City of Delta",
+          "City of Delta"
+        ],
+        [
+          "School district",
+          "SD37 Delta",
+          "SD37 Delta",
+          "SD37 Delta"
+        ],
+        [
+          "Speculation and Vacancy Tax area",
+          "Yes — City of Delta listed",
+          "Yes — City of Delta listed",
+          "Yes — City of Delta listed"
+        ],
+        [
+          "2026 Spring Clean-Up day",
+          "Monday, March 30, 2026 (Tsawwassen)",
+          "Monday, March 30, 2026 (Tsawwassen)",
+          "Monday, March 30, 2026 (Tsawwassen)"
+        ],
+        [
+          "Rapid transit station in area",
+          "None",
+          "None",
+          "—"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What is not confirmed about Cliff Drive"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "An official City of Delta boundary for Cliff Drive (none is published; the geography above is working geography from the school and park addresses)."
+          }
+        ],
+        [
+          {
+            "t": "Any condo or townhome complex name with a street address inside Cliff Drive."
+          }
+        ],
+        [
+          {
+            "t": "Which specific Cliff Drive parcels fall inside hazard Development Permit Area SD2 English Bluff."
+          }
+        ],
+        [
+          {
+            "t": "A development application inside the Cliff Drive pocket itself."
+          }
+        ],
+        [
+          {
+            "t": "Driving times to Vancouver, Richmond or the Peace Arch border crossing."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Related pages"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "/tsawwassen-central.html",
+            "t": "Tsawwassen Central Homes for Sale | Houses & Townhomes"
+          }
+        ],
+        [
+          {
+            "h": "/english-bluff.html",
+            "t": "English Bluff Homes for Sale | Oceanfront Tsawwassen"
+          }
+        ],
+        [
+          {
+            "h": "/beach-grove.html",
+            "t": "Beach Grove Homes for Sale | Tsawwassen Waterfront"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for Cliff Drive"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "https://cd.deltasd.bc.ca/",
+            "t": "cd.deltasd.bc.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/building-development/housing-our-future",
+            "t": "delta.ca · housing our future"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/brandrith-park",
+            "t": "delta.ca · brandrith park"
+          }
+        ],
+        [
+          {
+            "h": "https://maps.delta.ca/Utilities/ZoningPDF/RS4.pdf",
+            "t": "maps.delta.ca · RS4"
+          }
+        ],
+        [
+          {
+            "h": "https://hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com/3417/7676/8580/Delta20Official20Community20Plan20202420-20Housing20Our20Future.pdf",
+            "t": "hdp-ca-prod-app-delta-letstalk-files.s3.ca-central-1.amazonaws.com · Delta20Official20Community20Plan20202420 20Housi"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/sites/default/files/2023-06/Form%20T1%20-%20SPEA%20DPA%20Application%20Guide%20-%20May%202023.pdf",
+            "t": "delta.ca · Form T1 SPEA DPA Application Guide May 2023"
+          }
+        ],
+        [
+          {
+            "h": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf",
+            "t": "delta.civicweb.net · 7600 Delta Zoning Bylaw"
+          }
+        ],
+        [
+          {
+            "h": "http://www.delta.ca/community-culture/happening-delta/news/news-release-city-delta-announces-2026-spring-clean",
+            "t": "delta.ca · news release city delta announces 2026 spring cl"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/services/garbage-recycling/green-can-compost",
+            "t": "delta.ca · green can compost"
+          }
+        ],
+        [
+          {
+            "h": "http://www.delta.ca/parks-recreation/sport-recreation/indoor-facilities/south-delta-recreation-centre",
+            "t": "delta.ca · south delta recreation centre"
+          }
+        ],
+        [
+          {
+            "h": "http://tsawwassentowncentre.ca/project-updates/",
+            "t": "tsawwassentowncentre.ca · project updates"
+          }
+        ],
+        [
+          {
+            "h": "https://centurygroup.ca/projects/southlands-tsawwassen/",
+            "t": "centurygroup.ca · southlands tsawwassen"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/services/property-taxes-utilities/property-taxes",
+            "t": "delta.ca · property taxes"
+          }
+        ],
+        [
+          {
+            "h": "http://www.delta.ca/services/property-taxes-utilities/utilities",
+            "t": "delta.ca · utilities"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas",
+            "t": "www2.gov.bc.ca · taxable areas"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt602.pdf",
+            "t": "infomaps.translink.ca · tt602"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Is Cliff Drive an official City of Delta neighbourhood?",
       "a": "No. \"Cliff Drive\" is a Paragon sub-area name; the City of Delta plans this ground as part of the Tsawwassen community under the Official Community Plan, Bylaw No. 8400 (2024), and publishes no boundary for the name.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is Cliff Drive an official City of Delta neighbourhood?"
     },
     {
-      "q": "Which school is in Cliff Drive?",
       "a": "Cliff Drive Elementary, 5025 12 Ave, Delta — an elementary (K–7) school in School District 37, confirmed in the BC Ministry of Education K-12 schools file and on the school's SD37 site.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which school is in Cliff Drive?"
     },
     {
-      "q": "Is there still a Tsawwassen Area Plan for Cliff Drive?",
       "a": "No. The current Official Community Plan is Bylaw No. 8400 (2024), adopted July 8, 2024 — a single consolidated plan with no Tsawwassen Area Plan schedule; the former area plan was Schedule D.1 under the superseded Bylaw No. 3950.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is there still a Tsawwassen Area Plan for Cliff Drive?"
     },
     {
-      "q": "Can Jared show me homes in Cliff Drive?",
       "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
-      "gen": "muse-generic"
+      "gen": "muse-generic",
+      "q": "Can Jared show me homes in Cliff Drive?"
     }
   ],
   "slug": "cliff-drive",

@@ -45,27 +45,27 @@
       "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Neilsen Grove",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Neilsen Grove"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -88,18 +88,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -117,18 +117,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -141,18 +141,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -160,37 +160,38 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Neilson Grove Elementary, 5500 Admiral Blvd",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
-        [
-          "Ladner Pioneer Library",
-          "Drive",
-          "5",
-          "2.0"
-        ],
         [
           "Save-On-Foods, 5186 48 Ave",
           "Drive",
           "5",
           "1.9"
+        ],
+        [
+          "Ladner Pioneer Library",
+          "Drive",
+          "5",
+          "2.0"
         ],
         [
           "Ladner Exchange",
@@ -199,18 +200,17 @@
           "3.5"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -228,87 +228,87 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt601",
-            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf",
+            "t": "infomaps.translink.ca · tt601"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt618",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt618.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt618.pdf",
+            "t": "infomaps.translink.ca · tt618"
           }
         ],
         [
           {
-            "t": "delta.ca · park and amenity search",
-            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?keywords&region=All&amenities%5B74%5D=74&page=1"
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?keywords&region=All&amenities%5B74%5D=74&page=1",
+            "t": "delta.ca · park and amenity search"
           }
         ],
         [
           {
-            "t": "delta.ca · ladner leisure centre",
-            "h": "http://delta.ca/parks-recreation/sport-recreation/indoor-facilities/ladner-leisure-centre"
+            "h": "http://delta.ca/parks-recreation/sport-recreation/indoor-facilities/ladner-leisure-centre",
+            "t": "delta.ca · ladner leisure centre"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca · ladner pioneer library",
-            "h": "https://www.fvrl.bc.ca/locations/ladner-pioneer-library"
+            "h": "https://www.fvrl.bc.ca/locations/ladner-pioneer-library",
+            "t": "fvrl.bc.ca · ladner pioneer library"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · delta",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta",
+            "t": "studentsuccess.gov.bc.ca · delta"
           }
         ],
         [
           {
-            "t": "saveonfoods.com · store",
-            "h": "https://www.saveonfoods.com/sm/planning/rsid/936/store"
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/936/store",
+            "t": "saveonfoods.com · store"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 2,
-      "text": "What's nearby, building by building",
-      "gen": "nbb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
-      "gen": "nbb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Pilothouse at Hampton Cove, 5535 Admiral Way",
-      "gen": "nbb",
-      "pos": "end"
+      "text": "What's nearby, building by building"
     },
     {
-      "t": "list",
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Pilothouse at Hampton Cove, 5535 Admiral Way"
+    },
+    {
+      "gen": "nbb",
       "items": [
         [
           {
@@ -331,19 +331,19 @@
           }
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 3,
-      "text": "Measured walking and driving times from each building",
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
       "head": [
         "Building",
         "To",
@@ -351,14 +351,8 @@
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
-        [
-          "Pilothouse at Hampton Cove",
-          "Ladner Exchange",
-          "Drive",
-          "6",
-          "3.5"
-        ],
         [
           "Pilothouse at Hampton Cove",
           "Save-On-Foods, 5186 48 Ave",
@@ -368,6 +362,13 @@
         ],
         [
           "Pilothouse at Hampton Cove",
+          "Ladner Exchange",
+          "Drive",
+          "6",
+          "3.5"
+        ],
+        [
+          "Pilothouse at Hampton Cove",
           "Ladner Pioneer Library",
           "Drive",
           "6",
@@ -375,14 +376,14 @@
         ],
         [
           "Shorewalk",
-          "Save-On-Foods, 5186 48 Ave",
+          "Ladner Pioneer Library",
           "Walk",
           "11",
           "0.8"
         ],
         [
           "Shorewalk",
-          "Ladner Pioneer Library",
+          "Save-On-Foods, 5186 48 Ave",
           "Walk",
           "11",
           "0.8"
@@ -395,64 +396,503 @@
           "1.3"
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 3,
-      "text": "Sources for what’s nearby each building",
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
     },
     {
-      "t": "list",
+      "gen": "nbb",
       "items": [
         [
           {
-            "t": "infomaps.translink.ca · tt618",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt618.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt618.pdf",
+            "t": "infomaps.translink.ca · tt618"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt601",
-            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/221/tt601.pdf",
+            "t": "infomaps.translink.ca · tt601"
           }
         ],
         [
           {
-            "t": "delta.ca · park and amenity search",
-            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?keywords&region=All&amenities%5B74%5D=74&page=1"
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search?keywords&region=All&amenities%5B74%5D=74&page=1",
+            "t": "delta.ca · park and amenity search"
           }
         ],
         [
           {
-            "t": "delta.ca · ladner leisure centre",
-            "h": "http://delta.ca/parks-recreation/sport-recreation/indoor-facilities/ladner-leisure-centre"
+            "h": "http://delta.ca/parks-recreation/sport-recreation/indoor-facilities/ladner-leisure-centre",
+            "t": "delta.ca · ladner leisure centre"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca · ladner pioneer library",
-            "h": "https://www.fvrl.bc.ca/locations/ladner-pioneer-library"
+            "h": "https://www.fvrl.bc.ca/locations/ladner-pioneer-library",
+            "t": "fvrl.bc.ca · ladner pioneer library"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · delta",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/delta",
+            "t": "studentsuccess.gov.bc.ca · delta"
           }
         ],
         [
           {
-            "t": "saveonfoods.com · store",
-            "h": "https://www.saveonfoods.com/sm/planning/rsid/936/store"
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/936/store",
+            "t": "saveonfoods.com · store"
           }
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Neilsen Grove: streets and boundaries"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Neilsen Grove is a north Ladner pocket in the City of Delta, and the spelling is the first fact: the AREA is \"Neilsen Grove\" and the SCHOOL is \"Neilson Grove Elementary\" — opposite spellings, both official"
+          }
+        ],
+        [
+          {
+            "t": "The pocket sits on and around the Marina Garden Estates lands on Admiral Way and Admiral Boulevard, named in City of Delta council reports; the City publishes no neighbourhood boundary for the name"
+          }
+        ],
+        [
+          {
+            "t": "Neilson Grove Elementary is physically in the area at 5500 Admiral Boulevard"
+          }
+        ],
+        [
+          {
+            "t": "Hawthorne is south, Delta Manor and the Ladner village core are south-west, and Ladner Harbour is west, at Ladner Harbour Park, 4905 McNeelys Way"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Neilsen Grove: the housing stock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The pocket mixes freehold detached houses with strata townhouse and apartment buildings in the Hampton Cove / Marina Garden Estates development on Admiral Way and Admiral Boulevard"
+          }
+        ],
+        [
+          {
+            "t": "Polygon's Hampton Cove buildings, from the developer's own pages: Pilothouse, a condominium building at 5535 Admiral Way ( Fairwinds townhomes at 5550 Admiral Way ( Beaufort Landing townhomes at 5551 Admiral Way ( and Westhampton townhomes at 5311 Admiral Way"
+          }
+        ],
+        [
+          {
+            "t": "A City council report names Marina Garden Estates at 5311 Admiral Way as a townhouse development, and a City memorandum describes a multi-family apartment building within the same application lands"
+          }
+        ],
+        [
+          {
+            "t": "7600 — RS5 minimum lot area 550 m² (460 m² outside the Single Family Residential designation), RS6 at 390 m² and RS7 at 335 m² for new lots created by subdivision"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Neilsen Grove: rules that affect buyers"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "This section covers what is specific to this pocket."
+          }
+        ],
+        [
+          {
+            "t": "Lots near the harbour shore can fall in the Streamside Protection and Enhancement Development Permit Area, which covers any Delta property within 30 m of a stream, slough or ditch"
+          }
+        ],
+        [
+          {
+            "t": "The RS1 zone lists a secondary suite as an accessory use to a single detached dwelling, which is the suite route for the pocket's detached lots where RS1 applies"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Neilsen Grove: local details a buyer would not know"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Ladner Leisure Centre, 4600 Clarence Taylor Crescent, is the main Ladner recreation facility on the City's facility pages"
+          }
+        ],
+        [
+          {
+            "t": "Ladner Pioneer Library (Fraser Valley Regional Library) is at 4683 51st Street in the village core"
+          }
+        ],
+        [
+          {
+            "t": "Delta Hospital, 5800 Mountain View Blvd, is Fraser Health's community hospital for Delta with 24/7 emergency care, beside Ladner Exchange"
+          }
+        ],
+        [
+          {
+            "t": "Route 601 runs from Ladner Exchange via Ladner Trunk Road, Highway 17A and Highway 99 to Bridgeport Station — the Ladner commuter link a Neilsen Grove buyer uses from the exchange"
+          }
+        ],
+        [
+          {
+            "t": "SD37 publishes Ladner Area catchment boundary maps (elementary and secondary, updated October 2017) alongside the address-based locator"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Neilsen Grove: costs and taxes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The pocket-specific point is billing type: urban Ladner homes here are on City water and sewer, billed on the annual flat rate utility bill or quarterly metered bills, unlike the well-and-septic checks that apply on Delta farm parcels"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Neilsen Grove: getting around"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "From Ladner Exchange, route 601 runs via Ladner Trunk Road (Highway 10), Highway 17A and Highway 99 to Bridgeport Station on the Canada Line"
+          }
+        ],
+        [
+          {
+            "t": "Route 620 links Ladner Exchange to the BC Ferries Tsawwassen terminal and to Bridgeport Station via Highway 17A and Highway 17"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Neilsen Grove: risks and due diligence"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Check streamside setbacks near the harbour and sloughs: any lot within 30 m of a stream, slough or ditch is in the Streamside Protection and Enhancement Development Permit Area"
+          }
+        ],
+        [
+          {
+            "t": "For a Hampton Cove strata unit, the due diligence is the strata record set — bylaws, rules, fees, levies and depreciation information — under the Province's strata buying guidance"
+          }
+        ],
+        [
+          {
+            "t": "Confirm the parcel's flood construction level with the City: Ladner is diked low land, and the level is property-specific"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "How Neilsen Grove compares"
+    },
+    {
+      "caption": "Neilsen Grove compared",
+      "gen": "uq",
+      "head": [
+        "Fact",
+        "Neilsen Grove",
+        "Hawthorne",
+        "Ladner Rural"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Municipality",
+          "City of Delta",
+          "City of Delta",
+          "City of Delta"
+        ],
+        [
+          "School district",
+          "SD37 Delta",
+          "SD37 Delta",
+          "SD37 Delta"
+        ],
+        [
+          "Speculation and Vacancy Tax area",
+          "Yes — City of Delta listed",
+          "Yes — City of Delta listed",
+          "Yes — City of Delta listed"
+        ],
+        [
+          "2026 Spring Clean-Up day",
+          "Tuesday, March 31, 2026 (Ladner)",
+          "Tuesday, March 31, 2026 (Ladner)",
+          "Tuesday, March 31, 2026 (Ladner)"
+        ],
+        [
+          "Elementary school inside the area",
+          "Yes — Neilson Grove Elementary, 5500 Admiral Blvd",
+          "—",
+          "—"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What is not confirmed about Neilsen Grove"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "SD37 catchments for Neilsen Grove addresses other than the sample address (5500 Admiral Boulevard)."
+          }
+        ],
+        [
+          {
+            "t": "A park inside Neilsen Grove itself by official City name, and a grocery store inside the pocket."
+          }
+        ],
+        [
+          {
+            "t": "Whether any Agricultural Land Reserve land sits inside the pocket."
+          }
+        ],
+        [
+          {
+            "t": "The current construction status of the Marina Garden Estates apartment building described in the City memorandum."
+          }
+        ],
+        [
+          {
+            "t": "Driving times to Vancouver, Surrey Central or the Peace Arch border crossing."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Related pages"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "/ladner-rural.html",
+            "t": "Ladner Rural Homes & Acreages for Sale | Delta"
+          }
+        ],
+        [
+          {
+            "h": "/hawthorne.html",
+            "t": "Hawthorne Ladner Homes for Sale | Delta BC"
+          }
+        ],
+        [
+          {
+            "h": "/delta-manor.html",
+            "t": "Delta Manor Homes for Sale, Ladner BC"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for Neilsen Grove"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "https://ng.deltasd.bc.ca/",
+            "t": "ng.deltasd.bc.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://delta.civicweb.net/document/202969/",
+            "t": "delta.civicweb.net · document"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/parks-recreation/parks-trails/park-and-amenity-search/ladner-harbour-park",
+            "t": "delta.ca · ladner harbour park"
+          }
+        ],
+        [
+          {
+            "h": "https://polyhomes.com/community/pilothouse/",
+            "t": "polyhomes.com · pilothouse"
+          }
+        ],
+        [
+          {
+            "h": "http://www.polyhomes.com/community/fairwinds",
+            "t": "polyhomes.com · fairwinds"
+          }
+        ],
+        [
+          {
+            "h": "https://www.polyhomes.com/community/beaufortlanding/",
+            "t": "polyhomes.com · beaufortlanding"
+          }
+        ],
+        [
+          {
+            "h": "https://www.polyhomes.com/community/westhampton/",
+            "t": "polyhomes.com · westhampton"
+          }
+        ],
+        [
+          {
+            "h": "https://delta.civicweb.net/document/84874/",
+            "t": "delta.civicweb.net · document (2)"
+          }
+        ],
+        [
+          {
+            "h": "https://maps.delta.ca/Utilities/ZoningPDF/RS5.pdf",
+            "t": "maps.delta.ca · RS5"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/first-time-owners",
+            "t": "www2.gov.bc.ca · first time owners"
+          }
+        ],
+        [
+          {
+            "h": "https://www.delta.ca/sites/default/files/2023-06/Form%20T1%20-%20SPEA%20DPA%20Application%20Guide%20-%20May%202023.pdf",
+            "t": "delta.ca · Form T1 SPEA DPA Application Guide May 2023"
+          }
+        ],
+        [
+          {
+            "h": "https://maps.delta.ca/Utilities/ZoningPDF/RS1.pdf",
+            "t": "maps.delta.ca · RS1"
+          }
+        ],
+        [
+          {
+            "h": "http://www.delta.ca/community-culture/happening-delta/news/news-release-city-delta-announces-2026-spring-clean",
+            "t": "delta.ca · news release city delta announces 2026 spring cl"
+          }
+        ],
+        [
+          {
+            "h": "http://delta.ca/parks-recreation/sport-recreation/indoor-facilities/ladner-leisure-centre",
+            "t": "delta.ca · ladner leisure centre"
+          }
+        ],
+        [
+          {
+            "h": "https://fvrl.bibliocommons.com/locations/LD",
+            "t": "fvrl.bibliocommons.com · locations"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Delta/delta-hospital",
+            "t": "fraserhealth.ca · delta hospital"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [

@@ -1,0 +1,84 @@
+# Greendale Guide — Extra Local Notes
+Page: greendale-guide (Greendale, Chilliwack; area guide).
+
+## 1. STREETS AND BOUNDARIES
+- Greendale is a farming settlement on the west side of the City of Chilliwack, on the Sumas Prairie, with Sumas Prairie Road as its spine. The City's Agricultural Area Plan names Greendale among Chilliwack's smaller agricultural settlements, alongside Sardis, Vedder Crossing, Rosedale and Yarrow. https://www.chilliwack.com/main/attachments/Files/2387/SB1%5FAgricultural%5FArea%5FPlan%5F1%2Epdf
+- The City publishes no street-by-street boundary for Greendale as a sub-area; the named anchors are Greendale Community Elementary School at 6621 Sumas Prairie Road and the Great Blue Heron Nature Reserve at the south end of Sumas Prairie Road, on the Vedder River. https://www.chilliwack.com/main/page.cfm?id=210
+- History in brief: by the end of the 19th century Greendale was one of the smaller settlements around the Chilliwack hub, and from 1944 to 1946 a large number of farmers migrated here from the Canadian Prairies, diversifying the dairy mainstay into poultry, hogs, raspberries and strawberries. https://www.chilliwack.com/main/attachments/Files/2387/SB1%5FAgricultural%5FArea%5FPlan%5F1%2Epdf
+- It sits west of Sardis and the University of the Fraser Valley (UFV) Chilliwack campus, on the loop BC Transit runs through Yarrow before reaching Greendale. https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=55
+Read: 2026-11-03
+
+## 2. THE HOUSING STOCK
+- The housing stock is farm housing on agricultural parcels, not subdivision housing. The City's Agricultural Area Plan states Chilliwack's land base is 25,900 hectares, two-thirds of it reserved for agriculture, and that city agriculture is dominated by dairy and poultry farms, nurseries and greenhouses — the working setting Greendale houses sit in. https://www.chilliwack.com/main/attachments/Files/2387/SB1%5FAgricultural%5FArea%5FPlan%5F1%2Epdf
+- Farm parcels here fall under Development Permit Area D-4, Farm Home Plate, in the Chilliwack 2050 Official Community Plan (OCP), which exists to keep the residential footprint from encroaching into active farmland. https://www.chilliwack.com/main/page.cfm?id=2387
+- The community building is the school: Greendale Community Elementary, 6621 Sumas Prairie Road, built in 2002 and designated a community school in School District No. 33 (SD33) documents. https://www.sd33.bc.ca/sites/sd33.bc.ca/files/2022-03/SD33%20LRFP%202021-2025.pdf
+- No City recreation centre is located in Greendale; the named public site is the Great Blue Heron Nature Reserve at 5200 Sumas Prairie Road, with over 10 kilometres of trails and no admission fee. https://www.chilliwack.com/main/page.cfm?id=210
+Read: 2026-11-03
+
+## 3. RULES THAT AFFECT BUYERS HERE
+- The governing plan is Chilliwack 2050, Official Community Plan Bylaw 2025, No. 5500, adopted December 16, 2025, and its Schedule B1 is the Agricultural Area Plan that sets the City's farm-land policies for Greendale. https://www.chilliwack.com/main/page.cfm?id=2387
+- Agricultural Land Reserve (ALR) housing rules cap the house itself: land in the ALR may generally have no more than one residence per parcel, a principal residence must be 500 square metres or less in total floor area, and a secondary suite is permitted only when it is entirely inside the principal residence and City bylaws allow it. https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/
+- One additional detached residence can be permitted without an Agricultural Land Commission (ALC) application, at up to 90 square metres on parcels of 40 hectares or less, or up to 186 square metres on larger parcels, if the conditions on the Commission's housing page are met. https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/
+- Flood building rules have a Greendale-specific section: for non-ALR areas in Greendale and Yarrow, the City's floodplain guide allows the lowest habitable floor at not less than 1.2 metres above natural ground elevation or 0.3 metres above the crown of the adjacent road, whichever is greater, with a qualified professional's report and a flooding covenant on title. https://www.chilliwack.com/main/page.cfm?id=637
+Read: 2026-11-03
+
+## 4. WHAT BUYERS ASK
+- **Q:** Can I build a second house on a Greendale farm? **A:** Only inside the Agricultural Land Reserve housing frame. The Agricultural Land Commission permits one principal residence of 500 square metres or less per parcel, a suite only inside that residence, and in some cases one additional detached residence of up to 90 square metres on parcels of 40 hectares or less. Anything beyond that needs a Commission application, and City bylaws can be more restrictive, not less. https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/
+- **Q:** Which schools will my children attend? **A:** Start with the school in the community, then confirm by address. Greendale Community Elementary at 6621 Sumas Prairie Road is Kindergarten to Grade 5, and the district's Families of Schools list groups it with Mt. Slesse Middle School (Grades 6–8) and G.W. Graham Secondary (Grades 9–12). School District No. 33 catchments are set by street address, so run the exact farm address through the district School Locator. https://www.sd33.bc.ca/sites/sd33.bc.ca/files/2025-08/Family%20of%20School%20list%202025%202026_0.pdf
+- **Q:** How does flood risk change what I can build? **A:** Directly, through a named Greendale rule. The City floodplain guide's section for non-ALR areas in Greendale and Yarrow sets the lowest habitable floor at 1.2 metres above natural ground or 0.3 metres above the road crown, whichever is greater, and requires a qualified professional's report plus a covenant absolving the City for flood damage. On ALR parcels behind standard dykes the same 1.2-metre figure applies. https://www.chilliwack.com/main/page.cfm?id=637
+- **Q:** Is there a bus, or is this car-only country? **A:** There is a bus, but it is infrequent. BC Transit Route 55 Yarrow–Greendale loops from Vedder Road at South Sumas Road through the UFV Chilliwack campus and Yarrow to Greendale, with four weekday departures shown on the operator's schedule (7:11 a.m., 9:50 a.m., 2:55 p.m. and 6:05 p.m. from Vedder Road) and three on Saturday. Plan daily life around a vehicle and treat the bus as a backup. https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=55
+- **Q:** What farm uses will I live beside? **A:** Working dairy and poultry country. The City's Agricultural Area Plan states Chilliwack agriculture is dominated by dairy and poultry farms, nurseries and greenhouses, and City policy is to protect designated agricultural land for agricultural purposes — normal farm practice, including manure spreading and early machinery hours, is the protected use, not the exception. https://www.chilliwack.com/main/attachments/Files/2387/SB1%5FAgricultural%5FArea%5FPlan%5F1%2Epdf
+Read: 2026-11-03
+
+## 5. LOCAL DETAILS A BUYER WOULD NOT KNOW
+- The nature reserve is a working heron colony, not just a park: the City states the Great Blue Heron Nature Reserve holds one of the largest breeding colonies of Great Blue Herons in British Columbia, with a Rotary Interpretive Centre, observation tower and bird blinds, open 10 a.m.–4 p.m. February to October and 11 a.m.–3 p.m. November to January. https://www.chilliwack.com/main/page.cfm?id=210
+- Catchments are under review elsewhere in the district, which can move boundaries: School District No. 33 states a catchment review begins in fall 2026 for four other schools, with any recommended adjustments to the Board by spring 2027 — Greendale is not named in that review. https://sd33.bc.ca/index.php/find-your-school
+- Water history matters on well-served farm roads: a 2016 City council package described Greendale Water Phase 2 and Phase 3 projects to extend the City water supply into Greendale because private wells had shown elevated nitrates and arsenic in laboratory tests — confirm whether a specific parcel is on City water or a well before buying. https://www.chilliwack.com/apps/council/meetings/agendapackage/reg/2016.10.18 - Regular Council Agenda Package.pdf
+- For rural parcels off community sewer, Fraser Health states a building must use an onsite sewerage system complying with the provincial Sewerage System Regulation, and only an Authorized Person may design, install or repair it. https://www.fraserhealth.ca/health-topics-a-to-z/onsite-sewerage-systems/regulatory-requirements-for-onsite-sewerage-systems
+- Well records for a parcel are held in the Province's GWELLS registry, which is where a buyer checks a drilled well's record before relying on it. https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/information-for-property-owners/well-records-registration
+- The nearest library branches are outside Greendale: Yarrow Library at 4670 Community Street and Sardis Library at 5819 Tyson Road are the Fraser Valley Regional Library branches named in earlier official-source research for this area. http://fvrl.bc.ca/locations/yarrow-library
+Read: 2026-11-03
+
+## 6. DEVELOPMENT AND NEW PROJECTS
+- No active applications found on the municipal page read on 2026-11-03 https://www.chilliwack.com/main/page.cfm?id=2387
+- The plan change that touches every Greendale parcel is the plan itself: Chilliwack 2050, Official Community Plan Bylaw 2025, No. 5500, adopted December 16, 2025, carries the Agricultural Area Plan as Schedule B1 and the Farm Home Plate Development Permit Area as Schedule D-4. STATUS: adopted plan, implementation under way, read 2026-11-03. http://engagechilliwack.com/chwk2050
+Read: 2026-11-03
+
+## 7. COSTS AND TAXES HERE
+- City of Chilliwack residential tax rates, water and sewer charges and quarterly utility billing are written in full in the chilliwack-houses-for-sale note — see the chilliwack-houses-for-sale note. https://www.chilliwack.com/main/attachments/Files/2527/Tax%5FRates%5Ffor%5Fthe%5FWeb%2Dmou9gntw%5Fc%2Epdf
+- No Greendale-specific municipal charge was found on the City pages read; the area-specific cost a buyer meets is servicing — confirming City water connection versus a private well, and an onsite sewerage system versus community sewer, parcel by parcel. https://www.fraserhealth.ca/health-topics-a-to-z/onsite-sewerage-systems/regulatory-requirements-for-onsite-sewerage-systems
+Read: 2026-11-03
+
+## 8. GETTING AROUND
+- BC Transit, not TransLink, serves Greendale, on Route 55 Yarrow–Greendale. The operator's schedule shows the loop running Vedder Road at South Sumas Road, UFV Chilliwack Campus, Yarrow Central Road at Kehler Street, then Greendale, and back. https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=55
+- Route 55 frequency is four trips on weekdays and three on Saturdays in the schedule read, with no Sunday trips shown — the timetable, not a summary page, is the document to check before relying on a trip. https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=55
+- The regional link is Route 66 Fraser Valley Express from Downtown Chilliwack, reached from Greendale by first getting to a Vedder Road stop; measured drive times from Greendale to Highway 1 or downtown Chilliwack are UNCONFIRMED. https://www.bctransit.com/chilliwack/schedules-and-maps/
+Read: 2026-11-03
+
+## 9. RISKS AND DUE DILIGENCE
+- Floodplain is the headline risk: the City states much of Chilliwack lies in the floodplain of the Fraser River to the north, the Vedder River to the south or the Sumas River to the west, and Greendale sits on the Sumas Prairie between the Sumas and Vedder systems. https://www.chilliwack.com/main/page.cfm?id=637
+- Look the lot up under Floodplain Regulation Bylaw No. 4519: new construction elevation is the Flood Construction Level plus 0.6 metres freeboard, the freeboard can only be waived with a Section 219 covenant and a qualified professional's report, and the bylaw guide does not give a lot's individual level — the City or a professional must state it for the parcel. https://www.chilliwack.com/main/page.cfm?id=637
+- Check Development Permit Area designations on the parcel in the Chilliwack 2050 schedules: D-4 Farm Home Plate governs the residential footprint on farmland, and D-3 Riparian Area protects fish habitat along creeks and ditches crossing farm parcels. https://www.chilliwack.com/main/page.cfm?id=2387
+- Confirm Agricultural Land Reserve status parcel by parcel on Agricultural Land Commission mapping before assuming any non-farm use; the plan protects the land base, and ALR status is a property-level fact, not a neighbourhood one. https://www.alc.gov.bc.ca/alr-maps
+Read: 2026-11-03
+
+## 10. HOW IT COMPARES
+| Fact | Greendale | Yarrow | Sardis |
+|---|---|---|---|
+| Plan frame | Schedule B1 Agricultural Area Plan, Chilliwack 2050 OCP Bylaw No. 5500 https://www.chilliwack.com/main/page.cfm?id=2387 | Schedule B7 Yarrow Neighbourhood Plan, same OCP https://www.chilliwack.com/main/page.cfm?id=2387 | Schedule B5 Sardis Neighbourhood Plan, same OCP https://www.chilliwack.com/main/page.cfm?id=2387 |
+| School district | School District No. 33 (Chilliwack) https://sd33.bc.ca/index.php/find-your-school | School District No. 33 (Chilliwack) https://sd33.bc.ca/index.php/find-your-school | School District No. 33 (Chilliwack) https://sd33.bc.ca/index.php/find-your-school |
+| Named bus route | Route 55 Yarrow–Greendale https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=55 | Route 55 Yarrow–Greendale https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=55 | unconfirmed |
+| Flood rule named for the area | Non-ALR Greendale and Yarrow: lowest habitable floor 1.2 m above natural ground or 0.3 m above road crown https://www.chilliwack.com/main/page.cfm?id=637 | Same Greendale and Yarrow section https://www.chilliwack.com/main/page.cfm?id=637 | unconfirmed |
+Read: 2026-11-03
+
+## NOT CONFIRMED
+- Greendale's Mennonite settlement history: NOT CONFIRMED for this note. The only source found in this pass stating that Mennonites first settled Greendale in April 1930, on lots bounded by Adams Road, Hopedale Road, South Sumas Road and Sumas Prairie Road, was an encyclopedia entry (GAMEO) citing Chilliwack Museum and Archives material — not a City of Chilliwack, museum or other official page actually read, so the history is not stated as fact here.
+- An official street-by-street boundary for the Greendale sub-area — no City page read publishes one.
+- A Greendale-specific statement of build eras or dwelling types from a City source, and any named residential development inside Greendale.
+- Whether a specific Greendale parcel is on City water or a private well today — the 2016 council package describes phased water extension; current service is parcel-specific and was not confirmed.
+- Any active development application inside Greendale on a City applications listing — no Greendale application was found on the municipal pages read; the City does not publish a single Greendale-filtered applications page in the sources read.
+
+## INTERNAL LINK SUGGESTIONS
+- chilliwack-farms — the city-wide farm and ALR buying rules, which point back to this guide for Greendale-specific farm facts.
+- greendale — the street-level neighbourhood page for the same community.
+- yarrow-guide — the neighbouring farm settlement that shares Greendale's flood rule and its Route 55 bus loop.

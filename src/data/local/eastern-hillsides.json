@@ -1,74 +1,27 @@
 {
-  "status": "draft",
-  "slug": "eastern-hillsides",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: chilliwack.com (1)",
-            "h": "https://www.chilliwack.com/main/attachments/attachView.cfm?attachID=3557"
-          }
-        ],
-        [
-          {
-            "t": "Source: sd33.bc.ca",
-            "h": "https://sd33.bc.ca/index.php/find-your-school"
-          }
-        ],
-        [
-          {
-            "t": "Source: chilliwack.com (3)",
-            "h": "https://www.chilliwack.com/main/page.cfm?id=1962"
-          }
-        ],
-        [
-          {
-            "t": "Source: bctransit.com",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview"
-          }
-        ],
-        [
-          {
-            "t": "Source: chilliwack.com (5)",
-            "h": "https://www.chilliwack.com/main/page.cfm?id=1754&dowhat=locationView&plID=203"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "What's nearby Eastern Hillsides",
       "gen": "nb",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What's nearby Eastern Hillsides"
     },
     {
+      "gen": "nb",
+      "pos": "end",
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -86,18 +39,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -115,18 +68,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -144,18 +97,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -163,25 +116,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Sardis Library, 5819 Tyson Rd",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Save-On-Foods Garrison Crossing",
@@ -202,18 +156,17 @@
           "5.4"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -221,91 +174,588 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "bctransit.com · chw map 66",
-            "h": "https://www.bctransit.com/wp-content/uploads/2026/03/chw_map_66.pdf"
+            "h": "https://www.bctransit.com/wp-content/uploads/2026/03/chw_map_66.pdf",
+            "t": "bctransit.com · chw map 66"
           }
         ],
         [
           {
-            "t": "bctransit.com · schedules and maps",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/"
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/",
+            "t": "bctransit.com · schedules and maps"
           }
         ],
         [
           {
-            "t": "chilliwack.com",
-            "h": "https://www.chilliwack.com/main/page.cfm?id=1754.&dowhat=typeView&ptID=1&listView=1"
+            "h": "https://www.chilliwack.com/main/page.cfm?id=1754.&dowhat=typeView&ptID=1&listView=1",
+            "t": "chilliwack.com"
           }
         ],
         [
           {
-            "t": "chilliwack.com (2)",
-            "h": "https://www.chilliwack.com/main/page.cfm?id=37&prshow=details&prID=409"
+            "h": "https://www.chilliwack.com/main/page.cfm?id=37&prshow=details&prID=409",
+            "t": "chilliwack.com (2)"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca",
-            "h": "https://www.fvrl.bc.ca/"
+            "h": "https://www.fvrl.bc.ca/",
+            "t": "fvrl.bc.ca"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · chilliwack",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/chilliwack"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/chilliwack",
+            "t": "studentsuccess.gov.bc.ca · chilliwack"
           }
         ],
         [
           {
-            "t": "saveonfoods.com · store",
-            "h": "https://www.saveonfoods.com/sm/planning/rsid/944/store"
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/944/store",
+            "t": "saveonfoods.com · store"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Eastern Hillsides: streets and boundaries"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Eastern Hillsides is a hillside plan area in southeast Chilliwack, inside the City of Chilliwack."
+          }
+        ],
+        [
+          {
+            "t": "Its edges are the Ryder Lake uplands to the west, Lookout Ridge and Elk Mountain to the south, the Cascade foothills and Fraser Valley Regional District boundary to the east, and Highway 1 (Trans-Canada Highway) and valley-floor farmland to the north."
+          }
+        ],
+        [
+          {
+            "t": "Marble Hill is a named slope area inside the plan area, and internal streets named in City park listings include Allan Road, Rowanna Crescent and Marble Hill Road."
+          }
+        ],
+        [
+          {
+            "t": "It sits across the valley floor from Promontory and Sardis to the northwest, with Rosedale and Bridal Falls east along Highway 1."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Eastern Hillsides: the housing stock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The plan describes early development as large semi-serviced lots with single-family homes, with small-lot zoning in later development cells."
+          }
+        ],
+        [
+          {
+            "t": "Development is organized into development cells with unit allocations, and those allocations still regulate how many units may be developed in the plan area."
+          }
+        ],
+        [
+          {
+            "t": "Lot size is set by zone and slope together: Suburban Hillside Residential (SHR) minimum lot area runs 360 square metres to 990 square metres under the Zoning Bylaw slope table."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Eastern Hillsides: rules that affect buyers"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The governing plan is the Eastern Hillsides Neighbourhood Plan, Schedule B4 of the Chilliwack 2050 Official Community Plan (Bylaw 2025, No. 5500)."
+          }
+        ],
+        [
+          {
+            "t": "Zoning is City of Chilliwack Zoning Bylaw 2020, No. 5000: Small Lot Residential (R3) minimum lot is 360 square metres, Hillside Residential (HR) is 0.2 hectares with a community water system and 0.4 hectares otherwise, and Rural Hillside (RH) is 8 hectares."
+          }
+        ],
+        [
+          {
+            "t": "Subdivision of land with slopes of 20 percent or more needs a development permit under the 2050 Official Community Plan's Hillside Development Permit Area (Schedule D-5)."
+          }
+        ],
+        [
+          {
+            "t": "The plan was amended in 2017 specifically to protect future development from rock fall, landslide and earthflow where conditions are unstable."
+          }
+        ],
+        [
+          {
+            "t": "The historic wagon road, Browlee Road, is identified in the plan as a heritage asset, and wagon roads in the area include Nixon, Ruddock, Allan and Hinkley."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Eastern Hillsides: local details a buyer would not know"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The nearest City recreation centre is off the hillside: Cheam Leisure Centre at 45501 Market Way in Sardis."
+          }
+        ],
+        [
+          {
+            "t": "The nearest library branch is Chilliwack Library at 45860 First Avenue; no Fraser Valley Regional Library branch is inside the plan area."
+          }
+        ],
+        [
+          {
+            "t": "City parks serving the area are Allan Creek Park at 51314 Rowanna Crescent, Forest Gate Park at 51442 Allan Road, Marble Hill Natural Area at 7515 Marble Hill Road and Chilliwack Community Forest at 51642 Allan Road."
+          }
+        ],
+        [
+          {
+            "t": "Chilliwack General Hospital at 45600 Menholm Road and the Chilliwack Urgent and Primary Care Centre at 104–7955 Evans Road serve the area from the valley floor."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Eastern Hillsides: development and new projects"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The one plan change that affects every lot is recent: the Eastern Hillsides Neighbourhood Plan was updated a third time in 2025 as part of the Chilliwack 2050 Official Community Plan update, which replaced its land-use designations with city-wide designations while its development cells and unit allocations continue."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Eastern Hillsides: costs and taxes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Utilities and solid waste are billed quarterly in Chilliwack, not on the tax notice."
+          }
+        ],
+        [
+          {
+            "t": "Water rates sit in the Waterworks Regulation Bylaw 2004, No. 2995 and sewer rates in the Sanitary Sewer System Regulation Bylaw 2010, No. 3702, both linked from the City's Tax and Utility Rates page."
+          }
+        ],
+        [
+          {
+            "t": "Municipal tax revenue in Chilliwack also carries drainage and dyking levies on top of the general rate, per the City's Tax and Utility Rates page."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Eastern Hillsides: getting around"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Highway 1 is the only highway access, forming the north edge of the plan area."
+          }
+        ],
+        [
+          {
+            "t": "No BC Transit route in the Chilliwack overview serves the plan area, so there is no bus, park-and-ride or rapid transit inside Eastern Hillsides."
+          }
+        ],
+        [
+          {
+            "t": "Trail access is the local alternative: the City lists Allan Creek Trail and the Elk Mountain Trail in its parks and trails directory for this area."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Eastern Hillsides: risks and due diligence"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Geotechnical hazard is the first check here: steep slopes, main watercourses and ravines cross the plan area, and the plan identifies geotechnical hazard areas."
+          }
+        ],
+        [
+          {
+            "t": "Look the lot up against the Hillside Development Permit Area (Schedule D-5) in the 2050 Official Community Plan, because subdivision at 20 percent slope or more requires a permit."
+          }
+        ],
+        [
+          {
+            "t": "Check Agricultural Land Reserve (ALR) status for any lot at the valley-floor north edge in the Agricultural Land Commission's ALR Property and Map Finder, because farmland borders the plan area there."
+          }
+        ],
+        [
+          {
+            "t": "The City pages do not give a lot's slide history or covenant terms; those come from the property's own geotechnical reports and title documents."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "How Eastern Hillsides compares"
+    },
+    {
+      "caption": "Eastern Hillsides compared",
+      "gen": "uq",
+      "head": [
+        "Fact",
+        "Eastern Hillsides",
+        "Promontory",
+        "East Chilliwack"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "School inside the area",
+          "None — plan states it",
+          "—",
+          "—"
+        ],
+        [
+          "School district",
+          "SD33",
+          "SD33",
+          "SD33"
+        ],
+        [
+          "Speculation and Vacancy Tax area",
+          "Yes — City of Chilliwack listed",
+          "Yes — City of Chilliwack listed",
+          "Yes — City of Chilliwack listed"
+        ],
+        [
+          "Hillside permit trigger at 20% slope",
+          "Yes — Schedule D-5",
+          "—",
+          "—"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What is not confirmed about Eastern Hillsides"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "OPEN CONFLICT — Chilliwack Bylaw 3055: the City of Chilliwack's subdivisions webpage (read fresh 2026-11-03) states that all subdivisions are subject to the \"Land Development Bylaw 2014, No. 3055\", while the verified ledger from earlier programs in this project holds that bylaw as never adopted."
+          }
+        ],
+        [
+          {
+            "t": "Parcel-level zone, Agricultural Land Reserve status and floodplain status for any specific Eastern Hillsides property."
+          }
+        ],
+        [
+          {
+            "t": "Named townhome or condo complexes, including any golf-course townhome community, on an official or developer source."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Related pages"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "/promontory.html",
+            "t": "Promontory Homes for Sale | Chilliwack Hillside MLS®"
+          }
+        ],
+        [
+          {
+            "h": "/east-chilliwack.html",
+            "t": "East Chilliwack Homes for Sale | Acreages & Rural MLS®"
+          }
+        ],
+        [
+          {
+            "h": "/garrison-crossing.html",
+            "t": "Garrison Crossing Homes for Sale | Chilliwack Real Estate"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for Eastern Hillsides"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "https://www.chilliwack.com/ocp",
+            "t": "chilliwack.com"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwack.com/main/attachments/attachView.cfm?attachID=3557",
+            "t": "chilliwack.com · attachView.cfm"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwack.com/main/attachments/Files/377/ZBA%5F5000%5F%2D%5FZoning%5FBylaw%5F2020%2Epdf",
+            "t": "chilliwack.com · ZBA 5000 Zoning Bylaw 2020 pdf"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwack.com/main/attachments/attachView.cfm?attachID=8295",
+            "t": "chilliwack.com · attachView.cfm (2)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwack.com/main/page.cfm?id=1962",
+            "t": "chilliwack.com (2)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwack.com/main/attachments/Files/2650/2021-05-28%20GSP%20MASTER%202020%20-%20Urban%20Format.pdf",
+            "t": "chilliwack.com · 2021 05 28 GSP MASTER 2020 Urban Format"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview",
+            "t": "bctransit.com · route overview"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwack.com/main/page.cfm?id=1754&dowhat=locationView&plID=203",
+            "t": "chilliwack.com (3)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Chilliwack/chilliwack-general-hospital",
+            "t": "fraserhealth.ca · chilliwack general hospital"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwack.com/main/page.cfm?id=1893",
+            "t": "chilliwack.com (4)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwack.com/main/page.cfm?id=2527",
+            "t": "chilliwack.com (5)"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas",
+            "t": "www2.gov.bc.ca · taxable areas"
+          }
+        ],
+        [
+          {
+            "h": "https://www.alc.gov.bc.ca/alr-maps",
+            "t": "alc.gov.bc.ca · alr maps"
+          }
+        ],
+        [
+          {
+            "h": "https://sd33.bc.ca/index.php/find-your-school",
+            "t": "sd33.bc.ca · find your school"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwack.com/main/page.cfm?id=653",
+            "t": "chilliwack.com (6)"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "musefaq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
+    },
+    {
+      "gen": "musefaq",
+      "items": [
+        [
+          {
+            "h": "https://www.chilliwack.com/main/attachments/attachView.cfm?attachID=3557",
+            "t": "Source: chilliwack.com (1)"
+          }
+        ],
+        [
+          {
+            "h": "https://sd33.bc.ca/index.php/find-your-school",
+            "t": "Source: sd33.bc.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwack.com/main/page.cfm?id=1962",
+            "t": "Source: chilliwack.com (3)"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Is there a school in Eastern Hillsides?",
+      "a": "Part of Marble Hill is treated as undevelopable land. The City's Greenspace Plan identifies the lower and upper Marble Hill slide areas as undevelopable, and Council directed an expanded Marble Hill development moratorium area in 2017 after continuing ground movement was reported, so a Marble Hill lot needs its geotechnical record checked before any build is assumed.",
+      "gen": "uq",
+      "q": "What is the Marble Hill slide issue?"
+    },
+    {
+      "a": "Yes — slope alone can almost triple it. Under Zoning Bylaw 2020, No. 5000 the Suburban Hillside Residential minimum lot area ranges from 360 square metres to 990 square metres by the bylaw's slope table, with a 12-metre minimum width and 20-metre minimum depth, so the zone name alone does not settle what a lot can do.",
+      "gen": "uq",
+      "q": "Does slope change the minimum lot size?"
+    },
+    {
+      "a": "No route runs into the plan area. BC Transit's Chilliwack route overview lists routes 51, 52, 53, 54, 55, 57, 58, 59, 66, 71 and 72 for the city system, and none of them serves the Eastern Hillsides plan area, so daily trips are by car.",
+      "gen": "uq",
+      "q": "Is there bus service on the hillsides?"
+    },
+    {
       "a": "No — the Eastern Hillsides Neighbourhood Plan states there is no school inside the plan area; SD33 catchments are address-based, and the recorded sample address (51314 Rowanna Crescent) feeds East Chilliwack Elementary, Rosedale Traditional Community School and Chilliwack Secondary.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is there a school in Eastern Hillsides?"
     },
     {
-      "q": "Which plan governs development in Eastern Hillsides?",
       "a": "The Eastern Hillsides Neighbourhood Plan, Schedule B4 of the Chilliwack 2050 Official Community Plan — its development cells and unit allocations still regulate how many units may be developed, while land-use designations now come from the city-wide OCP.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which plan governs development in Eastern Hillsides?"
     },
     {
-      "q": "What slope and slide risks apply to hillside lots here?",
       "a": "The plan identifies steep slopes and geotechnical hazard areas; the plan was amended in 2017 to protect development from rock fall, landslide and earthflow, the Marble Hill slide areas are identified as undevelopable lands, and an expanded Marble Hill development moratorium was directed in 2017.",
-      "gen": "muse"
-    },
-    {
-      "q": "Is there bus service in Eastern Hillsides?",
-      "a": "No route in BC Transit's Chilliwack route overview runs into the plan area — the system lists routes 51, 52, 53, 54, 55, 57, 58, 59, 66, 71 and 72, none serving the hillsides directly.",
-      "gen": "muse"
-    },
-    {
-      "q": "What parks and trails serve the area?",
-      "a": "City listings include Allan Creek Park (51314 Rowanna Crescent), Forest Gate Park (51442 Allan Road), Marble Hill Natural Area (7515 Marble Hill Road), Allan Creek Trail, Chilliwack Community Forest (51642 Allan Road) and the Elk Mountain Trail.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What slope and slide risks apply to hillside lots here?"
     }
-  ]
+  ],
+  "slug": "eastern-hillsides",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

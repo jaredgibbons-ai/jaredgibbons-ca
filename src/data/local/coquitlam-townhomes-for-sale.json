@@ -1,58 +1,33 @@
 {
-  "status": "draft",
-  "slug": "coquitlam-townhomes-for-sale",
-  "updated": "2026-11-01",
-  "gen_gap": true,
-  "hand_edited": true,
-  "new_page": {
-    "title": "Coquitlam Townhomes for Sale | Jared Gibbons REALTOR®",
-    "description": "Coquitlam townhomes for sale: ground-level homes in strata buildings, with monthly listings and sales for Coquitlam. Jared Gibbons, REALTOR®, Royal LePage Little Oak.",
-    "h1": "Coquitlam Townhomes for Sale | Metro Vancouver Real Estate"
-  },
-  "breadcrumbs": [
-    {
-      "name": "Home",
-      "href": "/index.html"
-    },
-    {
-      "name": "Coquitlam",
-      "href": "/coquitlam-homes-for-sale.html"
-    },
-    {
-      "name": "Townhomes",
-      "href": "/coquitlam-townhomes-for-sale.html"
-    }
-  ],
-  "faq_heading": "Coquitlam Townhomes for Sale: your questions answered",
   "blocks": [
     {
+      "gen": "gappage",
       "t": "notice",
-      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.",
-      "gen": "gappage"
+      "text": "Draft for Jared's approval. Built from the boards' September 2026 statistics, the monthly SnapStats figures and Jared's MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet."
     },
     {
+      "gen": "gappage",
       "t": "p",
-      "text": "Coquitlam townhomes for sale: ground-level homes in strata buildings. The Greater Vancouver REALTORS® benchmark for townhomes in Coquitlam was $976,600 in September 2026 (-6.5% over a year). Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees.",
-      "gen": "gappage"
+      "text": "Coquitlam townhomes for sale: ground-level homes in strata buildings. The Greater Vancouver REALTORS® benchmark for townhomes in Coquitlam was $976,600 in September 2026 (-6.5% over a year). Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees."
     },
     {
-      "t": "grid",
-      "gen": "gappage"
+      "gen": "gappage",
+      "t": "grid"
     },
     {
-      "t": "h",
+      "gen": "sold",
       "level": 2,
-      "text": "Coquitlam townhomes sold, November 2025 to October 2026",
-      "gen": "sold"
+      "t": "h",
+      "text": "Coquitlam townhomes sold, November 2025 to October 2026"
     },
     {
+      "gen": "sold",
       "t": "p",
-      "text": "307 townhomes sold in Coquitlam with a median price of $1,000,000 (the middle half sold between $871,500 and $1,199,500), taking a median of 17 days to sell at 98.5% of the last list price; 7% sold above list. They had a median $638 per square foot, a median year built of 2020 and a median strata fee of $390 a month.",
-      "gen": "sold"
+      "text": "307 townhomes sold in Coquitlam with a median price of $1,000,000 (the middle half sold between $871,500 and $1,199,500), taking a median of 17 days to sell at 98.5% of the last list price; 7% sold above list. They had a median $638 per square foot, a median year built of 2020 and a median strata fee of $390 a month."
     },
     {
-      "t": "table",
       "caption": "Coquitlam: townhomes sold by quarter",
+      "gen": "sold",
       "head": [
         "Period",
         "Sold",
@@ -81,11 +56,11 @@
         ]
       ],
       "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
-      "gen": "sold"
+      "t": "table"
     },
     {
-      "t": "table",
       "caption": "Coquitlam: townhomes sold by community",
+      "gen": "sold",
       "head": [
         "Community",
         "Sold",
@@ -185,11 +160,11 @@
         ]
       ],
       "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
-      "gen": "sold"
+      "t": "table"
     },
     {
-      "t": "table",
       "caption": "Coquitlam: buildings and complexes with the most townhomes sold",
+      "gen": "sold",
       "head": [
         "Building or complex",
         "Sold",
@@ -281,17 +256,17 @@
         ]
       ],
       "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
-      "gen": "sold"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "gappage",
       "level": 2,
-      "text": "Coquitlam townhomes: benchmark price and changes, September 2026",
-      "gen": "gappage"
+      "t": "h",
+      "text": "Coquitlam townhomes: benchmark price and changes, September 2026"
     },
     {
-      "t": "table",
       "caption": "Coquitlam townhomes, MLS® Home Price Index, September 2026",
+      "gen": "gappage",
       "head": [
         "Area",
         "Benchmark price",
@@ -319,37 +294,37 @@
         ]
       ],
       "source": "Source: Greater Vancouver REALTORS®, MLS® Home Price Index, September 2026 (released October 2, 2026). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at 1.5% or more.",
-      "gen": "gappage"
+      "t": "table"
     },
     {
+      "gen": "gappage",
       "t": "p",
-      "text": "Coquitlam: the townhomes benchmark was $976,600 in September 2026. Over the past year it fell 6.5%; over three months it fell 3.9%; over the last month it was little changed (-1.2%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 8.7%; over 5 years it rose 6.7%; over 10 years it rose 64.7%.",
-      "gen": "gappage"
+      "text": "Coquitlam: the townhomes benchmark was $976,600 in September 2026. Over the past year it fell 6.5%; over three months it fell 3.9%; over the last month it was little changed (-1.2%, under the 1.5% we need before calling it a move). Longer term, over 3 years it fell 8.7%; over 5 years it rose 6.7%; over 10 years it rose 64.7%."
     },
     {
-      "t": "h",
+      "gen": "gappage",
       "level": 2,
-      "text": "Townhomes against other home types in Coquitlam",
-      "gen": "gappage"
-    },
-    {
-      "t": "p",
-      "text": "Coquitlam: the townhomes benchmark of $976,600 sits $607,800 below the detached houses benchmark of $1,584,400 (62% of it) and $336,500 above the apartments (condos) benchmark of $640,100 (153% of it).",
-      "gen": "gappage"
-    },
-    {
       "t": "h",
-      "level": 2,
-      "text": "Elementary and middle schools in Coquitlam",
-      "gen": "gappage"
+      "text": "Townhomes against other home types in Coquitlam"
     },
     {
+      "gen": "gappage",
       "t": "p",
-      "text": "39 elementary and middle schools are located in the City of Coquitlam: 39 in SD43 Coquitlam. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district.",
-      "gen": "gappage"
+      "text": "Coquitlam: the townhomes benchmark of $976,600 sits $607,800 below the detached houses benchmark of $1,584,400 (62% of it) and $336,500 above the apartments (condos) benchmark of $640,100 (153% of it)."
     },
     {
-      "t": "list",
+      "gen": "gappage",
+      "level": 2,
+      "t": "h",
+      "text": "Elementary and middle schools in Coquitlam"
+    },
+    {
+      "gen": "gappage",
+      "t": "p",
+      "text": "39 elementary and middle schools are located in the City of Coquitlam: 39 in SD43 Coquitlam. This lists where a school building is, from the BC Data Catalogue and the other official sources read on November 1, 2026. It is not a catchment list: which school serves a home is set by address, so check the exact address with the school district."
+    },
+    {
+      "gen": "gappage",
       "items": [
         [
           {
@@ -502,153 +477,531 @@
           }
         ]
       ],
-      "gen": "gappage"
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "gappage",
       "level": 2,
-      "text": "Before you buy townhomes in Coquitlam",
-      "gen": "gappage"
+      "t": "h",
+      "text": "Before you buy townhomes in Coquitlam"
     },
     {
+      "gen": "gappage",
       "t": "p",
-      "text": "Jared checks these with you on the exact address before you write an offer:",
-      "gen": "gappage"
+      "text": "Jared checks these with you on the exact address before you write an offer:"
     },
     {
-      "t": "list",
+      "gen": "gappage",
       "items": [
         [
           {
-            "t": "Mortgage calculator",
-            "h": "/mortgage-calculator.html"
+            "h": "/mortgage-calculator.html",
+            "t": "Mortgage calculator"
           }
         ],
         [
           {
-            "t": "Home evaluation",
-            "h": "/home-evaluation.html"
+            "h": "/home-evaluation.html",
+            "t": "Home evaluation"
           }
         ]
       ],
-      "gen": "gappage"
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "gappage",
       "level": 2,
-      "text": "More Coquitlam real estate",
-      "gen": "gappage",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "More Coquitlam real estate"
     },
     {
-      "t": "list",
+      "gen": "gappage",
       "items": [
         [
           {
-            "t": "Coquitlam homes for sale",
-            "h": "/coquitlam-homes-for-sale.html"
+            "h": "/coquitlam-homes-for-sale.html",
+            "t": "Coquitlam homes for sale"
           }
         ],
         [
           {
-            "t": "Coquitlam real estate market stats",
-            "h": "/coquitlam-real-estate-market-stats.html"
+            "h": "/coquitlam-real-estate-market-stats.html",
+            "t": "Coquitlam real estate market stats"
           }
         ],
         [
           {
-            "t": "Fraser Valley market stats",
-            "h": "/fraser-valley-market-stats.html"
+            "h": "/fraser-valley-market-stats.html",
+            "t": "Fraser Valley market stats"
           }
         ],
         [
           {
-            "t": "Mortgage calculator",
-            "h": "/mortgage-calculator.html"
+            "h": "/mortgage-calculator.html",
+            "t": "Mortgage calculator"
           }
         ],
         [
           {
-            "t": "Home evaluation",
-            "h": "/home-evaluation.html"
+            "h": "/home-evaluation.html",
+            "t": "Home evaluation"
           }
         ],
         [
           {
-            "t": "Contact Jared",
-            "h": "/contact.html"
+            "h": "/contact.html",
+            "t": "Contact Jared"
           }
         ]
       ],
-      "gen": "gappage",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Coquitlam Townhomes: streets and boundaries"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "This page covers townhomes across the whole City of Coquitlam, from Maillardville and Burquitlam in the west to Burke Mountain and Partington Creek in the northeast."
+          }
+        ],
+        [
+          {
+            "t": "The townhouse stock clusters where the City has planned it: Burke Mountain under the Partington Creek Neighbourhood Plan, the City Centre and Burquitlam station areas, and infill sites rezoned to RT-2 Townhouse Residential across the older neighbourhoods."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Coquitlam Townhomes: the housing stock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Townhouses in Coquitlam are a multi-family form that needs a Form and Character Development Permit: the City requires that permit before subdividing, constructing or adding to a building in a Development Permit Area, covering design, landscaping, siting, parking and finishes."
+          }
+        ],
+        [
+          {
+            "t": "The current building-permit list shows the form still being built at scale: a 142-unit, 3-storey townhouse project at 1395 Pollard Street on Burke Mountain, in 24 buildings, and 16 townhouses in 3 blocks at 3469 Baycrest Avenue, both with applications dated August 2026."
+          }
+        ],
+        [
+          {
+            "t": "Older infill townhomes arrive one rezoning at a time: at 586 Thompson Avenue the City's notice proposed rezoning from RS-1 One-Family Residential to RT-2 Townhouse Residential for three 3-storey townhouse buildings holding nine units."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Coquitlam Townhomes: rules that affect buyers"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Townhouse zoning is RT-2 Townhouse Residential under Zoning Bylaw No. 3000, 1996 — the City's own land-sale document for 3596 Innes Court confirms that site is zoned RT-2 for townhouse development."
+          }
+        ],
+        [
+          {
+            "t": "One zone is in flux: the City states the R-4 Intensive Small-Scale Residential zone will be reviewed as part of its upcoming Townhouse and Rowhouse Review, so R-4 townhouse-form rules may change — check current."
+          }
+        ],
+        [
+          {
+            "t": "Creek-side townhouse sites can also sit in a Watercourse Protection Development Permit Area, where a permit is required before developing, subdividing, constructing or altering land."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Coquitlam Townhomes: local details a buyer would not know"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The City sells townhouse land itself: its 2025 request for offers covered a 3.60-acre RT-2 townhouse site at 3596 Innes Court on Burke Mountain, bounded by Mitchell Street and Brownlee Avenue, beside a future park of about 2.0 acres."
+          }
+        ],
+        [
+          {
+            "t": "School catchment is by permanent home address in School District No."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Coquitlam Townhomes: development and new projects"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "1395 Pollard Street, Burke Mountain, developer not stated on the City list, townhouses: 142 units in 24 buildings, 3 storeys — STATUS: building permit application in August 2026, read 2026-11-03."
+          }
+        ],
+        [
+          {
+            "t": "3469 Baycrest Avenue, developer not stated on the City list, townhouses: 16 units in 3 blocks of 5, 6 and 5 units — STATUS: building permit application in August 2026, read 2026-11-03."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Coquitlam Townhomes: costs and taxes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Coquitlam is a designated taxable area for the provincial Speculation and Vacancy Tax, so a townhouse owner must complete the annual declaration."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Coquitlam Townhomes: getting around"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Townhouse areas feed the Evergreen Extension: Coquitlam Central Station is the rail and bus hub for the Burke Mountain and City Centre clusters, connecting to the Millennium Line and the West Coast Express."
+          }
+        ],
+        [
+          {
+            "t": "Route 185, Coquitlam Central Station to Lansdowne, and Route 186, Coquitlam Central Station to Hampton Park via David Avenue, are the bus links from the station into the northern townhouse neighbourhoods."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Coquitlam Townhomes: risks and due diligence"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Check creek proximity on any Burke Mountain or ravine-edge complex: the Watercourse Protection Development Permit Area layer shows where alteration needs a permit, and strata depreciation reports are where retaining walls and drainage show up for existing complexes."
+          }
+        ],
+        [
+          {
+            "t": "Check slope on the City's environmental development permit mapping, which also maps unstable slopes for the City Centre and Northeast areas; the map does not give a lot-level geotechnical conclusion."
+          }
+        ],
+        [
+          {
+            "t": "Check the zoning in force at purchase, not at listing: the Townhouse and Rowhouse Review, including the R-4 zone, is an open City project, so townhouse-form rules are a check-current item."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "How Coquitlam Townhomes compares"
+    },
+    {
+      "caption": "Coquitlam Townhomes compared",
+      "gen": "uq",
+      "head": [
+        "Fact",
+        "Coquitlam townhomes (this page)",
+        "Coquitlam condos",
+        "Burke Mountain houses"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Approval a new project needs",
+          "Form and Character Development Permit for multi-family, including townhouse",
+          "Form and Character Development Permit for multi-family, including apartment",
+          "—"
+        ],
+        [
+          "Townhouse zone named by the City",
+          "RT-2 Townhouse Residential",
+          "—",
+          "—"
+        ],
+        [
+          "Speculation and Vacancy Tax",
+          "Coquitlam is a designated taxable area",
+          "Coquitlam is a designated taxable area",
+          "Coquitlam is a designated taxable area"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for Coquitlam Townhomes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "https://www.coquitlam.ca/254/Development-Permits",
+            "t": "coquitlam.ca · Development Permits"
+          }
+        ],
+        [
+          {
+            "h": "https://coquitlam.ca/DocumentCenter/View/16441/Section-475-Public-Notice---PROJ-23-011-23-031-21-091?bidId=",
+            "t": "coquitlam.ca · Section 475 Public Notice PROJ 23 011 23 031 21"
+          }
+        ],
+        [
+          {
+            "h": "https://www.coquitlam.ca/DocumentCenter/View/193/Current-Multiple-Family-Commercial-Industrial-and-Institutional-Building-Permit-Applications-PDF",
+            "t": "coquitlam.ca · Current Multiple Family Commercial Industrial an"
+          }
+        ],
+        [
+          {
+            "h": "https://www.coquitlam.ca/DocumentCenter/View/13815/Notice-of-Zoning-Amendment---586-Thompson-Avenue?bidId",
+            "t": "coquitlam.ca · bidId"
+          }
+        ],
+        [
+          {
+            "h": "https://coquitlam.ca/DocumentCenter/View/15590/25-012-RFO---Land-Sale---Townhouse-Development-Site-at-3596-Innes-Crt?bidId",
+            "t": "coquitlam.ca · bidId (2)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.coquitlam.ca/DocumentCenter/View/15337/Small-Scale-Multi-Unit-Housing-Summary-Guide?bidId",
+            "t": "coquitlam.ca · bidId (3)"
+          }
+        ],
+        [
+          {
+            "h": "http://infomaps.translink.ca/Public_Timetables/192/tt185.pdf",
+            "t": "infomaps.translink.ca · tt185"
+          }
+        ],
+        [
+          {
+            "h": "https://www.coquitlam.ca/AgendaCenter/ViewFile/Minutes/_03152021-510",
+            "t": "coquitlam.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/043",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "http://coquitlam.ca/m/newsflash/Home/Detail/2009",
+            "t": "coquitlam.ca · Detail"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas",
+            "t": "www2.gov.bc.ca · taxable areas"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt186.pdf",
+            "t": "infomaps.translink.ca · tt186"
+          }
+        ],
+        [
+          {
+            "h": "https://coquitlam.ca/DocumentCenter/View/1527/Schedule-B---Environmental-Development-Permit-Areas-PDF?bidId=",
+            "t": "coquitlam.ca · Schedule B Environmental Development Permit Area"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    }
+  ],
+  "breadcrumbs": [
+    {
+      "href": "/index.html",
+      "name": "Home"
+    },
+    {
+      "href": "/coquitlam-homes-for-sale.html",
+      "name": "Coquitlam"
+    },
+    {
+      "href": "/coquitlam-townhomes-for-sale.html",
+      "name": "Townhomes"
     }
   ],
   "faq": [
     {
+      "a": "307 townhomes sold in Coquitlam between November 1, 2025 to October 22, 2026, with a median price of $1,000,000.",
       "gen": "sold",
-      "q": "What did townhomes in Coquitlam sell for?",
-      "a": "307 townhomes sold in Coquitlam between November 1, 2025 to October 22, 2026, with a median price of $1,000,000."
+      "q": "What did townhomes in Coquitlam sell for?"
     },
     {
+      "a": "The median was 17 days from listing to sale, and homes sold at a median 98.5% of the last list price (7% sold above list), for sales November 1, 2025 to October 22, 2026.",
       "gen": "sold",
-      "q": "How long do townhomes take to sell in Coquitlam?",
-      "a": "The median was 17 days from listing to sale, and homes sold at a median 98.5% of the last list price (7% sold above list), for sales November 1, 2025 to October 22, 2026."
+      "q": "How long do townhomes take to sell in Coquitlam?"
     },
     {
+      "a": "The middle half of the 307 townhomes that sold in Coquitlam went for between $871,500 and $1,199,500, around a median of $1,000,000.",
       "gen": "sold",
-      "q": "What price range do most townhomes in Coquitlam sell in?",
-      "a": "The middle half of the 307 townhomes that sold in Coquitlam went for between $871,500 and $1,199,500, around a median of $1,000,000."
+      "q": "What price range do most townhomes in Coquitlam sell in?"
     },
     {
+      "a": "7% of the 307 townhomes sold for more than the last list price, and the median sale was 98.5% of it.",
       "gen": "sold",
-      "q": "Do townhomes in Coquitlam sell above asking price?",
-      "a": "7% of the 307 townhomes sold for more than the last list price, and the median sale was 98.5% of it."
+      "q": "Do townhomes in Coquitlam sell above asking price?"
     },
     {
+      "a": "Of the 307 sales, 303 listings gave a monthly fee and the median was $390.",
       "gen": "sold",
-      "q": "What is a typical strata fee for townhomes in Coquitlam?",
-      "a": "Of the 307 sales, 303 listings gave a monthly fee and the median was $390."
+      "q": "What is a typical strata fee for townhomes in Coquitlam?"
     },
     {
+      "a": "The median year built was 2020 for the 307 townhomes sold in Coquitlam.",
       "gen": "sold",
-      "q": "How old are the townhomes that sold in Coquitlam?",
-      "a": "The median year built was 2020 for the 307 townhomes sold in Coquitlam."
+      "q": "How old are the townhomes that sold in Coquitlam?"
     },
     {
+      "a": "The median townhome that sold in Coquitlam had 3 bedrooms, from the 307 sales between November 1, 2025 to October 22, 2026.",
       "gen": "sold",
-      "q": "How many bedrooms do townhomes in Coquitlam usually have?",
-      "a": "The median townhome that sold in Coquitlam had 3 bedrooms, from the 307 sales between November 1, 2025 to October 22, 2026."
+      "q": "How many bedrooms do townhomes in Coquitlam usually have?"
     },
     {
+      "a": "By number sold: Burke Mountain (149), Coquitlam West (46), Westwood Plateau (33), for November 1, 2025 to October 22, 2026.",
       "gen": "sold",
-      "q": "Which Coquitlam communities sold the most townhomes?",
-      "a": "By number sold: Burke Mountain (149), Coquitlam West (46), Westwood Plateau (33), for November 1, 2025 to October 22, 2026."
+      "q": "Which Coquitlam communities sold the most townhomes?"
     },
     {
+      "a": "By number sold: Versant (12), Partington Creek (12), Beaumont By Polygon (11), for November 1, 2025 to October 22, 2026.",
       "gen": "sold",
-      "q": "Which Coquitlam buildings sold the most townhomes?",
-      "a": "By number sold: Versant (12), Partington Creek (12), Beaumont By Polygon (11), for November 1, 2025 to October 22, 2026."
+      "q": "Which Coquitlam buildings sold the most townhomes?"
     },
     {
-      "q": "What is the benchmark price of a townhome in Coquitlam?",
-      "a": "The Greater Vancouver REALTORS® MLS® Home Price Index benchmark for townhomes in Coquitlam was $976,600 in September 2026, a modelled price for a typical home and not an average of sales."
+      "a": "The Greater Vancouver REALTORS® MLS® Home Price Index benchmark for townhomes in Coquitlam was $976,600 in September 2026, a modelled price for a typical home and not an average of sales.",
+      "q": "What is the benchmark price of a townhome in Coquitlam?"
     },
     {
-      "q": "Did townhome prices fall in Coquitlam?",
-      "a": "Over the past year the benchmark fell 6.5%. Over three months it fell 3.9%. A change under 1.5% is not described as a rise or fall."
+      "a": "Over the past year the benchmark fell 6.5%. Over three months it fell 3.9%. A change under 1.5% is not described as a rise or fall.",
+      "q": "Did townhome prices fall in Coquitlam?"
     },
     {
-      "q": "Is Coquitlam a buyers’ or sellers’ market?",
-      "a": "In October 2026 houses in Coquitlam had a sales ratio of 14%, which the reports’ scale reads as a balanced market, and condos and townhomes 16%, which the reports’ scale reads as a balanced market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers."
+      "a": "In October 2026 houses in Coquitlam had a sales ratio of 14%, which the reports’ scale reads as a balanced market, and condos and townhomes 16%, which the reports’ scale reads as a balanced market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers.",
+      "q": "Is Coquitlam a buyers’ or sellers’ market?"
     },
     {
-      "q": "How many townhomes are for sale in Coquitlam?",
-      "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the townhomes in Coquitlam that match what you want."
+      "a": "The listing feed on this page shows what is active now, and the number changes daily. Ask Jared and he will send you the townhomes in Coquitlam that match what you want.",
+      "q": "How many townhomes are for sale in Coquitlam?"
+    },
+    {
+      "a": "Both forms exist, and the title decides. Read the title, the strata plan if any, and the Form B before assuming which one a listing is.",
+      "gen": "uq",
+      "q": "Are Coquitlam townhomes strata or freehold?"
+    },
+    {
+      "a": "Check the Watercourse Protection Development Permit Area first. Coquitlam requires that permit before land in the area is developed or altered, and Burke Mountain townhouse projects are being approved alongside creek corridors — the Partington Creek projects secure a 50-metre wildlife corridor, widening to 100 metres at a wildlife hot spot. Setbacks and common-property drainage are strata-document checks.",
+      "gen": "uq",
+      "q": "What should I check on a Burke Mountain townhouse near a creek?"
+    },
+    {
+      "a": "Possibly, but two reviews govern it. Townhouses need Form and Character Development Permit compliance for any rebuild form, and the City is reviewing its townhouse and rowhouse framework, including the R-4 zone, so today's density is not a guaranteed future density. Confirm current zoning on the City's mapping and the Official Community Plan (OCP) designation for the complex address.",
+      "gen": "uq",
+      "q": "Can a townhouse complex here be redeveloped?"
+    },
+    {
+      "a": "Coquitlam Central Station is the hub the northern bus routes feed. Routes 185 and 186 both run from Coquitlam Central Station into the Lansdowne Drive and David Avenue neighbourhoods, and the station is served by the Millennium Line Evergreen Extension and the West Coast Express. Burke Mountain townhouses are bus-fed to that station, not station-adjacent; Burquitlam Station serves the west side.",
+      "gen": "uq",
+      "q": "Which SkyTrain station do most Coquitlam townhouse areas feed?"
     }
   ],
+  "faq_heading": "Coquitlam Townhomes for Sale: your questions answered",
+  "gen_gap": true,
+  "hand_edited": true,
   "needs_from_muse": [
     "Live listing feed filtered to townhomes in Coquitlam",
     "Jared's own notes"
-  ]
+  ],
+  "new_page": {
+    "description": "Coquitlam townhomes for sale: ground-level homes in strata buildings, with monthly listings and sales for Coquitlam. Jared Gibbons, REALTOR®, Royal LePage Little Oak.",
+    "h1": "Coquitlam Townhomes for Sale | Metro Vancouver Real Estate",
+    "title": "Coquitlam Townhomes for Sale | Jared Gibbons REALTOR®"
+  },
+  "slug": "coquitlam-townhomes-for-sale",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

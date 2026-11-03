@@ -1,0 +1,77 @@
+# Pitt Meadows Duplexes — Extra Local Notes
+Page: pitt-meadows-duplexes-for-sale (Pitt Meadows; duplexes).
+
+## 1. STREETS AND BOUNDARIES
+- This page covers duplexes anywhere inside the City of Pitt Meadows; Pitt Meadows-wide facts are in the south-meadows-houses-for-sale note — see that note — and this note keeps only what governs a duplex or a duplex build.
+- Pitt Meadows is a diked Fraser, Pitt and Alouette river floodplain city, and its flood bylaw splits the city into two designated flood areas: Schedule A Rural Floodplain and Schedule B Urban Floodplain, with different designated flood levels for each. https://www.pittmeadows.ca/sites/default/files/2024-09/Floodplain Designation and Construction Control Bylaw No. 2384, 2008 - Consolidated.pdf
+- The City's subdivision rules that a duplex split must pass are Zoning Bylaw No. 2505 (minimum lot area, width and depth by zone), Subdivision and Development Servicing Bylaw No. 2589, and Official Community Plan Bylaw No. 2864. https://www.pittmeadows.ca/homes-development/property-development/subdivisions
+Read: 2026-11-03
+
+## 2. THE HOUSING STOCK
+- The duplex stock here is individual two-unit buildings on single lots, plus duplex-form homes inside strata townhouse complexes — the named complex stock is documented in the south-meadows-houses-for-sale note and is not re-counted here.
+- Since June 25, 2024 the form class has widened: the City amended Zoning Bylaw No. 2505, 2011 to allow three- to six-unit multi-family development in areas zoned for single-family homes, so a "duplex lot" in Pitt Meadows may now carry more than a duplex. https://www.pittmeadows.ca/sites/default/files/2024-11/Staff%20Report%20-%202025%20Business%20Plan%20-%20Planning.pdf
+Read: 2026-11-03
+
+## 3. RULES THAT AFFECT BUYERS HERE
+- Flood construction levels govern any duplex build or major renovation: the Floodplain Designation and Construction Control Bylaw No. 2384, 2008 sets the Designated Flood Level at 1.85 metres Geodetic Survey of Canada datum for the Schedule A Rural Floodplain and 5.15 metres for the Schedule B Urban Floodplain. https://www.pittmeadows.ca/sites/default/files/2024-09/Floodplain Designation and Construction Control Bylaw No. 2384, 2008 - Consolidated.pdf
+- On June 25, 2024 the City adopted the provincially required small-scale multi-unit housing (SSMUH) changes to Zoning Bylaw No. 2505, 2011 and, the same day, a bylaw designating the areas around the West Coast Express stations as Transit-Oriented Areas. https://www.pittmeadows.ca/sites/default/files/2024-11/Staff%20Report%20-%202025%20Business%20Plan%20-%20Planning.pdf
+- The City's Official Community Plan policy 5.2.1, as amended by Bylaw No. 3034, 2025, encourages secondary-suite-ready homes for new single-detached and duplex construction outside the floodplain — suite readiness is a stated policy for duplex builds, not an assumption. http://www.pittmeadows.ca/sites/default/files/2026-06/2026-06-23-3034%2C-2025-OCP-Amendment-Bylaw-Provincial-Housing-Legislation.pdf
+- Short-term rentals are not permitted anywhere in Pitt Meadows — the City states this on its home-based business page — so a duplex here cannot be underwritten as a short-term rental. https://www.pittmeadows.ca/node/171
+- Ground-oriented small-scale multi-unit projects are also shaped by Development Permit Area #9 (Ground-Oriented Residential) design guidelines in the Official Community Plan, updated alongside the 2024 SSMUH changes. https://www.pittmeadows.ca/sites/default/files/2024-11/Staff%20Report%20-%202025%20Business%20Plan%20-%20Planning.pdf
+Read: 2026-11-03
+
+## 4. WHAT BUYERS ASK
+- **Q:** Can I build a duplex higher than the house next door here? **A:** The flood bylaw, not the neighbour, sets the floor. In the Schedule B Urban Floodplain the Designated Flood Level is 5.15 metres geodetic datum, and habitable construction must be read against Bylaw No. 2384, 2008 before a design is priced. A duplex on a rural Schedule A lot works to a 1.85-metre level instead. https://www.pittmeadows.ca/sites/default/files/2024-09/Floodplain Designation and Construction Control Bylaw No. 2384, 2008 - Consolidated.pdf
+- **Q:** Is a duplex still the most I can build on a single-family lot? **A:** No — since June 25, 2024 it usually is not. Pitt Meadows amended Zoning Bylaw No. 2505, 2011 that day to allow three- to six-unit development in single-family areas, and designated Transit-Oriented Areas around its West Coast Express stations. The exact count for a lot depends on its zone and transit proximity, so the lot's current zone is the first check. https://www.pittmeadows.ca/sites/default/files/2024-11/Staff%20Report%20-%202025%20Business%20Plan%20-%20Planning.pdf
+- **Q:** Can each side of a new duplex have its own suite? **A:** Suite-ready duplex construction is encouraged, with a limit to read first. Official Community Plan policy 5.2.1, amended by Bylaw No. 3034, 2025, encourages secondary-suite-ready homes for new single-detached and duplex construction outside the floodplain. Whether a specific duplex can hold a suite on each side is a zoning and permit question for that lot, not something a listing can promise. http://www.pittmeadows.ca/sites/default/files/2026-06/2026-06-23-3034%2C-2025-OCP-Amendment-Bylaw-Provincial-Housing-Legislation.pdf
+- **Q:** What does the City charge a two-family build in development cost charges? **A:** Development Cost Charges Bylaw No. 2995, 2024 sets the two-family, three-family or townhouse rate at a $17,306 total per unit, built from major roads, water, sanitary, drainage and parks components. That is a per-unit charge on top of permit fees, and it applies at the stage the bylaw sets, so a duplex budget should carry it from the first estimate. https://www.pittmeadows.ca/sites/default/files/2026-04/v17-2010_DCC_Rate_Summary.pdf
+Read: 2026-11-03
+
+## 5. LOCAL DETAILS A BUYER WOULD NOT KNOW
+- Pitt Meadows collects property taxes and utility fees in one combined bill, so a duplex's water, drainage, diking, sewer and solid-waste charges arrive on the same notice as its taxes. https://www.pittmeadows.ca/sites/default/files/2026-05/Tax-insert-2026.pdf
+- Working near a dike needs its own permit: the Drainage System Protection Bylaw No. 2266, 2007 requires a permit before constructing within seven metres of the toe of a dike or within six metres of the top of bank of a key ditch or watercourse. https://www.pittmeadows.ca/sites/default/files/2023-04/Drainage%20System%20Protection%20Bylaw%20No.%202266%2C%202007.pdf
+- The 2026 taxes on a Pitt Meadows property were due July 2, 2026, with a 5% penalty added after that date and a further 5% after August 1, 2026, under the 2026 Annual Tax Rates Bylaw No. 3047, 2026. https://www.pittmeadows.ca/sites/default/files/2026-05/2026-Annual-Tax-Rates-Bylaw-No-3047%2C-2026.pdf
+- Splitting one duplex lot into two fee-simple halves is a subdivision: the Land Title Office will not register the new parcels without the City Approving Officer's signature on the plan. https://www.pittmeadows.ca/homes-development/property-development/subdivisions
+- The City adopted an Amenity Cost Charge bylaw in 2024 alongside the SSMUH changes, so new small-scale multi-unit projects can carry that charge as well as development cost charges (DCCs). https://www.pittmeadows.ca/sites/default/files/2024-11/Staff%20Report%20-%202025%20Business%20Plan%20-%20Planning.pdf
+Read: 2026-11-03
+
+## 6. DEVELOPMENT AND NEW PROJECTS
+- Heron's Nest non-market housing — city-owned land in central Pitt Meadows; Metro Vancouver Housing Corporation with the City and project partners; 115 non-market rental apartments plus a 150-space child care facility; home type: apartment rental. STATUS: project agreements completed per the City's Planning Division 2025 Business Plan report (November 26, 2024 meeting) — check current, read 2026-11-03. https://www.pittmeadows.ca/sites/default/files/2024-11/Staff%20Report%20-%202025%20Business%20Plan%20-%20Planning.pdf
+- 11812 Blakely Road rezoning — 11812 Blakely Rd; applicant-led rezoning from Comprehensive Development zone CD-O to Urban Residential 6 (R-6); six residential townhouse units proposed on a lot earlier approved for four townhouse units. STATUS: Zoning Amendment Bylaw No. 3052, 2026 brought to Council for first, second and third readings on June 23, 2026; a public hearing is prohibited for this rezoning under provincial rules — read 2026-11-03. https://www.pittmeadows.ca/sites/default/files/2026-06/2026-06-23-Public-Notice-3052%2C-2026-11812-Blakely-Road_0.pdf
+Read: 2026-11-03
+
+## 7. COSTS AND TAXES HERE
+- Development cost charges for a two-family build total $17,306 per unit under Development Cost Charges Bylaw No. 2995, 2024 (adopted September 10, 2024); a single-family unit is $23,183 per unit under the same summary. https://www.pittmeadows.ca/sites/default/files/2026-04/v17-2010_DCC_Rate_Summary.pdf
+- Pitt Meadows' 2026 tax rates are set by the 2026 Annual Tax Rates Bylaw No. 3047, 2026, which levies separately for general municipal and drainage purposes — the drainage levy is a named line in a diked city. https://www.pittmeadows.ca/sites/default/files/2026-05/2026-Annual-Tax-Rates-Bylaw-No-3047%2C-2026.pdf
+- Pitt Meadows is a designated taxable area for the provincial Speculation and Vacancy Tax, so a duplex owner files the annual declaration. https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas
+Read: 2026-11-03
+
+## 8. GETTING AROUND
+- Pitt Meadows has its own West Coast Express station, Pitt Meadows Station, and the City designated Transit-Oriented Areas around its West Coast Express stations on June 25, 2024 — lots near the station carry different unit potential. https://www.pittmeadows.ca/sites/default/files/2024-11/Staff%20Report%20-%202025%20Business%20Plan%20-%20Planning.pdf
+- TransLink's route 791 runs between Haney Place (Maple Ridge) and Braid Station via Pitt Meadows Station and Maple Meadows Station, linking the city to the SkyTrain network by bus. https://infomaps.translink.ca/Public_Timetables/214/tt791.pdf
+- The Golden Ears Bridge is the road link from Pitt Meadows and Maple Ridge south to Langley — see the south-meadows-houses-for-sale note for the city-wide road picture.
+Read: 2026-11-03
+
+## 9. RISKS AND DUE DILIGENCE
+- Flood is the first diligence item: read the lot's schedule under Bylaw No. 2384, 2008 (rural or urban floodplain) and its Designated Flood Level before valuing buildable area or suite potential. https://www.pittmeadows.ca/sites/default/files/2024-09/Floodplain Designation and Construction Control Bylaw No. 2384, 2008 - Consolidated.pdf
+- Ditches and dikes constrain side yards: the Drainage System Protection Bylaw No. 2266, 2007 permit triggers (seven metres from a dike toe, six metres from a key-ditch bank) can remove land a buyer counted as usable. https://www.pittmeadows.ca/sites/default/files/2023-04/Drainage%20System%20Protection%20Bylaw%20No.%202266%2C%202007.pdf
+- A duplex inside a strata complex carries the complex's Form B diligence, not a two-lot duplex file — the title form (one lot, two-lot strata plan, or subdivided pair) is the check that decides which diligence applies. https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing
+Read: 2026-11-03
+
+## 10. HOW IT COMPARES
+| Fact | Pitt Meadows | Maple Ridge | Port Coquitlam |
+|---|---|---|---|
+| Speculation and Vacancy Tax taxable area | Yes https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas | Yes https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas | Yes https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas |
+| Municipal flood construction bylaw with a stated flood level | Yes — Bylaw No. 2384, 2008: 5.15 m urban / 1.85 m rural https://www.pittmeadows.ca/sites/default/files/2024-09/Floodplain Designation and Construction Control Bylaw No. 2384, 2008 - Consolidated.pdf | unconfirmed | unconfirmed |
+| Two-family development cost charge stated by the municipality | $17,306 per unit (2024) https://www.pittmeadows.ca/sites/default/files/2026-04/v17-2010_DCC_Rate_Summary.pdf | unconfirmed | unconfirmed |
+Read: 2026-11-03
+
+## NOT CONFIRMED
+- A named, verified strata duplex (two-lot strata plan) or fee-simple half-duplex subdivision in Pitt Meadows: none is confirmed on an official or developer source in the duplex source-finding index; the named complex stock sits in the south-meadows-houses-for-sale note.
+- Pitt Meadows' servicing position and any servicing bylaw number: unconfirmed in the program's verified ledger, so none is stated here.
+- The current construction status of Heron's Nest beyond the November 2024 agreements milestone — flagged "check current" in Section 6.
+
+## INTERNAL LINK SUGGESTIONS
+- south-meadows-houses-for-sale — carries Pitt Meadows-wide facts and the named Osprey Village complex stock this note points to.
+- pitt-meadows-houses-for-sale — the city-wide housing picture a duplex buyer cross-shops against.
+- maple-ridge-duplexes-for-sale — the neighbouring city's duplex rules, across the Pitt River, for comparison.

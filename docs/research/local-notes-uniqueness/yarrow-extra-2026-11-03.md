@@ -1,0 +1,82 @@
+# Yarrow Neighbourhood — Extra Local Notes
+Page: yarrow (Yarrow; neighbourhood).
+
+## 1. STREETS AND BOUNDARIES
+- Yarrow is a village inside the City of Chilliwack that sits outside the City's Urban Growth Boundary, bounded by Agricultural Land Reserve (ALR) land on all sides. https://www.engagechilliwack.com/yarrowplan/faqs
+- The north edge is the Vedder River, with the Great Blue Heron Nature Reserve and Browne Creek Wetlands between the river and the village, and the east edge is the B.C. Hydro Railway (Southern Railway of British Columbia), a freight line with no passenger service confirmed in City plan material. https://www.engagechilliwack.com/yarrowplan/faqs
+- Yarrow Central Road is the village main street, and No. 3 Road and Wilson Road are the other named roads serving the village. https://www.engagechilliwack.com/yarrowplan/faqs
+- Yarrow is the last City community on the road south to Cultus Lake: BC Parks directs lake traffic off Highway 1 at the Yarrow or Sardis exits. https://bcparks.ca/cultus-lake-park/
+Read: 2026-11-03
+
+## 2. THE HOUSING STOCK
+- Most of the village is designated Low Density Residential in the Official Community Plan (OCP), with General Commercial designations on parts of Yarrow Central Road and General Industrial on parts of No. 3 Road. https://www.engagechilliwack.com/yarrowplan/faqs
+- Village homes use individual septic systems — the village is not on City sanitary sewer — and the 2015 update to the City's Sanitary Sewer Bylaw allowed lots of 0.2 hectares to be created off sewer, down from a 1-hectare minimum, after which a number of subdivisions in Yarrow followed. https://www.engagechilliwack.com/yarrowplan/faqs
+- The acreage ring around the village sits in the AL (Agricultural Lowland) Zone, where the minimum lot area is 7.5 hectares for land excluded or exempted from the ALR or approved for subdivision within it, 1 hectare for a boundary adjustment, and 0.2 hectares for a homesite severance approved by the Agricultural Land Commission. https://www.chilliwack.com/main/attachments/Files/377/ZBA%5F5000%5F%2D%5FZoning%5FBylaw%5F2020%2Epdf
+Read: 2026-11-03
+
+## 3. RULES THAT AFFECT BUYERS HERE
+- Yarrow is planned for minimal growth: the City states the OCP envisions a minimal growth scenario because servicing limits and floodplain impacts cap how much density the village can take. https://www.engagechilliwack.com/yarrowplan/faqs
+- An accessory dwelling unit in the Yarrow Neighbourhood requires a satisfactory independent hydrogeological assessment, a groundwater-protection rule written into the R1-A section of Zoning Bylaw 2020, No. 5000. https://www.chilliwack.com/main/attachments/Files/377/ZBA%5F5000%5F%2D%5FZoning%5FBylaw%5F2020%2Epdf
+- Non-ALR lots in Yarrow follow a stated flood rule: the underside of the lowest habitable floor must be at least 1.2 m above natural ground elevation or 0.3 m above the crown of the adjacent road, whichever is greater, with a Qualified Professional's report and a Section 219 Covenant. https://www.chilliwack.com/main/page.cfm?id=637
+- On ALR parcels around the village, the Agricultural Land Commission frame is one principal residence of 500 m² or less, a suite only inside that residence, and at most one additional residence of 90 m² (parcels 40 ha or less) or 186 m² (over 40 ha). https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/
+Read: 2026-11-03
+
+## 4. WHAT BUYERS ASK
+- **Q:** Is Yarrow on City sewer and water? **A:** No for sewer, and not City water either. The City states Yarrow homes use individual septic systems and the village is not connected to sanitary sewer; drinking water comes through Yarrow Water Works, a community system. Servicing limits are the stated reason the OCP plans only minimal growth here, so a buyer's suite, subdivision or addition plans all run through septic capacity and groundwater rules first. https://www.engagechilliwack.com/yarrowplan/faqs
+- **Q:** Which schools serve a Yarrow address? **A:** The SD33 School Locator result on record for 4595 Wilson Rd is Yarrow Elementary Community School at that same address for elementary, Stitó:s Lá:lém Totí:lt for middle school, and Sardis Secondary for secondary, with the locator's note that Vedder Middle students must attend Sardis Secondary. Catchments are address-based, so confirm the exact address in the locator rather than assuming the village result applies to an acreage outside it. https://sd33.bc.ca/index.php/find-your-school
+- **Q:** Can I subdivide a Yarrow lot? **A:** Possibly, at village scale. Since 2015 the City's Sanitary Sewer Bylaw has allowed 0.2-hectare lots in areas not connected to sanitary sewer, down from 1 hectare, and subdivisions in Yarrow followed that change. The Yarrow Neighbourhood Plan exists partly to manage that subdivision pattern against septic and servicing thresholds, so the zone, the lot's septic capacity and the plan's servicing limits all have to line up. https://www.engagechilliwack.com/yarrowplan/faqs
+- **Q:** How real is the flood risk in Yarrow? **A:** The village is flat, low-lying land with the water table close to the surface, and the Vedder River runs along its north side. For non-ALR lots the City's floodplain guide sets the lowest habitable floor at 1.2 m above natural ground or 0.3 m above the road crown, whichever is greater, backed by a Qualified Professional's report and a covenant on title. Check the specific lot's flood status with the City. https://www.chilliwack.com/main/page.cfm?id=637
+- **Q:** What bus service does Yarrow actually get? **A:** Route 55 Yarrow-Greendale is a loop, not a shuttle to downtown. BC Transit's timetable shows four weekday trips and three Saturday trips through the Yarrow stop at Yarrow Central Road at Kehler Street, running from Vedder Road at South Sumas Road via the University of the Fraser Valley Chilliwack campus and on to Greendale. The Yarrow stop is about 19 minutes into the loop from Vedder Road. https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview?route=55
+Read: 2026-11-03
+
+## 5. LOCAL DETAILS A BUYER WOULD NOT KNOW
+- Yarrow Pioneer Park, 4380 Kehler St, is a 2.5-hectare park with a playground, skate park, picnic area and washrooms, and its original skate park was built by local residents and was one of the first skate parks in British Columbia. https://www.chilliwack.com/main/page.cfm?id=1754&dowhat=locationView&plID=160
+- Yarrow Community Park, 4670 Community St, is a 1.5-hectare park with tennis courts and a ball hockey area, and the Yarrow Library and Yarrow Community Hall stand in the park. https://www.chilliwack.com/main/page.cfm?id=1754&dowhat=locationView&plID=160
+- The Vedder Rotary Loop Trail passes the village's north edge: the City's trail listing puts the Yarrow Community Hall–Library at kilometre 12.9 and the start of the Vedder Rotary Trail South at Wilson Road, kilometre 13.4. https://www.chilliwack.com/main/page.cfm?id=1754.&dowhat=locationView&plID=167
+- Well records for acreage parcels are searched in the Province's GWELLS registry, not through the City. https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/information-for-property-owners/well-records-registration
+Read: 2026-11-03
+
+## 6. DEVELOPMENT AND NEW PROJECTS
+- Yarrow Neighbourhood Plan: the plan is now Schedule B7 of the Chilliwack 2050 Official Community Plan, Bylaw 2025, No. 5500. STATUS: adopted plan framework, read 2026-11-03; the City's Engage page for the plan still frames it under the older 2040 OCP, so treat that page's plan-status wording as check current. https://chilliwack.com/ocp https://www.engagechilliwack.com/yarrowplan/faqs
+- No active applications found on the municipal page read on 2026-11-03 https://www.chilliwack.com/main/page.cfm?id=2905
+Read: 2026-11-03
+
+## 7. COSTS AND TAXES HERE
+- For the City of Chilliwack headline residential tax rate and the City utility billing cycle, see the chilliwack-houses-for-sale note — Yarrow is inside the City, and the rate is not restated here.
+- Yarrow homes carry no City sewer charge and no City water bill: sewerage is by private septic system, and water is billed through Yarrow Water Works, the community water system named in the City's plan material. https://www.engagechilliwack.com/yarrowplan/faqs
+- The Speculation and Vacancy Tax applies in the City of Chilliwack — see the chilliwack-houses-for-sale note. https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas
+Read: 2026-11-03
+
+## 8. GETTING AROUND
+- Route 55 Yarrow-Greendale is the village bus: four weekday and three Saturday loop trips through Yarrow Central Road at Kehler Street, via the University of the Fraser Valley Chilliwack campus. https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview?route=55
+- The Vedder Rotary Loop Trail gives walkers and cyclists a 20+ km gravel loop along the Vedder River, passing the Yarrow Community Hall–Library at kilometre 12.9. https://www.chilliwack.com/main/page.cfm?id=1754.&dowhat=locationView&plID=167
+- Highway 1 access is by the Yarrow exit or the Sardis (Vedder Road) exit, the two exits BC Parks names for the Cultus Lake road corridor south of the village. https://bcparks.ca/cultus-lake-park/
+Read: 2026-11-03
+
+## 9. RISKS AND DUE DILIGENCE
+- Start with the flood layer: Yarrow is flat and low with a high water table, and the City's floodplain guide gives Yarrow its own floor-elevation rule (1.2 m above natural ground or 0.3 m above the road crown) with a Qualified Professional's report and a covenant. https://www.chilliwack.com/main/page.cfm?id=637
+- Check ALR status parcel by parcel on the Agricultural Land Commission map before valuing any farm or second-dwelling use — the village is ringed by ALR land on all sides. https://www.alc.gov.bc.ca/alr-maps
+- Price the septic and groundwater file with the house: accessory units need a satisfactory independent hydrogeological assessment, and wells are verified in the Province's GWELLS registry. https://www.chilliwack.com/main/attachments/Files/377/ZBA%5F5000%5F%2D%5FZoning%5FBylaw%5F2020%2Epdf https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/information-for-property-owners/well-records-registration
+Read: 2026-11-03
+
+## 10. HOW IT COMPARES
+| Fact | Yarrow | Greendale | Sardis |
+|---|---|---|---|
+| OCP plan area | Schedule B7 Yarrow | unconfirmed | Schedule B5 Sardis |
+| Bus route named by BC Transit | Route 55 Yarrow-Greendale | Route 55 Yarrow-Greendale | Route 51 Vedder |
+| Floodplain floor rule stated by the City | 1.2 m above natural ground or 0.3 m above road crown (non-ALR rule shared with Greendale) | Same stated non-ALR rule as Yarrow | General rule: Flood Construction Level plus 0.6 m freeboard |
+| School district | SD33 | SD33 | SD33 |
+Sources: https://chilliwack.com/ocp https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview?route=55 https://www.chilliwack.com/main/page.cfm?id=637
+Read: 2026-11-03
+
+## NOT CONFIRMED
+- No condo building or townhome complex in Yarrow was named with an address on an official, developer or strata source in this pass.
+- The single zone and its minimum lot area and frontage for village (non-acreage) parcels were not confirmed from the zoning bylaw in this pass.
+- A named grocery store on Yarrow Central Road with a street address was not confirmed on an official source.
+- The current status wording of the Yarrow Neighbourhood Plan on the City's Engage page still references the 2040 OCP; the Schedule B7 position is taken from the City's current OCP page — check current.
+- Drive times from Yarrow to Chilliwack Proper, Abbotsford and Highway 1 are UNCONFIRMED; no operator page states them.
+
+## INTERNAL LINKS
+- yarrow-guide — the full guide for the village, with its history and plan background.
+- greendale — the neighbouring farm community that shares Yarrow's bus loop and its floodplain floor rule.
+- majuba-hill — the hillside community directly above the village, in the same school catchment pattern.

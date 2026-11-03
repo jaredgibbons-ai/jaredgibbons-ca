@@ -1,0 +1,89 @@
+# Fleetwood Tynehead Houses — Extra Local Notes
+Page: fleetwood-tynehead-surrey-houses-for-sale (Fleetwood Tynehead; houses).
+
+## 1. STREETS AND BOUNDARIES
+- Fleetwood sits at the centre of the northern half of Surrey, with Whalley to the west, Newton and Cloverdale to the south, and Guildford to the east and north. https://www.surrey.ca/about-surrey/our-communities/fleetwood
+- The Fleetwood plan area stretches from Green Timbers Urban Forest in the west towards the Agricultural Land Reserve in the east — that west-to-east line is the practical edge of the Fleetwood house area. https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/fleetwood-land-use-plans/fleetwood-town-centre-plan
+- Tynehead is the east end of the same board area, where Tynehead Regional Park sits at the headwaters of the Serpentine River — the name marks the park and the Serpentine headwaters side of the area, not a separate community. https://metrovancouver.org/services/regional-parks/park/tynehead-regional-park
+- The City calls Fleetwood the smallest of Surrey's town centres and one of the more recently developed, and describes it as a diverse residential area of mostly single family dwellings. https://www.surrey.ca/about-surrey/our-communities/fleetwood
+Read: 2026-11-03
+
+## 2. THE HOUSING STOCK
+- Fleetwood's detached stock is mostly single family dwellings, in a neighbourhood the City describes as home to many families with a growing business presence — the family-house character is the area's defining stock, unlike the tower core in Whalley. https://www.surrey.ca/about-surrey/our-communities/fleetwood
+- The community is also characterized by its parks and agricultural lowlands, so the house area runs from ordinary residential streets in the west to lowland and farm-edge lots toward the Agricultural Land Reserve in the east. https://www.surrey.ca/about-surrey/our-communities/fleetwood
+- The Fleetwood Community Association dates to 1923, and the original Fleetwood Community Hall was built in the 1930s — the settlement history is older than the "recently developed" town centre label suggests. https://www.surrey.ca/about-surrey/our-communities/fleetwood
+- Thomas Fleetwood is memorialized with a statue in front of the Fleetwood Community Centre and Library, put up in 2008, and Francis Park beside the centre is named for his sister Edith Francis. https://www.surrey.ca/about-surrey/our-communities/fleetwood
+Read: 2026-11-03
+
+## 3. RULES THAT AFFECT BUYERS HERE
+- The Fleetwood Plan guides growth over the next 30-plus years as SkyTrain extends along Fraser Highway; its Stage 1 Plan was endorsed by Council on March 7, 2022 and an updated Stage 1 Plan on October 16, 2023, with further changes since to align with the Province's Transit Oriented Areas legislation. https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/fleetwood-land-use-plans/fleetwood-town-centre-plan
+- Council will consider the updated Fleetwood Plan in 2026, so a Fleetwood lot's plan designation is a moving target until that consideration — confirm current zoning and plan status with the City before valuing a lot on future density. https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/fleetwood-land-use-plans/fleetwood-town-centre-plan
+- Surrey's small-scale multi-unit housing rules cap units at three on lots smaller than 280 square metres, four on lots larger than 280 square metres, and up to six on eligible lots of at least 281 square metres within 400 metres of a frequent bus stop. https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing
+- One secondary suite is permitted per single family, semi-detached or duplex dwelling unit, its habitable floor area may not exceed 40 percent of the principal dwelling, and a suite is not permitted inside a coach house or garden suite. https://www.surrey.ca/renovating-building-development/building/building-or-legalizing-secondary-suite
+- A coach house or garden suite must be at least 35 square metres and at most 75 square metres, rising to 120 square metres for lots zoned RA, R2, R2-O and R3 where the existing house is below maximum floor area ratio, with lane access required for a coach house on smaller R3–R6 lots and one extra parking space. https://www.surrey.ca/renovating-building-development/building/residential-building/residential-building-permits/coach-houses-garden-suites
+- At the east end, Agricultural Land Reserve rules apply: on ALR parcels the Agricultural Land Commission framework allows one principal residence up to 500 square metres plus one additional residence of 90 square metres on parcels up to 40 hectares, or 186 square metres on larger parcels. https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/
+Read: 2026-11-03
+
+## 4. WHAT BUYERS ASK
+- **Q:** When will Fleetwood actually have SkyTrain? **A:** The Surrey–Langley SkyTrain project names two Fleetwood stations — Fleetwood Station at the northeast corner of 160 Street and Fraser Highway, and Bakerview-166 Street Station at the northwest corner of 166 Street and Fraser Highway — on a 16-kilometre Expo Line extension from King George Station to 203 Street in Langley City. The stations page read in this pass does not state an in-service date, so any date quoted to a buyer is unconfirmed and the right description is stations under construction, not a running service. https://surreylangleyskytrain.gov.bc.ca/stations/
+- **Q:** What can I build on a Fleetwood house lot today? **A:** Small-scale multi-unit housing allows three units on lots smaller than 280 square metres and four on larger lots, rising to six on eligible lots of at least 281 square metres within 400 metres of a frequent bus stop. One secondary suite per dwelling unit is allowed up to 40 percent of the principal dwelling's floor area, and a coach house or garden suite of 35 to 75 square metres is allowed in zones that permit detached houses. The Fleetwood Plan's transit-oriented areas add designation changes Council considers in 2026. https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations/zoning-small-scale-multi-unit-housing
+- **Q:** Is the east end of Fleetwood farm land? **A:** Partly — the Fleetwood plan area stretches toward the Agricultural Land Reserve in the east, and Tynehead's park land sits at the headwaters of the Serpentine River. On an ALR parcel the Commission framework limits housing to one principal residence up to 500 square metres plus one additional residence, so an east-end acreage lot is not valued like an ordinary residential lot. Confirm ALR status and the City plan area for any east-end lot before valuing it, because the two checks can pull in opposite directions. https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/fleetwood-land-use-plans/fleetwood-town-centre-plan
+- **Q:** Can I walk to a park and a community centre from a Fleetwood house? **A:** Yes, near the station corridor — Fleetwood Station is described by the project as providing better access to the Fleetwood Community Centre and connectivity to the future Fleetwood Centre under the Fleetwood Plan, and Bakerview-166 Street Station will provide better access to the Surrey Sport and Leisure Complex. Tynehead Regional Park at the east end adds the Serpentine River trails and hatchery. Which of these a house actually walks to depends on whether it sits near 160 Street, 166 Street, or the park side of the area. https://surreylangleyskytrain.gov.bc.ca/stations/
+- **Q:** Is a Fleetwood house in the floodplain? **A:** The City's coastal floodplain stretches along the Nicomekl and Serpentine Rivers toward Cloverdale and Newton, and Fleetwood's own description includes agricultural lowlands, so lowland and east-end lots need the lot-level check. The floodplain page describes the coastal floodplain area, not individual parcels, and much of that lowland is protected by dikes and sea dams on the tidal rivers. A buyer should confirm the specific lot on the City's mapping and ask whether its protection is a dike, a sea dam, or fill height. https://www.surrey.ca/services-payments/water-drainage-sewer/flood-control/lowlands-floodplains/surrey-coastal-floodplain
+Read: 2026-11-03
+
+## 5. LOCAL DETAILS A BUYER WOULD NOT KNOW
+- Tynehead Regional Park's Serpentine River is salmon habitat, and Metro Vancouver states that dogs are not allowed in the Serpentine River and its tributaries, and that the park's leash-optional area is not fenced. https://metrovancouver.org/services/regional-parks/park/tynehead-regional-park
+- The Tynehead Hatchery raises coho, chum and chinook salmon that return to the Serpentine River to spawn, and it is run by the Serpentine Enhancement Society, a non-profit volunteer group — so hatchery access depends on volunteers, not a staffed schedule. https://metrovancouver.org/services/regional-parks/park/tynehead-regional-park
+- Trail construction in Tynehead Regional Park from September to December 2026 closes parts of the Perimeter Trail and the Raven's Nest Trail on weekdays for a new 280-metre section of Perimeter Trail, with two areas closed every day of the week during construction. https://metrovancouver.org/services/regional-parks/park/tynehead-regional-park
+- The Fleetwood Business Improvement Association represents about 120 property owners and about 350 businesses, and the Fleetwood Community Association has hosted the Fleetwood Festival since 1998. https://www.surrey.ca/about-surrey/our-communities/fleetwood
+- The Fleetwood Athletic Park is a City capital project for the area, with design planned to begin in 2022 per the City's community page — check its current status before treating it as an existing amenity. https://www.surrey.ca/about-surrey/our-communities/fleetwood
+Read: 2026-11-03
+
+## 6. DEVELOPMENT AND NEW PROJECTS
+- Surrey–Langley SkyTrain extension — 16 kilometres of elevated Expo Line from King George Station to 203 Street in Langley City, with eight stations and three transit exchanges; STATUS: under construction, project station pages read 2026-11-03. https://surreylangleyskytrain.gov.bc.ca/stations/
+- Fleetwood Station — northeast corner of 160 Street and Fraser Highway, providing better access to the Fleetwood Community Centre and connectivity to the future Fleetwood Centre under the Fleetwood Plan; STATUS: future station on the project under construction, read 2026-11-03. https://surreylangleyskytrain.gov.bc.ca/stations/
+- Bakerview-166 Street Station — northwest corner of 166 Street and Fraser Highway, with an integrated transit exchange for north-south bus connections and better access to the Surrey Sport and Leisure Complex; STATUS: future station on the project under construction, read 2026-11-03. https://surreylangleyskytrain.gov.bc.ca/stations/
+- Green Timbers Station — 140 Street and Fraser Highway, at the westernmost edge of Green Timbers Urban Forest, facilitating access to Jim Pattison Outpatient Care and Surgery Centre, the BC RCMP E-Divisional Headquarters and Surrey Memorial Hospital; STATUS: future station on the project under construction, read 2026-11-03. https://surreylangleyskytrain.gov.bc.ca/stations/
+- 152 Street Station — northwest corner of Fraser Highway and 152 Street, providing better connectivity to the growing business and residential community; STATUS: future station on the project under construction, read 2026-11-03. https://surreylangleyskytrain.gov.bc.ca/stations/
+- Fleetwood Plan — Stage 1 Plan endorsed March 7, 2022, updated Stage 1 Plan endorsed October 16, 2023, further changes to align with the Province's Transit Oriented Areas legislation, with Council to consider the updated plan in 2026; STATUS: plan update in progress, City page read 2026-11-03. https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/fleetwood-land-use-plans/fleetwood-town-centre-plan
+- Tynehead Perimeter Trail — new 280-metre section under construction September to December 2026 with weekday closures of the Raven's Nest Group Camp, Raven's Nest Trail and a south section of the Perimeter Trail (West); STATUS: under construction, Metro Vancouver advisory read 2026-11-03. https://metrovancouver.org/services/regional-parks/park/tynehead-regional-park
+Read: 2026-11-03
+
+## 7. COSTS AND TAXES HERE
+- Fleetwood houses pay the city-wide Surrey tax — there is no Fleetwood rate. The full 2026 rate, parcel taxes and utility figures are carried in the surrey-houses-for-sale note — see the surrey-houses-for-sale note. https://www.surrey.ca/services-payments/property-taxes/property-tax-rates
+- Surrey property taxes are due July 2, with a 5 percent penalty if not paid by midnight July 2 and a further 5 percent penalty after September 2. https://www.surrey.ca/services-payments/property-taxes/paying-your-property-taxes
+- The Speculation and Vacancy Tax applies in Fleetwood because the Province lists the City of Surrey as a designated taxable area in the Metro Vancouver Regional District. https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas
+Read: 2026-11-03
+
+## 8. GETTING AROUND
+- Fleetwood has no SkyTrain station operating today; the two project stations are Fleetwood Station at 160 Street and Fraser Highway and Bakerview-166 Street Station at 166 Street and Fraser Highway, the latter with an integrated transit exchange. https://surreylangleyskytrain.gov.bc.ca/stations/
+- Fraser Highway is the corridor that ties Fleetwood to both Whalley and Langley City — the Surrey–Langley SkyTrain extension runs primarily along Fraser Highway on an elevated guideway from King George Station to 203 Street. https://surreylangleyskytrain.gov.bc.ca/stations/
+- Tynehead Regional Park is accessible by transit, with bus stops near the park on 96 Avenue, per Metro Vancouver's park page. https://metrovancouver.org/services/regional-parks/park/tynehead-regional-park
+Read: 2026-11-03
+
+## 9. RISKS AND DUE DILIGENCE
+- Confirm Agricultural Land Reserve status at the east end before valuing a Fleetwood lot, because the plan area runs towards the ALR and the Commission's housing limits on ALR parcels are far below ordinary residential density. https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/
+- Check any Serpentine River-side lot for riparian and habitat rules: the Serpentine River runs through Tynehead Regional Park as salmon habitat, and Metro Vancouver keeps people and dogs out of the river and away from its banks to protect sensitive life stages. https://metrovancouver.org/services/regional-parks/park/tynehead-regional-park
+- Confirm the lot against the Fleetwood Plan's current stage, because the plan's transit-oriented areas and its 2026 Council consideration can change what a lot near 160 Street or 166 Street may become after a purchase. https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/fleetwood-land-use-plans/fleetwood-town-centre-plan
+- For lowland lots, check the City's floodplain mapping for the Serpentine lowland: the coastal floodplain page describes dykes, sea dams and flood boxes on the Nicomekl and Serpentine Rivers, but it does not clear a single parcel. https://www.surrey.ca/services-payments/water-drainage-sewer/flood-control/lowlands-floodplains/surrey-coastal-floodplain
+Read: 2026-11-03
+
+## 10. HOW IT COMPARES
+| Fact | Fleetwood | Whalley | Guildford |
+|---|---|---|---|
+| SkyTrain stations operating today | 0 https://www.surrey.ca/services-payments/parking-streets-transportation/walking-cycling-transit/transit-in-surrey | 4 https://www.surrey.ca/services-payments/parking-streets-transportation/walking-cycling-transit/transit-in-surrey | 0 https://www.surrey.ca/services-payments/parking-streets-transportation/walking-cycling-transit/transit-in-surrey |
+| Future SkyTrain stations named on Fraser Highway | Fleetwood (160 Street), Bakerview-166 Street https://surreylangleyskytrain.gov.bc.ca/stations/ | unconfirmed | unconfirmed |
+| Local land-use plan | Fleetwood Plan, Stage 1 endorsed 2022, updated 2023 https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/fleetwood-land-use-plans/fleetwood-town-centre-plan | City Centre Plan, 2017, update underway https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/whalley-land-use-plans/city-centre-plan | Guildford Plan, approved October 30, 2023 https://www.surrey.ca/sites/default/files/media/documents/GuildfordPlanFinal.pdf |
+Read: 2026-11-03
+
+## NOT CONFIRMED
+- A Surrey–Langley SkyTrain in-service date — the project stations page read in this pass does not state one, so none is quoted here.
+- School catchment results for Fleetwood addresses from SD36's locator — no locator run was completed for a Fleetwood address in this pass, so no catchment claim is made.
+- Named Fleetwood detached subdivisions with developer-stated lot sizes or build decades — no municipal or developer page read in this pass stated them.
+- The current status of the Fleetwood Athletic Park capital project beyond the City page's design-planned-to-begin-in-2022 note — not re-confirmed in this pass.
+
+## INTERNAL LINKS
+- fleetwood-tynehead-guide — the full guide to the same area, for buyers who want Fleetwood's history, parks and plan in one place.
+- guildford-surrey-houses-for-sale — the house area to the east, for buyers comparing the Tynehead park edge with Fraser Heights.
+- cloverdale-houses-for-sale — the house area to the south, for buyers comparing Fleetwood's family streets with Cloverdale's historic main street.

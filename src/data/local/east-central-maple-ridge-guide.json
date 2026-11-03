@@ -1,35 +1,12 @@
 {
-  "status": "draft",
-  "slug": "east-central-maple-ridge-guide",
-  "updated": "2026-11-01",
-  "breadcrumbs": [
-    {
-      "name": "Home",
-      "href": "/index.html"
-    },
-    {
-      "name": "Maple Ridge neighbourhood guides",
-      "href": "/maple-ridge-neighbourhood-guides.html"
-    },
-    {
-      "name": "East Central Maple Ridge",
-      "href": "/east-central-maple-ridge-guide.html"
-    }
-  ],
-  "suppress": [
-    "Planning and flood notes for East Central Maple Ridge",
-    "East Central Maple Ridge questions",
-    "Related guides"
-  ],
-  "faq_heading": "East Central Maple Ridge: your questions answered",
   "blocks": [
     {
       "t": "notice",
       "text": "Draft for Jared's approval. Written from City of Maple Ridge, Maple Ridge Museum, TransLink, School District 42 and BC government pages, and it replaces text repeated on the other Maple Ridge guides."
     },
     {
-      "t": "h",
       "level": 2,
+      "t": "h",
       "text": "Uptown Haney: how the east side of the Town Centre took shape"
     },
     {
@@ -41,7 +18,6 @@
       "text": "Schools mark the east side's early growth. The museum records that the first school in the Haney townsite centre opened on December 28, 1908, on Hinch Road (now 225 Street) roughly where the Leisure Centre stands today. It had two rooms and 59 pupils in its first year. A larger Haney Central School replaced it in 1923 on the same property, about where the western half of Haney Place Mall now sits. An 1888 school stood at Dewdney Trunk Road and Lillooet Road, today's 232 Street."
     },
     {
-      "t": "table",
       "caption": "Public places on the east side of the Town Centre",
       "head": [
         "Place",
@@ -69,10 +45,10 @@
           "11925 Haney Place",
           "Two floors with climbing and bouldering walls, an indoor skate and scooter park and a multi-sport court. The City says it has run for over 25 years."
         ]
-      ]
+      ],
+      "t": "table"
     },
     {
-      "t": "table",
       "caption": "Where the sources disagree",
       "head": [
         "Item",
@@ -95,11 +71,12 @@
           "20010 Dunn Avenue, Maple Ridge (TransLink park-and-ride page)",
           "Pitt Meadows (the city column in the same page's table)"
         ]
-      ]
+      ],
+      "t": "table"
     },
     {
-      "t": "h",
       "level": 2,
+      "t": "h",
       "text": "Sport, skating and the arts"
     },
     {
@@ -111,8 +88,8 @@
       "text": "The ACT Arts Centre is now City-run: the City says it took over operating the centre on January 1, 2026, from the Maple Ridge Pitt Meadows Arts Council. The City's facility page lists a 486-seat main stage and a flat-floor studio theatre of about 2,311 sq ft."
     },
     {
-      "t": "h",
       "level": 2,
+      "t": "h",
       "text": "Getting around: Maple Meadows Station"
     },
     {
@@ -128,8 +105,8 @@
       "text": "The West Coast Express timetable effective September 7, 2026 shows five weekday departures from Maple Meadows to Waterfront, at 5:50, 6:20, 6:50, 7:20 and 7:50 a.m., taking about 50 minutes. Evening trains arrive back at 4:38, 5:08, 5:38, 6:18 and 7:08 p.m. There is no weekend or holiday service."
     },
     {
-      "t": "h",
       "level": 2,
+      "t": "h",
       "text": "What the plans mean if you own or buy here"
     },
     {
@@ -145,8 +122,8 @@
       "text": "Out west, the Hammond Area Plan says residential and mixed-use buildings near Maple Meadows Station generally run 8 to 12 storeys depending on distance from the station, and the plan says the station was designated a Transit-Oriented Area in 2024. The City dates the Port Hammond Junction Township to 1883, and the Maple Ridge Museum says Interfor announced the Hammond Cedar Mill closure in fall 2019."
     },
     {
-      "t": "h",
       "level": 2,
+      "t": "h",
       "text": "Flood history and what to check"
     },
     {
@@ -154,19 +131,19 @@
       "text": "The Maple Ridge Museum holds a June 1948 aerial photo of central Haney looking south toward the Fraser at the height of that year's flood. The City publishes Fraser River and Alouette River floodplain maps, shows the area expected to flood on average once every 200 years, and says it manages flood risk case by case. I found no flood statement written for the east side as a whole, so look up the exact address."
     },
     {
-      "t": "h",
+      "gen": "market",
       "level": 2,
-      "text": "Maple Ridge home prices, September 2026",
-      "gen": "market"
+      "t": "h",
+      "text": "Maple Ridge home prices, September 2026"
     },
     {
+      "gen": "market",
       "t": "p",
-      "text": "The MLS® Home Price Index benchmark for a typical Maple Ridge home was $882,600 in September 2026, down 7.0% from a year earlier. Detached homes were $1,155,900 (down 7.7% over the year), townhouses $700,800 (down 8.1%) and apartments $513,400 (down 2.6%).",
-      "gen": "market"
+      "text": "The MLS® Home Price Index benchmark for a typical Maple Ridge home was $882,600 in September 2026, down 7.0% from a year earlier. Detached homes were $1,155,900 (down 7.7% over the year), townhouses $700,800 (down 8.1%) and apartments $513,400 (down 2.6%)."
     },
     {
-      "t": "table",
       "caption": "Maple Ridge MLS® benchmark prices, September 2026",
+      "gen": "market",
       "head": [
         "Home type",
         "Benchmark price",
@@ -205,22 +182,22 @@
         ]
       ],
       "source": "Source: Greater Vancouver REALTORS® MLS® Home Price Index, September 2026 (released October 2, 2026).",
-      "gen": "market"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How East Central compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How East Central compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "East Central against its whole city, October 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "East Central against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
       "caption": "East Central against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -245,156 +222,156 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and October 2026, detached houses: listings rose from 72 in June to 75 in October (+4.2%), and it took 19.8% of the city’s 247 sales over the period; condos and townhomes: listings fell from 112 in June to 106 in October (−5.4%), and it took 40.4% of the city’s 230 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings rose from 72 in June to 75 in October (+4.2%), and it took 19.8% of the city’s 247 sales over the period; condos and townhomes: listings fell from 112 in June to 106 in October (−5.4%), and it took 40.4% of the city’s 230 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out East Central for detached houses in July (a sellers’ best bet); detached houses in June, September (a buyers’ best bet); condos and townhomes in August, October (a sellers’ best bet); condos and townhomes in June (a buyers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out East Central for detached houses in July (a sellers’ best bet); detached houses in June, September (a buyers’ best bet); condos and townhomes in August, October (a sellers’ best bet); condos and townhomes in June (a buyers’ best bet)."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Maple Ridge real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Maple Ridge real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Maple Ridge homes for sale",
-            "h": "/maple-ridge-homes-for-sale.html"
+            "h": "/maple-ridge-homes-for-sale.html",
+            "t": "Maple Ridge homes for sale"
           }
         ],
         [
           {
-            "t": "Maple Ridge real estate market stats",
-            "h": "/maple-ridge-real-estate-market-stats.html"
+            "h": "/maple-ridge-real-estate-market-stats.html",
+            "t": "Maple Ridge real estate market stats"
           }
         ],
         [
           {
-            "t": "Maple Ridge houses for sale",
-            "h": "/maple-ridge-houses-for-sale.html"
+            "h": "/maple-ridge-houses-for-sale.html",
+            "t": "Maple Ridge houses for sale"
           }
         ],
         [
           {
-            "t": "Maple Ridge condos for sale",
-            "h": "/maple-ridge-condos-for-sale.html"
+            "h": "/maple-ridge-condos-for-sale.html",
+            "t": "Maple Ridge condos for sale"
           }
         ],
         [
           {
-            "t": "Maple Ridge townhomes for sale",
-            "h": "/maple-ridge-townhomes-for-sale.html"
+            "h": "/maple-ridge-townhomes-for-sale.html",
+            "t": "Maple Ridge townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Maple Ridge",
-            "h": "/sell-my-house-in-maple-ridge.html"
+            "h": "/sell-my-house-in-maple-ridge.html",
+            "t": "Sell my house in Maple Ridge"
           }
         ],
         [
           {
-            "t": "East Central homes and market figures",
-            "h": "/east-central.html"
+            "h": "/east-central.html",
+            "t": "East Central homes and market figures"
           }
         ],
         [
           {
-            "t": "Northeast real estate",
-            "h": "/northeast.html"
+            "h": "/northeast.html",
+            "t": "Northeast real estate"
           }
         ],
         [
           {
-            "t": "Northwest real estate",
-            "h": "/northwest-maple-ridge.html"
+            "h": "/northwest-maple-ridge.html",
+            "t": "Northwest real estate"
           }
         ],
         [
           {
-            "t": "Silver Valley real estate",
-            "h": "/silver-valley.html"
+            "h": "/silver-valley.html",
+            "t": "Silver Valley real estate"
           }
         ],
         [
           {
-            "t": "Southwest real estate",
-            "h": "/southwest-maple-ridge.html"
+            "h": "/southwest-maple-ridge.html",
+            "t": "Southwest real estate"
           }
         ],
         [
           {
-            "t": "Thornhill real estate",
-            "h": "/thornhill-mr.html"
+            "h": "/thornhill-mr.html",
+            "t": "Thornhill real estate"
           }
         ],
         [
           {
-            "t": "Websters Corners real estate",
-            "h": "/websters-corners.html"
+            "h": "/websters-corners.html",
+            "t": "Websters Corners real estate"
           }
         ],
         [
           {
-            "t": "West Central real estate",
-            "h": "/west-central.html"
+            "h": "/west-central.html",
+            "t": "West Central real estate"
           }
         ],
         [
           {
-            "t": "Whonnock real estate",
-            "h": "/whonnock.html"
+            "h": "/whonnock.html",
+            "t": "Whonnock real estate"
           }
         ],
         [
           {
-            "t": "Albion real estate",
-            "h": "/albion.html"
+            "h": "/albion.html",
+            "t": "Albion real estate"
           }
         ],
         [
           {
-            "t": "Cottonwood real estate",
-            "h": "/cottonwood-mr.html"
+            "h": "/cottonwood-mr.html",
+            "t": "Cottonwood real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby East Central Maple Ridge",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby East Central Maple Ridge"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -422,18 +399,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -446,18 +423,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -475,18 +452,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -494,25 +471,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Maple Ridge Leisure Centre, 11925 Haney Place",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Maple Ridge Library",
@@ -539,18 +517,17 @@
           "3.2"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -558,93 +535,93 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt701",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf",
+            "t": "infomaps.translink.ca · tt701"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt745",
-            "h": "https://infomaps.translink.ca/Public_Timetables/207/tt745.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/207/tt745.pdf",
+            "t": "infomaps.translink.ca · tt745"
           }
         ],
         [
           {
-            "t": "translink.ca · direction",
-            "h": "https://www.translink.ca/schedules-and-maps/route/743/direction/1/map"
+            "h": "https://www.translink.ca/schedules-and-maps/route/743/direction/1/map",
+            "t": "translink.ca · direction"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · maple ridge leisure centre",
-            "h": "https://www.mapleridge.ca/art-parks-rec/recreation-facilities/maple-ridge-leisure-centre"
+            "h": "https://www.mapleridge.ca/art-parks-rec/recreation-facilities/maple-ridge-leisure-centre",
+            "t": "mapleridge.ca · maple ridge leisure centre"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca · locations",
-            "h": "https://www.fvrl.bc.ca/locations"
+            "h": "https://www.fvrl.bc.ca/locations",
+            "t": "fvrl.bc.ca · locations"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · maple ridge",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/maple-ridge"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/maple-ridge",
+            "t": "studentsuccess.gov.bc.ca · maple ridge"
           }
         ],
         [
           {
-            "t": "haneyplacemall.com · contact us",
-            "h": "https://www.haneyplacemall.com/contact_us/"
+            "h": "https://www.haneyplacemall.com/contact_us/",
+            "t": "haneyplacemall.com · contact us"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 2,
-      "text": "What's nearby, building by building",
-      "gen": "nbb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
-      "gen": "nbb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Alouette Estates, 11870 232 Street",
-      "gen": "nbb",
-      "pos": "end"
+      "text": "What's nearby, building by building"
     },
     {
-      "t": "list",
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Alouette Estates, 11870 232 Street"
+    },
+    {
+      "gen": "nbb",
       "items": [
         [
           {
@@ -667,18 +644,18 @@
           }
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 3,
-      "text": "Dogwood Lane, 22555 116 Avenue",
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Dogwood Lane, 22555 116 Avenue"
     },
     {
-      "t": "list",
+      "gen": "nbb",
       "items": [
         [
           {
@@ -691,18 +668,18 @@
           }
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 3,
-      "text": "Duet, 22977 116 Avenue",
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Duet, 22977 116 Avenue"
     },
     {
-      "t": "list",
+      "gen": "nbb",
       "items": [
         [
           {
@@ -720,18 +697,18 @@
           }
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 3,
-      "text": "Fraser Glen, 22740 116 Avenue",
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Fraser Glen, 22740 116 Avenue"
     },
     {
-      "t": "list",
+      "gen": "nbb",
       "items": [
         [
           {
@@ -739,18 +716,18 @@
           }
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 3,
-      "text": "Gold Creek Estates, 12191 228 Street",
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Gold Creek Estates, 12191 228 Street"
     },
     {
-      "t": "list",
+      "gen": "nbb",
       "items": [
         [
           {
@@ -773,19 +750,19 @@
           }
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 3,
-      "text": "Measured walking and driving times from each building",
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
       "head": [
         "Building",
         "To",
@@ -793,6 +770,7 @@
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Alouette Estates",
@@ -873,10 +851,10 @@
         ],
         [
           "Fraser Glen",
-          "Golden Ears Elementary",
+          "Haney Place Mall",
           "Drive",
           "2",
-          "1.2"
+          "1.4"
         ],
         [
           "Gold Creek Estates",
@@ -887,7 +865,7 @@
         ],
         [
           "Gold Creek Estates",
-          "Eric Langton Elementary",
+          "Save-On-Foods / Valley Fair, 22703 Lougheed Highway",
           "Walk",
           "15",
           "1.1"
@@ -900,142 +878,563 @@
           "1.1"
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 3,
-      "text": "Sources for what’s nearby each building",
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
     },
     {
-      "t": "list",
+      "gen": "nbb",
       "items": [
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt701",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf",
+            "t": "infomaps.translink.ca · tt701"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt745",
-            "h": "https://infomaps.translink.ca/Public_Timetables/210/tt745.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/210/tt745.pdf",
+            "t": "infomaps.translink.ca · tt745"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · Harry Hooge Park 63",
-            "h": "https://www.mapleridge.ca/Facilities/Facility/Details/Harry-Hooge-Park-63"
+            "h": "https://www.mapleridge.ca/Facilities/Facility/Details/Harry-Hooge-Park-63",
+            "t": "mapleridge.ca · Harry Hooge Park 63"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · maple ridge leisure centre",
-            "h": "https://www.mapleridge.ca/art-parks-rec/recreation-facilities/maple-ridge-leisure-centre"
+            "h": "https://www.mapleridge.ca/art-parks-rec/recreation-facilities/maple-ridge-leisure-centre",
+            "t": "mapleridge.ca · maple ridge leisure centre"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca · locations",
-            "h": "https://www.fvrl.bc.ca/locations"
+            "h": "https://www.fvrl.bc.ca/locations",
+            "t": "fvrl.bc.ca · locations"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · maple ridge",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/maple-ridge"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/maple-ridge",
+            "t": "studentsuccess.gov.bc.ca · maple ridge"
           }
         ],
         [
           {
-            "t": "saveonfoods.com · store",
-            "h": "https://www.saveonfoods.com/sm/planning/rsid/935/store"
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/935/store",
+            "t": "saveonfoods.com · store"
           }
         ],
         [
           {
-            "t": "haneyplacemall.com · contact us",
-            "h": "https://www.haneyplacemall.com/contact_us/"
+            "h": "https://www.haneyplacemall.com/contact_us/",
+            "t": "haneyplacemall.com · contact us"
           }
         ],
         [
           {
-            "t": "translink.ca · direction",
-            "h": "https://www.translink.ca/schedules-and-maps/route/743/direction/1/map"
+            "h": "https://www.translink.ca/schedules-and-maps/route/743/direction/1/map",
+            "t": "translink.ca · direction"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt746",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt746.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt746.pdf",
+            "t": "infomaps.translink.ca · tt746"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · Brickwood Park 35",
-            "h": "https://www.mapleridge.ca/Facilities/Facility/Details/Brickwood-Park-35"
+            "h": "https://www.mapleridge.ca/Facilities/Facility/Details/Brickwood-Park-35",
+            "t": "mapleridge.ca · Brickwood Park 35"
           }
         ],
         [
           {
-            "t": "mapleridge.ca · Jim Hadgkiss Park 78",
-            "h": "https://www.mapleridge.ca/Facilities/Facility/Details/Jim-Hadgkiss-Park-78"
+            "h": "https://www.mapleridge.ca/Facilities/Facility/Details/Jim-Hadgkiss-Park-78",
+            "t": "mapleridge.ca · Jim Hadgkiss Park 78"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt733",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt733.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt733.pdf",
+            "t": "infomaps.translink.ca · tt733"
           }
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "East Central Maple Ridge: streets and boundaries"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "East Central is a board sub-area name, not a City plan name; its downtown west end is governed by the City's Town Centre Area Plan (Official Community Plan Chapter 10.4)."
+          }
+        ],
+        [
+          {
+            "t": "The Town Centre plan area expanded in 2025 to include River Bend, and earlier plan text puts its edge at 124 Avenue north, 221 Street west and Burnett Street east."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "East Central Maple Ridge: the housing stock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The stock splits in two: freehold houses on the streets east and north of downtown, and strata condos in the Town Centre core."
+          }
+        ],
+        [
+          {
+            "t": "The 2025 plan adds a Town Centre Core designation supporting higher density in a walkable downtown anchored by Haney Transit Exchange and Port Haney Station."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "East Central Maple Ridge: rules that affect buyers"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Secondary suites must not exceed 40% of the building's total gross floor area (Gross Floor Area) and must not sit in the Floodplain Area, under Zoning Bylaw 7600-2019."
+          }
+        ],
+        [
+          {
+            "t": "Provincial small-scale multi-unit housing (Small-Scale Multi-Unit Housing) rules allow up to three, four or six units on eligible single-family and duplex lots in Maple Ridge."
+          }
+        ],
+        [
+          {
+            "t": "Two Transit-Oriented Areas (Haney Transit Exchange and Port Haney Station) fall inside the Town Centre plan area under Designation Bylaw No. 8001-2024."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "East Central Maple Ridge: local details a buyer would not know"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The Town Centre was formerly called Central Haney and grew around the Port Haney station and steamboat landing."
+          }
+        ],
+        [
+          {
+            "t": "Land-use designations here were consolidated from 11 to 7 in the November 25, 2025 plan update, so older plan maps no longer match."
+          }
+        ],
+        [
+          {
+            "t": "A City land-use review covers Cliff Avenue, Selkirk Avenue and 119 Avenue properties between 221 Street and 222 Street, between this plan and the draft Lougheed Transit Corridor plan."
+          }
+        ],
+        [
+          {
+            "t": "Detached garden suites are capped at 140 square metres or 15% of lot area, whichever is less, outside the Agricultural Land Reserve."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "East Central Maple Ridge: development and new projects"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Guide-specific item: the Town Centre Area Plan update was adopted November 25, 2025, adding the Town Centre Core designation and the River Bend boundary expansion."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "East Central Maple Ridge: costs and taxes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Maple Ridge's 2026 total residential mill rate is 4.53578 per $1,000 of assessed value, including the municipal general rate of 2.86430 (2026 Property Tax Rate Summary)."
+          }
+        ],
+        [
+          {
+            "t": "The 2026 flat water fee is $859.25; flat-rate water and sewer appear on the tax notice, while metered customers are billed quarterly."
+          }
+        ],
+        [
+          {
+            "t": "Maple Ridge is a designated taxable area for the provincial Speculation and Vacancy Tax, so residential owners must declare."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "East Central Maple Ridge: getting around"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Port Haney Station, at this area's southwest corner, is a West Coast Express stop between Mission City and Waterfront, Monday to Friday only, with no weekend or statutory-holiday service."
+          }
+        ],
+        [
+          {
+            "t": "Haney Place Exchange is the local bus hub; the planned Langley–Haney Place Bus Rapid Transit line would run about 22 kilometres with 13 stations and peak service every 10 minutes."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "East Central Maple Ridge: risks and due diligence"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Check any lot against Schedule A of Floodplain Management Bylaw No. 8121-2026: no habitable area may be built with its floor system below the Flood Construction Level."
+          }
+        ],
+        [
+          {
+            "t": "The bylaw also designates land less than 1.5 metres above the natural boundary of an adjacent watercourse as floodplain — creek-side lots away from the Fraser are not exempt."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "How East Central Maple Ridge compares"
+    },
+    {
+      "caption": "East Central Maple Ridge compared",
+      "gen": "uq",
+      "head": [
+        "Fact",
+        "East Central",
+        "Silver Valley",
+        "Southwest (Hammond)"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "City area plan",
+          "Town Centre, Chapter 10.4",
+          "Silver Valley, Chapter 10.3",
+          "Hammond, Chapter 10.5"
+        ],
+        [
+          "West Coast Express station in area",
+          "Port Haney",
+          "None",
+          "Maple Meadows and Port Haney"
+        ],
+        [
+          "Plan update adopted",
+          "Nov. 25, 2025",
+          "Nov. 25, 2025",
+          "Nov. 25, 2025"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Related pages"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "/maple-ridge-condos-for-sale.html",
+            "t": "Maple Ridge Condos for Sale | Apartments"
+          }
+        ],
+        [
+          {
+            "h": "/maple-ridge-homes-for-sale.html",
+            "t": "Maple Ridge Homes for Sale | MLS Listings"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for East Central Maple Ridge"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/area-neighbourhood-plans/town?bidId=",
+            "t": "mapleridge.ca · town"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/media/file/attachment-tcap-official-community-plan-amending-bylaw-no-8060-2025pdf",
+            "t": "mapleridge.ca · attachment tcap official community plan amending"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/secondary-suites",
+            "t": "mapleridge.ca · secondary suites"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-action/housing-target-order/new",
+            "t": "mapleridge.ca · housing target order"
+          }
+        ],
+        [
+          {
+            "h": "https://www.sd42.ca/announcement/registration-summer-learning-starts/",
+            "t": "sd42.ca · registration summer learning starts"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/news/city-advances-climate-action-flood-resilience-environmental-protection-and-mckenney-creek",
+            "t": "mapleridge.ca · city advances climate action flood resilience en"
+          }
+        ],
+        [
+          {
+            "h": "https://engage.mapleridge.ca/landusereview",
+            "t": "engage.mapleridge.ca · landusereview"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/build-do-business/planning-land-use/community-planning/housing-ready/detached-garden-suites",
+            "t": "mapleridge.ca · detached garden suites"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/news/maple-ridge-advances-housing-strategy-completion-area-plan-updates",
+            "t": "mapleridge.ca · maple ridge advances housing strategy completion"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/your-government/city-projects/golden-ears-way-widening",
+            "t": "mapleridge.ca · golden ears way widening"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/media/file/2026-property-tax-rates",
+            "t": "mapleridge.ca · 2026 property tax rates"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas",
+            "t": "www2.gov.bc.ca · taxable areas"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt997.pdf",
+            "t": "infomaps.translink.ca · tt997"
+          }
+        ],
+        [
+          {
+            "h": "https://www.translink.ca/-/media/translink/documents/plans-and-projects/rapid-transit/bus-rapid-transit/brt-phase-3-engagement-summary.pdf",
+            "t": "translink.ca · brt phase 3 engagement summary"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/media/file/maple-ridge-floodplain-management-bylaw-no-8121-2026pdf",
+            "t": "mapleridge.ca · maple ridge floodplain management bylaw no 8121"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/area-neighbourhood-plans/silver?bidId=",
+            "t": "mapleridge.ca · silver"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    }
+  ],
+  "breadcrumbs": [
+    {
+      "href": "/index.html",
+      "name": "Home"
+    },
+    {
+      "href": "/maple-ridge-neighbourhood-guides.html",
+      "name": "Maple Ridge neighbourhood guides"
+    },
+    {
+      "href": "/east-central-maple-ridge-guide.html",
+      "name": "East Central Maple Ridge"
     }
   ],
   "faq": [
     {
-      "q": "Where does East Central Maple Ridge begin and end?",
-      "a": "East Central is an MLS sub-area name and the City does not publish its boundary. The City's Town Centre Area Plan is the nearest official guide."
+      "a": "East Central is an MLS sub-area name and the City does not publish its boundary. The City's Town Centre Area Plan is the nearest official guide.",
+      "q": "Where does East Central Maple Ridge begin and end?"
     },
     {
-      "q": "Which high school is on the east side of the Town Centre?",
-      "a": "Thomas Haney Secondary, at 23000 116 Avenue. The school says it opened in September 1992 and runs a self-directed learning model. Its grade range differs by source: the BC government listing says Grades 7 to 12 and the school's own page says Grade 8 to 12. Confirm catchments with SD42 by address."
+      "a": "Thomas Haney Secondary, at 23000 116 Avenue. The school says it opened in September 1992 and runs a self-directed learning model. Its grade range differs by source: the BC government listing says Grades 7 to 12 and the school's own page says Grade 8 to 12. Confirm catchments with SD42 by address.",
+      "q": "Which high school is on the east side of the Town Centre?"
     },
     {
-      "q": "What is at Telosky Stadium?",
-      "a": "The City lists two synthetic softball diamonds, overlapping synthetic soccer fields, LED lighting on all four diamonds, a new washroom and fieldhouse, and the Thomas Haney Youth Action Park skate plaza of about 17,000 sq ft, at 23000 116 Avenue."
+      "a": "The City lists two synthetic softball diamonds, overlapping synthetic soccer fields, LED lighting on all four diamonds, a new washroom and fieldhouse, and the Thomas Haney Youth Action Park skate plaza of about 17,000 sq ft, at 23000 116 Avenue.",
+      "q": "What is at Telosky Stadium?"
     },
     {
-      "q": "Is there a youth centre nearby?",
-      "a": "Yes. The Greg Moore Youth Centre is at 11925 Haney Place. The City says it has operated for over 25 years and lists climbing and bouldering walls, an indoor skate park and a multi-sport court. Check the City's page for current hours."
+      "a": "Yes. The Greg Moore Youth Centre is at 11925 Haney Place. The City says it has operated for over 25 years and lists climbing and bouldering walls, an indoor skate park and a multi-sport court. Check the City's page for current hours.",
+      "q": "Is there a youth centre nearby?"
     },
     {
-      "q": "How much is parking at Maple Meadows Station?",
-      "a": "TransLink lists 435 spaces at $3 a day or $60 a month, open 4 a.m. to 2 a.m., with no overnight parking. Check TransLink's page for current rates."
+      "a": "TransLink lists 435 spaces at $3 a day or $60 a month, open 4 a.m. to 2 a.m., with no overnight parking. Check TransLink's page for current rates.",
+      "q": "How much is parking at Maple Meadows Station?"
     },
     {
-      "q": "Does the Lougheed corridor plan cover the east side?",
-      "a": "Not according to the City's description. The corridor plan runs from the western boundary to 221 Street, and its four proposed bus rapid transit stops are at 203 Street, 207 Street, Laity Street and 216 Street. The City also says the plan does not change zoning or approve construction."
+      "a": "Not according to the City's description. The corridor plan runs from the western boundary to 221 Street, and its four proposed bus rapid transit stops are at 203 Street, 207 Street, Laity Street and 216 Street. The City also says the plan does not change zoning or approve construction.",
+      "q": "Does the Lougheed corridor plan cover the east side?"
     },
     {
-      "q": "Who runs The ACT Arts Centre now?",
-      "a": "The City of Maple Ridge, since January 1, 2026. It was previously run by the Maple Ridge Pitt Meadows Arts Council."
+      "a": "The City of Maple Ridge, since January 1, 2026. It was previously run by the Maple Ridge Pitt Meadows Arts Council.",
+      "q": "Who runs The ACT Arts Centre now?"
     },
     {
-      "q": "Has central Haney flooded before?",
-      "a": "The Maple Ridge Museum has an aerial photo of central Haney during the June 1948 Fraser River flood. Today the City publishes floodplain maps and asks owners near the floodplain to check the exact address, since rules differ lot by lot."
+      "a": "The Maple Ridge Museum has an aerial photo of central Haney during the June 1948 Fraser River flood. Today the City publishes floodplain maps and asks owners near the floodplain to check the exact address, since rules differ lot by lot.",
+      "q": "Has central Haney flooded before?"
+    },
+    {
+      "a": "No — East Central is the board sub-area label used for listings, while the City plans this ground as the Town Centre plus the residential streets east of it. A buyer should check which City plan and zone covers the exact lot, because downtown parcels follow Town Centre designations, not house-lot rules.",
+      "gen": "uq",
+      "q": "Is East Central an official neighbourhood?"
+    },
+    {
+      "a": "Golden Ears Elementary at 23124 118 Avenue and Thomas Haney Secondary at 23000 116 Avenue are physically inside East Central. Catchments in School District 42 (Maple Ridge–Pitt Meadows) are address-based, so a house two streets away can map to a different elementary school; run the exact address in the district locator before subjects.",
+      "gen": "uq",
+      "q": "Which schools sit inside this area?"
+    },
+    {
+      "a": "Possibly — provincial rules require Maple Ridge to allow up to three, four or six small-scale units on eligible single-family and duplex lots, with the count set by lot size and distance to frequent transit.",
+      "gen": "uq",
+      "q": "Can a downtown house lot take more units?"
+    },
+    {
+      "a": "At the south edge, yes — the City's Floodplain Management Bylaw No. 8121-2026, approved July 28, 2026, designates floodplain areas, sets flood construction levels and setbacks, and regulates fill. It addresses Fraser River, Alouette River, steep-creek and groundwater flooding, so check Schedule A for the specific lot.",
+      "gen": "uq",
+      "q": "Does flood risk apply this far from the river?"
     }
   ],
+  "faq_heading": "East Central Maple Ridge: your questions answered",
+  "market_spec": {
+    "area": "Maple Ridge",
+    "board": "gvr",
+    "label": "Maple Ridge"
+  },
   "needs_from_muse": [
     "median sold price by home type, last 12 months",
     "days on market and sale-to-list ratio",
@@ -1043,12 +1442,15 @@
     "typical lot size and age of homes east of 224 Street",
     "Jared's own sales here and one first-hand note"
   ],
-  "market_spec": {
-    "board": "gvr",
-    "area": "Maple Ridge",
-    "label": "Maple Ridge"
-  },
+  "slug": "east-central-maple-ridge-guide",
+  "status": "draft",
+  "suppress": [
+    "Planning and flood notes for East Central Maple Ridge",
+    "East Central Maple Ridge questions",
+    "Related guides"
+  ],
   "suppress_gen": [
     "Related guides"
-  ]
+  ],
+  "updated": "2026-11-01"
 }

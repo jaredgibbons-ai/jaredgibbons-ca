@@ -1,60 +1,34 @@
 {
   "blocks": [
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: chilliwack.com",
-            "h": "https://chilliwack.com/ocp"
-          }
-        ],
-        [
-          {
-            "t": "Source: cadreb.com",
-            "h": "https://www.cadreb.com/market/"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Chilliwack Downtown 55+ homes for sale",
+      "gen": "n55link",
       "h": "/chilliwack-55-plus-neighbourhood-guide.html",
       "pos": "end",
-      "gen": "n55link"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "What's nearby Chilliwack Downtown",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
+      "text": "Chilliwack Downtown 55+ homes for sale"
     },
     {
+      "gen": "nb",
+      "level": 2,
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Chilliwack Downtown"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -82,18 +56,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -111,18 +85,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -145,18 +119,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -164,25 +138,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Chilliwack Central Elementary Community, 9435 Young Rd",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Central Community Park",
@@ -209,18 +184,17 @@
           "2.3"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -233,105 +207,105 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "bctransit.com · route overview",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=66"
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=66",
+            "t": "bctransit.com · route overview"
           }
         ],
         [
           {
-            "t": "bctransit.com · schedules and maps",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/"
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/",
+            "t": "bctransit.com · schedules and maps"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview (2)",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=51"
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=51",
+            "t": "bctransit.com · route overview (2)"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview (3)",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=53"
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=53",
+            "t": "bctransit.com · route overview (3)"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview (4)",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=57"
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=57",
+            "t": "bctransit.com · route overview (4)"
           }
         ],
         [
           {
-            "t": "chilliwack.com",
-            "h": "https://www.chilliwack.com/main/page.cfm?id=1754.&dowhat=typeView&ptID=1&listView=1"
+            "h": "https://www.chilliwack.com/main/page.cfm?id=1754.&dowhat=typeView&ptID=1&listView=1",
+            "t": "chilliwack.com"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca · locations",
-            "h": "https://www.fvrl.bc.ca/locations"
+            "h": "https://www.fvrl.bc.ca/locations",
+            "t": "fvrl.bc.ca · locations"
           }
         ],
         [
           {
-            "t": "chilliwackculturalcentre.ca",
-            "h": "https://www.chilliwackculturalcentre.ca/"
+            "h": "https://www.chilliwackculturalcentre.ca/",
+            "t": "chilliwackculturalcentre.ca"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · chilliwack",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/chilliwack"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/chilliwack",
+            "t": "studentsuccess.gov.bc.ca · chilliwack"
           }
         ],
         [
           {
-            "t": "saveonfoods.com · store",
-            "h": "https://www.saveonfoods.com/sm/planning/rsid/2213/store"
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/2213/store",
+            "t": "saveonfoods.com · store"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 2,
-      "text": "What's nearby, building by building",
-      "gen": "nbb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
-      "gen": "nbb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "9000 Birch Street",
-      "gen": "nbb",
-      "pos": "end"
+      "text": "What's nearby, building by building"
     },
     {
-      "t": "list",
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "9000 Birch Street"
+    },
+    {
+      "gen": "nbb",
       "items": [
         [
           {
@@ -354,18 +328,18 @@
           }
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 3,
-      "text": "9060 Birch Street",
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "9060 Birch Street"
     },
     {
-      "t": "list",
+      "gen": "nbb",
       "items": [
         [
           {
@@ -373,18 +347,18 @@
           }
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 3,
-      "text": "Chilliwack Gardens, 45749 Spadina Avenue",
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Chilliwack Gardens, 45749 Spadina Avenue"
     },
     {
-      "t": "list",
+      "gen": "nbb",
       "items": [
         [
           {
@@ -402,19 +376,19 @@
           }
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 3,
-      "text": "Measured walking and driving times from each building",
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
       "head": [
         "Building",
         "To",
@@ -422,6 +396,7 @@
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "9000 Birch Street",
@@ -529,116 +504,567 @@
           "0.7"
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 3,
-      "text": "Sources for what’s nearby each building",
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
     },
     {
-      "t": "list",
+      "gen": "nbb",
       "items": [
         [
           {
-            "t": "bctransit.com · schedules and maps",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/"
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/",
+            "t": "bctransit.com · schedules and maps"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=51"
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=51",
+            "t": "bctransit.com · route overview"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview (2)",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=53"
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=53",
+            "t": "bctransit.com · route overview (2)"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview (3)",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=57"
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=57",
+            "t": "bctransit.com · route overview (3)"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview (4)",
-            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=66"
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/route-overview/?route=66",
+            "t": "bctransit.com · route overview (4)"
           }
         ],
         [
           {
-            "t": "chilliwack.com",
-            "h": "https://chilliwack.com/main/page.cfm?id=1754&dowhat=locationView&plID=23"
+            "h": "https://chilliwack.com/main/page.cfm?id=1754&dowhat=locationView&plID=23",
+            "t": "chilliwack.com"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca · locations",
-            "h": "https://www.fvrl.bc.ca/locations"
+            "h": "https://www.fvrl.bc.ca/locations",
+            "t": "fvrl.bc.ca · locations"
           }
         ],
         [
           {
-            "t": "chilliwackculturalcentre.ca",
-            "h": "https://www.chilliwackculturalcentre.ca/"
+            "h": "https://www.chilliwackculturalcentre.ca/",
+            "t": "chilliwackculturalcentre.ca"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · chilliwack",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in/chilliwack"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/chilliwack",
+            "t": "studentsuccess.gov.bc.ca · chilliwack"
           }
         ],
         [
           {
-            "t": "saveonfoods.com · store",
-            "h": "https://www.saveonfoods.com/sm/planning/rsid/2213/store"
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/2213/store",
+            "t": "saveonfoods.com · store"
           }
         ],
         [
           {
-            "t": "chilliwack.com (2)",
-            "h": "https://www.chilliwack.com/main/page.cfm?id=1754.&dowhat=typeView&ptID=1&listView=1"
+            "h": "https://www.chilliwack.com/main/page.cfm?id=1754.&dowhat=typeView&ptID=1&listView=1",
+            "t": "chilliwack.com (2)"
           }
         ],
         [
           {
-            "t": "chilliwack.com (3)",
-            "h": "https://www.chilliwack.com/main/page.cfm?id=37&prid=544&prshow=details"
+            "h": "https://www.chilliwack.com/main/page.cfm?id=37&prid=544&prshow=details",
+            "t": "chilliwack.com (3)"
           }
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Chilliwack Downtown: streets and boundaries"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Downtown is the historic core of Chilliwack Proper, centred on Five Corners, where Yale Road and Young Road intersect with Wellington Avenue."
+          }
+        ],
+        [
+          {
+            "t": "The downtown core centres on Main Street, Yale Road East and Young Road, with First Avenue and Princess Avenue framing the District 1881 blocks."
+          }
+        ],
+        [
+          {
+            "t": "Municipally this ground is planned as Schedule B3, the Downtown Neighbourhood Plan, inside the Chilliwack 2050 Official Community Plan (OCP); it is a Chilliwack and District Real Estate Board (CADREB) market, not a Fraser Valley board market."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Chilliwack Downtown: the housing stock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The downtown form is set by plan, not by a housing count: the Downtown Neighbourhood Plan directs land use, housing, commercial and economic vitality, public open space and the form and character of development for the core."
+          }
+        ],
+        [
+          {
+            "t": "District 1881 itself mixes retail, commercial, residential and mixed-use buildings in one redevelopment, including the Woolworth Flats homes at 46128 Yale Road named on the developer's own site."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Chilliwack Downtown: rules that affect buyers"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The Chilliwack Downtown Design Guidelines under D-6 direct new development to use the form, proportion, pattern and detailing of the core's existing fabric, and encourage restoration of buildings of heritage value using historically accurate materials."
+          }
+        ],
+        [
+          {
+            "t": "The City's December 2025 guide confirms a development permit is required for new construction, additions, signs and significant site alterations in Development Permit Areas 6 to 10, including DPA 6 Downtown."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Chilliwack Downtown: local details a buyer would not know"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Chilliwack Library, 45860 First Avenue, is the Fraser Valley Regional Library branch inside the core."
+          }
+        ],
+        [
+          {
+            "t": "Chilliwack General Hospital, 45600 Menholm Road, is immediately north of the core and provides emergency care."
+          }
+        ],
+        [
+          {
+            "t": "The Chilliwack Mural Festival's street party runs in District 1881 and on Mill Street, with District 1881's Thunderbird Stage and a Breezeway performance space off Yale Road — a recurring road-activity weekend in the core."
+          }
+        ],
+        [
+          {
+            "t": "City Hall, the permit counter for D-6 applications, is at 8550 Young Road, at the core's south edge."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Chilliwack Downtown: development and new projects"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "District 1881, Five Corners site bounded by Young Road, Yale Road, Princess Avenue and Empress Lane, developer Algra Bros. Developments Ltd.: a multi-year, multi-phase mix of retail, commercial, residential and mixed-use buildings on the 3.75-acre City/CEPCO assembly. STATUS: built phases operating, project described by CEPCO as the benchmark redevelopment for subsequent downtown development, read 2026-11-03."
+          }
+        ],
+        [
+          {
+            "t": "Downtown Neighbourhood Plan (Schedule B3): adopted June 2010, updated 2025 as part of Official Community Plan Bylaw 2025, No. 5500. STATUS: current plan, read 2026-11-03."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Chilliwack Downtown: costs and taxes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The downtown-specific cost is process: a D-6 development permit application, with design-guideline compliance, is part of the budget for new construction, additions, signs and significant site alterations in the core."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Chilliwack Downtown: getting around"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Downtown Chilliwack is the main British Columbia Transit (BC Transit) exchange and terminus for local routes 51 to 59, 71 and 72."
+          }
+        ],
+        [
+          {
+            "t": "Route 66 Fraser Valley Express runs from Downtown Chilliwack to Lougheed Town Centre Station, with Chilliwack stops including Vedder Road at Luckakuck Way and the Lickman Park & Ride."
+          }
+        ],
+        [
+          {
+            "t": "BC Transit's December 18, 2025 service notice, effective January 4, 2026, added Sunday-evening service for Route 57 Broadway, Route 53 Fairfield and Route 51."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Chilliwack Downtown: risks and due diligence"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Check which Schedule D permit areas touch the parcel, not just D-6: the OCP lists D-1 Drinking Water Supply through D-10 Industrial, and areas beyond D-6 apply per parcel."
+          }
+        ],
+        [
+          {
+            "t": "Heritage value is a permit factor downtown: the D-6 guidelines encourage restoration of buildings of heritage value and direct historically accurate exterior materials for that work."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "How Chilliwack Downtown compares"
+    },
+    {
+      "caption": "Chilliwack Downtown compared",
+      "gen": "uq",
+      "head": [
+        "Fact",
+        "Chilliwack Downtown",
+        "Sardis",
+        "Chilliwack Proper West"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "OCP plan area",
+          "Schedule B3 Downtown Neighbourhood Plan",
+          "Schedule B5 Sardis",
+          "Schedule B2 Chilliwack Proper and Fairfield Island"
+        ],
+        [
+          "School district",
+          "School District No. 33 (SD33)",
+          "SD33",
+          "SD33"
+        ],
+        [
+          "Named bus service",
+          "Downtown exchange, terminus for routes 51–59, 71, 72",
+          "Route 51 Vedder and Route 66 stop at Vedder Road at Luckakuck Way",
+          "—"
+        ],
+        [
+          "Form-and-character permit area",
+          "D-6 Downtown",
+          "—",
+          "—"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What is not confirmed about Chilliwack Downtown"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "A street-level boundary for the downtown sub-area, and which Schedule D areas beyond D-6 apply to any specific parcel."
+          }
+        ],
+        [
+          {
+            "t": "Named downtown strata complexes with their own published rental, pet or age bylaws — none confirmed on a strata source."
+          }
+        ],
+        [
+          {
+            "t": "OPEN CONFLICT on the land development bylaw: the City's subdivisions webpage names a \"Land Development Bylaw 2014, No. 3055,\" while the verified ledger from earlier research programs holds that bylaw was never adopted."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Related pages"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "/chilliwack-mountain.html",
+            "t": "Chilliwack Mountain Homes for Sale | View Houses & MLS®"
+          }
+        ],
+        [
+          {
+            "h": "/chilliwack-houses-for-sale.html",
+            "t": "Chilliwack Houses for Sale | Detached Homes & MLS®"
+          }
+        ],
+        [
+          {
+            "h": "/garrison-crossing.html",
+            "t": "Garrison Crossing Homes for Sale | Chilliwack Real Estate"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for Chilliwack Downtown"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "https://www.businessinchilliwack.com/downtown/",
+            "t": "businessinchilliwack.com · downtown"
+          }
+        ],
+        [
+          {
+            "h": "https://chilliwack.com/ocp",
+            "t": "chilliwack.com"
+          }
+        ],
+        [
+          {
+            "h": "https://www.cadreb.com/market/",
+            "t": "cadreb.com · market"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwack.com/main/attachments/attachView.cfm?attachID=3556",
+            "t": "chilliwack.com · attachView.cfm"
+          }
+        ],
+        [
+          {
+            "h": "https://district1881.com/eat-shop-drink-all-local/shop/",
+            "t": "district1881.com · shop"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwack.com/main/attachments/attachView.cfm?attachID=8154",
+            "t": "chilliwack.com · attachView.cfm (2)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwack.com/main/attachments/Files/3279/2025%5F12%5FDevelopment%5FPermit%5FBrochure%5F%2D%5FDP%5F6%2D10%2Epdf",
+            "t": "chilliwack.com · 2025 12 Development Permit Brochure DP 6 10 pd"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in/chilliwack",
+            "t": "studentsuccess.gov.bc.ca · chilliwack"
+          }
+        ],
+        [
+          {
+            "h": "https://sd33.bc.ca/index.php/find-your-school",
+            "t": "sd33.bc.ca · find your school"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrl.bc.ca/locations/chilliwack-library",
+            "t": "fvrl.bc.ca · chilliwack library"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Chilliwack/chilliwack-general-hospital",
+            "t": "fraserhealth.ca · chilliwack general hospital"
+          }
+        ],
+        [
+          {
+            "h": "https://www.chilliwackmuralfestival.com/post/chilliwack-mural-festival-announces-2025-performer-lineup",
+            "t": "chilliwackmuralfestival.com · chilliwack mural festival announces 2025 perform"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/chilliwack/schedules-and-maps/",
+            "t": "bctransit.com · schedules and maps"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/service-improvements-in-chilliwack-and-agassiz-harrison-2025-12-18/",
+            "t": "bctransit.com · service improvements in chilliwack and agassiz h"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "musefaq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
+    },
+    {
+      "gen": "musefaq",
+      "items": [
+        [
+          {
+            "h": "https://chilliwack.com/ocp",
+            "t": "Source: chilliwack.com"
+          }
+        ],
+        [
+          {
+            "h": "https://www.cadreb.com/market/",
+            "t": "Source: cadreb.com"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Which plan governs Chilliwack Downtown?",
+      "a": "The Downtown Neighbourhood Plan, Schedule B3 of the Chilliwack 2050 OCP. Adopted in June 2010 and updated in 2025, it sets the vision for the Downtown Plan Area over 30 years, covering land use, housing, commercial vitality, open space, transportation and the form and character of both public and private development. Read the parcel's designation in B3 before valuing any infill potential.",
+      "gen": "uq",
+      "q": "Which plan actually governs a downtown purchase?"
+    },
+    {
+      "a": "District 1881 is the redevelopment of the 3.75-acre downtown site bounded by Young Road, Yale Road, Princess Avenue and Empress Lane. The City of Chilliwack and the Chilliwack Economic Partners Corporation (CEPCO) assembled the properties, and Council awarded the redevelopment contract to Algra Bros. Developments Ltd. The project combines retail, commercial, residential and mixed-use buildings across multiple phases.",
+      "gen": "uq",
+      "q": "What is District 1881, and who built it?"
+    },
+    {
+      "a": "No. Development in the mapped downtown area is subject to the D-6 form-and-character permit guidelines, which exist to facilitate the Downtown Design Guidelines. New work is expected to fit the core's form, proportion and detailing, and buildings of heritage value are encouraged to be restored with historically accurate materials, so exterior plans need a permit check first.",
+      "gen": "uq",
+      "q": "Can I change the exterior of a downtown building freely?"
+    },
+    {
+      "a": "Four School District No. 33 (SD33) schools sit in the core corridor: Chilliwack Central Elementary Community, 9435 Young Road; Bernard Elementary, 45465 Bernard Avenue; Chilliwack Middle School, 46354 Yale Road; and Chilliwack Secondary, 46363 Yale Road. Catchments are address-based, so confirm the exact address in the SD33 School Locator rather than relying on the downtown label.",
+      "gen": "uq",
+      "q": "Which schools are in the downtown core?"
+    },
+    {
       "a": "The City of Chilliwack's 2050 Official Community Plan, Official Community Plan Bylaw 2025, No. 5500 — specifically its Schedule B3 Downtown Neighbourhood Plan, with the Schedule D-6 Downtown development permit area applying in the core and the other Schedule D areas applying per parcel.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which plan governs Chilliwack Downtown?"
     },
     {
-      "q": "Which board's listings does this page show?",
       "a": "Chilliwack is a Chilliwack and District Real Estate Board (CADREB) market, and CADREB publishes statistics board-wide only. The live page's FAQ claim that its listings update from the Fraser Valley Real Estate Board feed is incorrect for a CADREB market and is flagged in this file as a rebuild fix.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which board's listings does this page show?"
     },
     {
-      "q": "Can a downtown Chilliwack house add a suite?",
       "a": "Under Zoning Bylaw 2020, No. 5000, a secondary suite is one permitted accessory dwelling unit per lot, capped at the lesser of 90 m² and 40% of the building's habitable floor space, with garden suites capped at 100 m² and ADU parking at 1–2 spaces under s.5.04; the city-wide SSMUH amendment (Bylaw 5395, adopted June 18, 2024) allows 3–4 units on urban-growth-boundary parcels zoned for single-detached and duplex housing (see ~/workspace/area-research-2026-11/rules-gaps-2026-11-01.md, items 6 and 7f, read 2026-11-01).",
-      "gen": "muse"
-    },
-    {
-      "q": "Can Jared show me homes in Chilliwack Downtown?",
-      "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
-      "gen": "muse-generic"
+      "gen": "muse",
+      "q": "Can a downtown Chilliwack house add a suite?"
     }
   ],
   "slug": "chilliwack-downtown",

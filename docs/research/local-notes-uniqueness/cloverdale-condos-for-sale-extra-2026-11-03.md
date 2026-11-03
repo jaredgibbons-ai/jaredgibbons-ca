@@ -1,0 +1,82 @@
+# Cloverdale Condos — Extra Local Notes
+Page: cloverdale-condos-for-sale (Cloverdale, Surrey; condos).
+
+## 1. STREETS AND BOUNDARIES
+- Cloverdale Town Centre is the historic heart of Surrey at the intersection of Highway 10 and Highway 15 (Pacific Highway), and the City is updating its town centre plan — the plan frame for the condo stock in the town centre itself. https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/cloverdale-land-use-plans/cloverdale-town-centre-plan
+- This page covers condos only, and Cloverdale's verified apartment buildings sit in two pockets: Clayton Heights around 68 Avenue and 188 to 194 Street, and the town-centre north edge at 64 Avenue and 164 Street — shared Cloverdale boundary and plan facts are in full in the cloverdale-houses-for-sale note. https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/cloverdale-land-use-plans/cloverdale-town-centre-plan
+- On July 22, 2024 Council expanded the town centre plan boundary northward, bounded by 60 Avenue to the south, 175 and 175A Street to the west, 64 Avenue to the north and 180 Street to the east, plus one lot at 18120 56 Avenue — about 80.8 hectares and 145 properties, which puts the 64 Avenue condo edge inside the expanded plan area. https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/cloverdale-land-use-plans/cloverdale-town-centre-plan
+Read: 2026-11-03
+
+## 2. THE HOUSING STOCK
+- Four apartment-condo buildings are verified by name for the Cloverdale board community in this program, and the rest of the attached stock is predominantly townhouse complexes, which are not counted on this condos-only page. http://www.bccondosandhomes.com/building/st-andrews-16421-64-avenue
+- St. Andrews at Northview, 16421 64 Avenue (eight addresses, 16421 to 16499 64 Avenue), is a gated community of eight three-storey buildings beside Northview Golf Course: its building record states strata plan BCS2562, 219 units, built 2009, homes of 1,264 to 1,866 square feet and an 8,000-plus square foot club with outdoor pool. http://www.bccondosandhomes.com/building/st-andrews-16421-64-avenue
+- Waterstone, 6420 and 6440 194 Street in Clayton, is a freehold strata apartment complex built in 2010 around a 15,000 square foot clubhouse with an indoor 60-foot pool, whirlpool, steam room, sauna, fitness centre and guest suite. https://www.canadashomesearch.com/listing/r3119239-311-6420-194-street-surrey-british-columbia-v4n6j7-449900/brochure
+- Calera, 18818 68 Avenue in Clayton, is a freehold strata apartment building built in 2010; its building record states 153 units, with a bike room, club house, exercise centre and recreation centre. https://www.bccondosandhomes.com/building/calera-18818-68-avenue
+- Compass at 18755 68 Avenue in Clayton is the apartment phase of a shared name: two four-storey wood-frame buildings built in 2008, while the Compass units at 18777 68A Avenue are townhouses and belong on a townhome page, not this one. https://activerain.com/blogsview/4374272/condos-for-sale-in-compass--clayton-heights--cloverdale--b-c-
+Read: 2026-11-03
+
+## 3. RULES THAT AFFECT BUYERS HERE
+- Directory lines saying rentals are allowed with restrictions for St. Andrews, Calera or Compass no longer bind a buyer, because strata rental-restriction bylaws have been void province-wide since November 24, 2022; pet bylaws remain enforceable and are stated building by building in the section above. https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/legislation-and-changes/changes-to-legislation
+- The diligence document for every building on this page is the Form B Information Certificate: the Province states it must set out the lot's strata fees, amounts owing, approved special levies, the contingency reserve fund balance and an insurance summary, with the rules, budget and most recent depreciation report attached. https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate
+- The town centre plan update was endorsed for another revision on October 30, 2023 specifically to support the planned new hospital and BC Cancer Centre, including medically supportive land uses — a plan risk and plan upside that applies to town-centre condos, not to the Clayton buildings. https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/cloverdale-land-use-plans/cloverdale-town-centre-plan
+- Surrey-wide zoning, small-scale multi-unit housing and tax rules are stated in full in the surrey-condos-for-sale note — see the surrey-condos-for-sale note. https://www.surrey.ca/renovating-building-development/land-planning-development/provincial-housing-financial-regulations
+Read: 2026-11-03
+
+## 4. WHAT BUYERS ASK
+- **Q:** Is Compass a condo building or a townhouse complex? **A:** Both, under one marketing name, and the civic address decides. The 18755 68 Avenue phase is apartment condos in two four-storey buildings built in 2008; the 18777 68A Avenue units are classified as townhouses. A buyer comparing fees, insurance and form should read the strata plan for the exact address rather than the Compass name, because the two phases are different housing forms in the same Clayton pocket. https://activerain.com/blogsview/4374272/condos-for-sale-in-compass--clayton-heights--cloverdale--b-c-
+- **Q:** Which Cloverdale condo buildings have a large clubhouse rather than a small amenity room? **A:** Two do, and they are in different pockets. Waterstone in Clayton was built around a 15,000 square foot clubhouse with an indoor 60-foot pool, and St. Andrews at Northview on 64 Avenue has an 8,000-plus square foot club with an outdoor pool, fitness centre, media room, library and guest suites. Amenity size is part of the strata fee comparison for these two buildings and is not typical of the smaller Clayton low-rises. http://www.bccondosandhomes.com/building/st-andrews-16421-64-avenue
+- **Q:** Can I rent out a Cloverdale condo long-term if the building record says rentals are restricted? **A:** Yes for a long-term rental. Provincial changes effective November 24, 2022 removed strata rental restrictions, so an older directory or bylaw line restricting rentals cannot be enforced against a long-term tenancy. A strata may still restrict short-term rentals by bylaw, and the City separately regulates short-term rentals, so a short-stay plan needs both the registered bylaws and the City licence position checked for the specific building. https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/legislation-and-changes/changes-to-legislation
+- **Q:** What is being built in Cloverdale that changes condo ownership here? **A:** A second Surrey hospital and BC Cancer Centre is under construction in Cloverdale, and the City endorsed a town centre plan update in 2023 to support it, including medically supportive land uses. The City states the facility will open in 2030 and that it will build a new west-side multi-use path on 180 Street and new bikeways, and work with TransLink on transit between the hospital and the future 184 Street SkyTrain station. https://www.surrey.ca/news-events/news/city-of-surrey-clears-way-future-hospital-growth
+Read: 2026-11-03
+
+## 5. LOCAL DETAILS A BUYER WOULD NOT KNOW
+- The Cloverdale Fairgrounds are not inside the town centre plan's scope: the City designates them a Special Study Area under a separate master planning and market feasibility study, so plan claims for a condo near the fairgrounds need that separate study, not the town centre plan. https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/cloverdale-land-use-plans/cloverdale-town-centre-plan
+- The hospital's own numbers, from the City's December 1, 2025 corporate report: the new Surrey Hospital and BC Cancer Centre at 5500 180 Street, directly south of the Kwantlen Polytechnic University Cloverdale campus, will include 168 inpatient beds, five operating rooms, a 55-space emergency department, 54 chemotherapy treatment spaces, six radiation therapy units and 50 examination rooms, with construction begun in September 2023 and completion anticipated in 2030. https://www.surrey.ca/sites/default/files/corporate-reports/CR_2025_R264.pdf
+- The same City report expects pedestrian activity to increase significantly around Highway 10 and the town centre as hospital staff and visitors walk to nearby restaurants and services — a daily-life change for town-centre condo owners from 2030. https://www.surrey.ca/sites/default/files/corporate-reports/CR_2025_R264.pdf
+- St. Andrews' eight civic addresses (16421 to 16499 64 Avenue) are one strata, BCS2562, so a unit's address alone does not identify a separate building corporation; the phased build years in individual listings (2007 to 2009) sit inside that one strata plan. http://www.bccondosandhomes.com/building/st-andrews-16421-64-avenue
+Read: 2026-11-03
+
+## 6. DEVELOPMENT AND NEW PROJECTS
+- New Surrey Hospital and BC Cancer Centre — 5500 180 Street (also addressed as 18050 James Hill Drive in Fraser Health material), by Fraser Health: 168 inpatient beds, five operating rooms, a 55-space emergency department and a BC Cancer Centre with 54 chemotherapy spaces and six radiation units; STATUS: under construction since September 2023, completion anticipated 2030, City corporate report dated December 1, 2025, read 2026-11-03. https://www.surrey.ca/sites/default/files/corporate-reports/CR_2025_R264.pdf
+- Surrey-Langley SkyTrain, Cloverdale stations — Hillcrest–184 Street at Fraser Highway and 184 Street, and Clayton at Fraser Highway and 190 Street are the two stations serving this page's Clayton and Cloverdale condo pockets; STATUS: under construction, project status report July 2026, read 2026-11-03. The remaining Surrey stations on the line are covered in full in the surrey-condos-for-sale note — see the surrey-condos-for-sale note. https://surreylangleyskytrain.gov.bc.ca/app/uploads/sites/938/2026/09/SLS_Monthly-Status-Report_July_2026.pdf
+- Cloverdale Town Centre Plan update — plan process, not a building: Step 3 (developing the plan update) runs fall 2024 to winter 2026 on the City page, with the final steps in spring to summer 2027; STATUS: in progress, read 2026-11-03. https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/cloverdale-land-use-plans/cloverdale-town-centre-plan
+Read: 2026-11-03
+
+## 7. COSTS AND TAXES HERE
+- Surrey's 2026 residential tax rate and utility charges are city-wide and are stated in full in the surrey-houses-for-sale note — see the surrey-condos-for-sale note for the condo application of those figures. https://www.surrey.ca/services-payments/property-taxes/property-tax-rates
+- The Speculation and Vacancy Tax (SVT) applies to Cloverdale condos because the Province lists the City of Surrey as a designated taxable area, so an owner who leaves a St. Andrews, Waterstone or Calera unit vacant must still file the annual declaration. https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas
+Read: 2026-11-03
+
+## 8. GETTING AROUND
+- No SkyTrain station is inside Cloverdale today; the two future stations for this page are Hillcrest–184 Street and Clayton, both under construction on the Surrey-Langley SkyTrain extension. https://surreylangleyskytrain.gov.bc.ca/app/uploads/sites/938/2026/09/SLS_Monthly-Status-Report_July_2026.pdf
+- Current bus service is the Cloverdale and Clayton route set: TransLink route 370 runs Cloverdale to Willowbrook, route 372 runs Clayton Heights to Langley Centre, and route 342 runs Langley Centre to Newton Exchange through the Cloverdale corridor. https://www.transit.land/explore/operators/o-c28-translink
+- Route 531 runs between White Rock Centre and Willowbrook via Highway 10, giving the town-centre condos a direct bus toward South Surrey and the Township. https://encyclopedia.thefreedictionary.com/Langley+Centre
+- Highway 10 and Highway 15 (Pacific Highway) cross at the town centre, and Highway 15 runs south to the Pacific border crossing — the driving frame for both condo pockets. https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/cloverdale-land-use-plans/cloverdale-town-centre-plan
+Read: 2026-11-03
+
+## 9. RISKS AND DUE DILIGENCE
+- Check a low-lying Cloverdale condo against the provincial flood work on the Serpentine and Nicomekl rivers: a provincial release describes five flood projects including Serpentine dike raising scheduled for summer 2027 and a new pump station near the 16000 block of 60 Avenue expected in late 2027 — the release does not tell a buyer the flood position of a specific building. https://archive.news.gov.bc.ca/releases/news_releases_2024-2028/2026EMCR0038-000983.pdf
+- For a town-centre unit, check whether the lot sits inside the expanded town centre plan boundary (north to 64 Avenue since July 22, 2024): plan-area buildings carry both the hospital-support land-use direction and the uncertainty of a plan update still in progress. https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/cloverdale-land-use-plans/cloverdale-town-centre-plan
+- For St. Andrews, Waterstone and Calera, read the depreciation report attached to the Form B rather than the amenity list: the Province requires the most recent depreciation report to be attached to the certificate, and clubhouse and pool buildings carry renewal costs a small low-rise does not. https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate
+- On the community's farm edge, confirm Agricultural Land Reserve status on the Agricultural Land Commission maps before valuing any condo-adjacent land claim, because Cloverdale's lowland side includes ALR parcels. https://www.alc.gov.bc.ca/alr-maps
+Read: 2026-11-03
+
+## 10. HOW IT COMPARES
+| Fact | Cloverdale (condos) | Clayton (condos) | South Surrey (condos) |
+|---|---|---|---|
+| Verified apartment buildings in this program | 4 across the Cloverdale board community, including the Clayton pocket below http://www.bccondosandhomes.com/building/st-andrews-16421-64-avenue | Waterstone and Calera, both built 2010, plus the Compass apartment phase built 2008 https://www.bccondosandhomes.com/building/calera-18818-68-avenue | unconfirmed |
+| Future SkyTrain station | Hillcrest–184 Street https://surreylangleyskytrain.gov.bc.ca/app/uploads/sites/938/2026/09/SLS_Monthly-Status-Report_July_2026.pdf | Clayton, at Fraser Highway and 190 Street https://surreylangleyskytrain.gov.bc.ca/app/uploads/sites/938/2026/09/SLS_Monthly-Status-Report_July_2026.pdf | None — no SkyTrain station is planned in South Surrey on the project page |
+| Plan driver | Town Centre Plan update driven by the new hospital and BC Cancer Centre https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/cloverdale-land-use-plans/cloverdale-town-centre-plan | unconfirmed | unconfirmed |
+Read: 2026-11-03
+
+## NOT CONFIRMED
+- A unit count for the Compass apartment phase alone — the 104-home figure in earlier research covers the whole Compass complex including its townhouses.
+- Whether Waterstone's 274-unit directory figure is a per-complex total — the directory states it as a development total, not a per-address count.
+- Any Cloverdale condo building's registered pet or age bylaw from a strata-own page — building records were read, registered bylaws were not.
+- Current bus frequencies for routes 370, 372, 342 and 531 — route identities were confirmed, timetable frequencies were not read from a TransLink timetable in this pass.
+- New condo presale projects inside Cloverdale beyond the hospital and SkyTrain works — no developer page for a Cloverdale condo presale was read in this pass.
+
+Internal links:
+- cloverdale-houses-for-sale — the shared Cloverdale boundaries, schools and farm-edge rules behind this condo note.
+- clayton-cloverdale-houses-for-sale — the Clayton pocket where three of the four verified condo buildings actually sit.
+- surrey-condos-for-sale — the city-wide condo rules, tax figures and SkyTrain corridor projects stated in full.

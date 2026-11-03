@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "lake-errock-mission-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Lake Errock compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Lake Errock compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Lake Errock against its whole city, October 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Lake Errock against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
       "caption": "Lake Errock against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -41,154 +38,544 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and October 2026, detached houses: listings fell from 16 in June to 12 in October (−25.0%), and it took 3.5% of the city’s 141 sales over the period; condos and townhomes: listings was 1 in June and 1 in October, too few (under 3) to call a rise or fall, and it took 0.0% of the city’s 46 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 16 in June to 12 in October (−25.0%), and it took 3.5% of the city’s 141 sales over the period; condos and townhomes: listings was 1 in June and 1 in October, too few (under 3) to call a rise or fall, and it took 0.0% of the city’s 46 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Lake Errock for detached houses in June, July, August, September, October (a buyers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out Lake Errock for detached houses in June, July, August, September, October (a buyers’ best bet)."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Mission real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Mission real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Mission homes for sale",
-            "h": "/mission-homes-for-sale.html"
+            "h": "/mission-homes-for-sale.html",
+            "t": "Mission homes for sale"
           }
         ],
         [
           {
-            "t": "Mission real estate market stats",
-            "h": "/mission-real-estate-market-stats.html"
+            "h": "/mission-real-estate-market-stats.html",
+            "t": "Mission real estate market stats"
           }
         ],
         [
           {
-            "t": "Mission condos for sale",
-            "h": "/mission-condos-for-sale.html"
+            "h": "/mission-condos-for-sale.html",
+            "t": "Mission condos for sale"
           }
         ],
         [
           {
-            "t": "Mission townhomes for sale",
-            "h": "/mission-townhomes-for-sale.html"
+            "h": "/mission-townhomes-for-sale.html",
+            "t": "Mission townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Mission",
-            "h": "/sell-my-house-in-mission.html"
+            "h": "/sell-my-house-in-mission.html",
+            "t": "Sell my house in Mission"
           }
         ],
         [
           {
-            "t": "Schools in Mission",
-            "h": "/schools-in-mission-bc.html"
+            "h": "/schools-in-mission-bc.html",
+            "t": "Schools in Mission"
           }
         ],
         [
           {
-            "t": "Lake Errock homes and market figures",
-            "h": "/lake-errock.html"
+            "h": "/lake-errock.html",
+            "t": "Lake Errock homes and market figures"
           }
         ],
         [
           {
-            "t": "Mission real estate",
-            "h": "/mission-bc.html"
+            "h": "/mission-bc.html",
+            "t": "Mission real estate"
           }
         ],
         [
           {
-            "t": "Mission West real estate",
-            "h": "/mission-west.html"
+            "h": "/mission-west.html",
+            "t": "Mission West real estate"
           }
         ],
         [
           {
-            "t": "Stave Falls real estate",
-            "h": "/stave-falls.html"
+            "h": "/stave-falls.html",
+            "t": "Stave Falls real estate"
           }
         ],
         [
           {
-            "t": "Steelhead real estate",
-            "h": "/steelhead.html"
+            "h": "/steelhead.html",
+            "t": "Steelhead real estate"
           }
         ],
         [
           {
-            "t": "Dewdney Deroche real estate",
-            "h": "/dewdney-deroche.html"
+            "h": "/dewdney-deroche.html",
+            "t": "Dewdney Deroche real estate"
           }
         ],
         [
           {
-            "t": "Durieu real estate",
-            "h": "/durieu.html"
+            "h": "/durieu.html",
+            "t": "Durieu real estate"
           }
         ],
         [
           {
-            "t": "Hatzic real estate",
-            "h": "/hatzic.html"
+            "h": "/hatzic.html",
+            "t": "Hatzic real estate"
           }
         ],
         [
           {
-            "t": "Hemlock real estate",
-            "h": "/hemlock.html"
+            "h": "/hemlock.html",
+            "t": "Hemlock real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Lake Errock: streets and boundaries"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Lake Errock is an unincorporated lakeside community in Fraser Valley Regional District (FVRD) Electoral Area C, east of Deroche near Harrison Mills — not inside the City of Mission and not inside the District of Kent. The FVRD states its Area C plan area spans from the Harrison River to east of Deroche and includes Morris Valley, Harrison Mills, Lake Errock and the eastern Deroche Bench"
+          }
+        ],
+        [
+          {
+            "t": "Lake Errock has its own named district identity: the FVRD lists Electoral Area C as Sasquatch Country, covering Harrison Mills, Hemlock Valley and Lake Errock"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Lake Errock: the housing stock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Servicing is lot-by-lot rather than municipal: the FVRD ran a Lake Errock Neighbourhood Plan servicing feasibility study and a local sanitary servicing plan process as part of the Area C plan work, because new Lake Errock services had to be studied before growth"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Lake Errock: rules that affect buyers"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "A new community plan now governs Lake Errock: the FVRD Electoral Area C Official Community Plan, Bylaw 1747, 2024, adopted September 18, 2025, includes a dedicated Lake Errock Neighbourhood Plan and replaced the former plan, Bylaw No. 0020, 1998"
+          }
+        ],
+        [
+          {
+            "t": "FVRD Zoning Bylaw No. 1638, 2021 permits one secondary suite or one accessory dwelling unit per lot, not both, in almost all electoral areas, subject to lot size and servicing"
+          }
+        ],
+        [
+          {
+            "t": "On Agricultural Land Reserve (ALR) parcels the Agricultural Land Commission allows one principal residence up to 500 square metres plus one additional residence of 90 square metres up to 40 hectares, or 186 square metres above 40 hectares"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Lake Errock: local details a buyer would not know"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The community's growth debate was driven by a former gravel pit: the FVRD's project page is titled Lake Errock Gravel Pit Redevelopment, and the Harrison Rise proposal for that site included 11 three-unit multiplexes (33 dwelling units) in the material summarized by the FVRD"
+          }
+        ],
+        [
+          {
+            "t": "Fire protection here has a named local investment: the FVRD's Canada Community-Building Fund report lists a North Fraser Fire Lake Errock gear storage renovation and Lake Errock Community Park upgrades as funded projects ( Annual Expenditure Report for Reporting Year 2025.pdf)."
+          }
+        ],
+        [
+          {
+            "t": "A Morris Valley Roadside Trail Extension and Shelter is listed in the same FVRD fund report for Electoral Area C, on the road serving Lake Errock's east side ( Annual Expenditure Report for Reporting Year 2025.pdf)."
+          }
+        ],
+        [
+          {
+            "t": "School District No. 75 assigns Deroche and Dewdney elementary catchments to Hatzic Middle School, which is the middle-school path Lake Errock families check first for a specific address"
+          }
+        ],
+        [
+          {
+            "t": "The nearest hospital named on an official health page is Mission Memorial Hospital, 7324 Hurd Street, Mission, with a 25-bed medical inpatient unit, a 20-bed Patient Assessment and Transition Home unit and a 10-bed hospice"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Lake Errock: development and new projects"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Harrison Rise, 43837 and 43873 Lougheed Highway, GWEB Holdings Ltd.: rezoning application withdrawn March 7, 2025, no active rezoning at the FVRD; the proposal was folded into the Lake Errock Neighbourhood Plan process instead, status read on the FVRD page on 2026-11-03"
+          }
+        ],
+        [
+          {
+            "t": "Area C Official Community Plan, Bylaw 1747, 2024, including the Lake Errock Neighbourhood Plan: adopted by the FVRD Board on September 18, 2025, status read on 2026-11-03"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Lake Errock: costs and taxes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Lake Errock owners pay property tax to the Province, not to a municipality, because Lake Errock is a rural area; the Province states rural owners receive their notice from the Surveyor of Taxes Office"
+          }
+        ],
+        [
+          {
+            "t": "Electoral Area C has its own FVRD sewer service area for Morris Valley (service 444 in the FVRD financial plan), which is an Area C cost structure that does not exist in Areas F or G; whether a Lake Errock lot pays it is a parcel check"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Lake Errock: getting around"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Lougheed Highway (Highway 7) is the through route, west to Deroche and Mission and east across the Harrison River toward Agassiz; BC Transit and the FVRD consulted in spring 2025 on a proposed Highway 7 bus between downtown Mission and downtown Agassiz that would serve this corridor if funded"
+          }
+        ],
+        [
+          {
+            "t": "No TransLink service reaches Lake Errock; the West Coast Express commuter trains run from Mission City Station in the City of Mission, west of Deroche"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Lake Errock: risks and due diligence"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Read the lot's designation and any development permit areas in the new Bylaw 1747, 2024 Lake Errock Neighbourhood Plan schedules, because the 1998 plan's hazard and environmentally sensitive permit areas no longer govern"
+          }
+        ],
+        [
+          {
+            "t": "Confirm water source, septic or sewer connection and perc results lot by lot on Bayview Road and Malcolm Road; the FVRD's own servicing feasibility work for the neighbourhood plan is the starting document, not listing text"
+          }
+        ],
+        [
+          {
+            "t": "Check ALR status by parcel identifier number (PID) on the Agricultural Land Commission maps before assuming a second home or subdivision is possible"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "How Lake Errock compares"
+    },
+    {
+      "caption": "Lake Errock compared",
+      "gen": "uq",
+      "head": [
+        "Fact",
+        "Lake Errock",
+        "Dewdney–Deroche",
+        "Harrison Mills"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Local government",
+          "FVRD Electoral Area C",
+          "FVRD Electoral Area G",
+          "FVRD Electoral Area C"
+        ],
+        [
+          "Community plan",
+          "Area C Official Community Plan Bylaw 1747, 2024, with Lake Errock Neighbourhood Plan",
+          "—",
+          "Area C Official Community Plan Bylaw 1747, 2024, with Harrison Mills Neighbourhood Plan"
+        ],
+        [
+          "Property tax paid to",
+          "Province, rural area",
+          "Province, rural area",
+          "Province, rural area"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Related pages"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "/dewdney-deroche-mission-guide.html",
+            "t": "Dewdney Deroche, Mission Guide | Parks, Flood, Schools"
+          }
+        ],
+        [
+          {
+            "h": "/hemlock-valley-mission-guide.html",
+            "t": "Hemlock Valley, Mission Guide | Sasquatch, Hazards, Plan"
+          }
+        ],
+        [
+          {
+            "h": "/mission-bc-mission-guide.html",
+            "t": "Mission BC, Mission Guide | Schools, Transit, Parks"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for Lake Errock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "https://haveyoursay.fvrd.ca/areacocp?tool=news_feed",
+            "t": "haveyoursay.fvrd.ca · areacocp"
+          }
+        ],
+        [
+          {
+            "h": "https://haveyoursay.fvrd.ca/lake-errock",
+            "t": "haveyoursay.fvrd.ca · lake errock"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrd.ca/EN/meta/contact/your-electoral-area-director.html",
+            "t": "fvrd.ca · your electoral area director"
+          }
+        ],
+        [
+          {
+            "h": "https://haveyoursay.fvrd.ca/adu",
+            "t": "haveyoursay.fvrd.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrd.ca/assets/Government/Documents/Financial~Reporting/CWF",
+            "t": "fvrd.ca · Financial~Reporting"
+          }
+        ],
+        [
+          {
+            "h": "https://media.mpsd.ca/media/Default/medialib/merged-agenda-package-cotw_dec03_2024.054b732103.pdf",
+            "t": "media.mpsd.ca · merged agenda package cotw dec03 2024.054b732103"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fraserhealth.ca/service-directory/locations/mission/mission-memorial-hospital",
+            "t": "fraserhealth.ca · mission memorial hospital"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/annual-property-tax/rural-area",
+            "t": "www2.gov.bc.ca · rural area"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96448_01",
+            "t": "bclaws.gov.bc.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://pub-fvrd.escribemeetings.com/filestream.ashx?DocumentId=29616",
+            "t": "pub-fvrd.escribemeetings.com · filestream.ashx"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bctransit.com/have-your-say-in-the-future-of-transit-along-highway-2025-04-25/",
+            "t": "bctransit.com · have your say in the future of transit along hig"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt997.pdf",
+            "t": "infomaps.translink.ca · tt997"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrd.ca/assets/Government/Documents/Bylaws/Planning~and~Land~Use/Area%20C%20-%20OCP%20Bylaw%2020%20-%20Morris%20Valley,%20Harrison%20Mills%20and%20Lake%20Errock.pdf",
+            "t": "fvrd.ca · Area C OCP Bylaw 20 Morris Valley, Harrison"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fvrd.ca/assets/Government/Documents/Document~Library/EA%20Housing%20Needs%20Report.pdf",
+            "t": "fvrd.ca · EA Housing Needs Report"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Are there more or fewer homes for sale in Lake Errock Mission than in June?",
       "a": "In Lake Errock Mission, listings of houses fell from 16 in June to 12 in October (−25.0%); condos and townhomes was 1 in June and 1 in October, too few (under 3) to call a rise or fall.",
-      "gen": "snap-faq"
+      "gen": "snap-faq",
+      "q": "Are there more or fewer homes for sale in Lake Errock Mission than in June?"
     },
     {
-      "q": "How big is Lake Errock Mission compared with the rest of Mission?",
       "a": "In October 2026, Lake Errock Mission held 5.6% of the 216 houses listed in Mission and 0.8% of the 125 condos and townhomes listed in Mission.",
-      "gen": "snap-faq"
+      "gen": "snap-faq",
+      "q": "How big is Lake Errock Mission compared with the rest of Mission?"
     },
     {
-      "q": "How many homes sold in Lake Errock Mission from June to October 2026?",
       "a": "5 houses and 0 condos and townhomes sold in Lake Errock Mission over those 5 months.",
-      "gen": "snap-faq"
+      "gen": "snap-faq",
+      "q": "How many homes sold in Lake Errock Mission from June to October 2026?"
     },
     {
-      "q": "How do I find out which school serves an address in Lake Errock Mission?",
       "a": "School catchments are set by address, so use the school district's catchment locator with the exact address. Catchment lines change, so check before you write an offer.",
-      "gen": "bank-faq"
+      "gen": "bank-faq",
+      "q": "How do I find out which school serves an address in Lake Errock Mission?"
     },
     {
-      "q": "Who can help me buy or sell in Lake Errock Mission?",
       "a": "Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, works across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361 or use the contact form on this site.",
-      "gen": "bank-faq"
+      "gen": "bank-faq",
+      "q": "Who can help me buy or sell in Lake Errock Mission?"
     }
+  ],
+  "slug": "lake-errock-mission-guide",
+  "status": "generated",
+  "suppress": [
+    "Related guides"
   ],
   "suppress_gen": [
     "Related guides"
   ],
-  "suppress": [
-    "Related guides"
-  ]
+  "updated": "2026-11-01"
 }

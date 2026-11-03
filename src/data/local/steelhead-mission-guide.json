@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "steelhead-mission-guide",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Steelhead compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Steelhead compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Steelhead against its whole city, October 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Steelhead against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
       "caption": "Steelhead against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -34,139 +31,139 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and October 2026, detached houses: listings was 1 in June and 0 in October, too few (under 3) to call a rise or fall, and it took 0.0% of the city’s 141 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings was 1 in June and 0 in October, too few (under 3) to call a rise or fall, and it took 0.0% of the city’s 141 sales over the period."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Mission real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Mission real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Mission homes for sale",
-            "h": "/mission-homes-for-sale.html"
+            "h": "/mission-homes-for-sale.html",
+            "t": "Mission homes for sale"
           }
         ],
         [
           {
-            "t": "Mission real estate market stats",
-            "h": "/mission-real-estate-market-stats.html"
+            "h": "/mission-real-estate-market-stats.html",
+            "t": "Mission real estate market stats"
           }
         ],
         [
           {
-            "t": "Mission condos for sale",
-            "h": "/mission-condos-for-sale.html"
+            "h": "/mission-condos-for-sale.html",
+            "t": "Mission condos for sale"
           }
         ],
         [
           {
-            "t": "Mission townhomes for sale",
-            "h": "/mission-townhomes-for-sale.html"
+            "h": "/mission-townhomes-for-sale.html",
+            "t": "Mission townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Mission",
-            "h": "/sell-my-house-in-mission.html"
+            "h": "/sell-my-house-in-mission.html",
+            "t": "Sell my house in Mission"
           }
         ],
         [
           {
-            "t": "Schools in Mission",
-            "h": "/schools-in-mission-bc.html"
+            "h": "/schools-in-mission-bc.html",
+            "t": "Schools in Mission"
           }
         ],
         [
           {
-            "t": "Steelhead homes and market figures",
-            "h": "/steelhead.html"
+            "h": "/steelhead.html",
+            "t": "Steelhead homes and market figures"
           }
         ],
         [
           {
-            "t": "Dewdney Deroche real estate",
-            "h": "/dewdney-deroche.html"
+            "h": "/dewdney-deroche.html",
+            "t": "Dewdney Deroche real estate"
           }
         ],
         [
           {
-            "t": "Durieu real estate",
-            "h": "/durieu.html"
+            "h": "/durieu.html",
+            "t": "Durieu real estate"
           }
         ],
         [
           {
-            "t": "Hatzic real estate",
-            "h": "/hatzic.html"
+            "h": "/hatzic.html",
+            "t": "Hatzic real estate"
           }
         ],
         [
           {
-            "t": "Hemlock real estate",
-            "h": "/hemlock.html"
+            "h": "/hemlock.html",
+            "t": "Hemlock real estate"
           }
         ],
         [
           {
-            "t": "Lake Errock real estate",
-            "h": "/lake-errock.html"
+            "h": "/lake-errock.html",
+            "t": "Lake Errock real estate"
           }
         ],
         [
           {
-            "t": "Mission real estate",
-            "h": "/mission-bc.html"
+            "h": "/mission-bc.html",
+            "t": "Mission real estate"
           }
         ],
         [
           {
-            "t": "Mission West real estate",
-            "h": "/mission-west.html"
+            "h": "/mission-west.html",
+            "t": "Mission West real estate"
           }
         ],
         [
           {
-            "t": "Stave Falls real estate",
-            "h": "/stave-falls.html"
+            "h": "/stave-falls.html",
+            "t": "Stave Falls real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Steelhead",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Steelhead"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -179,18 +176,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -208,18 +205,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -247,18 +244,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -271,91 +268,458 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=34"
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=34",
+            "t": "bctransit.com · route overview"
           }
         ],
         [
           {
-            "t": "env.gov.bc.ca · rolley lk",
-            "h": "http://www.env.gov.bc.ca/bcparks/explore/parkpgs/rolley_lk/"
+            "h": "http://www.env.gov.bc.ca/bcparks/explore/parkpgs/rolley_lk/",
+            "t": "env.gov.bc.ca · rolley lk"
           }
         ],
         [
           {
-            "t": "mission.ca · 2026 fall winter leisure guide",
-            "h": "https://www.mission.ca/media/file/2026-fall-winter-leisure-guide"
+            "h": "https://www.mission.ca/media/file/2026-fall-winter-leisure-guide",
+            "t": "mission.ca · 2026 fall winter leisure guide"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca · locations",
-            "h": "https://www.fvrl.bc.ca/locations"
+            "h": "https://www.fvrl.bc.ca/locations",
+            "t": "fvrl.bc.ca · locations"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/075"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/075",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Steelhead: streets and boundaries"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Steelhead is a rural community in northwest Mission, City of Mission, Fraser Valley Regional District, in the Stave Lake / Stave River uplands north of Silverdale and west of the town core, reached via Stave Lake Street and Dewdney Trunk Road toward Stave Falls."
+          }
+        ],
+        [
+          {
+            "t": "33105 Thomas Avenue is filed as \"LOCATION: Steelhead\" in a City rezoning package."
+          }
+        ],
+        [
+          {
+            "t": "Draft OCP engagement identified Rural Centres in both Stave Falls and Steelhead, where limited commercial growth could support local needs."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Steelhead: the housing stock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Rural residential acreages: at 33105 Thomas Avenue the existing zone is Rural 36 Zone (RU36), with a proposal to create single-family lots each with a secondary dwelling, under a Rural Residential Secondary Dwelling Zone (RR7s)."
+          }
+        ],
+        [
+          {
+            "t": "The OCP designation for that Steelhead site is Rural Residential, with no OCP change proposed alongside the rezoning."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Steelhead: rules that affect buyers"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "A 2026 City report on shipping containers grouped Steelhead with Stave Falls, Ferndale and Keystone as larger-lot rural areas, and recommended limiting residential shipping-container storage to lots of 0.2 hectares (0.49 acres) or larger in suburban and rural zones."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Steelhead: local details a buyer would not know"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Construction of Stave Falls Dam and Powerhouse began in 1909 and was completed by January 1, 1912; Ruskin Dam construction began in 1929, 5.6 km downstream, creating Hayward Lake Reservoir."
+          }
+        ],
+        [
+          {
+            "t": "The Power House at Stave Falls Visitor Centre, Hayward Lake recreation area and Stave Lake boat launch are all about 60 km east of Vancouver and are run as BC Hydro recreation areas."
+          }
+        ],
+        [
+          {
+            "t": "The Stave Lake Reservoir lodge and campsite is closed indefinitely while the area and structures undergo an engineering and structural assessment, per BC Hydro."
+          }
+        ],
+        [
+          {
+            "t": "Steelhead Falls is a named viewpoint on the Hayward Lake reservoir trail system in BC Hydro's recreation area network."
+          }
+        ],
+        [
+          {
+            "t": "A January 2000 upgrade to Stave Falls Dam and Powerhouse was completed to increase efficiency and ensure long-term hydroelectric service."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Steelhead: costs and taxes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Speculation and Vacancy Tax: the District of Mission is listed as a designated taxable area, so Steelhead owners must declare."
+          }
+        ],
+        [
+          {
+            "t": "City of Mission 2026 budget presentation utility illustration (average home): water $627.24, sewer $776.64 — rural Steelhead lots on well/septic will not carry those flat municipal utility charges in the same way; confirm what, if anything, the specific lot is billed for."
+          }
+        ],
+        [
+          {
+            "t": "Mission's official residential tax rate per $1,000 was not stated."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Steelhead: getting around"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "West Coast Express from Mission City Station runs weekday mornings to Waterfront, Vancouver, and weekday afternoons back, with no weekend or statutory-holiday service."
+          }
+        ],
+        [
+          {
+            "t": "Ruskin Dam is a road crossing of the Stave River between Mission (Stave Falls side) and Maple Ridge (Ruskin side), downstream of Hayward Lake."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Steelhead: risks and due diligence"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Dam and reservoir safety: BC Hydro states hydroelectric operations create special concerns — avoid designated hazard areas above and below Stave Falls and Ruskin Dams, obey posted signs, and note swimming, boating or fishing in those areas is extremely dangerous because of releases and currents."
+          }
+        ],
+        [
+          {
+            "t": "Hayward Lake rule: canoeing or swimming within 1 km of Ruskin Dam is prohibited in BC Hydro's recreation guidance for the reservoir system — confirm current signage on site."
+          }
+        ],
+        [
+          {
+            "t": "Fraser flood maps do not settle a Steelhead lot: the Province's 2026 floodplain release covers the Fraser from Yale to Mission, but Steelhead's local risks are slope, creek and reservoir-related — get lot-level geotechnical and riparian advice."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "How Steelhead compares"
+    },
+    {
+      "caption": "Steelhead compared",
+      "gen": "uq",
+      "head": [
+        "Fact",
+        "Steelhead",
+        "Mission West (Silverdale)",
+        "—"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Municipality / district",
+          "Mission, Fraser Valley RD",
+          "Mission, Fraser Valley RD",
+          "Mission, Fraser Valley RD"
+        ],
+        [
+          "School district",
+          "SD75",
+          "SD75",
+          "SD75"
+        ],
+        [
+          "Speculation and Vacancy Tax",
+          "Applies — Mission listed",
+          "Applies — Mission listed",
+          "Applies — Mission listed"
+        ],
+        [
+          "West Coast Express",
+          "Drive to Mission City Station",
+          "Drive / bus to Mission City Station",
+          "Bus 35 Hatzic to Mission City Station"
+        ],
+        [
+          "Plan status",
+          "Rural Centre; Rural Mission Strategy prioritized 2025",
+          "SCPA neighbourhood plans in progress",
+          "2025 OCP Bylaw 6350-2025"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What is not confirmed about Steelhead"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "No Steelhead-specific tax rate, school-in-Steelhead, transit route, or completed new building in the last 5 years was confirmed."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Related pages"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "/mission-west-mission-guide.html",
+            "t": "Mission-West, Mission Guide | Silverdale, Schools, Plans"
+          }
+        ],
+        [
+          {
+            "h": "/stave-falls-mission-guide.html",
+            "t": "Stave Falls, Mission Guide | Hayward Lake, Trails, Plans"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for Steelhead"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "https://www.mission.ca/sites/default/files/2024-03/Information%20Package%20-%20Notice%20of%20Rezoning%20Bylaw%20-%20R18-023.pdf",
+            "t": "mission.ca · Information Package Notice of Rezoning Bylaw"
+          }
+        ],
+        [
+          {
+            "h": "https://engage.mission.ca/media/file/phase-2-engagement-public-workbook",
+            "t": "engage.mission.ca · phase 2 engagement public workbook"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mission.ca/media/file/information-package-rao26-2",
+            "t": "mission.ca · information package rao26 2"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bchydro.com/community/recreation_areas/stave_lake.html?fixZoomMobile=true",
+            "t": "bchydro.com · stave lake"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt997.pdf",
+            "t": "infomaps.translink.ca · tt997"
+          }
+        ],
+        [
+          {
+            "h": "https://www.BChydro.com/community/recreation_areas/ruskin_dam.html",
+            "t": "BChydro.com · ruskin dam"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bchydro.com/community/recreation_areas/hayward_lake.html",
+            "t": "bchydro.com · hayward lake"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mission.ca/media/file/legislated-referral-consultation",
+            "t": "mission.ca · legislated referral consultation"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas",
+            "t": "www2.gov.bc.ca · taxable areas"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mission.ca/media/file/budget-2026-oct-26-meeting-presentation",
+            "t": "mission.ca · budget 2026 oct 26 meeting presentation"
+          }
+        ],
+        [
+          {
+            "h": "https://news.gov.bc.ca/releases/2026WLRS0029-000715",
+            "t": "news.gov.bc.ca · 2026WLRS0029 000715"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Are there more or fewer homes for sale in Steelhead Mission than in June?",
-      "a": "In Steelhead Mission, listings of houses was 1 in June and 0 in October, too few (under 3) to call a rise or fall.",
-      "gen": "snap-faq"
+      "a": "Plan for private services until you prove otherwise for the specific lot. Get a well potability/flow test and a septic inspection by an authorized person as subjects.",
+      "gen": "uq",
+      "q": "Is Steelhead on city water and sewer?"
     },
     {
-      "q": "How big is Steelhead Mission compared with the rest of Mission?",
-      "a": "In October 2026, Steelhead Mission held 0.0% of the 216 houses listed in Mission.",
-      "gen": "snap-faq"
+      "a": "Only if the zone says so. At 33105 Thomas Avenue the owner applied to rezone from RU36 to RR7s specifically \"to allow for the subdivision of single family lots with a secondary dwelling on each lot.\" A plain RU36 lot should not be assumed to carry that right.",
+      "gen": "uq",
+      "q": "Can each lot have a second home?"
     },
     {
-      "q": "How many homes sold in Steelhead Mission from June to October 2026?",
-      "a": "0 houses sold in Steelhead Mission over those 5 months.",
-      "gen": "snap-faq"
+      "a": "Steelhead sits in the Stave system: Stave Lake Reservoir is held by Stave Falls Dam, Hayward Lake Reservoir below it is held by Ruskin Dam, and BC Hydro warns that water releases create dangerous currents above and below both dams. Recreation rules differ by lake — Hayward is canoes and non-motorized boats (electric motors permitted), Stave permits motorized boats.",
+      "gen": "uq",
+      "q": "What is the dam and lake context?"
     },
     {
-      "q": "Who can help me buy or sell in Steelhead Mission?",
-      "a": "Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, works across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361 or use the contact form on this site.",
-      "gen": "bank-faq"
-    },
-    {
-      "q": "How do I find out which school serves an address in Steelhead Mission?",
-      "a": "School catchments are set by address, so use the school district's catchment locator with the exact address. Catchment lines change, so check before you write an offer.",
-      "gen": "bank-faq"
+      "a": "No BC Transit route is named for Steelhead. Mission routes from Mission City Station are 31, 32, 33, 34, 35 and 39, plus TransLink 701 and the West Coast Express; a car is the practical link from Steelhead to that station. Check BC Transit for any rural stop on Stave Lake Street before relying on it.",
+      "gen": "uq",
+      "q": "Is there a bus to Steelhead?"
     }
+  ],
+  "slug": "steelhead-mission-guide",
+  "status": "generated",
+  "suppress": [
+    "Related guides"
   ],
   "suppress_gen": [
     "Related guides"
   ],
-  "suppress": [
-    "Related guides"
-  ]
+  "updated": "2026-11-01"
 }

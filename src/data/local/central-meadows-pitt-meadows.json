@@ -1,60 +1,19 @@
 {
-  "status": "generated",
-  "slug": "central-meadows-pitt-meadows",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: sd42.ca",
-            "h": "https://www.sd42.ca/school-locator/"
-          }
-        ],
-        [
-          {
-            "t": "Source: pittmeadows.ca (2)",
-            "h": "https://www.pittmeadows.ca/city-services/transportation-infrastructure/transportation/bus-train-skytrain"
-          }
-        ],
-        [
-          {
-            "t": "Source: pittmeadows.ca (3)",
-            "h": "https://www.pittmeadows.ca/node/163"
-          }
-        ],
-        [
-          {
-            "t": "Source: pittmeadows.ca (4)",
-            "h": "https://www.pittmeadows.ca/sites/default/files/docs/dmlive-155673-v1-gpra_report_to_pitt_meadows_20190405_v2_pdf.pdf"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
       "t": "h",
-      "level": 2,
-      "text": "Central Meadows homes listed and sold, June to October 2026",
-      "gen": "snapstats"
+      "text": "Central Meadows homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Central Meadows, October 2026. Detached houses: 9 listed at month end and 5 sold in October, a sales ratio of 56%. Condos and townhomes: 24 listed at month end and 9 sold in October, a sales ratio of 38% (a sellers’ market).",
-      "gen": "snapstats"
+      "text": "Central Meadows, October 2026. Detached houses: 9 listed at month end and 5 sold in October, a sales ratio of 56%. Condos and townhomes: 24 listed at month end and 9 sold in October, a sales ratio of 38% (a sellers’ market)."
     },
     {
-      "t": "table",
       "caption": "Central Meadows listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -112,142 +71,142 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 21 sold over 5 months against an average of 17.0 listed, about 4.0 months of listings at that pace; the busiest month was July with 5 sold. Condos and townhomes: 34 sold over 5 months against an average of 30.8 listed, about 4.5 months of listings at that pace; the busiest month was October with 9 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 21 sold over 5 months against an average of 17.0 listed, about 4.0 months of listings at that pace; the busiest month was July with 5 sold. Condos and townhomes: 34 sold over 5 months against an average of 30.8 listed, about 4.5 months of listings at that pace; the busiest month was October with 9 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Central Meadows by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Meadows by home type"
     },
     {
-      "t": "list",
+      "gen": "typepage",
       "items": [
         [
           {
-            "t": "Central Meadows houses for sale",
-            "h": "/central-meadows-houses-for-sale.html"
+            "h": "/central-meadows-houses-for-sale.html",
+            "t": "Central Meadows houses for sale"
           }
         ],
         [
           {
-            "t": "Central Meadows condos and townhomes for sale",
-            "h": "/central-meadows-condos-townhomes-for-sale.html"
+            "h": "/central-meadows-condos-townhomes-for-sale.html",
+            "t": "Central Meadows condos and townhomes for sale"
           }
         ]
       ],
-      "gen": "typepage",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Pitt Meadows real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Pitt Meadows real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Pitt Meadows homes for sale",
-            "h": "/pitt-meadows-homes-for-sale.html"
+            "h": "/pitt-meadows-homes-for-sale.html",
+            "t": "Pitt Meadows homes for sale"
           }
         ],
         [
           {
-            "t": "Pitt Meadows real estate market stats",
-            "h": "/pitt-meadows-real-estate-market-stats.html"
+            "h": "/pitt-meadows-real-estate-market-stats.html",
+            "t": "Pitt Meadows real estate market stats"
           }
         ],
         [
           {
-            "t": "Pitt Meadows houses for sale",
-            "h": "/pitt-meadows-houses-for-sale.html"
+            "h": "/pitt-meadows-houses-for-sale.html",
+            "t": "Pitt Meadows houses for sale"
           }
         ],
         [
           {
-            "t": "Pitt Meadows condos for sale",
-            "h": "/pitt-meadows-condos-for-sale.html"
+            "h": "/pitt-meadows-condos-for-sale.html",
+            "t": "Pitt Meadows condos for sale"
           }
         ],
         [
           {
-            "t": "Pitt Meadows townhomes for sale",
-            "h": "/pitt-meadows-townhomes-for-sale.html"
+            "h": "/pitt-meadows-townhomes-for-sale.html",
+            "t": "Pitt Meadows townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Pitt Meadows",
-            "h": "/sell-my-house-in-pitt-meadows.html"
+            "h": "/sell-my-house-in-pitt-meadows.html",
+            "t": "Sell my house in Pitt Meadows"
           }
         ],
         [
           {
-            "t": "Central Meadows neighbourhood guide",
-            "h": "/central-meadows-pitt-meadows-guide.html"
+            "h": "/central-meadows-pitt-meadows-guide.html",
+            "t": "Central Meadows neighbourhood guide"
           }
         ],
         [
           {
-            "t": "Mid Meadows real estate",
-            "h": "/mid-meadows-pitt-meadows.html"
+            "h": "/mid-meadows-pitt-meadows.html",
+            "t": "Mid Meadows real estate"
           }
         ],
         [
           {
-            "t": "North Meadows real estate",
-            "h": "/north-meadows-pitt-meadows.html"
+            "h": "/north-meadows-pitt-meadows.html",
+            "t": "North Meadows real estate"
           }
         ],
         [
           {
-            "t": "South Meadows real estate",
-            "h": "/south-meadows-pitt-meadows.html"
+            "h": "/south-meadows-pitt-meadows.html",
+            "t": "South Meadows real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "p",
-      "text": "Central Meadows 55+ homes for sale",
+      "gen": "n55link",
       "h": "/central-meadows-pitt-meadows-55-plus-homes-for-sale.html",
       "pos": "end",
-      "gen": "n55link"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "What's nearby Central Meadows",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
+      "text": "Central Meadows 55+ homes for sale"
     },
     {
+      "gen": "nb",
+      "level": 2,
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Central Meadows"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -270,18 +229,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -299,18 +258,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -328,18 +287,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -347,25 +306,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Pitt Meadows Family Recreation Centre, 12027 Harris Road",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Pitt Meadows Elementary",
@@ -392,18 +352,17 @@
           "3.0"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Not confirmed",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Not confirmed"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -411,93 +370,93 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt701",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf",
+            "t": "infomaps.translink.ca · tt701"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt791",
-            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt791.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/214/tt791.pdf",
+            "t": "infomaps.translink.ca · tt791"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · node",
-            "h": "https://www.pittmeadows.ca/node/5171"
+            "h": "https://www.pittmeadows.ca/node/5171",
+            "t": "pittmeadows.ca · node"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · drop schedules hours rates",
-            "h": "https://www.pittmeadows.ca/parks-recreation/drop-schedules-hours-rates"
+            "h": "https://www.pittmeadows.ca/parks-recreation/drop-schedules-hours-rates",
+            "t": "pittmeadows.ca · drop schedules hours rates"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca",
-            "h": "https://www.fvrl.bc.ca/"
+            "h": "https://www.fvrl.bc.ca/",
+            "t": "fvrl.bc.ca"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/042"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/042",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "realcanadiansuperstore.ca · details",
-            "h": "https://www.realcanadiansuperstore.ca/store-locator/details/1555"
+            "h": "https://www.realcanadiansuperstore.ca/store-locator/details/1555",
+            "t": "realcanadiansuperstore.ca · details"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 2,
-      "text": "What's nearby, building by building",
-      "gen": "nbb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one.",
-      "gen": "nbb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Meadowland Village, 18960 Advent Road",
-      "gen": "nbb",
-      "pos": "end"
+      "text": "What's nearby, building by building"
     },
     {
-      "t": "list",
+      "gen": "nbb",
+      "pos": "end",
+      "t": "p",
+      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them. School catchments are not confirmed for these addresses: confirm with the school district before relying on one."
+    },
+    {
+      "gen": "nbb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Meadowland Village, 18960 Advent Road"
+    },
+    {
+      "gen": "nbb",
       "items": [
         [
           {
@@ -520,19 +479,19 @@
           }
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 3,
-      "text": "Measured walking and driving times from each building",
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times from each building"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), starting at each building’s address",
+      "gen": "nbb",
       "head": [
         "Building",
         "To",
@@ -540,6 +499,7 @@
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Meadowland Village (from the street)",
@@ -563,104 +523,633 @@
           "0.7"
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nbb",
       "level": 3,
-      "text": "Sources for what’s nearby each building",
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby each building"
     },
     {
-      "t": "list",
+      "gen": "nbb",
       "items": [
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt722",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt722.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt722.pdf",
+            "t": "infomaps.translink.ca · tt722"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt701",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt701.pdf",
+            "t": "infomaps.translink.ca · tt701"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · hoffmann park",
-            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/hoffmann-park"
+            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/hoffmann-park",
+            "t": "pittmeadows.ca · hoffmann park"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · advent park",
-            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/advent-park"
+            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/advent-park",
+            "t": "pittmeadows.ca · advent park"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · drop schedules hours rates",
-            "h": "https://www.pittmeadows.ca/parks-recreation/drop-schedules-hours-rates"
+            "h": "https://www.pittmeadows.ca/parks-recreation/drop-schedules-hours-rates",
+            "t": "pittmeadows.ca · drop schedules hours rates"
           }
         ],
         [
           {
-            "t": "fvrl.bc.ca",
-            "h": "https://www.fvrl.bc.ca/"
+            "h": "https://www.fvrl.bc.ca/",
+            "t": "fvrl.bc.ca"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/042"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/042",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ],
         [
           {
-            "t": "saveonfoods.com · store",
-            "h": "https://www.saveonfoods.com/sm/planning/rsid/995/store"
+            "h": "https://www.saveonfoods.com/sm/planning/rsid/995/store",
+            "t": "saveonfoods.com · store"
           }
         ],
         [
           {
-            "t": "realcanadiansuperstore.ca · details",
-            "h": "https://www.realcanadiansuperstore.ca/store-locator/details/1555"
+            "h": "https://www.realcanadiansuperstore.ca/store-locator/details/1555",
+            "t": "realcanadiansuperstore.ca · details"
           }
         ]
       ],
-      "gen": "nbb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Meadows: streets and boundaries"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Central Meadows has no official City boundary; the closest official planning name is the Official Community Plan (OCP) Municipal Town Centre."
+          }
+        ],
+        [
+          {
+            "t": "The Town Centre covers the Harris Road corridor and the North Lougheed Area and the Civic Centre, with Lougheed Highway (Highway 7) at the north edge and the Canadian Pacific Kansas City (CPKC) rail line along Hammond Road."
+          }
+        ],
+        [
+          {
+            "t": "Harris Road is the main street, and City Hall at 12007 Harris Road sits in the civic core beside the recreation centre and library."
+          }
+        ],
+        [
+          {
+            "t": "Mid Meadows lies southeast, West Meadows west, North Meadows across Lougheed Highway, and Maple Ridge east."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Meadows: the housing stock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The stock is an established Town Centre mix: detached houses on the interior streets, with multifamily buildings concentrated on Harris Road."
+          }
+        ],
+        [
+          {
+            "t": "The OCP designates the Town Centre for high and medium density multifamily and mixed-use commercial and residential development, so the Harris Road frontage differs from the interior streets."
+          }
+        ],
+        [
+          {
+            "t": "House lots sit under RS (Large Lot Residential), R-3, R-4 and R-6 zones in Zoning Bylaw No. 2505, 2011, with subdivision minimums from 1,215 square metres in R-3, R-4 and R-6 to 0.2 hectares in RS."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Meadows: rules that affect buyers"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The governing plan is \"I See Pitt Meadows 2040,\" Official Community Plan Bylaw No. 2864, 2020, adopted September 27, 2022, which repealed the former OCP Bylaw 2352, 2007."
+          }
+        ],
+        [
+          {
+            "t": "One secondary suite per principal dwelling is allowed where the zone permits it, at 33 to 90 square metres inside the same building."
+          }
+        ],
+        [
+          {
+            "t": "A garden suite is one per lot at 33 to 90 square metres in the zones listed in the City garden suite guide, including RS, and a lot with a garden suite cannot also have a secondary suite."
+          }
+        ],
+        [
+          {
+            "t": "Under the City's Small-Scale Multi-Unit Housing (SSMUH) rules, lots of 280 square metres or less allow up to 3 units, lots over 280 square metres up to 4 units, and lots over 280 square metres within 400 metres of a frequent transit bus stop up to 6 units; the amending Bylaw No. 2986 was adopted June 25, 2024."
+          }
+        ],
+        [
+          {
+            "t": "The 1,215 square metre figure in the R zones is a subdivision minimum only and does not apply to development on existing lots, per the City's SSMUH implementation update."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Meadows: local details a buyer would not know"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Central Meadows drains through urban drainage Area 3 (Kennedy, including McKechnie) of the Pitt Meadows / Maple Ridge Diking District, serviced by ditches, culverts and storm sewers discharging to the Alouette, Pitt and Fraser Rivers."
+          }
+        ],
+        [
+          {
+            "t": "The civic core is walkable in one block: sxwhekwnes (Spirit Square) at 11985 Harris Road, Pitt Meadows Family Recreation Centre at 12027 Harris Road and Pitt Meadows Public Library at 200-12099 Harris Road."
+          }
+        ],
+        [
+          {
+            "t": "Harris Road holds registered heritage buildings, including the Pitt Meadows General Store and Post Office at 12294 Harris Road, now the Pitt Meadows Museum."
+          }
+        ],
+        [
+          {
+            "t": "Meadowtown Shopping Centre at 19800 Lougheed Highway, at the area's northeast edge, holds the Real Canadian Superstore grocery store named in the City's commercial lands analysis, while Meadowvale Shopping Centre on Harris Road North holds Save-On-Foods."
+          }
+        ],
+        [
+          {
+            "t": "Pitt Meadows Regional Airport (YPK) is west of the area, and the City maintains a page for airport safety and noise concerns."
+          }
+        ],
+        [
+          {
+            "t": "The nearest hospital is Ridge Meadows Hospital at 11666 Laity Street in Maple Ridge, a Fraser Health community hospital with 24/7 emergency care."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Meadows: costs and taxes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Pitt Meadows' 2026 general municipal residential rate is $2.8438 per $1,000 of taxable value, plus the $0.1082 drainage rate, under Bylaw No. 3047, 2026, adopted May 5, 2026."
+          }
+        ],
+        [
+          {
+            "t": "2026 property taxes were due July 2, 2026, with a 5 percent penalty added after July 2, 2026 and a further 5 percent after August 1, 2026."
+          }
+        ],
+        [
+          {
+            "t": "The Speculation and Vacancy Tax (SVT) applies in the City of Pitt Meadows, which the Province lists as a designated taxable area in the Metro Vancouver Regional District."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Meadows: getting around"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Pitt Meadows Station on Harris Road is the transit anchor: West Coast Express trains run to Waterfront Station, Vancouver, Monday to Friday in peak periods."
+          }
+        ],
+        [
+          {
+            "t": "The City states the West Coast Express trip from Pitt Meadows to downtown Vancouver is about 45 minutes."
+          }
+        ],
+        [
+          {
+            "t": "Bus connections at the station include route 701 to Coquitlam Central Station and Haney Place via Harris Road and Hammond Road, route 791 to Braid Station and Haney Place, the 719/722 Meadowtown–Fraser Way circular service, and the R3 Lougheed Hwy RapidBus stop at Harris Road."
+          }
+        ],
+        [
+          {
+            "t": "Golden Ears Way and the Golden Ears Bridge, east of the area, are the driving route toward Langley and Surrey."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Meadows: risks and due diligence"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Start on the City's Dikes page: the city is almost entirely protected by 60 kilometres of dikes, and the Diking District is defined by the Fraser, Pitt and Alouette River dikes."
+          }
+        ],
+        [
+          {
+            "t": "Check the lot against the Floodplain Designation and Construction Control Bylaw No. 2384, 2008: its Designated Flood Level is 1.85 metres Geodetic Survey of Canada datum for the Schedule A Rural Floodplain and 5.15 metres for the Schedule B Urban Floodplain."
+          }
+        ],
+        [
+          {
+            "t": "Note the superseded figure: an older City document stated about 86 percent of the city in the floodplain; the City's 2020 Business Plan figure of over 95 percent is the current one and governs."
+          }
+        ],
+        [
+          {
+            "t": "Check Agricultural Land Reserve (ALR) status per address: the City states 78 percent of its land base is in the ALR, although Town Centre parcels are a per-address check on Agricultural Land Commission maps."
+          }
+        ],
+        [
+          {
+            "t": "The dike pages do not tell a buyer an individual home's flood construction level or insurance position; that comes from the property's own permit history."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "How Central Meadows compares"
+    },
+    {
+      "caption": "Central Meadows compared",
+      "gen": "uq",
+      "head": [
+        "Fact",
+        "Central Meadows",
+        "Mid Meadows",
+        "South Meadows"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Municipality",
+          "City of Pitt Meadows",
+          "City of Pitt Meadows",
+          "City of Pitt Meadows"
+        ],
+        [
+          "School district",
+          "SD42",
+          "SD42",
+          "SD42"
+        ],
+        [
+          "2026 general municipal rate per $1,000",
+          "$2.8438 (Bylaw No. 3047)",
+          "$2.8438 (Bylaw No. 3047)",
+          "$2.8438 (Bylaw No. 3047)"
+        ],
+        [
+          "Speculation and Vacancy Tax area",
+          "Yes",
+          "Yes",
+          "Yes"
+        ],
+        [
+          "West Coast Express station in the area",
+          "Yes — Pitt Meadows Station",
+          "—",
+          "—"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What is not confirmed about Central Meadows"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "An official street-by-street boundary or official neighbourhood name for Central Meadows — the City publishes neither; the OCP Town Centre is the closest official name."
+          }
+        ],
+        [
+          {
+            "t": "Condo building names and townhome complex names in Central Meadows on an official, developer or strata source."
+          }
+        ],
+        [
+          {
+            "t": "Driving commute times in minutes to Vancouver, Coquitlam and Maple Ridge."
+          }
+        ],
+        [
+          {
+            "t": "Agricultural Land Reserve parcels inside the Town Centre core — a per-address check only."
+          }
+        ],
+        [
+          {
+            "t": "An age and style profile of the housing stock on an official source."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Related pages"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "/mid-meadows-pitt-meadows.html",
+            "t": "Mid Meadows Homes for Sale, Pitt Meadows"
+          }
+        ],
+        [
+          {
+            "h": "/south-meadows-pitt-meadows.html",
+            "t": "South Meadows Homes for Sale, Pitt Meadows"
+          }
+        ],
+        [
+          {
+            "h": "/north-meadows-pitt-meadows.html",
+            "t": "North Meadows Homes for Sale, Pitt Meadows"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for Central Meadows"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "https://www.pittmeadows.ca/ocp",
+            "t": "pittmeadows.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/hearings/2020-11-05_-2869_2020_north_lougheed_ocp_amendment_bylaw.pdf",
+            "t": "pittmeadows.ca · 2020 11 05 2869 2020 north lougheed ocp amendmen"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/city-hall/property-taxes/payment-options",
+            "t": "pittmeadows.ca · payment options"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/sites/default/files/2025-04/Zoning%20Bylaw%20No.%202505%2C%202011%20-%20Consolidated%20Version_0.pdf",
+            "t": "pittmeadows.ca · Zoning Bylaw No. 2505 2011 Consolidated Versi"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/media/8989",
+            "t": "pittmeadows.ca · media"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/sites/default/files/docs/homes-development/information_sheet_-_planning_-_garden_suitesv4.pdf",
+            "t": "pittmeadows.ca · information sheet planning garden suitesv4"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/sites/default/files/2025-12/Dec_2_2025_SSMUH_Transit_Oriented_Areas_Implementation_Update.pdf",
+            "t": "pittmeadows.ca · Dec 2 2025 SSMUH Transit Oriented Areas Implemen"
+          }
+        ],
+        [
+          {
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "sd42.ca · school locator"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/sites/default/files/2022-03/pitt-meadows_business-plan_2020-web-full02.pdf",
+            "t": "pittmeadows.ca · pitt meadows business plan 2020 web full02"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/sites/default/files/2026-05/2026-Annual-Tax-Rates-Bylaw-No-3047%2C-2026.pdf",
+            "t": "pittmeadows.ca · 2026 Annual Tax Rates Bylaw No 3047 2026"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/node/163",
+            "t": "pittmeadows.ca · node"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-list/sxwhekwns-spirit-square",
+            "t": "pittmeadows.ca · sxwhekwns spirit square"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/arts-culture-heritage/heritage",
+            "t": "pittmeadows.ca · heritage"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/hearings/2025-11-04-Public-Hearing-Notice-3031%2C-2025-19800-Lougheed_Highway-Daycare.pdf",
+            "t": "pittmeadows.ca · 2025 11 04 Public Hearing Notice 3031 2025 1980"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital",
+            "t": "fraserhealth.ca · ridge meadows hospital"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/our-community/city-planning-projects/pitt-meadows-road-and-rail-improvements-project/past-project",
+            "t": "pittmeadows.ca · past project"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "musefaq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
+    },
+    {
+      "gen": "musefaq",
+      "items": [
+        [
+          {
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "Source: sd42.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/city-services/transportation-infrastructure/transportation/bus-train-skytrain",
+            "t": "Source: pittmeadows.ca (2)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/node/163",
+            "t": "Source: pittmeadows.ca (3)"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Which public schools serve Central Meadows?",
+      "a": "Pitt Meadows Elementary and Pitt Meadows Secondary, for the sample address checked.",
+      "gen": "uq",
+      "q": "Which schools serve a Central Meadows home?"
+    },
+    {
+      "a": "Yes — treat flood as standard due diligence here. The City's 2020 Business Plan states over 95 percent of the Pitt Meadows land base lies within the floodplain of the Fraser River and, to a smaller degree, the Pitt River, and the city is almost entirely protected by 60 kilometres of dikes, ditches, pump stations and flood boxes.",
+      "gen": "uq",
+      "q": "Is this area in a floodplain?"
+    },
+    {
+      "a": "No — the City allows one or the other. Zoning Bylaw No. 2505, 2011 allows one secondary suite per principal dwelling at 33 to 90 square metres inside the same building where the zone permits it, and garden suites in the listed zones including RS, but a lot with a garden suite cannot also have a secondary suite.",
+      "gen": "uq",
+      "q": "Can I have both a suite and a garden suite?"
+    },
+    {
+      "a": "It is a separate levy inside the tax bylaw. The 2026 Annual Tax Rates Bylaw No. 3047, 2026 sets the residential drainage rate at $0.1082 per $1,000 of taxable value, alongside the general municipal rate of $2.8438 per $1,000, reflecting this area's position in an urban drainage catchment.",
+      "gen": "uq",
+      "q": "What is the extra drainage charge on the tax bill?"
+    },
+    {
       "a": "Pitt Meadows Elementary at 11941 Harris Road is physically in the area, and Pitt Meadows Secondary at 19438 116B Avenue is the public secondary school for Pitt Meadows; SD42 has no middle tier, and for the sample address used (12007 Harris Road), the SD42 locator gives Pitt Meadows Elementary and Pitt Meadows Secondary — catchments for other addresses must be checked in the locator.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which public schools serve Central Meadows?"
     },
     {
-      "q": "What transit serves Central Meadows?",
       "a": "Pitt Meadows Station gives West Coast Express service to Vancouver and bus connections including route 701 to Coquitlam Central Station and Haney Place, route 791 to Braid Station and Haney Place, and the 719/722 Meadowtown circular service; the R3 RapidBus stops at Harris Road on Lougheed Highway.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What transit serves Central Meadows?"
     },
     {
-      "q": "Is Central Meadows in a floodplain?",
       "a": "The City's 2020 Business Plan states over 95% of Pitt Meadows lies within the Fraser River and Pitt River floodplain, and the city is almost entirely protected by 60 km of dikes; this area is in urban drainage Area 3 of the Pitt Meadows / Maple Ridge Diking District.",
-      "gen": "muse"
-    },
-    {
-      "q": "Where is the main shopping and grocery shopping?",
-      "a": "Save-On-Foods is the grocery tenant at Meadowvale Shopping Centre on Harris Road, and Meadowtown Shopping Centre at 19800 Lougheed Highway, with Real Canadian Superstore, sits at the area's north-east edge, with further shops and services on Harris Road in the Town Centre.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Is Central Meadows in a floodplain?"
     }
-  ]
+  ],
+  "slug": "central-meadows-pitt-meadows",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

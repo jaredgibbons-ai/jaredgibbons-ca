@@ -1,40 +1,37 @@
 {
-  "status": "generated",
-  "slug": "abbotsford-homes-for-sale",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "p",
-      "text": "Sell my house in Abbotsford: current prices, lot rules and a free home evaluation",
+      "gen": "sellerlink",
       "h": "/sell-my-house-in-abbotsford.html",
-      "gen": "sellerlink"
+      "t": "p",
+      "text": "Sell my house in Abbotsford: current prices, lot rules and a free home evaluation"
     },
     {
-      "t": "p",
-      "text": "See all 55 schools in Abbotsford, BC",
+      "gen": "schoollist",
       "h": "/schools-in-abbotsford-bc.html",
-      "gen": "schoollist"
+      "t": "p",
+      "text": "See all 55 schools in Abbotsford, BC"
     },
     {
-      "t": "p",
-      "text": "Abbotsford real estate market stats for September 2026: benchmark prices and trends",
+      "gen": "marketlink",
       "h": "/abbotsford-real-estate-market-stats.html",
-      "gen": "marketlink"
-    },
-    {
-      "t": "h",
-      "level": 2,
-      "text": "Abbotsford houses: sale price, days on market and sale-to-list, May to October 2026",
-      "gen": "snapstats"
-    },
-    {
       "t": "p",
-      "text": "In October 2026 houses in Abbotsford sold about 3% below list price, after 38 days on market on the reports’ measure (up from 18 in May).",
-      "gen": "snapstats"
+      "text": "Abbotsford real estate market stats for September 2026: benchmark prices and trends"
     },
     {
-      "t": "table",
+      "gen": "snapstats",
+      "level": 2,
+      "t": "h",
+      "text": "Abbotsford houses: sale price, days on market and sale-to-list, May to October 2026"
+    },
+    {
+      "gen": "snapstats",
+      "t": "p",
+      "text": "In October 2026 houses in Abbotsford sold about 3% below list price, after 38 days on market on the reports’ measure (up from 18 in May)."
+    },
+    {
       "caption": "Abbotsford houses: monthly market figures",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Reported sale price",
@@ -101,22 +98,22 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. The reports give one sale-price figure a month and do not say whether it is an average or a median, so use it for direction, not as a valuation of your own home.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Abbotsford houses: 13 months of listings, sales and prices to October 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Abbotsford houses: 13 months of listings, sales and prices to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Over the 13 months from October 2025 to October 2026, listings of houses in Abbotsford peaked at 469 in October 2025 and bottomed at 293 in December 2025. Sales were strongest in October 2026 with 72. The reported sale price moved from $1,055,000 to $1,060,000, a change of +0.5%.",
-      "gen": "snapstats"
+      "text": "Over the 13 months from October 2025 to October 2026, listings of houses in Abbotsford peaked at 469 in October 2025 and bottomed at 293 in December 2025. Sales were strongest in October 2026 with 72. The reported sale price moved from $1,055,000 to $1,060,000, a change of +0.5%."
     },
     {
-      "t": "table",
       "caption": "Abbotsford houses: 13-month trend",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Reported sale price",
@@ -204,102 +201,559 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. The reports give one sale-price figure a month and do not say whether it is an average or a median, so use it for direction, not as a valuation of your own home.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Abbotsford neighbourhoods",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford neighbourhoods"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Abbotsford East real estate",
-            "h": "/abbotsford-east.html"
+            "h": "/abbotsford-east.html",
+            "t": "Abbotsford East real estate"
           }
         ],
         [
           {
-            "t": "Abbotsford West real estate",
-            "h": "/abbotsford-west.html"
+            "h": "/abbotsford-west.html",
+            "t": "Abbotsford West real estate"
           }
         ],
         [
           {
-            "t": "Aberdeen real estate",
-            "h": "/aberdeen.html"
+            "h": "/aberdeen.html",
+            "t": "Aberdeen real estate"
           }
         ],
         [
           {
-            "t": "Bradner real estate",
-            "h": "/bradner.html"
+            "h": "/bradner.html",
+            "t": "Bradner real estate"
           }
         ],
         [
           {
-            "t": "Central Abbotsford real estate",
-            "h": "/central-abbotsford.html"
+            "h": "/central-abbotsford.html",
+            "t": "Central Abbotsford real estate"
           }
         ],
         [
           {
-            "t": "Matsqui real estate",
-            "h": "/matsqui.html"
+            "h": "/matsqui.html",
+            "t": "Matsqui real estate"
           }
         ],
         [
           {
-            "t": "Poplar real estate",
-            "h": "/poplar.html"
+            "h": "/poplar.html",
+            "t": "Poplar real estate"
           }
         ],
         [
           {
-            "t": "Sumas Mountain real estate",
-            "h": "/sumas-mountain.html"
+            "h": "/sumas-mountain.html",
+            "t": "Sumas Mountain real estate"
           }
         ],
         [
           {
-            "t": "Sumas Prairie real estate",
-            "h": "/sumas-prairie.html"
+            "h": "/sumas-prairie.html",
+            "t": "Sumas Prairie real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Homes for Sale: streets and boundaries"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Abbotsford is a single city in the Fraser Valley Regional District, crossed east–west by Highway 1 and Fraser Highway, with the Huntingdon / Sumas border crossing at its south end on the Highway 11 corridor."
+          }
+        ],
+        [
+          {
+            "t": "The City publishes its communities as demographic profile areas, including Bradner – Mt. Lehman (area 1), Aberdeen (area 6) and West Abbotsford (area 7); board sub-area names and City profile names overlap but are not the same list."
+          }
+        ],
+        [
+          {
+            "t": "Abbotsford International Airport (YXX) sits in the southwest of the city, south of Fraser Highway and west of Clearbrook."
+          }
+        ],
+        [
+          {
+            "t": "Mission lies across the Fraser River to the north, the Township of Langley to the west, Chilliwack to the east, and the United States border to the south."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Homes for Sale: the housing stock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The city-wide stock is governed by Abbotsford Zoning Bylaw, 2014, No."
+          }
+        ],
+        [
+          {
+            "t": "Infill subdivision is an active form: Council reports in 2025 repeatedly rezoned single lots from Urban Residential Zone, Infill (RS3-i) to Infill Residential Zone (RS7) for two-, three- and four-lot subdivisions, for example at 2272 Lynden Street and 2330 Fir Street."
+          }
+        ],
+        [
+          {
+            "t": "The rural half of the city is farm lots at agricultural scale: minimum subdivision lot area 8.0 hectares in the A1 zone and 16.0 hectares in the A2 zone."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Homes for Sale: rules that affect buyers"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The governing plan is Abbotsforward 2050, the City's updated Official Community Plan (OCP): the City's laws site now carries the OCP as Bylaw No. 3690-2025, replacing the Bylaw No. 2600-2016 cited in earlier research — check current."
+          }
+        ],
+        [
+          {
+            "t": "Small-scale multi-unit housing (SSMUH) is built into the OCP update: the draft framework received by Council on May 13, 2025 proposed an SSMUH 1 designation enabling small-scale multi-unit housing near the urban core and the Primary Transit Corridor, limited to three storeys and a maximum of four dwelling units per lot."
+          }
+        ],
+        [
+          {
+            "t": "In the A1 agricultural zone, one Accessory Farm Dwelling Unit per lot is permitted under the Agricultural Land Reserve Use Regulation, B.C. Reg. 30/2019, or with Agricultural Land Commission approval, on a lot of at least 0.4 hectares, capped at 90 square metres (lots of 40 hectares or less) or 186 square metres (larger lots), plus one secondary suite per lot to 100 square metres."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Homes for Sale: local details a buyer would not know"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Water and sewer are billed bi-monthly, not monthly, and a 5 percent discount applies if payment is received by the due date printed on the bill."
+          }
+        ],
+        [
+          {
+            "t": "From January 2027, solid waste fees move off the annual property tax notice and onto the utility bill alongside water and sewer; collection days do not change."
+          }
+        ],
+        [
+          {
+            "t": "Properties not connected to City water or sewer — well and septic properties — are not charged those utility fees."
+          }
+        ],
+        [
+          {
+            "t": "Any utility account balance outstanding at December 31 is transferred to the property tax account and subject to daily interest, per the City's current utility bill page (stated for the 2025 balance)."
+          }
+        ],
+        [
+          {
+            "t": "Abbotsford Regional Hospital and Cancer Centre, 32900 Marshall Road, is the city's hospital, with 24-hour emergency, surgery and maternity services, and the urgent and primary care centre is at 100-2692 Clearbrook Road."
+          }
+        ],
+        [
+          {
+            "t": "Property tax notices are billed annually for January to December, with an estimated delivery date of May 22, 2026 for the 2026 notice."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Homes for Sale: development and new projects"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Abbotsforward 2050 OCP and zoning update, city-wide: the Stage 3 Draft Policy and Regulation Report was received by Council on May 13, 2025, with community engagement directed, and the City's laws site now carries the OCP as Bylaw No. 3690-2025. STATUS: adopted bylaw posted on the City laws site, read 2026-11-03 — check current for any later amendments."
+          }
+        ],
+        [
+          {
+            "t": "McKee Neighbourhood Plan, for the Auguston and Highlands side of the city: the plan area currently holds about 4,600 people in 1,193 dwelling units, and the plan guides the phased build-out of the OCP's New Neighbourhoods area. STATUS: neighbourhood plan in force as an OCP schedule, read 2026-11-03."
+          }
+        ],
+        [
+          {
+            "t": "STATUS: construction west of the city, planning east, read 2026-11-03."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Homes for Sale: costs and taxes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The City's 2026 Tax Rates Summary sets the Class 1 Residential general municipal rate at 1.08284 dollars per $1,000 of taxable value; the full 2026 rate is set by Tax Rates Bylaw No. 3727-2026 and adds school, Fraser Valley Regional District, hospital and library levies."
+          }
+        ],
+        [
+          {
+            "t": "All 2026 property taxes were due July 2, 2026, with a first 5 percent penalty on July 3, 2026 and a second 5 percent penalty on September 16, 2026, including on unclaimed Home Owner Grant amounts."
+          }
+        ],
+        [
+          {
+            "t": "Effective March 1, 2026, the residential water rate is $1.46 per cubic metre and the sewer rate is $1.35 per cubic metre, after a Council-approved 4 percent increase to each in January 2026."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Homes for Sale: getting around"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "BC Transit's Central Fraser Valley system, not TransLink, runs Abbotsford buses; route 21 Fraser Hwy links Aldergrove and Bourquin Exchange via Highstreet Exchange."
+          }
+        ],
+        [
+          {
+            "t": "Highway 1 interchanges serving the city include Mt. Lehman Road and Clearbrook Road; the Huntingdon / Sumas border crossing is at the south end of the Highway 11 corridor."
+          }
+        ],
+        [
+          {
+            "t": "Abbotsford International Airport (YXX) is inside the city, in the southwest, under its own federal Airport Zoning Regulations, SOR/83-253."
+          }
+        ],
+        [
+          {
+            "t": "There is no SkyTrain or West Coast Express station in Abbotsford; the nearest West Coast Express station is Mission City Station."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Homes for Sale: risks and due diligence"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Check the specific lot in the City's WebMap for its zone and any Zoning Bylaw Schedule E floodplain designation before offering; both are lot-specific."
+          }
+        ],
+        [
+          {
+            "t": "Agricultural Land Reserve (ALR) status is parcel-specific across the rural half of the city; subdivision, non-farm use and added dwellings can need Agricultural Land Commission approval on top of City zoning."
+          }
+        ],
+        [
+          {
+            "t": "Airport height surfaces are a separate layer from zoning and floodplain: land on City drawing M-500 can be height-capped even where zoning allows a taller building."
+          }
+        ],
+        [
+          {
+            "t": "For rural homes off City sewer, Fraser Health states an onsite sewerage system must comply with the Sewerage System Regulation, and well records sit in the Province's GWELLS registry."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "How Abbotsford Homes for Sale compares"
+    },
+    {
+      "caption": "Abbotsford Homes for Sale compared",
+      "gen": "uq",
+      "head": [
+        "Fact",
+        "Abbotsford",
+        "Chilliwack",
+        "Mission"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "2026 general municipal residential rate per $1,000",
+          "1.08284 (general municipal, Class 1)",
+          "3.00943 (Class 1 municipal rate)",
+          "—"
+        ],
+        [
+          "Speculation and Vacancy Tax taxable area",
+          "Yes — City of Abbotsford named",
+          "Yes — City of Chilliwack named",
+          "Yes — District of Mission named"
+        ],
+        [
+          "Transit operator",
+          "BC Transit, Central Fraser Valley",
+          "BC Transit, Chilliwack system",
+          "—"
+        ],
+        [
+          "School district",
+          "SD34 Abbotsford",
+          "SD33 Chilliwack",
+          "SD75 Mission"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Related pages"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "/abbotsford-neighbourhood-guides.html",
+            "t": "Abbotsford Neighbourhood Guides | BC"
+          }
+        ],
+        [
+          {
+            "h": "/abbotsford-houses-for-sale.html",
+            "t": "Abbotsford Houses for Sale | Single-Family"
+          }
+        ],
+        [
+          {
+            "h": "/aberdeen-guide.html",
+            "t": "Aberdeen Abbotsford Neighbourhood Guide"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for Abbotsford Homes for Sale"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "https://www.bctransit.com/wp-content/uploads/2026/08/cfv_map_21.pdf",
+            "t": "bctransit.com · cfv map 21"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/sites/default/files/2021-02/2020%20McKee%20Profile%20-%20spreads%20final.pdf",
+            "t": "abbotsford.ca · 2020 McKee Profile spreads final"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/sites/default/files/docs/business-development/Development%20Guidlines%20for%20YXX%202020.pdf",
+            "t": "abbotsford.ca · Development Guidlines for YXX 2020"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014",
+            "t": "abbotsford.ca · zoning bylaw 2014"
+          }
+        ],
+        [
+          {
+            "h": "https://abbotsford.civicweb.net/document/58344/",
+            "t": "abbotsford.civicweb.net · document"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/sites/default/files/2021-10/AgRefresh%20St3%20-%20Parcel%20Size.pdf",
+            "t": "abbotsford.ca · AgRefresh St3 Parcel Size"
+          }
+        ],
+        [
+          {
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea",
+            "t": "laws.abbotsford.ca · 2025bschedulea"
+          }
+        ],
+        [
+          {
+            "h": "https://abbotsford.civicweb.net/document/58283/",
+            "t": "abbotsford.civicweb.net · document (2)"
+          }
+        ],
+        [
+          {
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400210",
+            "t": "laws.abbotsford.ca · 2014b2400210"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbyschools.ca/policy-18-school-catchment-areas",
+            "t": "abbyschools.ca · policy 18 school catchment areas"
+          }
+        ],
+        [
+          {
+            "h": "https://laws-lois.justice.gc.ca/eng/regulations/sor-83-253/FullText.html?wbdisable=true",
+            "t": "laws-lois.justice.gc.ca · FullText"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/city-services/utility-billing/current-utility-bill",
+            "t": "abbotsford.ca · current utility bill"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/city-services/utility-billing",
+            "t": "abbotsford.ca · utility billing"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Abbotsford/abbotsford-regional-hospital-and-cancer-centre",
+            "t": "fraserhealth.ca · abbotsford regional hospital and cancer centre"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/city-services/property-taxes/your-current-tax-notice",
+            "t": "abbotsford.ca · your current tax notice"
+          }
+        ],
+        [
+          {
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2016b2600schedulee",
+            "t": "laws.abbotsford.ca · 2016b2600schedulee"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "How many houses are for sale in Abbotsford?",
+      "a": "Abbotsforward 2050, the updated Official Community Plan, governs. The City's laws site carries it as OCP Bylaw No. 3690-2025, with neighbourhood plans for City Centre, Historic Downtown, UDistrict and McKee named inside it. A Stage 3 draft of the update was received by Council on May 13, 2025, alongside matching zoning bylaw changes, so confirm the current bylaw version for any specific lot.",
+      "gen": "uq",
+      "q": "Which plan governs growth in Abbotsford?"
+    },
+    {
+      "a": "Often yes, through infill zoning or the new small-scale multi-unit housing framework. Each route carries Development Bylaw, 2022 works and services conditions.",
+      "gen": "uq",
+      "q": "Can a city lot be split or built out to four units?"
+    },
+    {
+      "a": "Only on land inside the airport zoning area in the southwest of the city. Land covered by the Abbotsford Airport Zoning Regulations, SOR/83-253, shown on City drawing M-500, is subject to height limits under the approach, outer and transitional surfaces, and NAV CANADA and Transport Canada approvals are required before the City issues a building permit on that land.",
+      "gen": "uq",
+      "q": "Does the airport restrict what I can build?"
+    },
+    {
       "a": "At the end of October 2026 the Fraser Valley Real Estate Board figures showed 410 houses listed in Abbotsford and 72 sold in the month, a sales ratio of 18%. Month-end counts move daily; ask Jared what is on the market today.",
-      "gen": "snap-faq"
+      "gen": "snap-faq",
+      "q": "How many houses are for sale in Abbotsford?"
     },
     {
-      "q": "What is the reported sale price for houses in Abbotsford?",
       "a": "The October report gave $1,060,000 for houses in Abbotsford, against $949,000 the month before. The reports give one sale-price figure and do not say whether it is an average or a median, so use it for direction, not as a valuation of your own home.",
-      "gen": "snap-faq"
+      "gen": "snap-faq",
+      "q": "What is the reported sale price for houses in Abbotsford?"
     },
     {
-      "q": "How long do houses take to sell in Abbotsford?",
       "a": "The October report showed 38 days on market for houses in Abbotsford and a sale-to-list price ratio of 97%, against 39 days the month before.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "Do I need a home inspection when buying in Abbotsford?",
-      "a": "It is strongly recommended. Make the offer subject to an inspection so a qualified inspector can look at the roof, structure, drainage, electrical and heating before you remove conditions.",
-      "gen": "bank-faq"
-    },
-    {
-      "q": "Can I add a suite or coach house to a house in Abbotsford?",
-      "a": "BC's small-scale multi-unit housing rules allow more homes on many urban lots, but each municipality sets the details and many lots are excluded. Check the lot's zoning with the municipality before you plan a suite or coach house.",
-      "gen": "bank-faq"
+      "gen": "snap-faq",
+      "q": "How long do houses take to sell in Abbotsford?"
     }
-  ]
+  ],
+  "slug": "abbotsford-homes-for-sale",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

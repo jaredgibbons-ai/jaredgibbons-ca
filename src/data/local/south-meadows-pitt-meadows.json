@@ -1,42 +1,19 @@
 {
-  "status": "generated",
-  "slug": "south-meadows-pitt-meadows",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Source: sd42.ca",
-            "h": "https://www.sd42.ca/school-locator/"
-          }
-        ]
-      ],
-      "gen": "musefaq",
-      "pos": "end"
-    },
-    {
       "t": "h",
-      "level": 2,
-      "text": "South Meadows homes listed and sold, June to October 2026",
-      "gen": "snapstats"
+      "text": "South Meadows homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "South Meadows, October 2026. Detached houses: 11 listed at month end and 2 sold in October, a sales ratio of 18% (a balanced market). Condos and townhomes: 8 listed at month end and 6 sold in October, a sales ratio of 75%.",
-      "gen": "snapstats"
+      "text": "South Meadows, October 2026. Detached houses: 11 listed at month end and 2 sold in October, a sales ratio of 18% (a balanced market). Condos and townhomes: 8 listed at month end and 6 sold in October, a sales ratio of 75%."
     },
     {
-      "t": "table",
       "caption": "South Meadows listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -94,135 +71,135 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 14 sold over 5 months against an average of 11.6 listed, about 4.1 months of listings at that pace; the busiest month was September with 5 sold. Condos and townhomes: 18 sold over 5 months against an average of 12.6 listed, about 3.5 months of listings at that pace; the busiest month was October with 6 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 14 sold over 5 months against an average of 11.6 listed, about 4.1 months of listings at that pace; the busiest month was September with 5 sold. Condos and townhomes: 18 sold over 5 months against an average of 12.6 listed, about 3.5 months of listings at that pace; the busiest month was October with 6 sold."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "South Meadows by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "South Meadows by home type"
     },
     {
-      "t": "list",
+      "gen": "typepage",
       "items": [
         [
           {
-            "t": "South Meadows houses for sale",
-            "h": "/south-meadows-houses-for-sale.html"
+            "h": "/south-meadows-houses-for-sale.html",
+            "t": "South Meadows houses for sale"
           }
         ],
         [
           {
-            "t": "South Meadows condos and townhomes for sale",
-            "h": "/south-meadows-condos-townhomes-for-sale.html"
+            "h": "/south-meadows-condos-townhomes-for-sale.html",
+            "t": "South Meadows condos and townhomes for sale"
           }
         ]
       ],
-      "gen": "typepage",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Pitt Meadows real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Pitt Meadows real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Pitt Meadows homes for sale",
-            "h": "/pitt-meadows-homes-for-sale.html"
+            "h": "/pitt-meadows-homes-for-sale.html",
+            "t": "Pitt Meadows homes for sale"
           }
         ],
         [
           {
-            "t": "Pitt Meadows real estate market stats",
-            "h": "/pitt-meadows-real-estate-market-stats.html"
+            "h": "/pitt-meadows-real-estate-market-stats.html",
+            "t": "Pitt Meadows real estate market stats"
           }
         ],
         [
           {
-            "t": "Pitt Meadows houses for sale",
-            "h": "/pitt-meadows-houses-for-sale.html"
+            "h": "/pitt-meadows-houses-for-sale.html",
+            "t": "Pitt Meadows houses for sale"
           }
         ],
         [
           {
-            "t": "Pitt Meadows condos for sale",
-            "h": "/pitt-meadows-condos-for-sale.html"
+            "h": "/pitt-meadows-condos-for-sale.html",
+            "t": "Pitt Meadows condos for sale"
           }
         ],
         [
           {
-            "t": "Pitt Meadows townhomes for sale",
-            "h": "/pitt-meadows-townhomes-for-sale.html"
+            "h": "/pitt-meadows-townhomes-for-sale.html",
+            "t": "Pitt Meadows townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Pitt Meadows",
-            "h": "/sell-my-house-in-pitt-meadows.html"
+            "h": "/sell-my-house-in-pitt-meadows.html",
+            "t": "Sell my house in Pitt Meadows"
           }
         ],
         [
           {
-            "t": "South Meadows neighbourhood guide",
-            "h": "/south-meadows-pitt-meadows-guide.html"
+            "h": "/south-meadows-pitt-meadows-guide.html",
+            "t": "South Meadows neighbourhood guide"
           }
         ],
         [
           {
-            "t": "Central Meadows real estate",
-            "h": "/central-meadows-pitt-meadows.html"
+            "h": "/central-meadows-pitt-meadows.html",
+            "t": "Central Meadows real estate"
           }
         ],
         [
           {
-            "t": "Mid Meadows real estate",
-            "h": "/mid-meadows-pitt-meadows.html"
+            "h": "/mid-meadows-pitt-meadows.html",
+            "t": "Mid Meadows real estate"
           }
         ],
         [
           {
-            "t": "North Meadows real estate",
-            "h": "/north-meadows-pitt-meadows.html"
+            "h": "/north-meadows-pitt-meadows.html",
+            "t": "North Meadows real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby South Meadows",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
+      "text": "What's nearby South Meadows"
+    },
+    {
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
       "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -245,18 +222,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -274,18 +251,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -298,25 +275,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from South Bonson Community Centre, 10932 Barnston View Road",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Fraser Way Roundabout Park",
@@ -343,74 +321,458 @@
           "4.5"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "translink.ca · west coast express",
-            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express"
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt719",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt719.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt719.pdf",
+            "t": "infomaps.translink.ca · tt719"
           }
         ],
         [
           {
-            "t": "infomaps.translink.ca · tt722",
-            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt722.pdf"
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt722.pdf",
+            "t": "infomaps.translink.ca · tt722"
           }
         ],
         [
           {
-            "t": "pittmeadows.ca · parks and facilities list",
-            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-and-facilities-list"
+            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-and-facilities-list",
+            "t": "pittmeadows.ca · parks and facilities list"
           }
         ],
         [
           {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/042"
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/042",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "South Meadows Pitt Meadows: streets and boundaries"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "South Meadows is the board's name; the City calls this pocket South Bonson, the Bonson Road corridor south of Hammond Road and the Canadian Pacific Kansas City rail tracks to the Fraser River."
+          }
+        ],
+        [
+          {
+            "t": "Osprey Village, at Fraser Way and Barnston View Road, is the pocket's village centre, and the Golden Ears Business Park lands sit toward Harris Road on its west side."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "South Meadows Pitt Meadows: the housing stock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The guide-level shape is a village pocket: houses on the Bonson Road streets, with townhome and duplex streets around Osprey Village and along Fraser Way."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "South Meadows Pitt Meadows: rules that affect buyers"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The governing plan is the Official Community Plan \"I See Pitt Meadows 2040,\" Bylaw No. 2864, 2020, adopted September 27, 2022, which repealed the former Official Community Plan Bylaw No. 2352, 2007 — older plan references for South Bonson are superseded."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "South Meadows Pitt Meadows: local details a buyer would not know"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Shoreline Park, 51 Bonson Road, sits on the Fraser River dike, and the dyke-top trails run along the river through the pocket."
+          }
+        ],
+        [
+          {
+            "t": "Bonson Park, 11546 Bonson Road, holds a disc golf course, and Pitt Meadows Athletic Park, 11431 Bonson Road, holds soccer fields and ball diamonds, with the community garden at 11410 Bonson Road."
+          }
+        ],
+        [
+          {
+            "t": "The Pitt Meadows Arena complex, with three sheets of ice, is in this pocket, while the Pitt Meadows Family Recreation Centre, 12027 Harris Road, is north of it."
+          }
+        ],
+        [
+          {
+            "t": "Pitt Meadows Regional Airport (YPK) is west of the pocket across Harris Road, and the City keeps a page for airport safety and noise concerns; no official airport noise-zone map covering this pocket was confirmed."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "South Meadows Pitt Meadows: development and new projects"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Golden Ears Business Park, south Bonson / south Harris Road area, Onni Group, industrial business park: the City records the park being built out in phases on the pocket's west side — STATUS: build-out in phases, read 2026-11-03."
+          }
+        ],
+        [
+          {
+            "t": "Pitt Meadows Road and Rail Improvements Project, Harris Road at the Canadian Pacific Kansas City rail crossing, north-west of the pocket: the project includes a new four-lane underpass below the main rail crossing at Harris Road — STATUS: project in delivery, read 2026-11-03."
+          }
+        ],
+        [
+          {
+            "t": "Langley–Haney Place Bus Rapid Transit, via the Golden Ears Bridge and Lougheed Highway north of this pocket, TransLink: the planned line connects to the R3 Lougheed Hwy RapidBus at the city's north side — STATUS: planned service, read 2026-11-03."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "South Meadows Pitt Meadows: costs and taxes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "One city figure is carried here because it is specific to this dike-protected pocket: the 2026 Annual Tax Rates Bylaw No. 3047, 2026 sets the residential drainage levy at $0.1082 per $1,000 of taxable value, alongside the general municipal rate of $2.8438 per $1,000; full Pitt Meadows tax and utility facts belong to the city pages."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "South Meadows Pitt Meadows: getting around"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Routes 719 and 722 run as a combined circular service through Bonson Road and Fraser Way: 719 runs Meadowtown to Fraser Way via Maple Meadows Station, Hammond Road and Bonson Road, continuing as 722, which returns via Harris Road and Hammond Road."
+          }
+        ],
+        [
+          {
+            "t": "Route 701 runs along Hammond Road at the pocket's north edge to Coquitlam Central Station and Haney Place via Pitt Meadows Station, and the West Coast Express runs weekday trains from Pitt Meadows Station, north of the pocket."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "South Meadows Pitt Meadows: risks and due diligence"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Check Agricultural Land Reserve status per parcel at the pocket's edges: the City states 78% of Pitt Meadows is in the Agricultural Land Reserve, even though the built South Bonson pocket itself is developed village land."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "How South Meadows Pitt Meadows compares"
+    },
+    {
+      "caption": "South Meadows Pitt Meadows compared",
+      "gen": "uq",
+      "head": [
+        "Fact",
+        "South Meadows (South Bonson)",
+        "Mid Meadows",
+        "Central Meadows"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "City name for the pocket",
+          "South Bonson",
+          "—",
+          "—"
+        ],
+        [
+          "Public school building in the pocket",
+          "None",
+          "—",
+          "Pitt Meadows Elementary, 11941 Harris Road"
+        ],
+        [
+          "Community centre in the pocket",
+          "South Bonson Community Centre, 10932 Barnston View Road",
+          "—",
+          "Pitt Meadows Family Recreation Centre, 12027 Harris Road"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What is not confirmed about South Meadows Pitt Meadows"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Exact east and west limits of the board's South Meadows sub-area; the Bonson name origin on an official source; an official airport noise-zone map covering the pocket; condo building names in the pocket on an official, developer or strata source; a current residential presale project inside the pocket."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Related pages"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "/south-meadows-pitt-meadows-guide.html",
+            "t": "South Meadows, Pitt Meadows: Guide"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for South Meadows Pitt Meadows"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "https://www.pittmeadows.ca/our-community/news/media-releases/council-supports-business-park-land-use",
+            "t": "pittmeadows.ca · council supports business park land use"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/sites/default/files/2025-04/Zoning%20Bylaw%20No.%202505%2C%202011%20-%20Consolidated%20Version_0.pdf",
+            "t": "pittmeadows.ca · Zoning Bylaw No. 2505 2011 Consolidated Versi"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/sites/default/files/docs/dmlive-155673-v1-gpra_report_to_pitt_meadows_20190405_v2_pdf.pdf",
+            "t": "pittmeadows.ca · dmlive 155673 v1 gpra report to pitt meadows 201"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/ocp",
+            "t": "pittmeadows.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/042",
+            "t": "studentsuccess.gov.bc.ca · in school district"
+          }
+        ],
+        [
+          {
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "sd42.ca · school locator"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/parks-recreation/parks-fields-facilities/parks-and-facilities-list",
+            "t": "pittmeadows.ca · parks and facilities list"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/sites/default/files/2022-03/pitt-meadows_business-plan_2020-web-full02.pdf",
+            "t": "pittmeadows.ca · pitt meadows business plan 2020 web full02"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/our-community/ypk-airport",
+            "t": "pittmeadows.ca · ypk airport"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/city-services/transportation-infrastructure/transportation/bus-train-skytrain",
+            "t": "pittmeadows.ca · bus train skytrain"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/sites/default/files/2026-05/2026-Annual-Tax-Rates-Bylaw-No-3047%2C-2026.pdf",
+            "t": "pittmeadows.ca · 2026 Annual Tax Rates Bylaw No 3047 2026"
+          }
+        ],
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/218/tt719.pdf",
+            "t": "infomaps.translink.ca · tt719"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pittmeadows.ca/node/163",
+            "t": "pittmeadows.ca · node"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "musefaq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
+    },
+    {
+      "gen": "musefaq",
+      "items": [
+        [
+          {
+            "h": "https://www.sd42.ca/school-locator/",
+            "t": "Source: sd42.ca"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "Which public schools serve South Meadows?",
+      "a": "No public school building sits inside this pocket. The closest elementary schools are Edith McDermott Elementary, 12178 Bonson Road, and Pitt Meadows Elementary, 11941 Harris Road, both north of the rail tracks, and Pitt Meadows Secondary, 19438 116B Avenue, is the city's only public secondary school. Catchment is by address in School District No. 42, which has no middle tier.",
+      "gen": "uq",
+      "q": "Is there a school inside South Meadows?"
+    },
+    {
+      "a": "That result is for that address only; other Bonson Road addresses can return a different elementary school, so run each address.",
+      "gen": "uq",
+      "q": "Which catchment did a South Bonson address return?"
+    },
+    {
+      "a": "Osprey Village is the commercial and community node at Fraser Way and Barnston View Road, holding the South Bonson Community Centre and the Pitt Meadows Art Gallery at 10932 Barnston View Road, plus the village shops the City's commercial lands analysis names, including Osprey Village Market. It is the services centre for the houses south of the rail tracks.",
+      "gen": "uq",
+      "q": "What is Osprey Village?"
+    },
+    {
+      "a": "Yes — the City's 2020 Business Plan states over 95% of Pitt Meadows lies within the Fraser River and Pitt River floodplain, protected by about 60 kilometres of dikes. This pocket sits behind the Fraser River dike in drainage Area 3 of the local diking district, and the dike itself carries Shoreline Park and the dyke-top trails, so flood and dike checks belong in every purchase here.",
+      "gen": "uq",
+      "q": "Is this area in a floodplain?"
+    },
+    {
       "a": "No public school building sits inside the sub-area; Pitt Meadows Secondary at 19438 116B Avenue is the public secondary school for Pitt Meadows, and for the sample address used (10932 Barnston View Road), the SD42 locator gives Davie Jones Elementary and Pitt Meadows Secondary — SD42 has no middle tier, and catchments for other addresses must be checked in the locator.",
-      "gen": "muse"
-    },
-    {
-      "q": "How many homes are for sale in South Meadows?",
-      "a": "At the end of October 2026 the Greater Vancouver REALTORS® figures showed 11 houses listed with 2 sold in the month and 8 condos and townhomes listed with 6 sold in the month in South Meadows. Those are month-end counts and move daily; ask Jared what is on the market today.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "Is South Meadows a buyers’ or sellers’ market?",
-      "a": "In October 2026, houses had a sales ratio of 18%, a balanced market; condos and townhomes had a sales ratio of 75% on too few listings to read as a market type. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers.",
-      "gen": "snap-faq"
-    },
-    {
-      "q": "Can Jared show me homes in South Meadows?",
-      "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
-      "gen": "muse-generic"
+      "gen": "muse",
+      "q": "Which public schools serve South Meadows?"
     }
-  ]
+  ],
+  "slug": "south-meadows-pitt-meadows",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

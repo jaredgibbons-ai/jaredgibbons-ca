@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "abbotsford-houses-for-sale",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Abbotsford houses by price band, October 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Abbotsford houses by price band, October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "72 houses sold in October against 410 listed. The price band with the most sales was $1,000,001 to $1,250,000, with 23 sold (32% of the month). Among bands with at least ten homes listed, the highest sales ratio was $800,001 to $900,000 at 35%.",
-      "gen": "snapstats"
+      "text": "72 houses sold in October against 410 listed. The price band with the most sales was $1,000,001 to $1,250,000, with 23 sold (32% of the month). Among bands with at least ten homes listed, the highest sales ratio was $800,001 to $900,000 at 35%."
     },
     {
-      "t": "table",
       "caption": "Abbotsford houses: listings and sales by price band, October 2026",
+      "gen": "snapstats",
       "head": [
         "Price band",
         "Listed",
@@ -110,22 +107,22 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Bands with nothing listed and nothing sold are left out. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Abbotsford houses by bedroom count, October 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Abbotsford houses by bedroom count, October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Splitting October 2026 by size, the most sales came from the 3 to 4 bedrooms group, with 32 of 72 sold, against 148 of 410 listed.",
-      "gen": "snapstats"
+      "text": "Splitting October 2026 by size, the most sales came from the 3 to 4 bedrooms group, with 32 of 72 sold, against 148 of 410 listed."
     },
     {
-      "t": "table",
       "caption": "Abbotsford houses: listings and sales by bedroom count, October 2026",
+      "gen": "snapstats",
       "head": [
         "Size",
         "Listed",
@@ -159,34 +156,487 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Houses: streets and boundaries"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Abbotsford is one city, not a set of separate towns, and its detached houses sit inside the City of Abbotsford in the Fraser Valley Regional District (FVRD). The City's Official Community Plan (OCP) is Bylaw No. 2600-2016, as amended."
+          }
+        ],
+        [
+          {
+            "t": "Highway 1 (Trans-Canada Highway) cuts the city east–west, with house areas reached from exits including Mount Lehman Road, Clearbrook Road, McCallum Road, Sumas Way (Highway 11) and Whatcom Road. Highway 1 widening in the Fraser Valley is a provincial project."
+          }
+        ],
+        [
+          {
+            "t": "The city's detailed house-area rules sit in neighbourhood plans, not in the OCP alone. The City lists its neighbourhood plans on one page, including the City Centre Neighbourhood Plan (Bylaw 2913-2019), the Historic Downtown Neighbourhood Plan (Bylaw 2920-2019) and the McKee Neighbourhood Plan added in 2023."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Houses: the housing stock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Detached houses are the form this page covers, from older central streets to acreage houses on the rural edges. Acreage parcels with houses occur on the rural west and southwest edges, serviced by wells and onsite sewage where outside the urban boundary."
+          }
+        ],
+        [
+          {
+            "t": "New detached supply is charged as a distinct class in the City's development cost charge (Development Cost Charge, DCC) summary: \"single detached\" is charged per lot, separate from duplex, townhouse and apartment."
+          }
+        ],
+        [
+          {
+            "t": "The McKee area on Sumas Mountain is the city's last large greenfield house area. The City's McKee profile describes the plan area before most building took place."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Houses: rules that affect buyers"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "One zoning bylaw governs every Abbotsford house lot: Zoning Bylaw No. 2400-2014. The City's zoning page states the bylaw sets zones and rules for each property."
+          }
+        ],
+        [
+          {
+            "t": "Farm-edge houses can sit in the Agricultural Land Reserve (ALR)."
+          }
+        ],
+        [
+          {
+            "t": "Houses near Abbotsford International Airport (YXX) can face federal height limits. The City's YXX development guidelines tie building height to Airport Zoning Regulations and drawing M-500."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Houses: local details a buyer would not know"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Your water bill cycle depends on where the house sits. The City bills water and sewer bi-monthly, except in the Clearbrook Waterworks District, where sewer is billed quarterly."
+          }
+        ],
+        [
+          {
+            "t": "Paying the utility bill on time cuts it by 5 percent. The City states a 5 percent discount applies when payment is received by the due date printed on the bill."
+          }
+        ],
+        [
+          {
+            "t": "Unpaid utility balances do not stay separate from the house. The City states any utility account balance outstanding at December 31, 2025 was transferred to the property tax account and is subject to daily interest."
+          }
+        ],
+        [
+          {
+            "t": "The Gur Sikh Temple on South Fraser Way is a National Historic Site of Canada. Parks Canada lists the temple as a designated place, in the central part of the city."
+          }
+        ],
+        [
+          {
+            "t": "Abbotsford Regional Hospital and Cancer Centre is the city's hospital, listed by Fraser Health in Abbotsford."
+          }
+        ],
+        [
+          {
+            "t": "The City's parcel lookup is its WebMap, not a listing site. The City provides WebMap under mapping, data and analytics for property information."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Houses: development and new projects"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "McKee Neighbourhood Plan, Sumas Mountain, City of Abbotsford: a plan for about 842 hectares on Sumas Mountain (plan area about 769 hectares in the background report). STATUS: adopted by Council June 26, 2023 as OCP Amendment Bylaw No. 3400-2023, Schedule E to the OCP; read 2026-11-03."
+          }
+        ],
+        [
+          {
+            "t": "Abbotsforward 2050 OCP update, city-wide, City of Abbotsford: the current OCP is Bylaw No. 2600-2016 and the City has begun implementing an updated OCP. STATUS: update process under way; read 2026-11-03 — check current."
+          }
+        ],
+        [
+          {
+            "t": "Highstreet Transit Exchange, Highstreet area, City of Abbotsford: a transit exchange project listed by the City under its projects. STATUS: City project page live; read 2026-11-03."
+          }
+        ],
+        [
+          {
+            "t": "Highway 1 Fraser Valley widening, through Abbotsford, Province of British Columbia: highway widening with a provincial fact sheet dated September 22, 2026. STATUS: provincial project under way; read 2026-11-03."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Houses: costs and taxes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Abbotsford property tax rates are set each year in a Tax Rates Bylaw, expressed per $1,000 of taxable value. The 2025 bylaw is Bylaw No. 3643-2025, read a first and second time May 6, 2025."
+          }
+        ],
+        [
+          {
+            "t": "Water and sewer are charged by use, not as one flat city-wide fee. Under the Fees and Charges Bylaw amendment for 2025 (Bylaw No. 3598-2025), residential water was $1.42 per cubic metre and sanitary sewer $1.30 per cubic metre, with a 5 percent discount for payment by the due date."
+          }
+        ],
+        [
+          {
+            "t": "Those utility rates rose again in 2026. The City states Council approved a 4 percent increase to water and sewer rates in January 2026, effective March 1, 2026: residential water $1.46 per cubic metre and sewer $1.35 per cubic metre."
+          }
+        ],
+        [
+          {
+            "t": "Solid waste is an annual cart-based fee. The 2025 fees bylaw example for a serviced property with a 240-litre garbage cart, 240-litre recycling cart and 240-litre compostables cart is a basic annual fee of $407."
+          }
+        ],
+        [
+          {
+            "t": "A new detached house carries a single-detached DCC total of $64,860 per lot in the City summary effective February 1, 2026, including school site acquisition charges."
+          }
+        ],
+        [
+          {
+            "t": "The Speculation and Vacancy Tax applies in Abbotsford, which the Province lists as a taxable area."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Houses: getting around"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Abbotsford has no SkyTrain; buses are run by BC Transit in the Central Fraser Valley system. Route 66, the Fraser Valley Express, links Abbotsford with Langley, Chilliwack and the SkyTrain connection to the west."
+          }
+        ],
+        [
+          {
+            "t": "Route 1 (Highstreet / University of the Fraser Valley, UFV) and Route 2 (Highstreet / McMillan) are the cross-town GoLines named in BC Transit's route list — see the route pages for current routing."
+          }
+        ],
+        [
+          {
+            "t": "Route 21 connects Abbotsford with Aldergrove and Langley, with peak trips to Abbotsford International Airport (YXX) in the BC Transit route list carried in the Nov 1 research — check current."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Abbotsford Houses: risks and due diligence"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Check the dike and flood layer first for any prairie-floor house. The City's flood response pages cover the Sumas Prairie and Matsqui Prairie dike areas and evacuation information."
+          }
+        ],
+        [
+          {
+            "t": "Check the Natural Environment Development Permit rules before planning work near a creek or slope. The City's Natural Environment Development Permit (NEDP) guide ties environmental assessment reports to the OCP and neighbourhood plans."
+          }
+        ],
+        [
+          {
+            "t": "Check wells and septic where a house is outside the urban boundary. The Province's groundwater pages cover well records and registration for property owners."
+          }
+        ],
+        [
+          {
+            "t": "Check onsite sewage rules with Fraser Health for a house on a septic system. Fraser Health publishes the regulatory requirements for onsite sewerage systems."
+          }
+        ],
+        [
+          {
+            "t": "Check the parcel itself on the City WebMap; the map shows the lot, it does not replace a title search or a survey."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "How Abbotsford Houses compares"
+    },
+    {
+      "caption": "Abbotsford Houses compared",
+      "gen": "uq",
+      "head": [
+        "Fact",
+        "Abbotsford",
+        "Mission",
+        "Chilliwack"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Speculation and Vacancy Tax area",
+          "Yes — City of Abbotsford listed",
+          "Yes — City of Mission listed",
+          "Yes — City of Chilliwack listed"
+        ],
+        [
+          "Bus operator",
+          "BC Transit, Central Fraser Valley",
+          "—",
+          "BC Transit, Chilliwack system (Route 66 Fraser Valley Express)"
+        ],
+        [
+          "2026 residential water rate",
+          "$1.46/m3 from Mar 1, 2026",
+          "—",
+          "—"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What is not confirmed about Abbotsford Houses"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Abbotsford's exact 2025 and 2026 Class 1 (residential) municipal tax rate per $1,000 as a single clean figure: the Tax Rates Bylaw No."
+          }
+        ],
+        [
+          {
+            "t": "states only what Zoning Bylaw No."
+          }
+        ],
+        [
+          {
+            "t": "Current development-application list for the whole city: the City's development planning page exists, but individual applications were not enumerated this session."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for Abbotsford Houses"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea",
+            "t": "laws.abbotsford.ca · 2025bschedulea"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/assets/gov/transportation-infrastructure-projects/highway-1-fraser-valley/documents/2026-09-22-september-fraser-valley-hwy1-fact-sheet.pdf",
+            "t": "www2.gov.bc.ca · 2026 09 22 september fraser valley hwy1 fact she"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/business-development/community-planning/neighbourhood-plans",
+            "t": "abbotsford.ca · neighbourhood plans"
+          }
+        ],
+        [
+          {
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400210",
+            "t": "laws.abbotsford.ca · 2014b2400210"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/sites/default/files/2026-04/DCC-ACC%20Rates%20Summary%20Bylaw%20No.%203633-2025_0.pdf",
+            "t": "abbotsford.ca · DCC ACC Rates Summary Bylaw No. 3633 2025 0"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/sites/default/files/2021-02/2020%20McKee%20Profile%20-%20spreads%20final.pdf",
+            "t": "abbotsford.ca · 2020 McKee Profile spreads final"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014",
+            "t": "abbotsford.ca · zoning bylaw 2014"
+          }
+        ],
+        [
+          {
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400140",
+            "t": "laws.abbotsford.ca · 2014b2400140"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/sites/default/files/docs/business-development/Development%20Guidlines%20for%20YXX%202020.pdf",
+            "t": "abbotsford.ca · Development Guidlines for YXX 2020"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbyschools.ca/schools/catchments",
+            "t": "abbyschools.ca · catchments"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas",
+            "t": "www2.gov.bc.ca · taxable areas"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/floodresponse",
+            "t": "abbotsford.ca · floodresponse"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/city-services/utility-billing/current-utility-bill",
+            "t": "abbotsford.ca · current utility bill"
+          }
+        ],
+        [
+          {
+            "h": "https://www.pc.gc.ca/culture/designation/lieu-site/temple-sikh-abbotsford-sikh-temple",
+            "t": "pc.gc.ca · temple sikh abbotsford sikh temple"
+          }
+        ],
+        [
+          {
+            "h": "https://www.fraserhealth.ca/Service-Directory/Locations/Abbotsford/abbotsford-regional-hospital-and-cancer-centre",
+            "t": "fraserhealth.ca · abbotsford regional hospital and cancer centre"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/city-services/mapping-data-analytics/webmap",
+            "t": "abbotsford.ca · webmap"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "How many houses are for sale in Abbotsford?",
-      "a": "At the end of October 2026 the Fraser Valley Real Estate Board figures showed 410 houses listed in Abbotsford and 72 sold in the month, a sales ratio of 18%. Month-end counts move daily; ask Jared what is on the market today.",
-      "gen": "snap-faq"
+      "a": "That is a City bylaw permission, not a guarantee for one address: the lot still has to meet the bylaw's other conditions, parking and building-code rules, so confirm the exact address with the City before counting suite income in an offer.",
+      "gen": "uq",
+      "q": "Can I add a suite to an Abbotsford house?"
     },
     {
-      "q": "What is the reported sale price for houses in Abbotsford?",
-      "a": "The October report gave $1,060,000 for houses in Abbotsford, against $949,000 the month before. The reports give one sale-price figure and do not say whether it is an average or a median, so use it for direction, not as a valuation of your own home.",
-      "gen": "snap-faq"
+      "a": "Up to four in the stated small-scale multi-unit conditions. Zone, servicing and development permit areas can still limit a specific lot, so the City's WebMap and a zoning confirmation come before any rebuild plan.",
+      "gen": "uq",
+      "q": "How many homes can go on one Abbotsford house lot?"
     },
     {
-      "q": "How long do houses take to sell in Abbotsford?",
-      "a": "The October report showed 38 days on market for houses in Abbotsford and a sale-to-list price ratio of 97%, against 39 days the month before.",
-      "gen": "snap-faq"
+      "a": "The catchment is set by street address, not by neighbourhood name. Abbotsford School District No. 34 (SD34) states its School Locator portal determines the catchment school, and its catchment policy is Policy 18. Check the exact address in the locator before removing subjects, because two houses on the same street can sit in different catchments.",
+      "gen": "uq",
+      "q": "Which school does an Abbotsford address feed into?"
     },
     {
-      "q": "Can I add a suite or coach house to a house in Abbotsford?",
-      "a": "BC's small-scale multi-unit housing rules allow more homes on many urban lots, but each municipality sets the details and many lots are excluded. Check the lot's zoning with the municipality before you plan a suite or coach house.",
-      "gen": "bank-faq"
-    },
-    {
-      "q": "Do I need a home inspection when buying in Abbotsford?",
-      "a": "It is strongly recommended. Make the offer subject to an inspection so a qualified inspector can look at the roof, structure, drainage, electrical and heating before you remove conditions.",
-      "gen": "bank-faq"
+      "a": "Yes, Abbotsford is a taxable area, so an owner must declare each year even when exempt. The Province lists the taxable areas on its Speculation and Vacancy Tax pages, and reserve and treaty lands are not part of the taxable areas. A house left empty can be taxed even though a principal residence is normally exempt.",
+      "gen": "uq",
+      "q": "Is Abbotsford in the Speculation and Vacancy Tax area?"
     }
-  ]
+  ],
+  "slug": "abbotsford-houses-for-sale",
+  "status": "generated",
+  "updated": "2026-11-01"
 }

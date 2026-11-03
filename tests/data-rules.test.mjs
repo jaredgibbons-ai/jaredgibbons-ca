@@ -285,3 +285,19 @@ test('no research-process wording on any page: no UNCONFIRMED / UNVERIFIED tags,
   for (const [f, t] of texts) { const d = JSON.parse(t); walk(d.blocks || [], hits, f); walk(d.faq || [], hits, f); }
   assert.deepEqual(hits.slice(0, 5), [], `${hits.length} strings with research wording`);
 });
+
+test("uniqueness sections (uq): no URLs outside links, no research wording, no slug-style cross-references; the three wrong-place notes are not published", () => {
+  let pages = 0, faqs = 0;
+  const bad = /UNVERIFIED|UNCONFIRMED|\bunconfirmed\b|\bsiblings?\b|\bslug\b|\bbrief\b|this pass|Read: 20\d\d|~\/|Jared to confirm|https?:\/\//;
+  for (const [f, t] of texts) {
+    if (!t.includes('"uq"')) continue;
+    const d = JSON.parse(t);
+    assert.ok(!['holly.json', 'hawthorne-guide.json', 'lower-landing.json'].includes(f.split('/').pop()), `${f}: wrong-place note published`);
+    const mine = (d.blocks || []).filter((b) => b.gen === 'uq');
+    const txt = JSON.stringify(mine).replace(/"h":"[^"]*"/g, '');
+    assert.ok(!bad.test(txt), `${f}: uq text leaked: ${(txt.match(bad) || [])[0]}`);
+    for (const q of (d.faq || []).filter((x) => x.gen === 'uq')) { faqs++; assert.ok(!bad.test(q.q + ' ' + q.a), `${f}: uq FAQ leaked`); }
+    pages++;
+  }
+  assert.ok(pages >= 450 && faqs >= 1200, `expected 450+ pages and 1200+ FAQ entries, got ${pages} / ${faqs}`);
+});

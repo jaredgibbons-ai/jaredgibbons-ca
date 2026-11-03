@@ -1,58 +1,31 @@
 {
-  "status": "draft",
-  "slug": "central-port-coquitlam",
-  "updated": "2026-11-01",
-  "community": {
-    "area": "port-coquitlam",
-    "name": "Central Port Coquitlam"
-  },
-  "new_page": {
-    "title": "Central Port Coquitlam, Port Coquitlam Homes for Sale",
-    "description": "Central Port Coquitlam, Port Coquitlam homes for sale and market figures for October 2026. Jared Gibbons, REALTOR®.",
-    "h1": "Central Port Coquitlam, Port Coquitlam Homes for Sale"
-  },
-  "breadcrumbs": [
-    {
-      "name": "Home",
-      "href": "/index.html"
-    },
-    {
-      "name": "Port Coquitlam",
-      "href": "/port-coquitlam-homes-for-sale.html"
-    },
-    {
-      "name": "Central Port Coquitlam real estate",
-      "href": "/central-port-coquitlam.html"
-    }
-  ],
-  "faq_heading": "Central Port Coquitlam real estate: your questions answered",
   "blocks": [
     {
       "t": "notice",
       "text": "Draft for Jared's approval. Built only from the monthly MLS® figures (SnapStats) for Central Port Coquitlam. It has no local notes, street boundaries, schools or listing feed yet; see the open items below."
     },
     {
+      "gen": "community",
       "t": "p",
-      "text": "Central Port Coquitlam, Port Coquitlam: 18 houses and 139 condos and townhomes listed at the end of October, with 0 and 19 sold in the month. It is one of 10 communities the Greater Vancouver REALTORS® figures break out for Port Coquitlam.",
-      "gen": "community"
+      "text": "Central Port Coquitlam, Port Coquitlam: 18 houses and 139 condos and townhomes listed at the end of October, with 0 and 19 sold in the month. It is one of 10 communities the Greater Vancouver REALTORS® figures break out for Port Coquitlam."
     },
     {
       "t": "grid"
     },
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Central Port Coquitlam homes listed and sold, June to October 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Central Port Coquitlam homes listed and sold, June to October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Central Port Coquitlam, October 2026. Detached houses: 18 listed at month end and 0 sold in October, a sales ratio of —. Condos and townhomes: 139 listed at month end and 19 sold in October, a sales ratio of 14% (a balanced market).",
-      "gen": "snapstats"
+      "text": "Central Port Coquitlam, October 2026. Detached houses: 18 listed at month end and 0 sold in October, a sales ratio of —. Condos and townhomes: 139 listed at month end and 19 sold in October, a sales ratio of 14% (a balanced market)."
     },
     {
-      "t": "table",
       "caption": "Central Port Coquitlam listings, sales and sales ratio by month",
+      "gen": "snapstats",
       "head": [
         "Month",
         "Houses listed",
@@ -110,27 +83,27 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Looking across the period, Detached houses: 4 sold over 5 months against an average of 18.6 listed, about 23.2 months of listings at that pace; the busiest month was July with 2 sold. Condos and townhomes: 96 sold over 5 months against an average of 129.6 listed, about 6.8 months of listings at that pace; the busiest month was June with 29 sold.",
-      "gen": "snapstats"
+      "text": "Looking across the period, Detached houses: 4 sold over 5 months against an average of 18.6 listed, about 23.2 months of listings at that pace; the busiest month was July with 2 sold. Condos and townhomes: 96 sold over 5 months against an average of 129.6 listed, about 6.8 months of listings at that pace; the busiest month was June with 29 sold."
     },
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Central Port Coquitlam compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Central Port Coquitlam compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Central Port Coquitlam against its whole city, October 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Central Port Coquitlam against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
       "caption": "Central Port Coquitlam against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -155,32 +128,32 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and October 2026, detached houses: listings fell from 22 in June to 18 in October (−18.2%), and it took 4.4% of the city’s 91 sales over the period; condos and townhomes: listings rose from 134 in June to 139 in October (+3.7%), and it took 47.3% of the city’s 203 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 22 in June to 18 in October (−18.2%), and it took 4.4% of the city’s 91 sales over the period; condos and townhomes: listings rose from 134 in June to 139 in October (+3.7%), and it took 47.3% of the city’s 203 sales over the period."
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "The monthly write-ups singled out Central Port Coquitlam for condos and townhomes in July, August, September, October (a buyers’ best bet).",
-      "gen": "snapstats"
+      "text": "The monthly write-ups singled out Central Port Coquitlam for condos and townhomes in July, August, September, October (a buyers’ best bet)."
     },
     {
-      "t": "h",
+      "gen": "community",
       "level": 2,
-      "text": "Central Port Coquitlam share of Port Coquitlam listings and sales by month",
-      "gen": "community"
+      "t": "h",
+      "text": "Central Port Coquitlam share of Port Coquitlam listings and sales by month"
     },
     {
+      "gen": "community",
       "t": "p",
-      "text": "In Central Port Coquitlam, its share of the houses listed in Port Coquitlam went from 12.8% in June to 13.1% in October and its share of the condos and townhomes listed went from 58.3% to 63.5%. A share that holds steady while the city moves means the community is following the city; a share that drifts means it is moving differently.",
-      "gen": "community"
+      "text": "In Central Port Coquitlam, its share of the houses listed in Port Coquitlam went from 12.8% in June to 13.1% in October and its share of the condos and townhomes listed went from 58.3% to 63.5%. A share that holds steady while the city moves means the community is following the city; a share that drifts means it is moving differently."
     },
     {
-      "t": "table",
       "caption": "Central Port Coquitlam as a share of Port Coquitlam, by month",
+      "gen": "community",
       "head": [
         "Month",
         "Share of city houses listed",
@@ -226,131 +199,524 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Shares are the community’s count divided by the city total for the same month and home type.",
-      "gen": "community"
+      "t": "table"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Port Coquitlam real estate",
       "gen": "community",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Port Coquitlam real estate"
     },
     {
-      "t": "list",
+      "gen": "community",
       "items": [
         [
           {
-            "t": "Port Coquitlam homes for sale",
-            "h": "/port-coquitlam-homes-for-sale.html"
+            "h": "/port-coquitlam-homes-for-sale.html",
+            "t": "Port Coquitlam homes for sale"
           }
         ],
         [
           {
-            "t": "Port Coquitlam real estate market stats",
-            "h": "/port-coquitlam-real-estate-market-stats.html"
+            "h": "/port-coquitlam-real-estate-market-stats.html",
+            "t": "Port Coquitlam real estate market stats"
           }
         ],
         [
           {
-            "t": "Port Coquitlam condos for sale",
-            "h": "/port-coquitlam-condos-for-sale.html"
+            "h": "/port-coquitlam-condos-for-sale.html",
+            "t": "Port Coquitlam condos for sale"
           }
         ],
         [
           {
-            "t": "Port Coquitlam townhomes for sale",
-            "h": "/port-coquitlam-townhomes-for-sale.html"
+            "h": "/port-coquitlam-townhomes-for-sale.html",
+            "t": "Port Coquitlam townhomes for sale"
           }
         ],
         [
           {
-            "t": "Schools in Port Coquitlam",
-            "h": "/schools-in-port-coquitlam-bc.html"
+            "h": "/schools-in-port-coquitlam-bc.html",
+            "t": "Schools in Port Coquitlam"
           }
         ],
         [
           {
-            "t": "Citadel real estate",
-            "h": "/citadel-port-coquitlam.html"
+            "h": "/citadel-port-coquitlam.html",
+            "t": "Citadel real estate"
           }
         ],
         [
           {
-            "t": "Glenwood real estate",
-            "h": "/glenwood-port-coquitlam.html"
+            "h": "/glenwood-port-coquitlam.html",
+            "t": "Glenwood real estate"
           }
         ],
         [
           {
-            "t": "Lincoln Park real estate",
-            "h": "/lincoln-park-port-coquitlam.html"
+            "h": "/lincoln-park-port-coquitlam.html",
+            "t": "Lincoln Park real estate"
           }
         ],
         [
           {
-            "t": "Lower Mary Hill real estate",
-            "h": "/lower-mary-hill-port-coquitlam.html"
+            "h": "/lower-mary-hill-port-coquitlam.html",
+            "t": "Lower Mary Hill real estate"
           }
         ],
         [
           {
-            "t": "Mary Hill real estate",
-            "h": "/mary-hill-port-coquitlam.html"
+            "h": "/mary-hill-port-coquitlam.html",
+            "t": "Mary Hill real estate"
           }
         ],
         [
           {
-            "t": "Oxford Heights real estate",
-            "h": "/oxford-heights-port-coquitlam.html"
+            "h": "/oxford-heights-port-coquitlam.html",
+            "t": "Oxford Heights real estate"
           }
         ],
         [
           {
-            "t": "Riverwood real estate",
-            "h": "/riverwood-port-coquitlam.html"
+            "h": "/riverwood-port-coquitlam.html",
+            "t": "Riverwood real estate"
           }
         ],
         [
           {
-            "t": "Woodland Acres real estate",
-            "h": "/woodland-acres-port-coquitlam.html"
+            "h": "/woodland-acres-port-coquitlam.html",
+            "t": "Woodland Acres real estate"
           }
         ],
         [
           {
-            "t": "Birchland Manor real estate",
-            "h": "/birchland-manor-port-coquitlam.html"
+            "h": "/birchland-manor-port-coquitlam.html",
+            "t": "Birchland Manor real estate"
           }
         ]
       ],
-      "gen": "community",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Central Port Coquitlam by home type",
       "gen": "typepage",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Port Coquitlam by home type"
     },
     {
-      "t": "list",
+      "gen": "typepage",
       "items": [
         [
           {
-            "t": "Central Port Coquitlam houses for sale",
-            "h": "/central-port-coquitlam-houses-for-sale.html"
+            "h": "/central-port-coquitlam-houses-for-sale.html",
+            "t": "Central Port Coquitlam houses for sale"
           }
         ],
         [
           {
-            "t": "Central Port Coquitlam condos and townhomes for sale",
-            "h": "/central-port-coquitlam-condos-townhomes-for-sale.html"
+            "h": "/central-port-coquitlam-condos-townhomes-for-sale.html",
+            "t": "Central Port Coquitlam condos and townhomes for sale"
           }
         ]
       ],
-      "gen": "typepage",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Port Coquitlam: streets and boundaries"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Central Port Coquitlam is downtown Port Coquitlam, around Shaughnessy Street, Wilson Avenue and McAllister Avenue, with Port Coquitlam Station at 2125 Kingsway Avenue."
+          }
+        ],
+        [
+          {
+            "t": "The City's downtown civic centre area is bounded by McAllister Avenue, Shaughnessy Street, Wilson Avenue and Donald Street."
+          }
+        ],
+        [
+          {
+            "t": "The Official Community Plan (OCP), Bylaw No. 3838, identifies Downtown as a mixed-use neighbourhood, which is the plan name for the core of this sub-area."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Port Coquitlam: the housing stock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Central is the city's apartment core: Zoning Bylaw No. 3630 concentrates apartment zones RA1 (floor area ratio 1.0, rising to 1.5 with underground or structured parking and 2.0 with a $50 per square foot community amenity contribution) and RA2 (up to 2.5) downtown and along main roads."
+          }
+        ],
+        [
+          {
+            "t": "The bylaw also names site-specific Comprehensive Development zones downtown, including CD2 for PoCo Place Mall at 2755 Lougheed Highway and CD10 for Shaughnessy Station at 2850 Shaughnessy Street."
+          }
+        ],
+        [
+          {
+            "t": "Older detached homes remain on the central side streets off Hawthorne Avenue and Mary Hill Road, inside the same sub-area as the RA-zoned blocks."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Port Coquitlam: rules that affect buyers"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Downtown is a named Development Permit Area in the OCP: OCP Amendment Bylaw No."
+          }
+        ],
+        [
+          {
+            "t": "Apartments are permitted above ground-floor office and retail uses in the Downtown and other commercial areas under the OCP housing policy replaced by Bylaw No. 4373."
+          }
+        ],
+        [
+          {
+            "t": "The City is undertaking an OCP update to align with Metro 2050 and provincial housing legislation, after 2024–2025 work on small-scale multi-unit housing designations and Transit Oriented Areas — the current OCP was adopted in 2005 and substantially updated in 2013."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Port Coquitlam: local details a buyer would not know"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Port Coquitlam is Terry Fox's hometown, and the Terry Fox: Inspiring Local Champions exhibit is at the Port Coquitlam Community Centre downtown."
+          }
+        ],
+        [
+          {
+            "t": "Leigh Square is the downtown open-concept festival space, and Veterans Park in the heart of downtown was redesigned as an open concept space in the civic centre redevelopment."
+          }
+        ],
+        [
+          {
+            "t": "McAllister Avenue's streetscape was designed for walking, socializing and shopping, and an extension of the Donald Pathway is part of the same civic centre project."
+          }
+        ],
+        [
+          {
+            "t": "The City's capital list marks Downtown Lighting complete in 2025, covering Shaughnessy Street string lights from Kingsway Avenue to Wilson Avenue and McAllister Avenue post lights."
+          }
+        ],
+        [
+          {
+            "t": "Central Elementary at 2260 Central Avenue is on the district's at-or-near-capacity list, which limits cross-catchment moves into it."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Port Coquitlam: development and new projects"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Revitalizing Our Downtown / Civic Centre redevelopment, bounded by McAllister Avenue, Shaughnessy Street, Wilson Avenue and Donald Street, City of Port Coquitlam: Leigh Square, Veterans Park, Donald Pathway extension and surrounding City-owned spaces and roads — STATUS: City project page live, with downtown lighting complete (2025) in the capital list, read 2026-11-03."
+          }
+        ],
+        [
+          {
+            "t": "PoCo Place, 2755 Lougheed Highway: the mall site carries site-specific CD2 zoning in Bylaw No."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Port Coquitlam: costs and taxes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The City's Fees and Charges Bylaw, 2025, No. 4415 took effect January 1, 2026, and its Schedule D sets development application fees, including a $2,500 minimum fee for an Official Community Plan amendment with rezoning for rowhouse, townhouse and apartment zones."
+          }
+        ],
+        [
+          {
+            "t": "The City states Port Coquitlam has the lowest average property taxes and utility fees in Metro Vancouver, with a 1.95 percent property tax increase for the average home in 2026."
+          }
+        ],
+        [
+          {
+            "t": "The tax rate per $1,000 (Bylaw No."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Port Coquitlam: getting around"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The West Coast Express from Port Coquitlam Station runs five weekday westbound trains at 6:04, 6:34, 7:04, 7:34 and 8:04 a.m., arriving at Waterfront Station 36 minutes later, with no weekend or statutory holiday service."
+          }
+        ],
+        [
+          {
+            "t": "Five eastbound trains leave Waterfront Station at 3:50, 4:20, 4:50, 5:30 and 6:20 p.m. and stop at Port Coquitlam Station on the way to Mission City."
+          }
+        ],
+        [
+          {
+            "t": "The R3 Lougheed Hwy RapidBus runs along Lougheed Highway across the north edge of the central area, connecting toward Coquitlam Central Station."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Central Port Coquitlam: risks and due diligence"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Check flood status lot by lot on the City flood page: flood plain maps and preparedness resources are at portcoquitlam.ca/flood, and the City patrols and maintains dikes and pump stations during high water."
+          }
+        ],
+        [
+          {
+            "t": "Agricultural Land Reserve (ALR) land in the city is in the south, including land in and around Colony Farm Regional Park at Central's west edge on the Coquitlam River — relevant to lots near the river, not to downtown strata lots."
+          }
+        ],
+        [
+          {
+            "t": "The flood and OCP pages do not state a flood construction level for an individual downtown lot; that figure comes from the City for the specific address."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "How Central Port Coquitlam compares"
+    },
+    {
+      "caption": "Central Port Coquitlam compared",
+      "gen": "uq",
+      "head": [
+        "Fact",
+        "Central Port Coquitlam",
+        "Mary Hill",
+        "Riverwood"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "West Coast Express station inside the area",
+          "Yes, 2125 Kingsway Ave",
+          "No",
+          "No"
+        ],
+        [
+          "Apartment zones RA1/RA2",
+          "Yes, downtown and main roads",
+          "No",
+          "—"
+        ],
+        [
+          "Named recreation centre inside the area",
+          "Port Coquitlam Community Centre, 2150 Wilson Ave",
+          "No — Robert Hope Park pool, 2137 Lamprey Dr",
+          "Hyde Creek Recreation Centre, 1379 Laurier Ave"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What is not confirmed about Central Port Coquitlam"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Exact board boundary roads for Central Port Coquitlam: not published by the board."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for Central Port Coquitlam"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "https://infomaps.translink.ca/Public_Timetables/213/tt997.pdf",
+            "t": "infomaps.translink.ca · tt997"
+          }
+        ],
+        [
+          {
+            "h": "http://portcoquitlam.ca/our-government/capital-projects/revitalizing-our-downtown",
+            "t": "portcoquitlam.ca · revitalizing our downtown"
+          }
+        ],
+        [
+          {
+            "h": "https://www.portcoquitlam.ca/sites/default/files/2026-02/3838%20-%20Official%20Community%20Plan.pdf",
+            "t": "portcoquitlam.ca · 3838 Official Community Plan"
+          }
+        ],
+        [
+          {
+            "h": "http://www.portcoquitlam.ca/media/file/3630-zoning-bylaw-2008pdf",
+            "t": "portcoquitlam.ca · 3630 zoning bylaw 2008pdf"
+          }
+        ],
+        [
+          {
+            "h": "https://pub-portcoquitlam.escribemeetings.com/filestream.ashx?DocumentId=11285",
+            "t": "pub-portcoquitlam.escribemeetings.com · filestream.ashx"
+          }
+        ],
+        [
+          {
+            "h": "https://www.portcoquitlam.ca/our-government/reports-plans-publications/official-community-plan",
+            "t": "portcoquitlam.ca · official community plan"
+          }
+        ],
+        [
+          {
+            "h": "http://sd43.bc.ca/cross-catchment",
+            "t": "sd43.bc.ca · cross catchment"
+          }
+        ],
+        [
+          {
+            "h": "https://www.portcoquitlam.ca/our-government/media-centre/city-port-coquitlam-prepares-potential-flooding",
+            "t": "portcoquitlam.ca · city port coquitlam prepares potential flooding"
+          }
+        ],
+        [
+          {
+            "h": "https://www.portcoquitlam.ca/recreation/parks-sports-fields-trails/parks-directory/",
+            "t": "portcoquitlam.ca · parks directory"
+          }
+        ],
+        [
+          {
+            "h": "https://www.portcoquitlam.ca/our-government/media-centre/terry-fox-inspiring-local-champions-exhibit-opens-port-coquitlam",
+            "t": "portcoquitlam.ca · terry fox inspiring local champions exhibit open"
+          }
+        ],
+        [
+          {
+            "h": "https://www.portcoquitlam.ca/our-government/capital-projects?construction_year=All&page=2",
+            "t": "portcoquitlam.ca · capital projects"
+          }
+        ],
+        [
+          {
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas",
+            "t": "www2.gov.bc.ca · taxable areas"
+          }
+        ],
+        [
+          {
+            "h": "http://www.portcoquitlam.ca/media/file/4415-fees-and-charges-bylawpdf",
+            "t": "portcoquitlam.ca · 4415 fees and charges bylawpdf"
+          }
+        ],
+        [
+          {
+            "h": "https://www.portcoquitlam.ca/media/file/2026tax-newsletter-finalpdf",
+            "t": "portcoquitlam.ca · 2026tax newsletter finalpdf"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     },
     {
       "t": "h",
@@ -485,30 +851,68 @@
       "gen": "sold"
     }
   ],
+  "breadcrumbs": [
+    {
+      "href": "/index.html",
+      "name": "Home"
+    },
+    {
+      "href": "/port-coquitlam-homes-for-sale.html",
+      "name": "Port Coquitlam"
+    },
+    {
+      "href": "/central-port-coquitlam.html",
+      "name": "Central Port Coquitlam real estate"
+    }
+  ],
+  "community": {
+    "area": "port-coquitlam",
+    "name": "Central Port Coquitlam"
+  },
   "faq": [
     {
-      "q": "How many homes are for sale in Central Port Coquitlam?",
-      "a": "At the end of October 2026 the Greater Vancouver REALTORS® figures showed 18 houses and 139 condos and townhomes listed in Central Port Coquitlam. Those are month-end counts and they move daily, so ask Jared for a current list."
+      "a": "At the end of October 2026 the Greater Vancouver REALTORS® figures showed 18 houses and 139 condos and townhomes listed in Central Port Coquitlam. Those are month-end counts and they move daily, so ask Jared for a current list.",
+      "q": "How many homes are for sale in Central Port Coquitlam?"
     },
     {
-      "q": "Is Central Port Coquitlam a buyers’ or sellers’ market?",
-      "a": "In October 2026, condos and townhomes had 14% (a balanced market). The sales ratio is homes sold divided by homes listed; on the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers. One month in one community is a small sample, so look at the monthly table above before you decide."
+      "a": "In October 2026, condos and townhomes had 14% (a balanced market). The sales ratio is homes sold divided by homes listed; on the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers. One month in one community is a small sample, so look at the monthly table above before you decide.",
+      "q": "Is Central Port Coquitlam a buyers’ or sellers’ market?"
     },
     {
-      "q": "How many homes sold in Central Port Coquitlam from June to October 2026?",
-      "a": "4 houses and 96 condos and townhomes sold in Central Port Coquitlam over those 5 months; detached houses peaked in July with 2 sold and condos and townhomes peaked in June with 29 sold."
+      "a": "4 houses and 96 condos and townhomes sold in Central Port Coquitlam over those 5 months; detached houses peaked in July with 2 sold and condos and townhomes peaked in June with 29 sold.",
+      "q": "How many homes sold in Central Port Coquitlam from June to October 2026?"
     },
     {
-      "q": "How big is Central Port Coquitlam compared with the rest of Port Coquitlam?",
-      "a": "In October 2026, Central Port Coquitlam held 13.1% of the 137 detached houses listed in Port Coquitlam and 63.5% of the 219 condos and townhomes listed in Port Coquitlam."
+      "a": "In October 2026, Central Port Coquitlam held 13.1% of the 137 detached houses listed in Port Coquitlam and 63.5% of the 219 condos and townhomes listed in Port Coquitlam.",
+      "q": "How big is Central Port Coquitlam compared with the rest of Port Coquitlam?"
     },
     {
-      "q": "What mix of houses and condos is for sale in Central Port Coquitlam?",
-      "a": "In October 2026, houses made up 11.5% of the 157 homes listed in Central Port Coquitlam and condos and townhomes made up 88.5%; of the 19 that sold, houses were 0.0% and condos and townhomes 100.0%."
+      "a": "In October 2026, houses made up 11.5% of the 157 homes listed in Central Port Coquitlam and condos and townhomes made up 88.5%; of the 19 that sold, houses were 0.0% and condos and townhomes 100.0%.",
+      "q": "What mix of houses and condos is for sale in Central Port Coquitlam?"
     },
     {
-      "q": "Are there more or fewer homes for sale in Central Port Coquitlam than in June?",
-      "a": "Listings of detached houses fell from 22 in June to 18 in October 2026 (−18.2%); condos and townhomes rose from 134 in June to 139 in October 2026 (+3.7%)."
+      "a": "Listings of detached houses fell from 22 in June to 18 in October 2026 (−18.2%); condos and townhomes rose from 134 in June to 139 in October 2026 (+3.7%).",
+      "q": "Are there more or fewer homes for sale in Central Port Coquitlam than in June?"
+    },
+    {
+      "a": "No, there is no SkyTrain station inside Port Coquitlam. The Millennium Line Evergreen Extension station is Coquitlam Central, in Coquitlam; what Central has in the sub-area itself is Port Coquitlam Station on the West Coast Express, at 2125 Kingsway Avenue, between Coquitlam Central and Pitt Meadows stations.",
+      "gen": "uq",
+      "q": "Does Central Port Coquitlam have a SkyTrain station?"
+    },
+    {
+      "a": "Central Community Elementary is the catchment elementary for 2150 Wilson Avenue.",
+      "gen": "uq",
+      "q": "Which schools serve a Wilson Avenue address downtown?"
+    },
+    {
+      "a": "Yes, the low-lying downtown lands are part of the city's floodplain picture. The City states a significant portion of Port Coquitlam, protected by dyke infrastructure, is within the Fraser or Pitt River flood plain; a condo or house buyer here should ask the City about the specific lot and any flood construction requirements.",
+      "gen": "uq",
+      "q": "Is downtown in the floodplain?"
+    },
+    {
+      "a": "The Port Coquitlam Community Centre, holding the Terry Fox Library, is at 2150 Wilson Avenue downtown. Gates Park is at 2300 Reeve Street, the other named central park in the City parks directory.",
+      "gen": "uq",
+      "q": "What is at 2150 Wilson Avenue?"
     },
     {
       "gen": "sold",
@@ -521,10 +925,19 @@
       "a": "The median was 24 days from listing to sale, and homes sold at a median 97.7% of the last list price (5% sold above list), for sales November 1, 2025 to October 22, 2026."
     }
   ],
+  "faq_heading": "Central Port Coquitlam real estate: your questions answered",
   "needs_from_muse": [
     "Street boundaries of Central Port Coquitlam from the Paragon sub-area map, and its neighbouring communities",
     "Schools for Central Port Coquitlam, placed by street address",
     "Jared's own notes on Central Port Coquitlam: housing stock, who buys here, what to watch",
     "A live listing feed for Central Port Coquitlam"
-  ]
+  ],
+  "new_page": {
+    "description": "Central Port Coquitlam, Port Coquitlam homes for sale and market figures for October 2026. Jared Gibbons, REALTOR®.",
+    "h1": "Central Port Coquitlam, Port Coquitlam Homes for Sale",
+    "title": "Central Port Coquitlam, Port Coquitlam Homes for Sale"
+  },
+  "slug": "central-port-coquitlam",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

@@ -1,0 +1,86 @@
+# Langley Sell My House — Extra Local Notes
+Page: sell-my-house-in-langley (Langley; seller topic page).
+
+## 1. STREETS AND BOUNDARIES
+- "Langley" on this page is two municipalities, and a seller's permits, tax notice and utility bill come from only one of them: the City of Langley (the compact city around 200 Street and Fraser Highway) or the Township of Langley (Willoughby, Walnut Grove, Brookswood, Murrayville, Fort Langley, Aldergrove, Salmon River and the rural districts). https://www.tol.ca/en/services/property-taxes.aspx
+- The City of Langley is a separate municipality with its own tax notice — its 2026 property taxes were due July 2, 2026 — and a sale closing there is adjusted against the City's calendar, not the Township's. https://www.langleycity.ca/PayPropertyTaxes
+- Township-wide facts are treated in full elsewhere — see the brookswood-55-plus-homes-for-sale note; City of Langley-wide facts are treated in full elsewhere — see the city-of-langley-homes-for-sale note. This note covers what changes when the owner sells.
+Read: 2026-11-03
+
+## 2. THE HOUSING STOCK
+- What a Langley seller is selling into differs by municipality: City of Langley listings are mostly houses and strata units in a built-out city, while Township listings run from Willoughby townhouses to rural acreages, some of them in the Agricultural Land Reserve (ALR). https://www.alc.gov.bc.ca/alr-maps
+- The strata side of a Langley sale — depreciation reports, strata insurance and the Form B a condo seller's buyer will read — is treated in full in the langley-condos-under-399k note; this note covers the seller's own municipal and provincial steps.
+- For a Township acreage or farm property, the Agricultural Land Commission's (ALC) ALR Property and Map Finder is the tool that confirms whether the parcel is in the ALR before the property is marketed with any farm or subdivision claim. https://www.alc.gov.bc.ca/alr-maps
+Read: 2026-11-03
+
+## 3. RULES THAT AFFECT BUYERS HERE
+- In the Township of Langley, no demolition, alteration, repair or removal of a building or structure may be started without first obtaining a permit from the Township's Permit, Licence and Inspection Services department — a seller who finished a basement or demolished a structure without one carries that gap into the sale. https://ic10.esolg.ca/11207577_TownshipofLangley/en/building-development/resources/building/bulletins-forms-resources/Guide-to-Residential-Construction---SFD-Two-dwelling-house.pdf
+- The Township's residential construction guide lists what does need a building permit: constructing a new building, altering, repairing, renovating or adding to an existing one, finishing a basement, and installing new plumbing fixtures — the checklist a seller should run against their own renovation history before listing. https://ic10.esolg.ca/11207577_TownshipofLangley/en/building-development/resources/building/bulletins-forms-resources/Guide-to-Residential-Construction---SFD-Two-dwelling-house.pdf
+- A Township permit application requires a current title search no older than 30 days, with the details of any restrictive covenants, easements or rights-of-way registered against the property — the same charges a buyer's lawyer will find at closing. https://ic10.esolg.ca/11207577_TownshipofLangley/en/building-development/resources/building/bulletins-forms-resources/Guide-to-Residential-Construction---SFD-Two-dwelling-house.pdf
+- For ALR land in the Township, ALC regulations sit on top of Township zoning: the Township's own guidance notes ALC regulations may also affect what is allowed on ALR properties, so an ALR seller confirms both layers before promising a buyer a use. https://www.tol.ca/en/building-development/resources/building/bulletins-forms-resources/Document-Feed-Building-Forms/PLI---Mobile-Homes-on-Private-Property.pdf
+Read: 2026-11-03
+
+## 4. WHAT BUYERS ASK
+- **Q:** I bought my Langley home 18 months ago — is there a tax on selling this soon? **A:** Possibly: the British Columbia home flipping tax applies to profit from selling a property (including a presale contract) owned for less than 730 days, under the Residential Property (Short-Term Holding) Profit Tax Act, in effect January 1, 2025. The rate is 20 percent of net taxable income for a property sold within 365 days and gradually decreases over the next 365 days to zero at 730 days. Exemptions exist, and the Province's page sets out who must file a return. https://www2.gov.bc.ca/gov/content/taxes/income-taxes/bc-home-flipping-tax
+- **Q:** My completion date is in August — who pays the 2026 property taxes? **A:** Taxes are adjusted between seller and buyer at closing, but the Township's deadlines run regardless of the sale: Township of Langley property taxes were due July 2, 2026, with a 5 percent penalty at midnight July 2 and a further 5 percent at midnight September 3, 2026. The Township advises new owners to confirm with their notary or lawyer who pays by the due date. A seller closing after July 2 should expect the penalty question to be settled in the statement of adjustments. https://www.tol.ca/en/services/property-taxes.aspx
+- **Q:** Are Township utility fees part of the tax bill I settle at closing? **A:** No — since 2025 the Township of Langley mails utility fees on a separate statement from property taxes, covering water, sanitary sewer and garbage collection at an annual flat rate. The 2026 utility statement was due July 2, 2026, a 10 percent penalty applies to unpaid balances after the due date, and any utility balance still unpaid on December 31, 2026 transfers to the property tax account as arrears with daily interest — so a seller has two Township accounts to bring current, not one. https://www.tol.ca/en/news/separate-utility-statements-mailed-to-property-owners.aspx http://www.tol.ca/en/services/utility-fees.aspx
+- **Q:** My Township property is farmland — what must I check before I list it? **A:** Check the parcel in the Agricultural Land Commission's ALR Property and Map Finder first, because ALR status follows the land, not the listing. ALR land carries provincial restrictions on non-farm use and subdivision on top of Township zoning, and a buyer will price the property against what the ALR actually allows. If any part of the property is in the ALR, say so in the listing and let the buyer's due diligence confirm the permitted uses with the ALC. https://www.alc.gov.bc.ca/alr-maps
+- **Q:** I renovated without a permit years ago — does that matter when I sell? **A:** It can: Township rules require a building permit before altering, repairing or renovating a building or finishing a basement, and no work of that kind may start without one. Unpermitted work is a disclosure and pricing issue at sale, and a buyer's home inspector or lawyer can surface it. A seller with older unpermitted work should raise it with their REALTOR® and lawyer before listing rather than after an offer, when it becomes a renegotiation. https://ic10.esolg.ca/11207577_TownshipofLangley/en/building-development/resources/building/bulletins-forms-resources/Guide-to-Residential-Construction---SFD-Two-dwelling-house.pdf
+- **Q:** Do I have to file anything for the Speculation and Vacancy Tax before I sell? **A:** Langley is a taxable area for the provincial Speculation and Vacancy Tax, and owners in taxable areas must complete the annual declaration for their property. A seller should be current on declarations for the years they owned the property, because the buyer's lawyer will ask about the property's tax status at closing. The Province's taxable-areas page is the official list of where the tax applies. https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas
+Read: 2026-11-03
+
+## 5. LOCAL DETAILS A BUYER WOULD NOT KNOW
+- Township of Langley tax statements are mailed or emailed to owners by the end of May each year, and owners are responsible for paying by the due date even if the statement never arrives — a seller who "never got the bill" still owes the penalties. https://www.tol.ca/en/services/property-taxes.aspx
+- The Township split its utility statement off the tax notice only in 2025, so long-time owners may still expect one combined bill; 2026 is the second year of separate utility billing. https://www.tol.ca/en/news/separate-utility-statements-mailed-to-property-owners.aspx
+- Township utility accounts that remain unpaid at December 31, 2026 are transferred to the property tax account as arrears and charged daily interest — an unpaid utility bill can follow the property into a spring closing. http://www.tol.ca/en/services/utility-fees.aspx
+- City of Langley water is metered and billed on the June tax notice after a March meter read, which is the utility figure a City seller's adjustments are built from. https://www.langleycity.ca/PropertyTaxes/utilities
+- The Township adopted an Amenity Cost Charges (ACC) bylaw — Bylaw No. 6115, approved March 23, 2026 — which charges new residential and employment development for amenities; a seller marketing a Township property to a developer should expect the buyer's math to include ACCs alongside Development Cost Charges (DCCs). https://www.tol.ca/en/building-development/amenity-cost-charges.aspx
+- A seller can check what is being approved around their property on the Township's Development Activity Portal, which lists development applications since 2012 and can be filtered by community and status. https://www.tol.ca/en/building-development/development-activity.aspx
+Read: 2026-11-03
+
+## 6. DEVELOPMENT AND NEW PROJECTS
+- Township of Langley Official Community Plan (OCP) update — Township-wide; the Township is updating its OCP in response to provincial housing legislation introduced in 2023 and 2024, including plans for transit-oriented development and consolidation of several Willoughby neighbourhood plans; STATUS: public engagement/planning stage on the Township's engagement page, read 2026-11-03. A seller of a redevelopment-candidate lot should read the draft direction before pricing future density. https://www.tol.ca/en/connect/public-engagement-opportunities.aspx
+- Amenity Cost Charges Bylaw No. 6115 — Township of Langley; STATUS: adopted March 23, 2026, effective for applications submitted after adoption, with earlier in-stream applications exempt — the charge a developer-buyer now prices into Township land offers. https://www.tol.ca/en/building-development/amenity-cost-charges.aspx
+- City of Langley apartment projects on 56 Avenue, 53A Avenue and 54A Avenue — named once here; full entries are in the langley-condos-under-399k note. https://www.langleycity.ca/media/file/monthly-development-report-may-2026
+- Surrey-Langley SkyTrain along Fraser Highway to 203 Street — named once here; full entry in the city-of-langley-homes-for-sale note. https://www.translink.ca/plans-and-projects/projects/rapid-transit-projects/surrey-langley-skytrain
+Read: 2026-11-03
+
+## 7. COSTS AND TAXES HERE
+- Township of Langley 2026 property taxes were due July 2, 2026: a 5 percent penalty applies to current-year taxes, including any unclaimed home owner grant, at midnight July 2, and an additional 5 percent at midnight September 3, 2026 — penalties are legislated and cannot be waived. https://www.tol.ca/en/services/property-taxes.aspx
+- City of Langley 2026 property taxes were due July 2, 2026, with a penalty on payments received after the due date; the penalty rate was not stated on the City page read — see NOT CONFIRMED. https://www.langleycity.ca/PayPropertyTaxes
+- Township of Langley 2026 utility fees are a separate annual flat-rate statement (water, sanitary sewer, garbage), due July 2, 2026, with a 10 percent late penalty — separate from, and in addition to, the tax notice a seller settles. https://www.tol.ca/en/news/separate-utility-statements-mailed-to-property-owners.aspx
+- The British Columbia home flipping tax is the seller-side provincial tax to test on any Langley sale within 730 days of purchase: 20 percent of net taxable income inside 365 days, declining to zero at 730 days. https://www2.gov.bc.ca/gov/content/taxes/income-taxes/bc-home-flipping-tax
+Read: 2026-11-03
+
+## 8. GETTING AROUND
+- The Surrey-Langley SkyTrain is under construction along Fraser Highway to 203 Street in Langley City, with an anticipated in-service date of 2029 — a seller along the Fraser Highway corridor should expect construction-period disruption and a changed transit story at completion. https://www.translink.ca/plans-and-projects/projects/rapid-transit-projects/surrey-langley-skytrain
+- The Township's Fraser Highway widening between the 24300 and 24600 blocks — four-laning with multi-use paths, street lighting and bus pullouts — was completed in May 2026, per the Township's capital project page. https://www.tol.ca/en/building-development/fraser-highway-widening.aspx
+- Township capital work sellers may be asked about, including road widening on 208 Street and 80 Avenue and the Fraser River dike project, is listed on the Township's capital projects page. https://www.tol.ca/en/building-development/capital-projects.aspx
+Read: 2026-11-03
+
+## 9. RISKS AND DUE DILIGENCE
+- Fraser River flood risk is a live file in the Township: its capital program includes widening and raising the dike along the Fraser River, at STATUS: Planning on the Township's capital projects page — a seller of river-adjacent or low-lying Township land should expect dike and flood questions in a buyer's due diligence. https://www.tol.ca/en/building-development/capital-projects.aspx
+- For any Township property, confirm ALR status parcel by parcel in the ALC's ALR Property and Map Finder before the listing repeats a buyer's intended use — the map, not the seller's history of the land, is the record. https://www.alc.gov.bc.ca/alr-maps
+- Unpermitted work is the seller's own file to open first: the Township requires permits before construction, alteration or demolition, and occupancy is not authorized until a final inspection is accepted — both facts a buyer's lawyer can test against the property. https://ic10.esolg.ca/11207577_TownshipofLangley/en/building-development/resources/building/bulletins-forms-resources/Guide-to-Residential-Construction---SFD-Two-dwelling-house.pdf
+- A short holding period is a tax risk, not just a market risk: the home flipping tax reaches back to purchases made before January 1, 2025 if the property is sold on or after that date and owned for less than 730 days, unless an exemption applies. https://www2.gov.bc.ca/gov/content/taxes/income-taxes/bc-home-flipping-tax
+Read: 2026-11-03
+
+## 10. HOW IT COMPARES
+| Fact | City of Langley | Township of Langley | Surrey |
+|---|---|---|---|
+| 2026 property tax due date | July 2, 2026 https://www.langleycity.ca/PayPropertyTaxes | July 2, 2026 https://www.tol.ca/en/services/property-taxes.aspx | July 2 https://www.surrey.ca/services-payments/property-taxes/property-tax-rates |
+| Late tax penalty stated by the municipality | Penalty applies after due date; rate unconfirmed on the page read https://www.langleycity.ca/PayPropertyTaxes | 5% at July 2, plus a further 5% at September 3, 2026 https://www.tol.ca/en/services/property-taxes.aspx | unconfirmed |
+| Utility billing a seller settles | Metered water billed on the June tax notice https://www.langleycity.ca/PropertyTaxes/utilities | Separate annual flat-rate utility statement since 2025 https://www.tol.ca/en/news/separate-utility-statements-mailed-to-property-owners.aspx | Utility charges billed by the City, flat rate per unit for strata https://www.surrey.ca/services-payments/utility-billing-services/understanding-your-utility-bill |
+| Speculation and Vacancy Tax taxable area | Yes — Langley listed https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas | Yes — Langley listed https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas | Yes — Surrey listed https://www2.gov.bc.ca/gov/content/taxes/speculation-vacancy-tax/how-tax-works/taxable-areas |
+Read: 2026-11-03
+
+## NOT CONFIRMED
+- City of Langley property tax penalty rate for 2026 — the City page read states a penalty applies after the due date but does not state the rate.
+- City of Langley building permit fees and demolition permit steps for a pre-sale renovation or teardown — no City fee schedule was read in this pass; only Township permit rules are stated.
+- City of Langley secondary suite rules (size cap, owner-occupancy) and short-term rental status — recorded in this program's earlier research from the City's Zoning Bylaw 2025, No. 3300, but the bylaw text itself was not re-read in this pass, so no suite figure is stated here.
+- Whether the Township charges a fee for a property tax certificate or compliance letter ordered at closing — not confirmed on a Township page in this pass.
+
+## INTERNAL LINK SUGGESTIONS
+- langley-condos-under-399k — the strata and depreciation-report detail a Langley condo seller's buyer will work through.
+- city-of-langley-homes-for-sale — the City of Langley's own page for sellers inside the city boundary.
+- brookswood-55-plus-homes-for-sale — carries the Township-wide facts this note points to, for Township sellers comparing their options.

@@ -1,0 +1,80 @@
+# Maple Ridge Condos — Extra Local Notes
+Page: maple-ridge-condos-for-sale (Maple Ridge; condos).
+
+## 1. STREETS AND BOUNDARIES
+- Maple Ridge condos cluster in three official plan areas, not evenly across the city: the Town Centre around Haney Place and 224 Street, the Lougheed Transit Corridor between Lougheed Highway and Dewdney Trunk Road west to the city boundary at 221 Street, and the Hammond / Maple Meadows Station area in the southwest. https://www.mapleridge.ca/news/maple-ridge-council-approves-plan-guide-transit-oriented-development-around-lougheed-highway
+- The Town Centre core the condo stock centres on was described in the plan as bounded by Ontario Street (224 Street), Dewdney Trunk Road, Hinch Road (225 Street) and Lougheed Highway, later expanded to 124 Avenue, 221 Street and Burnett Street. http://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/area-neighbourhood-plans/town
+- City-wide Maple Ridge zoning, tax and utility facts are written in full in the maple-ridge-houses-for-sale note — see that note; this note covers only the condo-specific stock, rules and pipeline.
+Read: 2026-11-03
+
+## 2. THE HOUSING STOCK
+- Brickwater at The Village is a completed Town Centre project in the City's economic development brochure: 226 homes plus commercial space over 4 phases, 6 storeys, listed by the City with status Complete and completion 2024. https://www.mapleridge.ca/media/file/webcopy-mapleridgeeconomicdevelopmentbrochurefinalwebqualityspreads-ecdev-241031
+- ERA in the Town Centre is the large multi-phase project the City's retail analysis describes as bringing 1,500 new apartment and townhouse units to the downtown core — the scale marker for how much of the condo stock is new Town Centre product rather than older low-rise. https://www.mapleridge.ca/media/file/maple-ridge-retail-market-analysis-dec-2023
+- The North at Port Haney, on North Avenue between 223 Street and 224 Street, is listed in the same City brochure as a Falcon Homes project of 5 storeys with 67 homes in Phase 1 — a Port Haney Station-area building, distinct from the Haney Place core buildings. https://www.mapleridge.ca/media/file/webcopy-mapleridgeeconomicdevelopmentbrochurefinalwebqualityspreads-ecdev-241031
+- A second Falcon Homes project at 22638 119 Avenue / 22633 Selkirk Avenue and 11865 & 11893 227 Street is listed by the City at 6 storeys with 100 homes plus 5 townhomes, status under construction in the brochure. https://www.mapleridge.ca/media/file/webcopy-mapleridgeeconomicdevelopmentbrochurefinalwebqualityspreads-ecdev-241031
+- Turnock Manor at 22325 St Anne Avenue is a BC Housing affordable rental housing building in the Town Centre — it is rental, not a strata condo, and is included here only so buyers do not mistake it for a purchasable strata. https://www.bchousing.org/housing-assistance/rental-housing/affordable-rental-housing/turnock-manor
+Read: 2026-11-03
+
+## 3. RULES THAT AFFECT BUYERS HERE
+- Three Transit-Oriented Areas govern the tallest future condo form: Haney Place Transit Exchange, Port Haney Station and Maple Meadows Station were designated under Transit-Oriented Area Designation Bylaw No. 8001-2024, adopted June 25, 2024 — a building's distance to one of those hubs is a plan fact, not just a walkability claim. http://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/area-neighbourhood-plans/town
+- The Town Centre Core designation added November 25, 2025 supports higher densities in a walkable downtown anchored by Haney Place Transit Exchange and Port Haney Station, which is the policy basis for new mid-rise condos on 223 and 224 Street. https://www.mapleridge.ca/news/maple-ridge-advances-housing-strategy-completion-area-plan-updates
+- In Hammond, the 2025 update introduces Maple Meadows Mixed-Use with 8–12 storey buildings near Maple Meadows Station in the City's fall 2025 highlights — the only Maple Ridge condo area where the City states a storey range in a plan summary. https://www.mapleridge.ca/news/city-advances-ocp-and-area-plan-updates-increase-housing-and-align-legislation
+- Rental and pet bylaws for individual Maple Ridge strata buildings were not stated on any strata or municipal page read in this pass — see NOT CONFIRMED; do not rely on a listing summary for them.
+Read: 2026-11-03
+
+## 4. WHAT BUYERS ASK
+- **Q:** Where are Maple Ridge condos actually concentrated? **A:** In the Town Centre and along the Lougheed corridor, by plan. The Town Centre plan anchors higher density on Haney Place Transit Exchange and Port Haney Station, and the Lougheed Transit Corridor plan directs most new housing growth around future Bus Rapid Transit stations at 203 Street, 207 Street, Laity Street and 216 Street. Rural areas such as Thornhill have no condo stock under their plans. https://www.mapleridge.ca/news/maple-ridge-council-approves-plan-guide-transit-oriented-development-around-lougheed-highway
+- **Q:** Is a condo near Dewdney Trunk Road and 224 Street affected by construction right now? **A:** Yes, per the City's own notice. The City states the westbound Dewdney Trunk Road lane is closed between 222 and 224 Street and 223 Street is fully closed between Dewdney Trunk Road and Brown Avenue due to a development site, with geotechnical engineers investigating and the developer updating neighbouring properties. The notice was last updated July 20, 2026. https://www.mapleridge.ca/news/traffic-notice-dewdney-trunk-road-and-223-street
+- **Q:** Can I rent out a Maple Ridge condo? **A:** That depends on the individual strata's bylaws, and no Maple Ridge strata page read in this pass states a rental bylaw for a named building. The City-level fact is different: the 2025 Official Community Plan updates support more rental units city-wide as policy. For a specific building on 224 Street or Dewdney Trunk Road, obtain the strata bylaws and Form B before relying on rental use. https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/official-community-plan
+- **Q:** How do condo buyers here commute without a car? **A:** Through Haney Place. TransLink names R3 Lougheed Hwy RapidBus, 701, 733, 741, 745 and 746 from Haney Place, and Port Haney Station provides weekday West Coast Express trains to Waterfront. A Town Centre condo's transit is those named routes; a condo elsewhere in Maple Ridge does not share that exchange. https://buzzer.translink.ca/2026/08/more-bus-service-coming-to-21-routes-for-better-commutes-this-fall/
+Read: 2026-11-03
+
+## 5. LOCAL DETAILS A BUYER WOULD NOT KNOW
+- Maple Ridge Leisure Centre at 11925 Haney Place, with three pools, a fitness centre and a gymnasium, is the recreation facility inside the Town Centre condo cluster — most Town Centre buildings do not need their own pool to be near one. http://www.mapleridge.ca/1459
+- Maple Ridge Public Library at 130 – 22470 Dewdney Trunk Road is the only Fraser Valley Regional Library branch in the city, and it sits inside the condo core. http://fvrl.bc.ca/locations/maple-ridge-public-library
+- The City reports over 150 rezoning applications and 450 building permits under way city-wide in its April 2, 2026 Housing Action Plan update, with 133 new rental homes built and nearly 300 additional units approved — the pipeline context behind Town Centre construction disruption. https://www.mapleridge.ca/news/maple-ridge-reinvents-its-approach-housing-smart-planning-and-cutting-red-tape
+- Maple Ridge exceeded its Year One provincial housing target, delivering 751 net new homes from July 1, 2024 to June 30, 2025 against a target of 612, per the City's Housing Action Plan update. https://www.mapleridge.ca/news/maple-ridge-reinvents-its-approach-housing-smart-planning-and-cutting-red-tape
+Read: 2026-11-03
+
+## 6. DEVELOPMENT AND NEW PROJECTS
+- This section covers the municipal approvals pipeline only, per the program allocation — neighbourhood projects are entered in full on their neighbourhood notes: Town Centre / East Central projects see the east-central-maple-ridge-houses-for-sale note; Hammond / station-area projects see the southwest-maple-ridge-houses-for-sale note; West Central, Northwest, Silver Valley and Cottonwood projects see those neighbourhood notes.
+- Lougheed Transit Corridor Area Plan — adopted January 27, 2026 (Bylaw No. 7781-2021), public hearing January 20, 2026: staff were directed December 9, 2025 to begin accepting and processing development applications and pre-applications in the corridor, which runs from the western boundary to 221 Street along Lougheed Highway and Dewdney Trunk Road. Status read 2026-11-03: plan in effect, applications open. https://engage.mapleridge.ca/LTCAP
+- Town Centre, Hammond, Silver Valley and Albion plan updates — adopted in fall 2025 (Town Centre, Hammond and Silver Valley on November 25, 2025; Albion in October 2025) to meet the Province's December 31, 2025 deadline — these are the designations any new condo rezoning in those areas is now read against. Status read 2026-11-03: adopted. https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/official-community-plan
+- Housing Design Catalogue for small-scale multi-unit housing — the City's April 2026 update states it launched an online Housing Design Catalogue, one of the region's first, to support small-scale multi-unit housing — relevant to small condo and townhome infill, not to a named tower. Status read 2026-11-03: launched per City update. https://www.mapleridge.ca/news/maple-ridge-reinvents-its-approach-housing-smart-planning-and-cutting-red-tape
+Read: 2026-11-03
+
+## 7. COSTS AND TAXES HERE
+- Maple Ridge city-wide tax rate, utility charges, development cost charges and Speculation and Vacancy Tax position are written in full only in the maple-ridge-houses-for-sale note — see that note; no condo-specific municipal charge was stated on a City page read in this pass.
+- The City's development opportunities page is the municipal source for development costs for new condo projects; it frames Maple Ridge growth areas and development cost context for builders, not a per-building strata fee. https://www.mapleridge.ca/build-do-business/invest-maple-ridge/development-opportunities
+Read: 2026-11-03
+
+## 8. GETTING AROUND
+- Haney Place Transit Exchange routes named by TransLink are R3 Lougheed Hwy RapidBus (Coquitlam Central Station / Haney Place), 701, 733, 741, 745 and 746, plus 743, 744, 748, 749 and 791 on TransLink's Haney Place route diagram. https://buzzer.translink.ca/2026/08/more-bus-service-coming-to-21-routes-for-better-commutes-this-fall/
+- West Coast Express serves condo buyers at Port Haney Station (22300 River Road) and Maple Meadows Station, on the weekday Waterfront to Mission City line with five trains each way. https://www.translink.ca/schedules-and-maps/west-coast-express
+- Planned Langley–Haney Place Bus Rapid Transit is a 22-kilometre, 13-station line with planned peak service every 10 minutes, connecting at Haney Place to the R3; TransLink lists roadway designs, costs and timelines as not yet determined. https://www.translink.ca/plans-and-projects/projects/rapid-transit-projects/bus-rapid-transit
+Read: 2026-11-03
+
+## 9. RISKS AND DUE DILIGENCE
+- For a low-lying Town Centre or Port Haney condo, check the Fraser River floodplain document: the flood construction level is 6.7 metres geodetic and Zoning Bylaw s. 402.8(h) prohibits rental accommodation on a floodplain property — a rule that can affect a ground-floor unit's use. https://www.mapleridge.ca/media/file/floodplain-construction-0
+- For any strata purchase, the building-specific risks are in the strata documents, not the City plan: no depreciation report, rental bylaw or pet bylaw for a named Maple Ridge building was stated on a strata page read in this pass, so those remain a per-building document check.
+- Construction risk is current and named by the City at Dewdney Trunk Road and 223 Street, where a development site has closed lanes and a full street closure with geotechnical investigation under way. https://www.mapleridge.ca/news/traffic-notice-dewdney-trunk-road-and-223-street
+Read: 2026-11-03
+
+## 10. HOW IT COMPARES
+| Fact | Maple Ridge condos | Pitt Meadows condos | Port Coquitlam condos |
+|---|---|---|---|
+| Rapid transit hub in city | Haney Place Exchange plus Port Haney and Maple Meadows West Coast Express stations https://www.translink.ca/schedules-and-maps/west-coast-express | Pitt Meadows West Coast Express Station https://www.pittmeadows.ca/city-services/transportation-infrastructure/transportation/bus-train-skytrain | unconfirmed |
+| Governing growth plan | Town Centre Plan updated Nov 25, 2025 plus Lougheed Corridor Plan adopted Jan 27, 2026 https://engage.mapleridge.ca/LTCAP | Official Community Plan adopted Sep 27, 2022 https://www.pittmeadows.ca/ocp | unconfirmed |
+| School district | School District 42 https://www.sd42.ca/elementary-schools | School District 42 https://www.pittmeadows.ca/ocp | unconfirmed |
+Read: 2026-11-03
+
+## NOT CONFIRMED
+- Building-by-building year built, unit counts and strata plan numbers for older Maple Ridge condo buildings (for example the 224 Street and 222 Street low-rises) — the only sources found were listing aggregators (banned for this program); no municipal or strata page stating them was read, so no years are claimed here.
+- Rental, pet and age (55+) bylaws for any named Maple Ridge strata — no strata corporation page stating them was found; they must be read from the building's own bylaws / Form B.
+- Strata versus freehold split for the Maple Ridge condo stock — no municipal source states a split.
+- Completion dates for projects listed as under construction in the City's economic development brochure — the brochure gives estimates only; no developer page confirming a current completion date was read in this pass.
+
+Internal links:
+- maple-ridge-townhomes-for-sale — the townhome stock in the same Town Centre and corridor areas.
+- east-central-maple-ridge-houses-for-sale — the Town Centre edge where most condos sit, in detached-house form.
+- southwest-maple-ridge-houses-for-sale — the Hammond / Maple Meadows Station area named for 8–12 storey mixed-use in the 2025 update.

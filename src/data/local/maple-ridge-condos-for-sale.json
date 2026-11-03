@@ -1,22 +1,19 @@
 {
-  "status": "generated",
-  "slug": "maple-ridge-condos-for-sale",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Maple Ridge condos and townhomes by price band, October 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Maple Ridge condos and townhomes by price band, October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "46 condos and townhomes sold in October against 268 listed. The price band with the most sales was $400,001 to $500,000, with 11 sold (24% of the month). Among bands with at least ten homes listed, the highest sales ratio was $300,001 to $400,000 at 28%.",
-      "gen": "snapstats"
+      "text": "46 condos and townhomes sold in October against 268 listed. The price band with the most sales was $400,001 to $500,000, with 11 sold (24% of the month). Among bands with at least ten homes listed, the highest sales ratio was $300,001 to $400,000 at 28%."
     },
     {
-      "t": "table",
       "caption": "Maple Ridge condos and townhomes: listings and sales by price band, October 2026",
+      "gen": "snapstats",
       "head": [
         "Price band",
         "Listed",
@@ -86,22 +83,22 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Bands with nothing listed and nothing sold are left out. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "Maple Ridge condos and townhomes by bedroom count, October 2026",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "Maple Ridge condos and townhomes by bedroom count, October 2026"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Splitting October 2026 by size, the most sales came from the 2 bedrooms group, with 21 of 46 sold, against 94 of 268 listed.",
-      "gen": "snapstats"
+      "text": "Splitting October 2026 by size, the most sales came from the 2 bedrooms group, with 21 of 46 sold, against 94 of 268 listed."
     },
     {
-      "t": "table",
       "caption": "Maple Ridge condos and townhomes: listings and sales by bedroom count, October 2026",
+      "gen": "snapstats",
       "head": [
         "Size",
         "Listed",
@@ -135,34 +132,452 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Maple Ridge Condos: streets and boundaries"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Maple Ridge condos cluster in three official plan areas, not evenly across the city: the Town Centre around Haney Place and 224 Street, the Lougheed Transit Corridor between Lougheed Highway and Dewdney Trunk Road west to the city boundary at 221 Street, and the Hammond / Maple Meadows Station area in the southwest."
+          }
+        ],
+        [
+          {
+            "t": "The Town Centre core the condo stock centres on was described in the plan as bounded by Ontario Street (224 Street), Dewdney Trunk Road, Hinch Road (225 Street) and Lougheed Highway, later expanded to 124 Avenue, 221 Street and Burnett Street."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Maple Ridge Condos: the housing stock"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Brickwater at The Village is a completed Town Centre project in the City's economic development brochure: 226 homes plus commercial space over 4 phases, 6 storeys, listed by the City with status Complete and completion 2024."
+          }
+        ],
+        [
+          {
+            "t": "ERA in the Town Centre is the large multi-phase project the City's retail analysis describes as bringing 1,500 new apartment and townhouse units to the downtown core — the scale marker for how much of the condo stock is new Town Centre product rather than older low-rise."
+          }
+        ],
+        [
+          {
+            "t": "The North at Port Haney, on North Avenue between 223 Street and 224 Street, is listed in the same City brochure as a Falcon Homes project of 5 storeys with 67 homes in Phase 1 — a Port Haney Station-area building, distinct from the Haney Place core buildings."
+          }
+        ],
+        [
+          {
+            "t": "A second Falcon Homes project at 22638 119 Avenue / 22633 Selkirk Avenue and 11865 & 11893 227 Street is listed by the City at 6 storeys with 100 homes plus 5 townhomes, status under construction in the brochure."
+          }
+        ],
+        [
+          {
+            "t": "Turnock Manor at 22325 St Anne Avenue is a BC Housing affordable rental housing building in the Town Centre — it is rental, not a strata condo, and is included here only so buyers do not mistake it for a purchasable strata."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Maple Ridge Condos: rules that affect buyers"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Three Transit-Oriented Areas govern the tallest future condo form: Haney Place Transit Exchange, Port Haney Station and Maple Meadows Station were designated under Transit-Oriented Area Designation Bylaw No. 8001-2024, adopted June 25, 2024 — a building's distance to one of those hubs is a plan fact, not just a walkability claim."
+          }
+        ],
+        [
+          {
+            "t": "The Town Centre Core designation added November 25, 2025 supports higher densities in a walkable downtown anchored by Haney Place Transit Exchange and Port Haney Station, which is the policy basis for new mid-rise condos on 223 and 224 Street."
+          }
+        ],
+        [
+          {
+            "t": "In Hammond, the 2025 update introduces Maple Meadows Mixed-Use with 8–12 storey buildings near Maple Meadows Station in the City's fall 2025 highlights — the only Maple Ridge condo area where the City states a storey range in a plan summary."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Maple Ridge Condos: local details a buyer would not know"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Maple Ridge Leisure Centre at 11925 Haney Place, with three pools, a fitness centre and a gymnasium, is the recreation facility inside the Town Centre condo cluster — most Town Centre buildings do not need their own pool to be near one."
+          }
+        ],
+        [
+          {
+            "t": "Maple Ridge Public Library at 130 – 22470 Dewdney Trunk Road is the only Fraser Valley Regional Library branch in the city, and it sits inside the condo core."
+          }
+        ],
+        [
+          {
+            "t": "The City reports over 150 rezoning applications and 450 building permits under way city-wide in its April 2, 2026 Housing Action Plan update, with 133 new rental homes built and nearly 300 additional units approved — the pipeline context behind Town Centre construction disruption."
+          }
+        ],
+        [
+          {
+            "t": "Maple Ridge exceeded its Year One provincial housing target, delivering 751 net new homes from July 1, 2024 to June 30, 2025 against a target of 612, per the City's Housing Action Plan update."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Maple Ridge Condos: development and new projects"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Lougheed Transit Corridor Area Plan — adopted January 27, 2026 (Bylaw No. 7781-2021), public hearing January 20, 2026: staff were directed December 9, 2025 to begin accepting and processing development applications and pre-applications in the corridor, which runs from the western boundary to 221 Street along Lougheed Highway and Dewdney Trunk Road. Status read 2026-11-03: plan in effect, applications open."
+          }
+        ],
+        [
+          {
+            "t": "Town Centre, Hammond, Silver Valley and Albion plan updates — adopted in fall 2025 (Town Centre, Hammond and Silver Valley on November 25, 2025; Albion in October 2025) to meet the Province's December 31, 2025 deadline — these are the designations any new condo rezoning in those areas is now read against. Status read 2026-11-03: adopted."
+          }
+        ],
+        [
+          {
+            "t": "Housing Design Catalogue for small-scale multi-unit housing — the City's April 2026 update states it launched an online Housing Design Catalogue, one of the region's first, to support small-scale multi-unit housing — relevant to small condo and townhome infill, not to a named tower. Status read 2026-11-03: launched per City update."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Maple Ridge Condos: costs and taxes"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "The City's development opportunities page is the municipal source for development costs for new condo projects; it frames Maple Ridge growth areas and development cost context for builders, not a per-building strata fee."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Maple Ridge Condos: getting around"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Haney Place Transit Exchange routes named by TransLink are R3 Lougheed Hwy RapidBus (Coquitlam Central Station / Haney Place), 701, 733, 741, 745 and 746, plus 743, 744, 748, 749 and 791 on TransLink's Haney Place route diagram."
+          }
+        ],
+        [
+          {
+            "t": "West Coast Express serves condo buyers at Port Haney Station (22300 River Road) and Maple Meadows Station, on the weekday Waterfront to Mission City line with five trains each way."
+          }
+        ],
+        [
+          {
+            "t": "Planned Langley–Haney Place Bus Rapid Transit is a 22-kilometre, 13-station line with planned peak service every 10 minutes, connecting at Haney Place to the R3; TransLink lists roadway designs, costs and timelines as not yet determined."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Maple Ridge Condos: risks and due diligence"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "For a low-lying Town Centre or Port Haney condo, check the Fraser River floodplain document: the flood construction level is 6.7 metres geodetic and Zoning Bylaw s. 402.8(h) prohibits rental accommodation on a floodplain property — a rule that can affect a ground-floor unit's use."
+          }
+        ],
+        [
+          {
+            "t": "Construction risk is current and named by the City at Dewdney Trunk Road and 223 Street, where a development site has closed lanes and a full street closure with geotechnical investigation under way."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "How Maple Ridge Condos compares"
+    },
+    {
+      "caption": "Maple Ridge Condos compared",
+      "gen": "uq",
+      "head": [
+        "Fact",
+        "Maple Ridge condos",
+        "Pitt Meadows condos",
+        "Port Coquitlam condos"
+      ],
+      "pos": "end",
+      "rows": [
+        [
+          "Rapid transit hub in city",
+          "Haney Place Exchange plus Port Haney and Maple Meadows West Coast Express stations",
+          "Pitt Meadows West Coast Express Station",
+          "—"
+        ],
+        [
+          "Governing growth plan",
+          "Town Centre Plan updated Nov 25, 2025 plus Lougheed Corridor Plan adopted Jan 27, 2026",
+          "Official Community Plan adopted Sep 27, 2022",
+          "—"
+        ],
+        [
+          "School district",
+          "School District 42",
+          "School District 42",
+          "—"
+        ]
+      ],
+      "t": "table"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "What is not confirmed about Maple Ridge Condos"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "t": "Rental, pet and age (55+) bylaws for any named Maple Ridge strata — no strata corporation page stating them was found; they must be read from the building's own bylaws / Form B."
+          }
+        ],
+        [
+          {
+            "t": "Strata versus freehold split for the Maple Ridge condo stock — no municipal source states a split."
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Related pages"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "/maple-ridge-townhomes-for-sale.html",
+            "t": "Maple Ridge Townhomes for Sale | MLS"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
+      "gen": "uq",
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for Maple Ridge Condos"
+    },
+    {
+      "gen": "uq",
+      "items": [
+        [
+          {
+            "h": "https://www.mapleridge.ca/news/maple-ridge-council-approves-plan-guide-transit-oriented-development-around-lougheed-highway",
+            "t": "mapleridge.ca · maple ridge council approves plan guide transit"
+          }
+        ],
+        [
+          {
+            "h": "http://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/area-neighbourhood-plans/town",
+            "t": "mapleridge.ca · town"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/media/file/webcopy-mapleridgeeconomicdevelopmentbrochurefinalwebqualityspreads-ecdev-241031",
+            "t": "mapleridge.ca · webcopy mapleridgeeconomicdevelopmentbrochurefin"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/media/file/maple-ridge-retail-market-analysis-dec-2023",
+            "t": "mapleridge.ca · maple ridge retail market analysis dec 2023"
+          }
+        ],
+        [
+          {
+            "h": "https://www.bchousing.org/housing-assistance/rental-housing/affordable-rental-housing/turnock-manor",
+            "t": "bchousing.org · turnock manor"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/news/maple-ridge-advances-housing-strategy-completion-area-plan-updates",
+            "t": "mapleridge.ca · maple ridge advances housing strategy completion"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/news/city-advances-ocp-and-area-plan-updates-increase-housing-and-align-legislation",
+            "t": "mapleridge.ca · city advances ocp and area plan updates increase"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/news/traffic-notice-dewdney-trunk-road-and-223-street",
+            "t": "mapleridge.ca · traffic notice dewdney trunk road and 223 street"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/your-government/plans-strategies/official-community-plan-area-plans/official-community-plan",
+            "t": "mapleridge.ca · official community plan"
+          }
+        ],
+        [
+          {
+            "h": "https://buzzer.translink.ca/2026/08/more-bus-service-coming-to-21-routes-for-better-commutes-this-fall/",
+            "t": "buzzer.translink.ca · more bus service coming to 21 routes for better"
+          }
+        ],
+        [
+          {
+            "h": "http://www.mapleridge.ca/1459",
+            "t": "mapleridge.ca"
+          }
+        ],
+        [
+          {
+            "h": "http://fvrl.bc.ca/locations/maple-ridge-public-library",
+            "t": "fvrl.bc.ca · maple ridge public library"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/news/maple-ridge-reinvents-its-approach-housing-smart-planning-and-cutting-red-tape",
+            "t": "mapleridge.ca · maple ridge reinvents its approach housing smart"
+          }
+        ],
+        [
+          {
+            "h": "https://engage.mapleridge.ca/LTCAP",
+            "t": "engage.mapleridge.ca · LTCAP"
+          }
+        ],
+        [
+          {
+            "h": "https://www.mapleridge.ca/build-do-business/invest-maple-ridge/development-opportunities",
+            "t": "mapleridge.ca · development opportunities"
+          }
+        ],
+        [
+          {
+            "h": "https://www.translink.ca/schedules-and-maps/west-coast-express",
+            "t": "translink.ca · west coast express"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "How many condos and townhomes are for sale in Maple Ridge?",
-      "a": "At the end of October 2026 the Greater Vancouver REALTORS® figures showed 268 condos and townhomes listed in Maple Ridge and 46 sold in the month, a sales ratio of 17%. Month-end counts move daily; ask Jared what is on the market today.",
-      "gen": "snap-faq"
+      "a": "In the Town Centre and along the Lougheed corridor, by plan. The Town Centre plan anchors higher density on Haney Place Transit Exchange and Port Haney Station, and the Lougheed Transit Corridor plan directs most new housing growth around future Bus Rapid Transit stations at 203 Street, 207 Street, Laity Street and 216 Street. Rural areas such as Thornhill have no condo stock under their plans.",
+      "gen": "uq",
+      "q": "Where are Maple Ridge condos actually concentrated?"
     },
     {
-      "q": "What is the reported sale price for condos and townhomes in Maple Ridge?",
-      "a": "The October report gave $521,000 for condos and townhomes in Maple Ridge, against $525,000 the month before. The reports give one sale-price figure and do not say whether it is an average or a median, so use it for direction, not as a valuation of your own home.",
-      "gen": "snap-faq"
+      "a": "Yes, per the City's own notice. The City states the westbound Dewdney Trunk Road lane is closed between 222 and 224 Street and 223 Street is fully closed between Dewdney Trunk Road and Brown Avenue due to a development site, with geotechnical engineers investigating and the developer updating neighbouring properties. The notice was last updated July 20, 2026.",
+      "gen": "uq",
+      "q": "Is a condo near Dewdney Trunk Road and 224 Street affected by construction right now?"
     },
     {
-      "q": "How long do condos and townhomes take to sell in Maple Ridge?",
-      "a": "The October report showed 32 days on market for condos and townhomes in Maple Ridge and a sale-to-list price ratio of 97%, against 49 days the month before.",
-      "gen": "snap-faq"
+      "a": "The City-level fact is different: the 2025 Official Community Plan updates support more rental units city-wide as policy. For a specific building on 224 Street or Dewdney Trunk Road, obtain the strata bylaws and Form B before relying on rental use.",
+      "gen": "uq",
+      "q": "Can I rent out a Maple Ridge condo?"
     },
     {
-      "q": "What do strata fees cover on a condo in Maple Ridge?",
-      "a": "Strata fees pay for upkeep and insurance of the common property and the contingency reserve fund, and in some buildings heat, hot water or other services. The Form B Information Certificate lists exactly what a unit's fee covers.",
-      "gen": "bank-faq"
-    },
-    {
-      "q": "What should I read before buying a condo in Maple Ridge?",
-      "a": "The Form B, the bylaws, the last two years of strata minutes, the depreciation report and the contingency reserve fund balance. They show planned repairs, special levies and rules on pets and rentals.",
-      "gen": "bank-faq"
+      "a": "Through Haney Place. TransLink names R3 Lougheed Hwy RapidBus, 701, 733, 741, 745 and 746 from Haney Place, and Port Haney Station provides weekday West Coast Express trains to Waterfront. A Town Centre condo's transit is those named routes; a condo elsewhere in Maple Ridge does not share that exchange.",
+      "gen": "uq",
+      "q": "How do condo buyers here commute without a car?"
     }
-  ]
+  ],
+  "slug": "maple-ridge-condos-for-sale",
+  "status": "generated",
+  "updated": "2026-11-01"
 }
