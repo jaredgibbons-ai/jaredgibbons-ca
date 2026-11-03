@@ -52,6 +52,15 @@ const explore = [
     </div>
   </section>
 
+  <section class="section" id="google-live" aria-labelledby="h-google" hidden>
+    <div class="wrap">
+      <h2 id="h-google" class="h2">Latest Google reviews</h2>
+      <p class="rv-note" id="google-summary"></p>
+      <ul class="rv-list" id="google-list"></ul>
+      <p class="rv-note" id="google-links"></p>
+    </div>
+  </section>
+
   <section class="section" aria-labelledby="h-explore">
     <div class="wrap">
       <p class="eyebrow">Explore More</p>
@@ -71,6 +80,36 @@ const explore = [
     </div>
   </section>
 </main>
+
+<script is:inline>
+// Progressive enhancement: the six archived reviews above are the page. When the daily Google feed has data, show it too.
+// Reviews are shown as Google returns them (unedited), attributed to Google. No star-rating structured data (self-serving, D-19).
+(function () {
+  var sec = document.getElementById('google-live');
+  if (!sec || !window.fetch) return;
+  fetch('/api/reviews.json', { headers: { accept: 'application/json' } }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+    if (!d || !d.reviews || !d.reviews.length) return;
+    var el = function (t, c, x) { var n = document.createElement(t); if (c) n.className = c; if (x != null) n.textContent = x; return n; };
+    var list = document.getElementById('google-list');
+    d.reviews.slice(0, 24).forEach(function (r) {
+      var li = el('li', 'rv'), q = el('blockquote', 'rv__body');
+      q.appendChild(el('p', 'rv__title', '\u2605'.repeat(r.rating) + ' ' + r.rating + ' out of 5'));
+      if (r.text) r.text.split(/\n{2,}/).forEach(function (p) { q.appendChild(el('p', '', p)); });
+      if (r.reply) { var rep = el('p', '', 'Reply from Jared: ' + r.reply.text); rep.style.fontStyle = 'italic'; q.appendChild(rep); }
+      var who = el('p', 'rv__who'), b = el('strong', '', r.name); who.appendChild(b);
+      if (r.date) { who.appendChild(document.createElement('br')); who.appendChild(el('span', 'muted', new Date(r.date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' }) + ' \u00b7 Google review')); }
+      li.appendChild(q); li.appendChild(who); list.appendChild(li);
+    });
+    var sum = document.getElementById('google-summary');
+    if (d.totalReviewCount) sum.textContent = (d.averageRating ? d.averageRating.toFixed(1) + ' average from ' : '') + d.totalReviewCount + ' Google reviews';
+    var links = document.getElementById('google-links');
+    if (d.profileUrl) { var a = el('a', '', 'See all reviews on Google'); a.href = d.profileUrl; a.rel = 'noopener'; links.appendChild(a); }
+    if (d.profileUrl && d.reviewUrl) links.appendChild(document.createTextNode(' \u00b7 '));
+    if (d.reviewUrl) { var w = el('a', '', 'Leave a review'); w.href = d.reviewUrl; w.rel = 'noopener'; links.appendChild(w); }
+    sec.hidden = false;
+  }).catch(function () {});
+})();
+</script>
 </Base>
 
 <style>

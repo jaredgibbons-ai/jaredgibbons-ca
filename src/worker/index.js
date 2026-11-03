@@ -10,7 +10,16 @@ const SECURITY = {
 
 export default {
   async fetch(request, env) {
-    if (new URL(request.url).pathname.startsWith('/api/forms/')) return handleForm(request, env);
+    const pathname = new URL(request.url).pathname;
+    if (pathname.startsWith('/api/forms/')) return handleForm(request, env);
+    // Daily Google reviews copy, served by the jg-reviews Worker over a service binding (nothing public to configure).
+    if (pathname === '/api/reviews.json') {
+      if (!env.REVIEWS || (request.method !== 'GET' && request.method !== 'HEAD')) return new Response('Not found', { status: 404, headers: { 'cache-control': 'no-store' } });
+      try {
+        const r = await env.REVIEWS.fetch(new Request('https://jg-reviews/reviews.json'));
+        return new Response(r.body, { status: r.status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': r.ok ? 'public, max-age=900' : 'no-store', 'x-content-type-options': 'nosniff' } });
+      } catch { return new Response('Not found', { status: 404, headers: { 'cache-control': 'no-store' } }); }
+    }
     if (request.method !== 'GET' && request.method !== 'HEAD') {
       return new Response('Method Not Allowed', { status: 405, headers: { allow: 'GET, HEAD' } });
     }

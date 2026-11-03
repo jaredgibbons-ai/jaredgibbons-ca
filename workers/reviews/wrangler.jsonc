@@ -1,0 +1,16 @@
+{
+  // jg-reviews: pulls Jared's own Google Business Profile reviews once a day and keeps a public-fields-only copy in KV.
+  // Secrets (set by Jared in the Cloudflare dashboard, never in the repo): GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN.
+  // KV is auto-provisioned on the first `wrangler deploy` (needs wrangler 4.45+), so no namespace id is committed.
+  // Not deployed from here: a Hello World placeholder named jg-reviews already holds the secrets; deploying this code replaces it.
+  "name": "jg-reviews",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+  "triggers": { "crons": ["17 11 * * *"] },
+  "kv_namespaces": [{ "binding": "REVIEWS_KV" }],
+  "vars": {
+    // Only needed if the Google account manages more than one location: set to locations/<id> (a plain variable, not a secret).
+    "GBP_LOCATION": ""
+  },
+  "observability": { "enabled": true }
+}

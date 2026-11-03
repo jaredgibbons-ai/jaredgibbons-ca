@@ -32,3 +32,11 @@ Interim: reviews.html uses the archived reviews as static content. No star-ratin
 - Worker secrets `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REFRESH_TOKEN` are set by Jared on the Worker `jg-reviews` (placeholder Hello World Worker; the reviews code deploys over it and the secrets stay). No values are in the repo or docs.
 - Jared to-do in Google Cloud: delete the older client secrets (keep only the one now in Cloudflare) and set the consent screen to In production so the refresh token does not expire after 7 days.
 - The reviews Worker is not built yet. It is built and switched on only once the API quota shows 300 QPM.
+
+## Status 2026-11-03 (later): quota open, reviews Worker built
+- Quota on the project shows Requests per minute 600, per day 250,000, V4 General 3,000 (not 0), so access is approved. APIs enabled: Account Management, Business Information, Google My Business.
+- Built `workers/reviews` (Worker `jg-reviews`): daily cron (11:17 UTC) -> refresh-token login -> account/location -> v4 reviews (paged) -> KV `reviews:v1` (name, rating, text, date, reply only; no photos, no ids). `GET /reviews.json`, `GET /health`. A failed or empty pull never overwrites a good copy; the failure code is stored (`token_invalid` = redo the Playground step; `client_invalid` = wrong id/secret; `multiple_locations` = set `GBP_LOCATION`).
+- Site: `src/worker/index.js` serves `/api/reviews.json` through service binding `REVIEWS` -> `jg-reviews`; `reviews.astro` shows a "Latest Google reviews" block only when the feed has data (the six archived reviews stay as the fallback). Reviews are shown unedited and attributed to Google. No star-rating structured data (self-serving).
+- Tests: `tests/reviews-worker.test.mjs` (10), full suite 65 pass.
+- NOT deployed. To go live (needs Jared's go-ahead, with the Cloudflare connection from BL-07): `cd workers/reviews && npx wrangler deploy` (KV auto-provisions; wrangler 4.45+), then deploy the site. After the first deploy, wait for the 11:17 UTC cron or trigger once from the dashboard (Workers > jg-reviews > Settings > Trigger events), then check `/health` shows `ok:true`.
+- Note: if the app was in Testing when Jared authorised, the refresh token can expire after 7 days; the symptom is `token_invalid` on `/health`.

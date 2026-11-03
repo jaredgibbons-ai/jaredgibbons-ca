@@ -15,5 +15,7 @@
   // Outbound lead email (Cloudflare Email Service). Needs a sending domain onboarded first (needs approval).
   // Secrets LEAD_EMAIL_TO, LEAD_EMAIL_FROM, TURNSTILE_SECRET are set with `wrangler secret put`, never committed.
   "send_email": [{ "name": "EMAIL" }],
+  // Google reviews feed: the jg-reviews Worker (workers/reviews) holds the Google secrets; the site only reads its stored copy.
+  "services": [{ "binding": "REVIEWS", "service": "jg-reviews" }],
   "vars": { "PREVIEW": "true" }
 }
