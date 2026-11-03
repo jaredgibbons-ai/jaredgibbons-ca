@@ -126,18 +126,78 @@ def build(slug, t):
     return bl, faq[:4]
 
 
+def rank(slug):
+    if slug.endswith('-guide'): r = 1
+    elif slug.endswith('-houses-for-sale'): r = 2
+    elif re.search(r'-(?:condos|townhomes|condos-townhomes)-for-sale$|-55-plus', slug): r = 3
+    elif re.search(r'-for-sale$|-for-sale-', slug): r = 4
+    else: r = 0
+    return (r, len(slug), slug)
+
+
+def sents(x): return [y for y in re.split(r'(?<=[.!?])\s+', x) if y]
+def nrm(x): return re.sub(r'[^a-z0-9]+', ' ', x.lower()).strip()
+
+
+def dedupe(built):
+    """A sentence that several pages' notes share (the same area facts repeated in a houses note, a condos note and the area guide) is kept on one page only:
+    the area page, else its guide, else houses, else condos and townhomes. The other pages keep their own facts, so no two pages carry the same words."""
+    def walk(bl, faq):
+        for b in bl:
+            if b['t'] == 'list':
+                for it in b['items']:
+                    if not it[0].get('h'):
+                        for x in sents(it[0]['t']): yield x
+        for q, a in faq:
+            for x in sents(a): yield x
+    def sh(x):
+        w = re.findall(r"[a-z0-9$%'.\-]+", x.lower()); return {' '.join(w[i:i + 8]) for i in range(max(0, len(w) - 7))}
+    where = collections.defaultdict(set)
+    for slug, (bl, faq) in built.items():
+        for x in walk(bl, faq):
+            for k in sh(x): where[k].add(slug)
+    owner = {k: min(v, key=rank) for k, v in where.items() if 1 < len(v) < 40}
+    def ok_for(slug):
+        def ok(x):
+            ks = [k for k in sh(x) if k in owner]; allk = sh(x)
+            return not allk or sum(1 for k in ks if owner[k] != slug) / len(allk) < 0.3
+        return ok
+    dropped = 0
+    for slug, (bl, faq) in built.items():
+        ok = ok_for(slug)
+        for b in bl:
+            if b['t'] != 'list': continue
+            new = []
+            for it in b['items']:
+                if it[0].get('h'): new.append(it); continue
+                ss = sents(it[0]['t']); kept = [x for x in ss if ok(x)]; dropped += len(ss) - len(kept)
+                t = ' '.join(kept)
+                if len(t) >= 25: new.append([{'t': t}])
+            b['items'] = new
+        faq[:] = [(q, ' '.join(x for x in sents(a) if ok(x))) for q, a in faq]; faq[:] = [(q, a) for q, a in faq if len(a) >= 60]
+        i = 0; out = []
+        for j, b in enumerate(bl):  # a heading with nothing under it goes
+            if b['t'] == 'h' and (j + 1 >= len(bl) or bl[j + 1]['t'] == 'h' or (bl[j + 1]['t'] == 'list' and not bl[j + 1]['items'])): continue
+            if b['t'] == 'list' and not b['items']: continue
+            out.append(b)
+        bl[:] = out
+    print('shared sentences removed from the lower-priority pages:', dropped)
+
+
 def main():
     for p in glob.glob(f'{LOCAL}/*.json'):
         j = json.load(open(p, encoding='utf-8')); ch = False
         if any(b.get('gen') == G for b in j.get('blocks', [])): j['blocks'] = [b for b in j['blocks'] if b.get('gen') != G]; ch = True
         if any(f.get('gen') == G for f in j.get('faq', [])): j['faq'] = [f for f in j['faq'] if f.get('gen') != G]; ch = True
         if ch: T.save(os.path.basename(p)[:-5], j)
-    wrote = nfaq = 0; skipped = []; quarantined = []; thin = []
+    wrote = nfaq = 0; skipped = []; quarantined = []; thin = []; built = {}
     for f in sorted(glob.glob(f'{NOTES}/*{SFX}')):
         slug = os.path.basename(f)[:-len(SFX)]
         if slug in QUARANTINE: quarantined.append(slug); continue
         if not T.exists(slug): skipped.append(slug); continue
-        bl, faq = build(slug, open(f, encoding='utf-8').read())
+        built[slug] = build(slug, open(f, encoding='utf-8').read())
+    dedupe(built)
+    for slug, (bl, faq) in sorted(built.items()):
         if len([b for b in bl if b['t'] == 'h']) < 3: thin.append(slug); continue
         j = T.load(slug); j['blocks'] = j.get('blocks', []) + bl; j.setdefault('slug', slug)
         have = {x['q'] for x in j.get('faq', [])}
