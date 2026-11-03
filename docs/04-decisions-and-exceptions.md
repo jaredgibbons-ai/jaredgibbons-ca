@@ -459,3 +459,9 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 - **Notes that correct an archive/page premise (published, flagged for Jared):** Hemlock is not in Mission (FVRD Electoral Area C, unincorporated); Summit Middle School is at 1450 Parkway Boulevard (Westwood Plateau); Chilliwack Bylaw 3055 conflict still open and shown as not confirmed.
 - **Jared approved (2026-11-03):** use the new words, and rewrite archive wording on the remaining low-scoring pages.
 - **Tests:** `uq` guard added. 54 pass.
+
+## D-87 — Archive paragraphs rewritten on the 16 lowest pages; shared facts kept on one page (Jared approved, 2026-11-03)
+- **Shared facts:** `build_uniqueness.py` now keeps a fact on one page only when several notes carry it (owner = area page, then guide, houses, condos/townhomes), at 8-word level; 1,048 repeated sentences removed from the lower-priority pages. Pages under 0.70: 144 to 117.
+- **Rewrites:** 240 plain-text archive paragraphs on the 16 pages under 0.60 (Ladner and Tsawwassen houses/condos/townhomes, Sardis, Chilliwack, Surrey condos, two Maple Ridge guides, Langley and Cloverdale farms, Holly) rewritten with the same facts, numbers and instructions. `tools/apply_archive_rewrites.py` applies `docs/review/archive-rewrites/<slug>.json` (old and new text kept) behind guards: the page text must still equal "old", all numbers kept and none added, 60-150% length, no 8 copied words, no markup. All 240 passed.
+- **Left as archived on purpose:** copyright lines, board names, official body names and the bio claims (Medallion, $500M, raised on a farm) so they stay identical everywhere.
+- **Result:** whole site 109 of 1,107 pages under 0.70 (was 531 at the start of the day); none under 0.50. Of the 109, about 70 are at 0.65-0.70. The rest will come from Jared's area answers and photos. 54 tests pass.
