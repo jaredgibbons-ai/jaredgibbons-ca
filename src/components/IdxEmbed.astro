@@ -9,8 +9,8 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/recip/tmpl~v2
 <section class="section section--cream section--tight" aria-label={label}>
   <div class="wrap">
     <div class="idx" data-idx-src={src} data-idx-id={id}>
-      <noscript><p class="notice">Live MLS® listings need JavaScript. <a href="/recip.html">Search Listings</a></p></noscript>
     </div>
+    <noscript><p class="notice">Live MLS® listings need JavaScript. <a href="/recip.html">Search Listings</a></p></noscript>
     <p class="notice idx__fallback" hidden>The live listings did not load. <a href="/recip.html">Search Listings</a></p>
   </div>
 </section>
@@ -23,8 +23,10 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/recip/tmpl~v2
       if (started) return; started = true;
       const s = document.createElement('script');
       s.id = 'mrpscript'; s.async = true; s.src = box.dataset.idxSrc!;
+      const giveUp = () => { if (fb && ![...box.children].some((c) => c !== s)) { fb.hidden = false; box.hidden = true; } };
+      s.onerror = giveUp;
       box.appendChild(s);
-      setTimeout(() => { if (box.children.length <= 1 && fb) { fb.hidden = false; box.hidden = true; } }, 10000);
+      setTimeout(giveUp, 10000);
     };
     if ('IntersectionObserver' in window) {
       const io = new IntersectionObserver((e) => { if (e.some((x) => x.isIntersecting)) { io.disconnect(); load(); } }, { rootMargin: '400px 0px' });

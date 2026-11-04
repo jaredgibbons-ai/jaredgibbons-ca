@@ -42,7 +42,14 @@ def main():
             pages[slug] = sid
     for slug, sid in NAME_MATCH.items():
         pages.setdefault(slug, sid)
-    pending = [{'name': r[0], 'id': str(r[1]), 'address': r[3]} for r in new]
+    pending = []
+    for r in new:
+        slug = re.sub(r'\.html$', '', (r[3] or '').strip().lstrip('/'))
+        lp = os.path.join(ROOT, 'src/data/local', slug + '.json')
+        if os.path.exists(lp) and json.load(open(lp)).get('new_page') and any(b.get('t') == 'grid' for b in json.load(open(lp))['blocks']):
+            pages[slug] = str(r[1])
+        else:
+            pending.append({'name': r[0], 'id': str(r[1]), 'address': r[3]})
     ids = collections.Counter(pages.values())
     dup = [i for i, n in ids.items() if n > 1]
     out = {'account': ACCOUNT, 'pages': dict(sorted(pages.items())), 'pending': pending}
