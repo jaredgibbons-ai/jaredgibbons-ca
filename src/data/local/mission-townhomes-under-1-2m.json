@@ -1,49 +1,44 @@
 {
-  "status": "draft",
-  "slug": "mission-townhomes-under-1-2m",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: mission.ca",
-            "h": "https://www.mission.ca/services/property-taxes"
+            "h": "https://www.mission.ca/services/property-taxes",
+            "t": "Source: mission.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
-      "q": "What does \"under $1.2M\" actually cover on this page?",
-      "a": "A City of Mission–wide townhome feed with a $1.2M price ceiling, spanning the board sub-areas \"Mission\" and \"Mission-West\" on its first page — and, at reading, including detached-form homes inside strata complexes such as Heritage Park Place, so check each listing's form rather than assuming townhouse construction.",
-      "gen": "muse"
-    },
-    {
-      "q": "What is the median price of a Mission townhome?",
       "a": "SnapStats publishes no townhome-only median — its attached split is \"Condos & Townhomes\" combined, at community level only: Mission's combined median was $430,000 in September 2026 on 10 sales (it was $642,500 in August on 12 sales, so treat it as volatile small-count data), and no under-$1.2M band median exists in the source (as of September 2026, Source: SnapStats FVR/GVR September 2026 report).",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "What is the median price of a Mission townhome?"
     },
     {
-      "q": "Which schools serve Mission townhome areas?",
       "a": "SD75 schools confirmed by name and address against the BC Ministry K-12 file include Mission Senior Secondary, Hatzic and École Heritage Park middle schools, and elementaries such as Mission Central, Windebank, Albert McMahon and Christine Morrison — but catchments are address-based and no Mission catchment lookup is on record, so confirm the exact address with the district (~/workspace/area-research-2026-11/education/work/bc_k12_schools.csv, read 2026-11-01).",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Which schools serve Mission townhome areas?"
     },
     {
-      "q": "When are Mission property taxes due, and what is the penalty?",
       "a": "For 2026, City of Mission property taxes were due Thursday, July 2, 2026, and a 10% penalty was added to any current balances outstanding, including unclaimed home owner grants, on July 3, 2026.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "When are Mission property taxes due, and what is the penalty?"
     }
-  ]
+  ],
+  "slug": "mission-townhomes-under-1-2m",
+  "status": "draft",
+  "updated": "2026-11-01"
 }

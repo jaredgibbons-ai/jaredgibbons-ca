@@ -557,7 +557,7 @@
         ],
         [
           {
-            "t": "Guide feed snapshot (not a statistic): four cards at reading, all labelled West Central — a top-floor condo at 1203 11980 222 Street, a rancher at 12130 223 Street, a 1-bed condo at 225 12109 223 Street, and a townhouse at 21526 Mayo Place. The exact feed filter criteria beyond those labelled cards: Not verified."
+            "t": "The exact feed filter criteria beyond those labelled cards: Not verified."
           }
         ],
         [
@@ -1168,19 +1168,19 @@
       "t": "list"
     },
     {
-      "t": "h",
+      "gen": "sold",
       "level": 2,
-      "text": "West Central home prices: what sold, November 2025 to October 2026",
-      "gen": "sold"
+      "t": "h",
+      "text": "West Central home prices: what sold, November 2025 to October 2026"
     },
     {
+      "gen": "sold",
       "t": "p",
-      "text": "98 condos sold in West Central with a median price of $445,950 (the middle half sold between $390,000 and $515,000), taking a median of 26 days to sell at 97.7% of the last list price; 10% sold above list. They had a median $534 per square foot, a median year built of 2015 and a median strata fee of $363 a month. 38 townhomes sold in West Central with a median price of $615,000 (the middle half sold between $526,250 and $674,500), taking a median of 42 days to sell at 97.7% of the last list price; 11% sold above list. They had a median $458 per square foot, a median year built of 1989 and a median strata fee of $413 a month.",
-      "gen": "sold"
+      "text": "98 condos sold in West Central with a median price of $445,950 (the middle half sold between $390,000 and $515,000), taking a median of 26 days to sell at 97.7% of the last list price; 10% sold above list. They had a median $534 per square foot, a median year built of 2015 and a median strata fee of $363 a month. 38 townhomes sold in West Central with a median price of $615,000 (the middle half sold between $526,250 and $674,500), taking a median of 42 days to sell at 97.7% of the last list price; 11% sold above list. They had a median $458 per square foot, a median year built of 1989 and a median strata fee of $413 a month."
     },
     {
-      "t": "table",
       "caption": "West Central: what sold, by home type",
+      "gen": "sold",
       "head": [
         "Home type",
         "Sold",
@@ -1208,11 +1208,11 @@
         ]
       ],
       "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
-      "gen": "sold"
+      "t": "table"
     },
     {
-      "t": "table",
       "caption": "West Central: condos sold by quarter",
+      "gen": "sold",
       "head": [
         "Period",
         "Sold",
@@ -1241,7 +1241,7 @@
         ]
       ],
       "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
-      "gen": "sold"
+      "t": "table"
     }
   ],
   "breadcrumbs": [
@@ -1316,14 +1316,14 @@
       "q": "Era's unit counts don't agree between websites — which is right?"
     },
     {
+      "a": "98 condos sold in West Central between November 1, 2025 to October 22, 2026, with a median price of $445,950.",
       "gen": "sold",
-      "q": "What did condos in West Central sell for?",
-      "a": "98 condos sold in West Central between November 1, 2025 to October 22, 2026, with a median price of $445,950."
+      "q": "What did condos in West Central sell for?"
     },
     {
+      "a": "The median was 26 days from listing to sale, and homes sold at a median 97.7% of the last list price (10% sold above list), for sales November 1, 2025 to October 22, 2026.",
       "gen": "sold",
-      "q": "How long do condos take to sell in West Central?",
-      "a": "The median was 26 days from listing to sale, and homes sold at a median 97.7% of the last list price (10% sold above list), for sales November 1, 2025 to October 22, 2026."
+      "q": "How long do condos take to sell in West Central?"
     }
   ],
   "faq_heading": "West Central condos and townhomes: your questions answered",

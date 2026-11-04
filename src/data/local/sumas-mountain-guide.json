@@ -1,19 +1,19 @@
 {
   "blocks": [
     {
-      "t": "h",
+      "gen": "snapstats",
       "level": 2,
-      "text": "How Sumas Mountain compares with the rest of its city",
-      "gen": "snapstats"
+      "t": "h",
+      "text": "How Sumas Mountain compares with the rest of its city"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Sumas Mountain against its whole city, October 2026: share of listings and sales, sales ratio and rank.",
-      "gen": "snapstats"
+      "text": "Sumas Mountain against its whole city, October 2026: share of listings and sales, sales ratio and rank."
     },
     {
-      "t": "table",
       "caption": "Sumas Mountain against the whole city, October 2026",
+      "gen": "snapstats",
       "head": [
         "Home type",
         "Share of city listings",
@@ -31,139 +31,139 @@
         ]
       ],
       "source": "Source: MLS® data from the Greater Vancouver REALTORS® and the Fraser Valley Real Estate Board, compiled by SnapStats®. Rank counts only communities with at least ten homes listed. Falling listings with steady sales mean homes are being absorbed faster; rising listings with steady sales mean more choice for buyers. A sellers’ best bet is a community where homes sell quickly against the number listed; a buyers’ best bet is the reverse. Sales ratio is homes sold divided by homes listed. On the reports’ own scale under 12% is a buyers’ market, 12% to 20% is balanced and over 20% is a sellers’ market. With fewer than ten homes listed, one sale moves the ratio a long way, so treat it as a rough signal.",
-      "gen": "snapstats"
+      "t": "table"
     },
     {
+      "gen": "snapstats",
       "t": "p",
-      "text": "Between June 2026 and October 2026, detached houses: listings fell from 4 in June to 3 in October (−25.0%), and it took 0.3% of the city’s 287 sales over the period.",
-      "gen": "snapstats"
+      "text": "Between June 2026 and October 2026, detached houses: listings fell from 4 in June to 3 in October (−25.0%), and it took 0.3% of the city’s 287 sales over the period."
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "More Abbotsford real estate",
       "gen": "communitylinks",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "More Abbotsford real estate"
     },
     {
-      "t": "list",
+      "gen": "communitylinks",
       "items": [
         [
           {
-            "t": "Abbotsford homes for sale",
-            "h": "/abbotsford-homes-for-sale.html"
+            "h": "/abbotsford-homes-for-sale.html",
+            "t": "Abbotsford homes for sale"
           }
         ],
         [
           {
-            "t": "Abbotsford real estate market stats",
-            "h": "/abbotsford-real-estate-market-stats.html"
+            "h": "/abbotsford-real-estate-market-stats.html",
+            "t": "Abbotsford real estate market stats"
           }
         ],
         [
           {
-            "t": "Abbotsford houses for sale",
-            "h": "/abbotsford-houses-for-sale.html"
+            "h": "/abbotsford-houses-for-sale.html",
+            "t": "Abbotsford houses for sale"
           }
         ],
         [
           {
-            "t": "Abbotsford condos for sale",
-            "h": "/abbotsford-condos-for-sale.html"
+            "h": "/abbotsford-condos-for-sale.html",
+            "t": "Abbotsford condos for sale"
           }
         ],
         [
           {
-            "t": "Abbotsford townhomes for sale",
-            "h": "/abbotsford-townhomes-for-sale.html"
+            "h": "/abbotsford-townhomes-for-sale.html",
+            "t": "Abbotsford townhomes for sale"
           }
         ],
         [
           {
-            "t": "Sell my house in Abbotsford",
-            "h": "/sell-my-house-in-abbotsford.html"
+            "h": "/sell-my-house-in-abbotsford.html",
+            "t": "Sell my house in Abbotsford"
           }
         ],
         [
           {
-            "t": "Schools in Abbotsford",
-            "h": "/schools-in-abbotsford-bc.html"
+            "h": "/schools-in-abbotsford-bc.html",
+            "t": "Schools in Abbotsford"
           }
         ],
         [
           {
-            "t": "Sumas Mountain homes and market figures",
-            "h": "/sumas-mountain.html"
+            "h": "/sumas-mountain.html",
+            "t": "Sumas Mountain homes and market figures"
           }
         ],
         [
           {
-            "t": "Sumas Prairie real estate",
-            "h": "/sumas-prairie.html"
+            "h": "/sumas-prairie.html",
+            "t": "Sumas Prairie real estate"
           }
         ],
         [
           {
-            "t": "Abbotsford East real estate",
-            "h": "/abbotsford-east.html"
+            "h": "/abbotsford-east.html",
+            "t": "Abbotsford East real estate"
           }
         ],
         [
           {
-            "t": "Abbotsford West real estate",
-            "h": "/abbotsford-west.html"
+            "h": "/abbotsford-west.html",
+            "t": "Abbotsford West real estate"
           }
         ],
         [
           {
-            "t": "Aberdeen real estate",
-            "h": "/aberdeen.html"
+            "h": "/aberdeen.html",
+            "t": "Aberdeen real estate"
           }
         ],
         [
           {
-            "t": "Bradner real estate",
-            "h": "/bradner.html"
+            "h": "/bradner.html",
+            "t": "Bradner real estate"
           }
         ],
         [
           {
-            "t": "Central Abbotsford real estate",
-            "h": "/central-abbotsford.html"
+            "h": "/central-abbotsford.html",
+            "t": "Central Abbotsford real estate"
           }
         ],
         [
           {
-            "t": "Matsqui real estate",
-            "h": "/matsqui.html"
+            "h": "/matsqui.html",
+            "t": "Matsqui real estate"
           }
         ],
         [
           {
-            "t": "Poplar real estate",
-            "h": "/poplar.html"
+            "h": "/poplar.html",
+            "t": "Poplar real estate"
           }
         ]
       ],
-      "gen": "communitylinks",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Condo buildings in Sumas Mountain",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Streets, schools and getting around Sumas Mountain",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Condo buildings in Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Sumas Mountain"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -196,18 +196,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect condo buyers in Sumas Mountain",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect condo buyers in Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -255,18 +255,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Sumas Mountain",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -294,168 +294,168 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC condo buying rules",
-            "h": "/bc-condo-buying-rules.html"
+            "h": "/bc-condo-buying-rules.html",
+            "t": "BC condo buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the condo notes on Sumas Mountain",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the condo notes on Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "fvrd.ca · sumas mountain",
-            "h": "http://www.fvrd.ca/EN/main/parks-recreation/parks-trails/sumas-mountain.html"
+            "h": "http://www.fvrd.ca/EN/main/parks-recreation/parks-trails/sumas-mountain.html",
+            "t": "fvrd.ca · sumas mountain"
           }
         ],
         [
           {
-            "t": "letstalkabbotsford.ca · mckee trail strategy",
-            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy"
+            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy",
+            "t": "letstalkabbotsford.ca · mckee trail strategy"
           }
         ],
         [
           {
-            "t": "letstalkabbotsford.ca · new park dianne brook ave",
-            "h": "https://letstalkabbotsford.ca/new-park-dianne-brook-ave"
+            "h": "https://letstalkabbotsford.ca/new-park-dianne-brook-ave",
+            "t": "letstalkabbotsford.ca · new park dianne brook ave"
           }
         ],
         [
           {
-            "t": "mountain.abbyschools.ca · schoolplan",
-            "h": "https://mountain.abbyschools.ca/schoolplan/"
+            "h": "https://mountain.abbyschools.ca/schoolplan/",
+            "t": "mountain.abbyschools.ca · schoolplan"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=7"
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=7",
+            "t": "bctransit.com · route overview"
           }
         ],
         [
           {
-            "t": "abbotsford.civicweb.net · document",
-            "h": "https://abbotsford.civicweb.net/document/45965/"
+            "h": "https://abbotsford.civicweb.net/document/45965/",
+            "t": "abbotsford.civicweb.net · document"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · junction creek 36169 lower sumas mountain road",
-            "h": "https://www.bccondosandhomes.com/building/junction-creek-36169-lower-sumas-mountain-road"
+            "h": "https://www.bccondosandhomes.com/building/junction-creek-36169-lower-sumas-mountain-road",
+            "t": "bccondosandhomes.com · junction creek 36169 lower sumas mountain road"
           }
         ],
         [
           {
-            "t": "pushormitchell.com · updates to strata requirements depreciation repo",
-            "h": "https://pushormitchell.com/2024/05/16/updates-to-strata-requirements-depreciation-reports/"
+            "h": "https://pushormitchell.com/2024/05/16/updates-to-strata-requirements-depreciation-reports/",
+            "t": "pushormitchell.com · updates to strata requirements depreciation repo"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · zoning bylaw 2014",
-            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014"
+            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014",
+            "t": "abbotsford.ca · zoning bylaw 2014"
           }
         ],
         [
           {
-            "t": "laws.abbotsford.ca · 2025bschedulea",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea"
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea",
+            "t": "laws.abbotsford.ca · 2025bschedulea"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · Zoning Bylaw Updates Overview 2025",
-            "h": "https://www.abbotsford.ca/sites/default/files/2026-01/Zoning%20Bylaw%20Updates%20Overview%202025.pdf"
+            "h": "https://www.abbotsford.ca/sites/default/files/2026-01/Zoning%20Bylaw%20Updates%20Overview%202025.pdf",
+            "t": "abbotsford.ca · Zoning Bylaw Updates Overview 2025"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "paxlaw.ca · bc property transfer tax exemptions guide",
-            "h": "https://www.paxlaw.ca/blog/real-estate-law/bc-property-transfer-tax-exemptions-guide/"
+            "h": "https://www.paxlaw.ca/blog/real-estate-law/bc-property-transfer-tax-exemptions-guide/",
+            "t": "paxlaw.ca · bc property transfer tax exemptions guide"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Townhome complexes in Sumas Mountain",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "A zero-listing month is a thin-market fact, not a no-stock fact.",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Junction Creek — 36169 Lower Sumas Mountain Road. STRATA (townhouse-form strata complex at the foot of the mountain)",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Townhome complexes in Sumas Mountain"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "Unit count: Not confirmed.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "A zero-listing month is a thin-market fact, not a no-stock fact."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sage at Auguston (The Sage) — 4401 Blauson Boulevard, Auguston. STRATA — freehold strata, strata plan BCS2034, built 2007, 120 units in 3 storeys",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Junction Creek — 36169 Lower Sumas Mountain Road. STRATA (townhouse-form strata complex at the foot of the mountain)"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "A building-data source drawing on MLS and public strata records records: built 2007, 120 homes in 3 storeys, wood-frame construction, Title: Freehold Strata, strata plan BCS2034, managed by Advantage Property Management. Pet wording in listings varies by unit (one Royal LePage listing states a combination rule of cats/small dogs) — listing-stated, the filed bylaws govern.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Unit count: Not confirmed."
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Sumas Mountain",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sage at Auguston (The Sage) — 4401 Blauson Boulevard, Auguston. STRATA — freehold strata, strata plan BCS2034, built 2007, 120 units in 3 storeys"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "pos": "end",
+      "t": "p",
+      "text": "A building-data source drawing on MLS and public strata records records: built 2007, 120 homes in 3 storeys, wood-frame construction, Title: Freehold Strata, strata plan BCS2034, managed by Advantage Property Management. Pet wording in listings varies by unit (one Royal LePage listing states a combination rule of cats/small dogs) — listing-stated, the filed bylaws govern."
+    },
+    {
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Sumas Mountain"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -463,18 +463,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect townhome buyers in Sumas Mountain",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect townhome buyers in Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -502,18 +502,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Sumas Mountain",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -531,130 +531,130 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC townhome buying rules",
-            "h": "/bc-townhome-buying-rules.html"
+            "h": "/bc-townhome-buying-rules.html",
+            "t": "BC townhome buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the townhome notes on Sumas Mountain",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the townhome notes on Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "fvrd.ca · sumas mountain",
-            "h": "http://www.fvrd.ca/EN/main/parks-recreation/parks-trails/sumas-mountain.html"
+            "h": "http://www.fvrd.ca/EN/main/parks-recreation/parks-trails/sumas-mountain.html",
+            "t": "fvrd.ca · sumas mountain"
           }
         ],
         [
           {
-            "t": "letstalkabbotsford.ca · mckee trail strategy",
-            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy"
+            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy",
+            "t": "letstalkabbotsford.ca · mckee trail strategy"
           }
         ],
         [
           {
-            "t": "letstalkabbotsford.ca · new park dianne brook ave",
-            "h": "https://letstalkabbotsford.ca/new-park-dianne-brook-ave"
+            "h": "https://letstalkabbotsford.ca/new-park-dianne-brook-ave",
+            "t": "letstalkabbotsford.ca · new park dianne brook ave"
           }
         ],
         [
           {
-            "t": "mountain.abbyschools.ca · schoolplan",
-            "h": "https://mountain.abbyschools.ca/schoolplan/"
+            "h": "https://mountain.abbyschools.ca/schoolplan/",
+            "t": "mountain.abbyschools.ca · schoolplan"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=7"
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=7",
+            "t": "bctransit.com · route overview"
           }
         ],
         [
           {
-            "t": "bccondosandhomes.com · junction creek 36169 lower sumas mountain road",
-            "h": "https://www.bccondosandhomes.com/building/junction-creek-36169-lower-sumas-mountain-road"
+            "h": "https://www.bccondosandhomes.com/building/junction-creek-36169-lower-sumas-mountain-road",
+            "t": "bccondosandhomes.com · junction creek 36169 lower sumas mountain road"
           }
         ],
         [
           {
-            "t": "abbotsford.civicweb.net · document",
-            "h": "https://abbotsford.civicweb.net/document/45965/"
+            "h": "https://abbotsford.civicweb.net/document/45965/",
+            "t": "abbotsford.civicweb.net · document"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · 2025 07 10 City Page",
-            "h": "https://www.abbotsford.ca/sites/default/files/2025-07/2025-07-10%20City%20Page.pdf"
+            "h": "https://www.abbotsford.ca/sites/default/files/2025-07/2025-07-10%20City%20Page.pdf",
+            "t": "abbotsford.ca · 2025 07 10 City Page"
           }
         ],
         [
           {
-            "t": "pushormitchell.com · updates to strata requirements depreciation repo",
-            "h": "https://pushormitchell.com/2024/05/16/updates-to-strata-requirements-depreciation-reports/"
+            "h": "https://pushormitchell.com/2024/05/16/updates-to-strata-requirements-depreciation-reports/",
+            "t": "pushormitchell.com · updates to strata requirements depreciation repo"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · zoning bylaw 2014",
-            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014"
+            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014",
+            "t": "abbotsford.ca · zoning bylaw 2014"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · Zoning Bylaw Updates Overview 2025",
-            "h": "https://www.abbotsford.ca/sites/default/files/2026-01/Zoning%20Bylaw%20Updates%20Overview%202025.pdf"
+            "h": "https://www.abbotsford.ca/sites/default/files/2026-01/Zoning%20Bylaw%20Updates%20Overview%202025.pdf",
+            "t": "abbotsford.ca · Zoning Bylaw Updates Overview 2025"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · your current tax notice",
-            "h": "https://www.abbotsford.ca/city-services/property-taxes/your-current-tax-notice"
+            "h": "https://www.abbotsford.ca/city-services/property-taxes/your-current-tax-notice",
+            "t": "abbotsford.ca · your current tax notice"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 2,
-      "text": "Lots and land in Sumas Mountain",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Bare-land strata",
-      "gen": "tn",
-      "pos": "end"
+      "text": "Lots and land in Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "tn",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Bare-land strata"
+    },
+    {
+      "gen": "tn",
       "items": [
         [
           {
@@ -662,18 +662,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Fee-simple land",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Fee-simple land"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -706,18 +706,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Development proposal",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Development proposal"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -725,18 +725,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Streets, schools and getting around Sumas Mountain",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -754,18 +754,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Local rules that affect land buyers in Sumas Mountain",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect land buyers in Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -803,18 +803,18 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Good to know about Sumas Mountain",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
@@ -837,136 +837,136 @@
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
+      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
+            "h": "/bc-land-buying-rules.html",
+            "t": "BC land buying rules"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "tn",
       "level": 3,
-      "text": "Sources for the land notes on Sumas Mountain",
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the land notes on Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "tn",
       "items": [
         [
           {
-            "t": "fvrd.ca · sumas mountain",
-            "h": "http://www.fvrd.ca/EN/main/parks-recreation/parks-trails/sumas-mountain.html"
+            "h": "http://www.fvrd.ca/EN/main/parks-recreation/parks-trails/sumas-mountain.html",
+            "t": "fvrd.ca · sumas mountain"
           }
         ],
         [
           {
-            "t": "letstalkabbotsford.ca · projects",
-            "h": "https://letstalkabbotsford.ca/projects"
+            "h": "https://letstalkabbotsford.ca/projects",
+            "t": "letstalkabbotsford.ca · projects"
           }
         ],
         [
           {
-            "t": "letstalkabbotsford.ca · mckee trail strategy",
-            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy"
+            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy",
+            "t": "letstalkabbotsford.ca · mckee trail strategy"
           }
         ],
         [
           {
-            "t": "letstalkabbotsford.ca · new park dianne brook ave",
-            "h": "https://letstalkabbotsford.ca/new-park-dianne-brook-ave"
+            "h": "https://letstalkabbotsford.ca/new-park-dianne-brook-ave",
+            "t": "letstalkabbotsford.ca · new park dianne brook ave"
           }
         ],
         [
           {
-            "t": "mountain.abbyschools.ca · schoolplan",
-            "h": "https://mountain.abbyschools.ca/schoolplan/"
+            "h": "https://mountain.abbyschools.ca/schoolplan/",
+            "t": "mountain.abbyschools.ca · schoolplan"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=7"
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=7",
+            "t": "bctransit.com · route overview"
           }
         ],
         [
           {
-            "t": "abbotsford.civicweb.net · document",
-            "h": "https://abbotsford.civicweb.net/document/45965/"
+            "h": "https://abbotsford.civicweb.net/document/45965/",
+            "t": "abbotsford.civicweb.net · document"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · zoning bylaw 2014",
-            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014"
+            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014",
+            "t": "abbotsford.ca · zoning bylaw 2014"
           }
         ],
         [
           {
-            "t": "laws.abbotsford.ca · 2025bschedulea",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea"
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea",
+            "t": "laws.abbotsford.ca · 2025bschedulea"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · 2025 07 10 City Page",
-            "h": "https://www.abbotsford.ca/sites/default/files/2025-07/2025-07-10%20City%20Page.pdf"
+            "h": "https://www.abbotsford.ca/sites/default/files/2025-07/2025-07-10%20City%20Page.pdf",
+            "t": "abbotsford.ca · 2025 07 10 City Page"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · form b information certificate",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/renting-buying-selling/buying-and-selling-strata/paperwork-for-buyers-and-sellers/form-b-information-certificate",
+            "t": "www2.gov.bc.ca · form b information certificate"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · evacuation orders modified additional properties",
-            "h": "https://www.abbotsford.ca/city-hall/news-media/evacuation-orders-modified-additional-properties-sumas-prairie"
+            "h": "https://www.abbotsford.ca/city-hall/news-media/evacuation-orders-modified-additional-properties-sumas-prairie",
+            "t": "abbotsford.ca · evacuation orders modified additional properties"
           }
         ]
       ],
-      "gen": "tn",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 2,
-      "text": "Acreage and rural land in Sumas Mountain",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The ground in Sumas Mountain",
-      "gen": "acre",
-      "pos": "end"
+      "text": "Acreage and rural land in Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "acre",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The ground in Sumas Mountain"
+    },
+    {
+      "gen": "acre",
       "items": [
         [
           {
@@ -984,18 +984,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Streets, schools and getting around Sumas Mountain",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -1028,18 +1028,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Local rules that affect acreage buyers in Sumas Mountain",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect acreage buyers in Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -1047,160 +1047,155 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Good to know about Sumas Mountain",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
-        [
-          {
-            "t": "The page's \"1,512-hectare\" park size figure was likewise not confirmed on the FVRD page as read: Not verified."
-          }
-        ],
         [
           {
             "t": "The same mountain has two second-penalty dates: A City-side owner who misses July 2 takes the second 5% on September 16; a rural-side owner takes it on October 31. Neighbours a road apart can be on different tax calendars, different plans and different servicing — the jurisdiction line is the first fact on any mountain parcel."
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "acre",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below.",
-      "gen": "acre",
-      "pos": "end"
+      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "BC acreage buying rules",
-            "h": "/bc-acreage-buying-rules.html"
+            "h": "/bc-acreage-buying-rules.html",
+            "t": "BC acreage buying rules"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Sources for the acreage notes on Sumas Mountain",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the acreage notes on Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "fvrd.ca · sumas mountain",
-            "h": "http://www.fvrd.ca/EN/main/parks-recreation/parks-trails/sumas-mountain.html"
+            "h": "http://www.fvrd.ca/EN/main/parks-recreation/parks-trails/sumas-mountain.html",
+            "t": "fvrd.ca · sumas mountain"
           }
         ],
         [
           {
-            "t": "letstalkabbotsford.ca · projects",
-            "h": "https://letstalkabbotsford.ca/projects"
+            "h": "https://letstalkabbotsford.ca/projects",
+            "t": "letstalkabbotsford.ca · projects"
           }
         ],
         [
           {
-            "t": "letstalkabbotsford.ca · mckee trail strategy",
-            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy"
+            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy",
+            "t": "letstalkabbotsford.ca · mckee trail strategy"
           }
         ],
         [
           {
-            "t": "letstalkabbotsford.ca · new park dianne brook ave",
-            "h": "https://letstalkabbotsford.ca/new-park-dianne-brook-ave"
+            "h": "https://letstalkabbotsford.ca/new-park-dianne-brook-ave",
+            "t": "letstalkabbotsford.ca · new park dianne brook ave"
           }
         ],
         [
           {
-            "t": "mountain.abbyschools.ca · schoolplan",
-            "h": "https://mountain.abbyschools.ca/schoolplan/"
+            "h": "https://mountain.abbyschools.ca/schoolplan/",
+            "t": "mountain.abbyschools.ca · schoolplan"
           }
         ],
         [
           {
-            "t": "abbyschools.ca · catchments",
-            "h": "https://www.abbyschools.ca/schools/catchments"
+            "h": "https://www.abbyschools.ca/schools/catchments",
+            "t": "abbyschools.ca · catchments"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · parks playgrounds",
-            "h": "https://www.abbotsford.ca/parks-playgrounds"
+            "h": "https://www.abbotsford.ca/parks-playgrounds",
+            "t": "abbotsford.ca · parks playgrounds"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=7"
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=7",
+            "t": "bctransit.com · route overview"
           }
         ],
         [
           {
-            "t": "abbotsford.civicweb.net · document",
-            "h": "https://abbotsford.civicweb.net/document/45965/"
+            "h": "https://abbotsford.civicweb.net/document/45965/",
+            "t": "abbotsford.civicweb.net · document"
           }
         ],
         [
           {
-            "t": "abbotsford.ca",
-            "h": "https://www.abbotsford.ca/sites/default/files/2025-07/2025-07-10"
+            "h": "https://www.abbotsford.ca/sites/default/files/2025-07/2025-07-10",
+            "t": "abbotsford.ca"
           }
         ],
         [
           {
-            "t": "laws.abbotsford.ca · 2025bschedulea",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea"
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea",
+            "t": "laws.abbotsford.ca · 2025bschedulea"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · zoning bylaw 2014",
-            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014"
+            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014",
+            "t": "abbotsford.ca · zoning bylaw 2014"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 2,
-      "text": "Mobile and manufactured homes in Sumas Mountain",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "The park-form stock that does exist here is one bare-land strata of detached houses — owned-land stock in strata form, not a pad park.",
-      "gen": "mh",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The parks and communities",
-      "gen": "mh",
-      "pos": "end"
+      "text": "Mobile and manufactured homes in Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "mh",
+      "pos": "end",
+      "t": "p",
+      "text": "The park-form stock that does exist here is one bare-land strata of detached houses — owned-land stock in strata form, not a pad park."
+    },
+    {
+      "gen": "mh",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The parks and communities"
+    },
+    {
+      "gen": "mh",
       "items": [
         [
           {
@@ -1213,18 +1208,18 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Streets, schools and getting around Sumas Mountain",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Streets, schools and getting around Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
@@ -1242,18 +1237,18 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Local rules that affect park-home buyers in Sumas Mountain",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect park-home buyers in Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
@@ -1271,18 +1266,18 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Good to know about Sumas Mountain",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Good to know about Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
@@ -1300,130 +1295,130 @@
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "mh",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules for buying a home in a park (the pad tenancy, park-owner consent, pad-rent caps, the Manufactured Home Registry and park closures) are explained once, with sources, on the page linked below.",
-      "gen": "mh",
-      "pos": "end"
+      "text": "The BC rules for buying a home in a park (the pad tenancy, park-owner consent, pad-rent caps, the Manufactured Home Registry and park closures) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
-            "t": "BC mobile home buying rules",
-            "h": "/bc-mobile-home-buying-rules.html"
+            "h": "/bc-mobile-home-buying-rules.html",
+            "t": "BC mobile home buying rules"
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "mh",
       "level": 3,
-      "text": "Sources for the mobile-home notes on Sumas Mountain",
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the mobile-home notes on Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "mh",
       "items": [
         [
           {
-            "t": "fvrd.ca · sumas mountain",
-            "h": "http://www.fvrd.ca/EN/main/parks-recreation/parks-trails/sumas-mountain.html"
+            "h": "http://www.fvrd.ca/EN/main/parks-recreation/parks-trails/sumas-mountain.html",
+            "t": "fvrd.ca · sumas mountain"
           }
         ],
         [
           {
-            "t": "letstalkabbotsford.ca · projects",
-            "h": "https://letstalkabbotsford.ca/projects"
+            "h": "https://letstalkabbotsford.ca/projects",
+            "t": "letstalkabbotsford.ca · projects"
           }
         ],
         [
           {
-            "t": "letstalkabbotsford.ca · mckee trail strategy",
-            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy"
+            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy",
+            "t": "letstalkabbotsford.ca · mckee trail strategy"
           }
         ],
         [
           {
-            "t": "letstalkabbotsford.ca · new park dianne brook ave",
-            "h": "https://letstalkabbotsford.ca/new-park-dianne-brook-ave"
+            "h": "https://letstalkabbotsford.ca/new-park-dianne-brook-ave",
+            "t": "letstalkabbotsford.ca · new park dianne brook ave"
           }
         ],
         [
           {
-            "t": "mountain.abbyschools.ca · schoolplan",
-            "h": "https://mountain.abbyschools.ca/schoolplan/"
+            "h": "https://mountain.abbyschools.ca/schoolplan/",
+            "t": "mountain.abbyschools.ca · schoolplan"
           }
         ],
         [
           {
-            "t": "clayburn.abbyschools.ca · clayburn",
-            "h": "https://clayburn.abbyschools.ca/ourschool/codeofconduct/clayburn"
+            "h": "https://clayburn.abbyschools.ca/ourschool/codeofconduct/clayburn",
+            "t": "clayburn.abbyschools.ca · clayburn"
           }
         ],
         [
           {
-            "t": "abbyschools.ca · catchments",
-            "h": "https://www.abbyschools.ca/schools/catchments"
+            "h": "https://www.abbyschools.ca/schools/catchments",
+            "t": "abbyschools.ca · catchments"
           }
         ],
         [
           {
-            "t": "bctransit.com · route overview",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=7"
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=7",
+            "t": "bctransit.com · route overview"
           }
         ],
         [
           {
-            "t": "sumasfirstnation.com · sacred land returned to semath",
-            "h": "https://sumasfirstnation.com/press-releases/sacred-land-returned-to-semath/"
+            "h": "https://sumasfirstnation.com/press-releases/sacred-land-returned-to-semath/",
+            "t": "sumasfirstnation.com · sacred land returned to semath"
           }
         ],
         [
           {
-            "t": "abbotsford.civicweb.net · document",
-            "h": "https://abbotsford.civicweb.net/document/45965/"
+            "h": "https://abbotsford.civicweb.net/document/45965/",
+            "t": "abbotsford.civicweb.net · document"
           }
         ],
         [
           {
-            "t": "abbotsford.civicweb.net · document (2)",
-            "h": "https://abbotsford.civicweb.net/document/40562/"
+            "h": "https://abbotsford.civicweb.net/document/40562/",
+            "t": "abbotsford.civicweb.net · document (2)"
           }
         ],
         [
           {
-            "t": "abbotsford.ca · zoning bylaw 2014",
-            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014"
+            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014",
+            "t": "abbotsford.ca · zoning bylaw 2014"
           }
         ]
       ],
-      "gen": "mh",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "dx",
       "level": 2,
-      "text": "Duplexes and half duplexes in Sumas Mountain",
-      "gen": "dx",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "What a duplex looks like in Sumas Mountain",
-      "gen": "dx",
-      "pos": "end"
+      "text": "Duplexes and half duplexes in Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "dx",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "What a duplex looks like in Sumas Mountain"
+    },
+    {
+      "gen": "dx",
       "items": [
         [
           {
@@ -1431,18 +1426,18 @@
           }
         ]
       ],
-      "gen": "dx",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "dx",
       "level": 3,
-      "text": "Local rules that affect duplexes in Sumas Mountain",
-      "gen": "dx",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Local rules that affect duplexes in Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "dx",
       "items": [
         [
           {
@@ -1465,76 +1460,76 @@
           }
         ]
       ],
-      "gen": "dx",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "dx",
+      "pos": "end",
       "t": "p",
-      "text": "How a half duplex can legally be sold (strata duplex or fee-simple half duplex), the strata checks, and the tax points are explained once, with sources, on the page linked below.",
-      "gen": "dx",
-      "pos": "end"
+      "text": "How a half duplex can legally be sold (strata duplex or fee-simple half duplex), the strata checks, and the tax points are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "dx",
       "items": [
         [
           {
-            "t": "BC duplex and half-duplex buying rules",
-            "h": "/bc-duplex-half-duplex-buying-rules.html"
+            "h": "/bc-duplex-half-duplex-buying-rules.html",
+            "t": "BC duplex and half-duplex buying rules"
           }
         ]
       ],
-      "gen": "dx",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "dx",
       "level": 3,
-      "text": "Sources for the duplex notes on Sumas Mountain",
-      "gen": "dx",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the duplex notes on Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "dx",
       "items": [
         [
           {
-            "t": "abbotsford.ca · zoning bylaw 2014",
-            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014"
+            "h": "https://www.abbotsford.ca/city-services/bylaw-services/bylaw-listings/zoning-bylaw-2014",
+            "t": "abbotsford.ca · zoning bylaw 2014"
           }
         ],
         [
           {
-            "t": "laws.abbotsford.ca · 2025bschedulea",
-            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea"
+            "h": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2025bschedulea",
+            "t": "laws.abbotsford.ca · 2025bschedulea"
           }
         ]
       ],
-      "gen": "dx",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 2,
-      "text": "What's nearby Sumas Mountain",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "Transit",
-      "gen": "nb",
-      "pos": "end"
+      "text": "What's nearby Sumas Mountain"
     },
     {
-      "t": "list",
+      "gen": "nb",
+      "pos": "end",
+      "t": "p",
+      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+    },
+    {
+      "gen": "nb",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "Transit"
+    },
+    {
+      "gen": "nb",
       "items": [
         [
           {
@@ -1552,18 +1547,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Parks and recreation",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Parks and recreation"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1591,18 +1586,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Schools",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Schools"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1625,18 +1620,18 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Groceries and shopping",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Groceries and shopping"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
@@ -1644,25 +1639,26 @@
           }
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Measured walking and driving times",
-      "gen": "nb",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Measured walking and driving times"
     },
     {
-      "t": "table",
       "caption": "Measured on November 2, 2026 with OpenStreetMap routing (OSRM for driving, routed-foot for walking), from Auguston Traditional Elementary, 36367 Stephen Leacock Drive",
+      "gen": "nb",
       "head": [
         "To",
         "How",
         "Minutes",
         "Distance (km)"
       ],
+      "pos": "end",
       "rows": [
         [
           "Lower Sumas Mountain Park",
@@ -1677,179 +1673,178 @@
           "8.7"
         ]
       ],
-      "gen": "nb",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "nb",
       "level": 3,
-      "text": "Sources for what’s nearby",
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "bctransit.com · route overview",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=7"
-          }
-        ],
-        [
-          {
-            "t": "bctransit.com · route overview (2)",
-            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=31"
-          }
-        ],
-        [
-          {
-            "t": "abbotsford.ca · parks playgrounds",
-            "h": "https://www.abbotsford.ca/parks-playgrounds"
-          }
-        ],
-        [
-          {
-            "t": "studentsuccess.gov.bc.ca · in school district",
-            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/034"
-          }
-        ]
-      ],
-      "gen": "nb",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 2,
-      "text": "Sources",
-      "gen": "musefaq",
-      "pos": "end"
+      "text": "Sources for what’s nearby"
     },
     {
-      "t": "list",
+      "gen": "nb",
       "items": [
         [
           {
-            "t": "Source: letstalkabbotsford.ca",
-            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy"
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=7",
+            "t": "bctransit.com · route overview"
           }
         ],
         [
           {
-            "t": "Source: abbotsford.civicweb.net",
-            "h": "https://abbotsford.civicweb.net/document/40562/"
+            "h": "https://www.bctransit.com/central-fraser-valley/schedules-and-maps/route-overview/?route=31",
+            "t": "bctransit.com · route overview (2)"
+          }
+        ],
+        [
+          {
+            "h": "https://www.abbotsford.ca/parks-playgrounds",
+            "t": "abbotsford.ca · parks playgrounds"
+          }
+        ],
+        [
+          {
+            "h": "https://studentsuccess.gov.bc.ca/schools/in-school-district/034",
+            "t": "studentsuccess.gov.bc.ca · in school district"
           }
         ]
       ],
+      "pos": "end",
+      "t": "list"
+    },
+    {
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
+    },
+    {
+      "gen": "musefaq",
+      "items": [
+        [
+          {
+            "h": "https://letstalkabbotsford.ca/mckee-trail-strategy",
+            "t": "Source: letstalkabbotsford.ca"
+          }
+        ],
+        [
+          {
+            "h": "https://abbotsford.civicweb.net/document/40562/",
+            "t": "Source: abbotsford.civicweb.net"
+          }
+        ]
+      ],
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
+      "a": "No — no apartment-condo building was verified on the mountain, and attached inventory was 0 in September 2026. The strata choices that exist are detached-house bare-land strata (Straiton) and a townhouse complex at the foot (Junction Creek).",
       "gen": "tn",
-      "q": "Is there any condo tower or low-rise I can buy on Sumas Mountain?",
-      "a": "No — no apartment-condo building was verified on the mountain, and attached inventory was 0 in September 2026. The strata choices that exist are detached-house bare-land strata (Straiton) and a townhouse complex at the foot (Junction Creek)."
+      "q": "Is there any condo tower or low-rise I can buy on Sumas Mountain?"
     },
     {
+      "a": "You own your detached house and lot as a strata lot and share common property (roads, gate, landscaping) with the strata corporation — the City report records 26 single-family strata lots in EPS1299 at 4595 Sumas Mountain Road. Fees, bylaws and a Form B apply exactly as in a condo, but there is no shared building envelope.",
       "gen": "tn",
-      "q": "What is a bare-land strata, and how is Straiton different from a condo?",
-      "a": "You own your detached house and lot as a strata lot and share common property (roads, gate, landscaping) with the strata corporation — the City report records 26 single-family strata lots in EPS1299 at 4595 Sumas Mountain Road. Fees, bylaws and a Form B apply exactly as in a condo, but there is no shared building envelope."
+      "q": "What is a bare-land strata, and how is Straiton different from a condo?"
     },
     {
+      "a": "The building directory records \"pets allowed, pets allowed w/rest.\" for the complex — confirm the exact number/size rules in the filed bylaws attached to the Form B, because directory summaries conflict between its own pages.",
       "gen": "tn",
-      "q": "Are pets allowed at Junction Creek?",
-      "a": "The building directory records \"pets allowed, pets allowed w/rest.\" for the complex — confirm the exact number/size rules in the filed bylaws attached to the Form B, because directory summaries conflict between its own pages."
+      "q": "Are pets allowed at Junction Creek?"
     },
     {
+      "a": "Long-term rental-restriction bylaws are void province-wide since November 24, 2022; a strata may still restrict short-term rentals.",
       "gen": "tn",
-      "q": "Can I rent out a strata home on the mountain?",
-      "a": "Long-term rental-restriction bylaws are void province-wide since November 24, 2022; a strata may still restrict short-term rentals."
+      "q": "Can I rent out a strata home on the mountain?"
     },
     {
+      "a": "Only what that strata's budget covers — typically common roads, gates, landscaping and insurance on common property, not your house's roof or exterior. The specific inclusions for Straiton or Junction Creek are in their budgets/Form B: Not confirmed from public sources.",
       "gen": "tn",
-      "q": "What will strata fees cover in a bare-land strata?",
-      "a": "Only what that strata's budget covers — typically common roads, gates, landscaping and insurance on common property, not your house's roof or exterior. The specific inclusions for Straiton or Junction Creek are in their budgets/Form B: Not confirmed from public sources."
+      "q": "What will strata fees cover in a bare-land strata?"
     },
     {
+      "a": "There are three verified townhouse strata complexes: Junction Creek (Lower Sumas Mountain Road), Sage at Auguston (4401 Blauson Blvd, 120 units) and King's Gate (36260 McKee Road, 67 units). Everything else named on the mountain is detached houses, rural lots, or the Straiton bare-land strata.",
       "gen": "tn",
-      "q": "Are there actually townhouses on Sumas Mountain, or is it all houses?",
-      "a": "There are three verified townhouse strata complexes: Junction Creek (Lower Sumas Mountain Road), Sage at Auguston (4401 Blauson Blvd, 120 units) and King's Gate (36260 McKee Road, 67 units). Everything else named on the mountain is detached houses, rural lots, or the Straiton bare-land strata."
+      "q": "Are there actually townhouses on Sumas Mountain, or is it all houses?"
     },
     {
+      "a": "You own your detached house and lot as a strata lot and share common property (roads, gate, landscaping) with the strata corporation — the City report records 26 single-family strata lots in EPS1299 at 4595 Sumas Mountain Road. Fees, bylaws and a Form B apply exactly as in a townhouse strata, but there is no shared building envelope and no townhouse unit.",
       "gen": "tn",
-      "q": "What is a bare-land strata, and how is Straiton different from a townhouse?",
-      "a": "You own your detached house and lot as a strata lot and share common property (roads, gate, landscaping) with the strata corporation — the City report records 26 single-family strata lots in EPS1299 at 4595 Sumas Mountain Road. Fees, bylaws and a Form B apply exactly as in a townhouse strata, but there is no shared building envelope and no townhouse unit."
+      "q": "What is a bare-land strata, and how is Straiton different from a townhouse?"
     },
     {
+      "a": "None is recorded as 55+ in any source checked. King's Gate's complex data expressly records \"Age Restrictions: No,\" and no age restriction appears for Sage at Auguston (a family community beside Auguston Traditional Elementary) or Junction Creek. Gated is not 55+.",
       "gen": "tn",
-      "q": "Are any of the mountain townhouse complexes 55+?",
-      "a": "None is recorded as 55+ in any source checked. King's Gate's complex data expressly records \"Age Restrictions: No,\" and no age restriction appears for Sage at Auguston (a family community beside Auguston Traditional Elementary) or Junction Creek. Gated is not 55+."
+      "q": "Are any of the mountain townhouse complexes 55+?"
     },
     {
+      "a": "Acreage here is individual City slope parcels (zone minimums 0.4 ha SR to 4.0 ha RR) and FVRD rural parcels on well and septic.",
       "gen": "acre",
-      "q": "Is there an acreage subdivision on Sumas Mountain I can buy into?",
-      "a": "Acreage here is individual City slope parcels (zone minimums 0.4 ha SR to 4.0 ha RR) and FVRD rural parcels on well and septic."
+      "q": "Is there an acreage subdivision on Sumas Mountain I can buy into?"
     },
     {
+      "a": "The built west/south slopes are City of Abbotsford (Zoning 2400-2014, Abbotsforward 2050, McKee Plan on the west slope; taxes due July 2 with 5% July 3 and a second 5% September 16). The upper/eastern rural part is FVRD land (Sumas Mountain OCP Bylaw No. 584; provincial rural taxes, second 5% penalty October 31, no public water or sewer). Confirm the lot's side of the line before relying on any rule.",
       "gen": "acre",
-      "q": "Which government governs my lot — and why does it change the taxes?",
-      "a": "The built west/south slopes are City of Abbotsford (Zoning 2400-2014, Abbotsforward 2050, McKee Plan on the west slope; taxes due July 2 with 5% July 3 and a second 5% September 16). The upper/eastern rural part is FVRD land (Sumas Mountain OCP Bylaw No. 584; provincial rural taxes, second 5% penalty October 31, no public water or sewer). Confirm the lot's side of the line before relying on any rule."
+      "q": "Which government governs my lot — and why does it change the taxes?"
     },
     {
+      "a": "Geotechnical review: the McKee plan puts unstable geotechnical areas and slopes over 40% into a protected open space network, and the OCP applies Steep Slope Development Permit guidelines on slope land — budget for the review and read the lot's DPA position before valuing buildable area.",
       "gen": "acre",
-      "q": "What diligence does a slope acreage need that a flat lot does not?",
-      "a": "Geotechnical review: the McKee plan puts unstable geotechnical areas and slopes over 40% into a protected open space network, and the OCP applies Steep Slope Development Permit guidelines on slope land — budget for the review and read the lot's DPA position before valuing buildable area."
+      "q": "What diligence does a slope acreage need that a flat lot does not?"
     },
     {
+      "a": "Ask about it directly: five quarries operate on Sumas Mountain and their gravel trucks use an access road to Highway 1 through the Lightning Rock site, per Semá:th First Nation, with an alternate-route study agreed by the Province, Semá:th and the City. A Sumas Mountain Road acreage lives with that traffic until any reroute exists.",
       "gen": "acre",
-      "q": "What about quarry traffic?",
-      "a": "Ask about it directly: five quarries operate on Sumas Mountain and their gravel trucks use an access road to Highway 1 through the Lightning Rock site, per Semá:th First Nation, with an alternate-route study agreed by the Province, Semá:th and the City. A Sumas Mountain Road acreage lives with that traffic until any reroute exists."
+      "q": "What about quarry traffic?"
     },
     {
+      "a": "No verified one. Abbotsford's verified pad-rental parks are Paradise Park, Georgian Park and Maplewood Estates, on other grounds.",
       "gen": "mh",
-      "q": "Is there a mobile home park on Sumas Mountain?",
-      "a": "No verified one. Abbotsford's verified pad-rental parks are Paradise Park, Georgian Park and Maplewood Estates, on other grounds."
+      "q": "Is there a mobile home park on Sumas Mountain?"
     },
     {
+      "a": "No. Straiton Mountain Estates (4595 Sumas Mountain Road, EPS1299) is a bare-land strata of detached houses: you own a strata lot and the house on it, pay strata fees, follow the bylaws, and get a Form B — there is no shared building envelope and no rented pad.",
       "gen": "mh",
-      "q": "What is Straiton, then — is it the mountain's mobile park?",
-      "a": "No. Straiton Mountain Estates (4595 Sumas Mountain Road, EPS1299) is a bare-land strata of detached houses: you own a strata lot and the house on it, pay strata fees, follow the bylaws, and get a Form B — there is no shared building envelope and no rented pad."
+      "q": "What is Straiton, then — is it the mountain's mobile park?"
     },
     {
+      "a": "Gated is not 55+. The registered bylaws on the Form B are the only operative source for any purchase.",
       "gen": "mh",
-      "q": "Is Straiton 55+?",
-      "a": "Gated is not 55+. The registered bylaws on the Form B are the only operative source for any purchase."
+      "q": "Is Straiton 55+?"
     },
     {
+      "a": "The home only — a chattel. You rent the pad under the Manufactured Home Park Tenancy Act; the sale takes effect only when registered in the Manufactured Home Registry (Bill of Sale + Notice to Transfer via a lawyer or notary, CSA label attached); and the existing pad tenancy is assigned to you on the same terms, with the park owner's written consent requested on RTB Form 10 — answered by the 10th day or deemed given, no consent fee.",
       "gen": "mh",
-      "q": "If I buy on a rented pad elsewhere in Abbotsford, what do I own?",
-      "a": "The home only — a chattel. You rent the pad under the Manufactured Home Park Tenancy Act; the sale takes effect only when registered in the Manufactured Home Registry (Bill of Sale + Notice to Transfer via a lawyer or notary, CSA label attached); and the existing pad tenancy is assigned to you on the same terms, with the park owner's written consent requested on RTB Form 10 — answered by the 10th day or deemed given, no consent fee."
+      "q": "If I buy on a rented pad elsewhere in Abbotsford, what do I own?"
     },
     {
+      "a": "You would own a strata lot, pay strata fees and get a Form B, but there is no shared building and no half-duplex unit.",
       "gen": "dx",
-      "q": "Is Straiton a duplex or townhouse complex?",
-      "a": "You would own a strata lot, pay strata fees and get a Form B, but there is no shared building and no half-duplex unit."
+      "q": "Is Straiton a duplex or townhouse complex?"
     },
     {
+      "a": "Yes. City zoning (Bylaw 2400-2014) and Abbotsforward 2050 apply on the City side; the fvrd Sumas Mountain OCP (Bylaw No. 584) covers the rural part, which has no public water or sewer — well and septic checks, and rural tax collection by the Province, replace the City items.",
       "gen": "dx",
-      "q": "City side or FVRD side — does it change my diligence?",
-      "a": "Yes. City zoning (Bylaw 2400-2014) and Abbotsforward 2050 apply on the City side; the fvrd Sumas Mountain OCP (Bylaw No. 584) covers the rural part, which has no public water or sewer — well and septic checks, and rural tax collection by the Province, replace the City items."
+      "q": "City side or FVRD side — does it change my diligence?"
     },
     {
+      "a": "Geotechnical review on slope lots (slopes over 40% and unstable areas sit in the McKee plan's protected open space network), and quarry truck traffic — five quarries operate on the mountain and their gravel trucks use an access road to Highway 1 through the Lightning Rock site.",
       "gen": "dx",
-      "q": "What slope or traffic items surprise buyers here?",
-      "a": "Geotechnical review on slope lots (slopes over 40% and unstable areas sit in the McKee plan's protected open space network), and quarry truck traffic — five quarries operate on the mountain and their gravel trucks use an access road to Highway 1 through the Lightning Rock site."
+      "q": "What slope or traffic items surprise buyers here?"
     },
     {
-      "q": "Who plans land use on Sumas Mountain?",
       "a": "Two plans apply: the City of Abbotsford Official Community Plan and McKee Neighbourhood Plan on the City side, and the FVRD Sumas Mountain Official Community Plan, Bylaw No. 584, for the rural FVRD part.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Who plans land use on Sumas Mountain?"
     },
     {
-      "q": "Are there working quarries on Sumas Mountain?",
       "a": "Yes — a City council report covers gravel extraction at Jamieson Quarry, and Semá:th First Nation states five quarries on Sumas Mountain use an access road to Highway 1.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Are there working quarries on Sumas Mountain?"
     }
   ],
   "slug": "sumas-mountain-guide",

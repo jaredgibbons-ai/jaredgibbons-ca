@@ -3,7 +3,7 @@
 Rules (applied to every text string except links, tags and slugs):
   1. 'UNCONFIRMED' / 'UNVERIFIED' become plain 'not confirmed' / 'not verified'.
   2. A citation like '(as of September 2026, Source: SnapStats FVR September 2026 report)' becomes '(SnapStats, September 2026)'; a bare 'Source: SnapStats ... report.' is removed.
-  3. A sentence that talks about the research itself (sibling files, batches, 'in this research', 'the notes', Jared's reports, locator results, a page 'at its reading') is dropped.
+  3. A sentence that talks about the research itself or the old page it was read from ('at reading', 'for the rebuild', 'the page promises ...') (sibling files, batches, 'in this research', 'the notes', Jared's reports, locator results, a page 'at its reading') is dropped.
   4. A FAQ whose answer is left under 40 characters, or under 40% of a long answer, is dropped; an empty paragraph or list item is dropped; a heading left with nothing under it is dropped.
 Idempotent.  Run last in the chain, before npm run build:   python3 -I tools/scrub_research_wording.py [--dry]
 """
@@ -13,7 +13,7 @@ LOCAL = os.path.join(ROOT, 'src/data/local')
 SKIP_KEYS = {'h', 'gen', 'slug', 'id', 'pos', 'level', 'status', 'href', 'img', 'src', 'alt'}
 CITE = re.compile(r'\(?\bas of (\w+ 20\d\d),? Source: SnapStats(?: (?:FVR|GVR))?(?: \w+ 20\d\d)? report\)?\.?', re.I)
 BARE = re.compile(r'\s*Source: SnapStats(?: (?:FVR|GVR))?(?: \w+ 20\d\d)? report\.?', re.I)
-PROC = re.compile(r"\bsiblings?\b|\bbatch[- ]?\d|\bslug\b|research file|Jared.s reports|\bthe notes\b|\bin this research\b|\bthis research\b|\bat its reading\b|reading was|page text read|live page text|locator (?:returned|result)|no locator|\bnot read\b|were not read|was not read|\bfeed was\b|\bvisible feed\b", re.I)
+PROC = re.compile(r"\bsiblings?\b|\bbatch[- ]?\d|\bslug\b|research file|Jared.s reports|\bthe notes\b|\bin this research\b|\bthis research\b|\bat its reading\b|reading was|page text read|live page text|locator (?:returned|result)|no locator|\bnot read\b|were not read|was not read|\bfeed was\b|\bvisible feed\b|\bat reading\b|\bas read\b|\bfor the rebuild\b|\bpromises an? \w+|\bCentral absence\b|\bFeed snapshot\b|\bthis topic page\b", re.I)
 SENT = re.compile(r'(?<=[.!?])\s+(?=[A-Z0-9“"(])')
 counts = {'sent': 0, 'case': 0, 'cite': 0, 'faq': 0, 'item': 0, 'head': 0}
 
@@ -29,6 +29,7 @@ def scrub(s):
         s = re.sub(r'(^|[.!?]\s+|:\s+|\(\s*)UNVERIFIED', lambda m: m.group(1) + 'Not verified', s)
         s = s.replace('UNCONFIRMED', 'not confirmed').replace('UNVERIFIED', 'not verified')
     s = re.sub(r'\s*\b(?:in|from|across) (?:this|the) research\b', '', s)   # 'verified in this research' reads fine as 'verified'
+    s = re.sub(r'\s+as read in this pass\b', '', s); s = re.sub(r'\s+as read (?=in )', ' ', s)   # 'as read in Township council reports' is a real source, keep the sentence
     if PROC.search(s):
         parts = SENT.split(s); keep = [p for p in parts if not PROC.search(p)]
         if len(keep) != len(parts): counts['sent'] += len(parts) - len(keep); s = ' '.join(keep)

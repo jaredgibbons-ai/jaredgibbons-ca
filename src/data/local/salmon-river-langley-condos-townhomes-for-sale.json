@@ -153,7 +153,7 @@
       "items": [
         [
           {
-            "t": "The guide page is headed \"Salmon River, Langley Guide | Acreages, Farms & Wells\" (written October 9, 2026), with a \"Homes for sale in Salmon River\" section described on the page as \"Live MLS® listings, updated daily\"; the guide page displays no total result count, and the cards visible at reading are a snapshot only. The cards visible are labelled \"Salmon River, Langley\" and are mostly rural houses, plus one vacant-land card and the out-of-scope Langley City condo card flagged in the header block. The exact MLS feed filter criteria behind the guide page, and why that condo card is labelled Salmon River in it, are not verified."
+            "t": "The cards visible are labelled \"Salmon River, Langley\" and are mostly rural houses, plus one vacant-land card and the out-of-scope Langley City condo card flagged in the header block. The exact MLS feed filter criteria behind the guide page, and why that condo card is labelled Salmon River in it, are not verified."
           }
         ],
         [
@@ -963,19 +963,19 @@
       "t": "list"
     },
     {
-      "t": "h",
+      "gen": "sold",
       "level": 2,
-      "text": "Salmon River home prices: what sold, November 2025 to October 2026",
-      "gen": "sold"
+      "t": "h",
+      "text": "Salmon River home prices: what sold, November 2025 to October 2026"
     },
     {
+      "gen": "sold",
       "t": "p",
-      "text": "5 condos sold in Salmon River with a median price of $480,000, taking a median of 51 days to sell at 97.0% of the last list price; 0% sold above list. They had a median $591 per square foot, a median year built of 2011 and a median strata fee of $448 a month.",
-      "gen": "sold"
+      "text": "5 condos sold in Salmon River with a median price of $480,000, taking a median of 51 days to sell at 97.0% of the last list price; 0% sold above list. They had a median $591 per square foot, a median year built of 2011 and a median strata fee of $448 a month."
     },
     {
-      "t": "table",
       "caption": "Salmon River: what sold, by home type",
+      "gen": "sold",
       "head": [
         "Home type",
         "Sold",
@@ -995,7 +995,7 @@
         ]
       ],
       "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
-      "gen": "sold"
+      "t": "table"
     }
   ],
   "breadcrumbs": [
@@ -1085,14 +1085,14 @@
       "q": "Can an acreage here add a second dwelling for family or farm help?"
     },
     {
+      "a": "5 condos sold in Salmon River between November 1, 2025 to October 22, 2026, with a median price of $480,000.",
       "gen": "sold",
-      "q": "What did condos in Salmon River sell for?",
-      "a": "5 condos sold in Salmon River between November 1, 2025 to October 22, 2026, with a median price of $480,000."
+      "q": "What did condos in Salmon River sell for?"
     },
     {
+      "a": "The median was 51 days from listing to sale, and homes sold at a median 97.0% of the last list price (0% sold above list), for sales November 1, 2025 to October 22, 2026.",
       "gen": "sold",
-      "q": "How long do condos take to sell in Salmon River?",
-      "a": "The median was 51 days from listing to sale, and homes sold at a median 97.0% of the last list price (0% sold above list), for sales November 1, 2025 to October 22, 2026."
+      "q": "How long do condos take to sell in Salmon River?"
     }
   ],
   "faq_heading": "Salmon River condos and townhomes: your questions answered",

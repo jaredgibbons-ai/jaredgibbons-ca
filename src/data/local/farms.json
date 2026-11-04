@@ -1,24 +1,21 @@
 {
-  "status": "draft",
-  "slug": "farms",
-  "updated": "2026-11-01",
   "blocks": [
     {
-      "t": "h",
+      "gen": "acre",
       "level": 2,
-      "text": "Farms: what the ground is and what governs it",
-      "gen": "acre",
-      "pos": "end"
-    },
-    {
+      "pos": "end",
       "t": "h",
-      "level": 3,
-      "text": "The ground",
-      "gen": "acre",
-      "pos": "end"
+      "text": "Farms: what the ground is and what governs it"
     },
     {
-      "t": "list",
+      "gen": "acre",
+      "level": 3,
+      "pos": "end",
+      "t": "h",
+      "text": "The ground"
+    },
+    {
+      "gen": "acre",
       "items": [
         [
           {
@@ -26,18 +23,18 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Scope and area context",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Scope and area context"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
@@ -45,69 +42,69 @@
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
+      "gen": "acre",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below.",
-      "gen": "acre",
-      "pos": "end"
+      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below."
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "BC acreage buying rules",
-            "h": "/bc-acreage-buying-rules.html"
+            "h": "/bc-acreage-buying-rules.html",
+            "t": "BC acreage buying rules"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "acre",
       "level": 3,
-      "text": "Sources for the acreage notes on Farms",
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for the acreage notes on Farms"
     },
     {
-      "t": "list",
+      "gen": "acre",
       "items": [
         [
           {
-            "t": "www2.gov.bc.ca · property transfer tax",
-            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax"
+            "h": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax",
+            "t": "www2.gov.bc.ca · property transfer tax"
           }
         ],
         [
           {
-            "t": "canada.ca · news122 excise gst hst news no 122",
-            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html"
+            "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
+            "t": "canada.ca · news122 excise gst hst news no 122"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · depreciation report requirements",
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements"
+            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
+            "t": "www2.gov.bc.ca · depreciation report requirements"
           }
         ]
       ],
-      "gen": "acre",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Farms: streets and boundaries",
       "gen": "uq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Farms: streets and boundaries"
     },
     {
-      "t": "list",
+      "gen": "uq",
       "items": [
         [
           {
@@ -120,18 +117,18 @@
           }
         ]
       ],
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "uq",
       "level": 2,
-      "text": "Farms: the housing stock",
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Farms: the housing stock"
     },
     {
-      "t": "list",
+      "gen": "uq",
       "items": [
         [
           {
@@ -149,18 +146,18 @@
           }
         ]
       ],
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "uq",
       "level": 2,
-      "text": "Farms: rules that affect buyers",
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Farms: rules that affect buyers"
     },
     {
-      "t": "list",
+      "gen": "uq",
       "items": [
         [
           {
@@ -193,18 +190,18 @@
           }
         ]
       ],
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "uq",
       "level": 2,
-      "text": "Farms: local details a buyer would not know",
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Farms: local details a buyer would not know"
     },
     {
-      "t": "list",
+      "gen": "uq",
       "items": [
         [
           {
@@ -242,18 +239,18 @@
           }
         ]
       ],
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "uq",
       "level": 2,
-      "text": "Farms: development and new projects",
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Farms: development and new projects"
     },
     {
-      "t": "list",
+      "gen": "uq",
       "items": [
         [
           {
@@ -261,18 +258,18 @@
           }
         ]
       ],
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "uq",
       "level": 2,
-      "text": "Farms: costs and taxes",
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Farms: costs and taxes"
     },
     {
-      "t": "list",
+      "gen": "uq",
       "items": [
         [
           {
@@ -285,18 +282,18 @@
           }
         ]
       ],
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "uq",
       "level": 2,
-      "text": "Farms: getting around",
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Farms: getting around"
     },
     {
-      "t": "list",
+      "gen": "uq",
       "items": [
         [
           {
@@ -309,18 +306,18 @@
           }
         ]
       ],
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "uq",
       "level": 2,
-      "text": "Farms: risks and due diligence",
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Farms: risks and due diligence"
     },
     {
-      "t": "list",
+      "gen": "uq",
       "items": [
         [
           {
@@ -343,24 +340,25 @@
           }
         ]
       ],
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "uq",
       "level": 2,
-      "text": "How Farms compares",
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "How Farms compares"
     },
     {
-      "t": "table",
       "caption": "Farms compared",
+      "gen": "uq",
       "head": [
         "Purchase path",
         "Application stated",
         "Income test stated"
       ],
+      "pos": "end",
       "rows": [
         [
           "Owner-operated producing farm",
@@ -378,166 +376,163 @@
           "Must show the operation will meet income requirements at the proposed harvest date"
         ]
       ],
-      "gen": "uq",
-      "pos": "end"
+      "t": "table"
     },
     {
-      "t": "h",
+      "gen": "uq",
       "level": 2,
-      "text": "Related pages",
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Related pages"
     },
     {
-      "t": "list",
+      "gen": "uq",
       "items": [
         [
           {
-            "t": "Broiler Farms for Sale BC | Turn-Key Grower Operations",
-            "h": "/broiler-farms-for-sale-bc.html"
+            "h": "/broiler-farms-for-sale-bc.html",
+            "t": "Broiler Farms for Sale BC | Turn-Key Grower Operations"
           }
         ],
         [
           {
-            "t": "Abbotsford Farms for Sale | ALR Farm MLS",
-            "h": "/abbotsford-farms.html"
+            "h": "/abbotsford-farms.html",
+            "t": "Abbotsford Farms for Sale | ALR Farm MLS"
           }
         ]
       ],
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
+      "gen": "uq",
       "level": 2,
-      "text": "Sources for Farms",
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "h",
+      "text": "Sources for Farms"
     },
     {
-      "t": "list",
+      "gen": "uq",
       "items": [
         [
           {
-            "t": "www2.gov.bc.ca · water licensing rights",
-            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/water-licensing-rights"
+            "h": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/water-licensing-rights",
+            "t": "www2.gov.bc.ca · water licensing rights"
           }
         ],
         [
           {
-            "t": "info.bcassessment.ca · understanding property classes and exemptions",
-            "h": "https://info.bcassessment.ca/Services-products/property-classes-and-exemptions/understanding-property-classes-and-exemptions?TermStoreId=2e29bc59-558d-448c-9c19-d11b487dbf89&TermSetId=0a8def97-2239-4f44-b0fc-f2f10a0ea2d4&TermId=582130f6-038f-4842-ada7-0166ce03a246"
+            "h": "https://info.bcassessment.ca/Services-products/property-classes-and-exemptions/understanding-property-classes-and-exemptions?TermStoreId=2e29bc59-558d-448c-9c19-d11b487dbf89&TermSetId=0a8def97-2239-4f44-b0fc-f2f10a0ea2d4&TermId=582130f6-038f-4842-ada7-0166ce03a246",
+            "t": "info.bcassessment.ca · understanding property classes and exemptions"
           }
         ],
         [
           {
-            "t": "info.bcassessment.ca · Apply for farm classification",
-            "h": "https://info.bcassessment.ca/Services-products/property-classes-and-exemptions/farm-land-assessment/farm-classification-in-british-columbia/Apply-for-farm-classification?bcgovtm=Junewebinarannouncement&TermStoreId=2e29bc59-558d-448c-9c19-d11b487dbf89&TermSetId=0a8def97-2239-4f44-b0fc-f2f10a0ea2d4&TermId=edf88474-1907-4185-b77b-5cd510f603a0"
+            "h": "https://info.bcassessment.ca/Services-products/property-classes-and-exemptions/farm-land-assessment/farm-classification-in-british-columbia/Apply-for-farm-classification?bcgovtm=Junewebinarannouncement&TermStoreId=2e29bc59-558d-448c-9c19-d11b487dbf89&TermSetId=0a8def97-2239-4f44-b0fc-f2f10a0ea2d4&TermId=edf88474-1907-4185-b77b-5cd510f603a0",
+            "t": "info.bcassessment.ca · Apply for farm classification"
           }
         ],
         [
           {
-            "t": "info.bcassessment.ca · classifying land leased to farmers",
-            "h": "http://info.bcassessment.ca/Services-products/property-classes-and-exemptions/farm-land-assessment/classifying-land-leased-to-farmers"
+            "h": "http://info.bcassessment.ca/Services-products/property-classes-and-exemptions/farm-land-assessment/classifying-land-leased-to-farmers",
+            "t": "info.bcassessment.ca · classifying land leased to farmers"
           }
         ],
         [
           {
-            "t": "bclaws.gov.bc.ca",
-            "h": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/30_2019?bcgovtm=CSMLS"
+            "h": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/30_2019?bcgovtm=CSMLS",
+            "t": "bclaws.gov.bc.ca"
           }
         ],
         [
           {
-            "t": "alc.gov.bc.ca · housing in the alr",
-            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+            "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/",
+            "t": "alc.gov.bc.ca · housing in the alr"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · irrigation 2026",
-            "h": "http://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/agriculture-and-seafood/agricultural-land-and-environment/strengthening-farming/farm-practices/2026/irrigation_2026.pdf"
+            "h": "http://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/agriculture-and-seafood/agricultural-land-and-environment/strengthening-farming/farm-practices/2026/irrigation_2026.pdf",
+            "t": "www2.gov.bc.ca · irrigation 2026"
           }
         ],
         [
           {
-            "t": "fcc-fac.ca · young farmers",
-            "h": "https://www.fcc-fac.ca/en/financing/agriculture/young-farmers"
+            "h": "https://www.fcc-fac.ca/en/financing/agriculture/young-farmers",
+            "t": "fcc-fac.ca · young farmers"
           }
         ],
         [
           {
-            "t": "agriculture.canada.ca · node",
-            "h": "https://agriculture.canada.ca/en/node/685"
+            "h": "https://agriculture.canada.ca/en/node/685",
+            "t": "agriculture.canada.ca · node"
           }
         ],
         [
           {
-            "t": "www2.gov.bc.ca · highway1 216th 264th widening",
-            "h": "https://www2.gov.bc.ca/gov/content/transportation-projects/fraser-valley-highway1/highway1-216th-264th-widening"
+            "h": "https://www2.gov.bc.ca/gov/content/transportation-projects/fraser-valley-highway1/highway1-216th-264th-widening",
+            "t": "www2.gov.bc.ca · highway1 216th 264th widening"
           }
         ],
         [
           {
-            "t": "fcc-fac.ca · agriculture",
-            "h": "https://www.fcc-fac.ca/en/financing/agriculture"
+            "h": "https://www.fcc-fac.ca/en/financing/agriculture",
+            "t": "fcc-fac.ca · agriculture"
           }
         ]
       ],
-      "gen": "uq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     },
     {
-      "t": "h",
-      "level": 2,
-      "text": "Sources",
       "gen": "musefaq",
-      "pos": "end"
+      "level": 2,
+      "pos": "end",
+      "t": "h",
+      "text": "Sources"
     },
     {
-      "t": "list",
+      "gen": "musefaq",
       "items": [
         [
           {
-            "t": "Source: info.bcassessment.ca",
-            "h": "https://info.bcassessment.ca/Services-products/property-classes-and-exemptions/farm-land-assessment/farm-classification-in-british-columbia/Apply-for-farm-classification"
+            "h": "https://info.bcassessment.ca/Services-products/property-classes-and-exemptions/farm-land-assessment/farm-classification-in-british-columbia/Apply-for-farm-classification",
+            "t": "Source: info.bcassessment.ca"
           }
         ]
       ],
-      "gen": "musefaq",
-      "pos": "end"
+      "pos": "end",
+      "t": "list"
     }
   ],
   "faq": [
     {
+      "a": "Yes, you must re-apply in your own name by October 31. BC Assessment states that after purchasing a farm-classified property, a buyer who plans to continue farming must submit a General Application for Farm Classification by October 31, and a buyer who will not continue farming should notify BC Assessment of the plan to cease agricultural activity. Missing the deadline loses the classification for the next tax year.",
       "gen": "uq",
-      "q": "I bought a farm that already has farm classification — do I need to do anything?",
-      "a": "Yes, you must re-apply in your own name by October 31. BC Assessment states that after purchasing a farm-classified property, a buyer who plans to continue farming must submit a General Application for Farm Classification by October 31, and a buyer who will not continue farming should notify BC Assessment of the plan to cease agricultural activity. Missing the deadline loses the classification for the next tax year."
+      "q": "I bought a farm that already has farm classification — do I need to do anything?"
     },
     {
+      "a": "It depends on the size of the whole operation, in three tiers. An operation under 0.8 hectares must show $10,000 in gross farm income — the highest bar — while one between 0.8 and 4 hectares must show $2,500, and a larger one $2,500 plus 5% of the actual value of the land over 4 hectares. Keep receipts and sales logs, as BC Assessment may require proof.",
       "gen": "uq",
-      "q": "How much does my small farm actually have to sell to keep farm status?",
-      "a": "It depends on the size of the whole operation, in three tiers. An operation under 0.8 hectares must show $10,000 in gross farm income — the highest bar — while one between 0.8 and 4 hectares must show $2,500, and a larger one $2,500 plus 5% of the actual value of the land over 4 hectares. Keep receipts and sales logs, as BC Assessment may require proof."
+      "q": "How much does my small farm actually have to sell to keep farm status?"
     },
     {
+      "a": "Yes, within the regulation's size limits, if local zoning also allows it. The ALR Use Regulation permits one additional residence of up to 90 square metres on a parcel of 40 hectares or less, or up to 186 square metres above 40 hectares, alongside a principal residence of 500 square metres or less. Anything larger, or more residences, requires ALC approval.",
       "gen": "uq",
-      "q": "Can I add a second home for farm help on ALR land without an ALC application?",
-      "a": "Yes, within the regulation's size limits, if local zoning also allows it. The ALR Use Regulation permits one additional residence of up to 90 square metres on a parcel of 40 hectares or less, or up to 186 square metres above 40 hectares, alongside a principal residence of 500 square metres or less. Anything larger, or more residences, requires ALC approval."
+      "q": "Can I add a second home for farm help on ALR land without an ALC application?"
     },
     {
+      "a": "No, lawful non-domestic water use needs its own licence. The Province states the right to divert and use surface or groundwater is authorized by a licence or approval under the Water Sustainability Act, and non-domestic groundwater use — irrigation is the stated example — requires a licence and payment of fees and rentals. Confirm the licences on the specific farm and their transfer position before completion.",
       "gen": "uq",
-      "q": "Does the farm's well or irrigation water transfer automatically with the land?",
-      "a": "No, lawful non-domestic water use needs its own licence. The Province states the right to divert and use surface or groundwater is authorized by a licence or approval under the Water Sustainability Act, and non-domestic groundwater use — irrigation is the stated example — requires a licence and payment of fees and rentals. Confirm the licences on the specific farm and their transfer position before completion."
+      "q": "Does the farm's well or irrigation water transfer automatically with the land?"
     },
     {
-      "q": "Is every property on the farms portal a working farm?",
-      "a": "No — as read, its describable cards include two unbuilt agricultural Land parcels, a hobby-farm acreage that is not in the ALR, a 0.63-acre residential lot with farm-adjacent zoning permissions, and a rancher whose card text connects it to farming only by backing onto a farm. Read each card on its own text.",
-      "gen": "muse"
-    },
-    {
-      "q": "Does buying farm land automatically keep its farm classification?",
       "a": "No — classification is a voluntary, property-by-property BC Assessment program with income thresholds by operation size, and a buyer who plans to continue farming must submit a General Application for Farm Classification by October 31 after purchase or the classification can be removed.",
-      "gen": "muse"
+      "gen": "muse",
+      "q": "Does buying farm land automatically keep its farm classification?"
     }
-  ]
+  ],
+  "slug": "farms",
+  "status": "draft",
+  "updated": "2026-11-01"
 }
