@@ -103,7 +103,7 @@ def pr_snap(c):
     n = snap_numbers(c); C = c['name']; d, t = n['d'], n['t']
     gap_d, gap_t = 100 - n['dratio_ll'], 100 - n['tratio_ll']
     bl = []
-    bl.append({'t': 'p', 'text': f"This search lists {C} homes where the asking price has come down, pulled live from the MLS®. {pick('lead', c)} In October 2026 a typical {C} detached home sold for {money(n['dprice'])}, took {n['ddom']} days and closed at {n['dratio_ll']}% of its list price, with {n['dinv']} detached homes for sale and {n['dsold']} sold in the month.", 'gen': G})
+    bl.append({'t': 'p', 'text': f"This search lists {C} homes where the asking price has dropped by at least 1%, pulled live from the MLS®. Land and income properties are left out; houses, townhomes and condos are all included. {pick('lead', c)} In October 2026 a typical {C} detached home sold for {money(n['dprice'])}, took {n['ddom']} days and closed at {n['dratio_ll']}% of its list price, with {n['dinv']} detached homes for sale and {n['dsold']} sold in the month.", 'gen': G})
     bl.append({'t': 'grid', 'gen': G})
     bl.append({'t': 'h', 'level': 2, 'text': f"What a price drop means in {C} right now", 'gen': G})
     bl.append({'t': 'p', 'text': f"Detached homes in {C} have been selling about {gap_d}% under list price, and condos and townhomes {'about the same' if gap_t == gap_d else f'about {gap_t}% under'}. On the detached side the sales ratio was {n['dsr']}%, which SnapStats reads as a {read(n['dsr'])}. For condos and townhomes it was {n['tsr']}%, {'also' if read(n['tsr']) == read(n['dsr']) else 'which is'} a {read(n['tsr'])}. {pick('seller', c)}", 'gen': G})
@@ -155,7 +155,7 @@ def nl_snap(c):
     dt, tt = d['trend'], t['trend']; months = dt['months']
     bl = []
     peak = max(range(13), key=lambda i: dt['solds'][i]); low = min(range(13), key=lambda i: dt['solds'][i])
-    bl.append({'t': 'p', 'text': f"New listings in {C} come on the MLS® every day. This search shows the ones listed in the past week, live. To judge a fresh listing, it helps to know how quickly the market is clearing: in October 2026, {n['dsold']} detached homes and {n['t']['total']['sales']} condos and townhomes sold in {C}, and the typical detached home sold in {n['ddom']} days.", 'gen': G})
+    bl.append({'t': 'p', 'text': f"New listings in {C} come on the MLS® every day. This search shows the ones that have been on the market 7 days or less, live. To judge a fresh listing, it helps to know how quickly the market is clearing: in October 2026, {n['dsold']} detached homes and {n['t']['total']['sales']} condos and townhomes sold in {C}, and the typical detached home sold in {n['ddom']} days.", 'gen': G})
     bl.append({'t': 'grid', 'gen': G})
     bl.append({'t': 'h', 'level': 2, 'text': f"How fast {C} homes sold over the past year", 'gen': G})
     bl.append({'t': 'p', 'text': f"Detached sales in {C} peaked at {dt['solds'][peak]} in {mlabel(peak, months)} and were lowest at {dt['solds'][low]} in {mlabel(low, months)}. Active detached listings moved between {min(dt['inventory'])} and {max(dt['inventory'])} over the same 13 months. In October 2026 the median detached sale price was {money(n['dprice'])}, which is {abs(n['dprice_yoy'])}% {'below' if n['dprice_yoy'] < 0 else 'above'} October 2025.", 'gen': G})
@@ -196,7 +196,7 @@ def sold_rows(entries):
 def pr_sold(c):
     city = SD['city'][c['sold']]; g = city['groups']; C = c['name']
     h, tw, co = g['house'], g.get('townhome'), g.get('condo')
-    bl = [{'t': 'p', 'text': f"This search lists {C} homes where the asking price has come down, pulled live from the MLS®. To read a cut, compare it with what {C} homes actually sell for. From {WINDOW}, {h['n']} {C} houses sold at a median {money(h['price'])} after {h['dom']} days, and they closed at {h['ratio']:.1f}% of the last list price, with {h['over']}% selling above it.", 'gen': G},
+    bl = [{'t': 'p', 'text': f"This search lists {C} homes where the asking price has dropped by at least 1%, pulled live from the MLS®. Land and income properties are left out; houses, townhomes and condos are all included. To read a cut, compare it with what {C} homes actually sell for. From {WINDOW}, {h['n']} {C} houses sold at a median {money(h['price'])} after {h['dom']} days, and they closed at {h['ratio']:.1f}% of the last list price, with {h['over']}% selling above it.", 'gen': G},
           {'t': 'grid', 'gen': G},
           {'t': 'h', 'level': 2, 'text': f"What a price drop means in {C}", 'gen': G}]
     gaps = {k: round(100 - g[k]['ratio'], 1) for k, _ in TYPES if k in g and g[k].get('ratio') and g[k]['n'] >= 5}
@@ -228,7 +228,7 @@ def pr_sold(c):
 def nl_sold(c):
     city = SD['city'][c['sold']]; g = city['groups']; C = c['name']; h = g['house']
     qs = h['q']; bands = h['bands']; tot = sum(bands)
-    bl = [{'t': 'p', 'text': f"New listings in {C} come on the MLS® every day, and this search shows the ones listed in the past week. How fast a fresh listing sells depends on its price and type. From {WINDOW}, {h['n']} {C} houses sold in a median {h['dom']} days, {g['townhome']['n']} townhomes in {g['townhome']['dom']} and {g['condo']['n']} condos in {g['condo']['dom']}.", 'gen': G},
+    bl = [{'t': 'p', 'text': f"New listings in {C} come on the MLS® every day, and this search shows the ones that have been on the market 7 days or less. How fast a fresh listing sells depends on its price and type. From {WINDOW}, {h['n']} {C} houses sold in a median {h['dom']} days, {g['townhome']['n']} townhomes in {g['townhome']['dom']} and {g['condo']['n']} condos in {g['condo']['dom']}.", 'gen': G},
           {'t': 'grid', 'gen': G},
           {'t': 'h', 'level': 2, 'text': f"Where {C} house sales have been priced", 'gen': G}]
     big = max(range(7), key=lambda i: bands[i]); sm = [i for i in range(7) if bands[i]]
