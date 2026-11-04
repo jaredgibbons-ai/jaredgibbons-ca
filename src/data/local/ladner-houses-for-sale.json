@@ -451,6 +451,138 @@
    "pos": "end"
   },
   {
+   "t": "h",
+   "level": 2,
+   "text": "Ladner houses: what sold, November 1, 2025 to October 22, 2026",
+   "gen": "sold"
+  },
+  {
+   "t": "p",
+   "text": "117 houses sold in Ladner with a median price of $1,340,000 (the middle half sold between $1,150,000 and $1,550,000), taking a median of 16 days to sell at 96.8% of the last list price; 10% sold above list. They had a median $585 per square foot, a median year built of 1986 and a median lot of 6,008 square feet.",
+   "gen": "sold"
+  },
+  {
+   "t": "table",
+   "caption": "Ladner: what sold, by home type",
+   "head": [
+    "Home type",
+    "Sold",
+    "Median price",
+    "Median days to sell",
+    "Sold vs list",
+    "Median per sq ft"
+   ],
+   "rows": [
+    [
+     "Houses",
+     "117",
+     "$1,340,000",
+     "16 days",
+     "96.8%",
+     "$585"
+    ]
+   ],
+   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+   "gen": "sold"
+  },
+  {
+   "t": "table",
+   "caption": "Ladner: houses sold by quarter",
+   "head": [
+    "Period",
+    "Sold",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Nov 2025 to Jan 2026",
+     "17",
+     "$1,265,000"
+    ],
+    [
+     "Feb to Apr 2026",
+     "51",
+     "$1,345,000"
+    ],
+    [
+     "May to Jul 2026",
+     "38",
+     "$1,429,500"
+    ],
+    [
+     "Aug to Oct 2026",
+     "11",
+     "$1,180,000"
+    ]
+   ],
+   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+   "gen": "sold"
+  },
+  {
+   "t": "table",
+   "caption": "Ladner: houses sold by community",
+   "head": [
+    "Community",
+    "Sold",
+    "Median price",
+    "Median days to sell",
+    "Sold vs list",
+    "Median per sq ft"
+   ],
+   "rows": [
+    [
+     "Hawthorne",
+     "36",
+     "$1,352,500",
+     "20 days",
+     "97.3%",
+     "$581"
+    ],
+    [
+     "Holly",
+     "22",
+     "$1,417,000",
+     "18 days",
+     "96.4%",
+     "$559"
+    ],
+    [
+     "Delta Manor",
+     "18",
+     "$1,338,000",
+     "10 days",
+     "97.5%",
+     "$606"
+    ],
+    [
+     "Ladner Elementary",
+     "18",
+     "$1,140,000",
+     "18 days",
+     "96.5%",
+     "$571"
+    ],
+    [
+     "Neilsen Grove",
+     "16",
+     "$1,362,500",
+     "30 days",
+     "95.5%",
+     "$683"
+    ],
+    [
+     "Port Guichon",
+     "6",
+     "$1,369,500",
+     "14 days",
+     "95.6%",
+     "$607"
+    ]
+   ],
+   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
+   "gen": "sold"
+  },
+  {
    "t": "p",
    "text": "Notes that also apply here are written up once, on these pages:",
    "gen": "dedupe",
@@ -487,9 +619,51 @@
    "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
    "gen": "muse-generic",
    "q": "Can I book a private showing with Jared?"
+  },
+  {
+   "gen": "sold",
+   "q": "What did houses in Ladner sell for?",
+   "a": "117 houses sold in Ladner between November 1, 2025 to October 22, 2026, with a median price of $1,340,000."
+  },
+  {
+   "gen": "sold",
+   "q": "How long do houses take to sell in Ladner?",
+   "a": "The median was 16 days from listing to sale, and homes sold at a median 96.8% of the last list price (10% sold above list), for sales November 1, 2025 to October 22, 2026."
+  },
+  {
+   "gen": "sold",
+   "q": "What price range do most houses in Ladner sell in?",
+   "a": "The middle half of the 117 houses that sold in Ladner went for between $1,150,000 and $1,550,000, around a median of $1,340,000."
+  },
+  {
+   "gen": "sold",
+   "q": "Do houses in Ladner sell above asking price?",
+   "a": "10% of the 117 houses sold for more than the last list price, and the median sale was 96.8% of it."
+  },
+  {
+   "gen": "sold",
+   "q": "How old are the houses that sold in Ladner?",
+   "a": "The median year built was 1986 for the 117 houses sold in Ladner."
+  },
+  {
+   "gen": "sold",
+   "q": "How many bedrooms do houses in Ladner usually have?",
+   "a": "The median house that sold in Ladner had 4 bedrooms, from the 117 sales between November 1, 2025 to October 22, 2026."
+  },
+  {
+   "gen": "sold",
+   "q": "Which Ladner communities sold the most houses?",
+   "a": "By number sold: Hawthorne (36), Holly (22), Ladner Elementary (18), for November 1, 2025 to October 22, 2026."
   }
  ],
  "slug": "ladner-houses-for-sale",
  "status": "draft",
- "updated": "2026-11-01"
+ "updated": "2026-11-01",
+ "city_page": {
+  "city": "ladner",
+  "label": "Ladner",
+  "types": [
+   "house"
+  ]
+ }
 }

@@ -1,115 +1,462 @@
 {
-  "status": "draft",
-  "slug": "mission-homes-under-1-8m",
-  "updated": "2026-11-01",
-  "blocks": [
-    {
-      "t": "h",
-      "level": 2,
-      "text": "More real estate nearby",
-      "gen": "relatedlinks",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Mission homes for sale",
-            "h": "/mission-homes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Mission real estate market stats",
-            "h": "/mission-real-estate-market-stats.html"
-          }
-        ],
-        [
-          {
-            "t": "Sell my house in Mission",
-            "h": "/sell-my-house-in-mission.html"
-          }
-        ],
-        [
-          {
-            "t": "Schools in Mission",
-            "h": "/schools-in-mission-bc.html"
-          }
-        ],
-        [
-          {
-            "t": "Mission Farms for Sale real estate",
-            "h": "/mission-farms.html"
-          }
-        ],
-        [
-          {
-            "t": "Mission Lots & Land for Sale real estate",
-            "h": "/mission-lots-land.html"
-          }
-        ],
-        [
-          {
-            "t": "Mission Neighbourhood Guides real estate",
-            "h": "/mission-neighbourhood-guides.html"
-          }
-        ],
-        [
-          {
-            "t": "Mission West real estate",
-            "h": "/mission-west.html"
-          }
-        ],
-        [
-          {
-            "t": "Mission West real estate",
-            "h": "/mission-west-condos-townhomes-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Mission West real estate",
-            "h": "/mission-west-houses-for-sale.html"
-          }
-        ],
-        [
-          {
-            "t": "Stave Falls real estate",
-            "h": "/stave-falls.html"
-          }
-        ],
-        [
-          {
-            "t": "Steelhead real estate",
-            "h": "/steelhead.html"
-          }
-        ]
-      ],
-      "gen": "relatedlinks",
-      "pos": "end"
-    }
+ "status": "draft",
+ "slug": "mission-homes-under-1-8m",
+ "updated": "2026-11-01",
+ "blocks": [
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More real estate nearby",
+   "gen": "relatedlinks",
+   "pos": "end"
+  },
+  {
+   "t": "list",
+   "items": [
+    [
+     {
+      "t": "Mission homes for sale",
+      "h": "/mission-homes-for-sale.html"
+     }
+    ],
+    [
+     {
+      "t": "Mission real estate market stats",
+      "h": "/mission-real-estate-market-stats.html"
+     }
+    ],
+    [
+     {
+      "t": "Sell my house in Mission",
+      "h": "/sell-my-house-in-mission.html"
+     }
+    ],
+    [
+     {
+      "t": "Schools in Mission",
+      "h": "/schools-in-mission-bc.html"
+     }
+    ],
+    [
+     {
+      "t": "Mission Farms for Sale real estate",
+      "h": "/mission-farms.html"
+     }
+    ],
+    [
+     {
+      "t": "Mission Lots & Land for Sale real estate",
+      "h": "/mission-lots-land.html"
+     }
+    ],
+    [
+     {
+      "t": "Mission Neighbourhood Guides real estate",
+      "h": "/mission-neighbourhood-guides.html"
+     }
+    ],
+    [
+     {
+      "t": "Mission West real estate",
+      "h": "/mission-west.html"
+     }
+    ],
+    [
+     {
+      "t": "Mission West real estate",
+      "h": "/mission-west-condos-townhomes-for-sale.html"
+     }
+    ],
+    [
+     {
+      "t": "Mission West real estate",
+      "h": "/mission-west-houses-for-sale.html"
+     }
+    ],
+    [
+     {
+      "t": "Stave Falls real estate",
+      "h": "/stave-falls.html"
+     }
+    ],
+    [
+     {
+      "t": "Steelhead real estate",
+      "h": "/steelhead.html"
+     }
+    ]
+   ],
+   "gen": "relatedlinks",
+   "pos": "end"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Mission houses sold: price bands, November 1, 2025 to October 22, 2026",
+   "gen": "sold"
+  },
+  {
+   "t": "p",
+   "text": "In Mission, the sales at $1,800,000 or less were 302 of 305 houses (99%), 65 of 65 townhomes (100%) and 36 of 36 condos (100%), for sales November 1, 2025 to October 22, 2026. The table shows how many sold in each price band.",
+   "gen": "sold"
+  },
+  {
+   "t": "table",
+   "caption": "Mission: how many sold in each price band",
+   "head": [
+    "Price band",
+    "Houses",
+    "Townhomes",
+    "Condos"
+   ],
+   "rows": [
+    [
+     "Under $600,000",
+     "6",
+     "14",
+     "33"
+    ],
+    [
+     "$600,000 to $799,999",
+     "81",
+     "50",
+     "Fewer than 5"
+    ],
+    [
+     "$800,000 to $999,999",
+     "111",
+     "Fewer than 5",
+     "Fewer than 5"
+    ],
+    [
+     "$1,000,000 to $1,199,999",
+     "56",
+     "Fewer than 5",
+     "Fewer than 5"
+    ],
+    [
+     "$1,200,000 to $1,499,999",
+     "40",
+     "Fewer than 5",
+     "Fewer than 5"
+    ],
+    [
+     "$1,500,000 to $1,799,999",
+     "8",
+     "Fewer than 5",
+     "Fewer than 5"
+    ],
+    [
+     "$1,800,000 and over",
+     "Fewer than 5",
+     "Fewer than 5",
+     "Fewer than 5"
+    ]
+   ],
+   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A count under 5 is shown as \"Fewer than 5\".",
+   "gen": "sold"
+  },
+  {
+   "t": "p",
+   "text": "305 houses sold in Mission with a median price of $905,000 (the middle half sold between $780,000 and $1,095,000), taking a median of 35 days to sell at 97.0% of the last list price; 8% sold above list. They had a median $377 per square foot, a median year built of 1991 and a median lot of 7,060 square feet.",
+   "gen": "sold"
+  },
+  {
+   "t": "p",
+   "text": "65 townhomes sold in Mission with a median price of $679,900 (the middle half sold between $635,000 and $709,900), taking a median of 25 days to sell at 98.6% of the last list price; 3% sold above list. They had a median $444 per square foot, a median year built of 2021 and a median strata fee of $349 a month.",
+   "gen": "sold"
+  },
+  {
+   "t": "p",
+   "text": "36 condos sold in Mission with a median price of $468,250 (the middle half sold between $400,000 and $519,750), taking a median of 32 days to sell at 97.6% of the last list price; 3% sold above list. They had a median $496 per square foot, a median year built of 2006 and a median strata fee of $433 a month.",
+   "gen": "sold"
+  },
+  {
+   "t": "p",
+   "text": "These are closed-sale prices, so they show what Mission homes actually sold for, not what they were listed at. A Mission house listed today at $1,800,000 or less can be measured against them: the middle half of the 305 houses sold between $780,000 and $1,095,000, and half of them sold in 35 days or fewer.",
+   "gen": "sold"
+  },
+  {
+   "t": "table",
+   "caption": "Mission: what sold, by home type",
+   "head": [
+    "Home type",
+    "Sold",
+    "Median price",
+    "Median days to sell",
+    "Sold vs list",
+    "Median per sq ft"
+   ],
+   "rows": [
+    [
+     "Houses",
+     "305",
+     "$905,000",
+     "35 days",
+     "97.0%",
+     "$377"
+    ],
+    [
+     "Townhomes",
+     "65",
+     "$679,900",
+     "25 days",
+     "98.6%",
+     "$444"
+    ],
+    [
+     "Condos",
+     "36",
+     "$468,250",
+     "32 days",
+     "97.6%",
+     "$496"
+    ]
+   ],
+   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+   "gen": "sold"
+  },
+  {
+   "t": "table",
+   "caption": "Mission: houses sold by quarter",
+   "head": [
+    "Period",
+    "Sold",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Nov 2025 to Jan 2026",
+     "75",
+     "$970,000"
+    ],
+    [
+     "Feb to Apr 2026",
+     "94",
+     "$930,000"
+    ],
+    [
+     "May to Jul 2026",
+     "99",
+     "$900,000"
+    ],
+    [
+     "Aug to Oct 2026",
+     "37",
+     "$808,000"
+    ]
+   ],
+   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+   "gen": "sold"
+  },
+  {
+   "t": "table",
+   "caption": "Mission: houses sold by community",
+   "head": [
+    "Community",
+    "Sold",
+    "Median price",
+    "Median days to sell",
+    "Sold vs list",
+    "Median per sq ft"
+   ],
+   "rows": [
+    [
+     "Mission",
+     "252",
+     "$891,000",
+     "33 days",
+     "97.1%",
+     "$372"
+    ],
+    [
+     "Hatzic",
+     "27",
+     "$985,000",
+     "29 days",
+     "96.5%",
+     "$444"
+    ],
+    [
+     "Lake Errock",
+     "11",
+     "$865,000",
+     "102 days",
+     "95.3%",
+     "$359"
+    ],
+    [
+     "Mission-West",
+     "5",
+     "$1,725,000",
+     "96 days",
+     "95.8%",
+     "$450"
+    ]
+   ],
+   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
+   "gen": "sold"
+  },
+  {
+   "t": "table",
+   "caption": "Mission: townhomes sold by community",
+   "head": [
+    "Community",
+    "Sold",
+    "Median price",
+    "Median days to sell",
+    "Sold vs list",
+    "Median per sq ft"
+   ],
+   "rows": [
+    [
+     "Mission",
+     "55",
+     "$679,000",
+     "30 days",
+     "98.6%",
+     "$436"
+    ],
+    [
+     "Mission-West",
+     "9",
+     "$685,000",
+     "14 days",
+     "98.8%",
+     "$473"
+    ]
+   ],
+   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
+   "gen": "sold"
+  },
+  {
+   "t": "table",
+   "caption": "Mission: buildings and complexes with the most townhomes sold",
+   "head": [
+    "Building or complex",
+    "Sold",
+    "Median price",
+    "Median days to sell",
+    "Median year built",
+    "Median strata fee"
+   ],
+   "rows": [
+    [
+     "Skyview",
+     "10",
+     "$714,900",
+     "6 days",
+     "2025",
+     "$180 a month"
+    ],
+    [
+     "Archer Green",
+     "8",
+     "$682,500",
+     "16 days",
+     "2022",
+     "$381 a month"
+    ],
+    [
+     "Spencer Estates",
+     "5",
+     "$415,000",
+     "55 days",
+     "1994",
+     "$410 a month"
+    ]
+   ],
+   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. Names are as entered in the MLS® listings; a building is listed only with 5 or more sales, and its price is the median of those sales, not any one home.",
+   "gen": "sold"
+  },
+  {
+   "t": "p",
+   "text": "Notes that also apply here are written up once, on these pages:",
+   "gen": "dedupe",
+   "pos": "end"
+  },
+  {
+   "t": "list",
+   "items": [
+    [
+     {
+      "t": "Foreclosures & Court Ordered Sales",
+      "h": "/foreclosures.html"
+     }
+    ],
+    [
+     {
+      "t": "Mission Condos for Sale",
+      "h": "/mission-condos-for-sale.html"
+     }
+    ],
+    [
+     {
+      "t": "Luxury Homes in Mission – Explore Properties Over $1.8 Million",
+      "h": "/mission-homes-over-1-8m.html"
+     }
+    ],
+    [
+     {
+      "t": "Mission Townhomes for Sale",
+      "h": "/mission-townhomes-for-sale.html"
+     }
+    ]
+   ],
+   "gen": "dedupe",
+   "pos": "end"
+  }
+ ],
+ "faq": [
+  {
+   "q": "Can Jared show me homes in Mission?",
+   "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
+   "gen": "muse-generic"
+  },
+  {
+   "gen": "sold",
+   "q": "What did houses in Mission sell for?",
+   "a": "305 houses sold in Mission between November 1, 2025 to October 22, 2026, with a median price of $905,000."
+  },
+  {
+   "gen": "sold",
+   "q": "How long do houses take to sell in Mission?",
+   "a": "The median was 35 days from listing to sale, and homes sold at a median 97.0% of the last list price (8% sold above list), for sales November 1, 2025 to October 22, 2026."
+  },
+  {
+   "gen": "sold",
+   "q": "What price range do most houses in Mission sell in?",
+   "a": "The middle half of the 305 houses that sold in Mission went for between $780,000 and $1,095,000, around a median of $905,000."
+  },
+  {
+   "gen": "sold",
+   "q": "Do houses in Mission sell above asking price?",
+   "a": "8% of the 305 houses sold for more than the last list price, and the median sale was 97.0% of it."
+  },
+  {
+   "gen": "sold",
+   "q": "How old are the houses that sold in Mission?",
+   "a": "The median year built was 1991 for the 305 houses sold in Mission."
+  },
+  {
+   "gen": "sold",
+   "q": "How many bedrooms do houses in Mission usually have?",
+   "a": "The median house that sold in Mission had 4 bedrooms, from the 305 sales between November 1, 2025 to October 22, 2026."
+  },
+  {
+   "gen": "sold",
+   "q": "Which Mission communities sold the most houses?",
+   "a": "By number sold: Mission BC (252), Hatzic (27), Lake Errock (11), for November 1, 2025 to October 22, 2026."
+  }
+ ],
+ "city_page": {
+  "city": "mission",
+  "label": "Mission",
+  "types": [
+   "house",
+   "townhome",
+   "condo"
   ],
-  "faq": [
-    {
-      "q": "Can I add a suite or coach house to a house in Mission?",
-      "a": "BC's small-scale multi-unit housing rules allow more homes on many urban lots, but each municipality sets the details and many lots are excluded. Check the lot's zoning with the municipality before you plan a suite or coach house.",
-      "gen": "bank-faq"
-    },
-    {
-      "q": "Do I need a home inspection when buying in Mission?",
-      "a": "It is strongly recommended. Make the offer subject to an inspection so a qualified inspector can look at the roof, structure, drainage, electrical and heating before you remove conditions.",
-      "gen": "bank-faq"
-    },
-    {
-      "q": "How do I find out which school serves an address in Mission?",
-      "a": "School catchments are set by address, so use the school district's catchment locator with the exact address. Catchment lines change, so check before you write an offer.",
-      "gen": "bank-faq"
-    },
-    {
-      "q": "Can Jared show me homes in Mission?",
-      "a": "Yes. Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, books private showings across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361, or use the contact form on this site.",
-      "gen": "muse-generic"
-    }
-  ]
+  "band": 1800000
+ }
 }

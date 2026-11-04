@@ -25,6 +25,7 @@ CITYSEL = {
  'south-surrey': [('South Surrey White Rock', ('White Rock',))], 'cloverdale': [('Cloverdale', ())], 'north-delta': [('N. Delta', ())], 'ladner': [('Ladner', ())],
  'mission': [('Mission', ())], 'burnaby': [('Burnaby North', ()), ('Burnaby South', ()), ('Burnaby East', ())], 'coquitlam': [('Coquitlam', ())],
  'port-coquitlam': [('Port Coquitlam', ())], 'port-moody': [('Port Moody', ())], 'new-westminster': [('New Westminster', ())],
+ 'tsawwassen': [('Tsawwassen', ())], 'maple-ridge': [('Maple Ridge', ())], 'chilliwack': [('Chilliwack', ())],
 }
 # SnapStats area key -> Paragon areas (for community and type pages)
 SNAP_AREAS = {'abbotsford': ['Abbotsford'], 'surrey': ['Surrey', 'North Surrey'], 'south-surrey-white-rock': ['South Surrey White Rock'], 'north-delta': ['N. Delta'], 'cloverdale': ['Cloverdale'],
@@ -122,6 +123,41 @@ def complexes(rows):
     return sorted(out, key=lambda x: -x['n'])
 
 
+BANDS = [(0, 600000, 'Under $600,000'), (600000, 800000, '$600,000 to $799,999'), (800000, 1000000, '$800,000 to $999,999'), (1000000, 1200000, '$1,000,000 to $1,199,999'),
+         (1200000, 1500000, '$1,200,000 to $1,499,999'), (1500000, 1800000, '$1,500,000 to $1,799,999'), (1800000, 10 ** 12, '$1,800,000 and over')]
+
+
+def band_counts(rows):
+    p = [num(a['Sold Price']) for a in rows]
+    return [sum(1 for x in p if x is not None and lo <= x < hi) for lo, hi, _ in BANDS]
+
+
+def city_entry(rows, bysub, sel):
+    v = [a for a in rows if any(a['Area'] == ar and a['Sub-Area/Community'] not in ex for ar, ex in sel)]
+    d = {g: stats([a for a in v if group_of(a) == g], g) for g in GROUPS if any(group_of(a) == g for a in v)}
+    for g in d: d[g]['bands'] = band_counts([a for a in v if group_of(a) == g])
+    cx = {g: complexes([a for a in v if group_of(a) == g]) for g in ('condo', 'townhome')}
+    return {'groups': d, 'complexes': {g: c[:40] for g, c in cx.items() if c}, 'subs': sorted(f'{ar}|{sb}' for ar, ex in sel for (a2, sb) in bysub if a2 == ar and sb not in ex)}
+
+
+def add_cities(csv_path, keys):
+    """Add city keys (and price bands for every city) to the saved aggregate from the same export, using only sales up to the saved window's last day. Existing figures are not recomputed."""
+    agg = json.load(open(AGG, encoding='utf-8')); last = agg['meta']['last']
+    rows = [a for a in csv.DictReader(open(csv_path, encoding='utf-8-sig')) if a['Status'] == 'Closed' and group_of(a) and a['Sold Date'] <= last]
+    bysub = collections.defaultdict(list)
+    for a in rows: bysub[(a['Area'], a['Sub-Area/Community'])].append(a)
+    for ck in keys:
+        agg['city'][ck] = city_entry(rows, bysub, CITYSEL[ck])
+    for ck, sel in CITYSEL.items():           # bands for the cities that already existed
+        if ck in agg['city'] and ck not in keys:
+            e = city_entry(rows, bysub, sel)
+            for g, grp in agg['city'][ck]['groups'].items():
+                if g in e['groups'] and e['groups'][g]['n'] == grp['n']: grp['bands'] = e['groups'][g]['bands']
+                elif g in e['groups']: print('count differs for', ck, g, grp['n'], e['groups'][g]['n'])
+    json.dump(agg, open(AGG, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    print('added', keys, 'rows used', len(rows))
+
+
 def aggregate(csv_path):
     rows = [a for a in csv.DictReader(open(csv_path, encoding='utf-8-sig')) if a['Status'] == 'Closed' and group_of(a)]
     dates = [a['Sold Date'] for a in rows]
@@ -135,15 +171,7 @@ def aggregate(csv_path):
             if r: d[g] = stats(r, g)
         cx = {g: complexes([a for a in v if group_of(a) == g]) for g in ('condo', 'townhome')}
         out['sub'][f'{ar}|{sb}'] = {'groups': d, 'complexes': {g: c for g, c in cx.items() if c}}
-    for ck, sel in CITYSEL.items():
-        v = [a for a in rows if any(a['Area'] == ar and a['Sub-Area/Community'] not in ex for ar, ex in sel)]
-        d = {g: stats([a for a in v if group_of(a) == g], g) for g in GROUPS if any(group_of(a) == g for a in v)}
-        cx = {g: complexes([a for a in v if group_of(a) == g]) for g in ('condo', 'townhome')}
-        subs = {}
-        for ar, ex in sel:
-            for (a2, sb), vv in bysub.items():
-                if a2 == ar and sb not in ex: subs[sb] = None
-        out['city'][ck] = {'groups': d, 'complexes': {g: c[:40] for g, c in cx.items() if c}, 'subs': sorted(f'{ar}|{sb}' for ar, ex in sel for (a2, sb) in bysub if a2 == ar and sb not in ex)}
+    for ck, sel in CITYSEL.items(): out['city'][ck] = city_entry(rows, bysub, sel)
     os.makedirs(os.path.dirname(AGG), exist_ok=True)
     json.dump(out, open(AGG, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     return out
@@ -275,6 +303,43 @@ def page_blocks(agg, k, disp, types):
     return bl
 
 
+def city_blocks(agg, ck, label, types, band=None):
+    cd = agg['city'].get(ck)
+    if not cd: return [], []
+    g = cd['groups']; order = [x for x in types if x in g and g[x]['n'] >= MIN_MENTION]
+    if not order: return [], []
+    big = max(order, key=lambda x: g[x]['n']); noun = GL[big]
+    if band:
+        bl = [H(f'{label} {noun} sold: price bands, {WINDOW}')]
+        idx = [i for i, (lo, hi, _) in enumerate(BANDS) if hi <= band]; parts = []
+        for x in order:
+            bc = g[x].get('bands'); tot = g[x]['n']
+            if not bc: continue
+            under = sum(bc[i] for i in idx)
+            parts.append(f'{under:,} of {tot:,} {GL[x]} ({round(100 * under / tot)}%)')
+        if parts: bl.append(P(f'In {label}, the sales at {money(band)} or less were ' + ', '.join(parts[:-1]) + (' and ' if len(parts) > 1 else '') + parts[-1] + f', for sales {WINDOW}. The table shows how many sold in each price band.'))
+        rows = []
+        for i, (lo, hi, nm) in enumerate(BANDS):
+            r = [nm]
+            for x in order:
+                bc = g[x].get('bands'); r.append(('Fewer than 5' if bc[i] < MIN_MED else str(bc[i])) if bc else '—')
+            rows.append(r)
+        bl.append({'t': 'table', 'caption': f'{label}: how many sold in each price band', 'head': ['Price band'] + [GROUPS[x] for x in order], 'rows': rows, 'source': SRC + ' A count under 5 is shown as "Fewer than 5".', 'gen': G})
+        for x in sorted(order, key=lambda y: -g[y]['n']): bl.append(P(one_line(label, g[x], x)))
+        hx = g.get('house')
+        if hx and hx['n'] >= MIN_MED and 'p25' in hx:
+            bl.append(P(f'These are closed-sale prices, so they show what {label} homes actually sold for, not what they were listed at. A {label} house listed today at {money(band)} or less can be measured against them: the middle half of the {hx["n"]:,} houses sold between {money(hx["p25"])} and {money(hx["p75"])}, and half of them sold in {hx["dom"]} days or fewer.'))
+    else:
+        bl = [H(f'{label} {noun}: what sold, {WINDOW}')]
+        bl.append(P(' '.join(one_line(label, g[x], x) for x in sorted(order, key=lambda x: -g[x]['n'])[:2])))
+    bl += mix_table(label, g, types) + (quarter_table(label, g[big], big) if g[big]['n'] >= 12 else [])
+    for x in (sorted(order, key=lambda y: -g[y]['n']) if band else [big]): bl += sub_table(label, cd['subs'], x, agg)
+    for x in ('condo', 'townhome'):
+        if x in types and cd['complexes'].get(x): bl += bldg_table(label, cd['complexes'][x], x)
+    faq = (sold_faq(label, noun, g[big], big) + sold_faq_more(label, noun, g[big], big, cd, agg)) if g[big]['n'] >= MIN_MED else []
+    return bl, faq
+
+
 def apply_pages():
     agg = load(); changed = 0; hit = 0
     for f in sorted(glob.glob(os.path.join(ROOT, 'src/data/local/*.json'))):
@@ -298,6 +363,14 @@ def apply_pages():
                             x = max(ex, key=lambda y: g[y]['n']); qs = {q['q'] for q in j['faq']}
                             j['faq'] += [q for q in sold_faq(disp, GL[x], g[x], x) if q['q'] not in qs]
             j['needs_from_muse'] = [n for n in j.get('needs_from_muse', []) if not re.search(r'sold (prices|listings)|days on market', n, re.I)] if j.get('needs_from_muse') else j.get('needs_from_muse')
+        cp = j.get('city_page')              # {'city': 'ladner', 'label': 'Ladner', 'types': ['house'], 'band': 1800000?}
+        if cp:
+            j['blocks'] = [b for b in j.get('blocks', []) if b.get('gen') != G]
+            bl, fq = city_blocks(agg, cp['city'], cp['label'], cp['types'], cp.get('band'))
+            if bl:
+                j['blocks'] += bl; hit += 1
+                j['faq'] = [q for q in j.get('faq', []) if q.get('gen') != G]
+                qs = {q['q'] for q in j['faq']}; j['faq'] += [q for q in fq if q['q'] not in qs]
         if json.dumps(j, sort_keys=True) != before:
             with open(f, 'w', encoding='utf-8') as fh: json.dump(j, fh, indent=2, ensure_ascii=False); fh.write('\n')
             changed += 1
@@ -305,7 +378,8 @@ def apply_pages():
 
 
 if __name__ == '__main__':
-    ap = argparse.ArgumentParser(); ap.add_argument('--csv'); a = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument('--csv'); ap.add_argument('--add-cities', nargs='+', metavar='CSV_THEN_KEYS', help='CSV path followed by city keys to add to the saved aggregate'); a = ap.parse_args()
+    if a.add_cities: add_cities(a.add_cities[0], a.add_cities[1:])
     if a.csv:
         o = aggregate(a.csv); print('aggregated', o['meta'], len(o['sub']), 'sub-areas')
     apply_pages()

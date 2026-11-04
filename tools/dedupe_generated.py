@@ -17,6 +17,8 @@ import uniqueness as U
 LOCAL = os.path.join(ROOT, 'src/data/local'); PAGES = os.path.join(ROOT, 'src/data/pages'); GEN = 'dedupe'
 KEEP_GENS = {'jtake', 'near2', GEN}
 HUBS = ['mobile-home-parks-fraser-valley']
+PROTECT = {'ladner-townhomes-for-sale', 'ladner-houses-for-sale', 'east-burnaby', 'websters-corners', 'ladner-condos-for-sale', 'chilliwack-proper-east', 'south-meadows-houses-for-sale',
+           'tsawwassen-townhomes-for-sale', 'glenwood-port-coquitlam', 'vancouver-heights-burnaby', 'chilliwack-houses-for-sale', 'mid-meadows-pitt-meadows', 'maple-ridge-houses-for-sale', 'mission-homes-under-1-8m'}   # Jared, 2026-11-04: these must stay over 1,000 words
 MIN_WORDS, CONTAIN, MIN_BLOCK = 300, 0.6, 20
 if '--contain' in sys.argv: CONTAIN = float(sys.argv[sys.argv.index('--contain') + 1])
 def sh_of(w): return {' '.join(w[i:i + 8]) for i in range(max(0, len(w) - 7))}
@@ -48,8 +50,11 @@ def scores(pages, local, drops):
 def main():
     dry = '--dry' in sys.argv
     pages, local = load()
-    for s, l in local.items():                       # idempotent: remove our own pointer blocks first
-        if any(b.get('gen') == GEN for b in l.get('blocks', [])): l['blocks'] = [b for b in l['blocks'] if b.get('gen') != GEN]
+    existing = {}                                    # pointer blocks from an earlier run: keep their owners, so a partial re-run (one generator re-adding its blocks) never loses them
+    for s, l in local.items():
+        if any(b.get('gen') == GEN for b in l.get('blocks', [])):
+            existing[s] = {re.sub(r'^/|\.html$', '', it[0]['h']) for b in l['blocks'] if b.get('gen') == GEN and b['t'] == 'list' for it in b['items'] if it and it[0].get('h')}
+            l['blocks'] = [b for b in l['blocks'] if b.get('gen') != GEN]
     base, bw, cnt = scores(pages, local, {})
     low = {s for s, v in base.items() if v < 0.7}
     items = []                                       # (slug, kind, index, shingles, words)
@@ -90,9 +95,10 @@ def main():
     # keep >= MIN_WORDS words on every page
     for s in list(drops):
         w, _ = page_words_shingles(s, pages, local, drops[s])
-        if len(w) < MIN_WORDS:
+        floor = min(1000, bw[s]) if s in PROTECT else 0   # protected pages never drop below 1,000 words because of this pass (a page already shorter keeps what it has)
+        if len(w) < max(MIN_WORDS, floor):
             order = sorted(drops[s], key=lambda k: -len(U.words(json.dumps(local[s]['blocks'][k[1]] if k[0] == 'B' else local[s]['faq'][k[1]]))))
-            while order and len(page_words_shingles(s, pages, local, set(order))[0]) < MIN_WORDS: order.pop(0)
+            while order and len(page_words_shingles(s, pages, local, set(order))[0]) < max(MIN_WORDS, floor): order.pop(0)
             if order: drops[s] = set(order)
             else: del drops[s]
     # pointer lines
@@ -108,7 +114,9 @@ def main():
         dr = drops.get(s, set()); changed = False
         if dr:
             l['blocks'] = [b for i, b in enumerate(l.get('blocks', [])) if ('B', i) not in dr]; l['faq'] = [f for i, f in enumerate(l.get('faq', [])) if ('F', i) not in dr]; changed = True
+        own = (owners.get(s, set()) if dr else set()) | existing.get(s, set())
+        if own:
             l['blocks'] += [{'t': 'p', 'text': 'Notes that also apply here are written up once, on these pages:', 'gen': GEN, 'pos': 'end'},
-                            {'t': 'list', 'items': [[{'t': name(o), 'h': f'/{o}.html'}] for o in sorted(owners[s])], 'gen': GEN, 'pos': 'end'}]
+                            {'t': 'list', 'items': [[{'t': name(o), 'h': f'/{o}.html'}] for o in sorted(own) if o in pages], 'gen': GEN, 'pos': 'end'}]; changed = True
         if changed: json.dump(l, open(os.path.join(LOCAL, s + '.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 if __name__ == '__main__': main()

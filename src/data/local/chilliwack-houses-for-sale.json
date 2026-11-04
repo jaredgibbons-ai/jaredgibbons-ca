@@ -435,6 +435,162 @@
       ],
       "pos": "end",
       "t": "list"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Chilliwack houses: what sold, November 1, 2025 to October 22, 2026",
+      "gen": "sold"
+    },
+    {
+      "t": "p",
+      "text": "294 houses sold in Chilliwack with a median price of $825,000 (the middle half sold between $695,938 and $1,038,038), taking a median of 26 days to sell at 97.2% of the last list price; 5% sold above list. They had a median $378 per square foot, a median year built of 1980 and a median lot of 7,274 square feet.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Chilliwack: what sold, by home type",
+      "head": [
+        "Home type",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Houses",
+          "294",
+          "$825,000",
+          "26 days",
+          "97.2%",
+          "$378"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Chilliwack: houses sold by quarter",
+      "head": [
+        "Period",
+        "Sold",
+        "Median price"
+      ],
+      "rows": [
+        [
+          "Nov 2025 to Jan 2026",
+          "70",
+          "$896,500"
+        ],
+        [
+          "Feb to Apr 2026",
+          "86",
+          "$825,000"
+        ],
+        [
+          "May to Jul 2026",
+          "94",
+          "$812,500"
+        ],
+        [
+          "Aug to Oct 2026",
+          "44",
+          "$749,950"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+      "gen": "sold"
+    },
+    {
+      "t": "table",
+      "caption": "Chilliwack: houses sold by community",
+      "head": [
+        "Community",
+        "Sold",
+        "Median price",
+        "Median days to sell",
+        "Sold vs list",
+        "Median per sq ft"
+      ],
+      "rows": [
+        [
+          "Chilliwack Proper East",
+          "66",
+          "$735,000",
+          "24 days",
+          "97.3%",
+          "$379"
+        ],
+        [
+          "Eastern Hillsides",
+          "56",
+          "$1,142,500",
+          "24 days",
+          "97.5%",
+          "$350"
+        ],
+        [
+          "Chilliwack Proper West",
+          "46",
+          "$697,000",
+          "26 days",
+          "96.6%",
+          "$402"
+        ],
+        [
+          "Chilliwack Proper South",
+          "44",
+          "$700,000",
+          "28 days",
+          "96.9%",
+          "$392"
+        ],
+        [
+          "Fairfield Island",
+          "39",
+          "$850,000",
+          "24 days",
+          "97.6%",
+          "$377"
+        ],
+        [
+          "Little Mountain",
+          "17",
+          "$1,115,000",
+          "29 days",
+          "98.3%",
+          "$366"
+        ],
+        [
+          "Chilliwack Mountain",
+          "9",
+          "$970,000",
+          "15 days",
+          "97.1%",
+          "$392"
+        ],
+        [
+          "East Chilliwack",
+          "9",
+          "$1,239,900",
+          "38 days",
+          "97.9%",
+          "$443"
+        ],
+        [
+          "Lower Landing",
+          "5",
+          "$1,015,000",
+          "48 days",
+          "98.5%",
+          "$427"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a community is listed only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "sold"
     }
   ],
   "faq": [
@@ -457,9 +613,51 @@
       "a": "Agricultural Land Reserve (ALR) rules limit most parcels to one residence unless another qualifies; a principal residence must be 500 square metres or less, with any suite inside it. Check the parcel on Agricultural Land Commission mapping before assuming a second home is possible.",
       "gen": "uq",
       "q": "Can a farm-edge parcel hold a second home?"
+    },
+    {
+      "gen": "sold",
+      "q": "What did houses in Chilliwack sell for?",
+      "a": "294 houses sold in Chilliwack between November 1, 2025 to October 22, 2026, with a median price of $825,000."
+    },
+    {
+      "gen": "sold",
+      "q": "How long do houses take to sell in Chilliwack?",
+      "a": "The median was 26 days from listing to sale, and homes sold at a median 97.2% of the last list price (5% sold above list), for sales November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "What price range do most houses in Chilliwack sell in?",
+      "a": "The middle half of the 294 houses that sold in Chilliwack went for between $695,938 and $1,038,038, around a median of $825,000."
+    },
+    {
+      "gen": "sold",
+      "q": "Do houses in Chilliwack sell above asking price?",
+      "a": "5% of the 294 houses sold for more than the last list price, and the median sale was 97.2% of it."
+    },
+    {
+      "gen": "sold",
+      "q": "How old are the houses that sold in Chilliwack?",
+      "a": "The median year built was 1980 for the 294 houses sold in Chilliwack."
+    },
+    {
+      "gen": "sold",
+      "q": "How many bedrooms do houses in Chilliwack usually have?",
+      "a": "The median house that sold in Chilliwack had 4 bedrooms, from the 294 sales between November 1, 2025 to October 22, 2026."
+    },
+    {
+      "gen": "sold",
+      "q": "Which Chilliwack communities sold the most houses?",
+      "a": "By number sold: Chilliwack Proper East (66), Eastern Hillsides (56), Chilliwack Proper West (46), for November 1, 2025 to October 22, 2026."
     }
   ],
   "slug": "chilliwack-houses-for-sale",
   "status": "draft",
-  "updated": "2026-11-01"
+  "updated": "2026-11-01",
+  "city_page": {
+    "city": "chilliwack",
+    "label": "Chilliwack",
+    "types": [
+      "house"
+    ]
+  }
 }
