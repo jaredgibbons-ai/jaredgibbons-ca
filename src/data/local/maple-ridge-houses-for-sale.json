@@ -727,25 +727,6 @@
    "gen": "sold"
   },
   {
-   "t": "p",
-   "text": "Notes that also apply here are written up once, on these pages:",
-   "gen": "dedupe",
-   "pos": "end"
-  },
-  {
-   "t": "list",
-   "items": [
-    [
-     {
-      "t": "Maple Ridge Homes Over $1.8M for Sale",
-      "h": "/maple-ridge-homes-over-1-8m.html"
-     }
-    ]
-   ],
-   "gen": "dedupe",
-   "pos": "end"
-  },
-  {
    "t": "h",
    "level": 2,
    "text": "Price reductions, new listings and views",
@@ -775,6 +756,47 @@
     ]
    ],
    "gen": "srchlinks",
+   "pos": "end"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "New construction in Maple Ridge",
+   "gen": "nclinks",
+   "pos": "end",
+   "_for": "new-construction-maple-ridge"
+  },
+  {
+   "t": "list",
+   "items": [
+    [
+     {
+      "t": "New construction homes for sale in Maple Ridge",
+      "h": "/new-construction-maple-ridge.html"
+     }
+    ]
+   ],
+   "gen": "nclinks",
+   "pos": "end",
+   "_for": "new-construction-maple-ridge"
+  },
+  {
+   "t": "p",
+   "text": "Notes that also apply here are written up once, on these pages:",
+   "gen": "dedupe",
+   "pos": "end"
+  },
+  {
+   "t": "list",
+   "items": [
+    [
+     {
+      "t": "Maple Ridge Homes Over $1.8M for Sale",
+      "h": "/maple-ridge-homes-over-1-8m.html"
+     }
+    ]
+   ],
+   "gen": "dedupe",
    "pos": "end"
   }
  ],

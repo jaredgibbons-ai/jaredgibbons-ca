@@ -12,6 +12,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 XLSX = os.path.join(ROOT, 'docs/review/idx/embed-list-2026-11-04.xlsx')
 OUT = os.path.join(ROOT, 'src/data/idx-embeds.json')
 ACCOUNT = '67649'
+NC_XLSX = os.path.join(ROOT, 'docs/review/idx/new-construction-searches-2026-11-04.xlsx')
+NC_ADDR_FIX = {'sardis-homes-for-sale': 'new-construction-sardis'}
 # Searches the worksheet lists as "not on any live page" whose name is the page's own name.
 NAME_MATCH = {
     'metrotown-homes-for-sale': '1450248',          # "Metrotown Homes for Sale"
@@ -53,6 +55,19 @@ def main():
                 problems.append(('address has no page on our site', name, slug)); continue
             if not any(b.get('t') == 'grid' for b in json.load(open(pj))['blocks']):
                 problems.append(('page has no listings placeholder, not wired', name, slug)); continue
+            if slug in pages and pages[slug] != sid:
+                problems.append(('page has two searches', slug, f'{pages[slug]} / {sid}')); continue
+            pages[slug] = sid
+    # New-construction searches (Age 0 or less), one per city; second workbook. Sardis lands on its own new page, not the general Sardis homes page.
+    if os.path.exists(NC_XLSX):
+        nwb = openpyxl.load_workbook(NC_XLSX, read_only=True)
+        for r in list(nwb['New construction searches'].iter_rows(values_only=True))[1:]:
+            name, sid, _old, addr = r[0], r[1], r[2], r[3]
+            if not name: continue
+            sid = str(sid); slug = re.sub(r'\.html$', '', (addr or '').strip().lstrip('/')); slug = NC_ADDR_FIX.get(slug, slug)
+            lp = os.path.join(ROOT, 'src/data/local', slug + '.json')
+            if not os.path.exists(lp) or not any(b.get('t') == 'grid' for b in json.load(open(lp))['blocks']):
+                problems.append(('new-construction page missing or has no listings placeholder', name, slug)); continue
             if slug in pages and pages[slug] != sid:
                 problems.append(('page has two searches', slug, f'{pages[slug]} / {sid}')); continue
             pages[slug] = sid
