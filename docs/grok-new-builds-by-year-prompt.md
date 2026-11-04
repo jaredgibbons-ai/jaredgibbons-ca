@@ -4,7 +4,7 @@ Attach: `docs/idx-page-inventory.csv`, `src/data/snapstats/_mapping.json`, the l
 
 ```
 TASK
-Count, then build, MyRealPage saved searches for NEW BUILDS (Year Built 2027 or later) for each area we cover. One search per area, not one per year. Account 67649. Same worksheet format as embed-list.xlsx. Do not publish anything.
+Count, then build, MyRealPage saved searches for NEW CONSTRUCTION (Year Built 2027 or later) for each area we cover. One search per area, not one per year. Account 67649. Same worksheet format as embed-list.xlsx. Do not publish anything.
 
 AREAS
 Use the attached idx-page-inventory.csv (page slugs) and _mapping.json (our area names against the board's names). Start with every city: South Surrey, White Rock, Surrey, Cloverdale, Langley, Abbotsford, Mission, Chilliwack, Maple Ridge, Pitt Meadows, Delta (Tsawwassen, Ladner, North Delta), Coquitlam, Port Coquitlam, Port Moody, Burnaby, New Westminster, Richmond, Vancouver, and the rest of the attached list. Then neighbourhoods and sub-areas, but only inside a city that passes the count. Where my name and the board's name differ, use the board's value and tell me.
@@ -32,9 +32,9 @@ STEP 3: DECIDE BY RULE
 - Do not change or copy existing searches. Do not reuse an address that already exists, except the existing presale pages above, which are the intended home for their city's search.
 
 STEP 4: BUILD each qualifying search
-- Name: "[Area] New Builds for Sale" (second search: "[Area] 2028 or Later New Builds for Sale").
+- Name: "[Area] New Construction for Sale" (second search: "[Area] 2028 or Later New Construction for Sale").
 - Filters as the 18 searches built on Nov 4: Active, houses, townhomes and condos, no land, no income properties, Year Built 2027 or later, sorted by Year Built earliest first if the tool allows.
-- Page address: the existing presale page for that city if there is one. Otherwise suggest /new-builds-[area-slug].html using the slug from idx-page-inventory.csv without "-guide" (example /new-builds-fleetwood.html). H1: "New Builds for Sale in [Area]".
+- Page address: the existing presale page for that city if there is one. Otherwise suggest /new-construction-[area-slug].html using the slug from idx-page-inventory.csv without "-guide" (example /new-construction-fleetwood.html). H1: "New Construction Homes for Sale in [Area]".
 - Test the embed on one search and say whether it rendered, on what page, and what you saw.
 
 STEP 5: RETURN
