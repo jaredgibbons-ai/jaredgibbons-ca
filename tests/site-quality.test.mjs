@@ -35,3 +35,16 @@ test('built pages: every image has alt text and dimensions (listing photos excep
   for (const f of pages) for (const m of html(f).matchAll(/<img\b([^>]*)>/g)) { const a = m[1]; if (!/\balt=/.test(a) || (!/\bwidth=/.test(a) && !/listing-photos/.test(a))) bad.push(`${f}: ${a.slice(0, 60)}`); }
   assert.equal(bad.length, 0, bad.slice(0, 5).join('; '));
 });
+
+test('built pages: each listing search block names a numeric search id, loads from the vendor host only, and reserves its height', { skip: !built }, () => {
+  const bad = [];
+  const ids = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/idx-embeds.json'), 'utf8')).pages;
+  for (const f of pages) {
+    const t = html(f); const m = t.match(/data-idx-src="([^"]*)"/);
+    if (!m) continue;
+    if (!/^https:\/\/idx\.myrealpage\.com\/wps\/rest\/\d+\/l\/idx2\/recip\/[^"]*\/-\/search-\d+\.def\/in\.js$/.test(m[1])) bad.push(`${f}: src ${m[1]}`);
+    if (ids[f.replace(/\.html$/, '')] && !m[1].includes(`search-${ids[f.replace(/\.html$/, '')]}.def`)) bad.push(`${f}: wrong id`);
+    if (/<script[^>]+src="https:\/\/idx\.myrealpage/.test(t)) bad.push(`${f}: vendor script is not lazy`);
+  }
+  assert.equal(bad.length, 0, bad.slice(0, 5).join('; '));
+});

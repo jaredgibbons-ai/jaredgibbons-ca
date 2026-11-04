@@ -1,0 +1,38 @@
+---
+// MyRealPage listing search for one page. The vendor script is added only when the block nears the
+// viewport (keeps it off the LCP/INP path) and the space is reserved so the page does not shift (CLS).
+// If nothing renders within 10 s the visitor sees the plain link to the full search instead.
+interface Props { id: string; account: string; label?: string }
+const { id, account, label = 'Listings' } = Astro.props;
+const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/recip/tmpl~v2,noframe~true/-/search-${id}.def/in.js`;
+---
+<section class="section section--cream section--tight" aria-label={label}>
+  <div class="wrap">
+    <div class="idx" data-idx-src={src} data-idx-id={id}>
+      <noscript><p class="notice">Live MLS® listings need JavaScript. <a href="/recip.html">Search Listings</a></p></noscript>
+    </div>
+    <p class="notice idx__fallback" hidden>The live listings did not load. <a href="/recip.html">Search Listings</a></p>
+  </div>
+</section>
+<script>
+  const box = document.querySelector<HTMLElement>('.idx[data-idx-src]');
+  if (box) {
+    const fb = box.parentElement?.querySelector<HTMLElement>('.idx__fallback');
+    let started = false;
+    const load = () => {
+      if (started) return; started = true;
+      const s = document.createElement('script');
+      s.id = 'mrpscript'; s.async = true; s.src = box.dataset.idxSrc!;
+      box.appendChild(s);
+      setTimeout(() => { if (box.children.length <= 1 && fb) { fb.hidden = false; box.hidden = true; } }, 10000);
+    };
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((e) => { if (e.some((x) => x.isIntersecting)) { io.disconnect(); load(); } }, { rootMargin: '400px 0px' });
+      io.observe(box);
+    } else load();
+  }
+</script>
+<style>
+  .idx{min-height:36rem}
+  .idx[hidden],.idx__fallback[hidden]{display:none}
+</style>

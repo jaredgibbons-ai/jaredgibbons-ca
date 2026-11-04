@@ -14,9 +14,13 @@ import { pickReviews } from '../lib/reviews';
 import REVIEW_EXCERPTS from '../data/review-excerpts.json';
 import AREA_PHOTOS from '../data/area-photos.json';
 import PhotoCredit from './PhotoCredit.astro';
+import IdxEmbed from './IdxEmbed.astro';
+import IDX from '../data/idx-embeds.json';
 
 const { page } = Astro.props as { page: any };
 const seo = page.seo || {};
+const idx = IDX as { account: string; pages: Record<string, string> };
+const idxId = idx.pages[page.slug];
 
 // Local-knowledge layer (src/data/local/<slug>.json): original sourced sections inserted before the first
 // level-2 heading, plus FAQ + breadcrumb structured data. Only used where present; archive blocks are untouched.
@@ -114,6 +118,7 @@ let fid = 0;
         </div>
       </section>
     );
+    if (sec.kind === 'grid' && idxId) return <IdxEmbed id={idxId} account={idx.account} />;
     if (sec.kind === 'grid') return (
       <section class="section section--cream section--tight" aria-label="Listings">
         <div class="wrap">
