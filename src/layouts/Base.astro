@@ -5,6 +5,18 @@ import Footer from '../components/Footer.astro';
 const { title, canonical, footerTagline, footerCell = false, current = '', brandHref = '/', description, ogTitle, ogDescription, ogImage, jsonld = [], robots = '' } = Astro.props;
 // PUBLIC_PREVIEW defaults to true: the whole preview is closed. Launch (needs Jared's approval) builds with PUBLIC_PREVIEW=false, which then emits each page's own robots value.
 const preview = import.meta.env.PUBLIC_PREVIEW !== 'false';
+const isHome = Astro.url.pathname === '/' || Astro.url.pathname === '/index.html';
+const site = 'https://jaredgibbons.ca';
+// Home-only entity markup (facts as published in the footer and profile; no ratings, no social profiles that are not confirmed)
+const entity = isHome ? [
+  { '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${site}/#website`, url: `${site}/`, name: 'Jared Gibbons', inLanguage: 'en-CA', publisher: { '@id': `${site}/#agent` } },
+  { '@context': 'https://schema.org', '@type': 'RealEstateAgent', '@id': `${site}/#agent`, name: 'Jared Gibbons', url: `${site}/`, telephone: '+1-604-928-1361', email: 'jaredgibbons@royallepage.ca',
+    description: 'Jared Gibbons is a REALTOR® with Royal LePage Little Oak Realty serving South Surrey, White Rock, Langley and the Fraser Valley.',
+    parentOrganization: { '@type': 'Organization', name: 'Royal LePage Little Oak Realty' },
+    address: { '@type': 'PostalAddress', streetAddress: '#201, 15272 Croydon Drive', addressLocality: 'Surrey', addressRegion: 'BC', postalCode: 'V3Z 0Z5', addressCountry: 'CA' },
+    areaServed: ['South Surrey', 'White Rock', 'Langley', 'Surrey', 'Abbotsford', 'Chilliwack', 'Fraser Valley'].map((n) => ({ '@type': 'Place', name: n })) },
+] : [];
+const ogUrl = canonical;
 const robotsContent = preview ? 'noindex, nofollow' : robots;
 ---
 <!doctype html>
@@ -23,7 +35,15 @@ const robotsContent = preview ? 'noindex, nofollow' : robots;
   {ogTitle && <meta property="og:title" content={ogTitle} />}
   {(ogDescription ?? description) && <meta property="og:description" content={ogDescription ?? description} />}
   {ogImage && <meta property="og:image" content={ogImage} />}
-  {jsonld.map((j: any) => <script type="application/ld+json" set:html={JSON.stringify(j).replace(/</g, '\\u003c')} />)}
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Jared Gibbons" />
+  <meta property="og:locale" content="en_CA" />
+  {ogUrl && <meta property="og:url" content={ogUrl} />}
+  <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+  {(ogTitle ?? title) && <meta name="twitter:title" content={ogTitle ?? title} />}
+  {(ogDescription ?? description) && <meta name="twitter:description" content={ogDescription ?? description} />}
+  {ogImage && <meta name="twitter:image" content={ogImage} />}
+  {[...entity, ...jsonld].map((j: any) => <script type="application/ld+json" set:html={JSON.stringify(j).replace(/</g, '\\u003c')} />)}
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
