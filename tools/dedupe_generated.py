@@ -15,7 +15,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, '..
 sys.path.insert(0, HERE)
 import uniqueness as U
 LOCAL = os.path.join(ROOT, 'src/data/local'); PAGES = os.path.join(ROOT, 'src/data/pages'); GEN = 'dedupe'
-KEEP_GENS = {'jtake', 'near2', GEN, 'srch', 'srchlinks'}
+KEEP_GENS = {'jtake', 'near2', GEN, 'srch', 'srchlinks', 'ncmp'}
 HUBS = ['mobile-home-parks-fraser-valley']
 PROTECT = {'ladner-townhomes-for-sale', 'ladner-houses-for-sale', 'east-burnaby', 'websters-corners', 'ladner-condos-for-sale', 'chilliwack-proper-east', 'south-meadows-houses-for-sale',
            'tsawwassen-townhomes-for-sale', 'glenwood-port-coquitlam', 'vancouver-heights-burnaby', 'chilliwack-houses-for-sale', 'mid-meadows-pitt-meadows', 'maple-ridge-houses-for-sale', 'mission-homes-under-1-8m'}   # Jared, 2026-11-04: these must stay over 1,000 words

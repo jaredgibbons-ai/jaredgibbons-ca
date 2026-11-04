@@ -582,6 +582,88 @@
    ],
    "gen": "dedupe",
    "pos": "end"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "How Burnaby Hospital compares with nearby areas",
+   "gen": "ncmp",
+   "pos": "end"
+  },
+  {
+   "t": "p",
+   "text": "A price is easier to read next to the areas this page names as its neighbours and landmarks. These are the ones with at least 5 sales of the same type between November 1, 2025 to October 22, 2026.",
+   "gen": "ncmp",
+   "pos": "end"
+  },
+  {
+   "t": "p",
+   "text": "Burnaby Hospital did not have 5 sales of condos in the period, so it cannot be placed by price, but nearby condos sold from $640,000 in Forest Glen to $690,000 in Metrotown.",
+   "gen": "ncmp",
+   "pos": "end"
+  },
+  {
+   "t": "p",
+   "text": "Burnaby Hospital did not have 5 sales of townhomes in the period, so it cannot be placed by price, but nearby townhomes sold from $846,500 in Forest Glen to $1,086,500 in Burnaby Lake.",
+   "gen": "ncmp",
+   "pos": "end"
+  },
+  {
+   "t": "table",
+   "caption": "Burnaby Hospital and nearby areas: what sold",
+   "head": [
+    "Area",
+    "Type",
+    "Sold",
+    "Median price",
+    "Days to sell",
+    "Sold vs list"
+   ],
+   "rows": [
+    [
+     "Burnaby Lake",
+     "Townhomes",
+     "6",
+     "$1,086,500",
+     "46",
+     "98.3%"
+    ],
+    [
+     "Forest Glen",
+     "Condos",
+     "57",
+     "$640,000",
+     "38",
+     "96.7%"
+    ],
+    [
+     "Forest Glen",
+     "Townhomes",
+     "6",
+     "$846,500",
+     "14",
+     "98.0%"
+    ],
+    [
+     "Metrotown",
+     "Condos",
+     "410",
+     "$690,000",
+     "31",
+     "97.0%"
+    ],
+    [
+     "Metrotown",
+     "Townhomes",
+     "31",
+     "$979,000",
+     "39",
+     "97.2%"
+    ]
+   ],
+   "source": "Source: Paragon closed sales, November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price. Sold vs list is the sale price as a percentage of the last list price. An area is listed only where at least 5 homes of that type sold. Distances are straight line between centre points (OpenStreetMap contributors and Wikipedia).",
+   "gen": "ncmp",
+   "pos": "end"
   }
  ],
  "breadcrumbs": [
