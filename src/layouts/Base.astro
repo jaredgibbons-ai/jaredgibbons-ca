@@ -2,7 +2,8 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-const { title, canonical, footerTagline, footerCell = false, current = '', brandHref = '/', description, ogTitle, ogDescription, ogImage, jsonld = [], robots = '' } = Astro.props;
+const { title, canonical, footerTagline, footerCell = false, current = '', brandHref = '/', description, ogTitle, ogDescription, ogImage, jsonld = [], robots = '', crumbs = [] } = Astro.props;
+const crumbLd = crumbs.length > 1 ? [{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs.map((c: any, i: number) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: 'https://jaredgibbons.ca' + c.href })) }] : [];
 // PUBLIC_PREVIEW defaults to true: the whole preview is closed. Launch (needs Jared's approval) builds with PUBLIC_PREVIEW=false, which then emits each page's own robots value.
 const preview = import.meta.env.PUBLIC_PREVIEW !== 'false';
 const isHome = Astro.url.pathname === '/' || Astro.url.pathname === '/index.html';
@@ -43,12 +44,19 @@ const robotsContent = preview ? 'noindex, nofollow' : robots;
   {(ogTitle ?? title) && <meta name="twitter:title" content={ogTitle ?? title} />}
   {(ogDescription ?? description) && <meta name="twitter:description" content={ogDescription ?? description} />}
   {ogImage && <meta name="twitter:image" content={ogImage} />}
-  {[...entity, ...jsonld].map((j: any) => <script type="application/ld+json" set:html={JSON.stringify(j).replace(/</g, '\\u003c')} />)}
+  {[...entity, ...jsonld, ...crumbLd].map((j: any) => <script type="application/ld+json" set:html={JSON.stringify(j).replace(/</g, '\\u003c')} />)}
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <aside class="preview-banner" aria-label="Preview notice">Private working preview — pages are being rebuilt in stages, so a link may point to a page that is not built yet. Not indexed.</aside>
   <Header current={current} brandHref={brandHref} />
+  {crumbs.length > 1 && (
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol class="wrap">
+        {crumbs.map((c: any, i: number) => i < crumbs.length - 1 ? <li><a href={c.href}>{c.name}</a></li> : <li aria-current="page">{c.name}</li>)}
+      </ol>
+    </nav>
+  )}
   <slot />
   <Footer tagline={footerTagline} cell={footerCell} />
   <nav class="action-bar" aria-label="Quick actions">

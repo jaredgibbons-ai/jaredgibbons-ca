@@ -16,6 +16,7 @@ import AREA_PHOTOS from '../data/area-photos.json';
 import PhotoCredit from './PhotoCredit.astro';
 import IdxEmbed from './IdxEmbed.astro';
 import IDX from '../data/idx-embeds.json';
+import BREADCRUMBS from '../data/breadcrumbs.json';
 
 const { page } = Astro.props as { page: any };
 const seo = page.seo || {};
@@ -30,8 +31,12 @@ const local = LOCAL[`../data/local/${page.slug}.json`];
 let endCount = 0;
 const origin = 'https://jaredgibbons.ca';
 const jsonld: any[] = [];
+// Breadcrumbs: the local layer's own trail, else the generated one (tools/build_breadcrumbs.py), else Home > Blog > post for blog posts.
+const postName = String(page.title || '').split('|')[0].trim();
+const crumbs: any[] = page.slug === 'index' || page.slug === '404' ? [] : local?.breadcrumbs?.length ? local.breadcrumbs
+  : String(page.path || '').startsWith('/blog.html/') ? [{ name: 'Home', href: '/index.html' }, { name: 'Blog', href: '/blog.html' }, { name: postName, href: page.path }]
+  : (BREADCRUMBS as Record<string, any[]>)[page.slug] ?? [];
 if (local?.faq?.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: local.faq.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
-if (local?.breadcrumbs?.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: local.breadcrumbs.map((c: any, i: number) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: origin + c.href })) });
 // The old MLS search form leaked into six farm pages as text (form labels, a 34-item and a 275-item list of dropdown options, "Save search", "Reset", "Filters"). It is not content: drop it from "Price: Property Type / Subtype:" through "Filters".
 {
   const ptxt = (b: any) => b.text ?? b.parts?.map((x: any) => x.t).join('') ?? '';
@@ -101,6 +106,7 @@ let fid = 0;
   ogDescription={seo['OG description'] || undefined}
   ogImage={seo['OG image'] || undefined}
   jsonld={jsonld}
+  crumbs={crumbs}
   robots={isGated(page.slug) ? 'noindex, follow' : (seo['Meta robots'] || 'index, follow')}
   footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
   footerCell={true}
