@@ -19,7 +19,7 @@ KEEP_GENS = {'jtake', 'near2', GEN}
 HUBS = ['mobile-home-parks-fraser-valley']
 PROTECT = {'ladner-townhomes-for-sale', 'ladner-houses-for-sale', 'east-burnaby', 'websters-corners', 'ladner-condos-for-sale', 'chilliwack-proper-east', 'south-meadows-houses-for-sale',
            'tsawwassen-townhomes-for-sale', 'glenwood-port-coquitlam', 'vancouver-heights-burnaby', 'chilliwack-houses-for-sale', 'mid-meadows-pitt-meadows', 'maple-ridge-houses-for-sale', 'mission-homes-under-1-8m'}   # Jared, 2026-11-04: these must stay over 1,000 words
-MIN_WORDS, CONTAIN, MIN_BLOCK = 300, 0.6, 20
+MIN_WORDS, CONTAIN, MIN_BLOCK, CONTAIN_PROTECTED = 300, 0.6, 20, 0.4
 if '--contain' in sys.argv: CONTAIN = float(sys.argv[sys.argv.index('--contain') + 1])
 def sh_of(w): return {' '.join(w[i:i + 8]) for i in range(max(0, len(w) - 7))}
 def load():
@@ -72,26 +72,29 @@ def main():
     idx = defaultdict(list)
     for n, it in enumerate(items):
         for x in it[3]: idx[x].append(n)
-    parent = list(range(len(items)))
-    def find(a):
-        while parent[a] != a: parent[a] = parent[parent[a]]; a = parent[a]
-        return a
-    for n, it in enumerate(items):
-        hits = Counter(m for x in it[3] for m in idx[x] if m != n and items[m][0] != it[0])
-        for m, c in hits.items():
-            if c / min(len(it[3]), len(items[m][3])) >= CONTAIN: parent[find(n)] = find(m)
-    clusters = defaultdict(list)
-    for n in range(len(items)): clusters[find(n)].append(n)
+    def cluster(th):
+        parent = list(range(len(items)))
+        def find(a):
+            while parent[a] != a: parent[a] = parent[parent[a]]; a = parent[a]
+            return a
+        for n, it in enumerate(items):
+            hits = Counter(m for x in it[3] for m in idx[x] if m != n and items[m][0] != it[0])
+            for m, c in hits.items():
+                if c / min(len(it[3]), len(items[m][3])) >= th: parent[find(n)] = find(m)
+        cl = defaultdict(list)
+        for n in range(len(items)): cl[find(n)].append(n)
+        return cl
     drops = defaultdict(set); owners = defaultdict(set); ncl = 0
-    for ms in clusters.values():
-        slugs = {items[m][0] for m in ms}
-        if len(slugs) < 2: continue
-        ncl += 1
-        pick = lambda s: (0 if s in HUBS else 1 if s not in low else 2, len(s), s)
-        owner = min(slugs, key=pick)
-        for m in ms:
-            s, kind, i, _, _ = items[m]
-            if s != owner and s in low: drops[s].add((kind, i)); owners[s].add(owner)
+    for th, only in ((CONTAIN, None), (CONTAIN_PROTECTED, PROTECT)):      # protected pages (kept over 1,000 words) also lose partial copies; other pages only near-copies
+        for ms in cluster(th).values():
+            slugs = {items[m][0] for m in ms}
+            if len(slugs) < 2: continue
+            ncl += 1
+            pick = lambda s: (0 if s in HUBS else 1 if s not in low else 2, len(s), s)
+            owner = min(slugs, key=pick)
+            for m in ms:
+                s, kind, i, _, _ = items[m]
+                if s != owner and s in low and (only is None or s in only): drops[s].add((kind, i)); owners[s].add(owner)
     # keep >= MIN_WORDS words on every page
     for s in list(drops):
         w, _ = page_words_shingles(s, pages, local, drops[s])
