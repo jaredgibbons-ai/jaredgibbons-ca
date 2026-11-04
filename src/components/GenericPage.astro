@@ -27,6 +27,12 @@ const origin = 'https://jaredgibbons.ca';
 const jsonld: any[] = [];
 if (local?.faq?.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: local.faq.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
 if (local?.breadcrumbs?.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: local.breadcrumbs.map((c: any, i: number) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: origin + c.href })) });
+// The old MLS search form leaked into six farm pages as text (form labels, a 34-item and a 275-item list of dropdown options, "Save search", "Reset", "Filters"). It is not content: drop it from "Price: Property Type / Subtype:" through "Filters".
+{
+  const ptxt = (b: any) => b.text ?? b.parts?.map((x: any) => x.t).join('') ?? '';
+  const from = page.blocks.findIndex((b: any) => b.t === 'p' && /^Price:\s*Property Type \/ Subtype/.test(ptxt(b)));
+  if (from >= 0) { const to = page.blocks.findIndex((b: any, i: number) => i > from && b.t === 'p' && ptxt(b).trim() === 'Filters'); if (to > from) page.blocks = [...page.blocks.slice(0, from), ...page.blocks.slice(to + 1)]; }
+}
 if (local) {
   // `hide`: archive paragraphs/headings (matched by their opening words) that move to another page; the archive record is untouched.
   if (local.hide?.length) page.blocks = page.blocks.filter((b: any) => { const tx = b.text ?? b.parts?.map((x: any) => x.t).join('') ?? ''; return !((b.t === 'p' || b.t === 'h') && local.hide.some((x: string) => tx.startsWith(x))); });

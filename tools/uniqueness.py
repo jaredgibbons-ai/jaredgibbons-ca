@@ -27,6 +27,11 @@ def text_of(b):
 
 def page_text(slug, page, local):
     blocks = list(page['blocks'])
+    ptx = lambda b: b.get('text') or ' '.join(x['t'] for x in b.get('parts', []))   # the leaked MLS search form on six farm pages is not content (see GenericPage.astro)
+    fr = next((i for i, b in enumerate(blocks) if b['t'] == 'p' and re.match(r'Price:\s*Property Type / Subtype', ptx(b))), -1)
+    if fr >= 0:
+        to = next((i for i in range(fr + 1, len(blocks)) if blocks[i]['t'] == 'p' and ptx(blocks[i]).strip() == 'Filters'), -1)
+        if to > fr: blocks = blocks[:fr] + blocks[to + 1:]
     if local and local.get('hide'): blocks = [b for b in blocks if not (b['t'] in ('p', 'h') and any(text_of(b).startswith(x) for x in local['hide']))]
     if local and local.get('suppress'):
         keep, drop = [], False
