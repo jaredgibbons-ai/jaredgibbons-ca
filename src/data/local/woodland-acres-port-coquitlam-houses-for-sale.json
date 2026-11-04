@@ -5,11 +5,6 @@
    "text": "Draft for Jared's approval. Built only from the monthly MLS® figures (SnapStats) for houses in Woodland Acres. No local notes, sold prices, building list or live listing feed yet; see the open items."
   },
   {
-   "gen": "typepage",
-   "t": "p",
-   "text": "Woodland Acres, Port Coquitlam: 6 houses listed at the end of October 2026 and 2 sold in the month, a sales ratio of 33% on only 6 listed, too few to read as a market type. By listings that is number 9 of 10 Port Coquitlam communities for houses."
-  },
-  {
    "t": "grid"
   },
   {
@@ -358,35 +353,6 @@
    "gen": "sold"
   },
   {
-   "t": "p",
-   "text": "5 houses sold in Woodland Acres with a median price of $1,295,000, taking a median of 8 days to sell at 97.0% of the last list price; 20% sold above list. They had a median $587 per square foot, a median year built of 1972 and a median lot of 7,345 square feet.",
-   "gen": "sold"
-  },
-  {
-   "t": "table",
-   "caption": "Woodland Acres: what sold, by home type",
-   "head": [
-    "Home type",
-    "Sold",
-    "Median price",
-    "Median days to sell",
-    "Sold vs list",
-    "Median per sq ft"
-   ],
-   "rows": [
-    [
-     "Houses",
-     "5",
-     "$1,295,000",
-     "8 days",
-     "97.0%",
-     "$587"
-    ]
-   ],
-   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
-   "gen": "sold"
-  },
-  {
    "t": "h",
    "level": 2,
    "text": "Jared's take on Woodland Acres",
@@ -396,6 +362,31 @@
    "t": "p",
    "text": "Mature trees line the streets of Woodland Acres, an established pocket in north Port Coquitlam on the Coquitlam border. Coquitlam Centre and the SkyTrain are minutes away, which makes it easy for families and commuters alike.",
    "gen": "jtake"
+  },
+  {
+   "t": "p",
+   "text": "Notes that also apply here are written up once, on these pages:",
+   "gen": "dedupe",
+   "pos": "end"
+  },
+  {
+   "t": "list",
+   "items": [
+    [
+     {
+      "t": "Mid Meadows Houses for Sale",
+      "h": "/mid-meadows-houses-for-sale.html"
+     }
+    ],
+    [
+     {
+      "t": "Woodland Acres, Port Coquitlam Homes for Sale",
+      "h": "/woodland-acres-port-coquitlam.html"
+     }
+    ]
+   ],
+   "gen": "dedupe",
+   "pos": "end"
   }
  ],
  "breadcrumbs": [
@@ -433,16 +424,6 @@
    "a": "3838, plans the city by its wider residential areas, so City documents are searched by street address rather than by the board's sub-area name.",
    "gen": "uq",
    "q": "Does the City treat Woodland Acres as its own neighbourhood?"
-  },
-  {
-   "gen": "sold",
-   "q": "What did houses in Woodland Acres sell for?",
-   "a": "5 houses sold in Woodland Acres between November 1, 2025 to October 22, 2026, with a median price of $1,295,000."
-  },
-  {
-   "gen": "sold",
-   "q": "How long do houses take to sell in Woodland Acres?",
-   "a": "The median was 8 days from listing to sale, and homes sold at a median 97.0% of the last list price (20% sold above list), for sales November 1, 2025 to October 22, 2026."
   }
  ],
  "faq_heading": "Woodland Acres houses: your questions answered",

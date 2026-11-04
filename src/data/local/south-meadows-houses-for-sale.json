@@ -155,18 +155,6 @@
   },
   {
    "gen": "uq",
-   "items": [
-    [
-     {
-      "t": "No official boundary is published for the board name: the working limits are Hammond Road and the rail line to the north, the Fraser River to the south, the Bonson Road corridor in the middle, and the Golden Ears Business Park lands toward Harris Road to the west."
-     }
-    ]
-   ],
-   "pos": "end",
-   "t": "list"
-  },
-  {
-   "gen": "uq",
    "level": 2,
    "pos": "end",
    "t": "h",
@@ -535,6 +523,25 @@
    "t": "p",
    "text": "Osprey Village and the South Bonson Community Centre anchor South Meadows, the South Bonson stretch of the Bonson Road corridor that runs from Hammond Road and the rail tracks down to the Fraser.",
    "gen": "jtake"
+  },
+  {
+   "t": "p",
+   "text": "Notes that also apply here are written up once, on these pages:",
+   "gen": "dedupe",
+   "pos": "end"
+  },
+  {
+   "t": "list",
+   "items": [
+    [
+     {
+      "t": "Living in South Meadows",
+      "h": "/south-meadows-pitt-meadows-guide.html"
+     }
+    ]
+   ],
+   "gen": "dedupe",
+   "pos": "end"
   }
  ],
  "breadcrumbs": [

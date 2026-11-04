@@ -411,35 +411,6 @@
    "gen": "sold"
   },
   {
-   "t": "p",
-   "text": "7 houses sold in Barber Street with a median price of $1,848,000, taking a median of 38 days to sell at 96.3% of the last list price; 0% sold above list. They had a median $732 per square foot, a median year built of 1978 and a median lot of 7,494 square feet.",
-   "gen": "sold"
-  },
-  {
-   "t": "table",
-   "caption": "Barber Street: what sold, by home type",
-   "head": [
-    "Home type",
-    "Sold",
-    "Median price",
-    "Median days to sell",
-    "Sold vs list",
-    "Median per sq ft"
-   ],
-   "rows": [
-    [
-     "Houses",
-     "7",
-     "$1,848,000",
-     "38 days",
-     "96.3%",
-     "$732"
-    ]
-   ],
-   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
-   "gen": "sold"
-  },
-  {
    "t": "h",
    "level": 2,
    "text": "Jared's take on Barber Street",
@@ -449,6 +420,25 @@
    "t": "p",
    "text": "Waterfront and water views are the draw on Barber Street, a shoreline strip on the Port Moody Arm. The park crowds at Old Orchard Park are part of life here.",
    "gen": "jtake"
+  },
+  {
+   "t": "p",
+   "text": "Notes that also apply here are written up once, on these pages:",
+   "gen": "dedupe",
+   "pos": "end"
+  },
+  {
+   "t": "list",
+   "items": [
+    [
+     {
+      "t": "Barber Street, Port Moody Homes for Sale",
+      "h": "/barber-street-port-moody.html"
+     }
+    ]
+   ],
+   "gen": "dedupe",
+   "pos": "end"
   }
  ],
  "faq": [
@@ -477,16 +467,6 @@
    "gen": "uq",
    "q": "What is at the end of the shoreline?",
    "a": "Old Orchard Park, at the west end of the shoreline below Ioco Road, is the shore's park anchor, and the City is running master plans for Rocky Point and Old Orchard parks together."
-  },
-  {
-   "gen": "sold",
-   "q": "What did houses in Barber Street sell for?",
-   "a": "7 houses sold in Barber Street between November 1, 2025 to October 22, 2026, with a median price of $1,848,000."
-  },
-  {
-   "gen": "sold",
-   "q": "How long do houses take to sell in Barber Street?",
-   "a": "The median was 38 days from listing to sale, and homes sold at a median 96.3% of the last list price (0% sold above list), for sales November 1, 2025 to October 22, 2026."
   }
  ],
  "needs_from_muse": [
