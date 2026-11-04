@@ -8,7 +8,7 @@ Rule: blocks and FAQ answers in src/data/local/*.json (not Jared's own words, no
 The owner of a cluster is a hub page if one is in it, else a page that is not under the threshold, else the page with the shortest slug. Copies are dropped only from pages
 currently under 0.7 unique, only if the page keeps >= 300 words, and each page that loses blocks gets one pointer line with a link to the owner pages. Re-runnable after the
 builders (they re-add the blocks, this removes them again): run last in the chain, before the final build.
-    python3 -I tools/dedupe_generated.py [--dry] [--scores /path/to/uniqueness.csv]"""
+    python3 -I tools/dedupe_generated.py [--dry] [--contain 0.6]"""
 import csv, glob, json, os, re, sys
 from collections import Counter, defaultdict
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, '..')
@@ -18,6 +18,7 @@ LOCAL = os.path.join(ROOT, 'src/data/local'); PAGES = os.path.join(ROOT, 'src/da
 KEEP_GENS = {'jtake', 'near2', GEN}
 HUBS = ['mobile-home-parks-fraser-valley']
 MIN_WORDS, CONTAIN, MIN_BLOCK = 300, 0.6, 20
+if '--contain' in sys.argv: CONTAIN = float(sys.argv[sys.argv.index('--contain') + 1])
 def sh_of(w): return {' '.join(w[i:i + 8]) for i in range(max(0, len(w) - 7))}
 def load():
     pages, local = {}, {}
