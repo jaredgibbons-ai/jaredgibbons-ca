@@ -30,7 +30,7 @@ CITYSEL = {
 # SnapStats area key -> Paragon areas (for community and type pages)
 SNAP_AREAS = {'abbotsford': ['Abbotsford'], 'surrey': ['Surrey', 'North Surrey'], 'south-surrey-white-rock': ['South Surrey White Rock'], 'north-delta': ['N. Delta'], 'cloverdale': ['Cloverdale'],
               'langley': ['Langley'], 'mission': ['Mission'], 'burnaby': ['Burnaby North', 'Burnaby South', 'Burnaby East'], 'new-westminster': ['New Westminster'], 'coquitlam': ['Coquitlam'],
-              'port-coquitlam': ['Port Coquitlam'], 'port-moody': ['Port Moody'], 'pitt-meadows': ['Pitt Meadows'], 'maple-ridge': ['Maple Ridge']}
+              'port-coquitlam': ['Port Coquitlam'], 'port-moody': ['Port Moody'], 'pitt-meadows': ['Pitt Meadows'], 'maple-ridge': ['Maple Ridge'], 'chilliwack': ['Chilliwack', 'East Chilliwack']}
 ALIAS = {'central port coquitlam': 'central pt coquitlam', 'simon fraser university sfu': 'simon fraser univer'}
 
 
@@ -345,7 +345,7 @@ def apply_pages():
     for f in sorted(glob.glob(os.path.join(ROOT, 'src/data/local/*.json'))):
         j = json.load(open(f, encoding='utf-8')); slug = os.path.basename(f)[:-5]
         before = json.dumps(j, sort_keys=True)
-        tp = j.get('type_page'); cm = j.get('community')
+        tp = j.get('type_page'); cm = j.get('community') or j.get('sold_sub')   # sold_sub: link a page to a sold sub-area without the side effects of 'community' (community lists, snapstats mapping)
         if (tp or cm) and not slug.startswith('brentwood') and not j.get('gen_gap'):
             j['blocks'] = [b for b in j.get('blocks', []) if b.get('gen') != G]
             ak, name = (tp['area'], tp['name']) if tp else (cm['area'], cm['name'])

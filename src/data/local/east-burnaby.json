@@ -820,6 +820,43 @@
   },
   {
    "t": "p",
+   "text": "25 houses sold in East Burnaby with a median price of $1,612,000 (the middle half sold between $1,445,000 and $2,150,000), taking a median of 26 days to sell at 95.5% of the last list price; 4% sold above list. They had a median $592 per square foot, a median year built of 1991 and a median lot of 6,370 square feet. 9 duplexes sold in East Burnaby with a median price of $1,735,000 (the middle half sold between $1,480,000 and $1,866,667), taking a median of 24 days to sell at 97.1% of the last list price; 0% sold above list. They had a median $675 per square foot and a median year built of 2025.",
+   "gen": "sold"
+  },
+  {
+   "t": "table",
+   "caption": "East Burnaby: what sold, by home type",
+   "head": [
+    "Home type",
+    "Sold",
+    "Median price",
+    "Median days to sell",
+    "Sold vs list",
+    "Median per sq ft"
+   ],
+   "rows": [
+    [
+     "Houses",
+     "25",
+     "$1,612,000",
+     "26 days",
+     "95.5%",
+     "$592"
+    ],
+    [
+     "Duplexes (half and full)",
+     "9",
+     "$1,735,000",
+     "24 days",
+     "97.1%",
+     "$675"
+    ]
+   ],
+   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+   "gen": "sold"
+  },
+  {
+   "t": "p",
    "text": "Notes that also apply here are written up once, on these pages:",
    "gen": "dedupe",
    "pos": "end"
@@ -876,14 +913,24 @@
    "q": "What is Robert Burnaby Park?",
    "a": "The east side's large forested park — the City describes many creeks and streams running through it and over half its area as critical wildlife habitat, and is restoring it with invasive-species removal and 3,000 new trees; its courts are listed at 3 tennis and 10 pickleball.",
    "gen": "muse"
+  },
+  {
+   "gen": "sold",
+   "q": "What did houses in East Burnaby sell for?",
+   "a": "25 houses sold in East Burnaby between November 1, 2025 to October 22, 2026, with a median price of $1,612,000."
+  },
+  {
+   "gen": "sold",
+   "q": "How long do houses take to sell in East Burnaby?",
+   "a": "The median was 26 days from listing to sale, and homes sold at a median 95.5% of the last list price (4% sold above list), for sales November 1, 2025 to October 22, 2026."
   }
  ],
  "slug": "east-burnaby",
  "status": "generated",
  "updated": "2026-11-01",
- "community": {
+ "needs_from_muse": null,
+ "sold_sub": {
   "area": "burnaby",
   "name": "East Burnaby"
- },
- "needs_from_muse": null
+ }
 }

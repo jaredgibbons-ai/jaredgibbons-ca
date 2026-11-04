@@ -678,6 +678,98 @@
    "t": "list"
   },
   {
+   "t": "h",
+   "level": 2,
+   "text": "Chilliwack Proper East home prices: what sold, November 2025 to October 2026",
+   "gen": "sold"
+  },
+  {
+   "t": "p",
+   "text": "66 houses sold in Chilliwack Proper East with a median price of $735,000 (the middle half sold between $680,500 and $805,000), taking a median of 24 days to sell at 97.3% of the last list price; 5% sold above list. They had a median $379 per square foot, a median year built of 1960 and a median lot of 7,540 square feet. 37 townhomes sold in Chilliwack Proper East with a median price of $451,500 (the middle half sold between $368,000 and $605,000), taking a median of 33 days to sell at 96.9% of the last list price; 3% sold above list. They had a median $323 per square foot, a median year built of 1994 and a median strata fee of $403 a month.",
+   "gen": "sold"
+  },
+  {
+   "t": "table",
+   "caption": "Chilliwack Proper East: what sold, by home type",
+   "head": [
+    "Home type",
+    "Sold",
+    "Median price",
+    "Median days to sell",
+    "Sold vs list",
+    "Median per sq ft"
+   ],
+   "rows": [
+    [
+     "Houses",
+     "66",
+     "$735,000",
+     "24 days",
+     "97.3%",
+     "$379"
+    ],
+    [
+     "Condos",
+     "22",
+     "$258,250",
+     "56 days",
+     "95.5%",
+     "$328"
+    ],
+    [
+     "Townhomes",
+     "37",
+     "$451,500",
+     "33 days",
+     "96.9%",
+     "$323"
+    ],
+    [
+     "Duplexes (half and full)",
+     "3",
+     "Too few sales for a typical price",
+     "—",
+     "—",
+     "—"
+    ]
+   ],
+   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A figure is shown only where at least 5 homes sold, and a row is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+   "gen": "sold"
+  },
+  {
+   "t": "table",
+   "caption": "Chilliwack Proper East: houses sold by quarter",
+   "head": [
+    "Period",
+    "Sold",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Nov 2025 to Jan 2026",
+     "12",
+     "$795,000"
+    ],
+    [
+     "Feb to Apr 2026",
+     "19",
+     "$730,000"
+    ],
+    [
+     "May to Jul 2026",
+     "24",
+     "$746,000"
+    ],
+    [
+     "Aug to Oct 2026",
+     "11",
+     "$570,000"
+    ]
+   ],
+   "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. Sold vs list is the sale price as a percentage of the last list price. A quarter is shown only when each of the four has 5 or more sales, and the table does not call the change a trend.",
+   "gen": "sold"
+  },
+  {
    "t": "p",
    "text": "Notes that also apply here are written up once, on these pages:",
    "gen": "dedupe",
@@ -741,14 +833,24 @@
    "a": "Yes, Route 57 Broadway changed on January 4, 2026. British Columbia Transit (BC Transit) moved the route's Carleton Street service one block east to McNaught Road, added new stops on McNaught Road and Acorn Street, and added Sunday-evening service on Routes 51, 53 Fairfield and 57 Broadway.",
    "gen": "uq",
    "q": "Did the bus on my street change recently?"
+  },
+  {
+   "gen": "sold",
+   "q": "What did houses in Chilliwack Proper East sell for?",
+   "a": "66 houses sold in Chilliwack Proper East between November 1, 2025 to October 22, 2026, with a median price of $735,000."
+  },
+  {
+   "gen": "sold",
+   "q": "How long do houses take to sell in Chilliwack Proper East?",
+   "a": "The median was 24 days from listing to sale, and homes sold at a median 97.3% of the last list price (5% sold above list), for sales November 1, 2025 to October 22, 2026."
   }
  ],
  "slug": "chilliwack-proper-east",
  "status": "draft",
  "updated": "2026-11-01",
- "community": {
+ "needs_from_muse": null,
+ "sold_sub": {
   "area": "chilliwack",
   "name": "Chilliwack Proper East"
- },
- "needs_from_muse": null
+ }
 }
