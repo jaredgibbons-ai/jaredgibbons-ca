@@ -36,6 +36,10 @@ export function route(url, index, assetExists) {
     const r = index.redirects.get(k);
     if (r) return { type: 'redirect', location: r.to, status: r.status };
   }
+  // 2b) legacy blog filter/month URLs (never rebuilt as pages; the old links carried a doubled prefix)
+  if (/^\/blog\.html\/(blog\.html(\/.*)?|archives(\/.*)?)$/.test(path)) {
+    return { type: 'redirect', location: '/blog.html', status: 301 };
+  }
   // 3) tracking / CMS-preview / pagination params never change the page (served, not redirected,
   //    so analytics still sees the campaign parameters)
   // 4) trailing slash: /x/ -> /x when /x resolves

@@ -120,3 +120,9 @@ test('redirects added on the live site after the archive: old slugs reach live p
     assert.equal(R(x.to).type, 'asset', x.to);
   }
 });
+
+test('legacy blog month and filter URLs redirect to the blog index', () => {
+  for (const p of ['/blog.html/archives/2026/10/', '/blog.html/archives/2025/04', '/blog.html/blog.html', '/blog.html/blog.html/archives/2026/10/']) {
+    assert.deepEqual(R(p), { type: 'redirect', location: '/blog.html', status: 301 }, p);
+  }
+});
