@@ -38,11 +38,13 @@ test('built pages: every image has alt text and dimensions (listing photos excep
 
 test('built pages: each listing search block names a numeric search id, loads from the vendor host only, and reserves its height', { skip: !built }, () => {
   const bad = [];
-  const ids = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/idx-embeds.json'), 'utf8')).pages;
+  const data = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/idx-embeds.json'), 'utf8')); const ids = data.pages; const special = data.special || {};
   for (const f of pages) {
     const t = html(f); const m = t.match(/data-idx-src="([^"]*)"/);
     if (!m) continue;
-    if (!/^https:\/\/idx\.myrealpage\.com\/wps\/rest\/\d+\/l\/idx2\/recip\/[^"]*\/-\/search-\d+\.def\/in\.js$/.test(m[1])) bad.push(`${f}: src ${m[1]}`);
+    const slug = f.replace(/\.html$/, '');
+    if (special[slug]) { if (m[1] !== `https://idx.myrealpage.com/wps/rest/${data.account}/l/idx2/${special[slug]}`) bad.push(`${f}: wrong special src`); }
+    else if (!/^https:\/\/idx\.myrealpage\.com\/wps\/rest\/\d+\/l\/idx2\/recip\/[^"]*\/-\/search-\d+\.def\/in\.js$/.test(m[1])) bad.push(`${f}: src ${m[1]}`);
     if (ids[f.replace(/\.html$/, '')] && !m[1].includes(`search-${ids[f.replace(/\.html$/, '')]}.def`)) bad.push(`${f}: wrong id`);
     if (/<script[^>]+src="https:\/\/idx\.myrealpage/.test(t)) bad.push(`${f}: vendor script is not lazy`);
   }

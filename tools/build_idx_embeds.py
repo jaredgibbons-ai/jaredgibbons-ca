@@ -40,6 +40,34 @@ def main():
             if slug in pages and pages[slug] != sid:
                 problems.append(('page has two searches', slug, f'{pages[slug]} / {sid}')); continue
             pages[slug] = sid
+    # Searches built for pages that used an unsaved widget on the old site (one search per page).
+    if 'Built for pages (57)' in wb.sheetnames:
+        for r in list(wb['Built for pages (57)'].iter_rows(values_only=True))[1:]:
+            name, sid, _old, addr, _u, _t, _sc, code = r[:8]
+            if not name: continue
+            sid = str(sid); slug = re.sub(r'\.html$', '', (addr or '').strip().lstrip('/'))
+            if f'search-{sid}.def' not in (code or '') or f'/{ACCOUNT}/' not in code:
+                problems.append(('embed code does not match id/account', name, sid)); continue
+            pj = os.path.join(ROOT, 'src/data/pages', slug + '.json')
+            if not os.path.exists(pj):
+                problems.append(('address has no page on our site', name, slug)); continue
+            if not any(b.get('t') == 'grid' for b in json.load(open(pj))['blocks']):
+                problems.append(('page has no listings placeholder, not wired', name, slug)); continue
+            if slug in pages and pages[slug] != sid:
+                problems.append(('page has two searches', slug, f'{pages[slug]} / {sid}')); continue
+            pages[slug] = sid
+    # Three special widgets (my listings active/sold, the open search form). Stored as the path after /l/idx2/.
+    special = {}
+    if 'Special embeds (3)' in wb.sheetnames:
+        pat = re.compile(r'src="https://idx\.myrealpage\.com/wps/rest/' + ACCOUNT + r'/l/idx2/([A-Za-z0-9~,%._()/-]+/in\.js)"')
+        for r in list(wb['Special embeds (3)'].iter_rows(values_only=True))[1:]:
+            name, _sid, _old, addr, _u, _t, _sc, code = r[:8]
+            if not name: continue
+            slug = re.sub(r'\.html$', '', (addr or '').strip().lstrip('/'))
+            m = pat.search(code or '')
+            if not m or not os.path.exists(os.path.join(ROOT, 'src/data/pages', slug + '.json')):
+                problems.append(('special embed not usable', name, slug)); continue
+            special[slug] = m.group(1)
     for slug, sid in NAME_MATCH.items():
         pages.setdefault(slug, sid)
     pending = []
@@ -52,9 +80,9 @@ def main():
             pending.append({'name': r[0], 'id': str(r[1]), 'address': r[3]})
     ids = collections.Counter(pages.values())
     dup = [i for i, n in ids.items() if n > 1]
-    out = {'account': ACCOUNT, 'pages': dict(sorted(pages.items())), 'pending': pending}
+    out = {'account': ACCOUNT, 'pages': dict(sorted(pages.items())), 'special': dict(sorted(special.items())), 'pending': pending}
     json.dump(out, open(OUT, 'w'), indent=1)
-    print(len(pages), 'pages wired;', len(pending), 'pending;', 'ids shared by several pages:', len(dup))
+    print(len(pages), 'pages wired;', len(special), 'special;', len(pending), 'pending;', 'ids shared by several pages:', len(dup))
     for p in problems: print('PROBLEM', p)
 
 if __name__ == '__main__':
