@@ -19,6 +19,8 @@ export default {
       if (!env.REVIEWS || (request.method !== 'GET' && request.method !== 'HEAD')) return new Response('Not found', { status: 404, headers: { 'cache-control': 'no-store' } });
       try {
         const r = await env.REVIEWS.fetch(new Request('https://jg-reviews/reviews.json'));
+        // jg-reviews is still a placeholder until the Google Business Profile feed is connected (BL-03): pass through only a real JSON answer.
+        if (r.ok && !/json/i.test(r.headers.get('content-type') || '')) return new Response('Not found', { status: 404, headers: { 'cache-control': 'no-store' } });
         return new Response(r.body, { status: r.status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': r.ok ? 'public, max-age=900' : 'no-store', 'x-content-type-options': 'nosniff' } });
       } catch { return new Response('Not found', { status: 404, headers: { 'cache-control': 'no-store' } }); }
     }

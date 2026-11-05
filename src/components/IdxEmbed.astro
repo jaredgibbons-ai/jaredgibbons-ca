@@ -38,4 +38,6 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
 <style>
   .idx{min-height:36rem}
   .idx[hidden],.idx__fallback[hidden]{display:none}
+  /* MyRealPage adds its own "Login with Facebook / Google / X" bar above the results; our page has its own sign-in and account links (D-133). */
+  .idx :global(.mrp-results-vow-toolbar-wrapper),.idx :global(.mrp-vow-toolbar){display:none}
 </style>
