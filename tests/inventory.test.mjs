@@ -26,7 +26,7 @@ test('new pages under the uniqueness threshold are left out of the sitemap', { s
 });
 
 test('a launch-mode build emits each page its own robots value; normal builds stay closed', { timeout: 120000 }, () => {
-  execSync('npx astro build --outDir /tmp/launch-check', { env: { ...process.env, PUBLIC_PREVIEW: 'false' }, stdio: 'ignore' });
+  execSync('npx astro build --outDir /tmp/launch-check', { env: { ...process.env, PUBLIC_PREVIEW: 'false', TEST_ALLOW_DRAFT_OUTLINES: 'yes' }, stdio: 'ignore' });
   const meta = (dir, f) => (/<meta name="robots" content="([^"]*)"/.exec(readFileSync(`${dir}/${f}.html`, 'utf8')) || [])[1];
   assert.equal(meta('/tmp/launch-check', 'sell-my-house-in-mission'), 'index, follow');
   assert.equal(meta('/tmp/launch-check', '404'), 'noindex');

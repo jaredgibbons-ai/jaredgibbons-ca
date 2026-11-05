@@ -2,7 +2,20 @@
   "status": "draft",
   "slug": "south-surrey-neighbourhoods",
   "updated": "2026-11-01",
-  "blocks": [],
+  "blocks": [
+    {
+      "t": "h",
+      "level": 2,
+      "text": "South Surrey and White Rock neighbourhood map",
+      "gen": "areamap"
+    },
+    {
+      "t": "areamap",
+      "region": "south-surrey-white-rock",
+      "mode": "hub",
+      "gen": "areamap"
+    }
+  ],
   "faq": [
     {
       "q": "Who can help me buy or sell in South Surrey?",

@@ -65,4 +65,17 @@ test('draft outlines block a launch build but not the preview', () => {
   assert.deepEqual(draftsBlockLaunch(r, undefined), []);
   assert.deepEqual(draftsBlockLaunch(r, 'true'), []);
   assert.deepEqual(draftsBlockLaunch(r, 'false'), ['a']);
+  assert.deepEqual(draftsBlockLaunch(r, 'false', 'yes'), [], 'the test-only bypass');
+});
+
+test('the South Surrey / White Rock outlines are valid, link to real pages, and point at real sold-12m sub-areas', async () => {
+  const { readFileSync, existsSync } = await import('node:fs');
+  const r = JSON.parse(readFileSync(new URL('../src/data/maps/south-surrey-white-rock.json', import.meta.url), 'utf8'));
+  assert.deepEqual(validateRegion(r), []);
+  assert.equal(r.areas.length, 9);
+  const sold = JSON.parse(readFileSync(new URL('../src/data/sold/sold-12m.json', import.meta.url), 'utf8'));
+  for (const a of r.areas) {
+    assert.ok(sold.sub[a.sold], `${a.id} sold key`);
+    assert.ok(existsSync(new URL(`../src/data/local${a.href.replace('.html', '.json')}`, import.meta.url)), `${a.id} page data`);
+  }
 });
