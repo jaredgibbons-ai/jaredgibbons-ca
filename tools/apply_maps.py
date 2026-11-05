@@ -9,7 +9,7 @@ import glob, json, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HUBS = {'south-surrey-white-rock': 'south-surrey-neighbourhoods', 'surrey': 'surrey-neighbourhood-guides', 'cloverdale': 'cloverdale-neighbourhood-guides', 'langley': 'langley-neighbourhood-guides',
         'delta': 'delta-neighbourhood-guides', 'maple-ridge': 'maple-ridge-neighbourhood-guides', 'pitt-meadows': 'pitt-meadows-neighbourhood-guides', 'abbotsford': 'abbotsford-neighbourhood-guides',
-        'richmond': 'richmond-neighbourhood-guides', 'vancouver': 'vancouver-neighbourhood-guides', 'burnaby': 'burnaby-neighbourhood-guides', 'new-westminster': 'new-westminster-neighbourhood-guides', 'coquitlam': 'coquitlam-neighbourhood-guides', 'chilliwack': 'chilliwack-neighbourhood-guides'}
+        'richmond': 'richmond-neighbourhood-guides', 'vancouver': 'vancouver-neighbourhood-guides', 'burnaby': 'burnaby-neighbourhood-guides', 'new-westminster': 'new-westminster-neighbourhood-guides', 'coquitlam': 'coquitlam-neighbourhood-guides', 'chilliwack': 'chilliwack-neighbourhood-guides', 'mission': 'mission-neighbourhood-guides'}
 # Pages that are hand-built Astro files rather than src/data/local data (no blocks to add): they still get an outline on their hub map.
 BESPOKE = {'fort-langley'}
 
