@@ -535,4 +535,4 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 - **Each page:** live-search placeholder, measures table, quarters, neighbourhoods and the buildings behind them, bedroom and nearby-city comparison, size and building-age tables, price ranges, mortgage calculator at the median price, FAQ, links. No live listing counts are published.
 - **Live search:** each page needs a bedroom-filtered MyRealPage search. Worksheet for Jerry: `docs/review/idx/bedroom-searches-2026-11-04.xlsx` (24 rows). Until he sends IDs, each page shows the same "not connected" notice as the other pages.
 - **Links in:** each city condo and townhome page has a "by number of bedrooms" list, and the explore block lists the bedroom pages ("Langley 2 bedroom condos").
-- **Uniqueness:** 24 of 24 above 70% (lowest 70.1%).
+- **Uniqueness:** 24 of 24 above 70% (lowest 71.5%).
