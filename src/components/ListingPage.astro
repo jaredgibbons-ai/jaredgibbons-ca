@@ -1,4 +1,6 @@
 ---
+import EXPLORE from '../data/explore.json';
+import ExploreLinks from './ExploreLinks.astro';
 // Own-listing detail page. Content comes from src/data/listings/<slug>.json (tools/import_listings.py).
 // Photos: web-size derivatives of the owner's photo export (never hotlinked from the vendor CDN).
 import Base from '../layouts/Base.astro';
@@ -30,6 +32,7 @@ const photoList: { p: number; id: string; w: number; h: number }[] = PHOTO_LISTS
 // archive alt text per position ("Photo 3: <address> | MLS ...")
 const altByPos: Record<number, string> = {};
 for (const a of page.photos.alts ?? []) { const m = /^Photo (\d+):/.exec(a); if (m) altByPos[Number(m[1])] = a; }
+const explore = (EXPLORE as Record<string, any>)['listing:' + page.slug];
 const _h1 = (blocks.find((b: any) => b.t === 'h' && b.level === 1) as any)?.text;
 const crumbs = _h1 ? [{ name: 'Home', href: '/index.html' }, { name: 'My Listings', href: '/our-listings.html' }, { name: String(_h1), href: '/our-listings.html' }] : [];
 const telHref = (s: string) => 'tel:' + s;
@@ -122,6 +125,7 @@ const telHref = (s: string) => 'tel:' + s;
     </div>
   </section>
   <Cta />
+  {explore && <ExploreLinks data={explore} />}
 </main>
 </Base>
 

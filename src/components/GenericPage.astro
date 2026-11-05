@@ -99,7 +99,7 @@ for (const b of page.blocks) {
 push();
 const linkOnly = (items: any[]) => items.every((it) => it.length === 1 && it[0].h);
 let fid = 0;
-const explore = (EXPLORE as Record<string, any>)[page.slug];
+const explore = (EXPLORE as Record<string, any>)[String(page.path || '').startsWith('/blog.html/') ? 'post:' + page.slug : page.slug];
 ---
 <Base
   title={page.title}

@@ -62,7 +62,24 @@ def city_of(s):
         if h in HUB_TO_CITY: return HUB_TO_CITY[h]
     for k in CITYKEYS:
         if s.startswith(k + '-'): return k
-    return None
+    return extra_city(s)
+
+FORE = {'abbotsford': 'abbotsford', 'chilliwack': 'chilliwack', 'mission': 'mission', 'mapleridge': 'maple-ridge', 'surrey': 'surrey', 'southsurrey': 'south-surrey', 'cloverale': 'cloverdale', 'cloverdale': 'cloverdale'}
+PLACE_CITY = {'aldergrove': 'langley', 'brookswood': 'langley', 'ambleside': 'west-vancouver', 'braemar': 'north-vancouver', 'delbrook': 'north-vancouver', 'edgemont': 'north-vancouver', 'chartwell': 'west-vancouver',
+              'british-properties': 'west-vancouver', 'canyon-heights-nv': 'north-vancouver', 'anmore': 'port-moody', 'brentwood': 'burnaby', 'metrotown': 'burnaby', 'hatzic': 'mission', 'poplar': 'abbotsford',
+              'serpentine': 'cloverdale', 'rosedale': 'chilliwack', 'popkum': 'chilliwack', 'bridal-falls': 'chilliwack', 'cultus-lake': 'chilliwack', 'east-chilliwack': 'sardis', 'downtown-ve': 'vancouver',
+              'yaletown': 'vancouver', 'steveston': 'richmond', 'grandview-corners': 'surrey', 'grandview-heights': 'surrey', 'morgan-crossing': 'south-surrey', 'mt-lehman-abbotsford': 'abbotsford',
+              'brunette-new-westminster': 'new-westminster', 'barnston-island-surrey': 'surrey', 'river-valley': 'sardis', 'luxury-homes-for-sale-in-white-rock-south-surrey': 'south-surrey'}
+def extra_city(s):
+    m = re.match(r'^([a-z]+)foreclosures', s) or re.match(r'^([a-z]+)-foreclosures', s)
+    if m and m.group(1) in FORE: return FORE[m.group(1)]
+    for rx in (r'-(abbotsford|chilliwack|langley|surrey|maple-ridge|tsawwassen|crescent-beach-ocean-park)$', r'^(?:new-listings-this-week|price-reduced-homes)-(.+)$'):
+        m = re.search(rx, s)
+        if m:
+            t = m.group(1); t = {'south-surrey-white-rock': 'south-surrey', 'crescent-beach-ocean-park': 'south-surrey'}.get(t, t)
+            if t in HUBS: return t
+    pl = split(s)[0]
+    return PLACE_CITY.get(pl) or PLACE_CITY.get(s) or PLACE_CITY.get(re.sub(r'-guide$', '', s))
 
 # ---- place and type
 TYPES = [  # (regex of the suffix, key, label)
@@ -132,11 +149,9 @@ def build():
         if not c and pl in pc and pl not in HUBS: info[s] = (max(pc[pl], key=pc[pl].get), pl, ty, lab)
     by_place = {}
     for s, (c, pl, ty, _) in info.items(): by_place.setdefault((c, pl), []).append(s)
-    out = {}
-    for s in grid:
-        city, pl, ty, _ = info[s]
-        if not city: continue
-        seen = {s}; cols = []
+
+    def make(self_slug, city, pl):
+        seen = {self_slug}; cols = []
         def take(slugs, cap, more_cap=0):
             vis, more = [], []
             for x in slugs:
@@ -144,28 +159,67 @@ def build():
                 seen.add(x)
                 (vis if len(vis) < cap else more).append([label(x), f'/{x}.html'])
             return vis, more[:more_cap]
-        # 1 same place
-        sibs = sorted([x for x in by_place.get((city, pl), []) if x != s], key=lambda x: (ORDER.index(info[x][2]) if info[x][2] in ORDER else 99, x))
-        nc_self = [x for x in sibs if info[x][2] == 'nc']
-        v, m = take(sibs, 10, 10)
-        if v: cols.append(dict(h=f'Explore {pname(pl)} real estate', links=v, more=m))
-        # 2 city searches
+        if pl:
+            sibs = sorted([x for x in by_place.get((city, pl), []) if x != self_slug], key=lambda x: (ORDER.index(info[x][2]) if info[x][2] in ORDER else 99, x))
+            v, m = take(sibs, 10, 10)
+            if v: cols.append(dict(h=f'Explore {pname(pl)} real estate', links=v, more=m))
         csl = sorted([x for x in grid if info[x][0] == city and x not in seen and info[x][2] != 'nc' and 'open-houses' not in x], key=lambda x: (0 if info[x][1] in HUBS else 1, ORDER.index(info[x][2]) if info[x][2] in ORDER else 99, x))
         csl = [x for x in csl if info[x][2] not in ('guide',)] + [x for x in csl if info[x][2] == 'guide']
         v, m = take(csl, 8, 32)
         if v: cols.append(dict(h=f'Popular {NAME(city)} searches', links=v, more=m))
-        # 3 nearby cities
         nl = []
         for n in NEAR.get(city, []):
             if n in HUBS: nl.append([f'{NAME(n)} homes for sale', f'/{HUBS[n]}.html'])
-            if n in NCPAGE and NCPAGE[n] != s: nl.append([f'New construction in {NAME(n)}', f'/{NCPAGE[n]}.html'])
-        nl = [x for x in nl if x[1] != f'/{s}.html']
+            if n in NCPAGE and NCPAGE[n] != self_slug: nl.append([f'New construction in {NAME(n)}', f'/{NCPAGE[n]}.html'])
+        nl = [x for x in nl if x[1] != f'/{self_slug}.html']
         if nl: cols.append(dict(h='Nearby cities', links=nl[:8], more=nl[8:]))
-        # 4 new construction in the city
         ncs = ([NCPAGE[city]] if city in NCPAGE else []) + sorted([x for x in grid if info[x][0] == city and info[x][2] == 'nc' and x != NCPAGE.get(city)])
-        v = [[label(x) if x in SUB_NC or (x.startswith('new-construction-') and x != NCPAGE.get(city)) else f'New construction in {NAME(city)}', f'/{x}.html'] for x in ncs if x != s and f'/{x}.html' not in {l[1] for c in cols for l in c['links'] + c['more']}]
+        v = [[label(x) if x in SUB_NC or (x.startswith('new-construction-') and x != NCPAGE.get(city)) else f'New construction in {NAME(city)}', f'/{x}.html'] for x in ncs if x != self_slug and f'/{x}.html' not in {l[1] for c in cols for l in c['links'] + c['more']}]
         if v: cols.append(dict(h=f'New construction in {NAME(city)}', links=v[:8], more=v[8:24]))
+        return cols
+
+    def region(self_slug):
+        cols = []
+        if self_slug.startswith('bc-'):
+            g = [x for x in sorted(exist) if x.startswith('bc-') and x != self_slug and re.search(r'(rules|resources)$', x)]
+            if g: cols.append(dict(h='BC buying guides', links=[[(crumbs(x)[-1]['name'] if crumbs(x) else NAME(x)), f'/{x}.html'] for x in g][:8], more=[]))
+        elif re.search(r'(poultry|chicken|egg-farms|turkey|broiler|^farms$|acreage|^land$)', self_slug):
+            g = [x for x in sorted(exist) if x != self_slug and re.search(r'(poultry|chicken|egg-farms|turkey|broiler|^farms$|fraser-valley-acreages|^land$)', x)]
+            if g: cols.append(dict(h='Farms and acreages', links=[[(crumbs(x)[-1]['name'] if crumbs(x) else NAME(x)), f'/{x}.html'] for x in g][:8], more=[]))
+        cities = [[f'{NAME(k)} homes for sale', f'/{HUBS[k]}.html'] for k in sorted(HUBS) if HUBS[k] != self_slug and k in NEAR]
+        cols.append(dict(h='Search by city', links=cities[:10], more=cities[10:]))
+        ncl = [[f'New construction in {NAME(k)}', f'/{v}.html'] for k, v in sorted(NCPAGE.items()) if v != self_slug and k in NEAR]
+        cols.append(dict(h='New construction by city', links=ncl[:10], more=ncl[10:]))
+        return cols
+
+    out = {}
+    for s in grid:
+        city, pl, ty, _ = info[s]
+        cols = make(s, city, pl) if city else region(s)
         if cols: out[s] = dict(cols=cols)
+
+    # --- blog posts and own listings: a place or city named in the slug/title
+    STOP = {'main', 'knight', 'central', 'fraser', 'east', 'west', 'north', 'south', 'holly', 'hastings', 'arbutus', 'cambie', 'granville', 'royal', 'albion', 'clayton', 'brookswood', 'bridge', 'queens', 'newton', 'whalley'}
+    places = {pl: cs for (cs, pl), v in by_place.items() if cs and pl not in HUBS and pl and (len(pl) >= 8 or '-' in pl) and pl not in STOP and any(info[x][2] == 'base' for x in v)}
+    cityphrase = {k.replace('-', ' '): k for k in HUBS}
+    cityphrase.update({'white rock': 'south-surrey', 'crescent beach': 'south-surrey', 'ocean park': 'south-surrey', 'south surrey': 'south-surrey', 'fort langley': 'langley', 'walnut grove': 'langley', 'willoughby': 'langley', 'clayton': 'cloverdale', 'tsawwassen': 'tsawwassen'})
+    def text_place(txt):
+        t = ' ' + re.sub(r'[^a-z0-9]+', ' ', txt.lower()).strip() + ' '
+        for pl in sorted(places, key=len, reverse=True):
+            if f" {pl.replace('-', ' ')} " in t: return places[pl], pl
+        for ph in sorted(cityphrase, key=len, reverse=True):
+            if f' {ph} ' in t: return cityphrase[ph], None
+        return None, None
+    n_p = n_l = 0
+    for f in glob.glob('src/data/posts/*.json'):
+        d = json.load(open(f)); city, pl = text_place(d['slug'] + ' ' + d.get('title', ''))
+        cols = make('post:' + d['slug'], city, pl) if city else region('post:' + d['slug'])
+        out['post:' + d['slug']] = dict(cols=cols); n_p += 1
+    for f in glob.glob('src/data/listings/*.json'):
+        d = json.load(open(f)); city, pl = text_place(re.sub(r'^listing\.[a-z0-9]+-?', '', d['slug']))
+        cols = make('listing:' + d['slug'], city, pl) if city else region('listing:' + d['slug'])
+        out['listing:' + d['slug']] = dict(cols=cols); n_l += 1
+    print(n_p, 'posts,', n_l, 'listings')
     return out
 
 if __name__ == '__main__':
