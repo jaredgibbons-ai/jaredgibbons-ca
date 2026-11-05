@@ -172,7 +172,7 @@ const explore = (EXPLORE as Record<string, any>)[String(page.path || '').startsW
                   {b.source && <p class="tbl__src">{b.source} {/^Source:/.test(b.source) && page.slug !== 'data-and-methodology' && <a href="/data-and-methodology.html">How these figures are defined and sourced</a>}</p>}
                 </div>
               );
-              if (b.t === 'calc') return b.which === 'mortgage' ? <MortgageCalc exemption={b.exemption} /> : <NetProceedsCalc />;
+              if (b.t === 'calc') return b.which === 'mortgage' ? <MortgageCalc price={b.price} exemption={b.exemption} /> : <NetProceedsCalc />;
               if (b.t === 'form') return <FormStub labels={b.labels} submit={b.submit} uid={`f${fid++}`} />;
               return null;
             })}

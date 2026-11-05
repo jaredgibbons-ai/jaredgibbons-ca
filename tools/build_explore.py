@@ -86,13 +86,14 @@ TYPES = [  # (regex of the suffix, key, label)
  (r'-55-plus-homes-for-sale$', '55', '{P} 55+ homes for sale'), (r'-55-plus-condos-for-sale$', '55', '{P} 55+ condos for sale'), (r'-55-plus-townhomes-for-sale$', '55', '{P} 55+ townhomes for sale'),
  (r'-condos-townhomes-for-sale$', 'ct', '{P} condos and townhomes for sale'), (r'-condos-and-townhomes$', 'ct', '{P} condos and townhomes for sale'),
  (r'-houses-with-coach-houses-for-sale$', 'house', '{P} houses with coach houses'), (r'-houses-for-sale$', 'house', '{P} houses for sale'), (r'-houses$', 'house', '{P} houses for sale'),
+ (r'-[123]-bedroom-(condos|townhomes)-for-sale$', 'bed', None),
  (r'-condos-under-[0-9a-z]+$', 'condo', None), (r'-condos-for-sale$', 'condo', '{P} condos for sale'), (r'-townhomes-under-[0-9a-z-]+$', 'town', None), (r'-townhomes-for-sale$', 'town', '{P} townhomes for sale'),
  (r'-duplexes-with-suites-for-sale$', 'duplex', '{P} duplexes with suites'), (r'-duplexes-for-sale$', 'duplex', '{P} duplexes for sale'),
  (r'-acreages-farms-for-sale$', 'acre', '{P} acreages and farms'), (r'-acreages-for-sale$', 'acre', '{P} acreages for sale'), (r'-lots-land$', 'land', '{P} lots and land'),
  (r'-mobile-homes-for-sale$', 'mobile', '{P} mobile homes for sale'), (r'-mobile-homes$', 'mobile', '{P} mobile homes for sale'),
  (r'-homes-(under|over)-[0-9a-z-]+$', 'home', None), (r'-homes-for-sale$', 'home', '{P} homes for sale'), (r'-guide$', 'guide', '{P} neighbourhood guide'),
 ]
-ORDER = ['home', 'house', 'ct', 'condo', 'town', 'duplex', '55', 'acre', 'land', 'mobile', 'nc', 'base', 'guide', 'other']
+ORDER = ['home', 'house', 'ct', 'condo', 'town', 'bed', 'duplex', '55', 'acre', 'land', 'mobile', 'nc', 'base', 'guide', 'other']
 
 def strip_city(x):
     if x in HUBS: return x
@@ -135,6 +136,8 @@ def price(x):
 def label(s):
     place, ty, lab = split(s)
     if lab is None:
+        mb = re.search(r'-([123])-bedroom-(condos|townhomes)-for-sale$', s)
+        if mb: return f"{pname(place)} {mb.group(1)} bedroom {mb.group(2)}"
         m = re.search(r'-(homes|condos|townhomes)-(under|over)-([0-9a-z-]+)$', s)
         if m: return f"{pname(place)} {m.group(1)} {m.group(2)} {price(m.group(3))}"
         cr = crumbs(s); return cr[-1]['name'] if cr else NAME(s)

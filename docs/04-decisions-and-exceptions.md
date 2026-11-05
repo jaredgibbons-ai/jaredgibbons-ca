@@ -526,3 +526,13 @@ Status key: **Approved** (Jared said so), **Applied – needs review** (done in 
 - **Exemptions** are a selector (none, first-time buyer, newly built) and assume every buyer on title qualifies; the page says so. Foreign buyer tax, GST on new homes, legal fees, strata fees and property tax are listed as not included.
 - **Runs in the browser only;** nothing is sent or stored, so no form-security work applies.
 - **Not done on purpose:** the 25-year insured amortization surcharge is not on the CMHC page I read, so the calculator shows a notice instead of a number.
+
+## D-101 — Bedroom pages: 24 built, 12 held (Jared, 2026-11-04)
+- **Rule you set:** condos get 1, 2 and 3 bedroom pages, townhomes get 2 bedroom pages, no 1 bedroom townhome pages. I also left out 3 bedroom townhome pages: they are most of the townhome market and the city townhome page already covers them.
+- **Areas:** Surrey (Surrey and North Surrey board areas), South Surrey, White Rock (added), Cloverdale, North Delta, Ladner, Tsawwassen, Langley, Abbotsford, Chilliwack (Chilliwack and Sardis board areas). Slugs read like `langley-2-bedroom-condos-for-sale`.
+- **Threshold:** a page is built only where 30 or more sold in the past year. At 5 sales I built all 36 combinations, and every one under about 27 sales scored below the 70% unique line (not enough sales to fill neighbourhood and building tables), so those 12 are held, not published. They are in `docs/review/bedroom-pages-held.csv` (Abbotsford 3 bed 26, North Delta 2 bed 25, Tsawwassen 1 bed 22, and so on). Nothing was removed from any sitemap; they were never added. Tell me if you want any of them published anyway.
+- **Data:** `src/data/sold/sold-beds.json` from `tools/build_bedroom_layer.py` (closed sales to October 22, grouped figures only; studios excluded; "3 bedroom" means 3 or more). Pages built by `tools/build_bedroom_pages.py`, now in `tools/chain.sh`.
+- **Each page:** live-search placeholder, measures table, quarters, neighbourhoods and the buildings behind them, bedroom and nearby-city comparison, size and building-age tables, price ranges, mortgage calculator at the median price, FAQ, links. No live listing counts are published.
+- **Live search:** each page needs a bedroom-filtered MyRealPage search. Worksheet for Jerry: `docs/review/idx/bedroom-searches-2026-11-04.xlsx` (24 rows). Until he sends IDs, each page shows the same "not connected" notice as the other pages.
+- **Links in:** each city condo and townhome page has a "by number of bedrooms" list, and the explore block lists the bedroom pages ("Langley 2 bedroom condos").
+- **Uniqueness:** 24 of 24 above 70% (lowest 70.1%).
