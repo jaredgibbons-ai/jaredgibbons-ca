@@ -15,6 +15,31 @@
       "gen": "snapstats"
     },
     {
+      "t": "h",
+      "level": 2,
+      "text": "Where Murrayville sits",
+      "gen": "areamap"
+    },
+    {
+      "t": "areamap",
+      "region": "langley",
+      "mode": "area",
+      "current": "murrayville",
+      "gen": "areamap"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Drive time to Murrayville",
+      "gen": "areamap"
+    },
+    {
+      "t": "commute",
+      "region": "langley",
+      "current": "murrayville",
+      "gen": "areamap"
+    },
+    {
       "t": "table",
       "caption": "Murrayville listings, sales and sales ratio by month",
       "head": [

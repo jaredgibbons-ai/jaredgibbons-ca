@@ -36,7 +36,7 @@ test('every map file in src/data/maps is valid and every link goes to a real pag
     assert.deepEqual(validateRegion(r), [], f);
     for (const a of r.areas) {
       const s = a.href.slice(1, -5);
-      assert.ok(fs.existsSync(new URL(`../src/data/pages/${s}.json`, import.meta.url)) || fs.existsSync(new URL(`../src/data/local/${s}.json`, import.meta.url)), `${f}: ${a.href} has no page`);
+      assert.ok(fs.existsSync(new URL(`../src/data/pages/${s}.json`, import.meta.url)) || fs.existsSync(new URL(`../src/data/local/${s}.json`, import.meta.url)) || fs.existsSync(new URL(`../src/pages/${s}.astro`, import.meta.url)), `${f}: ${a.href} has no page`);
     }
   }
 });

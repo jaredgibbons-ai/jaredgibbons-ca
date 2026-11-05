@@ -35,6 +35,31 @@
    "gen": "snapstats"
   },
   {
+   "t": "h",
+   "level": 2,
+   "text": "Where East Newton sits",
+   "gen": "areamap"
+  },
+  {
+   "t": "areamap",
+   "region": "surrey",
+   "mode": "area",
+   "current": "east-newton",
+   "gen": "areamap"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Drive time to East Newton",
+   "gen": "areamap"
+  },
+  {
+   "t": "commute",
+   "region": "surrey",
+   "current": "east-newton",
+   "gen": "areamap"
+  },
+  {
    "t": "table",
    "caption": "East Newton listings, sales and sales ratio by month",
    "head": [

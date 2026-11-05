@@ -41,6 +41,31 @@
       "gen": "snapstats"
     },
     {
+      "t": "h",
+      "level": 2,
+      "text": "Where Brookswood sits",
+      "gen": "areamap"
+    },
+    {
+      "t": "areamap",
+      "region": "langley",
+      "mode": "area",
+      "current": "brookswood",
+      "gen": "areamap"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Drive time to Brookswood",
+      "gen": "areamap"
+    },
+    {
+      "t": "commute",
+      "region": "langley",
+      "current": "brookswood",
+      "gen": "areamap"
+    },
+    {
       "t": "table",
       "caption": "Brookswood listings, sales and sales ratio by month",
       "head": [

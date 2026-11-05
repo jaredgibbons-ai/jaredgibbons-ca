@@ -15,6 +15,31 @@
       "gen": "snapstats"
     },
     {
+      "t": "h",
+      "level": 2,
+      "text": "Where Langley City sits",
+      "gen": "areamap"
+    },
+    {
+      "t": "areamap",
+      "region": "langley",
+      "mode": "area",
+      "current": "langley-city",
+      "gen": "areamap"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Drive time to Langley City",
+      "gen": "areamap"
+    },
+    {
+      "t": "commute",
+      "region": "langley",
+      "current": "langley-city",
+      "gen": "areamap"
+    },
+    {
       "t": "table",
       "caption": "Langley City listings, sales and sales ratio by month",
       "head": [

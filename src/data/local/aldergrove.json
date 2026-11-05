@@ -15,6 +15,31 @@
       "gen": "snapstats"
     },
     {
+      "t": "h",
+      "level": 2,
+      "text": "Where Aldergrove sits",
+      "gen": "areamap"
+    },
+    {
+      "t": "areamap",
+      "region": "langley",
+      "mode": "area",
+      "current": "aldergrove",
+      "gen": "areamap"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Drive time to Aldergrove",
+      "gen": "areamap"
+    },
+    {
+      "t": "commute",
+      "region": "langley",
+      "current": "aldergrove",
+      "gen": "areamap"
+    },
+    {
       "t": "table",
       "caption": "Aldergrove listings, sales and sales ratio by month",
       "head": [

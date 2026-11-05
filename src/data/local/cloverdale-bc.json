@@ -38,6 +38,31 @@
       "gen": "snapstats"
     },
     {
+      "t": "h",
+      "level": 2,
+      "text": "Where Cloverdale sits",
+      "gen": "areamap"
+    },
+    {
+      "t": "areamap",
+      "region": "cloverdale",
+      "mode": "area",
+      "current": "cloverdale-bc",
+      "gen": "areamap"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Drive time to Cloverdale",
+      "gen": "areamap"
+    },
+    {
+      "t": "commute",
+      "region": "cloverdale",
+      "current": "cloverdale-bc",
+      "gen": "areamap"
+    },
+    {
       "t": "table",
       "caption": "Cloverdale listings, sales and sales ratio by month",
       "head": [
