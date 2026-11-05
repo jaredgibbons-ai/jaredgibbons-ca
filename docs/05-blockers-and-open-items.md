@@ -9,7 +9,7 @@
 | BL-04 | IDX route: new board feed/licence, or another provider, with Royal LePage sign-off. Is Jared leaving MyRealPage entirely? | Every listing surface, search, map, signup/login | Jared / brokerage |
 | BL-05 | **Answered 2026-10-31:** leads go by email to Jared's Keyvera website-lead address and to jaredgibbons@royallepage.ca. Still open: newsletter form destination. The Keyvera address is stored only as a Worker secret. | Forms go-live | Jared |
 | BL-06 | Lead-tools decisions: listing-alerts box (no alert system exists), review quotes, auto-popup. | Native rebuild of those modules | Jared |
-| BL-07 | Cloudflare: a scoped API token entered through Cloudflare's/my secure setup (never in chat) for a live private preview URL. Not needed for screenshots. | Live preview URL | Jared |
+| BL-07 (resolved 2026-11-05, D-128: preview connected through Git; no token needed) | Cloudflare: a scoped API token entered through Cloudflare's/my secure setup (never in chat) for a live private preview URL. Not needed for screenshots. | Live preview URL | Jared |
 
 ## Open items
 | ID | Item |

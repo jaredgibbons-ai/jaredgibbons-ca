@@ -36,11 +36,11 @@ npm install
 python3 -I tools/build_nav.py      # regenerates src/data/nav.json from the archive record
 npm run build && npx astro preview # or serve dist/
 ```
-Git remote: `origin` = github.com/jaredgibbons-ai/jaredgibbons-ca (`main`, source of truth, A-02). Cloudflare: nothing deployed (BL-07).
+Git remote: `origin` = github.com/jaredgibbons-ai/jaredgibbons-ca (`main`, source of truth, A-02). Cloudflare: private preview deployed 2026-11-05 (D-128).
 
 
 ## Routing Worker (built 2026-10-31, not deployed)
-- `wrangler.jsonc`: Workers with static assets from `dist/`, `run_worker_first: true`, `PREVIEW=true` (adds `X-Robots-Tag: noindex`). No Cloudflare account or token is connected yet (BL-07); nothing is deployed and DNS is untouched.
+- `wrangler.jsonc`: Workers with static assets from `dist/`, `run_worker_first: true`, `PREVIEW=true` (adds `X-Robots-Tag: noindex`). Deployed 2026-11-05 as a private preview at `https://jaredgibbons-ca.jaredgibbons.workers.dev` (D-128); DNS is untouched and jaredgibbons.ca still points at the old site.
 - `src/worker/route.js` (pure, unit-tested) + `src/worker/index.js` (Cloudflare glue). Rules are data: `src/worker/rules.json`, generated from `redirects.csv` by `npm run rules`.
 - Order: host/protocol (http and www to https apex) → exact archive rules (redirect or 404) → trailing slash → static assets → extensionless name to `.html` when that page exists → real 404 (`/404.html`, status 404).
 - Tracking (`utm_*`, `gclid`…), CMS preview (`?p=…&preview=true`) and `?_pg=N` params serve the page without redirecting, so analytics keeps the campaign parameters. `?_pg=N` returns the base page until listings are connected.

@@ -10,8 +10,8 @@ Done 2026-11-04 in the Google Cloud console (project **jaredgibbons-ca-maps**, l
 The key is a **browser key**: it is visible in the page source by design, so it is not a secret. The website restriction and the spending alert are what protect it. Never put a card number or a Google password anywhere except Google's own pages.
 
 ## Still to do (Jared, at the private preview deploy)
-1. Add the preview address to the key's website list (Credentials > the key > Websites), for example `https://<preview-name>.workers.dev/*`.
-2. Give the key to the build as `PUBLIC_GOOGLE_MAPS_KEY`: a build variable in Cloudflare (Workers & Pages > project > Settings > Build > Variables and secrets), or a `.env` file next to `package.json` when building on the Mac (git ignores it). The site does not exist on Cloudflare yet, so there is nothing to set today.
+1. ~~Add the preview address to the key's website list~~ Done 2026-11-05 by Claude in Jared's console: `https://jaredgibbons-ca.jaredgibbons.workers.dev/*` is now on the key (it can take up to 5 minutes to take effect).
+2. Give the key to the build as `PUBLIC_GOOGLE_MAPS_KEY`: a build variable in Cloudflare (Workers & Pages > project > Settings > Build > Variables and secrets), or a `.env` file next to `package.json` when building on the Mac (git ignores it). The private preview now exists (see docs/02), so this is the next step: Jared sets it in the Worker's build settings and retries the latest build. Claude does not type API keys into fields.
 3. Hard stop (done 2026-11-05 by Claude in Jared's Google Cloud console): Maps JavaScript API > Quotas, "Map loads per day" lowered from unlimited to **400** (about 12,000 a month, which keeps a bad month near the US$25 budget). Raise it if real traffic needs more. "3D Map loads per day" (flyover) is still unlimited.
 4. Optional hard stop for the nearby-places buttons: APIs & Services > Places API (New) > Quotas, lower the Nearby Search requests per day. Each button press is one request (name and position only), so cost follows clicks, not page views.
 
