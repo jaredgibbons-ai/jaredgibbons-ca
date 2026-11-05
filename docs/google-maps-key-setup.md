@@ -12,7 +12,7 @@ The key is a **browser key**: it is visible in the page source by design, so it 
 ## Still to do (Jared, at the private preview deploy)
 1. Add the preview address to the key's website list (Credentials > the key > Websites), for example `https://<preview-name>.workers.dev/*`.
 2. Give the key to the build as `PUBLIC_GOOGLE_MAPS_KEY`: a build variable in Cloudflare (Workers & Pages > project > Settings > Build > Variables and secrets), or a `.env` file next to `package.json` when building on the Mac (git ignores it). The site does not exist on Cloudflare yet, so there is nothing to set today.
-3. Optional hard stop: APIs & Services > Maps JavaScript API > Quotas, lower "Map loads per day".
+3. Hard stop (done 2026-11-05 by Claude in Jared's Google Cloud console): Maps JavaScript API > Quotas, "Map loads per day" lowered from unlimited to **400** (about 12,000 a month, which keeps a bad month near the US$25 budget). Raise it if real traffic needs more. "3D Map loads per day" (flyover) is still unlimited.
 4. Optional hard stop for the nearby-places buttons: APIs & Services > Places API (New) > Quotas, lower the Nearby Search requests per day. Each button press is one request (name and position only), so cost follows clicks, not page views.
 
 ## Address checking on forms (optional, later)
