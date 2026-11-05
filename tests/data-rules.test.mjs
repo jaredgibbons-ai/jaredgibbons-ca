@@ -326,3 +326,7 @@ test('area photos (D-89): only open licences, a credit, alt text and a real file
   const credits = JSON.parse(fs.readFileSync('src/data/local/photo-credits.json', 'utf8'));
   assert.equal(credits.blocks.find((b) => b.t === 'list').items.length, n, 'photo-credits page must list every photo');
 });
+
+test('no internal research file path reaches published text (local layers)', () => {
+  for (const [f, t] of texts) assert.ok(!/~\/workspace|\/workspace\/area-research/.test(t), `${f}: research file path in published text`);
+});

@@ -1,6 +1,55 @@
 {
   "blocks": [
     {
+      "t": "h",
+      "level": 2,
+      "text": "Mission townhomes that sold: price bands and sub-areas, November 2025 to October 2026",
+      "gen": "uplift"
+    },
+    {
+      "t": "p",
+      "text": "The 65 townhomes that closed in Mission over the 12 months had a $679,900 median, and the middle half sold between $635,000 and $709,900. That is a long way inside a $1,200,000 ceiling: 64 of the 65 sold below $800,000, fewer than five sold between $800,000 and $999,999, and none sold at $1,000,000 or more. A search for Mission townhomes under $1.2 million therefore covers the whole townhome market, not a part of it.",
+      "gen": "uplift"
+    },
+    {
+      "t": "table",
+      "caption": "Mission: townhomes sold, by price band",
+      "head": [
+        "Sale price",
+        "Sold",
+        "Share of sales"
+      ],
+      "rows": [
+        [
+          "Under $600,000",
+          "14",
+          "22%"
+        ],
+        [
+          "$600,000 to $799,999",
+          "50",
+          "77%"
+        ],
+        [
+          "$800,000 to $999,999",
+          "Fewer than 5",
+          "—"
+        ]
+      ],
+      "source": "Source: Paragon, the MLS® system used by Jared’s office, closed sales from November 1, 2025 to October 22, 2026. Pending sales are not counted. Median means the middle price, so half sold for more and half for less. A price band is shown only with 5 or more sales; with fewer, one sale would be the whole figure.",
+      "gen": "uplift"
+    },
+    {
+      "t": "p",
+      "text": "Most of the activity is in the Mission BC sub-area (55 of the 65 sales, $679,000 median, 30 days to sell), followed by Mission-West (9 sales, $685,000 median, 14 days). The only complexes with five or more sales were Skyview (10 sales, $714,900 median), Spencer Estates (5 sales, $415,000 median) in Mission BC and Archer Green (7 sales, $680,000 median) in Mission-West. The median year built is 2021, and the median strata fee is $349 a month ($4,188 a year, 0.62% of the median price).",
+      "gen": "uplift"
+    },
+    {
+      "t": "p",
+      "text": "By quarter the median was $687,500 in November to January (16 sales); $692,500 in February to April (22 sales); $675,000 in May to July (17 sales); $641,704 in August to October (10 sales). The most recent quarter has 10 sales, so it is a smaller sample than the others and should be read with that in mind. Homes took 25 days to sell at 98.6% of the last list price, and 3% sold above list.",
+      "gen": "uplift"
+    },
+    {
       "gen": "musefaq",
       "level": 2,
       "pos": "end",
@@ -28,7 +77,7 @@
       "q": "What is the median price of a Mission townhome?"
     },
     {
-      "a": "SD75 schools confirmed by name and address against the BC Ministry K-12 file include Mission Senior Secondary, Hatzic and École Heritage Park middle schools, and elementaries such as Mission Central, Windebank, Albert McMahon and Christine Morrison — but catchments are address-based and no Mission catchment lookup is on record, so confirm the exact address with the district (~/workspace/area-research-2026-11/education/work/bc_k12_schools.csv, read 2026-11-01).",
+      "a": "SD75 schools confirmed by name and address against the BC Ministry K-12 file include Mission Senior Secondary, Hatzic and École Heritage Park middle schools, and elementaries such as Mission Central, Windebank, Albert McMahon and Christine Morrison — but catchments are address-based and no Mission catchment lookup is on record, so confirm the exact address with the district.",
       "gen": "muse",
       "q": "Which schools serve Mission townhome areas?"
     },
@@ -36,6 +85,16 @@
       "a": "For 2026, City of Mission property taxes were due Thursday, July 2, 2026, and a 10% penalty was added to any current balances outstanding, including unclaimed home owner grants, on July 3, 2026.",
       "gen": "muse",
       "q": "When are Mission property taxes due, and what is the penalty?"
+    },
+    {
+      "q": "Do all Mission townhomes sell for less than $1.2 million?",
+      "a": "In the last 12 months, yes. All 65 townhomes that closed in Mission sold under $1,000,000, and the median was $679,900. Townhomes at or above $1.2 million did not appear in the sales data.",
+      "gen": "uplift"
+    },
+    {
+      "q": "What is the strata fee on a Mission townhome?",
+      "a": "The median across 64 sales was $349 a month, $4,188 a year. Fees were lower in the Mission BC sub-area ($310 median) than in Mission-West ($401).",
+      "gen": "uplift"
     }
   ],
   "slug": "mission-townhomes-under-1-2m",
