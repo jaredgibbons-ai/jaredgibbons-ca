@@ -284,6 +284,12 @@ def area_page(ck, k, slug):
     bl.append({'t': 'grid'})
     bl += SO.page_blocks(AGG, k, label, ['house', 'condo', 'townhome', 'duplex', 'acreage', 'mobile', 'land'])
     for b in bl: b.setdefault('gen', G)
+    shown = sorted(order, key=lambda y: -g[y]['n'])[:2]
+    for x in order:      # every other home type with enough sales gets its own sentence and quarterly table
+        if x in shown: continue
+        if g[x]['n'] >= SO.MIN_MED and 'price' in g[x]: bl.append(P(SO.one_line(label, g[x], x)))
+    for x in order:
+        if x != big and g[x]['n'] >= 12: bl += [{**b, 'gen': G} for b in SO.quarter_table(label, g[x], x)]
     bl += typical_blocks(label, g, order)
     # comparison with the rest of the city
     rows = []
