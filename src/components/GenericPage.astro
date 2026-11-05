@@ -22,6 +22,7 @@ import IdxEmbed from './IdxEmbed.astro';
 import IDX from '../data/idx-embeds.json';
 import BREADCRUMBS from '../data/breadcrumbs.json';
 import EXPLORE from '../data/explore.json';
+import EXPLORE_EXTRA from '../data/explore-extra.json';
 import ExploreLinks from './ExploreLinks.astro';
 
 const { page } = Astro.props as { page: any };
@@ -95,6 +96,19 @@ if (photos.length) {
 const NO_REVIEWS = new Set(['404', 'privacy', 'subscribe-to-our-newsletter', 'contact', 'reviews', 'data-and-methodology', 'photo-credits']);
 if (!NO_REVIEWS.has(page.slug) && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.splice(page.blocks.length - endCount, 0, { t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
 
+// Long pages (twenty or more H2 sections) get an "On this page" jump list right after the H1, so a reader can reach a section without scrolling thousands of pixels.
+{
+  const h2s = page.blocks.filter((b: any) => b.t === 'h' && b.level === 2 && !b.href && String(b.text || '').trim());
+  const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
+  if (h2s.length >= 20 && h1i >= 0 && page.slug !== 'blog') {
+    const used = new Set(page.blocks.filter((b: any) => b.id).map((b: any) => b.id));
+    const items = h2s.slice(0, 60).map((b: any) => {
+      if (!b.id) { let id = String(b.text).toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48) || 'section'; let n = 2; const base = id; while (used.has(id)) id = `${base}-${n++}`; used.add(id); b.id = id; }
+      return { text: b.text, id: b.id };
+    });
+    page.blocks.splice(h1i + 1, 0, { t: 'toc', items });
+  }
+}
 // Archive pages open with an H2 above the H1 ("Fraser Valley Acreages for Sale" over the longer H1): show that line as a small label above the H1, not a second giant heading.
 {
   const b0 = page.blocks[0]; const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
@@ -143,7 +157,11 @@ for (const b of page.blocks) {
 push();
 const linkOnly = (items: any[]) => items.every((it) => it.length === 1 && it[0].h);
 let fid = 0;
-const explore = (EXPLORE as Record<string, any>)[String(page.path || '').startsWith('/blog.html/') ? 'post:' + page.slug : page.slug];
+const exploreBase = (EXPLORE as Record<string, any>)[String(page.path || '').startsWith('/blog.html/') ? 'post:' + page.slug : page.slug];
+const _extra: string[][] = (EXPLORE_EXTRA as Record<string, any>)[page.slug] ?? [];
+const explore = !_extra.length ? exploreBase
+  : exploreBase ? { ...exploreBase, cols: exploreBase.cols.map((c: any, i: number) => i === 0 ? { ...c, links: [...c.links, ..._extra.filter((l) => !c.links.some((x: string[]) => x[1] === l[1]))] } : c) }
+  : { cols: [{ h: 'Related guides', links: _extra, more: [] }] };
 ---
 <Base
   title={page.title}
@@ -190,6 +208,11 @@ const explore = (EXPLORE as Record<string, any>)[String(page.path || '').startsW
                 const Tag = `h${Math.min(b.level, 5)}`;
                 return <Tag id={b.id} class={(b.level === 1 ? 'pg__h1' : b.level === 2 ? 'h2' : 'pg__h') + (b.level <= 2 ? capsClass(b.text) : '')}>{b.href ? <Rich parts={[{ t: b.text, h: b.href }]} /> : b.text}</Tag>;
               }
+              if (b.t === 'toc') return (
+                <details class="toc"><summary>On this page ({b.items.length} sections)</summary>
+                  <ul>{b.items.map((it: any) => <li><a href={`#${it.id}`}>{it.text}</a></li>)}</ul>
+                </details>
+              );
               if (b.t === 'p') return <p class={b.cls}><Rich parts={b.parts} /></p>;
               if (b.t === 'photo') return <PhotoCredit photo={b.photo} hero sizes="(min-width:48rem) 40rem, 100vw" />;
               if (b.t === 'list') return (
@@ -252,6 +275,11 @@ const explore = (EXPLORE as Record<string, any>)[String(page.path || '').startsW
   .pg :global(p){margin:0 0 1em}
   .pg__h1{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.05;letter-spacing:-.025em;margin:0 0 1.25rem;text-wrap:balance;max-width:24ch}
   .pg__h1.caps{max-width:32ch}
+  .toc{margin:0 0 var(--s5);border:1px solid var(--ink);background:#fff}
+  .toc summary{cursor:pointer;font:700 .9375rem var(--f-head);min-height:2.75rem;display:flex;align-items:center;padding:0 .85rem}
+  .toc ul{margin:0;padding:.25rem .85rem .85rem 2rem;columns:2 16rem;column-gap:var(--s6)}
+  .toc li{break-inside:avoid;padding:.2rem 0}
+  .toc a{display:inline-block;min-height:1.5rem}
   .pg__h{font-size:1.25rem;margin:2rem 0 .75rem}
   .pg p,.pg li,.pg a{overflow-wrap:anywhere}
   .byline{font:600 .8125rem var(--f-head);letter-spacing:.04em}

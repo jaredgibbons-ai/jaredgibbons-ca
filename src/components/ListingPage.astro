@@ -34,7 +34,7 @@ const rest: { k?: string; v: string }[] = [];
 const photoList: { p: number; id: string; w: number; h: number }[] = PHOTO_LISTS[`../data/listing-photos/${page.slug}.json`] ?? [];
 // archive alt text per position ("Photo 3: <address> | MLS ...")
 const altByPos: Record<number, string> = {};
-for (const a of page.photos.alts ?? []) { const m = /^Photo (\d+):/.exec(a); if (m) altByPos[Number(m[1])] = a; }
+for (const a of page.photos.alts ?? []) { const m = /^Photo (\d+):/.exec(a); if (m) altByPos[Number(m[1])] = a.replace(/^(Photo \d+: )([^,]+)/, (_x: string, p1: string, p2: string) => p1 + titleCaseAddress(p2)); }
 const explore = (EXPLORE as Record<string, any>)['listing:' + page.slug];
 const _h1 = (blocks.find((b: any) => b.t === 'h' && b.level === 1) as any)?.text;
 const crumbs = _h1 ? [{ name: 'Home', href: '/index.html' }, { name: 'My Listings', href: '/our-listings.html' }, { name: String(_h1), href: '/our-listings.html' }] : [];
@@ -61,6 +61,19 @@ function builtMeta(): string {
   }
   return `${head} ${tail}`;
 }
+// The archive repeats Status / Property type / MLS / Year built / Sold date in two or three fact lists. Show each fact once (first value wins),
+// and drop a list's heading when nothing is left under it.
+const factKey = (k: string) => String(k).toLowerCase().replace(/[:.]/g, '').replace(/^prop type$/, 'property type').replace(/mls® num$/, 'mls number').trim();
+const seenFacts = new Set<string>();
+const bodyBlocks: any[] = [];
+for (const b of blocks.filter((x) => !(x.t === 'h' && x.level === 1) && x.t !== 'summary' && x.t !== 'credit' && x.t !== 'disclaimer' && x.t !== 'agent')) {
+  if (b.t === 'facts') {
+    const items = b.items.filter((it: any) => { const k = factKey(it.k); if (seenFacts.has(k)) return false; seenFacts.add(k); return true; });
+    if (!items.length) { if (bodyBlocks.at(-1)?.t === 'h') bodyBlocks.pop(); continue; }
+    bodyBlocks.push({ ...b, items });
+  } else bodyBlocks.push(b);
+}
+const h1Text = cityName ? `${addr}, ${cityName}` : '';
 const rawMeta = String(seo['Meta description'] || '').replace(/^\[SOLD\]:\s*/i, '').trim();
 const metaDesc = rawMeta.length >= 70 ? rawMeta : builtMeta();
 ---
@@ -81,7 +94,7 @@ const metaDesc = rawMeta.length >= 70 ? rawMeta : builtMeta();
   <section class="section">
     <div class="wrap ls">
       {blocks.map((b) => {
-        if (b.t === 'h' && b.level === 1) return <h1 class={`ls__h1${capsClass(b.text)}`}>{b.text}</h1>;
+        if (b.t === 'h' && b.level === 1) return <h1 class={`ls__h1${capsClass(h1Text || b.text)}`}>{h1Text || b.text}</h1>;
         if (b.t === 'summary') {
           const inner = (
             <>
@@ -109,7 +122,7 @@ const metaDesc = rawMeta.length >= 70 ? rawMeta : builtMeta();
 
   <section class="section section--cream">
     <div class="wrap ls">
-      {blocks.filter((b) => !(b.t === 'h' && b.level === 1) && b.t !== 'summary' && b.t !== 'credit' && b.t !== 'disclaimer' && b.t !== 'agent').map((b) => {
+      {bodyBlocks.map((b) => {
         if (b.t === 'h') return <h2 class="ls__h">{b.text}</h2>;
         if (b.t === 'p') return <p class="ls__p">{b.parts.map((x: any) => x.h ? <a href={x.h}>{x.t}</a> : x.t).reduce((a: any[], x: any) => (a.length ? [...a, ' ', x] : [x]), [])}</p>;
         if (b.t === 'list') return <ul class="ls__list">{b.items.map((it: any) => <li>{it.map((x: any) => x.t).join(' ')}</li>)}</ul>;
