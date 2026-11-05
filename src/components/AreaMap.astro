@@ -1,0 +1,94 @@
+---
+// Neighbourhood map: every area filled, outlined and labelled; press an area for a popup that links to its page.
+// Google Maps JavaScript API, loaded only when the map scrolls into view (keeps LCP and INP clean and keeps map loads, which are billed after 10,000 a month, to people who see it).
+// Needs PUBLIC_GOOGLE_MAPS_KEY at build time (a browser key restricted to our domains; D-102). Without it the map says so and the link list still works.
+// mode 'hub': all of the region's areas. mode 'area': only the current area, in a strong outline (neighbours are not drawn).
+import { validateRegion } from '../lib/areamap.js';
+const FILES = import.meta.glob('../data/maps/*.json', { eager: true, import: 'default' }) as Record<string, any>;
+const { region: slug, mode = 'hub', current = '' } = Astro.props as { region: string; mode?: 'hub' | 'area'; current?: string };
+const region = FILES[`../data/maps/${slug}.json`];
+if (!region) throw new Error(`AreaMap: no map data for ${slug}`);
+const errs = validateRegion(region);
+if (errs.length) throw new Error(`AreaMap ${slug}: ${errs.join('; ')}`);
+const areas = mode === 'area' ? region.areas.filter((a: any) => a.id === current) : region.areas;
+if (mode === 'area' && !areas.length) throw new Error(`AreaMap ${slug}: no area ${current}`);
+const key = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY || '';
+const payload = JSON.stringify({ name: region.name, center: region.center, mode, areas });
+---
+<section class="areamap" aria-label={mode === 'area' ? `${areas[0].name} neighbourhood map` : `${region.name} neighbourhood map`}>
+  <div class="areamap__map" data-key={key} data-map={payload} role="region" aria-label="Interactive map. The same areas are listed as links below the map.">
+    <p class="areamap__note notice">{key ? 'The map loads when you scroll to it.' : 'The interactive map is not connected in the preview yet. The areas are listed below.'}</p>
+  </div>
+  <p class="areamap__hint">Drag to move the map. Press an area to open its page.</p>
+  {mode === 'hub' && (
+    <nav aria-label={`${region.name} neighbourhoods`}>
+      <ul class="areamap__list">{areas.map((a: any) => <li><a href={a.href}>{a.name}</a></li>)}</ul>
+    </nav>
+  )}
+</section>
+<script>
+  import { popupSpec, centroid, boundsOf } from '../lib/areamap.js';
+  const host = document.querySelector('.areamap__map') as HTMLElement | null;
+  if (host && host.dataset.key) {
+    const key = host.dataset.key, data = JSON.parse(host.dataset.map || '{}');
+    let started = false;
+    const fail = (m: string) => { host.innerHTML = `<p class="areamap__note notice">${m}</p>`; };
+    (window as any).gm_authFailure = () => fail('The map could not load. The areas are listed below.');
+    const load = () => new Promise<void>((res, rej) => {
+      if ((window as any).google?.maps?.importLibrary) return res();
+      const cb = '__areaMapReady'; (window as any)[cb] = () => res();
+      const s = document.createElement('script');
+      s.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(key)}&v=weekly&loading=async&callback=${cb}`;
+      s.async = true; s.onerror = () => rej(new Error('script')); document.head.appendChild(s);
+    });
+    const start = async () => {
+      if (started) return; started = true;
+      try {
+        await load();
+        const g = (window as any).google;
+        const { Map, Polygon, InfoWindow } = await g.maps.importLibrary('maps');
+        host.innerHTML = '';
+        const map = new Map(host, { center: data.center, zoom: 12, gestureHandling: 'cooperative', mapTypeControl: true, streetViewControl: true, fullscreenControl: true });
+        const b = boundsOf(data.areas);
+        map.fitBounds({ south: b.south, west: b.west, north: b.north, east: b.east }, 24);
+        class Label extends g.maps.OverlayView {
+          pos: any; text: string; div: HTMLElement | null = null;
+          constructor(pos: any, text: string) { super(); this.pos = pos; this.text = text; }
+          onAdd() { this.div = document.createElement('div'); this.div.className = 'areamap__label'; this.div.textContent = this.text; this.getPanes().floatPane.appendChild(this.div); }
+          draw() { const p = this.getProjection().fromLatLngToDivPixel(this.pos); if (p && this.div) { this.div.style.left = p.x + 'px'; this.div.style.top = p.y + 'px'; } }
+          onRemove() { this.div?.remove(); }
+        }
+        const info = new InfoWindow();
+        const only = data.mode === 'area';
+        for (const a of data.areas) {
+          const base = only ? { fillColor: '#ffffff', fillOpacity: 0.05, strokeColor: '#000000', strokeWeight: 4 } : { fillColor: '#d8cdb4', fillOpacity: 0.55, strokeColor: '#1a1a1a', strokeWeight: 2 };
+          for (const ring of a.rings) {
+            const poly = new Polygon({ map, paths: ring.map(([lat, lng]: number[]) => ({ lat, lng })), ...base, clickable: !only });
+            if (only) continue;
+            poly.addListener('mouseover', () => poly.setOptions({ fillOpacity: 0.8 }));
+            poly.addListener('mouseout', () => poly.setOptions({ fillOpacity: base.fillOpacity }));
+            poly.addListener('click', (e: any) => {
+              const sp = popupSpec(a, data.name), box = document.createElement('div');
+              const h = document.createElement('strong'); h.textContent = sp.title; h.style.display = 'block';
+              const l = document.createElement('a'); l.href = sp.href; l.textContent = sp.linkText;
+              box.append(h, l); info.setContent(box); info.setPosition(e.latLng); info.open({ map });
+            });
+          }
+          const c = centroid(a.rings); if (c && !only) new Label(new g.maps.LatLng(c[0], c[1]), a.name).setMap(map);
+        }
+      } catch (e) { fail('The map could not load. The areas are listed below.'); }
+    };
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((es) => { if (es.some((x) => x.isIntersecting)) { io.disconnect(); start(); } }, { rootMargin: '300px' });
+      io.observe(host);
+    } else start();
+  }
+</script>
+<style is:global>
+  .areamap{margin:var(--s5) 0}
+  .areamap__map{height:min(70vh,36rem);min-height:20rem;background:var(--cream);border:1px solid var(--ink);position:relative}
+  .areamap__note{margin:1rem}
+  .areamap__hint{font-size:.8125rem;color:#444;margin:.5rem 0 0}
+  .areamap__list{list-style:none;padding:0;margin:var(--s4) 0 0;display:grid;gap:.25rem 1.5rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}
+  .areamap__label{position:absolute;transform:translate(-50%,-50%);pointer-events:none;font:800 .75rem/1.15 var(--f-head);text-transform:uppercase;letter-spacing:.04em;text-align:center;color:#111;text-shadow:0 0 3px #fff,0 0 3px #fff;white-space:nowrap}
+</style>
