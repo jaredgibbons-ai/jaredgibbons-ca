@@ -71,6 +71,24 @@ def main():
             if slug in pages and pages[slug] != sid:
                 problems.append(('page has two searches', slug, f'{pages[slug]} / {sid}')); continue
             pages[slug] = sid
+    # Sub-area new-construction searches (Age 0 or less), one per board sub-area with 5 or more new listings (tab Counts, Status 'Built').
+    SUB_XLSX = os.path.join(ROOT, 'docs/review/idx/new-construction-subarea-searches-2026-11-04.xlsx')
+    if os.path.exists(SUB_XLSX):
+        swb = openpyxl.load_workbook(SUB_XLSX, read_only=True)
+        codes = {str(r[1]): (r[7] or '') for r in list(swb['Sub-area searches'].iter_rows(values_only=True))[1:] if r[0]}
+        for r in list(swb['Counts'].iter_rows(values_only=True))[1:]:
+            if r[3] != 'Built': continue
+            name, sid, addr = r[1], str(r[4]), r[5]
+            slug = re.sub(r'\.html$', '', (addr or '').strip().lstrip('/'))
+            code = codes.get(sid, '')
+            if f'search-{sid}' not in code or ACCOUNT not in code:
+                problems.append(('sub-area embed code does not match its search id/account', name, slug)); continue
+            lp = os.path.join(ROOT, 'src/data/local', slug + '.json')
+            if not os.path.exists(lp) or not any(b.get('t') == 'grid' for b in json.load(open(lp))['blocks']):
+                problems.append(('sub-area new-construction page missing or has no listings placeholder', name, slug)); continue
+            if slug in pages and pages[slug] != sid:
+                problems.append(('page has two searches', slug, f'{pages[slug]} / {sid}')); continue
+            pages[slug] = sid
     # Three special widgets (my listings active/sold, the open search form). Stored as the path after /l/idx2/.
     special = {}
     if 'Special embeds (3)' in wb.sheetnames:

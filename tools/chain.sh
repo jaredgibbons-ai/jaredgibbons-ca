@@ -11,6 +11,7 @@ python3 -I tools/build_type_near.py 2>&1 | tail -2
 python3 -I tools/build_neighbour_compare.py 2>&1 | tail -3
 python3 -I tools/build_search_pages.py 2>&1 | tail -2
 python3 -I tools/build_new_construction.py 2>&1 | tail -2
+python3 -I tools/build_new_construction_subareas.py 2>&1 | tail -2
 python3 -I tools/build_idx_embeds.py 2>&1 | head -1
 python3 -I tools/dedupe_generated.py 2>&1 | tail -2
 npm run build >/tmp/b1.log 2>&1; tail -2 /tmp/b1.log
