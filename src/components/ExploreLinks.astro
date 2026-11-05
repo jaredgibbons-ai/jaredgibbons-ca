@@ -1,0 +1,30 @@
+---
+// "Explore" link block at the end of every listing-search page (data: src/data/explore.json, tools/build_explore.py).
+// Template output, not page content. Not part of the main menu.
+const { data } = Astro.props as { data: { cols: { h: string; links: string[][]; more: string[][] }[] } };
+---
+{data && data.cols.length > 0 && (
+  <aside class="explore" aria-labelledby="explore-h">
+    <div class="wrap">
+      <h2 class="explore__title" id="explore-h">Explore more searches and neighbourhoods</h2>
+      <div class="explore__cols">
+        {data.cols.map((c) => (
+          <nav class="explore__col" aria-label={c.h}>
+            <h3 class="explore__h">{c.h}</h3>
+            <ul>
+              {c.links.map((l) => <li><a href={l[1]}>{l[0]}</a></li>)}
+            </ul>
+            {c.more.length > 0 && (
+              <details class="explore__more">
+                <summary>Show more</summary>
+                <ul>
+                  {c.more.map((l) => <li><a href={l[1]}>{l[0]}</a></li>)}
+                </ul>
+              </details>
+            )}
+          </nav>
+        ))}
+      </div>
+    </div>
+  </aside>
+)}

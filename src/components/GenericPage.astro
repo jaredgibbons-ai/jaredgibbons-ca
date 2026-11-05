@@ -17,6 +17,8 @@ import PhotoCredit from './PhotoCredit.astro';
 import IdxEmbed from './IdxEmbed.astro';
 import IDX from '../data/idx-embeds.json';
 import BREADCRUMBS from '../data/breadcrumbs.json';
+import EXPLORE from '../data/explore.json';
+import ExploreLinks from './ExploreLinks.astro';
 
 const { page } = Astro.props as { page: any };
 const seo = page.seo || {};
@@ -97,6 +99,7 @@ for (const b of page.blocks) {
 push();
 const linkOnly = (items: any[]) => items.every((it) => it.length === 1 && it[0].h);
 let fid = 0;
+const explore = (EXPLORE as Record<string, any>)[page.slug];
 ---
 <Base
   title={page.title}
@@ -178,6 +181,7 @@ let fid = 0;
     );
   })}
   <Cta />
+  {explore && <ExploreLinks data={explore} />}
 </main>
 </Base>
 
