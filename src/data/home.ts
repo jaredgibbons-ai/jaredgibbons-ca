@@ -5,12 +5,12 @@ export const reviews = [
   { text: 'We have known and worked with Jared for over 10 years. He is a trusted realtor that has always understood our needs and wants. We highly recommend him.', name: 'Baljinder', date: '9 October 2026 · Google review' },
   { text: 'I was going to write a long heartfelt message, because Jared has been so exceptional to work with…', name: 'Natalie', date: '27 September 2026 · Google review' },
   { text: 'We had a great experience working with Jared to sell our condo. He was professional, dedicated…', name: 'Atta', date: '25 September 2026 · Google review' },
-  { text: 'Working with Jared made selling our condo a much smoother experience than we expected. …', name: 'Maryam', date: '20 September 2026 · Google review' },
-  { text: 'Great dealing with this agent. He was informative , helpful and knowledgeable about all the aspects…', name: 'Richard', date: 'June 2026 · Google review' },
-  { text: 'We had an excellent experience working with Jared. From the very beginning, he took the time to really listen to what we were looking for and helped us find homes that matched both our needs and our lifestyle. …', name: 'Jessica', date: '15 June 2026 · Google review' },
+  { text: 'Working with Jared made selling our condo a much smoother experience than we expected…', name: 'Maryam', date: '20 September 2026 · Google review' },
+  { text: 'Great dealing with this agent. He was informative, helpful and knowledgeable about all the aspects…', name: 'Richard', date: 'June 2026 · Google review' },
+  { text: 'We had an excellent experience working with Jared. From the very beginning, he took the time to really listen to what we were looking for and helped us find homes that matched both our needs and our lifestyle…', name: 'Jessica', date: '15 June 2026 · Google review' },
   { text: 'Being on my own and having to make all the decisions myself, I truly appreciated having Jared’s…', name: 'Marilyn', date: '6 June 2026 · Google review' },
-  { text: 'As first-time home buyers, we are so grateful we had Jared guiding us every step of the way. He was always quick to respond to texts, emails, and questions. …', name: 'Savannah', date: '22 May 2026 · Google review' },
-  { text: 'Highly recommend Jared and his team. He made listing and selling my condo easy. …', name: 'Kelly', date: '20 April 2026 · Google review' },
+  { text: 'As first-time home buyers, we are so grateful we had Jared guiding us every step of the way. He was always quick to respond to texts, emails, and questions…', name: 'Savannah', date: '22 May 2026 · Google review' },
+  { text: 'Highly recommend Jared and his team. He made listing and selling my condo easy…', name: 'Kelly', date: '20 April 2026 · Google review' },
 ];
 
 // alt describes what each image shows (D-20, approved 31 Oct). Archived alt text is recorded in B-15.

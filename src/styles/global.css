@@ -106,6 +106,8 @@ a:hover{text-decoration-thickness:3px}
 .nav__panel--wide{max-height:calc(100vh - 11rem);overflow:auto;width:min(58rem,calc(100vw - 2*var(--gutter)));padding:1.25rem 0}
 .nav__item--wide{position:static}
 .nav__item--wide .nav__panel{left:50%;transform:translateX(-50%)}
+/* The last two panels open leftwards from the item's right edge so they never run off the screen (1301-1500 px). */
+@media (min-width:1301px){.nav__item:nth-last-child(-n+2) .nav__panel{left:auto;right:0}}
 .mega{display:grid;grid-template-columns:15rem 1fr;column-gap:2rem;padding:0 1.25rem}
 .mega__city{display:contents}
 .mega__region{grid-column:1;margin:.9rem 0 .3rem;font:700 .6875rem var(--f-head);letter-spacing:.12em;text-transform:uppercase;color:#666}

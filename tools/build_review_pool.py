@@ -23,7 +23,7 @@ def sentences(t): return re.split(r'(?<=[.!?”"])\s+(?=[A-Z“"])', t)
 
 def excerpt(t):
     t = re.sub(r'\s+[A-Z]{2}$', '', t) if re.search(r'\.\s+[A-Z]{2}$', t) else t   # trailing self-signed initials
-    t = t.strip('"').strip()
+    t = re.sub(r'\s+([,.;:!?])', r'\1', t.strip('"').strip())
     if SKIP_TEXT.search(t): return None
     ss = [s for s in sentences(t) if not NAMES.search(s)]
     if not ss: return None
@@ -33,7 +33,7 @@ def excerpt(t):
         if out and len(out) + len(s) + 1 > MAXLEN: break
         if not out and len(s) > MAXLEN: return None
         out = (out + ' ' + s).strip()
-    return out + ' …' if out else None
+    return re.sub(r'[.]$', '', out) + '…' if out else None
 
 
 oldwhen = {(o['who'], re.sub(r'[“”…\s]+', ' ', o['quote'])[:40]): o['when'] for o in old['items']}

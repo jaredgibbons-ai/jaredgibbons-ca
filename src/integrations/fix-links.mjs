@@ -34,7 +34,7 @@ export default function fixLinks() {
         const resolve = (href) => {
           const m = href.match(/^([^?#]*)([?#].*)?$/); const p = decodeURI(m[1]); const tail = m[2] || '';
           if (!p.startsWith('/') || p.startsWith('//')) return { keep: true };
-          if (WORKER_SERVED.test(p)) return { keep: true };
+          if (WORKER_SERVED.test(p)) return p in manual ? (manual[p] === null ? { drop: true } : { to: manual[p] + tail }) : { keep: true };
           let cur = p, hops = 0;
           while (hops++ < 4) {
             if (redirects.has(cur) && !exists(cur)) { cur = redirects.get(cur).replace(/^https:\/\/jaredgibbons\.ca/, ''); continue; }

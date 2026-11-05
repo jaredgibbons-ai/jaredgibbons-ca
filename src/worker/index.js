@@ -1,6 +1,7 @@
 import rules from './rules.json';
 import { buildIndex, route, NESTED } from './route.js';
 import { handleForm } from './forms.js';
+import { handlePhoto } from './photos.js';
 
 const index = buildIndex(rules);
 const SECURITY = {
@@ -12,6 +13,7 @@ export default {
   async fetch(request, env) {
     const pathname = new URL(request.url).pathname;
     if (pathname.startsWith('/api/forms/')) return handleForm(request, env);
+    if (pathname.startsWith('/listing-photos/')) return handlePhoto(request, env, pathname);
     // Daily Google reviews copy, served by the jg-reviews Worker over a service binding (nothing public to configure).
     if (pathname === '/api/reviews.json') {
       if (!env.REVIEWS || (request.method !== 'GET' && request.method !== 'HEAD')) return new Response('Not found', { status: 404, headers: { 'cache-control': 'no-store' } });

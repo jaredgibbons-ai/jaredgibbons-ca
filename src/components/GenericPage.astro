@@ -98,7 +98,7 @@ if (!NO_REVIEWS.has(page.slug) && !page.blocks.some((b: any) => b.t === 'reviews
 // Archive pages open with an H2 above the H1 ("Fraser Valley Acreages for Sale" over the longer H1): show that line as a small label above the H1, not a second giant heading.
 {
   const b0 = page.blocks[0]; const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
-  if (b0?.t === 'h' && b0.level === 2 && h1i > 0 && h1i <= 2) page.blocks[0] = { t: 'p', cls: 'eyebrow', parts: [{ t: b0.text }] };
+  if (b0?.t === 'h' && (b0.level === 2 || b0.level === 3) && h1i > 0 && h1i <= 2) page.blocks[0] = { t: 'p', cls: 'eyebrow', parts: [{ t: b0.text }] };
   // Leftover widget label from the archive, right above the ALR heading.
   page.blocks = page.blocks.filter((b: any) => !(b.t === 'p' && (b.parts || []).map((x: any) => x.t).join('').trim() === 'ALR property search'));
 }

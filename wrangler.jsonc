@@ -17,5 +17,7 @@
   "send_email": [{ "name": "EMAIL" }],
   // Google reviews feed: the jg-reviews Worker (workers/reviews) holds the Google secrets; the site only reads its stored copy.
   "services": [{ "binding": "REVIEWS", "service": "jg-reviews" }],
+  // Listing photos (3,338 files x 3 sizes). Upload: tools/upload_photos_r2.sh. Served by src/worker/photos.js.
+  "r2_buckets": [{ "binding": "PHOTOS", "bucket_name": "jg-listing-photos" }],
   "vars": { "PREVIEW": "true" }
 }

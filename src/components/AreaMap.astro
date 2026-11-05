@@ -62,11 +62,13 @@ const window_ = (sold as any).meta.window;
   {shaded && (
     <details class="areamap__data">
       <summary>Closed-sales figures behind the shading</summary>
+      <div class="areamap__tbl" tabindex="0" role="region" aria-label={`Closed-sales figures, ${region.name}`}>
       <table class="tbl">
         <caption>Closed sales, {window_}. Figures are medians for the area and property type; types with fewer than {MIN_SALES} sales are left out.</caption>
         <thead><tr><th scope="col">Area</th><th scope="col">Type</th><th scope="col">Sales</th><th scope="col">Median sold price</th><th scope="col">Median price per sq ft</th><th scope="col">Median days on market</th></tr></thead>
         <tbody>{rows.map(({ a, label, f }: any) => <tr><th scope="row"><a href={a.href}>{a.name}</a></th><td>{label}</td><td>{f.n}</td><td>{fmt('price', f.price)}</td><td>{fmt('ppsf', f.ppsf)}</td><td>{fmt('dom', f.dom)}</td></tr>)}</tbody>
       </table>
+      </div>
       {noFig.length > 0 && <p class="areamap__fine">Not enough closed sales for a figure: {noFig.map((a: any) => a.name).join(', ')}.</p>}
     </details>
   )}
@@ -274,6 +276,7 @@ const window_ = (sold as any).meta.window;
   .areamap__pin{position:absolute;transform:translate(-50%,-50%);width:1.5rem;height:1.5rem;border-radius:50%;background:#0a0a0a;color:#fff;border:2px solid #fff;box-shadow:0 0 0 1px #0a0a0a;display:grid;place-items:center;font:800 .7rem/1 var(--f-head);cursor:pointer}
   .areamap__list{list-style:none;padding:0;margin:var(--s4) 0 0;display:grid;gap:.25rem 1.5rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}
   .areamap__data{margin-top:var(--s4)}
+  .areamap__tbl{overflow-x:auto;max-width:100%}
   .areamap__data summary{cursor:pointer;font-weight:700;min-height:2.75rem;display:flex;align-items:center}
   .areamap__label{position:absolute;transform:translate(-50%,-50%);pointer-events:none;font:800 .75rem/1.15 var(--f-head);text-transform:uppercase;letter-spacing:.04em;text-align:center;color:#111;text-shadow:0 0 3px #fff,0 0 3px #fff;white-space:pre}
 </style>
