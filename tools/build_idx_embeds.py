@@ -89,6 +89,23 @@ def main():
             if slug in pages and pages[slug] != sid:
                 problems.append(('page has two searches', slug, f'{pages[slug]} / {sid}')); continue
             pages[slug] = sid
+    # 395-page job (houses, condos and townhomes, area pages), built 2026-11-04/05 in account 67649, one search per page. Only rows whose Status starts with "Built" are wired;
+    # rows marked HOLD ("Not built") stay unwired until Jared answers. Pages are the local layers (src/data/local) or the original pages.
+    for fn, sheet in (('houses-searches-2026-11-04.xlsx', 'Houses searches'), ('condos-townhomes-searches-2026-11-05.xlsx', 'Condos & townhomes searches'), ('area-searches-2026-11-05.xlsx', 'Area searches')):
+        fp = os.path.join(ROOT, 'docs/review/idx', fn)
+        if not os.path.exists(fp): continue
+        for r in list(openpyxl.load_workbook(fp, read_only=True)[sheet].iter_rows(values_only=True))[1:]:
+            name, sid, _old, addr, _u, _t, _sc, code, _notes, _cnt, status = r[:11]
+            if not name or not (status or '').startswith('Built'): continue
+            sid = str(sid); slug = re.sub(r'\.html$', '', (addr or '').strip().lstrip('/'))
+            if f'search-{sid}' not in (code or '') or ACCOUNT not in (code or ''):
+                problems.append(('395-job embed code does not match id/account', name, slug)); continue
+            pj = [q for q in (os.path.join(ROOT, 'src/data/local', slug + '.json'), os.path.join(ROOT, 'src/data/pages', slug + '.json')) if os.path.exists(q)]
+            if not pj or not any(b.get('t') == 'grid' for b in json.load(open(pj[0]))['blocks']):
+                problems.append(('395-job page missing or has no listings placeholder', name, slug)); continue
+            if slug in pages and pages[slug] != sid:
+                problems.append(('page has two searches', slug, f'{pages[slug]} / {sid}')); continue
+            pages[slug] = sid
     # Three special widgets (my listings active/sold, the open search form). Stored as the path after /l/idx2/.
     special = {}
     if 'Special embeds (3)' in wb.sheetnames:
