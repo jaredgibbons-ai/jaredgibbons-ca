@@ -2,7 +2,7 @@
 // "Drive time to your work": the visitor types an address and gets an estimated drive time to the middle of this neighbourhood.
 // Runs in the visitor's browser with Google's Routes library (Maps JavaScript API, our restricted key). We do not receive, send on, or store the address.
 // Loads Google only when the visitor clicks into the address field. The destination is the centre of the area's outline (src/data/maps/<region>.json).
-import { validateRegion, centroid } from '../lib/areamap.js';
+import { validateRegion, centroid, draftsBlockLaunch } from '../lib/areamap.js';
 import { LEAVE_OPTIONS } from '../lib/commute.js';
 const FILES = import.meta.glob('../data/maps/*.json', { eager: true, import: 'default' }) as Record<string, any>;
 const { region: slug, current } = Astro.props as { region: string; current: string };
@@ -10,6 +10,8 @@ const region = FILES[`../data/maps/${slug}.json`];
 if (!region) throw new Error(`CommuteTime: no map data for ${slug}`);
 const errs = validateRegion(region);
 if (errs.length) throw new Error(`CommuteTime ${slug}: ${errs.join('; ')}`);
+const drafts = draftsBlockLaunch(region, import.meta.env.PUBLIC_PREVIEW);
+if (drafts.length) throw new Error(`CommuteTime ${slug}: outlines still marked draft cannot ship at launch: ${drafts.join(', ')}`);
 const area = region.areas.find((a: any) => a.id === current);
 if (!area) throw new Error(`CommuteTime ${slug}: no area ${current}`);
 const c = centroid(area.rings);

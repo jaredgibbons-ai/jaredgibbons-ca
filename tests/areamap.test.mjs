@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { validateRegion, popupSpec, centroid, boundsOf, flyoverFor } from '../src/lib/areamap.js';
+import { validateRegion, popupSpec, centroid, boundsOf, flyoverFor, draftsBlockLaunch } from '../src/lib/areamap.js';
 
 const sq = (s, w, n, e) => [[s, w], [s, e], [n, e], [n, w], [s, w]];
 const region = { region: 'test', name: 'Test Region', center: { lat: 49.05, lng: -122.8 }, bbox: [48.9, -123.1, 49.3, -122.5],
@@ -58,4 +58,11 @@ test('3D flyover is on by default, tunable, and can be turned off', () => {
   assert.equal(flyoverFor({ ...r, flyover: false }), null);
   assert.deepEqual(flyoverFor({ ...r, flyover: { lat: 1, lng: 2, range: 5000 } }), { lat: 1, lng: 2, range: 5000 });
   assert.equal(validateRegion({ region: 'x', name: 'X', bbox: [0, 0, 1, 1], areas: [], flyover: false }).length, 0);
+});
+
+test('draft outlines block a launch build but not the preview', () => {
+  const r = { areas: [{ id: 'a', status: 'draft' }, { id: 'b', status: 'confirmed' }] };
+  assert.deepEqual(draftsBlockLaunch(r, undefined), []);
+  assert.deepEqual(draftsBlockLaunch(r, 'true'), []);
+  assert.deepEqual(draftsBlockLaunch(r, 'false'), ['a']);
 });

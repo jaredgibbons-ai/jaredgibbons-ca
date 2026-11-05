@@ -74,3 +74,9 @@ export function flyoverFor(region) {
   const range = Math.round(Math.min(40000, Math.max(4000, Math.hypot(dx, dy) * 1.1)) / 100) * 100;
   return { lat, lng, altitude: 0, range, tilt: 55, heading: 0 };
 }
+
+/** Draft outlines are for the preview only. At launch (PUBLIC_PREVIEW=false) any area still marked draft stops the build, so an unconfirmed outline can never go public. */
+export function draftsBlockLaunch(region, previewValue) {
+  if (String(previewValue) !== 'false') return [];
+  return (region.areas || []).filter((a) => a.status !== 'confirmed').map((a) => a.id);
+}

@@ -5,7 +5,7 @@
 // mode 'hub': all of the region's areas. mode 'area': only the current area, in a strong outline (neighbours are not drawn).
 // Hub extras (D-103): areas that name a sold-12m sub-area are shaded by our own closed-sales figures (median price, price per sq ft, days on market; 5 sales minimum),
 // with the same figures in a text table, and a click-to-load 3D flyover when the region has one.
-import { validateRegion, flyoverFor } from '../lib/areamap.js';
+import { validateRegion, flyoverFor, draftsBlockLaunch } from '../lib/areamap.js';
 import { figures, TYPES, METRICS, MIN_SALES, fmt } from '../lib/choropleth.js';
 import sold from '../data/sold/sold-12m.json';
 const FILES = import.meta.glob('../data/maps/*.json', { eager: true, import: 'default' }) as Record<string, any>;
@@ -14,6 +14,8 @@ const region = FILES[`../data/maps/${slug}.json`];
 if (!region) throw new Error(`AreaMap: no map data for ${slug}`);
 const errs = validateRegion(region);
 if (errs.length) throw new Error(`AreaMap ${slug}: ${errs.join('; ')}`);
+const drafts = draftsBlockLaunch(region, import.meta.env.PUBLIC_PREVIEW);
+if (drafts.length) throw new Error(`AreaMap ${slug}: outlines still marked draft cannot ship at launch: ${drafts.join(', ')}`);
 const areas = mode === 'area' ? region.areas.filter((a: any) => a.id === current) : region.areas;
 if (mode === 'area' && !areas.length) throw new Error(`AreaMap ${slug}: no area ${current}`);
 const figs: Record<string, any> = {};
