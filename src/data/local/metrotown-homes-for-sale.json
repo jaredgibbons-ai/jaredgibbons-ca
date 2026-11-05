@@ -15,6 +15,31 @@
    "gen": "snapstats"
   },
   {
+   "t": "h",
+   "level": 2,
+   "text": "Where Metrotown sits",
+   "gen": "areamap"
+  },
+  {
+   "t": "areamap",
+   "region": "burnaby",
+   "mode": "area",
+   "current": "metrotown-homes-for-sale",
+   "gen": "areamap"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Drive time to Metrotown",
+   "gen": "areamap"
+  },
+  {
+   "t": "commute",
+   "region": "burnaby",
+   "current": "metrotown-homes-for-sale",
+   "gen": "areamap"
+  },
+  {
    "t": "table",
    "caption": "Metrotown listings, sales and sales ratio by month",
    "head": [

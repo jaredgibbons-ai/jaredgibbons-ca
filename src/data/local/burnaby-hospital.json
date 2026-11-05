@@ -12,6 +12,31 @@
       "gen": "snapstats"
     },
     {
+      "t": "h",
+      "level": 2,
+      "text": "Where Burnaby Hospital sits",
+      "gen": "areamap"
+    },
+    {
+      "t": "areamap",
+      "region": "burnaby",
+      "mode": "area",
+      "current": "burnaby-hospital",
+      "gen": "areamap"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Drive time to Burnaby Hospital",
+      "gen": "areamap"
+    },
+    {
+      "t": "commute",
+      "region": "burnaby",
+      "current": "burnaby-hospital",
+      "gen": "areamap"
+    },
+    {
       "t": "table",
       "caption": "Burnaby Hospital listings, sales and sales ratio by month",
       "head": [

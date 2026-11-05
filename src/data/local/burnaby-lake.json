@@ -12,6 +12,31 @@
       "gen": "snapstats"
     },
     {
+      "t": "h",
+      "level": 2,
+      "text": "Where Burnaby Lake sits",
+      "gen": "areamap"
+    },
+    {
+      "t": "areamap",
+      "region": "burnaby",
+      "mode": "area",
+      "current": "burnaby-lake",
+      "gen": "areamap"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Drive time to Burnaby Lake",
+      "gen": "areamap"
+    },
+    {
+      "t": "commute",
+      "region": "burnaby",
+      "current": "burnaby-lake",
+      "gen": "areamap"
+    },
+    {
       "t": "table",
       "caption": "Burnaby Lake listings, sales and sales ratio by month",
       "head": [

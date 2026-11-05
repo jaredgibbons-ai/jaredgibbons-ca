@@ -100,6 +100,31 @@
       "text": "Main Street is also the line that splits the board's Mount Pleasant VE (east) and Mount Pleasant VW (west) sub-areas. Buildings below are counted only where a source places them on the corridor itself; Mount Pleasant VE product that a source places off-corridor is not imported."
     },
     {
+      "t": "h",
+      "level": 2,
+      "text": "Where Main sits",
+      "gen": "areamap"
+    },
+    {
+      "t": "areamap",
+      "region": "vancouver",
+      "mode": "area",
+      "current": "main",
+      "gen": "areamap"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Drive time to Main",
+      "gen": "areamap"
+    },
+    {
+      "t": "commute",
+      "region": "vancouver",
+      "current": "main",
+      "gen": "areamap"
+    },
+    {
       "gen": "tn",
       "level": 3,
       "pos": "end",

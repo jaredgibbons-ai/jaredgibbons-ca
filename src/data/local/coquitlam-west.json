@@ -12,6 +12,31 @@
       "gen": "snapstats"
     },
     {
+      "t": "h",
+      "level": 2,
+      "text": "Where Coquitlam West sits",
+      "gen": "areamap"
+    },
+    {
+      "t": "areamap",
+      "region": "coquitlam",
+      "mode": "area",
+      "current": "coquitlam-west",
+      "gen": "areamap"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Drive time to Coquitlam West",
+      "gen": "areamap"
+    },
+    {
+      "t": "commute",
+      "region": "coquitlam",
+      "current": "coquitlam-west",
+      "gen": "areamap"
+    },
+    {
       "t": "table",
       "caption": "Coquitlam West listings, sales and sales ratio by month",
       "head": [

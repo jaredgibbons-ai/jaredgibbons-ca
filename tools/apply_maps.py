@@ -36,7 +36,10 @@ def main():
     for f in sorted(glob.glob(os.path.join(ROOT, 'src/data/maps/*.json'))):
         region = json.load(open(f, encoding='utf-8'))
         todo = [(HUBS[region['region']], None)] if region['region'] in HUBS else []
-        todo += [(a['href'][1:-5], a) for a in region['areas']]
+        by = {}
+        for a in region['areas']: by.setdefault(a['href'][1:-5], []).append(a)
+        for slug, group in by.items():   # two outlines can share one page (Mount Pleasant East/West): the page's map shows them all, ids comma-joined
+            todo.append((slug, group[0] if len(group) == 1 else {**group[0], 'id': ','.join(g['id'] for g in group), 'name': group[0]['name'].split(' (')[0]}))
         for slug, area in todo:
             if slug in BESPOKE or not os.path.exists(os.path.join(ROOT, 'src/data/local', slug + '.json')):
                 print('skip (hand-built or guide-only page, outline on the hub map only) ->', slug); continue

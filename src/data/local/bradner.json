@@ -15,6 +15,31 @@
    "gen": "snapstats"
   },
   {
+   "t": "h",
+   "level": 2,
+   "text": "Where Bradner sits",
+   "gen": "areamap"
+  },
+  {
+   "t": "areamap",
+   "region": "abbotsford",
+   "mode": "area",
+   "current": "bradner",
+   "gen": "areamap"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Drive time to Bradner",
+   "gen": "areamap"
+  },
+  {
+   "t": "commute",
+   "region": "abbotsford",
+   "current": "bradner",
+   "gen": "areamap"
+  },
+  {
    "t": "table",
    "caption": "Bradner listings, sales and sales ratio by month",
    "head": [

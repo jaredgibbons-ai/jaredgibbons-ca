@@ -12,7 +12,7 @@ const errs = validateRegion(region);
 if (errs.length) throw new Error(`CommuteTime ${slug}: ${errs.join('; ')}`);
 const drafts = draftsBlockLaunch(region, import.meta.env.PUBLIC_PREVIEW, process.env.TEST_ALLOW_DRAFT_OUTLINES);
 if (drafts.length) throw new Error(`CommuteTime ${slug}: outlines still marked draft cannot ship at launch: ${drafts.join(', ')}`);
-const area = region.areas.find((a: any) => a.id === current);
+const area = region.areas.find((a: any) => a.id === current.split(',')[0]);
 if (!area) throw new Error(`CommuteTime ${slug}: no area ${current}`);
 const c = centroid(area.rings);
 const key = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY || '';

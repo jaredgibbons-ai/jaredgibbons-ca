@@ -17,7 +17,7 @@ const errs = validateRegion(region);
 if (errs.length) throw new Error(`AreaMap ${slug}: ${errs.join('; ')}`);
 const drafts = draftsBlockLaunch(region, import.meta.env.PUBLIC_PREVIEW, process.env.TEST_ALLOW_DRAFT_OUTLINES);
 if (drafts.length) throw new Error(`AreaMap ${slug}: outlines still marked draft cannot ship at launch: ${drafts.join(', ')}`);
-const areas = mode === 'area' ? region.areas.filter((a: any) => a.id === current) : region.areas;
+const areas = mode === 'area' ? region.areas.filter((a: any) => current.split(',').includes(a.id)) : region.areas;
 if (mode === 'area' && !areas.length) throw new Error(`AreaMap ${slug}: no area ${current}`);
 const figs: Record<string, any> = {};
 if (mode === 'hub') for (const a of areas) {

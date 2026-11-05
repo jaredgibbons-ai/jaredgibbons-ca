@@ -32,6 +32,31 @@
       "gen": "snapstats"
     },
     {
+      "t": "h",
+      "level": 2,
+      "text": "Where Central Coquitlam sits",
+      "gen": "areamap"
+    },
+    {
+      "t": "areamap",
+      "region": "coquitlam",
+      "mode": "area",
+      "current": "central-coquitlam",
+      "gen": "areamap"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Drive time to Central Coquitlam",
+      "gen": "areamap"
+    },
+    {
+      "t": "commute",
+      "region": "coquitlam",
+      "current": "central-coquitlam",
+      "gen": "areamap"
+    },
+    {
       "t": "table",
       "caption": "Central Coquitlam listings, sales and sales ratio by month",
       "head": [
