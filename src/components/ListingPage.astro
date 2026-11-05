@@ -6,6 +6,7 @@ import ExploreLinks from './ExploreLinks.astro';
 import Base from '../layouts/Base.astro';
 import Cta from './Cta.astro';
 import ListingGallery from './ListingGallery.astro';
+import MortgageCalc from './MortgageCalc.astro';
 
 // Web-size photo lists written by tools/process_photos.py (Drive folder 10 -> src/data/listing-photos/<slug>.json)
 const PHOTO_LISTS = import.meta.glob('../data/listing-photos/*.json', { eager: true, import: 'default' }) as Record<string, any[]>;
@@ -35,6 +36,7 @@ for (const a of page.photos.alts ?? []) { const m = /^Photo (\d+):/.exec(a); if 
 const explore = (EXPLORE as Record<string, any>)['listing:' + page.slug];
 const _h1 = (blocks.find((b: any) => b.t === 'h' && b.level === 1) as any)?.text;
 const crumbs = _h1 ? [{ name: 'Home', href: '/index.html' }, { name: 'My Listings', href: '/our-listings.html' }, { name: String(_h1), href: '/our-listings.html' }] : [];
+const priceNum = /^\$[\d,]+$/.test(price) ? Number(price.replace(/[$,]/g, '')) : 0;
 const telHref = (s: string) => 'tel:' + s;
 ---
 <Base
@@ -109,6 +111,15 @@ const telHref = (s: string) => 'tel:' + s;
       })}
     </div>
   </section>
+
+  {priceNum > 0 && (
+    <section class="section" aria-labelledby="ls-mc-h">
+      <div class="wrap ls">
+        <h2 class="ls__h" id="ls-mc-h">{page.status === 'Sold' ? 'Estimate a payment at this price' : 'Estimate the monthly payment'}</h2>
+        <MortgageCalc price={priceNum} />
+      </div>
+    </section>
+  )}
 
   <section class="section">
     <div class="wrap ls">

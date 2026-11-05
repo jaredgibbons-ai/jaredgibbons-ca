@@ -1,0 +1,118 @@
+---
+// Mortgage payment + BC property transfer tax estimator. Runs in the browser only: nothing is sent or stored.
+// No interest rate is built in (the visitor types the rate their lender quoted). Maths and sources: src/lib/mortgage.js (D-100).
+const { price = null, exemption = 'none' } = Astro.props as { price?: number | null; exemption?: 'none' | 'first' | 'new' };
+const priceText = price ? Math.round(price).toLocaleString('en-CA') : '';
+---
+<form class="mc" id="mc" novalidate onsubmit="return false" aria-describedby="mc-note" data-price={price ?? ''}>
+  <p id="mc-note" class="notice">This is an estimate for planning, not a quote or advice. It uses only the numbers on this form. Nothing you enter is sent or saved. Ask your lender or mortgage broker for the rate and terms that apply to you.</p>
+  <div class="mc__grid">
+    <div class="mc__row">
+      <label for="mc-price">Home price ($)</label>
+      <input id="mc-price" data-k="price" type="text" inputmode="decimal" autocomplete="off" value={priceText} aria-describedby="mc-price-e" />
+      <small id="mc-price-e" class="mc__err" role="alert"></small>
+    </div>
+    <div class="mc__row">
+      <label for="mc-down">Down payment (%)</label>
+      <input id="mc-down" data-k="down" type="text" inputmode="decimal" autocomplete="off" value="20" aria-describedby="mc-down-h mc-down-e" />
+      <small id="mc-down-h">20% or more avoids mortgage default insurance.</small><small id="mc-down-e" class="mc__err" role="alert"></small>
+    </div>
+    <div class="mc__row">
+      <label for="mc-rate">Interest rate (%)</label>
+      <input id="mc-rate" data-k="rate" type="text" inputmode="decimal" autocomplete="off" placeholder="Your lender’s rate" aria-describedby="mc-rate-h mc-rate-e" />
+      <small id="mc-rate-h">Enter the rate you were quoted. Rates change often, so none is filled in.</small><small id="mc-rate-e" class="mc__err" role="alert"></small>
+    </div>
+    <div class="mc__row">
+      <label for="mc-years">Amortization</label>
+      <select id="mc-years" data-k="years">
+        <option value="10">10 years</option><option value="15">15 years</option><option value="20">20 years</option>
+        <option value="25" selected>25 years</option><option value="30">30 years</option>
+      </select>
+    </div>
+    <div class="mc__row">
+      <label for="mc-freq">Payment frequency</label>
+      <select id="mc-freq" data-k="freq">
+        <option value="monthly" selected>Monthly</option><option value="semimonthly">Semi-monthly</option>
+        <option value="biweekly">Bi-weekly</option><option value="weekly">Weekly</option>
+      </select>
+    </div>
+    <fieldset class="mc__row mc__fs">
+      <legend>Property transfer tax exemption</legend>
+      <label class="mc__opt"><input type="radio" name="mc-ex" value="none" checked={exemption === 'none'} /> None</label>
+      <label class="mc__opt"><input type="radio" name="mc-ex" value="first" checked={exemption === 'first'} /> First-time home buyer</label>
+      <label class="mc__opt"><input type="radio" name="mc-ex" value="new" checked={exemption === 'new'} /> Newly built home</label>
+      <small>Both exemptions have conditions. The estimate assumes every buyer on title qualifies.</small>
+    </fieldset>
+  </div>
+  <div class="mc__out" id="mc-out" aria-live="polite" aria-atomic="true">
+    <p class="mc__empty">Enter a home price to see the estimate.</p>
+  </div>
+  <noscript><p class="notice">This calculator needs JavaScript. Call Jared on 604-928-1361 and he can run the numbers with you.</p></noscript>
+  <p class="mc__src">Property transfer tax and exemptions follow the Government of BC pages on the <a href="https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/calculation-examples" rel="noopener">property transfer tax</a>, <a href="https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers/current-amount" rel="noopener">first-time buyer exemption</a> and <a href="https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption/exemption-amounts" rel="noopener">newly built home exemption</a>. Insurance premiums follow the <a href="https://www.cmhc-schl.gc.ca/en/finance-and-investing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/cmhc-mortgage-loan-insurance-cost" rel="noopener">CMHC premium table</a>. Fixed-rate mortgages compound semi-annually. Not included: legal fees, strata fees, property tax, GST on new homes, the 20% additional tax for foreign buyers, and adjustments on completion.</p>
+</form>
+<script>
+  import { estimate } from '../lib/mortgage.js';
+  const f = document.getElementById('mc') as HTMLFormElement | null;
+  if (f) {
+    const out = document.getElementById('mc-out') as HTMLElement;
+    const el = (k: string) => f.querySelector(`[data-k="${k}"]`) as HTMLInputElement;
+    const cad = (n: number, d = 0) => '$' + n.toLocaleString('en-CA', { minimumFractionDigits: d, maximumFractionDigits: d });
+    const err = (k: string, m: string) => { (document.getElementById(`mc-${k}-e`) as HTMLElement).textContent = m; m ? el(k).setAttribute('aria-invalid', 'true') : el(k).removeAttribute('aria-invalid'); };
+    function read(k: string, label: string, max: number | null, optional = false): number | null | false {
+      const raw = el(k).value.replace(/[$,\s]/g, '');
+      err(k, '');
+      if (raw === '') { if (optional) return null; err(k, `Enter ${label}.`); return false; }
+      if (!/^(\d+\.?\d*|\.\d+)$/.test(raw)) { err(k, 'Enter a number, for example 650000.'); return false; }
+      const v = parseFloat(raw);
+      if (max != null && v > max) { err(k, `Enter a number up to ${max}.`); return false; }
+      return v;
+    }
+    const row = (l: string, v: string, c = '') => `<tr${c ? ` class="${c}"` : ''}><th scope="row">${l}</th><td>${v}</td></tr>`;
+    const FREQ: Record<string, string> = { monthly: 'Monthly payment', semimonthly: 'Semi-monthly payment', biweekly: 'Bi-weekly payment', weekly: 'Weekly payment' };
+    function run() {
+      const price = read('price', 'a home price', 1e9), down = read('down', 'a down payment percentage', 100), rate = read('rate', 'a rate', 30, true);
+      if (price === false || down === false || rate === false) { out.innerHTML = '<p class="mc__empty">Fix the highlighted entries to see the estimate.</p>'; return; }
+      if (!price || price <= 0) { out.innerHTML = '<p class="mc__empty">Enter a home price to see the estimate.</p>'; return; }
+      const ex = (f!.querySelector('input[name="mc-ex"]:checked') as HTMLInputElement).value as 'none' | 'first' | 'new';
+      const freq = el('freq').value;
+      const e = estimate({ price, downPct: down as number, ratePct: rate as number | null, years: parseInt(el('years').value, 10), freq, exemption: ex });
+      let h = '<table class="tbl"><caption>Estimate</caption><tbody>';
+      h += row('Home price', cad(price)) + row(`Down payment (${(down as number).toString()}%)`, cad(e.down));
+      if (e.premium) h += row(`Mortgage insurance premium (${e.premiumPct}%, added to the mortgage)`, cad(e.premium));
+      h += row('Mortgage amount', cad(e.loan));
+      h += e.pay == null ? row(FREQ[freq], 'Enter a rate to see this') : row(FREQ[freq], cad(e.pay, 2), 'mc__net');
+      h += row('Property transfer tax before exemption', cad(e.tax));
+      if (ex !== 'none') h += row('Exemption', '−' + cad(e.exempt)) + row('Property transfer tax payable', cad(e.taxDue));
+      h += row('Down payment plus property transfer tax', cad(e.cash), 'mc__tot') + '</tbody></table>';
+      for (const n of e.notices) h += `<p class="notice">${n}</p>`;
+      if (ex !== 'none' && e.exempt === 0) h += '<p class="notice">At this price the exemption you selected does not apply.</p>';
+      out.innerHTML = h;
+    }
+    f.addEventListener('input', run);
+    f.addEventListener('change', run);
+    run();
+  }
+</script>
+<style>
+  .mc{max-width:46rem;margin:var(--s5) 0}
+  .mc__grid{display:grid;gap:var(--s4);grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+  .mc__row{display:grid;gap:.3rem;align-content:start}
+  .mc label,.mc legend{font:700 .8125rem var(--f-head);letter-spacing:.04em}
+  .mc input[type="text"],.mc select{min-height:2.75rem;border:1px solid var(--ink);border-radius:0;background:#fff;padding:.6rem .8rem;font:inherit;max-width:100%}
+  .mc input[aria-invalid="true"]{border-width:2px}
+  .mc small{font-size:.8125rem;color:#444}
+  .mc .mc__err{color:#8a0000;font-weight:700}
+  .mc__fs{grid-column:1/-1;border:0;padding:0;margin:0}
+  .mc__opt{display:flex;align-items:center;gap:.6rem;min-height:2.75rem;font:400 1rem var(--f-body)!important;letter-spacing:0!important}
+  .mc__opt input{width:1.25rem;height:1.25rem;accent-color:#000}
+  .mc__out{margin-top:var(--s5);border:1px solid var(--ink);background:#fff;padding:var(--s4);min-height:21rem}
+  .mc__out :global(.tbl){width:100%;border-collapse:collapse;margin-bottom:1rem}
+  .mc__out :global(.tbl caption){text-align:left;font:700 .8125rem var(--f-head);padding-bottom:.5rem}
+  .mc__out :global(th),.mc__out :global(td){text-align:left;padding:.45rem .6rem;border-bottom:1px solid var(--rule)}
+  .mc__out :global(td){text-align:right;font-variant-numeric:tabular-nums}
+  .mc__out :global(.mc__net th),.mc__out :global(.mc__net td){font-weight:700;font-size:1.125rem}
+  .mc__out :global(.mc__tot th),.mc__out :global(.mc__tot td){font-weight:700;border-top:2px solid var(--ink)}
+  .mc__out :global(.notice){margin:.5rem 0 0}
+  .mc__empty{margin:0}
+  .mc__src{font-size:.8125rem;color:#444;margin-top:var(--s4)}
+</style>
