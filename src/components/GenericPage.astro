@@ -66,7 +66,14 @@ if (local) {
   // pos:'end' blocks (related-link lists) go after the archive content, so the top of the page stays as it was.
   const endBlocks = local.blocks.filter((b: any) => b.pos === 'end').map(asPart);
   endCount = endBlocks.length;
-  page.blocks = [...page.blocks.slice(0, cut), ...local.blocks.filter((b: any) => b.pos !== 'end').map(asPart), ...faqBlocks, ...page.blocks.slice(cut), ...endBlocks];
+  // pos:'before-form' blocks go above the heading that introduces the page's contact form (About: awards), instead of after the form.
+  const formAt = page.blocks.findIndex((b: any) => b.t === 'form');
+  const beforeForm = local.blocks.filter((b: any) => b.pos === 'before-form').map(asPart);
+  const formCut = beforeForm.length && formAt > 0 ? (page.blocks[formAt - 1]?.t === 'h' ? formAt - 1 : formAt) : -1;
+  const plain = local.blocks.filter((b: any) => b.pos !== 'end' && b.pos !== 'before-form').map(asPart);
+  const arr = [...page.blocks.slice(0, cut), ...plain, ...faqBlocks, ...page.blocks.slice(cut)];
+  if (formCut >= 0) { const at2 = arr.indexOf(page.blocks[formCut]); arr.splice(at2, 0, ...beforeForm); } else arr.push(...beforeForm);
+  page.blocks = [...arr, ...endBlocks];
 }
 
 // Contact fix (D-73): 148 archive pages print jared@jaredgibbons.ca, which is not Jared's address; shown as jaredgibbons@royallepage.ca. The archive record is untouched.
