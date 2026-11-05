@@ -15,8 +15,8 @@ def lon(s): return round(-122.80112 + (s - 152) * (0.002743 if s >= 152 else 0.0
 BORDER = 49.0003
 HW = 0.0025   # half-width of the King George Blvd strip, degrees of longitude
 
-# King George Blvd centreline (lat, lng), north to south.  Placed from Google Maps points at 40, 32 and 16 Ave and the Peace Arch crossing.
-KGB = [(lat(40), -122.8219), (lat(32), -122.8118), (lat(24), -122.7938), (lat(16), -122.7757), (49.0166, -122.7667), (BORDER, -122.7577)]
+# King George Blvd centreline (lat, lng), north to south.  Google Maps intersection points at 40, 32, 28, 24, 20, 16 and 8 Ave plus the Peace Arch crossing.
+KGB = [(lat(40), -122.8219), (lat(32), -122.8118), (lat(28), -122.8040), (lat(24), -122.7934), (lat(20), -122.7846), (lat(16), -122.7757), (lat(8), -122.7622), (BORDER, -122.7577)]
 def kgb_lon(a):
     """KGB longitude at avenue a (linear between the placed points)."""
     la = lat(a)
@@ -44,21 +44,21 @@ A = {}
 A['crescent-beach'] = close([(49.0598, -122.8845), (49.0585, -122.8790), (49.0560, -122.8730), (49.0545, lon(128)), (lat(20), lon(128)), (lat(20), lon(136)), (49.0240, lon(136))]
                             + list(reversed(S_COAST[:4]))[0:0] + [(49.0252, -122.8560), (49.0262, -122.8640)] + [(49.0262, -122.8705)] + list(reversed(W_COAST[:-1]))[0:0] + W_COAST[-2::-1])
 # Elgin Chantrell: N 40 Ave; W 128 St below Crescent Rd then diagonal into Mud Bay; S 20 Ave (128-140) then 28 Ave (140-KGB); E 140 St to 28 Ave then W side of KGB to 40 Ave.
-A['elgin-chantrell'] = close([(lat(40), lon(136)), (lat(40), round(-122.8219 - HW, 5)), (lat(32), round(-122.8118 - HW, 5)), (lat(28), round(kgb_lon(28) - HW, 5)),
+A['elgin-chantrell'] = close([(lat(40), lon(136)), (lat(40), round(-122.8219 - HW, 5)), (lat(32), round(-122.8118 - HW, 5)), (lat(28), lon(152)),
                               (lat(28), lon(140)), (lat(20), lon(140)), (lat(20), lon(128)), (49.0545, lon(128))])
 # Sunnyside Park: N 28 Ave; W 140 St (28-20 Ave) then 136 St (20-16 Ave); S 16 Ave; E 152 St.
 A['sunnyside-park'] = close([(lat(28), lon(140)), (lat(28), lon(152)), (lat(16), lon(152)), (lat(16), lon(136)), (lat(20), lon(136)), (lat(20), lon(140))])
 # King George Corridor: strip along KGB; W 152 St (28-16 Ave) then 160 St to Marine Dr; E east edge of the highway; S border at Peace Arch.
-A['king-george-corridor'] = close([(round(lat(40) - 0.0003, 5), round(-122.8219, 5)), (lat(32), round(-122.8118 - HW, 5)), (lat(28), round(kgb_lon(28) - HW, 5)), (lat(28), lon(152)), (lat(16), lon(152)), (lat(16), lon(160)), (49.0166, lon(160))]
-                                   + E_COAST[1:] + [(BORDER, -122.7552)] + [(y, x) for y, x in reversed(kgb_side(+1)[1:-1])] + [(round(lat(40) - 0.0003, 5), round(-122.8219 + HW, 5))])
+A['king-george-corridor'] = close([(round(lat(40) - 0.0003, 5), round(-122.8219, 5)), (lat(32), round(-122.8118 - HW, 5)), (lat(28), lon(152)), (lat(16), lon(152)), (lat(16), lon(160)), (49.0166, lon(160))]
+                                   + E_COAST[1:] + [(BORDER, -122.7552)] + [(y, (-122.7990 if y == lat(28) else x)) for y, x in reversed(kgb_side(+1)[1:-1])] + [(round(lat(40) - 0.0003, 5), round(-122.8219 + HW, 5))])
 # White Rock: N 16 Ave; W ~136 St; E 160 St; S Semiahmoo Bay.
 A['white-rock'] = close([(lat(16), lon(136)), (lat(16), lon(160)), (49.0166, lon(160))] + list(reversed(S_COAST[3:-1])) + [(49.0240, lon(136))])
 # Morgan Creek: N 40 Ave; S 32 Ave; W KGB; E 168 St.
 A['morgan-creek'] = close([(lat(40), round(-122.8219 + HW, 5)), (lat(40), lon(168)), (lat(32), lon(168)), (lat(32), round(-122.8118 + HW, 5))])
 # Grandview Surrey: N 32 Ave; W east edge of KGB; E 176 St; S 20 Ave to 168 St then 24 Ave (168-176 St).
-A['grandview'] = close([(lat(32), round(-122.8118 + HW, 5)), (lat(32), lon(176)), (lat(24), lon(176)), (lat(24), lon(168)), (lat(20), lon(168)), (lat(20), round(kgb_lon(20) + HW, 5)), (lat(24), round(kgb_lon(24) + HW, 5))])
+A['grandview'] = close([(lat(32), round(-122.8118 + HW, 5)), (lat(32), lon(176)), (lat(24), lon(176)), (lat(24), lon(168)), (lat(20), lon(168)), (lat(20), round(kgb_lon(20) + HW, 5)), (lat(24), round(kgb_lon(24) + HW, 5)), (lat(28), -122.7990)])
 # Pacific Douglas: N 20 Ave (west of 168 St) and 24 Ave (east of it); W KGB; E 176 St; S US border.
-A['pacific-douglas'] = close([(lat(20), round(kgb_lon(20) + HW, 5)), (lat(20), lon(168)), (lat(24), lon(168)), (lat(24), lon(176)), (BORDER, lon(176)), (BORDER, -122.7552), (49.0166, round(-122.7667 + HW, 5)), (lat(16), round(-122.7757 + HW, 5))])
+A['pacific-douglas'] = close([(lat(20), round(kgb_lon(20) + HW, 5)), (lat(20), lon(168)), (lat(24), lon(168)), (lat(24), lon(176)), (BORDER, lon(176)), (BORDER, -122.7552), (lat(8), round(-122.7622 + HW, 5)), (lat(16), round(-122.7757 + HW, 5))])
 # Hazelmere: N 32 Ave; W 176 St; E 192 St; S US border.
 A['hazelmere'] = close([(lat(32), lon(176)), (lat(32), lon(192)), (BORDER, lon(192)), (BORDER, lon(176))])
 
