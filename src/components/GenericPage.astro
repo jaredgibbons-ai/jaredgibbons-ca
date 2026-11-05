@@ -169,7 +169,7 @@ const explore = (EXPLORE as Record<string, any>)[String(page.path || '').startsW
                 <div class="tblwrap" tabindex="0" role="region" aria-label={b.caption}>
                   <table class="tbl"><caption>{b.caption}</caption>
                     <thead><tr>{b.head.map((h: string) => <th scope="col">{h}</th>)}</tr></thead>
-                    <tbody>{b.rows.map((r: string[]) => <tr>{r.map((c, ci) => ci === 0 ? <th scope="row">{c}</th> : <td>{c}</td>)}</tr>)}</tbody>
+                    <tbody>{b.rows.map((r: any[]) => <tr>{r.map((c, ci) => { const v = c && typeof c === 'object' ? <a href={c.h}>{c.t}</a> : c; return ci === 0 ? <th scope="row">{v}</th> : <td>{v}</td>; })}</tr>)}</tbody>
                   </table>
                   {b.source && <p class="tbl__src">{b.source} {/^Source:/.test(b.source) && page.slug !== 'data-and-methodology' && <a href="/data-and-methodology.html">How these figures are defined and sourced</a>}</p>}
                 </div>
