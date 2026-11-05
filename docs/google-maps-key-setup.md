@@ -1,17 +1,20 @@
-# Google Maps key for the neighbourhood maps (D-102)
+# Google Maps key for the neighbourhood maps (D-102, D-103)
 
-The key is a **browser key**: it is visible in the page source by design, so it is not a secret. What protects it is the website restriction and the spending cap below. Never put a card number or a Google password anywhere except Google's own pages.
+Done 2026-11-04 in the Google Cloud console (project **jaredgibbons-ca-maps**, linked to the existing billing account):
 
-1. Go to console.cloud.google.com and sign in with the Google account that should own the billing. Create a project (for example "jaredgibbons-ca").
-2. Billing: link a billing account to the project. Google gives 10,000 free map loads a month for the Maps JavaScript API and charges US$7 per 1,000 after that (Google's pricing page, checked 2026-11-04).
-3. APIs & Services > Library: enable **Maps JavaScript API** (nothing else is needed).
-4. APIs & Services > Credentials > Create credentials > API key. Then edit the key:
-   - Application restrictions: **Websites**. Add `https://jaredgibbons.ca/*`, `https://www.jaredgibbons.ca/*` and the preview address (for example `https://jaredgibbons-ca.<your-subdomain>.workers.dev/*`).
-   - API restrictions: **Restrict key** > Maps JavaScript API only.
-5. Spending guard: Billing > Budgets & alerts > create a budget (for example US$25 a month) with email alerts. Optional hard stop: APIs & Services > Maps JavaScript API > Quotas, lower "Map loads per day".
-6. Give the key to the build as `PUBLIC_GOOGLE_MAPS_KEY`:
-   - Building on your Mac: `PUBLIC_GOOGLE_MAPS_KEY=<the key> npm run build` (or put it in a file named `.env`, which git ignores).
-   - Building on Cloudflare: Workers & Pages > the project > Settings > Variables and Secrets, add `PUBLIC_GOOGLE_MAPS_KEY` as a build variable.
-7. Add one line to the privacy page saying the map loads from Google (I will write it).
+- APIs on: **Maps JavaScript API**, **Places API (New)**, **Routes API**. (Address Validation is a server call and needs its own server key, see below.)
+- Key **"jaredgibbons.ca browser key"**: restricted to those three APIs and to the websites `https://jaredgibbons.ca/*` and `https://www.jaredgibbons.ca/*`.
+- Budget **"jaredgibbons.ca maps"**: US$25 a month for this project only, email alerts at 50%, 90% and 100% to billing admins.
+- The older project "Website map" has an unrestricted key from 2024 that is not ours; leave it alone, but consider restricting it if it is not in use.
 
-Without the key the maps show a "not connected" note and the list of area links under each map still works.
+The key is a **browser key**: it is visible in the page source by design, so it is not a secret. The website restriction and the spending alert are what protect it. Never put a card number or a Google password anywhere except Google's own pages.
+
+## Still to do (Jared, at the private preview deploy)
+1. Add the preview address to the key's website list (Credentials > the key > Websites), for example `https://<preview-name>.workers.dev/*`.
+2. Give the key to the build as `PUBLIC_GOOGLE_MAPS_KEY`: a build variable in Cloudflare (Workers & Pages > project > Settings > Build > Variables and secrets), or a `.env` file next to `package.json` when building on the Mac (git ignores it). The site does not exist on Cloudflare yet, so there is nothing to set today.
+3. Optional hard stop: APIs & Services > Maps JavaScript API > Quotas, lower "Map loads per day".
+
+## Address checking on forms (optional, later)
+The forms add a suggestion list to address fields with the browser key above. A second, **server** key can also tick "Address check" onto each lead: create a key restricted to the **Address Validation API** only (enable that API first), and add it to the Worker as the secret `GOOGLE_ADDRESS_VALIDATION_KEY`. Without it the lead says "Address check: not checked". Never paste that key in chat.
+
+Without the browser key the maps show a "not connected" note and the list of area links under each map still works.

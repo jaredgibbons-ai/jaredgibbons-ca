@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { validateRegion, popupSpec, centroid, boundsOf } from '../src/lib/areamap.js';
+import { validateRegion, popupSpec, centroid, boundsOf, flyoverFor } from '../src/lib/areamap.js';
 
 const sq = (s, w, n, e) => [[s, w], [s, e], [n, e], [n, w], [s, w]];
 const region = { region: 'test', name: 'Test Region', center: { lat: 49.05, lng: -122.8 }, bbox: [48.9, -123.1, 49.3, -122.5],
@@ -39,4 +39,23 @@ test('every map file in src/data/maps is valid and every link goes to a real pag
       assert.ok(fs.existsSync(new URL(`../src/data/pages/${s}.json`, import.meta.url)) || fs.existsSync(new URL(`../src/data/local/${s}.json`, import.meta.url)), `${f}: ${a.href} has no page`);
     }
   }
+});
+
+test('sold keys and flyover settings are validated', () => {
+  const ring = [[1, 1], [1, 2], [2, 2], [1, 1]];
+  const base = { region: 'x', name: 'X', center: { lat: 1, lng: 1 }, bbox: [0, 0, 3, 3], areas: [{ id: 'a', name: 'A', href: '/a.html', status: 'draft', rings: [ring] }] };
+  assert.deepEqual(validateRegion(base), []);
+  assert.deepEqual(validateRegion({ ...base, areas: [{ ...base.areas[0], sold: 'South Surrey White Rock|Morgan Creek' }], flyover: { lat: 1, lng: 1, altitude: 100, range: 9000, tilt: 55 } }), []);
+  assert.ok(validateRegion({ ...base, areas: [{ ...base.areas[0], sold: 'Morgan Creek' }] }).some((e) => /sold must look like/.test(e)));
+  assert.ok(validateRegion({ ...base, flyover: { lat: 1, lng: 1 } }).some((e) => /flyover needs/.test(e)));
+});
+
+test('3D flyover is on by default, tunable, and can be turned off', () => {
+  const r = { bbox: [48.9, -123.1, 49.3, -122.5] };
+  const f = flyoverFor(r);
+  assert.ok(Math.abs(f.lat - 49.1) < 1e-9 && Math.abs(f.lng + 122.8) < 1e-9);
+  assert.ok(f.range >= 4000 && f.range <= 40000); assert.equal(f.tilt, 55);
+  assert.equal(flyoverFor({ ...r, flyover: false }), null);
+  assert.deepEqual(flyoverFor({ ...r, flyover: { lat: 1, lng: 2, range: 5000 } }), { lat: 1, lng: 2, range: 5000 });
+  assert.equal(validateRegion({ region: 'x', name: 'X', bbox: [0, 0, 1, 1], areas: [], flyover: false }).length, 0);
 });

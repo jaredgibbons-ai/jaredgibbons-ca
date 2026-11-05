@@ -1,0 +1,80 @@
+---
+// "Drive time to your work": the visitor types an address and gets an estimated drive time to the middle of this neighbourhood.
+// Runs in the visitor's browser with Google's Routes library (Maps JavaScript API, our restricted key). We do not receive, send on, or store the address.
+// Loads Google only when the visitor clicks into the address field. The destination is the centre of the area's outline (src/data/maps/<region>.json).
+import { validateRegion, centroid } from '../lib/areamap.js';
+import { LEAVE_OPTIONS } from '../lib/commute.js';
+const FILES = import.meta.glob('../data/maps/*.json', { eager: true, import: 'default' }) as Record<string, any>;
+const { region: slug, current } = Astro.props as { region: string; current: string };
+const region = FILES[`../data/maps/${slug}.json`];
+if (!region) throw new Error(`CommuteTime: no map data for ${slug}`);
+const errs = validateRegion(region);
+if (errs.length) throw new Error(`CommuteTime ${slug}: ${errs.join('; ')}`);
+const area = region.areas.find((a: any) => a.id === current);
+if (!area) throw new Error(`CommuteTime ${slug}: no area ${current}`);
+const c = centroid(area.rings);
+const key = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY || '';
+---
+<form class="commute" id="commute" novalidate onsubmit="return false" data-key={key} data-lat={c[0]} data-lng={c[1]} data-name={area.name}>
+  <h2 class="commute__h">Drive time from {area.name}</h2>
+  {key
+    ? <p class="commute__note">Type your work or school address to see an estimated drive time. It runs in your browser and nothing you type is saved or sent to us.</p>
+    : <p class="notice">The drive-time tool is not connected in the preview yet.</p>}
+  <div class="commute__row">
+    <label for="commute-from">Your work or school address</label>
+    <input id="commute-from" type="text" autocomplete="off" disabled={!key} aria-describedby="commute-help" />
+    <small id="commute-help">Street address and city, for example 100 Main St, Vancouver.</small>
+  </div>
+  <div class="commute__row">
+    <label for="commute-leave">Leave at</label>
+    <select id="commute-leave" disabled={!key}>{LEAVE_OPTIONS.map(([v, l]) => <option value={v}>{l}</option>)}</select>
+  </div>
+  <button type="button" class="btn" id="commute-go" disabled={!key}>Get drive time</button>
+  <div class="commute__out" id="commute-out" aria-live="polite" aria-atomic="true"></div>
+  <p class="commute__fine">The time is to the middle of the neighbourhood, not to a specific home. Traffic varies by day and incidents. Directions and traffic data from Google Maps.</p>
+</form>
+<script>
+  import { loadGoogle } from '../lib/gmaps.js';
+  import { attachAddressAutocomplete } from '../lib/address-autocomplete.js';
+  import { nextWeekdayAt, formatTrip } from '../lib/commute.js';
+  const f = document.getElementById('commute') as HTMLFormElement | null;
+  if (f && f.dataset.key) {
+    const key = f.dataset.key, name = f.dataset.name || 'this neighbourhood';
+    const dest = { lat: Number(f.dataset.lat), lng: Number(f.dataset.lng) };
+    const from = document.getElementById('commute-from') as HTMLInputElement, leave = document.getElementById('commute-leave') as HTMLSelectElement;
+    const out = document.getElementById('commute-out') as HTMLElement, go = document.getElementById('commute-go') as HTMLButtonElement;
+    attachAddressAutocomplete(from, key);
+    const say = (t: string, warn = false) => { out.textContent = ''; const p = document.createElement('p'); p.textContent = t; if (warn) p.className = 'notice'; out.appendChild(p); };
+    const run = async () => {
+      const text = from.value.trim();
+      if (text.length < 5) { say('Enter your work or school address first.', true); from.focus(); return; }
+      go.disabled = true; say('Working it out…');
+      try {
+        const g = await loadGoogle(key);
+        const { Route } = await g.maps.importLibrary('routes');
+        const when = leave.value === 'am' ? nextWeekdayAt(8) : leave.value === 'pm' ? nextWeekdayAt(17) : new Date();
+        const res = await Route.computeRoutes({ origin: text, destination: dest, travelMode: 'DRIVING', routingPreference: 'TRAFFIC_AWARE', departureTime: when && leave.value !== 'now' ? when : undefined, fields: ['durationMillis', 'distanceMeters'] });
+        const r = res && res.routes && res.routes[0];
+        if (!r || !Number.isFinite(r.durationMillis)) { say('No drive route was found for that address. Check it and try again.', true); }
+        else {
+          const t = formatTrip(r.durationMillis, r.distanceMeters || 0);
+          const label = leave.value === 'am' ? 'weekday at 8:00 a.m.' : leave.value === 'pm' ? 'weekday at 5:00 p.m.' : 'now';
+          say(`About ${t.text} by car to the middle of ${name}, leaving ${label}${label.endsWith('.') ? '' : '.'}`);
+        }
+      } catch { say('The drive-time tool could not load. Please try again in a moment.', true); }
+      go.disabled = false;
+    };
+    go.addEventListener('click', run);
+    from.addEventListener('keydown', (e) => { if (e.key === 'Enter' && from.getAttribute('aria-expanded') !== 'true') { e.preventDefault(); run(); } });
+  }
+</script>
+<style>
+  .commute{max-width:36rem;display:grid;gap:var(--s4);margin:var(--s5) 0;border:1px solid var(--ink);padding:var(--s4);background:#fff}
+  .commute__h{margin:0;font-size:1.25rem}
+  .commute__row{display:grid;gap:.35rem}
+  .commute label{font:700 .8125rem var(--f-head);letter-spacing:.04em}
+  .commute input,.commute select{min-height:2.75rem;border:1px solid var(--ink);border-radius:0;background:#fff;padding:.6rem .8rem;font:inherit;max-width:100%}
+  .commute small,.commute__note,.commute__fine{font-size:.8125rem;color:#444;margin:0}
+  .commute .btn{justify-self:start}
+  .commute__out p{margin:0;font-weight:700}
+</style>

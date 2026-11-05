@@ -1,5 +1,7 @@
 // Pure helpers for the neighbourhood map (src/components/AreaMap.astro). The Google Maps calls live in the component; everything testable lives here.
 // Data format: src/data/maps/<region>.json  { region, name, center:{lat,lng}, bbox:[south,west,north,east], areas:[{ id, name, group?, href, status:'draft'|'confirmed', rings:[[[lat,lng],...]] }] }
+// Optional per area: sold: 'Board area|Sub-area' (a key in src/data/sold/sold-12m.json; shades the hub map by our own closed-sales figures, see choropleth.js).
+// Optional per region: flyover: { lat, lng, altitude, range, tilt, heading } to tune the click-to-load 3D view; omitted = on with sensible defaults, false = no 3D button.
 // Outlines are our own (drawn from boundary streets and public data), never copied from another site; each stays 'draft' until Jared confirms it.
 
 export function validateRegion(r) {
@@ -8,6 +10,10 @@ export function validateRegion(r) {
   for (const k of ['region', 'name']) if (!r[k]) errs.push(`missing ${k}`);
   const bb = r.bbox;
   if (!Array.isArray(bb) || bb.length !== 4) errs.push('bbox must be [south, west, north, east]');
+  if (r.flyover !== undefined && r.flyover !== false) {
+    const f = r.flyover;
+    if (!f || !Number.isFinite(f.lat) || !Number.isFinite(f.lng) || !Number.isFinite(f.range) || f.range <= 0) errs.push('flyover needs lat, lng and a range in metres');
+  }
   const ids = new Set();
   for (const a of r.areas || []) {
     const t = `area ${a.id || '?'}`;
@@ -16,6 +22,7 @@ export function validateRegion(r) {
     if (!a.name) errs.push(`${t}: missing name`);
     if (!/^\/[a-z0-9-]+\.html$/.test(a.href || '')) errs.push(`${t}: href must look like /page.html`);
     if (!['draft', 'confirmed'].includes(a.status)) errs.push(`${t}: status must be draft or confirmed`);
+    if (a.sold !== undefined && !/^[^|]+\|[^|]+$/.test(a.sold)) errs.push(`${t}: sold must look like "Board area|Sub-area"`);
     if (!Array.isArray(a.rings) || !a.rings.length) errs.push(`${t}: no rings`);
     for (const ring of a.rings || []) {
       if (!Array.isArray(ring) || ring.length < 4) { errs.push(`${t}: a ring needs at least 4 points (first = last)`); continue; }
@@ -55,4 +62,15 @@ export function boundsOf(areas) {
   let s = 90, w = 180, n = -90, e = -180;
   for (const a of areas) for (const ring of a.rings) for (const [la, ln] of ring) { s = Math.min(s, la); n = Math.max(n, la); w = Math.min(w, ln); e = Math.max(e, ln); }
   return { south: s, west: w, north: n, east: e };
+}
+
+/** The 3D flyover a hub map gets unless the region file sets its own or turns it off with flyover: false. Camera sits back about as far as the region is wide. */
+export function flyoverFor(region) {
+  if (region.flyover === false) return null;
+  if (region.flyover) return region.flyover;
+  const bb = region.bbox, mid = (a, b) => (a + b) / 2;
+  const lat = mid(bb[0], bb[2]), lng = mid(bb[1], bb[3]);
+  const dy = (bb[2] - bb[0]) * 111000, dx = (bb[3] - bb[1]) * 111000 * Math.cos((lat * Math.PI) / 180);
+  const range = Math.round(Math.min(40000, Math.max(4000, Math.hypot(dx, dy) * 1.1)) / 100) * 100;
+  return { lat, lng, altitude: 0, range, tilt: 55, heading: 0 };
 }

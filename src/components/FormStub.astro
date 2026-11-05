@@ -2,20 +2,36 @@
 // Archive form, rendered inert. Fields/labels are the archived ones; submission is NOT wired
 // (forms Worker, decision pending BL-05). The notice states this so it never reads as operational.
 const { labels = [], submit = '', uid = 'f' } = Astro.props;
+const key = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY || '';
 const type = (l: string) => /email/i.test(l) ? 'email' : /phone/i.test(l) ? 'tel' : 'text';
 ---
-<form class="fstub" aria-describedby={`${uid}-note`} onsubmit="return false" novalidate>
+<form class="fstub" data-key={key} aria-describedby={`${uid}-note`} onsubmit="return false" novalidate>
   <p id={`${uid}-note`} class="notice">This form is not connected in the preview. Nothing you type here is sent.</p>
   {labels.map((l: string, i: number) => (
     <div class="fstub__row">
       <label for={`${uid}-${i}`}>{l}</label>
       {/message/i.test(l)
         ? <textarea id={`${uid}-${i}`} rows="4" disabled></textarea>
-        : <input id={`${uid}-${i}`} type={type(l)} disabled />}
+        : <input id={`${uid}-${i}`} type={type(l)} data-addr={/address/i.test(l) ? '' : undefined} disabled />}
     </div>
   ))}
   <button type="button" class="btn" aria-disabled="true" disabled>{submit}</button>
 </form>
+<script>
+  // Address fields get suggestions once the form is live (the inputs are disabled in the preview, so nothing happens there).
+  import { attachAddressAutocomplete } from '../lib/address-autocomplete.js';
+  document.querySelectorAll<HTMLFormElement>('form.fstub[data-key]').forEach((f) => {
+    const key = f.dataset.key || '';
+    if (key) f.querySelectorAll<HTMLInputElement>('input[data-addr]:not(:disabled)').forEach((i) => attachAddressAutocomplete(i, key));
+  });
+</script>
+<style is:global>
+  .addrsug{border:1px solid var(--ink);background:#fff;margin-top:-1px;max-width:100%}
+  .addrsug ul{list-style:none;margin:0;padding:0}
+  .addrsug li{padding:.65rem .8rem;min-height:2.75rem;display:flex;align-items:center;cursor:pointer}
+  .addrsug li.is-active,.addrsug li:hover{background:var(--cream)}
+  .addrsug__attr{margin:0;padding:.35rem .8rem;font-size:.75rem;color:#444;border-top:1px solid var(--rule)}
+</style>
 <style>
   .fstub{max-width:36rem;display:grid;gap:var(--s4);margin:var(--s5) 0}
   .fstub__row{display:grid;gap:.35rem}

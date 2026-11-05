@@ -13,6 +13,8 @@
 //   TURNSTILE_SECRET    Cloudflare Turnstile secret (required: no unprotected public form)
 //   ALLOWED_ORIGINS     comma-separated origins allowed to post (default https://jaredgibbons.ca)
 //   RATE                optional Workers rate-limiting binding
+//   GOOGLE_ADDRESS_VALIDATION_KEY  optional secret: a SERVER key (restricted to Address Validation API) that adds one "Address check" line to the lead.
+//                       It never blocks or changes a lead; with no key, or on any error, the line says "not checked". Set as a Worker secret only.
 
 const MAX_BODY = 20 * 1024;
 const FORM_TITLES = { contact: 'Contact form', 'home-evaluation': 'Home evaluation request', 'property-check': 'Property check request' };
@@ -56,6 +58,24 @@ export function validate(kind, input) {
   return { clean, errors };
 }
 
+/** 'complete' | 'check' | 'unchecked'. Asks Google's Address Validation API whether the typed address is a complete, confirmed Canadian address. Never throws, never blocks a lead. */
+export async function checkAddress(address, env, doFetch = fetch) {
+  const key = env && env.GOOGLE_ADDRESS_VALIDATION_KEY;
+  if (!key || !address) return 'unchecked';
+  const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 2500);
+  try {
+    const r = await doFetch(`https://addressvalidation.googleapis.com/v1:validateAddress?key=${encodeURIComponent(key)}`, {
+      method: 'POST', headers: { 'content-type': 'application/json' }, signal: ctl.signal,
+      body: JSON.stringify({ address: { regionCode: 'CA', addressLines: [address] } }),
+    });
+    if (!r.ok) return 'unchecked';
+    const v = (await r.json())?.result?.verdict;
+    if (!v || typeof v !== 'object') return 'unchecked';
+    return v.addressComplete === true && !v.hasUnconfirmedComponents ? 'complete' : 'check';
+  } catch { return 'unchecked'; } finally { clearTimeout(timer); }
+}
+const CHECK_TEXT = { complete: 'confirmed as a complete address', check: 'could not be fully confirmed, please check it', unchecked: 'not checked' };
+
 const oneLine = (v) => String(v || '').replace(/[\r\n\u2028\u2029]+/g, ' ').trim();
 
 // Plain text laid out as "Label: value" lines so Keyvera can read the name, email, phone, message and the
@@ -67,6 +87,7 @@ export function leadEmail(lead) {
   if (f.email) lines.push(`Email: ${oneLine(f.email)}`);
   if (f.phone) lines.push(`Phone: ${oneLine(f.phone)}`);
   if (f.address) lines.push(`Address: ${oneLine(f.address)}`);
+  if (f.address && lead.address_check) lines.push(`Address check: ${CHECK_TEXT[lead.address_check] || 'not checked'}`);
   if (f.subject) lines.push(`Subject: ${oneLine(f.subject)}`);
   if (lead.page) lines.push(`Page: ${oneLine(lead.page)}`);
   lines.push(`Received: ${lead.received_at}`);
@@ -139,10 +160,11 @@ export async function handleForm(request, env, deps = {}) {
 
   const id = crypto.randomUUID();
   const lead = { id, kind, received_at: new Date().toISOString(), page: String(input.page || '').slice(0, 300), fields: clean };
+  if (clean.address) lead.address_check = await checkAddress(clean.address, env, doFetch);
   const results = [];
   if (env.LEADS_DB) {
     results.push(env.LEADS_DB.prepare('INSERT INTO leads (id, kind, received_at, page, fields) VALUES (?, ?, ?, ?, ?)')
-      .bind(id, kind, lead.received_at, lead.page, JSON.stringify(clean)).run().then(() => true, () => false));
+      .bind(id, kind, lead.received_at, lead.page, JSON.stringify(lead.address_check ? { ...clean, address_check: lead.address_check } : clean)).run().then(() => true, () => false));
   }
   if (env.LEAD_WEBHOOK_URL) {
     results.push(doFetch(env.LEAD_WEBHOOK_URL, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(lead) })

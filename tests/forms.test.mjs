@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { handleForm, validate, leadEmail } from '../src/worker/forms.js';
+import { handleForm, validate, leadEmail, checkAddress } from '../src/worker/forms.js';
 
 const ORIGIN = 'https://jaredgibbons.ca';
 const good = { name: 'Pat Example', email: 'pat@example.com', phone: '604-555-0100', subject: 'Hello', message: 'I would like to talk.', 'cf-turnstile-response': 'tok' };
@@ -79,4 +79,29 @@ test('email content: header injection is neutralised; address-only leads have no
   assert.ok(!/[\r\n]/.test(m.subject)); assert.ok(!/[\r\n]/.test(m.replyTo.name));
   const p = leadEmail({ kind: 'property-check', received_at: 't', page: '', fields: { address: '1 Main St' } });
   assert.equal(p.replyTo, undefined); assert.match(p.text, /^Address: 1 Main St$/m);
+});
+
+const addrGood = { name: 'Pat Example', email: 'pat@example.com', address: '1 Main St, Surrey, BC', 'cf-turnstile-response': 'tok' };
+const gfetch = (verdict, status = 200) => async (u, init) => {
+  if (String(u).includes('turnstile')) return new Response(JSON.stringify({ success: true }));
+  if (String(u).includes('addressvalidation.googleapis.com')) return new Response(JSON.stringify({ result: { verdict } }), { status });
+  return new Response('ok');
+};
+test('address check: complete, needs-review and unchecked all reach the lead and never block it', async () => {
+  const e = { GOOGLE_ADDRESS_VALIDATION_KEY: 'k' };
+  assert.equal(await checkAddress('1 Main St', e, gfetch({ addressComplete: true })), 'complete');
+  assert.equal(await checkAddress('1 Main St', e, gfetch({ addressComplete: true, hasUnconfirmedComponents: true })), 'check');
+  assert.equal(await checkAddress('1 Main St', e, gfetch({})), 'check');
+  assert.equal(await checkAddress('1 Main St', e, gfetch({}, 500)), 'unchecked');
+  assert.equal(await checkAddress('1 Main St', {}, gfetch({ addressComplete: true })), 'unchecked');
+  assert.equal(await checkAddress('1 Main St', e, async () => { throw new Error('down'); }), 'unchecked');
+  const db = fakeDb();
+  const r = await handleForm(mk(addrGood, { path: '/api/forms/home-evaluation' }), { TURNSTILE_SECRET: 's', LEADS_DB: db, GOOGLE_ADDRESS_VALIDATION_KEY: 'k' }, { fetch: gfetch({ addressComplete: false }) });
+  assert.equal(r.status, 200);
+  assert.equal(JSON.parse(db.rows[0][4]).address_check, 'check');
+  const r2 = await handleForm(mk(addrGood, { path: '/api/forms/home-evaluation' }), { TURNSTILE_SECRET: 's', LEADS_DB: fakeDb() }, { fetch: gfetch({ addressComplete: true }) });
+  assert.equal(r2.status, 200);
+  const m = leadEmail({ kind: 'home-evaluation', received_at: 'x', fields: { name: 'P', address: '1 Main St' }, address_check: 'check' });
+  assert.match(m.text, /Address check: could not be fully confirmed/);
+  assert.ok(!/Address check/.test(leadEmail({ kind: 'contact', received_at: 'x', fields: { name: 'P' } }).text));
 });
