@@ -53,6 +53,28 @@
     },
     {
       "t": "p",
+      "text": "The Mission school district publishes its catchments only as an interactive map, not as a list of streets. Use the district's own page to check an address:",
+      "gen": "schools-sup"
+    },
+    {
+      "t": "p",
+      "text": "Mission school district catchments and school finder",
+      "h": "https://www.mpsd.ca/district-map",
+      "gen": "schools-sup"
+    },
+    {
+      "t": "p",
+      "text": "The Conseil scolaire francophone publishes its attendance zones (zones de fréquentation) on its own site:",
+      "gen": "schools-sup"
+    },
+    {
+      "t": "p",
+      "text": "Conseil scolaire francophone attendance zones",
+      "h": "https://www.csf.bc.ca/transport/zones-de-frequentation/",
+      "gen": "schools-sup"
+    },
+    {
+      "t": "p",
       "text": "Dewdney and Deroche carry their own mailing communities but sit in the Mission school district, so they are listed here."
     },
     {
@@ -67,6 +89,7 @@
         "School",
         "District",
         "French Immersion",
+        "Grades",
         "Street address",
         "Community"
       ],
@@ -75,6 +98,7 @@
           "Albert McMahon Elementary",
           "SD75 Mission",
           "—",
+          "K-6",
           "32865 Cherry Ave",
           "Mission"
         ],
@@ -82,6 +106,7 @@
           "Cherry Hill Elementary",
           "SD75 Mission",
           "—",
+          "K-6",
           "32557 Best Ave",
           "Mission"
         ],
@@ -89,6 +114,7 @@
           "Christine Morrison Elementary",
           "SD75 Mission",
           "Yes",
+          "K-6",
           "32611 Mcrae Ave",
           "Mission"
         ],
@@ -96,6 +122,7 @@
           "Edwin S Richards Elementary",
           "SD75 Mission",
           "—",
+          "K-6",
           "33419 Cherry Ave",
           "Mission"
         ],
@@ -103,6 +130,7 @@
           "Hatzic Elementary",
           "SD75 Mission",
           "—",
+          "K-6",
           "8465 Draper St",
           "Mission"
         ],
@@ -110,6 +138,7 @@
           "Hillside Traditional Academy",
           "SD75 Mission",
           "—",
+          "K-6",
           "33621 Best Ave",
           "Mission"
         ],
@@ -117,6 +146,7 @@
           "Mission Central Elementary",
           "SD75 Mission",
           "Yes",
+          "K-6",
           "7466 Welton St",
           "Mission"
         ],
@@ -124,6 +154,7 @@
           "Silverdale Elementary",
           "SD75 Mission",
           "—",
+          "K-6",
           "29715 Donatelli Ave",
           "Mission"
         ],
@@ -131,6 +162,7 @@
           "Stave Falls Elementary",
           "SD75 Mission",
           "—",
+          "K-6",
           "30204 Brackley Ave",
           "Mission"
         ],
@@ -138,6 +170,7 @@
           "West Heights Elementary",
           "SD75 Mission",
           "—",
+          "K-6",
           "32065 Van Velzen Ave",
           "Mission"
         ],
@@ -145,6 +178,7 @@
           "Windebank Elementary",
           "SD75 Mission",
           "—",
+          "K-6",
           "33570 11th Ave",
           "Mission"
         ],
@@ -152,6 +186,7 @@
           "Deroche Elementary",
           "SD75 Mission",
           "—",
+          "K-6",
           "10340 N Deroche Rd",
           "Deroche"
         ],
@@ -159,6 +194,7 @@
           "Dewdney Elementary",
           "SD75 Mission",
           "—",
+          "K-6",
           "37151 Hawkins-Pickle Rd B107",
           "Dewdney"
         ]
@@ -177,6 +213,7 @@
         "School",
         "District",
         "French Immersion",
+        "Grades",
         "Street address"
       ],
       "rows": [
@@ -184,12 +221,14 @@
           "École Heritage Park Middle School",
           "SD75 Mission",
           "Yes",
+          "7-9",
           "33700 Prentis Ave"
         ],
         [
           "Hatzic Middle School",
           "SD75 Mission",
           "—",
+          "7-9",
           "34875 Moffat Avenue"
         ]
       ],
@@ -207,6 +246,7 @@
         "School",
         "District",
         "French Immersion",
+        "Grades",
         "Street address"
       ],
       "rows": [
@@ -214,6 +254,7 @@
           "Mission Senior Secondary",
           "SD75 Mission",
           "Yes",
+          "10-12",
           "32939 7th Ave"
         ]
       ],
@@ -230,27 +271,32 @@
       "head": [
         "School",
         "District",
+        "Grades",
         "Street address"
       ],
       "rows": [
         [
           "Continuing Ed SD 75",
           "SD75 Mission",
+          "12",
           "33919 Dewdney Trunk Rd"
         ],
         [
           "des Deux-Rives",
           "SD93 Conseil scolaire francophone",
+          "K-12",
           "7674 Stave Lake St"
         ],
         [
           "Fraserview Learning Centre",
           "SD75 Mission",
+          "8-12",
           "32444 7th Ave"
         ],
         [
           "Mission Online School",
           "SD75 Mission",
+          "7-12",
           "Mailing address only in the source"
         ]
       ],
@@ -271,22 +317,26 @@
       "head": [
         "School",
         "District area",
+        "Grades",
         "Street address"
       ],
       "rows": [
         [
           "Seminary of Christ the King",
           "SD75 Mission",
+          "9-12",
           "Mailing address only in the source"
         ],
         [
           "Valley Christian Online School",
           "SD75 Mission",
+          "K-9",
           "8955 Cedar St"
         ],
         [
           "Valley Christian School",
           "SD75 Mission",
+          "K-8",
           "8955 Cedar St"
         ]
       ],
