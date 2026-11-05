@@ -75,6 +75,7 @@ const window_ = (sold as any).meta.window;
   import { popupSpec, centroid, boundsOf } from '../lib/areamap.js';
   import { loadGoogle, onAuthFailure } from '../lib/gmaps.js';
   import { classify, rampColor, textOn, legend, fmt, fmtShort } from '../lib/choropleth.js';
+  import { MAP_STYLE } from '../lib/map-style.js';
   import { NEARBY, nearbyRequest, radiusFor, distanceM, describePlaces, kmLabel } from '../lib/nearby-places.js';
   const host = document.querySelector('.areamap__map') as HTMLElement | null;
   if (host && host.dataset.key) {
@@ -119,7 +120,7 @@ const window_ = (sold as any).meta.window;
         g = await loadGoogle(key);
         const { Map, Polygon, InfoWindow } = await g.maps.importLibrary('maps');
         host.innerHTML = '';
-        map = new Map(host, { center: data.center, zoom: 12, gestureHandling: 'cooperative', mapTypeControl: true, streetViewControl: true, fullscreenControl: true });
+        map = new Map(host, { center: data.center, zoom: 12, styles: MAP_STYLE, gestureHandling: 'cooperative', mapTypeControl: true, streetViewControl: true, fullscreenControl: true });
         const b = boundsOf(data.areas);
         map.fitBounds({ south: b.south, west: b.west, north: b.north, east: b.east }, 24);
         class Label extends g.maps.OverlayView {
