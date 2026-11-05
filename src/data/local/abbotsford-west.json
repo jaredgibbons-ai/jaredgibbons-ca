@@ -38,6 +38,31 @@
       "gen": "snapstats"
     },
     {
+      "t": "h",
+      "level": 2,
+      "text": "Where Abbotsford West sits",
+      "gen": "areamap"
+    },
+    {
+      "t": "areamap",
+      "region": "abbotsford",
+      "mode": "area",
+      "current": "abbotsford-west",
+      "gen": "areamap"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Drive time to Abbotsford West",
+      "gen": "areamap"
+    },
+    {
+      "t": "commute",
+      "region": "abbotsford",
+      "current": "abbotsford-west",
+      "gen": "areamap"
+    },
+    {
       "t": "table",
       "caption": "Abbotsford West listings, sales and sales ratio by month",
       "head": [

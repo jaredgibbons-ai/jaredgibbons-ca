@@ -125,6 +125,26 @@ REGIONS['delta'] = ('Delta', [
  A('neilsen-grove', 'Neilsen Grove', 'neilsen-grove', 'Ladner', 'Neilsen Grove', l_([(610, 10), (500, 235), (322, 500), (300, 492), (165, 548), (150, 525), (235, 430), (325, 395), (270, 350), (345, 290), (395, 205), (335, 100), (345, 40)])),
 ])
 
+# ---------------------------------------------------------------- Abbotsford
+# Only three FVREB sub-areas.  The two Paragon screenshots (overview ab1, close-up ab2) were fitted to Google coordinates of landmarks (Abbotsford International
+# Airport, Abbotsford Recreation Centre, Silverbrook Farm, Gurdwara Kalgidhar Darbar Sahib, Castle Fun Park; fit error under 20 m).  Corners are good to about 100 m.
+def _inv(la, lo): return (round((la - 49.001776) / 0.0018276, 3), round((lo + 123.220335) / 0.0027568, 3))
+def _p1(x, y): return _inv(49.06556 - (y - 372) * 0.0001687, -122.4273 + (x - 162) * 0.0002575)
+def _p2(x, y): return _inv(49.06556 - (y - 301) * 0.0000843, -122.37482 + (x - 332) * 0.0001288)
+def _bd(x): return (round((49.0003 - 49.001776) / 0.0018276, 3), _inv(0, -122.4273 + (x - 162) * 0.0002575)[1])   # a point on the US border straight below pixel x
+p1_ = lambda l: [_p1(*p) for p in l]
+p2_ = lambda l: [_p2(*p) for p in l]
+AB_CW = p2_([(720, 203), (720, 290), (793, 293), (793, 552), (747, 552), (747, 592), (793, 592), (795, 668)])    # Central's west edge (with the Mill Lake Park box)
+AB_CE = p2_([(1022, 203), (1022, 330), (1085, 335), (1130, 375), (1143, 440), (1140, 520), (1135, 600), (1170, 688)])   # Central's east edge
+AB_HWY_C = p2_([(935, 685)])
+REGIONS['abbotsford'] = ('Abbotsford', [
+ A('abbotsford-west', 'Abbotsford West', 'abbotsford-west', 'Abbotsford', 'Abbotsford West', p2_([(282, 200), (720, 200)]) + AB_CW[1:] + p2_([(645, 655), (282, 405)])),
+ A('central-abbotsford', 'Central Abbotsford', 'central-abbotsford', 'Abbotsford', 'Central Abbotsford', AB_CW + AB_HWY_C + AB_CE[::-1]),
+ A('aberdeen', 'Aberdeen', 'aberdeen', 'Abbotsford', 'Aberdeen', [_p1(37.5, 247), p2_([(282, 405)])[0], _p1(341.5, 540), _p1(250, 670), _bd(251.5), _bd(37.5)]),
+ A('poplar', 'Poplar', 'poplar', 'Abbotsford', 'Poplar', p2_([(282, 405), (645, 655), (795, 668), (935, 685), (1170, 688)]) + [_p1(867.5, 573), _bd(867.5), _bd(251.5), _p1(250, 670), _p1(341.5, 540)]),
+ A('abbotsford-east', 'Abbotsford East', 'abbotsford-east', 'Abbotsford', 'Abbotsford East', AB_CE + p1_([(900, 568), (1005, 515), (1045, 487), (1025, 455), (1025, 238), (810, 285), (810, 325)])),
+])
+
 if __name__ == '__main__':
     only = sys.argv[1:] or list(REGIONS)
     for r in only:

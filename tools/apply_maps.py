@@ -8,7 +8,7 @@ Generated blocks carry "gen": "areamap"; they are removed and rebuilt on every r
 import glob, json, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HUBS = {'south-surrey-white-rock': 'south-surrey-neighbourhoods', 'surrey': 'surrey-neighbourhood-guides', 'cloverdale': 'cloverdale-neighbourhood-guides', 'langley': 'langley-neighbourhood-guides',
-        'delta': 'delta-neighbourhood-guides', 'maple-ridge': 'maple-ridge-neighbourhood-guides', 'pitt-meadows': 'pitt-meadows-neighbourhood-guides'}
+        'delta': 'delta-neighbourhood-guides', 'maple-ridge': 'maple-ridge-neighbourhood-guides', 'pitt-meadows': 'pitt-meadows-neighbourhood-guides', 'abbotsford': 'abbotsford-neighbourhood-guides'}
 # Pages that are hand-built Astro files rather than src/data/local data (no blocks to add): they still get an outline on their hub map.
 BESPOKE = {'fort-langley'}
 
