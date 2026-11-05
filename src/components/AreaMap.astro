@@ -6,6 +6,7 @@
 // Hub extras (D-103): areas that name a sold-12m sub-area are shaded by our own closed-sales figures (median price, price per sq ft, days on market; 5 sales minimum),
 // with the same figures in a text table, and a click-to-load 3D flyover when the region has one.
 import { validateRegion, flyoverFor, draftsBlockLaunch } from '../lib/areamap.js';
+import { NEARBY } from '../lib/nearby-places.js';
 import { figures, TYPES, METRICS, MIN_SALES, fmt } from '../lib/choropleth.js';
 import sold from '../data/sold/sold-12m.json';
 const FILES = import.meta.glob('../data/maps/*.json', { eager: true, import: 'default' }) as Record<string, any>;
@@ -46,6 +47,12 @@ const window_ = (sold as any).meta.window;
   </div>
   {shaded && <ul class="areamap__legend" id="areamap-legend" aria-label="Map shading key" hidden></ul>}
   <p class="areamap__hint">Drag to move the map. Press an area to open its page.{shaded ? ` Shading uses our closed-sales figures for ${window_}; areas with fewer than ${MIN_SALES} sales of a type are left grey.` : ''}</p>
+  <div class="areamap__near" id="areamap-near" role="group" aria-labelledby="areamap-near-h" hidden>
+    <p class="areamap__nearh" id="areamap-near-h">Show nearby places</p>
+    {NEARBY.map((c) => <button type="button" class="btn btn--ghost areamap__nb" data-cat={c.id} aria-pressed="false">{c.label}</button>)}
+  </div>
+  <p class="areamap__fine" id="areamap-near-note" aria-live="polite" hidden></p>
+  <ul class="areamap__nearlist" id="areamap-near-list" aria-label="Nearby places shown on the map" hidden></ul>
   <button type="button" class="btn areamap__fly" id="areamap-fly" hidden>View 3D flyover</button>
   {mode === 'hub' && (
     <nav aria-label={`${region.name} neighbourhoods`}>
@@ -68,6 +75,7 @@ const window_ = (sold as any).meta.window;
   import { popupSpec, centroid, boundsOf } from '../lib/areamap.js';
   import { loadGoogle, onAuthFailure } from '../lib/gmaps.js';
   import { classify, rampColor, textOn, legend, fmt, fmtShort } from '../lib/choropleth.js';
+  import { NEARBY, nearbyRequest, radiusFor, distanceM, describePlaces, kmLabel } from '../lib/nearby-places.js';
   const host = document.querySelector('.areamap__map') as HTMLElement | null;
   if (host && host.dataset.key) {
     const key = host.dataset.key, data = JSON.parse(host.dataset.map || '{}');
@@ -159,6 +167,7 @@ const window_ = (sold as any).meta.window;
           recolour();
         }
         setupFlyover();
+        setupNearby();
       } catch (e) { fail('The map could not load. The areas are listed below.'); }
     };
 
@@ -169,7 +178,7 @@ const window_ = (sold as any).meta.window;
       btn.hidden = false;
       let el: any = null, showing3d = false, mapNodes: Node[] = [];
       btn.addEventListener('click', async () => {
-        if (showing3d) { el?.remove(); mapNodes.forEach((n) => host.appendChild(n)); showing3d = false; btn.textContent = 'View 3D flyover'; if (map) g.maps.event.trigger(map, 'resize'); return; }
+        if (showing3d) { el?.remove(); mapNodes.forEach((n) => host.appendChild(n)); showing3d = false; if (nearEl) nearEl.hidden = false; btn.textContent = 'View 3D flyover'; if (map) g.maps.event.trigger(map, 'resize'); return; }
         btn.disabled = true; btn.textContent = 'Loading 3D…';
         try {
           const { Map3DElement } = await g.maps.importLibrary('maps3d');
@@ -177,9 +186,63 @@ const window_ = (sold as any).meta.window;
           el = new Map3DElement({ center: { lat: f.lat, lng: f.lng, altitude: f.altitude || 0 }, range: f.range, tilt: f.tilt ?? 55, heading: f.heading ?? 0, mode: 'HYBRID' });
           el.style.cssText = 'display:block;width:100%;height:100%';
           mapNodes = [...host.childNodes]; mapNodes.forEach((n) => host.removeChild(n)); host.appendChild(el);
-          showing3d = true; btn.textContent = 'Back to the map';
+          showing3d = true; if (nearEl) nearEl.hidden = true; btn.textContent = 'Back to the map';
         } catch { btn.textContent = 'View 3D flyover'; const p = document.createElement('p'); p.className = 'areamap__fine'; p.textContent = '3D view is not available right now.'; btn.insertAdjacentElement('afterend', p); }
         btn.disabled = false;
+      });
+    };
+
+    // Opt-in nearby places: nothing is requested until a button is pressed. Each press runs one Nearby Search (name and position only) around the middle of the visible map.
+    // Results stay in this page's memory only; pressing a pressed button clears its pins.
+    const nearEl = document.getElementById('areamap-near') as HTMLElement | null;
+    const setupNearby = () => {
+      const noteEl = document.getElementById('areamap-near-note') as HTMLElement | null, listEl = document.getElementById('areamap-near-list') as HTMLElement | null;
+      if (!nearEl || !noteEl || !listEl) return;
+      nearEl.hidden = false;
+      const iw = new g.maps.InfoWindow();
+      class Pin extends g.maps.OverlayView {
+        pos: any; letter: string; name: string; div: HTMLElement | null = null;
+        constructor(pos: any, letter: string, name: string) { super(); this.pos = pos; this.letter = letter; this.name = name; }
+        onAdd() {
+          this.div = document.createElement('div'); this.div.className = 'areamap__pin'; this.div.textContent = this.letter; this.div.title = this.name;
+          this.div.addEventListener('click', (e) => { e.stopPropagation(); const b = document.createElement('strong'); b.textContent = this.name; iw.setContent(b); iw.setPosition(this.pos); iw.open({ map }); });
+          this.getPanes().overlayMouseTarget.appendChild(this.div);
+        }
+        draw() { const p = this.getProjection().fromLatLngToDivPixel(this.pos); if (p && this.div) { this.div.style.left = p.x + 'px'; this.div.style.top = p.y + 'px'; } }
+        onRemove() { this.div?.remove(); }
+      }
+      const shown = new Map<string, { pins: any[]; rows: any[]; radius: number }>();
+      const render = () => {
+        for (const n of [...listEl.children]) n.remove();
+        const all = [...shown.values()].flatMap((v) => v.rows).sort((a, b) => a.m - b.m);
+        for (const r of all) { const li = document.createElement('li'); li.textContent = `${r.name} (${r.label}, ${kmLabel(r.m)} from the middle of the map)`; listEl.appendChild(li); }
+        listEl.hidden = !all.length;
+        const parts = [...shown.entries()].map(([id, v]) => `${NEARBY.find((c) => c.id === id)!.label.toLowerCase()}: ${v.rows.length ? v.rows.length : 'none found'}`);
+        const radius = [...shown.values()][0]?.radius;
+        noteEl.hidden = !shown.size;
+        noteEl.textContent = shown.size ? `Within about ${kmLabel(radius)} of the middle of the map when you pressed (${parts.join('; ')}). Places data from Google Maps, shown live and not stored. Move the map, then press a button off and on to search the new view.` : '';
+      };
+      const clear = (id: string) => { const v = shown.get(id); if (!v) return; v.pins.forEach((p) => p.setMap(null)); shown.delete(id); };
+      nearEl.querySelectorAll<HTMLButtonElement>('.areamap__nb').forEach((btn) => {
+        btn.addEventListener('click', async () => {
+          const cat = NEARBY.find((c) => c.id === btn.dataset.cat)!;
+          if (btn.getAttribute('aria-pressed') === 'true') { clear(cat.id); btn.setAttribute('aria-pressed', 'false'); render(); return; }
+          btn.disabled = true;
+          try {
+            const c = map.getCenter(), bnd = map.getBounds();
+            const center = { lat: c.lat(), lng: c.lng() };
+            const ne = bnd.getNorthEast(), sw = bnd.getSouthWest();
+            const radius = radiusFor(distanceM({ lat: center.lat, lng: sw.lng() }, { lat: center.lat, lng: ne.lng() }), distanceM({ lat: sw.lat(), lng: center.lng }, { lat: ne.lat(), lng: center.lng }));
+            const { Place } = await g.maps.importLibrary('places');
+            const { places } = await Place.searchNearby(nearbyRequest(cat, center, radius));
+            clear(cat.id);
+            const rows = describePlaces(places, cat, center);
+            const pins = rows.map((r) => { const pin = new Pin(new g.maps.LatLng(r.lat, r.lng), cat.pin, r.name); pin.setMap(map); return pin; });
+            shown.set(cat.id, { pins, rows, radius });
+            btn.setAttribute('aria-pressed', 'true'); render();
+          } catch { noteEl.hidden = false; noteEl.textContent = 'Nearby places are not available right now.'; }
+          btn.disabled = false;
+        });
       });
     };
 
@@ -202,6 +265,12 @@ const window_ = (sold as any).meta.window;
   .areamap__legend li{display:flex;align-items:center;gap:.4rem}
   .areamap__sw{display:inline-block;width:1.1rem;height:1.1rem;border:1px solid #1a1a1a}
   .areamap__fly{margin-top:var(--s3)}
+  .areamap__near{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:var(--s3)}
+  .areamap__nearh{margin:0 .5rem 0 0;font:700 .8125rem var(--f-head);letter-spacing:.04em}
+  .areamap__nb[aria-pressed="true"]{background:var(--ink);color:#fff}
+  .areamap__nearlist{columns:2 16rem;column-gap:var(--s5);margin:var(--s3) 0 0;padding-left:1.1rem;font-size:.875rem}
+  .areamap__nearlist li{break-inside:avoid;padding:.1rem 0}
+  .areamap__pin{position:absolute;transform:translate(-50%,-50%);width:1.5rem;height:1.5rem;border-radius:50%;background:#0a0a0a;color:#fff;border:2px solid #fff;box-shadow:0 0 0 1px #0a0a0a;display:grid;place-items:center;font:800 .7rem/1 var(--f-head);cursor:pointer}
   .areamap__list{list-style:none;padding:0;margin:var(--s4) 0 0;display:grid;gap:.25rem 1.5rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}
   .areamap__data{margin-top:var(--s4)}
   .areamap__data summary{cursor:pointer;font-weight:700;min-height:2.75rem;display:flex;align-items:center}

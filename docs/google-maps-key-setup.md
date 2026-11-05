@@ -13,6 +13,7 @@ The key is a **browser key**: it is visible in the page source by design, so it 
 1. Add the preview address to the key's website list (Credentials > the key > Websites), for example `https://<preview-name>.workers.dev/*`.
 2. Give the key to the build as `PUBLIC_GOOGLE_MAPS_KEY`: a build variable in Cloudflare (Workers & Pages > project > Settings > Build > Variables and secrets), or a `.env` file next to `package.json` when building on the Mac (git ignores it). The site does not exist on Cloudflare yet, so there is nothing to set today.
 3. Optional hard stop: APIs & Services > Maps JavaScript API > Quotas, lower "Map loads per day".
+4. Optional hard stop for the nearby-places buttons: APIs & Services > Places API (New) > Quotas, lower the Nearby Search requests per day. Each button press is one request (name and position only), so cost follows clicks, not page views.
 
 ## Address checking on forms (optional, later)
 The forms add a suggestion list to address fields with the browser key above. A second, **server** key can also tick "Address check" onto each lead: create a key restricted to the **Address Validation API** only (enable that API first), and add it to the Worker as the secret `GOOGLE_ADDRESS_VALIDATION_KEY`. Without it the lead says "Address check: not checked". Never paste that key in chat.
