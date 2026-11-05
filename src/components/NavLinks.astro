@@ -2,7 +2,7 @@
 // Recursive renderer for nav children (levels 2+). Labels/hrefs come verbatim from nav.json.
 const { items } = Astro.props;
 ---
-{items.map((it) =>
+{[...items.filter((i) => !i.children), ...items.filter((i) => i.children)].map((it) =>
   it.children ? (
     <div class="nav__group">
       {it.href ? <a href={it.href} class="nav__sub-label">{it.label}</a> : <span class="nav__sub-label">{it.label}</span>}

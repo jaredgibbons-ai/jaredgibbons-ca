@@ -95,6 +95,39 @@ if (photos.length) {
 const NO_REVIEWS = new Set(['404', 'privacy', 'subscribe-to-our-newsletter', 'contact', 'reviews', 'data-and-methodology', 'photo-credits']);
 if (!NO_REVIEWS.has(page.slug) && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.splice(page.blocks.length - endCount, 0, { t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
 
+// Archive pages open with an H2 above the H1 ("Fraser Valley Acreages for Sale" over the longer H1): show that line as a small label above the H1, not a second giant heading.
+{
+  const b0 = page.blocks[0]; const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
+  if (b0?.t === 'h' && b0.level === 2 && h1i > 0 && h1i <= 2) page.blocks[0] = { t: 'p', cls: 'eyebrow', parts: [{ t: b0.text }] };
+  // Leftover widget label from the archive, right above the ALR heading.
+  page.blocks = page.blocks.filter((b: any) => !(b.t === 'p' && (b.parts || []).map((x: any) => x.t).join('').trim() === 'ALR property search'));
+}
+
+// Archive "Related · Area / Explore More / 01 title / Nearby View →" runs of plain paragraphs become one 'related' block (a card grid).
+{
+  const txt = (b: any) => (b?.t === 'p' ? (b.parts || []).map((x: any) => x.t).join(' ').replace(/\s+/g, ' ').trim() : '');
+  const out: any[] = []; const bl = page.blocks;
+  for (let i = 0; i < bl.length; i++) {
+    const b = bl[i];
+    if (b.t === 'h' && b.text === 'Explore More') {
+      const items: any[] = []; let j = i + 1;
+      while (j + 2 < bl.length && /^\d{1,2}$/.test(txt(bl[j])) && bl[j + 1]?.t === 'p' && bl[j + 2]?.t === 'p' && (bl[j + 2].parts || []).some((x: any) => x.h)) {
+        const link = bl[j + 2].parts.find((x: any) => x.h);
+        items.push({ n: txt(bl[j]), title: txt(bl[j + 1]), label: txt({ t: 'p', parts: bl[j + 2].parts.filter((x: any) => !x.h) }), href: link.h });
+        j += 3;
+      }
+      if (items.length >= 2) {
+        const prev = out[out.length - 1];
+        const eyebrow = prev && /^Related\s*·/.test(txt(prev)) ? (out.pop(), txt(prev)) : '';
+        out.push({ t: 'related', eyebrow, title: 'Explore More', items });
+        i = j - 1; continue;
+      }
+    }
+    out.push(b);
+  }
+  page.blocks = out;
+}
+
 // Split into render sections at each level-2 heading; reviews and grid get their own sections.
 type Sec = { kind: 'text' | 'reviews' | 'grid' | 'photos'; blocks: any[]; block?: any };
 const sections: Sec[] = [];
@@ -172,6 +205,21 @@ const explore = (EXPLORE as Record<string, any>)[String(page.path || '').startsW
                   })}
                 </a>
               );
+              if (b.t === 'related') return (
+                <div class="related">
+                  {b.eyebrow && <p class="eyebrow">{b.eyebrow}</p>}
+                  <h2 class="related__h">{b.title}</h2>
+                  <ul class="related__grid">
+                    {b.items.map((it: any) => (
+                      <li><a class="related__card" href={it.href.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/'}>
+                        <span class="related__n" aria-hidden="true">{it.n}</span>
+                        <span class="related__t">{it.title}</span>
+                        <span class="related__a">{it.label ? `${it.label} ` : ''}view →</span>
+                      </a></li>
+                    ))}
+                  </ul>
+                </div>
+              );
               if (b.t === 'notice') return <p class="notice">{b.text}</p>;
               if (b.t === 'table') return (
                 <div class="tblwrap" tabindex="0" role="region" aria-label={b.caption}>
@@ -225,4 +273,14 @@ const explore = (EXPLORE as Record<string, any>)[String(page.path || '').startsW
   .cardlink__t{font-size:.9375rem}
   .phgrid__wide{grid-column:1/-1}
   .phgrid{list-style:none;margin:1.25rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,18rem),1fr));gap:var(--s4)}
+  .pg:has(.related){max-width:none}
+  .related{margin:var(--s5) 0 var(--s4)}
+  .related__h{font-size:clamp(1.4rem,2.6vw,1.9rem);margin:0 0 var(--s4)}
+  .related__grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,16rem),1fr));gap:var(--s4)}
+  .related__card{display:grid;grid-template-rows:auto 1fr auto;gap:.5rem;height:100%;border:1px solid var(--ink);background:#fff;padding:1rem 1.15rem;text-decoration:none}
+  .related__card:hover,.related__card:focus-visible{background:var(--ink);color:#fff}
+  .related__n{font:700 .75rem var(--f-head);letter-spacing:.08em;color:#666}
+  .related__card:hover .related__n,.related__card:focus-visible .related__n{color:#ccc}
+  .related__t{font:700 1.0625rem/1.3 var(--f-head)}
+  .related__a{font:600 .8125rem var(--f-head);letter-spacing:.03em;text-transform:uppercase}
 </style>

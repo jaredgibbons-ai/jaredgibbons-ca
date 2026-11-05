@@ -4,6 +4,13 @@ import NavLinks from './NavLinks.astro';
 import nav from '../data/nav.json';
 const { current = '', brandHref = '/' } = Astro.props;
 const wide = new Set(['Communities']);
+// Communities menu: one list of places on the left, the chosen place's links on the right (no sideways scrolling); on phones each place opens in place.
+const REGIONS: [string, string[]][] = [
+  ['Core markets', ['South Surrey', 'Surrey', 'Langley', 'Cloverdale', 'Delta']],
+  ['Fraser Valley', ['Abbotsford', 'Chilliwack', 'Mission', 'Maple Ridge', 'Pitt Meadows']],
+  ['Metro Vancouver', ['Richmond', 'Vancouver', 'Burnaby', 'New Westminster', 'Coquitlam']],
+];
+const slug = (t: string) => t.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 ---
 <aside class="topbar" aria-label="Contact and social links">
   <div class="wrap">
@@ -14,6 +21,8 @@ const wide = new Set(['Communities']);
     <div class="topbar__right">
       <a href="https://www.facebook.com/jaredgibbonsrealestate/">Facebook</a>
       <a href="https://www.instagram.com/jaredgibbonsrealestate/">Instagram</a>
+      <a href="https://www.tiktok.com/@jaredgibbonsrealtor">TikTok</a>
+      <a href="https://www.youtube.com/@JaredGibbonsRealtor">YouTube</a>
       <a href="/blog.html">Blog</a>
     </div>
   </div>
@@ -38,7 +47,29 @@ const wide = new Set(['Communities']);
               <>
                 <button class="nav__toggle" type="button" aria-expanded="false" aria-controls={id} aria-label={`${item.label} submenu`}><Icon name="chevron" /></button>
                 <div class:list={['nav__panel', isWide && 'nav__panel--wide']} id={id} hidden>
-                  <NavLinks items={item.children} />
+                  {isWide ? (
+                    <div class="mega">
+                      {REGIONS.map(([region, names]) => (
+                        <>
+                          <p class="mega__region">{region}</p>
+                          {names.map((n) => {
+                            const g = item.children.find((c: any) => c.label === n);
+                            if (!g) return null;
+                            const first = region === 'Core markets' && n === 'South Surrey';
+                            return (
+                              <div class="mega__city">
+                                <button class="mega__tab" type="button" aria-expanded={first ? 'true' : 'false'} aria-controls={`mp-${slug(n)}`}>{n}</button>
+                                <div class="mega__pane" id={`mp-${slug(n)}`} hidden={!first}>
+                                  <p class="mega__title">{n}</p>
+                                  <ul>{g.children.map((l: any) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </>
+                      ))}
+                    </div>
+                  ) : <NavLinks items={item.children} />}
                 </div>
               </>
             )}
@@ -77,6 +108,16 @@ const wide = new Set(['Communities']);
     item.addEventListener('mouseenter', () => { if (!mq.matches) { closeAll(t); t.setAttribute('aria-expanded','true'); document.getElementById(t.getAttribute('aria-controls')).hidden = false; } });
     item.addEventListener('mouseleave', () => { if (!mq.matches) closeAll(); });
   });
+  // Communities: pick a place, see its links. Desktop shows one pane at a time (hover or focus); phones open and close each place.
+  const tabs = [...document.querySelectorAll('.mega__tab')];
+  const show = (tab, on) => { tab.setAttribute('aria-expanded', String(on)); document.getElementById(tab.getAttribute('aria-controls')).hidden = !on; };
+  tabs.forEach((tab) => {
+    const pick = () => { if (mq.matches) return; tabs.forEach((t) => show(t, t === tab)); };
+    tab.addEventListener('mouseenter', pick);
+    tab.addEventListener('focus', pick);
+    tab.addEventListener('click', () => { if (mq.matches) show(tab, tab.getAttribute('aria-expanded') !== 'true'); else pick(); });
+  });
+  mq.addEventListener('change', () => tabs.forEach((t, i) => show(t, !mq.matches && i === 0)));
   document.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape') return;
     const open = toggles.find((t) => t.getAttribute('aria-expanded') === 'true');
