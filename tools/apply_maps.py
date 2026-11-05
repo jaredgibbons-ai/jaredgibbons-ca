@@ -7,7 +7,8 @@ Generated blocks carry "gen": "areamap"; they are removed and rebuilt on every r
 """
 import glob, json, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-HUBS = {'south-surrey-white-rock': 'south-surrey-neighbourhoods', 'surrey': 'surrey-neighbourhood-guides', 'cloverdale': 'cloverdale-neighbourhood-guides', 'langley': 'langley-neighbourhood-guides'}
+HUBS = {'south-surrey-white-rock': 'south-surrey-neighbourhoods', 'surrey': 'surrey-neighbourhood-guides', 'cloverdale': 'cloverdale-neighbourhood-guides', 'langley': 'langley-neighbourhood-guides',
+        'delta': 'delta-neighbourhood-guides', 'maple-ridge': 'maple-ridge-neighbourhood-guides', 'pitt-meadows': 'pitt-meadows-neighbourhood-guides'}
 # Pages that are hand-built Astro files rather than src/data/local data (no blocks to add): they still get an outline on their hub map.
 BESPOKE = {'fort-langley'}
 
@@ -36,7 +37,8 @@ def main():
         todo = [(HUBS[region['region']], None)] if region['region'] in HUBS else []
         todo += [(a['href'][1:-5], a) for a in region['areas']]
         for slug, area in todo:
-            if slug in BESPOKE: print('skip (bespoke page) ->', slug); continue
+            if slug in BESPOKE or not os.path.exists(os.path.join(ROOT, 'src/data/local', slug + '.json')):
+                print('skip (hand-built or guide-only page, outline on the hub map only) ->', slug); continue
             p, d, fmt = load(slug)
             keep = [b for b in d['blocks'] if b.get('gen') != 'areamap']
             at = 0

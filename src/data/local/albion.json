@@ -15,6 +15,31 @@
    "gen": "snapstats"
   },
   {
+   "t": "h",
+   "level": 2,
+   "text": "Where Albion sits",
+   "gen": "areamap"
+  },
+  {
+   "t": "areamap",
+   "region": "maple-ridge",
+   "mode": "area",
+   "current": "albion",
+   "gen": "areamap"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Drive time to Albion",
+   "gen": "areamap"
+  },
+  {
+   "t": "commute",
+   "region": "maple-ridge",
+   "current": "albion",
+   "gen": "areamap"
+  },
+  {
    "t": "table",
    "caption": "Albion listings, sales and sales ratio by month",
    "head": [

@@ -44,6 +44,31 @@
    "gen": "snapstats"
   },
   {
+   "t": "h",
+   "level": 2,
+   "text": "Where Nordel sits",
+   "gen": "areamap"
+  },
+  {
+   "t": "areamap",
+   "region": "delta",
+   "mode": "area",
+   "current": "nordel",
+   "gen": "areamap"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Drive time to Nordel",
+   "gen": "areamap"
+  },
+  {
+   "t": "commute",
+   "region": "delta",
+   "current": "nordel",
+   "gen": "areamap"
+  },
+  {
    "t": "table",
    "caption": "Nordel listings, sales and sales ratio by month",
    "head": [

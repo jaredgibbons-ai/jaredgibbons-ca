@@ -65,6 +65,66 @@ REGIONS['langley'] = ('Langley', [
  A('aldergrove', 'Aldergrove', 'aldergrove', 'Langley', 'Aldergrove Langley', [(40, 264.1), (40, 276), (24, 276), (24, 264.1), (28, 264.1), (28, 260.1), (33.7, 260.1), (33.7, 264.1)]),
 ])
 
+# ---------------------------------------------------------------- Maple Ridge and Pitt Meadows
+# The Metro Vancouver street grid carries on east of Surrey, so these use the same lat/lng formulas.  Corners were read off a 2x enlargement of the Paragon
+# close-up (c32a: left half, c32b: right half) and converted through two label-fitted formulas.  Only the polygons whose whole outline is on the screenshots are
+# drawn: North Meadows, Silver Valley, Websters Corners and Northeast run off the top of the screenshots (north to Pitt Lake / Golden Ears Park), so they are not drawn.
+def _ca(cx, cy):
+    x, y = cx / 2, 190 + cy / 2
+    return (round(132 - (y - 335) / 10.6, 2), round(240 + (x - 799) / 10.75, 2))
+def _cb(cx, cy):
+    x, y = 560 + cx / 2, 190 + cy / 2
+    return (round(132 - (y - 335) / 10.6, 2), round(240 + (x - 799) / 10.75, 2))
+a_ = lambda l: [_ca(*p) for p in l]
+b_ = lambda l: [_cb(*p) for p in l]
+TH_S, TH_SE = (94.3, 272.0), (94.2, 287.5)
+REGIONS['maple-ridge'] = ('Maple Ridge', [
+ A('north-maple-ridge', 'North Maple Ridge', 'north-maple-ridge-guide', 'Maple Ridge', 'North Maple Ridge', a_([(918, 190), (1095, 190), (1095, 127), (1256, 127), (1256, 288), (1018, 288), (918, 288)])),
+ A('northwest-maple-ridge', 'Northwest Maple Ridge', 'northwest-maple-ridge', 'Maple Ridge', 'Northwest Maple Ridge', a_([(830, 288), (918, 288), (1018, 288), (1018, 545), (727, 545), (757, 522), (757, 415), (830, 413)])),
+ A('west-central', 'West Central', 'west-central', 'Maple Ridge', 'West Central', a_([(1018, 288), (1256, 288), (1256, 655), (1018, 665), (1018, 545)])),
+ A('southwest-maple-ridge', 'Southwest Maple Ridge', 'southwest-maple-ridge', 'Maple Ridge', 'Southwest Maple Ridge', a_([(727, 545), (1018, 545), (1018, 665), (1000, 668), (900, 700), (800, 748), (727, 795)])),
+ A('east-central', 'East Central', 'east-central', 'Maple Ridge', 'East Central', a_([(1256, 288)]) + b_([(300, 286), (360, 300), (440, 350), (478, 420), (480, 550), (307, 550), (307, 748), (280, 765)]) + a_([(1256, 655)])),
+ A('cottonwood', 'Cottonwood', 'cottonwood-mr', 'Maple Ridge', 'Cottonwood MR', b_([(307, 550), (655, 550), (655, 735), (600, 735), (530, 795), (470, 810), (390, 770), (340, 745), (307, 748)])),
+ A('albion', 'Albion', 'albion', 'Maple Ridge', 'Albion', b_([(307, 748), (340, 745), (390, 770), (470, 810), (530, 795), (600, 735), (655, 735), (655, 1000), (612, 1072), (450, 990), (300, 880), (280, 765)])),
+ A('thornhill', 'Thornhill', 'thornhill-mr', 'Maple Ridge', 'Thornhill MR', b_([(655, 735), (690, 705), (760, 652), (850, 660), (930, 695), (968, 735), (1010, 690), (1040, 650), (1100, 615), (1165, 610)]) + [TH_S] + b_([(612, 1072), (655, 1000)])),
+ A('whonnock', 'Whonnock', 'whonnock', 'Maple Ridge', 'Whonnock', b_([(1165, 553)]) + [(120, 287.5), TH_SE, TH_S] + b_([(1165, 610)])),
+])
+REGIONS['pitt-meadows'] = ('Pitt Meadows', [
+ A('west-meadows', 'West Meadows', 'west-meadows-pitt-meadows-guide', 'Pitt Meadows', 'West Meadows', a_([(240, 208), (482, 376), (482, 707), (380, 655), (250, 615), (100, 590), (20, 545), (8, 440), (40, 385), (130, 322), (200, 262)])),
+ A('mid-meadows', 'Mid Meadows', 'mid-meadows-pitt-meadows', 'Pitt Meadows', 'Mid Meadows', a_([(482, 376), (757, 522), (727, 574), (487, 430)])),
+ A('central-meadows', 'Central Meadows', 'central-meadows-pitt-meadows', 'Pitt Meadows', 'Central Meadows', a_([(487, 430), (727, 574), (727, 586), (567, 588), (567, 610), (487, 610)])),
+ A('south-meadows', 'South Meadows', 'south-meadows-pitt-meadows', 'Pitt Meadows', 'South Meadows', a_([(487, 610), (567, 610), (567, 588), (727, 588), (727, 795), (600, 772), (487, 707)])),
+])
+
+# ---------------------------------------------------------------- Delta (North Delta and the Ladner core)
+# North Delta: corners from a 6x enlargement of the overview screenshot (c21n); the avenues and streets there are Surrey's (120 St and 84/72/64 Ave edges line up with
+# West Newton), so they are placed on the same grid.  Ladner: the close-up screenshot was fitted to Google coordinates of five landmarks (Boundary Bay Airport,
+# Ladner Leisure Centre, Watershed Park, OWL, Brunswick Point; fit error under 10 m), corners read off a 4x enlargement (c22a).
+def _cn(cx, cy): return (round(84 - (cy - 545) / 32, 2), round(120 + (cx - 637) / 32, 2))
+def _cl(cx, cy):
+    x, y = 380 + cx / 4, 330 + cy / 4
+    la, lo = 49.0806 - (y - 519) * 0.000169, -123.0088 + (x - 751) * 0.0002575
+    return (round((la - 49.001776) / 0.0018276, 2), round((lo + 123.220335) / 0.0027568, 2))
+n_ = lambda l: [_cn(*p) for p in l]
+def _cs(cx, cy):   # 4x enlargement of the right-hand strip of the Ladner close-up (c22s), same landmark fit as _cl
+    x, y = 1040 + cx / 4, 190 + cy / 4
+    la, lo = 49.0806 - (y - 519) * 0.000169, -123.0088 + (x - 751) * 0.0002575
+    return (round((la - 49.001776) / 0.0018276, 2), round((lo + 123.220335) / 0.0027568, 2))
+s_ = lambda l: [_cs(*p) for p in l]
+H91 = [(90, 90), (95, 230), (100, 330), (105, 380), (130, 430), (190, 490), (260, 535), (330, 570), (400, 610), (440, 660), (480, 740), (520, 820), (560, 910), (600, 1000), (640, 1085)]   # Highway 91 edge
+l_ = lambda l: [_cl(*p) for p in l]
+REGIONS['delta'] = ('Delta', [
+ A('annieville', 'Annieville', 'annieville', 'N. Delta', 'Annieville', n_([(245, 160), (637, 165), (637, 540), (380, 540), (380, 295), (345, 262), (225, 215)])),
+ A('nordel', 'Nordel', 'nordel', 'N. Delta', 'Nordel', n_([(225, 215), (345, 262), (380, 295), (380, 935), (190, 935), (150, 880), (110, 800), (60, 640), (30, 525), (100, 400), (190, 300)])),
+ A('scottsdale', 'Scottsdale', 'scottsdale', 'N. Delta', 'Scottsdale', n_([(380, 545), (637, 545), (637, 935), (380, 935)])),
+ A('sunshine-hills', 'Sunshine Hills', 'sunshine-hills-woods', 'N. Delta', 'Sunshine Hills Woods', n_([(190, 935), (637, 935)]) + [(48.2, 120.0)] + s_(H91[::-1])),
+ A('holly', 'Holly', 'holly', 'Ladner', 'Holly', l_([(733, 160), (1105, 398), (1078, 430), (1055, 742), (895, 788), (865, 783), (865, 742), (733, 742)])),
+ A('hawthorne', 'Hawthorne', 'hawthorne', 'Ladner', 'Hawthorne', l_([(500, 235), (600, 345), (733, 398), (733, 565), (325, 563), (322, 500)])),
+ A('delta-manor', 'Delta Manor', 'delta-manor', 'Ladner', 'Delta Manor', l_([(325, 563), (733, 565), (733, 742), (420, 742), (412, 740), (392, 645)])),
+ A('ladner-elementary', 'Ladner Elementary', 'ladner-elementary', 'Ladner', 'Ladner Elementary', l_([(145, 595), (295, 495), (325, 563), (392, 645), (412, 740), (385, 815), (215, 815), (145, 740)])),
+ A('neilsen-grove', 'Neilsen Grove', 'neilsen-grove', 'Ladner', 'Neilsen Grove', l_([(610, 10), (500, 235), (322, 500), (300, 492), (165, 548), (150, 525), (235, 430), (325, 395), (270, 350), (345, 290), (395, 205), (335, 100), (345, 40)])),
+])
+
 if __name__ == '__main__':
     only = sys.argv[1:] or list(REGIONS)
     for r in only:
