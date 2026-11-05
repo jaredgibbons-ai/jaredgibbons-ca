@@ -106,6 +106,22 @@ def main():
             if slug in pages and pages[slug] != sid:
                 problems.append(('page has two searches', slug, f'{pages[slug]} / {sid}')); continue
             pages[slug] = sid
+    # 55+ batch (53 searches, ids 1451141-1451228, account 67649), one search per page. Different column layout from the 395-job worksheets:
+    # Row, Page address, Name, H1, Area used, Type, Restricted Age, Price cap, Search ID, Count, Status, Verify URL, Embed code, ...  Rows with Status "Skipped" stay unwired.
+    fp55 = os.path.join(ROOT, 'docs/review/idx/55plus-searches-2026-11-05.xlsx')
+    if os.path.exists(fp55):
+        for r in list(openpyxl.load_workbook(fp55, read_only=True)['55+ searches'].iter_rows(values_only=True))[1:]:
+            _row, addr, name, _h1, _area, _t, _age, _cap, sid, _cnt, status, _verify, code = r[:13]
+            if not name or not (status or '').startswith('Built'): continue
+            sid = str(sid); slug = re.sub(r'\.html$', '', (addr or '').strip().lstrip('/'))
+            if f'search-{sid}' not in (code or '') or ACCOUNT not in (code or ''):
+                problems.append(('55+ embed code does not match id/account', name, slug)); continue
+            pj = [q for q in (os.path.join(ROOT, 'src/data/local', slug + '.json'), os.path.join(ROOT, 'src/data/pages', slug + '.json')) if os.path.exists(q)]
+            if not pj or not any(b.get('t') == 'grid' for b in json.load(open(pj[0]))['blocks']):
+                problems.append(('55+ page missing or has no listings placeholder', name, slug)); continue
+            if slug in pages and pages[slug] != sid:
+                problems.append(('page has two searches', slug, f'{pages[slug]} / {sid}')); continue
+            pages[slug] = sid
     # Three special widgets (my listings active/sold, the open search form). Stored as the path after /l/idx2/.
     special = {}
     if 'Special embeds (3)' in wb.sheetnames:
