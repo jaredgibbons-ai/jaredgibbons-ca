@@ -14,6 +14,33 @@ export function getStaticPaths() {
     if (ov.description) { pg.seo['Meta description'] = ov.description; pg.seo['OG description'] = ov.description; }
     if (ov.h1) { pg.seo.H1 = ov.h1; const h = pg.blocks.find((b: any) => b.t === 'h' && b.level === 1); if (h) h.text = ov.h1; else pg.blocks.unshift({ t: 'h', level: 1, text: ov.h1 }); }
   }
+  // The archive's blog index carries the full text of the 55 newest posts one after another (about 280,000 px tall on a phone). It becomes a proper
+  // index: each of those posts keeps its heading link, byline and a short lead, then a "Read the full post" link; every post is then listed as a link.
+  const blog = out.find((o) => o.params.slug === 'blog');
+  if (blog) {
+    const B: any[] = blog.props.page.blocks;
+    const starts = B.map((b, i) => (b.t === 'h' && b.level === 2 && /\/blog\.html\/[^?#]+$/.test(String(b.href || '')) ? i : -1)).filter((i) => i >= 0);
+    const tailAt = B.findIndex((b, i) => i > (starts[starts.length - 1] ?? 0) && b.t === 'p' && b.parts?.[0]?.t === 'Blogs');
+    const lead = (txt: string) => { if (txt.length <= 300) return txt; const c = txt.slice(0, 300); const e = Math.max(c.lastIndexOf('. '), c.lastIndexOf('? ')); return e > 120 ? c.slice(0, e + 1) : c.slice(0, c.lastIndexOf(' ')).replace(/[,;:\s]+$/, '') + '…'; };
+    const ptxt = (b: any) => (b.parts || []).reduce((a: string, x: any, i: number) => a + (i && !/^[,.;:!?)\]”’]/.test(x.t) ? ' ' : '') + x.t, '').replace(/\s+([,.;:!?])(?=\s|$)/g, '$1');
+    const head = B.slice(0, starts[0] ?? 0);
+    const body: any[] = [];
+    starts.forEach((st, k) => {
+      const end = k + 1 < starts.length ? starts[k + 1] : (tailAt > 0 ? tailAt : B.length);
+      const sec = B.slice(st, end);
+      body.push(sec[0]);
+      const by = sec.slice(1, 4).find((b) => b.t === 'p' && /^by$/i.test(String(b.parts?.[0]?.t).trim()));
+      if (by) body.push(by);
+      const first = sec.slice(1).find((b) => b.t === 'p' && ptxt(b).length > 110 && !/accurate as of|legal or tax advice|general information|campaign proposals|Nothing has been/i.test(ptxt(b)) && !/^by$/i.test(String(b.parts?.[0]?.t).trim()));
+      if (first) body.push({ t: 'p', parts: [{ t: lead(ptxt(first)) }] });
+      body.push({ t: 'p', parts: [{ t: 'Read the full post', h: sec[0].href }] });
+    });
+    const posts = Object.values(import.meta.glob('../data/posts/*.json', { eager: true, import: 'default' }) as Record<string, any>)
+      .filter((q: any) => q.canonical && q.title)
+      .sort((a: any, b: any) => String(b.seo?.Published || '').localeCompare(String(a.seo?.Published || '')));
+    const all = [{ t: 'h', level: 2, text: 'All Blog Posts' }, { t: 'list', items: posts.map((q: any) => [{ t: String(q.title).replace(/ \| Jared Gibbons.*$/, ''), h: q.canonical }]) }];
+    blog.props.page = { ...blog.props.page, blocks: [...head, ...body, ...all, ...(tailAt > 0 ? B.slice(tailAt) : [])] };
+  }
   // New pages (no archive counterpart) are authored as src/data/local/<slug>.json with a `new_page` header.
   const taken = new Set(out.map((o) => o.params.slug));
   const locals = import.meta.glob('../data/local/*.json', { eager: true, import: 'default' }) as Record<string, any>;

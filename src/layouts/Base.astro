@@ -2,7 +2,11 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-const { title, canonical, footerTagline, footerCell = false, current = '', brandHref = '/', description, ogTitle, ogDescription, ogImage, jsonld = [], robots = '', crumbs = [] } = Astro.props;
+import { fitTitle, fitMeta } from '../lib/seo';
+const { title: rawTitle, description: rawDescription, canonical, footerTagline, footerCell = false, current = '', brandHref = '/', ogTitle, ogDescription, ogImage, jsonld = [], robots = '', crumbs = [] } = Astro.props;
+const title = fitTitle(rawTitle);
+const description = fitMeta(rawDescription);
+const ogDesc = fitMeta(ogDescription) ?? description;
 const crumbLd = crumbs.length > 1 ? [{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs.map((c: any, i: number) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: 'https://jaredgibbons.ca' + c.href })) }] : [];
 // PUBLIC_PREVIEW defaults to true: the whole preview is closed. Launch (needs Jared's approval) builds with PUBLIC_PREVIEW=false, which then emits each page's own robots value.
 const preview = import.meta.env.PUBLIC_PREVIEW !== 'false';
@@ -34,7 +38,7 @@ const robotsContent = preview ? 'noindex, nofollow' : robots;
   <link rel="preload" href="/fonts/lato-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
   {description && <meta name="description" content={description} />}
   {ogTitle && <meta property="og:title" content={ogTitle} />}
-  {(ogDescription ?? description) && <meta property="og:description" content={ogDescription ?? description} />}
+  {ogDesc && <meta property="og:description" content={ogDesc} />}
   {ogImage && <meta property="og:image" content={ogImage} />}
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Jared Gibbons" />

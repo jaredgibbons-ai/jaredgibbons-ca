@@ -4,6 +4,7 @@ import ExploreLinks from './ExploreLinks.astro';
 // Own-listing detail page. Content comes from src/data/listings/<slug>.json (tools/import_listings.py).
 // Photos: web-size derivatives of the owner's photo export (never hotlinked from the vendor CDN).
 import Base from '../layouts/Base.astro';
+import { titleCaseAddress } from '../lib/seo';
 import { capsClass } from '../lib/caps';
 import Cta from './Cta.astro';
 import ListingGallery from './ListingGallery.astro';
@@ -39,13 +40,36 @@ const _h1 = (blocks.find((b: any) => b.t === 'h' && b.level === 1) as any)?.text
 const crumbs = _h1 ? [{ name: 'Home', href: '/index.html' }, { name: 'My Listings', href: '/our-listings.html' }, { name: String(_h1), href: '/our-listings.html' }] : [];
 const priceNum = /^\$[\d,]+$/.test(price) ? Number(price.replace(/[$,]/g, '')) : 0;
 const telHref = (s: string) => 'tel:' + s;
+
+// Search snippet. The archive's meta is often empty ("[SOLD]:" alone) or MLS marketing text, so an empty one is built from the facts on the page.
+const factMap: Record<string, string> = {};
+for (const b of blocks) if (b.t === 'facts') for (const it of b.items) { const k = String(it.k).replace(/:$/, ''); if (!(k in factMap) && it.v?.[0]) factMap[k] = String(it.v[0]); }
+const titleParts = String(page.title || '').replace(/ – MLS .*$/, '').split(', ');
+const cityName = titleParts.length > 2 ? titleParts[titleParts.length - 2] : '';
+const addr = titleCaseAddress(titleParts[0] || '');
+const seoTitle = String(page.title || '').replace(/^[^,]+/, addr);
+const statusWord = page.status === 'Sold' ? 'Sold' : page.status === 'Leased' ? 'Leased' : 'For sale';
+function builtMeta(): string {
+  const dw = factMap['Dwelling Type'] || '';
+  const bits = [dw, factMap['Bedrooms'] && `${factMap['Bedrooms']} bed`, factMap['Bathrooms'] && `${factMap['Bathrooms']} bath`, factMap['Floor Area'] && `${factMap['Floor Area']} sq ft`, factMap['Year Built'] && `built ${factMap['Year Built']}`].filter(Boolean) as string[];
+  const when = factMap['Sold Date'] ? `${statusWord} ${factMap['Sold Date'].replace(/^(\w+) \d+, (\d{4})$/, '$1 $2')}${price ? ` for ${price}` : ''}.` : (price ? `${price}.` : '');
+  const tail = 'Jared Gibbons, REALTOR®, Royal LePage Little Oak Realty.';
+  const head = `${statusWord}: ${addr}${cityName ? `, ${cityName}` : ''}${cityName ? ' BC' : ''}.`;
+  for (let n = bits.length; n >= 0; n--) {
+    const m = [head, bits.slice(0, n).join(', ') + (n ? '.' : ''), when, tail].filter((x) => x && x !== '.').join(' ');
+    if (m.length <= 158) return m;
+  }
+  return `${head} ${tail}`;
+}
+const rawMeta = String(seo['Meta description'] || '').replace(/^\[SOLD\]:\s*/i, '').trim();
+const metaDesc = rawMeta.length >= 70 ? rawMeta : builtMeta();
 ---
 <Base
-  title={page.title}
+  title={seoTitle}
   canonical={page.canonical}
-  description={seo['Meta description'] || undefined}
-  ogTitle={seo['OG title'] || undefined}
-  ogDescription={seo['OG description'] || undefined}
+  description={metaDesc}
+  ogTitle={seoTitle}
+  ogDescription={metaDesc}
   ogImage={seo['OG image'] || undefined}
   robots={page.status === 'Expired' ? 'noindex, follow' : (seo['Meta robots'] || 'index, follow')}
   footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
