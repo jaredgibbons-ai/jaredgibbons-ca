@@ -35,7 +35,7 @@ import { reviews, awards, listings, areas, southSurreyLinks, langleyLinks, langl
   <!-- ░░ What clients say ░░ -->
   <section class="section section--cream" aria-labelledby="h-reviews">
     <div class="wrap">
-      <h2 id="h-reviews" class="h2">What clients say</h2>
+      <h2 id="h-reviews" class="h2 caps">What clients say</h2>
       <ul class="reviews">
         {reviews.map((r) => (
           <li class="review">
@@ -52,7 +52,7 @@ import { reviews, awards, listings, areas, southSurreyLinks, langleyLinks, langl
   <!-- ░░ WHY WORK WITH US ░░ -->
   <section class="section" aria-labelledby="h-why">
     <div class="wrap">
-      <h2 id="h-why" class="h2 h2--caps">WHY WORK WITH US</h2>
+      <h2 id="h-why" class="h2 caps">WHY WORK WITH US</h2>
       <h3 class="subhead">OUR PROVEN PERFORMANCE</h3>
       <p class="preview-flag">Open item OI-07: performance figures under this heading were not captured as text in the archive (likely image/script-rendered). Will be filled from the baseline zips.</p>
       <ul class="awards" aria-label="Awards">
@@ -64,7 +64,7 @@ import { reviews, awards, listings, areas, southSurreyLinks, langleyLinks, langl
   <!-- ░░ OUR LISTINGS ░░ -->
   <section class="section section--cream" aria-labelledby="h-listings">
     <div class="wrap">
-      <h2 id="h-listings" class="h2 h2--caps">OUR LISTINGS</h2>
+      <h2 id="h-listings" class="h2 caps">OUR LISTINGS</h2>
       <p class="notice">Listings are not connected in this preview. Cards below are the archived 31 Oct 2026 snapshot of Jared's own listings.</p>
       <ul class="cards">
         {listings.map((l) => (
@@ -100,7 +100,7 @@ import { reviews, awards, listings, areas, southSurreyLinks, langleyLinks, langl
   <!-- ░░ As Seen In ░░ -->
   <section class="section" aria-labelledby="h-seen">
     <div class="wrap">
-      <h2 id="h-seen" class="h2 h2--caps">As Seen In</h2>
+      <h2 id="h-seen" class="h2 caps">As Seen In</h2>
       <ul class="seen">
         {[['Craigslist',164],['REW.ca',147],['Realtylink',122],['LoopNet',150],['Spacelist',99],['REALTOR.ca',225],['Royal LePage',206],['Kijiji',338]].map(([name, h], i) => <li class="seen__tile"><img src={`/img/as-seen-in-${i + 1}.webp`} alt={name} width="640" height={h} loading="lazy" decoding="async" /></li>)}
       </ul>
@@ -112,7 +112,7 @@ import { reviews, awards, listings, areas, southSurreyLinks, langleyLinks, langl
   <section class="section section--cream" aria-labelledby="h-area">
     <div class="wrap">
       <p class="eyebrow">Fraser Valley · Metro Vancouver · BC</p>
-      <h2 id="h-area" class="h2">Search by Area</h2>
+      <h2 id="h-area" class="h2 caps">Search by Area</h2>
       <p class="lede"><strong>Every community.</strong> <strong>Every property type.</strong></p>
       <p class="prose">As South Surrey's #1 ranked REALTOR®, Jared Gibbons serves buyers and sellers across 11 communities in the Fraser Valley and Metro Vancouver. Select a community to search attached homes, detached homes, townhomes, or acreages.</p>
       <p class="eyebrow">11 Communities · Updated Daily from MLS®</p>
@@ -140,7 +140,7 @@ import { reviews, awards, listings, areas, southSurreyLinks, langleyLinks, langl
   <!-- ░░ Search homes by area and type ░░ -->
   <section class="section" aria-labelledby="h-type">
     <div class="wrap">
-      <h2 id="h-type" class="h2">Search homes by area and type</h2>
+      <h2 id="h-type" class="h2 caps">Search homes by area and type</h2>
       <p class="lede">Live MLS® listings, updated daily. Pick a home type, price range or area.</p>
       <div class="twocol">
         <div>
@@ -175,7 +175,7 @@ import { reviews, awards, listings, areas, southSurreyLinks, langleyLinks, langl
   <section class="section section--cream" aria-labelledby="h-res">
     <div class="wrap">
       <p class="eyebrow">Tools &amp; Resources</p>
-      <h2 id="h-res" class="h2">Resources</h2>
+      <h2 id="h-res" class="h2 caps">Resources</h2>
       <p class="lede">Everything you need to buy, sell, or stay informed in the South Surrey and Fraser Valley market.</p>
       <ul class="tiles">
         {resources.map((q) => (
@@ -195,7 +195,7 @@ import { reviews, awards, listings, areas, southSurreyLinks, langleyLinks, langl
   <!-- ░░ Ready to get started? ░░ -->
   <section class="section section--ink on-dark cta" aria-labelledby="h-ready">
     <div class="wrap">
-      <h2 id="h-ready" class="h2">Ready to get started?</h2>
+      <h2 id="h-ready" class="h2 caps">Ready to get started?</h2>
       <p class="lede">Call <a href="tel:604-928-1361">604-928-1361</a> or <a href="mailto:jaredgibbons@royallepage.ca">email me</a> today and let's discuss your next home sale or purchase.</p>
     </div>
   </section>
@@ -203,12 +203,10 @@ import { reviews, awards, listings, areas, southSurreyLinks, langleyLinks, langl
 </Base>
 
 <style>
-  /* ── Type preview (home only): heavier, tighter, uppercase headings; wider-tracked labels. Colours unchanged. ── */
+  /* Home-only sizing; the shared heading style (800, tight, .caps) is in global.css */
   .hero__name{font-weight:800;letter-spacing:-.05em}
   .hero__tag{font-weight:600;letter-spacing:.24em}
-  .h2,.h2--caps{font-weight:800;text-transform:uppercase;letter-spacing:-.025em;line-height:1.02;font-size:clamp(1.9rem,4.6vw,3.75rem)}
   .rank__h{font-weight:800;text-transform:uppercase;letter-spacing:-.045em;line-height:.96}
-  .eyebrow{font-weight:600;letter-spacing:.24em}
   .area__name{font-weight:800;text-transform:uppercase;letter-spacing:-.02em}
   .tile__h{font-weight:800;letter-spacing:-.015em}
   .subhead{font-weight:800}

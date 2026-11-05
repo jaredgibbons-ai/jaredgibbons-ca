@@ -5,6 +5,7 @@
 // reviews) are explicit files and take precedence over this route.
 import Base from '../layouts/Base.astro';
 import Rich from './Rich.astro';
+import { capsClass } from '../lib/caps';
 import Cta from './Cta.astro';
 import ReviewCards from './ReviewCards.astro';
 import FormStub from './FormStub.astro';
@@ -124,7 +125,7 @@ const explore = (EXPLORE as Record<string, any>)[String(page.path || '').startsW
     if (sec.kind === 'photos') return (
       <section class="section section--tight" aria-labelledby={`photos-${si}`}>
         <div class="wrap">
-          <h2 class="h2" id={`photos-${si}`}>Photos from the area</h2>
+          <h2 class="h2 caps" id={`photos-${si}`}>Photos from the area</h2>
           <ul class="phgrid">
             {sec.block.photos.map((ph: any) => <li class={ph.wide ? 'phgrid__wide' : undefined}><PhotoCredit photo={ph} sizes={ph.wide ? '(min-width:64rem) 72rem, 100vw' : '(min-width:64rem) 24rem, (min-width:40rem) 45vw, 100vw'} /></li>)}
           </ul>
@@ -147,7 +148,7 @@ const explore = (EXPLORE as Record<string, any>)[String(page.path || '').startsW
             {sec.blocks.map((b) => {
               if (b.t === 'h') {
                 const Tag = `h${Math.min(b.level, 5)}`;
-                return <Tag id={b.id} class={b.level === 1 ? 'pg__h1' : b.level === 2 ? 'h2' : 'pg__h'}>{b.href ? <Rich parts={[{ t: b.text, h: b.href }]} /> : b.text}</Tag>;
+                return <Tag id={b.id} class={(b.level === 1 ? 'pg__h1' : b.level === 2 ? 'h2' : 'pg__h') + (b.level <= 2 ? capsClass(b.text) : '')}>{b.href ? <Rich parts={[{ t: b.text, h: b.href }]} /> : b.text}</Tag>;
               }
               if (b.t === 'p') return <p class={b.cls}><Rich parts={b.parts} /></p>;
               if (b.t === 'photo') return <PhotoCredit photo={b.photo} hero sizes="(min-width:48rem) 40rem, 100vw" />;
@@ -195,6 +196,7 @@ const explore = (EXPLORE as Record<string, any>)[String(page.path || '').startsW
   .pg{max-width:var(--measure)}
   .pg :global(p){margin:0 0 1em}
   .pg__h1{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.05;letter-spacing:-.025em;margin:0 0 1.25rem;text-wrap:balance;max-width:24ch}
+  .pg__h1.caps{max-width:32ch}
   .pg__h{font-size:1.25rem;margin:2rem 0 .75rem}
   .pg p,.pg li,.pg a{overflow-wrap:anywhere}
   .byline{font:600 .8125rem var(--f-head);letter-spacing:.04em}

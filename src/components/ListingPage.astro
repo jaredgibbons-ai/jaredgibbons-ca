@@ -4,6 +4,7 @@ import ExploreLinks from './ExploreLinks.astro';
 // Own-listing detail page. Content comes from src/data/listings/<slug>.json (tools/import_listings.py).
 // Photos: web-size derivatives of the owner's photo export (never hotlinked from the vendor CDN).
 import Base from '../layouts/Base.astro';
+import { capsClass } from '../lib/caps';
 import Cta from './Cta.astro';
 import ListingGallery from './ListingGallery.astro';
 import MortgageCalc from './MortgageCalc.astro';
@@ -56,7 +57,7 @@ const telHref = (s: string) => 'tel:' + s;
   <section class="section">
     <div class="wrap ls">
       {blocks.map((b) => {
-        if (b.t === 'h' && b.level === 1) return <h1 class="ls__h1">{b.text}</h1>;
+        if (b.t === 'h' && b.level === 1) return <h1 class={`ls__h1${capsClass(b.text)}`}>{b.text}</h1>;
         if (b.t === 'summary') {
           const inner = (
             <>
