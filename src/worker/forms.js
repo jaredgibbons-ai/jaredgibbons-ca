@@ -143,8 +143,8 @@ export async function handleForm(request, env, deps = {}) {
   if (body.bad || typeof body.data !== 'object' || body.data === null) return json(400, { ok: false, error: 'bad_request' });
   const input = body.data;
 
-  // honeypot: real people never fill it; answer as if accepted so bots learn nothing
-  if (typeof input.website === 'string' && input.website.trim() !== '') return json(200, { ok: true });
+  // honeypot (named _hp_url because browsers and password managers autofill fields called "website"): real people never fill it; answer as if accepted so bots learn nothing
+  if (typeof input._hp_url === 'string' && input._hp_url.trim() !== '') return json(200, { ok: true });
 
   const token = input['cf-turnstile-response'];
   if (typeof token !== 'string' || !token) return json(403, { ok: false, error: 'captcha_required' });

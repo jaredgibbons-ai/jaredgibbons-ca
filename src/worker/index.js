@@ -4,13 +4,31 @@ import { handleForm } from './forms.js';
 import { handlePhoto } from './photos.js';
 
 const index = buildIndex(rules);
+// Headers on every response, API and photo answers included. CSP here is frame protection only: a script allowlist needs the launch inventory of
+// third-party scripts (Google Maps, Turnstile, MyRealPage, YouTube) and is a separate step (D-140).
 const SECURITY = {
   'x-content-type-options': 'nosniff',
   'referrer-policy': 'strict-origin-when-cross-origin',
+  'x-frame-options': 'SAMEORIGIN',
+  'content-security-policy': "frame-ancestors 'self'; base-uri 'self'",
+  'permissions-policy': 'camera=(), microphone=(), payment=(), usb=()',
+  'strict-transport-security': 'max-age=31536000',
 };
+// Fail safe: pages are noindex unless INDEXABLE is exactly the string "true". A missing, mistyped or inherited setting keeps the site closed.
+const indexable = (env) => env.INDEXABLE === 'true';
 
 export default {
   async fetch(request, env) {
+    const res = await handle(request, env);
+    const h = new Headers(res.headers);
+    for (const [k, v] of Object.entries(SECURITY)) if (!h.has(k)) h.set(k, v);
+    if (!indexable(env)) h.set('x-robots-tag', 'noindex, nofollow');
+    return new Response(res.body, { status: res.status, statusText: res.statusText, headers: h });
+  },
+};
+
+async function handle(request, env) {
+  {
     const pathname = new URL(request.url).pathname;
     if (pathname.startsWith('/api/forms/')) return handleForm(request, env);
     if (pathname.startsWith('/listing-photos/')) return handlePhoto(request, env, pathname);
@@ -38,27 +56,29 @@ export default {
     };
     // route() is synchronous; prefetch the few candidate paths it can ask about.
     const u = new URL(request.url);
-    const cands = new Set([u.pathname, u.pathname + '.html', '/index.html', u.pathname.replace(/\/+$/, ''), '/404.html']);
+    const bare = u.pathname.replace(/\/+$/, '');
+    const cands = new Set([u.pathname, u.pathname + '.html', '/index.html', bare, '/404.html']);
     for (const [re, f] of NESTED) {
-      const m = u.pathname.match(re); if (m) cands.add(f(m));
+      for (const pth of [u.pathname, bare]) { const m = pth.match(re); if (m) cands.add(f(m)); }
     }
+    const dbl = bare.match(/^\/[^/]+\.html\/([^/]+\.html)$/); if (dbl) cands.add('/' + dbl[1]);
     for (const c of cands) await exists(c);
     const decision = route(request.url, index, (p) => seen.get(p) === true);
 
     const withHeaders = (res, extra = {}) => {
       const h = new Headers(res.headers);
-      for (const [k, v] of Object.entries({ ...SECURITY, ...extra })) h.set(k, v);
-      if (env.PREVIEW === 'true') h.set('x-robots-tag', 'noindex, nofollow');
+      for (const [k, v] of Object.entries(extra)) h.set(k, v);
       return new Response(res.body, { status: res.status, headers: h });
     };
     if (decision.type === 'redirect') {
-      return withHeaders(new Response(null, { status: decision.status, headers: { location: decision.location } }));
+      // An hour, not forever: a browser keeps a bare 301 indefinitely, so a bad hop would stick for every visitor who met it.
+      return withHeaders(new Response(null, { status: decision.status, headers: { location: decision.location, 'cache-control': 'public, max-age=3600' } }));
     }
     if (decision.type === 'asset') {
       const res = await env.ASSETS.fetch(new Request(new URL(decision.path, request.url), request));
       return withHeaders(res, decision.path.endsWith('.html') ? { 'cache-control': 'public, max-age=0, must-revalidate' } : {});
     }
     const nf = await env.ASSETS.fetch(new Request(new URL('/404.html', request.url), { method: 'GET' }));
-    return withHeaders(new Response(nf.body, { status: 404, headers: { 'content-type': 'text/html; charset=utf-8' } }), { 'cache-control': 'no-store' });
-  },
-};
+    return withHeaders(new Response(nf.body, { status: decision.status || 404, headers: { 'content-type': 'text/html; charset=utf-8' } }), { 'cache-control': 'no-store' });
+  }
+}

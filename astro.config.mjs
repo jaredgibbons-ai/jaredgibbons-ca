@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import fixLinks from './src/integrations/fix-links.mjs';
+import lastmod from './src/integrations/lastmod.mjs';
 
 // Static output. Archived URLs keep their .html suffix (build.format: 'file'), so
 // /fort-langley.html is emitted as dist/fort-langley.html. The routing Worker (later phase)
@@ -10,5 +11,5 @@ export default defineConfig({
   trailingSlash: 'never',
   build: { format: 'file', inlineStylesheets: 'auto' },
   devToolbar: { enabled: false },
-  integrations: [fixLinks()],
+  integrations: [fixLinks(), lastmod()],
 });

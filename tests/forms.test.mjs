@@ -34,7 +34,7 @@ test('captcha is mandatory and verified server-side', async () => {
   assert.equal((await handleForm(mk(good), env(), { fetch: captcha(false) })).status, 403);
 });
 test('honeypot looks accepted but stores nothing', async () => {
-  const e = env(); const r = await handleForm(mk({ ...good, website: 'http://spam' }), e, { fetch: captcha() });
+  const e = env(); const r = await handleForm(mk({ ...good, _hp_url: 'http://spam' }), e, { fetch: captcha() });
   assert.equal(r.status, 200); assert.equal(e.LEADS_DB.rows.length, 0);
 });
 test('origin, method, unknown form, size and rate limits', async () => {

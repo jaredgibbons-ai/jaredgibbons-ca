@@ -13,8 +13,9 @@ const idx = buildIndex(rules);
 const R = (p) => route(`https://jaredgibbons.ca${p}`, idx, exists);
 
 test('rules account for all 81 archive rows', () => {
-  const n = [...rules.hostRules, ...rules.redirects.filter((x) => x.source !== 'live-observed'), ...rules.gone].reduce((a, x) => a + x.rows, 0)
-    + [...rules.conflicts, ...rules.ignored].reduce((a, x) => a + x.rows.length, 0);
+  const n = [...rules.redirects.filter((x) => x.source !== 'live-observed'), ...rules.gone].reduce((a, x) => a + x.rows, 0)
+    + [...rules.conflicts, ...rules.ignored].reduce((a, x) => a + x.rows.length, 0)
+    + Object.values(rules.rows_in_code).reduce((a, x) => a + x, 0);
   assert.equal(n, 81);
 });
 test('host rules: http and www go to https apex', () => {
@@ -50,6 +51,18 @@ test('tracking, CMS preview and pagination params serve the page (no redirect, a
 });
 test('archive 404 reference path is a real 404', () => {
   assert.equal(R('/this-page-does-not-exist-archive-check').type, 'notfound');
+  assert.equal(rules.gone.some((g) => g.from.includes('archive-check')), false);   // the crawler probe is not shipped as a rule
+});
+test('D-140: no redirect target 404s; doubled-prefix pages, query strings, /404.html, the feed and the PTT page', () => {
+  for (const r of rules.redirects) if (!r.to.includes('listing.')) { const t = r.to.split('?')[0]; assert.equal(R(t).type, 'asset', `${r.from} -> ${r.to}`); }
+  assert.equal(rules.redirects.filter((r) => r.to.startsWith('/recip.html/')).length, 0);
+  assert.deepEqual(R('/our-listings.html/white-rock-condos-for-sale.html'), { type: 'redirect', location: '/white-rock-condos-for-sale.html', status: 301 });
+  assert.equal(R('/surrey-open-houses.html/not-a-real-page.html').type, 'notfound');
+  assert.equal(R('/contact-us?utm_source=postcard').location, '/contact.html?utm_source=postcard');
+  assert.equal(R('/404.html').type, 'notfound');
+  assert.equal(R('/blog.html/blog.feed').status, 410);
+  assert.equal(R('/bc-property-transfer-tax-calculator.html').location, '/first-time-buyer-calculator.html');
+  assert.equal(R('/langley-condos-under-700k.html').location, '/langley-condos-for-sale.html');
 });
 test('nested paths map to internal prefixes without clashing with their parent page', () => {
   const fake = (p) => ['/blog.html', '/internal/blog/some-post-123.html', '/internal/listings/listing.r1.1.html'].includes(p);
@@ -65,7 +78,7 @@ const out = path.join('node_modules', '.cache-worker-test.mjs');
 execFileSync('npx', ['esbuild', 'src/worker/index.js', '--bundle', '--format=esm', `--outfile=${out}`, '--log-level=error'], { stdio: 'inherit' });
 const worker = (await import(path.resolve(out))).default;
 const env = {
-  PREVIEW: 'true',
+  INDEXABLE: 'false',
   ASSETS: { async fetch(req) {
     const p = new URL(req.url).pathname;
     if (!exists(p)) return new Response('nope', { status: 404 });
@@ -96,6 +109,24 @@ test('worker: blog post and own-listing pages are served at their public URLs; /
   assert.equal((await call('/internal/listings/' + lst)).status, 404);
   assert.equal((await call('/blog.html/not-a-real-post-1')).status, 404);
   assert.equal((await call('/blog.html')).status, 200);
+});
+test('worker D-140: fail-safe noindex, security headers on every answer, redirect cache, real 404 status, trailing-slash nested path', async () => {
+  const lst = fs.readdirSync(path.join(DIST, 'internal/listings')).find((f) => f.includes('similkameen')).replace(/\.html$/, '');
+  let r = await call('/our-listings.html/' + lst + '/', { redirect: 'manual' });
+  assert.equal(r.status, 301); assert.equal(r.headers.get('location'), '/our-listings.html/' + lst);
+  r = await call('/contact-us?utm_source=postcard', { redirect: 'manual' });
+  assert.equal(r.headers.get('location'), '/contact.html?utm_source=postcard'); assert.equal(r.headers.get('cache-control'), 'public, max-age=3600');
+  assert.equal((await call('/404.html')).status, 404);
+  assert.equal((await call('/blog.html/blog.feed')).status, 410);
+  r = await call('/cedar-hills.html');
+  for (const h of ['x-frame-options', 'content-security-policy', 'permissions-policy', 'strict-transport-security']) assert.ok(r.headers.get(h), h);
+  // every answer is noindex unless INDEXABLE is exactly "true": a boolean, "TRUE", "1" or nothing all stay closed
+  for (const v of [undefined, 'false', true, 'TRUE', '1', 'yes']) { r = await worker.fetch(new Request('https://jaredgibbons.ca/cedar-hills.html'), { ...env, INDEXABLE: v }); assert.equal(r.headers.get('x-robots-tag'), 'noindex, nofollow', String(v)); }
+  r = await worker.fetch(new Request('https://jaredgibbons.ca/cedar-hills.html'), { ...env, INDEXABLE: 'true' });
+  assert.equal(r.headers.get('x-robots-tag'), null);
+  // API and photo answers carry the same headers
+  r = await call('/api/reviews.json'); assert.equal(r.headers.get('x-robots-tag'), 'noindex, nofollow'); assert.ok(r.headers.get('x-frame-options'));
+  r = await call('/listing-photos/abc-480.webp'); assert.equal(r.headers.get('x-robots-tag'), 'noindex, nofollow');
 });
 test('worker: only GET and HEAD', async () => {
   assert.equal((await call('/', { method: 'POST' })).status, 405);

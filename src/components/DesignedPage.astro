@@ -62,7 +62,7 @@ const hero = d.hero;
     </div>
     <div class="wrap">
       <ul class="dp-stats" style={`--n:${hero.stats.length}`}>
-        {hero.stats.map((s: any) => <li><strong>{s.k}</strong><span>{s.v}</span></li>)}
+        {hero.stats.map((s: any) => <li><strong>{s.k}</strong>{' '}<span>{s.v}</span></li>)}
       </ul>
     </div>
   </header>
@@ -84,7 +84,7 @@ const hero = d.hero;
             <ul class:list={['dp-tiles', { 'dp-tiles--small': b.small, 'dp-tiles--4': b.items.length === 4 }]}>
               {b.items.map((t: any) => (
                 <li class="dp-tile">
-                  <strong class="dp-tile__k">{t.k}</strong>
+                  <strong class="dp-tile__k">{t.k}</strong>{' '}
                   {t.t && <span class="dp-tile__t">{t.t}</span>}
                   {t.d && <p class="dp-tile__d">{t.d}</p>}
                 </li>
@@ -381,7 +381,7 @@ const hero = d.hero;
   .dp-band strong{font:800 1.125rem var(--f-head)}
   .dp-band__alt{font-weight:700;text-decoration:underline}
   .dp-fine{font-size:.875rem;color:var(--grey);max-width:46rem;margin:var(--s3) 0}
-  .dp-sec--ink .dp-fine{color:#d9d9d9}
+  .dp-sec--ink .dp-fine{color:var(--cream-deep)}
   .dp-fine__b{margin-left:1rem}
   .dp-steps{list-style:none;margin:var(--s5) 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--ink)}
   .dp-steps li{display:grid;grid-template-columns:3.25rem 1fr;gap:var(--s4);padding:1.25rem 0;border-bottom:1px solid var(--ink)}
@@ -455,6 +455,6 @@ const hero = d.hero;
   .dp-vf :global(.fstub label){color:#fff}
   .dp-vf :global(.fstub .notice){color:var(--ink)}
   .dp-vf :global(.fstub .btn){background:#fff;color:var(--ink);border-color:#fff;opacity:.6}
-  .dp-close__foot{margin:var(--s5) 0 0;font-size:.875rem;color:#d9d9d9}
+  .dp-close__foot{margin:var(--s5) 0 0;font-size:.875rem;color:var(--cream-deep)}
   .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 </style>

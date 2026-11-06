@@ -1,31 +1,25 @@
 {
  "generated_from": "docs/archive-extracts/redirects.csv",
  "rows": 81,
- "hostRules": [
-  {
-   "from": "http://jaredgibbons.ca/",
-   "to": "https://jaredgibbons.ca/",
-   "status": 301,
-   "rows": 2
-  },
-  {
-   "from": "http://www.jaredgibbons.ca/",
-   "to": "https://jaredgibbons.ca/",
-   "status": 301,
-   "rows": 1
-  },
-  {
-   "from": "https://www.jaredgibbons.ca/",
-   "to": "https://jaredgibbons.ca/",
-   "status": 301,
-   "rows": 2
-  }
+ "live_observed_rows": 28,
+ "doubled_prefix_paths": [
+  "/blog.html/south-surrey-townhomes-for-sale.html",
+  "/blog.html/south-surrey-white-rock-55-plus-condos-for-sale.html",
+  "/chilliwack-open-houses.html/maple-ridge-houses-for-sale.html",
+  "/our-listings.html/white-rock-condos-for-sale.html",
+  "/south-surrey-open-houses.html/cloverdale-neighbourhood-guides.html",
+  "/surrey-open-houses.html/langley-neighbourhood-guides.html"
  ],
+ "rows_in_code": {
+  "host_http_www": 5,
+  "crawler_probe": 1,
+  "doubled_prefix": 6
+ },
  "redirects": [
   {
    "rows": 1,
-   "from": "/blog.html/blog.feed",
-   "to": "/blog.html",
+   "from": "/bc-property-transfer-tax-calculator.html",
+   "to": "/first-time-buyer-calculator.html",
    "status": 301,
    "target_blocked_idx": false
   },
@@ -179,7 +173,7 @@
   {
    "rows": 1,
    "from": "/langley-condos-under-700k.html",
-   "to": "/langley-condos-under-499k.html",
+   "to": "/langley-condos-for-sale.html",
    "status": 301,
    "target_blocked_idx": false,
    "source": "live-observed"
@@ -300,7 +294,7 @@
   {
    "rows": 1,
    "from": "/recip.html/listing.10-15065-58-avenue-surrey.106795272",
-   "to": "/recip.html/listing.r3044624-surrey-bc.17190279096",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
@@ -314,7 +308,7 @@
   {
    "rows": 1,
    "from": "/recip.html/listing.117-16433-19-avenue-surrey-bc-v3z-0z1-r3074326.107493379",
-   "to": "/recip.html/listing.r3074326-surrey-bc.17190346422",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
@@ -335,14 +329,14 @@
   {
    "rows": 1,
    "from": "/recip.html/listing.15453-108-avenue-surrey.106832316",
-   "to": "/recip.html/listing.r3046775-surrey-bc.17190245519",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
   {
    "rows": 1,
    "from": "/recip.html/listing.162-15236-36-avenue-surrey-bc-v3z-2b3-r3072165.107436115",
-   "to": "/recip.html/listing.r3072165-surrey-bc.17190336953",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
@@ -356,7 +350,7 @@
   {
    "rows": 1,
    "from": "/recip.html/listing.17336-0b-avenue-surrey-bc-v3s-8l2-r3074997.107539838",
-   "to": "/recip.html/listing.r3074997-surrey-bc.17190341226",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
@@ -370,14 +364,14 @@
   {
    "rows": 1,
    "from": "/recip.html/listing.17804-60th-avenue-surrey.106784460",
-   "to": "/recip.html/listing.r3044402-surrey-bc.17190175424",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
   {
    "rows": 1,
    "from": "/recip.html/listing.18863-64a-avenue-surrey.106833384",
-   "to": "/recip.html/listing.r3046903-surrey-bc.17190236720",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
@@ -405,21 +399,21 @@
   {
    "rows": 1,
    "from": "/recip.html/listing.208-22022-49-avenue-langley.106858316",
-   "to": "/recip.html/listing.r3047191-langley-bc.17190271059",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
   {
    "rows": 1,
    "from": "/recip.html/listing.20952-94b-avenue-langley.106870799",
-   "to": "/recip.html/listing.r3046631-langley-bc.17190195033",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
   {
    "rows": 1,
    "from": "/recip.html/listing.21-21267-83a-avenue-langley.106861359",
-   "to": "/recip.html/listing.r3047809-langley-bc.17190271047",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
@@ -433,14 +427,14 @@
   {
    "rows": 1,
    "from": "/recip.html/listing.23-6513-200-street-langley.106812017",
-   "to": "/recip.html/listing.r3045656-langley-bc.17190187688",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
   {
    "rows": 1,
    "from": "/recip.html/listing.23072-muench-trail-langley.106756612",
-   "to": "/recip.html/listing.r3042510-langley-bc.17190275279",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
@@ -461,7 +455,7 @@
   {
    "rows": 1,
    "from": "/recip.html/listing.26446-32a-avenue-langley.106942544",
-   "to": "/recip.html/listing.r3051350-langley-bc.17190236709",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
@@ -475,21 +469,21 @@
   {
    "rows": 1,
    "from": "/recip.html/listing.303-1354-winter-street-white-rock.104204538",
-   "to": "/recip.html/listing.r2965640-white-rock-bc.17190124782",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
   {
    "rows": 1,
    "from": "/recip.html/listing.3224-272b-street-langley.106756082",
-   "to": "/recip.html/listing.r3042784-langley-bc.17190225607",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
   {
    "rows": 1,
    "from": "/recip.html/listing.327-171a-street-surrey.106858307",
-   "to": "/recip.html/listing.r3047681-surrey-bc.17190195981",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
@@ -503,21 +497,21 @@
   {
    "rows": 1,
    "from": "/recip.html/listing.3799-196a-street-langley.106849429",
-   "to": "/recip.html/listing.r3047295-langley-bc.17190204693",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
   {
    "rows": 1,
    "from": "/recip.html/listing.4-12957-17-avenue-surrey.106981065",
-   "to": "/recip.html/listing.r3053477-surrey-bc.17190286696",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
   {
    "rows": 1,
    "from": "/recip.html/listing.4-20292-96-avenue-langley.106699833",
-   "to": "/recip.html/listing.r3040509-langley-bc.17190253240",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
@@ -531,28 +525,28 @@
   {
    "rows": 1,
    "from": "/recip.html/listing.6124-264-street-langley.106649982",
-   "to": "/recip.html/listing.r3038682-langley-bc.17190193019",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
   {
    "rows": 1,
    "from": "/recip.html/listing.6767-182a-street-surrey.106857935",
-   "to": "/recip.html/listing.r3047332-surrey-bc.17190183850",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
   {
    "rows": 1,
    "from": "/recip.html/listing.7699-210-street-langley.106811512",
-   "to": "/recip.html/listing.r3045718-langley-bc.17190183861",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
   {
    "rows": 1,
    "from": "/recip.html/listing.8623-141-street-surrey.106858388",
-   "to": "/recip.html/listing.r3047628-surrey-bc.17190198538",
+   "to": "/recip.html",
    "status": 301,
    "target_blocked_idx": true
   },
@@ -647,23 +641,9 @@
   },
   {
    "rows": 1,
-   "from": "/bc-property-transfer-tax-calculator.html",
-   "archive_status": 404
-  },
-  {
-   "rows": 1,
-   "from": "/blog.html/south-surrey-townhomes-for-sale.html",
-   "archive_status": 403
-  },
-  {
-   "rows": 1,
-   "from": "/blog.html/south-surrey-white-rock-55-plus-condos-for-sale.html",
-   "archive_status": 403
-  },
-  {
-   "rows": 1,
-   "from": "/chilliwack-open-houses.html/maple-ridge-houses-for-sale.html",
-   "archive_status": 403
+   "from": "/blog.html/blog.feed",
+   "archive_status": 410,
+   "serve": 410
   },
   {
    "rows": 1,
@@ -677,27 +657,7 @@
   },
   {
    "rows": 1,
-   "from": "/our-listings.html/white-rock-condos-for-sale.html",
-   "archive_status": 403
-  },
-  {
-   "rows": 1,
    "from": "/sardis.html",
-   "archive_status": 404
-  },
-  {
-   "rows": 1,
-   "from": "/south-surrey-open-houses.html/cloverdale-neighbourhood-guides.html",
-   "archive_status": 403
-  },
-  {
-   "rows": 1,
-   "from": "/surrey-open-houses.html/langley-neighbourhood-guides.html",
-   "archive_status": 403
-  },
-  {
-   "rows": 1,
-   "from": "/this-page-does-not-exist-archive-check",
    "archive_status": 404
   }
  ],
