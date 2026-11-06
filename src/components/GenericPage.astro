@@ -42,6 +42,8 @@ const local = LOCAL[`../data/local/${page.slug}.json`];
 const INTERNAL_FAQ = /(owner-approved|\bflagged\b|\bin this file\b|\bthe archive\b|stated position|as its own statement|the page body|\.html page|\bunverified\b|^what is the [\w\- ]+ page\?|\bthe page (says|states|names|lists|shows|carries|quotes|gives|tells|describes|advises|covers|uses|itself)\b|\bdoes the [\w\- ]+ page (say|state|name|list|show|carry|quote|give|tell|describe|advise|cover)|what does the page|which of those claims)/i;
 if (local?.faq?.length) {
   const seenQ = new Set<string>();
+  // The two plain questions were generated with the page name inserted ("Can Jared show me homes in Open?", "… in Our?", "… in Sold Properties?"); the unnamed wording reads right on every page.
+  local.faq = local.faq.map((f: any) => /^Can Jared show me homes in .+\?$/.test(f.q) ? { ...f, q: 'Can I book a private showing with Jared?' } : /^How do I find out what my home in .+ is worth\?$/.test(f.q) ? { ...f, q: 'How do I find out what my home is worth?' } : f);
   local.faq = local.faq.filter((f: any) => { const k = String(f.q).trim().toLowerCase(); if (seenQ.has(k)) return false; seenQ.add(k); return !INTERNAL_FAQ.test(f.q + ' ' + f.a); });
 }
 // Three archive pages (About, Zonings, Buying) kept a contact form as plain text under an "... Form" heading (label lines, an option list, then "SUBMIT"). Those become the same
