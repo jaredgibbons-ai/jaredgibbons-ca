@@ -222,7 +222,7 @@ const hero = d.hero;
               <ul class="dp-vids">
                 {b.items.map((v: any) => (
                   <li><a href={`https://www.youtube.com/watch?v=${v.id}`} rel="noopener" target="_blank">
-                    <img src={`${v.src}.webp`} width="480" height="360" alt={v.alt} loading="lazy" decoding="async" />
+                    <img src={v.src ? `${v.src}.webp` : `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`} width="480" height="360" alt={v.alt} loading="lazy" decoding="async" />
                     <span class="dp-vids__play" aria-hidden="true">▶</span>
                     <span class="dp-vids__l">{v.label} <span class="sr-only">(opens YouTube)</span></span>
                   </a></li>
@@ -439,7 +439,7 @@ const hero = d.hero;
   .dp-vids img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;opacity:.95}
   .dp-vids__play{position:absolute;left:50%;top:42%;translate:-50% -50%;width:4.25rem;height:4.25rem;border-radius:50%;background:rgba(0,0,0,.75);border:2px solid #fff;display:grid;place-items:center;font-size:1.5rem;padding-left:.25rem}
   .dp-vids__l{display:block;padding:.7rem 1rem;font:700 .875rem var(--f-head);background:#000}
-  .dp-fig{margin:var(--s5) 0 0;border:1px solid var(--ink);background:#fff}
+  .dp-fig{margin:var(--s5) auto 0;border:1px solid var(--ink);background:#fff}
   .dp-fig img{display:block;width:100%;height:auto}
   .dp-book{list-style:none;margin:var(--s5) 0 0;padding:0 0 .75rem;display:flex;gap:var(--s4);overflow-x:auto;scroll-snap-type:x mandatory}
   .dp-book li{flex:0 0 min(70vw,15rem);scroll-snap-align:start;display:grid;gap:.4rem}

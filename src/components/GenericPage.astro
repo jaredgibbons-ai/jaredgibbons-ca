@@ -6,6 +6,7 @@
 import Base from '../layouts/Base.astro';
 import Rich from './Rich.astro';
 import { capsClass } from '../lib/caps';
+import { upgradeBlocks, dropOrphans, cleanArchive } from '../lib/upgrade';
 import Cta from './Cta.astro';
 import ReviewCards from './ReviewCards.astro';
 import FormStub from './FormStub.astro';
@@ -207,6 +208,8 @@ if (isHub) {
   page.blocks = out;
 }
 
+page.blocks = cleanArchive(page.blocks);
+
 // Split into render sections at each level-2 heading; reviews and grid get their own sections.
 type Sec = { kind: 'text' | 'reviews' | 'grid' | 'photos'; blocks: any[]; block?: any };
 const sections: Sec[] = [];
@@ -225,8 +228,10 @@ push();
   const pt = (b: any) => (b?.t === 'p' ? (b.parts || []).map((x: any) => x.t).join(' ').replace(/\s+/g, ' ').trim() : '');
   const isLabel = (b: any) => b?.t === 'p' && !b.cls && (b.parts || []).length === 1 && !b.parts[0].h && /^[A-Z0-9][^.!?:;]{1,46}\.$/.test(pt(b)) && pt(b).split(' ').length <= 7;
   const simple = (b: any) => b.t === 'p' || b.t === 'list';
-  for (const sec of sections) {
+  for (const [sx, sec] of sections.entries()) {
     if (sec.kind !== 'text') continue;
+    sec.blocks = dropOrphans(sec.blocks, (sections[sx + 1]?.kind === 'reviews' ? 'reviews clients' : sections.slice(sx + 1).find((x) => x.kind === 'text')?.blocks.find((b: any) => b.t === 'h' && b.level === 2)?.text || ''));
+    sec.blocks = upgradeBlocks(sec.blocks);
     for (const b of sec.blocks) if (b.t === 'p' && !b.cls && /:$/.test(pt(b)) && pt(b).split(' ').length <= 4) b.cls = 'pg__label';
     // questions: a level-3 heading or a one-line paragraph ending in "?", followed by its answer
     const isQ = (b: any) => (b?.t === 'h' && b.level === 3 && /\?\s*$/.test(b.text) && !b.href) || (b?.t === 'p' && !b.cls && (b.parts || []).length === 1 && !b.parts[0].h && /\?$/.test(pt(b)) && pt(b).split(' ').length <= 22);
@@ -255,7 +260,7 @@ push();
       if (ok && items.length >= 2) sec.blocks = [...sec.blocks.slice(0, first), { t: 'subs', items }, ...sec.blocks.slice(i)];
     }
     const first = sec.blocks[0];
-    (sec as any).split = first?.t === 'h' && first.level === 2 && !first.href && sec.blocks.length > 1 && sec.blocks.slice(1).every((b: any) => ['p', 'list', 'faq', 'subs', 'notice'].includes(b.t) || (b.t === 'h' && b.level >= 3));
+    (sec as any).split = first?.t === 'h' && first.level === 2 && !first.href && sec.blocks.length > 1 && sec.blocks.slice(1).every((b: any) => ['p', 'list', 'faq', 'subs', 'notice', 'kvgrid', 'stats'].includes(b.t) || (b.t === 'h' && b.level >= 3));
   }
 }
 const linkOnly = (items: any[]) => items.every((it) => it.length === 1 && it[0].h);
@@ -325,7 +330,7 @@ const explore = !_extra.length ? exploreBase
                 </ul>
               );
               if (b.t === 'card') return (
-                <a class="cardlink" href={b.href.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/'}>
+                <a class:list={['cardlink', { 'cardlink--arrow': b.lines.length === 2 && b.lines[1].text?.trim() === '→' }]} href={b.href.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/'}>
                   {b.lines.map((l: any, k: number) => {
                     if (l.level) { const T = `h${Math.min(l.level, 5)}`; return <T class="cardlink__h">{l.text}</T>; }
                     return <span class={k === 0 ? 'cardlink__h' : 'cardlink__t'}>{l.text}</span>;
@@ -364,11 +369,11 @@ const explore = !_extra.length ? exploreBase
                     <p><a class="btn" href="/sold-properties.html">See all {done.length} sold homes</a></p>
                   </>
                 );
-                const years = [...new Set(done.map((c) => c.year || 'Earlier'))];
+                const shown = done.slice(0, 24);
                 return (
                   <>
-                    <p>{done.length} homes sold or leased, newest first. <a href="/our-listings.html">See Jared's active listings</a>.</p>
-                    {years.map((y) => { const rows = done.filter((c) => (c.year || 'Earlier') === y); return <><h2 class="h2" id={`sold-${y}`}>Sold in {y} ({rows.length})</h2><ul class="cards">{rows.map(card)}</ul></>; })}
+                    <p>The {shown.length} most recent of the {done.length} homes Jared has sold or leased, newest first. <a href="/our-listings.html">See Jared's active listings</a>.</p>
+                    <ul class="cards">{shown.map(card)}</ul>
                   </>
                 );
               }
@@ -393,6 +398,17 @@ const explore = !_extra.length ? exploreBase
                   ))}
                 </ul>
               );
+              if (b.t === 'kvgrid') return (
+                <ul class:list={['kvgrid', { 'kvgrid--wide': b.wide }]}>
+                  {b.items.map((c: any) => (
+                    <li class="kv">
+                      {c.kicker && <p class="kv__k">{c.kicker}</p>}
+                      {c.title && <h3 class="kv__h">{c.title}</h3>}
+                      <dl class="kv__rows">{c.rows.map((r: any) => <div class="kv__row"><dt>{r.l}</dt><dd><Rich parts={r.v} /></dd></div>)}</dl>
+                    </li>
+                  ))}
+                </ul>
+              );
               if (b.t === 'stats') return (
                 <ul class:list={['statcards', { 'statcards--sm': b.small, 'statcards--six': b.items.length === 6 }]}>
                   {b.items.map((it: any) => <li class="statcard"><span class="statcard__l">{it.label}</span><strong class="statcard__v">{it.value}</strong>{it.sub && <span class="statcard__s">{it.delta ? <span class={['statcard__d', /^\s*[-\u2212]/.test(it.delta) ? 'is-down' : /^\s*\+/.test(it.delta) ? 'is-up' : ''].join(' ')} aria-hidden="true">{/^\s*[-\u2212]/.test(it.delta) ? '▼' : '▲'}</span> : null}{it.delta ? [(/^\s*[-\u2212]/.test(it.delta) ? 'Down' : 'Up'), String(it.delta).replace(/^\s*[-+\u2212]/, ''), String(it.sub).replace(/^\s*[-+\u2212]?[\d.]+%\s*/, '')].filter(Boolean).join(' ') : it.sub}</span>}</li>)}
@@ -410,8 +426,8 @@ const explore = !_extra.length ? exploreBase
                   if (bi < 1 || yi < 1 || b.rows.length > 6 || b.head.length < 4) return null;
                   return <ul class="statcards statcards--sm">{b.rows.map((r: any[]) => { const dv = String(r[yi]); return <li class="statcard"><span class="statcard__l">{typeof r[0] === 'object' ? r[0].t : r[0]}</span><strong class="statcard__v">{typeof r[bi] === 'object' ? r[bi].t : r[bi]}</strong><span class="statcard__s"><span class={'statcard__d ' + (/^\s*[-\u2212]/.test(dv) ? 'is-down' : 'is-up')} aria-hidden="true">{/^\s*[-\u2212]/.test(dv) ? '▼' : '▲'}</span>{/^\s*[-\u2212]/.test(dv) ? 'Down ' : /^\s*\+/.test(dv) ? 'Up ' : ''}{dv.replace(/^\s*[-+\u2212]/, '')} over 1 year</span></li>; })}</ul>;
                 })()}
-                <div class="tblwrap" tabindex="0" role="region" aria-label={b.caption}>
-                  <table class="tbl"><caption>{b.caption}</caption>
+                <div class:list={['tblwrap', { 'tblwrap--narrow': b.head.length <= 3 && b.rows.length <= 12 }]} tabindex="0" role="region" aria-label={b.caption}>
+                  <table class="tbl">{b.caption && <caption>{b.caption}</caption>}
                     <thead><tr>{b.head.map((h: string) => <th scope="col">{h}</th>)}</tr></thead>
                     <tbody>{b.rows.map((r: any[]) => <tr>{r.map((c, ci) => { const v = c && typeof c === 'object' ? <a href={c.h}>{c.t}</a> : c; return ci === 0 ? <th scope="row">{v}</th> : <td>{v}</td>; })}</tr>)}</tbody>
                   </table>
@@ -493,6 +509,20 @@ const explore = !_extra.length ? exploreBase
   .sub :global(p){margin:0 0 .75em;font-size:1rem;line-height:1.65}
   .sub :global(p:last-child){margin-bottom:0}
   .section--cream .sub{border-color:var(--cream-deep);border-top-color:var(--ink)}
+  .kvgrid{list-style:none;margin:0 0 1.5rem;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,27rem),1fr));gap:var(--s4)}
+  .kvgrid--wide{grid-template-columns:1fr;max-width:64rem}
+  .kv{background:#fff;border:1px solid var(--rule);border-top:3px solid var(--ink);padding:1.1rem 1.35rem .5rem;min-width:0}
+  .section--cream .kv{border-color:var(--cream-deep);border-top-color:var(--ink)}
+  .kv__k{font:700 .6875rem/1.3 var(--f-head);letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin:0 0 .35rem}
+  .kv__h{font:800 1rem/1.25 var(--f-head);letter-spacing:-.005em;margin:0 0 .6rem}
+  .kv__rows{margin:0}
+  .kv__row{display:grid;grid-template-columns:minmax(6.5rem,32%) 1fr;gap:.25rem 1rem;padding:.6rem 0;border-top:1px solid var(--rule);font-size:.9375rem;line-height:1.55}
+  .kv__row:first-child{border-top:0}
+  .kv dt{font:700 .75rem/1.5 var(--f-head);letter-spacing:.08em;text-transform:uppercase;color:var(--grey);padding-top:.1rem}
+  .kv dd{margin:0;overflow-wrap:anywhere}
+  .kv dt{overflow-wrap:normal;hyphens:manual}
+  .kv dd :global(strong),.kv dd :global(b){font-weight:700}
+  @media (max-width:30rem){.kv__row{grid-template-columns:1fr}}
   .lines{list-style:none;margin:0 0 1.25em;padding:0;border-top:1px solid var(--ink)}
   .lines li{padding:.55rem 0;border-bottom:1px solid var(--rule)}
   .lines--links{columns:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));gap:.75rem;border-top:0;margin:0 0 1.5rem}
@@ -502,6 +532,7 @@ const explore = !_extra.length ? exploreBase
   .lines--links li:hover,.lines--links li:focus-within{background:var(--ink);color:#fff}
   .lines--links li:hover :global(a)::after{transform:translateX(.25rem)}
   .lines--links li:hover :global(a),.lines--links li:focus-within :global(a){color:#fff}
+  .tblwrap--narrow{max-width:42rem}
   .tblwrap{overflow-x:auto;border:1px solid var(--ink);background:#fff;margin:0 0 1.5rem}
   /* Stat cards: figures run left to right, label above, big number, change below. */
   .statcards{list-style:none;margin:0 0 1.5rem;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:0;border:1px solid var(--ink);border-right:0;border-bottom:0;background:#fff}
@@ -527,6 +558,8 @@ const explore = !_extra.length ? exploreBase
   .tbl tbody th{font-weight:700}
   .tbl__src{font-size:.8125rem;margin:0;padding:.5rem .85rem}
   .cardlink{display:grid;gap:.35rem;border:1px solid var(--ink);background:#fff;padding:1.1rem 1.25rem;margin:0 0 var(--s4);text-decoration:none}
+  .cardlink--arrow{display:flex;align-items:center;justify-content:space-between;min-height:3.25rem;padding-block:.7rem}
+  .cardlink--arrow .cardlink__t{font-size:1.25rem;line-height:1}
   .cardlink:hover,.cardlink:focus-visible{background:var(--ink);color:#fff}
   .cardlink__h{font:700 1.0625rem/1.3 var(--f-head);margin:0}
   .cardlink__t{font-size:.9375rem}
