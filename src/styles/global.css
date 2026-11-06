@@ -97,13 +97,13 @@ a:hover{text-decoration-thickness:3px}
 .nav__toggle{font:inherit;width:1.75rem;height:2.75rem;margin-left:-.4rem;background:none;border:0;cursor:pointer;display:grid;place-items:center;color:var(--ink)}
 .nav__toggle svg{width:.7rem;height:.7rem;transition:transform .15s}
 .nav__toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
-.nav__panel{position:absolute;left:0;top:100%;min-width:17rem;background:#fff;border:1px solid var(--ink);border-top:0;padding:.75rem 0;box-shadow:6px 6px 0 var(--cream-deep)}
+.nav__panel{position:absolute;left:0;top:100%;min-width:17rem;max-height:calc(100vh - 11rem);max-height:calc(100dvh - 11rem);overflow-y:auto;overscroll-behavior:contain;background:#fff;border:1px solid var(--ink);border-top:0;padding:.75rem 0;box-shadow:6px 6px 0 var(--cream-deep)}
 .nav__panel[hidden]{display:none}
 .nav__panel a{display:block;padding:.45rem 1.25rem;font:400 .9375rem/1.35 var(--f-body);text-decoration:none}
 .nav__panel a:hover{background:var(--cream)}
 .nav__sub{padding-left:.75rem}
 .nav__sub-label{display:block;padding:.45rem 1.25rem;font:700 .875rem/1.35 var(--f-head)}
-.nav__panel--wide{max-height:calc(100vh - 11rem);overflow:auto;width:min(58rem,calc(100vw - 2*var(--gutter)));padding:1.25rem 0}
+.nav__panel--wide{overflow:auto;width:min(58rem,calc(100vw - 2*var(--gutter)));padding:1.25rem 0}
 .nav__item--wide{position:static}
 .nav__item--wide .nav__panel{left:50%;transform:translateX(-50%)}
 /* The last two panels open leftwards from the item's right edge so they never run off the screen (1301-1500 px). */
@@ -134,7 +134,7 @@ a:hover{text-decoration-thickness:3px}
   .nav__item{flex-wrap:wrap;border-bottom:1px solid var(--rule)}
   .nav__link{flex:1;min-height:3.25rem;font-size:.875rem;padding:0}
   .nav__toggle{width:3.25rem;height:3.25rem;margin:0}
-  .nav__panel,.nav__item--wide .nav__panel{position:static;transform:none;width:100%;min-width:0;columns:1;border:0;box-shadow:none;padding:0 0 1rem;flex-basis:100%}
+  .nav__panel,.nav__item--wide .nav__panel{position:static;transform:none;width:100%;min-width:0;max-height:none;overflow:visible;columns:1;border:0;box-shadow:none;padding:0 0 1rem;flex-basis:100%}
   .nav__panel a{padding-left:.5rem}
   .mega{display:block;padding:0}
   .mega__region{margin:1rem .5rem .25rem}
