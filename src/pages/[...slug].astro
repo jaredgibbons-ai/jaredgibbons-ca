@@ -41,6 +41,12 @@ export function getStaticPaths() {
     const all = [{ t: 'h', level: 2, text: 'All Blog Posts' }, { t: 'list', items: posts.map((q: any) => [{ t: String(q.title).replace(/ \| Jared Gibbons.*$/, ''), h: q.canonical }]) }];
     blog.props.page = { ...blog.props.page, blocks: [...head, ...body, ...all, ...(tailAt > 0 ? B.slice(tailAt) : [])] };
   }
+  // /our-listings.html and /sold-properties.html showed only the MyRealPage widget, so 192 of Jared's 203 listing pages had no link from the site. Both now carry a
+  // static card list built from src/data/listings (photos, price, facts), which also works when the widget does not load.
+  const own = out.find((o) => o.params.slug === 'our-listings');
+  if (own) { const B = own.props.page.blocks; const at = Math.max(1, B.findIndex((b: any) => b.t === 'p') + 1); own.props.page = { ...own.props.page, blocks: [...B.slice(0, at), { t: 'lcards', mode: 'active' }, ...B.slice(at)] }; }
+  const sold = out.find((o) => o.params.slug === 'sold-properties');
+  if (sold) { const B = sold.props.page.blocks; const at = B.findIndex((b: any) => b.t === 'grid'); sold.props.page = { ...sold.props.page, blocks: [...B.slice(0, at < 0 ? B.length : at), { t: 'lcards', mode: 'sold' }, ...B.slice(at < 0 ? B.length : at)] }; }
   // New pages (no archive counterpart) are authored as src/data/local/<slug>.json with a `new_page` header.
   const taken = new Set(out.map((o) => o.params.slug));
   const locals = import.meta.glob('../data/local/*.json', { eager: true, import: 'default' }) as Record<string, any>;

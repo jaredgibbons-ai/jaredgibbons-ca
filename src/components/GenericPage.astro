@@ -19,6 +19,8 @@ import REVIEW_EXCERPTS from '../data/review-excerpts.json';
 import AREA_PHOTOS from '../data/area-photos.json';
 import PhotoCredit from './PhotoCredit.astro';
 import IdxEmbed from './IdxEmbed.astro';
+import PropertyCard from './PropertyCard.astro';
+import { ownCards } from '../lib/own-listings';
 import IDX from '../data/idx-embeds.json';
 import BREADCRUMBS from '../data/breadcrumbs.json';
 import EXPLORE from '../data/explore.json';
@@ -202,7 +204,7 @@ const explore = !_extra.length ? exploreBase
     return (
       <section class:list={['section', { 'section--cream': si % 2 === 1, 'section--tight': !sec.blocks.some((x) => x.t === 'h') && sec.blocks.length <= 3 }]}>
         <div class="wrap">
-          <div class="pg">
+          <div class:list={['pg', { 'pg--wide': sec.blocks.some((x) => x.t === 'lcards') }]}>
             {sec.blocks.map((b) => {
               if (b.t === 'h') {
                 const Tag = `h${Math.min(b.level, 5)}`;
@@ -243,6 +245,31 @@ const explore = !_extra.length ? exploreBase
                   </ul>
                 </div>
               );
+              if (b.t === 'lcards') {
+                const all = ownCards();
+                const mon = (c: any) => { const m = /^(\w{3}) \d+, (\d{4})$/.exec(c.soldDate || ''); return m ? `Sold ${m[1]} ${m[2]}` : 'Sold'; };
+                const card = (c: any) => <PropertyCard href={c.href} photoSlug={c.slug} street={c.street} city={c.city} price={c.price} beds={c.beds} baths={c.baths}
+                  floorArea={c.sqft ? (/sq/i.test(c.sqft) ? c.sqft : `${c.sqft} sqft`) : undefined} status={c.status === 'Active' ? 'Active' : c.status} type={c.type} tags={c.status === 'Active' ? [] : [mon(c)]} mls={c.mls} moreLabel="More Info" />;
+                const active = all.filter((c) => c.status === 'Active').sort((a, b) => b.priceNum - a.priceNum);
+                const done = all.filter((c) => c.status !== 'Active').sort((a, b) => b.soldTs - a.soldTs);
+                if (b.mode === 'active') return (
+                  <>
+                    {active.length > 0 && <><h2 class="h2">Active listings ({active.length})</h2>
+                      <p class="notice">Status is shown as captured in the archive on 2026-10-31. Live status needs the listing feed, which is not connected in the preview.</p>
+                      <ul class="cards">{active.map(card)}</ul></>}
+                    <h2 class="h2">Recently sold</h2>
+                    <ul class="cards">{done.slice(0, 12).map(card)}</ul>
+                    <p><a class="btn" href="/sold-properties.html">See all {done.length} sold homes</a></p>
+                  </>
+                );
+                const years = [...new Set(done.map((c) => c.year || 'Earlier'))];
+                return (
+                  <>
+                    <p>{done.length} homes sold or leased, newest first. <a href="/our-listings.html">See Jared's active listings</a>.</p>
+                    {years.map((y) => { const rows = done.filter((c) => (c.year || 'Earlier') === y); return <><h2 class="h2" id={`sold-${y}`}>Sold in {y} ({rows.length})</h2><ul class="cards">{rows.map(card)}</ul></>; })}
+                  </>
+                );
+              }
               if (b.t === 'notice') return <p class="notice">{b.text}</p>;
               if (b.t === 'table') return (
                 <div class="tblwrap" tabindex="0" role="region" aria-label={b.caption}>
@@ -272,6 +299,7 @@ const explore = !_extra.length ? exploreBase
 <style>
   .section--tight{padding-block:clamp(1.25rem,3vw,2rem)}
   .pg{max-width:var(--measure)}
+  .pg--wide{max-width:none}
   .pg :global(p){margin:0 0 1em}
   .pg__h1{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.05;letter-spacing:-.025em;margin:0 0 1.25rem;text-wrap:balance;max-width:24ch}
   .pg__h1.caps{max-width:32ch}

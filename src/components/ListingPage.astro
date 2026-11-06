@@ -5,6 +5,7 @@ import ExploreLinks from './ExploreLinks.astro';
 // Photos: web-size derivatives of the owner's photo export (never hotlinked from the vendor CDN).
 import Base from '../layouts/Base.astro';
 import { titleCaseAddress } from '../lib/seo';
+import { parseListingSlug } from '../lib/own-listings';
 import { capsClass } from '../lib/caps';
 import Cta from './Cta.astro';
 import ListingGallery from './ListingGallery.astro';
@@ -37,7 +38,6 @@ const altByPos: Record<number, string> = {};
 for (const a of page.photos.alts ?? []) { const m = /^Photo (\d+):/.exec(a); if (m) altByPos[Number(m[1])] = a.replace(/^(Photo \d+: )([^,]+)/, (_x: string, p1: string, p2: string) => p1 + titleCaseAddress(p2)); }
 const explore = (EXPLORE as Record<string, any>)['listing:' + page.slug];
 const _h1 = (blocks.find((b: any) => b.t === 'h' && b.level === 1) as any)?.text;
-const crumbs = _h1 ? [{ name: 'Home', href: '/index.html' }, { name: 'My Listings', href: '/our-listings.html' }, { name: String(_h1), href: '/our-listings.html' }] : [];
 const priceNum = /^\$[\d,]+$/.test(price) ? Number(price.replace(/[$,]/g, '')) : 0;
 const telHref = (s: string) => 'tel:' + s;
 
@@ -45,9 +45,11 @@ const telHref = (s: string) => 'tel:' + s;
 const factMap: Record<string, string> = {};
 for (const b of blocks) if (b.t === 'facts') for (const it of b.items) { const k = String(it.k).replace(/:$/, ''); if (!(k in factMap) && it.v?.[0]) factMap[k] = String(it.v[0]); }
 const titleParts = String(page.title || '').replace(/ – MLS .*$/, '').split(', ');
-const cityName = titleParts.length > 2 ? titleParts[titleParts.length - 2] : '';
-const addr = titleCaseAddress(titleParts[0] || '');
-const seoTitle = String(page.title || '').replace(/^[^,]+/, addr);
+const _slugAddr = parseListingSlug(page.slug);
+const cityName = _slugAddr ? _slugAddr.city : (titleParts.length > 2 ? titleParts[titleParts.length - 2] : '');
+const addr = _slugAddr ? _slugAddr.street : titleCaseAddress(titleParts[0] || '');
+const seoTitle = titleParts.length > 1 ? String(page.title || '').replace(/^[^,]+/, titleCaseAddress(titleParts[0])) : String(page.title || '');
+const crumbs = _h1 ? [{ name: 'Home', href: '/index.html' }, { name: 'My Listings', href: '/our-listings.html' }, { name: _slugAddr ? `${addr}, ${cityName}` : String(_h1), href: '/our-listings.html' }] : [];
 const statusWord = page.status === 'Sold' ? 'Sold' : page.status === 'Leased' ? 'Leased' : 'For sale';
 function builtMeta(): string {
   const dw = factMap['Dwelling Type'] || '';
