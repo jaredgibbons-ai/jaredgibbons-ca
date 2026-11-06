@@ -72,6 +72,7 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
         {listings.map((l) => (
           <PropertyCard
             href={`/our-listings.html/listing.${l.slug}`}
+            photoSlug={`listing.${l.slug}`}
             street={l.street} city={l.city} price={l.price}
             beds={l.beds} baths={l.baths} area_sqft={l.sqft}
             brokerage={l.brokerage}

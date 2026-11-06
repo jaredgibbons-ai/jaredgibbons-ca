@@ -5,13 +5,25 @@
  * are supplied differ (brief: "sold cards must match buy-page cards").
  */
 import Icon from './Icon.astro';
-const { as: Tag = 'h3', titleRest, areaM2, moreLabel = "More Info", href, street, city, postal, area, price, beds, baths, area_sqft, floorArea, status, type, mls, brokerage, listedBy, description, tags = [] } = Astro.props;
+// First photo of the listing (web-size WebP from the R2 route; lists written by tools/process_photos.py)
+const PHOTO_LISTS = import.meta.glob('../data/listing-photos/*.json', { eager: true, import: 'default' }) as Record<string, any[]>;
+const { photoSlug, as: Tag = 'h3', titleRest, areaM2, moreLabel = "More Info", href, street, city, postal, area, price, beds, baths, area_sqft, floorArea, status, type, mls, brokerage, listedBy, description, tags = [] } = Astro.props;
 const fmt = (n) => n;
+// The home page's slug can differ from the listing's own slug in the middle; the vendor id after the last dot is the same, so fall back to that.
+const photoKey = photoSlug ? (`../data/listing-photos/${photoSlug}.json` in PHOTO_LISTS ? `../data/listing-photos/${photoSlug}.json` : Object.keys(PHOTO_LISTS).find((k) => k.endsWith(`.${String(photoSlug).split('.').pop()}.json`))) : undefined;
+const photo = photoKey ? (PHOTO_LISTS[photoKey] ?? [])[0] : undefined;
+const photoBase = import.meta.env.PUBLIC_PHOTO_BASE ?? '/listing-photos/';
 ---
 <li class="pcard" data-status={status ?? undefined}>
-  <div class="pcard__media" role="img" aria-label={`Photo of ${street}, ${city} — pending`}>
-    <span class="pcard__ph">Photo pending<br />from archive</span>
-  </div>
+  {photo ? (
+    <div class="pcard__media">
+      <img src={`${photoBase}${photo.id}-480.webp`} srcset={`${photoBase}${photo.id}-480.webp 480w, ${photoBase}${photo.id}-960.webp 960w`} sizes="(min-width:64rem) 25rem, (min-width:40rem) 33vw, 100vw" width={photo.w >= photo.h ? 480 : Math.round(480 * photo.w / photo.h)} height={photo.w >= photo.h ? Math.round(480 * photo.h / photo.w) : 480} alt={`${street}, ${city}`} loading="lazy" decoding="async" />
+    </div>
+  ) : (
+    <div class="pcard__media" role="img" aria-label={`Photo of ${street}, ${city} — pending`}>
+      <span class="pcard__ph">Photo pending<br />from archive</span>
+    </div>
+  )}
   <div class="pcard__body">
     {(status || type || tags.length > 0) && (
       <p class="pcard__tags">
