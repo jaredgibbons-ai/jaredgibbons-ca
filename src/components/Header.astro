@@ -43,6 +43,8 @@ const MENUS: Record<string, { cols: Col[]; cta: { title: string; text: string; l
     cta: { title: 'Market numbers', text: 'Benchmark prices, sales and listings for each area, updated monthly.', label: 'See the latest stats', href: '/fraser-valley-market-stats.html' },
   },
 };
+// Every land-use-plan entry reads "<Place> Land Use Plans" (the archive labels only said "Surrey", "Delta" and so on); the GIS entry keeps its name.
+const luLabel = (t: string) => /land use plan|geographic information/i.test(t) ? t : /\bplans$/i.test(t) ? t.replace(/\bplans$/i, 'Land Use Plans') : `${t} Land Use Plans`;
 const short = (l: string) => { const a = l.split(' | ')[0]; return a.length > 52 ? a.split(':')[0] : a; };
 const wide = new Set(['Communities', ...Object.keys(MENUS)]);
 function megaCols(item: any) {
@@ -50,7 +52,7 @@ function megaCols(item: any) {
   const kids: any[] = item.children, used = new Set<string>(), find = (l: string) => kids.find((c) => c.label === l);
   const cols = m.cols.map((c) => {
     const links: { label: string; href: string }[] = []; const seen = new Set<string>();
-    const add = (k: any) => { const t = short(k.label); if (!k.href || seen.has(t)) return; seen.add(t); links.push({ label: t, href: k.href }); };
+    const add = (k: any) => { const t = c.expand === 'Land use plans' ? luLabel(short(k.label)) : short(k.label); if (!k.href || seen.has(t)) return; seen.add(t); links.push({ label: t, href: k.href }); };
     if (c.expand) { const p = find(c.expand); if (p) { used.add(p.label); (p.children || []).slice(0, c.max ?? 99).forEach(add); } }
     for (const l of [...(c.items || []), ...(c.after || [])]) { const k = find(l); if (k) { used.add(l); add(k); } }
     return { title: c.title, href: c.href, links };
@@ -176,8 +178,10 @@ const slug = (t: string) => t.toLowerCase().replace(/[^a-z0-9]+/g, '-');
     });
     // desktop: open on hover/focus-in of the item
     const item = t.closest('.nav__item');
-    item.addEventListener('mouseenter', () => { if (!mq.matches) { closeAll(t); t.setAttribute('aria-expanded','true'); document.getElementById(t.getAttribute('aria-controls')).hidden = false; } });
-    item.addEventListener('mouseleave', () => { if (!mq.matches) closeAll(); });
+    // The panel stays open for a moment after the pointer leaves, so you can cross to a neighbouring item or reach a link without it vanishing.
+    let timer = 0;
+    item.addEventListener('mouseenter', () => { clearTimeout(timer); if (!mq.matches) { closeAll(t); t.setAttribute('aria-expanded','true'); document.getElementById(t.getAttribute('aria-controls')).hidden = false; } });
+    item.addEventListener('mouseleave', () => { if (!mq.matches) { clearTimeout(timer); timer = window.setTimeout(() => { if (!item.matches(':hover') && !item.contains(document.activeElement)) closeAll(); }, 450); } });
   });
   // Communities: pick a place, see its links. Desktop shows one pane at a time (hover or focus); phones open and close each place.
   const tabs = [...document.querySelectorAll('.mega__tab')];

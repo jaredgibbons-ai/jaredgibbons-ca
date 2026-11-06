@@ -810,3 +810,9 @@ Research-voice cleanup wave 2: 340 passages on 183 pages rewritten or deleted (A
 - Menu: MLS Listings, Buy a Home, Sell Your Home, About Us and Resources open as grouped columns with one call-to-action. No photo behind the menu (readability, load time, black/white brand). Any nav item not placed in a group still shows in a "More" column.
 - Vimeo: linked in the top bar (with Facebook, Instagram, TikTok, YouTube, Blog) and the footer, to https://vimeo.com/user84468535. No embedded videos on the home page (Jared asked for the link only).
 - Selling resource page: four full-length reviews plus twelve more real Google reviews (no edits to wording).
+
+## D-150 — Text-section redesign and menu hover (2026-11-06)
+- Every Land Use Plans entry in the Resources menu now reads "<Area> Land Use Plans" (GIS entry unchanged).
+- Dropdown panels stay open 450ms after the pointer leaves, so neighbouring buttons can be checked; nav items stretch to the header height to remove the hover gap.
+- Text-only sections that start with an H2 use a two-column layout (sticky heading left, content right); headings are smaller with an accent bar.
+- Question headings and one-line question paragraphs are grouped into an accordion (first answer open). Area subsections become cards, link paragraphs become cream callouts, link lists become tiles.
