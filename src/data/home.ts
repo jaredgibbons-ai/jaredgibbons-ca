@@ -92,5 +92,5 @@ export const resources = [
   { n: '03', kicker: 'Know the Land', title: ['Zoning','Guide'], text: 'Understand Surrey and Fraser Valley zoning bylaws before you buy.', href: '/zonings.html' },
   { n: '04', kicker: 'Market Insights', title: ['Blog &','News'], text: 'Local market updates, neighbourhood guides, and buying and selling tips.', href: '/blog.html' },
   { n: '05', kicker: 'Stay Connected', title: ['Newsletter'], text: 'Monthly market reports and listings delivered directly to your inbox.', href: '/subscribe-to-our-newsletter.html' },
-  { n: '06', kicker: 'Getting Started', title: ['First Time','Buyer'], text: 'Programs, incentives, and guidance for first-time home buyers in BC.', href: '/first-time-home-buyer-program.html' },
+  { n: '06', kicker: 'Know the Costs', title: ['First-Time Buyer','Calculator'], text: 'Estimate property transfer tax, the GST rebate and FHSA savings on your first BC home.', href: '/first-time-buyer-calculator.html' },
 ];

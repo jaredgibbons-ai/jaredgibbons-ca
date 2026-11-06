@@ -99,6 +99,8 @@ if (local?.faq?.length) jsonld.push({ '@context': 'https://schema.org', '@type':
 if (local) {
   // `hide`: archive paragraphs/headings (matched by their opening words) that move to another page; the archive record is untouched.
   if (local.hide?.length) page.blocks = page.blocks.filter((b: any) => { const tx = b.text ?? b.parts?.map((x: any) => x.t).join('') ?? ''; return !((b.t === 'p' || b.t === 'h') && local.hide.some((x: string) => tx.startsWith(x))); });
+  // `replace_body`: the local layer rewrites the whole page body (a bare address list, say); only the archive H1 is kept.
+  if (local.replace_body) { const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1); page.blocks = page.blocks.slice(0, h1i + 1); }
   // `suppress`: level-2 headings whose whole section is replaced by the local layer (duplicated sibling-page text).
   if (local.suppress?.length) {
     let drop = false;
