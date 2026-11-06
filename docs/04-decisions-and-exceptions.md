@@ -820,3 +820,8 @@ Research-voice cleanup wave 2: 340 passages on 183 pages rewritten or deleted (A
 ## D-151 — Neighbourhood guide hubs: map first, no photo (2026-11-06)
 - On every neighbourhood-guide hub page the map sits directly under the H1; the hero photo and the "neighbourhood map" heading are removed. H1 is smaller on these pages.
 - Area names inside the map are smaller (12px max, 8px min) so they stop crowding and overlapping.
+
+## D-152 — Hub pages identical; map names readable; search coverage list (2026-11-06)
+- All 15 neighbourhood-guide hubs open the same way: H1 (caps), map, then the page's own text and link lists. The "Neighbourhood guides · City" line is removed.
+- Map names: 13px down to 10px; a name that does not fit its area at the current zoom is hidden, and where two names would overlap the larger area keeps its name. Zooming in shows the rest (recalculated on every zoom/pan). Hovering an area with a hidden name shows it in a small tag. Unverified against real Google tiles (this environment cannot reach Google): check Chilliwack and Vancouver on the preview.
+- Search coverage by city and type: `docs/review/search-coverage-2026-11-06.csv` (21 cities x 20 search types). Thin spots: penthouses 5 of 21 cities, houses with suites 1, coach houses 1, 3 bedroom condos 2, 55+ 5. New searches need a Paragon export with suite and style fields (raw rows are not kept) and a MyRealPage saved search per page (Jerry).

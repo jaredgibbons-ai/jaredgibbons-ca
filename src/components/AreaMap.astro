@@ -46,7 +46,7 @@ const window_ = (sold as any).meta.window;
     <p class="areamap__note notice">{key ? 'The map loads when you scroll to it.' : 'The interactive map is not connected in the preview yet. The areas are listed below.'}</p>
   </div>
   {shaded && <ul class="areamap__legend" id="areamap-legend" aria-label="Map shading key" hidden></ul>}
-  <p class="areamap__hint">Drag to move the map. Press an area to open its page.{shaded ? ` Shading uses our closed-sales figures for ${window_}; areas with fewer than ${MIN_SALES} sales of a type are left grey.` : ''}</p>
+  <p class="areamap__hint">Drag to move the map. Zoom in to show the names of smaller areas. Press an area to open its page.{shaded ? ` Shading uses our closed-sales figures for ${window_}; areas with fewer than ${MIN_SALES} sales of a type are left grey.` : ''}</p>
   <div class="areamap__near" id="areamap-near" role="group" aria-labelledby="areamap-near-h" hidden>
     <p class="areamap__nearh" id="areamap-near-h">Show nearby places</p>
     {NEARBY.map((c) => <button type="button" class="btn btn--ghost areamap__nb" data-cat={c.id} aria-pressed="false">{c.label}</button>)}
@@ -83,7 +83,7 @@ const window_ = (sold as any).meta.window;
   if (host && host.dataset.key) {
     const key = host.dataset.key, data = JSON.parse(host.dataset.map || '{}');
     const shaded = Object.keys(data.figs || {}).length > 0;
-    let started = false, map: any = null, g: any = null;
+    let started = false, map: any = null, g: any = null, relayout: () => void = () => {};
     const fail = (m: string) => { host.innerHTML = `<p class="areamap__note notice">${m}</p>`; };
     onAuthFailure(() => fail('The map could not load. The areas are listed below.'));
     const polys: { poly: any; a: any }[] = [];
@@ -114,6 +114,7 @@ const window_ = (sold as any).meta.window;
         for (const row of legend(m, cls)) { const li = document.createElement('li'); const sw = document.createElement('span'); sw.className = 'areamap__sw'; sw.style.background = row.color; sw.setAttribute('aria-hidden', 'true'); li.append(sw, document.createTextNode(row.label)); legendEl!.appendChild(li); }
       }
       const li = document.createElement('li'); const sw = document.createElement('span'); sw.className = 'areamap__sw'; sw.style.background = '#e3e3e3'; sw.setAttribute('aria-hidden', 'true'); li.append(sw, document.createTextNode(`Fewer than ${data.minSales} sales`)); legendEl!.appendChild(li);
+      relayout();
     };
 
     const start = async () => {
@@ -127,7 +128,7 @@ const window_ = (sold as any).meta.window;
         map.fitBounds({ south: b.south, west: b.west, north: b.north, east: b.east }, 24);
         // Area name labels: sized and wrapped to fit inside each area's outline at the current zoom, so every name sits in its own area.
         class Label extends g.maps.OverlayView {
-          pos: any; name: string; sub: string; box: any; div: HTMLElement | null = null; color = '#111111';
+          pos: any; name: string; sub: string; box: any; div: HTMLElement | null = null; color = '#111111'; fits = true; size = 0;
           constructor(pos: any, name: string, box: any) { super(); this.pos = pos; this.name = name; this.sub = ''; this.box = box; }
           onAdd() { this.div = document.createElement('div'); this.div.className = 'areamap__label'; this.getPanes().floatPane.appendChild(this.div); }
           wrap(max: number): string[] {
@@ -140,14 +141,17 @@ const window_ = (sold as any).meta.window;
             const p = pr.fromLatLngToDivPixel(this.pos); if (!p) return;
             const sw = pr.fromLatLngToDivPixel(new g.maps.LatLng(this.box.south, this.box.west)), ne = pr.fromLatLngToDivPixel(new g.maps.LatLng(this.box.north, this.box.east));
             const w = Math.abs(ne.x - sw.x) * 0.9, h = Math.abs(sw.y - ne.y) * 0.85;
-            let fs = 12, lines: string[] = [this.name];
-            for (; fs >= 8; fs -= 1) {
+            // 13px down to 10px (smaller is unreadable): a name that does not fit its area at this zoom is hidden until the reader zooms in, instead of piling over its neighbours.
+            let fs = 13, lines: string[] = [this.name]; this.fits = false;
+            for (; fs >= 10; fs -= 1) {
               const per = Math.max(7, Math.floor(w / (fs * 0.68)));
               lines = this.wrap(per);
               const lw = Math.max(...lines.map((l) => l.length)) * fs * 0.68, lh = (lines.length + (this.sub ? 1 : 0)) * fs * 1.2;
-              if (lw <= w && lh <= h) break;
+              if (lw <= w && lh <= h) { this.fits = true; break; }
             }
-            this.div.style.fontSize = fs + 'px';
+            this.size = w * h;
+            this.div.style.display = this.fits ? '' : 'none';
+            this.div.style.fontSize = Math.max(fs, 10) + 'px';
             this.div.textContent = lines.join('\n') + (this.sub ? '\n' + this.sub : '');
             this.div.style.left = p.x + 'px'; this.div.style.top = p.y + 'px';
           }
@@ -183,6 +187,30 @@ const window_ = (sold as any).meta.window;
           }
           const c = centroid(a.rings);
           if (c && !only) { const lab = new Label(new g.maps.LatLng(c[0], c[1]), a.name, boundsOf([a])); lab.setMap(map); labels.set(a.id, lab); }
+        }
+        // Declutter: biggest areas win; a name that would overlap one already placed stays hidden until the map is zoomed in.
+        const declutter = () => {
+          const placed: DOMRect[] = [];
+          for (const lab of [...labels.values()].sort((x: any, y: any) => y.size - x.size)) {
+            if (!lab.div || !lab.fits) continue;
+            const r = lab.div.getBoundingClientRect(), pad = 3;
+            const hit = placed.some((q) => r.left < q.right + pad && r.right + pad > q.left && r.top < q.bottom + pad && r.bottom + pad > q.top);
+            if (hit) lab.div.style.display = 'none'; else placed.push(r);
+          }
+        };
+        if (!only) g.maps.event.addListener(map, 'idle', () => { for (const lab of labels.values()) lab.draw(); declutter(); });
+        relayout = () => { for (const lab of labels.values()) lab.draw(); declutter(); };
+        // Hover name for areas whose label is hidden at this zoom.
+        const tip = document.createElement('div'); tip.className = 'areamap__tip'; tip.hidden = true; host.appendChild(tip);
+        for (const { poly, a } of polys) {
+          if (only) continue;
+          poly.addListener('mousemove', (e: any) => {
+            const lab = labels.get(a.id); if (!lab || (lab.div && lab.div.style.display !== 'none')) { tip.hidden = true; return; }
+            tip.textContent = lab.name + (lab.sub ? ' ' + lab.sub : ''); tip.hidden = false;
+            const ev = e.domEvent as MouseEvent, hb = host.getBoundingClientRect();
+            tip.style.left = (ev.clientX - hb.left + 12) + 'px'; tip.style.top = (ev.clientY - hb.top + 14) + 'px';
+          });
+          poly.addListener('mouseout', () => { tip.hidden = true; });
         }
         if (shaded && typeSel && metricSel) {
           // Start on the property type with the most shaded areas.
@@ -303,5 +331,6 @@ const window_ = (sold as any).meta.window;
   .areamap__data{margin-top:var(--s4)}
   .areamap__tbl{overflow-x:auto;max-width:100%}
   .areamap__data summary{cursor:pointer;font-weight:700;min-height:2.75rem;display:flex;align-items:center}
+  .areamap__tip{position:absolute;z-index:5;pointer-events:none;background:#111;color:#fff;font:700 .75rem/1.3 var(--f-head);text-transform:uppercase;letter-spacing:.03em;padding:.35rem .55rem;white-space:nowrap}
   .areamap__label{position:absolute;transform:translate(-50%,-50%);pointer-events:none;font:800 .75rem/1.2 var(--f-head);text-transform:uppercase;letter-spacing:.02em;text-align:center;color:#111;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 6px #fff;white-space:pre}
 </style>

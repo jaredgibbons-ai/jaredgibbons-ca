@@ -156,6 +156,8 @@ if (isHub) {
     if (page.blocks[hi]?.t === 'h' && page.blocks[hi].level === 2 && /map$/i.test(page.blocks[hi].text || '')) page.blocks.splice(hi, 1);
     page.blocks.splice(h1i + 1, 0, m);
   }
+  // The "Neighbourhood guides · City of X" line (above or below the H1 on some hubs) says nothing the H1 and breadcrumb do not; every hub opens the same way.
+  page.blocks = page.blocks.filter((b: any) => !(b.t === 'p' && (b.parts || [{ t: b.text }]).map((x: any) => x.t).join('').trim().startsWith('Neighbourhood guides ·')));
 }
 // Long pages (twenty or more H2 sections) get an "On this page" jump list right after the H1, so a reader can reach a section without scrolling thousands of pixels.
 {
@@ -305,7 +307,7 @@ const explore = !_extra.length ? exploreBase
             {sec.blocks.map((b, bi) => {
               if (b.t === 'h') {
                 const Tag = `h${Math.min(b.level, 5)}`;
-                return <Tag id={b.id} class={(b.level === 1 ? 'pg__h1' : b.level === 2 ? 'h2' : 'pg__h') + (b.level <= 2 ? capsClass(b.text) : '')}>{b.href ? <Rich parts={[{ t: b.text, h: b.href }]} /> : b.text}</Tag>;
+                return <Tag id={b.id} class={(b.level === 1 ? 'pg__h1' : b.level === 2 ? 'h2' : 'pg__h') + (b.level <= 2 ? (isHub && b.level === 1 ? ' caps' : capsClass(b.text)) : '')}>{b.href ? <Rich parts={[{ t: b.text, h: b.href }]} /> : b.text}</Tag>;
               }
               if (b.t === 'toc') return (
                 <details class="toc"><summary>On this page ({b.items.length} sections)</summary>
