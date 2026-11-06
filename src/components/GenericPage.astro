@@ -131,7 +131,8 @@ page.blocks = JSON.parse(JSON.stringify(page.blocks).replaceAll('jared@jaredgibb
 
 // Area photos (D-89, src/data/area-photos.json, tools/build_area_photos.py): public-licence photos with the credit shown under each one.
 // The main photo goes after the first paragraph under the H1; any others form a gallery section before the closing link lists.
-const photos: any[] = (AREA_PHOTOS as Record<string, any[]>)[page.slug] ?? [];
+const isHub = page.blocks.some((b: any) => b.t === 'areamap' && b.mode === 'hub');
+const photos: any[] = isHub ? [] : ((AREA_PHOTOS as Record<string, any[]>)[page.slug] ?? []);
 if (photos.length) {
   const h1 = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
   const p1 = page.blocks.findIndex((b: any, i: number) => i > h1 && b.t === 'p');
@@ -145,6 +146,17 @@ if (photos.length) {
 const NO_REVIEWS = new Set(['404', 'privacy', 'subscribe-to-our-newsletter', 'contact', 'reviews', 'data-and-methodology', 'photo-credits']);
 if (!NO_REVIEWS.has(page.slug) && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.splice(page.blocks.length - endCount, 0, { t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
 
+// Neighbourhood-guide hubs: the map sits straight under the H1 (no photo, no "map" heading), so the page opens on the thing readers came for.
+if (isHub) {
+  const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
+  const mi = page.blocks.findIndex((b: any) => b.t === 'areamap' && b.mode === 'hub');
+  if (h1i >= 0 && mi >= 0) {
+    const [m] = page.blocks.splice(mi, 1);
+    const hi = mi - 1;
+    if (page.blocks[hi]?.t === 'h' && page.blocks[hi].level === 2 && /map$/i.test(page.blocks[hi].text || '')) page.blocks.splice(hi, 1);
+    page.blocks.splice(h1i + 1, 0, m);
+  }
+}
 // Long pages (twenty or more H2 sections) get an "On this page" jump list right after the H1, so a reader can reach a section without scrolling thousands of pixels.
 {
   const h2s = page.blocks.filter((b: any) => b.t === 'h' && b.level === 2 && !b.href && String(b.text || '').trim());
@@ -289,7 +301,7 @@ const explore = !_extra.length ? exploreBase
     return (
       <section class:list={['section', { 'section--cream': si % 2 === 1, 'section--tight': (!sec.blocks.some((x) => x.t === 'h') && sec.blocks.length <= 3) || (isSearch && si === 0), 'section--search': isSearch && si === 0 }]}>
         <div class="wrap">
-          <div class:list={['pg', { 'pg--wide': sec.blocks.some((x) => x.t === 'lcards'), 'pg--search': isSearch && si === 0, 'pg--split': (sec as any).split && !(isSearch && si === 0) }]}>
+          <div class:list={['pg', { 'pg--hub': isHub,  'pg--wide': sec.blocks.some((x) => x.t === 'lcards'), 'pg--search': isSearch && si === 0, 'pg--split': (sec as any).split && !(isSearch && si === 0) }]}>
             {sec.blocks.map((b, bi) => {
               if (b.t === 'h') {
                 const Tag = `h${Math.min(b.level, 5)}`;
@@ -432,6 +444,7 @@ const explore = !_extra.length ? exploreBase
   .pg :global(p){margin:0 0 1em}
   .pg__h1{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.05;letter-spacing:-.025em;margin:0 0 1.25rem;text-wrap:balance;max-width:40ch}
   .pg__h1.caps{max-width:48ch}
+  .pg--hub .pg__h1,.pg--hub .pg__h1.caps{font-size:clamp(1.75rem,3.2vw,2.5rem);max-width:none;margin-bottom:1rem}
   .toc{margin:0 0 var(--s5);border:1px solid var(--ink);background:#fff}
   .toc summary{cursor:pointer;font:700 .9375rem var(--f-head);min-height:2.75rem;display:flex;align-items:center;padding:0 .85rem}
   .toc ul{margin:0;padding:.25rem .85rem .85rem 2rem;columns:2 16rem;column-gap:var(--s6)}

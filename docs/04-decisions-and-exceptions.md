@@ -816,3 +816,7 @@ Research-voice cleanup wave 2: 340 passages on 183 pages rewritten or deleted (A
 - Dropdown panels stay open 450ms after the pointer leaves, so neighbouring buttons can be checked; nav items stretch to the header height to remove the hover gap.
 - Text-only sections that start with an H2 use a two-column layout (sticky heading left, content right); headings are smaller with an accent bar.
 - Question headings and one-line question paragraphs are grouped into an accordion (first answer open). Area subsections become cards, link paragraphs become cream callouts, link lists become tiles.
+
+## D-151 — Neighbourhood guide hubs: map first, no photo (2026-11-06)
+- On every neighbourhood-guide hub page the map sits directly under the H1; the hero photo and the "neighbourhood map" heading are removed. H1 is smaller on these pages.
+- Area names inside the map are smaller (12px max, 8px min) so they stop crowding and overlapping.

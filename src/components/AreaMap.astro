@@ -140,8 +140,8 @@ const window_ = (sold as any).meta.window;
             const p = pr.fromLatLngToDivPixel(this.pos); if (!p) return;
             const sw = pr.fromLatLngToDivPixel(new g.maps.LatLng(this.box.south, this.box.west)), ne = pr.fromLatLngToDivPixel(new g.maps.LatLng(this.box.north, this.box.east));
             const w = Math.abs(ne.x - sw.x) * 0.9, h = Math.abs(sw.y - ne.y) * 0.85;
-            let fs = 16, lines: string[] = [this.name];
-            for (; fs >= 10; fs -= 1) {
+            let fs = 12, lines: string[] = [this.name];
+            for (; fs >= 8; fs -= 1) {
               const per = Math.max(7, Math.floor(w / (fs * 0.68)));
               lines = this.wrap(per);
               const lw = Math.max(...lines.map((l) => l.length)) * fs * 0.68, lh = (lines.length + (this.sub ? 1 : 0)) * fs * 1.2;
@@ -303,5 +303,5 @@ const window_ = (sold as any).meta.window;
   .areamap__data{margin-top:var(--s4)}
   .areamap__tbl{overflow-x:auto;max-width:100%}
   .areamap__data summary{cursor:pointer;font-weight:700;min-height:2.75rem;display:flex;align-items:center}
-  .areamap__label{position:absolute;transform:translate(-50%,-50%);pointer-events:none;font:800 .8125rem/1.2 var(--f-head);text-transform:uppercase;letter-spacing:.02em;text-align:center;color:#111;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 6px #fff;white-space:pre}
+  .areamap__label{position:absolute;transform:translate(-50%,-50%);pointer-events:none;font:800 .75rem/1.2 var(--f-head);text-transform:uppercase;letter-spacing:.02em;text-align:center;color:#111;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 6px #fff;white-space:pre}
 </style>
