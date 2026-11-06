@@ -3,6 +3,7 @@
 import GenericPage from '../components/GenericPage.astro';
 import DesignedPage from '../components/DesignedPage.astro';
 import SEO_OVERRIDES from '../data/seo-overrides.json';
+import SEO_FINAL from '../data/seo-final.json';
 export function getStaticPaths() {
   const mods = import.meta.glob('../data/pages/*.json', { eager: true }) as Record<string, any>;
   const out = Object.values(mods).map((m) => ({ params: { slug: m.default.slug }, props: { page: m.default } }));
@@ -58,6 +59,16 @@ export function getStaticPaths() {
     out.push({ params: { slug }, props: { page: { slug, path: `/${slug}.html`, url: canonical, kind: 'page', title: n.title, canonical,
       seo: { Title: n.title, 'Meta description': n.description, H1: n.h1, Canonical: canonical, 'Meta robots': 'index, follow', 'OG title': n.title, 'OG description': n.description },
       blocks: [{ t: 'h', level: 1, text: n.h1 }], forms: [], iframes: [] } } });
+  }
+  // Final SEO pass (D-144, tools/build_seo_final.py): one reviewed title, H1 and meta description per page, applied last so it wins over the archive,
+  // the older overrides and every generator's own wording. Delete an entry to fall back to the layer underneath.
+  for (const o of out) {
+    const f = (SEO_FINAL as Record<string, any>)[o.params.slug];
+    if (!f) continue;
+    const pg = o.props.page; pg.seo = { ...(pg.seo || {}) };
+    if (f.title) { pg.title = f.title; pg.seo.Title = f.title; pg.seo['OG title'] = f.title; }
+    if (f.description) { pg.seo['Meta description'] = f.description; pg.seo['OG description'] = f.description; }
+    if (f.h1) { pg.seo.H1 = f.h1; pg.blocks = [...pg.blocks]; const i = pg.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1); if (i >= 0) pg.blocks[i] = { ...pg.blocks[i], text: f.h1 }; else pg.blocks.unshift({ t: 'h', level: 1, text: f.h1 }); }
   }
   return out;
 }
