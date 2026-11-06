@@ -13,6 +13,8 @@ import NetProceedsCalc from './NetProceedsCalc.astro';
 import MortgageCalc from './MortgageCalc.astro';
 import CommuteTime from '../components/CommuteTime.astro';
 import AreaMap from './AreaMap.astro';
+import SourceList from './SourceList.astro';
+import { isSourcesHeading } from '../lib/sources';
 import { isGated } from '../lib/inventory';
 import { pickReviews } from '../lib/reviews';
 import { isPreview, isDraftNote } from '../lib/preview';
@@ -250,7 +252,7 @@ const explore = !_extra.length ? exploreBase
       <section class:list={['section', { 'section--cream': si % 2 === 1, 'section--tight': (!sec.blocks.some((x) => x.t === 'h') && sec.blocks.length <= 3) || (isSearch && si === 0), 'section--search': isSearch && si === 0 }]}>
         <div class="wrap">
           <div class:list={['pg', { 'pg--wide': sec.blocks.some((x) => x.t === 'lcards'), 'pg--search': isSearch && si === 0 }]}>
-            {sec.blocks.map((b) => {
+            {sec.blocks.map((b, bi) => {
               if (b.t === 'h') {
                 const Tag = `h${Math.min(b.level, 5)}`;
                 return <Tag id={b.id} class={(b.level === 1 ? 'pg__h1' : b.level === 2 ? 'h2' : 'pg__h') + (b.level <= 2 ? capsClass(b.text) : '')}>{b.href ? <Rich parts={[{ t: b.text, h: b.href }]} /> : b.text}</Tag>;
@@ -262,6 +264,7 @@ const explore = !_extra.length ? exploreBase
               );
               if (b.t === 'p') return <p class={b.cls}><Rich parts={b.parts} /></p>;
               if (b.t === 'photo') return <PhotoCredit photo={b.photo} hero sizes="(min-width:48rem) 40rem, 100vw" />;
+              if (b.t === 'list' && sec.blocks[bi - 1]?.t === 'h' && isSourcesHeading(sec.blocks[bi - 1].text) && b.items.some((it: any[]) => it.some((p: any) => p.h))) return <SourceList items={b.items} />;
               if (b.t === 'list') return (
                 <ul class:list={['lines', { 'lines--links': linkOnly(b.items) }]}>
                   {b.items.map((it: any) => <li><Rich parts={it} /></li>)}
@@ -316,7 +319,23 @@ const explore = !_extra.length ? exploreBase
                 );
               }
               if (b.t === 'notice') { if (isDraftNote(b.text) && !isPreview) return null; return <p class="notice">{b.text}</p>; }
-              if (b.t === 'table') return (
+              if (b.t === 'stats') return (
+                <ul class:list={['statcards', { 'statcards--sm': b.small, 'statcards--six': b.items.length === 6 }]}>
+                  {b.items.map((it: any) => <li class="statcard"><span class="statcard__l">{it.label}</span><strong class="statcard__v">{it.value}</strong>{it.sub && <span class="statcard__s">{it.delta ? <span class={['statcard__d', /^\s*[-\u2212]/.test(it.delta) ? 'is-down' : /^\s*\+/.test(it.delta) ? 'is-up' : ''].join(' ')} aria-hidden="true">{/^\s*[-\u2212]/.test(it.delta) ? '▼' : '▲'}</span> : null}{it.delta ? [(/^\s*[-\u2212]/.test(it.delta) ? 'Down' : 'Up'), String(it.delta).replace(/^\s*[-+\u2212]/, ''), String(it.sub).replace(/^\s*[-+\u2212]?[\d.]+%\s*/, '')].filter(Boolean).join(' ') : it.sub}</span>}</li>)}
+                </ul>
+              );
+              if (b.t === 'chips') return (
+                <nav class="chips" aria-label={b.label}>
+                  {b.label && <span class="chips__l">{b.label}</span>}
+                  <ul>{b.items.map((c: any) => <li><a class:list={['chip', { 'is-now': c.now }]} href={c.h.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/'} aria-current={c.now ? 'true' : undefined}>{c.t}</a></li>)}</ul>
+                </nav>
+              );
+              if (b.t === 'table') return (<>
+                {(() => {
+                  const bi = b.head.findIndex((h: string) => /^benchmark( price)?$/i.test(h)), yi = b.head.findIndex((h: string) => /^1 year$/i.test(h));
+                  if (bi < 1 || yi < 1 || b.rows.length > 6 || b.head.length < 4) return null;
+                  return <ul class="statcards statcards--sm">{b.rows.map((r: any[]) => { const dv = String(r[yi]); return <li class="statcard"><span class="statcard__l">{typeof r[0] === 'object' ? r[0].t : r[0]}</span><strong class="statcard__v">{typeof r[bi] === 'object' ? r[bi].t : r[bi]}</strong><span class="statcard__s"><span class={'statcard__d ' + (/^\s*[-\u2212]/.test(dv) ? 'is-down' : 'is-up')} aria-hidden="true">{/^\s*[-\u2212]/.test(dv) ? '▼' : '▲'}</span>{/^\s*[-\u2212]/.test(dv) ? 'Down ' : /^\s*\+/.test(dv) ? 'Up ' : ''}{dv.replace(/^\s*[-+\u2212]/, '')} over 1 year</span></li>; })}</ul>;
+                })()}
                 <div class="tblwrap" tabindex="0" role="region" aria-label={b.caption}>
                   <table class="tbl"><caption>{b.caption}</caption>
                     <thead><tr>{b.head.map((h: string) => <th scope="col">{h}</th>)}</tr></thead>
@@ -324,7 +343,7 @@ const explore = !_extra.length ? exploreBase
                   </table>
                   {b.source && <p class="tbl__src">{b.source} {/^Source:/.test(b.source) && page.slug !== 'data-and-methodology' && <a href="/data-and-methodology.html">How these figures are defined and sourced</a>}</p>}
                 </div>
-              );
+              </>);
               if (b.t === 'calc') return b.which === 'mortgage' ? <MortgageCalc price={b.price} exemption={b.exemption} /> : <NetProceedsCalc />;
               if (b.t === 'areamap') return <AreaMap region={b.region} mode={b.mode} current={b.current} />;
               if (b.t === 'commute') return <CommuteTime region={b.region} current={b.current} />;
@@ -343,15 +362,18 @@ const explore = !_extra.length ? exploreBase
 
 <style>
   .section--tight{padding-block:clamp(1.25rem,3vw,2rem)}
-  .pg{max-width:var(--measure);margin-inline:auto}
+  /* Content runs the full width of the page column (same left edge as the header); only running text is held to a readable line length. */
+  .pg{max-width:none;margin-inline:0;--prose:62rem}
+  .pg > :where(p,ul.lines,.toc,details,.cardlink,.notice,h3,h4,h5,.pg__h,.byline){max-width:var(--prose)}
+  .pg > :where(p,ul.lines){font-size:1.125rem;line-height:1.7}
   .pg--wide{max-width:none}
   .pg--search{max-width:none}
   .pg--search .pg__h1,.pg--search .pg__h1.caps{font-size:clamp(1.75rem,3.4vw,2.5rem);max-width:none;margin-bottom:.75rem}
   .pg--search p{max-width:56rem;margin-bottom:0}
   .section--search{padding-bottom:0}
   .pg :global(p){margin:0 0 1em}
-  .pg__h1{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.05;letter-spacing:-.025em;margin:0 0 1.25rem;text-wrap:balance;max-width:24ch}
-  .pg__h1.caps{max-width:32ch}
+  .pg__h1{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.05;letter-spacing:-.025em;margin:0 0 1.25rem;text-wrap:balance;max-width:40ch}
+  .pg__h1.caps{max-width:48ch}
   .toc{margin:0 0 var(--s5);border:1px solid var(--ink);background:#fff}
   .toc summary{cursor:pointer;font:700 .9375rem var(--f-head);min-height:2.75rem;display:flex;align-items:center;padding:0 .85rem}
   .toc ul{margin:0;padding:.25rem .85rem .85rem 2rem;columns:2 16rem;column-gap:var(--s6)}
@@ -365,12 +387,29 @@ const explore = !_extra.length ? exploreBase
   .lines li{padding:.55rem 0;border-bottom:1px solid var(--rule)}
   .lines--links{columns:2 16rem;column-gap:var(--s6)}
   .lines--links li{break-inside:avoid}
-  .pg:has(.lines--links){max-width:none}
-  .tblwrap{overflow-x:auto;border:1px solid var(--ink);background:#fff;margin:0 0 1.25rem}
+  .tblwrap{overflow-x:auto;border:1px solid var(--ink);background:#fff;margin:0 0 1.5rem}
+  /* Stat cards: figures run left to right, label above, big number, change below. */
+  .statcards{list-style:none;margin:0 0 1.5rem;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:0;border:1px solid var(--ink);border-right:0;border-bottom:0;background:#fff}
+  .statcards--sm{grid-template-columns:repeat(auto-fit,minmax(11rem,1fr))}
+  @media (min-width:56rem){.statcards--six{grid-template-columns:repeat(3,1fr)}}
+  .statcard{display:grid;align-content:start;gap:.35rem;padding:1.1rem 1.25rem 1.2rem;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+  .statcard__l{font:700 .75rem/1.3 var(--f-head);letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+  .statcard__v{font:800 clamp(1.6rem,2.6vw,2.25rem)/1.05 var(--f-head);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+  .statcards--sm .statcard__v{font-size:clamp(1.4rem,2.2vw,1.85rem)}
+  .statcard__s{font:600 .8125rem/1.35 var(--f-head);display:flex;align-items:baseline;gap:.4rem}
+  .statcard__d{font-size:.7rem}
+  .chips{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .6rem;margin:0 0 1.5rem}
+  .chips__l{font:700 .75rem var(--f-head);letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin-right:.35rem}
+  .chips ul{list-style:none;margin:0;padding:0;display:contents}
+  .chip{display:inline-flex;align-items:center;min-height:2.5rem;padding:.35rem .95rem;border:1px solid var(--ink);background:#fff;font:700 .8125rem var(--f-head);letter-spacing:.02em;text-decoration:none}
+  .chip:hover,.chip:focus-visible,.chip.is-now{background:var(--ink);color:#fff}
   .tbl{border-collapse:collapse;width:100%;font-size:.9375rem}
   .tbl caption{text-align:left;font:700 .8125rem var(--f-head);padding:.6rem .85rem;border-bottom:1px solid var(--ink)}
   .tbl th,.tbl td{text-align:left;padding:.5rem .85rem;border-bottom:1px solid var(--rule)}
-  .tbl thead th{font:700 .75rem var(--f-head);text-transform:uppercase;letter-spacing:.05em}
+  .tbl thead th{font:700 .75rem var(--f-head);text-transform:uppercase;letter-spacing:.05em;background:var(--ink);color:#fff;white-space:nowrap}
+  .tbl tbody tr:nth-child(even){background:var(--cream)}
+  .tbl td{font-variant-numeric:tabular-nums}
+  .tbl tbody th{font-weight:700}
   .tbl__src{font-size:.8125rem;margin:0;padding:.5rem .85rem}
   .cardlink{display:grid;gap:.35rem;border:1px solid var(--ink);background:#fff;padding:1.1rem 1.25rem;margin:0 0 var(--s4);text-decoration:none}
   .cardlink:hover,.cardlink:focus-visible{background:var(--ink);color:#fff}
@@ -378,7 +417,6 @@ const explore = !_extra.length ? exploreBase
   .cardlink__t{font-size:.9375rem}
   .phgrid__wide{grid-column:1/-1}
   .phgrid{list-style:none;margin:1.25rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,18rem),1fr));gap:var(--s4)}
-  .pg:has(.related){max-width:none}
   .related{margin:var(--s5) 0 var(--s4)}
   .related__h{font-size:clamp(1.4rem,2.6vw,1.9rem);margin:0 0 var(--s4)}
   .related__grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,16rem),1fr));gap:var(--s4)}

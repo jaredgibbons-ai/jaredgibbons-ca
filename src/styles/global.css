@@ -122,6 +122,22 @@ a:hover{text-decoration-thickness:3px}
 .mega__pane li{break-inside:avoid}
 .mega__pane a{padding:.3rem 0;font-size:.9375rem}
 .mega__pane a:hover{background:none;text-decoration:underline}
+/* Grouped mega panels: labelled columns on the left, one call-to-action on the right. */
+.nav__item.nav__item--wide .nav__panel--mega,.nav__item.nav__item--wide .nav__panel--wide{left:50%;right:auto;transform:translateX(-50%)}
+.nav__panel--mega{width:min(70rem,calc(100vw - 2*var(--gutter)));padding:1.5rem 0}
+.mm{display:grid;grid-template-columns:1fr 16rem;gap:2rem;padding:0 1.5rem;align-items:start}
+.mm__cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));gap:1.5rem 2rem}
+.mm__h{margin:0 0 .6rem;padding-bottom:.45rem;border-bottom:2px solid var(--ink);font:800 .75rem/1.3 var(--f-head);letter-spacing:.12em;text-transform:uppercase}
+.mm__h a{padding:0!important;font:inherit!important;letter-spacing:inherit}
+.mm__h a:hover{background:none!important;text-decoration:underline}
+.mm ul{list-style:none;margin:0;padding:0}
+.mm .mm__col a{padding:.32rem 0;font-size:.9375rem}
+.mm .mm__col li a:hover{background:none;text-decoration:underline;text-underline-offset:.2em}
+.mm__cta{background:var(--ink);color:#fff;padding:1.25rem 1.25rem 1.4rem;display:grid;gap:.6rem}
+.mm__ctah{margin:0;font:800 1.0625rem/1.25 var(--f-head)}
+.mm__ctat{margin:0;font-size:.9375rem;line-height:1.45;color:#ddd}
+.nav__panel .mm__cta .btn{background:#fff;color:var(--ink);border-color:#fff;justify-self:start;padding:.8rem 1.2rem;min-height:2.75rem;font:700 .8125rem/1 var(--f-head)}
+.nav__panel .mm__cta .btn:hover{background:transparent;color:#fff}
 .nav__group{break-inside:avoid;padding:0 0 1rem}
 .nav__group>.nav__sub-label{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;padding-bottom:.25rem;border-bottom:1px solid var(--rule);margin:0 1.25rem .35rem;padding-inline:0}
 .nav__group a{padding-block:.25rem;font-size:.875rem}
@@ -137,6 +153,11 @@ a:hover{text-decoration-thickness:3px}
   .nav__panel,.nav__item--wide .nav__panel{position:static;transform:none;width:100%;min-width:0;max-height:none;overflow:visible;columns:1;border:0;box-shadow:none;padding:0 0 1rem;flex-basis:100%}
   .nav__panel a{padding-left:.5rem}
   .mega{display:block;padding:0}
+  .nav__panel--mega{width:100%}
+  .mm{display:block;padding:0 .5rem}
+  .mm__cols{display:block}
+  .mm__col{margin-bottom:1rem}
+  .mm__cta{margin-top:.5rem}
   .mega__region{margin:1rem .5rem .25rem}
   .mega__city{display:block;border-top:1px solid var(--rule)}
   .mega__tab{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:2.75rem;padding:.4rem .5rem;border-left:0}

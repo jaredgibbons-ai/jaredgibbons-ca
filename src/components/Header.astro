@@ -3,7 +3,62 @@ import Icon from './Icon.astro';
 import NavLinks from './NavLinks.astro';
 import nav from '../data/nav.json';
 const { current = '', brandHref = '/' } = Astro.props;
-const wide = new Set(['Communities']);
+// Grouped mega panels (D-149): each top-level menu with sub-pages opens as labelled columns plus one call-to-action, instead of one long list.
+// `items` name child labels exactly as in nav.json; `expand` lists that child's own sub-pages as the column. Anything not named here still appears (last column), so no menu page can be dropped silently.
+type Col = { title: string; href?: string; items?: string[]; expand?: string; max?: number; after?: string[] };
+const MENUS: Record<string, { cols: Col[]; cta: { title: string; text: string; label: string; href: string } }> = {
+  'MLS Listings': {
+    cols: [
+      { title: 'Search', items: ['Search Listings', 'Map Search', 'Foreclosures', 'South Surrey Homes for Sale', 'Langley Homes for Sale'] },
+      { title: 'Open houses', href: '/open-houses.html', expand: 'Open Houses' },
+      { title: 'Price searches', expand: 'Price Searches' },
+      { title: 'Farms, land & commercial', href: '/farms.html', expand: 'Farms', max: 6, after: ['Land', 'Commercial'] },
+    ],
+    cta: { title: 'Not sure where to start?', text: 'Tell Jared what you want and he will set up a search for you.', label: 'Talk to Jared', href: '/contact.html' },
+  },
+  'Buy a Home': {
+    cols: [
+      { title: 'Start here', items: ['Home Buying Process', 'First Time Home Buyer Program', 'First-Time Home Buyer GST Rebate in BC | Save Up to $50,000', 'Mortgage Calculator'] },
+      { title: 'Questions', items: ['FAQ for Home Buyers in BC | Jared Gibbons, REALTOR®', 'How to Buy a Mobile Home in BC'] },
+    ],
+    cta: { title: 'Ready to look?', text: 'Search every MLS® listing in the Fraser Valley and Metro Vancouver.', label: 'Search listings', href: '/recip.html' },
+  },
+  'Sell Your Home': {
+    cols: [
+      { title: 'Get started', items: ['Home Evaluation', 'Marketing Plan', 'Selling Resources'] },
+      { title: 'More', items: ['Sell My House Fast in Langley BC | Jared Gibbons Realtor', 'FAQ for Home Sellers in BC | Jared Gibbons, REALTOR®'] },
+    ],
+    cta: { title: 'What is your home worth?', text: 'A free, no-pressure evaluation from Jared.', label: 'Free home evaluation', href: '/home-evaluation.html' },
+  },
+  'About Us': {
+    cols: [{ title: 'About Jared', items: ['Meet Jared', 'Reviews', 'Contact', 'South Surrey Real Estate Agent | Jared Gibbons Realtor'] }],
+    cta: { title: 'Call or text', text: '604-928-1361', label: 'Call Jared', href: 'tel:604-928-1361' },
+  },
+  'Resources': {
+    cols: [
+      { title: 'Tools and numbers', items: ['Mortgage Calculator', 'First-Time Buyer Calculator BC | PTT, GST Rebate & FHSA', 'Fraser Valley Market Stats', 'Zonings'] },
+      { title: 'Land use plans', href: '/land-use-plans.html', expand: 'Land use plans' },
+      { title: 'Learn and stay in touch', items: ['Resources for Buyers and Sellers', 'Schools', 'Subscribe to our Newsletter', 'Privacy Policy'] },
+    ],
+    cta: { title: 'Market numbers', text: 'Benchmark prices, sales and listings for each area, updated monthly.', label: 'See the latest stats', href: '/fraser-valley-market-stats.html' },
+  },
+};
+const short = (l: string) => { const a = l.split(' | ')[0]; return a.length > 52 ? a.split(':')[0] : a; };
+const wide = new Set(['Communities', ...Object.keys(MENUS)]);
+function megaCols(item: any) {
+  const m = MENUS[item.label]; if (!m) return null;
+  const kids: any[] = item.children, used = new Set<string>(), find = (l: string) => kids.find((c) => c.label === l);
+  const cols = m.cols.map((c) => {
+    const links: { label: string; href: string }[] = []; const seen = new Set<string>();
+    const add = (k: any) => { const t = short(k.label); if (!k.href || seen.has(t)) return; seen.add(t); links.push({ label: t, href: k.href }); };
+    if (c.expand) { const p = find(c.expand); if (p) { used.add(p.label); (p.children || []).slice(0, c.max ?? 99).forEach(add); } }
+    for (const l of [...(c.items || []), ...(c.after || [])]) { const k = find(l); if (k) { used.add(l); add(k); } }
+    return { title: c.title, href: c.href, links };
+  });
+  const rest = kids.filter((k) => !used.has(k.label));
+  if (rest.length) cols.push({ title: 'More', href: undefined, links: rest.filter((k) => k.href).map((k) => ({ label: short(k.label), href: k.href })) });
+  return { cols, cta: m.cta };
+}
 // Communities menu: one list of places on the left, the chosen place's links on the right (no sideways scrolling); on phones each place opens in place.
 const REGIONS: [string, string[]][] = [
   ['Core markets', ['South Surrey', 'Surrey', 'Langley', 'Cloverdale', 'Delta']],
@@ -46,8 +101,23 @@ const slug = (t: string) => t.toLowerCase().replace(/[^a-z0-9]+/g, '-');
             {hasKids && (
               <>
                 <button class="nav__toggle" type="button" aria-expanded="false" aria-controls={id} aria-label={`${item.label} submenu`}><Icon name="chevron" /></button>
-                <div class:list={['nav__panel', isWide && 'nav__panel--wide']} id={id} hidden>
-                  {isWide ? (
+                <div class:list={['nav__panel', isWide && !MENUS[item.label] && 'nav__panel--wide', !!MENUS[item.label] && 'nav__panel--mega']} id={id} hidden>
+                  {MENUS[item.label] ? (() => { const mm = megaCols(item)!; return (
+                    <div class="mm">
+                      <div class="mm__cols">
+                        {mm.cols.map((c) => (
+                          <div class="mm__col">
+                            <p class="mm__h">{c.href ? <a href={c.href}>{c.title}</a> : c.title}</p>
+                            <ul>{c.links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+                          </div>
+                        ))}
+                      </div>
+                      <aside class="mm__cta" aria-label={mm.cta.title}>
+                        <p class="mm__ctah">{mm.cta.title}</p>
+                        <p class="mm__ctat">{mm.cta.text}</p>
+                        <a class="btn" href={mm.cta.href}>{mm.cta.label}</a>
+                      </aside>
+                    </div>); })() : isWide ? (
                     <div class="mega">
                       {REGIONS.map(([region, names]) => (
                         <>

@@ -16,11 +16,35 @@ export const reviews = [
 // alt describes what each image shows (D-20, approved 31 Oct). Archived alt text is recorded in B-15.
 // Order and files follow the archive: ww-img01, 02, 03, 2, 05.
 export const awards = [
-  { alt: 'Royal LePage Years of Service award', slug: 'award-of-merit', w: 199, h: 188 },
-  { alt: 'Royal LePage Canada Top 35 Under 35 award', slug: 'diamond-club', w: 108, h: 198 },
-  { alt: 'Rookie of the Year award', slug: 'top-100', w: 211, h: 84 },
-  { alt: 'Royal LePage Top Ten Award', slug: 'hall-of-fame', w: 211, h: 117 },
-  { alt: 'Royal LePage Red Diamond Award', slug: 'platinum-award', w: 170, h: 175 },
+  { alt: 'Royal LePage Red Diamond Award', src: '/img/award-platinum-award.webp', w: 170, h: 175 },
+  { alt: 'Royal LePage Top Ten Award 2025, Individual, British Columbia', src: '/img/awards/tt-2025.webp', w: 801, h: 300 },
+  { alt: 'Royal LePage Top Ten Award 2024, Individual, British Columbia', src: '/img/awards/tt-2024.webp', w: 800, h: 300 },
+  { alt: 'Royal LePage National Top 2% 2025', src: '/img/awards/top2-2025.webp', w: 300, h: 300 },
+  { alt: 'Royal LePage National Top 2% 2024', src: '/img/awards/top2-2024.webp', w: 300, h: 300 },
+  { alt: 'Royal LePage National Top 2% Award 2022', src: '/img/awards/top2-2022.webp', w: 284, h: 300 },
+  { alt: 'Royal LePage Executive Circle Award 2025', src: '/img/awards/ec-2025.webp', w: 1011, h: 300 },
+  { alt: 'Royal LePage Executive Circle Award 2024', src: '/img/awards/ec-2024.webp', w: 1012, h: 300 },
+  { alt: 'Royal LePage Executive Circle Award 2022', src: '/img/awards/ec-2022.webp', w: 975, h: 300 },
+  { alt: 'Royal LePage National Top 5% 2025', src: '/img/awards/top5-2025.webp', w: 300, h: 300 },
+  { alt: 'Royal LePage National Top 5% 2024', src: '/img/awards/top5-2024.webp', w: 300, h: 300 },
+  { alt: 'Royal LePage National Top 5% 2023', src: '/img/awards/top5-2023.webp', w: 300, h: 300 },
+  { alt: 'Royal LePage National Top 5% Award 2022', src: '/img/awards/top5-2022.webp', w: 285, h: 300 },
+  { alt: 'Royal LePage Top 35 Under 35 2025', src: '/img/awards/t35-2025.webp', w: 166, h: 300 },
+  { alt: 'Royal LePage Top 35 Under 35 2024', src: '/img/awards/t35-2024.webp', w: 167, h: 300 },
+  { alt: 'Royal LePage Top 35 Under 35 Team 2023', src: '/img/awards/t35-2023.webp', w: 168, h: 300 },
+  { alt: 'Royal LePage Top 35 Under 35 2020', src: '/img/awards/t35-2020.webp', w: 146, h: 300 },
+  { alt: 'Royal LePage Award of Excellence 2025', src: '/img/awards/aoe-2025.webp', w: 414, h: 300 },
+  { alt: 'Royal LePage Award of Excellence, Lifetime Member', src: '/img/awards/aoe-lifetime.webp', w: 413, h: 300 },
+  { alt: 'Royal LePage Years of Service award', src: '/img/award-award-of-merit.webp', w: 199, h: 188 },
+  { alt: 'Rookie of the Year award', src: '/img/award-top-100.webp', w: 211, h: 84 },
+];
+
+// Jared's Vimeo videos (https://vimeo.com/user84468535), newest first. ratio is the video's own shape so portrait shorts are not cropped.
+export const vimeoProfile = 'https://vimeo.com/user84468535';
+export const videos = [
+  { id: '1243899820', title: 'South Surrey Neighbourhood Tour | Living in South Surrey, BC', ratio: '9 / 16' },
+  { id: '1243899620', title: 'SOLD | 2623 216 St, Langley | Renovated 3BR Home on Acreage | Campbell Valley', ratio: '9 / 16' },
+  { id: '1243899706', title: 'SOLD | 3772 Old Clayburn Rd, Abbotsford | 3BR Split-Level Home', ratio: '4 / 5' },
 ];
 
 // "OUR LISTINGS" — 11 slides in the archive; the last (6469 Meadow Place) repeats the first (carousel clone, baseline note B-07).

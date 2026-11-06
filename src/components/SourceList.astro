@@ -1,0 +1,32 @@
+---
+// Sources as cards: publisher, readable title, type tag and host. Opens in a new tab (these are other people's sites).
+import { sourceInfo } from '../lib/sources';
+const { items = [] } = Astro.props as { items: any[][] };
+const rows = items.map((it) => { const a = it.find((p: any) => p.h); const text = it.map((p: any) => p.t).join(' ').trim(); return a ? { ...sourceInfo(a.t || text, a.h), href: a.h } : { pub: '', title: text, kind: '', host: '', href: '' }; });
+---
+<ul class="srcs">
+  {rows.map((r) => (
+    <li>{r.href
+      ? <a class="src" href={r.href} target="_blank" rel="noopener">
+          <span class="src__pub">{r.pub}</span>
+          <span class="src__title">{r.title}<span class="sr-only"> (opens in a new tab)</span></span>
+          <span class="src__meta"><span class="src__tag">{r.kind}</span><span class="src__host">{r.host}</span><span class="src__go" aria-hidden="true">↗</span></span>
+        </a>
+      : <p class="src src--plain"><span class="src__title">{r.title}</span></p>}
+    </li>
+  ))}
+</ul>
+<style is:global>
+  .srcs{list-style:none;margin:0 0 1.5rem;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));gap:.75rem}
+  .src{display:grid;grid-template-rows:auto 1fr auto;gap:.35rem;height:100%;padding:.9rem 1rem;border:1px solid var(--ink);background:#fff;color:var(--ink);text-decoration:none;overflow-wrap:anywhere}
+  .src:hover,.src:focus-visible{background:var(--ink);color:#fff}
+  .src__pub{font:700 .6875rem/1.3 var(--f-head);letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+  .src:hover .src__pub,.src:focus-visible .src__pub{color:#ccc}
+  .src__title{font:700 1rem/1.3 var(--f-head)}
+  .src__meta{display:flex;align-items:center;gap:.5rem;font-size:.75rem;color:var(--grey);min-width:0}
+  .src:hover .src__meta,.src:focus-visible .src__meta{color:#ccc}
+  .src__tag{flex:none;border:1px solid currentColor;padding:.05rem .4rem;font:700 .625rem var(--f-head);letter-spacing:.08em;text-transform:uppercase}
+  .src__host{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .src__go{flex:none;font-weight:700}
+  .src--plain{border-style:dashed}
+</style>

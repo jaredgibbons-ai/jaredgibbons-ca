@@ -107,7 +107,7 @@ const window_ = (sold as any).meta.window;
       for (const [id, lab] of labels) {
         const a = data.areas.find((x: any) => x.id === id), v = valueOf(a);
         const fill = cls && Number.isFinite(v) ? rampColor(cls.classOf(v), cls.k) : 'rgb(240,240,240)';
-        lab.setStyle(textOn(fill), Number.isFinite(v) ? `${a.name}\n${fmtShort(m, v)}` : a.name);
+        lab.setStyle(textOn(fill), Number.isFinite(v) ? fmtShort(m, v) : '');
       }
       if (cls) {
         legendEl!.replaceChildren();
@@ -125,13 +125,37 @@ const window_ = (sold as any).meta.window;
         map = new Map(host, { center: data.center, zoom: 12, styles: MAP_STYLE, gestureHandling: 'cooperative', mapTypeControl: true, streetViewControl: true, fullscreenControl: true });
         const b = boundsOf(data.areas);
         map.fitBounds({ south: b.south, west: b.west, north: b.north, east: b.east }, 24);
+        // Area name labels: sized and wrapped to fit inside each area's outline at the current zoom, so every name sits in its own area.
         class Label extends g.maps.OverlayView {
-          pos: any; text: string; div: HTMLElement | null = null;
-          constructor(pos: any, text: string) { super(); this.pos = pos; this.text = text; }
-          onAdd() { this.div = document.createElement('div'); this.div.className = 'areamap__label'; this.div.textContent = this.text; this.getPanes().floatPane.appendChild(this.div); }
-          draw() { const p = this.getProjection().fromLatLngToDivPixel(this.pos); if (p && this.div) { this.div.style.left = p.x + 'px'; this.div.style.top = p.y + 'px'; } }
+          pos: any; name: string; sub: string; box: any; div: HTMLElement | null = null; color = '#111111';
+          constructor(pos: any, name: string, box: any) { super(); this.pos = pos; this.name = name; this.sub = ''; this.box = box; }
+          onAdd() { this.div = document.createElement('div'); this.div.className = 'areamap__label'; this.getPanes().floatPane.appendChild(this.div); }
+          wrap(max: number): string[] {
+            const out: string[] = []; let line = '';
+            for (const w of this.name.split(/\s+/)) { if (line && (line + ' ' + w).length > max) { out.push(line); line = w; } else line = line ? line + ' ' + w : w; }
+            if (line) out.push(line); return out;
+          }
+          draw() {
+            const pr = this.getProjection(); if (!pr || !this.div) return;
+            const p = pr.fromLatLngToDivPixel(this.pos); if (!p) return;
+            const sw = pr.fromLatLngToDivPixel(new g.maps.LatLng(this.box.south, this.box.west)), ne = pr.fromLatLngToDivPixel(new g.maps.LatLng(this.box.north, this.box.east));
+            const w = Math.abs(ne.x - sw.x) * 0.9, h = Math.abs(sw.y - ne.y) * 0.85;
+            let fs = 16, lines: string[] = [this.name];
+            for (; fs >= 10; fs -= 1) {
+              const per = Math.max(7, Math.floor(w / (fs * 0.68)));
+              lines = this.wrap(per);
+              const lw = Math.max(...lines.map((l) => l.length)) * fs * 0.68, lh = (lines.length + (this.sub ? 1 : 0)) * fs * 1.2;
+              if (lw <= w && lh <= h) break;
+            }
+            this.div.style.fontSize = fs + 'px';
+            this.div.textContent = lines.join('\n') + (this.sub ? '\n' + this.sub : '');
+            this.div.style.left = p.x + 'px'; this.div.style.top = p.y + 'px';
+          }
           onRemove() { this.div?.remove(); }
-          setStyle(color: string, text: string) { this.text = text; if (this.div) { this.div.textContent = text; this.div.style.color = color; this.div.style.textShadow = color === '#ffffff' ? '0 0 3px #000,0 0 3px #000' : '0 0 3px #fff,0 0 3px #fff'; } }
+          setStyle(color: string, sub: string) {
+            this.sub = sub; this.color = color;
+            if (this.div) { this.div.style.color = color; this.div.style.textShadow = color === '#ffffff' ? '0 0 3px #000,0 0 3px #000,0 0 6px #000' : '0 0 3px #fff,0 0 3px #fff,0 0 6px #fff'; this.draw(); }
+          }
         }
         const info = new InfoWindow();
         for (const a of data.areas) {
@@ -158,7 +182,7 @@ const window_ = (sold as any).meta.window;
             });
           }
           const c = centroid(a.rings);
-          if (c && !only) { const lab = new Label(new g.maps.LatLng(c[0], c[1]), a.name); lab.setMap(map); labels.set(a.id, lab); }
+          if (c && !only) { const lab = new Label(new g.maps.LatLng(c[0], c[1]), a.name, boundsOf([a])); lab.setMap(map); labels.set(a.id, lab); }
         }
         if (shaded && typeSel && metricSel) {
           // Start on the property type with the most shaded areas.
@@ -261,13 +285,14 @@ const window_ = (sold as any).meta.window;
   .areamap__ctrl>div{display:grid;gap:.3rem}
   .areamap__ctrl label{font:700 .8125rem var(--f-head);letter-spacing:.04em}
   .areamap__ctrl select{min-height:2.75rem;border:1px solid var(--ink);border-radius:0;background:#fff;padding:.5rem .8rem;font:inherit}
-  .areamap__map{height:min(70vh,36rem);min-height:20rem;background:var(--cream);border:1px solid var(--ink);position:relative}
+  .areamap__map{height:clamp(30rem,78vh,52rem);background:var(--cream);border:1px solid var(--ink);position:relative}
   .areamap__note{margin:1rem}
   .areamap__hint,.areamap__fine{font-size:.8125rem;color:#444;margin:.5rem 0 0}
   .areamap__legend{list-style:none;display:flex;flex-wrap:wrap;gap:.35rem 1.25rem;padding:0;margin:var(--s3) 0 0;font-size:.8125rem}
   .areamap__legend li{display:flex;align-items:center;gap:.4rem}
   .areamap__sw{display:inline-block;width:1.1rem;height:1.1rem;border:1px solid var(--ink)}
   .areamap__fly{margin-top:var(--s3)}
+  @media (max-width:40rem){.areamap__map{height:clamp(26rem,70vh,34rem)}}
   .areamap__near{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:var(--s3)}
   .areamap__nearh{margin:0 .5rem 0 0;font:700 .8125rem var(--f-head);letter-spacing:.04em}
   .areamap__nb[aria-pressed="true"]{background:var(--ink);color:#fff}
@@ -278,5 +303,5 @@ const window_ = (sold as any).meta.window;
   .areamap__data{margin-top:var(--s4)}
   .areamap__tbl{overflow-x:auto;max-width:100%}
   .areamap__data summary{cursor:pointer;font-weight:700;min-height:2.75rem;display:flex;align-items:center}
-  .areamap__label{position:absolute;transform:translate(-50%,-50%);pointer-events:none;font:800 .75rem/1.15 var(--f-head);text-transform:uppercase;letter-spacing:.04em;text-align:center;color:#111;text-shadow:0 0 3px #fff,0 0 3px #fff;white-space:pre}
+  .areamap__label{position:absolute;transform:translate(-50%,-50%);pointer-events:none;font:800 .8125rem/1.2 var(--f-head);text-transform:uppercase;letter-spacing:.02em;text-align:center;color:#111;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 6px #fff;white-space:pre}
 </style>
