@@ -879,3 +879,10 @@ Research-voice cleanup wave 2: 340 passages on 183 pages rewritten or deleted (A
 ## D-161 (2026-11-06) Forms go-live code, and the re-pull path
 - All page forms (contact, home evaluation incl. city/postal/bedrooms/bathrooms/size/features/notes, address check, home value) can now post to the Worker. A build variable `PUBLIC_FORMS_LIVE=true` switches them from inert stubs to live; default is inert. Failures show "not sent" plus a ready-written email to Jared. Steps in `docs/forms-go-live.md`. Tests: 16 forms cases.
 - `tools/build_extras_layer.py` takes several `--dir` folders, `--status` and `--end`, and matches on ML # so Pete's September-to-today re-pull merges without double counts. Page text and period labels in `tools/build_extras_pages.py` still say August 31 and need one pass when the re-pull arrives.
+
+## D-162 — Keyword and golf searches (2026-11-06)
+- Jerry's keyword file (19 searches, IDs 1451379 and 1451381–1451398) is saved in `docs/review/idx/keyword-golf-searches-2026-11-06.xlsx`. `tools/build_idx_embeds.py` wires K1–K3 (South Surrey/White Rock, Surrey, Cloverdale coach house) and G1–G6 (golf) by row code. Langley coach house stays on 1450209 (K4 ignored).
+- Six new draft golf pages (`<city>-golf-course-homes-for-sale`: South Surrey and White Rock, Surrey, Langley, Abbotsford, Tsawwassen, Ladner) are written by `tools/build_golf_pages.py` from the Paragon golf flag (Site Influences: Golf Course Nearby or Golf Course Dev., houses only). Figures follow the suite-page rules (median at 5+ sales, page at 30+). No course names or distances are stated because the flag is the agent's.
+- Cloverdale has 75 golf-flag sales but was not in Jerry's list, so no page yet.
+- Held, not built: K5 Abbotsford coach (5 listings), K6–K9 Burnaby, Coquitlam, Richmond, Vancouver coach (no sold data pulled for those cities); M1 Morgan Creek remarks search (the existing Morgan Creek page can take it if wanted); C1–C3 community centre (word search on remarks is thin and noisy, 5–12 listings).
+- All new pages stay `draft`. `build_extras_layer.py` gained a `golf` group.

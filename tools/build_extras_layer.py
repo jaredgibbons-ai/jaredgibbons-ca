@@ -16,6 +16,7 @@ Groups
   coach        house, acreage house or half duplex with Carriage/Coach House or Laneway House in Style of Home (the only coach house flag Paragon has)
   lane         house with Lane Access in Site Influences
   second       house with a floor area in Det'd 2nd Residence
+  golf         house with Golf Course Nearby or Golf Course Dev. in Site Influences
   condo        Apartment/Condo (the base for penthouses)
   pent         Apartment/Condo with Penthouse in Style of Home
 """
@@ -54,6 +55,7 @@ def tags(a):
         if 'Legal Suite' in su or 'Licensed Suite' in su: g.add('legal')
         elif 'Unauthorized Suite' in su: g.add('unauth')
         if 'Lane Access' in si: g.add('lane')
+        if 'Golf Course Nearby' in si or 'Golf Course Dev.' in si: g.add('golf')
         if (S.num((a.get("Floor Area - Det'd 2nd Residence") or '').replace(',', '')) or 0) > 0: g.add('second')
     if t in HOUSE_T + ('House with Acreage', '1/2 Duplex') and any(x in ('Carriage/Coach House', 'Laneway House') for x in st_): g.add('coach')
     if t == 'Apartment/Condo':
@@ -149,7 +151,7 @@ def main():
     for ck, sel in CITY.items():
         R = pick(rows, sel); tg = [(a, tags(a)) for a in R]
         ent = {'groups': {}}
-        for g in ('house', 'legal', 'unauth', 'coach', 'lane', 'second', 'condo', 'pent'):
+        for g in ('house', 'legal', 'unauth', 'coach', 'lane', 'second', 'golf', 'condo', 'pent'):
             gr = [a for a, t in tg if g in t]
             ent['groups'][g] = stats(gr, 'c' if g in ('condo', 'pent') else 'h')
         ent['pent_buildings'] = buildings([a for a, t in tg if 'pent' in t])
@@ -158,10 +160,10 @@ def main():
         for a, t in tg: subs[a['Area'] + '|' + a['Sub-Area/Community']].append((a, t))
         for k, v in subs.items():
             e = {}
-            for g in ('house', 'legal', 'coach', 'condo', 'pent'):
+            for g in ('house', 'legal', 'coach', 'golf', 'condo', 'pent'):
                 gr = [a for a, t in v if g in t]
                 if gr: e[g] = stats(gr, 'c' if g in ('condo', 'pent') else 'h')
-            if any(x['n'] >= S.MIN_MENTION for g, x in e.items() if g in ('legal', 'coach', 'pent')):
+            if any(x['n'] >= S.MIN_MENTION for g, x in e.items() if g in ('legal', 'coach', 'golf', 'pent')):
                 out['sub'].setdefault(ck + '#' + k, e)
     json.dump(out, open(OUT, 'w'), ensure_ascii=False, separators=(',', ':'))
     print('wrote', OUT, os.path.getsize(OUT), 'bytes')

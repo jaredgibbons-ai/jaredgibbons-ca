@@ -143,6 +143,25 @@ def main():
             if slug in pages and pages[slug] != sid:
                 problems.append(('page has two searches', slug, f'{pages[slug]} / {sid}')); continue
             pages[slug] = sid
+    # Keyword and golf worksheet (2026-11-06): columns Row, Search name, Search ID, ..., Embed code. Names map to pages here. Held (not wired): K5-K9, M1, C1-C3.
+    # K4 Langley coach house stays on the search already wired to that page (1450209), so a second id is ignored, not an error.
+    KEYWORD_PAGES = {'K1': 'south-surrey-houses-with-coach-houses-for-sale', 'K2': 'surrey-houses-with-coach-houses-for-sale', 'K3': 'cloverdale-houses-with-coach-houses-for-sale',
+                     'G1': 'south-surrey-white-rock-golf-course-homes-for-sale', 'G2': 'surrey-golf-course-homes-for-sale', 'G3': 'langley-golf-course-homes-for-sale',
+                     'G4': 'abbotsford-golf-course-homes-for-sale', 'G5': 'tsawwassen-golf-course-homes-for-sale', 'G6': 'ladner-golf-course-homes-for-sale'}
+    fpk = os.path.join(ROOT, 'docs/review/idx/keyword-golf-searches-2026-11-06.xlsx')
+    if os.path.exists(fpk):
+        rowsk = list(openpyxl.load_workbook(fpk, read_only=True)['Searches'].iter_rows(values_only=True))
+        headk = [str(h or '') for h in rowsk[0]]; cid, ccode = headk.index('Search ID'), headk.index('Embed code')
+        for r in rowsk[1:]:
+            slug = KEYWORD_PAGES.get(str(r[0] or '').strip())
+            if not slug: continue
+            sid, code = str(r[cid] or '').strip(), r[ccode] or ''
+            if not sid.isdigit() or f'search-{sid}' not in code or ACCOUNT not in code:
+                problems.append(('keyword sheet: id or embed code not usable', r[0], sid)); continue
+            pj = [q for q in (os.path.join(ROOT, 'src/data/local', slug + '.json'), os.path.join(ROOT, 'src/data/pages', slug + '.json')) if os.path.exists(q)]
+            if not pj or not any(b.get('t') == 'grid' for b in json.load(open(pj[0]))['blocks']):
+                problems.append(('keyword sheet: page missing or has no listings placeholder', r[0], slug)); continue
+            pages.setdefault(slug, sid)
     # Three special widgets (my listings active/sold, the open search form). Stored as the path after /l/idx2/.
     special = {}
     if 'Special embeds (3)' in wb.sheetnames:
