@@ -23,6 +23,8 @@ _d = datetime.date.fromisoformat(SD['meta']['last'])
 LAST = f'{_d.strftime("%B")} {_d.day}, {_d.year}'
 WINDOW = f'November 1, 2025 to {LAST}'
 MK = json.load(open('src/data/market/2026-09.json'))
+EX = json.load(open('src/data/sold/sold-extras.json'))     # coach house, suite and penthouse figures (Pete's export, to August 31, 2026)
+EXW = EX['meta']['window']
 SN = json.load(open('src/data/snapstats/2026-10.json'))['areas']
 MAPPED = json.load(open('src/data/snapstats/_mapping.json'))['mapped']
 QLAB = ['November 2025 to January 2026', 'February to April 2026', 'May to July 2026', f'August 1 to {LAST}']
@@ -175,8 +177,28 @@ def finish(slug, seo, crumbs, faq, bl, faq_heading, links, extra=None):
     return j
 
 
-NOTICE_COACH = ('Draft for Jared’s approval. This page shows what the city allows and how detached houses in the area have sold. It has no coach house sales or counts, because the sold figures '
-                'are not split out for coach houses. The live search is not connected yet.')
+NOTICE_COACH = ('Draft for Jared’s approval. Coach house figures come from the Carriage/Coach House and Laneway House style flags in Paragon closed sales, which the listing agent fills in, so the counts are small and will miss some. '
+                'The live search is not connected yet.')
+
+
+def coach_part(city, name):
+    """Paragraph, table and FAQ answer built from the coach house flags in the extras layer."""
+    g = EX['city'][city]['groups']; co, ho, la = g['coach'], g['house'], g['lane']
+    assert co['n'] >= 5 and ho['n'] >= 30
+    prem = 100 * (co['price'] - ho['price']) / ho['price']
+    side = f'above' if co['price'] >= ho['price'] else 'below'
+    para = (f'Paragon marks {co["n"]} of the {ho["n"]} {name} detached houses that closed from {EXW.replace(" to ", " to ")} as a coach house or laneway house. They sold at a median of {money(co["price"])}, '
+            f'{abs(prem):.0f}% {side} the {money(ho["price"])} median for all {name} houses in the same months. The flag is typed in by the listing agent, so treat the count as a floor and not a census.' + (f' With only {co["n"]} sales the price gap is a rough sign, not a trend.' if co['n'] < 15 else ''))
+    rows = [['Sales', num(co['n']), num(la['n']), num(ho['n'])], ['Median price', money(co['price']), money(la['price']), money(ho['price'])],
+            ['Days to sell', str(co['dom']), str(la['dom']), str(ho['dom'])]]
+    if co.get('ratio') and la.get('ratio') and ho.get('ratio'): rows.append(['Sold price as a share of list price', f'{co["ratio"]}%', f'{la["ratio"]}%', f'{ho["ratio"]}%'])
+    if co.get('lot_sqft') and la.get('lot_sqft') and ho.get('lot_sqft'): rows.append(['Median lot size', sqft(co['lot_sqft']), sqft(la['lot_sqft']), sqft(ho['lot_sqft'])])
+    if co.get('yb') and la.get('yb') and ho.get('yb'): rows.append(['Median year built', str(co['yb']), str(la['yb']), str(ho['yb'])])
+    t = tbl(f'{name} detached houses sold with a coach house or laneway house flag', ['Measure', 'Coach or laneway house', 'Lane access', 'All detached houses'], rows,
+            f'Source: Paragon closed sales, {EXW}. Lane access is the Site Influences field. Later months are left out because the export is incomplete after August 2026. A figure is shown only where at least 5 homes sold.')
+    faq = (f'About {abs(prem):.0f}% {side} the all-house median. {co["n"]} {name} houses marked as a coach or laneway house closed from {EXW} at a median of {money(co["price"])}, against {money(ho["price"])} for all {name} detached houses. '
+           f'The flag is entered by the listing agent, so the true number is higher.' + (f' With only {co["n"]} sales the gap is a rough sign, not a trend.' if co['n'] < 15 else ''))
+    return para, t, faq
 
 
 # ================================================================== COACH HOUSES
@@ -194,8 +216,7 @@ def surrey_coach():
     bl = [{'t': 'notice', 'text': NOTICE_COACH, 'gen': G},
           P('This search lists detached houses for sale in Surrey and North Surrey that come with a coach house: a second, smaller home on the same lot, usually built over a garage at the back. '
             'It runs from Fleetwood and Newton across to Guildford and Fraser Heights. Cloverdale and South Surrey have their own coach house searches, linked at the bottom.'),
-          P(f'I can’t give you a coach house price, because the sold records I work from don’t mark them. What I can show is the market they sit in: {tot:,} detached houses closed in the Surrey and North Surrey board areas '
-            f'in the year to {LAST}, and across the whole City of Surrey the median price was {money(c["price"])}.'),
+          P(coach_part('surrey', 'Surrey and North Surrey')[0] + f' Across the whole City of Surrey the median detached house price was {money(c["price"])} in the year to {LAST}.'),
           {'t': 'grid', 'gen': G},
           H('What Surrey allows for a coach house'),
           P('Surrey puts coach houses and garden suites under one rule. Each has to be at least 35 and at most 75 square metres, and any residential zone that allows detached houses, duplexes or houseplexes also allows one.'),
@@ -213,6 +234,7 @@ def surrey_coach():
             'That is a useful picture of the pattern: narrow lots, a lane behind, and a second home over the garage.'),
           P('About one-third of Surrey is designated Agriculture in the Official Community Plan, and 95% of that land is inside the Agricultural Land Reserve. The small-scale rules above are for urban lots, not a route to extra homes on Reserve land. '
             'Bridgeview sits behind dikes. Confirm Reserve and floodplain status before you count on a second home.'),
+          coach_part('surrey', 'Surrey and North Surrey')[1],
           H('Detached houses in the City of Surrey: what sold'),
           measures('Detached houses sold in the City of Surrey (including Cloverdale and South Surrey)', c, 'Detached houses'),
           P(f'In the City of Surrey houses took {c["dom"]} days to sell at a median and closed at {c["ratio"]}% of the list price, and {c["over"]}% sold over it. The year-built median is {c["yb"]}, so a typical Surrey house is older than a lot of buyers expect before they start adding a second home.'),
@@ -233,7 +255,7 @@ def surrey_coach():
     faq = [('How big can a coach house be in Surrey?', 'Between 35 and 75 square metres. On lots zoned RA, R2, R2-O or R3 it can reach 120 square metres where the existing house or duplex is below its maximum floor area ratio.'),
            ('Can a Surrey coach house have a secondary suite in it?', 'No. Surrey does not allow a secondary suite inside a coach house or garden suite. A suite is allowed in the main house, one per unit, up to 40% of the principal unit’s habitable floor area.'),
            ('Does a Surrey lot need a lane for a coach house?', 'On smaller R3 to R6 lots, yes: the rules require lane access for a coach house. The lot also needs one extra parking space.'),
-           ('How much does a Surrey house with a coach house cost?', f'I don’t have a coach house price, because the sold records do not flag them. For all Surrey detached houses, the median was {money(c["price"])} over the year to {LAST}, with the middle half between {money(c["p25"])} and {money(c["p75"])}.'),
+           ('How much does a Surrey house with a coach house cost?', coach_part('surrey', 'Surrey and North Surrey')[2] + f' Across all of Surrey the median was {money(c["price"])} in the year to {LAST}.'),
            ('Is a coach house the same as a garden suite in Surrey?', 'Surrey’s rule covers both in one sentence: a coach house or garden suite is 35 to 75 square metres, allowed in any zone that allows detached houses, duplexes or houseplexes.'),
            ('Do these rules apply in White Rock, Langley or Delta?', 'No. They are Surrey’s. White Rock, the Township of Langley, the City of Langley and Delta each have their own bylaws, so confirm the city before you read a listing.')]
     links = [('Surrey houses for sale', 'surrey-houses-for-sale'), ('Surrey homes for sale', 'surrey-homes-for-sale'), ('Surrey half duplexes for sale', 'surrey-duplexes-for-sale'),
@@ -258,8 +280,7 @@ def cloverdale_coach():
     assert sn['comms'][0]['name'] == 'Clayton' and sn['comms'][1]['name'] == 'Cloverdale'
     bl = [{'t': 'notice', 'text': NOTICE_COACH, 'gen': G},
           P('These are detached houses for sale in Cloverdale and Clayton with a coach house on the lot. The two parts of this search look very different from each other: Cloverdale town has older and larger lots, and Clayton is the newer small-lot neighbourhood.'),
-          P(f'The sold records I use do not mark coach houses, so I can’t quote you a price for one. What I can say is that {c["n"]} Cloverdale houses sold in the year to {LAST} at a median of {money(c["price"])}, '
-            f'about {money(h["benchmark"])} on the Home Price Index benchmark, and that {c["dom"]} days was the median wait.'),
+          P(coach_part('cloverdale', 'Cloverdale')[0] + f' Over the year to {LAST} all {c["n"]} Cloverdale and Clayton houses in the main sold file had a median of {money(c["price"])}, about {money(h["benchmark"])} on the Home Price Index benchmark, and {c["dom"]} days was the median wait.'),
           {'t': 'grid', 'gen': G},
           H('Clayton and Cloverdale are two different lots'),
           P(f'Clayton’s houses that sold had a median lot of just {sqft(cy["lot"])}, built around {cy["yb"]}, and a median price of {money(cy["price"])}. In Cloverdale town the median lot was {sqft(cl["lot"])}, the median house was built in {cl["yb"]} and the median price was {money(cl["price"])}. '
@@ -275,6 +296,7 @@ def cloverdale_coach():
           P('Cloverdale also has working farmland. Surrey’s small-scale housing rules are for urban lots; they are not a way to add a second home on a parcel in the Agricultural Land Reserve, where the Agricultural Land Commission sets what extra housing is allowed. '
             'Farm and acreage lots are covered in the buying rules for acreage on this site.'),
           P('Two big projects are worth knowing about. The new Surrey Hospital and BC Cancer Centre at 5500 180 Street started construction in September 2023, with completion expected in 2030, and the Surrey-Langley SkyTrain, 16 kilometres long with a station at Clayton, is under construction and expected in late 2029.'),
+          coach_part('cloverdale', 'Cloverdale')[1],
           H('Cloverdale houses: what sold'),
           measures('Detached houses sold in Cloverdale', c, 'Cloverdale houses'),
           quarters('Cloverdale houses sold, by period', c),
@@ -292,6 +314,7 @@ def cloverdale_coach():
           {'t': 'calc', 'which': 'mortgage', 'price': c['price'], 'gen': G}]
     faq = [('Are RF-12C and RF-13 still zones in Cloverdale?', 'No. Surrey replaced RF-12, RF-12C and RF-13 with the R4 Small Lot Residential zone on July 8, 2024. A listing that still uses the old names is out of date, so check the lot’s current zone.'),
            ('How big can a Cloverdale coach house be?', 'Between 35 and 75 square metres. The limit is 120 on RA, R2, R2-O and R3 lots where the existing house is below its maximum floor area ratio.'),
+           ('How much does a Cloverdale house with a coach house cost?', coach_part('cloverdale', 'Cloverdale')[2]),
            ('What do Cloverdale houses sell for?', f'The median was {money(c["price"])} over the year to {LAST}, from {c["n"]} sales. Clayton houses had a median of {money(cy["price"])} and Cloverdale town houses {money(cl["price"])}.'),
            ('Can I add a coach house to a farm lot near Cloverdale?', 'Not under Surrey’s small-scale rules. Those cover urban lots. A parcel in the Agricultural Land Reserve is governed by the Agricultural Land Commission, so check the Reserve first.'),
            ('How fast do Cloverdale houses sell?', f'The median was {c["dom"]} days, and homes closed at {c["ratio"]}% of list price at a median. {c["over"]}% sold over the list price.'),
@@ -322,8 +345,7 @@ def south_surrey_coach():
     bl = [{'t': 'notice', 'text': NOTICE_COACH, 'gen': G},
           P('This search lists detached houses for sale in South Surrey with a coach house on the lot. It covers Crescent Beach and Ocean Park, Elgin Chantrell, Grandview, King George Corridor, Morgan Creek, Pacific Douglas, Sunnyside Park and Hazelmere. '
             'White Rock is a separate city with its own bylaws and is not part of this search.'),
-          P(f'There is no coach house line in the sold records I work from, so I can’t quote a coach house price. South Surrey as a whole is the market around it: {c["n"]} detached houses sold in the year to {LAST} at a median of {money(c["price"])}, '
-            f'which is {money(c["price"] - group("surrey", "house")["price"])} above the City of Surrey median.'),
+          P(coach_part('south-surrey', 'South Surrey')[0] + f' South Surrey as a whole is the market around it: its median is {money(c["price"])} in the year to {LAST}, which is {money(c["price"] - group("surrey", "house")["price"])} above the City of Surrey median.'),
           {'t': 'grid', 'gen': G},
           H('Surrey’s rules, as they apply in South Surrey'),
           P('South Surrey is part of the City of Surrey, so one set of coach house rules covers it. A coach house or garden suite is between 35 and 75 square metres. Any residential zone that allows a detached house, a duplex or a houseplex also allows one. '
@@ -339,6 +361,7 @@ def south_surrey_coach():
             f'Elgin Chantrell sits at the other end with {sqft(ec["lot"])} and a {money(ec["price"])} median price, the highest of any South Surrey neighbourhood. Crescent Beach and Ocean Park had the most sales, {cb["n"]}, at {money(cb["price"])}.'),
           subtable('Detached houses sold in South Surrey, by neighbourhood', rows, snapcity='south-surrey-white-rock'),
           P(f'For contrast, White Rock’s {wr["n"]} house sales had a median price of {money(wr["price"])} on a median lot of {sqft(wr["lot"])}. Its coach house rules are the City of White Rock’s and I have not covered them on this page.'),
+          coach_part('south-surrey', 'South Surrey')[1],
           H('South Surrey houses: what sold'),
           measures('Detached houses sold in South Surrey', c, 'South Surrey houses'),
           quarters('South Surrey houses sold, by period', c),
@@ -354,7 +377,7 @@ def south_surrey_coach():
           {'t': 'calc', 'which': 'mortgage', 'price': c['price'], 'gen': G}]
     faq = [('Do Surrey’s coach house rules apply in White Rock?', 'No. White Rock is its own city. Surrey’s limits, 35 to 75 square metres and lane access on smaller lots, apply to South Surrey, Crescent Beach and Ocean Park, Elgin Chantrell, Grandview and the other Surrey neighbourhoods.'),
            ('Can I build a coach house in Crescent Beach?', 'Possibly, but the lot is in a floodplain. The flood construction level is 3.30 metres above Geodetic Survey of Canada datum, a floodplain build needs a geotechnical engineer, and building below that level needs a Development Variance Permit.'),
-           ('How much do South Surrey houses cost?', f'The median was {money(c["price"])} over the year to {LAST}, with the middle half between {money(c["p25"])} and {money(c["p75"])}. I do not have a coach house price on its own.'),
+           ('How much do South Surrey houses with a coach house cost?', coach_part('south-surrey', 'South Surrey')[2] + f' The median for all South Surrey detached houses was {money(c["price"])} in the year to {LAST}, with the middle half between {money(c["p25"])} and {money(c["p75"])}.'),
            ('Which South Surrey area has the biggest lots?', f'Elgin Chantrell, with a median lot of {sqft(ec["lot"])}. Grandview and Pacific Douglas are the smallest at {sqft(gr["lot"])} and {sqft(pdg["lot"])}.'),
            ('How long do South Surrey houses take to sell?', f'{c["dom"]} days at a median, and houses closed at {c["ratio"]}% of list price. {c["over"]}% sold over the list price.'),
            ('Can a South Surrey duplex have a suite as well?', 'Yes, one suite per half of a duplex, up to 40% of that unit’s habitable floor area. I list them on the South Surrey duplexes with suites page.')]

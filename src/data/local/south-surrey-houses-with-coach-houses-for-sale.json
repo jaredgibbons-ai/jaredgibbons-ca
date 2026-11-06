@@ -34,8 +34,8 @@
    "gen": "nsrch"
   },
   {
-   "q": "How much do South Surrey houses cost?",
-   "a": "The median was $1,716,500 over the year to October 22, 2026, with the middle half between $1,421,000 and $2,125,000. I do not have a coach house price on its own.",
+   "q": "How much do South Surrey houses with a coach house cost?",
+   "a": "About 4% below the all-house median. 10 South Surrey houses marked as a coach or laneway house closed from November 1, 2025 to August 31, 2026 at a median of $1,640,000, against $1,715,000 for all South Surrey detached houses. The flag is entered by the listing agent, so the true number is higher. With only 10 sales the gap is a rough sign, not a trend. The median for all South Surrey detached houses was $1,716,500 in the year to October 22, 2026, with the middle half between $1,421,000 and $2,125,000.",
    "gen": "nsrch"
   },
   {
@@ -57,7 +57,7 @@
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. This page shows what the city allows and how detached houses in the area have sold. It has no coach house sales or counts, because the sold figures are not split out for coach houses. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. Coach house figures come from the Carriage/Coach House and Laneway House style flags in Paragon closed sales, which the listing agent fills in, so the counts are small and will miss some. The live search is not connected yet.",
    "gen": "nsrch"
   },
   {
@@ -67,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "There is no coach house line in the sold records I work from, so I can’t quote a coach house price. South Surrey as a whole is the market around it: 454 detached houses sold in the year to October 22, 2026 at a median of $1,716,500, which is $331,500 above the City of Surrey median.",
+   "text": "Paragon marks 10 of the 431 South Surrey detached houses that closed from November 1, 2025 to August 31, 2026 as a coach house or laneway house. They sold at a median of $1,640,000, 4% below the $1,715,000 median for all South Surrey houses in the same months. The flag is typed in by the listing agent, so treat the count as a floor and not a census. With only 10 sales the price gap is a rough sign, not a trend. South Surrey as a whole is the market around it: its median is $1,716,500 in the year to October 22, 2026, which is $331,500 above the City of Surrey median.",
    "gen": "nsrch"
   },
   {
@@ -222,6 +222,56 @@
    "t": "p",
    "text": "For contrast, White Rock’s 85 house sales had a median price of $1,565,000 on a median lot of 5,165 sq ft. Its coach house rules are the City of White Rock’s and I have not covered them on this page.",
    "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "South Surrey detached houses sold with a coach house or laneway house flag",
+   "head": [
+    "Measure",
+    "Coach or laneway house",
+    "Lane access",
+    "All detached houses"
+   ],
+   "rows": [
+    [
+     "Sales",
+     "10",
+     "45",
+     "431"
+    ],
+    [
+     "Median price",
+     "$1,640,000",
+     "$1,498,500",
+     "$1,715,000"
+    ],
+    [
+     "Days to sell",
+     "34",
+     "40",
+     "32"
+    ],
+    [
+     "Sold price as a share of list price",
+     "99.3%",
+     "96.9%",
+     "95.8%"
+    ],
+    [
+     "Median lot size",
+     "5,196 sq ft",
+     "3,827 sq ft",
+     "7,192 sq ft"
+    ],
+    [
+     "Median year built",
+     "2022",
+     "2014",
+     "1997"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed sales, November 1, 2025 to August 31, 2026. Lane access is the Site Influences field. Later months are left out because the export is incomplete after August 2026. A figure is shown only where at least 5 homes sold."
   },
   {
    "t": "h",

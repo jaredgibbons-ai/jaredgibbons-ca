@@ -34,6 +34,11 @@
    "gen": "nsrch"
   },
   {
+   "q": "How much does a Cloverdale house with a coach house cost?",
+   "a": "About 2% above the all-house median. 24 Cloverdale houses marked as a coach or laneway house closed from November 1, 2025 to August 31, 2026 at a median of $1,324,750, against $1,300,000 for all Cloverdale detached houses. The flag is entered by the listing agent, so the true number is higher.",
+   "gen": "nsrch"
+  },
+  {
    "q": "What do Cloverdale houses sell for?",
    "a": "The median was $1,297,500 over the year to October 22, 2026, from 306 sales. Clayton houses had a median of $1,295,000 and Cloverdale town houses $1,300,000.",
    "gen": "nsrch"
@@ -57,7 +62,7 @@
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. This page shows what the city allows and how detached houses in the area have sold. It has no coach house sales or counts, because the sold figures are not split out for coach houses. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. Coach house figures come from the Carriage/Coach House and Laneway House style flags in Paragon closed sales, which the listing agent fills in, so the counts are small and will miss some. The live search is not connected yet.",
    "gen": "nsrch"
   },
   {
@@ -67,7 +72,7 @@
   },
   {
    "t": "p",
-   "text": "The sold records I use do not mark coach houses, so I can’t quote you a price for one. What I can say is that 306 Cloverdale houses sold in the year to October 22, 2026 at a median of $1,297,500, about $1,317,200 on the Home Price Index benchmark, and that 21 days was the median wait.",
+   "text": "Paragon marks 24 of the 294 Cloverdale detached houses that closed from November 1, 2025 to August 31, 2026 as a coach house or laneway house. They sold at a median of $1,324,750, 2% above the $1,300,000 median for all Cloverdale houses in the same months. The flag is typed in by the listing agent, so treat the count as a floor and not a census. Over the year to October 22, 2026 all 306 Cloverdale and Clayton houses in the main sold file had a median of $1,297,500, about $1,317,200 on the Home Price Index benchmark, and 21 days was the median wait.",
    "gen": "nsrch"
   },
   {
@@ -162,6 +167,56 @@
    "t": "p",
    "text": "Two big projects are worth knowing about. The new Surrey Hospital and BC Cancer Centre at 5500 180 Street started construction in September 2023, with completion expected in 2030, and the Surrey-Langley SkyTrain, 16 kilometres long with a station at Clayton, is under construction and expected in late 2029.",
    "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Cloverdale detached houses sold with a coach house or laneway house flag",
+   "head": [
+    "Measure",
+    "Coach or laneway house",
+    "Lane access",
+    "All detached houses"
+   ],
+   "rows": [
+    [
+     "Sales",
+     "24",
+     "40",
+     "294"
+    ],
+    [
+     "Median price",
+     "$1,324,750",
+     "$1,250,000",
+     "$1,300,000"
+    ],
+    [
+     "Days to sell",
+     "24",
+     "24",
+     "20"
+    ],
+    [
+     "Sold price as a share of list price",
+     "96.7%",
+     "96.4%",
+     "96.8%"
+    ],
+    [
+     "Median lot size",
+     "3,099 sq ft",
+     "3,286 sq ft",
+     "6,064 sq ft"
+    ],
+    [
+     "Median year built",
+     "2009",
+     "2005",
+     "2000"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed sales, November 1, 2025 to August 31, 2026. Lane access is the Site Influences field. Later months are left out because the export is incomplete after August 2026. A figure is shown only where at least 5 homes sold."
   },
   {
    "t": "h",
