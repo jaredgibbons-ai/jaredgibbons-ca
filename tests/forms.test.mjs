@@ -117,3 +117,12 @@ test('quiz lead is validated and the email lists every answer', async () => {
   const bad = await handleForm(mk({ ...quiz, starting: '', email: 'x' }, { path: '/api/forms/quiz' }), env(), { fetch: captcha() });
   assert.equal(bad.status, 422);
 });
+
+test('home evaluation keeps the extra fields in the email', async () => {
+  const sent = [];
+  const e = env({ EMAIL: { send: async (m) => { sent.push(m); } }, LEAD_EMAIL_FROM: 'leads@jaredgibbons.ca', LEAD_EMAIL_TO: 'a@example.com,b@example.com' });
+  const body = { name: 'Pat', email: 'pat@example.com', phone: '604-555-0100', address: '1 Main St', city: 'Surrey', postal: 'V3T 1A1', bedrooms: '3', bathrooms: '2', size: '1800 sq. ft.', features: 'New roof', notes: 'Call after 5.', 'cf-turnstile-response': 'tok' };
+  const r = await handleForm(mk(body, { path: '/api/forms/home-evaluation' }), e, { fetch: captcha() });
+  assert.equal(r.status, 200); assert.equal(sent.length, 2);
+  for (const v of ['Surrey', 'V3T 1A1', 'Bedrooms: 3', 'Size: 1800 sq. ft.', 'New roof', 'Call after 5.']) assert.ok(sent[0].text.includes(v), v);
+});

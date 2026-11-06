@@ -875,3 +875,7 @@ Research-voice cleanup wave 2: 340 passages on 183 pages rewritten or deleted (A
 - Send posts to the Worker `POST /api/forms/quiz` (new `quiz` schema in `src/worker/forms.js`, tested). The lead email lists name, email, phone and every answer, with the visitor as reply-to. Delivery still needs the BL-05 items: `TURNSTILE_SECRET`, the Email Service sending domain and `LEAD_EMAIL_FROM`, `LEAD_EMAIL_TO`, and `ALLOWED_ORIGINS`.
 - Until delivery is on, or on any failure, the visitor sees "Your answers were not sent" and a button that opens the same answers as a ready-written email to jaredgibbons@royallepage.ca. Nothing says "sent" unless the Worker accepted it.
 - Not ported: the live site's auto-prompt dialog and listing-alerts box (unchanged from the earlier decision).
+
+## D-161 (2026-11-06) Forms go-live code, and the re-pull path
+- All page forms (contact, home evaluation incl. city/postal/bedrooms/bathrooms/size/features/notes, address check, home value) can now post to the Worker. A build variable `PUBLIC_FORMS_LIVE=true` switches them from inert stubs to live; default is inert. Failures show "not sent" plus a ready-written email to Jared. Steps in `docs/forms-go-live.md`. Tests: 16 forms cases.
+- `tools/build_extras_layer.py` takes several `--dir` folders, `--status` and `--end`, and matches on ML # so Pete's September-to-today re-pull merges without double counts. Page text and period labels in `tools/build_extras_pages.py` still say August 31 and need one pass when the re-pull arrives.

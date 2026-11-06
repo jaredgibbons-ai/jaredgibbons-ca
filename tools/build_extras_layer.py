@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Extras layer from Pete's Paragon sold export (Closed only, Nov 1, 2025 to Nov 6, 2026): suites, coach houses and penthouses.
 
-    python3 -I tools/build_extras_layer.py --dir <folder with the RD_/RA_ csv files>     writes src/data/sold/sold-extras.json
+    python3 -I tools/build_extras_layer.py --dir <folder with the RD_/RA_ csv files> [--dir <second folder>] [--status Closed,<other status>] [--end 2026-10-31]
+                                                                                writes src/data/sold/sold-extras.json
+    With the September-to-today re-pull: pass both folders, the extra status Pete pulled it under, and the new --end date. Rows are matched on ML # so a sale in both folders counts once.
 
 Window: November 1, 2025 to August 31, 2026.  The export only has sales Paragon had marked Closed, and sales thin out after August (803 detached in September, 111 in October),
 so later months are left out until Pete re-pulls them.  Rules are the same as the main sold layer: grouped figures only (the raw rows carry MLS numbers and never enter the repo),
@@ -129,14 +131,20 @@ def buildings(rows):
 
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument('--dir', required=True); a = ap.parse_args()
-    rows = []
-    for f in sorted(glob.glob(os.path.join(a.dir, 'R[AD]_*.csv'))):
-        for r in csv.DictReader(open(f, encoding='utf-8-sig', errors='replace')): rows.append(r)
-    rows = [r for r in rows if sold_date(r) <= END and r['Status'] == 'Closed']
-    print(len(rows), 'closed sales to', END)
-    out = {'meta': {'window': 'November 1, 2025 to August 31, 2026', 'first': '2025-11-01', 'last': END.isoformat(), 'closed': len(rows),
-                    'source': 'Paragon closed-sales export (Closed status only) supplied by Pete, 2026-11-06. Sales after August 2026 are incomplete in the export and are left out. Raw rows are not stored.'},
+    ap = argparse.ArgumentParser(); ap.add_argument('--dir', required=True, action='append'); ap.add_argument('--status', default='Closed'); ap.add_argument('--end', default=END.isoformat()); a = ap.parse_args()
+    end = datetime.date.fromisoformat(a.end); statuses = {x.strip() for x in a.status.split(',') if x.strip()}
+    seen, rows = set(), []
+    for d in a.dir:
+        for f in sorted(glob.glob(os.path.join(d, 'R[AD]_*.csv'))):
+            for r in csv.DictReader(open(f, encoding='utf-8-sig', errors='replace')):
+                k = r.get('ML #')
+                if k and k in seen: continue
+                seen.add(k); rows.append(r)
+    rows = [r for r in rows if sold_date(r) <= end and r['Status'] in statuses]
+    print(len(rows), 'sales to', end, 'statuses', sorted(statuses))
+    window = f"November 1, 2025 to {end.strftime('%B')} {end.day}, {end.year}"
+    out = {'meta': {'window': window, 'first': '2025-11-01', 'last': end.isoformat(), 'closed': len(rows),
+                    'source': f"Paragon sold export supplied by Pete ({', '.join(sorted(statuses))} status), window {window}. Raw rows are not stored."},
            'city': {}, 'sub': {}}
     for ck, sel in CITY.items():
         R = pick(rows, sel); tg = [(a, tags(a)) for a in R]

@@ -35,6 +35,13 @@ export const SCHEMAS = {
     email: { label: 'Your email', required: true, max: 200, email: true },
     phone: { label: 'Your phone number', max: 30, phone: true },
     address: { label: 'Address', required: true, max: 200 },
+    city: { label: 'City', max: 80 },
+    postal: { label: 'Postal code', max: 12 },
+    bedrooms: { label: 'Bedrooms', max: 10 },
+    bathrooms: { label: 'Bathrooms', max: 10 },
+    size: { label: 'Size', max: 30 },
+    features: { label: 'Features', max: 300 },
+    notes: { label: 'Notes', max: 3000 },
   },
   'property-check': {
     address: { label: 'Property address', required: true, max: 200 },
@@ -102,10 +109,12 @@ export function leadEmail(lead) {
   if (f.address) lines.push(`Address: ${oneLine(f.address)}`);
   if (f.address && lead.address_check) lines.push(`Address check: ${CHECK_TEXT[lead.address_check] || 'not checked'}`);
   if (f.subject) lines.push(`Subject: ${oneLine(f.subject)}`);
+  if (lead.kind === 'home-evaluation') for (const k of ['city', 'postal', 'bedrooms', 'bathrooms', 'size', 'features']) if (f[k]) lines.push(`${SCHEMAS['home-evaluation'][k].label}: ${oneLine(f[k])}`);
   if (lead.kind === 'quiz') for (const k of QUIZ_ORDER) if (f[k]) lines.push(`${SCHEMAS.quiz[k].label}: ${oneLine(f[k])}`);
   if (lead.page) lines.push(`Page: ${oneLine(lead.page)}`);
   lines.push(`Received: ${lead.received_at}`);
   if (f.message) lines.push('', 'Message:', f.message);
+  if (f.notes) lines.push('', 'Notes:', f.notes);
   const who = oneLine(f.name) || 'website visitor';
   return {
     subject: `${FORM_TITLES[lead.kind] || 'Website lead'} from ${who}`.slice(0, 200),

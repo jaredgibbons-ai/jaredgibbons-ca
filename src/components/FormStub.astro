@@ -6,26 +6,78 @@ const key = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY || '';
 const type = (l: string) => /email/i.test(l) ? 'email' : /phone/i.test(l) ? 'tel' : 'text';
 // Simple archive forms pass `labels`; richer ones (home evaluation) pass `fields`: { label, type: text|email|tel|select|textarea, options, wide, addr }.
 const rows: any[] = fields ?? labels.map((l: string) => ({ label: l.replace(/:$/, ''), type: /message/i.test(l) ? 'textarea' : type(l), addr: /address/i.test(l), wide: /message|address/i.test(l) }));
+// Live mode (build variable PUBLIC_FORMS_LIVE=true): the same fields post to the Worker (POST /api/forms/<kind>) with Turnstile, and any failure falls back to a ready-written email.
+const live = import.meta.env.PUBLIC_FORMS_LIVE === 'true';
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
+const KEYS: [RegExp, string][] = [[/e-?mail/i, 'email'], [/phone/i, 'phone'], [/subject/i, 'subject'], [/message/i, 'message'], [/postal/i, 'postal'], [/^city/i, 'city'], [/bedroom/i, 'bedrooms'], [/bathroom/i, 'bathrooms'], [/^size/i, 'size'], [/feature/i, 'features'], [/notes/i, 'notes'], [/address/i, 'address'], [/name/i, 'name']];
+const keyOf = (l: string) => KEYS.find(([re]) => re.test(l))?.[1] ?? '';
+const names = rows.map((r: any) => keyOf(r.label));
+const has = (k: string) => names.includes(k);
+const kind = fields ? 'home-evaluation' : has('message') ? 'contact' : has('address') && has('email') ? 'home-evaluation' : has('address') && !has('email') ? 'property-check' : '';
+const isLive = live && !!kind;
 ---
-<form class:list={['fstub', { 'fstub--grid': !!fields }]} data-key={key} aria-describedby={`${uid}-note`} onsubmit="return false" novalidate>
+<form class:list={['fstub', { 'fstub--grid': !!fields }]} data-key={key} data-kind={isLive ? kind : undefined} data-sitekey={isLive ? siteKey : undefined} aria-describedby={isLive ? undefined : `${uid}-note`} onsubmit={isLive ? undefined : 'return false'} novalidate>
   {title && <p class="fstub__title">{title}</p>}
-  <p id={`${uid}-note`} class="notice">This form is not connected in the preview. Nothing you type here is sent.</p>
+  {!isLive && <p id={`${uid}-note`} class="notice">This form is not connected in the preview. Nothing you type here is sent.</p>}
   <div class="fstub__fields">
   {rows.map((r: any, i: number) => (
     <div class:list={['fstub__row', { 'fstub__row--wide': r.wide }]}>
       <label for={`${uid}-${i}`}>{r.label}</label>
       {r.type === 'textarea'
-        ? <textarea id={`${uid}-${i}`} rows="4" disabled></textarea>
+        ? <textarea id={`${uid}-${i}`} name={names[i] || undefined} rows="4" disabled={!isLive}></textarea>
         : r.type === 'select'
-          ? <select id={`${uid}-${i}`} disabled><option value="">Select</option>{r.options.map((o: string) => <option>{o}</option>)}</select>
-          : <input id={`${uid}-${i}`} type={r.type} data-addr={r.addr ? '' : undefined} disabled />}
+          ? <select id={`${uid}-${i}`} name={names[i] || undefined} disabled={!isLive}><option value="">Select</option>{r.options.map((o: string) => <option>{o}</option>)}</select>
+          : <input id={`${uid}-${i}`} name={names[i] || undefined} type={r.type} data-addr={r.addr ? '' : undefined} autocomplete={({ name: 'name', email: 'email', phone: 'tel' } as any)[names[i]]} disabled={!isLive} />}
+      <p class="fstub__err" id={`${uid}-${i}-e`} role="alert"></p>
     </div>
   ))}
   </div>
-  <button type="button" class="btn" aria-disabled="true" disabled>{submit}</button>
+  {isLive && <div class="fstub__hp" aria-hidden="true"><label for={`${uid}-hp`}>Leave this empty</label><input id={`${uid}-hp`} name="_hp_url" tabindex="-1" autocomplete="off" /></div>}
+  {isLive && siteKey && <div class="fstub__ts" data-ts></div>}
+  {isLive
+    ? <button type="submit" class="btn">{submit}</button>
+    : <button type="button" class="btn" aria-disabled="true" disabled>{submit}</button>}
   {fine && <p class="fstub__fine">{fine}</p>}
+  {isLive && <p class="fstub__msg" data-msg role="status" aria-live="polite"></p>}
+  {isLive && <div class="fstub__fb" data-fb hidden><p>Sending from this page is not available right now. Your message is ready in an email to Jared:</p><p><a class="btn" data-mailto href="mailto:jaredgibbons@royallepage.ca">Open it in my email app</a> <a class="btn btn--ghost" href="tel:604-928-1361">Call or text 604-928-1361</a></p></div>}
 </form>
 <script>
+  // Live forms: post to the Worker. Anything but a confirmed "ok" is shown as not sent, with the email fallback.
+  document.querySelectorAll<HTMLFormElement>('form.fstub[data-kind]').forEach((f) => {
+    const kind = f.dataset.kind!, siteKey = f.dataset.sitekey || '';
+    const msg = f.querySelector<HTMLElement>('[data-msg]')!, fb = f.querySelector<HTMLElement>('[data-fb]')!, mailto = f.querySelector<HTMLAnchorElement>('[data-mailto]')!;
+    const btn = f.querySelector<HTMLButtonElement>('button[type=submit]')!, ts = f.querySelector<HTMLElement>('[data-ts]');
+    let tsId: string | null = null, tok = '';
+    const w = window as any;
+    const loadTs = () => {
+      if (!siteKey || !ts || tsId !== null) return; tsId = '';
+      const render = () => { tsId = w.turnstile.render(ts, { sitekey: siteKey, callback: (t: string) => { tok = t; } }); };
+      if (w.turnstile) return render();
+      const s = document.createElement('script'); s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'; s.async = true; s.onload = render; document.head.appendChild(s);
+    };
+    f.addEventListener('focusin', loadTs, { once: true });
+    const fields = () => [...f.querySelectorAll<HTMLInputElement>('input[name],textarea[name],select[name]')].filter((e) => e.name !== '_hp_url');
+    const setErr = (name: string, t: string) => { const el = f.querySelector<HTMLElement>(`[name="${name}"]`); const e = el?.parentElement?.querySelector<HTMLElement>('.fstub__err'); if (e) e.textContent = t; };
+    f.addEventListener('submit', async (ev) => {
+      ev.preventDefault(); msg.textContent = ''; fb.hidden = true; f.querySelectorAll('.fstub__err').forEach((e) => (e.textContent = ''));
+      const data: Record<string, string> = {};
+      fields().forEach((e) => { if (e.value.trim()) data[e.name] = e.value.trim(); });
+      data._hp_url = (f.querySelector<HTMLInputElement>('[name=_hp_url]')?.value || ''); data.page = location.pathname; data['cf-turnstile-response'] = tok;
+      const body = [`${kind} form`, '', ...fields().filter((e) => e.value.trim()).map((e) => `${(e.parentElement?.querySelector('label')?.textContent || e.name)}: ${e.value.trim()}`)].join('\n');
+      mailto.href = `mailto:jaredgibbons@royallepage.ca?subject=${encodeURIComponent('Website ' + kind.replace('-', ' ') + (data.name ? ' from ' + data.name : ''))}&body=${encodeURIComponent(body)}`;
+      const label = btn.textContent; btn.disabled = true; btn.textContent = 'Sending…';
+      try {
+        const r = await fetch('/api/forms/' + kind, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(data) });
+        const j = await r.json().catch(() => ({}));
+        if (r.ok && j.ok) { msg.textContent = 'Sent. Thank you. Jared will reply by email or phone.'; fields().forEach((e) => (e.value = '')); return; }
+        if (r.status === 422 && j.errors) { Object.entries<string>(j.errors).forEach(([k, t]) => setErr(k, t)); msg.textContent = 'Please check the highlighted fields.'; (f.querySelector('.fstub__err:not(:empty)')?.parentElement?.querySelector('input,textarea,select') as HTMLElement | null)?.focus(); }
+        else if (r.status === 429) msg.textContent = 'Too many tries. Please wait a minute and send again.';
+        else if (r.status === 403 && j.error === 'captcha_required') msg.textContent = 'Please complete the check, then press the button again.';
+        else { msg.textContent = 'Your message was not sent.'; fb.hidden = false; }
+      } catch { msg.textContent = 'Your message was not sent.'; fb.hidden = false; }
+      finally { btn.disabled = false; btn.textContent = label; if (w.turnstile && tsId) { w.turnstile.reset(tsId); tok = ''; } }
+    });
+  });
   // Address fields get suggestions once the form is live (the inputs are disabled in the preview, so nothing happens there).
   import { attachAddressAutocomplete } from '../lib/address-autocomplete.js';
   document.querySelectorAll<HTMLFormElement>('form.fstub[data-key]').forEach((f) => {
@@ -52,6 +104,15 @@ const rows: any[] = fields ?? labels.map((l: string) => ({ label: l.replace(/:$/
   .fstub input,.fstub textarea,.fstub select{min-height:2.75rem;border:1px solid var(--ink);border-radius:0;background:#fff;color:var(--ink);padding:.55rem .8rem;font:inherit;width:100%;box-sizing:border-box}
   .fstub input:disabled,.fstub textarea:disabled,.fstub select:disabled{opacity:.6;cursor:not-allowed}
   .fstub .btn{justify-self:start}
+  .fstub__err{margin:0;font-size:.8125rem;font-weight:700;color:#b00020}
+  .fstub__err:empty{display:none}
+  .fstub__hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .fstub__msg{margin:0;font-weight:700}
+  .fstub__msg:empty{display:none}
+  .fstub__fb{border:1px solid var(--ink);background:#fff;padding:1rem 1.25rem}
+  .fstub__fb[hidden]{display:none}
+  .fstub__fb p{margin:0 0 .75rem}
+  .fstub__fb .btn{margin:0 .5rem .5rem 0}
   .fstub__fine{margin:0;font-size:.8125rem;color:#444}
   @media (max-width:40rem){.fstub--grid .fstub__fields{grid-template-columns:1fr}}
 </style>
