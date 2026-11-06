@@ -1,6 +1,7 @@
 ---
 // Generic archive-driven pages. Bespoke pages (index, fort-langley, reviews) are explicit files and win.
 import GenericPage from '../components/GenericPage.astro';
+import DesignedPage from '../components/DesignedPage.astro';
 import SEO_OVERRIDES from '../data/seo-overrides.json';
 export function getStaticPaths() {
   const mods = import.meta.glob('../data/pages/*.json', { eager: true }) as Record<string, any>;
@@ -61,5 +62,8 @@ export function getStaticPaths() {
   return out;
 }
 const { page } = Astro.props as { page: any };
+// Long editorial pages (Buying, Selling) are rebuilt as designed pages from src/data/designed/<slug>.json (same wording as the archive/live page).
+const designedMods = import.meta.glob('../data/designed/*.json', { eager: true, import: 'default' }) as Record<string, any>;
+const designed = Object.entries(designedMods).find(([f]) => f.endsWith(`/${page.slug}.json`))?.[1];
 ---
-<GenericPage page={page} />
+{designed ? <DesignedPage page={page} d={designed} /> : <GenericPage page={page} />}

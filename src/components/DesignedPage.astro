@@ -1,0 +1,460 @@
+---
+// Designed layout for the long editorial pages (Buying, Selling). Content comes from src/data/designed/<slug>.json:
+// buying.json is built from the archive record by tools/build_designed_buying.py (same wording), selling.json is written from the live page.
+// Section kinds: tiles, cards, tiers, steps, checks, costs, estimate, quotes, faq, checklist, gallery, videos, booklet, figure, sold ...
+import Base from '../layouts/Base.astro';
+import Rich from './Rich.astro';
+import Cta from './Cta.astro';
+import ExploreLinks from './ExploreLinks.astro';
+import FormStub from './FormStub.astro';
+import PropertyCard from './PropertyCard.astro';
+import { ownCards } from '../lib/own-listings';
+import EXPLORE from '../data/explore.json';
+
+const { page, d } = Astro.props as { page: any; d: any };
+const seo = page.seo || {};
+const origin = 'https://jaredgibbons.ca';
+const plain = (x: any) => (Array.isArray(x) ? x.map((p: any) => p.t).join(' ').replace(/\s+([,.;:!?])/g, '$1') : String(x ?? ''));
+const faqItems: any[] = d.sections.flatMap((s: any) => (s.blocks ?? []).filter((b: any) => b.type === 'faq').flatMap((b: any) => b.items));
+const jsonld: any[] = [];
+if (faqItems.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqItems.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: plain(f.a) } })) });
+const crumbs = [{ name: 'Home', href: '/index.html' }, { name: page.slug === 'buying' ? 'Buy a Home' : 'Sell Your Home', href: `/${page.slug}.html` }];
+const explore = (EXPLORE as Record<string, any>)[page.slug];
+const own = ownCards().filter((c) => c.status !== 'Active').sort((a, b) => b.soldTs - a.soldTs);
+const mon = (c: any) => { const m = /^(\w{3}) \d+, (\d{4})$/.exec(c.soldDate || ''); return m ? `Sold ${m[1]} ${m[2]}` : 'Sold'; };
+const isRich = (x: any) => Array.isArray(x);
+const href = (h: string) => h.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/';
+let fid = 0;
+const hero = d.hero;
+---
+<Base
+  title={page.title}
+  canonical={page.canonical}
+  description={seo['Meta description'] || undefined}
+  ogTitle={seo['OG title'] || undefined}
+  ogDescription={seo['OG description'] || undefined}
+  ogImage={seo['OG image'] || undefined}
+  jsonld={jsonld}
+  crumbs={crumbs}
+  robots={seo['Meta robots'] || 'index, follow'}
+  footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
+  footerCell={true}
+  brandHref="/index.html"
+>
+<main id="main" class="dp">
+  <header class="dp-hero">
+    <div class="wrap dp-hero__in">
+      <div class="dp-hero__txt">
+        <p class="eyebrow">{hero.eyebrow}</p>
+        <h1 class="dp-h1">{hero.h1}</h1>
+        {hero.tag && <p class="dp-tag">{hero.tag}</p>}
+        <p class="dp-lead">{hero.lead}</p>
+        {hero.updated && <p class="dp-upd">{hero.updated}</p>}
+        <p class="dp-ctas">
+          {hero.ctas.map((c: any) => <a class:list={['btn', { 'btn--ghost': !c.primary }]} href={href(c.href)}>{c.label}</a>)}
+        </p>
+      </div>
+      {hero.image && (
+        <figure class="dp-hero__img">
+          <img src={`${hero.image.src}.webp`} width={hero.image.w} height={hero.image.h} alt={hero.image.alt} fetchpriority="high" decoding="async" />
+        </figure>
+      )}
+    </div>
+    <div class="wrap">
+      <ul class="dp-stats" style={`--n:${hero.stats.length}`}>
+        {hero.stats.map((s: any) => <li><strong>{s.k}</strong><span>{s.v}</span></li>)}
+      </ul>
+    </div>
+  </header>
+
+  <nav class="dp-nav" aria-label="On this page">
+    <div class="wrap"><ul>{d.nav.map((n: any) => <li><a href={n.href}>{n.label}</a></li>)}</ul></div>
+  </nav>
+
+  {d.sections.map((s: any, si: number) => (
+    <section class:list={['dp-sec', { 'dp-sec--alt': si % 2 === 1 }]} id={s.id} aria-labelledby={`${s.id}-h`}>
+      <div class="wrap">
+        <p class="dp-label">{s.label}</p>
+        <h2 class="dp-h2" id={`${s.id}-h`}>{s.h2}</h2>
+        {s.lead && <p class="dp-sublead">{s.lead}</p>}
+        {s.intro && <p class="dp-intro">{isRich(s.intro) ? <Rich parts={s.intro} /> : s.intro}</p>}
+
+        {(s.blocks ?? []).map((b: any) => {
+          if (b.type === 'tiles') return (
+            <ul class:list={['dp-tiles', { 'dp-tiles--small': b.small, 'dp-tiles--4': b.items.length === 4 }]}>
+              {b.items.map((t: any) => (
+                <li class="dp-tile">
+                  <strong class="dp-tile__k">{t.k}</strong>
+                  {t.t && <span class="dp-tile__t">{t.t}</span>}
+                  {t.d && <p class="dp-tile__d">{t.d}</p>}
+                </li>
+              ))}
+            </ul>
+          );
+          if (b.type === 'cards') return (
+            <ul class="dp-cards" style={`--cols:${b.cols ?? 3}`}>
+              {b.items.map((c: any) => (
+                <li><a class="dp-card" href={href(c.href)}>
+                  <span class="dp-card__n">{c.n}</span>
+                  <strong class="dp-card__t">{c.t}</strong>
+                  <span class="dp-card__d">{c.d}</span>
+                  <span class="dp-card__a">{c.cta}</span>
+                </a></li>
+              ))}
+            </ul>
+          );
+          if (b.type === 'stat') return (
+            <div class="dp-stat">
+              <p class="dp-stat__l">{b.label}</p>
+              <p class="dp-stat__k">{b.k}</p>
+              <p class="dp-stat__d">{b.d}</p>
+              {b.link && <p><a class="btn btn--ghost" href={href(b.link.href)}>{b.link.label}</a></p>}
+            </div>
+          );
+          if (b.type === 'tiers') return (
+            <div class="dp-tbl" role="region" tabindex="0" aria-label="First-time buyer PTT tiers">
+              <table>
+                <thead><tr>{b.head.map((h: string) => <th scope="col">{h}</th>)}</tr></thead>
+                <tbody>{b.rows.map((r: any) => <tr><th scope="row">{r.n}</th><td>{r.range}</td><td>{r.what}</td><td class="dp-res">{r.result}</td></tr>)}</tbody>
+              </table>
+            </div>
+          );
+          if (b.type === 'note') return <p class="dp-note">{isRich(b.d) ? <Rich parts={b.d} /> : b.d}</p>;
+          if (b.type === 'band') return (
+            <div class="dp-band">
+              <strong>{b.lead}</strong>
+              <a class="btn" href={href(b.btn.href)}>{b.btn.label}</a>
+              <a class="dp-band__alt" href={b.alt.href}>{b.alt.label}</a>
+            </div>
+          );
+          if (b.type === 'fine') return (
+            <p class="dp-fine">
+              {isRich(b.a) ? <Rich parts={b.a} /> : b.a}
+              {b.b && <> <span class="dp-fine__b">{b.b}</span></>}
+              {b.c && <> <Rich parts={b.c} /></>}
+            </p>
+          );
+          if (b.type === 'steps') return (
+            <ol class="dp-steps">
+              {b.items.map((st: any) => (
+                <li>
+                  <span class="dp-steps__n" aria-hidden="true">{st.n}</span>
+                  <div>
+                    <h3 class="dp-steps__t">{st.t}</h3>
+                    <p>{st.d}</p>
+                    {st.do && <p class="dp-steps__do"><strong>What I do:</strong> {st.do}</p>}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          );
+          if (b.type === 'estimate') return (
+            <div class="dp-est" id="first-home-plan">
+              <p class="dp-est__h">{b.head[0]}</p>
+              <dl class="dp-est__rows">
+                {b.rows.map((r: string[]) => <div><dt>{r[0]}</dt><dd>{r[1]}</dd></div>)}
+              </dl>
+              <p class="dp-est__res"><span>{b.head[1]}</span><strong>{b.result}</strong></p>
+              <p class="dp-est__note">{isRich(b.note) ? <Rich parts={b.note} /> : b.note}</p>
+              <p class="dp-fine">{b.fine}</p>
+            </div>
+          );
+          if (b.type === 'costs') return (
+            <div class="dp-tbl" role="region" tabindex="0" aria-label="Closing costs on a $1M home">
+              <table>
+                <thead><tr>{b.head.map((h: string) => <th scope="col">{h}</th>)}</tr></thead>
+                <tbody>{b.rows.map((r: any) => <tr><th scope="row">{r.t}</th><td>{isRich(r.d) ? <Rich parts={r.d} /> : r.d}</td><td class="dp-res">{r.v}</td></tr>)}</tbody>
+              </table>
+            </div>
+          );
+          if (b.type === 'checks') return (
+            <ul class="dp-checks">
+              {b.items.map((c: any) => (
+                <li>
+                  <h3>{c.t}</h3>
+                  <p>{c.d}</p>
+                  {c.src && <p class="dp-checks__src">{c.src.replace(/^Source:\s*/, 'Source: ')}</p>}
+                </li>
+              ))}
+            </ul>
+          );
+          if (b.type === 'quotes') return (
+            <>
+              <ul class="dp-quotes">
+                {b.items.map((q: any) => (
+                  <li>
+                    <p class="dp-quotes__stars" aria-label="5 out of 5 stars">★★★★★ <span>{q.src}</span></p>
+                    <blockquote>{q.q.startsWith('“') ? q.q : `“${q.q}”`}</blockquote>
+                    <p class="dp-quotes__who"><strong>{q.who}</strong> · {q.date}</p>
+                  </li>
+                ))}
+              </ul>
+              {b.more && <p><a class="dp-link" href={href(b.more.href)}>{b.more.label}</a></p>}
+            </>
+          );
+          if (b.type === 'faq') return (
+            <>
+              <div class="dp-faq">
+                {b.items.map((f: any) => (
+                  <details>
+                    <summary>{f.q}</summary>
+                    <p>{isRich(f.a) ? <Rich parts={f.a} /> : f.a}</p>
+                  </details>
+                ))}
+              </div>
+              {b.more && <p>{<Rich parts={b.more} />}</p>}
+            </>
+          );
+          if (b.type === 'checklist') return (
+            <ul class="dp-checklist">{b.items.map((t: string) => <li>{t}</li>)}</ul>
+          );
+          if (b.type === 'subhead') return <h3 class="dp-sub">{b.t}</h3>;
+          if (b.type === 'gallery') return (
+            <ul class="dp-gal" style={`--cols:${b.cols ?? 4}`}>
+              {b.items.map((g: any) => (
+                <li><img src={`${g.src}-800.webp`} srcset={`${g.src}-800.webp 800w, ${g.src}.webp ${g.w}w`} sizes={`(min-width:64rem) ${Math.round(70 / (b.cols ?? 4))}rem, (min-width:40rem) 50vw, 100vw`} width="800" height={Math.round(800 * g.h / g.w)} alt={g.alt} loading="lazy" decoding="async" /></li>
+              ))}
+            </ul>
+          );
+          if (b.type === 'videos') return (
+            <>
+              <ul class="dp-vids">
+                {b.items.map((v: any) => (
+                  <li><a href={`https://www.youtube.com/watch?v=${v.id}`} rel="noopener" target="_blank">
+                    <img src={`${v.src}.webp`} width="480" height="360" alt={v.alt} loading="lazy" decoding="async" />
+                    <span class="dp-vids__play" aria-hidden="true">▶</span>
+                    <span class="dp-vids__l">{v.label} <span class="sr-only">(opens YouTube)</span></span>
+                  </a></li>
+                ))}
+              </ul>
+              {b.more && <p><a class="dp-link" href={b.more.href} rel="noopener" target="_blank">{b.more.label}</a></p>}
+            </>
+          );
+          if (b.type === 'figure') return (
+            <figure class="dp-fig" style={`max-width:${b.max ?? '100%'}`}><img src={`${b.src}.webp`} width={b.w} height={b.h} alt={b.alt} loading="lazy" decoding="async" /></figure>
+          );
+          if (b.type === 'booklet') return (
+            <ul class="dp-book" tabindex="0" aria-label="Printed booklet, 9 pages (scroll sideways)">
+              {b.items.map((g: any, i: number) => (
+                <li><img src={`${g.src}-800.webp`} width="800" height={Math.round(800 * b.h / b.w)} alt={g.alt} loading="lazy" decoding="async" /><span>Page {i + 1} of {b.items.length}</span></li>
+              ))}
+            </ul>
+          );
+          if (b.type === 'sold') return (
+            <>
+              <h3 class="dp-sub">{b.h}</h3>
+              <ul class="cards">
+                {own.slice(0, b.count ?? 9).map((c: any) => (
+                  <PropertyCard href={c.href} photoSlug={c.slug} street={c.street} city={c.city} price={c.price} beds={c.beds} baths={c.baths}
+                    floorArea={c.sqft ? (/sq/i.test(c.sqft) ? c.sqft : `${c.sqft} sqft`) : undefined} status={c.status} type={c.type} tags={[mon(c)]} mls={c.mls} moreLabel="More Info" />
+                ))}
+              </ul>
+              {b.more && <p><a class="btn" href={b.more.href}>{b.more.label}</a></p>}
+            </>
+          );
+          if (b.type === 'bullets') return <ul class="dp-bul">{b.items.map((t: string) => <li>{t}</li>)}</ul>;
+          if (b.type === 'sources') return (
+            <p class="dp-src"><strong>Sources:</strong> {b.items.map((x: any, i: number) => <>{i > 0 ? ' · ' : ''}<a href={x.h} rel="noopener">{x.t}</a></>)}</p>
+          );
+          if (b.type === 'valueband') return (
+            <div class="dp-vband">
+              <div><h3>{b.h}</h3><p>{b.d}</p></div>
+              <a class="btn" href="#home-value">Get my home value</a>
+            </div>
+          );
+          return null;
+        })}
+      </div>
+    </section>
+  ))}
+
+  {d.valueform && (
+    <section class="dp-sec dp-sec--ink" id={d.valueform.id} aria-labelledby="vf-h">
+      <div class="wrap dp-vf">
+        <div>
+          <h2 class="dp-h2" id="vf-h">{d.valueform.h}</h2>
+          <p class="dp-sublead">{d.valueform.d}</p>
+        </div>
+        <div class="dp-vf__form">
+          <FormStub labels={d.valueform.labels} submit={d.valueform.submit} uid={`vf${fid++}`} />
+          <p class="dp-fine">{d.valueform.fine}</p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {d.close && (
+    <section class="dp-sec dp-sec--ink dp-close" aria-labelledby="close-h">
+      <div class="wrap">
+        <p class="dp-label">{d.close.label}</p>
+        <h2 class="dp-h2" id="close-h">{d.close.h2}</h2>
+        {d.close.d && <p class="dp-sublead">{d.close.d}</p>}
+        <p class="dp-ctas">
+          {d.close.ctas.map((c: any) => <a class="btn" href={href(c.href)}>{c.label}</a>)}
+        </p>
+        {d.close.foot && <p class="dp-close__foot">{d.close.email && <a href={`mailto:${d.close.email}`}>{d.close.foot[0]}</a>} · {d.close.foot[1]}</p>}
+      </div>
+    </section>
+  )}
+  <Cta />
+  {explore && <ExploreLinks data={explore} />}
+</main>
+</Base>
+
+<style>
+  .dp{overflow-x:clip}
+  .dp-hero h1{margin:0 0 var(--s4)}
+  .dp-hero{padding-block:clamp(2rem,5vw,4rem) 0}
+  .dp-hero__in{display:grid;gap:var(--s6);align-items:end}
+  @media (min-width:60rem){.dp-hero__in{grid-template-columns:1.05fr .95fr}}
+  .dp-h1{font-size:clamp(3rem,9vw,6.5rem);line-height:.95;letter-spacing:-.035em;text-transform:uppercase;margin:0 0 var(--s4)}
+  .dp-tag{font:700 1.125rem/1.35 var(--f-head);margin:0 0 var(--s4);max-width:34rem}
+  .dp-lead{font-size:clamp(1.0625rem,1.6vw,1.25rem);max-width:38rem;margin:0 0 var(--s4)}
+  .dp-upd{font-size:.875rem;color:var(--grey);margin:0 0 var(--s4)}
+  .dp-ctas{display:flex;flex-wrap:wrap;gap:var(--s3);margin:var(--s5) 0 0}
+  .dp-hero__img{margin:0;border:1px solid var(--ink)}
+  .dp-hero__img img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+  .dp-stats{list-style:none;margin:var(--s7) 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--ink);border-bottom:0;border-right:0}
+  .dp-stats li{padding:1rem 1.1rem 1.15rem;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);display:flex;flex-direction:column;gap:.35rem;background:#fff}
+  .dp-stats strong{font:800 clamp(1.5rem,3vw,2.25rem)/1.05 var(--f-head);letter-spacing:-.02em}
+  .dp-stats span{font:700 .75rem/1.35 var(--f-head);letter-spacing:.06em;text-transform:uppercase}
+  .dp-stats li:last-child:nth-child(odd){grid-column:1/-1}
+  @media (min-width:48rem){.dp-stats{grid-template-columns:repeat(var(--n,4),1fr)}.dp-stats li:last-child:nth-child(odd){grid-column:auto}}
+  .dp-nav{position:sticky;top:var(--header-h);z-index:40;background:#fff;border-bottom:1px solid var(--ink);margin-top:var(--s7)}
+  .dp-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1.25rem;overflow-x:auto;scrollbar-width:thin}
+  .dp-nav a{display:inline-flex;align-items:center;min-height:2.75rem;white-space:nowrap;font:700 .8125rem var(--f-head);letter-spacing:.03em;color:var(--ink)}
+  .dp-sec{padding-block:clamp(2.5rem,6vw,4.5rem);border-top:4px solid var(--ink);scroll-margin-top:calc(var(--header-h) + 3.5rem)}
+  .dp-hero + .dp-nav + .dp-sec{border-top:0}
+  .dp-sec--alt{background:var(--cream)}
+  .dp-sec--ink{background:var(--ink);color:#fff}
+  .dp-sec--ink a:not(.btn){color:#fff}
+  .dp-sec--ink .btn{background:#fff;color:var(--ink);border-color:#fff}
+  .dp-sec--ink .btn:hover{background:transparent;color:#fff}
+  .dp-label{font:800 .75rem/1.3 var(--f-head);letter-spacing:.2em;text-transform:uppercase;margin:0 0 var(--s3)}
+  .dp-h2{font-size:clamp(2rem,5vw,3.5rem);line-height:1.02;letter-spacing:-.03em;margin:0 0 var(--s4);text-wrap:balance;max-width:22ch}
+  .dp-sublead{font:700 clamp(1.0625rem,1.8vw,1.25rem)/1.4 var(--f-head);max-width:44rem;margin:0 0 var(--s4)}
+  .dp-intro{max-width:46rem;margin:0 0 var(--s5)}
+  .dp-sub{font:800 .8125rem/1.3 var(--f-head);letter-spacing:.14em;text-transform:uppercase;margin:var(--s6) 0 var(--s3)}
+  .dp-tiles{list-style:none;margin:var(--s5) 0 0;padding:0;display:grid;gap:0;grid-template-columns:1fr;border:1px solid var(--ink);border-bottom:0;background:#fff}
+  .dp-tile{padding:1.25rem 1.35rem 1.5rem;border-bottom:1px solid var(--ink);display:flex;flex-direction:column;gap:.5rem}
+  .dp-tile__k{font:800 clamp(1.75rem,3.4vw,2.5rem)/1.05 var(--f-head);letter-spacing:-.02em}
+  .dp-tile__t{font:800 .8125rem/1.35 var(--f-head);letter-spacing:.06em;text-transform:uppercase}
+  .dp-tile__d{margin:0;font-size:.9375rem}
+  @media (min-width:44rem){.dp-tiles{grid-template-columns:repeat(3,1fr);border-right:0}.dp-tile{border-right:1px solid var(--ink)}}
+  @media (min-width:44rem){.dp-tiles--small .dp-tile__k{font-size:.9375rem;letter-spacing:.1em;text-transform:uppercase}}
+  .dp-tiles--small .dp-tile__k{font-size:.9375rem;letter-spacing:.1em;text-transform:uppercase}
+  @media (min-width:44rem){.dp-tiles--4{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:64rem){.dp-tiles--4{grid-template-columns:repeat(4,1fr)}}
+  .dp-cards{list-style:none;margin:var(--s5) 0 0;padding:0;display:grid;gap:var(--s4);grid-template-columns:1fr}
+  @media (min-width:40rem){.dp-cards{grid-template-columns:repeat(min(var(--cols,3),2),1fr)}}
+  @media (min-width:64rem){.dp-cards{grid-template-columns:repeat(var(--cols,3),1fr)}}
+  .dp-card{display:flex;flex-direction:column;gap:.45rem;height:100%;border:1px solid var(--ink);background:#fff;padding:1.15rem 1.25rem;text-decoration:none;color:var(--ink)}
+  .dp-card:hover,.dp-card:focus-visible{background:var(--ink);color:#fff}
+  .dp-card__n{font:800 .75rem var(--f-head);letter-spacing:.14em}
+  .dp-card__t{font:800 1.125rem/1.25 var(--f-head);text-transform:uppercase;letter-spacing:.01em}
+  .dp-card__d{font-size:.9375rem;flex:1}
+  .dp-card__a{font:800 .75rem var(--f-head);letter-spacing:.1em;text-transform:uppercase}
+  .dp-stat{border:1px solid var(--ink);background:#fff;padding:1.25rem 1.4rem;margin:var(--s5) 0;display:grid;gap:.4rem;max-width:46rem}
+  .dp-stat__l{font:800 .75rem var(--f-head);letter-spacing:.14em;text-transform:uppercase;margin:0}
+  .dp-stat__k{font:800 clamp(2.25rem,5vw,3.5rem)/1 var(--f-head);letter-spacing:-.03em;margin:0}
+  .dp-stat__d,.dp-stat p{margin:0}
+  .dp-tbl{overflow-x:auto;border:1px solid var(--ink);background:#fff;margin:var(--s5) 0}
+  .dp-tbl table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.9375rem}
+  .dp-tbl th,.dp-tbl td{text-align:left;padding:.75rem 1rem;border-bottom:1px solid var(--rule);vertical-align:top}
+  .dp-tbl thead th{font:800 .6875rem var(--f-head);letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);background:var(--cream)}
+  .dp-tbl tbody th{font:800 .9375rem var(--f-head);white-space:nowrap}
+  .dp-tbl tbody tr:last-child th,.dp-tbl tbody tr:last-child td{border-bottom:0}
+  .dp-res{font:800 .9375rem var(--f-head);white-space:nowrap}
+  @media (max-width:39.99rem){
+    .dp-tbl{overflow:visible}
+    .dp-tbl table{min-width:0;display:block}
+    .dp-tbl thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+    .dp-tbl tbody{display:block}
+    .dp-tbl tr{display:grid;gap:.3rem;padding:.9rem 1rem;border-bottom:1px solid var(--rule)}
+    .dp-tbl tbody tr:last-child{border-bottom:0}
+    .dp-tbl th,.dp-tbl td{padding:0;border:0;white-space:normal}
+    .dp-tbl tbody th{font-size:1rem}
+    .dp-tbl .dp-res{font-size:1rem}
+  }
+  .dp-note{max-width:46rem;margin:var(--s4) 0}
+  .dp-band{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s4);border-block:1px solid var(--ink);padding:1.1rem 0;margin:var(--s5) 0}
+  .dp-band strong{font:800 1.125rem var(--f-head)}
+  .dp-band__alt{font-weight:700;text-decoration:underline}
+  .dp-fine{font-size:.875rem;color:var(--grey);max-width:46rem;margin:var(--s3) 0}
+  .dp-sec--ink .dp-fine{color:#d9d9d9}
+  .dp-fine__b{margin-left:1rem}
+  .dp-steps{list-style:none;margin:var(--s5) 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--ink)}
+  .dp-steps li{display:grid;grid-template-columns:3.25rem 1fr;gap:var(--s4);padding:1.25rem 0;border-bottom:1px solid var(--ink)}
+  .dp-steps__n{font:800 1.5rem/1 var(--f-head);letter-spacing:-.02em}
+  .dp-steps__t{font:800 1.25rem/1.25 var(--f-head);margin:0 0 .35rem}
+  .dp-steps p{margin:0 0 .5rem;max-width:44rem}
+  .dp-steps__do{background:var(--cream);border-left:4px solid var(--ink);padding:.6rem .9rem;font-size:.9375rem}
+  .dp-sec--alt .dp-steps__do{background:#fff}
+  @media (min-width:48rem){.dp-steps li{grid-template-columns:5rem 1fr}.dp-steps__n{font-size:2.25rem}}
+  .dp-est{border:1px solid var(--ink);background:#fff;padding:1.25rem 1.4rem;max-width:34rem}
+  .dp-est__h{font:800 .75rem var(--f-head);letter-spacing:.14em;text-transform:uppercase;margin:0 0 var(--s3)}
+  .dp-est__rows{margin:0}
+  .dp-est__rows div{display:flex;justify-content:space-between;gap:var(--s4);padding:.55rem 0;border-bottom:1px solid var(--rule)}
+  .dp-est__rows dt{font-weight:700}
+  .dp-est__rows dd{margin:0}
+  .dp-est__res{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s4);margin:var(--s4) 0 var(--s3)}
+  .dp-est__res span{font:800 .75rem var(--f-head);letter-spacing:.14em;text-transform:uppercase}
+  .dp-est__res strong{font:800 clamp(1.75rem,4vw,2.5rem) var(--f-head);letter-spacing:-.02em}
+  .dp-est__note{font-size:.9375rem;margin:0 0 var(--s3)}
+  .dp-checks{list-style:none;margin:var(--s5) 0 0;padding:0;display:grid;gap:var(--s4);grid-template-columns:1fr}
+  @media (min-width:48rem){.dp-checks{grid-template-columns:repeat(2,1fr)}}
+  .dp-checks li{border:1px solid var(--ink);background:#fff;padding:1rem 1.2rem}
+  .dp-checks h3{font:800 1rem/1.3 var(--f-head);margin:0 0 .35rem}
+  .dp-checks p{margin:0 0 .4rem;font-size:.9375rem}
+  .dp-checks__src{font:700 .75rem var(--f-head);letter-spacing:.04em;color:var(--grey)}
+  .dp-quotes{list-style:none;margin:var(--s5) 0;padding:0;display:grid;gap:var(--s4);grid-template-columns:1fr;align-items:start}
+  @media (min-width:56rem){.dp-quotes{grid-template-columns:repeat(3,1fr)}}
+  .dp-quotes li{border:1px solid var(--ink);background:#fff;padding:1.15rem 1.25rem;display:flex;flex-direction:column;gap:.6rem}
+  .dp-quotes__stars{margin:0;color:var(--star);letter-spacing:.1em}
+  .dp-quotes__stars span{color:var(--grey);font:600 .75rem var(--f-head);letter-spacing:.04em;margin-left:.4rem}
+  .dp-quotes blockquote{margin:0;flex:1;font-size:.9375rem}
+  .dp-quotes__who{margin:0;font-size:.8125rem;color:var(--grey)}
+  .dp-quotes__who strong{color:var(--ink)}
+  .dp-link{font-weight:700;text-decoration:underline}
+  .dp-faq{margin:var(--s5) 0 var(--s4);border-top:1px solid var(--ink);max-width:52rem}
+  .dp-faq details{border-bottom:1px solid var(--ink)}
+  .dp-faq summary{cursor:pointer;list-style:none;padding:1rem 2.5rem 1rem 0;font:800 1.0625rem/1.35 var(--f-head);position:relative;min-height:2.75rem}
+  .dp-faq summary::-webkit-details-marker{display:none}
+  .dp-faq summary::after{content:"+";position:absolute;right:.25rem;top:.7rem;font:700 1.5rem/1 var(--f-head)}
+  .dp-faq details[open] summary::after{content:"–"}
+  .dp-faq details p{margin:0 0 1rem;max-width:44rem}
+  .dp-checklist{list-style:none;margin:var(--s5) 0 0;padding:1.25rem 1.4rem;border:1px solid var(--ink);background:#fff;display:grid;gap:.7rem 2rem;grid-template-columns:1fr}
+  @media (min-width:44rem){.dp-checklist{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:64rem){.dp-checklist{grid-template-columns:repeat(3,1fr)}}
+  .dp-checklist li{position:relative;padding-left:1.6rem}
+  .dp-checklist li::before{content:"✓";position:absolute;left:0;font-weight:800}
+  .dp-gal{list-style:none;margin:var(--s5) 0 0;padding:0;display:grid;gap:var(--s3);grid-template-columns:repeat(2,1fr)}
+  @media (min-width:48rem){.dp-gal{grid-template-columns:repeat(var(--cols,4),1fr)}}
+  .dp-gal img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border:1px solid var(--ink)}
+  .dp-vids{list-style:none;margin:var(--s5) 0 var(--s3);padding:0;display:grid;gap:var(--s4);grid-template-columns:1fr}
+  @media (min-width:44rem){.dp-vids{grid-template-columns:repeat(2,1fr)}}
+  .dp-vids a{display:block;position:relative;border:1px solid var(--ink);background:#000;color:#fff;text-decoration:none}
+  .dp-vids img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;opacity:.95}
+  .dp-vids__play{position:absolute;left:50%;top:42%;translate:-50% -50%;width:4.25rem;height:4.25rem;border-radius:50%;background:rgba(0,0,0,.75);border:2px solid #fff;display:grid;place-items:center;font-size:1.5rem;padding-left:.25rem}
+  .dp-vids__l{display:block;padding:.7rem 1rem;font:700 .875rem var(--f-head);background:#000}
+  .dp-fig{margin:var(--s5) 0 0;border:1px solid var(--ink);background:#fff}
+  .dp-fig img{display:block;width:100%;height:auto}
+  .dp-book{list-style:none;margin:var(--s5) 0 0;padding:0 0 .75rem;display:flex;gap:var(--s4);overflow-x:auto;scroll-snap-type:x mandatory}
+  .dp-book li{flex:0 0 min(70vw,15rem);scroll-snap-align:start;display:grid;gap:.4rem}
+  .dp-book img{display:block;width:100%;height:auto;border:1px solid var(--ink)}
+  .dp-book span{font:700 .75rem var(--f-head);letter-spacing:.06em;color:var(--grey)}
+  .dp-bul{margin:var(--s4) 0;padding-left:1.25rem;max-width:44rem}
+  .dp-bul li{margin:.25rem 0}
+  .dp-src{font-size:.875rem;max-width:46rem}
+  .dp-vband{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s4);margin:var(--s6) 0 0;padding:1.4rem 1.5rem;border:1px solid var(--ink);background:#fff}
+  .dp-vband h3{font:800 1.5rem var(--f-head);margin:0 0 .25rem}
+  .dp-vband p{margin:0}
+  .dp-vf{display:grid;gap:var(--s6)}
+  @media (min-width:56rem){.dp-vf{grid-template-columns:1fr 1fr;align-items:start}}
+  .dp-vf :global(.fstub){max-width:none}
+  .dp-vf :global(.fstub label){color:#fff}
+  .dp-vf :global(.fstub .notice){color:var(--ink)}
+  .dp-vf :global(.fstub .btn){background:#fff;color:var(--ink);border-color:#fff;opacity:.6}
+  .dp-close__foot{margin:var(--s5) 0 0;font-size:.875rem;color:#d9d9d9}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>

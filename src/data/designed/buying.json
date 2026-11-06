@@ -1,0 +1,801 @@
+{
+ "kind": "buying",
+ "slug": "buying",
+ "nav": [
+  {
+   "label": "Which buyer",
+   "href": "#which-buyer"
+  },
+  {
+   "label": "PTT exemption",
+   "href": "#ptt-exemption"
+  },
+  {
+   "label": "7 steps",
+   "href": "#process"
+  },
+  {
+   "label": "Calculator",
+   "href": "#calculator"
+  },
+  {
+   "label": "Closing costs",
+   "href": "#closing-costs"
+  },
+  {
+   "label": "Strata checklist",
+   "href": "#strata-checklist"
+  },
+  {
+   "label": "Reviews",
+   "href": "#reviews"
+  },
+  {
+   "label": "Regions",
+   "href": "#regions"
+  },
+  {
+   "label": "FAQ",
+   "href": "#faq"
+  }
+ ],
+ "hero": {
+  "eyebrow": "Vol. 01 · The buyer's edition",
+  "h1": "Buy better",
+  "tag": "Buying a home in BC, made simple.",
+  "updated": "Last updated October 2026",
+  "lead": "From South Surrey to Chilliwack, buying a home should not feel like decoding a foreign language. This guide walks you through every step in plain English — what to do, when to do it, and what it actually costs. Backed by 11+ years and a Top 1% Fraser Valley (FVREB) track record.",
+  "ctas": [
+   {
+    "label": "Talk to Jared →",
+    "href": "/contact.html",
+    "primary": true
+   },
+   {
+    "label": "Run the numbers",
+    "href": "/mortgage-calculator.html"
+   }
+  ],
+  "stats": [
+   {
+    "k": "Top 1%",
+    "v": "Fraser Valley (FVREB)"
+   },
+   {
+    "k": "Diamond",
+    "v": "Royal LePage Award Club"
+   },
+   {
+    "k": "Hall of Fame",
+    "v": "Lifetime recognition"
+   },
+   {
+    "k": "11+ yrs",
+    "v": "Local market expertise"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "id": "realtor",
+   "label": "Section I · The foundation",
+   "h2": "Do I need a realtor",
+   "lead": "In BC, buyers don't pay commission. So why not.",
+   "intro": "In BC, the buyer's agent commission is paid by the seller. That means having a top realtor on your side costs you nothing — but skipping one can cost you a lot. Here's what a good buyer's agent actually does for you.",
+   "blocks": [
+    {
+     "type": "tiles",
+     "items": [
+      {
+       "k": "$0",
+       "t": "Buyers don't pay commission",
+       "d": "In BC, the seller pays my commission as part of their listing agreement. You get my full expertise, full negotiation, and full diligence at no cost to you."
+      },
+      {
+       "k": "+$40K",
+       "t": "Catch the hidden costs",
+       "d": "Strata levies, leaky-condo history, encroachments, oil tanks, school catchment changes. The things that quietly cost buyers tens of thousands later — I catch before you sign."
+      },
+      {
+       "k": "7 levers",
+       "t": "Win the right offer",
+       "d": "Price is one piece. Deposit, conditions, completion date, possession, and how the offer is presented all matter. I've won deals at lower prices because the offer was structured better."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "which-buyer",
+   "label": "Section II · Where you are today",
+   "h2": "Which buyer",
+   "lead": "Every buyer's situation is different.",
+   "intro": "Pick the one that fits best. I'll meet you with the right plan, the right vendors, and the right pace for what you're trying to do.",
+   "blocks": [
+    {
+     "type": "cards",
+     "cols": 2,
+     "items": [
+      {
+       "n": "01",
+       "t": "First-time buyer",
+       "d": "No PTT under $500K · GST rebate · FHSA · 5% down",
+       "cta": "First-time programs →",
+       "href": "/first-time-home-buyer-program.html"
+      },
+      {
+       "n": "02",
+       "t": "Move-up buyer",
+       "d": "Selling and buying · Bridge loans · Timing the close",
+       "cta": "Plan both sides →",
+       "href": "/home-evaluation.html"
+      },
+      {
+       "n": "03",
+       "t": "Investor",
+       "d": "Rentals · Pre-sales · Farms · Fixers",
+       "cta": "Browse listings →",
+       "href": "/recip.html"
+      },
+      {
+       "n": "04",
+       "t": "Right-sizer",
+       "d": "Downsizing · One level living · Protect your equity",
+       "cta": "Plan your move →",
+       "href": "/contact.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ptt-exemption",
+   "label": "Section III · First-time buyer savings",
+   "h2": "No PTT under $500K",
+   "lead": "A big tax break most buyers miss.",
+   "intro": "If you're a first-time buyer in BC, you can save up to $8,000 on Property Transfer Tax. On a home priced at $500,000 or less, you pay zero PTT. This is one of the biggest savings available to first-time buyers — and many people don't even know it exists.",
+   "blocks": [
+    {
+     "type": "stat",
+     "label": "First-time buyer exemption",
+     "k": "$8,000",
+     "d": "Maximum Property Transfer Tax savings for qualifying first-time buyers in BC. The full exemption applies to homes priced at $500,000 or less. Up to $835,000 the exemption is capped at $8,000, and it phases out completely at $860,000.",
+     "link": {
+      "label": "See if you qualify →",
+      "href": "/first-time-home-buyer-program.html"
+     }
+    },
+    {
+     "type": "tiers",
+     "head": [
+      "Tier",
+      "Price",
+      "What happens",
+      "Result"
+     ],
+     "rows": [
+      {
+       "n": "01",
+       "range": "Up to $500,000",
+       "what": "Full exemption — you pay no Property Transfer Tax at all.",
+       "result": "$0 PTT"
+      },
+      {
+       "n": "02",
+       "range": "$500K to $835K",
+       "what": "First $500,000 is exempt. You only pay tax on the amount above that.",
+       "result": "Save $8,000"
+      },
+      {
+       "n": "03",
+       "range": "$835K to $860K",
+       "what": "Partial exemption — savings phase out gradually as price rises.",
+       "result": "Partial"
+      },
+      {
+       "n": "04",
+       "range": "Over $860,000",
+       "what": "No first-time buyer exemption available — full PTT applies.",
+       "result": "Full PTT"
+      },
+      {
+       "n": "+",
+       "range": "Buying a brand-new home",
+       "what": "Separate exemption for new builds — full break up to $1.1M, partial up to $1.15M.",
+       "result": "Bigger break"
+      }
+     ]
+    },
+    {
+     "type": "note",
+     "d": "To qualify: you must be a Canadian citizen or permanent resident, have lived in BC for the past year (or filed two BC tax returns in the last six years), have never owned a home anywhere in the world, and plan to live in the home as your principal residence. I'll walk you through the full eligibility check before you write an offer."
+    },
+    {
+     "type": "band",
+     "lead": "Know your number before you shop →",
+     "btn": {
+      "label": "Get your cash-to-close number",
+      "href": "/first-time-buyer-calculator.html"
+     },
+     "alt": {
+      "label": "or text 604-928-1361",
+      "href": "sms:6049281361"
+     }
+    },
+    {
+     "type": "fine",
+     "a": [
+      {
+       "t": "Start the first home plan",
+       "h": "/buying.html#first-home-plan"
+      },
+      {
+       "t": " to see your monthly payment."
+      }
+     ],
+     "b": "Prefer a spreadsheet view?",
+     "c": [
+      {
+       "t": "Run your numbers",
+       "h": "/first-time-buyer-calculator.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "process",
+   "label": "Section IV · The process",
+   "h2": "Seven steps",
+   "lead": "From first conversation to keys in hand.",
+   "intro": "Buying a home in BC is not as complicated as it sounds. Here is exactly what happens, in the order it happens, with the things that trip people up.",
+   "blocks": [
+    {
+     "type": "steps",
+     "items": [
+      {
+       "n": "01",
+       "t": "Get pre-approved",
+       "d": "A pre-approval tells you exactly what a bank will lend you. It locks in a rate for 90 to 120 days and shows sellers you are a serious buyer. In a busy market, an offer without one rarely wins.",
+       "do": "I introduce you to two or three mortgage brokers I trust. You will know your real budget within 48 hours. No fees, no obligation."
+      },
+      {
+       "n": "02",
+       "t": "Make a plan",
+       "d": "What do you actually need? What can you live without? We talk through schools, commute, the kind of home, and how long you plan to stay. From South Surrey to Chilliwack, every neighbourhood has a different story — I'll help you focus on the ones that fit your budget and lifestyle."
+      },
+      {
+       "n": "03",
+       "t": "Tour homes",
+       "d": "I show you homes that fit your plan — not random open houses. While we walk through, I'll point out things photos hide: drainage issues, the age of the roof, strata health, what the street is like at school pickup. You will learn to read a home the way a realtor does.",
+       "do": "I see the quiet listings before they are widely shared — price drops, expired-and-relisted, off-market. That's often where the real value is."
+      },
+      {
+       "n": "04",
+       "t": "Write an offer",
+       "d": "Price is just one piece. Deposit, conditions, closing date, what stays in the home, and how the offer is presented all matter. A smart offer can win even when it's not the highest one — I've seen it happen many times."
+      },
+      {
+       "n": "05",
+       "t": "Do your homework",
+       "d": "Once your offer is accepted, you usually have 5 to 10 business days to finalize your mortgage, get a home inspection, and review the strata documents (if applicable). This is when deals get saved or fall apart. I've reviewed thousands of strata document packages and know what to flag."
+      },
+      {
+       "n": "06",
+       "t": "Close the deal",
+       "d": "Your lawyer or notary handles the paperwork — transferring ownership, registering your mortgage, calculating any taxes, and moving the money. I keep everyone on schedule so nothing slips on closing day."
+      },
+      {
+       "n": "07",
+       "t": "Get the keys",
+       "d": "Possession day. We do a final walk-through together, you get the keys, and you move in. After that, I check in every year with a market update and a list of trusted contractors when you need one. Most of my business now comes from people I helped buy 10 or 15 years ago."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "calculator",
+   "label": "Section V · Run the numbers",
+   "h2": "The math",
+   "lead": "A quick look at what your payment might be.",
+   "intro": "Here is how price, down payment, and interest rate shape a monthly mortgage payment. For a more detailed breakdown including taxes and strata fees, head to the full mortgage calculator.",
+   "blocks": [
+    {
+     "type": "estimate",
+     "rows": [
+      [
+       "Home price",
+       "$1,000,000"
+      ],
+      [
+       "Down payment",
+       "$200,000 · 20%"
+      ],
+      [
+       "Mortgage",
+       "$800,000"
+      ],
+      [
+       "Interest rate",
+       "4.79%"
+      ],
+      [
+       "Amortization",
+       "25 years"
+      ]
+     ],
+     "result": "$4,558 / month",
+     "head": [
+      "Quick estimate",
+      "Your payment"
+     ],
+     "note": [
+      {
+       "t": "Estimated monthly payment: mortgage of $800,000 over 25 years at 4.79%, compounded semi-annually as Canadian fixed-rate mortgages are. For a complete picture (taxes, strata, insurance), use the "
+      },
+      {
+       "t": "full calculator",
+       "h": "/mortgage-calculator.html"
+      },
+      {
+       "t": "."
+      }
+     ],
+     "fine": "Estimate only. Based on a 25-year amortization. Your actual payment depends on your lender, credit, income, and the property. Property tax, strata fees, and home insurance not included."
+    }
+   ]
+  },
+  {
+   "id": "closing-costs",
+   "label": "Section VI · The full cost",
+   "h2": "Closing costs",
+   "lead": "What you pay on top of the down payment.",
+   "intro": "Plan to set aside another 1.5% to 4% of the price for closing costs. Here's what you'll likely pay — using a $1 million home as an example. Costs change with the price of the home and your situation.",
+   "blocks": [
+    {
+     "type": "costs",
+     "head": [
+      "Cost",
+      "What it is",
+      "On a $1M home"
+     ],
+     "rows": [
+      {
+       "t": "Property Transfer Tax",
+       "d": "BC tax on the home when you buy it. First-time buyers can pay $0 up to $500K and save up to $8,000 up to $835K.",
+       "v": "$18,000"
+      },
+      {
+       "t": "Legal and notary",
+       "d": "Your lawyer or notary handles paperwork, title, and registration.",
+       "v": "$1,500–$2,200"
+      },
+      {
+       "t": "Home inspection",
+       "d": [
+        {
+         "t": "Highly recommended. Costs more for older homes, "
+        },
+        {
+         "t": "acreages",
+         "h": "/farms.html"
+        },
+        {
+         "t": ", and pre-1990 builds."
+        }
+       ],
+       "v": "$500–$900"
+      },
+      {
+       "t": "Appraisal",
+       "d": "Sometimes required by your lender. Often covered by your mortgage broker.",
+       "v": "$0–$500"
+      },
+      {
+       "t": "CMHC insurance",
+       "d": "Mortgage insurance — only applies if your down payment is less than 20%.",
+       "v": "2.8%–4% of mortgage"
+      },
+      {
+       "t": "Tax adjustments",
+       "d": "You pay back the seller for any property taxes or strata fees they paid in advance.",
+       "v": "Varies"
+      },
+      {
+       "t": "Home insurance",
+       "d": "Required by your lender on closing day. Get quotes a couple of weeks ahead.",
+       "v": "$1,200–$2,500/yr"
+      },
+      {
+       "t": "Moving and utilities",
+       "d": "Movers, BC Hydro, FortisBC, internet, phone, mail forwarding.",
+       "v": "$1,000–$3,500"
+      },
+      {
+       "t": "GST",
+       "d": [
+        {
+         "t": "5% on new builds only. "
+        },
+        {
+         "t": "First-time buyer rebate up to $50,000",
+         "h": "/gst-rebate-in-bc.html"
+        },
+        {
+         "t": "."
+        }
+       ],
+       "v": "If applicable"
+      }
+     ]
+    },
+    {
+     "type": "note",
+     "d": "These are typical numbers — your actual costs depend on the home and your situation. I'll give you a personalized estimate before you write any offer so there are no surprises."
+    }
+   ]
+  },
+  {
+   "id": "strata-checklist",
+   "label": "Before you remove subjects · Strata",
+   "h2": "Strata checklist",
+   "intro": "Buying a condo or townhouse means buying into the strata too. These are the documents and rules I go through with you before subjects come off. Checked against official sources on Oct 29, 2026.",
+   "blocks": [
+    {
+     "type": "checks",
+     "items": [
+      {
+       "t": "Council and AGM minutes",
+       "d": "Two years of minutes. Look for leaks, disputes, lawsuits and upcoming repairs."
+      },
+      {
+       "t": "Reserve fund (CRF)",
+       "d": "The contingency reserve fund balance, and any special levies passed or proposed."
+      },
+      {
+       "t": "Depreciation report",
+       "d": "Stratas with five or more lots must get one at least every five years.",
+       "src": "Source:gov.bc.ca"
+      },
+      {
+       "t": "Form B",
+       "d": "The Information Certificate shows strata fees, the CRF, special levies and any legal action. In my deals, the listing agent always provides the Form B, so you don't pay for it. For background, the strata must provide it within one week of a request (s.59), and the fee is capped at $35 plus copying costs (Regulation s.4.4).",
+       "src": "Source: Act s.59 · Reg s.4.4"
+      },
+      {
+       "t": "Insurance deductible",
+       "d": "Check the strata's water-damage deductible, and make sure your own home insurance covers it."
+      },
+      {
+       "t": "Pets, parking and short-term rentals",
+       "d": "Check the bylaws on each."
+      },
+      {
+       "t": "Rentals",
+       "d": "Since Nov 24, 2022, BC stratas can't ban or limit long-term rentals. Short-term rental bylaws are still allowed.",
+       "src": "Source:gov.bc.ca"
+      },
+      {
+       "t": "Age limits",
+       "d": "Only 55+ age bylaws are allowed. Some exemptions apply, for caregivers, spouses and children.",
+       "src": "Source:gov.bc.ca"
+      },
+      {
+       "t": "Rainscreen",
+       "d": "For buildings from the late 1980s to early 2000s, ask whether it's been rainscreened, and check the minutes for envelope repairs."
+      },
+      {
+       "t": "2-5-10 warranty",
+       "d": "2 years for materials and labour, 5 years for the building envelope, 10 years for structure. Check how much time is left.",
+       "src": "Source:BC Housing"
+      },
+      {
+       "t": "Rescission period",
+       "d": "After your offer is accepted, you can still back out within three business days, but you must give written notice and pay the seller 0.25% of the offer price.",
+       "src": "Source:BCFSA"
+      }
+     ]
+    },
+    {
+     "type": "fine",
+     "a": "General information only. Have your lawyer or a strata document review service go through the documents before you remove subjects."
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "label": "Section VII · The difference",
+   "h2": "Why Jared",
+   "lead": "Most agents open doors. I open files.",
+   "intro": "Buying a home is a six-figure decision wrapped in a stack of paperwork and a tight deadline. The job isn't just to drive you to showings. It's to read every page nobody reads, write the offer that actually wins, and catch the things that quietly cost buyers $40,000 three years later.",
+   "blocks": [
+    {
+     "type": "tiles",
+     "items": [
+      {
+       "k": "01 — Local",
+       "t": "South Surrey to Chilliwack",
+       "d": "11+ years working from White Rock to the Eastern Hillsides. I know which side of which block holds value — and which doesn't."
+      },
+      {
+       "k": "02 — Careful",
+       "t": "Read every page",
+       "d": "Strata minutes, depreciation reports, title searches, zoning, ALR. I read it all so you know exactly what you're buying."
+      },
+      {
+       "k": "03 — Sharp",
+       "t": "Negotiate smart",
+       "d": "Hundreds of closed deals. I know what listing agents won't tell you and where most offers leave money on the table."
+      },
+      {
+       "k": "04 — Connected",
+       "t": "Trusted vendors",
+       "d": "Mortgage brokers, inspectors, lawyers, contractors, insurers. Vendors I trust because I've worked with them for years."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "reviews",
+   "label": "Section VIII · Reviews",
+   "h2": "What buyers say",
+   "intro": [
+    {
+     "t": "Five-star reviews from buyers I have helped, quoted word for word with the name, date and source shown. The full set lives on my "
+    },
+    {
+     "t": "reviews page",
+     "h": "/reviews.html"
+    },
+    {
+     "t": "."
+    }
+   ],
+   "blocks": [
+    {
+     "type": "quotes",
+     "items": [
+      {
+       "q": "“As first-time home buyers, we are so grateful we had Jared guiding us every step of the way. He was always quick to respond to texts, emails, and questions. …”",
+       "who": "S.E.",
+       "date": "22 May 2026",
+       "src": "Google review"
+      },
+      {
+       "q": "“Jared's knowledge of the Langley real estate market is second to none. As newcomers to home buying, his guidance was invaluable. He helped us navigate every step with ease, resulting in the purchase of our dream home. Highly recommend Jared for any first-time buyers out there!”",
+       "who": "Rehman",
+       "date": "16 May 2024",
+       "src": "Trustindex review"
+      }
+     ],
+     "more": {
+      "label": "Read all reviews →",
+      "href": "/reviews.html"
+     }
+    }
+   ]
+  },
+  {
+   "id": "regions",
+   "label": "Section IX · Search by region",
+   "h2": "Where are you looking",
+   "lead": "South Surrey to Chilliwack — I work the whole map.",
+   "intro": [
+    {
+     "t": "Pick a region to see live MLS® listings. Updated daily. Don't see your area? "
+    },
+    {
+     "t": "Send me a note",
+     "h": "/contact.html"
+    },
+    {
+     "t": " — I'll set up a custom search for you."
+    }
+   ],
+   "blocks": [
+    {
+     "type": "cards",
+     "cols": 4,
+     "items": [
+      {
+       "n": "01",
+       "t": "South Surrey",
+       "d": "Morgan Creek · Grandview · Elgin Chantrell · Ocean Park",
+       "cta": "Search South Surrey →",
+       "href": "/south-surrey-homes-for-sale.html"
+      },
+      {
+       "n": "02",
+       "t": "White Rock",
+       "d": "Marine Drive · Oceanfront · Hillside",
+       "cta": "Search White Rock →",
+       "href": "/white-rock.html"
+      },
+      {
+       "n": "03",
+       "t": "Langley",
+       "d": "Willoughby · Fort Langley · Walnut Grove · Brookswood",
+       "cta": "Search Langley →",
+       "href": "/langley-homes-for-sale.html"
+      },
+      {
+       "n": "04",
+       "t": "Surrey and Cloverdale",
+       "d": "Fleetwood · Panorama Ridge · Newton · Clayton",
+       "cta": "Search Surrey →",
+       "href": "/surrey-homes-for-sale.html"
+      },
+      {
+       "n": "05",
+       "t": "Maple Ridge and Pitt Meadows",
+       "d": "Albion · Silver Valley · Cottonwood · Thornhill",
+       "cta": "Search Maple Ridge →",
+       "href": "/maple-ridge-homes-for-sale.html"
+      },
+      {
+       "n": "06",
+       "t": "Abbotsford",
+       "d": "East Abbotsford · West Abbotsford · Matsqui",
+       "cta": "Search Abbotsford →",
+       "href": "/abbotsford-homes-under-1-8m.html"
+      },
+      {
+       "n": "07",
+       "t": "Mission and Chilliwack",
+       "d": "Hatzic · Eastern Hillsides · Chilliwack Mountain · Acreages",
+       "cta": "Search Fraser Valley East →",
+       "href": "/mission-homes-for-sale.html"
+      },
+      {
+       "n": "08",
+       "t": "All communities",
+       "d": "Full directory · Every neighbourhood · Updated daily",
+       "cta": "Browse all →",
+       "href": "/communities.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "library",
+   "label": "Section X · Resources",
+   "h2": "The library",
+   "lead": "Free guides and tools.",
+   "intro": "Free reference pages, calculators, and guides covering every part of buying a home in BC. Click any of these to learn more.",
+   "blocks": [
+    {
+     "type": "cards",
+     "cols": 3,
+     "items": [
+      {
+       "n": "01",
+       "t": "Mortgage calculator",
+       "d": "Full breakdown — payment, taxes, insurance, strata",
+       "cta": "Open tool →",
+       "href": "/mortgage-calculator.html"
+      },
+      {
+       "n": "02",
+       "t": "First-time buyer program",
+       "d": "PTT exemption · FHSA · RRSP Home Buyers' Plan",
+       "cta": "Read guide →",
+       "href": "/first-time-home-buyer-program.html"
+      },
+      {
+       "n": "03",
+       "t": "GST rebate on new homes",
+       "d": "Up to $50,000 savings on a new build",
+       "cta": "Read guide →",
+       "href": "/gst-rebate-in-bc.html"
+      },
+      {
+       "n": "04",
+       "t": "Buyer FAQ",
+       "d": "Forty common questions answered in plain English",
+       "cta": "Read answers →",
+       "href": "/faq-for-home-buyers-in-bc.html"
+      },
+      {
+       "n": "05",
+       "t": "Search MLS® listings",
+       "d": "South Surrey to Chilliwack · Updated daily",
+       "cta": "Search listings →",
+       "href": "/recip.html"
+      },
+      {
+       "n": "06",
+       "t": "Meet Jared",
+       "d": "Background · Approach · Why I do this work",
+       "cta": "Learn more →",
+       "href": "/jared.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "faq",
+   "label": "Section XI · Common questions",
+   "h2": "Quick answers",
+   "lead": "Plain English. No jargon.",
+   "intro": [
+    {
+     "t": "The questions buyers ask me most often. For the full set of answers, read the "
+    },
+    {
+     "t": "complete buyer FAQ",
+     "h": "/faq-for-home-buyers-in-bc.html"
+    },
+    {
+     "t": "."
+    }
+   ],
+   "blocks": [
+    {
+     "type": "faq",
+     "items": [
+      {
+       "q": "Do first-time buyers really pay no PTT under $500K",
+       "a": "Yes. If you qualify as a first-time buyer in BC and the home is priced at $500,000 or less, you pay $0 in Property Transfer Tax. Between $500,000 and $835,000, you save up to $8,000. Above $835,000, the savings phase out, and there's no exemption above $860,000. To qualify, you need to be a Canadian citizen or permanent resident, have lived in BC for the past year (or filed two BC tax returns in the last six), have never owned a home anywhere, and plan to live in the home as your principal residence."
+      },
+      {
+       "q": "How much down payment do I need",
+       "a": "The minimum is 5% on the first $500,000 and 10% on anything above that. Below 20% down, you pay mortgage default insurance, which adds 2.8% to 4% to your mortgage. On homes over $1.5 million, lenders require a full 20% down."
+      },
+      {
+       "q": "Do I pay you as the buyer",
+       "a": "In almost every case, the seller pays my commission as part of the listing agreement — at no cost to you. We confirm this in writing before any showing. If something different ever comes up, you'll know up front."
+      },
+      {
+       "q": "How long does buying a home take",
+       "a": "Most buyers take 30 to 90 days from first call to keys. Pre-approval is about a week. Finding the right home varies a lot — anywhere from two weeks to six months. Once an offer is accepted, you have 5 to 10 business days to finalize everything, then 30 to 60 days to close. We can move faster if needed."
+      },
+      {
+       "q": "What is subject removal",
+       "a": "Most accepted offers in BC are \"subject to\" things like financing and a home inspection. You usually have 5 to 10 business days to finish those checks. Once you're satisfied, you \"remove subjects\" — and the deal becomes binding. This is the most important week of your purchase. If something serious comes up before then, you can walk away without losing your deposit."
+      },
+      {
+       "q": "Can I buy before I sell my current home",
+       "a": "Yes — through a subject-to-sale offer (your purchase depends on selling your current home) or bridge financing (a short-term loan from your bank to cover the gap). Both work. Subject-to-sale offers can be weaker in a competitive bidding situation, while bridge loans need bank approval and short-term interest. We'll work through both before you decide."
+      },
+      {
+       "q": "Do I really need a realtor to buy a home in BC",
+       "a": "Strictly speaking, no. But here's the honest answer: in BC, the buyer's agent commission is paid by the seller, not you. So having a top realtor on your side costs you nothing. Skipping one can cost you a lot — missed strata issues, unfavourable contract terms, a weak negotiation position, missed exemptions. There's almost no situation where going without a buyer's agent comes out ahead."
+      },
+      {
+       "q": "Which areas do you cover",
+       "a": "South Surrey, White Rock, Surrey, Cloverdale, Langley, Maple Ridge, Pitt Meadows, Mission, Abbotsford, and Chilliwack. I also help buyers elsewhere in Greater Vancouver. If your area isn't listed, send me a note — I almost certainly cover it."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "close": {
+  "label": "End of edition",
+  "h2": "Let's talk",
+  "d": "A call, no pressure, no pitch. You leave knowing what's possible, what to budget, and what to do next.",
+  "ctas": [
+   {
+    "label": "Book a call →",
+    "href": "/contact.html"
+   },
+   {
+    "label": "Browse listings",
+    "href": "/recip.html"
+   },
+   {
+    "label": "604.928.1361",
+    "href": "tel:6049281361"
+   }
+  ],
+  "foot": [
+   "jaredgibbons@royallepage.ca",
+   "Royal LePage Little Oak Realty"
+  ],
+  "email": "jaredgibbons@royallepage.ca"
+ }
+}
