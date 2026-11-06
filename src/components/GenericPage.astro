@@ -15,6 +15,7 @@ import CommuteTime from '../components/CommuteTime.astro';
 import AreaMap from './AreaMap.astro';
 import { isGated } from '../lib/inventory';
 import { pickReviews } from '../lib/reviews';
+import { isPreview, isDraftNote } from '../lib/preview';
 import REVIEW_EXCERPTS from '../data/review-excerpts.json';
 import AREA_PHOTOS from '../data/area-photos.json';
 import PhotoCredit from './PhotoCredit.astro';
@@ -241,7 +242,7 @@ const explore = !_extra.length ? exploreBase
     if (sec.kind === 'grid') return (
       <section class="section section--tight" aria-label="Listings">
         <div class="wrap">
-          <p class="notice">Live MLS® listings for this search are not connected in the preview. <a href="/recip.html">Search Listings</a></p>
+          {isPreview && <p class="notice">Live MLS® listings for this search are not connected in the preview. <a href="/recip.html">Search Listings</a></p>}
         </div>
       </section>
     );
@@ -299,7 +300,7 @@ const explore = !_extra.length ? exploreBase
                 if (b.mode === 'active') return (
                   <>
                     {active.length > 0 && <><h2 class="h2">Active listings ({active.length})</h2>
-                      <p class="notice">Status is shown as captured in the archive on 2026-10-31. Live status needs the listing feed, which is not connected in the preview.</p>
+                      {isPreview && <p class="notice">Status is shown as captured in the archive on 2026-10-31. Live status needs the listing feed, which is not connected in the preview.</p>}
                       <ul class="cards">{active.map(card)}</ul></>}
                     <h2 class="h2">Recently sold</h2>
                     <ul class="cards">{done.slice(0, 12).map(card)}</ul>
@@ -314,7 +315,7 @@ const explore = !_extra.length ? exploreBase
                   </>
                 );
               }
-              if (b.t === 'notice') return <p class="notice">{b.text}</p>;
+              if (b.t === 'notice') { if (isDraftNote(b.text) && !isPreview) return null; return <p class="notice">{b.text}</p>; }
               if (b.t === 'table') return (
                 <div class="tblwrap" tabindex="0" role="region" aria-label={b.caption}>
                   <table class="tbl"><caption>{b.caption}</caption>

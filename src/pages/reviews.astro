@@ -49,7 +49,7 @@ const explore = [
         ))}
       </ul>
       <p class="rv-note">A selection of client comments. More reviews are shown below.</p>
-      <p class="preview-flag">Open items OI-15/OI-16: the archive text has no star ratings for these six reviews, and says "More reviews are shown below" but no further reviews were captured (they were likely loaded by the Trustindex script). Plan: Google Business Profile API feed (BL-03); until then only the six archived reviews are shown.</p>
+      {import.meta.env.PUBLIC_PREVIEW !== 'false' && <p class="preview-flag">Open items OI-15/OI-16: the archive text has no star ratings for these six reviews, and says "More reviews are shown below" but no further reviews were captured (they were likely loaded by the Trustindex script). Plan: Google Business Profile API feed (BL-03); until then only the six archived reviews are shown.</p>}
     </div>
   </section>
 

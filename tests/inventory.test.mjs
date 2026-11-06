@@ -33,3 +33,9 @@ test('a launch-mode build emits each page its own robots value; normal builds st
   for (const slug of held.slice(0, 3)) assert.equal(meta('/tmp/launch-check', slug), 'noindex, follow');
   assert.equal(meta('dist', 'sell-my-house-in-mission'), 'noindex, nofollow', 'normal builds stay fully closed');
 });
+
+test('a launch-mode build ships no internal review notes', { timeout: 120000, skip: !existsSync('/tmp/launch-check') }, () => {
+  let hits = '';
+  try { hits = execSync(`grep -rlE "Draft for Jared|Open item OI-|Archive note B-|Open items OI-" /tmp/launch-check --include=*.html | grep -v internal | head -5`, { encoding: 'utf8' }); } catch { hits = ''; }
+  assert.equal(hits.trim(), '', 'internal review text found in a launch build: ' + hits);
+});

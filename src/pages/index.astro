@@ -56,7 +56,7 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
     <div class="wrap">
       <h2 id="h-why" class="h2 caps">WHY WORK WITH US</h2>
       <h3 class="subhead">OUR PROVEN PERFORMANCE</h3>
-      <p class="preview-flag">Open item OI-07: performance figures under this heading were not captured as text in the archive (likely image/script-rendered). Will be filled from the baseline zips.</p>
+      {import.meta.env.PUBLIC_PREVIEW !== 'false' && <p class="preview-flag">Open item OI-07: performance figures under this heading were not captured as text in the archive (likely image/script-rendered). Will be filled from the baseline zips.</p>}
       <ul class="awards" aria-label="Awards">
         {awards.map((a) => <li class="award"><img src={`/img/award-${a.slug}.webp`} width={a.w} height={a.h} alt={a.alt} loading="lazy" decoding="async" /></li>)}
       </ul>
@@ -80,7 +80,7 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
           />
         ))}
       </ul>
-      <p class="preview-flag">Archive note B-07: the carousel repeats “6469 Meadow Place” as slide 11; shown once here. Card for 116 Calgary Avenue shows one numeric value in the archive (beds vs baths unknown) — not rendered.</p>
+      {import.meta.env.PUBLIC_PREVIEW !== 'false' && <p class="preview-flag">Archive note B-07: the carousel repeats “6469 Meadow Place” as slide 11; shown once here. Card for 116 Calgary Avenue shows one numeric value in the archive (beds vs baths unknown) — not rendered.</p>}
     </div>
   </section>
 
@@ -109,7 +109,7 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
           {[...seenLogos, ...seenLogos].map(([name, h, n], k) => <li class="seen__tile" aria-hidden={k >= seenLogos.length ? 'true' : undefined}><img src={`/img/as-seen-in-${n}.webp`} alt={name} width="640" height={h} loading="lazy" decoding="async" /></li>)}
         </ul>
       </div>
-      <p class="preview-flag">Archive note B-08: these 8 logo slides are image links to “/” with empty alt text (no accessible name). Rendered unlinked pending your decision D-08. Logo order follows the supplied file numbering; confirm against the live carousel (OI-12).</p>
+      {import.meta.env.PUBLIC_PREVIEW !== 'false' && <p class="preview-flag">Archive note B-08: these 8 logo slides are image links to “/” with empty alt text (no accessible name). Rendered unlinked pending your decision D-08. Logo order follows the supplied file numbering; confirm against the live carousel (OI-12).</p>}
     </div>
   </section>
 
