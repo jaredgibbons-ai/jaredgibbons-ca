@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "test": "node --test tests/worker.test.mjs tests/photos-worker.test.mjs tests/forms.test.mjs tests/reviews-worker.test.mjs tests/inventory.test.mjs tests/data-rules.test.mjs tests/site-quality.test.mjs tests/mortgage.test.mjs tests/areamap.test.mjs tests/choropleth.test.mjs tests/commute.test.mjs tests/nearby-places.test.mjs tests/map-style.test.mjs",
-    "rules": "python3 -I tools/build_rules.py"
+    "rules": "python3 -I tools/build_rules.py",
+    "audit:style": "python3 tools/audit_style.py 4"
   },
   "dependencies": {
     "@fontsource/lato": "^5.3.0",

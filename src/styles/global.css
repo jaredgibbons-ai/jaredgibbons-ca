@@ -8,6 +8,7 @@
 
 /* ───────────────────────── Tokens ───────────────────────── */
 :root{
+  --h1:clamp(1.9rem,3.4vw,2.75rem);
   --ink:#0a0a0a;
   --paper:#ffffff;
   --cream:#f0ece4;
@@ -55,6 +56,8 @@ a:hover{text-decoration-thickness:3px}
 /* One section-heading style site-wide: same size, a short bar above, caps only on short headings (src/lib/caps.ts). */
 .h2::before,.dp-h2::before{content:'';display:block;width:2.5rem;height:3px;background:var(--ink);margin-bottom:.8rem}
 .section--ink .h2::before,.dp-sec--ink .dp-h2::before{background:#fff}
+/* Every page title (H1) shares one size, except the home page name. */
+.pg__h1,.pg--search .pg__h1,.pg--hub .pg__h1,.dp-h1,.rv-h1,.fl-h1,.nf__h{font-size:var(--h1)!important;line-height:1.08!important;letter-spacing:-.025em!important}
 .lede{font-size:1.1875rem;max-width:var(--measure)}
 .prose{max-width:var(--measure)}
 .prose h3{font-size:1.375rem;margin:2.25rem 0 .75rem}

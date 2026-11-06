@@ -841,3 +841,8 @@ Research-voice cleanup wave 2: 340 passages on 183 pages rewritten or deleted (A
 ## D-155 — One design system for headings, cards and link lists (2026-11-06)
 - Why: styles had piled up one request at a time (huge caps headings on the home page, smaller ones in text sections, another scale on designed pages, three link-list looks).
 - Now: one section heading (1.5 to 2.1rem, short bar above, caps only for headings of 6 words or fewer) on every page type; page titles 1.9 to 3rem (the home page name stays large); link lists are bordered tiles with an arrow everywhere; cards are bordered boxes (cream on white bands, white on cream); designed pages lose the heavy 4px section rule and use the same section spacing as the rest.
+
+## D-156 — Keeping the look the same everywhere (2026-11-06)
+- Page titles (H1) now share one size variable (`--h1` in global.css) on every page type, including Reviews, Fort Langley and the 404 page. All section headings share one size (the old per-template sizes were removed). The "Explore more searches" heading uses the section heading style.
+- Check: `npm run audit:style` (serve `dist` on port 4321 first). It opens a sample of every page family (home, designed, hubs, bedroom, 55+, community, blog, listing, tools) and prints title size, section heading sizes, bars, left edge and section spacing, then lists outliers. Known and intended: the home page ranking banner (large stat headline), small sub-headings that are not section headings, and the centred 404 layout. Run it after any design change; add new page types to its sample list.
+- Rule for new pages: use the shared classes (`.h2`, `.section`, tile/card classes from global.css and GenericPage); do not set a heading size in a page's own CSS.
