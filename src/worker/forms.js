@@ -17,7 +17,7 @@
 //                       It never blocks or changes a lead; with no key, or on any error, the line says "not checked". Set as a Worker secret only.
 
 const MAX_BODY = 20 * 1024;
-const FORM_TITLES = { contact: 'Contact form', 'home-evaluation': 'Home evaluation request', 'property-check': 'Property check request' };
+const FORM_TITLES = { contact: 'Contact form', 'home-evaluation': 'Home evaluation request', 'property-check': 'Property check request', quiz: 'Home search quiz' };
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 // Fields follow the labels captured in the archive (`Your name:`, `Your email:` ...). The archive did
@@ -40,7 +40,20 @@ export const SCHEMAS = {
     address: { label: 'Property address', required: true, max: 200 },
     name: { label: 'Your name (optional)', max: 100 },
   },
+  // Home page "Where are you starting?" quiz. Multi-choice answers arrive as one comma-separated line.
+  quiz: {
+    name: { label: 'Your name', required: true, max: 100 },
+    email: { label: 'Your email', required: true, max: 200, email: true },
+    phone: { label: 'Your phone number', max: 30, phone: true },
+    starting: { label: 'Where they are starting', required: true, max: 80 },
+    types: { label: 'Looking for', max: 300 },
+    areas: { label: 'Areas', max: 300 },
+    budget: { label: 'Budget', max: 80 },
+    timeline: { label: 'Timing', max: 80 },
+    message: { label: 'Anything else', max: 2000 },
+  },
 };
+const QUIZ_ORDER = ['starting', 'types', 'areas', 'budget', 'timeline'];
 
 export function validate(kind, input) {
   const schema = SCHEMAS[kind];
@@ -89,6 +102,7 @@ export function leadEmail(lead) {
   if (f.address) lines.push(`Address: ${oneLine(f.address)}`);
   if (f.address && lead.address_check) lines.push(`Address check: ${CHECK_TEXT[lead.address_check] || 'not checked'}`);
   if (f.subject) lines.push(`Subject: ${oneLine(f.subject)}`);
+  if (lead.kind === 'quiz') for (const k of QUIZ_ORDER) if (f[k]) lines.push(`${SCHEMAS.quiz[k].label}: ${oneLine(f[k])}`);
   if (lead.page) lines.push(`Page: ${oneLine(lead.page)}`);
   lines.push(`Received: ${lead.received_at}`);
   if (f.message) lines.push('', 'Message:', f.message);

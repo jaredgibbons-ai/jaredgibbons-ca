@@ -869,3 +869,9 @@ Research-voice cleanup wave 2: 340 passages on 183 pages rewritten or deleted (A
 - Mobile home parks page rebuilt as area tables (71 parks, notes only where sourced) with area links, rules cards and a clean FAQ. GIS page rebuilt with what-a-map-shows cards, the 24 municipal map links in a table and a clean FAQ.
 - New local-layer key `replace_body` keeps only the archive H1 and lets the local layer write the page.
 - "Where are you starting?" tap panel and quiz: not built. It needs the Worker form endpoint, and the home page is outside the approved placement list.
+
+## D-160 (2026-11-06) "Where are you starting?" quiz on the home page
+- Built `src/components/SearchQuiz.astro`: five steps (starting point, what, where, budget and timing, name/email/phone), tap-style radio and checkbox choices, keyboard and screen-reader friendly, Back/Next/Send, honeypot, Turnstile loads only when `PUBLIC_TURNSTILE_SITEKEY` is set. Placed on the home page under the hero (Jared asked for it there, so the home page is now on the placement list). It can be reused on the condo/townhome feeds, calculator, mortgage, rebate and first-time-buyer pages.
+- Send posts to the Worker `POST /api/forms/quiz` (new `quiz` schema in `src/worker/forms.js`, tested). The lead email lists name, email, phone and every answer, with the visitor as reply-to. Delivery still needs the BL-05 items: `TURNSTILE_SECRET`, the Email Service sending domain and `LEAD_EMAIL_FROM`, `LEAD_EMAIL_TO`, and `ALLOWED_ORIGINS`.
+- Until delivery is on, or on any failure, the visitor sees "Your answers were not sent" and a button that opens the same answers as a ready-written email to jaredgibbons@royallepage.ca. Nothing says "sent" unless the Worker accepted it.
+- Not ported: the live site's auto-prompt dialog and listing-alerts box (unchanged from the earlier decision).

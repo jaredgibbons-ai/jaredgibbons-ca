@@ -1,0 +1,183 @@
+---
+// "Where are you starting?" quiz. Five short steps, then Send: the Worker (POST /api/forms/quiz) emails every answer to Jared.
+// While sending is not switched on (preview, or any failure), the same answers are offered as a ready-written email to Jared's inbox.
+const { heading = 'Where are you starting?', lede = 'Answer four quick questions and tell me where to send it. I will reply with homes to look at and the next steps.' } = Astro.props;
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
+const steps = [
+  { key: 'starting', q: 'Where are you starting?', multi: false, opts: ['First home', 'Moving up', 'Downsizing', 'Investing', 'Selling first, then buying', 'Just exploring'] },
+  { key: 'types', q: 'What are you looking for?', hint: 'Pick all that fit.', multi: true, opts: ['Detached house', 'Townhome', 'Condo', 'Duplex', 'House with a suite', 'Acreage or farm', 'Mobile home or 55+', 'Not sure yet'] },
+  { key: 'areas', q: 'Where?', hint: 'Pick all that fit.', multi: true, opts: ['South Surrey / White Rock', 'Langley', 'Surrey', 'Cloverdale', 'Abbotsford', 'Elsewhere in the Fraser Valley', 'Not sure yet'] },
+];
+const budgets = ['Under $500,000', '$500,000 to $750,000', '$750,000 to $1,000,000', '$1,000,000 to $1,500,000', '$1,500,000 to $2,000,000', 'Over $2,000,000', 'Not sure yet'];
+const timings = ['Right away', 'In 1 to 3 months', 'In 3 to 6 months', 'In 6 to 12 months', 'Just looking'];
+const total = 5;
+---
+<section class="section sq" aria-labelledby="h-quiz" data-quiz data-sitekey={siteKey}>
+  <div class="wrap">
+    <p class="eyebrow">Build my search</p>
+    <h2 id="h-quiz" class="h2 caps">{heading}</h2>
+    <p class="lede">{lede}</p>
+    <noscript><p class="notice">This quiz needs JavaScript. Call or text <a href="tel:604-928-1361">604-928-1361</a> or email <a href="mailto:jaredgibbons@royallepage.ca">jaredgibbons@royallepage.ca</a>.</p></noscript>
+    <form class="sq__form" novalidate hidden>
+      <p class="sq__progress" aria-live="polite"><span data-cur>1</span> of {total}</p>
+      <div class="sq__bar" aria-hidden="true"><span data-bar></span></div>
+      {steps.map((s, i) => (
+        <fieldset class="sq__step" data-step={i + 1} hidden={i > 0} data-key={s.key} data-multi={s.multi ? '1' : '0'}>
+          <legend class="sq__q">{s.q}</legend>
+          {s.hint && <p class="sq__hint">{s.hint}</p>}
+          <div class="sq__opts">
+            {s.opts.map((o, j) => (
+              <label class="sq__opt"><input type={s.multi ? 'checkbox' : 'radio'} name={s.key} value={o} /><span>{o}</span></label>
+            ))}
+          </div>
+        </fieldset>
+      ))}
+      <fieldset class="sq__step" data-step="4" hidden>
+        <legend class="sq__q">Budget and timing</legend>
+        <p class="sq__sub">Budget</p>
+        <div class="sq__opts" data-key="budget" data-multi="0">
+          {budgets.map((o) => <label class="sq__opt"><input type="radio" name="budget" value={o} /><span>{o}</span></label>)}
+        </div>
+        <p class="sq__sub">When do you want to move?</p>
+        <div class="sq__opts" data-key="timeline" data-multi="0">
+          {timings.map((o) => <label class="sq__opt"><input type="radio" name="timeline" value={o} /><span>{o}</span></label>)}
+        </div>
+      </fieldset>
+      <fieldset class="sq__step sq__contact" data-step="5" hidden>
+        <legend class="sq__q">Where should I send it?</legend>
+        <div class="sq__fields">
+          <div class="sq__row"><label for="sq-name">Your name</label><input id="sq-name" name="name" autocomplete="name" required maxlength="100" /><p class="sq__err" id="sq-name-e" role="alert"></p></div>
+          <div class="sq__row"><label for="sq-email">Your email</label><input id="sq-email" name="email" type="email" autocomplete="email" required maxlength="200" /><p class="sq__err" id="sq-email-e" role="alert"></p></div>
+          <div class="sq__row"><label for="sq-phone">Phone (optional)</label><input id="sq-phone" name="phone" type="tel" autocomplete="tel" maxlength="30" /><p class="sq__err" id="sq-phone-e" role="alert"></p></div>
+          <div class="sq__row sq__row--wide"><label for="sq-msg">Anything else? (optional)</label><textarea id="sq-msg" name="message" rows="3" maxlength="2000"></textarea></div>
+          <div class="sq__hp" aria-hidden="true"><label for="sq-hp">Leave this empty</label><input id="sq-hp" name="_hp_url" tabindex="-1" autocomplete="off" /></div>
+        </div>
+        {siteKey && <div class="sq__ts" data-ts></div>}
+        <p class="sq__fine">Pressing Send emails your answers to Jared. They are used to reply to you, nothing else. See the <a href="/privacy.html">privacy policy</a>.</p>
+      </fieldset>
+      <p class="sq__msg" data-msg role="status" aria-live="polite"></p>
+      <div class="sq__fallback" data-fallback hidden>
+        <p>Sending from this page is not available right now. Your answers are ready in an email to Jared:</p>
+        <p><a class="btn" data-mailto href="mailto:jaredgibbons@royallepage.ca">Open it in my email app</a> <a class="btn btn--ghost" href="tel:604-928-1361">Call or text 604-928-1361</a></p>
+      </div>
+      <div class="sq__nav">
+        <button type="button" class="btn btn--ghost" data-back hidden>Back</button>
+        <button type="button" class="btn" data-next disabled>Next</button>
+        <button type="submit" class="btn" data-send hidden>Send</button>
+      </div>
+    </form>
+    <div class="sq__done" data-done hidden tabindex="-1">
+      <h3 class="sq__q">Sent. Thank you.</h3>
+      <p>Jared has your answers and will reply by email, or by phone if you left a number. To talk sooner, call or text <a href="tel:604-928-1361">604-928-1361</a>.</p>
+    </div>
+  </div>
+</section>
+<script>
+  const root = document.querySelector<HTMLElement>('[data-quiz]');
+  if (root) {
+    const form = root.querySelector<HTMLFormElement>('form')!;
+    form.hidden = false;
+    const steps = [...form.querySelectorAll<HTMLElement>('.sq__step')];
+    const next = form.querySelector<HTMLButtonElement>('[data-next]')!, back = form.querySelector<HTMLButtonElement>('[data-back]')!, send = form.querySelector<HTMLButtonElement>('[data-send]')!;
+    const cur = form.querySelector('[data-cur]')!, bar = form.querySelector<HTMLElement>('[data-bar]')!, msg = form.querySelector<HTMLElement>('[data-msg]')!;
+    const fb = form.querySelector<HTMLElement>('[data-fallback]')!, mailto = form.querySelector<HTMLAnchorElement>('[data-mailto]')!;
+    const done = root.querySelector<HTMLElement>('[data-done]')!;
+    const labels: Record<string, string> = { starting: 'Where I am starting', types: 'Looking for', areas: 'Areas', budget: 'Budget', timeline: 'Timing' };
+    let at = 0, tsId: string | null = null, tsToken = '';
+    const vals = (name: string) => [...form.querySelectorAll<HTMLInputElement>(`input[name="${name}"]:checked`)].map((i) => i.value);
+    const answered = (i: number) => {
+      if (i === 0) return vals('starting').length > 0;
+      if (i === 1) return vals('types').length > 0;
+      if (i === 2) return vals('areas').length > 0;
+      if (i === 3) return vals('budget').length > 0 && vals('timeline').length > 0;
+      return true;
+    };
+    const show = (i: number) => {
+      at = i; steps.forEach((s, k) => (s.hidden = k !== i));
+      cur.textContent = String(i + 1); bar.style.width = `${((i + 1) / steps.length) * 100}%`;
+      back.hidden = i === 0; next.hidden = i === steps.length - 1; send.hidden = i !== steps.length - 1;
+      next.disabled = !answered(i); msg.textContent = ''; fb.hidden = true;
+      if (i === steps.length - 1) loadTurnstile();
+      (steps[i].querySelector('input') as HTMLElement | null)?.focus({ preventScroll: true });
+    };
+    form.addEventListener('change', () => { next.disabled = !answered(at); });
+    next.addEventListener('click', () => { if (answered(at)) show(at + 1); });
+    back.addEventListener('click', () => show(at - 1));
+    function loadTurnstile() {
+      const key = root!.dataset.sitekey, box = form.querySelector<HTMLElement>('[data-ts]');
+      if (!key || !box || tsId !== null) return;
+      const w = window as any;
+      const render = () => { tsId = w.turnstile.render(box, { sitekey: key, callback: (t: string) => { tsToken = t; } }); };
+      if (w.turnstile) return render();
+      const s = document.createElement('script'); s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'; s.async = true; s.onload = render; document.head.appendChild(s);
+    }
+    const payload = () => {
+      const g = (n: string) => (form.elements.namedItem(n) as HTMLInputElement | null)?.value.trim() || '';
+      return { starting: vals('starting').join(', '), types: vals('types').join(', '), areas: vals('areas').join(', '), budget: vals('budget').join(', '), timeline: vals('timeline').join(', '),
+        name: g('name'), email: g('email'), phone: g('phone'), message: g('message'), _hp_url: g('_hp_url'), page: location.pathname, 'cf-turnstile-response': tsToken };
+    };
+    const setErr = (k: string, t: string) => { const e = form.querySelector<HTMLElement>(`#sq-${k}-e`); if (e) e.textContent = t; };
+    const clearErr = () => ['name', 'email', 'phone'].forEach((k) => setErr(k, ''));
+    form.addEventListener('submit', async (ev) => {
+      ev.preventDefault(); clearErr(); msg.textContent = ''; fb.hidden = true;
+      const p = payload(); let bad = false;
+      if (!p.name) { setErr('name', 'Please enter your name.'); bad = true; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(p.email)) { setErr('email', 'Please enter a valid email address.'); bad = true; }
+      if (p.phone && !/^[0-9+().\-\s]{7,30}$/.test(p.phone)) { setErr('phone', 'Please enter a valid phone number.'); bad = true; }
+      if (bad) { (form.querySelector('.sq__err:not(:empty)')?.previousElementSibling as HTMLElement | null)?.focus(); return; }
+      send.disabled = true; send.textContent = 'Sending…';
+      const lines = ['Home search quiz', '', `Name: ${p.name}`, `Email: ${p.email}`, ...(p.phone ? [`Phone: ${p.phone}`] : []), ...(['starting', 'types', 'areas', 'budget', 'timeline'] as const).map((k) => `${labels[k]}: ${p[k]}`), ...(p.message ? ['', 'Anything else:', p.message] : [])];
+      mailto.href = `mailto:jaredgibbons@royallepage.ca?subject=${encodeURIComponent('Home search quiz from ' + p.name)}&body=${encodeURIComponent(lines.join('\n'))}`;
+      try {
+        const r = await fetch('/api/forms/quiz', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(p) });
+        const j = await r.json().catch(() => ({}));
+        if (r.ok && j.ok) { form.hidden = true; done.hidden = false; done.focus(); return; }
+        if (r.status === 422 && j.errors) { Object.entries<string>(j.errors).forEach(([k, t]) => setErr(k, t)); msg.textContent = 'Please check the highlighted fields.'; }
+        else if (r.status === 429) { msg.textContent = 'Too many tries. Please wait a minute and send again.'; }
+        else if (r.status === 403 && j.error === 'captcha_required') { msg.textContent = 'Please complete the check above, then press Send.'; }
+        else { msg.textContent = 'Your answers were not sent.'; fb.hidden = false; }
+      } catch { msg.textContent = 'Your answers were not sent.'; fb.hidden = false; }
+      finally { send.disabled = false; send.textContent = 'Send'; if ((window as any).turnstile && tsId !== null) { (window as any).turnstile.reset(tsId); tsToken = ''; } }
+    });
+    show(0);
+  }
+</script>
+<style>
+  .sq .lede{max-width:44rem}
+  .sq__form{max-width:48rem;background:var(--cream);border:1px solid var(--ink);padding:clamp(1.25rem,3vw,2rem);margin-top:var(--s5);display:grid;gap:var(--s4)}
+  .sq__progress{margin:0;font:700 .75rem var(--f-head);letter-spacing:.12em;text-transform:uppercase}
+  .sq__bar{height:4px;background:var(--rule)}
+  .sq__bar span{display:block;height:100%;width:20%;background:var(--ink);transition:width .2s}
+  .sq__step{border:0;margin:0;padding:0;min-width:0}
+  .sq__q{font:800 clamp(1.25rem,2.6vw,1.75rem)/1.15 var(--f-head);letter-spacing:-.02em;padding:0;margin:0 0 1rem}
+  .sq__hint,.sq__sub{margin:0 0 .75rem;font:600 .8125rem var(--f-head);letter-spacing:.06em;text-transform:uppercase;color:#444}
+  .sq__sub{margin-top:1.25rem;color:var(--ink)}
+  .sq__opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,13rem),1fr));gap:.6rem}
+  .sq__opt{position:relative;display:block}
+  .sq__opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+  .sq__opt span{display:flex;align-items:center;min-height:3rem;padding:.6rem .9rem;border:1px solid var(--ink);background:#fff;font:700 .9375rem/1.25 var(--f-head);transition:background .12s,color .12s}
+  .sq__opt:hover span{background:#ececec}
+  .sq__opt input:checked + span{background:var(--ink);color:#fff}
+  .sq__opt input:focus-visible + span{outline:3px solid var(--ink);outline-offset:2px}
+  .sq__fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s3)}
+  .sq__row{display:grid;gap:.3rem;align-content:start}
+  .sq__row--wide{grid-column:1 / -1}
+  .sq__row label{font:700 .75rem var(--f-head);letter-spacing:.06em;text-transform:uppercase}
+  .sq__row input,.sq__row textarea{min-height:2.75rem;border:1px solid var(--ink);border-radius:0;background:#fff;color:var(--ink);padding:.55rem .8rem;font:inherit;width:100%;box-sizing:border-box}
+  .sq__err{margin:0;font-size:.8125rem;font-weight:700;color:#b00020}
+  .sq__err:empty{display:none}
+  .sq__hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .sq__ts{margin-top:var(--s3)}
+  .sq__fine{margin:var(--s3) 0 0;font-size:.8125rem;color:#444}
+  .sq__msg{margin:0;font-weight:700}
+  .sq__msg:empty{display:none}
+  .sq__fallback{border:1px solid var(--ink);background:#fff;padding:1rem 1.25rem}
+  .sq__fallback p{margin:0 0 .75rem}
+  .sq__fallback .btn{margin:0 .5rem .5rem 0}
+  .sq__nav .btn[hidden],.sq__step[hidden],.sq__fallback[hidden]{display:none}
+  .sq__nav{display:flex;flex-wrap:wrap;gap:.75rem}
+  .sq__nav .btn[disabled]{opacity:.45;cursor:not-allowed}
+  .sq__done{max-width:48rem;background:var(--cream);border:1px solid var(--ink);padding:clamp(1.25rem,3vw,2rem);margin-top:var(--s5)}
+  .sq__done:focus{outline:3px solid var(--ink)}
+  @media (max-width:40rem){.sq__fields{grid-template-columns:1fr}.sq__nav .btn{flex:1 1 auto;justify-content:center}}
+</style>

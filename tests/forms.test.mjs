@@ -105,3 +105,15 @@ test('address check: complete, needs-review and unchecked all reach the lead and
   assert.match(m.text, /Address check: could not be fully confirmed/);
   assert.ok(!/Address check/.test(leadEmail({ kind: 'contact', received_at: 'x', fields: { name: 'P' } }).text));
 });
+
+test('quiz lead is validated and the email lists every answer', async () => {
+  const quiz = { name: 'Pat Example', email: 'pat@example.com', phone: '604-555-0100', starting: 'First home', types: 'Condo, Townhome', areas: 'South Surrey / White Rock, Langley', budget: '$500,000 to $750,000', timeline: 'In 1 to 3 months', message: 'Near transit please.', page: '/index.html', 'cf-turnstile-response': 'tok' };
+  const sent = [];
+  const e = env({ EMAIL: { send: async (m) => { sent.push(m); } }, LEAD_EMAIL_FROM: 'leads@jaredgibbons.ca', LEAD_EMAIL_TO: 'jaredgibbons@royallepage.ca' });
+  const r = await handleForm(mk(quiz, { path: '/api/forms/quiz' }), e, { fetch: captcha() });
+  assert.equal(r.status, 200); assert.equal(sent.length, 1);
+  assert.match(sent[0].subject, /Home search quiz from Pat Example/);
+  for (const v of ['First home', 'Condo, Townhome', 'South Surrey / White Rock, Langley', '$500,000 to $750,000', 'In 1 to 3 months', 'Near transit please.', 'pat@example.com', '604-555-0100']) assert.ok(sent[0].text.includes(v), v);
+  const bad = await handleForm(mk({ ...quiz, starting: '', email: 'x' }, { path: '/api/forms/quiz' }), env(), { fetch: captcha() });
+  assert.equal(bad.status, 422);
+});
