@@ -50,8 +50,11 @@ a:hover{text-decoration-thickness:3px}
 .section--ink{background:var(--ink);color:#fff}
 .section--ink a{color:#fff}
 .eyebrow{font:600 .75rem/1.3 var(--f-head);letter-spacing:.24em;text-transform:uppercase;margin:0 0 var(--s4)}
-.h2{font-size:clamp(1.75rem,3.2vw,2.75rem);text-transform:none;margin:0 0 var(--s4)}
-.h2.caps,.h2--caps{text-transform:uppercase;letter-spacing:-.025em;line-height:1.04;font-size:clamp(1.9rem,4.6vw,3.75rem)}
+.h2,.h2.caps,.h2--caps,.dp-h2{font-size:clamp(1.5rem,2.5vw,2.125rem);line-height:1.12;letter-spacing:-.015em;margin:0 0 var(--s4);text-wrap:balance}
+.h2.caps,.h2--caps,.dp-h2.caps{text-transform:uppercase}
+/* One section-heading style site-wide: same size, a short bar above, caps only on short headings (src/lib/caps.ts). */
+.h2::before,.dp-h2::before{content:'';display:block;width:2.5rem;height:3px;background:var(--ink);margin-bottom:.8rem}
+.section--ink .h2::before,.dp-sec--ink .dp-h2::before{background:#fff}
 .lede{font-size:1.1875rem;max-width:var(--measure)}
 .prose{max-width:var(--measure)}
 .prose h3{font-size:1.375rem;margin:2.25rem 0 .75rem}

@@ -837,3 +837,7 @@ Research-voice cleanup wave 2: 340 passages on 183 pages rewritten or deleted (A
 - Only rule facts marked as sourced in the city research are used. Not used: Richmond bylaw schedule numbers, MLS boundary claims, bus and station-distance claims, and White Rock coach house rules (the page says White Rock is its own city).
 - Live search ids come from `docs/review/idx/new-searches-2026-11-06.xlsx` (Jerry fills ID and embed code). The coach house rows say to clone the Langley coach house search (ID 1450209) and change the area; the exact MyRealPage field name is not confirmed.
 - Uniqueness 0.89 to 0.95 per page (8-word shingles). Inbound links were added at the end of the city hubs, the neighbourhood guide hubs, the matching houses pages and the Langley coach house page (tag `nslinks`).
+
+## D-155 — One design system for headings, cards and link lists (2026-11-06)
+- Why: styles had piled up one request at a time (huge caps headings on the home page, smaller ones in text sections, another scale on designed pages, three link-list looks).
+- Now: one section heading (1.5 to 2.1rem, short bar above, caps only for headings of 6 words or fewer) on every page type; page titles 1.9 to 3rem (the home page name stays large); link lists are bordered tiles with an arrow everywhere; cards are bordered boxes (cream on white bands, white on cream); designed pages lose the heavy 4px section rule and use the same section spacing as the rest.
