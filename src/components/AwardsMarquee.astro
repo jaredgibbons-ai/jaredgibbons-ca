@@ -1,0 +1,29 @@
+---
+// Moving strip of awards. The same awards are mixed into a different order per `seed`, and `reverse` runs the strip right to left instead of left to right.
+import { awards } from '../data/home';
+const { seed = '', reverse = false, size = 80, flush = false, label = 'Awards' } = Astro.props as { seed?: string; reverse?: boolean; size?: number; flush?: boolean; label?: string };
+// Deterministic shuffle (same page, same order at every build).
+let h = 2166136261; for (const c of String(seed)) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619) >>> 0; }
+const rnd = () => { h = (Math.imul(h ^ (h >>> 15), 2246822507) + 0x9e3779b9) >>> 0; return h / 4294967296; };
+const list = [...awards];
+if (seed) for (let i = list.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [list[i], list[j]] = [list[j], list[i]]; }
+const w = (a: any) => Math.round((a.w * size) / a.h);
+---
+<div class:list={['awm', { 'awm--flush': flush, 'awm--rev': reverse }]} role="region" aria-label={label} style={`--awh:${size}px`}>
+  <ul class="awm__track">
+    {list.map((a) => <li class="awm__item"><img src={a.src} width={w(a)} height={size} alt={a.alt} loading="lazy" decoding="async" /></li>)}
+    {list.map((a) => <li class="awm__item" aria-hidden="true"><img src={a.src} width={w(a)} height={size} alt="" loading="lazy" decoding="async" /></li>)}
+  </ul>
+</div>
+<style>
+  .awm{background:var(--ink);overflow:hidden;padding:1rem 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+  .awm--flush{margin:0}
+  .awm__track{display:flex;align-items:center;width:max-content;margin:0;padding:0;list-style:none;animation:awm-ltr 70s linear infinite}
+  .awm--rev .awm__track{animation-name:awm-rtl}
+  .awm:hover .awm__track,.awm:focus-within .awm__track{animation-play-state:paused}
+  .awm__item{flex:0 0 auto;display:flex;align-items:center;margin-right:clamp(2rem,5vw,4rem)}
+  .awm__item img{height:var(--awh);width:auto;display:block;max-width:none}
+  @keyframes awm-ltr{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+  @keyframes awm-rtl{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.awm__track{animation:none;width:auto;flex-wrap:wrap;justify-content:center;padding:0 var(--s4)}.awm__item[aria-hidden="true"]{display:none}.awm{-webkit-mask-image:none;mask-image:none}}
+</style>

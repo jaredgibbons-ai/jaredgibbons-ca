@@ -1,21 +1,29 @@
 ---
 // Archive form, rendered inert. Fields/labels are the archived ones; submission is NOT wired
 // (forms Worker, decision pending BL-05). The notice states this so it never reads as operational.
-const { labels = [], submit = '', uid = 'f' } = Astro.props;
+const { labels = [], submit = '', uid = 'f', fields = null, title = '', fine = '' } = Astro.props;
 const key = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY || '';
 const type = (l: string) => /email/i.test(l) ? 'email' : /phone/i.test(l) ? 'tel' : 'text';
+// Simple archive forms pass `labels`; richer ones (home evaluation) pass `fields`: { label, type: text|email|tel|select|textarea, options, wide, addr }.
+const rows: any[] = fields ?? labels.map((l: string) => ({ label: l.replace(/:$/, ''), type: /message/i.test(l) ? 'textarea' : type(l), addr: /address/i.test(l), wide: /message|address/i.test(l) }));
 ---
-<form class="fstub" data-key={key} aria-describedby={`${uid}-note`} onsubmit="return false" novalidate>
+<form class:list={['fstub', { 'fstub--grid': !!fields }]} data-key={key} aria-describedby={`${uid}-note`} onsubmit="return false" novalidate>
+  {title && <p class="fstub__title">{title}</p>}
   <p id={`${uid}-note`} class="notice">This form is not connected in the preview. Nothing you type here is sent.</p>
-  {labels.map((l: string, i: number) => (
-    <div class="fstub__row">
-      <label for={`${uid}-${i}`}>{l}</label>
-      {/message/i.test(l)
+  <div class="fstub__fields">
+  {rows.map((r: any, i: number) => (
+    <div class:list={['fstub__row', { 'fstub__row--wide': r.wide }]}>
+      <label for={`${uid}-${i}`}>{r.label}</label>
+      {r.type === 'textarea'
         ? <textarea id={`${uid}-${i}`} rows="4" disabled></textarea>
-        : <input id={`${uid}-${i}`} type={type(l)} data-addr={/address/i.test(l) ? '' : undefined} disabled />}
+        : r.type === 'select'
+          ? <select id={`${uid}-${i}`} disabled><option value="">Select</option>{r.options.map((o: string) => <option>{o}</option>)}</select>
+          : <input id={`${uid}-${i}`} type={r.type} data-addr={r.addr ? '' : undefined} disabled />}
     </div>
   ))}
+  </div>
   <button type="button" class="btn" aria-disabled="true" disabled>{submit}</button>
+  {fine && <p class="fstub__fine">{fine}</p>}
 </form>
 <script>
   // Address fields get suggestions once the form is live (the inputs are disabled in the preview, so nothing happens there).
@@ -33,10 +41,17 @@ const type = (l: string) => /email/i.test(l) ? 'email' : /phone/i.test(l) ? 'tel
   .addrsug__attr{margin:0;padding:.35rem .8rem;font-size:.75rem;color:#444;border-top:1px solid var(--rule)}
 </style>
 <style>
-  .fstub{max-width:36rem;display:grid;gap:var(--s4);margin:var(--s5) 0}
-  .fstub__row{display:grid;gap:.35rem}
-  .fstub label{font:700 .8125rem var(--f-head);letter-spacing:.04em}
-  .fstub input,.fstub textarea{min-height:2.75rem;border:1px solid var(--ink);border-radius:0;background:#fff;color:var(--ink);padding:.6rem .8rem;font:inherit}
-  .fstub input:disabled,.fstub textarea:disabled{opacity:.6;cursor:not-allowed}
+  .fstub{max-width:36rem;display:grid;gap:var(--s3);margin:var(--s4) 0}
+  .fstub--grid{max-width:48rem;background:var(--cream);padding:clamp(1.25rem,3vw,2rem);border:1px solid var(--ink)}
+  .fstub__title{font:800 1rem var(--f-head);text-transform:uppercase;letter-spacing:.06em;margin:0}
+  .fstub__fields{display:grid;gap:var(--s3)}
+  .fstub--grid .fstub__fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fstub__row{display:grid;gap:.3rem;align-content:start}
+  .fstub--grid .fstub__row--wide{grid-column:1 / -1}
+  .fstub label{font:700 .75rem var(--f-head);letter-spacing:.06em;text-transform:uppercase}
+  .fstub input,.fstub textarea,.fstub select{min-height:2.75rem;border:1px solid var(--ink);border-radius:0;background:#fff;color:var(--ink);padding:.55rem .8rem;font:inherit;width:100%;box-sizing:border-box}
+  .fstub input:disabled,.fstub textarea:disabled,.fstub select:disabled{opacity:.6;cursor:not-allowed}
   .fstub .btn{justify-self:start}
+  .fstub__fine{margin:0;font-size:.8125rem;color:#444}
+  @media (max-width:40rem){.fstub--grid .fstub__fields{grid-template-columns:1fr}}
 </style>

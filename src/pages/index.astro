@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import PropertyCard from '../components/PropertyCard.astro';
 import Stars from '../components/Stars.astro';
+import AwardsMarquee from '../components/AwardsMarquee.astro';
 import { reviews, awards, listings, areas, southSurreyLinks, langleyLinks, langleyHoods, quick, resources } from '../data/home';
 // As Seen In logos: [name, image height, file number]. Add more by dropping a webp in public/img and adding a row.
 const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',147,2],['Realtylink',122,3],['LoopNet',150,4],['Spacelist',99,5],['REALTOR.ca',225,6],['Royal LePage',206,7],['Kijiji',338,8]];
@@ -58,11 +59,9 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
       <h3 class="subhead">OUR PROVEN PERFORMANCE</h3>
       {import.meta.env.PUBLIC_PREVIEW !== 'false' && <p class="preview-flag">Open item OI-07: performance figures under this heading were not captured as text in the archive (likely image/script-rendered). Will be filled from the baseline zips.</p>}
     </div>
-    <div class="awards-marquee" role="region" aria-label="Awards">
-      <ul class="awards-track">
-        {awards.map((a) => <li class="award"><img src={a.src} width={Math.round(a.w * 90 / a.h)} height="90" alt={a.alt} loading="lazy" decoding="async" /></li>)}
-        {awards.map((a) => <li class="award" aria-hidden="true"><img src={a.src} width={Math.round(a.w * 90 / a.h)} height="90" alt="" loading="lazy" decoding="async" /></li>)}
-      </ul>
+    <div class="awards-rows">
+      <AwardsMarquee size={90} flush />
+      <AwardsMarquee seed="home-row-2" reverse size={72} flush label="More awards" />
     </div>
   </section>
 
@@ -221,12 +220,12 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
   .tile__h{font-weight:800;letter-spacing:-.015em}
   .subhead{font-weight:800}
   .rank__stats strong{font-weight:800;letter-spacing:-.03em}
-  .hero{padding-block:clamp(2.5rem,6vw,5rem) clamp(3rem,7vw,6rem)}
+  .hero{padding-block:clamp(1.5rem,3.5vw,3rem) clamp(1.75rem,4vw,3rem)}
   .hero__grid{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(1.5rem,5vw,4.5rem);align-items:end}
   .hero__name{font-size:clamp(2.75rem,8.2vw,7.5rem);line-height:.92;letter-spacing:-.035em;font-weight:700}
   .hero__tag{font:600 clamp(.9rem,1.6vw,1.125rem)/1.3 var(--f-head);letter-spacing:.18em;text-transform:uppercase;margin:1.75rem 0 2rem}
   .hero__actions{display:flex;flex-wrap:wrap;gap:1rem;margin:0}
-  .hero__actions .btn{min-height:3.75rem;padding:1.1rem 2.6rem;font-size:1rem;letter-spacing:.12em;flex:0 1 auto}
+  .hero__actions .btn{min-height:3.25rem;padding:.9rem 1.9rem;font-size:.9375rem;letter-spacing:.12em;flex:0 1 auto}
   @media (max-width:520px){.hero__actions .btn{flex:1 1 100%;justify-content:center}}
   .hero__media{aspect-ratio:4/5;background:var(--cream);border:1px solid var(--ink);overflow:hidden}
   .hero__media img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
@@ -238,13 +237,9 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
   .review__who{margin:0;font-size:.875rem;line-height:1.4}
   .subhead{font:700 clamp(1.125rem,2vw,1.5rem)/1.2 var(--f-head);letter-spacing:.04em;margin:1.5rem 0 1rem}
   .subhead--sm{font-size:1rem;margin-top:2rem}
-  .awards-marquee{background:var(--ink);overflow:hidden;margin:var(--s5) 0 0;padding:var(--s5) 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-  .awards-track{display:flex;align-items:center;width:max-content;margin:0;padding:0;list-style:none;animation:awards-scroll 70s linear infinite}
-  .awards-marquee:hover .awards-track,.awards-marquee:focus-within .awards-track{animation-play-state:paused}
-  .award{flex:0 0 auto;display:flex;align-items:center;margin-right:clamp(2rem,5vw,4rem)}
-  .award img{height:90px;width:auto;display:block;max-width:none}
-  @keyframes awards-scroll{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-  @media (prefers-reduced-motion:reduce){.awards-track{animation:none;width:auto;flex-wrap:wrap;justify-content:center;padding:0 var(--s4)}.award[aria-hidden="true"]{display:none}.awards-marquee{-webkit-mask-image:none;mask-image:none}}
+  .awards-rows{margin:var(--s4) 0 0;display:grid;gap:0}
+  .awards-rows :global(.awm:first-child){padding-bottom:.5rem}
+  .awards-rows :global(.awm + .awm){padding-top:.5rem}
 
   .rank__grid{display:grid;grid-template-columns:1.5fr 1fr;gap:var(--s7);align-items:center}
   .rank__h{font-size:clamp(2.25rem,6vw,5rem);line-height:1;letter-spacing:-.03em}

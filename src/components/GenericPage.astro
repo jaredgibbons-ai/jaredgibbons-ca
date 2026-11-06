@@ -29,8 +29,10 @@ import BREADCRUMBS from '../data/breadcrumbs.json';
 import EXPLORE from '../data/explore.json';
 import EXPLORE_EXTRA from '../data/explore-extra.json';
 import ExploreLinks from './ExploreLinks.astro';
+import AwardsMarquee from './AwardsMarquee.astro';
 
 const { page } = Astro.props as { page: any };
+const awRev = [...page.slug].reduce((n: number, c: string) => n + c.charCodeAt(0), 0) % 2 === 1;
 const seo = page.seo || {};
 const idx = IDX as { account: string; pages: Record<string, string>; special?: Record<string, string> };
 const idxId = idx.pages[page.slug];
@@ -280,7 +282,7 @@ const explore = !_extra.length ? exploreBase
 >
 <main id="main">
   {sections.map((sec, si) => {
-    if (sec.kind === 'reviews') return <ReviewCards heading={sec.block.heading} intro={sec.block.intro} items={pickReviews(page.slug, REVIEW_EXCERPTS.items)} id={`reviews-${si}`} />;
+    if (sec.kind === 'reviews') return <><AwardsMarquee seed={page.slug} reverse={awRev} size={64} flush /><ReviewCards heading={sec.block.heading} intro={sec.block.intro} items={pickReviews(page.slug, REVIEW_EXCERPTS.items)} id={`reviews-${si}`} /></>;
     if (sec.kind === 'photos') return (
       <section class="section section--tight" aria-labelledby={`photos-${si}`}>
         <div class="wrap">
@@ -419,7 +421,7 @@ const explore = !_extra.length ? exploreBase
               if (b.t === 'calc') return b.which === 'mortgage' ? <MortgageCalc price={b.price} exemption={b.exemption} /> : <NetProceedsCalc />;
               if (b.t === 'areamap') return <AreaMap region={b.region} mode={b.mode} current={b.current} />;
               if (b.t === 'commute') return <CommuteTime region={b.region} current={b.current} />;
-              if (b.t === 'form') return <FormStub labels={b.labels} submit={b.submit} uid={`f${fid++}`} />;
+              if (b.t === 'form') return <FormStub labels={b.labels} submit={b.submit} fields={b.fields} title={b.title} fine={b.fine} uid={`f${fid++}`} />;
               return null;
             })}
           </div>
@@ -495,7 +497,7 @@ const explore = !_extra.length ? exploreBase
   .lines li{padding:.55rem 0;border-bottom:1px solid var(--rule)}
   .lines--links{columns:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));gap:.75rem;border-top:0;margin:0 0 1.5rem}
   .lines--links li{padding:0;border:1px solid var(--ink);background:#fff;transition:background .15s,color .15s}
-  .lines--links li :global(a){display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding:.8rem 1.1rem;font:700 .9375rem/1.3 var(--f-head);text-decoration:none;color:inherit}
+  .lines--links li :global(a){display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3rem;padding:.65rem 1rem;font:700 .9375rem/1.3 var(--f-head);text-decoration:none;color:inherit}
   .lines--links li :global(a)::after{content:'→';font-weight:400;transition:transform .15s}
   .lines--links li:hover,.lines--links li:focus-within{background:var(--ink);color:#fff}
   .lines--links li:hover :global(a)::after{transform:translateX(.25rem)}
