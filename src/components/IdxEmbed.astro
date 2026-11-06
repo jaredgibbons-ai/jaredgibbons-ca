@@ -7,7 +7,7 @@ const { id = '', account, label = 'Listings', path } = Astro.props;
 // A saved search by id, or a special widget (my listings, the open search form) by its stored path.
 const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `recip/tmpl~v2,noframe~true/-/search-${id}.def/in.js`}`;
 ---
-<section class="section section--cream section--tight" aria-label={label}>
+<section class="section section--tight section--idx" aria-label={label}>
   <div class="wrap">
     <div class="idx" data-idx-src={src} data-idx-id={id || undefined}>
     </div>
@@ -36,6 +36,8 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
   }
 </script>
 <style>
+  /* white, like the search itself (D-143) */
+  .section--idx{background:#fff;padding-top:var(--s4)}
   .idx{min-height:36rem}
   .idx[hidden],.idx__fallback[hidden]{display:none}
   /* MyRealPage adds its own "Login with Facebook / Google / X" bar above the results; our page has its own sign-in and account links (D-133). */

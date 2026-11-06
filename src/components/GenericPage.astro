@@ -32,6 +32,8 @@ const seo = page.seo || {};
 const idx = IDX as { account: string; pages: Record<string, string>; special?: Record<string, string> };
 const idxId = idx.pages[page.slug];
 const idxPath = idx.special?.[page.slug];
+// A page whose main content is a live listing search: the heading is compact and the search starts right below it (D-143).
+const isSearch = !!(idxId || idxPath);
 
 // Local-knowledge layer (src/data/local/<slug>.json): original sourced sections inserted before the first
 // level-2 heading, plus FAQ + breadcrumb structured data. Only used where present; archive blocks are untouched.
@@ -237,16 +239,16 @@ const explore = !_extra.length ? exploreBase
     if (sec.kind === 'grid' && idxPath) return <IdxEmbed path={idxPath} account={idx.account} />;
     if (sec.kind === 'grid' && idxId) return <IdxEmbed id={idxId} account={idx.account} />;
     if (sec.kind === 'grid') return (
-      <section class="section section--cream section--tight" aria-label="Listings">
+      <section class="section section--tight" aria-label="Listings">
         <div class="wrap">
           <p class="notice">Live MLS® listings for this search are not connected in the preview. <a href="/recip.html">Search Listings</a></p>
         </div>
       </section>
     );
     return (
-      <section class:list={['section', { 'section--cream': si % 2 === 1, 'section--tight': !sec.blocks.some((x) => x.t === 'h') && sec.blocks.length <= 3 }]}>
+      <section class:list={['section', { 'section--cream': si % 2 === 1, 'section--tight': (!sec.blocks.some((x) => x.t === 'h') && sec.blocks.length <= 3) || (isSearch && si === 0), 'section--search': isSearch && si === 0 }]}>
         <div class="wrap">
-          <div class:list={['pg', { 'pg--wide': sec.blocks.some((x) => x.t === 'lcards') }]}>
+          <div class:list={['pg', { 'pg--wide': sec.blocks.some((x) => x.t === 'lcards'), 'pg--search': isSearch && si === 0 }]}>
             {sec.blocks.map((b) => {
               if (b.t === 'h') {
                 const Tag = `h${Math.min(b.level, 5)}`;
@@ -342,6 +344,10 @@ const explore = !_extra.length ? exploreBase
   .section--tight{padding-block:clamp(1.25rem,3vw,2rem)}
   .pg{max-width:var(--measure);margin-inline:auto}
   .pg--wide{max-width:none}
+  .pg--search{max-width:none}
+  .pg--search .pg__h1,.pg--search .pg__h1.caps{font-size:clamp(1.75rem,3.4vw,2.5rem);max-width:none;margin-bottom:.75rem}
+  .pg--search p{max-width:56rem;margin-bottom:0}
+  .section--search{padding-bottom:0}
   .pg :global(p){margin:0 0 1em}
   .pg__h1{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.05;letter-spacing:-.025em;margin:0 0 1.25rem;text-wrap:balance;max-width:24ch}
   .pg__h1.caps{max-width:32ch}
