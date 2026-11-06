@@ -34,7 +34,8 @@ def problems(slug, e):
 
 def main():
     final = {}
-    for f in sorted(glob.glob(f'{ROOT}/tools/seo_final/batch_*.json')):
+    # batch_* is the first pass; pass2_* (named specifics added to weak descriptions) is applied over it
+    for f in sorted(glob.glob(f'{ROOT}/tools/seo_final/batch_*.json')) + sorted(glob.glob(f'{ROOT}/tools/seo_final/pass2_*.json')):
         final.update(json.load(open(f)))
     bad = {s: problems(s, e) for s, e in final.items() if problems(s, e)}
     seen_t, seen_d = {}, {}
