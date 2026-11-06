@@ -37,6 +37,40 @@ const idxPath = idx.special?.[page.slug];
 // level-2 heading, plus FAQ + breadcrumb structured data. Only used where present; archive blocks are untouched.
 const LOCAL = import.meta.glob('../data/local/*.json', { eager: true, import: 'default' }) as Record<string, any>;
 const local = LOCAL[`../data/local/${page.slug}.json`];
+// FAQ clean-up at render time (data files are untouched): a question repeated on one page shows once, and entries written as notes about the page itself
+// ("owner-approved set", "Flagged:", "in this file", "What is the jared.html page?") are held back, since they read as internal review notes to a visitor.
+const INTERNAL_FAQ = /(owner-approved|\bflagged\b|\bin this file\b|\bthe archive\b|stated position|as its own statement|the page body|\.html page|\bunverified\b|^what is the [\w\- ]+ page\?|\bthe page (says|states|names|lists|shows|carries|quotes|gives|tells|describes|advises|covers|uses|itself)\b|\bdoes the [\w\- ]+ page (say|state|name|list|show|carry|quote|give|tell|describe|advise|cover)|what does the page|which of those claims)/i;
+if (local?.faq?.length) {
+  const seenQ = new Set<string>();
+  local.faq = local.faq.filter((f: any) => { const k = String(f.q).trim().toLowerCase(); if (seenQ.has(k)) return false; seenQ.add(k); return !INTERNAL_FAQ.test(f.q + ' ' + f.a); });
+}
+// Three archive pages (About, Zonings, Buying) kept a contact form as plain text under an "... Form" heading (label lines, an option list, then "SUBMIT"). Those become the same
+// inert form block the other pages use; the "I agree to be contacted" line is not a field and is dropped (the consent checkbox comes with the live form at launch).
+// "Buying Form" was a second H1 on its page, so it drops to an H2.
+{
+  const B = page.blocks; const out: any[] = [];
+  const h1First = B.findIndex((b: any) => b.t === 'h' && b.level === 1);
+  for (let i = 0; i < B.length; i++) {
+    const b0 = B[i];
+    if (b0.t === 'h' && b0.level <= 2 && /\bform$/i.test(String(b0.text).trim()) && (B[i + 1]?.t === 'p')) {
+      let j = i + 1; const labels: string[] = []; let last = i;
+      while (j < B.length && (B[j].t === 'p' || B[j].t === 'list') && j - i < 12) {
+        const txt = (B[j].parts ?? []).map((x: any) => x.t).join('|');
+        if (B[j].t === 'p' && /^submit$/i.test(txt.trim())) { last = j; break; }
+        if (B[j].t === 'p' && !/^yes, i agree/i.test(txt) && (B[j].parts ?? []).every((x: any) => /:$/.test(String(x.t).trim()))) for (const x of B[j].parts) labels.push(String(x.t).trim());
+        else if (B[j].t === 'p' && !/^yes, i agree/i.test(txt)) break;
+        last = j; j++;
+      }
+      if (labels.length >= 3) {
+        out.push(b0.level === 1 && i !== h1First ? { ...b0, level: 2 } : b0);
+        out.push({ t: 'form', labels: labels.map((l) => (/\?:$/.test(l) ? l.slice(0, -1) : l)), submit: 'Submit' });
+        i = last; continue;
+      }
+    }
+    out.push(b0);
+  }
+  page.blocks = out;
+}
 let endCount = 0;
 const origin = 'https://jaredgibbons.ca';
 const jsonld: any[] = [];
@@ -74,7 +108,13 @@ if (local) {
   const beforeForm = local.blocks.filter((b: any) => b.pos === 'before-form').map(asPart);
   const formCut = beforeForm.length && formAt > 0 ? (page.blocks[formAt - 1]?.t === 'h' ? formAt - 1 : formAt) : -1;
   const plain = local.blocks.filter((b: any) => b.pos !== 'end' && b.pos !== 'before-form').map(asPart);
-  const arr = [...page.blocks.slice(0, cut), ...plain, ...faqBlocks, ...page.blocks.slice(cut)];
+  // The FAQ closes the page content (before the contact form's heading, if the page has one) instead of sitting between the H1 and the page's own text.
+  const arr = [...page.blocks.slice(0, cut), ...plain, ...page.blocks.slice(cut)];
+  if (faqBlocks.length) {
+    const fIdx = arr.findIndex((b: any) => b.t === 'form');
+    const fAt = fIdx < 0 ? arr.length : (arr[fIdx - 1]?.t === 'h' ? fIdx - 1 : fIdx);
+    arr.splice(Math.max(fAt, 0), 0, ...faqBlocks);
+  }
   if (formCut >= 0) { const at2 = arr.indexOf(page.blocks[formCut]); arr.splice(at2, 0, ...beforeForm); } else arr.push(...beforeForm);
   page.blocks = [...arr, ...endBlocks];
 }

@@ -39,7 +39,7 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
     <div class="wrap">
       <h2 id="h-reviews" class="h2 caps">What clients say</h2>
       <ul class="reviews">
-        {reviews.map((r) => (
+        {reviews.slice(0, Math.floor(reviews.length / 3) * 3).map((r) => (
           <li class="review">
             <Stars rating={5} />
             <blockquote class="review__text">{r.text}</blockquote>
