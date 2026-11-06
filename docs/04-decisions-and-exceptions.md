@@ -808,5 +808,5 @@ Research-voice cleanup wave 2: 340 passages on 183 pages rewritten or deleted (A
 - Sources: any list under a "Sources" heading renders as cards (publisher, readable title, PDF/web tag, host). Publisher names come from a map in src/lib/sources.ts; titles come from link text or the URL.
 - Stats: Fraser Valley market-stats page rebuilt from flattened archive text into stat cards and real tables (wording and numbers unchanged; tools/convert_fv_stats.py). Every table with a Benchmark and 1-year column also gets a left-to-right card strip. Table headers are black, rows striped.
 - Menu: MLS Listings, Buy a Home, Sell Your Home, About Us and Resources open as grouped columns with one call-to-action. No photo behind the menu (readability, load time, black/white brand). Any nav item not placed in a group still shows in a "More" column.
-- Vimeo: three newest videos (5 Nov 2026) embedded under the hero with dnt=1, lazy-loaded; link to the full profile. Privacy page should name Vimeo before launch.
+- Vimeo: linked in the top bar (with Facebook, Instagram, TikTok, YouTube, Blog) and the footer, to https://vimeo.com/user84468535. No embedded videos on the home page (Jared asked for the link only).
 - Selling resource page: four full-length reviews plus twelve more real Google reviews (no edits to wording).

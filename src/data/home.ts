@@ -39,14 +39,6 @@ export const awards = [
   { alt: 'Rookie of the Year award', src: '/img/award-top-100.webp', w: 211, h: 84 },
 ];
 
-// Jared's Vimeo videos (https://vimeo.com/user84468535), newest first. ratio is the video's own shape so portrait shorts are not cropped.
-export const vimeoProfile = 'https://vimeo.com/user84468535';
-export const videos = [
-  { id: '1243899820', title: 'South Surrey Neighbourhood Tour | Living in South Surrey, BC', ratio: '9 / 16' },
-  { id: '1243899620', title: 'SOLD | 2623 216 St, Langley | Renovated 3BR Home on Acreage | Campbell Valley', ratio: '9 / 16' },
-  { id: '1243899706', title: 'SOLD | 3772 Old Clayburn Rd, Abbotsford | 3BR Split-Level Home', ratio: '4 / 5' },
-];
-
 // "OUR LISTINGS" — 11 slides in the archive; the last (6469 Meadow Place) repeats the first (carousel clone, baseline note B-07).
 // Beds/baths shown as in the archive: numbers only, icons unlabelled. Where the archive shows a single number it is kept as `n1`.
 export const listings = [
