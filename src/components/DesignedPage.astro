@@ -46,8 +46,8 @@ const hero = d.hero;
     <div class="wrap dp-hero__in">
       <div class="dp-hero__txt">
         <p class="eyebrow">{hero.eyebrow}</p>
-        <h1 class="dp-h1">{hero.h1}</h1>
-        {hero.tag && <p class="dp-tag">{hero.tag}</p>}
+        <h1 class="dp-h1">{page.seo?.H1 || hero.h1}</h1>
+        {hero.tag && <p class="dp-tag">{page.seo?.H1 && page.seo.H1 !== hero.h1 ? `${hero.h1}. ${hero.tag}` : hero.tag}</p>}
         <p class="dp-lead">{hero.lead}</p>
         {hero.updated && <p class="dp-upd">{hero.updated}</p>}
         <p class="dp-ctas">
@@ -307,7 +307,7 @@ const hero = d.hero;
   .dp-hero{padding-block:clamp(2rem,5vw,4rem) 0}
   .dp-hero__in{display:grid;gap:var(--s6);align-items:end}
   @media (min-width:60rem){.dp-hero__in{grid-template-columns:1.05fr .95fr}}
-  .dp-h1{font-size:clamp(3rem,9vw,6.5rem);line-height:.95;letter-spacing:-.035em;text-transform:uppercase;margin:0 0 var(--s4)}
+  .dp-h1{font-size:clamp(2.1rem,5.4vw,4.25rem);line-height:1;letter-spacing:-.035em;text-transform:uppercase;margin:0 0 var(--s4)}
   .dp-tag{font:700 1.125rem/1.35 var(--f-head);margin:0 0 var(--s4);max-width:34rem}
   .dp-lead{font-size:clamp(1.0625rem,1.6vw,1.25rem);max-width:38rem;margin:0 0 var(--s4)}
   .dp-upd{font-size:.875rem;color:var(--grey);margin:0 0 var(--s4)}
