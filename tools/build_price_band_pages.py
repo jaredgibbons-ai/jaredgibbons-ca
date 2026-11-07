@@ -103,12 +103,12 @@ def build(ck, kk):
         bl += [tbl(f'{nm} {noun} sold, by price range', ['Price range', 'Sales', 'Share of sales'], [[BANDL[j] + (' (under the cap)' if j < k else ''), num(x), f'{100 * x / n:.0f}%'] for j, x in enumerate(bd) if x], src(f'{n:,} {nm} {noun}'))]
     if cheap:
         bl += [H(f'Which {nm} areas sell for less?' if kk != 'h12' else f'Which {nm} areas sit near {caps}?'),
-               P((f'{len(below)} of the {len(rows)} {nm} neighbourhoods with a median had a {hs} median under {caps}' + (': ' + ', '.join(f'{r["name"]} ({money(r["price"])})' for r in below[:6]) + '.' if below else '.')
+               P((f'{len(below)} of the {len(rows)} {nm} neighbourhoods with a median had a {hs} median under {caps}' + ((', including ' if len(below) > 6 else ': ') + ', '.join(f'{r["name"]} ({money(r["price"])})' for r in below[:6]) + '.' if below else '.')
                   if kk != 'h12' else
-                  f'The table lists the {len(cheap)} {nm} neighbourhoods whose {hs} median is closest to {caps}. {(str(len([r for r in cheap if r["price"] < cap])) + " of them are under it, led by") if any(r["price"] < cap for r in cheap) else "None is under it. The closest is"} {cheapest["name"]} at {money(cheapest["price"])}, and the top of the list is {dearest["name"]} at {money(dearest["price"])}.')),
-               tbl(f'{nm} neighbourhoods with {hs} medians {"lowest" if kk != "h12" else "closest to " + caps}', ['Neighbourhood', 'Sales', 'Median price', f'Against {caps}', 'Price per sq ft', 'Median year built', 'Days to sell'],
-                   [[r['name'], str(r['n']), money(r['price']), (f'{money(cap - r["price"])} under' if r['price'] < cap else f'{money(r["price"] - cap)} over'), money(r['ppsf']), str(r['yb']) if r['yb'] else '—', str(r['dom']) if r['dom'] is not None else '—'] for r in cheap],
-                   srcn(f'{sum(r["n"] for r in cheap)} {nm} {noun} in', f'{len(cheap)} neighbourhoods, all sold at any price'))]
+                  f'The table lists the {len(cheap)} {nm} neighbourhoods whose {hs} median is closest to {caps}. {(str(len([r for r in cheap if r["price"] < cap])) + (" of them is" if len([r for r in cheap if r["price"] < cap]) == 1 else " of them are") + " under it, led by") if any(r["price"] < cap for r in cheap) else "None is under it. The closest is"} {cheapest["name"]} at {money(cheapest["price"])}, and the top of the list is {dearest["name"]} at {money(dearest["price"])}.')),
+               tbl(f'{nm} neighbourhoods with the {"lowest " + hs + " medians" if kk != "h12" else hs + " medians closest to " + caps}', ['Neighbourhood', 'Sales', 'Median price', f'Against {caps}', 'Price per sq ft', 'Median year built', 'Days to sell'],
+                   [[r['name'], str(r['n']), money(r['price']), (f'{money(cap - r["price"])} under' if r['price'] < cap else ('At the cap' if r['price'] == cap else f'{money(r["price"] - cap)} over')), money(r['ppsf']), str(r['yb']) if r['yb'] else '—', str(r['dom']) if r['dom'] is not None else '—'] for r in cheap],
+                   srcn(f'{sum(r["n"] for r in cheap):,} {nm} {noun} in', f'{len(cheap)} neighbourhoods, all sold at any price'))]
     q = g.get('q') or []
     if kk != 'h12' and len(q) == 4 and all(x.get('n') for x in q):
         bl += [H(f'{nm} {hs} sales by quarter'),
@@ -117,7 +117,7 @@ def build(ck, kk):
         bl += [H(f'Where most {nm} {hs} sales happen'),
                P(f'{busy[0]["name"]} had the most {hs} sales in {nm} ({busy[0]["n"]}, median {money(busy[0]["price"])}), followed by {busy[1]["name"]} ({busy[1]["n"]}, median {money(busy[1]["price"])}) and {busy[2]["name"]} ({busy[2]["n"]}, median {money(busy[2]["price"])}).'),
                tbl(f'Busiest {nm} neighbourhoods for {noun}', ['Neighbourhood', 'Sales', 'Median price', 'Days to sell'], [[r['name'], str(r['n']), money(r['price']), str(r['dom']) if r['dom'] is not None else '—'] for r in busy],
-                   srcn(f'{sum(r["n"] for r in busy)} {nm} {noun} in', f'the {len(busy)} busiest neighbourhoods'))]
+                   srcn(f'{sum(r["n"] for r in busy):,} {nm} {noun} in', f'the {len(busy)} busiest neighbourhoods'))]
     # the same cap across every property type in the city, so the page shows how far the budget goes in each
     gx = N.EX['city'][ck]['groups']
     kinds = [(lab, gx[key]) for lab, key in (('Houses', 'house'), ('Condos', 'condo'), ('Houses with a legal suite', 'legal'), ('Coach and laneway houses', 'coach')) if key in gx and gx[key].get('n', 0) >= 5 and gx[key].get('bands')]
@@ -140,12 +140,12 @@ def build(ck, kk):
     if kk == 'h12':
         faq = [(f'How many {nm} {noun} sell for under {caps}?', f'{under:,} of {n:,}, or {sh}%. {step:,} of them sold between $1,000,000 and {money(cap - 1)}.'),
                (f'How much more does {caps} buy than $1,000,000 in {nm}?', f'{step:,} more sales, {step * 100 / n:.0f}% of the market. The share under the cap rises from {round(100 * h1m_n / n)}% to {sh}%.')]
-        if cheap: faq.append((f'Which {nm} areas have {hs} medians near {caps}?', f'{cheapest["name"]} ({money(cheapest["price"])}, {cheapest["n"]} sales) to {dearest["name"]} ({money(dearest["price"])}, {dearest["n"]} sales) are the ten closest, for sales {N.WINDOW}.'))
+        if cheap: faq.append((f'Which {nm} areas have {hs} medians near {caps}?', f'{cheapest["name"]} ({money(cheapest["price"])}, {cheapest["n"]} sales) to {dearest["name"]} ({money(dearest["price"])}, {dearest["n"]} sales) are the {len(cheap)} closest, for sales {N.WINDOW}.'))
         faq.append((f'Is {caps} enough for a house in {nm}?', f'The median was {money(g["price"])}, so {caps} is {abs(round(100 * (g["price"] - cap) / g["price"]))}% {"below" if cap < g["price"] else "above"} it, and {sh}% of {n:,} sales closed under it.'))
     else:
         faq = [(f'How many {nm} {noun} sell for under {caps}?', f'{under:,} of {n:,}, or {sh}%. A further {num(bd[k])} sold in the next range up, {BANDL[k].lower()}.'),
                (f'What is the median price of a {hs} in {nm}?', f'{money(g["price"])} from {EXW}, so {caps} is {"below" if cap < g["price"] else "above"} the middle of the market.' + (f' The middle half sold between {money(g["p25"])} and {money(g["p75"])}.' if g.get('p25') else ''))]
-        if cheap: faq.append((f'Which {nm} area has the lowest {hs} prices?', f'{cheapest["name"]}, at {money(cheapest["price"])} across {cheapest["n"]} sales at {money(cheapest["ppsf"])} a square foot, median year built {cheapest["yb"] or "not recorded"}. The tenth lowest was {dearest["name"]} at {money(dearest["price"])}.'))
+        if cheap: faq.append((f'Which {nm} area has the lowest {hs} prices?', f'{cheapest["name"]}, at {money(cheapest["price"])} across {cheapest["n"]} sales at {money(cheapest["ppsf"])} a square foot, median year built {cheapest["yb"] or "not recorded"}. The highest of the {len(cheap)} lowest was {dearest["name"]} at {money(dearest["price"])}.'))
         if dom: faq.append((f'How fast do {nm} {noun} sell?', f'{dom} days at the median' + (f', closing at {ratio} of the last list price' if ratio else '') + (f', with {over}% above list' if over is not None else '') + '.'))
     links = [(f'{nm} homes for sale', hub), (f'{nm} condos for sale', f'{ck}-condos-for-sale'), (f'{nm} neighbourhood guides', f'{ck}-neighbourhood-guides'), (f'{nm} market stats', f'{ck}-real-estate-market-stats'),
              (f'{nm} townhomes under $1.2M', f'{ck}-townhomes-under-1-2m'), (f'{nm} homes under $1.8M', f'{ck}-homes-under-1-8m'), (f'{nm} condos under $800K', f'{ck}-condos-under-800k'),

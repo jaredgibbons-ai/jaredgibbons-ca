@@ -206,7 +206,7 @@ def page(r):
                               f'Source: Paragon closed and pending sales, {WIN}. A building is listed with 5 or more sales.'))
     # school facts
     srows = [['Type', 'Independent school' if indep else f'Public school, {f["district_name"]} School District'], ['Level', lvl.capitalize() if f['level'] else '—'], ['Grades', f['grades'] or '—'],
-             ['Programs listed', f['programs'] or '—'], ['Address', f'{f["address"]}, {f["city"]} {f["postal"]}'.strip()]]
+             ['Programs listed', f['programs'] or '—'], ['Address', f'{f["address"]}, {f["city"]} {(f["postal"][:3] + " " + f["postal"][3:]) if len(f["postal"] or "") == 6 else (f["postal"] or "")}'.strip()]]
     if f['url']: srows.append(['School website', {'t': re.sub(r'^https?://(www\.)?', '', f['url']).rstrip('/'), 'h': f['url']}])
     srows = [x for x in srows if x[1] != '—']
     bl += [H(f'About {nm}'), tbl(f'{nm} facts', ['Item', 'Detail'], srows, 'Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC), and the school and district websites, retrieved November 2026.')]
