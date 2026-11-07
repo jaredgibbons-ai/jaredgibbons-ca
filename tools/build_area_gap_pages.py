@@ -87,7 +87,7 @@ def nv_condos():
     top10 = rows[:10]; fmin, fmax = min(top10, key=lambda r: r['maint']), max(top10, key=lambda r: r['maint'])
     seo = dict(title='North Vancouver Condos for Sale | Prices by Area', h1='North Vancouver Condos for Sale', crumb='North Vancouver condos', links_h='More North Vancouver real estate',
                description=fit('Search North Vancouver condos for sale. See what Lower Lonsdale, Central Lonsdale and Lynn Valley condos sold for, plus strata fees and the benchmark price.'))
-    bl = [{'t': 'notice', 'text': 'Draft for Jared’s approval. Sold figures are Paragon closed sales to October 22, 2026 and the benchmark is the Greater Vancouver REALTORS® price for September 2026. The live search is not connected yet.', 'gen': G},
+    bl = [{'t': 'notice', 'text': 'Draft for Jared’s approval. Sold figures are Paragon closed sales to October 22, 2026 and the benchmark is the Greater Vancouver REALTORS® price for September 2026. The live search is connected.', 'gen': G},
           P('This search lists condos for sale in North Vancouver: apartment-style homes in strata buildings, from the Lonsdale corridor to Lynn Valley, Lynnmour and Roche Point. Townhomes and houses are separate searches. '
             'North Vancouver is two municipalities, the City and the District, and the MLS® neighbourhoods below cross both.'),
           P(f'{tot:,} North Vancouver condos closed in the year to {LAST}, in {len(rows)} neighbourhoods with 5 or more sales. {ll["name"]} led with {ll["n"]} ({100 * ll["n"] / tot:.0f}% of the total) at a median of {money(ll["price"])}, '
@@ -129,7 +129,7 @@ def furry_creek():
     seo = dict(title='Furry Creek Homes for Sale | Howe Sound Townhomes & Land', h1='Furry Creek Homes for Sale', crumb='Furry Creek homes', links_h='More Furry Creek and Howe Sound real estate',
                description=fit('Search Furry Creek homes for sale on Howe Sound. See the townhomes and land that trade here, how few homes sell each year and the local rules to check.',
                                'Search Furry Creek homes for sale on Howe Sound. See the townhomes and land that trade, how few homes sell each year and the local rules to check.'))
-    bl = [{'t': 'notice', 'text': 'Draft for Jared’s approval. Written from the Furry Creek guide (checked November 1, 2026) and Paragon closed sales to October 22, 2026. The live search is not connected yet.', 'gen': G},
+    bl = [{'t': 'notice', 'text': 'Draft for Jared’s approval. Written from the Furry Creek guide (checked November 1, 2026) and Paragon closed sales to October 22, 2026. The live search is connected.', 'gen': G},
           P('Furry Creek is a master-planned community on the east shore of Howe Sound along Highway 99, between Lions Bay and Squamish. It is unincorporated and sits in Electoral Area D of the Squamish-Lillooet Regional District (SLRD), '
             'so there is no city hall: the SLRD sets the zoning and runs the local services.'),
           P(f'This search lists homes for sale in Furry Creek. Very few sell. Between {N.WINDOW.replace(" to ", " and ")}, the MLS® recorded {n} sales here ({hn} house and {tn} townhomes), so the search often shows only a few homes at a time, and '
@@ -168,7 +168,7 @@ def coast(which):
             'so the board reports the two together. The village plan aims to keep a semi-rural beach village, with its shops along Beecher Street.')
     how = (f'The search below picks up homes for sale in F53 whose listing text mentions {nm}. Listings are not tagged by neighbourhood inside the sub-area, so a home whose description leaves the name out will not appear, '
            f'and one that mentions {nm} can sit closer to {other}. The Crescent Beach and Ocean Park search shows every home in both.')
-    bl = [{'t': 'notice', 'text': 'Draft for Jared’s approval. Sold figures are Jared’s Paragon pull of November 7, 2026 (closed and pending). The live search is not connected yet.', 'gen': G},
+    bl = [{'t': 'notice', 'text': 'Draft for Jared’s approval. Sold figures are Jared’s Paragon pull of November 7, 2026 (closed and pending). The live search is connected.', 'gen': G},
           P(intro), P(how), {'t': 'grid', 'gen': G}]
     if op:
         sold = f'{nm} home prices'
