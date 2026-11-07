@@ -30,14 +30,19 @@
   },
   {
    "q": "How does the Our Lady of Good Counsel home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Our Lady of Good Counsel. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names Our Lady of Good Counsel, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Our Lady of Good Counsel?",
+   "a": "In a straight line, the closest schools in the provincial list are Forsyth Road Elementary (0.5 km north), Honour Secondary School (0.5 km west) and Mary Jane Shannon Elementary (1.0 km east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Our Lady of Good Counsel. Under it are the prices homes sold for within 2 km of the school.",
+   "text": "The search below lists homes for sale whose listing names Our Lady of Good Counsel.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Our Lady of Good Counsel, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Our Lady of Good Counsel, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -122,33 +127,225 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Forsyth Road Elementary",
+      "t": "Homes for sale near Forsyth Road Elementary (elementary school, about 0.5 km north)",
       "h": "/homes-near-forsyth-road-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.5 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Mary Jane Shannon Elementary",
+      "t": "Homes for sale near Mary Jane Shannon Elementary (elementary school, about 1.0 km east)",
       "h": "/homes-near-mary-jane-shannon-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.0 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Lena Shaw Elementary",
+      "t": "Homes for sale near Lena Shaw Elementary (elementary school, about 1.1 km south-east)",
       "h": "/homes-near-lena-shaw-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.1 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Our Lady of Good Counsel",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "29 schools in the provincial school list sit within 3 km of Our Lady of Good Counsel in a straight line (19 elementary, 9 secondary, 1 other; 2 independent). The closest is Forsyth Road Elementary, 0.5 km away, and the farthest on this list is Surrey Academy of Innovative Learning, 2.6 km away. By type, the nearest secondary school is Honour Secondary School (0.5 km); the nearest independent school is Honour Secondary School (0.5 km); the nearest school listing a French Immersion program is Kwantlen Park Secondary (1.5 km). Other elementary schools close by: Forsyth Road Elementary (0.5 km north), Mary Jane Shannon Elementary (1.0 km east), Lena Shaw Elementary (1.1 km south-east), James Ardiel Elementary (1.5 km north), Surrey Traditional (1.6 km north). The nearest school teaching the same grades (K-7) is Forsyth Road Elementary, 0.5 km north of Our Lady of Good Counsel.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Our Lady of Good Counsel",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Forsyth Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.5 km north"
+    ],
+    [
+     "Honour Secondary School",
+     "Secondary",
+     "10-12",
+     "Independent",
+     "0.5 km west"
+    ],
+    [
+     "Mary Jane Shannon Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.0 km east"
+    ],
+    [
+     "Lena Shaw Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km south-east"
+    ],
+    [
+     "Guildford Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.4 km east"
+    ],
+    [
+     "James Ardiel Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km north"
+    ],
+    [
+     "Kwantlen Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.5 km west"
+    ],
+    [
+     "Surrey Traditional",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km north"
+    ],
+    [
+     "Ellendale Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km north-east"
+    ],
+    [
+     "K B Woodward Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km west"
+    ],
+    [
+     "Old Yale Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km south-west"
+    ],
+    [
+     "Hjorth Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km east"
+    ],
+    [
+     "Theresa Clarke Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km north-west"
+    ],
+    [
+     "Ecole Riverdale Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km east"
+    ],
+    [
+     "A H P Matthew Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km south-west"
+    ],
+    [
+     "Holly Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km east"
+    ],
+    [
+     "Queen Elizabeth Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.2 km south"
+    ],
+    [
+     "Simon Cunningham Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km south"
+    ],
+    [
+     "North Surrey Learning Centre",
+     "Secondary",
+     "11-12",
+     "Public",
+     "2.5 km south"
+    ],
+    [
+     "SD 36 Alternate North Surrey LC",
+     "Secondary",
+     "10-12",
+     "Public",
+     "2.5 km south"
+    ],
+    [
+     "Bonaccord Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km south-east"
+    ],
+    [
+     "Education Services (Alternate)",
+     "Other",
+     "6-12",
+     "Public",
+     "2.6 km south"
+    ],
+    [
+     "SAIL Secondary",
+     "Secondary",
+     "8, 9, 10, 12",
+     "Public",
+     "2.6 km south"
+    ],
+    [
+     "SD 36 Education Services (Type 1)",
+     "Secondary",
+     "9, 10, 12",
+     "Public",
+     "2.6 km south"
+    ],
+    [
+     "Surrey Academy of Innovative Learning",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.6 km south"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -171,7 +368,7 @@
     ],
     [
      {
-      "t": "Walk the route to Our Lady of Good Counsel the way a child would, and count the crossings and sidewalks."
+      "t": "Look at Forsyth Road Elementary, the nearest other elementary school, 0.5 km north of Our Lady of Good Counsel. Compare the two when you check which school serves the address."
      }
     ]
    ],

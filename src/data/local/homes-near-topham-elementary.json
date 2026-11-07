@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Topham Elementary | Prices",
-  "description": "Search homes for sale near Topham Elementary in Langley. See listings that mention the school, nearby schools, catchment checks and sold prices for the area.",
+  "description": "Search homes for sale near Topham Elementary in Langley. Find listings that name the school, plus nearby schools and what to check on the catchment.",
   "h1": "Homes for Sale Near Topham Elementary"
  },
  "breadcrumbs": [
@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Topham Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Topham Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Topham Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Topham Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Topham Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are James Kennedy Elementary (0.6 km west), des Voyageurs (0.8 km south) and West Langley Elementary (1.1 km north-west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions Topham Elementary, followed by what homes within 1 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions Topham Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Topham Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Topham Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,246 @@
    "items": [
     [
      {
-      "t": "Homes for sale near James Kennedy Elementary",
+      "t": "Homes for sale near James Kennedy Elementary (elementary school, about 0.6 km west)",
       "h": "/homes-near-james-kennedy-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.6 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near West Langley Elementary",
+      "t": "Homes for sale near West Langley Elementary (elementary school, about 1.1 km north-west)",
       "h": "/homes-near-west-langley-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.1 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Walnut Grove Secondary",
+      "t": "Homes for sale near Walnut Grove Secondary (secondary school, about 1.2 km west)",
       "h": "/homes-near-walnut-grove-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.2 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Topham Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "13 schools in the provincial school list sit within 3 km of Topham Elementary in a straight line (9 elementary, 2 other, 1 secondary, 1 middle; 1 independent). The closest is James Kennedy Elementary, 0.6 km away, and the farthest on this list is Richard Bulpitt Elementary, 3.0 km away. By type, the nearest secondary school is Walnut Grove Secondary (1.2 km); the nearest independent school is The King's School (2.7 km). Other elementary schools close by: James Kennedy Elementary (0.6 km west), des Voyageurs (0.8 km south), West Langley Elementary (1.1 km north-west), Alex Hope Elementary (1.5 km south-west), Gordon Greenwood Elementary (2.0 km west). The nearest school teaching the same grades (K-7) is James Kennedy Elementary, 0.6 km west of Topham Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Topham Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "James Kennedy Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.6 km west"
+    ],
+    [
+     "des Voyageurs",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.8 km south"
+    ],
+    [
+     "West Langley Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km north-west"
+    ],
+    [
+     "Walnut Grove Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.2 km west"
+    ],
+    [
+     "Alex Hope Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km south-west"
+    ],
+    [
+     "Gordon Greenwood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km west"
+    ],
+    [
+     "Lynn Fripps Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.1 km south-west"
+    ],
+    [
+     "Yorkson Creek Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "2.3 km south-west"
+    ],
+    [
+     "Dorothy Peacock Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km west"
+    ],
+    [
+     "The King's School",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.7 km south"
+    ],
+    [
+     "Willoughby Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.8 km south-west"
+    ],
+    [
+     "Langley Fine Arts School",
+     "Other",
+     "K-12",
+     "Public",
+     "2.8 km east"
+    ],
+    [
+     "Richard Bulpitt Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "3.0 km south-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 3 km from Topham Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 3 km from Topham Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Fort Langley Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.2 km east"
+    ],
+    [
+     "Donna Gabriel Robins Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "3.3 km south-west"
+    ],
+    [
+     "Josette Dandurand Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "3.3 km south-west"
+    ],
+    [
+     "Peter Ewart Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "3.8 km south-west"
+    ],
+    [
+     "R E Mountain Secondary",
+     "Secondary",
+     "9-12",
+     "Public",
+     "4.0 km south-west"
+    ],
+    [
+     "Meadow Montessori",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "4.9 km north"
+    ],
+    [
+     "R C Garnett Demonstration Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "4.9 km south-west"
+    ],
+    [
+     "Port Kells Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "5.0 km west"
+    ],
+    [
+     "Maple Ridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "5.0 km north"
+    ],
+    [
+     "Albion Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "5.2 km east"
+    ],
+    [
+     "Maddaugh Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "5.3 km south-west"
+    ],
+    [
+     "Hammond Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "5.4 km north-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -185,7 +403,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to Topham Elementary and note the crossings, sidewalks and hills."
+      "t": "Look at James Kennedy Elementary, the nearest other elementary school, 0.6 km west of Topham Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

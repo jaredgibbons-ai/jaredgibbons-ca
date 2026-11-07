@@ -30,7 +30,7 @@
   },
   {
    "q": "How does the Semiahmoo Secondary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Semiahmoo Secondary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names Semiahmoo Secondary, so a nearby home that leaves the name out will not show.",
    "gen": "nsrch"
   },
   {
@@ -41,6 +41,11 @@
   {
    "q": "How fast do homes sell near Semiahmoo Secondary?",
    "a": "The median was 31 days on the market, closing at 96.4% of the list price, with 5% of sales above the list price for the 574 homes within 2 km.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Semiahmoo Secondary?",
+   "a": "In a straight line, the closest schools in the provincial list are H T Thrift Elementary (0.1 km south), Newbridge Academy (0.9 km east) and Bayridge Elementary (1.1 km west).",
    "gen": "nsrch"
   }
  ],
@@ -145,7 +150,7 @@
   },
   {
    "t": "p",
-   "text": "Where those sales were: White Rock (303), Sunnyside Park (142), King George Corridor (122), Elgin Chantrell (6). The radius can cross neighbourhood lines, so the sub-areas show which part of town the sales came from.",
+   "text": "Where those sales were: White Rock (303), Sunnyside Park (142), King George Corridor (122), Elgin Chantrell (6).",
    "gen": "nsrch"
   },
   {
@@ -261,33 +266,155 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Bayridge Elementary",
+      "t": "Homes for sale near Bayridge Elementary (elementary school, about 1.1 km west)",
       "h": "/homes-near-bayridge-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.1 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near White Rock Christian Academy",
+      "t": "Homes for sale near White Rock Christian Academy (school, about 1.2 km north-east)",
       "h": "/homes-near-white-rock-christian-academy.html"
-     },
-     {
-      "t": "(school, about 1.2 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Star of the Sea",
+      "t": "Homes for sale near Star of the Sea (elementary school, about 1.3 km north-east)",
       "h": "/homes-near-star-of-the-sea.html"
-     },
-     {
-      "t": "(elementary school, about 1.3 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Semiahmoo Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "15 schools in the provincial school list sit within 3 km of Semiahmoo Secondary in a straight line (9 elementary, 3 other, 3 secondary; 5 independent). The closest is H T Thrift Elementary, 0.1 km away, and the farthest on this list is Southridge School, 3.0 km away. By type, the nearest secondary school is St John Paul II Academy (1.7 km); the nearest independent school is Newbridge Academy (0.9 km); the nearest school listing a French Immersion program is Jessie Lee Elementary (1.4 km). Other secondary schools close by: St John Paul II Academy (1.7 km south-east), Earl Marriott Secondary (2.1 km east), Elgin Park Secondary (2.8 km north-west). The nearest school teaching the same grades (8-12) is St John Paul II Academy, 1.7 km south-east of Semiahmoo Secondary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Semiahmoo Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "H T Thrift Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.1 km south"
+    ],
+    [
+     "Newbridge Academy",
+     "Other",
+     "K, 1, 2, 3, 4, 5, 8, 9",
+     "Independent",
+     "0.9 km east"
+    ],
+    [
+     "Bayridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km west"
+    ],
+    [
+     "White Rock Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "1.2 km north-east"
+    ],
+    [
+     "Star of the Sea",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.3 km north-east"
+    ],
+    [
+     "Jessie Lee Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km east"
+    ],
+    [
+     "White Rock Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km south-east"
+    ],
+    [
+     "St John Paul II Academy",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "1.7 km south-east"
+    ],
+    [
+     "Earl Marriott Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.1 km east"
+    ],
+    [
+     "Ray Shepherd Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km west"
+    ],
+    [
+     "Peace Arch Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km south-east"
+    ],
+    [
+     "Semiahmoo Trail Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km north"
+    ],
+    [
+     "Chantrell Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km north-west"
+    ],
+    [
+     "Elgin Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.8 km north-west"
+    ],
+    [
+     "Southridge School",
+     "Other",
+     "K-12",
+     "Independent",
+     "3.0 km north-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -310,12 +437,12 @@
     ],
     [
      {
-      "t": "Walk the route to Semiahmoo Secondary the way a child would, and count the crossings and sidewalks."
+      "t": "Compare price with similar homes farther from the school. The median condo within 2 km of Semiahmoo Secondary was $530,000, so check whether size and age explain a gap before you pay for the location."
      }
     ],
     [
      {
-      "t": "Compare price with similar homes farther from the school. The median condo within 2 km of Semiahmoo Secondary was $530,000, so check whether size and age explain a gap before you pay for the location."
+      "t": "Look at St John Paul II Academy, the nearest other secondary school, 1.7 km south-east of Semiahmoo Secondary. Compare the two when you check which school serves the address."
      }
     ]
    ],

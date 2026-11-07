@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Queen Elizabeth Secondary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Queen Elizabeth Secondary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Queen Elizabeth Secondary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names Queen Elizabeth Secondary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Queen Elizabeth Secondary?",
+   "a": "In a straight line, the closest schools in the provincial list are A H P Matthew Elementary (0.7 km north-west), Creekside Elementary (0.9 km south-east) and Simon Cunningham Elementary (0.9 km east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions Queen Elizabeth Secondary, followed by what homes within 2 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions Queen Elizabeth Secondary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Queen Elizabeth Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Queen Elizabeth Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,33 +145,225 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Simon Cunningham Elementary",
+      "t": "Homes for sale near Simon Cunningham Elementary (elementary school, about 0.9 km east)",
       "h": "/homes-near-simon-cunningham-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.9 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Betty Huff Elementary",
+      "t": "Homes for sale near Betty Huff Elementary (elementary school, about 1.0 km west)",
       "h": "/homes-near-betty-huff-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.0 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Old Yale Road Elementary",
+      "t": "Homes for sale near Old Yale Road Elementary (elementary school, about 1.6 km north-west)",
       "h": "/homes-near-old-yale-road-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.6 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Queen Elizabeth Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "32 schools in the provincial school list sit within 3 km of Queen Elizabeth Secondary in a straight line (20 elementary, 10 secondary, 2 other; 3 independent). The closest is A H P Matthew Elementary, 0.7 km away, and the farthest on this list is Prince Charles Elementary, 2.6 km away. By type, the nearest secondary school is North Surrey Learning Centre (1.0 km); the nearest independent school is Honour Secondary School (2.0 km); the nearest school listing a French Immersion program is Simon Cunningham Elementary (0.9 km). Other secondary schools close by: North Surrey Learning Centre (1.0 km east), SD 36 Alternate North Surrey LC (1.0 km east), SAIL Secondary (1.1 km south-east), SD 36 Education Services (Type 1) (1.1 km south-east), Surrey Academy of Innovative Learning (1.1 km south-east). The nearest school teaching the same grades (8-12) is Surrey Academy of Innovative Learning, 1.1 km south-east of Queen Elizabeth Secondary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Queen Elizabeth Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "A H P Matthew Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.7 km north-west"
+    ],
+    [
+     "Creekside Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km south-east"
+    ],
+    [
+     "Simon Cunningham Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km east"
+    ],
+    [
+     "Cindrich Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km south"
+    ],
+    [
+     "North Surrey Learning Centre",
+     "Secondary",
+     "11-12",
+     "Public",
+     "1.0 km east"
+    ],
+    [
+     "SD 36 Alternate North Surrey LC",
+     "Secondary",
+     "10-12",
+     "Public",
+     "1.0 km east"
+    ],
+    [
+     "Betty Huff Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.0 km west"
+    ],
+    [
+     "Education Services (Alternate)",
+     "Other",
+     "6-12",
+     "Public",
+     "1.1 km south-east"
+    ],
+    [
+     "SAIL Secondary",
+     "Secondary",
+     "8, 9, 10, 12",
+     "Public",
+     "1.1 km south-east"
+    ],
+    [
+     "SD 36 Education Services (Type 1)",
+     "Secondary",
+     "9, 10, 12",
+     "Public",
+     "1.1 km south-east"
+    ],
+    [
+     "Surrey Academy of Innovative Learning",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.1 km south-east"
+    ],
+    [
+     "Old Yale Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km north-west"
+    ],
+    [
+     "David Brankin Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km west"
+    ],
+    [
+     "Lena Shaw Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km north-east"
+    ],
+    [
+     "Senator Reid Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km west"
+    ],
+    [
+     "Honour Secondary School",
+     "Secondary",
+     "10-12",
+     "Independent",
+     "2.0 km north"
+    ],
+    [
+     "Green Timbers Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.1 km south-east"
+    ],
+    [
+     "Kwantlen Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.1 km north"
+    ],
+    [
+     "Continuing Ed SD36 (Invergarry)",
+     "Secondary",
+     "10-12",
+     "Public",
+     "2.1 km south-west"
+    ],
+    [
+     "Our Lady of Good Counsel",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.2 km north"
+    ],
+    [
+     "Brookside Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km south-east"
+    ],
+    [
+     "Sikh Academy",
+     "Other",
+     "K-8",
+     "Independent",
+     "2.3 km south-west"
+    ],
+    [
+     "K B Woodward Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km north"
+    ],
+    [
+     "Cedar Hills Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km west"
+    ],
+    [
+     "Prince Charles Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km north-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -189,7 +386,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to Queen Elizabeth Secondary and note the crossings, sidewalks and hills."
+      "t": "Look at North Surrey Learning Centre, the nearest other secondary school, 1.0 km east of Queen Elizabeth Secondary. Compare the two when you check which school serves the address."
      }
     ]
    ],

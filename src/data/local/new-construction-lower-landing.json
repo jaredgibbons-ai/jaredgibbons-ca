@@ -22,7 +22,33 @@
   }
  ],
  "faq_heading": "New construction in Lower Landing, Chilliwack: your questions answered",
- "faq": [],
+ "faq": [
+  {
+   "q": "What have new homes in Lower Landing sold for?",
+   "a": "The 6 townhomes that sold in Lower Landing had a median price of $613,950 and a median year built of 2025. The 5 houses had a median of $1,015,000 and were also built in 2025. Sales are for November 1, 2025 to October 22, 2026.",
+   "gen": "gapfix"
+  },
+  {
+   "q": "How long do newly built Lower Landing townhomes take to sell?",
+   "a": "The median was 97 days on the market at 99.1% of the last list price, against 48 days and 98.5% for houses. Newly built townhomes took about twice as long as the houses.",
+   "gen": "gapfix"
+  },
+  {
+   "q": "Which Lower Landing complex has resold the most?",
+   "a": "Cedarbrook, built in 2025, had 5 resales at a median of $618,000, taking a median of 102 days, with a strata fee of $70 a month.",
+   "gen": "gapfix"
+  },
+  {
+   "q": "Do I pay GST on a new home in Lower Landing?",
+   "a": "Yes. A new or substantially renovated home carries 5% GST, and first-time buyers can get that back in full on homes up to $1 million, with a partial rebate up to $1.5 million. Resale homes carry no GST.",
+   "gen": "gapfix"
+  },
+  {
+   "q": "What warranty comes with a new home in BC?",
+   "a": "A builder in BC has to provide third-party home warranty insurance: 2 years on labour and materials, 5 years on the building envelope and 10 years on the structure. Ask for the warranty certificate before you remove subjects.",
+   "gen": "gapfix"
+  }
+ ],
  "blocks": [
   {
    "t": "p",
@@ -128,6 +154,68 @@
     ]
    ],
    "gen": "ncs",
+   "pos": "end"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "What newly built homes in Lower Landing have sold for",
+   "gen": "gapfix",
+   "pos": "end"
+  },
+  {
+   "t": "p",
+   "text": "Nearly every home that sold in Lower Landing over the past year was built in 2025 or 2025, so the sales figures are a fair guide to what new construction here costs once it is finished and resold. The 6 townhomes sold at a median $613,950 ($389 per square foot), taking 97 days. The 5 houses sold at a median $1,015,000, about $427 per square foot, on lots of a median 3,712 square feet, in 48 days. Neither group sold above list price.",
+   "gen": "gapfix",
+   "pos": "end"
+  },
+  {
+   "t": "table",
+   "caption": "Lower Landing, Chilliwack: newly built homes that sold",
+   "head": [
+    "Home type",
+    "Sold",
+    "Median price",
+    "Price per sq ft",
+    "Median bedrooms",
+    "Median days to sell",
+    "Sale price vs list"
+   ],
+   "rows": [
+    [
+     "Townhomes",
+     "6",
+     "$613,950",
+     "$389",
+     "3",
+     "97",
+     "99.1%"
+    ],
+    [
+     "Houses",
+     "5",
+     "$1,015,000",
+     "$427",
+     "5",
+     "48",
+     "98.5%"
+    ]
+   ],
+   "source": "Source: Paragon MLS®, closed sales only, November 1, 2025 to October 22, 2026. A median is the middle price and is shown only where at least 5 homes sold.",
+   "gen": "gapfix",
+   "pos": "end"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Buying new in Lower Landing: taxes and protection",
+   "gen": "gapfix",
+   "pos": "end"
+  },
+  {
+   "t": "p",
+   "text": "A new home is taxed differently from a resale. The seller adds 5% GST to the price, a first-time buyer can recover it under the federal rebate (full rebate up to $1 million, partial up to $1.5 million), and BC property transfer tax is charged on the purchase price. The home also carries the builder warranty in BC: 2 years on labour and materials, 5 on the building envelope and 10 on the structure. The pages linked below explain each rule with the dates and limits.",
+   "gen": "gapfix",
    "pos": "end"
   }
  ]

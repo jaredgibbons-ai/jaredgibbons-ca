@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Fraser Wood Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Fraser Wood Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Fraser Wood Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Fraser Wood Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Fraser Wood Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Fraser Heights Secondary (0.8 km west), Erma Stephenson Elementary (1.0 km north-west) and Pacific Academy (1.1 km south-east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions Fraser Wood Elementary, followed by what homes within 1 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions Fraser Wood Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Fraser Wood Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Fraser Wood Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,33 +145,239 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Fraser Heights Secondary",
+      "t": "Homes for sale near Fraser Heights Secondary (secondary school, about 0.8 km west)",
       "h": "/homes-near-fraser-heights-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 0.8 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Erma Stephenson Elementary",
+      "t": "Homes for sale near Erma Stephenson Elementary (elementary school, about 1.0 km north-west)",
       "h": "/homes-near-erma-stephenson-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.0 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Pacific Academy",
+      "t": "Homes for sale near Pacific Academy (school, about 1.1 km south-east)",
       "h": "/homes-near-pacific-academy.html"
-     },
-     {
-      "t": "(school, about 1.1 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Fraser Wood Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "12 schools in the provincial school list sit within 3 km of Fraser Wood Elementary in a straight line (8 elementary, 3 secondary, 1 other; 1 independent). The closest is Fraser Heights Secondary, 0.8 km away, and the farthest on this list is Mountainview Montessori, 2.9 km away. By type, the nearest elementary school is Erma Stephenson Elementary (1.0 km); the nearest independent school is Pacific Academy (1.1 km). Other elementary schools close by: Erma Stephenson Elementary (1.0 km north-west), Dogwood Elementary (1.4 km west), Harold Bishop Elementary (1.6 km west), Bothwell Elementary School (1.6 km south-east), William F. Davidson Elementary (2.3 km south-west). The nearest school teaching the same grades (K-7) is Erma Stephenson Elementary, 1.0 km north-west of Fraser Wood Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Fraser Wood Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Fraser Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "0.8 km west"
+    ],
+    [
+     "Erma Stephenson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.0 km north-west"
+    ],
+    [
+     "Pacific Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "1.1 km south-east"
+    ],
+    [
+     "Dogwood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km west"
+    ],
+    [
+     "Harold Bishop Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km west"
+    ],
+    [
+     "Bothwell Elementary School",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km south-east"
+    ],
+    [
+     "William F. Davidson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km south-west"
+    ],
+    [
+     "North Surrey Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.3 km south-west"
+    ],
+    [
+     "Serpentine Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km south"
+    ],
+    [
+     "Johnston Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.6 km south-west"
+    ],
+    [
+     "Holly Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km west"
+    ],
+    [
+     "Mountainview Montessori",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km south-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 3 km from Fraser Wood Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 3 km from Fraser Wood Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Ecole Riverdale Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.2 km west"
+    ],
+    [
+     "Berkshire Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.3 km south-west"
+    ],
+    [
+     "Hjorth Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.4 km west"
+    ],
+    [
+     "Bonaccord Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.4 km south-west"
+    ],
+    [
+     "Woodland Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.5 km south"
+    ],
+    [
+     "Surrey Christian School",
+     "Other",
+     "K-12",
+     "Independent",
+     "3.5 km south"
+    ],
+    [
+     "Holy Cross Regional High School",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "3.6 km south"
+    ],
+    [
+     "St Matthew's Elementary",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "3.7 km south"
+    ],
+    [
+     "Guildford Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "3.7 km west"
+    ],
+    [
+     "Gobind Sarvar School",
+     "Other",
+     "K-12",
+     "Independent",
+     "3.7 km south"
+    ],
+    [
+     "Ellendale Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.9 km west"
+    ],
+    [
+     "Mary Jane Shannon Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.0 km west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -189,7 +400,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to Fraser Wood Elementary and note the crossings, sidewalks and hills."
+      "t": "Look at Erma Stephenson Elementary, the nearest other elementary school, 1.0 km north-west of Fraser Wood Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

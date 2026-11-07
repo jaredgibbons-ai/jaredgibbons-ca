@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Frost Road Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Frost Road Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Frost Road Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Frost Road Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Frost Road Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Holy Cross Regional High School (0.5 km north), St Matthew's Elementary (0.6 km north-west) and Surrey Christian School (0.6 km north).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Frost Road Elementary in the listing, then check the sold prices within 1 km of the school.",
+   "text": "Use the search below to see homes for sale that name Frost Road Elementary in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Frost Road Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Frost Road Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,33 +145,155 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Walnut Road Elementary",
+      "t": "Homes for sale near Walnut Road Elementary (elementary school, about 0.8 km south)",
       "h": "/homes-near-walnut-road-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.8 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Woodland Park Elementary",
+      "t": "Homes for sale near Woodland Park Elementary (elementary school, about 1.2 km north-west)",
       "h": "/homes-near-woodland-park-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.2 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near William Watson Elementary",
+      "t": "Homes for sale near William Watson Elementary (elementary school, about 1.4 km south)",
       "h": "/homes-near-william-watson-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.4 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Frost Road Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "15 schools in the provincial school list sit within 3 km of Frost Road Elementary in a straight line (10 elementary, 3 secondary, 2 other; 4 independent). The closest is Holy Cross Regional High School, 0.5 km away, and the farthest on this list is William F. Davidson Elementary, 3.0 km away. By type, the nearest elementary school is St Matthew's Elementary (0.6 km); the nearest school listing a French Immersion program is Coast Meridian Elementary (1.5 km). Other elementary schools close by: St Matthew's Elementary (0.6 km north-west), Walnut Road Elementary (0.8 km south), Woodland Park Elementary (1.2 km north-west), William Watson Elementary (1.4 km south), Coast Meridian Elementary (1.5 km south-east). The nearest school teaching the same grades (K-7) is St Matthew's Elementary, 0.6 km north-west of Frost Road Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Frost Road Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Holy Cross Regional High School",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "0.5 km north"
+    ],
+    [
+     "St Matthew's Elementary",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "0.6 km north-west"
+    ],
+    [
+     "Surrey Christian School",
+     "Other",
+     "K-12",
+     "Independent",
+     "0.6 km north"
+    ],
+    [
+     "Walnut Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.8 km south"
+    ],
+    [
+     "Woodland Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km north-west"
+    ],
+    [
+     "Gobind Sarvar School",
+     "Other",
+     "K-12",
+     "Independent",
+     "1.3 km east"
+    ],
+    [
+     "William Watson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km south"
+    ],
+    [
+     "Coast Meridian Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km south-east"
+    ],
+    [
+     "Serpentine Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km north"
+    ],
+    [
+     "Coyote Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km south-west"
+    ],
+    [
+     "Fleetwood Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.8 km south-west"
+    ],
+    [
+     "North Surrey Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.0 km north"
+    ],
+    [
+     "Berkshire Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km north-west"
+    ],
+    [
+     "Maple Green Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km west"
+    ],
+    [
+     "William F. Davidson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.0 km north-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -189,7 +316,7 @@
     ],
     [
      {
-      "t": "Walk to Frost Road Elementary from the home and check the crossings, sidewalks and lighting on the way."
+      "t": "Look at St Matthew's Elementary, the nearest other elementary school, 0.6 km north-west of Frost Road Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

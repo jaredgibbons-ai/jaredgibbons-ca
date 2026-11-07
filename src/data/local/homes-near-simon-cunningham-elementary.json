@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Simon Cunningham Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Simon Cunningham Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Simon Cunningham Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Simon Cunningham Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Simon Cunningham Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are North Surrey Learning Centre (0.2 km south), SD 36 Alternate North Surrey LC (0.2 km south) and Education Services (Alternate) (0.3 km south-east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Simon Cunningham Elementary. Under it are the prices homes sold for within 1 km of the school.",
+   "text": "The search below lists homes for sale whose listing names Simon Cunningham Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Simon Cunningham Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Simon Cunningham Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,33 +145,225 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Queen Elizabeth Secondary",
+      "t": "Homes for sale near Queen Elizabeth Secondary (secondary school, about 0.9 km west)",
       "h": "/homes-near-queen-elizabeth-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 0.9 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Green Timbers Elementary",
+      "t": "Homes for sale near Green Timbers Elementary (elementary school, about 1.3 km south-east)",
       "h": "/homes-near-green-timbers-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.3 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Lena Shaw Elementary",
+      "t": "Homes for sale near Lena Shaw Elementary (elementary school, about 1.4 km north)",
       "h": "/homes-near-lena-shaw-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.4 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Simon Cunningham Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "36 schools in the provincial school list sit within 3 km of Simon Cunningham Elementary in a straight line (22 elementary, 12 secondary, 2 other; 4 independent). The closest is North Surrey Learning Centre, 0.2 km away, and the farthest on this list is Kwantlen Park Secondary, 2.7 km away. By type, the nearest elementary school is Creekside Elementary (0.7 km); the nearest independent school is Honour Secondary School (2.2 km); the nearest school listing a French Immersion program is Kwantlen Park Secondary (2.7 km). Other elementary schools close by: Creekside Elementary (0.7 km south-west), Green Timbers Elementary (1.3 km south-east), Cindrich Elementary (1.4 km south-west), Lena Shaw Elementary (1.4 km north), A H P Matthew Elementary (1.5 km north-west). The nearest school teaching the same grades (K-7) is Creekside Elementary, 0.7 km south-west of Simon Cunningham Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Simon Cunningham Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "North Surrey Learning Centre",
+     "Secondary",
+     "11-12",
+     "Public",
+     "0.2 km south"
+    ],
+    [
+     "SD 36 Alternate North Surrey LC",
+     "Secondary",
+     "10-12",
+     "Public",
+     "0.2 km south"
+    ],
+    [
+     "Education Services (Alternate)",
+     "Other",
+     "6-12",
+     "Public",
+     "0.3 km south-east"
+    ],
+    [
+     "SAIL Secondary",
+     "Secondary",
+     "8, 9, 10, 12",
+     "Public",
+     "0.3 km south-east"
+    ],
+    [
+     "SD 36 Education Services (Type 1)",
+     "Secondary",
+     "9, 10, 12",
+     "Public",
+     "0.3 km south-east"
+    ],
+    [
+     "Surrey Academy of Innovative Learning",
+     "Secondary",
+     "8-12",
+     "Public",
+     "0.3 km south-east"
+    ],
+    [
+     "Creekside Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.7 km south-west"
+    ],
+    [
+     "Queen Elizabeth Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "0.9 km west"
+    ],
+    [
+     "Green Timbers Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.3 km south-east"
+    ],
+    [
+     "Cindrich Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km south-west"
+    ],
+    [
+     "Lena Shaw Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km north"
+    ],
+    [
+     "A H P Matthew Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km north-west"
+    ],
+    [
+     "Brookside Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km south"
+    ],
+    [
+     "Betty Huff Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km west"
+    ],
+    [
+     "Bonaccord Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km east"
+    ],
+    [
+     "Enver Creek Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.2 km south-east"
+    ],
+    [
+     "Honour Secondary School",
+     "Secondary",
+     "10-12",
+     "Independent",
+     "2.2 km north"
+    ],
+    [
+     "Old Yale Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km north-west"
+    ],
+    [
+     "Our Lady of Good Counsel",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.3 km north"
+    ],
+    [
+     "Cornerstone Montessori School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.5 km south-east"
+    ],
+    [
+     "David Brankin Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km west"
+    ],
+    [
+     "Maple Green Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km south-east"
+    ],
+    [
+     "Hjorth Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km north-east"
+    ],
+    [
+     "Janice Churchill Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km south-east"
+    ],
+    [
+     "Kwantlen Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.7 km north-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -189,7 +386,7 @@
     ],
     [
      {
-      "t": "Walk the route to Simon Cunningham Elementary the way a child would, and count the crossings and sidewalks."
+      "t": "Look at Creekside Elementary, the nearest other elementary school, 0.7 km south-west of Simon Cunningham Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

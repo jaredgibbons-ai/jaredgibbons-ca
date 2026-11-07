@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Sands Secondary | Prices",
-  "description": "Search homes for sale near Sands Secondary in Delta. See listings that mention the school, nearby schools, catchment checks and sold prices for the area.",
+  "description": "Search homes for sale near Sands Secondary in Delta. See listings that name the school, nearby schools and what to check on the catchment before you offer.",
   "h1": "Homes for Sale Near Sands Secondary"
  },
  "breadcrumbs": [
@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Sands Secondary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Delta School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Delta School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Sands Secondary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Sands Secondary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names Sands Secondary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Sands Secondary?",
+   "a": "In a straight line, the closest schools in the provincial list are Gray Elementary (0.2 km south-west), Richardson Elementary (1.1 km north-east) and Burnsview Secondary (1.1 km south-east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions Sands Secondary, followed by what homes within 2 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions Sands Secondary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Sands Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Sands Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,204 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Richardson Elementary",
+      "t": "Homes for sale near Richardson Elementary (elementary school, about 1.1 km north-east)",
       "h": "/homes-near-richardson-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.1 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Burnsview Secondary",
+      "t": "Homes for sale near Burnsview Secondary (secondary school, about 1.1 km south-east)",
       "h": "/homes-near-burnsview-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.1 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near North Delta Secondary",
+      "t": "Homes for sale near North Delta Secondary (secondary school, about 1.2 km east)",
       "h": "/homes-near-north-delta-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.2 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Sands Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "22 schools in the provincial school list sit within 3 km of Sands Secondary in a straight line (16 elementary, 5 secondary, 1 other; 1 independent). The closest is Gray Elementary, 0.2 km away, and the farthest on this list is Cougar Canyon Elementary, 2.9 km away. By type, the nearest secondary school is Burnsview Secondary (1.1 km); the nearest independent school is Immaculate Conception School (2.6 km); the nearest school listing a French Immersion program is Richardson Elementary (1.1 km). Other secondary schools close by: Burnsview Secondary (1.1 km south-east), North Delta Secondary (1.2 km east), Delta Continuing Education (1.4 km east), Delview Secondary (2.5 km north-east), Seaquam Secondary (2.8 km south-east). The nearest school teaching the same grades (8-12) is Burnsview Secondary, 1.1 km south-east of Sands Secondary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Sands Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Gray Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.2 km south-west"
+    ],
+    [
+     "Richardson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km north-east"
+    ],
+    [
+     "Burnsview Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.1 km south-east"
+    ],
+    [
+     "North Delta Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.2 km east"
+    ],
+    [
+     "McCloskey Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km east"
+    ],
+    [
+     "Chalmers Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.3 km south-east"
+    ],
+    [
+     "Delta Continuing Education",
+     "Secondary",
+     "10, 12",
+     "Public",
+     "1.4 km east"
+    ],
+    [
+     "Brooke Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km north"
+    ],
+    [
+     "Devon Gardens Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km north"
+    ],
+    [
+     "Hellings Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km north-east"
+    ],
+    [
+     "Heath Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km south-east"
+    ],
+    [
+     "Jarvis Traditional Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km east"
+    ],
+    [
+     "Gibson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km north-east"
+    ],
+    [
+     "Delview Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.5 km north-east"
+    ],
+    [
+     "Annieville Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km north"
+    ],
+    [
+     "Home Quest",
+     "Other",
+     "K-9",
+     "Public",
+     "2.5 km north"
+    ],
+    [
+     "Immaculate Conception School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.6 km north-east"
+    ],
+    [
+     "Westerman Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km east"
+    ],
+    [
+     "Kennedy Trail Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.8 km east"
+    ],
+    [
+     "Sunshine Hills Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.8 km south"
+    ],
+    [
+     "Seaquam Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.8 km south-east"
+    ],
+    [
+     "Cougar Canyon Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km south-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +361,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to Sands Secondary and note the crossings, sidewalks and hills."
+      "t": "Look at Burnsview Secondary, the nearest other secondary school, 1.1 km south-east of Sands Secondary. Compare the two when you check which school serves the address."
      }
     ]
    ],

@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Clearbrook Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Abbotsford School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Abbotsford School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Clearbrook Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Clearbrook Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Clearbrook Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Clearbrook Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are W J Mouat Secondary (1.0 km south), Colleen And Gordie Howe Middle School (1.0 km south) and Mennonite Educational Institute (1.2 km north-west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions Clearbrook Elementary, followed by what homes within 1 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions Clearbrook Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Clearbrook Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Clearbrook Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,33 +145,176 @@
    "items": [
     [
      {
-      "t": "Homes for sale near W J Mouat Secondary",
+      "t": "Homes for sale near W J Mouat Secondary (secondary school, about 1.0 km south)",
       "h": "/homes-near-w-j-mouat-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.0 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Godson Elementary",
+      "t": "Homes for sale near Godson Elementary (elementary school, about 3.7 km south-east)",
       "h": "/homes-near-godson-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 3.7 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Yale Secondary",
+      "t": "Homes for sale near Yale Secondary (secondary school, about 5.8 km south-east)",
       "h": "/homes-near-yale-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 5.8 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Clearbrook Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "18 schools in the provincial school list sit within 3 km of Clearbrook Elementary in a straight line (9 elementary, 3 secondary, 3 middle, 3 other; 4 independent). The closest is W J Mouat Secondary, 1.0 km away, and the farthest on this list is Abbotsford Traditional School, 3.0 km away. By type, the nearest elementary school is Dr Roberta Bondar Elementary (1.3 km); the nearest independent school is Mennonite Educational Institute (1.2 km). Other elementary schools close by: Dr Roberta Bondar Elementary (1.3 km east), Harry Sayers Elementary (1.5 km west), John Maclure Community School (1.8 km south-east), Ten Broeck Elementary (2.1 km south), Blue Jay Elementary (2.5 km south-west). The nearest school teaching the same grades (K-5) is Dr Roberta Bondar Elementary, 1.3 km east of Clearbrook Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Clearbrook Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "W J Mouat Secondary",
+     "Secondary",
+     "9-12",
+     "Public",
+     "1.0 km south"
+    ],
+    [
+     "Colleen And Gordie Howe Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "1.0 km south"
+    ],
+    [
+     "Mennonite Educational Institute",
+     "Other",
+     "K-12",
+     "Independent",
+     "1.2 km north-west"
+    ],
+    [
+     "Dr Roberta Bondar Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.3 km east"
+    ],
+    [
+     "Harry Sayers Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.5 km west"
+    ],
+    [
+     "Chief Dan George Middle",
+     "Middle",
+     "6-8",
+     "Public",
+     "1.6 km east"
+    ],
+    [
+     "John Maclure Community School",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.8 km south-east"
+    ],
+    [
+     "Cornerstone Christian School",
+     "Other",
+     "K-9",
+     "Independent",
+     "1.8 km east"
+    ],
+    [
+     "Rick Hansen Secondary",
+     "Secondary",
+     "9-12",
+     "Public",
+     "1.8 km west"
+    ],
+    [
+     "Eugene Reimer Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "1.9 km west"
+    ],
+    [
+     "Ten Broeck Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.1 km south"
+    ],
+    [
+     "Blue Jay Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.5 km south-west"
+    ],
+    [
+     "St. John Brebeuf Regional Secondary",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "2.6 km south-west"
+    ],
+    [
+     "St. James and St. Ann's Elementary",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.6 km south-west"
+    ],
+    [
+     "Dormick Park Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.6 km south"
+    ],
+    [
+     "Centennial Park Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.6 km south-east"
+    ],
+    [
+     "Terry Fox Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.8 km south-east"
+    ],
+    [
+     "Abbotsford Traditional School",
+     "Other",
+     "6-12",
+     "Public",
+     "3.0 km south-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -189,7 +337,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to Clearbrook Elementary and note the crossings, sidewalks and hills."
+      "t": "Look at Dr Roberta Bondar Elementary, the nearest other elementary school, 1.3 km east of Clearbrook Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

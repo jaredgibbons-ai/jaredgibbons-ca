@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Hjorth Road Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Hjorth Road Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Hjorth Road Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Hjorth Road Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Hjorth Road Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Guildford Park Secondary (0.7 km north-west), Holly Elementary (0.8 km north-east) and Mary Jane Shannon Elementary (0.9 km north-west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Hjorth Road Elementary. Under it are the prices homes sold for within 1 km of the school.",
+   "text": "The search below lists homes for sale whose listing names Hjorth Road Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Hjorth Road Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Hjorth Road Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,225 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Guildford Park Secondary",
+      "t": "Homes for sale near Guildford Park Secondary (secondary school, about 0.7 km north-west)",
       "h": "/homes-near-guildford-park-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 0.7 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Holly Elementary",
+      "t": "Homes for sale near Holly Elementary (elementary school, about 0.8 km north-east)",
       "h": "/homes-near-holly-elementary-surrey.html"
-     },
-     {
-      "t": "(elementary school, about 0.8 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Mary Jane Shannon Elementary",
+      "t": "Homes for sale near Mary Jane Shannon Elementary (elementary school, about 0.9 km north-west)",
       "h": "/homes-near-mary-jane-shannon-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.9 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Hjorth Road Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "29 schools in the provincial school list sit within 3 km of Hjorth Road Elementary in a straight line (18 elementary, 10 secondary, 1 other; 3 independent). The closest is Guildford Park Secondary, 0.7 km away, and the farthest on this list is Education Services (Alternate), 2.8 km away. By type, the nearest elementary school is Holly Elementary (0.8 km); the nearest independent school is Our Lady of Good Counsel (1.7 km); the nearest school listing a French Immersion program is Ecole Riverdale Elementary (0.9 km). Other elementary schools close by: Holly Elementary (0.8 km north-east), Mary Jane Shannon Elementary (0.9 km north-west), Ecole Riverdale Elementary (0.9 km north), Lena Shaw Elementary (1.3 km south-west), Bonaccord Elementary (1.3 km south). The nearest school teaching the same grades (K-7) is Holly Elementary, 0.8 km north-east of Hjorth Road Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Hjorth Road Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Guildford Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "0.7 km north-west"
+    ],
+    [
+     "Holly Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.8 km north-east"
+    ],
+    [
+     "Mary Jane Shannon Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km north-west"
+    ],
+    [
+     "Ecole Riverdale Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km north"
+    ],
+    [
+     "Lena Shaw Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.3 km south-west"
+    ],
+    [
+     "Bonaccord Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.3 km south"
+    ],
+    [
+     "Ellendale Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km north"
+    ],
+    [
+     "Mountainview Montessori",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km south-east"
+    ],
+    [
+     "Johnston Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.6 km south-east"
+    ],
+    [
+     "Our Lady of Good Counsel",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.7 km west"
+    ],
+    [
+     "William F. Davidson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km south-east"
+    ],
+    [
+     "Forsyth Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km west"
+    ],
+    [
+     "Harold Bishop Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km east"
+    ],
+    [
+     "Dogwood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km east"
+    ],
+    [
+     "Honour Secondary School",
+     "Secondary",
+     "10-12",
+     "Independent",
+     "2.1 km west"
+    ],
+    [
+     "Berkshire Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km south-east"
+    ],
+    [
+     "Iqra School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.5 km north"
+    ],
+    [
+     "Surrey Traditional",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km north-west"
+    ],
+    [
+     "Simon Cunningham Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km south-west"
+    ],
+    [
+     "James Ardiel Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km north-west"
+    ],
+    [
+     "Erma Stephenson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km north-east"
+    ],
+    [
+     "Fraser Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.7 km east"
+    ],
+    [
+     "North Surrey Learning Centre",
+     "Secondary",
+     "11-12",
+     "Public",
+     "2.7 km south-west"
+    ],
+    [
+     "SD 36 Alternate North Surrey LC",
+     "Secondary",
+     "10-12",
+     "Public",
+     "2.7 km south-west"
+    ],
+    [
+     "Education Services (Alternate)",
+     "Other",
+     "6-12",
+     "Public",
+     "2.8 km south-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +382,7 @@
     ],
     [
      {
-      "t": "Walk the route to Hjorth Road Elementary the way a child would, and count the crossings and sidewalks."
+      "t": "Look at Holly Elementary, the nearest other elementary school, 0.8 km north-east of Hjorth Road Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

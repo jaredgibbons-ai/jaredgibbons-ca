@@ -26,6 +26,6 @@ seen=set(); out=[o for o in out if not ((o['name'],o['address']) in seen or seen
 fix = json.load(open('src/data/schools/coordinate-fixes.json')) if os.path.exists('src/data/schools/coordinate-fixes.json') else []   # schools the official dataset has no coordinates for, with the source of each fix
 for o in out:
     for x in fix:
-        if o['lat'] is None and o['name'] == x['name'] and o['address'] == x['address']: o['lat'], o['lon'] = x['lat'], x['lon']
+        if (o['lat'] is None or x.get('override')) and o['name'] == x['name'] and o['address'] == x['address']: o['lat'], o['lon'] = x['lat'], x['lon']
 json.dump(out, open('src/data/schools/facts.json', 'w'), indent=0, ensure_ascii=False)
 print(len(out), 'schools;', sum(1 for s in out if s['lat']), 'with coordinates')

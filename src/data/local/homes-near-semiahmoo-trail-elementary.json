@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Semiahmoo Trail Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Semiahmoo Trail Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Semiahmoo Trail Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Semiahmoo Trail Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Semiahmoo Trail Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Star of the Sea (1.7 km south-east), Chantrell Creek Elementary (2.0 km south-west) and White Rock Christian Academy (2.1 km south-east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Semiahmoo Trail Elementary in the listing, then check the sold prices within 1 km of the school.",
+   "text": "Use the search below to see homes for sale that name Semiahmoo Trail Elementary in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Semiahmoo Trail Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Semiahmoo Trail Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,42 +141,245 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Star of the Sea",
+      "t": "Homes for sale near Star of the Sea (elementary school, about 1.7 km south-east)",
       "h": "/homes-near-star-of-the-sea.html"
-     },
-     {
-      "t": "(elementary school, about 1.7 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Chantrell Creek Elementary",
+      "t": "Homes for sale near Chantrell Creek Elementary (elementary school, about 2.0 km south-west)",
       "h": "/homes-near-chantrell-creek-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 2.0 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near White Rock Christian Academy",
+      "t": "Homes for sale near White Rock Christian Academy (school, about 2.1 km south-east)",
       "h": "/homes-near-white-rock-christian-academy.html"
-     },
-     {
-      "t": "(school, about 2.1 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Rosemary Heights Elementary",
+      "t": "Homes for sale near Rosemary Heights Elementary (elementary school, about 2.2 km north-east)",
       "h": "/homes-near-rosemary-heights-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 2.2 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Semiahmoo Trail Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "12 schools in the provincial school list sit within 3 km of Semiahmoo Trail Elementary in a straight line (8 elementary, 2 other, 2 secondary; 3 independent). The closest is Star of the Sea, 1.7 km away, and the farthest on this list is Bayridge Elementary, 2.8 km away. By type, the nearest secondary school is Elgin Park Secondary (2.5 km); the nearest school listing a French Immersion program is Elgin Park Secondary (2.5 km). Other elementary schools close by: Star of the Sea (1.7 km south-east), Chantrell Creek Elementary (2.0 km south-west), Rosemary Heights Elementary (2.2 km north-east), Morgan Elementary (2.3 km east), Jessie Lee Elementary (2.7 km south-east). The nearest school teaching the same grades (K-7) is Star of the Sea, 1.7 km south-east of Semiahmoo Trail Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Semiahmoo Trail Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Star of the Sea",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.7 km south-east"
+    ],
+    [
+     "Chantrell Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km south-west"
+    ],
+    [
+     "White Rock Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.1 km south-east"
+    ],
+    [
+     "Rosemary Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km north-east"
+    ],
+    [
+     "Morgan Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km east"
+    ],
+    [
+     "Elgin Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.5 km south-west"
+    ],
+    [
+     "Semiahmoo Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.6 km south"
+    ],
+    [
+     "Newbridge Academy",
+     "Other",
+     "K, 1, 2, 3, 4, 5, 8, 9",
+     "Independent",
+     "2.6 km south-east"
+    ],
+    [
+     "Jessie Lee Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km south-east"
+    ],
+    [
+     "H T Thrift Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km south"
+    ],
+    [
+     "Sunnyside Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.8 km east"
+    ],
+    [
+     "Bayridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.8 km south"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 3 km from Semiahmoo Trail Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 3 km from Semiahmoo Trail Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Southridge School",
+     "Other",
+     "K-12",
+     "Independent",
+     "3.1 km east"
+    ],
+    [
+     "Ray Shepherd Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.4 km south-west"
+    ],
+    [
+     "Crescent Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.7 km west"
+    ],
+    [
+     "Laronde Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.7 km south-west"
+    ],
+    [
+     "Earl Marriott Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "3.8 km south-east"
+    ],
+    [
+     "White Rock Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.9 km south"
+    ],
+    [
+     "St John Paul II Academy",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "4.1 km south"
+    ],
+    [
+     "Peace Arch Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.5 km south-east"
+    ],
+    [
+     "Edgewood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.5 km east"
+    ],
+    [
+     "Ocean Cliff Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.6 km south-west"
+    ],
+    [
+     "South Meridian Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.9 km south-east"
+    ],
+    [
+     "Grandview Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "5.0 km east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -194,7 +402,7 @@
     ],
     [
      {
-      "t": "Walk to Semiahmoo Trail Elementary from the home and check the crossings, sidewalks and lighting on the way."
+      "t": "Look at Star of the Sea, the nearest other elementary school, 1.7 km south-east of Semiahmoo Trail Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

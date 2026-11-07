@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Harold Bishop Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Harold Bishop Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Harold Bishop Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Harold Bishop Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Harold Bishop Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Dogwood Elementary (0.7 km north), William F. Davidson Elementary (0.9 km south) and Fraser Heights Secondary (1.1 km north-east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions Harold Bishop Elementary, followed by what homes within 1 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions Harold Bishop Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Harold Bishop Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Harold Bishop Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,197 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Dogwood Elementary",
+      "t": "Homes for sale near Dogwood Elementary (elementary school, about 0.7 km north)",
       "h": "/homes-near-dogwood-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.7 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near William F. Davidson Elementary",
+      "t": "Homes for sale near William F. Davidson Elementary (elementary school, about 0.9 km south)",
       "h": "/homes-near-william-f-davidson-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.9 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Fraser Heights Secondary",
+      "t": "Homes for sale near Fraser Heights Secondary (secondary school, about 1.1 km north-east)",
       "h": "/homes-near-fraser-heights-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.1 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Harold Bishop Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "21 schools in the provincial school list sit within 3 km of Harold Bishop Elementary in a straight line (16 elementary, 4 secondary, 1 other; 1 independent). The closest is Dogwood Elementary, 0.7 km away, and the farthest on this list is Lena Shaw Elementary, 3.0 km away. By type, the nearest secondary school is Fraser Heights Secondary (1.1 km); the nearest independent school is Pacific Academy (2.3 km); the nearest school listing a French Immersion program is Fraser Heights Secondary (1.1 km). Other elementary schools close by: Dogwood Elementary (0.7 km north), William F. Davidson Elementary (0.9 km south), Erma Stephenson Elementary (1.2 km north-east), Mountainview Montessori (1.5 km south-west), Holly Elementary (1.5 km north-west). The nearest school teaching the same grades (K-7) is Dogwood Elementary, 0.7 km north of Harold Bishop Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Harold Bishop Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Dogwood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.7 km north"
+    ],
+    [
+     "William F. Davidson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km south"
+    ],
+    [
+     "Fraser Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.1 km north-east"
+    ],
+    [
+     "Johnston Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.2 km south-west"
+    ],
+    [
+     "Erma Stephenson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km north-east"
+    ],
+    [
+     "Mountainview Montessori",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km south-west"
+    ],
+    [
+     "Holly Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km north-west"
+    ],
+    [
+     "Fraser Wood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km east"
+    ],
+    [
+     "North Surrey Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.7 km south"
+    ],
+    [
+     "Hjorth Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km west"
+    ],
+    [
+     "Bonaccord Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km south-west"
+    ],
+    [
+     "Ecole Riverdale Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km north-west"
+    ],
+    [
+     "Berkshire Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.1 km south"
+    ],
+    [
+     "Serpentine Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km south-east"
+    ],
+    [
+     "Guildford Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.3 km west"
+    ],
+    [
+     "Pacific Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.3 km east"
+    ],
+    [
+     "Mary Jane Shannon Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km west"
+    ],
+    [
+     "Ellendale Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km north-west"
+    ],
+    [
+     "Woodland Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km south"
+    ],
+    [
+     "Bothwell Elementary School",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km east"
+    ],
+    [
+     "Lena Shaw Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.0 km west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +354,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to Harold Bishop Elementary and note the crossings, sidewalks and hills."
+      "t": "Look at Dogwood Elementary, the nearest other elementary school, 0.7 km north of Harold Bishop Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

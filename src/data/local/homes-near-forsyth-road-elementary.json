@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Forsyth Road Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Forsyth Road Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Forsyth Road Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Forsyth Road Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Forsyth Road Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Our Lady of Good Counsel (0.5 km south), Honour Secondary School (0.7 km south-west) and Mary Jane Shannon Elementary (1.0 km east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Forsyth Road Elementary in the listing, then check the sold prices within 1 km of the school.",
+   "text": "Use the search below to see homes for sale that name Forsyth Road Elementary in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Forsyth Road Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Forsyth Road Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,211 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Our Lady of Good Counsel",
+      "t": "Homes for sale near Our Lady of Good Counsel (elementary school, about 0.5 km south)",
       "h": "/homes-near-our-lady-of-good-counsel.html"
-     },
-     {
-      "t": "(elementary school, about 0.5 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Mary Jane Shannon Elementary",
+      "t": "Homes for sale near Mary Jane Shannon Elementary (elementary school, about 1.0 km east)",
       "h": "/homes-near-mary-jane-shannon-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.0 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near James Ardiel Elementary",
+      "t": "Homes for sale near James Ardiel Elementary (elementary school, about 1.0 km north)",
       "h": "/homes-near-james-ardiel-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.0 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Forsyth Road Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "23 schools in the provincial school list sit within 3 km of Forsyth Road Elementary in a straight line (17 elementary, 6 secondary; 3 independent). The closest is Our Lady of Good Counsel, 0.5 km away, and the farthest on this list is SD 36 Alternate North Surrey LC, 2.9 km away. By type, the nearest secondary school is Honour Secondary School (0.7 km); the nearest school listing a French Immersion program is Kwantlen Park Secondary (1.6 km). Other elementary schools close by: Our Lady of Good Counsel (0.5 km south), Mary Jane Shannon Elementary (1.0 km east), James Ardiel Elementary (1.0 km north), Surrey Traditional (1.1 km north), Ellendale Elementary (1.4 km north-east). The nearest school teaching the same grades (K-7) is Our Lady of Good Counsel, 0.5 km south of Forsyth Road Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Forsyth Road Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Our Lady of Good Counsel",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "0.5 km south"
+    ],
+    [
+     "Honour Secondary School",
+     "Secondary",
+     "10-12",
+     "Independent",
+     "0.7 km south-west"
+    ],
+    [
+     "Mary Jane Shannon Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.0 km east"
+    ],
+    [
+     "James Ardiel Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.0 km north"
+    ],
+    [
+     "Surrey Traditional",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km north"
+    ],
+    [
+     "Guildford Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.4 km east"
+    ],
+    [
+     "Ellendale Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km north-east"
+    ],
+    [
+     "Lena Shaw Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km south-east"
+    ],
+    [
+     "Kwantlen Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.6 km south-west"
+    ],
+    [
+     "K B Woodward Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km west"
+    ],
+    [
+     "Theresa Clarke Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km west"
+    ],
+    [
+     "Hjorth Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km east"
+    ],
+    [
+     "Ecole Riverdale Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km east"
+    ],
+    [
+     "Old Yale Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km south-west"
+    ],
+    [
+     "Holly Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km east"
+    ],
+    [
+     "Iqra School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.3 km north-east"
+    ],
+    [
+     "A H P Matthew Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km south-west"
+    ],
+    [
+     "Bridgeview Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km north-west"
+    ],
+    [
+     "Queen Elizabeth Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.7 km south"
+    ],
+    [
+     "Simon Cunningham Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km south"
+    ],
+    [
+     "Bonaccord Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km south-east"
+    ],
+    [
+     "North Surrey Learning Centre",
+     "Secondary",
+     "11-12",
+     "Public",
+     "2.9 km south"
+    ],
+    [
+     "SD 36 Alternate North Surrey LC",
+     "Secondary",
+     "10-12",
+     "Public",
+     "2.9 km south"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +368,7 @@
     ],
     [
      {
-      "t": "Walk to Forsyth Road Elementary from the home and check the crossings, sidewalks and lighting on the way."
+      "t": "Look at Our Lady of Good Counsel, the nearest other elementary school, 0.5 km south of Forsyth Road Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

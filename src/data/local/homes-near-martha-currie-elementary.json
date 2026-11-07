@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Martha Currie Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Martha Currie Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Martha Currie Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Martha Currie Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Martha Currie Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Bibleway Christian Academy (0.7 km north-east), Sunrise Ridge Elementary (0.7 km north-east) and Don Christian Elementary (1.0 km north).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Martha Currie Elementary. Under it are the prices homes sold for within 1 km of the school.",
+   "text": "The search below lists homes for sale whose listing names Martha Currie Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Martha Currie Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Martha Currie Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,33 +145,162 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Sunrise Ridge Elementary",
+      "t": "Homes for sale near Sunrise Ridge Elementary (elementary school, about 0.7 km north-east)",
       "h": "/homes-near-sunrise-ridge-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.7 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Don Christian Elementary",
+      "t": "Homes for sale near Don Christian Elementary (elementary school, about 1.0 km north)",
       "h": "/homes-near-don-christian-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.0 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Lord Tweedsmuir Secondary",
+      "t": "Homes for sale near Lord Tweedsmuir Secondary (secondary school, about 1.1 km north-west)",
       "h": "/homes-near-lord-tweedsmuir-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.1 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Martha Currie Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "16 schools in the provincial school list sit within 3 km of Martha Currie Elementary in a straight line (9 elementary, 4 secondary, 3 other; 4 independent). The closest is Bibleway Christian Academy, 0.7 km away, and the farthest on this list is Hazelgrove Elementary, 2.9 km away. By type, the nearest elementary school is Sunrise Ridge Elementary (0.7 km); the nearest secondary school is Lord Tweedsmuir Secondary (1.1 km); the nearest school listing a French Immersion program is Sunrise Ridge Elementary (0.7 km). Other elementary schools close by: Sunrise Ridge Elementary (0.7 km north-east), Don Christian Elementary (1.0 km north), Cloverdale Traditional (1.2 km west), Hillcrest Elementary (1.5 km north), Latimer Road Elementary (1.7 km east). The nearest school teaching the same grades (K-7) is Sunrise Ridge Elementary, 0.7 km north-east of Martha Currie Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Martha Currie Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Bibleway Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "0.7 km north-east"
+    ],
+    [
+     "Sunrise Ridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.7 km north-east"
+    ],
+    [
+     "Don Christian Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.0 km north"
+    ],
+    [
+     "Lord Tweedsmuir Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.1 km north-west"
+    ],
+    [
+     "Cloverdale Traditional",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km west"
+    ],
+    [
+     "Hillcrest Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km north"
+    ],
+    [
+     "Cloverdale Learning Centre",
+     "Secondary",
+     "10-12",
+     "Public",
+     "1.6 km west"
+    ],
+    [
+     "SD 36 Alternate Cloverdale LC",
+     "Secondary",
+     "10-12",
+     "Public",
+     "1.6 km west"
+    ],
+    [
+     "Traditional Learning Academy Online",
+     "Other",
+     "K-12",
+     "Independent",
+     "1.6 km west"
+    ],
+    [
+     "Latimer Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km east"
+    ],
+    [
+     "Cloverdale Catholic School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.8 km west"
+    ],
+    [
+     "Adams Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km north"
+    ],
+    [
+     "George Greenaway Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km west"
+    ],
+    [
+     "Clayton Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.5 km north"
+    ],
+    [
+     "Crescent Heights Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.6 km north-east"
+    ],
+    [
+     "Hazelgrove Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km north-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -189,7 +323,7 @@
     ],
     [
      {
-      "t": "Walk the route to Martha Currie Elementary the way a child would, and count the crossings and sidewalks."
+      "t": "Look at Sunrise Ridge Elementary, the nearest other elementary school, 0.7 km north-east of Martha Currie Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

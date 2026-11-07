@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Douglas Elementary | Prices",
-  "description": "Search homes for sale near Douglas Elementary in Surrey. See listings that mention the school, nearby schools, catchment checks and sold prices for the area.",
+  "description": "Search homes for sale near Douglas Elementary in Surrey. Find listings that name the school, plus nearby schools and what to check on the catchment.",
   "h1": "Homes for Sale Near Douglas Elementary"
  },
  "breadcrumbs": [
@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Douglas Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Douglas Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Douglas Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Douglas Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Douglas Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are South Meridian Elementary (3.1 km north-west), Peace Arch Elementary (3.6 km north-west) and Earl Marriott Secondary (4.2 km north-west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions Douglas Elementary, followed by what homes within 1 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions Douglas Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Douglas Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Douglas Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,33 +145,211 @@
    "items": [
     [
      {
-      "t": "Homes for sale near South Meridian Elementary",
+      "t": "Homes for sale near South Meridian Elementary (elementary school, about 3.1 km north-west)",
       "h": "/homes-near-south-meridian-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 3.1 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Peace Arch Elementary",
+      "t": "Homes for sale near Peace Arch Elementary (elementary school, about 3.6 km north-west)",
       "h": "/homes-near-peace-arch-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 3.6 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Earl Marriott Secondary",
+      "t": "Homes for sale near Earl Marriott Secondary (secondary school, about 4.2 km north-west)",
       "h": "/homes-near-earl-marriott-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 4.2 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 5 km of Douglas Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "8 schools in the provincial school list sit within 5 km of Douglas Elementary in a straight line (5 elementary, 3 secondary; 1 independent). The closest is South Meridian Elementary, 3.1 km away, and the farthest on this list is Pacific Heights Elementary, 4.9 km away. By type, the nearest secondary school is Earl Marriott Secondary (4.2 km); the nearest independent school is St John Paul II Academy (4.6 km); the nearest school listing a French Immersion program is Peace Arch Elementary (3.6 km). Other elementary schools close by: South Meridian Elementary (3.1 km north-west), Peace Arch Elementary (3.6 km north-west), Edgewood Elementary (4.4 km north), White Rock Elementary (4.7 km north-west), Pacific Heights Elementary (4.9 km north). The nearest school teaching the same grades (K-7) is South Meridian Elementary, 3.1 km north-west of Douglas Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 5 km of Douglas Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "South Meridian Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.1 km north-west"
+    ],
+    [
+     "Peace Arch Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.6 km north-west"
+    ],
+    [
+     "Earl Marriott Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "4.2 km north-west"
+    ],
+    [
+     "Edgewood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.4 km north"
+    ],
+    [
+     "St John Paul II Academy",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "4.6 km north-west"
+    ],
+    [
+     "White Rock Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.7 km north-west"
+    ],
+    [
+     "Grandview Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "4.7 km north"
+    ],
+    [
+     "Pacific Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.9 km north"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 5 km from Douglas Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 5 km from Douglas Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Jessie Lee Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "5.4 km north-west"
+    ],
+    [
+     "Newbridge Academy",
+     "Other",
+     "K, 1, 2, 3, 4, 5, 8, 9",
+     "Independent",
+     "5.5 km north-west"
+    ],
+    [
+     "Southridge School",
+     "Other",
+     "K-12",
+     "Independent",
+     "5.6 km north-west"
+    ],
+    [
+     "East Kensington Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "5.6 km north"
+    ],
+    [
+     "H T Thrift Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "6.0 km north-west"
+    ],
+    [
+     "White Rock Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "6.0 km north-west"
+    ],
+    [
+     "Sunnyside Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "6.0 km north-west"
+    ],
+    [
+     "Semiahmoo Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "6.1 km north-west"
+    ],
+    [
+     "Star of the Sea",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "6.4 km north-west"
+    ],
+    [
+     "Bayridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "6.9 km north-west"
+    ],
+    [
+     "Morgan Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "7.2 km north-west"
+    ],
+    [
+     "Rosemary Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "7.7 km north-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -189,7 +372,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to Douglas Elementary and note the crossings, sidewalks and hills."
+      "t": "Look at South Meridian Elementary, the nearest other elementary school, 3.1 km north-west of Douglas Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Grandview Heights Secondary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Grandview Heights Secondary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Grandview Heights Secondary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names Grandview Heights Secondary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Grandview Heights Secondary?",
+   "a": "In a straight line, the closest schools in the provincial list are Pacific Heights Elementary (0.3 km north-east), Edgewood Elementary (0.8 km south-west) and Southridge School (2.0 km west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Grandview Heights Secondary. Under it are the prices homes sold for within 2 km of the school.",
+   "text": "The search below lists homes for sale whose listing names Grandview Heights Secondary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Grandview Heights Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Grandview Heights Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,197 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Pacific Heights Elementary",
+      "t": "Homes for sale near Pacific Heights Elementary (elementary school, about 0.3 km north-east)",
       "h": "/homes-near-pacific-heights-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.3 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Edgewood Elementary",
+      "t": "Homes for sale near Edgewood Elementary (elementary school, about 0.8 km south-west)",
       "h": "/homes-near-edgewood-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.8 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near South Meridian Elementary",
+      "t": "Homes for sale near South Meridian Elementary (elementary school, about 2.9 km south-west)",
       "h": "/homes-near-south-meridian-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 2.9 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Grandview Heights Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "6 schools in the provincial school list sit within 3 km of Grandview Heights Secondary in a straight line (5 elementary, 1 other; 1 independent). The closest is Pacific Heights Elementary, 0.3 km away, and the farthest on this list is South Meridian Elementary, 2.9 km away. By type, the nearest independent school is Southridge School (2.0 km).",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Grandview Heights Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Pacific Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.3 km north-east"
+    ],
+    [
+     "Edgewood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.8 km south-west"
+    ],
+    [
+     "Southridge School",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.0 km west"
+    ],
+    [
+     "Sunnyside Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km west"
+    ],
+    [
+     "East Kensington Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.8 km east"
+    ],
+    [
+     "South Meridian Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km south-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 3 km from Grandview Heights Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 3 km from Grandview Heights Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Earl Marriott Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "3.1 km south-west"
+    ],
+    [
+     "Morgan Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.2 km north-west"
+    ],
+    [
+     "Jessie Lee Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.3 km west"
+    ],
+    [
+     "Peace Arch Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.3 km south-west"
+    ],
+    [
+     "White Rock Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "3.7 km west"
+    ],
+    [
+     "Rosemary Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.7 km north-west"
+    ],
+    [
+     "Newbridge Academy",
+     "Other",
+     "K, 1, 2, 3, 4, 5, 8, 9",
+     "Independent",
+     "3.8 km west"
+    ],
+    [
+     "Star of the Sea",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "4.0 km west"
+    ],
+    [
+     "White Rock Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.3 km south-west"
+    ],
+    [
+     "St John Paul II Academy",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "4.5 km south-west"
+    ],
+    [
+     "Semiahmoo Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "4.7 km west"
+    ],
+    [
+     "H T Thrift Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.7 km west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -181,11 +350,6 @@
     [
      {
       "t": "Visit on a school day at drop-off and pick-up. Traffic and parking near Grandview Heights Secondary are very different at 8:30 am and 3 pm than on a Sunday viewing."
-     }
-    ],
-    [
-     {
-      "t": "Walk the route to Grandview Heights Secondary the way a child would, and count the crossings and sidewalks."
      }
     ]
    ],

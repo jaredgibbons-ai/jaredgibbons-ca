@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Pacific Heights Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Pacific Heights Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Pacific Heights Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Pacific Heights Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Pacific Heights Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Grandview Heights Secondary (0.3 km south-west), Edgewood Elementary (1.1 km south-west) and Southridge School (2.2 km west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Pacific Heights Elementary. Under it are the prices homes sold for within 1 km of the school.",
+   "text": "The search below lists homes for sale whose listing names Pacific Heights Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Pacific Heights Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Pacific Heights Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,33 +145,190 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Grandview Heights Secondary",
+      "t": "Homes for sale near Grandview Heights Secondary (secondary school, about 0.3 km south-west)",
       "h": "/homes-near-grandview-heights-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 0.3 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Edgewood Elementary",
+      "t": "Homes for sale near Edgewood Elementary (elementary school, about 1.1 km south-west)",
       "h": "/homes-near-edgewood-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.1 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near South Meridian Elementary",
+      "t": "Homes for sale near South Meridian Elementary (elementary school, about 3.1 km south-west)",
       "h": "/homes-near-south-meridian-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 3.1 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Pacific Heights Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "5 schools in the provincial school list sit within 3 km of Pacific Heights Elementary in a straight line (3 elementary, 1 secondary, 1 other; 1 independent). The closest is Grandview Heights Secondary, 0.3 km away, and the farthest on this list is East Kensington Elementary, 2.5 km away. By type, the nearest elementary school is Edgewood Elementary (1.1 km); the nearest independent school is Southridge School (2.2 km). Other elementary schools close by: Edgewood Elementary (1.1 km south-west), Sunnyside Elementary (2.5 km west), East Kensington Elementary (2.5 km east). The nearest school teaching the same grades (K-7) is Edgewood Elementary, 1.1 km south-west of Pacific Heights Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Pacific Heights Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Grandview Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "0.3 km south-west"
+    ],
+    [
+     "Edgewood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km south-west"
+    ],
+    [
+     "Southridge School",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.2 km west"
+    ],
+    [
+     "Sunnyside Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km west"
+    ],
+    [
+     "East Kensington Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 3 km from Pacific Heights Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 3 km from Pacific Heights Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "South Meridian Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.1 km south-west"
+    ],
+    [
+     "Morgan Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.3 km north-west"
+    ],
+    [
+     "Earl Marriott Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "3.4 km south-west"
+    ],
+    [
+     "Jessie Lee Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.6 km west"
+    ],
+    [
+     "Peace Arch Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.6 km south-west"
+    ],
+    [
+     "Rosemary Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.8 km north-west"
+    ],
+    [
+     "White Rock Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "3.9 km west"
+    ],
+    [
+     "Newbridge Academy",
+     "Other",
+     "K, 1, 2, 3, 4, 5, 8, 9",
+     "Independent",
+     "4.1 km west"
+    ],
+    [
+     "Star of the Sea",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "4.2 km west"
+    ],
+    [
+     "White Rock Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.6 km south-west"
+    ],
+    [
+     "St John Paul II Academy",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "4.8 km south-west"
+    ],
+    [
+     "Douglas Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.9 km south"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -189,7 +351,7 @@
     ],
     [
      {
-      "t": "Walk the route to Pacific Heights Elementary the way a child would, and count the crossings and sidewalks."
+      "t": "Look at Edgewood Elementary, the nearest other elementary school, 1.1 km south-west of Pacific Heights Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

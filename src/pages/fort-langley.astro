@@ -11,6 +11,43 @@ const explore = [
   ['All Communities','Search','/communities.html'],
   ['Home Buying Process','Resource','/buying.html'],
 ];
+const faq1 = [
+ {
+  "q": "Does FVREB publish prices for Fort Langley alone?",
+  "a": "No. FVREB reports Langley as one area, so the table above is for all of Langley, not Fort Langley only. Check the <a href=\"/fraser-valley-market-stats.html#langley\">current Langley figures</a>. For recent Fort Langley sales, call or text me at 604-928-1361. Source: <a href=\"https://www.fvreb.bc.ca/statistics/Package202609.pdf\">latest FVREB statistics package</a>."
+ },
+ {
+  "q": "Is Fort Langley part of the Township of Langley?",
+  "a": "Yes. Fort Langley is one of the communities in the Township of Langley, which was incorporated in Fort Langley in 1873 and calls itself the \"Birthplace of BC\" (<a href=\"https://www.tol.ca/en/the-township/about-the-township.aspx\">Township of Langley</a>). <a href=\"https://www.tourism-langley.ca/communities/\">Tourism Langley</a> also lists the Fort Langley National Historic Site there."
+ },
+ {
+  "q": "How do I find the school catchment for a Fort Langley home?",
+  "a": "Fort Langley Elementary has its own catchment map in the Langley School District's <a href=\"https://www.sd35.bc.ca/catchment-maps\">catchment maps</a>. Catchments follow the street address, so enter the address in the district's <a href=\"https://www.sd35.bc.ca/school-locator\">School Locator</a> and confirm before you buy."
+ }
+];
+const faq2 = [
+ {
+  "q": "Is Fort Langley a heritage area?",
+  "a": "Yes. The village core is one of only two heritage conservation areas in the Township of Langley, and exterior changes there generally need a Heritage Alteration Permit."
+ },
+ {
+  "q": "Does Fort Langley flood?",
+  "a": "Some low areas can. During the 2023 freshet the Township issued a flood advisory for unprotected floodplain areas including Fort Langley. Check the exact property with the Township."
+ },
+ {
+  "q": "What kinds of homes sell in Fort Langley?",
+  "a": "Detached houses, many on larger lots, plus townhomes, rowhomes and some condos near the village, and acreage outside it. The sales table on this page shows the Fort Langley sub-area only."
+ },
+ {
+  "q": "Which schools are in Fort Langley?",
+  "a": "Fort Langley Elementary and Langley Fine Arts School have Fort Langley addresses. Check the SD35 School Locator for the exact home."
+ }
+];
+const plain = (h: string) => h.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [...faq1, ...faq2].map((f) => ({ '@type': 'Question', name: plain(f.q), acceptedAnswer: { '@type': 'Answer', text: plain(f.a) } })) };
+import ReviewCards from '../components/ReviewCards.astro';
+import { pickReviews } from '../lib/reviews';
+import REVIEW_EXCERPTS from '../data/review-excerpts.json';
 ---
 <Base
   title="Fort Langley Homes for Sale | Historic Village Living"
@@ -23,6 +60,7 @@ const explore = [
   footerCell={true}
   brandHref="/index.html"
   current="/communities.html"
+  jsonld={[faqLd]}
   crumbs={[{ name: 'Home', href: '/index.html' }, { name: 'Communities', href: '/communities.html' }, { name: 'Fort Langley', href: '/fort-langley.html' }]}
 >
 <main id="main">
@@ -117,12 +155,7 @@ const explore = [
     <div class="wrap">
       <h2 id="h-faq" class="h2 caps">Fort Langley questions</h2>
       <div class="faq">
-        <details><summary>Does FVREB publish prices for Fort Langley alone?</summary>
-          <p>No. FVREB reports Langley as one area, so the table above is for all of Langley, not Fort Langley only. Check the <a href="/fraser-valley-market-stats.html#langley">current Langley figures</a>. For recent Fort Langley sales, call or text me at 604-928-1361. Source: <a href="https://www.fvreb.bc.ca/statistics/Package202609.pdf">latest FVREB statistics package</a>.</p></details>
-        <details><summary>Is Fort Langley part of the Township of Langley?</summary>
-          <p>Yes. Fort Langley is one of the communities in the Township of Langley, which was incorporated in Fort Langley in 1873 and calls itself the "Birthplace of BC" (<a href="https://www.tol.ca/en/the-township/about-the-township.aspx">Township of Langley</a>). <a href="https://www.tourism-langley.ca/communities/">Tourism Langley</a> also lists the Fort Langley National Historic Site there.</p></details>
-        <details><summary>How do I find the school catchment for a Fort Langley home?</summary>
-          <p>Fort Langley Elementary has its own catchment map in the Langley School District's <a href="https://www.sd35.bc.ca/catchment-maps">catchment maps</a>. Catchments follow the street address, so enter the address in the district's <a href="https://www.sd35.bc.ca/school-locator">School Locator</a> and confirm before you buy.</p></details>
+        {faq1.map((f) => <details><summary>{f.q}</summary><p set:html={f.a} /></details>)}
       </div>
     </div>
   </section>
@@ -178,10 +211,7 @@ const explore = [
     <div class="wrap">
       <h3 id="h-faq2" class="h2 faq-h caps">Fort Langley buyer questions</h3>
       <div class="faq">
-        <details><summary>Is Fort Langley a heritage area?</summary><p>Yes. The village core is one of only two heritage conservation areas in the Township of Langley, and exterior changes there generally need a Heritage Alteration Permit.</p></details>
-        <details><summary>Does Fort Langley flood?</summary><p>Some low areas can. During the 2023 freshet the Township issued a flood advisory for unprotected floodplain areas including Fort Langley. Check the exact property with the Township.</p></details>
-        <details><summary>What kinds of homes sell in Fort Langley?</summary><p>Detached houses, many on larger lots, plus townhomes, rowhomes and some condos near the village, and acreage outside it. The sales table on this page shows the Fort Langley sub-area only.</p></details>
-        <details><summary>Which schools are in Fort Langley?</summary><p>Fort Langley Elementary and Langley Fine Arts School have Fort Langley addresses. Check the SD35 School Locator for the exact home.</p></details>
+        {faq2.map((f) => <details><summary>{f.q}</summary><p set:html={f.a} /></details>)}
       </div>
       <p class="signoff">Jared Gibbons, REALTOR®, Royal LePage Little Oak Realty. Top 1% of all Realtors in the Fraser Valley. Call or text <a href="tel:6049281361">604-928-1361</a>.</p>
     </div>
@@ -235,6 +265,8 @@ const explore = [
       </div>
     </div>
   </section>
+
+  <ReviewCards heading={REVIEW_EXCERPTS.heading} intro={REVIEW_EXCERPTS.intro} items={pickReviews('fort-langley', REVIEW_EXCERPTS.items)} id="reviews" />
 
   <section class="section section--ink on-dark cta" aria-labelledby="h-ready">
     <div class="wrap">

@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Bayridge Elementary | Prices",
-  "description": "Search homes for sale near Bayridge Elementary in Surrey. See listings that mention the school, nearby schools, catchment checks and sold prices for the area.",
+  "description": "Search homes for sale near Bayridge Elementary in Surrey. Find listings that name the school, plus nearby schools and what to check on the catchment.",
   "h1": "Homes for Sale Near Bayridge Elementary"
  },
  "breadcrumbs": [
@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Bayridge Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Bayridge Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Bayridge Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Bayridge Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Bayridge Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are H T Thrift Elementary (1.1 km east), Semiahmoo Secondary (1.1 km east) and Ray Shepherd Elementary (1.2 km west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Bayridge Elementary in the listing, then check the sold prices within 1 km of the school.",
+   "text": "Use the search below to see homes for sale that name Bayridge Elementary in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Bayridge Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Bayridge Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,246 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Semiahmoo Secondary",
+      "t": "Homes for sale near Semiahmoo Secondary (secondary school, about 1.1 km east)",
       "h": "/homes-near-semiahmoo-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.1 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Ray Shepherd Elementary",
+      "t": "Homes for sale near Ray Shepherd Elementary (elementary school, about 1.2 km west)",
       "h": "/homes-near-ray-shepherd-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.2 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Chantrell Creek Elementary",
+      "t": "Homes for sale near Chantrell Creek Elementary (elementary school, about 2.0 km north-west)",
       "h": "/homes-near-chantrell-creek-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 2.0 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Bayridge Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "13 schools in the provincial school list sit within 3 km of Bayridge Elementary in a straight line (8 elementary, 3 secondary, 2 other; 4 independent). The closest is H T Thrift Elementary, 1.1 km away, and the farthest on this list is Semiahmoo Trail Elementary, 2.8 km away. By type, the nearest secondary school is Semiahmoo Secondary (1.1 km); the nearest independent school is Newbridge Academy (2.0 km); the nearest school listing a French Immersion program is Elgin Park Secondary (2.0 km). Other elementary schools close by: H T Thrift Elementary (1.1 km east), Ray Shepherd Elementary (1.2 km west), Chantrell Creek Elementary (2.0 km north-west), Star of the Sea (2.1 km north-east), Laronde Elementary (2.2 km west). The nearest school teaching the same grades (K-7) is H T Thrift Elementary, 1.1 km east of Bayridge Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Bayridge Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "H T Thrift Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km east"
+    ],
+    [
+     "Semiahmoo Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.1 km east"
+    ],
+    [
+     "Ray Shepherd Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km west"
+    ],
+    [
+     "Chantrell Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km north-west"
+    ],
+    [
+     "Elgin Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.0 km north-west"
+    ],
+    [
+     "Newbridge Academy",
+     "Other",
+     "K, 1, 2, 3, 4, 5, 8, 9",
+     "Independent",
+     "2.0 km east"
+    ],
+    [
+     "Star of the Sea",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.1 km north-east"
+    ],
+    [
+     "Laronde Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km west"
+    ],
+    [
+     "White Rock Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.2 km north-east"
+    ],
+    [
+     "White Rock Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km south-east"
+    ],
+    [
+     "St John Paul II Academy",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "2.4 km south-east"
+    ],
+    [
+     "Jessie Lee Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km east"
+    ],
+    [
+     "Semiahmoo Trail Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.8 km north"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 3 km from Bayridge Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 3 km from Bayridge Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Earl Marriott Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "3.1 km east"
+    ],
+    [
+     "Crescent Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.2 km north-west"
+    ],
+    [
+     "Ocean Cliff Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.4 km west"
+    ],
+    [
+     "Peace Arch Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.5 km east"
+    ],
+    [
+     "Sunnyside Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.1 km north-east"
+    ],
+    [
+     "Southridge School",
+     "Other",
+     "K-12",
+     "Independent",
+     "4.1 km north-east"
+    ],
+    [
+     "South Meridian Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.1 km east"
+    ],
+    [
+     "Morgan Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.4 km north-east"
+    ],
+    [
+     "Rosemary Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.6 km north-east"
+    ],
+    [
+     "Edgewood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "5.0 km east"
+    ],
+    [
+     "Grandview Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "5.8 km east"
+    ],
+    [
+     "Pacific Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "6.1 km east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -185,7 +403,7 @@
     ],
     [
      {
-      "t": "Walk to Bayridge Elementary from the home and check the crossings, sidewalks and lighting on the way."
+      "t": "Look at H T Thrift Elementary, the nearest other elementary school, 1.1 km east of Bayridge Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

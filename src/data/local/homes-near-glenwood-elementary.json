@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Glenwood Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Glenwood Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Glenwood Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Glenwood Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Glenwood Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are St Catherines School (1.8 km north-west), Noel Booth Elementary (2.3 km north-west) and Brookswood Secondary (2.7 km north).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Glenwood Elementary in the listing, then check the sold prices within 1 km of the school.",
+   "text": "Use the search below to see homes for sale that name Glenwood Elementary in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Glenwood Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Glenwood Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,232 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Noel Booth Elementary",
+      "t": "Homes for sale near Noel Booth Elementary (elementary school, about 2.3 km north-west)",
       "h": "/homes-near-noel-booth-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 2.3 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Brookswood Secondary",
+      "t": "Homes for sale near Brookswood Secondary (secondary school, about 2.7 km north)",
       "h": "/homes-near-brookswood-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 2.7 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Belmont Elementary",
+      "t": "Homes for sale near Belmont Elementary (elementary school, about 3.2 km north)",
       "h": "/homes-near-belmont-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 3.2 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 5 km of Glenwood Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "11 schools in the provincial school list sit within 5 km of Glenwood Elementary in a straight line (7 elementary, 2 other, 1 secondary, 1 middle; 1 independent). The closest is St Catherines School, 1.8 km away, and the farthest on this list is H D Stafford Middle, 5.0 km away. By type, the nearest secondary school is Brookswood Secondary (2.7 km); the nearest school listing a French Immersion program is Noel Booth Elementary (2.3 km). Other elementary schools close by: St Catherines School (1.8 km north-west), Noel Booth Elementary (2.3 km north-west), Belmont Elementary (3.2 km north), Uplands Elementary (4.1 km north), Alice Brown Elementary (4.3 km north). The nearest school teaching the same grades (K-7) is St Catherines School, 1.8 km north-west of Glenwood Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 5 km of Glenwood Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "St Catherines School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.8 km north-west"
+    ],
+    [
+     "Noel Booth Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km north-west"
+    ],
+    [
+     "Brookswood Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.7 km north"
+    ],
+    [
+     "Belmont Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.2 km north"
+    ],
+    [
+     "Langley Fundamental Middle/Secondary Sch",
+     "Other",
+     "6-12",
+     "Public",
+     "3.6 km north"
+    ],
+    [
+     "Uplands Elementary",
+     "Elementary",
+     "K-6",
+     "Public",
+     "4.1 km north"
+    ],
+    [
+     "Alice Brown Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.3 km north"
+    ],
+    [
+     "East Kensington Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.8 km west"
+    ],
+    [
+     "Simonds Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "4.9 km north"
+    ],
+    [
+     "U-Connect",
+     "Other",
+     "K-12",
+     "Public",
+     "4.9 km north"
+    ],
+    [
+     "H D Stafford Middle",
+     "Middle",
+     "6-8",
+     "Public",
+     "5.0 km north"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 5 km from Glenwood Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 5 km from Glenwood Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "James Hill Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "5.0 km north-east"
+    ],
+    [
+     "Murrayville Academy",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "5.1 km north"
+    ],
+    [
+     "Blacklock Fine Arts Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "5.5 km north"
+    ],
+    [
+     "Langley Fundamental Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "5.7 km north"
+    ],
+    [
+     "Nicomekl Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "5.9 km north"
+    ],
+    [
+     "Credo Christian Schools",
+     "Other",
+     "K-12",
+     "Independent",
+     "5.9 km north"
+    ],
+    [
+     "Douglas Park Community",
+     "Elementary",
+     "K-5",
+     "Public",
+     "6.1 km north"
+    ],
+    [
+     "Wix-Brown Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "6.2 km east"
+    ],
+    [
+     "Langley Christian School",
+     "Other",
+     "K-12",
+     "Independent",
+     "6.3 km north-east"
+    ],
+    [
+     "Choices Program",
+     "Secondary",
+     "10-12",
+     "Public",
+     "6.6 km north"
+    ],
+    [
+     "Langley Education Centre",
+     "Secondary",
+     "10-12",
+     "Public",
+     "6.6 km north"
+    ],
+    [
+     "Whytecliff Agile Learning Centre-Langley",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "6.7 km north"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -185,7 +389,7 @@
     ],
     [
      {
-      "t": "Walk to Glenwood Elementary from the home and check the crossings, sidewalks and lighting on the way."
+      "t": "Look at St Catherines School, the nearest other elementary school, 1.8 km north-west of Glenwood Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

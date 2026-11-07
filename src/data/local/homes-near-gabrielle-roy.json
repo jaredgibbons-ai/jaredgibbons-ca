@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Gabrielle-Roy | Prices",
-  "description": "Search homes for sale near Gabrielle-Roy in Surrey. See listings that mention the school, nearby schools, catchment checks and sold prices for the area.",
+  "description": "Search homes for sale near Gabrielle-Roy in Surrey. See listings that name the school, nearby schools and what to check on the catchment before you offer.",
   "h1": "Homes for Sale Near Gabrielle-Roy"
  },
  "breadcrumbs": [
@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Gabrielle-Roy catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Conseil scolaire francophone School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Conseil scolaire francophone School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Gabrielle-Roy home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Gabrielle-Roy. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names Gabrielle-Roy, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Gabrielle-Roy?",
+   "a": "In a straight line, the closest schools in the provincial list are W E Kinvig Elementary (0.3 km north-east), St Bernadette (0.7 km south) and Martha Jane Norris Elementary (0.7 km south-west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Gabrielle-Roy in the listing, then check the sold prices within 2 km of the school.",
+   "text": "Use the search below to see homes for sale that name Gabrielle-Roy in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Gabrielle-Roy, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Gabrielle-Roy, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,225 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Princess Margaret Secondary",
+      "t": "Homes for sale near Princess Margaret Secondary (secondary school, about 0.8 km north-west)",
       "h": "/homes-near-princess-margaret-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 0.8 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Henry Bose Elementary",
+      "t": "Homes for sale near Henry Bose Elementary (elementary school, about 0.9 km south-east)",
       "h": "/homes-near-henry-bose-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.9 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Tamanawis Secondary",
+      "t": "Homes for sale near Tamanawis Secondary (secondary school, about 1.3 km south-west)",
       "h": "/homes-near-tamanawis-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.3 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Gabrielle-Roy",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "29 schools in the provincial school list sit within 3 km of Gabrielle-Roy in a straight line (22 elementary, 6 secondary, 1 other; 5 independent). The closest is W E Kinvig Elementary, 0.3 km away, and the farthest on this list is Newton Elementary, 2.4 km away. By type, the nearest secondary school is Princess Margaret Secondary (0.8 km); the nearest independent school is St Bernadette (0.7 km); the nearest school listing a French Immersion program is Ecole Panorama Ridge Secondary (1.1 km).",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Gabrielle-Roy",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "W E Kinvig Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.3 km north-east"
+    ],
+    [
+     "St Bernadette",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "0.7 km south"
+    ],
+    [
+     "Martha Jane Norris Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.7 km south-west"
+    ],
+    [
+     "Princess Margaret Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "0.8 km north-west"
+    ],
+    [
+     "Henry Bose Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km south-east"
+    ],
+    [
+     "Ecole Panorama Ridge Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.1 km south"
+    ],
+    [
+     "Surrey Muslim School",
+     "Elementary",
+     "K-6",
+     "Independent",
+     "1.2 km north-east"
+    ],
+    [
+     "Tamanawis Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.3 km south-west"
+    ],
+    [
+     "Dr F D Sinclair Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km north-west"
+    ],
+    [
+     "North Ridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km south"
+    ],
+    [
+     "Panorama Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km south-west"
+    ],
+    [
+     "iLearn Secondary School Society",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "1.6 km south-east"
+    ],
+    [
+     "Khalsa School Newton",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.6 km west"
+    ],
+    [
+     "Hyland Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km east"
+    ],
+    [
+     "Guru Angad Dev School",
+     "Other",
+     "K-11",
+     "Independent",
+     "1.7 km north"
+    ],
+    [
+     "Beaver Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km south-west"
+    ],
+    [
+     "Cougar Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km west"
+    ],
+    [
+     "Georges Vanier Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km east"
+    ],
+    [
+     "Boundary Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km south-west"
+    ],
+    [
+     "Frank Hurt Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.2 km north-east"
+    ],
+    [
+     "Strawberry Hill Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km north-west"
+    ],
+    [
+     "J T Brown Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km south-west"
+    ],
+    [
+     "McLeod Road Traditional",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km south-east"
+    ],
+    [
+     "M B Sanford Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km east"
+    ],
+    [
+     "Newton Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km north"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -181,11 +378,6 @@
     [
      {
       "t": "View the home on a school day. Drop-off and pick-up near Gabrielle-Roy change the street more than a weekend viewing shows."
-     }
-    ],
-    [
-     {
-      "t": "Walk to Gabrielle-Roy from the home and check the crossings, sidewalks and lighting on the way."
      }
     ]
    ],

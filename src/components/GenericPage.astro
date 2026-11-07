@@ -151,7 +151,7 @@ if (photos.length) {
 
 // Every content page shows three Google review excerpts (assigned per page in src/data/review-assign.json, no two pages share the same three).
 // Archive pages that had no review block, and pages built from the local layer alone, get one, placed before the end-of-page link lists.
-const NO_REVIEWS = new Set(['404', 'privacy', 'subscribe-to-our-newsletter', 'contact', 'reviews', 'data-and-methodology', 'photo-credits']);
+const NO_REVIEWS = new Set(['404', 'privacy', 'subscribe-to-our-newsletter', 'contact', 'reviews', 'photo-credits']);
 if (!NO_REVIEWS.has(page.slug) && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.splice(page.blocks.length - endCount, 0, { t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
 
 // Neighbourhood-guide hubs: the map sits straight under the H1 (no photo, no "map" heading), so the page opens on the thing readers came for.

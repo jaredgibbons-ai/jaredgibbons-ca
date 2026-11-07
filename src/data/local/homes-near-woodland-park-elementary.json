@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Woodland Park Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Woodland Park Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Woodland Park Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Woodland Park Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Woodland Park Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are St Matthew's Elementary (0.7 km south-east), Holy Cross Regional High School (0.8 km south-east) and Surrey Christian School (0.9 km east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Woodland Park Elementary in the listing, then check the sold prices within 1 km of the school.",
+   "text": "Use the search below to see homes for sale that name Woodland Park Elementary in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Woodland Park Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Woodland Park Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,211 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Serpentine Heights Elementary",
+      "t": "Homes for sale near Serpentine Heights Elementary (elementary school, about 1.0 km north-east)",
       "h": "/homes-near-serpentine-heights-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.0 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Berkshire Park Elementary",
+      "t": "Homes for sale near Berkshire Park Elementary (elementary school, about 1.1 km north-west)",
       "h": "/homes-near-berkshire-park-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.1 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near North Surrey Secondary",
+      "t": "Homes for sale near North Surrey Secondary (secondary school, about 1.1 km north)",
       "h": "/homes-near-north-surrey-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.1 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Woodland Park Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "23 schools in the provincial school list sit within 3 km of Woodland Park Elementary in a straight line (16 elementary, 5 secondary, 2 other; 5 independent). The closest is St Matthew's Elementary, 0.7 km away, and the farthest on this list is Janice Churchill Elementary, 2.9 km away. By type, the nearest secondary school is Holy Cross Regional High School (0.8 km); the nearest school listing a French Immersion program is North Surrey Secondary (1.1 km). Other elementary schools close by: St Matthew's Elementary (0.7 km south-east), Serpentine Heights Elementary (1.0 km north-east), Berkshire Park Elementary (1.1 km north-west), Frost Road Elementary (1.2 km south-east), William F. Davidson Elementary (1.9 km north). The nearest school teaching the same grades (K-7) is St Matthew's Elementary, 0.7 km south-east of Woodland Park Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Woodland Park Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "St Matthew's Elementary",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "0.7 km south-east"
+    ],
+    [
+     "Holy Cross Regional High School",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "0.8 km south-east"
+    ],
+    [
+     "Surrey Christian School",
+     "Other",
+     "K-12",
+     "Independent",
+     "0.9 km east"
+    ],
+    [
+     "Serpentine Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.0 km north-east"
+    ],
+    [
+     "Berkshire Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km north-west"
+    ],
+    [
+     "North Surrey Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.1 km north"
+    ],
+    [
+     "Frost Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km south-east"
+    ],
+    [
+     "William F. Davidson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km north"
+    ],
+    [
+     "Mountainview Montessori",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km north-west"
+    ],
+    [
+     "Walnut Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km south-east"
+    ],
+    [
+     "Johnston Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.9 km north-west"
+    ],
+    [
+     "Coyote Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km south"
+    ],
+    [
+     "Gobind Sarvar School",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.1 km east"
+    ],
+    [
+     "Maple Green Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.1 km south-west"
+    ],
+    [
+     "Bonaccord Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km north-west"
+    ],
+    [
+     "Fleetwood Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.3 km south"
+    ],
+    [
+     "Cornerstone Montessori School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.5 km south-west"
+    ],
+    [
+     "William Watson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km south-east"
+    ],
+    [
+     "Harold Bishop Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km north"
+    ],
+    [
+     "Coast Meridian Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km south-east"
+    ],
+    [
+     "Green Timbers Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.8 km west"
+    ],
+    [
+     "Enver Creek Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.9 km south-west"
+    ],
+    [
+     "Janice Churchill Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km south-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +368,7 @@
     ],
     [
      {
-      "t": "Walk to Woodland Park Elementary from the home and check the crossings, sidewalks and lighting on the way."
+      "t": "Look at St Matthew's Elementary, the nearest other elementary school, 0.7 km south-east of Woodland Park Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

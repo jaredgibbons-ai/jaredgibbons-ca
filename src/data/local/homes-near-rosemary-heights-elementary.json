@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Rosemary Heights Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Rosemary Heights Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Rosemary Heights Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Rosemary Heights Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Rosemary Heights Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Morgan Elementary (0.5 km south-east), Sunnyside Elementary (1.7 km south-east) and Southridge School (2.2 km south-east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions Rosemary Heights Elementary, followed by what homes within 1 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions Rosemary Heights Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Rosemary Heights Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Rosemary Heights Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,197 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Semiahmoo Trail Elementary",
+      "t": "Homes for sale near Semiahmoo Trail Elementary (elementary school, about 2.2 km south-west)",
       "h": "/homes-near-semiahmoo-trail-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 2.2 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Star of the Sea",
+      "t": "Homes for sale near Star of the Sea (elementary school, about 2.6 km south)",
       "h": "/homes-near-star-of-the-sea.html"
-     },
-     {
-      "t": "(elementary school, about 2.6 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near White Rock Christian Academy",
+      "t": "Homes for sale near White Rock Christian Academy (school, about 2.7 km south)",
       "h": "/homes-near-white-rock-christian-academy.html"
-     },
-     {
-      "t": "(school, about 2.7 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Rosemary Heights Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "6 schools in the provincial school list sit within 3 km of Rosemary Heights Elementary in a straight line (4 elementary, 2 other; 3 independent). The closest is Morgan Elementary, 0.5 km away, and the farthest on this list is White Rock Christian Academy, 2.7 km away. By type, the nearest elementary school is Morgan Elementary (0.5 km); the nearest independent school is Southridge School (2.2 km). Other elementary schools close by: Morgan Elementary (0.5 km south-east), Sunnyside Elementary (1.7 km south-east), Semiahmoo Trail Elementary (2.2 km south-west), Star of the Sea (2.6 km south). The nearest school teaching the same grades (K-7) is Morgan Elementary, 0.5 km south-east of Rosemary Heights Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Rosemary Heights Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Morgan Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.5 km south-east"
+    ],
+    [
+     "Sunnyside Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km south-east"
+    ],
+    [
+     "Southridge School",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.2 km south-east"
+    ],
+    [
+     "Semiahmoo Trail Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km south-west"
+    ],
+    [
+     "Star of the Sea",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.6 km south"
+    ],
+    [
+     "White Rock Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.7 km south"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 3 km from Rosemary Heights Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 3 km from Rosemary Heights Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Jessie Lee Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.1 km south"
+    ],
+    [
+     "Newbridge Academy",
+     "Other",
+     "K, 1, 2, 3, 4, 5, 8, 9",
+     "Independent",
+     "3.4 km south"
+    ],
+    [
+     "Edgewood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.5 km south-east"
+    ],
+    [
+     "Grandview Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "3.7 km south-east"
+    ],
+    [
+     "Pacific Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.8 km south-east"
+    ],
+    [
+     "Semiahmoo Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "3.9 km south-west"
+    ],
+    [
+     "H T Thrift Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.0 km south"
+    ],
+    [
+     "Earl Marriott Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "4.0 km south"
+    ],
+    [
+     "Chantrell Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.2 km south-west"
+    ],
+    [
+     "Bayridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.6 km south-west"
+    ],
+    [
+     "Peace Arch Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.7 km south"
+    ],
+    [
+     "Elgin Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "4.7 km south-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -185,7 +354,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to Rosemary Heights Elementary and note the crossings, sidewalks and hills."
+      "t": "Look at Morgan Elementary, the nearest other elementary school, 0.5 km south-east of Rosemary Heights Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

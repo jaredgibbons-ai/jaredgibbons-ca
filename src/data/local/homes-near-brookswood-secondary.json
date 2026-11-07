@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Brookswood Secondary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Brookswood Secondary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Brookswood Secondary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names Brookswood Secondary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Brookswood Secondary?",
+   "a": "In a straight line, the closest schools in the provincial list are Langley Fundamental Middle/Secondary Sch (1.1 km north-east), Belmont Elementary (1.2 km west) and Noel Booth Elementary (1.4 km south-west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Brookswood Secondary. Under it are the prices homes sold for within 2 km of the school.",
+   "text": "The search below lists homes for sale whose listing names Brookswood Secondary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Brookswood Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Brookswood Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,42 +145,252 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Belmont Elementary",
+      "t": "Homes for sale near Belmont Elementary (elementary school, about 1.2 km west)",
       "h": "/homes-near-belmont-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.2 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Noel Booth Elementary",
+      "t": "Homes for sale near Noel Booth Elementary (elementary school, about 1.4 km south-west)",
       "h": "/homes-near-noel-booth-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.4 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Simonds Elementary",
+      "t": "Homes for sale near Simonds Elementary (elementary school, about 2.5 km north-west)",
       "h": "/homes-near-simonds-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 2.5 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near James Hill Elementary",
+      "t": "Homes for sale near James Hill Elementary (elementary school, about 3.0 km north-east)",
       "h": "/homes-near-james-hill-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 3.0 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Brookswood Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "13 schools in the provincial school list sit within 3 km of Brookswood Secondary in a straight line (10 elementary, 2 other, 1 middle; 2 independent). The closest is Langley Fundamental Middle/Secondary Sch, 1.1 km away, and the farthest on this list is James Hill Elementary, 3.0 km away. By type, the nearest elementary school is Belmont Elementary (1.2 km); the nearest independent school is St Catherines School (1.8 km); the nearest school listing a French Immersion program is Belmont Elementary (1.2 km).",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Brookswood Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Langley Fundamental Middle/Secondary Sch",
+     "Other",
+     "6-12",
+     "Public",
+     "1.1 km north-east"
+    ],
+    [
+     "Belmont Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km west"
+    ],
+    [
+     "Noel Booth Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km south-west"
+    ],
+    [
+     "Uplands Elementary",
+     "Elementary",
+     "K-6",
+     "Public",
+     "1.5 km north"
+    ],
+    [
+     "St Catherines School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.8 km south-west"
+    ],
+    [
+     "Alice Brown Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km north-west"
+    ],
+    [
+     "H D Stafford Middle",
+     "Middle",
+     "6-8",
+     "Public",
+     "2.4 km north"
+    ],
+    [
+     "Simonds Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.5 km north-west"
+    ],
+    [
+     "U-Connect",
+     "Other",
+     "K-12",
+     "Public",
+     "2.5 km north-west"
+    ],
+    [
+     "Murrayville Academy",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.6 km north-east"
+    ],
+    [
+     "Glenwood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km south"
+    ],
+    [
+     "Blacklock Fine Arts Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.9 km north"
+    ],
+    [
+     "James Hill Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "3.0 km north-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 3 km from Brookswood Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 3 km from Brookswood Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Langley Fundamental Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "3.2 km north-east"
+    ],
+    [
+     "Credo Christian Schools",
+     "Other",
+     "K-12",
+     "Independent",
+     "3.4 km north-east"
+    ],
+    [
+     "Nicomekl Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "3.5 km north-west"
+    ],
+    [
+     "Douglas Park Community",
+     "Elementary",
+     "K-5",
+     "Public",
+     "3.5 km north"
+    ],
+    [
+     "Choices Program",
+     "Secondary",
+     "10-12",
+     "Public",
+     "4.0 km north"
+    ],
+    [
+     "Langley Education Centre",
+     "Secondary",
+     "10-12",
+     "Public",
+     "4.0 km north"
+    ],
+    [
+     "Whytecliff Agile Learning Centre-Langley",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "4.0 km north"
+    ],
+    [
+     "Langley Online and Distributed Learning",
+     "Secondary",
+     "10-12",
+     "Public",
+     "4.1 km north"
+    ],
+    [
+     "Langley Secondary",
+     "Secondary",
+     "9-12",
+     "Public",
+     "4.1 km north"
+    ],
+    [
+     "Langley Christian School",
+     "Other",
+     "K-12",
+     "Independent",
+     "4.5 km north-east"
+    ],
+    [
+     "Peterson Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "5.4 km east"
+    ],
+    [
+     "East Kensington Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "5.4 km west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -194,11 +409,6 @@
     [
      {
       "t": "Visit on a school day at drop-off and pick-up. Traffic and parking near Brookswood Secondary are very different at 8:30 am and 3 pm than on a Sunday viewing."
-     }
-    ],
-    [
-     {
-      "t": "Walk the route to Brookswood Secondary the way a child would, and count the crossings and sidewalks."
      }
     ]
    ],

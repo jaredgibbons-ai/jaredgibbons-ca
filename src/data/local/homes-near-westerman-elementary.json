@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Westerman Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Westerman Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Westerman Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Westerman Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Westerman Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Strawberry Hill Elementary (0.4 km east), Jarvis Traditional Elementary (0.7 km west) and Cougar Creek Elementary (1.2 km south).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions Westerman Elementary, followed by what homes within 1 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions Westerman Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Westerman Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Westerman Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,225 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Strawberry Hill Elementary",
+      "t": "Homes for sale near Strawberry Hill Elementary (elementary school, about 0.4 km east)",
       "h": "/homes-near-strawberry-hill-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.4 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Cougar Creek Elementary",
+      "t": "Homes for sale near Cougar Creek Elementary (elementary school, about 1.2 km south)",
       "h": "/homes-near-cougar-creek-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.2 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near McCloskey Elementary",
+      "t": "Homes for sale near McCloskey Elementary (elementary school, about 1.6 km north-west)",
       "h": "/homes-near-mccloskey-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.6 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Westerman Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "33 schools in the provincial school list sit within 3 km of Westerman Elementary in a straight line (22 elementary, 8 secondary, 3 other; 6 independent). The closest is Strawberry Hill Elementary, 0.4 km away, and the farthest on this list is Surrey Muslim School, 2.5 km away. By type, the nearest secondary school is Princess Margaret Secondary (1.6 km); the nearest independent school is Khalsa School Newton (1.4 km); the nearest school listing a French Immersion program is Chalmers Elementary (1.8 km). Other elementary schools close by: Strawberry Hill Elementary (0.4 km east), Jarvis Traditional Elementary (0.7 km west), Cougar Creek Elementary (1.2 km south), Dr F D Sinclair Elementary (1.3 km east), Kennedy Trail Elementary (1.4 km north). The nearest school teaching the same grades (K-7) is Strawberry Hill Elementary, 0.4 km east of Westerman Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Westerman Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Strawberry Hill Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.4 km east"
+    ],
+    [
+     "Jarvis Traditional Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.7 km west"
+    ],
+    [
+     "Cougar Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km south"
+    ],
+    [
+     "Dr F D Sinclair Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.3 km east"
+    ],
+    [
+     "Kennedy Trail Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km north"
+    ],
+    [
+     "Khalsa School Newton",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.4 km south"
+    ],
+    [
+     "McCloskey Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km north-west"
+    ],
+    [
+     "Princess Margaret Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.6 km south-east"
+    ],
+    [
+     "Chalmers Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km west"
+    ],
+    [
+     "Delta Continuing Education",
+     "Secondary",
+     "10, 12",
+     "Public",
+     "1.8 km north-west"
+    ],
+    [
+     "Burnsview Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.0 km west"
+    ],
+    [
+     "North Delta Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.0 km north-west"
+    ],
+    [
+     "Heath Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km south-west"
+    ],
+    [
+     "Cougar Canyon Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km south-west"
+    ],
+    [
+     "Seaquam Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.1 km south-west"
+    ],
+    [
+     "Sikh Academy",
+     "Other",
+     "K-8",
+     "Independent",
+     "2.3 km north-east"
+    ],
+    [
+     "Tamanawis Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.3 km south"
+    ],
+    [
+     "Beaver Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km south"
+    ],
+    [
+     "Richardson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km north-west"
+    ],
+    [
+     "Hellings Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km north-west"
+    ],
+    [
+     "W E Kinvig Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km south-east"
+    ],
+    [
+     "Martha Jane Norris Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km south-east"
+    ],
+    [
+     "Gabrielle-Roy",
+     "Other",
+     "K-12",
+     "Public",
+     "2.5 km south-east"
+    ],
+    [
+     "Newton Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km north-east"
+    ],
+    [
+     "Surrey Muslim School",
+     "Elementary",
+     "K-6",
+     "Independent",
+     "2.5 km east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +382,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to Westerman Elementary and note the crossings, sidewalks and hills."
+      "t": "Look at Strawberry Hill Elementary, the nearest other elementary school, 0.4 km east of Westerman Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

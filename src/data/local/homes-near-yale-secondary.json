@@ -30,7 +30,7 @@
   },
   {
    "q": "How does the Yale Secondary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Yale Secondary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names Yale Secondary, so a nearby home that leaves the name out will not show.",
    "gen": "nsrch"
   },
   {
@@ -41,6 +41,11 @@
   {
    "q": "How fast do homes sell near Yale Secondary?",
    "a": "The median was 25 days on the market, closing at 97.6% of the list price, with 7% of sales above the list price for the 365 homes within 2 km.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Yale Secondary?",
+   "a": "In a straight line, the closest schools in the provincial list are William A. Fraser Middle School (0.2 km south), McMillan Elementary (0.5 km south-east) and Margaret Stenersen Elementary (1.2 km north).",
    "gen": "nsrch"
   }
  ],
@@ -145,7 +150,7 @@
   },
   {
    "t": "p",
-   "text": "Where those sales were: Abbotsford East (242), Central Abbotsford (114), Poplar (8). The radius can cross neighbourhood lines, so the sub-areas show which part of town the sales came from.",
+   "text": "Where those sales were: Abbotsford East (242), Central Abbotsford (114), Poplar (8).",
    "gen": "nsrch"
   },
   {
@@ -289,33 +294,148 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Robert Bateman Secondary",
+      "t": "Homes for sale near Robert Bateman Secondary (secondary school, about 2.6 km north)",
       "h": "/homes-near-robert-bateman-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 2.6 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Godson Elementary",
+      "t": "Homes for sale near Godson Elementary (elementary school, about 3.2 km west)",
       "h": "/homes-near-godson-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 3.2 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near W J Mouat Secondary",
+      "t": "Homes for sale near W J Mouat Secondary (secondary school, about 5.2 km west)",
       "h": "/homes-near-w-j-mouat-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 5.2 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Yale Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "14 schools in the provincial school list sit within 3 km of Yale Secondary in a straight line (6 elementary, 3 middle, 3 other, 2 secondary; 2 independent). The closest is William A. Fraser Middle School, 0.2 km away, and the farthest on this list is Abbotsford Middle School, 2.9 km away. By type, the nearest elementary school is McMillan Elementary (0.5 km); the nearest secondary school is Robert Bateman Secondary (2.6 km); the nearest independent school is Abbotsford Christian School (1.9 km). Other secondary schools close by: Robert Bateman Secondary (2.6 km north), Abbotsford Senior Secondary School (2.6 km west). The nearest school teaching the same grades (9-12) is Robert Bateman Secondary, 2.6 km north of Yale Secondary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Yale Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "William A. Fraser Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "0.2 km south"
+    ],
+    [
+     "McMillan Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "0.5 km south-east"
+    ],
+    [
+     "Margaret Stenersen Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.2 km north"
+    ],
+    [
+     "Abbotsford Virtual School",
+     "Other",
+     "K-12",
+     "Public",
+     "1.5 km west"
+    ],
+    [
+     "Alexander Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.8 km west"
+    ],
+    [
+     "Abbotsford Christian School",
+     "Other",
+     "K-12",
+     "Independent",
+     "1.9 km north-east"
+    ],
+    [
+     "Mountain Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.2 km east"
+    ],
+    [
+     "Dr Thomas A Swift Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.2 km north"
+    ],
+    [
+     "Prince Charles Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.5 km north-east"
+    ],
+    [
+     "Robert Bateman Secondary",
+     "Secondary",
+     "9-12",
+     "Public",
+     "2.6 km north"
+    ],
+    [
+     "Abbotsford Senior Secondary School",
+     "Secondary",
+     "9-12",
+     "Public",
+     "2.6 km west"
+    ],
+    [
+     "West Coast Adventist Online School",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.7 km south-west"
+    ],
+    [
+     "Clayburn Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "2.8 km north"
+    ],
+    [
+     "Abbotsford Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "2.9 km west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -338,12 +458,12 @@
     ],
     [
      {
-      "t": "Walk to Yale Secondary from the home and check the crossings, sidewalks and lighting on the way."
+      "t": "Compare price with similar homes farther from the school. The median house within 2 km of Yale Secondary was $1,019,100, so check whether size and age explain a gap before you pay for the location."
      }
     ],
     [
      {
-      "t": "Compare price with similar homes farther from the school. The median house within 2 km of Yale Secondary was $1,019,100, so check whether size and age explain a gap before you pay for the location."
+      "t": "Look at Robert Bateman Secondary, the nearest other secondary school, 2.6 km north of Yale Secondary. Compare the two when you check which school serves the address."
      }
     ]
    ],

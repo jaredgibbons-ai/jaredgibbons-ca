@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the James Kennedy Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the James Kennedy Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names James Kennedy Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names James Kennedy Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to James Kennedy Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Topham Elementary (0.6 km east), Walnut Grove Secondary (0.6 km west) and West Langley Elementary (0.9 km north).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names James Kennedy Elementary. Under it are the prices homes sold for within 1 km of the school.",
+   "text": "The search below lists homes for sale whose listing names James Kennedy Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names James Kennedy Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names James Kennedy Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,33 +145,148 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Topham Elementary",
+      "t": "Homes for sale near Topham Elementary (elementary school, about 0.6 km east)",
       "h": "/homes-near-topham-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.6 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Walnut Grove Secondary",
+      "t": "Homes for sale near Walnut Grove Secondary (secondary school, about 0.6 km west)",
       "h": "/homes-near-walnut-grove-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 0.6 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near West Langley Elementary",
+      "t": "Homes for sale near West Langley Elementary (elementary school, about 0.9 km north)",
       "h": "/homes-near-west-langley-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.9 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of James Kennedy Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "14 schools in the provincial school list sit within 3 km of James Kennedy Elementary in a straight line (11 elementary, 1 secondary, 1 middle, 1 other; 1 independent). The closest is Topham Elementary, 0.6 km away, and the farthest on this list is Donna Gabriel Robins Elementary, 2.8 km away. By type, the nearest secondary school is Walnut Grove Secondary (0.6 km); the nearest independent school is The King's School (2.7 km); the nearest school listing a French Immersion program is Walnut Grove Secondary (0.6 km). Other elementary schools close by: Topham Elementary (0.6 km east), West Langley Elementary (0.9 km north), des Voyageurs (1.0 km south-east), Alex Hope Elementary (1.2 km south), Gordon Greenwood Elementary (1.4 km west). The nearest school teaching the same grades (K-7) is Topham Elementary, 0.6 km east of James Kennedy Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of James Kennedy Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Topham Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.6 km east"
+    ],
+    [
+     "Walnut Grove Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "0.6 km west"
+    ],
+    [
+     "West Langley Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km north"
+    ],
+    [
+     "des Voyageurs",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.0 km south-east"
+    ],
+    [
+     "Alex Hope Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km south"
+    ],
+    [
+     "Gordon Greenwood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km west"
+    ],
+    [
+     "Lynn Fripps Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.7 km south"
+    ],
+    [
+     "Yorkson Creek Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "1.8 km south-west"
+    ],
+    [
+     "Dorothy Peacock Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km west"
+    ],
+    [
+     "Willoughby Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.4 km south-west"
+    ],
+    [
+     "Richard Bulpitt Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.6 km south"
+    ],
+    [
+     "Josette Dandurand Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.7 km south-west"
+    ],
+    [
+     "The King's School",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.7 km south-east"
+    ],
+    [
+     "Donna Gabriel Robins Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.8 km south-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -189,7 +309,7 @@
     ],
     [
      {
-      "t": "Walk the route to James Kennedy Elementary the way a child would, and count the crossings and sidewalks."
+      "t": "Look at Topham Elementary, the nearest other elementary school, 0.6 km east of James Kennedy Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Langley Meadows Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Langley Meadows Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Langley Meadows Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Langley Meadows Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Langley Meadows Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Crescent Heights Academy (0.7 km west), Katzie Elementary (1.3 km north-west) and R C Garnett Demonstration Elementary (1.3 km north-east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Langley Meadows Elementary. Under it are the prices homes sold for within 1 km of the school.",
+   "text": "The search below lists homes for sale whose listing names Langley Meadows Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Langley Meadows Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Langley Meadows Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,33 +145,169 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Crescent Heights Academy",
+      "t": "Homes for sale near Crescent Heights Academy (school, about 0.7 km west)",
       "h": "/homes-near-crescent-heights-academy.html"
-     },
-     {
-      "t": "(school, about 0.7 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Latimer Road Elementary",
+      "t": "Homes for sale near Katzie Elementary (elementary school, about 1.3 km north-west)",
+      "h": "/homes-near-katzie-elementary.html"
+     }
+    ],
+    [
+     {
+      "t": "Homes for sale near Latimer Road Elementary (elementary school, about 1.7 km south-west)",
       "h": "/homes-near-latimer-road-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.7 km away)"
-     }
-    ],
-    [
-     {
-      "t": "Homes for sale near Hazelgrove Elementary",
-      "h": "/homes-near-hazelgrove-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.9 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Langley Meadows Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "17 schools in the provincial school list sit within 3 km of Langley Meadows Elementary in a straight line (11 elementary, 3 secondary, 2 other, 1 middle; 3 independent). The closest is Crescent Heights Academy, 0.7 km away, and the farthest on this list is Don Christian Elementary, 3.0 km away. By type, the nearest elementary school is Katzie Elementary (1.3 km); the nearest secondary school is Whytecliff Agile Learning Centre-Langley (2.2 km); the nearest school listing a French Immersion program is Sunrise Ridge Elementary (2.6 km). Other elementary schools close by: Katzie Elementary (1.3 km north-west), R C Garnett Demonstration Elementary (1.3 km north-east), Latimer Road Elementary (1.7 km south-west), Hazelgrove Elementary (1.9 km north-west), Maddaugh Elementary (2.4 km north-west). The nearest school teaching the same grades (K-5) is R C Garnett Demonstration Elementary, 1.3 km north-east of Langley Meadows Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Langley Meadows Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Crescent Heights Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "0.7 km west"
+    ],
+    [
+     "Katzie Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.3 km north-west"
+    ],
+    [
+     "R C Garnett Demonstration Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.3 km north-east"
+    ],
+    [
+     "Latimer Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km south-west"
+    ],
+    [
+     "Hazelgrove Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km north-west"
+    ],
+    [
+     "Whytecliff Agile Learning Centre-Langley",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "2.2 km south-east"
+    ],
+    [
+     "Clayton Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.3 km north-west"
+    ],
+    [
+     "R E Mountain Secondary",
+     "Secondary",
+     "9-12",
+     "Public",
+     "2.4 km north"
+    ],
+    [
+     "Maddaugh Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km north-west"
+    ],
+    [
+     "Hillcrest Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km west"
+    ],
+    [
+     "Sunrise Ridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km south-west"
+    ],
+    [
+     "Nicomekl Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.6 km south"
+    ],
+    [
+     "Douglas Park Community",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.6 km south-east"
+    ],
+    [
+     "Peter Ewart Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "2.7 km north"
+    ],
+    [
+     "Bibleway Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.7 km south-west"
+    ],
+    [
+     "Regent Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.0 km north-west"
+    ],
+    [
+     "Don Christian Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.0 km west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -189,7 +330,7 @@
     ],
     [
      {
-      "t": "Walk the route to Langley Meadows Elementary the way a child would, and count the crossings and sidewalks."
+      "t": "Look at Katzie Elementary, the nearest other elementary school, 1.3 km north-west of Langley Meadows Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

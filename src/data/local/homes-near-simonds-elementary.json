@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Simonds Elementary | Prices",
-  "description": "Search homes for sale near Simonds Elementary in Langley. See listings that mention the school, nearby schools, catchment checks and sold prices for the area.",
+  "description": "Search homes for sale near Simonds Elementary in Langley. Find listings that name the school, plus nearby schools and what to check on the catchment.",
   "h1": "Homes for Sale Near Simonds Elementary"
  },
  "breadcrumbs": [
@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Simonds Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Simonds Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Simonds Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Simonds Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Simonds Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are H D Stafford Middle (0.6 km east), Alice Brown Elementary (0.7 km south) and Nicomekl Elementary (1.0 km north).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Simonds Elementary. Under it are the prices homes sold for within 1 km of the school.",
+   "text": "The search below lists homes for sale whose listing names Simonds Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Simonds Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Simonds Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,33 +145,239 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Nicomekl Elementary",
+      "t": "Homes for sale near Nicomekl Elementary (elementary school, about 1.0 km north)",
       "h": "/homes-near-nicomekl-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.0 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Douglas Park Community",
+      "t": "Homes for sale near Douglas Park Community (elementary school, about 1.6 km north-east)",
       "h": "/homes-near-douglas-park-community.html"
-     },
-     {
-      "t": "(elementary school, about 1.6 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Belmont Elementary",
+      "t": "Homes for sale near Belmont Elementary (elementary school, about 1.7 km south)",
       "h": "/homes-near-belmont-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.7 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Simonds Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "12 schools in the provincial school list sit within 3 km of Simonds Elementary in a straight line (8 elementary, 2 secondary, 1 middle, 1 other; 2 independent). The closest is H D Stafford Middle, 0.6 km away, and the farthest on this list is Murrayville Academy, 2.7 km away. By type, the nearest elementary school is Alice Brown Elementary (0.7 km); the nearest secondary school is Whytecliff Agile Learning Centre-Langley (2.1 km); the nearest independent school is Whytecliff Agile Learning Centre-Langley (2.1 km). Other elementary schools close by: Alice Brown Elementary (0.7 km south), Nicomekl Elementary (1.0 km north), Uplands Elementary (1.2 km south-east), Blacklock Fine Arts Elementary (1.3 km north-east), Douglas Park Community (1.6 km north-east). The nearest school teaching the same grades (K-5) is Nicomekl Elementary, 1.0 km north of Simonds Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Simonds Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "H D Stafford Middle",
+     "Middle",
+     "6-8",
+     "Public",
+     "0.6 km east"
+    ],
+    [
+     "Alice Brown Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.7 km south"
+    ],
+    [
+     "Nicomekl Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.0 km north"
+    ],
+    [
+     "Uplands Elementary",
+     "Elementary",
+     "K-6",
+     "Public",
+     "1.2 km south-east"
+    ],
+    [
+     "Blacklock Fine Arts Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.3 km north-east"
+    ],
+    [
+     "Douglas Park Community",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.6 km north-east"
+    ],
+    [
+     "Belmont Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km south"
+    ],
+    [
+     "Whytecliff Agile Learning Centre-Langley",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "2.1 km north-east"
+    ],
+    [
+     "Langley Fundamental Middle/Secondary Sch",
+     "Other",
+     "6-12",
+     "Public",
+     "2.5 km south-east"
+    ],
+    [
+     "Brookswood Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.5 km south-east"
+    ],
+    [
+     "Noel Booth Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km south"
+    ],
+    [
+     "Murrayville Academy",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.7 km east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 3 km from Simonds Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 3 km from Simonds Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Choices Program",
+     "Secondary",
+     "10-12",
+     "Public",
+     "3.1 km north-east"
+    ],
+    [
+     "Langley Education Centre",
+     "Secondary",
+     "10-12",
+     "Public",
+     "3.1 km north-east"
+    ],
+    [
+     "Latimer Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.1 km north-west"
+    ],
+    [
+     "Langley Online and Distributed Learning",
+     "Secondary",
+     "10-12",
+     "Public",
+     "3.2 km north-east"
+    ],
+    [
+     "Langley Secondary",
+     "Secondary",
+     "9-12",
+     "Public",
+     "3.2 km north-east"
+    ],
+    [
+     "St Catherines School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "3.2 km south"
+    ],
+    [
+     "Langley Fundamental Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "3.3 km east"
+    ],
+    [
+     "Credo Christian Schools",
+     "Other",
+     "K-12",
+     "Independent",
+     "3.5 km east"
+    ],
+    [
+     "Langley Meadows Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "3.7 km north"
+    ],
+    [
+     "Crescent Heights Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "3.7 km north"
+    ],
+    [
+     "Sunrise Ridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.8 km north-west"
+    ],
+    [
+     "Bibleway Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "3.9 km north-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -189,7 +400,7 @@
     ],
     [
      {
-      "t": "Walk the route to Simonds Elementary the way a child would, and count the crossings and sidewalks."
+      "t": "Look at Alice Brown Elementary, the nearest other elementary school, 0.7 km south of Simonds Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

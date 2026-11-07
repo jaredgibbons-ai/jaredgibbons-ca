@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Lord Tweedsmuir Secondary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Lord Tweedsmuir Secondary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Lord Tweedsmuir Secondary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names Lord Tweedsmuir Secondary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Lord Tweedsmuir Secondary?",
+   "a": "In a straight line, the closest schools in the provincial list are Don Christian Elementary (0.9 km east), Martha Currie Elementary (1.1 km south-east) and Cloverdale Catholic School (1.1 km south-west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions Lord Tweedsmuir Secondary, followed by what homes within 2 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions Lord Tweedsmuir Secondary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Lord Tweedsmuir Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Lord Tweedsmuir Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,183 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Don Christian Elementary",
+      "t": "Homes for sale near Don Christian Elementary (elementary school, about 0.9 km east)",
       "h": "/homes-near-don-christian-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.9 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Martha Currie Elementary",
+      "t": "Homes for sale near Martha Currie Elementary (elementary school, about 1.1 km south-east)",
       "h": "/homes-near-martha-currie-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.1 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Cloverdale Traditional",
+      "t": "Homes for sale near Cloverdale Traditional (elementary school, about 1.2 km south)",
       "h": "/homes-near-cloverdale-traditional.html"
-     },
-     {
-      "t": "(elementary school, about 1.2 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Lord Tweedsmuir Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "19 schools in the provincial school list sit within 3 km of Lord Tweedsmuir Secondary in a straight line (13 elementary, 4 secondary, 2 other; 3 independent). The closest is Don Christian Elementary, 0.9 km away, and the farthest on this list is Regent Road Elementary, 2.9 km away. By type, the nearest secondary school is Cloverdale Learning Centre (1.3 km); the nearest independent school is Cloverdale Catholic School (1.1 km); the nearest school listing a French Immersion program is Martha Currie Elementary (1.1 km). Other secondary schools close by: Cloverdale Learning Centre (1.3 km south-west), SD 36 Alternate Cloverdale LC (1.3 km south-west), Clayton Heights Secondary (2.3 km north-east), Ecole Salish Secondary (2.5 km north). The nearest school teaching the same grades (8-12) is Clayton Heights Secondary, 2.3 km north-east of Lord Tweedsmuir Secondary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Lord Tweedsmuir Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Don Christian Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km east"
+    ],
+    [
+     "Martha Currie Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km south-east"
+    ],
+    [
+     "Cloverdale Catholic School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.1 km south-west"
+    ],
+    [
+     "Cloverdale Traditional",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km south"
+    ],
+    [
+     "Traditional Learning Academy Online",
+     "Other",
+     "K-12",
+     "Independent",
+     "1.2 km south-west"
+    ],
+    [
+     "Cloverdale Learning Centre",
+     "Secondary",
+     "10-12",
+     "Public",
+     "1.3 km south-west"
+    ],
+    [
+     "SD 36 Alternate Cloverdale LC",
+     "Secondary",
+     "10-12",
+     "Public",
+     "1.3 km south-west"
+    ],
+    [
+     "Adams Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.3 km north"
+    ],
+    [
+     "George Greenaway Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km west"
+    ],
+    [
+     "Bibleway Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "1.4 km east"
+    ],
+    [
+     "Hillcrest Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km north-east"
+    ],
+    [
+     "Sunrise Ridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km east"
+    ],
+    [
+     "Clayton Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.3 km north-east"
+    ],
+    [
+     "Ecole Salish Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.5 km north"
+    ],
+    [
+     "Latimer Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km east"
+    ],
+    [
+     "Surrey Centre Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km west"
+    ],
+    [
+     "Hazelgrove Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km north-east"
+    ],
+    [
+     "A J McLellan Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km west"
+    ],
+    [
+     "Regent Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km north-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +340,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to Lord Tweedsmuir Secondary and note the crossings, sidewalks and hills."
+      "t": "Look at Cloverdale Learning Centre, the nearest other secondary school, 1.3 km south-west of Lord Tweedsmuir Secondary. Compare the two when you check which school serves the address."
      }
     ]
    ],

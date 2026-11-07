@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Kirkbride Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Kirkbride Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Kirkbride Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Kirkbride Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Kirkbride Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are L.A. Matheson Secondary (0.6 km north), Immaculate Conception School (0.8 km south-west) and Senator Reid Elementary (0.9 km east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Kirkbride Elementary. Under it are the prices homes sold for within 1 km of the school.",
+   "text": "The search below lists homes for sale whose listing names Kirkbride Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Kirkbride Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Kirkbride Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,225 @@
    "items": [
     [
      {
-      "t": "Homes for sale near L.A. Matheson Secondary",
+      "t": "Homes for sale near L.A. Matheson Secondary (secondary school, about 0.6 km north)",
       "h": "/homes-near-l-a-matheson-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 0.6 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Senator Reid Elementary",
+      "t": "Homes for sale near Senator Reid Elementary (elementary school, about 0.9 km east)",
       "h": "/homes-near-senator-reid-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.9 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Delview Secondary",
+      "t": "Homes for sale near Delview Secondary (secondary school, about 1.3 km west)",
       "h": "/homes-near-delview-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.3 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Kirkbride Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "28 schools in the provincial school list sit within 3 km of Kirkbride Elementary in a straight line (19 elementary, 7 secondary, 2 other; 4 independent). The closest is L.A. Matheson Secondary, 0.6 km away, and the farthest on this list is Old Yale Road Elementary, 2.8 km away. By type, the nearest elementary school is Immaculate Conception School (0.8 km); the nearest independent school is Immaculate Conception School (0.8 km); the nearest school listing a French Immersion program is Devon Gardens Elementary (2.1 km). Other elementary schools close by: Immaculate Conception School (0.8 km south-west), Senator Reid Elementary (0.9 km east), Cedar Hills Elementary (1.2 km north), David Brankin Elementary (1.3 km east), Royal Heights Elementary (1.4 km north-west). The nearest school teaching the same grades (K-7) is Immaculate Conception School, 0.8 km south-west of Kirkbride Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Kirkbride Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "L.A. Matheson Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "0.6 km north"
+    ],
+    [
+     "Immaculate Conception School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "0.8 km south-west"
+    ],
+    [
+     "Senator Reid Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km east"
+    ],
+    [
+     "Cedar Hills Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km north"
+    ],
+    [
+     "David Brankin Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.3 km east"
+    ],
+    [
+     "Delview Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.3 km west"
+    ],
+    [
+     "Royal Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km north-west"
+    ],
+    [
+     "Hellings Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km south-west"
+    ],
+    [
+     "Gibson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km west"
+    ],
+    [
+     "Continuing Ed SD36 (Invergarry)",
+     "Secondary",
+     "10-12",
+     "Public",
+     "1.5 km south-east"
+    ],
+    [
+     "Prince Charles Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km north"
+    ],
+    [
+     "Annieville Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km west"
+    ],
+    [
+     "Home Quest",
+     "Other",
+     "K-9",
+     "Public",
+     "1.7 km west"
+    ],
+    [
+     "Kennedy Trail Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km south"
+    ],
+    [
+     "Betty Huff Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km east"
+    ],
+    [
+     "Sikh Academy",
+     "Other",
+     "K-8",
+     "Independent",
+     "2.1 km south-east"
+    ],
+    [
+     "Devon Gardens Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.1 km west"
+    ],
+    [
+     "Delta Continuing Education",
+     "Secondary",
+     "10, 12",
+     "Public",
+     "2.2 km south-west"
+    ],
+    [
+     "Richardson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km south-west"
+    ],
+    [
+     "North Delta Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.4 km south-west"
+    ],
+    [
+     "A H P Matthew Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km east"
+    ],
+    [
+     "Cindrich Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km east"
+    ],
+    [
+     "McCloskey Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km south-west"
+    ],
+    [
+     "Khalsa Secondary School (Surrey)",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "2.7 km north"
+    ],
+    [
+     "Old Yale Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.8 km north-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +382,7 @@
     ],
     [
      {
-      "t": "Walk the route to Kirkbride Elementary the way a child would, and count the crossings and sidewalks."
+      "t": "Look at Immaculate Conception School, the nearest other elementary school, 0.8 km south-west of Kirkbride Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

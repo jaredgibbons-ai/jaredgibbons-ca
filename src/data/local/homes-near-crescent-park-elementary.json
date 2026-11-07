@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Crescent Park Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Crescent Park Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Crescent Park Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Crescent Park Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Crescent Park Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Ocean Cliff Elementary (1.1 km south-west), Laronde Elementary (1.3 km south-east) and Elgin Park Secondary (1.4 km east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions Crescent Park Elementary, followed by what homes within 1 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions Crescent Park Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Crescent Park Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Crescent Park Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,33 +145,190 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Ocean Cliff Elementary",
+      "t": "Homes for sale near Ocean Cliff Elementary (elementary school, about 1.1 km south-west)",
       "h": "/homes-near-ocean-cliff-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.1 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Elgin Park Secondary",
+      "t": "Homes for sale near Elgin Park Secondary (secondary school, about 1.4 km east)",
       "h": "/homes-near-elgin-park-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.4 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Chantrell Creek Elementary",
+      "t": "Homes for sale near Chantrell Creek Elementary (elementary school, about 1.8 km east)",
       "h": "/homes-near-chantrell-creek-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.8 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Crescent Park Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "5 schools in the provincial school list sit within 3 km of Crescent Park Elementary in a straight line (4 elementary, 1 secondary; 0 independent). The closest is Ocean Cliff Elementary, 1.1 km away, and the farthest on this list is Ray Shepherd Elementary, 2.3 km away. By type, the nearest secondary school is Elgin Park Secondary (1.4 km). Other elementary schools close by: Ocean Cliff Elementary (1.1 km south-west), Laronde Elementary (1.3 km south-east), Chantrell Creek Elementary (1.8 km east), Ray Shepherd Elementary (2.3 km south-east). The nearest school teaching the same grades (K-7) is Ocean Cliff Elementary, 1.1 km south-west of Crescent Park Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Crescent Park Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Ocean Cliff Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km south-west"
+    ],
+    [
+     "Laronde Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.3 km south-east"
+    ],
+    [
+     "Elgin Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.4 km east"
+    ],
+    [
+     "Chantrell Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km east"
+    ],
+    [
+     "Ray Shepherd Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km south-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 3 km from Crescent Park Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 3 km from Crescent Park Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Bayridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.2 km south-east"
+    ],
+    [
+     "Semiahmoo Trail Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.7 km east"
+    ],
+    [
+     "Semiahmoo Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "4.2 km east"
+    ],
+    [
+     "H T Thrift Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.2 km east"
+    ],
+    [
+     "Star of the Sea",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "4.5 km east"
+    ],
+    [
+     "White Rock Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "4.8 km east"
+    ],
+    [
+     "Newbridge Academy",
+     "Other",
+     "K, 1, 2, 3, 4, 5, 8, 9",
+     "Independent",
+     "4.9 km east"
+    ],
+    [
+     "Jessie Lee Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "5.3 km east"
+    ],
+    [
+     "White Rock Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "5.5 km south-east"
+    ],
+    [
+     "St John Paul II Academy",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "5.6 km south-east"
+    ],
+    [
+     "Rosemary Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "5.9 km north-east"
+    ],
+    [
+     "Morgan Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "6.0 km east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -189,7 +351,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to Crescent Park Elementary and note the crossings, sidewalks and hills."
+      "t": "Look at Ocean Cliff Elementary, the nearest other elementary school, 1.1 km south-west of Crescent Park Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

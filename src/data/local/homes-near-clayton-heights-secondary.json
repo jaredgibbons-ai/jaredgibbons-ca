@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Clayton Heights Secondary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Clayton Heights Secondary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Clayton Heights Secondary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names Clayton Heights Secondary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Clayton Heights Secondary?",
+   "a": "In a straight line, the closest schools in the provincial list are Hazelgrove Elementary (0.6 km east), Regent Road Elementary (0.9 km north) and Ecole Salish Secondary (1.0 km north-west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Clayton Heights Secondary in the listing, then check the sold prices within 2 km of the school.",
+   "text": "Use the search below to see homes for sale that name Clayton Heights Secondary in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Clayton Heights Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Clayton Heights Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,162 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Hazelgrove Elementary",
+      "t": "Homes for sale near Hazelgrove Elementary (elementary school, about 0.6 km east)",
       "h": "/homes-near-hazelgrove-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.6 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Katzie Elementary",
-      "h": "/homes-near-katzie-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.6 km away)"
-     }
-    ],
-    [
-     {
-      "t": "Homes for sale near Regent Road Elementary",
+      "t": "Homes for sale near Regent Road Elementary (elementary school, about 0.9 km north)",
       "h": "/homes-near-regent-road-elementary.html"
-     },
+     }
+    ],
+    [
      {
-      "t": "(elementary school, about 0.9 km away)"
+      "t": "Homes for sale near Adams Road Elementary (elementary school, about 1.2 km west)",
+      "h": "/homes-near-adams-road-elementary.html"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Clayton Heights Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "16 schools in the provincial school list sit within 3 km of Clayton Heights Secondary in a straight line (12 elementary, 2 secondary, 2 other; 2 independent). The closest is Hazelgrove Elementary, 0.6 km away, and the farthest on this list is R C Garnett Demonstration Elementary, 2.8 km away. By type, the nearest secondary school is Ecole Salish Secondary (1.0 km); the nearest independent school is Crescent Heights Academy (1.8 km); the nearest school listing a French Immersion program is Ecole Salish Secondary (1.0 km). Other secondary schools close by: Ecole Salish Secondary (1.0 km north-west), Lord Tweedsmuir Secondary (2.3 km south-west). The nearest school teaching the same grades (8-12) is Ecole Salish Secondary, 1.0 km north-west of Clayton Heights Secondary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Clayton Heights Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Hazelgrove Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.6 km east"
+    ],
+    [
+     "Regent Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km north"
+    ],
+    [
+     "Ecole Salish Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.0 km north-west"
+    ],
+    [
+     "Hillcrest Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.0 km south-west"
+    ],
+    [
+     "Adams Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km west"
+    ],
+    [
+     "Katzie Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.3 km east"
+    ],
+    [
+     "Don Christian Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km south-west"
+    ],
+    [
+     "Maddaugh Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km north-east"
+    ],
+    [
+     "Crescent Heights Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "1.8 km south-east"
+    ],
+    [
+     "Bibleway Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.0 km south"
+    ],
+    [
+     "Sunrise Ridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km south"
+    ],
+    [
+     "Latimer Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km south-east"
+    ],
+    [
+     "Lord Tweedsmuir Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.3 km south-west"
+    ],
+    [
+     "Langley Meadows Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.3 km south-east"
+    ],
+    [
+     "Martha Currie Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km south"
+    ],
+    [
+     "R C Garnett Demonstration Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.8 km east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +319,7 @@
     ],
     [
      {
-      "t": "Walk to Clayton Heights Secondary from the home and check the crossings, sidewalks and lighting on the way."
+      "t": "Look at Ecole Salish Secondary, the nearest other secondary school, 1.0 km north-west of Clayton Heights Secondary. Compare the two when you check which school serves the address."
      }
     ]
    ],

@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Guildford Park Secondary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Guildford Park Secondary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Guildford Park Secondary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names Guildford Park Secondary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Guildford Park Secondary?",
+   "a": "In a straight line, the closest schools in the provincial list are Mary Jane Shannon Elementary (0.4 km west), Ecole Riverdale Elementary (0.6 km north-east) and Hjorth Road Elementary (0.7 km south-east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Guildford Park Secondary in the listing, then check the sold prices within 2 km of the school.",
+   "text": "Use the search below to see homes for sale that name Guildford Park Secondary in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Guildford Park Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Guildford Park Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,218 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Mary Jane Shannon Elementary",
+      "t": "Homes for sale near Mary Jane Shannon Elementary (elementary school, about 0.4 km west)",
       "h": "/homes-near-mary-jane-shannon-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.4 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Hjorth Road Elementary",
+      "t": "Homes for sale near Hjorth Road Elementary (elementary school, about 0.7 km south-east)",
       "h": "/homes-near-hjorth-road-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.7 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Ellendale Elementary",
+      "t": "Homes for sale near Ellendale Elementary (elementary school, about 0.7 km north)",
       "h": "/homes-near-ellendale-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.7 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Guildford Park Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "24 schools in the provincial school list sit within 3 km of Guildford Park Secondary in a straight line (20 elementary, 4 secondary; 3 independent). The closest is Mary Jane Shannon Elementary, 0.4 km away, and the farthest on this list is Theresa Clarke Elementary, 3.0 km away. By type, the nearest secondary school is Honour Secondary School (1.8 km); the nearest independent school is Our Lady of Good Counsel (1.4 km); the nearest school listing a French Immersion program is Ecole Riverdale Elementary (0.6 km). Other secondary schools close by: Honour Secondary School (1.8 km west), Johnston Heights Secondary (2.2 km south-east), Kwantlen Park Secondary (2.9 km west), Fraser Heights Secondary (3.0 km east). The nearest school teaching the same grades (8-12) is Johnston Heights Secondary, 2.2 km south-east of Guildford Park Secondary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Guildford Park Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Mary Jane Shannon Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.4 km west"
+    ],
+    [
+     "Ecole Riverdale Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.6 km north-east"
+    ],
+    [
+     "Hjorth Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.7 km south-east"
+    ],
+    [
+     "Ellendale Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.7 km north"
+    ],
+    [
+     "Holly Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.8 km east"
+    ],
+    [
+     "Forsyth Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km west"
+    ],
+    [
+     "Our Lady of Good Counsel",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.4 km west"
+    ],
+    [
+     "Lena Shaw Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km south-west"
+    ],
+    [
+     "Honour Secondary School",
+     "Secondary",
+     "10-12",
+     "Independent",
+     "1.8 km west"
+    ],
+    [
+     "Iqra School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.9 km north"
+    ],
+    [
+     "Surrey Traditional",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km north-west"
+    ],
+    [
+     "James Ardiel Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km north-west"
+    ],
+    [
+     "Bonaccord Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km south-east"
+    ],
+    [
+     "Johnston Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.2 km south-east"
+    ],
+    [
+     "Mountainview Montessori",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km south-east"
+    ],
+    [
+     "Dogwood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km east"
+    ],
+    [
+     "Harold Bishop Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km east"
+    ],
+    [
+     "William F. Davidson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km south-east"
+    ],
+    [
+     "Erma Stephenson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km east"
+    ],
+    [
+     "Kwantlen Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.9 km west"
+    ],
+    [
+     "Simon Cunningham Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km south-west"
+    ],
+    [
+     "Fraser Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "3.0 km east"
+    ],
+    [
+     "K B Woodward Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.0 km west"
+    ],
+    [
+     "Theresa Clarke Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.0 km west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +375,7 @@
     ],
     [
      {
-      "t": "Walk to Guildford Park Secondary from the home and check the crossings, sidewalks and lighting on the way."
+      "t": "Look at Honour Secondary School, the nearest other secondary school, 1.8 km west of Guildford Park Secondary. Compare the two when you check which school serves the address."
      }
     ]
    ],

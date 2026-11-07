@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Donna Gabriel Robins Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Donna Gabriel Robins Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Donna Gabriel Robins Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Donna Gabriel Robins Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Donna Gabriel Robins Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Willoughby Elementary (0.6 km east), Peter Ewart Middle School (0.7 km west) and R E Mountain Secondary (0.8 km south-west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Donna Gabriel Robins Elementary in the listing, then check the sold prices within 1 km of the school.",
+   "text": "Use the search below to see homes for sale that name Donna Gabriel Robins Elementary in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Donna Gabriel Robins Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Donna Gabriel Robins Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,33 +145,169 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Willoughby Elementary",
+      "t": "Homes for sale near Willoughby Elementary (elementary school, about 0.6 km east)",
       "h": "/homes-near-willoughby-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.6 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near R E Mountain Secondary",
+      "t": "Homes for sale near R E Mountain Secondary (secondary school, about 0.8 km south-west)",
       "h": "/homes-near-r-e-mountain-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 0.8 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Josette Dandurand Elementary",
+      "t": "Homes for sale near Josette Dandurand Elementary (elementary school, about 1.1 km north-west)",
       "h": "/homes-near-josette-dandurand-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.1 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Donna Gabriel Robins Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "17 schools in the provincial school list sit within 3 km of Donna Gabriel Robins Elementary in a straight line (12 elementary, 2 middle, 2 secondary, 1 other; 1 independent). The closest is Willoughby Elementary, 0.6 km away, and the farthest on this list is des Voyageurs, 2.9 km away. By type, the nearest secondary school is R E Mountain Secondary (0.8 km); the nearest independent school is The King's School (2.7 km); the nearest school listing a French Immersion program is Alex Hope Elementary (1.8 km). Other elementary schools close by: Willoughby Elementary (0.6 km east), Richard Bulpitt Elementary (0.9 km east), Josette Dandurand Elementary (1.1 km north-west), Lynn Fripps Elementary (1.3 km north-east), R C Garnett Demonstration Elementary (1.7 km south-west). The nearest school teaching the same grades (K-5) is Willoughby Elementary, 0.6 km east of Donna Gabriel Robins Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Donna Gabriel Robins Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Willoughby Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "0.6 km east"
+    ],
+    [
+     "Peter Ewart Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "0.7 km west"
+    ],
+    [
+     "R E Mountain Secondary",
+     "Secondary",
+     "9-12",
+     "Public",
+     "0.8 km south-west"
+    ],
+    [
+     "Richard Bulpitt Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "0.9 km east"
+    ],
+    [
+     "Yorkson Creek Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "1.1 km north"
+    ],
+    [
+     "Josette Dandurand Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.1 km north-west"
+    ],
+    [
+     "Lynn Fripps Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.3 km north-east"
+    ],
+    [
+     "R C Garnett Demonstration Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.7 km south-west"
+    ],
+    [
+     "Alex Hope Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km north-east"
+    ],
+    [
+     "Maddaugh Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km west"
+    ],
+    [
+     "Walnut Grove Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.4 km north"
+    ],
+    [
+     "Dorothy Peacock Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km north"
+    ],
+    [
+     "Gordon Greenwood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km north"
+    ],
+    [
+     "The King's School",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.7 km east"
+    ],
+    [
+     "James Kennedy Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.8 km north-east"
+    ],
+    [
+     "Katzie Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km south-west"
+    ],
+    [
+     "des Voyageurs",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km north-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -189,7 +330,7 @@
     ],
     [
      {
-      "t": "Walk to Donna Gabriel Robins Elementary from the home and check the crossings, sidewalks and lighting on the way."
+      "t": "Look at Willoughby Elementary, the nearest other elementary school, 0.6 km east of Donna Gabriel Robins Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

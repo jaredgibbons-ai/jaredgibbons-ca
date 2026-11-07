@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Theresa Clarke Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Theresa Clarke Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Theresa Clarke Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Theresa Clarke Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Theresa Clarke Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are K B Woodward Elementary (0.6 km south), Kwantlen Park Secondary (0.9 km south) and Bridgeview Elementary (1.4 km north).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Theresa Clarke Elementary. Under it are the prices homes sold for within 1 km of the school.",
+   "text": "The search below lists homes for sale whose listing names Theresa Clarke Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Theresa Clarke Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Theresa Clarke Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,176 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Kwantlen Park Secondary",
+      "t": "Homes for sale near Kwantlen Park Secondary (secondary school, about 0.9 km south)",
       "h": "/homes-near-kwantlen-park-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 0.9 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Bridgeview Elementary",
+      "t": "Homes for sale near Bridgeview Elementary (elementary school, about 1.4 km north)",
       "h": "/homes-near-bridgeview-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.4 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near James Ardiel Elementary",
+      "t": "Homes for sale near James Ardiel Elementary (elementary school, about 1.5 km north-east)",
       "h": "/homes-near-james-ardiel-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.5 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Theresa Clarke Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "18 schools in the provincial school list sit within 3 km of Theresa Clarke Elementary in a straight line (14 elementary, 4 secondary; 4 independent). The closest is K B Woodward Elementary, 0.6 km away, and the farthest on this list is Guildford Park Secondary, 3.0 km away. By type, the nearest secondary school is Kwantlen Park Secondary (0.9 km); the nearest independent school is Honour Secondary School (1.5 km). Other elementary schools close by: K B Woodward Elementary (0.6 km south), Bridgeview Elementary (1.4 km north), James Ardiel Elementary (1.5 km north-east), Old Yale Road Elementary (1.5 km south), Khalsa School Old Yale Road (1.5 km west). The nearest school teaching the same grades (K-7) is K B Woodward Elementary, 0.6 km south of Theresa Clarke Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Theresa Clarke Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "K B Woodward Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.6 km south"
+    ],
+    [
+     "Kwantlen Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "0.9 km south"
+    ],
+    [
+     "Bridgeview Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km north"
+    ],
+    [
+     "James Ardiel Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km north-east"
+    ],
+    [
+     "Honour Secondary School",
+     "Secondary",
+     "10-12",
+     "Independent",
+     "1.5 km south-east"
+    ],
+    [
+     "Old Yale Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km south"
+    ],
+    [
+     "Khalsa School Old Yale Road",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.5 km west"
+    ],
+    [
+     "Khalsa Secondary School (Surrey)",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "1.6 km south-west"
+    ],
+    [
+     "Forsyth Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km east"
+    ],
+    [
+     "Surrey Traditional",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km north-east"
+    ],
+    [
+     "Our Lady of Good Counsel",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.8 km south-east"
+    ],
+    [
+     "Prince Charles Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km south-west"
+    ],
+    [
+     "A H P Matthew Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km south"
+    ],
+    [
+     "Mary Jane Shannon Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km east"
+    ],
+    [
+     "Cedar Hills Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km south-west"
+    ],
+    [
+     "Lena Shaw Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km south-east"
+    ],
+    [
+     "Ellendale Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km east"
+    ],
+    [
+     "Guildford Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "3.0 km east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +333,7 @@
     ],
     [
      {
-      "t": "Walk the route to Theresa Clarke Elementary the way a child would, and count the crossings and sidewalks."
+      "t": "Look at K B Woodward Elementary, the nearest other elementary school, 0.6 km south of Theresa Clarke Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

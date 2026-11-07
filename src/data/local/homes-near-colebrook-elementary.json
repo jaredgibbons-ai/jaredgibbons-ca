@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Colebrook Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Colebrook Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Colebrook Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Colebrook Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Colebrook Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Al-Mustafa School (0.1 km south-west), J T Brown Elementary (1.1 km north) and Panorama Park Elementary (1.6 km north).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Colebrook Elementary. Under it are the prices homes sold for within 1 km of the school.",
+   "text": "The search below lists homes for sale whose listing names Colebrook Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Colebrook Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Colebrook Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,246 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Panorama Park Elementary",
+      "t": "Homes for sale near Panorama Park Elementary (elementary school, about 1.6 km north)",
       "h": "/homes-near-panorama-park-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.6 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Boundary Park Elementary",
+      "t": "Homes for sale near Boundary Park Elementary (elementary school, about 1.8 km north)",
       "h": "/homes-near-boundary-park-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.8 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Pinewood Elementary",
+      "t": "Homes for sale near Pinewood Elementary (elementary school, about 2.2 km north-west)",
       "h": "/homes-near-pinewood-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 2.2 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Colebrook Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "13 schools in the provincial school list sit within 3 km of Colebrook Elementary in a straight line (10 elementary, 3 secondary; 3 independent). The closest is Al-Mustafa School, 0.1 km away, and the farthest on this list is Henry Bose Elementary, 2.8 km away. By type, the nearest secondary school is Tamanawis Secondary (2.3 km); the nearest school listing a French Immersion program is Ecole Panorama Ridge Secondary (2.4 km). Other elementary schools close by: Al-Mustafa School (0.1 km south-west), J T Brown Elementary (1.1 km north), Panorama Park Elementary (1.6 km north), Boundary Park Elementary (1.8 km north), Pinewood Elementary (2.2 km north-west). The nearest school teaching the same grades (K-7) is J T Brown Elementary, 1.1 km north of Colebrook Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Colebrook Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Al-Mustafa School",
+     "Elementary",
+     "K-3",
+     "Independent",
+     "0.1 km south-west"
+    ],
+    [
+     "J T Brown Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km north"
+    ],
+    [
+     "Panorama Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km north"
+    ],
+    [
+     "Boundary Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km north"
+    ],
+    [
+     "Pinewood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km north-west"
+    ],
+    [
+     "Beaver Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km north"
+    ],
+    [
+     "Tamanawis Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.3 km north"
+    ],
+    [
+     "Ecole Panorama Ridge Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.4 km north-east"
+    ],
+    [
+     "North Ridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km north-east"
+    ],
+    [
+     "St Bernadette",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.5 km north-east"
+    ],
+    [
+     "Martha Jane Norris Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km north"
+    ],
+    [
+     "iLearn Secondary School Society",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "2.6 km north-east"
+    ],
+    [
+     "Henry Bose Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.8 km north-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 3 km from Colebrook Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 3 km from Colebrook Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Khalsa School Newton",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "3.1 km north"
+    ],
+    [
+     "Gabrielle-Roy",
+     "Other",
+     "K-12",
+     "Public",
+     "3.2 km north-east"
+    ],
+    [
+     "Cougar Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.3 km north"
+    ],
+    [
+     "Cougar Canyon Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.3 km north-west"
+    ],
+    [
+     "Seaquam Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "3.4 km north-west"
+    ],
+    [
+     "W E Kinvig Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.5 km north-east"
+    ],
+    [
+     "Woodward Hill Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.6 km east"
+    ],
+    [
+     "Princess Margaret Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "3.6 km north"
+    ],
+    [
+     "Sunshine Hills Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.7 km north-west"
+    ],
+    [
+     "McLeod Road Traditional",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.7 km north-east"
+    ],
+    [
+     "Hyland Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.8 km north-east"
+    ],
+    [
+     "Sullivan Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "4.0 km north-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -185,7 +403,7 @@
     ],
     [
      {
-      "t": "Walk the route to Colebrook Elementary the way a child would, and count the crossings and sidewalks."
+      "t": "Look at Al-Mustafa School, the nearest other elementary school, 0.1 km south-west of Colebrook Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

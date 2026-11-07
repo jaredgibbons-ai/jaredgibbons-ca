@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the L.A. Matheson Secondary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the L.A. Matheson Secondary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names L.A. Matheson Secondary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names L.A. Matheson Secondary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to L.A. Matheson Secondary?",
+   "a": "In a straight line, the closest schools in the provincial list are Kirkbride Elementary (0.6 km south), Cedar Hills Elementary (0.7 km north-east) and Senator Reid Elementary (0.8 km east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions L.A. Matheson Secondary, followed by what homes within 2 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions L.A. Matheson Secondary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names L.A. Matheson Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names L.A. Matheson Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,225 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Kirkbride Elementary",
+      "t": "Homes for sale near Kirkbride Elementary (elementary school, about 0.6 km south)",
       "h": "/homes-near-kirkbride-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.6 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Senator Reid Elementary",
+      "t": "Homes for sale near Senator Reid Elementary (elementary school, about 0.8 km east)",
       "h": "/homes-near-senator-reid-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.8 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Royal Heights Elementary",
+      "t": "Homes for sale near Royal Heights Elementary (elementary school, about 1.2 km west)",
       "h": "/homes-near-royal-heights-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.2 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of L.A. Matheson Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "28 schools in the provincial school list sit within 3 km of L.A. Matheson Secondary in a straight line (19 elementary, 7 secondary, 2 other; 4 independent). The closest is Kirkbride Elementary, 0.6 km away, and the farthest on this list is Delta Continuing Education, 2.8 km away. By type, the nearest secondary school is Delview Secondary (1.6 km); the nearest independent school is Immaculate Conception School (1.3 km); the nearest school listing a French Immersion program is Devon Gardens Elementary (2.4 km). Other secondary schools close by: Delview Secondary (1.6 km south-west), Continuing Ed SD36 (Invergarry) (1.8 km south-east), Khalsa Secondary School (Surrey) (2.2 km north), Queen Elizabeth Secondary (2.7 km east), Kwantlen Park Secondary (2.8 km north-east). The nearest school teaching the same grades (8-12) is Delview Secondary, 1.6 km south-west of L.A. Matheson Secondary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of L.A. Matheson Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Kirkbride Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.6 km south"
+    ],
+    [
+     "Cedar Hills Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.7 km north-east"
+    ],
+    [
+     "Senator Reid Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.8 km east"
+    ],
+    [
+     "Prince Charles Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km north-east"
+    ],
+    [
+     "Royal Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km west"
+    ],
+    [
+     "Immaculate Conception School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.3 km south-west"
+    ],
+    [
+     "David Brankin Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km south-east"
+    ],
+    [
+     "Delview Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.6 km south-west"
+    ],
+    [
+     "Betty Huff Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km east"
+    ],
+    [
+     "Gibson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km south-west"
+    ],
+    [
+     "Continuing Ed SD36 (Invergarry)",
+     "Secondary",
+     "10-12",
+     "Public",
+     "1.8 km south-east"
+    ],
+    [
+     "Annieville Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km west"
+    ],
+    [
+     "Home Quest",
+     "Other",
+     "K-9",
+     "Public",
+     "1.9 km west"
+    ],
+    [
+     "Hellings Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km south-west"
+    ],
+    [
+     "Khalsa Secondary School (Surrey)",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "2.2 km north"
+    ],
+    [
+     "Khalsa School Old Yale Road",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.4 km north"
+    ],
+    [
+     "A H P Matthew Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km east"
+    ],
+    [
+     "Kennedy Trail Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km south"
+    ],
+    [
+     "Old Yale Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km north-east"
+    ],
+    [
+     "Sikh Academy",
+     "Other",
+     "K-8",
+     "Independent",
+     "2.4 km south-east"
+    ],
+    [
+     "Devon Gardens Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km south-west"
+    ],
+    [
+     "Cindrich Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km east"
+    ],
+    [
+     "Queen Elizabeth Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.7 km east"
+    ],
+    [
+     "Kwantlen Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.8 km north-east"
+    ],
+    [
+     "Delta Continuing Education",
+     "Secondary",
+     "10, 12",
+     "Public",
+     "2.8 km south-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +382,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to L.A. Matheson Secondary and note the crossings, sidewalks and hills."
+      "t": "Look at Delview Secondary, the nearest other secondary school, 1.6 km south-west of L.A. Matheson Secondary. Compare the two when you check which school serves the address."
      }
     ]
    ],

@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Bridgeview Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Bridgeview Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Bridgeview Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Bridgeview Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Bridgeview Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Theresa Clarke Elementary (1.4 km south), James Ardiel Elementary (1.9 km east) and K B Woodward Elementary (1.9 km south).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Bridgeview Elementary in the listing, then check the sold prices within 1 km of the school.",
+   "text": "Use the search below to see homes for sale that name Bridgeview Elementary in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Bridgeview Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Bridgeview Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,162 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Theresa Clarke Elementary",
+      "t": "Homes for sale near Theresa Clarke Elementary (elementary school, about 1.4 km south)",
       "h": "/homes-near-theresa-clarke-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.4 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near James Ardiel Elementary",
+      "t": "Homes for sale near James Ardiel Elementary (elementary school, about 1.9 km east)",
       "h": "/homes-near-james-ardiel-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.9 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Surrey Traditional",
+      "t": "Homes for sale near Surrey Traditional (elementary school, about 2.1 km east)",
       "h": "/homes-near-surrey-traditional.html"
-     },
-     {
-      "t": "(elementary school, about 2.1 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Bridgeview Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "16 schools in the provincial school list sit within 3 km of Bridgeview Elementary in a straight line (11 elementary, 3 secondary, 2 other; 6 independent). The closest is Theresa Clarke Elementary, 1.4 km away, and the farthest on this list is Our Lady of Good Counsel, 3.0 km away. By type, the nearest secondary school is Khalsa Secondary School (Surrey) (2.2 km); the nearest independent school is Khalsa School Old Yale Road (2.0 km); the nearest school listing a French Immersion program is K B Woodward Elementary (1.9 km). Other elementary schools close by: Theresa Clarke Elementary (1.4 km south), James Ardiel Elementary (1.9 km east), K B Woodward Elementary (1.9 km south), Khalsa School Old Yale Road (2.0 km south-west), Surrey Traditional (2.1 km east). The nearest school teaching the same grades (K-7) is Theresa Clarke Elementary, 1.4 km south of Bridgeview Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Bridgeview Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Theresa Clarke Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km south"
+    ],
+    [
+     "James Ardiel Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km east"
+    ],
+    [
+     "K B Woodward Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km south"
+    ],
+    [
+     "Khalsa School Old Yale Road",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.0 km south-west"
+    ],
+    [
+     "Surrey Traditional",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.1 km east"
+    ],
+    [
+     "Khalsa Secondary School (Surrey)",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "2.2 km south-west"
+    ],
+    [
+     "Kwantlen Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.3 km south"
+    ],
+    [
+     "Urban Academy Junior",
+     "Elementary",
+     "K-3",
+     "Independent",
+     "2.6 km north-west"
+    ],
+    [
+     "Urban Academy Senior",
+     "Other",
+     "4-12",
+     "Independent",
+     "2.6 km north-west"
+    ],
+    [
+     "Forsyth Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km south-east"
+    ],
+    [
+     "Honour Secondary School",
+     "Secondary",
+     "10-12",
+     "Independent",
+     "2.7 km south-east"
+    ],
+    [
+     "Old Yale Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.8 km south"
+    ],
+    [
+     "Ecole Qayqayt Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.9 km west"
+    ],
+    [
+     "Home Learners Program",
+     "Other",
+     "K-8",
+     "Public",
+     "2.9 km north-west"
+    ],
+    [
+     "Skwo:wech",
+     "Elementary",
+     "K-5",
+     "Public",
+     "3.0 km north-west"
+    ],
+    [
+     "Our Lady of Good Counsel",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "3.0 km south-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +319,7 @@
     ],
     [
      {
-      "t": "Walk to Bridgeview Elementary from the home and check the crossings, sidewalks and lighting on the way."
+      "t": "Look at Theresa Clarke Elementary, the nearest other elementary school, 1.4 km south of Bridgeview Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the North Delta Secondary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Delta School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Delta School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the North Delta Secondary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names North Delta Secondary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names North Delta Secondary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to North Delta Secondary?",
+   "a": "In a straight line, the closest schools in the provincial list are Delta Continuing Education (0.2 km east), Richardson Elementary (0.3 km north-west) and McCloskey Elementary (0.4 km south).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions North Delta Secondary, followed by what homes within 2 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions North Delta Secondary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names North Delta Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names North Delta Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,225 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Richardson Elementary",
+      "t": "Homes for sale near Richardson Elementary (elementary school, about 0.3 km north-west)",
       "h": "/homes-near-richardson-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.3 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near McCloskey Elementary",
+      "t": "Homes for sale near McCloskey Elementary (elementary school, about 0.4 km south)",
       "h": "/homes-near-mccloskey-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.4 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Hellings Elementary",
+      "t": "Homes for sale near Hellings Elementary (elementary school, about 0.9 km north-east)",
       "h": "/homes-near-hellings-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.9 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of North Delta Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "28 schools in the provincial school list sit within 3 km of North Delta Secondary in a straight line (19 elementary, 7 secondary, 2 other; 2 independent). The closest is Delta Continuing Education, 0.2 km away, and the farthest on this list is Cougar Creek Elementary, 2.9 km away. By type, the nearest elementary school is Richardson Elementary (0.3 km); the nearest independent school is Immaculate Conception School (1.6 km); the nearest school listing a French Immersion program is Richardson Elementary (0.3 km). Other secondary schools close by: Delta Continuing Education (0.2 km east), Sands Secondary (1.2 km west), Burnsview Secondary (1.4 km south), Delview Secondary (1.7 km north), Continuing Ed SD36 (Invergarry) (2.8 km east). The nearest school teaching the same grades (8-12) is Sands Secondary, 1.2 km west of North Delta Secondary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of North Delta Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Delta Continuing Education",
+     "Secondary",
+     "10, 12",
+     "Public",
+     "0.2 km east"
+    ],
+    [
+     "Richardson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.3 km north-west"
+    ],
+    [
+     "McCloskey Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.4 km south"
+    ],
+    [
+     "Hellings Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km north-east"
+    ],
+    [
+     "Sands Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.2 km west"
+    ],
+    [
+     "Gray Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.3 km south-west"
+    ],
+    [
+     "Jarvis Traditional Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km south-east"
+    ],
+    [
+     "Devon Gardens Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km north-west"
+    ],
+    [
+     "Burnsview Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.4 km south"
+    ],
+    [
+     "Chalmers Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km south"
+    ],
+    [
+     "Gibson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km north"
+    ],
+    [
+     "Immaculate Conception School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.6 km north-east"
+    ],
+    [
+     "Kennedy Trail Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km east"
+    ],
+    [
+     "Delview Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.7 km north"
+    ],
+    [
+     "Brooke Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km north-west"
+    ],
+    [
+     "Westerman Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km south-east"
+    ],
+    [
+     "Annieville Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km north"
+    ],
+    [
+     "Home Quest",
+     "Other",
+     "K-9",
+     "Public",
+     "2.0 km north"
+    ],
+    [
+     "Strawberry Hill Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km south-east"
+    ],
+    [
+     "Heath Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km south"
+    ],
+    [
+     "Kirkbride Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km north-east"
+    ],
+    [
+     "Continuing Ed SD36 (Invergarry)",
+     "Secondary",
+     "10-12",
+     "Public",
+     "2.8 km east"
+    ],
+    [
+     "L.A. Matheson Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.9 km north-east"
+    ],
+    [
+     "Royal Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km north"
+    ],
+    [
+     "Cougar Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km south-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +382,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to North Delta Secondary and note the crossings, sidewalks and hills."
+      "t": "Look at Delta Continuing Education, the nearest other secondary school, 0.2 km east of North Delta Secondary. Compare the two when you check which school serves the address."
      }
     ]
    ],

@@ -30,14 +30,19 @@
   },
   {
    "q": "How does the Crescent Heights Academy home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Crescent Heights Academy. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names Crescent Heights Academy, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Crescent Heights Academy?",
+   "a": "In a straight line, the closest schools in the provincial list are Langley Meadows Elementary (0.7 km east), Katzie Elementary (1.1 km north) and Latimer Road Elementary (1.1 km south-west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions Crescent Heights Academy, followed by what homes within 2 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions Crescent Heights Academy.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Crescent Heights Academy, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Crescent Heights Academy, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -118,33 +123,183 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Langley Meadows Elementary",
+      "t": "Homes for sale near Langley Meadows Elementary (elementary school, about 0.7 km east)",
       "h": "/homes-near-langley-meadows-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.7 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Latimer Road Elementary",
+      "t": "Homes for sale near Katzie Elementary (elementary school, about 1.1 km north)",
+      "h": "/homes-near-katzie-elementary.html"
+     }
+    ],
+    [
+     {
+      "t": "Homes for sale near Latimer Road Elementary (elementary school, about 1.1 km south-west)",
       "h": "/homes-near-latimer-road-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.1 km away)"
-     }
-    ],
-    [
-     {
-      "t": "Homes for sale near Hazelgrove Elementary",
-      "h": "/homes-near-hazelgrove-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.5 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Crescent Heights Academy",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "19 schools in the provincial school list sit within 3 km of Crescent Heights Academy in a straight line (14 elementary, 4 secondary, 1 other; 2 independent). The closest is Langley Meadows Elementary, 0.7 km away, and the farthest on this list is Douglas Park Community, 2.9 km away. By type, the nearest secondary school is Clayton Heights Secondary (1.8 km); the nearest independent school is Bibleway Christian Academy (1.9 km); the nearest school listing a French Immersion program is Sunrise Ridge Elementary (1.9 km). The nearest school teaching the same grades (K-12) is Bibleway Christian Academy, 1.9 km south-west of Crescent Heights Academy.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Crescent Heights Academy",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Langley Meadows Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "0.7 km east"
+    ],
+    [
+     "Katzie Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km north"
+    ],
+    [
+     "Latimer Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km south-west"
+    ],
+    [
+     "Hazelgrove Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km north-west"
+    ],
+    [
+     "Clayton Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.8 km north-west"
+    ],
+    [
+     "Hillcrest Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km west"
+    ],
+    [
+     "Sunrise Ridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km south-west"
+    ],
+    [
+     "R C Garnett Demonstration Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.9 km north-east"
+    ],
+    [
+     "Bibleway Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "1.9 km south-west"
+    ],
+    [
+     "Don Christian Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km west"
+    ],
+    [
+     "Maddaugh Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km north"
+    ],
+    [
+     "Regent Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km north-west"
+    ],
+    [
+     "Whytecliff Agile Learning Centre-Langley",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "2.6 km south-east"
+    ],
+    [
+     "Martha Currie Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km south-west"
+    ],
+    [
+     "Nicomekl Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.7 km south-east"
+    ],
+    [
+     "Adams Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km west"
+    ],
+    [
+     "Ecole Salish Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.8 km north-west"
+    ],
+    [
+     "R E Mountain Secondary",
+     "Secondary",
+     "9-12",
+     "Public",
+     "2.8 km north-east"
+    ],
+    [
+     "Douglas Park Community",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.9 km south-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -163,11 +318,6 @@
     [
      {
       "t": "Go past Crescent Heights Academy on a school morning and again mid-afternoon to see the traffic, parking and noise before you offer."
-     }
-    ],
-    [
-     {
-      "t": "Walk from the front door to Crescent Heights Academy and note the crossings, sidewalks and hills."
      }
     ]
    ],

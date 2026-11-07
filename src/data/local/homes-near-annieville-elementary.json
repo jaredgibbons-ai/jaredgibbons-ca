@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Annieville Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Delta School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Delta School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Annieville Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Annieville Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Annieville Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Annieville Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Delview Secondary (0.5 km south-east), Gibson Elementary (0.5 km south-east) and Devon Gardens Elementary (0.8 km south-west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions Annieville Elementary, followed by what homes within 1 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions Annieville Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Annieville Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Annieville Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,197 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Delview Secondary",
+      "t": "Homes for sale near Delview Secondary (secondary school, about 0.5 km south-east)",
       "h": "/homes-near-delview-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 0.5 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Devon Gardens Elementary",
+      "t": "Homes for sale near Devon Gardens Elementary (elementary school, about 0.8 km south-west)",
       "h": "/homes-near-devon-gardens-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.8 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Royal Heights Elementary",
+      "t": "Homes for sale near Royal Heights Elementary (elementary school, about 1.2 km north-east)",
       "h": "/homes-near-royal-heights-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.2 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Annieville Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "21 schools in the provincial school list sit within 3 km of Annieville Elementary in a straight line (15 elementary, 5 secondary, 1 other; 1 independent). The closest is Delview Secondary, 0.5 km away, and the farthest on this list is Queen Elizabeth Elementary, 3.0 km away. By type, the nearest elementary school is Gibson Elementary (0.5 km); the nearest independent school is Immaculate Conception School (1.4 km); the nearest school listing a French Immersion program is Devon Gardens Elementary (0.8 km). Other elementary schools close by: Gibson Elementary (0.5 km south-east), Devon Gardens Elementary (0.8 km south-west), Royal Heights Elementary (1.2 km north-east), Hellings Elementary (1.3 km south-east), Immaculate Conception School (1.4 km south-east). The nearest school teaching the same grades (K-7) is Gibson Elementary, 0.5 km south-east of Annieville Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Annieville Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Delview Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "0.5 km south-east"
+    ],
+    [
+     "Gibson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.5 km south-east"
+    ],
+    [
+     "Devon Gardens Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.8 km south-west"
+    ],
+    [
+     "Royal Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km north-east"
+    ],
+    [
+     "Hellings Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.3 km south-east"
+    ],
+    [
+     "Immaculate Conception School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.4 km south-east"
+    ],
+    [
+     "Brooke Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km south-west"
+    ],
+    [
+     "Kirkbride Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km east"
+    ],
+    [
+     "Richardson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km south"
+    ],
+    [
+     "L.A. Matheson Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.9 km east"
+    ],
+    [
+     "North Delta Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.0 km south"
+    ],
+    [
+     "Delta Continuing Education",
+     "Secondary",
+     "10, 12",
+     "Public",
+     "2.0 km south"
+    ],
+    [
+     "Cedar Hills Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km north-east"
+    ],
+    [
+     "McCloskey Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km south"
+    ],
+    [
+     "Sands Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.5 km south"
+    ],
+    [
+     "Senator Reid Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km east"
+    ],
+    [
+     "Gray Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km south"
+    ],
+    [
+     "Kennedy Trail Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km south-east"
+    ],
+    [
+     "Prince Charles Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km north-east"
+    ],
+    [
+     "Queensborough Middle School",
+     "Other",
+     "5-8",
+     "Public",
+     "2.8 km north-west"
+    ],
+    [
+     "Queen Elizabeth Elementary",
+     "Elementary",
+     "K-4",
+     "Public",
+     "3.0 km north-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +354,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to Annieville Elementary and note the crossings, sidewalks and hills."
+      "t": "Look at Gibson Elementary, the nearest other elementary school, 0.5 km south-east of Annieville Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

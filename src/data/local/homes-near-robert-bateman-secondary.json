@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Robert Bateman Secondary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Abbotsford School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Abbotsford School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Robert Bateman Secondary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Robert Bateman Secondary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names Robert Bateman Secondary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Robert Bateman Secondary?",
+   "a": "In a straight line, the closest schools in the provincial list are Clayburn Middle School (0.2 km north-east), Sandy Hill Elementary (0.5 km north-east) and Dr Thomas A Swift Elementary (0.5 km south-west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Robert Bateman Secondary. Under it are the prices homes sold for within 2 km of the school.",
+   "text": "The search below lists homes for sale whose listing names Robert Bateman Secondary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Robert Bateman Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Robert Bateman Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,33 +145,225 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Yale Secondary",
+      "t": "Homes for sale near Yale Secondary (secondary school, about 2.6 km south)",
       "h": "/homes-near-yale-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 2.6 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Godson Elementary",
+      "t": "Homes for sale near Godson Elementary (elementary school, about 5.0 km south-west)",
       "h": "/homes-near-godson-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 5.0 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near W J Mouat Secondary",
+      "t": "Homes for sale near W J Mouat Secondary (secondary school, about 5.8 km west)",
       "h": "/homes-near-w-j-mouat-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 5.8 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Robert Bateman Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "10 schools in the provincial school list sit within 3 km of Robert Bateman Secondary in a straight line (6 elementary, 2 middle, 1 other, 1 secondary; 1 independent). The closest is Clayburn Middle School, 0.2 km away, and the farthest on this list is Auguston Traditional Elementary, 3.0 km away. By type, the nearest elementary school is Sandy Hill Elementary (0.5 km); the nearest secondary school is Yale Secondary (2.6 km); the nearest independent school is Abbotsford Christian School (0.8 km). The nearest school teaching the same grades (9-12) is Yale Secondary, 2.6 km south of Robert Bateman Secondary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Robert Bateman Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Clayburn Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "0.2 km north-east"
+    ],
+    [
+     "Sandy Hill Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "0.5 km north-east"
+    ],
+    [
+     "Dr Thomas A Swift Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "0.5 km south-west"
+    ],
+    [
+     "Abbotsford Christian School",
+     "Other",
+     "K-12",
+     "Independent",
+     "0.8 km south"
+    ],
+    [
+     "Prince Charles Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.0 km south-east"
+    ],
+    [
+     "Margaret Stenersen Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.7 km south-west"
+    ],
+    [
+     "Yale Secondary",
+     "Secondary",
+     "9-12",
+     "Public",
+     "2.6 km south"
+    ],
+    [
+     "William A. Fraser Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "2.8 km south"
+    ],
+    [
+     "McMillan Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.9 km south"
+    ],
+    [
+     "Auguston Traditional Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "3.0 km north-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 3 km from Robert Bateman Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 3 km from Robert Bateman Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Abbotsford Virtual School",
+     "Other",
+     "K-12",
+     "Public",
+     "3.0 km south-west"
+    ],
+    [
+     "Mountain Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "3.3 km south-east"
+    ],
+    [
+     "Abbotsford School Of Integrated Arts",
+     "Other",
+     "6-12",
+     "Public",
+     "3.3 km south-east"
+    ],
+    [
+     "Terry Fox Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "3.8 km west"
+    ],
+    [
+     "Alexander Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "3.9 km south-west"
+    ],
+    [
+     "Cornerstone Christian School",
+     "Other",
+     "K-9",
+     "Independent",
+     "4.4 km west"
+    ],
+    [
+     "Chief Dan George Middle",
+     "Middle",
+     "6-8",
+     "Public",
+     "4.4 km west"
+    ],
+    [
+     "Abbotsford Senior Secondary School",
+     "Secondary",
+     "9-12",
+     "Public",
+     "4.4 km south-west"
+    ],
+    [
+     "Abbotsford Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "4.7 km south-west"
+    ],
+    [
+     "Dr Roberta Bondar Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "4.8 km west"
+    ],
+    [
+     "Mathxwí Elementary School",
+     "Elementary",
+     "K-5",
+     "Public",
+     "4.9 km north-west"
+    ],
+    [
+     "Godson Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "5.0 km south-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -189,7 +386,7 @@
     ],
     [
      {
-      "t": "Walk the route to Robert Bateman Secondary the way a child would, and count the crossings and sidewalks."
+      "t": "Look at Yale Secondary, the nearest other secondary school, 2.6 km south of Robert Bateman Secondary. Compare the two when you check which school serves the address."
      }
     ]
    ],

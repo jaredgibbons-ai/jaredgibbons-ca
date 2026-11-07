@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Betty Huff Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Betty Huff Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Betty Huff Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Betty Huff Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Betty Huff Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are David Brankin Elementary (0.6 km south-west), A H P Matthew Elementary (0.9 km north-east) and Senator Reid Elementary (1.0 km west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Betty Huff Elementary in the listing, then check the sold prices within 1 km of the school.",
+   "text": "Use the search below to see homes for sale that name Betty Huff Elementary in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Betty Huff Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Betty Huff Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,225 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Senator Reid Elementary",
+      "t": "Homes for sale near Senator Reid Elementary (elementary school, about 1.0 km west)",
       "h": "/homes-near-senator-reid-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.0 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Queen Elizabeth Secondary",
+      "t": "Homes for sale near Queen Elizabeth Secondary (secondary school, about 1.0 km east)",
       "h": "/homes-near-queen-elizabeth-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.0 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Old Yale Road Elementary",
+      "t": "Homes for sale near Old Yale Road Elementary (elementary school, about 1.6 km north)",
       "h": "/homes-near-old-yale-road-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.6 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Betty Huff Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "33 schools in the provincial school list sit within 3 km of Betty Huff Elementary in a straight line (20 elementary, 11 secondary, 2 other; 6 independent). The closest is David Brankin Elementary, 0.6 km away, and the farthest on this list is Honour Secondary School, 2.6 km away. By type, the nearest secondary school is Queen Elizabeth Secondary (1.0 km); the nearest independent school is Sikh Academy (1.7 km); the nearest school listing a French Immersion program is Simon Cunningham Elementary (1.9 km). Other elementary schools close by: David Brankin Elementary (0.6 km south-west), A H P Matthew Elementary (0.9 km north-east), Senator Reid Elementary (1.0 km west), Cindrich Elementary (1.0 km south-east), Creekside Elementary (1.6 km east). The nearest school teaching the same grades (K-7) is David Brankin Elementary, 0.6 km south-west of Betty Huff Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Betty Huff Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "David Brankin Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.6 km south-west"
+    ],
+    [
+     "A H P Matthew Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km north-east"
+    ],
+    [
+     "Senator Reid Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.0 km west"
+    ],
+    [
+     "Cindrich Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.0 km south-east"
+    ],
+    [
+     "Queen Elizabeth Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.0 km east"
+    ],
+    [
+     "Continuing Ed SD36 (Invergarry)",
+     "Secondary",
+     "10-12",
+     "Public",
+     "1.3 km south-west"
+    ],
+    [
+     "Creekside Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km east"
+    ],
+    [
+     "Old Yale Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.6 km north"
+    ],
+    [
+     "Cedar Hills Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km north-west"
+    ],
+    [
+     "Sikh Academy",
+     "Other",
+     "K-8",
+     "Independent",
+     "1.7 km south"
+    ],
+    [
+     "L.A. Matheson Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.8 km west"
+    ],
+    [
+     "Kirkbride Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km west"
+    ],
+    [
+     "Prince Charles Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km north-west"
+    ],
+    [
+     "Simon Cunningham Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km east"
+    ],
+    [
+     "North Surrey Learning Centre",
+     "Secondary",
+     "11-12",
+     "Public",
+     "1.9 km east"
+    ],
+    [
+     "SD 36 Alternate North Surrey LC",
+     "Secondary",
+     "10-12",
+     "Public",
+     "1.9 km east"
+    ],
+    [
+     "Education Services (Alternate)",
+     "Other",
+     "6-12",
+     "Public",
+     "2.1 km east"
+    ],
+    [
+     "SAIL Secondary",
+     "Secondary",
+     "8, 9, 10, 12",
+     "Public",
+     "2.1 km east"
+    ],
+    [
+     "SD 36 Education Services (Type 1)",
+     "Secondary",
+     "9, 10, 12",
+     "Public",
+     "2.1 km east"
+    ],
+    [
+     "Surrey Academy of Innovative Learning",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.1 km east"
+    ],
+    [
+     "Kwantlen Park Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.2 km north"
+    ],
+    [
+     "Immaculate Conception School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.5 km west"
+    ],
+    [
+     "K B Woodward Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km north"
+    ],
+    [
+     "Newton Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km south"
+    ],
+    [
+     "Honour Secondary School",
+     "Secondary",
+     "10-12",
+     "Independent",
+     "2.6 km north-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +382,7 @@
     ],
     [
      {
-      "t": "Walk to Betty Huff Elementary from the home and check the crossings, sidewalks and lighting on the way."
+      "t": "Look at David Brankin Elementary, the nearest other elementary school, 0.6 km south-west of Betty Huff Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

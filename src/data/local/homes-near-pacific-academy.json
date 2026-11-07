@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Pacific Academy | Prices",
-  "description": "Search homes for sale near Pacific Academy in Surrey. See listings that mention the school, nearby schools, catchment checks and sold prices for the area.",
+  "description": "Search homes for sale near Pacific Academy in Surrey. See listings that name the school, nearby schools and what to check on the catchment before you offer.",
   "h1": "Homes for Sale Near Pacific Academy"
  },
  "breadcrumbs": [
@@ -30,14 +30,19 @@
   },
   {
    "q": "How does the Pacific Academy home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Pacific Academy. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names Pacific Academy, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Pacific Academy?",
+   "a": "In a straight line, the closest schools in the provincial list are Bothwell Elementary School (0.6 km east), Fraser Wood Elementary (1.1 km north-west) and Fraser Heights Secondary (1.8 km north-west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Pacific Academy in the listing, then check the sold prices within 2 km of the school.",
+   "text": "Use the search below to see homes for sale that name Pacific Academy in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Pacific Academy, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Pacific Academy, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -118,33 +123,232 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Fraser Wood Elementary",
+      "t": "Homes for sale near Fraser Wood Elementary (elementary school, about 1.1 km north-west)",
       "h": "/homes-near-fraser-wood-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.1 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Fraser Heights Secondary",
+      "t": "Homes for sale near Fraser Heights Secondary (secondary school, about 1.8 km north-west)",
       "h": "/homes-near-fraser-heights-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.8 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Erma Stephenson Elementary",
+      "t": "Homes for sale near Erma Stephenson Elementary (elementary school, about 2.1 km north-west)",
       "h": "/homes-near-erma-stephenson-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 2.1 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Pacific Academy",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "11 schools in the provincial school list sit within 3 km of Pacific Academy in a straight line (7 elementary, 2 secondary, 2 other; 2 independent). The closest is Bothwell Elementary School, 0.6 km away, and the farthest on this list is Surrey Christian School, 2.9 km away. By type, the nearest secondary school is Fraser Heights Secondary (1.8 km); the nearest independent school is Gobind Sarvar School (2.8 km); the nearest school listing a French Immersion program is Fraser Wood Elementary (1.1 km). The nearest school teaching the same grades (K-12) is Gobind Sarvar School, 2.8 km south of Pacific Academy.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Pacific Academy",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Bothwell Elementary School",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.6 km east"
+    ],
+    [
+     "Fraser Wood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km north-west"
+    ],
+    [
+     "Fraser Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.8 km north-west"
+    ],
+    [
+     "Erma Stephenson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.1 km north-west"
+    ],
+    [
+     "North Surrey Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.2 km south-west"
+    ],
+    [
+     "Serpentine Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km south-west"
+    ],
+    [
+     "Harold Bishop Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km west"
+    ],
+    [
+     "Dogwood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km north-west"
+    ],
+    [
+     "William F. Davidson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km west"
+    ],
+    [
+     "Gobind Sarvar School",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.8 km south"
+    ],
+    [
+     "Surrey Christian School",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.9 km south-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 3 km from Pacific Academy",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 3 km from Pacific Academy",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Johnston Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "3.0 km west"
+    ],
+    [
+     "Holy Cross Regional High School",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "3.1 km south-west"
+    ],
+    [
+     "St Matthew's Elementary",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "3.1 km south-west"
+    ],
+    [
+     "Woodland Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.2 km south-west"
+    ],
+    [
+     "Mountainview Montessori",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.3 km west"
+    ],
+    [
+     "Berkshire Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.4 km south-west"
+    ],
+    [
+     "Frost Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.5 km south"
+    ],
+    [
+     "Holly Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.8 km west"
+    ],
+    [
+     "Bonaccord Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.8 km west"
+    ],
+    [
+     "Coast Meridian Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.1 km south"
+    ],
+    [
+     "Hjorth Road Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.1 km west"
+    ],
+    [
+     "Ecole Riverdale Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.2 km west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -163,11 +367,6 @@
     [
      {
       "t": "View the home on a school day. Drop-off and pick-up near Pacific Academy change the street more than a weekend viewing shows."
-     }
-    ],
-    [
-     {
-      "t": "Walk to Pacific Academy from the home and check the crossings, sidewalks and lighting on the way."
      }
     ]
    ],

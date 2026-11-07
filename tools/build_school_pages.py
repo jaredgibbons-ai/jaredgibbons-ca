@@ -47,6 +47,12 @@ def hav(a, b):
     return 12742 * math.asin(math.sqrt(h))
 
 
+def bearing(a, b):
+    la1, lo1, la2, lo2 = map(math.radians, (a[0], a[1], b[0], b[1]))
+    y = math.sin(lo2 - lo1) * math.cos(la2); x = math.cos(la1) * math.sin(la2) - math.sin(la1) * math.cos(la2) * math.cos(lo2 - lo1)
+    return ['north', 'north-east', 'east', 'south-east', 'south', 'south-west', 'west', 'north-west'][round(((math.degrees(math.atan2(y, x)) + 360) % 360) / 45) % 8]
+
+
 def fit(*c):
     for x in c:
         if 135 <= len(x) <= 158 and x.endswith('.'): return x
@@ -133,6 +139,7 @@ def page(r):
     title = next(t for t in (f'Homes for Sale Near {nmc} | Prices', f'Homes for Sale Near {nmc}', f'Homes for Sale Near {nmc}, {place}') if 38 <= len(t) <= 60)
     h1 = f'Homes for Sale Near {nm}' + (f', {place}' if r['dup'] else '')
     assert 20 <= len(h1) <= 60, h1
+    if r['dup']: nm = nmc   # two schools share a name (Holly, Walnut Road...): the body names the place too, so the pages do not read as copies
     n = sd['n'] if sd else None
     if sd and n >= 10:
         desc = fit(*[f'{a} {b}' for a in (f'Search homes for sale near {nm} in {place}.', f'Homes for sale near {nm} in {place}.', f'See homes for sale near {nm}.')
@@ -142,8 +149,7 @@ def page(r):
                                f'{n} sold within {rk} in twelve months, with prices by home type, nearby schools and catchment checks.')])
     else:
         desc = fit(*[f'{a} {b}' for a in (f'Search homes for sale near {nm} in {place}.', f'Homes for sale near {nm} in {place}.', f'See homes for sale near {nm}.')
-                     for b in ('See listings that mention the school, nearby schools, catchment checks and sold prices for the area.',
-                               'See listings that name the school, nearby schools and what to check on the catchment before you offer.',
+                     for b in ('See listings that name the school, nearby schools and what to check on the catchment before you offer.',
                                'Find listings that name the school, plus nearby schools and what to check on the catchment.',
                                'See listings that name the school, nearby schools and catchment checks.')])
     hub, hubname = HUB[r['hubkey']]
@@ -155,15 +161,17 @@ def page(r):
     if f['grades']: bits.append(f'It teaches grades {f["grades"].replace("-", " to ")}.' if f['grades'] not in ('K-12',) else 'It teaches kindergarten to grade 12.')
     if f['programs']: bits.append(f'Programs listed: {f["programs"]}.')
     intro = ' '.join(bits)
-    bl = [{'t': 'notice', 'text': 'Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, ' + WIN + f', within {rk} of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.', 'gen': G},
+    has = bool(sd and sd.get('all', {}).get('n', 0) >= 10)
+    bl = [{'t': 'notice', 'text': ('Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, ' + WIN + f', within {rk} of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.') if has else 'Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.', 'gen': G},
           P(intro),
-          P((f'The search below lists homes for sale whose listing names {nm}. Under it are the prices homes sold for within {rk} of the school.',
-             f'Below are the homes currently for sale whose listing mentions {nm}, followed by what homes within {rk} of the school sold for.',
-             f'Use the search below to see homes for sale that name {nm} in the listing, then check the sold prices within {rk} of the school.')[order]),
+          P((f'The search below lists homes for sale whose listing names {nm}.' + (f' Under it are the prices homes sold for within {rk} of the school.' if has else ''),
+             f'Below are the homes currently for sale whose listing mentions {nm}' + (f', followed by what homes within {rk} of the school sold for.' if has else '.'),
+             f'Use the search below to see homes for sale that name {nm} in the listing' + (f', then check the sold prices within {rk} of the school.' if has else '.'))[order]),
           {'t': 'grid', 'gen': G},
           H(f'How the {nm} search works'),
           P(f'MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names {nm}, so a home close to the school whose listing leaves the name out will not appear, '
-            f'and a listing that names the school can sit farther than {rk} away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.')]
+            + (f'and a listing that names the school can sit farther than {rk} away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.' if has else
+               'and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.'))]
     gdef = [('house', 'Houses'), ('townhouse', 'Townhomes'), ('condo', 'Condos')]
     mid = None
     if sd and n >= 10:
@@ -184,7 +192,7 @@ def page(r):
                       f'Source: Paragon closed and pending sales, {WIN}, within {rk} of the school address (straight-line distance). A pending sale is firm but not completed. A figure is shown only where at least 5 homes sold. Duplexes and row houses count in All homes only.'))
         subs = [s for s in sd['sub'] if s[1] >= 3]
         if subs:
-            bl.append(P('Where those sales were: ' + ', '.join(f'{N.disp(s[0])} ({s[1]})' for s in subs[:4]) + '. The radius can cross neighbourhood lines, so the sub-areas show which part of town the sales came from.'))
+            bl.append(P('Where those sales were: ' + ', '.join(f'{N.disp(s[0])} ({s[1]})' for s in subs[:4]) + '.'))
         for k, lab in (('condo', 'condo'), ('townhouse', 'townhome')):
             cx = [c for c in sd['complexes'].get(k, []) if c[2]]
             if len(cx) >= 2:
@@ -206,14 +214,52 @@ def page(r):
         bl.append({'t': 'p', 'parts': cp, 'gen': G})
     if r['near']:
         bl += [H(f'Other schools near {nm}'),
-               {'t': 'list', 'items': [[lk(f'Homes for sale near {o["school"]}', o['slug']), {'t': f'({LEVEL.get(o["f"]["level"], "school")}' + (f', about {d:.1f} km away)' if d is not None else ')')}] for d, o in r['near']], 'gen': G}]
+               {'t': 'list', 'items': [[lk(f'Homes for sale near {o["school"]} ({LEVEL.get(o["f"]["level"], "school")}' + (f', about {d:.1f} km {bearing(r["ll"], o["ll"])})' if d is not None else ')'), o['slug'])] for d, o in r['near']], 'gen': G}]
+    # every school within a few km (official coordinates, straight line): a table that is different on every page
+    if not r['approx']:
+        me = (f['lat'], f['lon']); R = 3
+        cand = sorted(((hav(me, (x['lat'], x['lon'])), x) for x in FACTS if x['lat'] and x is not f and not (x['name'] == f['name'] and x['address'] == f['address'])), key=lambda t: t[0])
+        cand = [(d, x) for d, x in cand if d >= 0.02]   # programs run from the same building (online, alternate, continuing ed) are not 'nearby schools'
+        within = [(d, x) for d, x in cand if d <= R]
+        if len(within) < 4: R = 5; within = [(d, x) for d, x in cand if d <= R]
+        if len(within) >= 4:
+            kinds = collections.Counter(x['level'] or 'other' for _, x in within); ind = sum(1 for _, x in within if x['independent'])
+            parts = ', '.join(f'{c} {k}' for k, c in sorted(kinds.items(), key=lambda t: -t[1]))
+            near1 = within[0]
+            txt = (f'{len(within)} schools in the provincial school list sit within {R} km of {nm} in a straight line ({parts}; {ind} independent). The closest is {near1[1]["name"]}, {near1[0]:.1f} km away'
+                   + (f', and the farthest on this list is {within[min(len(within), 25) - 1][1]["name"]}, {within[min(len(within), 25) - 1][0]:.1f} km away.' if len(within) > 1 else '.'))
+            def nearest(pred, label):
+                m = next(((d, x) for d, x in within if pred(x)), None)
+                return f'the nearest {label} is {m[1]["name"]} ({m[0]:.1f} km)' if m else None
+            bits = [b for b in (nearest(lambda x: x['level'] == 'elementary', 'elementary school'), nearest(lambda x: x['level'] == 'secondary', 'secondary school'), nearest(lambda x: x['independent'], 'independent school'),
+                                nearest(lambda x: 'french' in (x['programs'] or '').lower(), 'school listing a French Immersion program')) if b]
+            bits = [b for b in bits if near1[1]['name'] not in b][:3] if len(bits) > 2 else bits
+            if bits: txt += ' By type, ' + '; '.join(bits) + '.'
+            peers = [(d, x) for d, x in within if f['level'] and x['level'] == f['level']][:5]
+            if len(peers) >= 2: txt += f' Other {f["level"]} schools close by: ' + ', '.join(f'{x["name"]} ({d:.1f} km {bearing(me, (x["lat"], x["lon"]))})' for d, x in peers) + '.'
+            same = next(((d, x) for d, x in within if f['grades'] and x['grades'] == f['grades']), None)
+            if same: txt += f' The nearest school teaching the same grades ({f["grades"]}) is {same[1]["name"]}, {same[0]:.1f} km {bearing(me, (same[1]["lat"], same[1]["lon"]))} of {nm}.'
+            rows_n = [[x['name'], (x['level'] or 'other').capitalize(), x['grades'] or '—', 'Independent' if x['independent'] else 'Public', f'{d:.1f} km {bearing(me, (x["lat"], x["lon"]))}'] for d, x in within[:25]]
+            bl += [H(f'Schools within {R} km of {nm}'), P(txt), tbl(f'Schools within {R} km of {nm}', ['School', 'Type', 'Grades', 'Public or independent', 'Distance and direction'], rows_n,
+                   'Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes.')]
+    # sparse areas: the next ring of schools, so the page still shows where a family has more choice
+    if not r['approx'] and len([1 for d, x in cand if d <= R]) < 14:
+        ring = [(d, x) for d, x in cand if R < d <= R + 4][:12]
+        if len(ring) < 8: ring = [(d, x) for d, x in cand if R < d <= R + 8][:12]
+        if len(ring) >= 4:
+            bl += [H(f'More schools beyond {R} km from {nm}'),
+                   tbl(f'Schools beyond {R} km from {nm}', ['School', 'Type', 'Grades', 'Public or independent', 'Distance and direction'],
+                       [[x['name'], (x['level'] or 'other').capitalize(), x['grades'] or '—', 'Independent' if x['independent'] else 'Public', f'{d:.1f} km {bearing(me, (x["lat"], x["lon"]))}'] for d, x in ring],
+                       'Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates.')]
     # what to check
     chk = [f'Confirm the catchment for the exact address on the {f["district_name"]} school finder. A home a few blocks from {nm} can sit in a different catchment.' if not indep else f'Ask {nm} how admission works. A short distance does not give a child a place.',
            (f'Visit on a school day at drop-off and pick-up. Traffic and parking near {nm} are very different at 8:30 am and 3 pm than on a Sunday viewing.',
             f'Go past {nm} on a school morning and again mid-afternoon to see the traffic, parking and noise before you offer.',
-            f'View the home on a school day. Drop-off and pick-up near {nm} change the street more than a weekend viewing shows.')[order],
-           (f'Walk the route to {nm} the way a child would, and count the crossings and sidewalks.', f'Walk from the front door to {nm} and note the crossings, sidewalks and hills.', f'Walk to {nm} from the home and check the crossings, sidewalks and lighting on the way.')[order]]
+            f'View the home on a school day. Drop-off and pick-up near {nm} change the street more than a weekend viewing shows.')[order]]
     if sd and n >= 10 and mid: chk.append(f'Compare price with similar homes farther from the school. The median {midlab[:-1] if midlab.endswith("s") else midlab} within {rk} of {nm} was {money(mid)}, so check whether size and age explain a gap before you pay for the location.')
+    if not r['approx'] and 'within' in dir() and within:
+        pr = next(((d, x) for d, x in within if f['level'] and x['level'] == f['level']), None)
+        if pr: chk.append(f'Look at {pr[1]["name"]}, the nearest other {f["level"]} school, {pr[0]:.1f} km {bearing(me, (pr[1]["lat"], pr[1]["lon"]))} of {nm}. Compare the two when you check which school serves the address.')
     bl += [H(f'Before you offer on a home near {nm}'), L(chk)]
     if mid:
         bl += [H(f'Estimate the payment on a home near {nm}'), P(f'The calculator starts at the {midlab[:-1] if midlab.endswith("s") else midlab} median near the school, {money(mid)}.'), {'t': 'calc', 'which': 'mortgage', 'price': mid, 'gen': G}]
@@ -222,9 +268,9 @@ def page(r):
     if indep:
         faq.append((f'Does living near {nm} get a child a place?', f'No. {nm} is an independent school and sets its own admission, so distance does not decide it. Ask the school how applications and wait lists work.'))
     else:
-        faq.append((f'Are the homes on this page in the {nm} catchment?', f'Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. {f["district_name"]} School District sets the catchment' +
+        faq.append((f'Are the homes on this page in the {nm} catchment?', f'Not necessarily. The search finds homes whose listing names the school' + (', and the sold prices are measured by distance' if has else '') + f'. {f["district_name"]} School District sets the catchment' +
                     (' and shows it on a ' + ('map only' if f['catchment'] == 'map only' else 'page') + ' on its website' if f['catchment_url'] else '') + ', so confirm the exact address with the district before you offer.'))
-    faq.append((f'How does the {nm} home search find homes?', f'It lists active houses, townhomes and condos whose listing description names {nm}. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than {rk} away.'))
+    faq.append((f'How does the {nm} home search find homes?', f'It lists active homes whose listing text names {nm}, so a nearby home that leaves the name out will not show.'))
     if sd and n >= 10:
         gs = sd['groups']; ps = [f'{lab.lower()} {money(gs[k]["price"])}' for k, lab in gdef if gs[k].get('price')]
         if ps: faq.append((f'How much do homes near {nm} sell for?', f'Within {rk} of the school, {n} homes sold between {WIN.replace(" to ", " and ")}. Medians were ' + ', '.join(ps) + '. A median is the middle price and is shown where at least 5 homes sold.'))
@@ -234,6 +280,9 @@ def page(r):
     links = []
     if r['area']: links.append((f'{r["area"]["area"]} neighbourhood guide', r['area']['page']))
     links.append((hubname, hub))
+    if not r['approx'] and 'within' in dir() and len(within) >= 3:
+        top3 = within[:3]
+        faq.append((f'Which schools are closest to {nm}?', f'In a straight line, the closest schools in the provincial list are ' + ', '.join(f'{x["name"]} ({d:.1f} km {bearing(me, (x["lat"], x["lon"]))})' for d, x in top3[:-1]) + f' and {top3[-1][1]["name"]} ({top3[-1][0]:.1f} km {bearing(me, (top3[-1][1]["lat"], top3[-1][1]["lon"]))}).'))
     links += SEARCHES[r['hubkey']] + [('Recently sold homes', 'sold-properties'), ('Find out what your home is worth', 'home-evaluation'), ('First-time home buyer program', 'first-time-home-buyer-program'), ('Home buyer questions in BC', 'faq-for-home-buyers-in-bc')]
     seen = set(); links = [x for x in links if not (x[1] in seen or seen.add(x[1]))]
     return N.finish(slug, seo, [(hubname, hub)], faq, bl, f'Homes near {nm}: your questions answered', links, dict(search_page=dict(kind='school', school=nm, city=r['hubkey'], radius=rad, sold=bool(sd and n >= 10))))
@@ -261,7 +310,7 @@ def inbound(built):
     for host, rs in byhub.items():
         rs = sorted(rs, key=lambda x: x['school'])
         nh += add_blocks(host, 'schoollinks', [{'t': 'h', 'level': 2, 'text': 'Homes for sale near each school'},
-                                               {'t': 'p', 'text': 'Each page lists homes for sale whose listing names the school and shows what homes within about 1 to 2 km of it sold for.'},
+                                               {'t': 'p', 'text': 'Each page lists homes for sale whose listing names the school, with school facts and the schools nearby. Where enough homes sold close to the school, it also shows what they sold for.'},
                                                {'t': 'list', 'items': [[lk(f'Homes for sale near {x["school"]}' + (f' ({x["city"]})' if x['dup'] else ''), x['slug'])] for x in rs]}], 'hub')
     for host, rs in byarea.items():
         rs = sorted(rs, key=lambda x: x['school'])

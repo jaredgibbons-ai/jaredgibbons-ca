@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Heath Elementary | Prices",
-  "description": "Search homes for sale near Heath Elementary in Delta. See listings that mention the school, nearby schools, catchment checks and sold prices for the area.",
+  "description": "Search homes for sale near Heath Elementary in Delta. See listings that name the school, nearby schools and what to check on the catchment before you offer.",
   "h1": "Homes for Sale Near Heath Elementary"
  },
  "breadcrumbs": [
@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Heath Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Delta School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Delta School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Heath Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Heath Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Heath Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Heath Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Seaquam Secondary (0.8 km south-east), Chalmers Elementary (0.8 km north) and Cougar Canyon Elementary (0.9 km south-east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Heath Elementary. Under it are the prices homes sold for within 1 km of the school.",
+   "text": "The search below lists homes for sale whose listing names Heath Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Heath Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Heath Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,197 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Seaquam Secondary",
+      "t": "Homes for sale near Seaquam Secondary (secondary school, about 0.8 km south-east)",
       "h": "/homes-near-seaquam-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 0.8 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Cougar Canyon Elementary",
+      "t": "Homes for sale near Cougar Canyon Elementary (elementary school, about 0.9 km south-east)",
       "h": "/homes-near-cougar-canyon-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.9 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Sunshine Hills Elementary",
+      "t": "Homes for sale near Sunshine Hills Elementary (elementary school, about 0.9 km south)",
       "h": "/homes-near-sunshine-hills-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.9 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Heath Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "21 schools in the provincial school list sit within 3 km of Heath Elementary in a straight line (15 elementary, 6 secondary; 1 independent). The closest is Seaquam Secondary, 0.8 km away, and the farthest on this list is Kennedy Trail Elementary, 3.0 km away. By type, the nearest elementary school is Chalmers Elementary (0.8 km); the nearest independent school is Khalsa School Newton (2.1 km); the nearest school listing a French Immersion program is Chalmers Elementary (0.8 km). Other elementary schools close by: Chalmers Elementary (0.8 km north), Cougar Canyon Elementary (0.9 km south-east), Sunshine Hills Elementary (0.9 km south), Jarvis Traditional Elementary (1.5 km north-east), Cougar Creek Elementary (1.8 km east). The nearest school teaching the same grades (K-7) is Chalmers Elementary, 0.8 km north of Heath Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Heath Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Seaquam Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "0.8 km south-east"
+    ],
+    [
+     "Chalmers Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.8 km north"
+    ],
+    [
+     "Cougar Canyon Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km south-east"
+    ],
+    [
+     "Sunshine Hills Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km south"
+    ],
+    [
+     "Burnsview Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "0.9 km north"
+    ],
+    [
+     "Jarvis Traditional Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km north-east"
+    ],
+    [
+     "Cougar Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km east"
+    ],
+    [
+     "McCloskey Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km north"
+    ],
+    [
+     "Westerman Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km north-east"
+    ],
+    [
+     "Sands Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.0 km north-west"
+    ],
+    [
+     "Gray Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km north-west"
+    ],
+    [
+     "Khalsa School Newton",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.1 km east"
+    ],
+    [
+     "Pinewood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.1 km south-east"
+    ],
+    [
+     "North Delta Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.3 km north"
+    ],
+    [
+     "Strawberry Hill Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km north-east"
+    ],
+    [
+     "Delta Continuing Education",
+     "Secondary",
+     "10, 12",
+     "Public",
+     "2.3 km north"
+    ],
+    [
+     "Beaver Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km south-east"
+    ],
+    [
+     "Richardson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km north"
+    ],
+    [
+     "Boundary Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km south-east"
+    ],
+    [
+     "Tamanawis Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.8 km south-east"
+    ],
+    [
+     "Kennedy Trail Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.0 km north-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +354,7 @@
     ],
     [
      {
-      "t": "Walk the route to Heath Elementary the way a child would, and count the crossings and sidewalks."
+      "t": "Look at Chalmers Elementary, the nearest other elementary school, 0.8 km north of Heath Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Hellings Elementary | Prices",
-  "description": "Search homes for sale near Hellings Elementary in Delta. See listings that mention the school, nearby schools, catchment checks and sold prices for the area.",
+  "description": "Search homes for sale near Hellings Elementary in Delta. Find listings that name the school, plus nearby schools and what to check on the catchment.",
   "h1": "Homes for Sale Near Hellings Elementary"
  },
  "breadcrumbs": [
@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Hellings Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Delta School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Delta School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Hellings Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Hellings Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Hellings Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Hellings Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Immaculate Conception School (0.7 km north-east), Gibson Elementary (0.8 km north-west) and Delta Continuing Education (0.8 km south).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Hellings Elementary in the listing, then check the sold prices within 1 km of the school.",
+   "text": "Use the search below to see homes for sale that name Hellings Elementary in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Hellings Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Hellings Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,225 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Richardson Elementary",
+      "t": "Homes for sale near Richardson Elementary (elementary school, about 0.9 km south-west)",
       "h": "/homes-near-richardson-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.9 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near North Delta Secondary",
+      "t": "Homes for sale near North Delta Secondary (secondary school, about 0.9 km south-west)",
       "h": "/homes-near-north-delta-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 0.9 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Delview Secondary",
+      "t": "Homes for sale near Delview Secondary (secondary school, about 0.9 km north)",
       "h": "/homes-near-delview-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 0.9 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Hellings Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "27 schools in the provincial school list sit within 3 km of Hellings Elementary in a straight line (18 elementary, 7 secondary, 2 other; 2 independent). The closest is Immaculate Conception School, 0.7 km away, and the farthest on this list is Sikh Academy, 2.5 km away. By type, the nearest secondary school is Delta Continuing Education (0.8 km); the nearest school listing a French Immersion program is Richardson Elementary (0.9 km). Other elementary schools close by: Immaculate Conception School (0.7 km north-east), Gibson Elementary (0.8 km north-west), Richardson Elementary (0.9 km south-west), Devon Gardens Elementary (1.1 km north-west), McCloskey Elementary (1.3 km south). The nearest school teaching the same grades (K-7) is Immaculate Conception School, 0.7 km north-east of Hellings Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Hellings Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Immaculate Conception School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "0.7 km north-east"
+    ],
+    [
+     "Gibson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.8 km north-west"
+    ],
+    [
+     "Delta Continuing Education",
+     "Secondary",
+     "10, 12",
+     "Public",
+     "0.8 km south"
+    ],
+    [
+     "Richardson Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km south-west"
+    ],
+    [
+     "North Delta Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "0.9 km south-west"
+    ],
+    [
+     "Delview Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "0.9 km north"
+    ],
+    [
+     "Devon Gardens Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.1 km north-west"
+    ],
+    [
+     "McCloskey Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.3 km south"
+    ],
+    [
+     "Annieville Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.3 km north-west"
+    ],
+    [
+     "Home Quest",
+     "Other",
+     "K-9",
+     "Public",
+     "1.3 km north-west"
+    ],
+    [
+     "Kennedy Trail Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km south-east"
+    ],
+    [
+     "Kirkbride Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km north-east"
+    ],
+    [
+     "Brooke Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km west"
+    ],
+    [
+     "Sands Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.0 km south-west"
+    ],
+    [
+     "L.A. Matheson Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.0 km north-east"
+    ],
+    [
+     "Jarvis Traditional Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km south"
+    ],
+    [
+     "Royal Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.1 km north"
+    ],
+    [
+     "Gray Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.1 km south-west"
+    ],
+    [
+     "Continuing Ed SD36 (Invergarry)",
+     "Secondary",
+     "10-12",
+     "Public",
+     "2.2 km east"
+    ],
+    [
+     "Senator Reid Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km north-east"
+    ],
+    [
+     "Burnsview Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.3 km south"
+    ],
+    [
+     "Chalmers Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km south"
+    ],
+    [
+     "Westerman Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km south-east"
+    ],
+    [
+     "David Brankin Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km north-east"
+    ],
+    [
+     "Sikh Academy",
+     "Other",
+     "K-8",
+     "Independent",
+     "2.5 km east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +382,7 @@
     ],
     [
      {
-      "t": "Walk to Hellings Elementary from the home and check the crossings, sidewalks and lighting on the way."
+      "t": "Look at Immaculate Conception School, the nearest other elementary school, 0.7 km north-east of Hellings Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

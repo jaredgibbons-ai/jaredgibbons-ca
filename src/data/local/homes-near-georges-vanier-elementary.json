@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Georges Vanier Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Georges Vanier Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Georges Vanier Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Georges Vanier Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Georges Vanier Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are M B Sanford Elementary (0.7 km north), Hyland Elementary (0.8 km south-west) and T E Scott Elementary (1.2 km east).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions Georges Vanier Elementary, followed by what homes within 1 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions Georges Vanier Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Georges Vanier Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Georges Vanier Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,225 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Hyland Elementary",
+      "t": "Homes for sale near Hyland Elementary (elementary school, about 0.8 km south-west)",
       "h": "/homes-near-hyland-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.8 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Chimney Hill Elementary",
+      "t": "Homes for sale near Chimney Hill Elementary (elementary school, about 1.4 km north-east)",
       "h": "/homes-near-chimney-hill-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.4 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Frank Hurt Secondary",
+      "t": "Homes for sale near Frank Hurt Secondary (secondary school, about 1.5 km north)",
       "h": "/homes-near-frank-hurt-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.5 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Georges Vanier Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "28 schools in the provincial school list sit within 3 km of Georges Vanier Elementary in a straight line (19 elementary, 6 secondary, 3 other; 5 independent). The closest is M B Sanford Elementary, 0.7 km away, and the farthest on this list is Newton Elementary, 2.9 km away. By type, the nearest secondary school is Frank Hurt Secondary (1.5 km); the nearest independent school is Surrey Muslim School (1.8 km); the nearest school listing a French Immersion program is Ecole Panorama Ridge Secondary (2.2 km). Other elementary schools close by: M B Sanford Elementary (0.7 km north), Hyland Elementary (0.8 km south-west), T E Scott Elementary (1.2 km east), McLeod Road Traditional (1.3 km south), Chimney Hill Elementary (1.4 km north-east). The nearest school teaching the same grades (K-7) is M B Sanford Elementary, 0.7 km north of Georges Vanier Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Georges Vanier Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "M B Sanford Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.7 km north"
+    ],
+    [
+     "Hyland Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.8 km south-west"
+    ],
+    [
+     "T E Scott Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km east"
+    ],
+    [
+     "McLeod Road Traditional",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.3 km south"
+    ],
+    [
+     "Chimney Hill Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km north-east"
+    ],
+    [
+     "Frank Hurt Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.5 km north"
+    ],
+    [
+     "Sullivan Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.6 km south"
+    ],
+    [
+     "Goldstone Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km south-east"
+    ],
+    [
+     "Surrey Muslim School",
+     "Elementary",
+     "K-6",
+     "Independent",
+     "1.8 km north-west"
+    ],
+    [
+     "Woodward Hill Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km south"
+    ],
+    [
+     "Henry Bose Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km south-west"
+    ],
+    [
+     "W E Kinvig Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.9 km west"
+    ],
+    [
+     "iLearn Secondary School Society",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "2.0 km south-west"
+    ],
+    [
+     "Regent Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.0 km east"
+    ],
+    [
+     "Gabrielle-Roy",
+     "Other",
+     "K-12",
+     "Public",
+     "2.0 km west"
+    ],
+    [
+     "Guru Angad Dev School",
+     "Other",
+     "K-11",
+     "Independent",
+     "2.0 km north-west"
+    ],
+    [
+     "North Ridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km south-west"
+    ],
+    [
+     "Bear Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km north-west"
+    ],
+    [
+     "Ecole Panorama Ridge Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.2 km south-west"
+    ],
+    [
+     "St Bernadette",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.3 km west"
+    ],
+    [
+     "Cambridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.4 km south-east"
+    ],
+    [
+     "Martha Jane Norris Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.6 km west"
+    ],
+    [
+     "Janice Churchill Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km north"
+    ],
+    [
+     "Princess Margaret Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.7 km west"
+    ],
+    [
+     "Newton Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.9 km north-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +382,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to Georges Vanier Elementary and note the crossings, sidewalks and hills."
+      "t": "Look at M B Sanford Elementary, the nearest other elementary school, 0.7 km north of Georges Vanier Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

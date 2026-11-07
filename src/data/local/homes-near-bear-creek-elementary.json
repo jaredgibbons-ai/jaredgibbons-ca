@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Bear Creek Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Bear Creek Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Bear Creek Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Bear Creek Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Bear Creek Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Frank Hurt Secondary (0.7 km south-east), Guru Angad Dev School (0.8 km south-west) and Newton Elementary (0.9 km west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Bear Creek Elementary in the listing, then check the sold prices within 1 km of the school.",
+   "text": "Use the search below to see homes for sale that name Bear Creek Elementary in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Bear Creek Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Bear Creek Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,225 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Frank Hurt Secondary",
+      "t": "Homes for sale near Frank Hurt Secondary (secondary school, about 0.7 km south-east)",
       "h": "/homes-near-frank-hurt-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 0.7 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Newton Elementary",
+      "t": "Homes for sale near Newton Elementary (elementary school, about 0.9 km west)",
       "h": "/homes-near-newton-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.9 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Brookside Elementary",
+      "t": "Homes for sale near Brookside Elementary (elementary school, about 1.5 km north-east)",
       "h": "/homes-near-brookside-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.5 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Bear Creek Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "32 schools in the provincial school list sit within 3 km of Bear Creek Elementary in a straight line (18 elementary, 10 secondary, 4 other; 4 independent). The closest is Frank Hurt Secondary, 0.7 km away, and the farthest on this list is Continuing Ed SD36 (Invergarry), 2.6 km away. By type, the nearest elementary school is Newton Elementary (0.9 km); the nearest independent school is Guru Angad Dev School (0.8 km); the nearest school listing a French Immersion program is Simon Cunningham Elementary (2.8 km). Other elementary schools close by: Newton Elementary (0.9 km west), Surrey Muslim School (1.3 km south-west), Brookside Elementary (1.5 km north-east), M B Sanford Elementary (1.8 km south-east), Janice Churchill Elementary (1.8 km east). The nearest school teaching the same grades (K-7) is Newton Elementary, 0.9 km west of Bear Creek Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Bear Creek Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Frank Hurt Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "0.7 km south-east"
+    ],
+    [
+     "Guru Angad Dev School",
+     "Other",
+     "K-11",
+     "Independent",
+     "0.8 km south-west"
+    ],
+    [
+     "Newton Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.9 km west"
+    ],
+    [
+     "Surrey Muslim School",
+     "Elementary",
+     "K-6",
+     "Independent",
+     "1.3 km south-west"
+    ],
+    [
+     "Brookside Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km north-east"
+    ],
+    [
+     "Enver Creek Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.7 km north-east"
+    ],
+    [
+     "M B Sanford Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km south-east"
+    ],
+    [
+     "Janice Churchill Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km east"
+    ],
+    [
+     "Sikh Academy",
+     "Other",
+     "K-8",
+     "Independent",
+     "2.0 km north-west"
+    ],
+    [
+     "Cornerstone Montessori School",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.1 km north-east"
+    ],
+    [
+     "W E Kinvig Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.1 km south-west"
+    ],
+    [
+     "Cindrich Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km north"
+    ],
+    [
+     "Green Timbers Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km north-east"
+    ],
+    [
+     "Dr F D Sinclair Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km south-west"
+    ],
+    [
+     "Georges Vanier Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km south-east"
+    ],
+    [
+     "Creekside Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km north"
+    ],
+    [
+     "Chimney Hill Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km south-east"
+    ],
+    [
+     "Princess Margaret Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.4 km south-west"
+    ],
+    [
+     "Gabrielle-Roy",
+     "Other",
+     "K-12",
+     "Public",
+     "2.5 km south-west"
+    ],
+    [
+     "Maple Green Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km north-east"
+    ],
+    [
+     "Education Services (Alternate)",
+     "Other",
+     "6-12",
+     "Public",
+     "2.6 km north"
+    ],
+    [
+     "SAIL Secondary",
+     "Secondary",
+     "8, 9, 10, 12",
+     "Public",
+     "2.6 km north"
+    ],
+    [
+     "SD 36 Education Services (Type 1)",
+     "Secondary",
+     "9, 10, 12",
+     "Public",
+     "2.6 km north"
+    ],
+    [
+     "Surrey Academy of Innovative Learning",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.6 km north"
+    ],
+    [
+     "Continuing Ed SD36 (Invergarry)",
+     "Secondary",
+     "10-12",
+     "Public",
+     "2.6 km north-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +382,7 @@
     ],
     [
      {
-      "t": "Walk to Bear Creek Elementary from the home and check the crossings, sidewalks and lighting on the way."
+      "t": "Look at Newton Elementary, the nearest other elementary school, 0.9 km west of Bear Creek Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

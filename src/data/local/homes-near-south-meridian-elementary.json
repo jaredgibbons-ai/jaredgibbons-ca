@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the South Meridian Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the South Meridian Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names South Meridian Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names South Meridian Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to South Meridian Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are Peace Arch Elementary (0.7 km west), Earl Marriott Secondary (1.1 km north-west) and White Rock Elementary (2.0 km west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names South Meridian Elementary. Under it are the prices homes sold for within 1 km of the school.",
+   "text": "The search below lists homes for sale whose listing names South Meridian Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names South Meridian Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names South Meridian Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,42 +141,231 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Peace Arch Elementary",
+      "t": "Homes for sale near Peace Arch Elementary (elementary school, about 0.7 km west)",
       "h": "/homes-near-peace-arch-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.7 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Earl Marriott Secondary",
+      "t": "Homes for sale near Earl Marriott Secondary (secondary school, about 1.1 km north-west)",
       "h": "/homes-near-earl-marriott-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.1 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Edgewood Elementary",
+      "t": "Homes for sale near Edgewood Elementary (elementary school, about 2.1 km north-east)",
       "h": "/homes-near-edgewood-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 2.1 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Douglas Elementary",
+      "t": "Homes for sale near Douglas Elementary (elementary school, about 3.1 km south-east)",
       "h": "/homes-near-douglas-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 3.1 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of South Meridian Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "10 schools in the provincial school list sit within 3 km of South Meridian Elementary in a straight line (4 elementary, 3 secondary, 3 other; 4 independent). The closest is Peace Arch Elementary, 0.7 km away, and the farthest on this list is White Rock Christian Academy, 2.9 km away. By type, the nearest secondary school is Earl Marriott Secondary (1.1 km); the nearest independent school is St John Paul II Academy (2.0 km). Other elementary schools close by: Peace Arch Elementary (0.7 km west), White Rock Elementary (2.0 km west), Edgewood Elementary (2.1 km north-east), Jessie Lee Elementary (2.3 km north-west). The nearest school teaching the same grades (K-7) is Peace Arch Elementary, 0.7 km west of South Meridian Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of South Meridian Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Peace Arch Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.7 km west"
+    ],
+    [
+     "Earl Marriott Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.1 km north-west"
+    ],
+    [
+     "White Rock Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.0 km west"
+    ],
+    [
+     "St John Paul II Academy",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "2.0 km west"
+    ],
+    [
+     "Edgewood Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.1 km north-east"
+    ],
+    [
+     "Jessie Lee Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km north-west"
+    ],
+    [
+     "Newbridge Academy",
+     "Other",
+     "K, 1, 2, 3, 4, 5, 8, 9",
+     "Independent",
+     "2.4 km north-west"
+    ],
+    [
+     "Southridge School",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.7 km north"
+    ],
+    [
+     "Grandview Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.9 km north-east"
+    ],
+    [
+     "White Rock Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.9 km north-west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "More schools beyond 3 km from South Meridian Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools beyond 3 km from South Meridian Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "H T Thrift Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.1 km west"
+    ],
+    [
+     "Semiahmoo Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "3.1 km west"
+    ],
+    [
+     "Douglas Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.1 km south-east"
+    ],
+    [
+     "Pacific Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.1 km north-east"
+    ],
+    [
+     "Sunnyside Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "3.1 km north"
+    ],
+    [
+     "Star of the Sea",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "3.3 km north-west"
+    ],
+    [
+     "Bayridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.1 km west"
+    ],
+    [
+     "Morgan Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.3 km north"
+    ],
+    [
+     "Rosemary Heights Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.8 km north"
+    ],
+    [
+     "Semiahmoo Trail Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "4.9 km north-west"
+    ],
+    [
+     "East Kensington Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "5.2 km north-east"
+    ],
+    [
+     "Ray Shepherd Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "5.3 km west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates."
   },
   {
    "t": "h",
@@ -194,7 +388,7 @@
     ],
     [
      {
-      "t": "Walk the route to South Meridian Elementary the way a child would, and count the crossings and sidewalks."
+      "t": "Look at Peace Arch Elementary, the nearest other elementary school, 0.7 km west of South Meridian Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],

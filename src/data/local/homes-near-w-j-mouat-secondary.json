@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the W J Mouat Secondary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Abbotsford School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Abbotsford School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the W J Mouat Secondary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names W J Mouat Secondary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 2 km away.",
+   "a": "It lists active homes whose listing text names W J Mouat Secondary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to W J Mouat Secondary?",
+   "a": "In a straight line, the closest schools in the provincial list are Clearbrook Elementary (1.0 km north), John Maclure Community School (1.0 km east) and Ten Broeck Elementary (1.4 km south-west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name W J Mouat Secondary in the listing, then check the sold prices within 2 km of the school.",
+   "text": "Use the search below to see homes for sale that name W J Mouat Secondary in the listing.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names W J Mouat Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names W J Mouat Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -140,33 +145,211 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Clearbrook Elementary",
+      "t": "Homes for sale near Clearbrook Elementary (elementary school, about 1.0 km north)",
       "h": "/homes-near-clearbrook-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.0 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Godson Elementary",
+      "t": "Homes for sale near Godson Elementary (elementary school, about 2.8 km south-east)",
       "h": "/homes-near-godson-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 2.8 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Yale Secondary",
+      "t": "Homes for sale near Yale Secondary (secondary school, about 5.2 km east)",
       "h": "/homes-near-yale-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 5.2 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of W J Mouat Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "23 schools in the provincial school list sit within 3 km of W J Mouat Secondary in a straight line (12 elementary, 5 secondary, 3 middle, 3 other; 4 independent). The closest is Clearbrook Elementary, 1.0 km away, and the farthest on this list is Abbotsford Senior Secondary School, 3.0 km away. By type, the nearest secondary school is Rick Hansen Secondary (2.3 km); the nearest independent school is Mennonite Educational Institute (2.1 km). Other secondary schools close by: Rick Hansen Secondary (2.3 km west), St. John Brebeuf Regional Secondary (2.3 km west), Bakerview Centre for Learning (2.6 km south), Bakerview Centre for Learning - CE (2.6 km south), Abbotsford Senior Secondary School (3.0 km south-east). The nearest school teaching the same grades (9-12) is Rick Hansen Secondary, 2.3 km west of W J Mouat Secondary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of W J Mouat Secondary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "Clearbrook Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.0 km north"
+    ],
+    [
+     "John Maclure Community School",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.0 km east"
+    ],
+    [
+     "Ten Broeck Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.4 km south-west"
+    ],
+    [
+     "Chief Dan George Middle",
+     "Middle",
+     "6-8",
+     "Public",
+     "1.5 km north-east"
+    ],
+    [
+     "Dr Roberta Bondar Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.7 km north-east"
+    ],
+    [
+     "Dormick Park Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.7 km south"
+    ],
+    [
+     "Centennial Park Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "1.7 km south-east"
+    ],
+    [
+     "Harry Sayers Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.0 km north-west"
+    ],
+    [
+     "Mennonite Educational Institute",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.1 km north-west"
+    ],
+    [
+     "Cornerstone Christian School",
+     "Other",
+     "K-9",
+     "Independent",
+     "2.1 km north-east"
+    ],
+    [
+     "Eugene Reimer Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "2.2 km west"
+    ],
+    [
+     "Terry Fox Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.2 km east"
+    ],
+    [
+     "Rick Hansen Secondary",
+     "Secondary",
+     "9-12",
+     "Public",
+     "2.3 km west"
+    ],
+    [
+     "St. James and St. Ann's Elementary",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "2.3 km west"
+    ],
+    [
+     "St. John Brebeuf Regional Secondary",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "2.3 km west"
+    ],
+    [
+     "ASIA - North Poplar",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.3 km south"
+    ],
+    [
+     "Abbotsford Traditional School",
+     "Other",
+     "6-12",
+     "Public",
+     "2.3 km south-west"
+    ],
+    [
+     "Blue Jay Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.5 km west"
+    ],
+    [
+     "Bakerview Centre for Learning",
+     "Secondary",
+     "9-12",
+     "Public",
+     "2.6 km south"
+    ],
+    [
+     "Bakerview Centre for Learning - CE",
+     "Secondary",
+     "11-12",
+     "Public",
+     "2.6 km south"
+    ],
+    [
+     "Godson Elementary",
+     "Elementary",
+     "K-5",
+     "Public",
+     "2.8 km south-east"
+    ],
+    [
+     "Abbotsford Middle School",
+     "Middle",
+     "6-8",
+     "Public",
+     "2.9 km south-east"
+    ],
+    [
+     "Abbotsford Senior Secondary School",
+     "Secondary",
+     "9-12",
+     "Public",
+     "3.0 km south-east"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -189,7 +372,7 @@
     ],
     [
      {
-      "t": "Walk to W J Mouat Secondary from the home and check the crossings, sidewalks and lighting on the way."
+      "t": "Look at Rick Hansen Secondary, the nearest other secondary school, 2.3 km west of W J Mouat Secondary. Compare the two when you check which school serves the address."
      }
     ]
    ],

@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Hyland Elementary | Prices",
-  "description": "Search homes for sale near Hyland Elementary in Surrey. See listings that mention the school, nearby schools, catchment checks and sold prices for the area.",
+  "description": "Search homes for sale near Hyland Elementary in Surrey. See listings that name the school, nearby schools and what to check on the catchment before you offer.",
   "h1": "Homes for Sale Near Hyland Elementary"
  },
  "breadcrumbs": [
@@ -25,19 +25,24 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Hyland Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Hyland Elementary home search find homes?",
-   "a": "It lists active houses, townhomes and condos whose listing description names Hyland Elementary. MLS® listings are not tagged by school, so a nearby home whose listing does not name the school will not show, and a listing that does can be farther than 1 km away.",
+   "a": "It lists active homes whose listing text names Hyland Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "Which schools are closest to Hyland Elementary?",
+   "a": "In a straight line, the closest schools in the provincial list are McLeod Road Traditional (0.8 km south-east), Georges Vanier Elementary (0.8 km north-east) and iLearn Secondary School Society (1.2 km south-west).",
    "gen": "nsrch"
   }
  ],
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
+   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
    "gen": "school"
   },
   {
@@ -47,7 +52,7 @@
   },
   {
    "t": "p",
-   "text": "Below are the homes currently for sale whose listing mentions Hyland Elementary, followed by what homes within 1 km of the school sold for.",
+   "text": "Below are the homes currently for sale whose listing mentions Hyland Elementary.",
    "gen": "nsrch"
   },
   {
@@ -62,7 +67,7 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Hyland Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Hyland Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
   },
   {
@@ -136,33 +141,225 @@
    "items": [
     [
      {
-      "t": "Homes for sale near Georges Vanier Elementary",
+      "t": "Homes for sale near Georges Vanier Elementary (elementary school, about 0.8 km north-east)",
       "h": "/homes-near-georges-vanier-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 0.8 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Henry Bose Elementary",
+      "t": "Homes for sale near Henry Bose Elementary (elementary school, about 1.2 km west)",
       "h": "/homes-near-henry-bose-elementary.html"
-     },
-     {
-      "t": "(elementary school, about 1.2 km away)"
      }
     ],
     [
      {
-      "t": "Homes for sale near Sullivan Heights Secondary",
+      "t": "Homes for sale near Sullivan Heights Secondary (secondary school, about 1.2 km south-east)",
       "h": "/homes-near-sullivan-heights-secondary.html"
-     },
-     {
-      "t": "(secondary school, about 1.2 km away)"
      }
     ]
    ],
    "gen": "school"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Schools within 3 km of Hyland Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "27 schools in the provincial school list sit within 3 km of Hyland Elementary in a straight line (18 elementary, 6 secondary, 3 other; 5 independent). The closest is McLeod Road Traditional, 0.8 km away, and the farthest on this list is Tamanawis Secondary, 2.7 km away. By type, the nearest secondary school is iLearn Secondary School Society (1.2 km); the nearest independent school is iLearn Secondary School Society (1.2 km); the nearest school listing a French Immersion program is Ecole Panorama Ridge Secondary (1.6 km). Other elementary schools close by: McLeod Road Traditional (0.8 km south-east), Georges Vanier Elementary (0.8 km north-east), Henry Bose Elementary (1.2 km west), Woodward Hill Elementary (1.2 km south), North Ridge Elementary (1.4 km south-west). The nearest school teaching the same grades (K-7) is McLeod Road Traditional, 0.8 km south-east of Hyland Elementary.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Schools within 3 km of Hyland Elementary",
+   "head": [
+    "School",
+    "Type",
+    "Grades",
+    "Public or independent",
+    "Distance and direction"
+   ],
+   "rows": [
+    [
+     "McLeod Road Traditional",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.8 km south-east"
+    ],
+    [
+     "Georges Vanier Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "0.8 km north-east"
+    ],
+    [
+     "iLearn Secondary School Society",
+     "Secondary",
+     "8-12",
+     "Independent",
+     "1.2 km south-west"
+    ],
+    [
+     "Henry Bose Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km west"
+    ],
+    [
+     "Woodward Hill Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.2 km south"
+    ],
+    [
+     "Sullivan Heights Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.2 km south-east"
+    ],
+    [
+     "North Ridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km south-west"
+    ],
+    [
+     "Goldstone Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.4 km south-east"
+    ],
+    [
+     "M B Sanford Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.5 km north-east"
+    ],
+    [
+     "Ecole Panorama Ridge Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "1.6 km west"
+    ],
+    [
+     "W E Kinvig Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.7 km north-west"
+    ],
+    [
+     "Gabrielle-Roy",
+     "Other",
+     "K-12",
+     "Public",
+     "1.7 km west"
+    ],
+    [
+     "St Bernadette",
+     "Elementary",
+     "K-7",
+     "Independent",
+     "1.7 km west"
+    ],
+    [
+     "T E Scott Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "1.8 km north-east"
+    ],
+    [
+     "Surrey Muslim School",
+     "Elementary",
+     "K-6",
+     "Independent",
+     "2.0 km north-west"
+    ],
+    [
+     "Frank Hurt Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.1 km north"
+    ],
+    [
+     "Chimney Hill Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km north-east"
+    ],
+    [
+     "Martha Jane Norris Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.2 km west"
+    ],
+    [
+     "Regent Christian Academy",
+     "Other",
+     "K-12",
+     "Independent",
+     "2.3 km east"
+    ],
+    [
+     "Cambridge Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.3 km south-east"
+    ],
+    [
+     "Guru Angad Dev School",
+     "Other",
+     "K-11",
+     "Independent",
+     "2.4 km north-west"
+    ],
+    [
+     "Panorama Park Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.5 km west"
+    ],
+    [
+     "Princess Margaret Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.5 km north-west"
+    ],
+    [
+     "Bear Creek Elementary",
+     "Elementary",
+     "K-7",
+     "Public",
+     "2.7 km north"
+    ],
+    [
+     "Tamanawis Secondary",
+     "Secondary",
+     "8-12",
+     "Public",
+     "2.7 km west"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: BC Data Catalogue, BC Schools - School Locations (Open Government Licence - BC). Distances are straight-line from the school coordinates, not walking or driving routes."
   },
   {
    "t": "h",
@@ -185,7 +382,7 @@
     ],
     [
      {
-      "t": "Walk from the front door to Hyland Elementary and note the crossings, sidewalks and hills."
+      "t": "Look at McLeod Road Traditional, the nearest other elementary school, 0.8 km south-east of Hyland Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],
