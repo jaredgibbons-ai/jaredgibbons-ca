@@ -12,6 +12,32 @@ const social = [
   ['Pinterest','https://www.pinterest.com/jaredgibbonsrealtor/'],
   ['Yelp','https://www.yelp.ca/biz/jared-gibbons-surrey'],
 ];
+// Popular searches: one link to each of the pages that carry the most searching, grouped so a visitor (and a crawler) can reach them from every page.
+const popular = [
+  ['Homes by city', [
+    ['South Surrey homes','/south-surrey-homes-for-sale.html'],['White Rock homes','/white-rock.html'],['Langley homes','/langley-homes-for-sale.html'],['Surrey homes','/surrey-homes-for-sale.html'],
+    ['Abbotsford homes','/abbotsford-homes-for-sale.html'],['Chilliwack homes','/chilliwack-homes-for-sale.html'],['Delta homes','/delta-homes-for-sale.html'],['Mission homes','/mission-homes-for-sale.html'],
+    ['Maple Ridge homes','/maple-ridge-homes-for-sale.html'],['Coquitlam homes','/coquitlam-homes-for-sale.html'],
+  ]],
+  ['Condos and townhomes', [
+    ['South Surrey condos','/south-surrey-condos-for-sale.html'],['Langley condos','/langley-condos-for-sale.html'],['Surrey condos','/surrey-condos-for-sale.html'],
+    ['South Surrey townhomes','/south-surrey-townhomes-for-sale.html'],['Langley townhomes','/langley-townhomes-for-sale.html'],['Surrey townhomes','/surrey-townhomes-for-sale.html'],
+  ]],
+  ['By price', [
+    ['Homes under $1.5 million','/homes-under-1500000.html'],['South Surrey homes under $1.8M','/south-surrey-homes-under-1-8m.html'],['Langley homes under $1.8M','/langley-homes-under-1-8m.html'],
+    ['Surrey townhomes under $1.2M','/surrey-townhomes-under-1-2m.html'],['South Surrey townhomes under $1.2M','/south-surrey-townhomes-under-1-2m.html'],['Langley townhomes under $1.2M','/langley-townhomes-under-1-2m.html'],
+  ]],
+  ['Lifestyle and new homes', [
+    ['South Surrey luxury homes','/south-surrey-luxury-homes.html'],['Waterfront homes in White Rock and South Surrey','/south-surrey-white-rock-waterfront-homes-for-sale.html'],
+    ['Langley acreages','/langley-acreages-for-sale.html'],['Fraser Valley acreages','/fraser-valley-acreages-for-sale.html'],['55+ condos in South Surrey and White Rock','/south-surrey-white-rock-55-plus-condos-for-sale.html'],
+    ['Golf course homes in South Surrey and White Rock','/south-surrey-white-rock-golf-course-homes-for-sale.html'],['South Surrey presales','/south-surrey-new-construction-presales.html'],
+    ['Presale projects across the Fraser Valley','/presale-projects-fraser-valley-and-metro-vancouver.html'],
+  ]],
+  ['Buyer and seller tools', [
+    ['Open houses','/open-houses.html'],['Sold properties','/sold-properties.html'],['What is my home worth?','/home-evaluation.html'],['First-time buyer programs in BC','/first-time-home-buyer-program.html'],
+    ['Mortgage calculator','/mortgage-calculator.html'],['GST rebate in BC','/gst-rebate-in-bc.html'],
+  ]],
+];
 const { tagline, cell = false } = Astro.props;
 ---
 <footer class="site-footer on-dark">
@@ -38,6 +64,17 @@ const { tagline, cell = false } = Astro.props;
         </ul>
       </div>
     </div>
+    <nav class="footer__popular" aria-label="Popular searches">
+      <h2 class="footer__popular-h">Popular searches</h2>
+      <div class="footer__popular-grid">
+        {popular.map(([h, links]) => (
+          <div>
+            <p class="footer__label">{h}</p>
+            <ul>{links.map(([n, href]) => <li><a href={href}>{n}</a></li>)}</ul>
+          </div>
+        ))}
+      </div>
+    </nav>
     <div class="footer__legal">
       <p>© 2026 Jared Gibbons – South Surrey Realtor. All rights reserved. | <a href="/privacy.html">Privacy Policy</a> | <a href="/data-and-methodology.html">Data &amp; Methodology</a> | <a href="/photo-credits.html">Photo Credits</a> | <a href="https://myrealpage.com/">Real Estate Websites by myRealPage</a></p>
       <p class="footer__recip"><img src="/img/icon-gv-recip-standard.gif" width="106" height="43" alt="Reciprocity Logo" loading="lazy" /></p>
