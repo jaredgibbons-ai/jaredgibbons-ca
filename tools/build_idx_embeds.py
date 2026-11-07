@@ -161,7 +161,10 @@ def main():
             pj = [q for q in (os.path.join(ROOT, 'src/data/local', slug + '.json'), os.path.join(ROOT, 'src/data/pages', slug + '.json')) if os.path.exists(q)]
             if not pj or not any(b.get('t') == 'grid' for b in json.load(open(pj[0]))['blocks']):
                 problems.append(('keyword sheet: page missing or has no listings placeholder', r[0], slug)); continue
-            pages.setdefault(slug, sid)
+            # K2 and K3 replace the Style of Home searches (1451317/1451318, 5 listings each) on their coach house pages: the word search finds 16 and 6 for the same areas.
+            # K1 covers South Surrey and White Rock together while the page is South Surrey only, so South Surrey keeps its own Style of Home search (1451319).
+            if r[0] in ('K2', 'K3'): pages[slug] = sid
+            else: pages.setdefault(slug, sid)
     # Three special widgets (my listings active/sold, the open search form). Stored as the path after /l/idx2/.
     special = {}
     if 'Special embeds (3)' in wb.sheetnames:
