@@ -1,0 +1,23 @@
+---
+// "What is your home worth?" block for seller-intent pages. Posts to the same forms Worker as the Home evaluation page (kind home-evaluation: name, email and address required).
+import FormStub from './FormStub.astro';
+const { place = '', uid = 'hv' } = Astro.props;
+const heading = place ? `What is your ${place} home worth?` : 'What is your home worth?';
+const fields = [
+  { label: 'Your name', type: 'text' },
+  { label: 'Your email', type: 'email' },
+  { label: 'Your phone number', type: 'tel' },
+  { label: 'Address', type: 'text', addr: true, wide: true },
+];
+---
+<section class="section section--cream hv" aria-labelledby={`h-${uid}`}>
+  <div class="wrap">
+    <p class="eyebrow">Free home value</p>
+    <h2 id={`h-${uid}`} class="h2 caps">{heading}</h2>
+    <p class="lede">Give me the address and where to send the answer. I look at the closest recent sales to your home, not a city average, and reply with a price range.</p>
+    <FormStub fields={fields} submit="Get my home value" uid={uid} fine="Free and no obligation. Not intended to solicit properties already listed for sale." />
+  </div>
+</section>
+<style>
+  .hv .lede{max-width:46rem}
+</style>

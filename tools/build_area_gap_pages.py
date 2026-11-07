@@ -59,7 +59,8 @@ def host_edit(host, fn):
     f = f'src/data/local/{host}.json'
     raw = open(f).read(); d = json.loads(raw); nl = '\n' if raw.endswith('\n') else ''
     line2 = raw.split('\n')[1] if '\n' in raw else ''; ind = len(line2) - len(line2.lstrip(' ')) or 1; asc = '\\u' in raw
-    fn(d); open(f, 'w').write(json.dumps(d, indent=ind, ensure_ascii=asc) + nl)
+    fn(d); compact = raw.count('\n') <= 1
+    open(f, 'w').write(json.dumps(d, separators=(',', ':') if compact else None, indent=None if compact else ind, ensure_ascii=asc) + nl)
 
 
 def set_blocks(host, gen, blocks, end=False):

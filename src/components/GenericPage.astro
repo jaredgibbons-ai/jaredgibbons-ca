@@ -24,6 +24,8 @@ import AREA_PHOTOS from '../data/area-photos.json';
 import PhotoCredit from './PhotoCredit.astro';
 import IdxEmbed from './IdxEmbed.astro';
 import ListingAlert from './ListingAlert.astro';
+import SearchQuiz from './SearchQuiz.astro';
+import HomeValue from './HomeValue.astro';
 import PropertyCard from './PropertyCard.astro';
 import { ownCards } from '../lib/own-listings';
 import IDX from '../data/idx-embeds.json';
@@ -464,6 +466,8 @@ const explore = !_extra.length ? exploreBase
       </section>
     );
   })}
+  {local?.lead === 'quiz' && <SearchQuiz heading={local.lead_heading} />}
+  {local?.lead === 'homevalue' && <HomeValue place={local.lead_place} />}
   <Cta />
   {explore && <ExploreLinks data={explore} />}
 </main>
