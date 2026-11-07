@@ -199,6 +199,47 @@ function titleRuns(bl: Block[]): Block[] {
   return out;
 }
 
+// ---- 0. Neighbourhood guide cards -> one card per guide ------------------------------------------------------------
+// The hub pages flattened every guide card (title, "MLS® sub-area / Also called / Inside" rows, a blurb, links, and the city that
+// belongs to "Inside") into separate lines. Rebuilt strictly: the heading must end "Neighbourhood guide", the list must be label/value
+// rows led by "MLS® sub-area" (with "Inside" last, its value arriving after the links), and the card must carry a guide link.
+function guideCards(bl: Block[]): Block[] {
+  const out: Block[] = [];
+  for (let i = 0; i < bl.length; i++) {
+    const b = bl[i], l = bl[i + 1];
+    if (b?.t === 'h' && b.level === 3 && /neighbourhood guide$/i.test(b.text) && l?.t === 'list' && l.items.length >= 3 && l.items.length % 2 === 1 && /^MLS/i.test(text(l.items[0]))) {
+      const cells = l.items.map((it: Part[]) => text(it));
+      const labels = cells.filter((_: string, k: number) => k % 2 === 0), vals = cells.filter((_: string, k: number) => k % 2 === 1);
+      if (labels[labels.length - 1] === 'Inside' && labels.slice(0, -1).every((x: string) => /^(MLS|Also called|Also spelled)/i.test(x))) {
+        let j = i + 2; const links: { t: string; h: string }[] = []; let blurb: Part[] | null = null; let city = '';
+        while (j < bl.length && bl[j].t !== 'h') {
+          const x = bl[j];
+          if (x.t === 'p' && !x.cls) {
+            const t = text(x.parts);
+            if (x.parts.every((q: Part) => q.h)) x.parts.forEach((q: Part) => links.push({ t: q.t, h: q.h! }));
+            else if (!blurb && t.length > 40) blurb = x.parts;
+            else if (!city && /^(City|District|Township|Village|Town) of /i.test(t)) city = t;
+            else break;
+          } else if (x.t === 'list' && x.items.every((it: Part[]) => it.length === 1)) {
+            for (const it of x.items) { if (it[0].h) links.push({ t: it[0].t, h: it[0].h }); else if (!city) city = it[0].t.trim(); else { j = -1; break; } }
+            if (j < 0) break;
+          } else break;
+          j++;
+        }
+        if (j >= 0 && links.length && blurb) {
+          const facts = labels.slice(0, -1).map((x: string, k: number) => ({ l: x, v: vals[k] })); if (city) facts.push({ l: 'Inside', v: city });
+          out.push({ t: 'gcard', title: b.text, facts, blurb, links });
+          i = j - 1; continue;
+        }
+      }
+    }
+    out.push(b);
+  }
+  const grouped: Block[] = [];
+  for (const b of out) { if (b.t === 'gcard') { const p = grouped[grouped.length - 1]; if (p?.t === 'gcards') p.items.push(b); else grouped.push({ t: 'gcards', items: [b] }); } else grouped.push(b); }
+  return grouped;
+}
+
 // A section often ends with the next section's one-word topic label ("Schools", "Parks and recreation"), left over from the old card layout.
 // It is dropped when it only repeats words of the next heading, or when it trails a list of links.
 export function dropOrphans(bl: Block[], nextHeading = ''): Block[] {
@@ -294,7 +335,8 @@ function splitTail(bl: Block[]): Block[] {
 }
 
 export function upgradeBlocks(bl: Block[]): Block[] {
-  let out = flatLists(splitTail(bl));
+  let out = guideCards(bl);
+  out = flatLists(splitTail(out));
   out = inlineKv(out);
   out = kvCards(out);
   out = colonRows(out);
