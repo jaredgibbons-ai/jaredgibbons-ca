@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Peace Arch Elementary | Prices",
-  "description": "Search homes for sale near Peace Arch Elementary in White Rock. Find listings that name the school, plus nearby schools and what to check on the catchment.",
+  "description": "Homes for sale near Peace Arch Elementary in White Rock. 114 sold within 1 km in twelve months, with prices by home type, nearby schools and catchment checks.",
   "h1": "Homes for Sale Near Peace Arch Elementary"
  },
  "breadcrumbs": [
@@ -25,12 +25,22 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Peace Arch Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Peace Arch Elementary home search find homes?",
    "a": "It lists active homes whose listing text names Peace Arch Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How much do homes near Peace Arch Elementary sell for?",
+   "a": "Within 1 km of the school, 114 homes sold between November 1, 2025 and October 31, 2026. Medians were houses $1,460,000, townhomes $790,000, condos $590,000. A median is the middle price and is shown where at least 5 homes sold.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How fast do homes sell near Peace Arch Elementary?",
+   "a": "Within 1 km of Peace Arch Elementary the median was 34 days on the market, closing at 96.5% of the list price, with 9% of sales above the list price for the 114 homes within 1 km.",
    "gen": "nsrch"
   },
   {
@@ -42,7 +52,7 @@
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
+   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
    "gen": "school"
   },
   {
@@ -52,7 +62,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Peace Arch Elementary.",
+   "text": "The search below lists homes for sale whose listing names Peace Arch Elementary. Under it are the prices homes sold for within 1 km of the school.",
    "gen": "nsrch"
   },
   {
@@ -67,7 +77,118 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Peace Arch Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Peace Arch Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "What homes within 1 km of Peace Arch Elementary sold for",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "Between November 1, 2025 and October 31, 2026, 114 homes sold within 1 km of Peace Arch Elementary: 63 houses, 31 townhomes and 9 condos. The largest group was houses, at a median of $1,460,000.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 1 km of Peace Arch Elementary, by type",
+   "head": [
+    "Measure",
+    "Houses",
+    "Townhomes",
+    "Condos",
+    "All homes"
+   ],
+   "rows": [
+    [
+     "Sales",
+     "63",
+     "31",
+     "9",
+     "114"
+    ],
+    [
+     "Median price",
+     "$1,460,000",
+     "$790,000",
+     "$590,000",
+     "$1,137,500"
+    ],
+    [
+     "Middle half of prices",
+     "$1,250,000 to $1,680,000",
+     "$730,000 to $850,000",
+     "—",
+     "$797,500 to $1,506,250"
+    ],
+    [
+     "Median days to sell",
+     "34",
+     "25",
+     "34",
+     "34"
+    ],
+    [
+     "Sold price as a share of list price",
+     "96.1%",
+     "96.9%",
+     "96.4%",
+     "96.5%"
+    ],
+    [
+     "Sales over the list price",
+     "13%",
+     "3%",
+     "0%",
+     "9%"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address (straight-line distance). A pending sale is firm but not completed. A figure is shown only where at least 5 homes sold. Duplexes and row houses count in All homes only."
+  },
+  {
+   "t": "p",
+   "text": "The middle half of sales within 1 km of Peace Arch Elementary went for houses between $1,250,000 and $1,680,000; townhomes between $730,000 and $850,000. Half of the 114 homes sold at or below $1,137,500, 96.5% of the list price at the median.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 1 km of Peace Arch Elementary, by quarter",
+   "head": [
+    "Quarter",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Nov 2025 to Jan 2026",
+     "19",
+     "$985,000"
+    ],
+    [
+     "Feb to Apr 2026",
+     "31",
+     "$1,100,000"
+    ],
+    [
+     "May to Jul 2026",
+     "32",
+     "$1,339,500"
+    ],
+    [
+     "Aug to Oct 2026",
+     "32",
+     "$1,168,750"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A median is shown only where at least 5 homes sold."
+  },
+  {
+   "t": "p",
+   "text": "Where the 114 sales within 1 km of Peace Arch Elementary were: White Rock (58 sales, median $1,379,048), King George Corridor (54 sales, median $828,500).",
    "gen": "nsrch"
   },
   {
@@ -400,11 +521,33 @@
     ],
     [
      {
+      "t": "Compare price with similar homes farther from the school. The median house within 1 km of Peace Arch Elementary was $1,460,000, so check whether size and age explain a gap before you pay for the location."
+     }
+    ],
+    [
+     {
       "t": "Look at South Meridian Elementary, the nearest other elementary school, 0.7 km east of Peace Arch Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],
    "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Estimate the payment on a home near Peace Arch Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "The calculator starts at the house median within 1 km of Peace Arch Elementary, $1,460,000, and you can change the price, down payment and rate.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "calc",
+   "which": "mortgage",
+   "price": 1460000,
+   "gen": "school"
   },
   {
    "t": "h",
@@ -480,6 +623,6 @@
   "school": "Peace Arch Elementary",
   "city": "south-surrey",
   "radius": 1.0,
-  "sold": false
+  "sold": true
  }
 }
