@@ -1,0 +1,106 @@
+---
+// "Email me new listings" box, shown above the live listing search. Posts to /api/forms/listing-alert
+// (Turnstile + honeypot + server-side consent record). Renders only when the live forms are switched on,
+// so it never appears as a box that does nothing.
+import { ALERT_CONSENT_TEXT, ALERT_SENDER } from '../lib/listing-alert.js';
+const { search = '', searchId = '' } = Astro.props;
+const live = import.meta.env.PUBLIC_FORMS_LIVE === 'true';
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
+---
+{live && siteKey && (
+  <form class="la" data-la data-sitekey={siteKey} data-search={search} data-search-id={searchId || undefined} aria-labelledby="la-title" novalidate>
+    <p class="la__title" id="la-title">Email me new listings{search ? <> for this search</> : null}</p>
+    <p class="la__lede">Get new homes by email as they come on the market. Jared sets up the alert for you.</p>
+    <div class="la__row">
+      <div class="la__f">
+        <label for="la-name">First name (optional)</label>
+        <input id="la-name" name="name" type="text" autocomplete="given-name" maxlength="100" />
+      </div>
+      <div class="la__f la__f--grow">
+        <label for="la-email">Email</label>
+        <input id="la-email" name="email" type="email" autocomplete="email" maxlength="200" required aria-describedby="la-email-e" />
+        <p class="la__err" id="la-email-e" role="alert"></p>
+      </div>
+      <button type="submit" class="btn la__btn">Email me new listings</button>
+    </div>
+    <div class="la__consent">
+      <input id="la-consent" name="consent" type="checkbox" value="yes" aria-describedby="la-consent-e la-fine" />
+      <label for="la-consent">{ALERT_CONSENT_TEXT}</label>
+    </div>
+    <p class="la__err" id="la-consent-e" role="alert"></p>
+    <p class="la__fine" id="la-fine">{ALERT_SENDER} <a href="/privacy.html">Privacy Policy</a></p>
+    <div class="la__hp" aria-hidden="true"><label for="la-hp">Leave this empty</label><input id="la-hp" name="_hp_url" tabindex="-1" autocomplete="off" /></div>
+    <div data-ts></div>
+    <p class="la__msg" data-msg role="status" aria-live="polite"></p>
+    <div class="la__fb" data-fb hidden><p>Sending from this page is not available right now. You can email Jared instead:</p><p><a class="btn" data-mailto href="mailto:jaredgibbons@royallepage.ca">Open it in my email app</a> <a class="btn btn--ghost" href="tel:604-928-1361">Call or text 604-928-1361</a></p></div>
+  </form>
+)}
+<script>
+  const f = document.querySelector<HTMLFormElement>('form[data-la]');
+  if (f) {
+    const siteKey = f.dataset.sitekey || '', ts = f.querySelector<HTMLElement>('[data-ts]')!;
+    const msg = f.querySelector<HTMLElement>('[data-msg]')!, fb = f.querySelector<HTMLElement>('[data-fb]')!, mailto = f.querySelector<HTMLAnchorElement>('[data-mailto]')!;
+    const btn = f.querySelector<HTMLButtonElement>('button[type=submit]')!;
+    const email = f.querySelector<HTMLInputElement>('[name=email]')!, name = f.querySelector<HTMLInputElement>('[name=name]')!, consent = f.querySelector<HTMLInputElement>('[name=consent]')!;
+    const errs: Record<string, HTMLElement> = { email: f.querySelector<HTMLElement>('#la-email-e')!, consent: f.querySelector<HTMLElement>('#la-consent-e')! };
+    const w = window as any;
+    let tsId: string | null = null, tok = '';
+    const loadTs = () => {
+      if (tsId !== null) return; tsId = '';
+      const render = () => { tsId = w.turnstile.render(ts, { sitekey: siteKey, callback: (t: string) => { tok = t; } }); };
+      if (w.turnstile) return render();
+      const old = document.querySelector<HTMLScriptElement>('script[src^="https://challenges.cloudflare.com/turnstile"]');
+      if (old) { old.addEventListener('load', render); return; }
+      const s = document.createElement('script'); s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'; s.async = true; s.onload = render; document.head.appendChild(s);
+    };
+    f.addEventListener('focusin', loadTs, { once: true });
+    const clear = () => { Object.values(errs).forEach((e) => (e.textContent = '')); email.removeAttribute('aria-invalid'); consent.removeAttribute('aria-invalid'); };
+    f.addEventListener('submit', async (ev) => {
+      ev.preventDefault(); msg.textContent = ''; fb.hidden = true; clear();
+      const em = email.value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)) { errs.email.textContent = 'Please enter a valid email address.'; email.setAttribute('aria-invalid', 'true'); email.focus(); return; }
+      if (!consent.checked) { errs.consent.textContent = 'Please tick the box so Jared can email you.'; consent.setAttribute('aria-invalid', 'true'); consent.focus(); return; }
+      const search = f.dataset.search || '';
+      const data: Record<string, string> = { email: em, consent: 'yes', page: location.pathname, search, _hp_url: f.querySelector<HTMLInputElement>('[name=_hp_url]')?.value || '', 'cf-turnstile-response': tok };
+      if (name.value.trim()) data.name = name.value.trim();
+      if (f.dataset.searchId) data.search_id = f.dataset.searchId;
+      mailto.href = `mailto:jaredgibbons@royallepage.ca?subject=${encodeURIComponent('New listing alerts')}&body=${encodeURIComponent(`Please email me new listings for: ${search || location.pathname}\nMy email: ${em}\n${name.value.trim() ? 'Name: ' + name.value.trim() + '\n' : ''}I agree to receive these emails and can unsubscribe at any time.`)}`;
+      const label = btn.textContent; btn.disabled = true; btn.textContent = 'Sending…';
+      try {
+        const r = await fetch('/api/forms/listing-alert', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(data) });
+        const j = await r.json().catch(() => ({}));
+        if (r.ok && j.ok) { msg.textContent = 'You are signed up. Jared will set up your alert and email you the new listings.'; email.value = ''; name.value = ''; consent.checked = false; return; }
+        if (r.status === 422 && j.errors) { if (j.errors.email) errs.email.textContent = j.errors.email; if (j.errors.consent) errs.consent.textContent = j.errors.consent; msg.textContent = 'Please check the highlighted fields.'; }
+        else if (r.status === 429) msg.textContent = 'Too many tries. Please wait a minute and send again.';
+        else if (r.status === 403 && j.error === 'captcha_required') msg.textContent = 'Please complete the check, then press the button again.';
+        else { msg.textContent = 'Your sign-up was not sent.'; fb.hidden = false; }
+      } catch { msg.textContent = 'Your sign-up was not sent.'; fb.hidden = false; }
+      finally { btn.disabled = false; btn.textContent = label; if (w.turnstile && tsId) { w.turnstile.reset(tsId); tok = ''; } }
+    });
+  }
+</script>
+<style>
+  .la{max-width:56rem;margin:0 0 var(--s4);padding:clamp(1rem,2.5vw,1.5rem);background:var(--cream);border:1px solid var(--ink);display:grid;gap:var(--s2)}
+  .la__title{margin:0;font:800 1rem var(--f-head);text-transform:uppercase;letter-spacing:.06em}
+  .la__lede{margin:0}
+  .la__row{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:flex-end}
+  .la__f{display:grid;gap:.3rem;min-width:11rem;flex:0 1 13rem}
+  .la__f--grow{flex:1 1 16rem}
+  .la label{font:700 .75rem var(--f-head);letter-spacing:.06em;text-transform:uppercase}
+  .la__f input{min-height:2.75rem;border:1px solid var(--ink);border-radius:0;background:#fff;color:var(--ink);padding:.55rem .8rem;font:inherit;width:100%;box-sizing:border-box}
+  .la__btn{min-height:2.75rem}
+  .la__consent{display:flex;gap:.6rem;align-items:flex-start}
+  .la__consent input{flex:none;width:1.4rem;height:1.4rem;margin:.1rem 0 0;accent-color:var(--ink)}
+  .la__consent label{font:400 .9375rem var(--f-body);letter-spacing:0;text-transform:none;cursor:pointer}
+  .la__err{margin:0;font-size:.8125rem;font-weight:700;color:#b00020}
+  .la__err:empty{display:none}
+  .la__fine{margin:0;font-size:.8125rem;color:#444}
+  .la__hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .la__msg{margin:0;font-weight:700}
+  .la__msg:empty{display:none}
+  .la__fb{border:1px solid var(--ink);background:#fff;padding:1rem 1.25rem}
+  .la__fb[hidden]{display:none}
+  .la__fb p{margin:0 0 .75rem}
+  .la__fb .btn{margin:0 .5rem .5rem 0}
+  @media (max-width:40rem){.la__f,.la__f--grow{flex:1 1 100%}.la__btn{width:100%;justify-self:stretch}}
+</style>

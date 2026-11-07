@@ -895,3 +895,10 @@ Research-voice cleanup wave 2: 340 passages on 183 pages rewritten or deleted (A
 
 ### D-163 addendum: coach house searches
 Surrey and Cloverdale coach house pages use Jerry's keyword searches (1451381, 1451382: "coach house" OR "carriage house" in the listing description, 16 and 6 listings) instead of the Style of Home searches (5 each), for more listings per page on the same area. South Surrey keeps its Style of Home search (1451319, 14 listings) because the keyword search covers South Surrey and White Rock together and the page is South Surrey only. Langley stays on 1450209. The sold figures on all of these pages still use Paragon's Style of Home tag.
+
+## D-164: "Email me new listings" signup on every search page (lead machine #1)
+- **What:** a compact form (`ListingAlert.astro`) sits directly above the live results on all 1,103 saved-search pages (not on the open map search, my listings or sold widgets). Fields: email (required), first name (optional), an unticked consent box. A site-quality test checks every search page has exactly one, above the results, unticked, with the sender details.
+- **Placement:** above the results, not below. The results are a long paginated list; a box under it is seen by the few who reach the end.
+- **Delivery:** `POST /api/forms/listing-alert` through the same Worker path as the other forms (Turnstile, honeypot, origin, rate limit). The email to Jared and the Keyvera lead address carries the search name, the MyRealPage search ID, the page URL and the consent record. Reply-to is the visitor.
+- **Consent record (CASL):** the Worker, not the browser, adds the exact wording shown (`src/lib/listing-alert.js`, shared by page and Worker) and the timestamp. Without a ticked box the Worker answers 422 and stores nothing. Keyvera contacts made from these emails should get `consentSource` "website new-listing alert box, page + date".
+- **Not automatic yet:** nothing sends the alerts by itself. Jared (or a Keyvera campaign) sets up the saved search for each signup; the form says "Jared sets up the alert for you" so the promise matches what happens.

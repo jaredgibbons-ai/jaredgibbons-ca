@@ -9,6 +9,7 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
 ---
 <section class="section section--tight section--idx" aria-label={label}>
   <div class="wrap">
+    <slot />
     <div class="idx" data-idx-src={src} data-idx-id={id || undefined}>
     </div>
     <noscript><p class="notice">Live MLS® listings need JavaScript. <a href="/recip.html">Search Listings</a></p></noscript>

@@ -16,8 +16,10 @@
 //   GOOGLE_ADDRESS_VALIDATION_KEY  optional secret: a SERVER key (restricted to Address Validation API) that adds one "Address check" line to the lead.
 //                       It never blocks or changes a lead; with no key, or on any error, the line says "not checked". Set as a Worker secret only.
 
+import { ALERT_CONSENT_TEXT } from '../lib/listing-alert.js';
+
 const MAX_BODY = 20 * 1024;
-const FORM_TITLES = { contact: 'Contact form', 'home-evaluation': 'Home evaluation request', 'property-check': 'Property check request', quiz: 'Home search quiz' };
+const FORM_TITLES = { contact: 'Contact form', 'home-evaluation': 'Home evaluation request', 'property-check': 'Property check request', quiz: 'Home search quiz', 'listing-alert': 'New listing alert signup' };
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 // Fields follow the labels captured in the archive (`Your name:`, `Your email:` ...). The archive did
@@ -59,6 +61,14 @@ export const SCHEMAS = {
     timeline: { label: 'Timing', max: 80 },
     message: { label: 'Anything else', max: 2000 },
   },
+  // "Email me new listings" box above the listing search on every search page. Consent is an unticked box; the wording shown is recorded by the Worker (see handleForm).
+  'listing-alert': {
+    email: { label: 'Your email', required: true, max: 200, email: true },
+    name: { label: 'Your first name', max: 100 },
+    search: { label: 'Search', max: 200 },
+    search_id: { label: 'Search ID', max: 20, digits: true },
+    consent: { label: 'Consent', required: true, max: 5, must: 'yes', mustMsg: 'Please tick the box so Jared can email you.' },
+  },
 };
 const QUIZ_ORDER = ['starting', 'types', 'areas', 'budget', 'timeline'];
 
@@ -68,9 +78,11 @@ export function validate(kind, input) {
   for (const [k, f] of Object.entries(schema)) {
     let v = input[k];
     v = typeof v === 'string' ? v.replace(/\r\n/g, '\n').trim() : '';
-    if (!v) { if (f.required) errors[k] = `${f.label} is required.`; continue; }
+    if (!v) { if (f.required) errors[k] = f.mustMsg || `${f.label} is required.`; continue; }
     if (v.length > f.max) { errors[k] = `${f.label} is too long (maximum ${f.max} characters).`; continue; }
     if (f.email && !EMAIL.test(v)) { errors[k] = `${f.label} must be a valid email address.`; continue; }
+    if (f.digits && !/^[0-9]+$/.test(v)) { errors[k] = `${f.label} is not valid.`; continue; }
+    if (f.must && v !== f.must) { errors[k] = f.mustMsg || `${f.label} is required.`; continue; }
     if (f.phone && !/^[0-9+().\-\s]{7,30}$/.test(v)) { errors[k] = `${f.label} must be a valid phone number.`; continue; }
     if (/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/.test(v)) { errors[k] = `${f.label} contains invalid characters.`; continue; }
     clean[k] = v;
@@ -111,11 +123,18 @@ export function leadEmail(lead) {
   if (f.subject) lines.push(`Subject: ${oneLine(f.subject)}`);
   if (lead.kind === 'home-evaluation') for (const k of ['city', 'postal', 'bedrooms', 'bathrooms', 'size', 'features']) if (f[k]) lines.push(`${SCHEMAS['home-evaluation'][k].label}: ${oneLine(f[k])}`);
   if (lead.kind === 'quiz') for (const k of QUIZ_ORDER) if (f[k]) lines.push(`${SCHEMAS.quiz[k].label}: ${oneLine(f[k])}`);
-  if (lead.page) lines.push(`Page: ${oneLine(lead.page)}`);
+  if (lead.kind === 'listing-alert') {
+    if (f.search) lines.push(`Search: ${oneLine(f.search)}`);
+    if (f.search_id) lines.push(`Search ID (MyRealPage): ${oneLine(f.search_id)}`);
+    if (lead.page) lines.push(`Search page: ${oneLine(lead.page).startsWith("/") ? "https://jaredgibbons.ca" : ""}${oneLine(lead.page)}`);
+    lines.push('Wants: email alerts of new listings that match this search');
+    lines.push(`Consent: express, given by ticking an unticked box on the page above at ${lead.received_at}`);
+    lines.push(`Wording shown: "${oneLine(f.consent_text)}"`);
+  } else if (lead.page) lines.push(`Page: ${oneLine(lead.page)}`);
   lines.push(`Received: ${lead.received_at}`);
   if (f.message) lines.push('', 'Message:', f.message);
   if (f.notes) lines.push('', 'Notes:', f.notes);
-  const who = oneLine(f.name) || 'website visitor';
+  const who = oneLine(f.name) || oneLine(f.email) || 'website visitor';
   return {
     subject: `${FORM_TITLES[lead.kind] || 'Website lead'} from ${who}`.slice(0, 200),
     text: lines.join('\n'),
@@ -187,6 +206,8 @@ export async function handleForm(request, env, deps = {}) {
 
   const { clean, errors } = validate(kind, input);
   if (Object.keys(errors).length) return json(422, { ok: false, errors });
+  // The consent wording is the server's own copy of what the page showed, never taken from the visitor.
+  if (kind === 'listing-alert') { clean.consent = 'yes'; clean.consent_text = ALERT_CONSENT_TEXT; }
 
   const id = crypto.randomUUID();
   const lead = { id, kind, received_at: new Date().toISOString(), page: String(input.page || '').slice(0, 300), fields: clean };

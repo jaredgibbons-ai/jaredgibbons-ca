@@ -135,3 +135,43 @@ test('delivery: direct email is best-effort when a webhook also took the lead, a
   assert.equal((await handleForm(mk(good), { ...base, LEAD_WEBHOOK_URL: 'https://hooks.example/lead' }, { fetch: f })).status, 200);
   assert.equal((await handleForm(mk(good), base, { fetch: f })).status, 502);
 });
+
+// "Email me new listings" signup: consent is required, recorded server-side, and the search travels with the lead.
+const alertGood = { email: 'pat@example.com', name: 'Pat', consent: 'yes', search: '2 Bedroom Condos for Sale in Abbotsford', search_id: '1451294', page: '/abbotsford-2-bedroom-condos-for-sale.html', 'cf-turnstile-response': 'tok' };
+test('listing alert: needs a valid email and the consent box; nothing is stored without them', async () => {
+  const e = env(); const P = { path: '/api/forms/listing-alert' };
+  const noConsent = await handleForm(mk({ ...alertGood, consent: '' }, P), e, { fetch: captcha() });
+  assert.equal(noConsent.status, 422); assert.match((await noConsent.json()).errors.consent, /tick the box/);
+  assert.equal((await handleForm(mk({ ...alertGood, consent: 'no' }, P), e, { fetch: captcha() })).status, 422);
+  assert.equal((await handleForm(mk({ ...alertGood, email: 'nope' }, P), e, { fetch: captcha() })).status, 422);
+  assert.equal((await handleForm(mk({ ...alertGood, search_id: '12; drop' }, P), e, { fetch: captcha() })).status, 422);
+  assert.equal(e.LEADS_DB.rows.length, 0);
+  assert.equal((await handleForm(mk({ ...alertGood, name: '' }, P), e, { fetch: captcha() })).status, 200);
+  assert.equal(e.LEADS_DB.rows.length, 1);
+});
+test('listing alert: the stored lead carries the server copy of the consent wording, and a spoofed one is ignored', async () => {
+  const e = env(); const { ALERT_CONSENT_TEXT } = await import('../src/lib/listing-alert.js');
+  await handleForm(mk({ ...alertGood, consent_text: 'I agree to anything' }, { path: '/api/forms/listing-alert' }), e, { fetch: captcha() });
+  const stored = JSON.parse(e.LEADS_DB.rows[0][4]);
+  assert.equal(stored.consent_text, ALERT_CONSENT_TEXT); assert.equal(stored.consent, 'yes'); assert.equal(stored.search_id, '1451294');
+});
+test('listing alert: webhook payload gives both inboxes the search, the page and the consent record', async () => {
+  const seen = [];
+  const f = async (u, init) => { if (String(u).includes('turnstile')) return new Response(JSON.stringify({ success: true })); seen.push(JSON.parse(init.body)); return new Response('ok'); };
+  const r = await handleForm(mk(alertGood, { path: '/api/forms/listing-alert' }), { TURNSTILE_SECRET: 's', LEAD_WEBHOOK_URL: 'https://hooks.example/lead', LEAD_EMAIL_TO: 'a@example.com,b@example.com' }, { fetch: f });
+  assert.equal(r.status, 200); const p = seen[0];
+  assert.equal(p.kind, 'listing-alert'); assert.equal(p.notify_to, 'a@example.com,b@example.com'); assert.equal(p.notify_reply_to, 'pat@example.com');
+  assert.match(p.notify_subject, /^New listing alert signup from Pat$/);
+  for (const re of [/^Email: pat@example\.com$/m, /^Search: 2 Bedroom Condos for Sale in Abbotsford$/m, /^Search ID \(MyRealPage\): 1451294$/m, /^Search page: https:\/\/jaredgibbons\.ca\/abbotsford-2-bedroom-condos-for-sale\.html$/m, /^Consent: express, given by ticking an unticked box/m, /^Wording shown: "Yes, email me new listings/m]) assert.match(p.notify_text, re);
+  const noName = leadEmail({ kind: 'listing-alert', received_at: 't', page: '/x.html', fields: { email: 'e@example.com', consent_text: 'c' } });
+  assert.equal(noName.subject, 'New listing alert signup from e@example.com');
+});
+test('listing alert: captcha, honeypot and origin rules apply like every other form', async () => {
+  const e = env(); const P = { path: '/api/forms/listing-alert' };
+  const { 'cf-turnstile-response': _t, ...nocap } = alertGood;
+  assert.equal((await handleForm(mk(nocap, P), e, { fetch: captcha() })).status, 403);
+  assert.equal((await handleForm(mk(alertGood, P), e, { fetch: captcha(false) })).status, 403);
+  assert.equal((await handleForm(mk({ ...alertGood, _hp_url: 'http://spam' }, P), e, { fetch: captcha() })).status, 200);
+  assert.equal(e.LEADS_DB.rows.length, 0);
+  assert.equal((await handleForm(mk(alertGood, { ...P, origin: 'https://evil.example' }), e, { fetch: captcha() })).status, 403);
+});

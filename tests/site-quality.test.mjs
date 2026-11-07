@@ -50,3 +50,23 @@ test('built pages: each listing search block names a numeric search id, loads fr
   }
   assert.equal(bad.length, 0, bad.slice(0, 5).join('; '));
 });
+
+// Every page that runs a saved listing search carries exactly one "Email me new listings" box above the results, with a consent box that starts unticked,
+// a labelled email field, the sender details and an unsubscribe statement. The three widget pages (open map search, my listings, sold) do not.
+test('built pages: each saved-search page has one correct "Email me new listings" box', { skip: !built }, () => {
+  const bad = []; let n = 0;
+  for (const f of pages) {
+    const t = html(f); const hasIdx = /class="idx"[^>]*data-idx-id="/.test(t); const forms = t.match(/<form class="la"/g) || [];
+    if (!hasIdx) { if (forms.length) bad.push(`${f}: box on a non-search page`); continue; }
+    n++;
+    if (forms.length !== 1) { bad.push(`${f}: ${forms.length} boxes`); continue; }
+    const box = t.slice(t.indexOf('<form class="la"'), t.indexOf('</form>', t.indexOf('<form class="la"')));
+    if (!/data-search="[^"]{5,}"/.test(box) || !/data-search-id="\d+"/.test(box)) bad.push(`${f}: search name or id`);
+    if (!/<label[^>]*for="la-email"/.test(box) || !/<label[^>]*for="la-consent"/.test(box)) bad.push(`${f}: labels`);
+    if (/name="consent"[^>]*checked/.test(box)) bad.push(`${f}: consent pre-ticked`);
+    if (!/Royal LePage Little Oak Realty/.test(box) || !/unsubscribe/i.test(box) || !/\/privacy\.html/.test(box)) bad.push(`${f}: sender or unsubscribe wording`);
+    if (t.indexOf('<form class="la"') > t.indexOf('class="idx"')) bad.push(`${f}: box is below the results`);
+  }
+  assert.ok(n > 1000 || n === 0, `only ${n} search pages found`);
+  assert.equal(bad.length, 0, bad.slice(0, 8).join('; '));
+});
