@@ -23,5 +23,9 @@ for d in ('SD33-37', 'SD38-93'):
             out.append(dict(name=r['school_name'], district=int(r['district_number']), district_name=r['district_name'], level=r['level'], grades=r['grades'], programs=r['programs'],
                             address=r['street_address'], city=r['city'], postal=r['postal_code'], lat=lat, lon=lon, url=r['school_url'], independent=indep, catchment_url=cu, catchment=cc))
 seen=set(); out=[o for o in out if not ((o['name'],o['address']) in seen or seen.add((o['name'],o['address'])))]
+fix = json.load(open('src/data/schools/coordinate-fixes.json')) if os.path.exists('src/data/schools/coordinate-fixes.json') else []   # schools the official dataset has no coordinates for, with the source of each fix
+for o in out:
+    for x in fix:
+        if o['lat'] is None and o['name'] == x['name'] and o['address'] == x['address']: o['lat'], o['lon'] = x['lat'], x['lon']
 json.dump(out, open('src/data/schools/facts.json', 'w'), indent=0, ensure_ascii=False)
 print(len(out), 'schools;', sum(1 for s in out if s['lat']), 'with coordinates')
