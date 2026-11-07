@@ -124,7 +124,7 @@ def main():
             pages[slug] = sid
     # Bedroom searches (24) and the 2026-11-06 new searches (29, coach houses, suites, penthouses): worksheets Jerry returns with the two "(Jerry fills)" columns filled.
     # Drop the returned file in docs/review/idx under the name shown; columns are read by header, rows with no search id or an embed code that does not match are skipped and reported.
-    for fn in ('bedroom-searches-2026-11-04-DONE.xlsx', 'new-searches-2026-11-06-DONE.xlsx', 'school-radius-searches-2026-11-07-DONE.xlsx'):
+    for fn in ('bedroom-searches-2026-11-04-DONE.xlsx', 'new-searches-2026-11-06-DONE.xlsx', 'school-radius-searches-2026-11-07-DONE.xlsx', 'area-gap-searches-2026-11-07-DONE.xlsx'):
         fp = os.path.join(ROOT, 'docs/review/idx', fn)
         if not os.path.exists(fp): continue
         wsx = openpyxl.load_workbook(fp, read_only=True).worksheets[0]
