@@ -190,9 +190,15 @@ def page(r):
                 ['Sales over the list price'] + [f'{g["over"]}%' if g.get('over') is not None else '—' for _, g in cols]]
         bl.append(tbl(f'Homes sold within {rk} of {nm}, by type', ['Measure'] + [c for c, _ in cols], trs,
                       f'Source: Paragon closed and pending sales, {WIN}, within {rk} of the school address (straight-line distance). A pending sale is firm but not completed. A figure is shown only where at least 5 homes sold. Duplexes and row houses count in All homes only.'))
+        mh = [f'{lab.lower()} between {money(g["p25"])} and {money(g["p75"])}' for lab, g in cols[:3] if g.get('p25')]
+        if mh:
+            bl.append(P(f'The middle half of sales within {rk} of {nm} went for ' + ('; '.join(mh)) + f'. Half of the {n} homes sold at or below {money(al["price"])}' + (f', {al["ratio"]}% of the list price at the median' if al.get('ratio') else '') + '.' if al.get('price') else f'The middle half of sales within {rk} of {nm} went for ' + ('; '.join(mh)) + '.'))
+        if sd.get('q') and n >= 12:
+            bl.append(tbl(f'Homes sold within {rk} of {nm}, by quarter', ['Quarter', 'Sales', 'Median price'], [[a, num(b), money(c) if c else '—'] for a, b, c in sd['q']],
+                          f'Source: Paragon closed and pending sales, {WIN}, within {rk} of the school address. A median is shown only where at least 5 homes sold.'))
         subs = [s for s in sd['sub'] if s[1] >= 3]
         if subs:
-            bl.append(P('Where those sales were: ' + ', '.join(f'{N.disp(s[0])} ({s[1]})' for s in subs[:4]) + '.'))
+            bl.append(P(f'Where the {n} sales within {rk} of {nm} were: ' + ', '.join(f'{N.disp(s[0])} ({s[1]} sales' + (f', median {money(s[2])}' if s[2] else '') + ')' for s in subs[:4]) + '.'))
         for k, lab in (('condo', 'condo'), ('townhouse', 'townhome')):
             cx = [c for c in sd['complexes'].get(k, []) if c[2]]
             if len(cx) >= 2:
@@ -262,7 +268,7 @@ def page(r):
         if pr: chk.append(f'Look at {pr[1]["name"]}, the nearest other {f["level"]} school, {pr[0]:.1f} km {bearing(me, (pr[1]["lat"], pr[1]["lon"]))} of {nm}. Compare the two when you check which school serves the address.')
     bl += [H(f'Before you offer on a home near {nm}'), L(chk)]
     if mid:
-        bl += [H(f'Estimate the payment on a home near {nm}'), P(f'The calculator starts at the {midlab[:-1] if midlab.endswith("s") else midlab} median near the school, {money(mid)}.'), {'t': 'calc', 'which': 'mortgage', 'price': mid, 'gen': G}]
+        bl += [H(f'Estimate the payment on a home near {nm}'), P(f'The calculator starts at the {midlab[:-1] if midlab.endswith("s") else midlab} median within {rk} of {nm}, {money(mid)}, and you can change the price, down payment and rate.'), {'t': 'calc', 'which': 'mortgage', 'price': mid, 'gen': G}]
     # FAQ
     faq = []
     if indep:
@@ -275,7 +281,7 @@ def page(r):
         gs = sd['groups']; ps = [f'{lab.lower()} {money(gs[k]["price"])}' for k, lab in gdef if gs[k].get('price')]
         if ps: faq.append((f'How much do homes near {nm} sell for?', f'Within {rk} of the school, {n} homes sold between {WIN.replace(" to ", " and ")}. Medians were ' + ', '.join(ps) + '. A median is the middle price and is shown where at least 5 homes sold.'))
         al = sd['all']
-        if al.get('dom'): faq.append((f'How fast do homes sell near {nm}?', f'The median was {al["dom"]} days on the market' + (f', closing at {al["ratio"]}% of the list price' if al.get('ratio') else '') + (f', with {al["over"]}% of sales above the list price' if al.get('over') is not None else '') + f' for the {n} homes within {rk}.'))
+        if al.get('dom'): faq.append((f'How fast do homes sell near {nm}?', f'Within {rk} of {nm} the median was {al["dom"]} days on the market' + (f', closing at {al["ratio"]}% of the list price' if al.get('ratio') else '') + (f', with {al["over"]}% of sales above the list price' if al.get('over') is not None else '') + f' for the {n} homes within {rk}.'))
     # links
     links = []
     if r['area']: links.append((f'{r["area"]["area"]} neighbourhood guide', r['area']['page']))

@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Berkshire Park Elementary | Prices",
-  "description": "Search homes for sale near Berkshire Park Elementary in Surrey. Find listings that name the school, plus nearby schools and what to check on the catchment.",
+  "description": "Homes for sale near Berkshire Park Elementary in Surrey. 61 sold within 1 km in twelve months, with prices by home type, nearby schools and catchment checks.",
   "h1": "Homes for Sale Near Berkshire Park Elementary"
  },
  "breadcrumbs": [
@@ -25,12 +25,22 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Berkshire Park Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Berkshire Park Elementary home search find homes?",
    "a": "It lists active homes whose listing text names Berkshire Park Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How much do homes near Berkshire Park Elementary sell for?",
+   "a": "Within 1 km of the school, 61 homes sold between November 1, 2025 and October 31, 2026. Medians were houses $1,187,500, townhomes $665,000. A median is the middle price and is shown where at least 5 homes sold.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How fast do homes sell near Berkshire Park Elementary?",
+   "a": "Within 1 km of Berkshire Park Elementary the median was 42 days on the market, closing at 95.5% of the list price, with 7% of sales above the list price for the 61 homes within 1 km.",
    "gen": "nsrch"
   },
   {
@@ -42,7 +52,7 @@
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
+   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
    "gen": "school"
   },
   {
@@ -52,7 +62,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Berkshire Park Elementary.",
+   "text": "The search below lists homes for sale whose listing names Berkshire Park Elementary. Under it are the prices homes sold for within 1 km of the school.",
    "gen": "nsrch"
   },
   {
@@ -67,7 +77,118 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Berkshire Park Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Berkshire Park Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "What homes within 1 km of Berkshire Park Elementary sold for",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "Between November 1, 2025 and October 31, 2026, 61 homes sold within 1 km of Berkshire Park Elementary: 46 houses and 13 townhomes. The largest group was houses, at a median of $1,187,500.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 1 km of Berkshire Park Elementary, by type",
+   "head": [
+    "Measure",
+    "Houses",
+    "Townhomes",
+    "Condos",
+    "All homes"
+   ],
+   "rows": [
+    [
+     "Sales",
+     "46",
+     "13",
+     "0",
+     "61"
+    ],
+    [
+     "Median price",
+     "$1,187,500",
+     "$665,000",
+     "—",
+     "$1,133,500"
+    ],
+    [
+     "Middle half of prices",
+     "$1,048,750 to $1,400,000",
+     "$607,500 to $786,750",
+     "—",
+     "$930,000 to $1,324,066"
+    ],
+    [
+     "Median days to sell",
+     "42",
+     "44",
+     "—",
+     "42"
+    ],
+    [
+     "Sold price as a share of list price",
+     "95.5%",
+     "96.7%",
+     "—",
+     "95.5%"
+    ],
+    [
+     "Sales over the list price",
+     "7%",
+     "8%",
+     "—",
+     "7%"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address (straight-line distance). A pending sale is firm but not completed. A figure is shown only where at least 5 homes sold. Duplexes and row houses count in All homes only."
+  },
+  {
+   "t": "p",
+   "text": "The middle half of sales within 1 km of Berkshire Park Elementary went for houses between $1,048,750 and $1,400,000; townhomes between $607,500 and $786,750. Half of the 61 homes sold at or below $1,133,500, 95.5% of the list price at the median.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 1 km of Berkshire Park Elementary, by quarter",
+   "head": [
+    "Quarter",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Nov 2025 to Jan 2026",
+     "15",
+     "$1,050,000"
+    ],
+    [
+     "Feb to Apr 2026",
+     "19",
+     "$1,133,500"
+    ],
+    [
+     "May to Jul 2026",
+     "15",
+     "$1,100,000"
+    ],
+    [
+     "Aug to Oct 2026",
+     "12",
+     "$1,213,500"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A median is shown only where at least 5 homes sold."
+  },
+  {
+   "t": "p",
+   "text": "Where the 61 sales within 1 km of Berkshire Park Elementary were: Fleetwood Tynehead (48 sales, median $1,150,000), Guildford (13 sales, median $1,000,000).",
    "gen": "nsrch"
   },
   {
@@ -382,11 +503,33 @@
     ],
     [
      {
+      "t": "Compare price with similar homes farther from the school. The median house within 1 km of Berkshire Park Elementary was $1,187,500, so check whether size and age explain a gap before you pay for the location."
+     }
+    ],
+    [
+     {
       "t": "Look at Mountainview Montessori, the nearest other elementary school, 0.9 km north of Berkshire Park Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],
    "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Estimate the payment on a home near Berkshire Park Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "The calculator starts at the house median within 1 km of Berkshire Park Elementary, $1,187,500, and you can change the price, down payment and rate.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "calc",
+   "which": "mortgage",
+   "price": 1187500,
+   "gen": "school"
   },
   {
    "t": "h",
@@ -462,6 +605,6 @@
   "school": "Berkshire Park Elementary",
   "city": "surrey",
   "radius": 1.0,
-  "sold": false
+  "sold": true
  }
 }

@@ -49,7 +49,7 @@ for f in sorted(glob.glob(f'{src}/*.csv')):
         inwin += 1
         try: sq = float(r['Floor Area -Grand Total'] or 0)
         except ValueError: sq = 0
-        rows.append(dict(price=p, list=money(r['List Price']), sqft=sq, dom=int(r['Days On Market']) if (r['Days On Market'] or '').isdigit() else None,
+        rows.append(dict(mo=d0.strftime('%Y-%m'), price=p, list=money(r['List Price']), sqft=sq, dom=int(r['Days On Market']) if (r['Days On Market'] or '').isdigit() else None,
                          t=r['Type of Dwelling'], sub=r['Sub-Area/Community'].strip(), cx=string.capwords(r['Complex/Subdivision Name'].strip())))
     o = dict(window=[LO.isoformat(), HI.isoformat()], rows=total, n=len(rows), all=stats(rows), groups={}, sub=[], complexes={})
     for k, ts in GROUPS.items(): o['groups'][k] = stats([r for r in rows if r['t'] in ts])
@@ -62,6 +62,10 @@ for f in sorted(glob.glob(f'{src}/*.csv')):
         for r in rows:
             if r['t'] in GROUPS[k] and r['cx']: cx.setdefault(r['cx'], []).append(r['price'])
         o['complexes'][k] = sorted([[c, len(v), med(v) if len(v) >= 5 else None] for c, v in cx.items() if len(v) >= 3], key=lambda x: -x[1])[:5]
+    QS = [('Nov 2025 to Jan 2026', ('2025-11', '2025-12', '2026-01')), ('Feb to Apr 2026', ('2026-02', '2026-03', '2026-04')), ('May to Jul 2026', ('2026-05', '2026-06', '2026-07')), ('Aug to Oct 2026', ('2026-08', '2026-09', '2026-10'))]
+    o['q'] = [[lab, len(v), med([x['price'] for x in v]) if len(v) >= 5 else None] for lab, ms in QS for v in [[r for r in rows if r['mo'] in ms]]]
+    BD = [(0, 600000), (600000, 800000), (800000, 1000000), (1000000, 1200000), (1200000, 1500000), (1500000, 1800000), (1800000, 10 ** 12)]
+    o['b'] = [sum(1 for r in rows if lo <= r['price'] < hi) for lo, hi in BD]
     res[slug] = o
     print(f'{slug:36} csv rows {total:4}  in window {len(rows):4}  house {o["groups"]["house"]["n"]} th {o["groups"]["townhouse"]["n"]} condo {o["groups"]["condo"]["n"]}')
 json.dump(dict(sorted(res.items())), open(OUT, 'w'), indent=1, ensure_ascii=False)
