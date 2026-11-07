@@ -162,7 +162,7 @@ test('listing alert: webhook payload gives both inboxes the search, the page and
   assert.equal(r.status, 200); const p = seen[0];
   assert.equal(p.kind, 'listing-alert'); assert.equal(p.notify_to, 'a@example.com,b@example.com'); assert.equal(p.notify_reply_to, 'pat@example.com');
   assert.match(p.notify_subject, /^New listing alert signup from Pat$/);
-  for (const re of [/^Email: pat@example\.com$/m, /^Search: 2 Bedroom Condos for Sale in Abbotsford$/m, /^Search ID \(MyRealPage\): 1451294$/m, /^Search page: https:\/\/jaredgibbons\.ca\/abbotsford-2-bedroom-condos-for-sale\.html$/m, /^Consent: express, given by ticking an unticked box/m, /^Wording shown: "Yes, email me new listings/m]) assert.match(p.notify_text, re);
+  for (const re of [/^Email: pat@example\.com$/m, /^Search: 2 Bedroom Condos for Sale in Abbotsford$/m, /^Search ID \(MyRealPage\): 1451294$/m, /^Search page: https:\/\/jaredgibbons\.ca\/abbotsford-2-bedroom-condos-for-sale\.html$/m, /^Consent: express, given by ticking an unticked box on the search page/m, /^Wording shown: "Yes, email me new listings/m]) assert.match(p.notify_text, re);
   const noName = leadEmail({ kind: 'listing-alert', received_at: 't', page: '/x.html', fields: { email: 'e@example.com', consent_text: 'c' } });
   assert.equal(noName.subject, 'New listing alert signup from e@example.com');
 });

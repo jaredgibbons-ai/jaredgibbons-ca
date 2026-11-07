@@ -128,7 +128,7 @@ export function leadEmail(lead) {
     if (f.search_id) lines.push(`Search ID (MyRealPage): ${oneLine(f.search_id)}`);
     if (lead.page) lines.push(`Search page: ${oneLine(lead.page).startsWith("/") ? "https://jaredgibbons.ca" : ""}${oneLine(lead.page)}`);
     lines.push('Wants: email alerts of new listings that match this search');
-    lines.push(`Consent: express, given by ticking an unticked box on the page above at ${lead.received_at}`);
+    lines.push(`Consent: express, given by ticking an unticked box on the search page at ${lead.received_at}`);
     lines.push(`Wording shown: "${oneLine(f.consent_text)}"`);
   } else if (lead.page) lines.push(`Page: ${oneLine(lead.page)}`);
   lines.push(`Received: ${lead.received_at}`);

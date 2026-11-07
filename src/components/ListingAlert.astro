@@ -19,10 +19,10 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
       <div class="la__f la__f--grow">
         <label for="la-email">Email</label>
         <input id="la-email" name="email" type="email" autocomplete="email" maxlength="200" required aria-describedby="la-email-e" />
-        <p class="la__err" id="la-email-e" role="alert"></p>
       </div>
       <button type="submit" class="btn la__btn">Email me new listings</button>
     </div>
+    <p class="la__err" id="la-email-e" role="alert"></p>
     <div class="la__consent">
       <input id="la-consent" name="consent" type="checkbox" value="yes" aria-describedby="la-consent-e la-fine" />
       <label for="la-consent">{ALERT_CONSENT_TEXT}</label>
