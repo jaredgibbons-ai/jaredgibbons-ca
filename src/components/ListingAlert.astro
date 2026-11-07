@@ -28,7 +28,7 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
       <label for="la-consent">{ALERT_CONSENT_TEXT}</label>
     </div>
     <p class="la__err" id="la-consent-e" role="alert"></p>
-    <p class="la__fine" id="la-fine">{ALERT_SENDER} <a href="/privacy.html">Privacy Policy</a></p>
+    <p class="la__fine" id="la-fine">{ALERT_SENDER}{" "}<a href="/privacy.html">Privacy Policy</a></p>
     <div class="la__hp" aria-hidden="true"><label for="la-hp">Leave this empty</label><input id="la-hp" name="_hp_url" tabindex="-1" autocomplete="off" /></div>
     <div data-ts></div>
     <p class="la__msg" data-msg role="status" aria-live="polite"></p>
