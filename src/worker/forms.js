@@ -123,6 +123,13 @@ export function leadEmail(lead) {
   };
 }
 
+// Extra flat fields on the webhook payload so an automation (Zapier) can email the lead without holding any address itself:
+// the recipients come from the LEAD_EMAIL_TO secret, the wording from leadEmail().
+export function notifyFields(lead, emailTo) {
+  const m = leadEmail(lead);
+  return { notify_to: emailTo.join(','), notify_subject: m.subject, notify_text: m.text, notify_reply_to: m.replyTo ? m.replyTo.email : '' };
+}
+
 const json = (status, body, extra = {}) =>
   new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', ...extra } });
 
@@ -184,24 +191,26 @@ export async function handleForm(request, env, deps = {}) {
   const id = crypto.randomUUID();
   const lead = { id, kind, received_at: new Date().toISOString(), page: String(input.page || '').slice(0, 300), fields: clean };
   if (clean.address) lead.address_check = await checkAddress(clean.address, env, doFetch);
-  const results = [];
+  const results = [], mail = [];
   if (env.LEADS_DB) {
     results.push(env.LEADS_DB.prepare('INSERT INTO leads (id, kind, received_at, page, fields) VALUES (?, ?, ?, ?, ?)')
       .bind(id, kind, lead.received_at, lead.page, JSON.stringify(lead.address_check ? { ...clean, address_check: lead.address_check } : clean)).run().then(() => true, () => false));
   }
   if (env.LEAD_WEBHOOK_URL) {
-    results.push(doFetch(env.LEAD_WEBHOOK_URL, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(lead) })
+    results.push(doFetch(env.LEAD_WEBHOOK_URL, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ ...lead, ...notifyFields(lead, emailTo) }) })
       .then((r) => r.ok, () => false));
   }
   if (emailReady) {
     // One message per recipient so a failure for one inbox is never hidden by success for another.
     const msg = leadEmail(lead);
     for (const to of emailTo) {
-      results.push(Promise.resolve().then(() => env.EMAIL.send({ to, from: { email: env.LEAD_EMAIL_FROM, name: 'Jared Gibbons website' }, ...msg })).then(() => true, () => false));
+      mail.push(Promise.resolve().then(() => env.EMAIL.send({ to, from: { email: env.LEAD_EMAIL_FROM, name: 'Jared Gibbons website' }, ...msg })).then(() => true, () => false));
     }
   }
   const ok = await Promise.all(results);
-  // A lead counts as received only when every configured destination accepted it.
-  if (ok.some((x) => !x)) return json(502, { ok: false, error: 'delivery_failed' });
+  const mailOk = await Promise.all(mail);
+  // A lead counts as received only when every configured destination accepted it. Direct email is the exception when a database or webhook also took
+  // the lead: then it is best-effort, so a sending domain that is not set up yet cannot turn a delivered lead into an error for the visitor.
+  if (ok.some((x) => !x) || (!results.length && mailOk.some((x) => !x))) return json(502, { ok: false, error: 'delivery_failed' });
   return json(200, { ok: true, id });
 }

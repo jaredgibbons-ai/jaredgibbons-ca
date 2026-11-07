@@ -32,6 +32,9 @@ Then push any commit (or "Retry build"): the forms switch from the "not connecte
 ## 4. Sending domain
 Outbound email uses Cloudflare Email Service (`EMAIL` binding in `wrangler.jsonc`). The sending domain must be onboarded to it first, which needs that domain's DNS on Cloudflare. If `jaredgibbons.ca` is not on Cloudflare until launch, either onboard another domain you already have there for sending (the From address only needs to be on an onboarded domain, and replies still go to the visitor) or tell me and I will switch delivery to a webhook (`LEAD_WEBHOOK_URL`, already supported) feeding your inbox.
 
+### Webhook route (used until the domain is on Cloudflare)
+A Zapier flow ("jaredgibbons-ca website lead email") catches each submission and emails it from Jared's Gmail to the addresses in `LEAD_EMAIL_TO`. The Worker sends the recipients, subject and body in the payload, so no address is stored in Zapier or the repo. Add one more Worker secret, `LEAD_WEBHOOK_URL`, set to the flow's catch URL. While direct email is not set up, its failure is ignored as long as the webhook took the lead. At launch, remove `LEAD_WEBHOOK_URL` once Email Service sends from the domain, or keep both.
+
 ## 5. Test on the preview
 Submit the quiz and one contact form. Expect an email at both addresses with the visitor as reply-to. If Send shows "not sent" with the email button, delivery is not set up yet; the answers are in the ready-written email.
 

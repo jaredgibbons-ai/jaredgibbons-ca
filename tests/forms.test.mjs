@@ -48,8 +48,9 @@ test('origin, method, unknown form, size and rate limits', async () => {
 test('delivery: webhook receives the lead; any failing destination is a 502 (not a false success)', async () => {
   const seen = [];
   const f = async (u, init) => { if (String(u).includes('turnstile')) return new Response(JSON.stringify({ success: true })); seen.push(JSON.parse(init.body)); return new Response('ok'); };
-  const r = await handleForm(mk(good), { TURNSTILE_SECRET: 's', LEAD_WEBHOOK_URL: 'https://hooks.example/lead' }, { fetch: f });
+  const r = await handleForm(mk(good), { TURNSTILE_SECRET: 's', LEAD_WEBHOOK_URL: 'https://hooks.example/lead', LEAD_EMAIL_TO: 'a@example.com, b@example.com' }, { fetch: f });
   assert.equal(r.status, 200); assert.equal(seen[0].kind, 'contact'); assert.equal(seen[0].fields.name, 'Pat Example');
+  assert.equal(seen[0].notify_to, 'a@example.com,b@example.com'); assert.match(seen[0].notify_subject, /Pat Example/); assert.match(seen[0].notify_text, /Name: Pat Example/); assert.ok('notify_reply_to' in seen[0]);
   const bad = async (u) => (String(u).includes('turnstile') ? new Response(JSON.stringify({ success: true })) : new Response('x', { status: 500 }));
   assert.equal((await handleForm(mk(good), { TURNSTILE_SECRET: 's', LEAD_WEBHOOK_URL: 'https://hooks.example/lead' }, { fetch: bad })).status, 502);
 });
@@ -125,4 +126,12 @@ test('home evaluation keeps the extra fields in the email', async () => {
   const r = await handleForm(mk(body, { path: '/api/forms/home-evaluation' }), e, { fetch: captcha() });
   assert.equal(r.status, 200); assert.equal(sent.length, 2);
   for (const v of ['Surrey', 'V3T 1A1', 'Bedrooms: 3', 'Size: 1800 sq. ft.', 'New roof', 'Call after 5.']) assert.ok(sent[0].text.includes(v), v);
+});
+
+test('delivery: direct email is best-effort when a webhook also took the lead, and required when it is the only destination', async () => {
+  const f = async (u) => (String(u).includes('turnstile') ? new Response(JSON.stringify({ success: true })) : new Response('ok'));
+  const failing = { send: async () => { throw new Error('no domain'); } };
+  const base = { TURNSTILE_SECRET: 's', LEAD_EMAIL_TO: 'a@example.com', LEAD_EMAIL_FROM: 'x@example.com', EMAIL: failing };
+  assert.equal((await handleForm(mk(good), { ...base, LEAD_WEBHOOK_URL: 'https://hooks.example/lead' }, { fetch: f })).status, 200);
+  assert.equal((await handleForm(mk(good), base, { fetch: f })).status, 502);
 });
