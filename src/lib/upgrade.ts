@@ -240,6 +240,35 @@ function guideCards(bl: Block[]): Block[] {
   return grouped;
 }
 
+// ---- 0b. Place cards (schools, parks, centres) -> one key/value card each --------------------------------------------
+// The same flattening split a "title / Label value / Label value / ..." card so that the last label's value (and the card's links)
+// landed in the next paragraph. Strict shape: a level-3 heading, a one-cell list of labels and values that ends on a label, then a
+// paragraph that starts with plain text (that label's value) and may end in links. Anything else is left exactly as it was.
+function placeCards(bl: Block[]): Block[] {
+  const out: Block[] = [];
+  const labelOk = (t: string) => /^[A-Z][A-Za-z0-9®'’&\/ -]{1,23}$/.test(t) && !/[.?!:;,]$/.test(t);
+  for (let i = 0; i < bl.length; i++) {
+    const b = bl[i], l = bl[i + 1], n = bl[i + 2];
+    if (b?.t === 'h' && b.level === 3 && !/\?\s*$/.test(b.text) && l?.t === 'list' && l.items.length >= 3 && l.items.length % 2 === 1 && n?.t === 'p' && !n.cls
+        && l.items.every((it: Part[]) => it.length === 1 && !it[0].h) && n.parts?.length && !n.parts[0].h) {
+      const cells = l.items.map((it: Part[]) => it[0].t.trim());
+      const labels = cells.filter((_: string, k: number) => k % 2 === 0), vals = cells.filter((_: string, k: number) => k % 2 === 1);
+      const lastVal = n.parts[0].t.trim();
+      let k = 1; while (k < n.parts.length && n.parts[k].h) k++;
+      const links = n.parts.slice(1, k);
+      const rest = n.parts.slice(k);
+      if (labels.every(labelOk) && new Set(labels).size === labels.length && vals.every((v: string) => v.length > 0 && v.length <= 200) && lastVal.length > 0 && lastVal.length <= 200 && !/[.!?]$/.test(lastVal) && (links.length > 0 || rest.length === 0) && rest.every((q: Part) => !q.h)) {
+        const rows = labels.map((x: string, j: number) => ({ l: x, v: [{ t: j < vals.length ? vals[j] : lastVal }] }));
+        out.push({ t: 'kvgrid', wide: true, items: [{ t: 'kv', kicker: '', title: b.text, href: b.href, rows, links }] });
+        if (rest.length) out.push({ t: 'p', parts: rest });
+        i += 2; continue;
+      }
+    }
+    out.push(b);
+  }
+  return out;
+}
+
 // A section often ends with the next section's one-word topic label ("Schools", "Parks and recreation"), left over from the old card layout.
 // It is dropped when it only repeats words of the next heading, or when it trails a list of links.
 export function dropOrphans(bl: Block[], nextHeading = ''): Block[] {
@@ -336,6 +365,7 @@ function splitTail(bl: Block[]): Block[] {
 
 export function upgradeBlocks(bl: Block[]): Block[] {
   let out = guideCards(bl);
+  out = placeCards(out);
   out = flatLists(splitTail(out));
   out = inlineKv(out);
   out = kvCards(out);

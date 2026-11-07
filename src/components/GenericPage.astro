@@ -421,8 +421,9 @@ const explore = !_extra.length ? exploreBase
                   {b.items.map((c: any) => (
                     <li class="kv">
                       {c.kicker && <p class="kv__k">{c.kicker}</p>}
-                      {c.title && <h3 class="kv__h">{c.title}</h3>}
+                      {c.title && <h3 class="kv__h">{c.href ? <a href={c.href}>{c.title}</a> : c.title}</h3>}
                       <dl class="kv__rows">{c.rows.map((r: any) => <div class="kv__row"><dt>{r.l}</dt><dd><Rich parts={r.v} /></dd></div>)}</dl>
+                      {c.links?.length > 0 && <ul class="kv__links">{c.links.map((k: any) => <li><a href={k.h.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/'}>{k.t}</a></li>)}</ul>}
                     </li>
                   ))}
                 </ul>
@@ -552,6 +553,9 @@ const explore = !_extra.length ? exploreBase
   .kv__k{font:700 .6875rem/1.3 var(--f-head);letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin:0 0 .35rem}
   .kv__h{font:800 1rem/1.25 var(--f-head);letter-spacing:-.005em;margin:0 0 .6rem}
   .kv__rows{margin:0}
+  .kv__h a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.2em}
+  .kv__links{list-style:none;margin:0;padding:.7rem 0 .8rem;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;font-size:.9375rem}
+  .kv__links a{font-weight:700}
   .kv__row{display:grid;grid-template-columns:minmax(6.5rem,32%) 1fr;gap:.25rem 1rem;padding:.6rem 0;border-top:1px solid var(--rule);font-size:.9375rem;line-height:1.55}
   .kv__row:first-child{border-top:0}
   .kv dt{font:700 .75rem/1.5 var(--f-head);letter-spacing:.08em;text-transform:uppercase;color:var(--grey);padding-top:.1rem}
