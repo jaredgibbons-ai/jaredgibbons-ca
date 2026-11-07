@@ -3,7 +3,7 @@
 
     south-surrey-white-rock, surrey, langley, abbotsford, tsawwassen, ladner     -> <city>-golf-course-homes-for-sale (draft, local layer with new_page header)
 
-Figures are Paragon closed sales, same rules as the suite pages.  No course names or distances are stated: the flag is the listing agent's, so the pages say what the flag covers and what to check.
+Figures are Paragon closed and pending sales, same rules as the suite pages.  No course names or distances are stated: the flag is the listing agent's, so the pages say what the flag covers and what to check.
 The saved searches are Jerry's (keyword-golf-searches-2026-11-06.xlsx, wired by tools/build_idx_embeds.py).   python3 -I tools/build_golf_pages.py
 """
 import json, os, sys
@@ -45,16 +45,16 @@ def page(ck, order):
     title = next(t for t in (f'{nm} Golf Course Homes for Sale | Prices', f'{nm} Golf Course Homes for Sale') if 38 <= len(t) <= 60)
     seo = dict(title=title, h1=f'Golf Course Homes for Sale in {nm}', crumb='Golf course homes',
                description=fit(*[f'{x} {y}' for x in (f'Search {nm} golf course homes.', f'{nm} golf course homes for sale.', f'Search {nm} homes on or near a golf course.')
-                                  for y in (f'{go["n"]} sold over ten months at a median of {money(go["price"])}, with prices by neighbourhood and what to check.',
-                                            f'{go["n"]} sold over ten months at a median of {money(go["price"])}, with prices by area and what to check before you offer.',
-                                            f'{go["n"]} sold in ten months at a median of {money(go["price"])}. See prices by neighbourhood and what to check before you offer.',
-                                            f'{go["n"]} sold in ten months at a median of {money(go["price"])}. See prices by neighbourhood and what to check.',
-                                            f'{go["n"]} closed sales in ten months, median {money(go["price"])}, with prices by neighbourhood and what to check before you offer.',
-                                            f'{go["n"]} sold in ten months at a median of {money(go["price"])}, with prices by neighbourhood.')]),
+                                  for y in (f'{go["n"]} sold over twelve months at a median of {money(go["price"])}, with prices by neighbourhood and what to check.',
+                                            f'{go["n"]} sold over twelve months at a median of {money(go["price"])}, with prices by area and what to check before you offer.',
+                                            f'{go["n"]} sold in twelve months at a median of {money(go["price"])}. See prices by neighbourhood and what to check before you offer.',
+                                            f'{go["n"]} sold in twelve months at a median of {money(go["price"])}. See prices by neighbourhood and what to check.',
+                                            f'{go["n"]} sales in twelve months, median {money(go["price"])}, with prices by neighbourhood and what to check before you offer.',
+                                            f'{go["n"]} sold in twelve months at a median of {money(go["price"])}, with prices by neighbourhood.')]),
                links_h=f'More {nm} house searches')
-    bl = [{'t': 'notice', 'text': 'Draft for Jared’s approval. Sold figures come from Paragon closed sales to August 31, 2026, because the export is incomplete after that. The live search is not connected yet.', 'gen': G},
+    bl = [{'t': 'notice', 'text': 'Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales to October 31, 2026. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.', 'gen': G},
           P((f'This search lists detached houses for sale in {c["area"]} that the listing marks as on or near a golf course.', f'Use this search to see {nm} detached houses currently for sale where the listing flags a golf course on the street or nearby.', f'Every house in this {nm} search is a detached home that the listing agent has tagged as beside or close to a golf course.')[order % 3] + (f' The most golf course sales were in {top[0]} ({sr[0][2]["golf"]["n"]})' + (f', {top[1]} ({sr[1][2]["golf"]["n"]})' if len(top) > 1 else '') + (f' and {top[2]} ({sr[2][2]["golf"]["n"]})' if len(top) > 2 else '') + '.' if top else '')),
-          P(f'' + (f'Of {ho["n"]:,} detached houses that closed in {nm} between November 1 and August 31, {go["n"]} ({share}%) carried a golf course flag. They sold for a median of {money(go["price"])}, {abs(prem)}% {side} the {money(ho["price"])} median for every {nm} house.', f'Between November 1 and August 31, {nm} recorded {ho["n"]:,} detached house sales, and {go["n"]} of them ({share}%) had the flag. The median was {money(go["price"])}, which is {abs(prem)}% {side} the {money(ho["price"])} median across all {nm} houses.')[order % 2]),
+          P(f'' + (f'Of {ho["n"]:,} detached houses that sold in {nm} between November 1, 2025 and October 31, 2026, {go["n"]} ({share}%) carried a golf course flag. They sold for a median of {money(go["price"])}, {abs(prem)}% {side} the {money(ho["price"])} median for every {nm} house.', f'Between November 1, 2025 and October 31, 2026, {nm} recorded {ho["n"]:,} detached house sales, and {go["n"]} of them ({share}%) had the flag. The median was {money(go["price"])}, which is {abs(prem)}% {side} the {money(ho["price"])} median across all {nm} houses.')[order % 2]),
           {'t': 'grid', 'gen': G}, H(f'What {nm} golf course homes sold for')]
     rows = [['Sales', num(go['n']), num(ho['n'])], ['Median price', cv(go, 'price', money), cv(ho, 'price', money)]]
     if go.get('p25'): rows.append(['Middle half of prices', f'{money(go["p25"])} to {money(go["p75"])}', f'{money(ho["p25"])} to {money(ho["p75"])}' if ho.get('p25') else '—'])
@@ -116,10 +116,10 @@ def page(ck, order):
             chk = [i.replace(x, y) for i in chk]
     bl += [H(f'Before you offer on a {nm} golf course home'), L(chk),
            H(f'Estimate the payment on a {nm} golf course home'), P(f'The calculator starts at the {nm} golf course median of {money(go["price"])}.'), {'t': 'calc', 'which': 'mortgage', 'price': go['price'], 'gen': G}]
-    faq = [(f'How much does a {nm} golf course home cost?', (f'The {go["n"]} golf course houses that closed between November 1, 2025 and August 31, 2026 had a median of {money(go["price"])}', f'Across {go["n"]} {nm} closings from November 2025 through August 2026, the golf course median came to {money(go["price"])}')[order % 2] + (f', with the middle half between {money(go["p25"])} and {money(go["p75"])}' if go.get('p25') else '') + f'. All {nm} detached houses had a median of {money(ho["price"])}.'),
+    faq = [(f'How much does a {nm} golf course home cost?', (f'The {go["n"]} golf course houses that sold between November 1, 2025 and October 31, 2026 had a median of {money(go["price"])}', f'Across {go["n"]} {nm} sales from November 2025 through October 2026, the golf course median came to {money(go["price"])}')[order % 2] + (f', with the middle half between {money(go["p25"])} and {money(go["p75"])}' if go.get('p25') else '') + f'. All {nm} detached houses had a median of {money(ho["price"])}.'),
            (f'What counts as a golf course home in {nm}?', (f'A detached house whose listing carries the Golf Course Nearby or Golf Course Dev. flag in Paragon. The listing agent enters it, so it covers homes near a course as well as on one.', f'In Paragon the agent who lists the house picks Golf Course Nearby or Golf Course Dev. under Site Influences, so {nm} homes beside a fairway and homes a short walk away can both appear.', f'It is a detached {nm} house with a golf course entry under Site Influences. The seller’s agent decides whether to tick it, which is why the {go["n"]} sales counted here are a minimum.')[order % 3]),
            (f'How fast do {nm} golf course homes sell?', (f'{go["dom"]} days at a median', f'The median was {go["dom"]} days on the market')[order % 2] + (f', closing at {go["ratio"]}% of list' if go.get('ratio') else '') + (f', with {go["over"]}% over the list price' if go.get('over') is not None else '') + f'. All {nm} houses took {ho["dom"]} days.')]
-    if top: faq.append((f'Which {nm} neighbourhoods have the most golf course homes?', f'{top[0]} had {sr[0][2]["golf"]["n"]} sales with the flag' + (f', {top[1]} {sr[1][2]["golf"]["n"]}' if len(top) > 1 else '') + (f' and {top[2]} {sr[2][2]["golf"]["n"]}' if len(top) > 2 else '') + f' between November 1, 2025 and August 31, 2026.'))
+    if top: faq.append((f'Which {nm} neighbourhoods have the most golf course homes?', f'{top[0]} had {sr[0][2]["golf"]["n"]} sales with the flag' + (f', {top[1]} {sr[1][2]["golf"]["n"]}' if len(top) > 1 else '') + (f' and {top[2]} {sr[2][2]["golf"]["n"]}' if len(top) > 2 else '') + f' between November 1, 2025 and October 31, 2026.'))
     crumb = (f'{nm} houses', HOMES[ck])
     return N.finish(slug, seo, [crumb], faq, bl, f'{nm} golf course homes: your questions answered', c['links'], dict(search_page=dict(kind='golf', city=ck)))
 

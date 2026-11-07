@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Houses-with-suites and penthouse searches from Pete's Paragon export (src/data/sold/sold-extras.json; Closed sales, November 1, 2025 to August 31, 2026).
+"""Houses-with-suites and penthouse searches from Pete's Paragon export (src/data/sold/sold-extras.json; closed and pending sales, November 1, 2025 to October 31, 2026).
 
     houses with suites  surrey, cloverdale, south-surrey, langley, abbotsford, burnaby, coquitlam, richmond, vancouver, north-delta, maple-ridge, chilliwack   (12 new draft pages)
     penthouses          vancouver, burnaby, richmond, surrey, coquitlam, new-westminster   (6 new draft pages)  + sold figures added to the Langley, Abbotsford and South Surrey/White Rock penthouse drafts
@@ -17,10 +17,10 @@ import build_new_searches as N
 from build_new_searches import P, H, L, tbl, money, num, sqft, lk, hpi, hpi_table, hubmap, nz, disp, EX, EXW, SRC_GVR, SRC_FV
 
 G = 'xtra'; LG = 'xtralinks'
-QL = ['November 2025 to January 2026', 'February to April 2026', 'May to July 2026', 'August 2026']
+QL = ['November 2025 to January 2026', 'February to April 2026', 'May to July 2026', 'August to October 2026']
 BANDS_H = N.BANDS
 BANDS_C = ['Under $500,000', '$500,000 to $749,999', '$750,000 to $999,999', '$1,000,000 to $1,499,999', '$1,500,000 to $1,999,999', '$2,000,000 and over']
-SRC = (f'Source: Paragon closed sales, {EXW}. Pending sales are not counted, and the export is incomplete after August 2026, so later months are left out. '
+SRC = (f'Source: Paragon closed and pending sales, {EXW}. A pending sale is firm but has not completed, so its price can still change; sales that fell through are left out. '
        'Median means the middle price. A figure is shown only where at least 5 homes sold.')
 SUITE_NOTE = ('A legal suite here means Paragon lists the suite as Legal Suite or Licensed Suite. An unauthorized suite is one the listing marks Unauthorized Suite. Houses with no suite, or with the suite field left blank, are not counted in either column.')
 
@@ -297,17 +297,17 @@ def suite_page(ck):
     top = [disp(n, a) for a, n, v in sr[:3]]
     big = sorted([(v['house']['n'], disp(n, a)) for k, v in EX['sub'].items() if k.split('#')[0] == c['ex'] and 'house' in v for a, n in [k.split('#', 1)[1].split('|', 1)]], reverse=True)[:5]
     seo = dict(title=f'{nm} Houses with Suites for Sale | Prices and Rules', h1=f'Houses with Suites for Sale in {nm}', crumb='Houses with suites',
-               description=fit(f'Search {nm} houses with a suite. {le["n"]} homes with a legal suite sold over the past ten months at a median of {money(le["price"])}, with suite rules and area prices.',
-                               f'Search {nm} houses with a suite. {le["n"]} with a legal suite sold over the past ten months at a median of {money(le["price"])}, plus suite rules and prices.',
-                               f'Search {nm} houses with a suite. {le["n"]} with a legal suite sold over the past ten months at a median of {money(le["price"])}, plus suite rules.',
-                               f'Houses with a suite for sale in {nm}. {le["n"]} with a legal suite sold over ten months at a median of {money(le["price"])}, plus suite rules and prices.',
-                               f'{nm} houses with a legal suite sold at a median of {money(le["price"])} over ten months ({le["n"]} sales). Search them, with suite rules and area prices.'),
+               description=fit(f'Search {nm} houses with a suite. {le["n"]} homes with a legal suite sold over the past twelve months at a median of {money(le["price"])}, with suite rules and area prices.',
+                               f'Search {nm} houses with a suite. {le["n"]} with a legal suite sold over the past twelve months at a median of {money(le["price"])}, plus suite rules and prices.',
+                               f'Search {nm} houses with a suite. {le["n"]} with a legal suite sold over the past twelve months at a median of {money(le["price"])}, plus suite rules.',
+                               f'Houses with a suite for sale in {nm}. {le["n"]} with a legal suite sold over twelve months at a median of {money(le["price"])}, plus suite rules and prices.',
+                               f'{nm} houses with a legal suite sold at a median of {money(le["price"])} over twelve months ({le["n"]} sales). Search them, with suite rules and area prices.'),
                links_h=f'More {nm} houses and suite searches')
     dword = 'more' if prem >= 0 else 'less'
     hp = [(b, hpi(src, b, 'detached')) for src, b in c['hpi']]
-    bl = [{'t': 'notice', 'text': 'Draft for Jared’s approval. Sold figures come from Paragon closed sales to August 31, 2026, because the export is incomplete after that. The live search is not connected yet.', 'gen': G},
+    bl = [{'t': 'notice', 'text': 'Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales to October 31, 2026. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.', 'gen': G},
           P(f'This search lists detached houses for sale in {c["area"]} that have a suite, legal or marked unauthorized. The busiest areas by house sales were {big[0][1]} ({big[0][0]}), ' + (', '.join(f'{x[1]} ({x[0]})' for x in big[1:4]) + f' and {big[4][1]} ({big[4][0]})' if len(big) > 4 else ', '.join(f'{x[1]} ({x[0]})' for x in big[1:])) + '. Condos, townhomes and half duplexes are separate searches.'),
-          P(f'Of {ho["n"]:,} detached houses that closed in {nm} between November 1 and August 31, {tot} ({share}%) had a suite: {le["n"]} legal and {un["n"]} unauthorized. '
+          P(f'Of {ho["n"]:,} detached houses that sold in {nm} between November 1, 2025 and October 31, 2026, {tot} ({share}%) had a suite: {le["n"]} legal and {un["n"]} unauthorized. '
             f'The legal-suite houses sold for a median of {money(le["price"])}, {abs(prem)}% {dword} than the {money(ho["price"])} median for every {nm} house.'),
           {'t': 'grid', 'gen': G},
           H(f'What {nm} houses with suites sold for')]
@@ -384,8 +384,8 @@ def suite_page(ck):
            {'t': 'h', 'level': 2, 'text': f'Estimate the payment on a {nm} house with a suite', 'gen': G}, P(f'The calculator starts at the {nm} legal-suite median of {money(le["price"])}.'),
            {'t': 'calc', 'which': 'mortgage', 'price': le['price'], 'gen': G}]
     nbq = []
-    if len(top) >= 3: nbq = [(f'Which {nm} neighbourhoods have the most houses with legal suites?', f'{top[0]} had {r5[0][2]["legal"]["n"]} legal-suite sales, {top[1]} {r5[1][2]["legal"]["n"]} and {top[2]} {r5[2][2]["legal"]["n"]} between November 1, 2025 and August 31, 2026.')]
-    faq = [(f'How much does a {nm} house with a suite cost?', f'The {le["n"]} houses with a legal suite that closed between November 1, 2025 and August 31, 2026 had a median of {money(le["price"])}' + (f', with the middle half between {money(le["p25"])} and {money(le["p75"])}' if le.get('p25') else '') + f'. Every {nm} detached house had a median of {money(ho["price"])}.'),
+    if len(top) >= 3: nbq = [(f'Which {nm} neighbourhoods have the most houses with legal suites?', f'{top[0]} had {r5[0][2]["legal"]["n"]} legal-suite sales, {top[1]} {r5[1][2]["legal"]["n"]} and {top[2]} {r5[2][2]["legal"]["n"]} between November 1, 2025 and October 31, 2026.')]
+    faq = [(f'How much does a {nm} house with a suite cost?', f'The {le["n"]} houses with a legal suite that sold between November 1, 2025 and October 31, 2026 had a median of {money(le["price"])}' + (f', with the middle half between {money(le["p25"])} and {money(le["p75"])}' if le.get('p25') else '') + f'. Every {nm} detached house had a median of {money(ho["price"])}.'),
            (f'What is the difference between a legal and an unauthorized suite in {nm}?', f'A legal suite is listed as Legal Suite or Licensed Suite, and an unauthorized one as Unauthorized Suite. {le["n"]} {nm} houses sold with a legal suite and {un["n"]} with an unauthorized one' + (f', which had a median of {money(un["price"])}' if un.get('price') else '') + '.'),
            ] + c['faqs'] + nbq + [
            (f'How fast do {nm} houses with a legal suite sell?', f'{le["dom"]} days at a median' + (f', closing at {le["ratio"]}% of list' if le.get('ratio') else '') + (f', with {le["over"]}% over the list price.' if le.get('over') is not None else '.'))]
@@ -454,14 +454,14 @@ def pent_page(ck):
     blocks, pe, co, prem, sr = pent_blocks(ck)
     dword = 'more' if prem >= 0 else 'less'
     seo = dict(title=f'{nm} Penthouses for Sale | Prices and Buildings', h1=f'Penthouses for Sale in {nm}', crumb='Penthouses',
-               description=fit(f'Search {nm} penthouses for sale. {pe["n"]} sold over the past ten months at a median of {money(pe["price"])}, with prices by neighbourhood and the buildings that sell most.',
-                               f'Search {nm} penthouses for sale. {pe["n"]} sold over the past ten months at a median of {money(pe["price"])}, with prices by neighbourhood and building.',
-                               f'{nm} penthouses for sale. {pe["n"]} sold over the past ten months at a median of {money(pe["price"])}, with prices by neighbourhood and building.',
-                               f'Search {nm} penthouses for sale. {pe["n"]} sold over the past ten months at a median of {money(pe["price"])}, plus prices by area and top buildings.'),
+               description=fit(f'Search {nm} penthouses for sale. {pe["n"]} sold over the past twelve months at a median of {money(pe["price"])}, with prices by neighbourhood and the buildings that sell most.',
+                               f'Search {nm} penthouses for sale. {pe["n"]} sold over the past twelve months at a median of {money(pe["price"])}, with prices by neighbourhood and building.',
+                               f'{nm} penthouses for sale. {pe["n"]} sold over the past twelve months at a median of {money(pe["price"])}, with prices by neighbourhood and building.',
+                               f'Search {nm} penthouses for sale. {pe["n"]} sold over the past twelve months at a median of {money(pe["price"])}, plus prices by area and top buildings.'),
                links_h=f'More {nm} condo and home searches')
-    intro = [{'t': 'notice', 'text': 'Draft for Jared’s approval. Sold figures come from Paragon closed sales to August 31, 2026, because the export is incomplete after that. The live search is not connected yet.', 'gen': G},
+    intro = [{'t': 'notice', 'text': 'Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales to October 31, 2026. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.', 'gen': G},
              P(f'This search lists penthouses for sale in {c["area"]}: top-floor condos that the listing marks as a penthouse. It covers {c["desc"]}. Other condos, townhomes and houses are separate searches.'),
-             P(f'{pe["n"]} {nm} penthouses closed from {EXW}, out of {co["n"]:,} condo sales in the same area and months. The median penthouse sold for {money(pe["price"])}, {abs(prem)}% {dword} than the {money(co["price"])} median for all condos' + (f', in {pe["dom"]} days at a median.' if pe.get('dom') else '.')),
+             P(f'{pe["n"]} {nm} penthouses sold from {EXW}, out of {co["n"]:,} condo sales in the same area and months. The median penthouse sold for {money(pe["price"])}, {abs(prem)}% {dword} than the {money(co["price"])} median for all condos' + (f', in {pe["dom"]} days at a median.' if pe.get('dom') else '.')),
              {'t': 'grid', 'gen': G}]
     mid = [H(f'About buying a top-floor home in {nm}')] + [P(t) for t in c['facts']]
     yb_t = f'The median {nm} penthouse sold was built in {pe["yb"]}' if pe.get('yb') else f'Check the year the {nm} building was built'
@@ -484,7 +484,7 @@ def pent_page(ck):
             {'t': 'h', 'level': 2, 'text': f'Estimate the payment on a {nm} penthouse', 'gen': G}, P(f'The calculator starts at the {nm} penthouse median of {money(pe["price"])}.'),
             {'t': 'calc', 'which': 'mortgage', 'price': pe['price'], 'gen': G}]
     nbh = f'{disp(sr[0][1], sr[0][0])} ({sr[0][2]["pent"]["n"]} sales)' if sr else None
-    faq = [(f'How much does a penthouse cost in {nm}?', f'The {pe["n"]} penthouses that closed between November 1, 2025 and August 31, 2026 had a median of {money(pe["price"])}' + (f', with the middle half between {money(pe["p25"])} and {money(pe["p75"])}' if pe.get('p25') else '') + f'. All {nm} condos had a median of {money(co["price"])}.'),
+    faq = [(f'How much does a penthouse cost in {nm}?', f'The {pe["n"]} penthouses that sold between November 1, 2025 and October 31, 2026 had a median of {money(pe["price"])}' + (f', with the middle half between {money(pe["p25"])} and {money(pe["p75"])}' if pe.get('p25') else '') + f'. All {nm} condos had a median of {money(co["price"])}.'),
            (f'How does a {nm} penthouse compare in price with other condos?', f'A penthouse cost {abs(prem)}% {dword} at the median' + (f', or {money(pe["ppsf"])} a square foot against {money(co["ppsf"])} for all condos' if pe.get('ppsf') and co.get('ppsf') else '') + '. Compare the floor area, the strata fee and the roof or terrace before you decide.'),
            (f'How fast do {nm} penthouses sell?', f'{pe["dom"]} days at a median' + (f', closing at {pe["ratio"]}% of list' if pe.get('ratio') else '') + (f', with {pe["over"]}% over the list price.' if pe.get('over') is not None else '.')),
            (f'What counts as a penthouse in {nm}?', f'{pe["n"]} of the {co["n"]:,} {nm} condo sales carried Penthouse in the style field' + (f', most of them in {nbh}' if nbh else '') + '. The listing agent enters that, so some top-floor homes are unmarked and a marked one is not always on the very top floor.'),
@@ -507,7 +507,7 @@ def add_existing(ck):
     c = PENT_EXIST[ck]; f = f'src/data/local/{c["slug"]}.json'; j = json.load(open(f))
     blocks, pe, co, prem, sr = pent_blocks(ck, existing=True)
     dword = 'more' if prem >= 0 else 'less'
-    intro = P(f'{pe["n"]} {c["name"]} penthouses closed from {EXW}, out of {co["n"]:,} condo sales in the same area and months. The median penthouse sold for {money(pe["price"])}, {abs(prem)}% {dword} than the {money(co["price"])} median for all condos.')
+    intro = P(f'{pe["n"]} {c["name"]} penthouses sold from {EXW}, out of {co["n"]:,} condo sales in the same area and months. The median penthouse sold for {money(pe["price"])}, {abs(prem)}% {dword} than the {money(co["price"])} median for all condos.')
     new = [dict(b, pos='end') for b in [intro] + blocks]
     for b in new: b['gen'] = G
     j['blocks'] = [b for b in j['blocks'] if b.get('gen') != G]

@@ -886,3 +886,9 @@ Research-voice cleanup wave 2: 340 passages on 183 pages rewritten or deleted (A
 - Cloverdale has 75 golf-flag sales but was not in Jerry's list, so no page yet.
 - Held, not built: K5 Abbotsford coach (5 listings), K6–K9 Burnaby, Coquitlam, Richmond, Vancouver coach (no sold data pulled for those cities); M1 Morgan Creek remarks search (the existing Morgan Creek page can take it if wanted); C1–C3 community centre (word search on remarks is thin and noisy, 5–12 listings).
 - All new pages stay `draft`. `build_extras_layer.py` gained a `golf` group.
+
+## D-163 — Pete's September-to-November re-pull merged (2026-11-06)
+- **Input:** `sold-export-2026-09-01_2026-11-06.zip` (5,660 sales, 12 CSVs, Closed and Pending; Land and Multifamily files not used by these pages). Kept outside the repo; only grouped figures are stored.
+- **Why Pending counts:** Sold Date is the date the sale was made, and a sale only turns Closed weeks later. A Closed-only pull is therefore thin after August (803 detached in September, 111 in October). With Pending added, September and October are complete as of November 6, so the window is now **November 1, 2025 to October 31, 2026** (exactly 12 months, four three-month periods: the last is August to October 2026). November 1–6 is left out so every period is whole.
+- **Merge:** `build_extras_layer.py --dir <new> --dir <old> --status Closed,Pending --end 2026-10-31`. Matched on ML #, the new row wins. Pending prices can still change and a few sales may fall through, which the source note on every page now says. August sales that are still Pending (rare) are not in either file.
+- **Pages regenerated:** all suite, penthouse, coach house and golf pages (wording moved from "closed sales to August 31" to "closed and pending sales to October 31", "ten months" to "twelve months"). The main sold layer (`sold-12m.json`, to October 22) is a separate pull and is unchanged.

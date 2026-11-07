@@ -23,7 +23,7 @@ _d = datetime.date.fromisoformat(SD['meta']['last'])
 LAST = f'{_d.strftime("%B")} {_d.day}, {_d.year}'
 WINDOW = f'November 1, 2025 to {LAST}'
 MK = json.load(open('src/data/market/2026-09.json'))
-EX = json.load(open('src/data/sold/sold-extras.json'))     # coach house, suite and penthouse figures (Pete's export, to August 31, 2026)
+EX = json.load(open('src/data/sold/sold-extras.json'))     # coach house, suite and penthouse figures (Pete's export, closed and pending sales to October 31, 2026)
 EXW = EX['meta']['window']
 SN = json.load(open('src/data/snapstats/2026-10.json'))['areas']
 MAPPED = json.load(open('src/data/snapstats/_mapping.json'))['mapped']
@@ -177,7 +177,7 @@ def finish(slug, seo, crumbs, faq, bl, faq_heading, links, extra=None):
     return j
 
 
-NOTICE_COACH = ('Draft for Jared’s approval. Coach house figures come from the Carriage/Coach House and Laneway House style flags in Paragon closed sales, which the listing agent fills in, so the counts are small and will miss some. '
+NOTICE_COACH = ('Draft for Jared’s approval. Coach house figures come from the Carriage/Coach House and Laneway House style flags in Paragon closed and pending sales, which the listing agent fills in, so the counts are small and will miss some. '
                 'The live search is not connected yet.')
 
 
@@ -187,7 +187,7 @@ def coach_part(city, name):
     assert co['n'] >= 5 and ho['n'] >= 30
     prem = 100 * (co['price'] - ho['price']) / ho['price']
     side = f'above' if co['price'] >= ho['price'] else 'below'
-    para = (f'Paragon marks {co["n"]} of the {ho["n"]} {name} detached houses that closed from {EXW.replace(" to ", " to ")} as a coach house or laneway house. They sold at a median of {money(co["price"])}, '
+    para = (f'Paragon marks {co["n"]} of the {ho["n"]} {name} detached houses that sold from {EXW} as a coach house or laneway house. They sold at a median of {money(co["price"])}, '
             f'{abs(prem):.0f}% {side} the {money(ho["price"])} median for all {name} houses in the same months. The flag is typed in by the listing agent, so treat the count as a floor and not a census.' + (f' With only {co["n"]} sales the price gap is a rough sign, not a trend.' if co['n'] < 15 else ''))
     rows = [['Sales', num(co['n']), num(la['n']), num(ho['n'])], ['Median price', money(co['price']), money(la['price']), money(ho['price'])],
             ['Days to sell', str(co['dom']), str(la['dom']), str(ho['dom'])]]
@@ -195,8 +195,8 @@ def coach_part(city, name):
     if co.get('lot_sqft') and la.get('lot_sqft') and ho.get('lot_sqft'): rows.append(['Median lot size', sqft(co['lot_sqft']), sqft(la['lot_sqft']), sqft(ho['lot_sqft'])])
     if co.get('yb') and la.get('yb') and ho.get('yb'): rows.append(['Median year built', str(co['yb']), str(la['yb']), str(ho['yb'])])
     t = tbl(f'{name} detached houses sold with a coach house or laneway house flag', ['Measure', 'Coach or laneway house', 'Lane access', 'All detached houses'], rows,
-            f'Source: Paragon closed sales, {EXW}. Lane access is the Site Influences field. Later months are left out because the export is incomplete after August 2026. A figure is shown only where at least 5 homes sold.')
-    faq = (f'About {abs(prem):.0f}% {side} the all-house median. {co["n"]} {name} houses marked as a coach or laneway house closed from {EXW} at a median of {money(co["price"])}, against {money(ho["price"])} for all {name} detached houses. '
+            f'Source: Paragon closed and pending sales, {EXW}. A pending sale is firm but has not completed, so its price can still change. Lane access is the Site Influences field. A figure is shown only where at least 5 homes sold.')
+    faq = (f'About {abs(prem):.0f}% {side} the all-house median. {co["n"]} {name} houses marked as a coach or laneway house sold from {EXW} at a median of {money(co["price"])}, against {money(ho["price"])} for all {name} detached houses. '
            f'The flag is entered by the listing agent, so the true number is higher.' + (f' With only {co["n"]} sales the gap is a rough sign, not a trend.' if co['n'] < 15 else ''))
     return para, t, faq
 

@@ -5,8 +5,8 @@
                                                                                 writes src/data/sold/sold-extras.json
     With the September-to-today re-pull: pass both folders, the extra status Pete pulled it under, and the new --end date. Rows are matched on ML # so a sale in both folders counts once.
 
-Window: November 1, 2025 to August 31, 2026.  The export only has sales Paragon had marked Closed, and sales thin out after August (803 detached in September, 111 in October),
-so later months are left out until Pete re-pulls them.  Rules are the same as the main sold layer: grouped figures only (the raw rows carry MLS numbers and never enter the repo),
+Window: November 1, 2025 to October 31, 2026 (closed and pending). Sold Date is the date the sale was made, and a sale only turns Closed weeks later, so the Closed-only pull thins out after August (803 detached in September, 111 in October); the September-to-November re-pull adds the Pending sales,
+so Pending counts as a sale.  Rules are the same as the main sold layer: grouped figures only (the raw rows carry MLS numbers and never enter the repo),
 a median needs 5 sales, a count is mentioned at 3, a building is named at 3 and priced at 5.  Map columns by header name.
 
 Groups
@@ -36,7 +36,7 @@ CITY = {
     'new-westminster': [('New Westminster', ())], 'mission': [('Mission', ())], 'pitt-meadows': [('Pitt Meadows', ())], 'north-vancouver': [('North Vancouver', ())],
 }
 HOUSE_T = ('House/Single Family',)
-Q = [('2025-11', '2025-12', '2026-01'), ('2026-02', '2026-03', '2026-04'), ('2026-05', '2026-06', '2026-07'), ('2026-08',)]
+Q = [('2025-11', '2025-12', '2026-01'), ('2026-02', '2026-03', '2026-04'), ('2026-05', '2026-06', '2026-07'), ('2026-08', '2026-09', '2026-10')]
 BANDS_H = [0, 600e3, 800e3, 1e6, 1.2e6, 1.5e6, 1.8e6, 1e12]
 BANDS_C = [0, 500e3, 750e3, 1e6, 1.5e6, 2e6, 1e12]
 
