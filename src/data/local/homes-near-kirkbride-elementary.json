@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Kirkbride Elementary | Prices",
-  "description": "Search homes for sale near Kirkbride Elementary in Surrey. Find listings that name the school, plus nearby schools and what to check on the catchment.",
+  "description": "Homes for sale near Kirkbride Elementary in Surrey. 70 homes sold within 1 km in twelve months. See prices by home type, nearby schools and catchment checks.",
   "h1": "Homes for Sale Near Kirkbride Elementary"
  },
  "breadcrumbs": [
@@ -25,12 +25,22 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Kirkbride Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Surrey School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Kirkbride Elementary home search find homes?",
    "a": "It lists active homes whose listing text names Kirkbride Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How much do homes near Kirkbride Elementary sell for?",
+   "a": "Within 1 km of the school, 70 homes sold between November 1, 2025 and October 31, 2026. Medians were houses $1,272,500, townhomes $617,000, condos $435,000. A median is the middle price and is shown where at least 5 homes sold.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How fast do homes sell near Kirkbride Elementary?",
+   "a": "Within 1 km of Kirkbride Elementary the median was 28 days on the market, closing at 95.8% of the list price, with 1% of sales above the list price for the 70 homes within 1 km.",
    "gen": "nsrch"
   },
   {
@@ -42,7 +52,7 @@
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
+   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
    "gen": "school"
   },
   {
@@ -52,7 +62,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Kirkbride Elementary.",
+   "text": "The search below lists homes for sale whose listing names Kirkbride Elementary. Under it are the prices homes sold for within 1 km of the school.",
    "gen": "nsrch"
   },
   {
@@ -67,7 +77,118 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Kirkbride Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Kirkbride Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "What homes within 1 km of Kirkbride Elementary sold for",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "Between November 1, 2025 and October 31, 2026, 70 homes sold within 1 km of Kirkbride Elementary: 24 houses, 17 townhomes and 25 condos. The largest group was condos, at a median of $435,000.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 1 km of Kirkbride Elementary, by type",
+   "head": [
+    "Measure",
+    "Houses",
+    "Townhomes",
+    "Condos",
+    "All homes"
+   ],
+   "rows": [
+    [
+     "Sales",
+     "24",
+     "17",
+     "25",
+     "70"
+    ],
+    [
+     "Median price",
+     "$1,272,500",
+     "$617,000",
+     "$435,000",
+     "$621,000"
+    ],
+    [
+     "Middle half of prices",
+     "$1,067,500 to $1,556,250",
+     "$531,000 to $642,500",
+     "$375,000 to $492,450",
+     "$459,375 to $1,127,000"
+    ],
+    [
+     "Median days to sell",
+     "25",
+     "45",
+     "36",
+     "28"
+    ],
+    [
+     "Sold price as a share of list price",
+     "95.1%",
+     "96.1%",
+     "96.7%",
+     "95.8%"
+    ],
+    [
+     "Sales over the list price",
+     "4%",
+     "0%",
+     "0%",
+     "1%"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address (straight-line distance). A pending sale is firm but not completed. A figure is shown only where at least 5 homes sold. Duplexes and row houses count in All homes only."
+  },
+  {
+   "t": "p",
+   "text": "The middle half of sales within 1 km of Kirkbride Elementary went for houses between $1,067,500 and $1,556,250; townhomes between $531,000 and $642,500; condos between $375,000 and $492,450. Half of the 70 homes sold at or below $621,000, 95.8% of the list price at the median.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 1 km of Kirkbride Elementary, by quarter",
+   "head": [
+    "Quarter",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Nov 2025 to Jan 2026",
+     "11",
+     "$590,000"
+    ],
+    [
+     "Feb to Apr 2026",
+     "31",
+     "$900,000"
+    ],
+    [
+     "May to Jul 2026",
+     "16",
+     "$466,250"
+    ],
+    [
+     "Aug to Oct 2026",
+     "12",
+     "$1,037,500"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A median is shown only where at least 5 homes sold."
+  },
+  {
+   "t": "p",
+   "text": "Where the 70 sales within 1 km of Kirkbride Elementary were: Queen Mary Park (34 sales, median $628,500), Annieville (28 sales, median $907,500), Cedar Hills (8 sales, median $329,400).",
    "gen": "nsrch"
   },
   {
@@ -382,11 +503,33 @@
     ],
     [
      {
+      "t": "Compare price with similar homes farther from the school. The median condo within 1 km of Kirkbride Elementary was $435,000, so check whether size and age explain a gap before you pay for the location."
+     }
+    ],
+    [
+     {
       "t": "Look at Immaculate Conception School, the nearest other elementary school, 0.8 km south-west of Kirkbride Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],
    "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Estimate the payment on a home near Kirkbride Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "The calculator starts at the condo median within 1 km of Kirkbride Elementary, $435,000, and you can change the price, down payment and rate.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "calc",
+   "which": "mortgage",
+   "price": 435000,
+   "gen": "school"
   },
   {
    "t": "h",
@@ -462,6 +605,6 @@
   "school": "Kirkbride Elementary",
   "city": "surrey",
   "radius": 1.0,
-  "sold": false
+  "sold": true
  }
 }

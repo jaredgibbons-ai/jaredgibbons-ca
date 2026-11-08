@@ -980,3 +980,8 @@ Surrey and Cloverdale coach house pages use Jerry's keyword searches (1451381, 1
 - **Wix-Brown Elementary** returned only 4 sold or pending homes, too few for fair medians, so the page shows no sold prices. The draft notice now says that instead of "export still to come" (`tools/build_school_pages.py`).
 - **King Traditional** returned 0 results and has no file, so its page stays held.
 - **Approvals:** newly built school pages show "Not yet" in the launch pack until Jared approves them. Tests 133 pass, 827 new pages all 0.7 or above on uniqueness.
+
+## D-177: Pete's batch 2 resend (Surrey schools, rows 41 to 60) (2026-11-08)
+- **Loaded:** 20 school CSVs, Fraser Wood through Kirkbride, through `tools/build_school_sold.py`. Every row count matched Pete's export log. 17 elementary schools use a 1 km radius and 3 secondary schools (Grandview Heights, Guildford Park, Johnston Heights) use 2 km; the pages state the radius used.
+- **Result:** 114 school pages now have sold figures, 42 still wait for Pete (rows 85 onward). One previously held page (no listings) now builds because it has sold figures.
+- **Approvals:** new school pages show "Not yet" in the launch pack until Jared approves them. Tests 133 pass, 828 new pages all 0.7 or above on uniqueness.
