@@ -1,6 +1,7 @@
 ---
 // "Explore" link block at the end of every listing-search page (data: src/data/explore.json, tools/build_explore.py).
 // Template output, not page content. Not part of the main menu.
+import { isHeldHref } from '../lib/launch';
 const { data } = Astro.props as { data: { cols: { h: string; links: string[][]; more: string[][] }[] } };
 ---
 {data && data.cols.length > 0 && (
@@ -12,13 +13,13 @@ const { data } = Astro.props as { data: { cols: { h: string; links: string[][]; 
           <nav class="explore__col" aria-label={c.h}>
             <h3 class="explore__h">{c.h}</h3>
             <ul>
-              {c.links.map((l) => <li><a href={l[1]}>{l[0]}</a></li>)}
+              {c.links.filter((l) => !isHeldHref(l[1])).map((l) => <li><a href={l[1]}>{l[0]}</a></li>)}
             </ul>
-            {c.more.length > 0 && (
+            {c.more.filter((l) => !isHeldHref(l[1])).length > 0 && (
               <details class="explore__more">
                 <summary>Show more</summary>
                 <ul>
-                  {c.more.map((l) => <li><a href={l[1]}>{l[0]}</a></li>)}
+                  {c.more.filter((l) => !isHeldHref(l[1])).map((l) => <li><a href={l[1]}>{l[0]}</a></li>)}
                 </ul>
               </details>
             )}

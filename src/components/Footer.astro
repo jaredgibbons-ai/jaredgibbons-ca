@@ -39,6 +39,7 @@ const popular = [
   ]],
 ];
 const { tagline, cell = false } = Astro.props;
+import { isHeldHref } from '../lib/launch';
 ---
 <footer class="site-footer on-dark">
   <div class="wrap">
@@ -67,7 +68,7 @@ const { tagline, cell = false } = Astro.props;
     <nav class="footer__popular" aria-label="Popular searches">
       <h2 class="footer__popular-h">Popular searches</h2>
       <div class="footer__popular-grid">
-        {popular.map(([h, links]) => (
+        {popular.map(([h, links]) => [h, links.filter(([, href]) => !isHeldHref(href))] as const).filter(([, links]) => links.length).map(([h, links]) => (
           <div>
             <p class="footer__label">{h}</p>
             <ul>{links.map(([n, href]) => <li><a href={href}>{n}</a></li>)}</ul>

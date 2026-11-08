@@ -7,6 +7,7 @@
 // with the same figures in a text table, and a click-to-load 3D flyover when the region has one.
 import { validateRegion, flyoverFor, draftsBlockLaunch } from '../lib/areamap.js';
 import { NEARBY } from '../lib/nearby-places.js';
+import { isHeldHref } from '../lib/launch';
 import { figures, TYPES, METRICS, MIN_SALES, fmt } from '../lib/choropleth.js';
 import sold from '../data/sold/sold-12m.json';
 const FILES = import.meta.glob('../data/maps/*.json', { eager: true, import: 'default' }) as Record<string, any>;
@@ -30,7 +31,7 @@ const shaded = Object.values(figs).some((f: any) => Object.values(f).some(Boolea
 const rows = shaded ? areas.flatMap((a: any) => TYPES.filter(([g]) => figs[a.id]?.[g]).map(([g, label]) => ({ a, label, f: figs[a.id][g] }))) : [];
 const noFig = shaded ? areas.filter((a: any) => !a.sold || !Object.values(figs[a.id] || {}).some(Boolean)) : [];
 const key = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY || '';
-const payload = JSON.stringify({ name: region.name, center: region.center, mode, areas: areas.map((a: any) => ({ id: a.id, name: a.name, href: a.href, group: !!a.group, rings: a.rings })), figs, types: TYPES, metrics: METRICS, minSales: MIN_SALES, flyover: mode === 'hub' ? flyoverFor(region) : null });
+const payload = JSON.stringify({ name: region.name, center: region.center, mode, areas: areas.map((a: any) => ({ id: a.id, name: a.name, href: isHeldHref(a.href) ? '' : a.href, group: !!a.group, rings: a.rings })), figs, types: TYPES, metrics: METRICS, minSales: MIN_SALES, flyover: mode === 'hub' ? flyoverFor(region) : null });
 const window_ = (sold as any).meta.window;
 ---
 <section class="areamap" aria-label={mode === 'area' ? `${areas[0].name} neighbourhood map` : `${region.name} neighbourhood map`}>
@@ -56,7 +57,7 @@ const window_ = (sold as any).meta.window;
   <button type="button" class="btn areamap__fly" id="areamap-fly" hidden>View 3D flyover</button>
   {mode === 'hub' && (
     <nav aria-label={`${region.name} neighbourhoods`}>
-      <ul class="areamap__list">{areas.map((a: any) => <li><a href={a.href}>{a.name}</a></li>)}</ul>
+      <ul class="areamap__list">{areas.map((a: any) => <li>{isHeldHref(a.href) ? a.name : <a href={a.href}>{a.name}</a>}</li>)}</ul>
     </nav>
   )}
   {shaded && (
@@ -66,7 +67,7 @@ const window_ = (sold as any).meta.window;
       <table class="tbl">
         <caption>Closed sales, {window_}. Figures are medians for the area and property type; types with fewer than {MIN_SALES} sales are left out.</caption>
         <thead><tr><th scope="col">Area</th><th scope="col">Type</th><th scope="col">Sales</th><th scope="col">Median sold price</th><th scope="col">Median price per sq ft</th><th scope="col">Median days on market</th></tr></thead>
-        <tbody>{rows.map(({ a, label, f }: any) => <tr><th scope="row"><a href={a.href}>{a.name}</a></th><td>{label}</td><td>{f.n}</td><td>{fmt('price', f.price)}</td><td>{fmt('ppsf', f.ppsf)}</td><td>{fmt('dom', f.dom)}</td></tr>)}</tbody>
+        <tbody>{rows.map(({ a, label, f }: any) => <tr><th scope="row">{isHeldHref(a.href) ? a.name : <a href={a.href}>{a.name}</a>}</th><td>{label}</td><td>{f.n}</td><td>{fmt('price', f.price)}</td><td>{fmt('ppsf', f.ppsf)}</td><td>{fmt('dom', f.dom)}</td></tr>)}</tbody>
       </table>
       </div>
       {noFig.length > 0 && <p class="areamap__fine">Not enough closed sales for a figure: {noFig.map((a: any) => a.name).join(', ')}.</p>}
@@ -181,7 +182,7 @@ const window_ = (sold as any).meta.window;
                 p.textContent = f ? `${data.metrics.find((m: any) => m[0] === metricSel.value)[1]}, ${tl}: ${fmt(metricSel.value, f[metricSel.value])} (${f.n} closed sales)` : `Fewer than ${data.minSales} closed sales of ${tl} in the past 12 months.`;
                 box.appendChild(p);
               }
-              const l = document.createElement('a'); l.href = sp.href; l.textContent = sp.linkText; box.appendChild(l);
+              if (sp.href) { const l = document.createElement('a'); l.href = sp.href; l.textContent = sp.linkText; box.appendChild(l); }
               info.setContent(box); info.setPosition(e.latLng); info.open({ map });
             });
           }

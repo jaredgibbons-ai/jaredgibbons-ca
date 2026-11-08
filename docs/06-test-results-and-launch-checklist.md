@@ -19,17 +19,29 @@ Bugs found and fixed during this pass: mobile menu overlay covered its own toggl
 
 Not yet tested: forms (none in preview), real images, INP, Safari/Firefox, screen reader, reduced-motion visual pass, print.
 
-## Launch checklist (nothing here is done)
-- [ ] Approval from Jared to launch, in writing
-- [ ] Route manifest 100% classified; redirects reviewed; real 404
-- [ ] IDX connected and Royal LePage sign-off, or listing surfaces explicitly scoped out
-- [ ] Forms: server validation, Turnstile, stored in D1, notification delivered end to end (test messages received)
-- [ ] Preview chrome removed; `noindex` removed; robots.txt and sitemap rules applied
-- [ ] Meta descriptions restored from archive; canonical and redirect checks
+## Launch checklist (updated 2026-11-07; nothing is launched)
+Approval pack: `docs/review/launch/launch-approval-2026-11-07.csv` (one row per new page, in batches) and `docs/review/launch/README.md`.
+
+**Needs Jared**
+- [ ] Written approval to launch, batch by batch (A: 479 pages ready, E: 164 auto-generated pages)
+- [ ] Confirm the 312 neighbourhood-map outlines in 21 regions (`src/data/maps/*.json`, status draft to confirmed). The launch build refuses to run while any outline is draft (`AreaMap.astro`)
+- [ ] Launch build setting `PUBLIC_PREVIEW=false` (removes review notes, `noindex` on the preview, applies holds)
+- [ ] `PUBLIC_GOOGLE_MAPS_KEY` build variable (maps, address suggestions, commute times)
+- [ ] IDX: Royal LePage sign-off or the new feed route (BL-04); GBP reviews feed (BL-03); newsletter form destination (BL-05); privacy page confirmations
+- [ ] Forms live: Turnstile site key and secret set by Jared, `PUBLIC_FORMS_LIVE=true`, test messages received at both addresses
 - [ ] Analytics (GA4 `G-7YQYX2KPBR`, Ads `AW-10817976788`, Meta Pixel) verified firing once
-- [ ] Core Web Vitals: lab and field reported separately; LCP ≤2.5 s, INP ≤200 ms, CLS ≤0.1
-- [ ] WCAG 2.2 AA audit, including manual keyboard and screen-reader passes
-- [ ] Rollback rehearsal; DNS change **only** with explicit approval
+- [ ] DNS change, only with explicit approval
+
+**Waiting on others (held pages: `src/data/launch/holds.json`)**
+- [ ] Jerry's saved searches: 97 held pages (price bands 20, area pages 33, condos and townhomes 21, acreage 14, guides 8, 55+ 1). Five main-menu hubs are in this list: Richmond, Vancouver, Burnaby, New Westminster and Coquitlam neighbourhood guides
+- [ ] Pete's school exports: 76 held school pages
+
+**Done**
+- [x] Route manifest classified, redirects implemented (OI-10a)
+- [x] Uniqueness gate: 0 of 816 new pages under 70%
+- [x] Link, SEO, markup and accessibility scans clean (D-171)
+- [x] Holds: a held page is noindex, out of the sitemap, footer and generated link lists in the launch build (tested 2026-11-07: sitemap 1,871 to 1,698 URLs, 0 draft notes left)
+- [ ] Core Web Vitals with real images, throttled; Safari and Firefox; screen reader pass; rollback rehearsal (not yet done)
 
 ## Run 2026-10-31 (after asset integration)
 - Archive-vs-render comparison: unchanged (home 1 line missing, Fort Langley known deviations only).

@@ -957,3 +957,9 @@ Surrey and Cloverdale coach house pages use Jerry's keyword searches (1451381, 1
 
 ## D-172: Pete's school batch 4 (2026-11-07)
 - **Loaded:** 8 school CSVs (rows 77 to 84, Peace Arch to Semiahmoo Trail; 2 km secondaries, 1 km elementaries). 68 of 144 school pages now have sold figures; 76 wait for Pete (batch 2, rows 41 to 60, has still not arrived; he is on rows 85 to 92).
+
+## D-173: Launch approval pack and holds (2026-11-07)
+- **Pack:** `tools/launch_pack.py` writes `docs/review/launch/launch-approval-2026-11-07.csv` for all 816 new pages in batches: A approve now 479, B waiting for Jerry's searches 97, C waiting for Pete's school exports 76, E auto-generated 164. The 14 pages with only one inbound link got links from related hubs first (`tools/build_launch_links.py`, gen `launchlinks`).
+- **Holds:** `src/data/launch/holds.json` (written by the pack) takes effect only in the launch build: held pages are noindex and out of the sitemap, footer, link-only lists, "Explore" columns, map lists, tables and inline links (`src/lib/launch.ts`). In the preview a held page shows why. Tested with a launch-mode build: sitemap 1,871 to 1,698 URLs, no draft notes, 4 stray links to held pages left in page bodies.
+- **Found:** the launch build refuses to run while any of the 312 neighbourhood-map outlines is draft. That is on the launch checklist for Jared to confirm. Five main-menu hubs (Richmond, Vancouver, Burnaby, New Westminster, Coquitlam neighbourhood guides) are held for want of Jerry's searches and still appear in the menu.
+- **Checklist:** `docs/06` rewritten with current status.

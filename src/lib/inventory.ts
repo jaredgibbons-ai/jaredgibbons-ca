@@ -3,6 +3,7 @@
 //  2. Uniqueness gate (src/data/inventory/uniqueness.json, written by tools/uniqueness.py --write-gate): a brand-new page under `min_unique` stays out until its copy is raised.
 import gate from '../data/inventory/gate.json';
 import uniq from '../data/inventory/uniqueness.json';
+import { isHeld } from './launch';
 
 const g = gate as any;
 const pages = g.pages as Record<string, { kind: string; history: { month: string; active: number }[] }>;
@@ -17,4 +18,4 @@ const u = uniq as any;
 const uniquenessHeld = (slug: string) => u.enforce === true && typeof u.scores[slug] === 'number' && u.scores[slug] < u.min_unique;
 // Utility pages that stay reachable and linked but are never indexed or put in the sitemap.
 const UTILITY = new Set(['photo-credits']);
-export const isGated = (slug: string) => UTILITY.has(slug) || listingGated(slug) || uniquenessHeld(slug);
+export const isGated = (slug: string) => UTILITY.has(slug) || listingGated(slug) || uniquenessHeld(slug) || isHeld(slug);
