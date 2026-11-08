@@ -16,6 +16,7 @@ T = {
     'abbotsford-golf-course-homes-for-sale': ['abbotsford-homes-for-sale', 'abbotsford-neighbourhood-guides', 'abbotsford-real-estate-market-stats'],
     'langley-golf-course-homes-for-sale': ['langley-homes-for-sale', 'langley-neighbourhood-guides', 'langley-real-estate-market-stats'],
     'surrey-golf-course-homes-for-sale': ['surrey-homes-for-sale', 'surrey-neighbourhood-guides', 'surrey-real-estate-market-stats'],
+    'west-vancouver-golf-course-homes-for-sale': ['west-vancouver-real-estate-market-stats', 'british-properties', 'dundarave-west-vancouver-guide'],
     'cloverdale-houses-with-suites-for-sale': ['cloverdale-neighbourhood-guides', 'surrey-homes-for-sale', 'cloverdale-real-estate-market-stats'],
     'north-delta-houses-with-suites-for-sale': ['north-delta-homes-for-sale', 'delta-homes-for-sale', 'delta-real-estate-market-stats'],
     'harrison-hot-springs-bc-guide': ['chilliwack-homes-for-sale', 'mission-homes-for-sale', 'fraser-valley-market-stats'],

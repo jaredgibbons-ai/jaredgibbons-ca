@@ -917,7 +917,7 @@ Surrey and Cloverdale coach house pages use Jerry's keyword searches (1451381, 1
 - **Refreshed with Jared's Paragon pull of November 7, 2026** (`src/data/sold/neighbourhood-2026-11-07.json`, closed and pending): Morgan Creek, Grandview (Surrey) and the Crescent Beach and Ocean Park guide get a dated "what homes sold for" block. Medians only where at least 5 sold; the source and the pending-sale caveat are on the page.
 - **White Rock hub:** sold prices added from the closed and pending extras (`sold-extras.json`).
 - **Furry Creek:** 4 sales in 12 months (1 house, 3 townhomes), so no medians are shown.
-- **West Vancouver golf: not built.** It waits on a count from Jerry and a golf-flag sold export from Pete; building without them would mean guessing.
+- **West Vancouver golf: not built.** It waits on a count from Jerry and a golf-flag sold export from Pete; building without them would mean guessing. (Built 2026-11-08, see D-182.)
 
 ## D-167: Uniqueness boost, school-page sold tables and site-wide gap fixes (2026-11-07)
 - **Why:** Jared asked for the page-by-page check (links, reviews, FAQ, uniqueness) and for every gap to be fixed. At the start of the pass 68 pages sat under the 70% unique-wording line (8 near it, 60 school pages).
@@ -1004,3 +1004,9 @@ Surrey and Cloverdale coach house pages use Jerry's keyword searches (1451381, 1
 - **Fixed:** counts of 1,000 or more in school page prose now carry a thousands comma (R E Mountain Secondary said "1140"). Fixed in `tools/build_school_pages.py`.
 - **Launch build:** the 160 school pages have no draft notice, no noindex and a search embed. Glenwood Elementary (2 sales) and Wix-Brown Elementary (4 sales) show no sold section, because they are too thin for medians.
 - **Approvals:** the remaining 46 school pages approved (recorded under `later` in `approvals.json`). All 160 school pages approved; 735 pages approved in total; 97 held for Jerry's searches. Tests 133 pass.
+
+## D-182: West Vancouver golf course homes page (2026-11-08)
+- **Built:** `west-vancouver-golf-course-homes-for-sale` (draft) by `tools/build_wv_golf_page.py` from Pete's grouped export, stored as `src/data/sold/wv-golf.json` (no listings). 351 detached sales (299 closed, 52 pending, accepted Nov 1, 2025 to Oct 31, 2026); 128 carry the Site Influences flag Golf Course Nearby (125) or Golf Course Dev. (3). Golf median $3,062,500 against $2,845,000 for all detached sales. Every figure on the page was checked against Pete's JSON.
+- **Limits stated on the page:** the export has no floor area, lot size, year built, quarterly or price-band data, and no medians by neighbourhood, so the page shows counts by sub-area only and says it cannot split the price gap into size and course.
+- **Search mismatch:** Jerry's count-only search 1451590 (43 listings) matches the word golf in listing remarks, while the sold figures and the other six golf pages use the Site Influences flag. The page says so. Wired through `NAME_MATCH` in `tools/build_idx_embeds.py`. If Jerry builds a Site Influences search for West Vancouver (same as the other six), swap the id.
+- **Links:** from the West Vancouver homes page, market stats, British Properties and Dundarave (`build_launch_links.py`). Uniqueness 0.94. Status: "Not yet" approved. Tests 133 pass.

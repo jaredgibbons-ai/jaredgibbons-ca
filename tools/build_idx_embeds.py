@@ -18,7 +18,8 @@ NC_ADDR_FIX = {'sardis-homes-for-sale': 'new-construction-sardis'}
 NAME_MATCH = {
     'metrotown-homes-for-sale': '1450248',          # "Metrotown Homes for Sale"
     'cloverale-foreclosures-court-ordered-sales': '1450032',  # "Cloverdale Foreclosures & Court Ordered Sales"
-    'langley-farms': '1450183',                     # "Langley Farms for Sale"
+    'langley-farms': '1450183',
+    'west-vancouver-golf-course-homes-for-sale': '1451590',  # Jerry's count-only search (area-gap sheet, 43 listings, Internet Remarks golf); the page says the live search is a remarks word search                     # "Langley Farms for Sale"
 }
 
 def main():
