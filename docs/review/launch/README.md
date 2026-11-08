@@ -15,3 +15,6 @@ Pages under 5 active listings (3-month average) are set to noindex automatically
 
 ## Update 2026-11-08
 Jared approved the 46 school pages that have Pete's sold figures (listed under `later` in `approvals.json`). Total approved: 689 pages. The 139 "Not yet" pages are all held: 97 wait for Jerry (batch B), 42 wait for Pete (batch C). This approves pages only; nothing is launched.
+
+## Update 2026-11-08 (second approval)
+Jared approved the remaining 46 school pages. All 160 school pages are now approved. Total approved: 735 pages. The 97 "Not yet" pages all wait for Jerry's saved searches (batch B). Nothing is launched.

@@ -143,10 +143,10 @@ def page(r):
     n = sd['n'] if sd else None
     if sd and n >= 10:
         desc = fit(*[f'{a} {b}' for a in (f'Search homes for sale near {nm} in {place}.', f'Homes for sale near {nm} in {place}.', f'See homes for sale near {nm}.')
-                     for b in (f'{n} sold within {rk} in twelve months. See prices for houses, townhomes and condos, nearby schools and catchment checks.',
-                               f'{n} homes sold within {rk} in twelve months. See prices by home type, nearby schools and catchment checks.',
-                               f'{n} sold within {rk} in a year, with prices by home type, nearby schools and what to check on the catchment.',
-                               f'{n} sold within {rk} in twelve months, with prices by home type, nearby schools and catchment checks.')])
+                     for b in (f'{n:,} sold within {rk} in twelve months. See prices for houses, townhomes and condos, nearby schools and catchment checks.',
+                               f'{n:,} homes sold within {rk} in twelve months. See prices by home type, nearby schools and catchment checks.',
+                               f'{n:,} sold within {rk} in a year, with prices by home type, nearby schools and what to check on the catchment.',
+                               f'{n:,} sold within {rk} in twelve months, with prices by home type, nearby schools and catchment checks.')])
     else:
         desc = fit(*[f'{a} {b}' for a in (f'Search homes for sale near {nm} in {place}.', f'Homes for sale near {nm} in {place}.', f'See homes for sale near {nm}.')
                      for b in ('See listings that name the school, nearby schools and what to check on the catchment before you offer.',
@@ -180,7 +180,7 @@ def page(r):
         big = max(gdef, key=lambda x: gs[x[0]]['n'])
         mid = gs[big[0]].get('price') or al.get('price'); midlab = big[1].lower()
         bl += [H(f'What homes within {rk} of {nm} sold for'),
-               P(f'Between {WIN.replace(" to ", " and ")}, {n} homes sold within {rk} of {nm}: ' + (', '.join(parts[:-1]) + (' and ' if len(parts) > 1 else '') + parts[-1] if parts else f'{n} homes') + '.'
+               P(f'Between {WIN.replace(" to ", " and ")}, {n:,} homes sold within {rk} of {nm}: ' + (', '.join(parts[:-1]) + (' and ' if len(parts) > 1 else '') + parts[-1] if parts else f'{n:,} homes') + '.'
                  + (f' The largest group was {big[1].lower()}, at a median of {money(gs[big[0]]["price"])}.' if gs[big[0]].get('price') else ''))]
         def cv(g, k, fmt=lambda x: f'{x:,}'): return fmt(g[k]) if g.get(k) is not None else '—'
         cols = [('Houses', gs['house']), ('Townhomes', gs['townhouse']), ('Condos', gs['condo']), ('All homes', al if al.get('price') else {'n': n})]
@@ -192,13 +192,13 @@ def page(r):
                       f'Source: Paragon closed and pending sales, {WIN}, within {rk} of the school address (straight-line distance). A pending sale is firm but not completed. A figure is shown only where at least 5 homes sold. Duplexes and row houses count in All homes only.'))
         mh = [f'{lab.lower()} between {money(g["p25"])} and {money(g["p75"])}' for lab, g in cols[:3] if g.get('p25')]
         if mh:
-            bl.append(P(f'The middle half of sales within {rk} of {nm} went for ' + ('; '.join(mh)) + f'. Half of the {n} homes sold at or below {money(al["price"])}' + (f', {al["ratio"]}% of the list price at the median' if al.get('ratio') else '') + '.' if al.get('price') else f'The middle half of sales within {rk} of {nm} went for ' + ('; '.join(mh)) + '.'))
+            bl.append(P(f'The middle half of sales within {rk} of {nm} went for ' + ('; '.join(mh)) + f'. Half of the {n:,} homes sold at or below {money(al["price"])}' + (f', {al["ratio"]}% of the list price at the median' if al.get('ratio') else '') + '.' if al.get('price') else f'The middle half of sales within {rk} of {nm} went for ' + ('; '.join(mh)) + '.'))
         if sd.get('q') and n >= 12:
             bl.append(tbl(f'Homes sold within {rk} of {nm}, by quarter', ['Quarter', 'Sales', 'Median price'], [[a, num(b), money(c) if c else '—'] for a, b, c in sd['q']],
                           f'Source: Paragon closed and pending sales, {WIN}, within {rk} of the school address. A median is shown only where at least 5 homes sold.'))
         subs = [s for s in sd['sub'] if s[1] >= 3]
         if subs:
-            bl.append(P(f'Where the {n} sales within {rk} of {nm} were: ' + ', '.join(f'{N.disp(s[0])} ({s[1]} sales' + (f', median {money(s[2])}' if s[2] else '') + ')' for s in subs[:4]) + '.'))
+            bl.append(P(f'Where the {n:,} sales within {rk} of {nm} were: ' + ', '.join(f'{N.disp(s[0])} ({s[1]:,} sales' + (f', median {money(s[2])}' if s[2] else '') + ')' for s in subs[:4]) + '.'))
         for k, lab in (('condo', 'condo'), ('townhouse', 'townhome')):
             cx = [c for c in sd['complexes'].get(k, []) if c[2]]
             if len(cx) >= 2:
@@ -279,9 +279,9 @@ def page(r):
     faq.append((f'How does the {nm} home search find homes?', f'It lists active homes whose listing text names {nm}, so a nearby home that leaves the name out will not show.'))
     if sd and n >= 10:
         gs = sd['groups']; ps = [f'{lab.lower()} {money(gs[k]["price"])}' for k, lab in gdef if gs[k].get('price')]
-        if ps: faq.append((f'How much do homes near {nm} sell for?', f'Within {rk} of the school, {n} homes sold between {WIN.replace(" to ", " and ")}. Medians were ' + ', '.join(ps) + '. A median is the middle price and is shown where at least 5 homes sold.'))
+        if ps: faq.append((f'How much do homes near {nm} sell for?', f'Within {rk} of the school, {n:,} homes sold between {WIN.replace(" to ", " and ")}. Medians were ' + ', '.join(ps) + '. A median is the middle price and is shown where at least 5 homes sold.'))
         al = sd['all']
-        if al.get('dom'): faq.append((f'How fast do homes sell near {nm}?', f'Within {rk} of {nm} the median was {al["dom"]} days on the market' + (f', closing at {al["ratio"]}% of the list price' if al.get('ratio') else '') + (f', with {al["over"]}% of sales above the list price' if al.get('over') is not None else '') + f' for the {n} homes within {rk}.'))
+        if al.get('dom'): faq.append((f'How fast do homes sell near {nm}?', f'Within {rk} of {nm} the median was {al["dom"]} days on the market' + (f', closing at {al["ratio"]}% of the list price' if al.get('ratio') else '') + (f', with {al["over"]}% of sales above the list price' if al.get('over') is not None else '') + f' for the {n:,} homes within {rk}.'))
     # links
     links = []
     if r['area']: links.append((f'{r["area"]["area"]} neighbourhood guide', r['area']['page']))
