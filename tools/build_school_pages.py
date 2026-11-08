@@ -84,7 +84,7 @@ def fact_for(r):
 def main():
     rows = load_rows(); built, held, skipped = [], [], []
     for r in rows:
-        if r['sid'].isdigit() and (r['count'] or 0) > 0: built.append(r)
+        if r['sid'].isdigit() and ((r['count'] or 0) > 0 or r['slug'][len('homes-near-'):] in SOLD): built.append(r)   # a search with no results yet still gets a page when Pete's sold figures exist
         elif r['sid'].isdigit(): held.append(r)
         else: skipped.append(r)
     names = collections.Counter(r['school'] for r in built)

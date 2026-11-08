@@ -968,3 +968,8 @@ Surrey and Cloverdale coach house pages use Jerry's keyword searches (1451381, 1
 - **Jared approved** batches A (479 pages) and E (164 auto-generated pages) of the launch pack, and confirmed all 312 neighbourhood-map outlines. Recorded in `docs/review/launch/approvals.json` and the CSV column "Approved by Jared". Not a launch: no build setting, DNS or domain changed.
 - **Menu:** held pages now also drop out of the main menu in the launch build (`Header.astro`), so the five neighbourhood-guide hubs waiting for Jerry's searches disappear from the menu and return on their own when wired and no longer held.
 - **Launch build:** `PUBLIC_PREVIEW=false` now builds without the draft-outline stop (1,873 pages, sitemap 1,698 URLs).
+
+## D-175: Pete's batch 9 (private schools) and zero-result school searches (2026-11-08)
+- **Loaded:** 12 private-school CSVs (sheet rows 152 to 163, 2 km radius) through `tools/build_school_sold.py`; 83 school pages now have sold figures (batch 2 and others still outstanding; 68 pages wait for Pete).
+- **New rule:** a school whose name search had 0 listings (Jerry's "held" rows) now gets a page when Pete's sold figures exist, because the sold section carries the page and the saved search fills in as listings name the school. 7 pages added (St Bernadette, St John Paul II Academy, Sacred Heart, Mennonite Educational Institute and three earlier schools); 11 held rows remain. All above 70% unique.
+- **Approvals:** `docs/review/launch/approvals.json` now lists the approved slugs (643); pages added after 2026-11-07 show "Not yet" in the pack until Jared approves them (15 school pages today).

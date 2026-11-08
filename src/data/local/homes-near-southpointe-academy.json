@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Southpointe Academy | Prices",
-  "description": "Search homes for sale near Southpointe Academy in Delta. Find listings that name the school, plus nearby schools and what to check on the catchment.",
+  "description": "Search homes for sale near Southpointe Academy in Delta. 191 sold within 2 km in twelve months, with prices by home type, nearby schools and catchment checks.",
   "h1": "Homes for Sale Near Southpointe Academy"
  },
  "breadcrumbs": [
@@ -34,6 +34,16 @@
    "gen": "nsrch"
   },
   {
+   "q": "How much do homes near Southpointe Academy sell for?",
+   "a": "Within 2 km of the school, 191 homes sold between November 1, 2025 and October 31, 2026. Medians were houses $1,500,000, townhomes $739,500, condos $609,000. A median is the middle price and is shown where at least 5 homes sold.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How fast do homes sell near Southpointe Academy?",
+   "a": "Within 2 km of Southpointe Academy the median was 33 days on the market, closing at 97.1% of the list price, with 5% of sales above the list price for the 191 homes within 2 km.",
+   "gen": "nsrch"
+  },
+  {
    "q": "Which schools are closest to Southpointe Academy?",
    "a": "In a straight line, the closest schools in the provincial list are Beach Grove Elementary (0.7 km east), Cliff Drive Elementary (1.8 km south-west) and South Park Elementary (2.4 km south).",
    "gen": "nsrch"
@@ -42,7 +52,7 @@
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
+   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
    "gen": "school"
   },
   {
@@ -52,7 +62,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Southpointe Academy.",
+   "text": "The search below lists homes for sale whose listing names Southpointe Academy. Under it are the prices homes sold for within 2 km of the school.",
    "gen": "nsrch"
   },
   {
@@ -67,8 +77,142 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Southpointe Academy, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Southpointe Academy, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "What homes within 2 km of Southpointe Academy sold for",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "Between November 1, 2025 and October 31, 2026, 191 homes sold within 2 km of Southpointe Academy: 65 houses, 34 townhomes and 85 condos. The largest group was condos, at a median of $609,000.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 2 km of Southpointe Academy, by type",
+   "head": [
+    "Measure",
+    "Houses",
+    "Townhomes",
+    "Condos",
+    "All homes"
+   ],
+   "rows": [
+    [
+     "Sales",
+     "65",
+     "34",
+     "85",
+     "191"
+    ],
+    [
+     "Median price",
+     "$1,500,000",
+     "$739,500",
+     "$609,000",
+     "$825,000"
+    ],
+    [
+     "Middle half of prices",
+     "$1,316,000 to $1,785,000",
+     "$677,425 to $834,750",
+     "$522,000 to $684,500",
+     "$628,000 to $1,400,000"
+    ],
+    [
+     "Median days to sell",
+     "20",
+     "42",
+     "47",
+     "33"
+    ],
+    [
+     "Sold price as a share of list price",
+     "97.2%",
+     "97.9%",
+     "96.7%",
+     "97.1%"
+    ],
+    [
+     "Sales over the list price",
+     "8%",
+     "9%",
+     "2%",
+     "5%"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address (straight-line distance). A pending sale is firm but not completed. A figure is shown only where at least 5 homes sold. Duplexes and row houses count in All homes only."
+  },
+  {
+   "t": "p",
+   "text": "The middle half of sales within 2 km of Southpointe Academy went for houses between $1,316,000 and $1,785,000; townhomes between $677,425 and $834,750; condos between $522,000 and $684,500. Half of the 191 homes sold at or below $825,000, 97.1% of the list price at the median.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 2 km of Southpointe Academy, by quarter",
+   "head": [
+    "Quarter",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Nov 2025 to Jan 2026",
+     "40",
+     "$715,000"
+    ],
+    [
+     "Feb to Apr 2026",
+     "42",
+     "$812,500"
+    ],
+    [
+     "May to Jul 2026",
+     "53",
+     "$835,000"
+    ],
+    [
+     "Aug to Oct 2026",
+     "56",
+     "$980,000"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A median is shown only where at least 5 homes sold."
+  },
+  {
+   "t": "p",
+   "text": "Where the 191 sales within 2 km of Southpointe Academy were: Beach Grove (61 sales, median $1,250,000), Tsawwassen North (59 sales, median $740,000), Cliff Drive (43 sales, median $718,000), Tsawwassen Central (17 sales, median $650,000).",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Condo buildings and complexes near Southpointe Academy with the most sales",
+   "head": [
+    "Building or complex",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Windsor Woods",
+     "6",
+     "$557,500"
+    ],
+    [
+     "Tsawwassen Springs",
+     "6",
+     "$990,000"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026. A building is listed with 5 or more sales."
   },
   {
    "t": "h",
@@ -135,8 +279,8 @@
     ],
     [
      {
-      "t": "Homes for sale near Ladner Elementary (elementary school, about 5.2 km north)",
-      "h": "/homes-near-ladner-elementary.html"
+      "t": "Homes for sale near Sacred Heart (elementary school, about 4.3 km north)",
+      "h": "/homes-near-sacred-heart.html"
      }
     ]
    ],
@@ -319,9 +463,31 @@
      {
       "t": "Visit on a school day at drop-off and pick-up. Traffic and parking near Southpointe Academy are very different at 8:30 am and 3 pm than on a Sunday viewing."
      }
+    ],
+    [
+     {
+      "t": "Compare price with similar homes farther from the school. The median condo within 2 km of Southpointe Academy was $609,000, so check whether size and age explain a gap before you pay for the location."
+     }
     ]
    ],
    "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Estimate the payment on a home near Southpointe Academy",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "The calculator starts at the condo median within 2 km of Southpointe Academy, $609,000, and you can change the price, down payment and rate.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "calc",
+   "which": "mortgage",
+   "price": 609000,
+   "gen": "school"
   },
   {
    "t": "h",
@@ -397,6 +563,6 @@
   "school": "Southpointe Academy",
   "city": "delta",
   "radius": 2.0,
-  "sold": false
+  "sold": true
  }
 }
