@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Douglas Park Community | Prices",
-  "description": "Search homes for sale near Douglas Park Community in Langley. Find listings that name the school, plus nearby schools and what to check on the catchment.",
+  "description": "Homes for sale near Douglas Park Community in Langley. 209 sold within 1 km in twelve months, with prices by home type, nearby schools and catchment checks.",
   "h1": "Homes for Sale Near Douglas Park Community"
  },
  "breadcrumbs": [
@@ -25,12 +25,22 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Douglas Park Community catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Douglas Park Community home search find homes?",
    "a": "It lists active homes whose listing text names Douglas Park Community, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How much do homes near Douglas Park Community sell for?",
+   "a": "Within 1 km of the school, 209 homes sold between November 1, 2025 and October 31, 2026. Medians were houses $1,045,000, townhomes $604,000, condos $461,500. A median is the middle price and is shown where at least 5 homes sold.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How fast do homes sell near Douglas Park Community?",
+   "a": "Within 1 km of Douglas Park Community the median was 28 days on the market, closing at 96.6% of the list price, with 3% of sales above the list price for the 209 homes within 1 km.",
    "gen": "nsrch"
   },
   {
@@ -42,7 +52,7 @@
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
+   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
    "gen": "school"
   },
   {
@@ -52,7 +62,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Douglas Park Community in the listing.",
+   "text": "Use the search below to see homes for sale that name Douglas Park Community in the listing, then check the sold prices within 1 km of the school.",
    "gen": "nsrch"
   },
   {
@@ -67,8 +77,142 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Douglas Park Community, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Douglas Park Community, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "What homes within 1 km of Douglas Park Community sold for",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "Between November 1, 2025 and October 31, 2026, 209 homes sold within 1 km of Douglas Park Community: 13 houses, 28 townhomes and 168 condos. The largest group was condos, at a median of $461,500.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 1 km of Douglas Park Community, by type",
+   "head": [
+    "Measure",
+    "Houses",
+    "Townhomes",
+    "Condos",
+    "All homes"
+   ],
+   "rows": [
+    [
+     "Sales",
+     "13",
+     "28",
+     "168",
+     "209"
+    ],
+    [
+     "Median price",
+     "$1,045,000",
+     "$604,000",
+     "$461,500",
+     "$484,600"
+    ],
+    [
+     "Middle half of prices",
+     "$964,000 to $1,217,500",
+     "$544,750 to $697,500",
+     "$400,000 to $510,000",
+     "$416,500 to $549,000"
+    ],
+    [
+     "Median days to sell",
+     "24",
+     "27",
+     "29",
+     "28"
+    ],
+    [
+     "Sold price as a share of list price",
+     "96.0%",
+     "97.0%",
+     "96.5%",
+     "96.6%"
+    ],
+    [
+     "Sales over the list price",
+     "0%",
+     "4%",
+     "3%",
+     "3%"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address (straight-line distance). A pending sale is firm but not completed. A figure is shown only where at least 5 homes sold. Duplexes and row houses count in All homes only."
+  },
+  {
+   "t": "p",
+   "text": "The middle half of sales within 1 km of Douglas Park Community went for houses between $964,000 and $1,217,500; townhomes between $544,750 and $697,500; condos between $400,000 and $510,000. Half of the 209 homes sold at or below $484,600, 96.6% of the list price at the median.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 1 km of Douglas Park Community, by quarter",
+   "head": [
+    "Quarter",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Nov 2025 to Jan 2026",
+     "50",
+     "$513,500"
+    ],
+    [
+     "Feb to Apr 2026",
+     "53",
+     "$484,600"
+    ],
+    [
+     "May to Jul 2026",
+     "47",
+     "$485,000"
+    ],
+    [
+     "Aug to Oct 2026",
+     "59",
+     "$444,000"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A median is shown only where at least 5 homes sold."
+  },
+  {
+   "t": "p",
+   "text": "Where the 209 sales within 1 km of Douglas Park Community were: Langley City (204 sales, median $484,800), Salmon River (4 sales).",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Condo buildings and complexes near Douglas Park Community with the most sales",
+   "head": [
+    "Building or complex",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Paddington Station",
+     "10",
+     "$430,000"
+    ],
+    [
+     "Michaud Gardens",
+     "6",
+     "$480,000"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026. A building is listed with 5 or more sales."
   },
   {
    "t": "h",
@@ -145,6 +289,12 @@
    "items": [
     [
      {
+      "t": "Homes for sale near Blacklock Fine Arts Elementary (elementary school, about 0.6 km south)",
+      "h": "/homes-near-blacklock-fine-arts-elementary.html"
+     }
+    ],
+    [
+     {
       "t": "Homes for sale near Nicomekl Elementary (elementary school, about 1.1 km west)",
       "h": "/homes-near-nicomekl-elementary.html"
      }
@@ -153,12 +303,6 @@
      {
       "t": "Homes for sale near Simonds Elementary (elementary school, about 1.6 km south-west)",
       "h": "/homes-near-simonds-elementary.html"
-     }
-    ],
-    [
-     {
-      "t": "Homes for sale near Langley Secondary (secondary school, about 1.8 km east)",
-      "h": "/homes-near-langley-secondary.html"
      }
     ]
    ],
@@ -344,11 +488,33 @@
     ],
     [
      {
+      "t": "Compare price with similar homes farther from the school. The median condo within 1 km of Douglas Park Community was $461,500, so check whether size and age explain a gap before you pay for the location."
+     }
+    ],
+    [
+     {
       "t": "Look at Blacklock Fine Arts Elementary, the nearest other elementary school, 0.6 km south of Douglas Park Community. Compare the two when you check which school serves the address."
      }
     ]
    ],
    "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Estimate the payment on a home near Douglas Park Community",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "The calculator starts at the condo median within 1 km of Douglas Park Community, $461,500, and you can change the price, down payment and rate.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "calc",
+   "which": "mortgage",
+   "price": 461500,
+   "gen": "school"
   },
   {
    "t": "h",
@@ -424,6 +590,6 @@
   "school": "Douglas Park Community",
   "city": "langley",
   "radius": 1.0,
-  "sold": false
+  "sold": true
  }
 }

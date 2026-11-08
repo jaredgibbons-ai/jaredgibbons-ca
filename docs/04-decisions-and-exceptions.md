@@ -988,3 +988,8 @@ Surrey and Cloverdale coach house pages use Jerry's keyword searches (1451381, 1
 
 ## D-178: School pages approved (2026-11-08)
 - Jared approved the 46 school pages that have sold figures. They are recorded under `later` in `docs/review/launch/approvals.json` (date 2026-11-08), and `tools/launch_pack.py` now reads a per-date approval list. 689 pages approved in total; 139 held pages (batch B waiting for Jerry, batch C waiting for Pete) stay "Not yet". Approval is for pages, not a launch.
+
+## D-179: Pete's rows 85 to 151 (2026-11-08)
+- **Loaded:** 66 school CSVs (47 new, 19 repeats of earlier batches that matched exactly and changed nothing). All row counts matched Pete's log. Radii used: 1 km, 1.5 km or 2 km, stated on each page.
+- **Result:** 160 school pages now have sold figures and none are waiting for Pete. Glenwood Elementary (2 sales) and Wix-Brown Elementary (4 sales) are too thin for medians, so their notices say so. King Traditional returned 0 results and has no file, so it stays held (0 listings, no sold figures).
+- **Approvals:** the newly loaded school pages show "Not yet" in the launch pack until Jared approves them. Tests 133 pass, 832 new pages all 0.7 or above on uniqueness.

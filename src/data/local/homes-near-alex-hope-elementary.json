@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Alex Hope Elementary | Prices",
-  "description": "Search homes for sale near Alex Hope Elementary in Langley. Find listings that name the school, plus nearby schools and what to check on the catchment.",
+  "description": "Homes for sale near Alex Hope Elementary in Langley. 239 sold within 1 km in twelve months, with prices by home type, nearby schools and catchment checks.",
   "h1": "Homes for Sale Near Alex Hope Elementary"
  },
  "breadcrumbs": [
@@ -25,12 +25,22 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Alex Hope Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Alex Hope Elementary home search find homes?",
    "a": "It lists active homes whose listing text names Alex Hope Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How much do homes near Alex Hope Elementary sell for?",
+   "a": "Within 1 km of the school, 239 homes sold between November 1, 2025 and October 31, 2026. Medians were houses $1,455,650, townhomes $765,000, condos $582,500. A median is the middle price and is shown where at least 5 homes sold.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How fast do homes sell near Alex Hope Elementary?",
+   "a": "Within 1 km of Alex Hope Elementary the median was 22 days on the market, closing at 97.8% of the list price, with 7% of sales above the list price for the 239 homes within 1 km.",
    "gen": "nsrch"
   },
   {
@@ -42,7 +52,7 @@
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
+   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
    "gen": "school"
   },
   {
@@ -52,7 +62,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Alex Hope Elementary in the listing.",
+   "text": "Use the search below to see homes for sale that name Alex Hope Elementary in the listing, then check the sold prices within 1 km of the school.",
    "gen": "nsrch"
   },
   {
@@ -67,8 +77,195 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Alex Hope Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Alex Hope Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "What homes within 1 km of Alex Hope Elementary sold for",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "Between November 1, 2025 and October 31, 2026, 239 homes sold within 1 km of Alex Hope Elementary: 48 houses, 105 townhomes and 80 condos. The largest group was townhomes, at a median of $765,000.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 1 km of Alex Hope Elementary, by type",
+   "head": [
+    "Measure",
+    "Houses",
+    "Townhomes",
+    "Condos",
+    "All homes"
+   ],
+   "rows": [
+    [
+     "Sales",
+     "48",
+     "105",
+     "80",
+     "239"
+    ],
+    [
+     "Median price",
+     "$1,455,650",
+     "$765,000",
+     "$582,500",
+     "$739,900"
+    ],
+    [
+     "Middle half of prices",
+     "$1,294,375 to $1,596,250",
+     "$703,500 to $870,635",
+     "$457,500 to $640,000",
+     "$630,000 to $1,009,000"
+    ],
+    [
+     "Median days to sell",
+     "16",
+     "21",
+     "26",
+     "22"
+    ],
+    [
+     "Sold price as a share of list price",
+     "97.7%",
+     "98.0%",
+     "97.4%",
+     "97.8%"
+    ],
+    [
+     "Sales over the list price",
+     "6%",
+     "7%",
+     "5%",
+     "7%"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address (straight-line distance). A pending sale is firm but not completed. A figure is shown only where at least 5 homes sold. Duplexes and row houses count in All homes only."
+  },
+  {
+   "t": "p",
+   "text": "The middle half of sales within 1 km of Alex Hope Elementary went for houses between $1,294,375 and $1,596,250; townhomes between $703,500 and $870,635; condos between $457,500 and $640,000. Half of the 239 homes sold at or below $739,900, 97.8% of the list price at the median.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 1 km of Alex Hope Elementary, by quarter",
+   "head": [
+    "Quarter",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Nov 2025 to Jan 2026",
+     "44",
+     "$780,700"
+    ],
+    [
+     "Feb to Apr 2026",
+     "68",
+     "$734,950"
+    ],
+    [
+     "May to Jul 2026",
+     "77",
+     "$760,000"
+    ],
+    [
+     "Aug to Oct 2026",
+     "50",
+     "$713,000"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A median is shown only where at least 5 homes sold."
+  },
+  {
+   "t": "p",
+   "text": "Where the 239 sales within 1 km of Alex Hope Elementary were: Willoughby Heights (152 sales, median $676,250), Walnut Grove (86 sales, median $837,000).",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Condo buildings and complexes near Alex Hope Elementary with the most sales",
+   "head": [
+    "Building or complex",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Walnut Park",
+     "16",
+     "$484,950"
+    ],
+    [
+     "The Commons",
+     "14",
+     "$469,995"
+    ],
+    [
+     "Kensington Gate",
+     "9",
+     "$600,000"
+    ],
+    [
+     "Yorkson Creek",
+     "7",
+     "$615,000"
+    ],
+    [
+     "Athenry Gate",
+     "5",
+     "$568,000"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026. A building is listed with 5 or more sales."
+  },
+  {
+   "t": "table",
+   "caption": "Townhome buildings and complexes near Alex Hope Elementary with the most sales",
+   "head": [
+    "Building or complex",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Highland Ridge",
+     "12",
+     "$700,000"
+    ],
+    [
+     "Chartwell Green",
+     "11",
+     "$760,000"
+    ],
+    [
+     "Outlook",
+     "9",
+     "$715,000"
+    ],
+    [
+     "Queen Anne Green",
+     "8",
+     "$833,225"
+    ],
+    [
+     "York By Mosaic",
+     "7",
+     "$710,000"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026. A building is listed with 5 or more sales."
   },
   {
    "t": "h",
@@ -323,11 +520,33 @@
     ],
     [
      {
+      "t": "Compare price with similar homes farther from the school. The median townhome within 1 km of Alex Hope Elementary was $765,000, so check whether size and age explain a gap before you pay for the location."
+     }
+    ],
+    [
+     {
       "t": "Look at Lynn Fripps Elementary, the nearest other elementary school, 0.6 km south-west of Alex Hope Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],
    "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Estimate the payment on a home near Alex Hope Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "The calculator starts at the townhome median within 1 km of Alex Hope Elementary, $765,000, and you can change the price, down payment and rate.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "calc",
+   "which": "mortgage",
+   "price": 765000,
+   "gen": "school"
   },
   {
    "t": "h",
@@ -403,6 +622,6 @@
   "school": "Alex Hope Elementary",
   "city": "langley",
   "radius": 1.0,
-  "sold": false
+  "sold": true
  }
 }

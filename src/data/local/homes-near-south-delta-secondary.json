@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near South Delta Secondary | Prices",
-  "description": "Search homes for sale near South Delta Secondary in Delta. Find listings that name the school, plus nearby schools and what to check on the catchment.",
+  "description": "Homes for sale near South Delta Secondary in Delta. 256 homes sold within 2 km in twelve months. See prices by home type, nearby schools and catchment checks.",
   "h1": "Homes for Sale Near South Delta Secondary"
  },
  "breadcrumbs": [
@@ -25,12 +25,22 @@
  "faq": [
   {
    "q": "Are the homes on this page in the South Delta Secondary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school. Delta School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Delta School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the South Delta Secondary home search find homes?",
    "a": "It lists active homes whose listing text names South Delta Secondary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How much do homes near South Delta Secondary sell for?",
+   "a": "Within 2 km of the school, 256 homes sold between November 1, 2025 and October 31, 2026. Medians were houses $1,490,000, townhomes $762,450, condos $635,000. A median is the middle price and is shown where at least 5 homes sold.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How fast do homes sell near South Delta Secondary?",
+   "a": "Within 2 km of South Delta Secondary the median was 28 days on the market, closing at 97.0% of the list price, with 5% of sales above the list price for the 256 homes within 2 km.",
    "gen": "nsrch"
   },
   {
@@ -42,7 +52,7 @@
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
+   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
    "gen": "school"
   },
   {
@@ -52,7 +62,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names South Delta Secondary.",
+   "text": "The search below lists homes for sale whose listing names South Delta Secondary. Under it are the prices homes sold for within 2 km of the school.",
    "gen": "nsrch"
   },
   {
@@ -67,8 +77,142 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names South Delta Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names South Delta Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "What homes within 2 km of South Delta Secondary sold for",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "Between November 1, 2025 and October 31, 2026, 256 homes sold within 2 km of South Delta Secondary: 147 houses, 26 townhomes and 67 condos. The largest group was houses, at a median of $1,490,000.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 2 km of South Delta Secondary, by type",
+   "head": [
+    "Measure",
+    "Houses",
+    "Townhomes",
+    "Condos",
+    "All homes"
+   ],
+   "rows": [
+    [
+     "Sales",
+     "147",
+     "26",
+     "67",
+     "256"
+    ],
+    [
+     "Median price",
+     "$1,490,000",
+     "$762,450",
+     "$635,000",
+     "$1,285,000"
+    ],
+    [
+     "Middle half of prices",
+     "$1,310,000 to $1,799,000",
+     "$688,750 to $865,250",
+     "$540,000 to $799,900",
+     "$776,175 to $1,547,500"
+    ],
+    [
+     "Median days to sell",
+     "20",
+     "34",
+     "50",
+     "28"
+    ],
+    [
+     "Sold price as a share of list price",
+     "97.0%",
+     "97.9%",
+     "96.7%",
+     "97.0%"
+    ],
+    [
+     "Sales over the list price",
+     "7%",
+     "4%",
+     "1%",
+     "5%"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address (straight-line distance). A pending sale is firm but not completed. A figure is shown only where at least 5 homes sold. Duplexes and row houses count in All homes only."
+  },
+  {
+   "t": "p",
+   "text": "The middle half of sales within 2 km of South Delta Secondary went for houses between $1,310,000 and $1,799,000; townhomes between $688,750 and $865,250; condos between $540,000 and $799,900. Half of the 256 homes sold at or below $1,285,000, 97.0% of the list price at the median.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 2 km of South Delta Secondary, by quarter",
+   "head": [
+    "Quarter",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Nov 2025 to Jan 2026",
+     "46",
+     "$1,250,000"
+    ],
+    [
+     "Feb to Apr 2026",
+     "59",
+     "$1,360,000"
+    ],
+    [
+     "May to Jul 2026",
+     "85",
+     "$1,305,000"
+    ],
+    [
+     "Aug to Oct 2026",
+     "66",
+     "$1,193,500"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A median is shown only where at least 5 homes sold."
+  },
+  {
+   "t": "p",
+   "text": "Where the 256 sales within 2 km of South Delta Secondary were: Tsawwassen Central (53 sales, median $1,347,000), Pebble Hill (48 sales, median $1,429,000), Cliff Drive (40 sales, median $837,500), Tsawwassen North (40 sales, median $864,750).",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Condo buildings and complexes near South Delta Secondary with the most sales",
+   "head": [
+    "Building or complex",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Windsor Woods",
+     "6",
+     "$557,500"
+    ],
+    [
+     "Tsawwassen Springs",
+     "6",
+     "$990,000"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026. A building is listed with 5 or more sales."
   },
   {
    "t": "h",
@@ -342,9 +486,31 @@
      {
       "t": "Visit on a school day at drop-off and pick-up. Traffic and parking near South Delta Secondary are very different at 8:30 am and 3 pm than on a Sunday viewing."
      }
+    ],
+    [
+     {
+      "t": "Compare price with similar homes farther from the school. The median house within 2 km of South Delta Secondary was $1,490,000, so check whether size and age explain a gap before you pay for the location."
+     }
     ]
    ],
    "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Estimate the payment on a home near South Delta Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "The calculator starts at the house median within 2 km of South Delta Secondary, $1,490,000, and you can change the price, down payment and rate.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "calc",
+   "which": "mortgage",
+   "price": 1490000,
+   "gen": "school"
   },
   {
    "t": "h",
@@ -414,6 +580,6 @@
   "school": "South Delta Secondary",
   "city": "delta",
   "radius": 2.0,
-  "sold": false
+  "sold": true
  }
 }

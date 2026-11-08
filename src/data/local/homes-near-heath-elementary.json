@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Heath Elementary | Prices",
-  "description": "Search homes for sale near Heath Elementary in Delta. See listings that name the school, nearby schools and what to check on the catchment before you offer.",
+  "description": "Search homes for sale near Heath Elementary in Delta. 71 sold within 1 km in twelve months, with prices by home type, nearby schools and catchment checks.",
   "h1": "Homes for Sale Near Heath Elementary"
  },
  "breadcrumbs": [
@@ -25,12 +25,22 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Heath Elementary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school. Delta School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Delta School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Heath Elementary home search find homes?",
    "a": "It lists active homes whose listing text names Heath Elementary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How much do homes near Heath Elementary sell for?",
+   "a": "Within 1 km of the school, 71 homes sold between November 1, 2025 and October 31, 2026. Medians were houses $1,234,000, townhomes $945,000. A median is the middle price and is shown where at least 5 homes sold.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How fast do homes sell near Heath Elementary?",
+   "a": "Within 1 km of Heath Elementary the median was 29 days on the market, closing at 96.1% of the list price, with 6% of sales above the list price for the 71 homes within 1 km.",
    "gen": "nsrch"
   },
   {
@@ -42,7 +52,7 @@
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
+   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
    "gen": "school"
   },
   {
@@ -52,7 +62,7 @@
   },
   {
    "t": "p",
-   "text": "The search below lists homes for sale whose listing names Heath Elementary.",
+   "text": "The search below lists homes for sale whose listing names Heath Elementary. Under it are the prices homes sold for within 1 km of the school.",
    "gen": "nsrch"
   },
   {
@@ -67,7 +77,118 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Heath Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Heath Elementary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 1 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "What homes within 1 km of Heath Elementary sold for",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "Between November 1, 2025 and October 31, 2026, 71 homes sold within 1 km of Heath Elementary: 62 houses and 8 townhomes. The largest group was houses, at a median of $1,234,000.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 1 km of Heath Elementary, by type",
+   "head": [
+    "Measure",
+    "Houses",
+    "Townhomes",
+    "Condos",
+    "All homes"
+   ],
+   "rows": [
+    [
+     "Sales",
+     "62",
+     "8",
+     "0",
+     "71"
+    ],
+    [
+     "Median price",
+     "$1,234,000",
+     "$945,000",
+     "—",
+     "$1,190,000"
+    ],
+    [
+     "Middle half of prices",
+     "$1,103,750 to $1,359,666",
+     "—",
+     "—",
+     "$1,079,000 to $1,350,000"
+    ],
+    [
+     "Median days to sell",
+     "31",
+     "22",
+     "—",
+     "29"
+    ],
+    [
+     "Sold price as a share of list price",
+     "95.9%",
+     "96.8%",
+     "—",
+     "96.1%"
+    ],
+    [
+     "Sales over the list price",
+     "5%",
+     "12%",
+     "—",
+     "6%"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address (straight-line distance). A pending sale is firm but not completed. A figure is shown only where at least 5 homes sold. Duplexes and row houses count in All homes only."
+  },
+  {
+   "t": "p",
+   "text": "The middle half of sales within 1 km of Heath Elementary went for houses between $1,103,750 and $1,359,666. Half of the 71 homes sold at or below $1,190,000, 96.1% of the list price at the median.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 1 km of Heath Elementary, by quarter",
+   "head": [
+    "Quarter",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Nov 2025 to Jan 2026",
+     "10",
+     "$1,345,000"
+    ],
+    [
+     "Feb to Apr 2026",
+     "23",
+     "$1,171,000"
+    ],
+    [
+     "May to Jul 2026",
+     "25",
+     "$1,155,000"
+    ],
+    [
+     "Aug to Oct 2026",
+     "13",
+     "$1,180,000"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 1 km of the school address. A median is shown only where at least 5 homes sold."
+  },
+  {
+   "t": "p",
+   "text": "Where the 71 sales within 1 km of Heath Elementary were: Scottsdale (32 sales, median $1,127,500), Sunshine Hills Woods (32 sales, median $1,248,810), Nordel (6 sales, median $1,280,000).",
    "gen": "nsrch"
   },
   {
@@ -354,11 +475,33 @@
     ],
     [
      {
+      "t": "Compare price with similar homes farther from the school. The median house within 1 km of Heath Elementary was $1,234,000, so check whether size and age explain a gap before you pay for the location."
+     }
+    ],
+    [
+     {
       "t": "Look at Chalmers Elementary, the nearest other elementary school, 0.8 km north of Heath Elementary. Compare the two when you check which school serves the address."
      }
     ]
    ],
    "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Estimate the payment on a home near Heath Elementary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "The calculator starts at the house median within 1 km of Heath Elementary, $1,234,000, and you can change the price, down payment and rate.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "calc",
+   "which": "mortgage",
+   "price": 1234000,
+   "gen": "school"
   },
   {
    "t": "h",
@@ -434,6 +577,6 @@
   "school": "Heath Elementary",
   "city": "delta",
   "radius": 1.0,
-  "sold": false
+  "sold": true
  }
 }
