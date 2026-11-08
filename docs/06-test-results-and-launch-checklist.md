@@ -23,8 +23,8 @@ Not yet tested: forms (none in preview), real images, INP, Safari/Firefox, scree
 Approval pack: `docs/review/launch/launch-approval-2026-11-07.csv` (one row per new page, in batches) and `docs/review/launch/README.md`.
 
 **Needs Jared**
-- [ ] Written approval to launch, batch by batch (A: 479 pages ready, E: 164 auto-generated pages)
-- [ ] Confirm the 312 neighbourhood-map outlines in 21 regions (`src/data/maps/*.json`, status draft to confirmed). The launch build refuses to run while any outline is draft (`AreaMap.astro`)
+- [x] Batches A (479 pages) and E (164 auto-generated) approved by Jared 2026-11-07 (`docs/review/launch/approvals.json`); this is approval of the pages, not a launch. B and C are added once Jerry's searches and Pete's exports are in
+- [x] 312 neighbourhood-map outlines in 21 regions confirmed by Jared 2026-11-07 (status confirmed); the launch build no longer stops on them
 - [ ] Launch build setting `PUBLIC_PREVIEW=false` (removes review notes, `noindex` on the preview, applies holds)
 - [ ] `PUBLIC_GOOGLE_MAPS_KEY` build variable (maps, address suggestions, commute times)
 - [ ] IDX: Royal LePage sign-off or the new feed route (BL-04); GBP reviews feed (BL-03); newsletter form destination (BL-05); privacy page confirmations
@@ -33,7 +33,7 @@ Approval pack: `docs/review/launch/launch-approval-2026-11-07.csv` (one row per 
 - [ ] DNS change, only with explicit approval
 
 **Waiting on others (held pages: `src/data/launch/holds.json`)**
-- [ ] Jerry's saved searches: 97 held pages (price bands 20, area pages 33, condos and townhomes 21, acreage 14, guides 8, 55+ 1). Five main-menu hubs are in this list: Richmond, Vancouver, Burnaby, New Westminster and Coquitlam neighbourhood guides
+- [ ] Jerry's saved searches: 97 held pages (price bands 20, area pages 33, condos and townhomes 21, acreage 14, guides 8, 55+ 1). Five main-menu hubs (Richmond, Vancouver, Burnaby, New Westminster and Coquitlam neighbourhood guides) are in this list and drop out of the menu in the launch build until their searches are wired
 - [ ] Pete's school exports: 76 held school pages
 
 **Done**

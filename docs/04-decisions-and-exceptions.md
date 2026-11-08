@@ -963,3 +963,8 @@ Surrey and Cloverdale coach house pages use Jerry's keyword searches (1451381, 1
 - **Holds:** `src/data/launch/holds.json` (written by the pack) takes effect only in the launch build: held pages are noindex and out of the sitemap, footer, link-only lists, "Explore" columns, map lists, tables and inline links (`src/lib/launch.ts`). In the preview a held page shows why. Tested with a launch-mode build: sitemap 1,871 to 1,698 URLs, no draft notes, 4 stray links to held pages left in page bodies.
 - **Found:** the launch build refuses to run while any of the 312 neighbourhood-map outlines is draft. That is on the launch checklist for Jared to confirm. Five main-menu hubs (Richmond, Vancouver, Burnaby, New Westminster, Coquitlam neighbourhood guides) are held for want of Jerry's searches and still appear in the menu.
 - **Checklist:** `docs/06` rewritten with current status.
+
+## D-174: Approvals and map outlines (2026-11-07)
+- **Jared approved** batches A (479 pages) and E (164 auto-generated pages) of the launch pack, and confirmed all 312 neighbourhood-map outlines. Recorded in `docs/review/launch/approvals.json` and the CSV column "Approved by Jared". Not a launch: no build setting, DNS or domain changed.
+- **Menu:** held pages now also drop out of the main menu in the launch build (`Header.astro`), so the five neighbourhood-guide hubs waiting for Jerry's searches disappear from the menu and return on their own when wired and no longer held.
+- **Launch build:** `PUBLIC_PREVIEW=false` now builds without the draft-outline stop (1,873 pages, sitemap 1,698 URLs).

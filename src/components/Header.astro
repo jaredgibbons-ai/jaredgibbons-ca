@@ -1,7 +1,11 @@
 ---
 import Icon from './Icon.astro';
 import NavLinks from './NavLinks.astro';
-import nav from '../data/nav.json';
+import navAll from '../data/nav.json';
+import { isHeldHref } from '../lib/launch';
+// Held pages (src/data/launch/holds.json) drop out of the menu in the launch build and come back on their own once they are no longer held.
+const dropHeld = (items: any[]): any[] => items.filter((i) => !isHeldHref(i.href)).map((i) => (i.children ? { ...i, children: dropHeld(i.children) } : i));
+const nav = dropHeld(navAll as any[]);
 const { current = '', brandHref = '/' } = Astro.props;
 // Grouped mega panels (D-149): each top-level menu with sub-pages opens as labelled columns plus one call-to-action, instead of one long list.
 // `items` name child labels exactly as in nav.json; `expand` lists that child's own sub-pages as the column. Anything not named here still appears (last column), so no menu page can be dropped silently.
