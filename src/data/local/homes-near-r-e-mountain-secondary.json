@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near R E Mountain Secondary | Prices",
-  "description": "Search homes for sale near R E Mountain Secondary in Langley. Find listings that name the school, plus nearby schools and what to check on the catchment.",
+  "description": "Homes for sale near R E Mountain Secondary in Langley. 1140 sold within 2 km in twelve months, with prices by home type, nearby schools and catchment checks.",
   "h1": "Homes for Sale Near R E Mountain Secondary"
  },
  "breadcrumbs": [
@@ -25,12 +25,22 @@
  "faq": [
   {
    "q": "Are the homes on this page in the R E Mountain Secondary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the R E Mountain Secondary home search find homes?",
    "a": "It lists active homes whose listing text names R E Mountain Secondary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How much do homes near R E Mountain Secondary sell for?",
+   "a": "Within 2 km of the school, 1140 homes sold between November 1, 2025 and October 31, 2026. Medians were houses $1,490,000, townhomes $835,000, condos $569,900. A median is the middle price and is shown where at least 5 homes sold.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How fast do homes sell near R E Mountain Secondary?",
+   "a": "Within 2 km of R E Mountain Secondary the median was 22 days on the market, closing at 97.8% of the list price, with 5% of sales above the list price for the 1140 homes within 2 km.",
    "gen": "nsrch"
   },
   {
@@ -42,7 +52,7 @@
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
+   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
    "gen": "school"
   },
   {
@@ -52,7 +62,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name R E Mountain Secondary in the listing.",
+   "text": "Use the search below to see homes for sale that name R E Mountain Secondary in the listing, then check the sold prices within 2 km of the school.",
    "gen": "nsrch"
   },
   {
@@ -67,8 +77,195 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names R E Mountain Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names R E Mountain Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
    "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "What homes within 2 km of R E Mountain Secondary sold for",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "Between November 1, 2025 and October 31, 2026, 1140 homes sold within 2 km of R E Mountain Secondary: 163 houses, 505 townhomes and 379 condos. The largest group was townhomes, at a median of $835,000.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 2 km of R E Mountain Secondary, by type",
+   "head": [
+    "Measure",
+    "Houses",
+    "Townhomes",
+    "Condos",
+    "All homes"
+   ],
+   "rows": [
+    [
+     "Sales",
+     "163",
+     "505",
+     "379",
+     "1,140"
+    ],
+    [
+     "Median price",
+     "$1,490,000",
+     "$835,000",
+     "$569,900",
+     "$810,000"
+    ],
+    [
+     "Middle half of prices",
+     "$1,376,190 to $1,660,000",
+     "$765,000 to $915,000",
+     "$476,000 to $630,000",
+     "$626,750 to $1,019,900"
+    ],
+    [
+     "Median days to sell",
+     "26",
+     "19",
+     "26",
+     "22"
+    ],
+    [
+     "Sold price as a share of list price",
+     "96.7%",
+     "98.5%",
+     "97.4%",
+     "97.8%"
+    ],
+    [
+     "Sales over the list price",
+     "7%",
+     "4%",
+     "5%",
+     "5%"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address (straight-line distance). A pending sale is firm but not completed. A figure is shown only where at least 5 homes sold. Duplexes and row houses count in All homes only."
+  },
+  {
+   "t": "p",
+   "text": "The middle half of sales within 2 km of R E Mountain Secondary went for houses between $1,376,190 and $1,660,000; townhomes between $765,000 and $915,000; condos between $476,000 and $630,000. Half of the 1140 homes sold at or below $810,000, 97.8% of the list price at the median.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 2 km of R E Mountain Secondary, by quarter",
+   "head": [
+    "Quarter",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Nov 2025 to Jan 2026",
+     "255",
+     "$810,000"
+    ],
+    [
+     "Feb to Apr 2026",
+     "303",
+     "$805,000"
+    ],
+    [
+     "May to Jul 2026",
+     "339",
+     "$818,000"
+    ],
+    [
+     "Aug to Oct 2026",
+     "243",
+     "$806,000"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A median is shown only where at least 5 homes sold."
+  },
+  {
+   "t": "p",
+   "text": "Where the 1140 sales within 2 km of R E Mountain Secondary were: Willoughby Heights (1070 sales, median $805,000), Clayton (64 sales, median $856,500), Langley City (4 sales).",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Condo buildings and complexes near R E Mountain Secondary with the most sales",
+   "head": [
+    "Building or complex",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "The Hive 2",
+     "27",
+     "$464,900"
+    ],
+    [
+     "Latimer Village",
+     "18",
+     "$590,000"
+    ],
+    [
+     "Walnut Park",
+     "16",
+     "$484,950"
+    ],
+    [
+     "Union Park",
+     "15",
+     "$595,000"
+    ],
+    [
+     "The Commons",
+     "14",
+     "$469,995"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026. A building is listed with 5 or more sales."
+  },
+  {
+   "t": "table",
+   "caption": "Townhome buildings and complexes near R E Mountain Secondary with the most sales",
+   "head": [
+    "Building or complex",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Heath West",
+     "23",
+     "$959,900"
+    ],
+    [
+     "Griffon",
+     "20",
+     "$939,900"
+    ],
+    [
+     "Aston",
+     "16",
+     "$969,900"
+    ],
+    [
+     "Addition",
+     "12",
+     "$904,900"
+    ],
+    [
+     "Townside Village",
+     "11",
+     "$1,029,900"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026. A building is listed with 5 or more sales."
   },
   {
    "t": "h",
@@ -313,9 +510,31 @@
      {
       "t": "View the home on a school day. Drop-off and pick-up near R E Mountain Secondary change the street more than a weekend viewing shows."
      }
+    ],
+    [
+     {
+      "t": "Compare price with similar homes farther from the school. The median townhome within 2 km of R E Mountain Secondary was $835,000, so check whether size and age explain a gap before you pay for the location."
+     }
     ]
    ],
    "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Estimate the payment on a home near R E Mountain Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "The calculator starts at the townhome median within 2 km of R E Mountain Secondary, $835,000, and you can change the price, down payment and rate.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "calc",
+   "which": "mortgage",
+   "price": 835000,
+   "gen": "school"
   },
   {
    "t": "h",
@@ -391,6 +610,6 @@
   "school": "R E Mountain Secondary",
   "city": "langley",
   "radius": 2.0,
-  "sold": false
+  "sold": true
  }
 }

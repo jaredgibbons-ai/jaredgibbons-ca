@@ -973,3 +973,10 @@ Surrey and Cloverdale coach house pages use Jerry's keyword searches (1451381, 1
 - **Loaded:** 12 private-school CSVs (sheet rows 152 to 163, 2 km radius) through `tools/build_school_sold.py`; 83 school pages now have sold figures (batch 2 and others still outstanding; 68 pages wait for Pete).
 - **New rule:** a school whose name search had 0 listings (Jerry's "held" rows) now gets a page when Pete's sold figures exist, because the sold section carries the page and the saved search fills in as listings name the school. 7 pages added (St Bernadette, St John Paul II Academy, Sacred Heart, Mennonite Educational Institute and three earlier schools); 11 held rows remain. All above 70% unique.
 - **Approvals:** `docs/review/launch/approvals.json` now lists the approved slugs (643); pages added after 2026-11-07 show "Not yet" in the pack until Jared approves them (15 school pages today).
+
+## D-176: Pete's batch 8 (Langley and Abbotsford schools) (2026-11-08)
+- **Loaded:** 20 school CSVs (sheet rows 131 to 151) through `tools/build_school_sold.py`; 103 school pages now have sold figures, 52 still wait for Pete (batch 2, rows 41 to 60, has not arrived; rows 85 onward are in progress).
+- **Chief Dan George Middle** shows "within 1.5 km" (the radius Pete used), so the pages say 1.5 km instead of 2 km.
+- **Wix-Brown Elementary** returned only 4 sold or pending homes, too few for fair medians, so the page shows no sold prices. The draft notice now says that instead of "export still to come" (`tools/build_school_pages.py`).
+- **King Traditional** returned 0 results and has no file, so its page stays held.
+- **Approvals:** newly built school pages show "Not yet" in the launch pack until Jared approves them. Tests 133 pass, 827 new pages all 0.7 or above on uniqueness.

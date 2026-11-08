@@ -4,7 +4,7 @@
  "updated": "2026-11-06",
  "new_page": {
   "title": "Homes for Sale Near Langley Secondary | Prices",
-  "description": "Search homes for sale near Langley Secondary in Langley. Find listings that name the school, plus nearby schools and what to check on the catchment.",
+  "description": "Search homes for sale near Langley Secondary in Langley. 177 sold within 2 km in twelve months, with prices by home type, nearby schools and catchment checks.",
   "h1": "Homes for Sale Near Langley Secondary"
  },
  "breadcrumbs": [
@@ -25,12 +25,22 @@
  "faq": [
   {
    "q": "Are the homes on this page in the Langley Secondary catchment?",
-   "a": "Not necessarily. The search finds homes whose listing names the school. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
+   "a": "Not necessarily. The search finds homes whose listing names the school, and the sold prices are measured by distance. Langley School District sets the catchment and shows it on a map only on its website, so confirm the exact address with the district before you offer.",
    "gen": "nsrch"
   },
   {
    "q": "How does the Langley Secondary home search find homes?",
    "a": "It lists active homes whose listing text names Langley Secondary, so a nearby home that leaves the name out will not show.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How much do homes near Langley Secondary sell for?",
+   "a": "Within 2 km of the school, 177 homes sold between November 1, 2025 and October 31, 2026. Medians were houses $1,330,000, townhomes $760,000, condos $465,000. A median is the middle price and is shown where at least 5 homes sold.",
+   "gen": "nsrch"
+  },
+  {
+   "q": "How fast do homes sell near Langley Secondary?",
+   "a": "Within 2 km of Langley Secondary the median was 27 days on the market, closing at 97.4% of the list price, with 3% of sales above the list price for the 177 homes within 2 km.",
    "gen": "nsrch"
   },
   {
@@ -42,7 +52,7 @@
  "blocks": [
   {
    "t": "notice",
-   "text": "Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.",
+   "text": "Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.",
    "gen": "school"
   },
   {
@@ -52,7 +62,7 @@
   },
   {
    "t": "p",
-   "text": "Use the search below to see homes for sale that name Langley Secondary in the listing.",
+   "text": "Use the search below to see homes for sale that name Langley Secondary in the listing, then check the sold prices within 2 km of the school.",
    "gen": "nsrch"
   },
   {
@@ -67,7 +77,118 @@
   },
   {
    "t": "p",
-   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Langley Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit some distance away. Ask Jared to watch for homes near the school that the search misses.",
+   "text": "MLS® listings are not tagged by school. This search finds houses, townhomes and condos whose description names Langley Secondary, so a home close to the school whose listing leaves the name out will not appear, and a listing that names the school can sit farther than 2 km away. Use the sold prices below for the distance-based picture, and ask Jared to watch for homes near the school that the search misses.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "What homes within 2 km of Langley Secondary sold for",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "Between November 1, 2025 and October 31, 2026, 177 homes sold within 2 km of Langley Secondary: 33 houses, 41 townhomes and 99 condos. The largest group was condos, at a median of $465,000.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 2 km of Langley Secondary, by type",
+   "head": [
+    "Measure",
+    "Houses",
+    "Townhomes",
+    "Condos",
+    "All homes"
+   ],
+   "rows": [
+    [
+     "Sales",
+     "33",
+     "41",
+     "99",
+     "177"
+    ],
+    [
+     "Median price",
+     "$1,330,000",
+     "$760,000",
+     "$465,000",
+     "$548,000"
+    ],
+    [
+     "Middle half of prices",
+     "$1,172,500 to $1,524,750",
+     "$604,000 to $841,500",
+     "$400,000 to $515,000",
+     "$452,500 to $950,000"
+    ],
+    [
+     "Median days to sell",
+     "33",
+     "17",
+     "27",
+     "27"
+    ],
+    [
+     "Sold price as a share of list price",
+     "97.1%",
+     "97.6%",
+     "97.4%",
+     "97.4%"
+    ],
+    [
+     "Sales over the list price",
+     "3%",
+     "2%",
+     "4%",
+     "3%"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address (straight-line distance). A pending sale is firm but not completed. A figure is shown only where at least 5 homes sold. Duplexes and row houses count in All homes only."
+  },
+  {
+   "t": "p",
+   "text": "The middle half of sales within 2 km of Langley Secondary went for houses between $1,172,500 and $1,524,750; townhomes between $604,000 and $841,500; condos between $400,000 and $515,000. Half of the 177 homes sold at or below $548,000, 97.4% of the list price at the median.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "table",
+   "caption": "Homes sold within 2 km of Langley Secondary, by quarter",
+   "head": [
+    "Quarter",
+    "Sales",
+    "Median price"
+   ],
+   "rows": [
+    [
+     "Nov 2025 to Jan 2026",
+     "36",
+     "$547,500"
+    ],
+    [
+     "Feb to Apr 2026",
+     "54",
+     "$539,500"
+    ],
+    [
+     "May to Jul 2026",
+     "44",
+     "$726,500"
+    ],
+    [
+     "Aug to Oct 2026",
+     "43",
+     "$490,000"
+    ]
+   ],
+   "gen": "nsrch",
+   "source": "Source: Paragon closed and pending sales, November 1, 2025 to October 31, 2026, within 2 km of the school address. A median is shown only where at least 5 homes sold."
+  },
+  {
+   "t": "p",
+   "text": "Where the 177 sales within 2 km of Langley Secondary were: Langley City (122 sales, median $498,500), Murrayville (46 sales, median $956,250), Salmon River (9 sales, median $485,000).",
    "gen": "nsrch"
   },
   {
@@ -145,6 +266,12 @@
    "items": [
     [
      {
+      "t": "Homes for sale near Langley Fundamental Elementary (elementary school, about 1.4 km south-east)",
+      "h": "/homes-near-langley-fundamental-elementary.html"
+     }
+    ],
+    [
+     {
       "t": "Homes for sale near Douglas Park Community (elementary school, about 1.8 km west)",
       "h": "/homes-near-douglas-park-community.html"
      }
@@ -153,12 +280,6 @@
      {
       "t": "Homes for sale near James Hill Elementary (elementary school, about 2.7 km south-east)",
       "h": "/homes-near-james-hill-elementary.html"
-     }
-    ],
-    [
-     {
-      "t": "Homes for sale near Nicomekl Elementary (elementary school, about 2.9 km west)",
-      "h": "/homes-near-nicomekl-elementary.html"
      }
     ]
    ],
@@ -400,11 +521,33 @@
     ],
     [
      {
+      "t": "Compare price with similar homes farther from the school. The median condo within 2 km of Langley Secondary was $465,000, so check whether size and age explain a gap before you pay for the location."
+     }
+    ],
+    [
+     {
       "t": "Look at Choices Program, the nearest other secondary school, 0.1 km south of Langley Secondary. Compare the two when you check which school serves the address."
      }
     ]
    ],
    "gen": "nsrch"
+  },
+  {
+   "t": "h",
+   "level": 2,
+   "text": "Estimate the payment on a home near Langley Secondary",
+   "gen": "nsrch"
+  },
+  {
+   "t": "p",
+   "text": "The calculator starts at the condo median within 2 km of Langley Secondary, $465,000, and you can change the price, down payment and rate.",
+   "gen": "nsrch"
+  },
+  {
+   "t": "calc",
+   "which": "mortgage",
+   "price": 465000,
+   "gen": "school"
   },
   {
    "t": "h",
@@ -480,6 +623,6 @@
   "school": "Langley Secondary",
   "city": "langley",
   "radius": 2.0,
-  "sold": false
+  "sold": true
  }
 }

@@ -162,7 +162,7 @@ def page(r):
     if f['programs']: bits.append(f'Programs listed: {f["programs"]}.')
     intro = ' '.join(bits)
     has = bool(sd and sd.get('all', {}).get('n', 0) >= 10)
-    bl = [{'t': 'notice', 'text': ('Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, ' + WIN + f', within {rk} of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.') if has else 'Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.', 'gen': G},
+    bl = [{'t': 'notice', 'text': ('Draft for Jared’s approval. Sold figures come from Paragon closed and pending sales, ' + WIN + f', within {rk} of the school address. A pending sale is firm but has not completed, so its price can still change. The live search is not connected yet.') if has else ('Draft for Jared’s approval. The live search is not connected yet. Pete’s export found only ' + str(sd['all']['n']) + ' sold or pending homes near this school, too few for fair medians, so this page shows no sold prices.' if sd and sd.get('all', {}).get('n', 0) > 0 else 'Draft for Jared’s approval. The live search is not connected yet, and sold prices for this school will be added when the sold export arrives.'), 'gen': G},
           P(intro),
           P((f'The search below lists homes for sale whose listing names {nm}.' + (f' Under it are the prices homes sold for within {rk} of the school.' if has else ''),
              f'Below are the homes currently for sale whose listing mentions {nm}' + (f', followed by what homes within {rk} of the school sold for.' if has else '.'),
