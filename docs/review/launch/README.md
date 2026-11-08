@@ -18,3 +18,6 @@ Jared approved the 46 school pages that have Pete's sold figures (listed under `
 
 ## Update 2026-11-08 (second approval)
 Jared approved the remaining 46 school pages. All 160 school pages are now approved. Total approved: 735 pages. The 97 "Not yet" pages all wait for Jerry's saved searches (batch B). Nothing is launched.
+
+## Update 2026-11-08 (West Vancouver golf)
+Jared approved the West Vancouver golf course homes page. Total approved: 736 pages; 97 still wait for Jerry's searches. Nothing is launched.

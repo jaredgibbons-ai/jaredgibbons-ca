@@ -1010,3 +1010,6 @@ Surrey and Cloverdale coach house pages use Jerry's keyword searches (1451381, 1
 - **Limits stated on the page:** the export has no floor area, lot size, year built, quarterly or price-band data, and no medians by neighbourhood, so the page shows counts by sub-area only and says it cannot split the price gap into size and course.
 - **Search mismatch:** Jerry's count-only search 1451590 (43 listings) matches the word golf in listing remarks, while the sold figures and the other six golf pages use the Site Influences flag. The page says so. Wired through `NAME_MATCH` in `tools/build_idx_embeds.py`. If Jerry builds a Site Influences search for West Vancouver (same as the other six), swap the id.
 - **Links:** from the West Vancouver homes page, market stats, British Properties and Dundarave (`build_launch_links.py`). Uniqueness 0.94. Status: "Not yet" approved. Tests 133 pass.
+
+## D-183: West Vancouver golf page approved (2026-11-08)
+- Jared approved `west-vancouver-golf-course-homes-for-sale` (see D-182); recorded under `later` in `approvals.json`. 736 pages approved in total.
