@@ -15,7 +15,7 @@ Workers & Pages > jaredgibbons-ca > Settings > Variables and Secrets > Add, type
 | Name | Value |
 |---|---|
 | `TURNSTILE_SECRET` | the Secret key from step 1 |
-| `LEAD_EMAIL_TO` | `jaredgibbons@royallepage.ca,<Keyvera website-lead address>` (comma, no space) |
+| `LEAD_EMAIL_TO` (also receives newsletter sign-ups) | `jaredgibbons@royallepage.ca,<Keyvera website-lead address>` (comma, no space) |
 | `LEAD_EMAIL_FROM` | an address on the sending domain, for example `leads@jaredgibbons.ca` |
 | `ALLOWED_ORIGINS` | `https://jaredgibbons.ca,https://jaredgibbons-ca.jaredgibbons.workers.dev` (drop the second at launch) |
 

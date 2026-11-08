@@ -1,0 +1,112 @@
+---
+// Newsletter sign-up on /subscribe-to-our-newsletter.html. Posts to /api/forms/newsletter (Turnstile + honeypot +
+// server-side consent record); the lead goes to the same inboxes as every other form (LEAD_EMAIL_TO, includes Jared's email).
+// The form renders only when the live forms are switched on; until then the page shows a plain email link instead
+// of a box that does nothing.
+import { NEWSLETTER_CONSENT_TEXT, NEWSLETTER_SENDER } from '../lib/newsletter.js';
+const live = import.meta.env.PUBLIC_FORMS_LIVE === 'true';
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
+---
+{!(live && siteKey) && (
+  <div class="nl">
+    <p class="nl__title">Subscribe by email</p>
+    <p class="nl__lede">To get the monthly newsletter, email Jared and he will add you. You can unsubscribe at any time.</p>
+    <p><a class="btn" href={`mailto:jaredgibbons@royallepage.ca?subject=${encodeURIComponent('Newsletter')}&body=${encodeURIComponent('Please add me to the monthly newsletter. I agree to receive it and can unsubscribe at any time.')}`}>Email Jared to subscribe</a> <a class="btn btn--ghost" href="tel:604-928-1361">Call or text 604-928-1361</a></p>
+    <p class="nl__fine">{NEWSLETTER_SENDER}{" "}<a href="/privacy.html">Privacy Policy</a></p>
+  </div>
+)}
+{live && siteKey && (
+  <form class="nl" data-nl data-sitekey={siteKey} aria-labelledby="nl-title" novalidate>
+    <p class="nl__title" id="nl-title">Sign up for the newsletter</p>
+    <p class="nl__lede">One email a month with market updates, new listings and real estate tips from Jared.</p>
+    <div class="nl__row">
+      <div class="nl__f">
+        <label for="nl-name">Name (optional)</label>
+        <input id="nl-name" name="name" type="text" autocomplete="name" maxlength="100" />
+      </div>
+      <div class="nl__f nl__f--grow">
+        <label for="nl-email">Email</label>
+        <input id="nl-email" name="email" type="email" autocomplete="email" maxlength="200" required aria-describedby="nl-email-e" />
+      </div>
+      <button type="submit" class="btn nl__btn">Subscribe</button>
+    </div>
+    <p class="nl__err" id="nl-email-e" role="alert"></p>
+    <div class="nl__consent">
+      <input id="nl-consent" name="consent" type="checkbox" value="yes" aria-describedby="nl-consent-e nl-fine" />
+      <label for="nl-consent">{NEWSLETTER_CONSENT_TEXT}</label>
+    </div>
+    <p class="nl__err" id="nl-consent-e" role="alert"></p>
+    <p class="nl__fine" id="nl-fine">{NEWSLETTER_SENDER}{" "}<a href="/privacy.html">Privacy Policy</a></p>
+    <div class="nl__hp" aria-hidden="true"><label for="nl-hp">Leave this empty</label><input id="nl-hp" name="_hp_url" tabindex="-1" autocomplete="off" /></div>
+    <div data-ts></div>
+    <p class="nl__msg" data-msg role="status" aria-live="polite"></p>
+    <div class="nl__fb" data-fb hidden><p>Sending from this page is not available right now. You can email Jared instead:</p><p><a class="btn" data-mailto href="mailto:jaredgibbons@royallepage.ca">Open it in my email app</a> <a class="btn btn--ghost" href="tel:604-928-1361">Call or text 604-928-1361</a></p></div>
+  </form>
+)}
+<script>
+  const f = document.querySelector<HTMLFormElement>('form[data-nl]');
+  if (f) {
+    const siteKey = f.dataset.sitekey || '', ts = f.querySelector<HTMLElement>('[data-ts]')!;
+    const msg = f.querySelector<HTMLElement>('[data-msg]')!, fb = f.querySelector<HTMLElement>('[data-fb]')!, mailto = f.querySelector<HTMLAnchorElement>('[data-mailto]')!;
+    const btn = f.querySelector<HTMLButtonElement>('button[type=submit]')!;
+    const email = f.querySelector<HTMLInputElement>('[name=email]')!, name = f.querySelector<HTMLInputElement>('[name=name]')!, consent = f.querySelector<HTMLInputElement>('[name=consent]')!;
+    const errs: Record<string, HTMLElement> = { email: f.querySelector<HTMLElement>('#nl-email-e')!, consent: f.querySelector<HTMLElement>('#nl-consent-e')! };
+    const w = window as any;
+    let tsId: string | null = null, tok = '';
+    const loadTs = () => {
+      if (tsId !== null) return; tsId = '';
+      const render = () => { tsId = w.turnstile.render(ts, { sitekey: siteKey, callback: (t: string) => { tok = t; } }); };
+      if (w.turnstile) return render();
+      const old = document.querySelector<HTMLScriptElement>('script[src^="https://challenges.cloudflare.com/turnstile"]');
+      if (old) { old.addEventListener('load', render); return; }
+      const s = document.createElement('script'); s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'; s.async = true; s.onload = render; document.head.appendChild(s);
+    };
+    f.addEventListener('focusin', loadTs, { once: true });
+    const clear = () => { Object.values(errs).forEach((e) => (e.textContent = '')); email.removeAttribute('aria-invalid'); consent.removeAttribute('aria-invalid'); };
+    f.addEventListener('submit', async (ev) => {
+      ev.preventDefault(); msg.textContent = ''; fb.hidden = true; clear();
+      const em = email.value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)) { errs.email.textContent = 'Please enter a valid email address.'; email.setAttribute('aria-invalid', 'true'); email.focus(); return; }
+      if (!consent.checked) { errs.consent.textContent = 'Please tick the box so Jared can email you.'; consent.setAttribute('aria-invalid', 'true'); consent.focus(); return; }
+      const data: Record<string, string> = { email: em, consent: 'yes', page: location.pathname, _hp_url: f.querySelector<HTMLInputElement>('[name=_hp_url]')?.value || '', 'cf-turnstile-response': tok };
+      if (name.value.trim()) data.name = name.value.trim();
+      mailto.href = `mailto:jaredgibbons@royallepage.ca?subject=${encodeURIComponent('Newsletter')}&body=${encodeURIComponent(`Please add me to the monthly newsletter.\nMy email: ${em}\n${name.value.trim() ? 'Name: ' + name.value.trim() + '\n' : ''}I agree to receive it and can unsubscribe at any time.`)}`;
+      const label = btn.textContent; btn.disabled = true; btn.textContent = 'Sending…';
+      try {
+        const r = await fetch('/api/forms/newsletter', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(data) });
+        const j = await r.json().catch(() => ({}));
+        if (r.ok && j.ok) { msg.textContent = 'You are signed up. Jared will email you the monthly newsletter.'; email.value = ''; name.value = ''; consent.checked = false; return; }
+        if (r.status === 422 && j.errors) { if (j.errors.email) errs.email.textContent = j.errors.email; if (j.errors.consent) errs.consent.textContent = j.errors.consent; msg.textContent = 'Please check the highlighted fields.'; }
+        else if (r.status === 429) msg.textContent = 'Too many tries. Please wait a minute and send again.';
+        else if (r.status === 403 && j.error === 'captcha_required') msg.textContent = 'Please complete the check, then press the button again.';
+        else { msg.textContent = 'Your sign-up was not sent.'; fb.hidden = false; }
+      } catch { msg.textContent = 'Your sign-up was not sent.'; fb.hidden = false; }
+      finally { btn.disabled = false; btn.textContent = label; if (w.turnstile && tsId) { w.turnstile.reset(tsId); tok = ''; } }
+    });
+  }
+</script>
+<style>
+  .nl{max-width:56rem;margin:0 0 var(--s4);padding:clamp(1rem,2.5vw,1.5rem);background:var(--cream);border:1px solid var(--ink);display:grid;gap:var(--s2)}
+  .nl__title{margin:0;font:800 1rem var(--f-head);text-transform:uppercase;letter-spacing:.06em}
+  .nl__lede{margin:0}
+  .nl__row{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:flex-end}
+  .nl__f{display:grid;gap:.3rem;min-width:11rem;flex:0 1 13rem}
+  .nl__f--grow{flex:1 1 16rem}
+  .nl label{font:700 .75rem var(--f-head);letter-spacing:.06em;text-transform:uppercase}
+  .nl__f input{min-height:2.75rem;border:1px solid var(--ink);border-radius:0;background:#fff;color:var(--ink);padding:.55rem .8rem;font:inherit;width:100%;box-sizing:border-box}
+  .nl__btn{min-height:2.75rem}
+  .nl__consent{display:flex;gap:.6rem;align-items:flex-start}
+  .nl__consent input{flex:none;width:1.4rem;height:1.4rem;margin:.1rem 0 0;accent-color:var(--ink)}
+  .nl__consent label{font:400 .9375rem var(--f-body);letter-spacing:0;text-transform:none;cursor:pointer}
+  .nl__err{margin:0;font-size:.8125rem;font-weight:700;color:#b00020}
+  .nl__err:empty{display:none}
+  .nl__fine{margin:0;font-size:.8125rem;color:#444}
+  .nl__hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .nl__msg{margin:0;font-weight:700}
+  .nl__msg:empty{display:none}
+  .nl__fb{border:1px solid var(--ink);background:#fff;padding:1rem 1.25rem}
+  .nl__fb[hidden]{display:none}
+  .nl__fb p{margin:0 0 .75rem}
+  .nl__fb .btn{margin:0 .5rem .5rem 0}
+  @media (max-width:40rem){.nl__f,.nl__f--grow{flex:1 1 100%}.nl__btn{width:100%;justify-self:stretch}}
+</style>

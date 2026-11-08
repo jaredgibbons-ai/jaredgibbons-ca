@@ -17,9 +17,10 @@
 //                       It never blocks or changes a lead; with no key, or on any error, the line says "not checked". Set as a Worker secret only.
 
 import { ALERT_CONSENT_TEXT } from '../lib/listing-alert.js';
+import { NEWSLETTER_CONSENT_TEXT } from '../lib/newsletter.js';
 
 const MAX_BODY = 20 * 1024;
-const FORM_TITLES = { contact: 'Contact form', 'home-evaluation': 'Home evaluation request', 'property-check': 'Property check request', quiz: 'Home search quiz', 'listing-alert': 'New listing alert signup' };
+const FORM_TITLES = { contact: 'Contact form', 'home-evaluation': 'Home evaluation request', 'property-check': 'Property check request', quiz: 'Home search quiz', 'listing-alert': 'New listing alert signup', newsletter: 'Newsletter signup' };
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 // Fields follow the labels captured in the archive (`Your name:`, `Your email:` ...). The archive did
@@ -67,6 +68,12 @@ export const SCHEMAS = {
     name: { label: 'Your first name', max: 100 },
     search: { label: 'Search', max: 200 },
     search_id: { label: 'Search ID', max: 20, digits: true },
+    consent: { label: 'Consent', required: true, max: 5, must: 'yes', mustMsg: 'Please tick the box so Jared can email you.' },
+  },
+  // Monthly newsletter sign-up page. Same consent rules as the listing alert.
+  newsletter: {
+    email: { label: 'Your email', required: true, max: 200, email: true },
+    name: { label: 'Your name', max: 100 },
     consent: { label: 'Consent', required: true, max: 5, must: 'yes', mustMsg: 'Please tick the box so Jared can email you.' },
   },
 };
@@ -129,6 +136,11 @@ export function leadEmail(lead) {
     if (lead.page) lines.push(`Search page: ${oneLine(lead.page).startsWith("/") ? "https://jaredgibbons.ca" : ""}${oneLine(lead.page)}`);
     lines.push('Wants: email alerts of new listings that match this search');
     lines.push(`Consent: express, given by ticking an unticked box on the search page at ${lead.received_at}`);
+    lines.push(`Wording shown: "${oneLine(f.consent_text)}"`);
+  } else if (lead.kind === 'newsletter') {
+    if (lead.page) lines.push(`Page: ${oneLine(lead.page).startsWith('/') ? 'https://jaredgibbons.ca' : ''}${oneLine(lead.page)}`);
+    lines.push('Wants: the monthly newsletter by email');
+    lines.push(`Consent: express, given by ticking an unticked box on the newsletter page at ${lead.received_at}`);
     lines.push(`Wording shown: "${oneLine(f.consent_text)}"`);
   } else if (lead.page) lines.push(`Page: ${oneLine(lead.page)}`);
   lines.push(`Received: ${lead.received_at}`);
@@ -208,6 +220,7 @@ export async function handleForm(request, env, deps = {}) {
   if (Object.keys(errors).length) return json(422, { ok: false, errors });
   // The consent wording is the server's own copy of what the page showed, never taken from the visitor.
   if (kind === 'listing-alert') { clean.consent = 'yes'; clean.consent_text = ALERT_CONSENT_TEXT; }
+  if (kind === 'newsletter') { clean.consent = 'yes'; clean.consent_text = NEWSLETTER_CONSENT_TEXT; }
 
   const id = crypto.randomUUID();
   const lead = { id, kind, received_at: new Date().toISOString(), page: String(input.page || '').slice(0, 300), fields: clean };

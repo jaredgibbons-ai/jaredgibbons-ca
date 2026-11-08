@@ -175,3 +175,38 @@ test('listing alert: captcha, honeypot and origin rules apply like every other f
   assert.equal(e.LEADS_DB.rows.length, 0);
   assert.equal((await handleForm(mk(alertGood, { ...P, origin: 'https://evil.example' }), e, { fetch: captcha() })).status, 403);
 });
+
+const nlGood = { email: 'pat@example.com', name: 'Pat', consent: 'yes', page: '/subscribe-to-our-newsletter.html', 'cf-turnstile-response': 'tok' };
+test('newsletter: needs a valid email and the consent box; the name is optional', async () => {
+  const e = env(); const P = { path: '/api/forms/newsletter' };
+  const noConsent = await handleForm(mk({ ...nlGood, consent: '' }, P), e, { fetch: captcha() });
+  assert.equal(noConsent.status, 422); assert.match((await noConsent.json()).errors.consent, /tick the box/);
+  assert.equal((await handleForm(mk({ ...nlGood, email: 'nope' }, P), e, { fetch: captcha() })).status, 422);
+  assert.equal(e.LEADS_DB.rows.length, 0);
+  assert.equal((await handleForm(mk({ ...nlGood, name: '' }, P), e, { fetch: captcha() })).status, 200);
+  assert.equal(e.LEADS_DB.rows.length, 1);
+});
+test('newsletter: the stored lead carries the server copy of the consent wording, and a spoofed one is ignored', async () => {
+  const e = env(); const { NEWSLETTER_CONSENT_TEXT } = await import('../src/lib/newsletter.js');
+  await handleForm(mk({ ...nlGood, consent_text: 'I agree to anything' }, { path: '/api/forms/newsletter' }), e, { fetch: captcha() });
+  const stored = JSON.parse(e.LEADS_DB.rows[0][4]);
+  assert.equal(stored.consent_text, NEWSLETTER_CONSENT_TEXT); assert.equal(stored.consent, 'yes');
+});
+test('newsletter: the webhook payload sends the signup and consent record to every LEAD_EMAIL_TO inbox', async () => {
+  const seen = [];
+  const f = async (u, init) => { if (String(u).includes('turnstile')) return new Response(JSON.stringify({ success: true })); seen.push(JSON.parse(init.body)); return new Response('ok'); };
+  const r = await handleForm(mk(nlGood, { path: '/api/forms/newsletter' }), { TURNSTILE_SECRET: 's', LEAD_WEBHOOK_URL: 'https://hooks.example/lead', LEAD_EMAIL_TO: 'jared@example.com,crm@example.com' }, { fetch: f });
+  assert.equal(r.status, 200); const p = seen[0];
+  assert.equal(p.kind, 'newsletter'); assert.equal(p.notify_to, 'jared@example.com,crm@example.com'); assert.equal(p.notify_reply_to, 'pat@example.com');
+  assert.match(p.notify_subject, /^Newsletter signup from Pat$/);
+  for (const re of [/^Email: pat@example\.com$/m, /^Wants: the monthly newsletter by email$/m, /^Page: https:\/\/jaredgibbons\.ca\/subscribe-to-our-newsletter\.html$/m, /^Consent: express, given by ticking an unticked box on the newsletter page/m, /^Wording shown: "Yes, email me the monthly newsletter/m]) assert.match(p.notify_text, re);
+});
+test('newsletter: captcha, honeypot and origin rules apply like every other form', async () => {
+  const e = env(); const P = { path: '/api/forms/newsletter' };
+  const { 'cf-turnstile-response': _t, ...nocap } = nlGood;
+  assert.equal((await handleForm(mk(nocap, P), e, { fetch: captcha() })).status, 403);
+  assert.equal((await handleForm(mk(nlGood, P), e, { fetch: captcha(false) })).status, 403);
+  assert.equal((await handleForm(mk({ ...nlGood, _hp_url: 'http://spam' }, P), e, { fetch: captcha() })).status, 200);
+  assert.equal(e.LEADS_DB.rows.length, 0);
+  assert.equal((await handleForm(mk(nlGood, { ...P, origin: 'https://evil.example' }), e, { fetch: captcha() })).status, 403);
+});

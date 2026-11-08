@@ -25,6 +25,7 @@ import AREA_PHOTOS from '../data/area-photos.json';
 import PhotoCredit from './PhotoCredit.astro';
 import IdxEmbed from './IdxEmbed.astro';
 import ListingAlert from './ListingAlert.astro';
+import Newsletter from './Newsletter.astro';
 import SearchQuiz from './SearchQuiz.astro';
 import HomeValue from './HomeValue.astro';
 import PropertyCard from './PropertyCard.astro';
@@ -156,6 +157,12 @@ if (photos.length) {
 // Archive pages that had no review block, and pages built from the local layer alone, get one, placed before the end-of-page link lists.
 const NO_REVIEWS = new Set(['404', 'privacy', 'subscribe-to-our-newsletter', 'contact', 'reviews', 'photo-credits']);
 if (!NO_REVIEWS.has(page.slug) && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.splice(page.blocks.length - endCount, 0, { t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
+
+// Newsletter page: the archive captured only the form's labels (Name, Email, a consent line, Subscribe). Swap them for the working sign-up.
+if (page.slug === 'subscribe-to-our-newsletter') {
+  const at = page.blocks.findIndex((b: any) => b.t === 'h' && /^Subscribe to our newsletter$/i.test(b.text || ''));
+  if (at >= 0) page.blocks.splice(at, page.blocks.length - at, { t: 'newsletter' });
+}
 
 // Neighbourhood-guide hubs: the map sits straight under the H1 (no photo, no "map" heading), so the page opens on the thing readers came for.
 if (isHub) {
@@ -331,6 +338,7 @@ const explore = !_extra.length ? exploreBase
                   <ul>{b.items.map((it: any) => <li><a href={`#${it.id}`}>{it.text}</a></li>)}</ul>
                 </details>
               );
+              if (b.t === 'newsletter') return <Newsletter />;
               if (b.t === 'p') return <p class={b.cls}><Rich parts={b.parts} /></p>;
               if (b.t === 'photo') return <PhotoCredit photo={b.photo} hero sizes="(min-width:48rem) 40rem, 100vw" />;
               if (b.t === 'list' && sec.blocks[bi - 1]?.t === 'h' && isSourcesHeading(sec.blocks[bi - 1].text) && b.items.some((it: any[]) => it.some((p: any) => p.h))) return <SourceList items={b.items} />;

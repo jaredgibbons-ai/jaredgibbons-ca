@@ -27,7 +27,7 @@ Approval pack: `docs/review/launch/launch-approval-2026-11-07.csv` (one row per 
 - [x] 312 neighbourhood-map outlines in 21 regions confirmed by Jared 2026-11-07 (status confirmed); the launch build no longer stops on them
 - [ ] Launch build setting `PUBLIC_PREVIEW=false` (removes review notes, `noindex` on the preview, applies holds)
 - [ ] `PUBLIC_GOOGLE_MAPS_KEY` build variable (maps, address suggestions, commute times)
-- [ ] IDX: Royal LePage sign-off or the new feed route (BL-04); GBP reviews feed (BL-03); newsletter form destination (BL-05); privacy page confirmations
+- [ ] IDX: Royal LePage sign-off or the new feed route (BL-04); GBP reviews feed (BL-03); newsletter form destination (BL-05, done 2026-11-08, D-187); privacy page confirmations (done 2026-11-08, D-187)
 - [ ] Forms live: Turnstile site key and secret set by Jared, `PUBLIC_FORMS_LIVE=true`, test messages received at both addresses
 - [ ] Analytics (GA4 `G-7YQYX2KPBR`, Ads `AW-10817976788`, Meta Pixel) verified firing once
 - [ ] DNS change, only with explicit approval
