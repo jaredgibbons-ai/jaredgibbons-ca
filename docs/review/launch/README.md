@@ -24,3 +24,6 @@ Jared approved the West Vancouver golf course homes page. Total approved: 736 pa
 
 ## Update 2026-11-08 (Jerry's searches)
 76 of the 77 remaining searches are wired, so 73 pages moved from "Hold" to "Approve now" and show "Not yet" until Jared approves them. Still held: the 20 price-band pages (waiting for Jerry) and Mt Lehman (no sub-area in the picker).
+
+## Update 2026-11-08 (96 pages approved)
+Jared approved the 96 pages that came out of hold after Jerry's searches (D-186). Pack now shows A 668 and E 164 approved; only Mt Lehman is held. Nothing is launched.
