@@ -985,3 +985,6 @@ Surrey and Cloverdale coach house pages use Jerry's keyword searches (1451381, 1
 - **Loaded:** 20 school CSVs, Fraser Wood through Kirkbride, through `tools/build_school_sold.py`. Every row count matched Pete's export log. 17 elementary schools use a 1 km radius and 3 secondary schools (Grandview Heights, Guildford Park, Johnston Heights) use 2 km; the pages state the radius used.
 - **Result:** 114 school pages now have sold figures, 42 still wait for Pete (rows 85 onward). One previously held page (no listings) now builds because it has sold figures.
 - **Approvals:** new school pages show "Not yet" in the launch pack until Jared approves them. Tests 133 pass, 828 new pages all 0.7 or above on uniqueness.
+
+## D-178: School pages approved (2026-11-08)
+- Jared approved the 46 school pages that have sold figures. They are recorded under `later` in `docs/review/launch/approvals.json` (date 2026-11-08), and `tools/launch_pack.py` now reads a per-date approval list. 689 pages approved in total; 139 held pages (batch B waiting for Jerry, batch C waiting for Pete) stay "Not yet". Approval is for pages, not a launch.

@@ -43,7 +43,11 @@ def group(slug, j):
     return 'Neighbourhood and area pages'
 
 APP = json.load(open('docs/review/launch/approvals.json')) if os.path.exists('docs/review/launch/approvals.json') else {'approved': []}
-APPROVED_SLUGS = set(APP.get('slugs', []))   # pages Jared approved on the date in approvals.json; pages added later wait for his next approval
+APPROVED_SLUGS = set(APP.get('slugs', []))
+APPROVED_ON = {x: APP['date'] for x in APPROVED_SLUGS}
+for _l in APP.get('later', []):
+    for x in _l['slugs']: APPROVED_ON[x] = _l['date']
+    APPROVED_SLUGS |= set(_l['slugs'])   # pages Jared approved on the date in approvals.json; pages added later wait for his next approval
 rows, holds = [], {}
 for f in sorted(glob.glob('src/data/local/*.json')):
     j = json.load(open(f))
@@ -67,7 +71,7 @@ for f in sorted(glob.glob('src/data/local/*.json')):
     batch = {'Approve': 'A. Approve now', 'Hold': 'B. Hold: waiting for Jerry' if 'Jerry' in reason else ('C. Hold: waiting for Pete' if 'Pete' in reason else 'D. Hold: fix first')}[rec]
     if j.get('status') == 'generated': batch = ('E. Auto-generated, goes live with the rest' if rec == 'Approve' else batch)
     rows.append([batch, g, s, f'https://jaredgibbons.ca/{s}.html', (seo.get(s) or j['new_page']).get('title', ''), j.get('status'), ('Wired' if wired else 'Not yet') if grid else 'No search on page',
-                 sold_state, words, f'{uniq:.0%}', inb[s], auto_noindex, rec, reason, (f'Yes, {APP["date"]}' if s in APPROVED_SLUGS else 'Not yet')])
+                 sold_state, words, f'{uniq:.0%}', inb[s], auto_noindex, rec, reason, (f'Yes, {APPROVED_ON[s]}' if s in APPROVED_SLUGS else 'Not yet')])
 rows.sort(key=lambda r: (r[0], r[1], r[2]))
 out = f'docs/review/launch/launch-approval-{DATE}.csv'
 with open(out, 'w', newline='') as fh:
