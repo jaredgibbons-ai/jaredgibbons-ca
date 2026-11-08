@@ -1013,3 +1013,10 @@ Surrey and Cloverdale coach house pages use Jerry's keyword searches (1451381, 1
 
 ## D-183: West Vancouver golf page approved (2026-11-08)
 - Jared approved `west-vancouver-golf-course-homes-for-sale` (see D-182); recorded under `later` in `approvals.json`. 736 pages approved in total.
+
+## D-184: Jerry's remaining searches wired (2026-11-08)
+- **Received:** `remaining-searches-2026-11-08-DONE.xlsx` (stored in `docs/review/idx`). 76 of 77 searches built: 64 of 65 page searches, all 5 hub searches, all 7 BC rules guides. `tools/build_idx_embeds.py` now reads every tab of that file; all 76 ids and embed codes match the account, and each page shows its own search in both the preview and launch builds.
+- **Not built:** `mt-lehman-abbotsford-guide` (the board picker has no Mt Lehman sub-area). Asked Jerry for an Abbotsford remarks search ("Mt. Lehman", "Mt Lehman", "Mount Lehman") in the Drive folder sheet "For Jerry: two more searches (2026-11-08)", with an optional Site Influences golf search for West Vancouver.
+- **Method notes from Jerry:** Barnston Island, Lindell Beach and Mount Currie use a remarks phrase because the picker has no matching sub-area (Lindell Beach sits in the board area "Cultus Lake & Area", Mount Currie in Pemberton). Brunette has a real sub-area but 0 active listings today; Barnston Island has 1. Renfrew, Renfrew Heights and the lawyer fees page used searches Jerry had already saved. Three counts were not captured (Brentwood Park townhomes, Mission condos, New Westminster condos).
+- **Links:** added inbound links for Barnston Island, Lindell Beach and Mount Currie (`build_launch_links.py`) so none sit under 2 inbound links.
+- **Launch pack:** 73 pages moved to "Approve now" with "Not yet" (Jared's approval pending); 21 still held (20 price-band pages wait for Jerry, plus Mt Lehman). Tests 133 pass, 833 new pages all 0.7 or above on uniqueness.

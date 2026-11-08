@@ -125,27 +125,28 @@ def main():
             pages[slug] = sid
     # Bedroom searches (24) and the 2026-11-06 new searches (29, coach houses, suites, penthouses): worksheets Jerry returns with the two "(Jerry fills)" columns filled.
     # Drop the returned file in docs/review/idx under the name shown; columns are read by header, rows with no search id or an embed code that does not match are skipped and reported.
-    for fn in ('bedroom-searches-2026-11-04-DONE.xlsx', 'new-searches-2026-11-06-DONE.xlsx', 'school-radius-searches-2026-11-07-DONE.xlsx', 'area-gap-searches-2026-11-07-DONE.xlsx', 'price-band-searches-2026-11-07-DONE.xlsx'):
+    for fn in ('bedroom-searches-2026-11-04-DONE.xlsx', 'new-searches-2026-11-06-DONE.xlsx', 'school-radius-searches-2026-11-07-DONE.xlsx', 'area-gap-searches-2026-11-07-DONE.xlsx', 'price-band-searches-2026-11-07-DONE.xlsx', 'remaining-searches-2026-11-08-DONE.xlsx'):
         fp = os.path.join(ROOT, 'docs/review/idx', fn)
         if not os.path.exists(fp): continue
-        wsx = openpyxl.load_workbook(fp, read_only=True).worksheets[0]
-        rows = list(wsx.iter_rows(values_only=True)); head = [str(h or '') for h in rows[0]]
-        ci = lambda key: next(i for i, h in enumerate(head) if h.startswith(key))
-        c_slug, c_id, c_code = ci('Page slug'), ci('Search ID'), ci('Embed code')
-        for r in rows[1:]:
-            slug, sid, code = r[c_slug], str(r[c_id] or '').strip(), r[c_code] or ''
-            if not slug: continue
-            # school worksheet: skipped rows have no id, and the held rows (0 listings) have no page yet; neither is a problem
-            if fn.startswith('school-radius') and (not sid.isdigit() or not os.path.exists(os.path.join(ROOT, 'src/data/local', slug + '.json'))): continue
-            if not sid.isdigit(): problems.append((fn + ': no search id', slug, sid)); continue
-            if f'search-{sid}' not in code or ACCOUNT not in code:
-                problems.append((fn + ': embed code does not match id/account', slug, sid)); continue
-            pj = [q for q in (os.path.join(ROOT, 'src/data/local', slug + '.json'), os.path.join(ROOT, 'src/data/pages', slug + '.json')) if os.path.exists(q)]
-            if not pj or not any(b.get('t') == 'grid' for b in json.load(open(pj[0]))['blocks']):
-                problems.append((fn + ': page missing or has no listings placeholder', slug, sid)); continue
-            if slug in pages and pages[slug] != sid:
-                problems.append(('page has two searches', slug, f'{pages[slug]} / {sid}')); continue
-            pages[slug] = sid
+        for wsx in (openpyxl.load_workbook(fp, read_only=True).worksheets if fn.startswith('remaining-searches') else openpyxl.load_workbook(fp, read_only=True).worksheets[:1]):
+          rows = list(wsx.iter_rows(values_only=True)); head = [str(h or '') for h in rows[0]]
+          ci = lambda key: next(i for i, h in enumerate(head) if h.startswith(key))
+          c_slug, c_id, c_code = ci('Page slug'), ci('Search ID'), ci('Embed code')
+          for r in rows[1:]:
+              slug, sid, code = r[c_slug], str(r[c_id] or '').strip(), r[c_code] or ''
+              if not slug: continue
+              # school worksheet: skipped rows have no id, and the held rows (0 listings) have no page yet; neither is a problem
+              if fn.startswith('school-radius') and (not sid.isdigit() or not os.path.exists(os.path.join(ROOT, 'src/data/local', slug + '.json'))): continue
+              if fn.startswith('remaining-searches') and not sid.isdigit(): continue   # skipped rows (no sub-area in the board picker) wait for a different search
+              if not sid.isdigit(): problems.append((fn + ': no search id', slug, sid)); continue
+              if f'search-{sid}' not in code or ACCOUNT not in code:
+                  problems.append((fn + ': embed code does not match id/account', slug, sid)); continue
+              pj = [q for q in (os.path.join(ROOT, 'src/data/local', slug + '.json'), os.path.join(ROOT, 'src/data/pages', slug + '.json')) if os.path.exists(q)]
+              if not pj or not any(b.get('t') == 'grid' for b in json.load(open(pj[0]))['blocks']):
+                  problems.append((fn + ': page missing or has no listings placeholder', slug, sid)); continue
+              if slug in pages and pages[slug] != sid:
+                  problems.append(('page has two searches', slug, f'{pages[slug]} / {sid}')); continue
+              pages[slug] = sid
     # Keyword and golf worksheet (2026-11-06): columns Row, Search name, Search ID, ..., Embed code. Names map to pages here. Held (not wired): K5-K9, M1, C1-C3.
     # K4 Langley coach house stays on the search already wired to that page (1450209), so a second id is ignored, not an error.
     KEYWORD_PAGES = {'K1': 'south-surrey-houses-with-coach-houses-for-sale', 'K2': 'surrey-houses-with-coach-houses-for-sale', 'K3': 'cloverdale-houses-with-coach-houses-for-sale',

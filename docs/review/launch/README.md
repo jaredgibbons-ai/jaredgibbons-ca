@@ -21,3 +21,6 @@ Jared approved the remaining 46 school pages. All 160 school pages are now appro
 
 ## Update 2026-11-08 (West Vancouver golf)
 Jared approved the West Vancouver golf course homes page. Total approved: 736 pages; 97 still wait for Jerry's searches. Nothing is launched.
+
+## Update 2026-11-08 (Jerry's searches)
+76 of the 77 remaining searches are wired, so 73 pages moved from "Hold" to "Approve now" and show "Not yet" until Jared approves them. Still held: the 20 price-band pages (waiting for Jerry) and Mt Lehman (no sub-area in the picker).
