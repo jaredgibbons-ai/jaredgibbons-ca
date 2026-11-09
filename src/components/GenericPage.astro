@@ -158,6 +158,18 @@ if (photos.length) {
 const NO_REVIEWS = new Set(['404', 'privacy', 'subscribe-to-our-newsletter', 'contact', 'reviews', 'photo-credits']);
 if (!NO_REVIEWS.has(page.slug) && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.splice(page.blocks.length - endCount, 0, { t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
 
+// A page with two source lists (for example condo notes and townhome notes) must not show the same source card twice: later lists keep only what earlier ones did not show.
+{
+  const shown = new Set<string>(); const drop = new Set<number>();
+  page.blocks.forEach((b: any, i: number) => {
+    const prev = page.blocks[i - 1];
+    if (b.t !== 'list' || prev?.t !== 'h' || !isSourcesHeading(prev.text)) return;
+    const keep = b.items.filter((it: any[]) => { const a = it.find((p: any) => p.h); const k = a ? String(a.h).replace(/#.*$/, '') : ''; if (!k) return true; if (shown.has(k)) return false; shown.add(k); return true; });
+    if (!keep.length) { drop.add(i); drop.add(i - 1); } else b.items = keep;
+  });
+  if (drop.size) page.blocks = page.blocks.filter((_: any, i: number) => !drop.has(i));
+}
+
 // Newsletter page: the archive captured only the form's labels (Name, Email, a consent line, Subscribe). Swap them for the working sign-up.
 if (page.slug === 'subscribe-to-our-newsletter') {
   const at = page.blocks.findIndex((b: any) => b.t === 'h' && /^Subscribe to our newsletter$/i.test(b.text || ''));

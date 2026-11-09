@@ -13,7 +13,7 @@ LOCAL = os.path.join(ROOT, 'src/data/local')
 SKIP_KEYS = {'h', 'gen', 'slug', 'id', 'pos', 'level', 'status', 'href', 'img', 'src', 'alt'}
 CITE = re.compile(r'\(?\bas of (\w+ 20\d\d),? Source: SnapStats(?: (?:FVR|GVR))?(?: \w+ 20\d\d)? report\)?\.?', re.I)
 BARE = re.compile(r'\s*Source: SnapStats(?: (?:FVR|GVR))?(?: \w+ 20\d\d)? report\.?', re.I)
-PROC = re.compile(r"\bsiblings?\b|\bbatch[- ]?\d|\bslug\b|research file|Jared.s reports|\bthe notes\b|\bin this research\b|\bthis research\b|\bat its reading\b|reading was|page text read|live page text|locator (?:returned|result)|no locator|\bnot read\b|were not read|was not read|\bfeed was\b|\bvisible feed\b|\bat reading\b|\bas read\b|\bfor the rebuild\b|\bpromises an? \w+|\bCentral absence\b|\bFeed snapshot\b|\bthis topic page\b", re.I)
+PROC = re.compile(r"\bInternal links?:|\bsiblings?\b|\bbatch[- ]?\d|\bslug\b|research file|Jared.s reports|\bthe notes\b|\bin this research\b|\bthis research\b|\bat its reading\b|reading was|page text read|live page text|locator (?:returned|result)|no locator|\bnot read\b|were not read|was not read|\bfeed was\b|\bvisible feed\b|\bat reading\b|\bas read\b|\bfor the rebuild\b|\bpromises an? \w+|\bCentral absence\b|\bFeed snapshot\b|\bthis topic page\b", re.I)
 SENT = re.compile(r'(?<=[.!?])\s+(?=[A-Z0-9“"(])')
 counts = {'sent': 0, 'case': 0, 'cite': 0, 'faq': 0, 'item': 0, 'head': 0}
 
@@ -33,6 +33,11 @@ def scrub(s):
     if PROC.search(s):
         parts = SENT.split(s); keep = [p for p in parts if not PROC.search(p)]
         if len(keep) != len(parts): counts['sent'] += len(parts) - len(keep); s = ' '.join(keep)
+    s = re.sub(r'\b([Aa]) (?=(?:Abbotsford|Aldergrove|Anmore|Agassiz|Ambleside|Annieville|Albion|Aberdeen)\b)', lambda m: ('An' if m.group(1) == 'A' else 'an') + ' ', s)   # "an Abbotsford"
+    s = re.sub(r'(?<![\d.])\b1 (years|bedrooms|bathrooms)\b', lambda m: '1 ' + m.group(1)[:-1], s)   # "1 year", "1 bedroom"
+    s = re.sub(r'(20\d\d\.) ([a-z])', lambda m: m.group(1) + ' ' + m.group(2).upper(), s)   # sentence start after a date
+    s = s.replace('official Official Community Plan', 'official Community Plan')
+    s = re.sub(r'\s+\($', '', s); s = re.sub(r'\.\s+and\s*(?:\(|Persons with)?\s*$', '.', s)   # leftovers of a dropped parenthetical
     return re.sub(r'\s{2,}', ' ', s).strip()
 
 

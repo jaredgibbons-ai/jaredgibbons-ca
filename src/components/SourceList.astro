@@ -2,7 +2,8 @@
 // Sources as cards: publisher, readable title, type tag and host. Opens in a new tab (these are other people's sites).
 import { sourceInfo } from '../lib/sources';
 const { items = [] } = Astro.props as { items: any[][] };
-const rows = items.map((it) => { const a = it.find((p: any) => p.h); const text = it.map((p: any) => p.t).join(' ').trim(); return a ? { ...sourceInfo(a.t || text, a.h), href: a.h } : { pub: '', title: text, kind: '', host: '', href: '' }; });
+const seen = new Set<string>();
+const rows = items.filter((it) => { const a = it.find((p: any) => p.h); const k = a ? String(a.h).replace(/#.*$/, '') : ''; if (!k) return true; if (seen.has(k)) return false; seen.add(k); return true; }).map((it) => { const a = it.find((p: any) => p.h); const text = it.map((p: any) => p.t).join(' ').trim(); return a ? { ...sourceInfo(a.t || text, a.h), href: a.h } : { pub: '', title: text, kind: '', host: '', href: '' }; });
 ---
 <ul class="srcs">
   {rows.map((r) => (

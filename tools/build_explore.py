@@ -141,7 +141,12 @@ def label(s):
         m = re.search(r'-(homes|condos|townhomes)-(under|over)-([0-9a-z-]+)$', s)
         if m: return f"{pname(place)} {m.group(1)} {m.group(2)} {price(m.group(3))}"
         cr = crumbs(s); return cr[-1]['name'] if cr else NAME(s)
-    return lab.format(P=pname(place))
+    out = lab.format(P=pname(place))
+    # never "Mountain View Homes homes for sale" or "... neighbourhood neighbourhood guide"
+    out = re.sub(r'\b(Homes|homes) homes for sale$', r'\1 for sale', out)
+    out = re.sub(r'(?i)\b(neighbourhood) neighbourhood guide$', r'\1 guide', out)
+    out = re.sub(r'(?i)\b(sales) homes for sale$', r'\1', out)
+    return out
 
 def build():
     info = {s: (city_of(s),) + split(s) for s in sorted(exist)}

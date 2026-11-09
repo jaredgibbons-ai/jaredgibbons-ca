@@ -9,6 +9,9 @@ import glob, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 NOTES = os.path.join(ROOT, 'docs/research/local-notes-55plus')
+# 55+ pages for areas with no area page of their own: the breadcrumb goes to the area's guide, never to the home page
+GUIDE_FOR = {'edgemont-55-plus-homes-for-sale': '/edgemont-north-vancouver-guide.html', 'fort-langley-55-plus-homes-for-sale': '/fort-langley.html', 'south-cambie-55-plus-homes-for-sale': '/south-cambie-vancouver-guide.html',
+             'university-vw-55-plus-homes-for-sale': '/university-endowment-lands-vancouver-guide.html', 'upper-lonsdale-55-plus-homes-for-sale': '/upper-lonsdale-north-vancouver-guide.html', 'whitby-estates-55-plus-homes-for-sale': '/whitby-estates-west-vancouver-guide.html'}
 LOCAL = os.path.join(ROOT, 'src/data/local'); PAGES = os.path.join(ROOT, 'src/data/pages')
 G = 'n55'; HUB = 'bc-55-plus-strata-rules'
 CITY = {'central-abbotsford': 'Abbotsford', 'abbotsford-west': 'Abbotsford', 'poplar': 'Abbotsford', 'ladner-elementary': 'Ladner', 'neilsen-grove': 'Ladner'}
@@ -252,7 +255,7 @@ def build_community(path, written):
     ttl = f'{disp} 55+ Homes for Sale'; ttl = ttl + ' | Jared Gibbons' if len(ttl) + 16 <= 66 else ttl
     d = {'status': 'draft', 'slug': slug, 'updated': '2026-11-01', 'n55_page': True, 'hand_edited': True, 'blocks': bl, 'faq': faq, 'faq_heading': f'{name} 55+ homes: your questions answered',
          'new_page': {'title': ttl[:70], 'description': desc[:158], 'h1': f'{name} 55+ Homes for Sale | {city} Real Estate' if city else f'{name} 55+ Homes for Sale'},
-         'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': f'{name}', 'href': f'/{comm}.html' if comm else '/index.html'}, {'name': '55+ homes', 'href': f'/{slug}.html'}],
+         'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': f'{name}', 'href': f'/{comm}.html' if comm else GUIDE_FOR.get(slug, '/index.html')}, {'name': '55+ homes', 'href': f'/{slug}.html'}],
          'needs_from_muse': [f'Jared’s own notes on the {name} 55+ buildings: how units sell, what buyers ask', 'Unit counts and years built marked unconfirmed in the sources', 'Live listing feed filtered to 55+ homes']}
     save(slug, d); written.append((slug, name, city, comm)); print('wrote', slug, len(bl), 'blocks', len(faq), 'faq')
 

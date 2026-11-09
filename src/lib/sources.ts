@@ -45,6 +45,15 @@ export function sourceInfo(text: string, url: string) {
     seg = clean(seg);
     title = seg && !GENERIC.test(seg) && !/^\d+$/.test(seg) ? seg : /civicweb|escribe/.test(h) ? 'Council document' : /\.pdf($|\?)/i.test(url) ? 'Official document' : 'Official page';
   }
+  // Some source labels were cut at about 48 characters in the notes ("... Official Community Plan New Westmi"). When the address ends in the full wording, use that.
+  if (title && !GENERIC.test(title)) {
+    let seg = '';
+    try { const p = new URL(url).pathname.split('/').filter(Boolean); seg = clean(decodeURIComponent(p[p.length - 1] || '')).replace(/\s\d{1,3}$/, ''); } catch { /* keep the label */ }
+    const norm = (x: string) => x.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    const nt = norm(title), ns = norm(seg);
+    if (nt.length >= 20 && ns.length > nt.length && ns.startsWith(nt)) title = seg;
+  }
+  title = title.replace(/\s*\([^)]*$/, '').trim();   // a label cut inside a bracket ("... as of June 30 2022 (Co")
   if (title === title.toLowerCase() || title === title.toUpperCase()) title = smart(title);
   if (title.length > 90) title = title.slice(0, 88).replace(/\s+\S*$/, '') + '…';
   const kind = /\.pdf($|\?)/i.test(url) ? 'PDF' : /\.(xlsx?|csv)($|\?)/i.test(url) ? 'Spreadsheet' : /\.pptx?($|\?)/i.test(url) ? 'Slides' : 'Web page';
