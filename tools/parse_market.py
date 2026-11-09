@@ -47,11 +47,11 @@ def parse_fvreb(path):
             ch = [float(x) for x in m.group(6).split()]
             if cur:
                 hpi.setdefault(area.title().replace('Fraser Valley Board', 'Fraser Valley Board'), {})[cur] = {'benchmark': n(m.group(4)), 'index': float(m.group(5)), 'chg_1m': ch[0], 'chg_3m': ch[1], 'chg_6m': ch[2], 'chg_1y': ch[3], 'chg_3y': ch[4], 'chg_5y': ch[5]}
-    # MLS summary blocks: header line "<Community>  Sep-26 ..." followed by metric rows (3 property types x 5 columns)
+    # MLS summary blocks: header line "<Community>  <Mon>-26 ..." followed by metric rows (3 property types x 5 columns)
     comm = None
     ptypes = ['detached', 'townhouse', 'apartment']
     for s in lines:
-        h = re.match(r'^(All Areas Combined|[A-Z][A-Za-z .&/*-]+?)\s{2,}Sep-26\s', s)
+        h = re.match(r'^(All Areas Combined|[A-Z][A-Za-z .&/*-]+?)\s{2,}[A-Z][a-z]{2}-\d\d\s', s)
         if h and 'Grand Totals' not in s:
             comm = h.group(1).strip().rstrip('*').strip(); summary.setdefault(comm, {}); 
         row = re.match(r'^(Sales|New Listings|Active Listings|Benchmark Price|Median Price|Average Price)\s+(.*)$', s)
@@ -67,11 +67,12 @@ def parse_fvreb(path):
 
 
 if __name__ == '__main__':
-    ap = argparse.ArgumentParser(); ap.add_argument('--gvr'); ap.add_argument('--fvreb'); ap.add_argument('--month'); ap.add_argument('--out')
+    ap = argparse.ArgumentParser(); ap.add_argument('--gvr'); ap.add_argument('--fvreb'); ap.add_argument('--month'); ap.add_argument('--out'); ap.add_argument('--gvr-date', default='October 2, 2026'); ap.add_argument('--fvreb-date', default='October 5, 2026')
     a = ap.parse_args()
     gvr = parse_gvr(a.gvr); hpi, summ = parse_fvreb(a.fvreb)
+    y, mo = a.month.split('-'); mname = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][int(mo) - 1]
     data = {'month': a.month,
-            'gvr': {'source': 'Greater Vancouver REALTORS® MLS® Home Price Index, September 2026 (released October 2, 2026)', 'hpi': gvr},
-            'fvreb': {'source': 'Fraser Valley Real Estate Board Statistics Package, September 2026 (released October 5, 2026)', 'hpi': hpi, 'summary': summ}}
+            'gvr': {'source': f'Greater Vancouver REALTORS® MLS® Home Price Index, {mname} {y} (released {a.gvr_date})', 'hpi': gvr},
+            'fvreb': {'source': f'Fraser Valley Real Estate Board Statistics Package, {mname} {y} (released {a.fvreb_date})', 'hpi': hpi, 'summary': summ}}
     json.dump(data, open(a.out, 'w'), indent=1, ensure_ascii=False)
     print(len(gvr), 'GVR areas;', len(hpi), 'FVREB HPI areas;', len(summ), 'FVREB summary communities')

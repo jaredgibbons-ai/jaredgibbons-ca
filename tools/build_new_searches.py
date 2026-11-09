@@ -7,7 +7,7 @@
     vancouver-houses-for-sale, vancouver-condos-for-sale, vancouver-townhomes-for-sale
 
 Numbers come only from files already in the repo: the Paragon closed-sales aggregate (src/data/sold/sold-12m.json), SnapStats (src/data/snapstats/2026-10.json) and the
-MLS(R) Home Price Index (src/data/market/2026-09.json). Rules come from the city research notes in docs/research (only lines with a source and no open question).
+MLS(R) Home Price Index (src/data/market/2026-10.json). Rules come from the city research notes in docs/research (only lines with a source and no open question).
 The raw Paragon rows are not in the repo, so the coach house pages cannot show coach-house sales: they say what the city allows and show the detached-house market around them.
 Pages are src/data/local/<slug>.json with a new_page header, status draft, and the same listings placeholder (grid) as the bedroom pages; the MyRealPage search id arrives
 from docs/review/idx/new-searches-*.xlsx once Jerry has built the searches.  Idempotent.
@@ -22,7 +22,7 @@ SD = json.load(open('src/data/sold/sold-12m.json'))
 _d = datetime.date.fromisoformat(SD['meta']['last'])
 LAST = f'{_d.strftime("%B")} {_d.day}, {_d.year}'
 WINDOW = f'November 1, 2025 to {LAST}'
-MK = json.load(open('src/data/market/2026-09.json'))
+MK = json.load(open('src/data/market/2026-10.json'))
 EX = json.load(open('src/data/sold/sold-extras.json'))     # coach house, suite and penthouse figures (Pete's export, closed and pending sales to October 31, 2026)
 EXW = EX['meta']['window']
 SN = json.load(open('src/data/snapstats/2026-10.json'))['areas']
@@ -31,8 +31,8 @@ QLAB = ['November 2025 to January 2026', 'February to April 2026', 'May to July 
 BANDS = ['Under $600,000', '$600,000 to $799,999', '$800,000 to $999,999', '$1,000,000 to $1,199,999', '$1,200,000 to $1,499,999', '$1,500,000 to $1,799,999', '$1,800,000 and over']
 PAR_SRC = f'Source: Paragon closed sales, {WINDOW}. Pending sales are not counted. Median means the middle price. A figure is shown only where at least 5 homes sold.'
 HPI_NOTE = 'The benchmark is the price of a typical home in the area, not a median of sales.'
-SRC_GVR = f'Source: Greater Vancouver REALTORS® MLS® Home Price Index, September 2026. {HPI_NOTE}'
-SRC_FV = f'Source: Fraser Valley Real Estate Board MLS® Home Price Index, September 2026. {HPI_NOTE}'
+SRC_GVR = f'Source: Greater Vancouver REALTORS® MLS® Home Price Index, October 2026. {HPI_NOTE}'
+SRC_FV = f'Source: Fraser Valley Real Estate Board MLS® Home Price Index, October 2026. {HPI_NOTE}'
 
 DISP = {'Hamilton RI': 'Hamilton', 'Renfrew VE': 'Renfrew', 'Victoria VE': 'Victoria', 'West End VW': 'West End', 'Downtown VW': 'Downtown', 'Downtown VE': 'Downtown Eastside area',
         'Fraser VE': 'Fraser', 'Collingwood VE': 'Collingwood', 'Fraserview VE': 'Fraserview', 'Killarney VE': 'Killarney', 'Fairview VW': 'Fairview', 'Oakridge VW': 'Oakridge',
@@ -513,7 +513,7 @@ def richmond_houses():
                links_h='More Richmond real estate')
     bl = [P('This search lists detached houses for sale across Richmond, from Steveston in the south-west to Hamilton in the east. Condos and townhomes have their own searches, linked at the bottom of the page.'),
           P(f'{tot} Richmond houses closed in the year to {LAST}, spread over {len(rows)} neighbourhoods. The sold records I use report Richmond by neighbourhood, so there is no single city median here: the table below gives each neighbourhood’s own figure, '
-            f'and the Home Price Index benchmark for a typical Richmond detached home was {money(h["benchmark"])} in September 2026.'),
+            f'and the Home Price Index benchmark for a typical Richmond detached home was {money(h["benchmark"])} in October 2026.'),
           {'t': 'grid', 'gen': G},
           H('Where Richmond houses sold, and how fast'),
           P(f'{hi["name"]} had the highest median price among neighbourhoods with 10 or more sales, {money(hi["price"])}, and {lo["name"]} the lowest, {money(lo["price"])}. '
@@ -537,9 +537,9 @@ def richmond_houses():
              'Is the house inside one of the five station areas that were left out of the rezoning?',
              'Is the lot east of No. 4 Road? If so, check Agricultural Land Reserve status.',
              'Has the house had a geotechnical or foundation report? Ask, especially for homes near the dikes.']),
-          {'t': 'h', 'level': 2, 'text': 'Estimate the payment on a Richmond house', 'gen': G}, P(f'The calculator starts at the September 2026 benchmark price for a Richmond detached home, {money(h["benchmark"])}.'),
+          {'t': 'h', 'level': 2, 'text': 'Estimate the payment on a Richmond house', 'gen': G}, P(f'The calculator starts at the October 2026 benchmark price for a Richmond detached home, {money(h["benchmark"])}.'),
           {'t': 'calc', 'which': 'mortgage', 'price': h['benchmark'], 'gen': G}]
-    faq = [('How much does a house cost in Richmond?', f'It depends on the neighbourhood. Among neighbourhoods with 10 or more sales, medians ran from {money(lo["price"])} in {lo["name"]} to {money(hi["price"])} in {hi["name"]}. The benchmark price for a typical Richmond detached home was {money(h["benchmark"])} in September 2026.'),
+    faq = [('How much does a house cost in Richmond?', f'It depends on the neighbourhood. Among neighbourhoods with 10 or more sales, medians ran from {money(lo["price"])} in {lo["name"]} to {money(hi["price"])} in {hi["name"]}. The benchmark price for a typical Richmond detached home was {money(h["benchmark"])} in October 2026.'),
            ('Which Richmond neighbourhood has the most house sales?', f'{sea["name"]}, with {sea["n"]} sales and a median of {money(sea["price"])}. {gra["name"]} was second with {gra["n"]}.'),
            ('What are the RSM zones in Richmond?', 'RSM/S, RSM/M, RSM/L and RSM/XL are the four zones Richmond Council created on June 24, 2024 for almost 27,000 former single-family and duplex lots. Check the lot’s current zone on the City’s map.'),
            ('Does the 2024 rezoning apply around the five station areas?', 'No. The areas around the Bridgeport, Capstan, Aberdeen, Lansdowne and Brighouse stations are excluded from it and have their own rules.'),
@@ -582,11 +582,11 @@ def richmond_condos():
              f'Check what the monthly fee includes. Ironwood ({money(ir["maint"])}) and Steveston South ({money(ss["maint"])}) sit above Brighouse ({money(bh["maint"])}).',
              'Check whether the building allows rentals and pets before you offer.',
              'For a new building in Hamilton, ask for the occupancy date and the status of the common areas.'])]
-    faq = [('How much is a condo in Richmond?', f'The median Richmond condo sold for about {money(bh["price"])} in Brighouse, {money(wc["price"])} in West Cambie and {money(ss["price"])} in Steveston South over the year to {LAST}. The apartment benchmark for the city was {money(h["benchmark"])} in September 2026.'),
+    faq = [('How much is a condo in Richmond?', f'The median Richmond condo sold for about {money(bh["price"])} in Brighouse, {money(wc["price"])} in West Cambie and {money(ss["price"])} in Steveston South over the year to {LAST}. The apartment benchmark for the city was {money(h["benchmark"])} in October 2026.'),
            ('Where do most Richmond condos sell?', f'Brighouse, with {bh["n"]} of {tot:,} sales, then West Cambie with {wc["n"]} and Brighouse South with {bs["n"]}.'),
            ('What are strata fees for a Richmond condo?', f'Median monthly fees by neighbourhood ran from {money(ham["maint"])} in Hamilton to {money(ir["maint"])} in Ironwood, with {money(bh["maint"])} in Brighouse. The building decides, so check the fee in the listing.'),
            ('Which Richmond condo neighbourhoods are newest?', f'Hamilton (median built {ham["yb"]}), Bridgeport ({br_["yb"]}) and West Cambie ({wc["yb"]}).'),
-           ('Did Richmond condo prices fall?', f'The apartment benchmark price moved {pct(h["chg_1y"])} over one year and {pct(h["chg_3y"])} over three years, to {money(h["benchmark"])} in September 2026.'),
+           ('Did Richmond condo prices fall?', f'The apartment benchmark price moved {pct(h["chg_1y"])} over one year and {pct(h["chg_3y"])} over three years, to {money(h["benchmark"])} in October 2026.'),
            ('Where do I find the rules for buying a strata?', 'On the BC condo buying rules page. It covers the strata documents you are entitled to and what to read before you remove subjects.')]
     links = [('Richmond homes for sale', 'richmond-homes-for-sale'), ('Richmond houses for sale', 'richmond-houses-for-sale'), ('Richmond townhomes for sale', 'richmond-townhomes-for-sale'),
              ('Richmond neighbourhood guides', 'richmond-neighbourhood-guides'), ('Richmond market stats', 'richmond-real-estate-market-stats'), ('BC condo buying rules', 'bc-condo-buying-rules'),
@@ -625,7 +625,7 @@ def richmond_townhomes():
              'Check pet, rental and parking bylaws before you offer.',
              'Compare complexes inside the same neighbourhood, using the fee and year built.',
              'For a newer unit, ask what is left of the new-home warranty.'])]
-    faq = [('How much is a townhome in Richmond?', f'The median Richmond townhome sold for {money(mn["price"])} in McLennan North, {money(ham["price"])} in Hamilton and {money(ss["price"])} in Steveston South over the year to {LAST}. The townhouse benchmark was {money(h["benchmark"])} in September 2026.'),
+    faq = [('How much is a townhome in Richmond?', f'The median Richmond townhome sold for {money(mn["price"])} in McLennan North, {money(ham["price"])} in Hamilton and {money(ss["price"])} in Steveston South over the year to {LAST}. The townhouse benchmark was {money(h["benchmark"])} in October 2026.'),
            ('Where are most townhomes sold in Richmond?', f'McLennan North, with {mn["n"]} of {tot} sales, then Brighouse South with {bs["n"]} and West Cambie with {wc["n"]}.'),
            ('Which Richmond townhome area is the cheapest?', f'Hamilton and Granville sit lowest among the larger areas, at {money(ham["price"])} and {money(by["Granville"]["price"])}. Brighouse South is {money(bs["price"])}.'),
            ('What are strata fees for a Richmond townhome?', f'Median fees ranged from {money(fmin["maint"])} a month in {fmin["name"]} to {money(fmax["maint"])} in {fmax["name"]}, among the 12 busiest neighbourhoods.'),
@@ -654,7 +654,7 @@ def vancouver_houses():
                links_h='More Vancouver real estate')
     bl = [P('This search lists detached houses for sale across the city of Vancouver, on the West Side and the East Side. Condos and townhomes have their own searches, and the North Shore and Burnaby are not included.'),
           P(f'{tot:,} Vancouver houses closed in the year to {LAST}: {tw} in Vancouver West and {te} in Vancouver East. The sold records report Vancouver by neighbourhood, so you get a median per neighbourhood instead of one city number. '
-            f'The Home Price Index benchmark for a typical detached home was {money(hw["benchmark"])} in Vancouver West and {money(he["benchmark"])} in Vancouver East in September 2026.'),
+            f'The Home Price Index benchmark for a typical detached home was {money(hw["benchmark"])} in Vancouver West and {money(he["benchmark"])} in Vancouver East in October 2026.'),
           {'t': 'grid', 'gen': G},
           H('The West Side: Vancouver West neighbourhoods'),
           P(f'West Side houses start high. {shaw["name"]} had the highest median, {money(shaw["price"])}, and took {shaw["dom"]} days to sell. {mac["name"]} ({money(mac["price"])}), {ker["name"]} ({money(ker["price"])}) and {pg["name"]} ({money(pg["price"])}) all sit above $3,000,000. '
@@ -677,7 +677,7 @@ def vancouver_houses():
              'Ask whether a house is a character house with retention incentives.',
              'Add the detention tank to a redevelopment budget.',
              'Confirm tenant rules if the house is rented.'])]
-    faq = [('How much does a house cost in Vancouver?', f'It depends on the side. Vancouver West neighbourhoods like Dunbar ({money(dun["price"])}) and Kerrisdale ({money(ker["price"])}) are near $3,000,000, while Renfrew ({money(ren["price"])}) and Knight ({money(kn["price"])}) are on the East Side. The September 2026 benchmark was {money(hw["benchmark"])} West and {money(he["benchmark"])} East.'),
+    faq = [('How much does a house cost in Vancouver?', f'It depends on the side. Vancouver West neighbourhoods like Dunbar ({money(dun["price"])}) and Kerrisdale ({money(ker["price"])}) are near $3,000,000, while Renfrew ({money(ren["price"])}) and Knight ({money(kn["price"])}) are on the East Side. The October 2026 benchmark was {money(hw["benchmark"])} West and {money(he["benchmark"])} East.'),
            ('Which Vancouver neighbourhood has the most house sales?', f'{dun["name"]}, with {dun["n"]} sales, then {ren["name"]} with {ren["n"]} and {kit["name"]} with {kit["n"]}.'),
            ('Which Vancouver houses sell the fastest?', f'{gw["name"]} had a median of {gw["dom"]} days. Renfrew took {ren["dom"]} and Kitsilano {kit["dom"]}. Shaughnessy took {shaw["dom"]}.'),
            ('What is the R1-1 zone?', 'It is the zone that replaced nine RS zones on October 17, 2023, for about 65,000 lots. It allows a house with a suite or laneway house, a duplex, character retention and multiplexes.'),
@@ -725,11 +725,11 @@ def vancouver_condos():
           P('Yaletown is on the Canada Line at Yaletown-Roundhouse station, and the Yaletown Historic Area (HA-3) caps building height at 21.4 metres. Parts of False Creek North are exposed to flooding from sea-level rise, so ask what the strata has planned.'),
           P('Vancouver’s Empty Homes Tax is 3% of assessed value for a home that is neither occupied nor rented. The Tenant Relocation and Protection Policy applies citywide if a rented building is redeveloped. For the strata documents you should read before you buy, see the BC condo buying rules.'),
           P('If you want a new building rather than a resale, the presale condos and townhomes page lists the Vancouver projects. The downtown condo search is a narrower view of the peninsula.')]
-    faq = [('How much is a condo in Vancouver?', f'It varies by neighbourhood: {money(col["price"])} in Collingwood, {money(dt["price"])} Downtown, {money(we["price"])} in the West End and {money(yal["price"])} in Yaletown, over the year to {LAST}. The apartment benchmark was {money(hw["benchmark"])} West and {money(he["benchmark"])} East in September 2026.'),
+    faq = [('How much is a condo in Vancouver?', f'It varies by neighbourhood: {money(col["price"])} in Collingwood, {money(dt["price"])} Downtown, {money(we["price"])} in the West End and {money(yal["price"])} in Yaletown, over the year to {LAST}. The apartment benchmark was {money(hw["benchmark"])} West and {money(he["benchmark"])} East in October 2026.'),
            ('Where do most Vancouver condos sell?', f'Downtown ({dt["n"]} sales), Yaletown ({yal["n"]}), the West End ({we["n"]}), Kitsilano ({kit["n"]}) and Mount Pleasant East ({mp["n"]}).'),
            ('What are strata fees in Vancouver?', f'Median fees run from {money(col["maint"])} in Collingwood to {money(ch["maint"])} in Coal Harbour. Yaletown is {money(yal["maint"])} and Downtown {money(dt["maint"])}.'),
            ('Is Yaletown on the Canada Line?', 'Yes, Yaletown-Roundhouse station. The Yaletown Historic Area (HA-3) also caps building height at 21.4 metres.'),
-           ('Did Vancouver condo prices fall?', f'Over one year the apartment benchmark moved {pct(hw["chg_1y"])} in Vancouver West and {pct(he["chg_1y"])} in Vancouver East, to {money(hw["benchmark"])} and {money(he["benchmark"])} in September 2026.'),
+           ('Did Vancouver condo prices fall?', f'Over one year the apartment benchmark moved {pct(hw["chg_1y"])} in Vancouver West and {pct(he["chg_1y"])} in Vancouver East, to {money(hw["benchmark"])} and {money(he["benchmark"])} in October 2026.'),
            ('Does Vancouver have a tax on empty condos?', 'Yes. The Empty Homes Tax is 3% of assessed value for a home that is not occupied or rented.')]
     links = [('Vancouver homes for sale', 'vancouver-homes-for-sale'), ('Vancouver houses for sale', 'vancouver-houses-for-sale'), ('Vancouver townhomes for sale', 'vancouver-townhomes-for-sale'),
              ('Downtown Vancouver condos', 'downtown-vancouver-condos-for-sale'), ('Vancouver presale condos and townhomes', 'vancouver-presale-condos-and-townhomes'),

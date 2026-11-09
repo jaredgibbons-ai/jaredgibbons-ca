@@ -87,7 +87,7 @@ def school_blocks(c, suf):
     else: bl.append({'t': 'list', 'items': items, 'gen': GEN})
     return bl
 
-MKT = json.load(open(os.path.join(ROOT, 'src/data/market/2026-09.json'), encoding='utf-8'))
+MKT = json.load(open(os.path.join(ROOT, 'src/data/market/2026-10.json'), encoding='utf-8'))
 TYPEL = {'detached': 'Detached houses', 'townhouse': 'Townhomes', 'apartment': 'Apartments (condos)', 'composite': 'All home types'}
 # city -> (GVR HPI areas) or (FVREB HPI areas), FVREB summary name
 BOARD = {
@@ -132,17 +132,17 @@ def hpi_blocks(c, N, t):
     src_key = BOARD[c][0]; rows = hpi_rows(c, N, t)
     if not rows: return []
     boardname = 'Greater Vancouver REALTORS®' if src_key == 'gvr' else 'Fraser Valley Real Estate Board'
-    rel = 'released October 2, 2026' if src_key == 'gvr' else 'released October 5, 2026'
+    rel = 'released November 2, 2026' if src_key == 'gvr' else 'released November 3, 2026'
     tab = [[a if len(rows) > 1 else N, money(r['benchmark']), f'{r["index"]:.1f}'] + [sg(r.get(k)) for k in ('chg_1m', 'chg_3m', 'chg_6m', 'chg_1y', 'chg_3y', 'chg_5y', 'chg_10y')] for a, r in rows]
-    bl = [H(f'{N} {TYPEL[t].lower()}: benchmark price and changes, September 2026'),
-          {'t': 'table', 'caption': f'{N} {TYPEL[t].lower()}, MLS® Home Price Index, September 2026', 'head': ['Area', 'Benchmark price', 'Index', '1 month', '3 months', '6 months', '1 year', '3 years', '5 years', '10 years'], 'rows': tab,
-           'source': f'Source: {boardname}, MLS® Home Price Index, September 2026 ({rel}). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at {THRESH}% or more.', 'gen': GEN}]
+    bl = [H(f'{N} {TYPEL[t].lower()}: benchmark price and changes, October 2026'),
+          {'t': 'table', 'caption': f'{N} {TYPEL[t].lower()}, MLS® Home Price Index, October 2026', 'head': ['Area', 'Benchmark price', 'Index', '1 month', '3 months', '6 months', '1 year', '3 years', '5 years', '10 years'], 'rows': tab,
+           'source': f'Source: {boardname}, MLS® Home Price Index, October 2026 ({rel}). The benchmark is the board’s modelled price for a typical home of this type, not an average of sales. The index sets January 2005 at 100. Changes are as published; the text below calls a change a rise or fall only at {THRESH}% or more.', 'gen': GEN}]
     sents = []
     for a, r in rows:
         nm = N if len(rows) == 1 else a
         bits = [move('over the past year it', r.get('chg_1y')), move('over three months it', r.get('chg_3m')), move('over the last month it', r.get('chg_1m'))]
         longer = [move(f'over {y} years it', r.get(k)) for y, k in ((3, 'chg_3y'), (5, 'chg_5y'), (10, 'chg_10y')) if r.get(k) is not None]
-        sents.append(f'{nm}: the {TYPEL[t].lower()} benchmark was {money(r["benchmark"])} in September 2026. ' + '; '.join(x for x in bits if x).capitalize() + '. Longer term, ' + '; '.join(longer) + '.' if longer else f'{nm}: the {TYPEL[t].lower()} benchmark was {money(r["benchmark"])} in September 2026. ' + '; '.join(x for x in bits if x).capitalize() + '.')
+        sents.append(f'{nm}: the {TYPEL[t].lower()} benchmark was {money(r["benchmark"])} in October 2026. ' + '; '.join(x for x in bits if x).capitalize() + '. Longer term, ' + '; '.join(longer) + '.' if longer else f'{nm}: the {TYPEL[t].lower()} benchmark was {money(r["benchmark"])} in October 2026. ' + '; '.join(x for x in bits if x).capitalize() + '.')
     bl.append(P(' '.join(sents)))
     return bl
 
@@ -169,13 +169,13 @@ def summary_blocks(c, N, t):
     labs = (('Sales', 'sales'), ('New listings', 'new_listings'), ('Active listings', 'active'), ('Benchmark price', 'benchmark'), ('Median sale price', 'median'), ('Average sale price', 'average'))
     trs = [[lab, fm(m)(sm[m]['now']), fm(m)(sm[m]['last_month']), fm(m)(sm[m]['last_year'])] for lab, m in labs if m in sm and sm[m].get('now') is not None]
     sa, na = sm['sales'], sm['active']
-    txt = f'In September 2026 {N} had {sa["now"]} {TYPEL[t].lower()} sales and {na["now"]} active listings ({sa["last_month"]} sales and {na["last_month"]} active in August; {sa["last_year"]} and {na["last_year"]} in September 2025).'
+    txt = f'In October 2026 {N} had {sa["now"]} {TYPEL[t].lower()} sales and {na["now"]} active listings ({sa["last_month"]} sales and {na["last_month"]} active in September; {sa["last_year"]} and {na["last_year"]} in October 2025).'
     cs = move('Sales', sa['chg_year']) if min(sa['now'], sa['last_year']) >= MIN_N else None
     ca = move('Active listings', na['chg_year']) if min(na['now'], na['last_year']) >= MIN_N else None
-    txt += ' ' + (cs + ' against September 2025. ' if cs else f'Sales were too few ({sa["now"]} now, {sa["last_year"]} a year earlier) to call a year-over-year trend. ') + (ca + ' against September 2025.' if ca else '')
-    return [H(f'{N} {TYPEL[t].lower()}: sales, listings and prices, September 2026'),
-            {'t': 'table', 'caption': f'{N} {TYPEL[t].lower()}, September 2026 with August 2026 and September 2025', 'head': ['Measure', 'September 2026', 'August 2026', 'September 2025'], 'rows': trs,
-             'source': 'Source: Fraser Valley Real Estate Board MLS® statistics package, September 2026 (released October 5, 2026). Median is the middle sale price of the month and average is the total of sale prices divided by sales; both swing when few homes sell, so a month with fewer than 3 sales is not read as a trend.', 'gen': GEN},
+    txt += ' ' + (cs + ' against October 2025. ' if cs else f'Sales were too few ({sa["now"]} now, {sa["last_year"]} a year earlier) to call a year-over-year trend. ') + (ca + ' against October 2025.' if ca else '')
+    return [H(f'{N} {TYPEL[t].lower()}: sales, listings and prices, October 2026'),
+            {'t': 'table', 'caption': f'{N} {TYPEL[t].lower()}, October 2026 with October 2026 and October 2025', 'head': ['Measure', 'October 2026', 'October 2026', 'October 2025'], 'rows': trs,
+             'source': 'Source: Fraser Valley Real Estate Board MLS® statistics package, October 2026 (released November 3, 2026). Median is the middle sale price of the month and average is the total of sale prices divided by sales; both swing when few homes sell, so a month with fewer than 3 sales is not read as a trend.', 'gen': GEN},
             P(txt.strip())]
 
 
@@ -262,14 +262,14 @@ def main():
         noun = {'acreages': 'acreages', 'lots-land': 'lots and land', '55-plus': '55+ homes', 'mobile': 'mobile homes', 'attached': T}[kind]
         ft = 'apartment' if T == 'condos' else 'townhouse'
         bm = lambda t: (hpi_rows(c, N, t) or [(None, None)])[0][1]
-        notice = {'t': 'notice', 'text': ('Draft for Jared\'s approval. Built from the boards\' September 2026 statistics and the monthly SnapStats figures. No live feed filtered to this home type, and no sold-price data for 55+ homes because the sold export has no age-restriction field.' if kind == '55-plus' else 'Draft for Jared\'s approval. Built from the boards\' September 2026 statistics, the monthly SnapStats figures and Jared\'s MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.'), 'gen': GEN}
+        notice = {'t': 'notice', 'text': ('Draft for Jared\'s approval. Built from the boards\' October 2026 statistics and the monthly SnapStats figures. No live feed filtered to this home type, and no sold-price data for 55+ homes because the sold export has no age-restriction field.' if kind == '55-plus' else 'Draft for Jared\'s approval. Built from the boards\' October 2026 statistics, the monthly SnapStats figures and Jared\'s MLS® closed sales (Nov 2025 to Oct 2026). No live feed filtered to this home type yet.'), 'gen': GEN}
         faq = []
         sn = lambda t, f: f(months, ak, N, t, *( [last, mn, yr, cslug] if f is snap_comm else [keys])) if ak else []
         if kind == 'attached':
             r = bm(ft)
-            intro = f'{N} {T} for sale: {w} in strata buildings. The {BN(c)} benchmark for {TYPEL[ft].lower()} in {N} was {money(r["benchmark"])} in September 2026 ({sg(r["chg_1y"])} over a year). Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees.' if r else INTRO['attached'].format(N=N, T=T, w=w)
+            intro = f'{N} {T} for sale: {w} in strata buildings. The {BN(c)} benchmark for {TYPEL[ft].lower()} in {N} was {money(r["benchmark"])} in October 2026 ({sg(r["chg_1y"])} over a year). Before you offer, read the strata documents: the depreciation report, meeting minutes, bylaws and fees.' if r else INTRO['attached'].format(N=N, T=T, w=w)
             body = hpi_blocks(c, N, ft) + summary_blocks(c, N, ft) + (gap_blocks(c, N, ft) if T == 'townhomes' else []) + (sn('condo_townhome', snap_comm) if T == 'condos' else [])
-            if r: faq.append({'q': f'What is the benchmark price of a {T[:-1] if T == "townhomes" else "condo"} in {N}?', 'a': f'The {BN(c)} MLS® Home Price Index benchmark for {TYPEL[ft].lower()} in {N}{"" if len(hpi_rows(c, N, ft)) == 1 else " (" + hpi_rows(c, N, ft)[0][0] + ")"} was {money(r["benchmark"])} in September 2026, a modelled price for a typical home and not an average of sales.'})
+            if r: faq.append({'q': f'What is the benchmark price of a {T[:-1] if T == "townhomes" else "condo"} in {N}?', 'a': f'The {BN(c)} MLS® Home Price Index benchmark for {TYPEL[ft].lower()} in {N}{"" if len(hpi_rows(c, N, ft)) == 1 else " (" + hpi_rows(c, N, ft)[0][0] + ")"} was {money(r["benchmark"])} in October 2026, a modelled price for a typical home and not an average of sales.'})
             if r: faq.append({'q': f'Did {T[:-1] if T == "townhomes" else "condo"} prices fall in {N}?', 'a': (move('Over the past year the benchmark', r['chg_1y']) or '') + '. ' + (move('Over three months it', r['chg_3m']) or '') + '. A change under 1.5% is not described as a rise or fall.'})
         elif kind == '55-plus':
             ra, rt_ = bm('apartment'), bm('townhouse')
@@ -277,11 +277,11 @@ def main():
             body = sn('condo_townhome', snap_months)
         elif kind == 'acreages':
             r = bm('detached')
-            intro = f'{N} acreages for sale: houses and land on lots of one acre or more. The {BN(c)} benchmark for a detached house in {N} was {money(r["benchmark"])} in September 2026. Jared sets up a search for the size, area and use you want, and checks whether the land is in the ALR before you offer.' if r else INTRO['acreages'].format(N=N)
+            intro = f'{N} acreages for sale: houses and land on lots of one acre or more. The {BN(c)} benchmark for a detached house in {N} was {money(r["benchmark"])} in October 2026. Jared sets up a search for the size, area and use you want, and checks whether the land is in the ALR before you offer.' if r else INTRO['acreages'].format(N=N)
             body = hpi_blocks(c, N, 'detached') + summary_blocks(c, N, 'detached') + gap_blocks(c, N, 'detached') + sn('detached', snap_comm)
         elif kind == 'lots-land':
             r = bm('composite')
-            intro = f'{N} lots and land for sale: vacant land and building lots on the MLS®. Zoning decides what can be built, so check the zone and the City’s plans for the exact lot before you offer. Across all home types the {BN(c)} benchmark in {N} was {money(r["benchmark"])} in September 2026.' if r else INTRO['lots-land'].format(N=N)
+            intro = f'{N} lots and land for sale: vacant land and building lots on the MLS®. Zoning decides what can be built, so check the zone and the City’s plans for the exact lot before you offer. Across all home types the {BN(c)} benchmark in {N} was {money(r["benchmark"])} in October 2026.' if r else INTRO['lots-land'].format(N=N)
             body = hpi_blocks(c, N, 'composite') + sn('detached', snap_months)
         else:
             intro = INTRO['mobile'].format(N=N)

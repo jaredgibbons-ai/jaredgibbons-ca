@@ -88,7 +88,7 @@ def nv_condos():
     top10 = rows[:10]; fmin, fmax = min(top10, key=lambda r: r['maint']), max(top10, key=lambda r: r['maint'])
     seo = dict(title='North Vancouver Condos for Sale | Prices by Area', h1='North Vancouver Condos for Sale', crumb='North Vancouver condos', links_h='More North Vancouver real estate',
                description=fit('Search North Vancouver condos for sale. See what Lower Lonsdale, Central Lonsdale and Lynn Valley condos sold for, plus strata fees and the benchmark price.'))
-    bl = [{'t': 'notice', 'text': 'Draft for Jared’s approval. Sold figures are Paragon closed sales to October 22, 2026 and the benchmark is the Greater Vancouver REALTORS® price for September 2026. The live search is connected.', 'gen': G},
+    bl = [{'t': 'notice', 'text': 'Draft for Jared’s approval. Sold figures are Paragon closed sales to October 22, 2026 and the benchmark is the Greater Vancouver REALTORS® price for October 2026. The live search is connected.', 'gen': G},
           P('This search lists condos for sale in North Vancouver: apartment-style homes in strata buildings, from the Lonsdale corridor to Lynn Valley, Lynnmour and Roche Point. Townhomes and houses are separate searches. '
             'North Vancouver is two municipalities, the City and the District, and the MLS® neighbourhoods below cross both.'),
           P(f'{tot:,} North Vancouver condos closed in the year to {LAST}, in {len(rows)} neighbourhoods with 5 or more sales. {ll["name"]} led with {ll["n"]} ({100 * ll["n"] / tot:.0f}% of the total) at a median of {money(ll["price"])}, '
@@ -103,7 +103,7 @@ def nv_condos():
           qcounts('North Vancouver condos sold, by period', qs),
           P(f'Sales ran {qs[0]} in November to January, {qs[1]} in February to April and {qs[2]} in May to July. The latest period, to {LAST}, shows {qs[3]} and is not a full quarter.'),
           hpi_table('Apartment benchmark price in North Vancouver', [('North Vancouver', h)], 'gvr', SRC_GVR),
-          P(f'The apartment benchmark was {money(h["benchmark"])} in September 2026, which moved {pct(h["chg_1y"])} over one year and {pct(h["chg_3y"])} over three years.')]
+          P(f'The apartment benchmark was {money(h["benchmark"])} in October 2026, which moved {pct(h["chg_1y"])} over one year and {pct(h["chg_3y"])} over three years.')]
     if len(allc) >= 3: bl += [H('Buildings that sold most'), btab, P('A building appears with 5 or more sales, because one or two sales is not a price.')]
     bl += [H('Buying a North Vancouver condo'),
            P(f'Check the building before the unit. The older buildings in the sold records, such as {pb["name"]} (median built {pb["yb"]}), raise different questions from the newer ones in {lv["name"]} and {ly["name"]}.'),
@@ -111,11 +111,11 @@ def nv_condos():
               f'Check what the monthly fee includes. The ten busiest neighbourhoods ran from {money(fmin["maint"])} to {money(fmax["maint"])} a month.',
               'For a building from before 2000, ask whether the building envelope has been repaired and what the engineer’s report said.',
               'Check rental and pet bylaws before you offer, and whether the building limits short-term rentals.'])]
-    faq = [('How much is a condo in North Vancouver?', f'Over the year to {LAST}, the median North Vancouver condo sold for {money(ll["price"])} in Lower Lonsdale, {money(cl["price"])} in Central Lonsdale and {money(lv["price"])} in Lynn Valley. The apartment benchmark was {money(h["benchmark"])} in September 2026.'),
+    faq = [('How much is a condo in North Vancouver?', f'Over the year to {LAST}, the median North Vancouver condo sold for {money(ll["price"])} in Lower Lonsdale, {money(cl["price"])} in Central Lonsdale and {money(lv["price"])} in Lynn Valley. The apartment benchmark was {money(h["benchmark"])} in October 2026.'),
            ('Where do most North Vancouver condos sell?', f'Lower Lonsdale, with {ll["n"]} of {tot:,} sales, then Central Lonsdale with {cl["n"]} and Lynn Valley with {lv["n"]}.'),
            ('What are strata fees for a North Vancouver condo?', f'Median monthly fees by neighbourhood ran from {money(fmin["maint"])} in {fmin["name"]} to {money(fmax["maint"])} in {fmax["name"]} among the ten busiest. The building decides, so check the fee in the listing.'),
            ('Which North Vancouver condo neighbourhoods are newest?', f'Among the busier neighbourhoods, {ly["name"]} (median built {ly["yb"]}) and {lv["name"]} ({lv["yb"]}) have the newest condos, and {pb["name"]} ({pb["yb"]}) the oldest.'),
-           ('Did North Vancouver condo prices fall?', f'The apartment benchmark price moved {pct(h["chg_1y"])} over one year and {pct(h["chg_3y"])} over three years, to {money(h["benchmark"])} in September 2026.')]
+           ('Did North Vancouver condo prices fall?', f'The apartment benchmark price moved {pct(h["chg_1y"])} over one year and {pct(h["chg_3y"])} over three years, to {money(h["benchmark"])} in October 2026.')]
     links = [('North Vancouver homes for sale', 'north-vancouver-homes-for-sale'), ('New construction in North Vancouver', 'new-construction-north-vancouver'), ('North Vancouver market stats', 'north-vancouver-real-estate-market-stats'),
              ('Schools in North Vancouver', 'schools-in-north-vancouver-bc'), ('BC condo buying rules', 'bc-condo-buying-rules'), ('Vancouver condos for sale', 'vancouver-condos-for-sale'), ('Burnaby condos for sale', 'burnaby-condos-for-sale'),
              ('West Vancouver homes for sale', 'west-vancouver-homes-for-sale'), ('First-time home buyer program', 'first-time-home-buyer-program'), ('Mortgage calculator for BC', 'mortgage-calculator')]

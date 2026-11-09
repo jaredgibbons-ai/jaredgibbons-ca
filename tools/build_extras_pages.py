@@ -364,7 +364,7 @@ def suite_page(ck):
     bl += [P(t) for t in c['rules']]
     if hp:
         e = hp[0][1]
-        bl.append(P(f'The MLS® Home Price Index benchmark for a detached house in {hp[0][0]} was {money(e["benchmark"])} in September 2026, {abs(e["chg_1y"]):.1f}% {"down" if e["chg_1y"] < 0 else "up"} over twelve months.' + (f' In {hp[1][0]} it was {money(hp[1][1]["benchmark"])}.' if len(hp) > 1 else '') + ' The benchmark is the price of a typical house, not a median of sales.'))
+        bl.append(P(f'The MLS® Home Price Index benchmark for a detached house in {hp[0][0]} was {money(e["benchmark"])} in October 2026, {abs(e["chg_1y"]):.1f}% {"down" if e["chg_1y"] < 0 else "up"} over twelve months.' + (f' In {hp[1][0]} it was {money(hp[1][1]["benchmark"])}.' if len(hp) > 1 else '') + ' The benchmark is the price of a typical house, not a median of sales.'))
     if c['costs']: bl += [H(f'Costs of a {nm} house with a suite'), P(c['costs'])]
     sz = SIZE.get(ck)
     if sz and sz[1] and le.get('sqft'):
@@ -435,7 +435,7 @@ def pent_blocks(ck, existing=False):
                tbl(f'{nm} buildings with 3 or more penthouse sales', ['Building', 'Neighbourhood', 'Penthouse sales', 'Median price', 'Year built', 'Strata fee a month'], br, SRC + ' A building is named here with 3 or more penthouse sales and priced with 5 or more.')]
     if c['hpi']:
         hp = [(b, hpi(src, b, 'apartment')) for src, b in c['hpi']]; e = hp[0][1]
-        bl.append(P(f'The MLS® Home Price Index benchmark for an apartment in {hp[0][0]} was {money(e["benchmark"])} in September 2026, {abs(e["chg_1y"]):.1f}% {"down" if e["chg_1y"] < 0 else "up"} over twelve months.' + (f' In {hp[1][0]} it was {money(hp[1][1]["benchmark"])}.' if len(hp) > 1 else '') + ' The benchmark is the price of a typical apartment, not a median of sales.'))
+        bl.append(P(f'The MLS® Home Price Index benchmark for an apartment in {hp[0][0]} was {money(e["benchmark"])} in October 2026, {abs(e["chg_1y"]):.1f}% {"down" if e["chg_1y"] < 0 else "up"} over twelve months.' + (f' In {hp[1][0]} it was {money(hp[1][1]["benchmark"])}.' if len(hp) > 1 else '') + ' The benchmark is the price of a typical apartment, not a median of sales.'))
     if pe.get('bands') and co.get('bands'):
         k = 3 if len(pe['bands']) == 6 else 3
         pm = round(100 * sum(pe['bands'][k:]) / pe['n']); cm = round(100 * sum(co['bands'][k:]) / co['n'])

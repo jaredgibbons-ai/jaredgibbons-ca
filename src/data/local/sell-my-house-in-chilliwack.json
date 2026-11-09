@@ -1,7 +1,7 @@
 {
   "status": "draft",
   "slug": "sell-my-house-in-chilliwack",
-  "updated": "2026-11-01",
+  "updated": "2026-11-09",
   "new_page": {
     "title": "Sell My House in Chilliwack, BC | Jared Gibbons REALTOR®",
     "description": "Selling in Chilliwack? See what the 2024 rules let a buyer build, how floodplain and suite rules affect your price, the Airbnb rules, and get a free home evaluation from Jared Gibbons.",
@@ -25,7 +25,7 @@
   "blocks": [
     {
       "t": "notice",
-      "text": "Draft for Jared's approval. Written from the City of Chilliwack's SSMUH page, its 2019 secondary suites guide, Short-Term Rental Bylaw 2021, No. 5141 (via Muse's verified file) and the Province's short-term rental page (as of November 1, 2026). There is no benchmark price table because Chilliwack is reported by a different real estate board whose statistics I do not yet have. Nothing here states a commission, fee or marketing package; those are for Jared to supply."
+      "text": "Draft for Jared's approval. Written from the City of Chilliwack's SSMUH page, its 2019 secondary suites guide, Short-Term Rental Bylaw 2021, No. 5141 (via Muse's verified file) and the Province's short-term rental page (as of November 1, 2026). The market table is from the Chilliwack and District board’s October 2026 detailed sheet; the board publishes no benchmark prices and no sub-area figures. Nothing here states a commission, fee or marketing package; those are for Jared to supply."
     },
     {
       "t": "p",
@@ -34,6 +34,130 @@
     {
       "t": "p",
       "text": "This page covers the unit rules Chilliwack set in 2024, suites and coach houses, short-term rentals and what I need to price your home."
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Chilliwack market, October 2026",
+      "gen": "cadreb"
+    },
+    {
+      "t": "p",
+      "text": "The Chilliwack and District Real Estate Board recorded 126 residential sales in October 2026, down 29.2% from 178 a year earlier. Detached sales were 67 against 83, townhouse sales 29 against 51 and apartment sales 21 against 29.",
+      "gen": "cadreb"
+    },
+    {
+      "t": "p",
+      "text": "Sellers had 1,332 residential listings on the board at month end, up 5.1% on October 2025, with 361 new listings in the month (371 a year ago). Against 126 sales that is about 9.5 sales for every 100 listings. A detached house took 44 days to sell on average, a townhouse 31 and an apartment 64.",
+      "gen": "cadreb"
+    },
+    {
+      "t": "table",
+      "caption": "Chilliwack and District board, residential sales by home type, October 2026 against October 2025",
+      "head": [
+        "Home type",
+        "Sales, Oct 2026",
+        "Sales, Oct 2025",
+        "Average sale price, Oct 2026",
+        "Average sale price, Oct 2025",
+        "Days to sell, Oct 2026",
+        "Listings at month end, Oct 2026"
+      ],
+      "rows": [
+        [
+          "Single family (detached)",
+          "67",
+          "83",
+          "$910,654",
+          "$896,689",
+          "44",
+          "697"
+        ],
+        [
+          "Townhouses (attached)",
+          "29",
+          "51",
+          "$557,400",
+          "$586,304",
+          "31",
+          "249"
+        ],
+        [
+          "Apartments",
+          "21",
+          "29",
+          "$340,529",
+          "$449,033",
+          "64",
+          "219"
+        ],
+        [
+          "Mobile homes",
+          "2",
+          "8",
+          "$202,000",
+          "$256,462",
+          "19",
+          "70"
+        ],
+        [
+          "House and acreage",
+          "7",
+          "7",
+          "$2,126,429",
+          "$1,747,500",
+          "25",
+          "88"
+        ],
+        [
+          "All residential",
+          "126",
+          "178",
+          "$790,623",
+          "$739,510",
+          "",
+          "1,332"
+        ]
+      ],
+      "source": "Source: Chilliwack & District Real Estate Board, MLS® detailed sheet, October 2026. Average sale price is the dollar value of units sold divided by units sold, so it moves with the mix of homes that sold; the board does not publish a benchmark price. A type with fewer than 10 sales in the month (mobile homes, house and acreage) is not read as a trend. All residential also counts the board’s multi-family (plex) category: no sales, 1 new listing and 9 listings at month end.",
+      "gen": "cadreb"
+    },
+    {
+      "t": "p",
+      "text": "By price, the busiest band in October was $550,000 to $599,999 with 11 sales. 32 of the 126 residential sales were under $500,000, 38 were from $500,000 to $749,999, 29 from $750,000 to $999,999 and 27 at $1,000,000 or more.",
+      "gen": "cadreb"
+    },
+    {
+      "t": "table",
+      "caption": "Chilliwack and District board, residential sales by price band, October 2026",
+      "head": [
+        "Sale price",
+        "Sales"
+      ],
+      "rows": [
+        [
+          "Under $500,000",
+          "32"
+        ],
+        [
+          "$500,000 to $749,999",
+          "38"
+        ],
+        [
+          "$750,000 to $999,999",
+          "29"
+        ],
+        [
+          "$1,000,000 to $1,499,999",
+          "19"
+        ],
+        [
+          "$1,500,000 and over",
+          "8"
+        ]
+      ],
+      "source": "Source: Chilliwack & District Real Estate Board, MLS® detailed sheet, October 2026. All residential sales, grouped here from the board’s $50,000 and $100,000 bands. The board covers Chilliwack, Agassiz-Harrison, Hope and Cultus Lake, not the City of Chilliwack alone.",
+      "gen": "cadreb"
     },
     {
       "t": "h",
@@ -221,12 +345,23 @@
       "a": "Yes within limits. Bylaw 5141 allows stays of 28 consecutive days or less in up to three sleeping units for up to eight guests, on the same lot as the owner's principal residence, with a business licence number on every advertisement. The Province also requires registration."
     },
     {
-      "q": "Why is there no price table on this page?",
-      "a": "Chilliwack is reported by a different real estate board from Surrey and Vancouver. I add its benchmark prices when I have that board's monthly statistics."
+      "q": "How is the Chilliwack housing market doing right now?",
+      "a": "In October 2026 the Chilliwack and District board recorded 126 residential sales against 178 a year earlier and 1,332 listings at month end. Detached homes took 44 days to sell on average, townhouses 31 and apartments 64."
+    },
+    {
+      "q": "How is the Chilliwack housing market doing right now?",
+      "a": "In October 2026 the Chilliwack and District board recorded 126 residential sales against 178 a year earlier and 1,332 listings at month end. Detached homes took 44 days to sell on average, townhouses 31 and apartments 64."
+    },
+    {
+      "q": "How is the Chilliwack housing market doing right now?",
+      "a": "In October 2026 the Chilliwack and District board recorded 126 residential sales against 178 a year earlier and 1,332 listings at month end. Detached homes took 44 days to sell on average, townhouses 31 and apartments 64."
+    },
+    {
+      "q": "Does Chilliwack have a benchmark price like Surrey or Vancouver?",
+      "a": "Not from its board. The Chilliwack and District board publishes sales, listings, days to sell and the dollar value sold by home type, so this page shows average sale prices, which move with the mix of homes that sold. Jared can pull recent sales near your address for a closer number."
     }
   ],
   "needs_from_muse": [
-    "Chilliwack and District real estate board monthly statistics (benchmark HPI by home type) so the market section can be generated",
     "Chilliwack Bylaw 5395 adoption date; rule for lots of 280 m2 or less; parking, coach house and garden suite rules after 2024; floodplain and ALR rules from the City's current pages",
     "Whether Short-Term Rental Bylaw 5141 has been amended since 2021",
     "Sold-price medians, days on market and sale-to-list ratio for Chilliwack, last 12 months (Paragon)",

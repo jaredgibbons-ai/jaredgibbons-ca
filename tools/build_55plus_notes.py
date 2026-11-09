@@ -668,7 +668,7 @@ def build_city(path, key):
     j['blocks'][at:at] = bl
     for b in j['blocks']:
         if b.get('t') == 'notice' and b.get('gen') == 'gappage' and 'verified local notes' not in b['text']:
-            b['text'] = b['text'].replace('Built from the boards\' September 2026 statistics and the monthly SnapStats figures.', 'Built from Jared\'s verified local notes (researched November 1, 2026), the boards\' September 2026 statistics and the monthly SnapStats figures.')
+            b['text'] = b['text'].replace('Built from the boards\' October 2026 statistics and the monthly SnapStats figures.', 'Built from Jared\'s verified local notes (researched November 1, 2026), the boards\' October 2026 statistics and the monthly SnapStats figures.')
     have = {f['q'] for f in j.get('faq', []) if f.get('gen') != GC}
     j['faq'] = [f for f in j.get('faq', []) if f.get('gen') != GC] + [f for f in faq if f['q'] not in have]
     npg = j.get('new_page') or {}

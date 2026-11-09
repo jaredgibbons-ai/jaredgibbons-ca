@@ -4,7 +4,7 @@ Every sentence is computed from the month's numbers, so each page is different a
 (slug <city>-real-estate-market-stats) and a link block (gen 'marketlink') is added to each city's hub pages.
     python3 -I tools/build_market_pages.py [--month 2026-09]
 """
-import argparse, glob, json, os, sys
+import argparse, glob, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import apply_market as AM
 
@@ -102,7 +102,52 @@ def area_blocks(data, month, board, area, label, summ_key, when):
             tot = sum(int(r[1]) for r in r2)
             out.append({'t': 'p', 'text': f'The board counted {tot} detached, townhouse and apartment sales in {label} in {when}, against active listings of ' + ', '.join(f'{r[2]} {r[0].lower()}' for r in r2) + ' at month end.'})
             out.append({'t': 'table', 'caption': f'{label} MLS® sales activity, {when}', 'head': ['Home type', 'Sales', 'Active listings', 'Median sale price', 'Sales vs a year ago'], 'rows': r2, 'source': 'Source: ' + src + '.'})
+            ly = f'{when.split()[0]} {int(when.split()[1]) - 1}'; sd, ad, rd = [], [], []
+            for k, lab, nm in TY[1:]:
+                x = summ.get(k, {})
+                if 'sales' in x and 'active' in x and x['active']['now']:
+                    sy = x['sales']['last_year']; ay = round(x['active']['now'] / (1 + x['active']['chg_year'] / 100))
+                    sd.append(f'{x["sales"]["now"]} {nm.lower()} sales ({sy} a year earlier)'); ad.append(f'{x["active"]["now"]:,} {nm.lower()} (about {ay:,} a year earlier)'); rd.append(f'{x["sales"]["now"] / x["active"]["now"] * 100:.1f}% for {nm.lower()}')
+            if sd:
+                out.append({'t': 'p', 'text': f'Set against {ly}, {label} had ' + ', '.join(sd[:-1]) + (' and ' if len(sd) > 1 else '') + sd[-1] + '. Month-end active listings were ' + ', '.join(ad[:-1]) + (' and ' if len(ad) > 1 else '') + ad[-1] + '. Dividing sales by active listings gives a sales-to-active ratio of ' + ', '.join(rd[:-1]) + (' and ' if len(rd) > 1 else '') + rd[-1] + '.'})
     return out
+
+
+def dollars(data, board, area, label, y, m, when):
+    """The year's move in dollars, worked back from the published one-year change (rounded to the nearest $100), so the figures differ for every area."""
+    h = (data['gvr'] if board == 'gvr' else data['fvreb'])['hpi'][area]; ly = f'{AM.MONTHS[int(m) - 1]} {int(y) - 1}'
+    def one(k):
+        b = h[k]['benchmark']; was = round(b / (1 + h[k]['chg_1y'] / 100), -2); d = b - was
+        return was, b, d
+    w, b, d = one('composite')
+    parts = []
+    for k, nm in (('detached', 'detached homes'), ('townhouse', 'townhouses'), ('apartment', 'apartments')):
+        if k in h and h[k].get('benchmark'):
+            w2, b2, d2 = one(k); parts.append(f'{nm} {"gained" if d2 > 0 else "lost"} about {money(abs(d2))}, from {money(w2)} to {money(b2)}')
+    c = h['composite']; w6 = round(c['benchmark'] / (1 + c['chg_6m'] / 100), -2); w3 = round(c['benchmark'] / (1 + c['chg_3y'] / 100), -2)
+    far = f' Further back, the benchmark was near {money(w6)} six months ago and near {money(w3)} three years ago, so today\'s figure sits about {money(abs(c["benchmark"] - w6))} {"above" if c["benchmark"] > w6 else "below"} the six-month mark and about {money(abs(c["benchmark"] - w3))} {"above" if c["benchmark"] > w3 else "below"} the three-year mark.'
+    rn, rh = regional(data, board); rc = rh['composite']; rw = round(rc['benchmark'] / (1 + rc['chg_1y'] / 100), -2)
+    gap, gap0 = c['benchmark'] - rc['benchmark'], w - rw
+    far += f' Against {rn}, the {label} benchmark is about {money(abs(gap))} {"above" if gap > 0 else "below"} the regional {money(rc["benchmark"])}; a year earlier the difference was about {money(abs(gap0))} {"above" if gap0 > 0 else "below"}.'
+    return (f'In dollars, the typical {label} home is worth about {money(abs(d))} {"more" if d > 0 else "less"} than in {ly}, when the benchmark was near {money(w)}. By type, ' + ', '.join(parts[:-1]) + (', and ' if len(parts) > 1 else '') + parts[-1] + ' over those twelve months.' + far) if parts else ''
+
+
+MONTH_YEAR = re.compile(r'(?:January|February|March|April|May|June|July|August|September|October|November|December) 20\d\d')
+
+
+def keep_extras(path, d, when):
+    """A page rebuilt each month must keep what other tools added to it: the lead-form flag and other top-level keys, the SEO-trimmed title style, generic FAQs
+    and the blocks appended at the end (related links, neighbourhood hubs, launch links, notes moved to a single page). Month names in their link labels move with the data."""
+    if not os.path.exists(path): return
+    old = json.load(open(path, encoding='utf-8'))
+    for k, v in old.items():
+        if k not in d: d[k] = v
+    t = old.get('new_page', {}).get('title', '')
+    if MONTH_YEAR.search(t): d['new_page']['title'] = MONTH_YEAR.sub(when, t)
+    have = {q['q'] for q in d['faq']}
+    d['faq'] += [q for q in old.get('faq', []) if q.get('gen') and q['q'] not in have]
+    for b in old['blocks']:
+        if b.get('pos'): d['blocks'].append(json.loads(re.sub(r'(Real Estate Market Stats, )' + MONTH_YEAR.pattern, r'\g<1>' + when, json.dumps(b, ensure_ascii=False))))
 
 
 def main():
@@ -130,6 +175,7 @@ def main():
                 blocks += [{'t': 'h', 'level': 2, 'text': f'{label} at a glance, {when}'}, {'t': 'p', 'text': f'{label} had an all-home benchmark of {money(cc["benchmark"])} ({mv(cc["chg_1y"])} over the year), with detached at {money(hp_["detached"]["benchmark"])}, townhouses at {money(hp_["townhouse"]["benchmark"]) if "townhouse" in hp_ else "n/a"} and apartments at {money(hp_["apartment"]["benchmark"])}.'}, {'t': 'p', 'text': f'{label} market stats in full', 'h': f'/{SUMMARY_LINK[label]}.html'}]
             else:
                 blocks += area_blocks(data, month, board, area, label, sk, when)
+                blocks.append({'t': 'p', 'text': dollars(data, board, area, label, y, m, when)})  # not on the 'at a glance' summaries a hub page repeats from its area pages
         if len(areas) > 1:
             names = ' and '.join([', '.join(x[2] for x in areas[:-1]), areas[-1][2]]) if len(areas) > 2 else f'{areas[0][2]} and {areas[1][2]}'
             hp = [(x[2], (data['gvr'] if x[0] == 'gvr' else data['fvreb'])['hpi'][x[1]]['composite']) for x in areas]
@@ -160,6 +206,7 @@ def main():
         d = {'status': 'generated', 'slug': page, 'updated': UPDATED, 'new_page': {'title': title, 'description': desc, 'h1': f'{disp} Real Estate Market Stats, {when}'},
              'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': f'{disp} market stats', 'href': f'/{page}.html'}],
              'faq_heading': f'{disp} market stats: your questions answered', 'blocks': blocks, 'faq': faq}
+        keep_extras(os.path.join(ROOT, f'src/data/local/{page}.json'), d, when)
         save(os.path.join(ROOT, f'src/data/local/{page}.json'), d); n += 1
         for h in hubs:
             if not os.path.exists(os.path.join(ROOT, f'src/data/pages/{h}.json')): continue
