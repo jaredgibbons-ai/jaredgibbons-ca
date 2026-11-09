@@ -1,4 +1,5 @@
 ---
+import { isPreview } from '../lib/preview';
 // "Drive time to your work": the visitor types an address and gets an estimated drive time to the middle of this neighbourhood.
 // Runs in the visitor's browser with Google's Routes library (Maps JavaScript API, our restricted key). We do not receive, send on, or store the address.
 // Loads Google only when the visitor clicks into the address field. The destination is the centre of the area's outline (src/data/maps/<region>.json).
@@ -16,7 +17,10 @@ const area = region.areas.find((a: any) => a.id === current.split(',')[0]);
 if (!area) throw new Error(`CommuteTime ${slug}: no area ${current}`);
 const c = centroid(area.rings);
 const key = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY || '';
+// Without the key the launch build leaves the tool out rather than showing a disabled form.
+const show = !!key || isPreview;
 ---
+{show && (
 <form class="commute" id="commute" novalidate onsubmit="return false" data-key={key} data-lat={c[0]} data-lng={c[1]} data-name={area.name}>
   <h2 class="commute__h">Drive time from {area.name}</h2>
   {key
@@ -35,6 +39,7 @@ const key = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY || '';
   <div class="commute__out" id="commute-out" aria-live="polite" aria-atomic="true"></div>
   <p class="commute__fine">The time is to the middle of the neighbourhood, not to a specific home. Traffic varies by day and incidents. Directions and traffic data from Google Maps.</p>
 </form>
+)}
 <script>
   import { loadGoogle } from '../lib/gmaps.js';
   import { attachAddressAutocomplete } from '../lib/address-autocomplete.js';

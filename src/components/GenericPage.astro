@@ -176,6 +176,18 @@ if (page.slug === 'subscribe-to-our-newsletter') {
   if (at >= 0) page.blocks.splice(at, page.blocks.length - at, { t: 'newsletter' });
 }
 
+// Testimonials page: the archive captured a review form's labels and a star list that nothing can receive. Reviews are left on Google, so the section becomes one button.
+if (page.slug === 'testimonials') {
+  const at = page.blocks.findIndex((b: any) => b.t === 'h' && /^Leave a review$/i.test(b.text || ''));
+  if (at >= 0) {
+    let end = at + 1;
+    while (end < page.blocks.length && page.blocks[end].t !== 'h' && page.blocks[end].t !== 'reviews') end++;
+    page.blocks.splice(at, end - at,
+      { t: 'p', parts: [{ t: 'Reviews are posted on Google, where anyone can read them. It takes a minute: pick your star rating, add a few lines about working with me and press Post.' }] },
+      { t: 'btnlink', label: 'Leave a Google review', href: 'https://maps.app.goo.gl/zvYBAj6rf2cKyjsZ9' });
+  }
+}
+
 // Neighbourhood-guide hubs: the map sits straight under the H1 (no photo, no "map" heading), so the page opens on the thing readers came for.
 if (isHub) {
   const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
@@ -483,6 +495,7 @@ const explore = !_extra.length ? exploreBase
               </>);
               if (b.t === 'calc') return b.which === 'mortgage' ? <MortgageCalc price={b.price} exemption={b.exemption} /> : <NetProceedsCalc />;
               if (b.t === 'areamap') return <AreaMap region={b.region} mode={b.mode} current={b.current} />;
+              if (b.t === 'btnlink') return <p><a class="btn" href={b.href} rel="noopener" target="_blank">{b.label}<span class="sr-only"> (opens in a new tab)</span></a></p>;
               if (b.t === 'commute') return <CommuteTime region={b.region} current={b.current} />;
               if (b.t === 'form') return <FormStub labels={b.labels} submit={b.submit} fields={b.fields} title={b.title} fine={b.fine} uid={`f${fid++}`} />;
               return null;

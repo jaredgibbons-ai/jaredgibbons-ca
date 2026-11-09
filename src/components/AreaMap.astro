@@ -1,4 +1,5 @@
 ---
+import { isPreview } from '../lib/preview';
 // Neighbourhood map: every area filled, outlined and labelled; press an area for a popup that links to its page.
 // Google Maps JavaScript API, loaded only when the map scrolls into view (keeps LCP and INP clean and keeps map loads, which are billed after 10,000 a month, to people who see it).
 // Needs PUBLIC_GOOGLE_MAPS_KEY at build time (a browser key restricted to our domains; D-102). Without it the map says so and the link list still works.
@@ -31,10 +32,14 @@ const shaded = Object.values(figs).some((f: any) => Object.values(f).some(Boolea
 const rows = shaded ? areas.flatMap((a: any) => TYPES.filter(([g]) => figs[a.id]?.[g]).map(([g, label]) => ({ a, label, f: figs[a.id][g] }))) : [];
 const noFig = shaded ? areas.filter((a: any) => !a.sold || !Object.values(figs[a.id] || {}).some(Boolean)) : [];
 const key = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY || '';
+// Without the key the launch build shows no map box (and no "not connected" note); the area links below still work.
+const showMap = !!key || isPreview;
 const payload = JSON.stringify({ name: region.name, center: region.center, mode, areas: areas.map((a: any) => ({ id: a.id, name: a.name, href: isHeldHref(a.href) ? '' : a.href, group: !!a.group, rings: a.rings })), figs, types: TYPES, metrics: METRICS, minSales: MIN_SALES, flyover: mode === 'hub' ? flyoverFor(region) : null });
 const window_ = (sold as any).meta.window;
 ---
+{(showMap || mode === 'hub') && (
 <section class="areamap" aria-label={mode === 'area' ? `${areas[0].name} neighbourhood map` : `${region.name} neighbourhood map`}>
+  {showMap && <Fragment>
   {shaded && (
     <div class="areamap__ctrl" id="areamap-ctrl" hidden>
       <div><label for="areamap-type">Property type</label>
@@ -55,6 +60,7 @@ const window_ = (sold as any).meta.window;
   <p class="areamap__fine" id="areamap-near-note" aria-live="polite" hidden></p>
   <ul class="areamap__nearlist" id="areamap-near-list" aria-label="Nearby places shown on the map" hidden></ul>
   <button type="button" class="btn areamap__fly" id="areamap-fly" hidden>View 3D flyover</button>
+  </Fragment>}
   {mode === 'hub' && (
     <nav aria-label={`${region.name} neighbourhoods`}>
       <ul class="areamap__list">{areas.map((a: any) => <li>{isHeldHref(a.href) ? a.name : <a href={a.href}>{a.name}</a>}</li>)}</ul>
@@ -74,6 +80,7 @@ const window_ = (sold as any).meta.window;
     </details>
   )}
 </section>
+)}
 <script>
   import { popupSpec, centroid, boundsOf } from '../lib/areamap.js';
   import { loadGoogle, onAuthFailure } from '../lib/gmaps.js';

@@ -5,11 +5,14 @@ const { labels = [], submit = '', uid = 'f', fields = null, title = '', fine = '
 const key = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY || '';
 const type = (l: string) => /email/i.test(l) ? 'email' : /phone/i.test(l) ? 'tel' : 'text';
 // Simple archive forms pass `labels`; richer ones (home evaluation) pass `fields`: { label, type: text|email|tel|select|textarea, options, wide, addr }.
-const rows: any[] = fields ?? labels.map((l: string) => ({ label: l.replace(/:$/, ''), type: /message/i.test(l) ? 'textarea' : type(l), addr: /address/i.test(l), wide: /message|address/i.test(l) }));
+let rows: any[] = fields ?? labels.map((l: string) => ({ label: l.replace(/:$/, ''), type: /message/i.test(l) ? 'textarea' : type(l), addr: /address/i.test(l), wide: /message|address/i.test(l) }));
+// Archive forms with "First Name" and "Last Name" become one "Your name" field (the Worker takes a single name), and the open question "How can I help you with your real estate journey?" is the message.
+if (!fields && rows.some((r: any) => /^first name/i.test(r.label)) && rows.some((r: any) => /^last name/i.test(r.label))) rows = rows.filter((r: any) => !/^last name/i.test(r.label)).map((r: any) => /^first name/i.test(r.label) ? { ...r, label: 'Your name' } : r);
+rows = rows.map((r: any) => /how can i help/i.test(r.label) ? { ...r, type: 'textarea', wide: true } : r);
 // Live mode (build variable PUBLIC_FORMS_LIVE=true): the same fields post to the Worker (POST /api/forms/<kind>) with Turnstile, and any failure falls back to a ready-written email.
 const live = import.meta.env.PUBLIC_FORMS_LIVE === 'true';
 const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
-const KEYS: [RegExp, string][] = [[/e-?mail/i, 'email'], [/phone/i, 'phone'], [/subject/i, 'subject'], [/message/i, 'message'], [/postal/i, 'postal'], [/^city/i, 'city'], [/bedroom/i, 'bedrooms'], [/bathroom/i, 'bathrooms'], [/^size/i, 'size'], [/feature/i, 'features'], [/notes/i, 'notes'], [/address/i, 'address'], [/name/i, 'name']];
+const KEYS: [RegExp, string][] = [[/e-?mail/i, 'email'], [/phone/i, 'phone'], [/subject/i, 'subject'], [/message|how can i help/i, 'message'], [/postal/i, 'postal'], [/^city/i, 'city'], [/bedroom/i, 'bedrooms'], [/bathroom/i, 'bathrooms'], [/^size/i, 'size'], [/feature/i, 'features'], [/notes/i, 'notes'], [/address/i, 'address'], [/name/i, 'name']];
 const keyOf = (l: string) => KEYS.find(([re]) => re.test(l))?.[1] ?? '';
 const names = rows.map((r: any) => keyOf(r.label));
 const has = (k: string) => names.includes(k);

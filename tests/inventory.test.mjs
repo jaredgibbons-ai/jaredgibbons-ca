@@ -39,3 +39,9 @@ test('a launch-mode build ships no internal review notes', { timeout: 120000, sk
   try { hits = execSync(`grep -rlE "Draft for Jared|Open item OI-|Archive note B-|Open items OI-" /tmp/launch-check --include=*.html | grep -v internal | head -5`, { encoding: 'utf8' }); } catch { hits = ''; }
   assert.equal(hits.trim(), '', 'internal review text found in a launch build: ' + hits);
 });
+
+test('a launch-mode build shows no preview banner, no preview notices and no research-note wording to visitors', { timeout: 120000, skip: !existsSync('/tmp/launch-check') }, () => {
+  let hits = '';
+  try { hits = execSync(`grep -rlE "Private working preview|not connected in the preview|in this preview|site copy|[Tt]he guide page|source pass|\(check current|— check current|check current with" /tmp/launch-check --include=*.html | grep -v internal | head -8`, { encoding: 'utf8' }); } catch { hits = ''; }
+  assert.equal(hits.trim(), '', 'preview or research-note wording found in a launch build: ' + hits);
+});

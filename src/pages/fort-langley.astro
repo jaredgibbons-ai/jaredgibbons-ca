@@ -1,4 +1,5 @@
 ---
+import { isPreview } from '../lib/preview';
 import Base from '../layouts/Base.astro';
 import PropertyCard from '../components/PropertyCard.astro';
 import listings from '../data/fort-langley-listings.json';
@@ -77,7 +78,7 @@ import REVIEW_EXCERPTS from '../data/review-excerpts.json';
   <!-- ░░ Listings grid (IDX — not connected in preview) ░░ -->
   <section class="section section--cream" id="listings" aria-label="Fort Langley listings">
     <div class="wrap">
-      <p class="notice">Listings are not connected in this preview. The 12 cards are the archived 31 Oct 2026 snapshot (page 1 of 44), shown to review layout only. Sorting and paging are inactive here.</p>
+      {isPreview && <p class="notice">Listings are not connected in this preview. The 12 cards are the archived 31 Oct 2026 snapshot (page 1 of 44), shown to review layout only. Sorting and paging are inactive here.</p>}
       <div class="toolbar">
         <label class="toolbar__sort"><span class="sr-only">Sort by</span>
           <select disabled aria-describedby="sort-note">

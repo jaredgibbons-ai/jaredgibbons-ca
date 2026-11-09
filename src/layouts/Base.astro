@@ -56,7 +56,7 @@ const robotsContent = preview ? 'noindex, nofollow' : robots;
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <aside class="preview-banner" aria-label="Preview notice">Private working preview — pages are being rebuilt in stages, so a link may point to a page that is not built yet. Not indexed.</aside>
+  {preview && <aside class="preview-banner" aria-label="Preview notice">Private working preview — pages are being rebuilt in stages, so a link may point to a page that is not built yet. Not indexed.</aside>}
   <Header current={current} brandHref={brandHref} />
   {crumbs.length > 1 && (
     <nav class="crumbs" aria-label="Breadcrumb">
