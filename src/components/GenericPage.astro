@@ -512,12 +512,21 @@ const explore = !_extra.length ? exploreBase
               if (b.t === 'btnlink') return <p><a class="btn" href={b.href} rel="noopener" target="_blank">{b.label}<span class="sr-only"> (opens in a new tab)</span></a></p>;
               if (b.t === 'commute') return <CommuteTime region={b.region} current={b.current} />;
               if (b.t === 'vipform') return (
-                <div class="vip" id="vip-floorplans">
-                  <h2 class="h2">Get VIP floorplans and pricing</h2>
-                  <p>Developers release floorplans, price lists and incentives to registered buyers first. Tell me which project and I’ll send the package and call you to walk through it.</p>
+                <div class="vip on-dark" id="vip-floorplans">
+                  <div class="vip__copy">
+                    <p class="eyebrow">VIP access</p>
+                    <h2 class="h2">Get VIP floorplans and pricing</h2>
+                    <p>Developers send floorplans, price lists and incentives to registered buyers first. Tell me the project and I’ll send the package, then call to walk you through it.</p>
+                    <ul class="vip__list">
+                      <li>Floorplans and the current price list</li>
+                      <li>Deposit structure, incentives and completion dates</li>
+                      <li>Straight answers on GST rebates, assignments and strata fees</li>
+                    </ul>
+                    <p class="vip__call">Prefer to talk? <a href="tel:6049281361">Call or text 604-928-1361</a></p>
+                  </div>
                   <FormStub kind="presale-vip" submit="Send me floorplans and pricing" uid={`vip${fid++}`}
                     fields={[{ label: 'Your name', type: 'text' }, { label: 'Your email', type: 'email' }, { label: 'Your phone number', type: 'tel' }, { label: 'Project (optional)', type: 'text' }]}
-                    fine="Jared replies by email or phone. This does not sign you up for a newsletter." />
+                    fine="Jared replies by email or phone. No newsletter sign-up." />
                 </div>
               );
               if (b.t === 'form') return <FormStub labels={b.labels} submit={b.submit} fields={b.fields} title={b.title} fine={b.fine} uid={`f${fid++}`} />;
@@ -546,9 +555,21 @@ const explore = !_extra.length ? exploreBase
 </script>
 
 <style>
-  .vip{background:var(--cream,#f0ece4);border-left:3px solid var(--ink);padding:clamp(1.1rem,3vw,1.75rem);margin:1.5rem 0;scroll-margin-top:calc(var(--header-h,4.25rem) + 1rem)}
-  .vip .h2{margin-top:0}
-  .vip > p{max-width:var(--measure)}
+  /* VIP floorplans box: a black band with the form on a white card (copy left, form right on wide screens). */
+  .vip{background:var(--ink);color:#fff;padding:clamp(1.5rem,4vw,3rem);margin:2rem 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:center;scroll-margin-top:calc(var(--header-h,4.25rem) + 1rem)}
+  .vip .h2{margin-top:0;color:#fff}
+  .vip .h2::before{background:#fff}
+  .vip .eyebrow{color:#fff;opacity:.8}
+  .vip__copy > p{max-width:var(--measure)}
+  .vip__list{list-style:none;margin:1.25rem 0;padding:0;display:grid;gap:.6rem}
+  .vip__list li{position:relative;padding-left:1.6rem;line-height:1.45}
+  .vip__list li::before{content:'';position:absolute;left:0;top:.5em;width:.9rem;height:2px;background:#fff}
+  .vip__call{margin:1.25rem 0 0;font-size:.9375rem;opacity:.9}
+  .vip__call a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+  .vip :global(.fstub){margin:0;max-width:none;background:#fff;color:var(--ink);border:0;padding:clamp(1.25rem,3vw,2rem)}
+  .vip :global(.fstub .btn){justify-self:stretch;justify-content:center;min-height:3rem}
+  .vip :global(.fstub__fine){color:var(--grey)}
+  @media (max-width:60rem){.vip{grid-template-columns:1fr}}
   .section--tight{padding-block:clamp(1.25rem,3vw,2rem)}
   /* Content runs the full width of the page column (same left edge as the header); only running text is held to a readable line length. */
   .pg{max-width:none;margin-inline:0;--prose:62rem}
