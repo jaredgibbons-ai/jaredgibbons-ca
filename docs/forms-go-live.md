@@ -1,6 +1,6 @@
 # Forms go-live: what to set, in order
 
-The code is finished and tested: the home page quiz, the contact forms, the home evaluation form and the address-check forms all post to the Worker (`/api/forms/<quiz|contact|home-evaluation|property-check>`). Nothing is live until the values below are set. Never put the Keyvera address or any secret in the repo or in chat.
+The code is finished and tested: the home page quiz, the contact forms, the home evaluation form and the address-check forms all post to the Worker (`/api/forms/<quiz|contact|home-evaluation|property-check|presale-vip>`). Nothing is live until the values below are set. Never put the Keyvera address or any secret in the repo or in chat.
 
 ## 1. Turnstile (the spam check)
 Cloudflare dashboard > Turnstile > Add widget.

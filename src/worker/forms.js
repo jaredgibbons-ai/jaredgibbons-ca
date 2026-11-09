@@ -20,7 +20,7 @@ import { ALERT_CONSENT_TEXT } from '../lib/listing-alert.js';
 import { NEWSLETTER_CONSENT_TEXT } from '../lib/newsletter.js';
 
 const MAX_BODY = 20 * 1024;
-const FORM_TITLES = { contact: 'Contact form', 'home-evaluation': 'Home evaluation request', 'property-check': 'Property check request', quiz: 'Home search quiz', 'listing-alert': 'New listing alert signup', newsletter: 'Newsletter signup' };
+const FORM_TITLES = { contact: 'Contact form', 'home-evaluation': 'Home evaluation request', 'property-check': 'Property check request', quiz: 'Home search quiz', 'listing-alert': 'New listing alert signup', newsletter: 'Newsletter signup', 'presale-vip': 'Presale VIP floorplans request' };
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 // Fields follow the labels captured in the archive (`Your name:`, `Your email:` ...). The archive did
@@ -69,6 +69,13 @@ export const SCHEMAS = {
     search: { label: 'Search', max: 200 },
     search_id: { label: 'Search ID', max: 20, digits: true },
     consent: { label: 'Consent', required: true, max: 5, must: 'yes', mustMsg: 'Please tick the box so Jared can email you.' },
+  },
+  // "Request VIP floorplans & pricing" on the presale and new-construction pages. Name, email and phone are all needed so Jared can send the package and call.
+  'presale-vip': {
+    name: { label: 'Your name', required: true, max: 100 },
+    email: { label: 'Your email', required: true, max: 200, email: true },
+    phone: { label: 'Your phone number', required: true, max: 30, phone: true },
+    project: { label: 'Project', max: 150 },
   },
   // Monthly newsletter sign-up page. Same consent rules as the listing alert.
   newsletter: {
@@ -128,6 +135,7 @@ export function leadEmail(lead) {
   if (f.address) lines.push(`Address: ${oneLine(f.address)}`);
   if (f.address && lead.address_check) lines.push(`Address check: ${CHECK_TEXT[lead.address_check] || 'not checked'}`);
   if (f.subject) lines.push(`Subject: ${oneLine(f.subject)}`);
+  if (lead.kind === 'presale-vip') { lines.push(`Project: ${oneLine(f.project) || 'not named (general presale request)'}`); lines.push('Wants: VIP floorplans and pricing'); }
   if (lead.kind === 'home-evaluation') for (const k of ['city', 'postal', 'bedrooms', 'bathrooms', 'size', 'features']) if (f[k]) lines.push(`${SCHEMAS['home-evaluation'][k].label}: ${oneLine(f[k])}`);
   if (lead.kind === 'quiz') for (const k of QUIZ_ORDER) if (f[k]) lines.push(`${SCHEMAS.quiz[k].label}: ${oneLine(f[k])}`);
   if (lead.kind === 'listing-alert') {

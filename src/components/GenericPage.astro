@@ -163,6 +163,13 @@ if (photos.length) {
 // Every content page shows three Google review excerpts (assigned per page in src/data/review-assign.json, no two pages share the same three).
 // Archive pages that had no review block, and pages built from the local layer alone, get one, placed before the end-of-page link lists.
 const NO_REVIEWS = new Set(['404', 'privacy', 'subscribe-to-our-newsletter', 'contact', 'reviews', 'photo-credits']);
+// Presale and new-construction pages: a "VIP floorplans & pricing" request (name, email, phone, project) after the opening section.
+// Project cards that link to #vip-floorplans fill in the project name (script at the end of this file).
+if (/presale|new-construction/.test(page.slug) && !page.blocks.some((b: any) => b.t === 'vipform')) {
+  const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
+  const at = page.blocks.findIndex((b: any, i: number) => i > h1i && b.t === 'h' && b.level === 2);
+  page.blocks.splice(at > 0 ? at : page.blocks.length - endCount, 0, { t: 'vipform' });
+}
 if (!NO_REVIEWS.has(page.slug) && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.splice(page.blocks.length - endCount, 0, { t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
 
 // A page with two source lists (for example condo notes and townhome notes) must not show the same source card twice: later lists keep only what earlier ones did not show.
@@ -504,6 +511,15 @@ const explore = !_extra.length ? exploreBase
               if (b.t === 'areamap') return <AreaMap region={b.region} mode={b.mode} current={b.current} />;
               if (b.t === 'btnlink') return <p><a class="btn" href={b.href} rel="noopener" target="_blank">{b.label}<span class="sr-only"> (opens in a new tab)</span></a></p>;
               if (b.t === 'commute') return <CommuteTime region={b.region} current={b.current} />;
+              if (b.t === 'vipform') return (
+                <div class="vip" id="vip-floorplans">
+                  <h2 class="h2">Get VIP floorplans and pricing</h2>
+                  <p>Developers release floorplans, price lists and incentives to registered buyers first. Tell me which project and I’ll send the package and call you to walk through it.</p>
+                  <FormStub kind="presale-vip" submit="Send me floorplans and pricing" uid={`vip${fid++}`}
+                    fields={[{ label: 'Your name', type: 'text' }, { label: 'Your email', type: 'email' }, { label: 'Your phone number', type: 'tel' }, { label: 'Project (optional)', type: 'text' }]}
+                    fine="Jared replies by email or phone. This does not sign you up for a newsletter." />
+                </div>
+              );
               if (b.t === 'form') return <FormStub labels={b.labels} submit={b.submit} fields={b.fields} title={b.title} fine={b.fine} uid={`f${fid++}`} />;
               return null;
             })}
@@ -519,7 +535,20 @@ const explore = !_extra.length ? exploreBase
 </main>
 </Base>
 
+<script>
+  // Project cards that link to #vip-floorplans put the project name into the request form, then move focus to the name field.
+  document.querySelectorAll<HTMLAnchorElement>('a[href="#vip-floorplans"]').forEach((a) => a.addEventListener('click', () => {
+    const lines = [...a.querySelectorAll<HTMLElement>('.cardlink__t')].map((e) => (e.textContent || '').trim()).filter((x) => x && !/^request\b/i.test(x));
+    const project = document.querySelector<HTMLInputElement>('#vip-floorplans input[name="project"]');
+    if (project && lines[0]) project.value = lines[0];
+    setTimeout(() => document.querySelector<HTMLInputElement>('#vip-floorplans input[name="name"]')?.focus({ preventScroll: true }), 350);
+  }));
+</script>
+
 <style>
+  .vip{background:var(--cream,#f0ece4);border-left:3px solid var(--ink);padding:clamp(1.1rem,3vw,1.75rem);margin:1.5rem 0;scroll-margin-top:calc(var(--header-h,4.25rem) + 1rem)}
+  .vip .h2{margin-top:0}
+  .vip > p{max-width:var(--measure)}
   .section--tight{padding-block:clamp(1.25rem,3vw,2rem)}
   /* Content runs the full width of the page column (same left edge as the header); only running text is held to a readable line length. */
   .pg{max-width:none;margin-inline:0;--prose:62rem}

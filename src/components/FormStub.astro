@@ -1,7 +1,7 @@
 ---
 // Archive form, rendered inert. Fields/labels are the archived ones; submission is NOT wired
 // (forms Worker, decision pending BL-05). The notice states this so it never reads as operational.
-const { labels = [], submit = '', uid = 'f', fields = null, title = '', fine = '' } = Astro.props;
+const { labels = [], submit = '', uid = 'f', fields = null, title = '', fine = '', kind: kindProp = '' } = Astro.props;
 const key = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY || '';
 const type = (l: string) => /email/i.test(l) ? 'email' : /phone/i.test(l) ? 'tel' : 'text';
 // Simple archive forms pass `labels`; richer ones (home evaluation) pass `fields`: { label, type: text|email|tel|select|textarea, options, wide, addr }.
@@ -12,11 +12,11 @@ rows = rows.map((r: any) => /how can i help/i.test(r.label) ? { ...r, type: 'tex
 // Live mode (build variable PUBLIC_FORMS_LIVE=true): the same fields post to the Worker (POST /api/forms/<kind>) with Turnstile, and any failure falls back to a ready-written email.
 const live = import.meta.env.PUBLIC_FORMS_LIVE === 'true';
 const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
-const KEYS: [RegExp, string][] = [[/e-?mail/i, 'email'], [/phone/i, 'phone'], [/subject/i, 'subject'], [/message|how can i help/i, 'message'], [/postal/i, 'postal'], [/^city/i, 'city'], [/bedroom/i, 'bedrooms'], [/bathroom/i, 'bathrooms'], [/^size/i, 'size'], [/feature/i, 'features'], [/notes/i, 'notes'], [/address/i, 'address'], [/name/i, 'name']];
+const KEYS: [RegExp, string][] = [[/e-?mail/i, 'email'], [/phone/i, 'phone'], [/subject/i, 'subject'], [/message|how can i help/i, 'message'], [/postal/i, 'postal'], [/^city/i, 'city'], [/bedroom/i, 'bedrooms'], [/bathroom/i, 'bathrooms'], [/^size/i, 'size'], [/feature/i, 'features'], [/notes/i, 'notes'], [/address/i, 'address'], [/project/i, 'project'], [/name/i, 'name']];
 const keyOf = (l: string) => KEYS.find(([re]) => re.test(l))?.[1] ?? '';
 const names = rows.map((r: any) => keyOf(r.label));
 const has = (k: string) => names.includes(k);
-const kind = fields ? 'home-evaluation' : has('message') ? 'contact' : has('address') && has('email') ? 'home-evaluation' : has('address') && !has('email') ? 'property-check' : '';
+const kind = kindProp ? kindProp : fields ? 'home-evaluation' : has('message') ? 'contact' : has('address') && has('email') ? 'home-evaluation' : has('address') && !has('email') ? 'property-check' : '';
 const isLive = live && !!kind;
 ---
 <form class:list={['fstub', { 'fstub--grid': !!fields }]} data-key={key} data-kind={isLive ? kind : undefined} data-sitekey={isLive ? siteKey : undefined} aria-describedby={isLive ? undefined : `${uid}-note`} onsubmit={isLive ? undefined : 'return false'} novalidate>

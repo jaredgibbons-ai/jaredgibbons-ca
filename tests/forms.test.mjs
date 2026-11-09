@@ -210,3 +210,13 @@ test('newsletter: captcha, honeypot and origin rules apply like every other form
   assert.equal(e.LEADS_DB.rows.length, 0);
   assert.equal((await handleForm(mk(nlGood, { ...P, origin: 'https://evil.example' }), e, { fetch: captcha() })).status, 403);
 });
+test('presale VIP floorplans request: name, email and phone are required; the project goes in the email', async () => {
+  const vip = { name: 'Pat Example', email: 'pat@example.com', phone: '604-555-0100', project: 'Latimer Walk', 'cf-turnstile-response': 'tok' };
+  const e = env(); const r = await handleForm(mk(vip, { path: '/api/forms/presale-vip' }), e, { fetch: captcha() });
+  assert.equal(r.status, 200); assert.equal(e.LEADS_DB.rows.length, 1);
+  const r2 = await handleForm(mk({ ...vip, phone: '' }, { path: '/api/forms/presale-vip' }), env(), { fetch: captcha() });
+  assert.equal(r2.status, 422); assert.match((await r2.json()).errors.phone, /required/);
+  const m = leadEmail({ kind: 'presale-vip', received_at: 't', page: '/new-construction-presales-in-langley-bc.html', fields: { name: 'Pat', email: 'p@example.com', phone: '604-555-0100', project: 'Latimer Walk' } });
+  assert.match(m.text, /Presale VIP floorplans request/); assert.match(m.text, /Project: Latimer Walk/); assert.match(m.text, /Phone: 604-555-0100/);
+  assert.match(leadEmail({ kind: 'presale-vip', received_at: 't', fields: { name: 'Pat' } }).text, /general presale request/);
+});
