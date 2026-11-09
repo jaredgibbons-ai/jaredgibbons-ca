@@ -120,6 +120,7 @@ def pname(place):
             n = cr[-1]['name'] if cr else None
             if n and ('Homes for Sale' in n or '|' in n): n = re.sub(r'\s*(Homes|Houses|Real Estate)( for Sale)?.*$', '', n).strip()
         n = n or NAME(place)
+    n = re.sub(r'\s+real estate$', '', n, flags=re.I).strip()   # breadcrumb names like 'North Coquitlam Real Estate'
     placename[place] = n
     return n
 

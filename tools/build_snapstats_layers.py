@@ -105,8 +105,8 @@ def build(slug, guide, ak, name, months, city_name):
         if not act[t]: return f'No {TL[t].lower()} were listed or sold in {name} between {month_name(first)} and {month_name(last)}.'
         if r is None: return f'{TL[t]} did not appear as a separate line for {name} in {mlabel(last)}.'
         k = kind(r['ratio'])
-        return (f'{TL[t]}: {num(r["inventory"])} listed at month end and {num(r["sales"])} sold in {month_name(last)}, a sales ratio of {pct(r["ratio"])}'
-                + (f' ({k}).' if k and r['inventory'] >= 10 else '.'))
+        return (f'{TL[t]}: {num(r["inventory"])} listed at month end and {num(r["sales"])} sold in {month_name(last)}'
+                + ('.' if r['ratio'] is None else f', a sales ratio of {pct(r["ratio"])}' + (f' ({k}).' if k and r['inventory'] >= 10 else '.')))
     if not guide:
         blocks.append({'t': 'h', 'level': 2, 'text': f'{name} homes listed and sold, {span}', 'gen': 'snapstats'})
         blocks.append({'t': 'p', 'text': f'{name}, {mlabel(last)}. ' + line('detached') + ' ' + line('condo_townhome'), 'gen': 'snapstats'})

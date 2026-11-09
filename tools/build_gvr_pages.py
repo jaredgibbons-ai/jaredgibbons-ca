@@ -280,7 +280,7 @@ def area_page(ck, k, slug):
     label = nm.replace(' (Vancouver)', '')
     bl = [{'t': 'notice', 'text': f'Draft for Jared’s approval. Figures are closed sales from Jared’s Paragon export; local facts come from official sources listed at the bottom. It has no listing feed yet.', 'gen': G}]
     parts = [f'{gn(d, x):,} {SO.GL[x]}' for x in order[:4]]
-    bl.append(P(f'{label} is an MLS® sub-area of {N}. Between {WINDOW.replace("November 1, 2025 to ", "November 2025 to ")}, {tot:,} homes sold there: ' + ', '.join(parts[:-1]) + (' and ' if len(parts) > 1 else '') + parts[-1] + '. ' + ' '.join(SO.one_line(label, g[x], x, extra=False) for x in sorted(order, key=lambda y: -g[y]['n'])[:1])))
+    bl.append(P(f'{label} is an MLS® sub-area of {N}. From {WINDOW.replace("November 1, 2025 to ", "November 2025 to ")}, {tot:,} homes sold there: ' + ', '.join(parts[:-1]) + (' and ' if len(parts) > 1 else '') + parts[-1] + '. ' + ' '.join(SO.one_line(label, g[x], x, extra=False) for x in sorted(order, key=lambda y: -g[y]['n'])[:1])))
     bl.append({'t': 'grid'})
     bl += SO.page_blocks(AGG, k, label, ['house', 'condo', 'townhome', 'duplex', 'acreage', 'mobile', 'land'])
     for b in bl: b.setdefault('gen', G)

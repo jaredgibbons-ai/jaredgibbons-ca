@@ -33,7 +33,7 @@ const smart = (s: string) => s.split(' ').map((w, i) => { const lw = w.toLowerCa
 const clean = (s: string) => s.replace(/\.(aspx?|pdf|html?|php|ashx|pptx?|docx?)\b/gi, ' ').replace(/[_+]+/g, ' ').replace(/\s*-\s*/g, ' ').replace(/%20/g, ' ').replace(/\s+/g, ' ').trim();
 export function sourceInfo(text: string, url: string) {
   const h = host(url);
-  let t = text.replace(/^Source:\s*/i, '').trim();
+  let t = text.replace(/^Source:\s*/i, '').replace(/\s*\(\d{1,2}\)\s*$/, '').trim();   // the notes numbered repeat links: 'chilliwack.com (2)'
   const parts = t.split(' · ');
   let title = parts.length > 1 ? parts.slice(1).join(' · ').trim() : (t.toLowerCase().replace(/^www\./, '') === h ? '' : t);
   title = clean(title);
@@ -51,10 +51,14 @@ export function sourceInfo(text: string, url: string) {
     try { const p = new URL(url).pathname.split('/').filter(Boolean); seg = clean(decodeURIComponent(p[p.length - 1] || '')).replace(/\s\d{1,3}$/, ''); } catch { /* keep the label */ }
     const norm = (x: string) => x.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
     const nt = norm(title), ns = norm(seg);
-    if (nt.length >= 20 && ns.length > nt.length && ns.startsWith(nt)) title = seg;
+    if (nt.length >= 8 && ns.length > nt.length && ns.startsWith(nt)) title = seg;
   }
   title = title.replace(/\s*\([^)]*$/, '').trim();   // a label cut inside a bracket ("... as of June 30 2022 (Co")
   if (title === title.toLowerCase() || title === title.toUpperCase()) title = smart(title);
+  // spelling slips in publishers' own file names and in the notes' labels
+  title = title.replace(/\bMillenium\b/g, 'Millennium').replace(/\bOakrige\b/g, 'Oakridge').replace(/\bCarraige\b/g, 'Carriage').replace(/\bTsawassen\b/g, 'Tsawwassen')
+    .replace(/\bWhats Happening\b/g, "What's Happening").replace(/\bGuidlines\b/g, 'Guidelines').replace(/\bCommunitiy\b/g, 'Community').replace(/\bBulding\b/g, 'Building')
+    .replace(/\bAbbottsford\b/g, 'Abbotsford').replace(/\b([Aa])ssigment\b/g, '$1ssignment');
   if (title.length > 90) title = title.slice(0, 88).replace(/\s+\S*$/, '') + '…';
   const kind = /\.pdf($|\?)/i.test(url) ? 'PDF' : /\.(xlsx?|csv)($|\?)/i.test(url) ? 'Spreadsheet' : /\.pptx?($|\?)/i.test(url) ? 'Slides' : 'Web page';
   return { pub: publisher(url), title, kind, host: h };

@@ -142,6 +142,13 @@ if (local) {
 page.blocks = JSON.parse(JSON.stringify(page.blocks).replaceAll('jared@jaredgibbons.ca', 'jaredgibbons@royallepage.ca'));
 
 // Area photos (D-89, src/data/area-photos.json, tools/build_area_photos.py): public-licence photos with the credit shown under each one.
+// An H2 that repeats the page H1 word for word (guide pages carried both) is dropped; the H1 already says it.
+{
+  const nh = (x: unknown) => String(x ?? '').replace(/\s+/g, ' ').trim().toLowerCase();
+  const h1t = nh(page.blocks.find((b: any) => b.t === 'h' && b.level === 1)?.text);
+  if (h1t) page.blocks = page.blocks.filter((b: any) => !(b.t === 'h' && b.level === 2 && nh(b.text) === h1t));
+}
+
 // The main photo goes after the first paragraph under the H1; any others form a gallery section before the closing link lists.
 const isHub = page.blocks.some((b: any) => b.t === 'areamap' && b.mode === 'hub');
 const photos: any[] = isHub ? [] : ((AREA_PHOTOS as Record<string, any[]>)[page.slug] ?? []);
@@ -392,7 +399,7 @@ const explore = !_extra.length ? exploreBase
                       <li><a class="related__card" href={it.href.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/'}>
                         <span class="related__n" aria-hidden="true">{it.n}</span>
                         <span class="related__t">{it.title}</span>
-                        <span class="related__a">{it.label ? `${it.label} ` : ''}view →</span>
+                        <span class="related__a">{it.label && !String(it.title || '').toLowerCase().trimEnd().endsWith(String(it.label).toLowerCase().trim()) ? `${it.label} ` : ''}view →</span>
                       </a></li>
                     ))}
                   </ul>
@@ -546,7 +553,7 @@ const explore = !_extra.length ? exploreBase
     .pg--split > .h2:first-child{grid-column:1;grid-row:1 / span 60;position:sticky;top:calc(var(--header-h) + 2rem)}
     .pg--split > :where(p,ul.lines,.toc,details,.cardlink,.notice,h3,h4,h5,.pg__h,.byline){max-width:48rem}
     .pg--split > .faqlist,.pg--split > .subs{max-width:none}
-    .pg--split > p:has(a ~ a ~ a){background:var(--cream,#f0ece4);border-left:3px solid #111;padding:1.1rem 1.3rem;margin:.75rem 0;line-height:1.8;max-width:none}
+    .pg--split > p:has(a ~ a ~ a){background:var(--cream,#f0ece4);border-left:3px solid var(--ink);padding:1.1rem 1.3rem;margin:.75rem 0;line-height:1.8;max-width:none}
     .pg--split > p:first-of-type:not(:has(a ~ a ~ a)){font-size:1.125rem;line-height:1.7}
   }
   /* FAQ accordion */

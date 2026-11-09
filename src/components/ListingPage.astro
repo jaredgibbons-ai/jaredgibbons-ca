@@ -1,5 +1,6 @@
 ---
 import EXPLORE from '../data/explore.json';
+import { isPreview } from '../lib/preview';
 import ExploreLinks from './ExploreLinks.astro';
 // Own-listing detail page. Content comes from src/data/listings/<slug>.json (tools/import_listings.py).
 // Photos: web-size derivatives of the owner's photo export (never hotlinked from the vendor CDN).
@@ -75,7 +76,12 @@ for (const b of blocks.filter((x) => !(x.t === 'h' && x.level === 1) && x.t !== 
     bodyBlocks.push({ ...b, items });
   } else bodyBlocks.push(b);
 }
-const h1Text = cityName ? `${addr}, ${cityName}` : '';
+// The same address was listed more than once (sold, then relisted): the MLS® number keeps the two H1s apart.
+const _addrKey = (s: string) => { const a = parseListingSlug(s); return a ? `${a.street}|${a.city}`.toLowerCase() : ''; };
+const _myKey = _addrKey(page.slug);
+const _dupAddr = !!_myKey && Object.keys(import.meta.glob('../data/listings/*.json')).filter((p) => _addrKey(p.split('/').pop()!.replace(/\.json$/, '')) === _myKey).length > 1;
+const _mls = /^listing\.(r\d+)/i.exec(page.slug)?.[1]?.toUpperCase();
+const h1Text = cityName ? `${addr}, ${cityName}${_dupAddr && _mls ? ` (MLS® ${_mls})` : ''}` : '';
 const rawMeta = String(seo['Meta description'] || '').replace(/^\[SOLD\]:\s*/i, '').trim();
 const metaDesc = rawMeta.length >= 70 ? rawMeta : builtMeta();
 ---
@@ -116,7 +122,7 @@ const metaDesc = rawMeta.length >= 70 ? rawMeta : builtMeta();
             <p>No photos are on file for this listing yet.</p>
           </div>
         )}
-      {page.status === 'Active' && (
+      {isPreview && page.status === 'Active' && (
         <p class="notice">Status is shown as captured in the archive on 2026-10-31. Live status needs the listing feed, which is not connected in the preview.</p>
       )}
     </div>
@@ -126,7 +132,7 @@ const metaDesc = rawMeta.length >= 70 ? rawMeta : builtMeta();
     <div class="wrap ls">
       {bodyBlocks.map((b) => {
         if (b.t === 'h') return <h2 class="ls__h">{b.text}</h2>;
-        if (b.t === 'p') return <p class="ls__p">{b.parts.map((x: any) => x.h ? <a href={x.h}>{x.t}</a> : x.t).reduce((a: any[], x: any) => (a.length ? [...a, ' ', x] : [x]), [])}</p>;
+        if (b.t === 'p') return <p class="ls__p">{b.parts.map((x: any) => x.h ? <a href={x.h}>{x.t}</a> : x.t).reduce((a: any[], x: any, i: number) => (a.length ? [...a, /^[.,;:!?)]/.test(String(b.parts[i].t || '')) ? '' : ' ', x] : [x]), [])}</p>;
         if (b.t === 'list') return <ul class="ls__list">{b.items.map((it: any) => <li>{it.map((x: any) => x.t).join(' ')}</li>)}</ul>;
         if (b.t === 'facts') return (
           <dl class="ls__facts">

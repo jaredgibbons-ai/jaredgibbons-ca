@@ -111,7 +111,7 @@ def build(slug, t):
             bl += [H(f'{name}: {SECS[k]}'), LI(items)]
     nc, u = bullets(sec.get('nc', []))
     nc = [x for x in nc if not re.search(r'\bParagon\b|sub-area code|catchment results|locator', x)][:5]
-    if nc: bl += [H(f'What is not confirmed about {name}'), LI(nc)]
+    # D-194: the NOT CONFIRMED list is research bookkeeping and is not published.
     rel = []
     for ln in sec.get('il', []):
         m = re.match(r'^- ([a-z0-9-]+)\b', ln)
