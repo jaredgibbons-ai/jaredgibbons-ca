@@ -3,7 +3,7 @@ langley-city-guide) by dropping sentences that the same site already says word-f
 Idempotent.  python3 -I tools/dedupe_guides_2026_11_08.py"""
 import json, re, glob, os, subprocess, csv, collections, sys
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
-TARGET = {'popkum-guide': 'bridal-falls-guide', 'bridal-falls-guide': None, 'langley-city-guide': 'langleycity'}
+TARGET = {'popkum-guide': 'bridal-falls-guide', 'bridal-falls-guide': None, 'langley-city-guide': 'langleycity', 'east-delta-guide': None, 'chilliwack-proper-east-guide': None, 'abbotsford-east': None, 'abbotsford-west': None, 'cloverdale-bc': None, 'cloverdale-bc-55-plus-homes-for-sale': None}
 GOAL = 0.705
 def sents(s): return [x for x in re.split(r'(?<=[.!?])\s+', s) if len(x.split()) >= 9]
 def strings(d):

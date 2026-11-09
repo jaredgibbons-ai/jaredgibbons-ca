@@ -7,6 +7,8 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 DRY = '--dry' in sys.argv
 META = re.compile(r"guide page|\bthe page(?:'|’)s\b|\bthe (?:current|existing|old|live|archived) page\b|site copy|[Ll]ive-page|source pass|\b(?:this|that|in this|in that) pass\b|opened pass|\bpass\b[^.;]{0,25}(?:not verified|not opened|could not|did not surface)|research pass|area research (?:recorded|confirmed|found)|Read gap|fetch[- ]service|working scope|\bper the page\b|the page itself|page names it|a question for Jared|existing sections|(?:the|a) page(?:'|’)s (?:stated|claimed|own)|stale twin")
 CHECK = [
+    (re.compile(r"; catchment not confirmed"), "; confirm the catchment with the district"),
+    (re.compile(r"\(catchment not confirmed\)"), "(confirm the catchment with the district)"),
     (re.compile(r"\(check current[;:]\s*([^)]+)\)"), r"(\1)"),
     (re.compile(r"\(check current\s*[—-]\s*([^)]+)\)"), r"(\1)"),
     (re.compile(r"\(check current schedule\)"), "(check the current schedule)"),
@@ -20,7 +22,8 @@ CHECK = [
 ]
 ABBR = {'No', 'Nos', 'St', 'Ave', 'Rd', 'Dr', 'Mt', 'Hwy', 'Blvd', 'vs', 'Ltd', 'Inc', 'Co', 'Mr', 'Mrs', 'Ms', 'approx', 'Sec', 'ss', 's', 'e.g', 'i.e', 'Ste', 'Cres', 'Pl'}
 STUB_PAREN = re.compile(r"\s*\((?:[^()]*?:\s*)?[Nn]ot verified[^()]*\)")
-STUB_SENT = re.compile(r"^[^.;:]{3,150}:\s*[Nn]ot verified(?: (?:at|for|as|by|on|in|pass)[^.;:]{0,60})?[.]?$")
+STUB_SENT = re.compile(r"^[^.;:]{3,150}:\s*[Nn]ot (?:verified|confirmed)(?: (?:at|for|as|by|on|in|from|per|here|beyond|pass|parcel)[^.;:—]{0,70}| \((?:none confirmed|community level only|SnapStats[^)]*)\))?(?: — (?:no source[^.;:]{0,60}))?[.]?$")
+STUB_ACTION = re.compile(r"^([^.;:]{3,150}):\s*[Nn]ot (?:verified|confirmed)[^.;:—]{0,70} — ((?:confirm|check|run|ask)[^.;]{0,90}[.]?)$")
 
 def split_sent(t):
     out, start = [], 0
@@ -37,6 +40,8 @@ def clean_sentence(s):
     trail = re.search(r'\s*$', body).group(0); body = body[:len(body)-len(trail)]
     if not body: return s
     if STUB_SENT.match(body): return ''
+    ma = STUB_ACTION.match(body)
+    if ma and not META.search(body): return lead + ma.group(1) + ': ' + ma.group(2) + trail
     if META.search(body):
         clauses = body.split('; ')
         keep = [c for c in clauses if not META.search(c)]
