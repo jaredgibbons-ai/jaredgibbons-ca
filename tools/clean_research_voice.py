@@ -41,6 +41,10 @@ RV = re.compile(r"""
  |\bruling\s+note\b|\bnever\s+(?:merged|as\s+inventory)\b|\bdocumented\s+as\s+such\b|\bthe\s+two\s+are\s+never\b
  |\bread\s+by\s+me\b|\blocator\s+sample\b|\(run\s+20\d\d-\d\d-\d\d\)|\bolder\s+brief\b
  |\bin\s+the\s+source\b|\bper\s+the\s+(?:\w+\s+)?(?:source|data\s+sheet)\b|\bdata\s+sheet\b|\bthe\s+sources\s+used\b
+ |\b(?:this|the|its|our|that|live)\s+(?:live\s+)?feed\b|\bfeed's\b|\b[a-z]+(?:-[a-z]+)+\s+feed\b|\bfeed\s+cards?\b|\bpage\s+feed\b
+ |\bthe\s+page\s+(?:is\s+headed|title|says)\b|\bthis\s+page's\b|\bpage\s+title\b|\beditorial\s+(?:copy|heading)\b|\bwhat\s+the\s+page\s+is\b|\bcontradicts\s+(?:itself|its\s+own)\b
+ |\bflagged\s+(?:in|here|at|above|below)\b|\bname\s+trap\b|\bstale\s+citations?\b|\bfor\s+the\s+record\b|\brules-gaps\b|\bstated\s+expressly\b|\bnever\s+borrow\b|\bconflated\b
+ |\bnone\s+(?:is\s+|are\s+)?verified\b|\bno\b[^.;]{0,60}?\b(?:is|are|was|were)\s+verified\b|\bverified\s+(?:below|above|here)\b|\bhas\s+none\s+verified\b|\bno\s+figure\s+of\s+any\s+kind\b
 """, re.I | re.X)
 NC_HEAD = re.compile(r'^\s*(?:what\s+is\s+)?(?:not|un)\s*(?:confirmed|verified)\b|^\s*what\s+is\s+not\s+confirmed\b', re.I)
 NC_CELL = re.compile(r'^\s*(?:not|un)\s*(?:confirmed|verified)\.?\s*(?:\(.*\))?\s*$', re.I)
@@ -65,9 +69,14 @@ SPLIT = re.compile(r'(?<=[.!?])' + ABBR + r'\s+(?=[A-Z"“(\'‘0-9$])')
 stats = collections.Counter(); samples = collections.defaultdict(list)
 
 
+VERIFIED = re.compile(r'\b(the|a|an|its|two|three|four|one|only|both)\s+verified\s+', re.I)
+
+
 def clean_text(s, where, first=True):
     if not isinstance(s, str) or not s.strip(): return s
     o = s
+    s = VERIFIED.sub(lambda m: m.group(1) + ' ', s)
+    s = re.sub(r'\b(this|that|the same) ground\b', lambda m: m.group(1) + ' area', s)
     if first and re.match(r'^\s*:\s', s):
         s = re.sub(r'^\s*:\s*(?:[—–-]\s*)?', '', s); stats['label colon'] += 1
         if s: s = s[0].upper() + s[1:]
