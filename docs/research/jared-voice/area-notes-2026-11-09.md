@@ -57,7 +57,7 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 ## Crescent Beach (South Surrey) — crescent-beach-ocean-park-guide (Crescent Beach part)
 - Jared's words (near publish-ready): "Crescent Beach is for someone who'll actually use the beach. If your idea of a good morning is grabbing a coffee and walking along the water, you'll probably love it. It's quiet most of the year and feels like a little village. The catch is that sunny summer weekends get busy."
 - Also a catch: have to be careful building because of what's in the dirt (likely registered archaeological sites under the BC Heritage Conservation Act, plus floodplain/sea-level rules — verify with City of Surrey / BC Archaeology Branch before wording; keep it general, no site specifics).
-- Local tip: (asked)
+- Local tip: likes "Heritage Park, I believe is the name" — almost certainly Elgin Heritage Park / Historic Stewart Farm, 13723 Crescent Road (City of Surrey), on the way into Crescent Beach along the Nicomekl. Confirm with Jared via the next question; fits Elgin Chantrell too.
 
 ## Ocean Park (South Surrey) — crescent-beach-ocean-park-guide (Ocean Park part)
 - Jared's words (near publish-ready): "Ocean Park is where I'd look if you want more of a year-round neighbourhood feel. It's great for families or anyone who likes quieter streets, mature trees, and having groceries and coffee close by. The catch is that walkability really depends on the address. Some homes are an easy walk to the shops. Others look close on a map, but you'll probably drive most days."
