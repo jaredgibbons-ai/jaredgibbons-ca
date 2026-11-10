@@ -60,4 +60,6 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - Local tip: (asked)
 
 ## Ocean Park (South Surrey) — crescent-beach-ocean-park-guide (Ocean Park part)
-- (asked)
+- Jared's words (near publish-ready): "Ocean Park is where I'd look if you want more of a year-round neighbourhood feel. It's great for families or anyone who likes quieter streets, mature trees, and having groceries and coffee close by. The catch is that walkability really depends on the address. Some homes are an easy walk to the shops. Others look close on a map, but you'll probably drive most days."
+- Also: 10–15 minutes to the highway, even 20 on bad days (Hwy 99). Lots of trees, very pretty streets. Lots of half-acre and full-acre properties (check sold-lot data for Crescent Bch Ocean Pk.).
+- Local tip: (asked)
