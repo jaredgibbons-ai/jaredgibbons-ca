@@ -57,9 +57,13 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 ## Crescent Beach (South Surrey) — crescent-beach-ocean-park-guide (Crescent Beach part)
 - Jared's words (near publish-ready): "Crescent Beach is for someone who'll actually use the beach. If your idea of a good morning is grabbing a coffee and walking along the water, you'll probably love it. It's quiet most of the year and feels like a little village. The catch is that sunny summer weekends get busy."
 - Also a catch: have to be careful building because of what's in the dirt (likely registered archaeological sites under the BC Heritage Conservation Act, plus floodplain/sea-level rules — verify with City of Surrey / BC Archaeology Branch before wording; keep it general, no site specifics).
-- Local tip: likes "Heritage Park, I believe is the name" — almost certainly Elgin Heritage Park / Historic Stewart Farm, 13723 Crescent Road (City of Surrey), on the way into Crescent Beach along the Nicomekl. Confirm with Jared via the next question; fits Elgin Chantrell too.
+- Local tip: likes "Heritage Park, I believe is the name" — almost certainly Elgin Heritage Park / Historic Stewart Farm, 13723 Crescent Road (City of Surrey), on the way into Crescent Beach along the Nicomekl. Jared confirmed.
 
 ## Ocean Park (South Surrey) — crescent-beach-ocean-park-guide (Ocean Park part)
 - Jared's words (near publish-ready): "Ocean Park is where I'd look if you want more of a year-round neighbourhood feel. It's great for families or anyone who likes quieter streets, mature trees, and having groceries and coffee close by. The catch is that walkability really depends on the address. Some homes are an easy walk to the shops. Others look close on a map, but you'll probably drive most days."
 - Also: 10–15 minutes to the highway, even 20 on bad days (Hwy 99). Lots of trees, very pretty streets. Lots of half-acre and full-acre properties (check sold-lot data for Crescent Bch Ocean Pk.).
 - Local tip: (asked)
+
+## Elgin Chantrell (South Surrey) — elgin-chantrell-guide
+- Jared's words (near publish-ready): "I'd tell a friend to look at Elgin Chantrell if they want a bigger lot, more privacy, and a quiet, treed neighbourhood. It's a great fit for families who want room for the kids to play or anyone who wants a bit more space between neighbours. The catch is that you'll drive for most errands, and a bigger yard means more upkeep."
+- Local tip: Elgin Heritage Park on Crescent Road, where Historic Stewart Farm is (Jared confirmed; 13723 Crescent Rd, City of Surrey). Also use as the Crescent Beach tip.
