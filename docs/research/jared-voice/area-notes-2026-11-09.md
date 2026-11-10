@@ -44,6 +44,6 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 
 ## Willoughby (Langley) — willoughby-guide
 - Who it suits: first-time buyers, commuters, and growing families looking for new construction.
-- What's great: (asked)
-- The catch: (asked)
+- What's great: people love that it has everything and it's new; up and coming; close to Highway 1. (Data: lowest house $/sq ft in Langley at $465, Paragon Nov 2025–Oct 2026, 179 house sales.)
+- The catch: smaller lots (check sold-lot medians), street parking, can be busy during school hours.
 - Local tip: (asked)
