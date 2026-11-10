@@ -115,9 +115,10 @@ test('built pages: links to other agents\' and brokerages\' sites carry rel="nof
   assert.equal(bad.length, 0, bad.slice(0, 5).join('; '));
 });
 
-test('built pages: no source points at another agent\'s or listing portal\'s page (D-204)', { skip: !built }, () => {
+test('built pages: no link points at another agent\'s, brokerage\'s or listing portal\'s page (D-204, D-209)', { skip: !built }, () => {
   const bad = [];
-  const rx = /<a\b[^>]*href="https?:\/\/(?:www\.|embed\.)?(?:bccondosandhomes\.com|mikestewart\.ca|homehappy\.ca|danmarusin\.com|vancouvernewcondos\.com|livabl\.com|rew\.ca|presalesbc\.com|bentruscottrealestate\.com|rennie\.com|zolo\.ca)[/"]/g;
+  const doms = JSON.parse(fs.readFileSync(new URL('../src/data/other-agent-domains.json', import.meta.url), 'utf8')).domains;   // D-209: the whole list
+  const rx = new RegExp(`<a\\b[^>]*href="https?:\\/\\/(?:[a-z0-9-]+\\.)*(?:${doms.map((d) => d.replace(/[.]/g, '\\.')).join('|')})[/"?#]`, 'gi');
   for (const f of pages) for (const m of html(f).matchAll(rx)) bad.push(`${f}: ${m[0].slice(0, 90)}`);
   assert.equal(bad.length, 0, bad.slice(0, 5).join('; '));
 });

@@ -22,8 +22,10 @@ const WORDING = [
 ];
 
 // Other agents', teams' and brokerages' sites cited as sources (D-200). Developers, governments and news stay followed.
-const OTHER_AGENTS = ['bccondosandhomes.com', 'mikestewart.ca', 'homehappy.ca', 'danmarusin.com', 'vancouvernewcondos.com', 'livabl.com', 'rew.ca',
-  'presalesbc.com', 'bentruscottrealestate.com', 'rennie.com', 'realtor.ca', 'zolo.ca', 'remax.ca', 'housesigma.com', 'zealty.ca', 'condoinvancouver.ca'];
+// Other agents', brokerages' and listing portals' sites (D-204, D-209: src/data/other-agent-domains.json). Source lists swap them at render time;
+// any link to them left elsewhere on a page (old blog posts, archive text) is unlinked here, text kept. realtor.ca (CREA) only gets nofollow.
+const OTHER_AGENTS = JSON.parse(fs.readFileSync(new URL('../data/other-agent-domains.json', import.meta.url), 'utf8')).domains;
+const NOFOLLOW_ONLY = ['realtor.ca'];
 
 function walk(dir, out = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -65,14 +67,15 @@ export default function fixLinks() {
           if (p.endsWith('.html') && exists(g)) return { to: g + tail };
           return { unresolved: true };
         };
-        let rewritten = 0, dropped = 0, headingsFixed = 0, wording = 0, nofollow = 0; const unresolved = new Map();
+        let rewritten = 0, dropped = 0, headingsFixed = 0, wording = 0, nofollow = 0, unlinked = 0; const unresolved = new Map();
         for (const f of files) {
           let t = fs.readFileSync(f, 'utf8'); let changed = false;
           t = t.replace(/<a\b([^>]*?)\shref="([^"]*)"([^>]*)>([\s\S]*?)<\/a>/g, (all, a, href, b, inner) => {
             if (!href.startsWith('/')) {
               // D-200: sources on other agents' and brokerages' sites stay as citations but pass no ranking credit (rel="nofollow")
               const host = (href.match(/^https?:\/\/(?:www\.)?([^/:?#]+)/i) || [])[1]?.toLowerCase();
-              if (!host || !OTHER_AGENTS.some((d) => host === d || host.endsWith('.' + d))) return all;
+              if (host && OTHER_AGENTS.some((d) => host === d || host.endsWith('.' + d))) { changed = true; unlinked++; return inner; }
+              if (!host || !NOFOLLOW_ONLY.some((d) => host === d || host.endsWith('.' + d))) return all;
               const attrs = a + b;
               if (/\brel="[^"]*\bnofollow\b/.test(attrs)) return all;
               changed = true; nofollow++;
@@ -99,7 +102,7 @@ export default function fixLinks() {
           { const before = t; for (const [re, to] of WORDING) t = t.replace(re, to); if (t !== before) { changed = true; wording++; } }
           if (changed) fs.writeFileSync(f, t);
         }
-        console.log(`[fix-links] rewritten ${rewritten}, removed ${dropped}, unresolved ${unresolved.size}, headings fixed ${headingsFixed}, wording ${wording} pages, nofollow ${nofollow}`);
+        console.log(`[fix-links] rewritten ${rewritten}, removed ${dropped}, unresolved ${unresolved.size}, headings fixed ${headingsFixed}, wording ${wording} pages, nofollow ${nofollow}, other-agent links unlinked ${unlinked}`);
         if (unresolved.size) fs.writeFileSync(path.join(root, '..', 'link-unresolved.json'), JSON.stringify([...unresolved], null, 1));
         else if (fs.existsSync(path.join(root, '..', 'link-unresolved.json'))) fs.unlinkSync(path.join(root, '..', 'link-unresolved.json'));
       },

@@ -16,11 +16,12 @@ Re-run after new research adds sources. python3 -I tools/build_source_replacemen
 import csv, json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROOT)
 OUT = 'src/data/source-replacements.json'
-AGENTS = r'bccondosandhomes\.com|mikestewart\.ca|homehappy\.ca|danmarusin\.com|vancouvernewcondos\.com|livabl\.com|rew\.ca|presalesbc\.com|bentruscottrealestate\.com|rennie\.com|zolo\.ca'
-AG = re.compile(AGENTS, re.I)
+AGENTS = '|'.join(re.escape(d) for d in json.load(open(os.path.join(ROOT, 'src/data/other-agent-domains.json')))['domains'])
+AG = re.compile(r'://(?:[a-z0-9-]+\.)*(?:' + AGENTS + r')(?=[/:?#"]|$)', re.I)
 SECONDARY = re.compile(AGENTS + r'|presale|carrietsang|realty|realtor|lumon\.com|nestpresales|strawhomes|youlive|goodmanreport|tmbrealestate|storeys\.com|bchomeworld|mdre\.ca|staging\.', re.I)
 CHECKED = 'checked November 1, 2026'
 PROJECT = 'Presale details: the developers’ own sales materials.'
+LISTING = 'Listing details: MLS® listing records.'
 BUILDING = 'Building facts: MLS® listing records and strata directories.'   # short on purpose: one line repeated on 300 pages must not add shared wording
 GOV = {
     'homehappy.ca/bc-first-time-buyer-programs': [{'t': 'gov.bc.ca · First time home buyers’ program', 'h': 'https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers'}],
@@ -114,6 +115,11 @@ def main():
         if 'bccondosandhomes.com' in u: put(u, 'building records line', {'text': BUILDING}); continue
         if re.search(r'rew\.ca/(buildings|developments)/(areas|search)|/zones/|/local/|/tag/|livabl\.com/[a-z-]+-bc$|livabl\.com/articles/\?p=|mikestewart\.ca/\?p=|presalesbc\.com|zolo\.ca|rennie\.com|mikestewart\.ca/presale$', u):
             put(u, 'index page dropped', {'drop': True}); continue
+        if not re.search(r'mikestewart|vancouvernewcondos|livabl|rew\.ca', u):          # D-209: the other agents' and portals' pages
+            if re.search(r'guide|neighbourhood|blog|podcast|substack|/post/|links-and-contacts|areas?/|/houses?\b|/community/?$', u) and not re.search(r'presale|project', u):
+                put(u, 'agent guide or blog dropped', {'drop': True}); continue
+            if re.search(r'presale|project|develop', u): put(u, 'plain project line', {'text': PROJECT}); continue
+            put(u, 'listing records line', {'text': LISTING}); continue
         name, dev, good = proj.get(u, ('', '', []))
         if not dev:
             m = re.search(r'-by-(?:the-)?([a-z0-9-]+)', u.split('/')[-1]); dev = m.group(1).replace('-', ' ') if m else ''
