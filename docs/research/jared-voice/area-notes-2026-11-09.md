@@ -52,4 +52,4 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - Who it suits: young families, professionals, investors.
 - What's great: "Love Grandview" — Jared lived there for 2 years. Grandview Corners is pretty sweet; likes how it's all laid out: commercial in the middle, residential going outwards. Big stores: Walmart, Real Canadian Superstore, Thrifty Foods; a Costco is coming (verify status/opening date before publishing). Morgan Crossing is great for shopping. Lots of stores, multiple gyms. New high school is built (Grandview Heights Secondary — verify opening year).
 - The catch: can have traffic sometimes because of the construction.
-- Local tip: (asked)
+- Local tip: likes north of Morgan Crossing — the townhomes going down the hill on 158 St (verify which side of the Grandview/Morgan Creek sub-area line this falls).
