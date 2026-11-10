@@ -578,3 +578,122 @@ Who it suits. Buyers who want acreage and quiet and are happy living beyond Cult
 What I’d tell a friend. I’d look here if what you want is to sit outside and have some space around you. The catch is that a quick errand can turn into a proper drive, especially when the lake is busy. 
 My tip. Drive from the house to where you’d do your weekly shop on a summer weekend. If you’re buying for a garden too, visit the lot in the late afternoon and see how early the shade comes in.
 ```
+
+
+# Batch 5 (final 22) — Jared's written answers, 2026-11-09 (verbatim; near publish-ready). Skipped: Northeast Maple Ridge, West Chilliwack, Majuba Hill (stay factual).
+
+```text
+Surrey / Delta
+
+1. Serpentine
+Who it suits. Buyers who want land for horses, farming or a shop and still want to be close to Cloverdale.
+What I’d tell a friend. I’d look here if the land is the reason you’re moving. I grew up on a farm, and I’d take a smaller piece of dry, usable ground over a bigger parcel that’s soggy half the year. That’s the catch I’d pay attention to on the Serpentine flats. 
+My tip. Walk the route from the driveway to the barn after a few days of rain. If you’d be hauling feed or moving equipment that way, you’ll learn more from that walk than from the acreage on the listing.
+
+2. East Delta
+Who it suits. Buyers who want to be in working farm country and are comfortable driving for most errands.
+What I’d tell a friend. Drive out along 104th Street and you’ll get the appeal pretty quickly. It’s wide open. The catch is that life on a farm road comes with trucks, equipment and neighbours who start work early. 
+My tip. If you need to bring in a horse trailer or farm truck, look at the entrance from both directions. Check the width over the ditch and whether you can turn around once you’re in.
+
+3. Ladner Rural
+Who it suits. Buyers who want a country property but still want Ladner Village to be part of their everyday life.
+What I’d tell a friend. I like the idea of having room for a garden or a barn and still being able to head into Ladner for dinner. The catch is that acreage listings can make every outbuilding sound useful. I’d pay for the ones I’d actually use. 
+My tip. If the barn is a big part of the price for you, spend as much time in it as you do in the house. Check the doors, the floor and whether the roof has been leaking.
+
+4. Westham Island
+Who it suits. Buyers who want a genuine farming setting and are happy with a quieter, more out-of-the-way routine.
+What I’d tell a friend. I’d take you across the bridge and out toward Reifel. The farm fields and marsh are what make this place feel different. The catch is that the bridge is part of every trip into town, whether you’re grabbing milk or bringing home a load of hay. 
+My tip. If you’ll be bringing in equipment or doing a renovation, check the bridge’s vehicle limits and talk to your contractor about deliveries before you buy.
+
+5. Port Guichon
+Who it suits. Buyers who want Ladner’s river side and like being close to the village.
+What I’d tell a friend. I’d start with a drive along River Road West. I like the mix of older homes and riverfront, but I’d get clear on what the listing means by “waterfront.” That word can describe very different properties. 
+My tip. If there’s a dock or float, ask what rights and maintenance obligations come with it. Get the documents for the specific property before you give it much value.
+
+Pitt Meadows / Maple Ridge
+
+6. West Meadows
+Who it suits. Buyers who want open space and are comfortable living near farmland and the airport.
+What I’d tell a friend. I can see the appeal if you want more room and like the open views. The catch is that aircraft noise is easy to miss if your showing happens during a quiet stretch. 
+My tip. Go back on a clear weekend and spend a little time outside. If you’re buying for the patio or yard, that’s where I’d judge it.
+
+7. North Maple Ridge
+Who it suits. Buyers who want a bigger lot, more trees and some space between neighbours.
+What I’d tell a friend. I’d take a drive up 224th to get a feel for this part of Maple Ridge. I like how quickly it starts to feel out of town. The catch is that a long driveway and a treed lot are both things you’ll have to look after. 
+My tip. If you’re leaving a townhouse because you finally want a sunny garden, go see the lot in the afternoon. Find the spot you’d plant in and see how much sun it actually gets.
+
+8. Northeast Maple Ridge
+skip
+
+9. Whonnock
+Who it suits. Buyers who want a rural setting and would trade a quick grocery run for a little more privacy.
+What I’d tell a friend. I’d take you to Whonnock Lake Park first. If having a place like that nearby sounds like something you’d use on a regular Tuesday, I get the appeal. The catch is that you’ll still be driving for most errands. 
+My tip. Visit the house after stopping at the lake. If being close to it is part of why you’re buying, see what the trip is like with a kid, a dog or a paddleboard in mind.
+
+Mission and area
+
+10. Durieu
+Who it suits. Buyers who want a small acreage or a country house in the Hatzic Valley.
+What I’d tell a friend. I’d look here if you want to see fields and mountains from the kitchen window and you’re fine heading into Mission for errands. The catch is that where the house sits in the valley matters. I’d pay attention to the ground around it before getting excited about the view. 
+My tip. If you’re on lower ground, check the flood mapping and ask about past water issues at the house and on the road you’d use to get out.
+
+11. Steelhead
+Who it suits. Buyers who want a treed acreage and like being tucked away.
+What I’d tell a friend. I’d drive out along Cardinal Street to see if the setting feels right. The upside is the privacy. The catch is that something as simple as getting reliable internet can become an address-by-address question. 
+My tip. If you work from home, ask what service the seller actually uses and confirm with the provider that you can get it at that address. Then make a call from inside the house.
+
+12. Hemlock Valley
+Who it suits. Skiers, snowboarders and buyers who’ll get enough use out of a mountain place to make it worthwhile.
+What I’d tell a friend. I’d buy here because I wanted weekends at Sasquatch Mountain. The part I’d think hardest about is getting up there. The upper section of Hemlock Valley Road is unpaved, and a drive up in good weather tells you very little about how you’ll feel doing it on a snowy Friday night. 
+My tip. Before you commit, ask who clears the driveway or complex parking, where guests park after a snowfall and how you get from the car to the front door with all your gear.
+
+Abbotsford
+
+13. Matsqui
+Who it suits. Buyers who like an older village setting or want land in an established farming area.
+What I’d tell a friend. I’d start in Matsqui Village and then drive out onto the prairie. Some people want a house in the village with a manageable yard. Others come for the fields. On the low ground, the catch I’d look into early is flood exposure. 
+My tip. Look at the house and its access road on the City’s flood mapping. I’d want to understand both before deciding how the property would work year-round.
+
+14. Sumas Mountain
+Who it suits. Buyers who want trees, trails and a bit of separation from town.
+What I’d tell a friend. I’d take you up to Sumas Mountain Regional Park and point you toward Chadsey Lake. If that’s your kind of Saturday, I can see why you’d want to live up here. The catch is that the hill becomes part of the routine, from driving home to finding a flat spot for the kids to play. 
+My tip. If the garage is at the bottom of a steep driveway, pull in and back out yourself. Then picture doing it in the dark with frost on the ground.
+
+15. Sumas Prairie
+Who it suits. Buyers who need real working land or want an acreage in an active farming area.
+What I’d tell a friend. I’d look here if the land can do what you need it to do. It’s open, productive farm country. The catch is flood exposure, and that would be one of my first questions on any property I liked. 
+My tip. Ask what happened at that exact property during past floods, including the house, barns and access road. Ask for records of any repairs and get an insurance quote that spells out the water coverage.
+
+Chilliwack and area
+
+16. West Chilliwack
+skip
+
+17. Majuba Hill
+skip
+
+18. Vedder Mountain
+Who it suits. Buyers who want a treed hillside setting and are happy driving for groceries and school.
+What I’d tell a friend. I’d look here if you want to come home to trees and a bit of privacy. The catch is that on a hillside lot, a big backyard on the listing can turn out to be mostly slope. 
+My tip. Walk from the back door to the spot you’d use most, whether that’s the garden or somewhere for the kids to play. If the route is awkward on the showing, it’ll still be awkward when you live there.
+
+19. Chilliwack River Valley
+Who it suits. People who fish, hike or spend a lot of time outdoors and are happy living farther from town.
+What I’d tell a friend. I’d look here if the river is somewhere you’ll actually spend time. The catch is that on a river-valley property, I’d care just as much about the road home and how the lot handles high water as I would about the house itself. 
+My tip. Drive the whole route from Vedder Crossing to the house. If you’re looking near the river, check the hazard mapping and ask about past water or access problems for that address.
+
+20. Cultus Lake
+Who it suits. Buyers who’ll use the lake regularly, whether they’re looking for a weekend place or somewhere to live year-round.
+What I’d tell a friend. I’d buy here for the mornings when you can walk down to the water with a coffee. The catch is summer traffic and, for homes on Cultus Lake Park residential leases, getting clear on the lease before you compare prices. 
+My tip. Visit on a hot Saturday and see where you and your guests would park. If it’s a park lease, ask for the remaining term and transfer details up front, then confirm financing for that specific property.
+
+21. Popkum
+Who it suits. Buyers who want a detached home on the east side of Chilliwack and like having a quieter place to come home to.
+What I’d tell a friend. I’d stop at Cheam Lake Wetlands to get a feel for this side of the valley. I like having a walk like that nearby. The catch is that you’re still heading out for a lot of your errands, and how close you are to Highway 1 can change how quiet the yard feels. 
+My tip. If the yard is what sold you, go back when traffic is moving and spend five minutes outside. That’s where I’d make the call.
+
+22. Bridal Falls
+Who it suits. Buyers who want a foothills setting, especially if they’re looking for a recreational place.
+What I’d tell a friend. I’d start with a walk at Bridal Veil Falls Park. It’s easy to see the appeal of having a weekend place out here. The catch is that if you’re looking at Bridal Falls RV Resort, what you can put on the lot and how you can use it are things I’d check before comparing it with a regular house. 
+My tip. Ask for the zoning and strata documents for the exact lot. If you want to stay year-round, rent it out or add a deck, check that specific use before making an offer.
+```
