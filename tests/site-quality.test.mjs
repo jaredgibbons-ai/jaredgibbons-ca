@@ -121,3 +121,10 @@ test('built pages: no source points at another agent\'s or listing portal\'s pag
   for (const f of pages) for (const m of html(f).matchAll(rx)) bad.push(`${f}: ${m[0].slice(0, 90)}`);
   assert.equal(bad.length, 0, bad.slice(0, 5).join('; '));
 });
+
+test('built pages: guide format v2 renders on Murrayville (D-205)', { skip: !built }, () => {
+  const h = html('murrayville-guide.html');
+  for (const s of ['class="qa"', 'Jared’s verdict:', 'class="pc"', 'right for you?', 'https://calendly.com/jaredgibbons', 'Drive, off-peak', 'Is Murrayville a good place to live?'])
+    assert.ok(h.includes(s), `missing ${s}`);
+  assert.ok(h.indexOf('class="qa"') < h.indexOf('class="qf"'), 'quick answer comes before quick facts');
+});

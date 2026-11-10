@@ -1202,3 +1202,14 @@ The 1,050 source links that pointed at other agents' and listing portals' pages 
 - **Index and search pages** (area lists, tag pages, page 2 of a search; 23) are dropped.
 - **Project pages with no developer site we could confirm (142)** → one plain line saying presale details come from the developers' own sales materials.
 Result: no built page links to those sites (one test guards it); the nofollow rule (D-200) stays as a backstop. The resources page keeps its link to realtor.ca, which is CREA's public listing site, not an agent's.
+
+## D-205 — 2026-11-10 — Guide format v2, piloted on Murrayville
+
+From the review of a competing agent's Murrayville post. Driven by `src/data/guide-plus.json` (one entry per guide, `status: draft` until Jared approves), rendered by `GenericPage.astro`:
+- **Quick answer** first under the H1: what the area is, the median sale prices by type (from `sold-12m.json` at build time) and Jared's one-line verdict.
+- **Quick facts** gain "Typical house sold" (year built, lot, bedrooms), "Drive, off-peak" (Highway 1, Surrey Central SkyTrain, downtown Vancouver, measured on OpenStreetMap routing with no traffic, so labelled off-peak with "rush hour takes longer") and "What it feels like".
+- **What works and what doesn't** near the top: Jared's own points marked "Jared"; the rest are sourced facts already on the page. No superlatives without a source.
+- **Is X right for you?** before the questions: 3–4 questions with straight answers and links to better-fit areas, then "Book a call with Jared" (calendly.com/jaredgibbons, checked) and the phone number.
+- **Video slot:** a YouTube id in the entry shows a tap-to-play tour (no YouTube code loads until tapped); nothing shows without one.
+- Two search-style questions per guide ("Is X a good place to live?", "What are the downsides of living in X?") lead the page's questions and its FAQ schema.
+Our prices are closed-sale medians with the window stated, not board benchmarks carried from another month. Murrayville is the pilot; the verdicts and trade-offs for the other guides come from Jared.

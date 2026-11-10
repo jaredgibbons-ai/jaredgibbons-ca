@@ -25,6 +25,8 @@ import REVIEW_EXCERPTS from '../data/review-excerpts.json';
 import AREA_PHOTOS from '../data/area-photos.json';
 import GUIDE_FACTS from '../data/guide-facts.json';
 import JARED_VOICE from '../data/jared-voice.json';
+import GUIDE_PLUS from '../data/guide-plus.json';
+import SOLD12 from '../data/sold/sold-12m.json';
 import LASTMOD from '../data/lastmod.json';
 import PhotoCredit from './PhotoCredit.astro';
 import IdxEmbed from './IdxEmbed.astro';
@@ -69,6 +71,12 @@ if (local?.faq?.length) {
   // The two plain questions were generated with the page name inserted ("Can Jared show me homes in Open?", "… in Our?", "… in Sold Properties?"); the unnamed wording reads right on every page.
   local.faq = local.faq.map((f: any) => /^Can Jared show me homes in .+\?$/.test(f.q) ? { ...f, q: 'Can I book a private showing with Jared?' } : /^How do I find out what my home in .+ is worth\?$/.test(f.q) ? { ...f, q: 'How do I find out what my home is worth?' } : f);
   local.faq = local.faq.filter((f: any) => { const k = String(f.q).trim().toLowerCase(); if (seenQ.has(k)) return false; seenQ.add(k); return !INTERNAL_FAQ.test(f.q + ' ' + f.a); });
+}
+// Guide format v2 (D-205, src/data/guide-plus.json): its search-style questions ("Is X a good place to live?") lead the page's questions.
+const GP = (GUIDE_PLUS as Record<string, any>)[page.slug];
+if (GP?.faq?.length && local) {
+  const asked = new Set(GP.faq.map((f: any) => f.q.toLowerCase()));
+  local.faq = [...GP.faq, ...(local.faq || []).filter((f: any) => !asked.has(String(f.q).toLowerCase()))];
 }
 // Three archive pages (About, Zonings, Buying) kept a contact form as plain text under an "... Form" heading (label lines, an option list, then "SUBMIT"). Those become the same
 // inert form block the other pages use; the "I agree to be contacted" line is not a field and is dropped (the consent checkbox comes with the live form at launch).
@@ -271,10 +279,36 @@ if (isHub) {
   }
 }
 // Neighbourhood guides open with a quick-facts box (D-197): typical prices and what sold (tools/build_guide_facts.py), then jump links to the sections people look for first.
+const money0 = (v: number) => '$' + Math.round(v).toLocaleString('en-CA');
+function gpPrices(gp: any): string {
+  const g = (SOLD12 as any).sub[gp.sub]?.groups; if (!g) return '';
+  const parts = [['house', 'houses'], ['townhome', 'townhomes'], ['condo', 'condos']].filter(([k]) => g[k]?.n >= 5 && g[k]?.price).map(([k, l], i) => i === 0 ? `${l} sold for a median of ${money0(g[k].price)}` : `${l} ${money0(g[k].price)}`);
+  if (!parts.length) return '';
+  const last = parts.length > 1 ? parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1] : parts[0];
+  return `Over the last twelve months, ${last}.`;
+}
+function gpFacts(gp: any) {
+  const h = (SOLD12 as any).sub[gp.sub]?.groups?.house;
+  const house = h?.n >= 5 ? [h.yb && `Built ${h.yb}`, h.lot_sqft && `${h.lot_sqft.toLocaleString('en-CA')} sq ft lot`, h.beds && `${h.beds} bedrooms`].filter(Boolean).join(' · ') : '';
+  return { house, commute: gp.commute, vibe: gp.vibe };
+}
 const isGuide = page.slug.endsWith('-guide');
 if (isGuide) {
   const gf = (GUIDE_FACTS as Record<string, any>)[page.slug];
-  const want: [RegExp, string][] = [[/^Homes for sale in /i, 'Homes for sale'], [/^Schools\b/i, 'Schools'], [/^Parks\b/i, 'Parks'], [/^Before you buy/i, 'Before you buy'], [/^Common questions$/i, 'Questions']];
+  // The archive's "Neighbourhood guide · Township of Langley" line under the H1 repeats the breadcrumb.
+  page.blocks = page.blocks.filter((b: any) => !(b.t === 'p' && (b.text ?? (b.parts || []).map((x: any) => x.t).join('')).trim().startsWith('Neighbourhood guide ·')));
+  // Guide format v2 (D-205): "What works and what doesn't" near the top, "Is X right for you?" before the questions.
+  if (GP) {
+    const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
+    let at = h1i + 1; while (['toc', 'areamap'].includes(page.blocks[at]?.t)) at++;
+    page.blocks.splice(at, 0, { t: 'h', level: 2, text: `What works and what doesn’t in ${GP.name}` }, { t: 'proscons', gp: GP });
+    if (GP.fit?.length) {
+      const qi = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 2 && /questions$/i.test(String(b.text || '')));
+      const fit = [{ t: 'h', level: 2, text: `Is ${GP.name} right for you?` }, { t: 'fit', gp: GP }];
+      if (qi > 0) page.blocks.splice(qi, 0, ...fit); else page.blocks.push(...fit);
+    }
+  }
+  const want: [RegExp, string][] = [[/^What works and what/i, 'Pros and cons'], [/^Homes for sale in /i, 'Homes for sale'], [/^Schools\b/i, 'Schools'], [/^Parks\b/i, 'Parks'], [/^Before you buy/i, 'Before you buy'], [/ right for you\?$/i, 'Right for you?'], [/questions$/i, 'Questions']];
   const used = new Set(page.blocks.filter((b: any) => b.id).map((b: any) => b.id));
   const jumps: any[] = [];
   for (const [re, label] of want) {
@@ -286,8 +320,10 @@ if (isGuide) {
   if (gf || jumps.length >= 2) {
     const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
     const tocAt = page.blocks.findIndex((b: any) => b.t === 'toc');
-    page.blocks.splice(tocAt > 0 ? tocAt : h1i + 1, 0, { t: 'quickfacts', facts: gf || null, jumps });
+    page.blocks.splice(tocAt > 0 ? tocAt : h1i + 1, 0, { t: 'quickfacts', facts: gf || null, jumps, gp: GP ? gpFacts(GP) : null });
   }
+  // Quick answer (D-205): what the area is, what homes sell for and Jared's one-line verdict, first thing under the H1, for readers, snippets and AI answers.
+  if (GP) { const qf = page.blocks.findIndex((b: any) => b.t === 'quickfacts'); const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1); page.blocks.splice(qf >= 0 ? qf : h1i + 1, 0, { t: 'qanswer', gp: GP, prices: gpPrices(GP) }); }
   // "Updated <month>" and a byline under the H1 (D-201)
   { const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1); if (h1i >= 0) page.blocks.splice(h1i + 1, 0, { t: 'updated' }); }
   // Jared's take (D-198): his own words on who the area suits, what he'd tell a friend and one tip (tools/build_jared_voice.py), right under the quick facts.
@@ -297,6 +333,11 @@ if (isGuide) {
     const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
     const tocAt = page.blocks.findIndex((b: any) => b.t === 'toc');
     page.blocks.splice(qf >= 0 ? qf + 1 : tocAt > 0 ? tocAt : h1i + 1, 0, { t: 'jvoice', v: jv });
+  }
+  // Video tour slot (D-205): only when guide-plus.json has a YouTube id for the guide; loads the player on tap.
+  if (GP?.video) {
+    const after = ['jvoice', 'quickfacts', 'qanswer'].map((t) => page.blocks.findIndex((b: any) => b.t === t)).find((i) => i >= 0) ?? 0;
+    page.blocks.splice(after + 1, 0, { t: 'video', id: GP.video, name: GP.name });
   }
 }
 // Archive pages open with an H2 above the H1 ("Fraser Valley Acreages for Sale" over the longer H1): show that line as a small label above the H1, not a second giant heading.
@@ -457,13 +498,41 @@ const explore = !_extra.length ? exploreBase
                   <dl class="qf__dl">
                     {b.facts?.prices?.length > 0 && <div><dt>Typical sale price</dt><dd>{b.facts.prices.map((x: any) => <span class="qf__p"><span>{x[0]}</span> <strong>{x[1]}</strong></span>)}</dd></div>}
                     {b.facts?.mix && <div><dt>Sold, Nov 2025 to Oct 2026</dt><dd>{b.facts.mix}</dd></div>}
+                    {b.gp?.house && <div><dt>Typical house sold</dt><dd>{b.gp.house}</dd></div>}
+                    {b.gp?.commute && <div><dt>Drive, off-peak</dt><dd>{b.gp.commute.rows.map((r: any) => <span class="qf__p"><span>{r[0]}</span> <strong>{r[1]} min</strong></span>)}</dd></div>}
+                    {b.gp?.vibe && <div><dt>What it feels like</dt><dd>{b.gp.vibe}</dd></div>}
                     {b.jumps.length > 0 && <div><dt>Jump to</dt><dd class="qf__j">{b.jumps.map((j: any) => <a href={`#${j.id}`}>{j.label}</a>)}</dd></div>}
                   </dl>
-                  {b.facts?.prices?.length > 0 && <p class="qf__src">Median prices from closed MLS® sales (Paragon).</p>}
+                  {b.facts?.prices?.length > 0 && <p class="qf__src">Median prices from closed MLS® sales (Paragon).{b.gp?.commute && ` Drive times measured on OpenStreetMap routing with no traffic, ${b.gp.commute.measured}, from ${b.gp.commute.from}; rush hour takes longer.`}</p>}
                 </div>
               );
               if (b.t === 'updated') return (
                 <p class="upd">Updated <time datetime={updatedDate.toISOString().slice(0, 7)}>{updatedLabel}</time> · By <a href="/about.html">Jared Gibbons, REALTOR®</a></p>
+              );
+              if (b.t === 'qanswer') return (
+                <section class="qa" aria-labelledby="quick-answer-h">
+                  <h2 class="qa__t" id="quick-answer-h">Quick answer</h2>
+                  <p class="qa__p">{b.gp.summary} {b.prices}</p>
+                  <p class="qa__v"><strong>Jared’s verdict:</strong> {b.gp.verdict}</p>
+                </section>
+              );
+              if (b.t === 'proscons') return (
+                <div class="pc">
+                  <div class="pc__col"><h3 class="pc__h">What works</h3><ul class="pc__l pc__l--yes">{b.gp.works.map((x: any) => <li>{x.t}{x.by === 'jared' && <span class="pc__by"> Jared</span>}</li>)}</ul></div>
+                  <div class="pc__col"><h3 class="pc__h">What doesn’t</h3><ul class="pc__l pc__l--no">{b.gp.doesnt.map((x: any) => <li>{x.t}{x.by === 'jared' && <span class="pc__by"> Jared</span>}</li>)}</ul></div>
+                </div>
+              );
+              if (b.t === 'fit') return (
+                <div class="fit">
+                  <ol class="fit__l">{b.gp.fit.map((x: any) => <li><p class="fit__q">{x.q}</p><p class="fit__a">{x.a}{x.links && x.links.length > 0 && <>{' '}{x.links.map((l: any, i: number) => <>{i > 0 ? ' · ' : ''}<a href={l[1]}>{l[0]}</a></>)}</>}</p></li>)}</ol>
+                  <div class="fit__cta"><p class="fit__ct">Still not sure? Book a quick call and we’ll talk it through.</p><a class="btn" href="https://calendly.com/jaredgibbons" target="_blank" rel="noopener">Book a call with Jared</a> <a class="fit__ph" href="tel:+16049281361">or call 604-928-1361</a></div>
+                </div>
+              );
+              if (b.t === 'video') return (
+                <section class="vid" aria-label={`${b.name} video tour`}>
+                  <button type="button" class="vid__btn" data-yt={b.id} aria-label={`Play the ${b.name} video tour`}><img src={`https://i.ytimg.com/vi/${b.id}/hqdefault.jpg`} alt="" width="480" height="360" loading="lazy" /><span class="vid__play" aria-hidden="true">▶</span></button>
+                  <p class="vid__cap">{b.name} neighbourhood tour with Jared</p>
+                </section>
               );
               if (b.t === 'jvoice') return (
                 <section class="jv on-dark" id="jareds-take" aria-labelledby="jareds-take-h">
@@ -663,6 +732,15 @@ const explore = !_extra.length ? exploreBase
 </script>
 
 <script>
+  // Video tour slot (D-205): the YouTube player loads only when the reader taps play.
+  document.querySelectorAll<HTMLButtonElement>('.vid__btn[data-yt]').forEach((b) => b.addEventListener('click', () => {
+    const f = document.createElement('iframe');
+    f.src = `https://www.youtube-nocookie.com/embed/${b.dataset.yt}?autoplay=1&rel=0`; f.title = b.getAttribute('aria-label') || 'Video tour';
+    f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'; f.allowFullscreen = true; b.replaceWith(f);
+  }));
+</script>
+
+<script>
   // Project cards that link to #vip-floorplans put the project name into the request form, then move focus to the name field.
   document.querySelectorAll<HTMLAnchorElement>('a[href="#vip-floorplans"]').forEach((a) => a.addEventListener('click', () => {
     const lines = [...a.querySelectorAll<HTMLElement>('.cardlink__t')].map((e) => (e.textContent || '').trim()).filter((x) => x && !/^request\b/i.test(x));
@@ -676,7 +754,8 @@ const explore = !_extra.length ? exploreBase
   /* Quick facts at the top of a guide (D-197) */
   .qf{border:1px solid var(--ink);background:#fff;padding:clamp(1rem,2.5vw,1.5rem);margin:0 0 1.25rem;max-width:56rem}
   .qf__t{margin:0 0 .75rem;font:800 .8125rem var(--f-head);letter-spacing:.12em;text-transform:uppercase}
-  .qf__dl{margin:0;display:grid;gap:.75rem}
+  .qf__dl{margin:0;display:grid;grid-template-columns:minmax(0,1fr);gap:.75rem}
+  .qf__dl > div, .qf__dl dd{min-width:0}
   .qf__dl > div{display:grid;grid-template-columns:minmax(9rem,12rem) 1fr;gap:.25rem 1rem;align-items:baseline}
   .qf__dl dt{font:700 .75rem var(--f-head);letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}
   .qf__dl dd{margin:0}
@@ -698,6 +777,32 @@ const explore = !_extra.length ? exploreBase
   .fold__b{padding-bottom:1rem}
 
   /* VIP floorplans box: a black band with the form on a white card (copy left, form right on wide screens). */
+  .qa{border-left:4px solid var(--ink);background:#f4f4f4;padding:1rem 1.25rem;margin:0 0 1.25rem;max-width:56rem}
+  .qa__t{margin:0 0 .4rem;font:800 .8125rem var(--f-head);letter-spacing:.12em;text-transform:uppercase}
+  .qa__p{margin:0 0 .6rem;font-size:1.0625rem;line-height:1.55;max-width:var(--measure)}
+  .qa__v{margin:0;line-height:1.5;max-width:var(--measure)}
+  .pc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:1rem;max-width:64rem;margin:0 0 1.5rem}
+  .pc__col{border:1px solid var(--ink);padding:1rem 1.25rem;background:#fff}
+  .pc__h{margin:0 0 .6rem;font-size:1.05rem}
+  .pc__l{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+  .pc__l li{position:relative;padding-left:1.6rem;line-height:1.5}
+  .pc__l li::before{position:absolute;left:0;top:0;font:800 1rem/1.5 var(--f-head)}
+  .pc__l--yes li::before{content:'+'}
+  .pc__l--no li::before{content:'−'}
+  .pc__by{display:inline-block;margin-left:.35rem;padding:0 .35rem;border:1px solid var(--grey);color:var(--grey);font:700 .625rem/1.6 var(--f-head);letter-spacing:.08em;text-transform:uppercase;vertical-align:.1em}
+  .fit{max-width:56rem;margin:0 0 1.5rem}
+  .fit__l{margin:0 0 1.25rem;padding-left:1.25rem;display:grid;gap:.9rem}
+  .fit__q{margin:0 0 .2rem;font:700 1.05rem/1.35 var(--f-head)}
+  .fit__a{margin:0;line-height:1.55;max-width:var(--measure)}
+  .fit__cta{border:1px solid var(--ink);padding:1rem 1.25rem;display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}
+  .fit__ct{margin:0;flex:1 1 100%;font-weight:600}
+  .fit__ph{color:var(--ink)}
+  .vid{max-width:56rem;margin:0 0 1.5rem}
+  .vid__btn{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:0;background:#000;cursor:pointer;overflow:hidden}
+  .vid__btn img{width:100%;height:100%;object-fit:cover;opacity:.85}
+  .vid__play{position:absolute;inset:0;margin:auto;width:4.5rem;height:4.5rem;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;font-size:1.6rem}
+  .vid iframe{width:100%;aspect-ratio:16/9;border:0;display:block}
+  .vid__cap{margin:.5rem 0 0;font-size:.85rem;color:var(--grey)}
   .upd{margin:-.5rem 0 1rem;font-size:.85rem;color:var(--grey);letter-spacing:.02em}
   .upd a{color:inherit}
   .jv{background:var(--ink);color:#fff;padding:clamp(1.25rem,3.5vw,2.25rem);margin:0 0 1.5rem;max-width:56rem;scroll-margin-top:calc(var(--header-h,4.25rem) + 1rem)}
