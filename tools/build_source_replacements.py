@@ -93,6 +93,18 @@ def dev_site(raw):
     return None
 
 
+CITYW = r'(?:South Surrey|Surrey City Centre|Surrey|Langley|Willoughby|Abbotsford|Coquitlam|Burquitlam|Burnaby|Metrotown|Brentwood|Vancouver|West Side|East|North|West|Richmond|Delta|Tsawwassen|Maple Ridge|Town Centre|Mission|Chilliwack|Port Moody|Poco|New West|Squamish|Mpc)'
+
+
+def clean_name(n):
+    n = re.sub(r'\s+', ' ', n).strip()
+    n = re.sub(r'\s+In New Westminster$|\s+Bc$', '', n).replace(' At ', ' at ')
+    for _ in range(3): n = re.sub(r'\s+(?:' + CITYW + r'|at|At|in|In)$', '', n).strip()
+    n = re.sub(r'(?<=[a-z])\d$', '', n)                       # "Baden Park1"
+    n = re.sub(r'(\d)(St|Nd|Rd|Th)\b', lambda m: m.group(1) + m.group(2).lower(), n)   # "39Th" -> "39th"
+    return n
+
+
 def main():
     proj = {}   # normalized URL -> (project name, developer)
     for pr in json.load(open('src/data/presale/2026-11-01.json'))['projects']:
@@ -108,10 +120,23 @@ def main():
             if f.endswith('.json'):
                 for m in re.finditer(r'https?://[^\s"\'<>]+', open(os.path.join(base, f), encoding='utf-8').read()):
                     if AG.search(m.group(0)): urls.add(norm(m.group(0)))
+    # Jerry's checked developer project pages (Nov 10, 2026): old agent URL -> the developer's own project page (D-210)
+    JERRY = {}
+    for r in csv.DictReader(open('docs/review/sources/presale-developer-pages-2026-11-10-jerry.csv', encoding='utf-8')):
+        old = norm(r['Where our old source pointed (other agent, for reference only)'])
+        link = r['Developer PROJECT page URL (fill in)'].strip()
+        dev = re.sub(r'\s*\(.*?\)', '', r['Developer (fill in if blank)']).strip()
+        if len(dev.split()) > 4: dev = ''
+        JERRY[old] = (link if link.startswith('http') else '', '' if re.search(r'presale|condos', dev, re.I) else dev, clean_name(r['Project']))
     out = {}; stats = {}
     def put(u, kind, v): out[u] = v; stats[kind] = stats.get(kind, 0) + 1
     for u in sorted(urls):
         if u in GOV: put(u, 'government page', {'items': GOV[u]}); continue
+        if u in JERRY and JERRY[u][0]:
+            link, dev, name = JERRY[u]; host = norm(link).split('/')[0]
+            put(u, 'developer project page (Jerry)', {'items': [{'t': f'{host} · {name}' + (f' ({dev})' if dev and dev.lower().split()[0] not in name.lower() else ''), 'h': link}]}); continue
+        if u in JERRY and JERRY[u][1] and not proj.get(u, ('', '', ''))[1]:
+            proj[u] = (JERRY[u][2], JERRY[u][1], [])
         if 'bccondosandhomes.com' in u: put(u, 'building records line', {'text': BUILDING}); continue
         if re.search(r'rew\.ca/(buildings|developments)/(areas|search)|/zones/|/local/|/tag/|livabl\.com/[a-z-]+-bc$|livabl\.com/articles/\?p=|mikestewart\.ca/\?p=|presalesbc\.com|zolo\.ca|rennie\.com|mikestewart\.ca/presale$', u):
             put(u, 'index page dropped', {'drop': True}); continue
