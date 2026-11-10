@@ -27,3 +27,10 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - What's great: "Walnut Grove is great." Newer than Brookswood; lots of sidewalks; Walnut Grove Community Centre in the middle; one of Langley's largest high schools (Walnut Grove Secondary — verify enrolment vs other Langley secondaries); a lot of homes from the 1990s (check sold year-built median).
 - The catch: some smaller lots around 5,000 sq ft (check sold-lot medians), but there are homes with suites as well.
 - Local tip: don't want to be too close to Highway 1 (noise). Likes Forest Hills (pocket near Forest Hills Park, 215 St — verify name/extent) and Alex Hope Field (verify name — Alex Hope Park/Elementary area).
+
+## Murrayville (Langley) — murrayville-guide
+- Who it suits: families.
+- What's great: W.C. Blair pool (verify name/location); "up the hill"; Ralph's market (verify — Ralph's Farm Market?); starting to get into farm area, side by side with the Salmon River; IGA and Ralph's for shopping (verify IGA location); beautiful streets like Walnut Grove — sidewalks, big trees down the street; loves James Hill Park (verify it sits in the Murrayville sub-area vs James Hill/Brookswood boundary).
+- The catch: not a lot of suites.
+- Proof point: Jared just sold a house a few doors down from James Hill Park on 219 St (pull the MLS® number/date before quoting).
+- Local tip: (asked)
