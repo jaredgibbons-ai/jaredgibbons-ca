@@ -217,3 +217,124 @@ Who it suits: First-time condo buyers and people who want to stay central with a
 What I’d tell a friend: I’d look here if convenience is high on the list. Around Airport Road and Young Road, I’d pay particular attention to which way the unit faces. Two units in the same building can feel completely different with the windows open. 
 My tip: Stand in the bedroom with the window open during your showing. If you’re a light sleeper, that’ll tell you more than the view from the living room.
 ```
+
+
+# Batch 2 (next 20 by sales) — Jared's written answers, 2026-11-09 (verbatim; near publish-ready)
+Verify before publishing: 20 Ave side / South Surrey Athletic Park / Sunnyside Acres / Semiahmoo Town Centre; Fraser Heights Recreation Centre; Bear Creek Park & Green Timbers Urban Forest entrances; Joe Brown Park; Cedar Hills Park; Bolivar Park; Nordel Way & Hwy 91; Scott Road; Watershed Park; Annieville Lions Park; Tsawwassen Mills & The Springs; TFN leasehold (link TFN / lender wording — keep general, no legal advice); 104 Ave & 240 St (Albion school + community centre names); Hammond Community Park + outdoor pool; Harris Road / Pitt Meadows WCE station; Townsend (Park?) side; Evans Road; Sardis Park; Vedder Park / river trails; Eastern Hillsides slope/geotech wording.
+Tsawwassen North leasehold line: check with TFN land-ownership info before publishing; phrase as 'ask/confirm', which Jared already does.
+
+```text
+South Surrey
+
+1. Sunnyside Park
+Who it suits. Families who want an established neighbourhood and downsizers who want errands close by.
+What I’d tell a friend. I like the 20th Avenue side if you’ll use the Athletic Park or walk through Sunnyside Acres. If you’d rather walk to groceries or coffee, I’d look closer to Semiahmoo Town Centre. The catch is that you can be close to one and still drive to the other. 
+My tip. If you’re looking near the fields, go on a Saturday morning. You’ll see what parking and traffic are like when games are on.
+
+Surrey
+
+2. Fraser Heights
+Who it suits. Families who want a detached house and expect to spend a lot of their week close to home.
+What I’d tell a friend. I’d start near the rec centre. It’s nice having somewhere to take the kids without making a whole trip of it. The catch is that getting onto Highway 1 at the wrong time can change your commute pretty quickly. 
+My tip. Drive from the house to the highway at the time you’d actually leave for work. That first stretch is easy to overlook.
+
+3. Bear Creek / Green Timbers
+Who it suits. Families who want a yard and somewhere nearby to walk the dog or take the kids.
+What I’d tell a friend. Bear Creek is where I’d go for the playground and fields. Green Timbers is where I’d go for a quieter walk in the trees. The catch is that a house can look close to either park on a map and still have an awkward walk to the entrance. 
+My tip. Walk to the entrance from the front door. If you’ve got kids, pay attention to where you’d have to cross.
+
+4. Panorama Ridge
+Who it suits. Buyers who want more privacy, mature trees and a yard they’ll spend time in.
+What I’d tell a friend. I’d start near Joe Brown Park if you like the idea of getting out for a walk without going far. The catch is that a big, treed lot can take more work than you expect, and you’ll likely drive for most errands. 
+My tip. Go back in the late afternoon. A beautiful backyard under big trees might get less sun than you were picturing.
+
+5. Cedar Hills
+Who it suits. Buyers who want a detached house with a yard and are happy to update it over time.
+What I’d tell a friend. I’d look at the side streets around Cedar Hills Park. If the lot and layout work, I’d give a dated house a fair shot. The catch is that the money you set aside for a kitchen can disappear fast if the roof or drainage needs attention first. 
+My tip. If there’s a finished basement, ask how old the perimeter drains are and whether the seller has any records of work on them.
+
+6. Bolivar Heights
+Who it suits. Buyers who want a detached home and like the idea of a view or a bit more separation from the neighbours.
+What I’d tell a friend. I’d start with the streets around Bolivar Park. If a house has a great outlook, I’d also look closely at how much of the yard is flat enough to use. A view is lovely, but so is having somewhere to put a table and let the kids play. 
+My tip. If a retaining wall is holding up the part of the yard you’re buying the house for, have it looked at and ask for any repair records.
+
+North Delta
+
+7. Nordel
+Who it suits. Families who want an established detached neighbourhood and often drive toward Highway 91.
+What I’d tell a friend. I’d look a few turns off Nordel Way. I like being close to the main route, but I’d want a backyard where I can sit and talk without raising my voice.
+My tip. Try turning into and out of the street during the evening rush. A turn that’s easy on Sunday can be a pain every weekday.
+
+8. Scottsdale
+Who it suits. Buyers who want groceries, restaurants and transit close by.
+What I’d tell a friend. I’d look near Scott Road if you like being able to grab dinner or pick up a few things on your way home. The catch is that the convenience comes with traffic, especially if your place faces the main road.
+My tip. If you’re buying for walkability, walk to the grocery store from the house. See how many busy crossings you’d use and whether you’d still do it in the rain.
+
+9. Sunshine Hills / Woods
+Who it suits. Families who want a treed neighbourhood and anyone who’d use the trails regularly.
+What I’d tell a friend. Watershed Park would be a big reason I’d look here. Having that much trail close by is something I’d use all year. The catch is that a shaded yard can stay damp and get less light than you expect. 
+My tip. If you like to garden or eat outside, go back when you’d normally be home and see where the sun actually hits.
+
+10. Annieville
+Who it suits. Buyers looking for an older detached house, a proper yard and a quieter side street.
+What I’d tell a friend. I’d start around Annieville Lions Park. If the house has a layout you like and a yard you’ll use, I wouldn’t get hung up on dated finishes. The catch is that two houses built around the same time can have very different maintenance histories. 
+My tip. Ask what’s been done to the plumbing, wiring and drains. Those are the updates I’d rather see receipts for than a new countertop.
+
+Tsawwassen
+
+11. Tsawwassen North
+Who it suits. Downsizers who like the Springs and buyers looking for a newer condo or townhome near the shops.
+What I’d tell a friend. I’d look here if you want something newer and like having Tsawwassen Mills close. The big catch is that ownership can vary by development, including leasehold homes on Tsawwassen First Nation lands. I’d sort that out early because it can affect financing and resale. 
+My tip. Ask for the title details up front. If it’s leasehold, have your lender confirm financing for that specific development and your lawyer review the lease before you commit.
+
+Maple Ridge
+
+12. Albion
+Who it suits. Families moving up to a bigger townhome or a detached house.
+What I’d tell a friend. I’d start around 104th and 240th if having the school and community centre close would make your week easier. The catch is that getting out to Lougheed can take longer than you’d guess from the map. 
+My tip. Do the school drop-off and then drive out to Lougheed on a weekday morning. See how that routine feels before you buy.
+
+13. Southwest Maple Ridge
+Who it suits. Buyers who want an older detached house and like being on the west side for trips toward Pitt Meadows or across the Golden Ears Bridge.
+What I’d tell a friend. I’d start in Hammond around the community park. It has the feel of an older neighbourhood, with a park and outdoor pool right there. The catch is that if you’re near the rail line, train noise can matter more than you’d think on a quick showing. 
+My tip. If the tracks are close, ask the neighbours what they hear at night. A quiet afternoon showing only tells you so much.
+
+14. Silver Valley
+Who it suits. Buyers who want a newer family home and would rather have trees and trails nearby than walk to the shops.
+What I’d tell a friend. I get the appeal if you want to come home somewhere that feels tucked away. The catch is that school, groceries and everything else can turn into a drive, and some yards are smaller or steeper than the house photos suggest. 
+My tip. Stand where you’d actually put the patio table or the kids’ play set. See how much flat space you have once you account for the slope.
+
+Pitt Meadows
+
+15. Central Meadows
+Who it suits. First-time buyers and downsizers who want flatter streets, shops nearby and the option of taking the train.
+What I’d tell a friend. I’d start around Harris Road. Having the park nearby is nice, and the West Coast Express can be handy if its weekday schedule fits. The catch is that living near the tracks and living a few blocks back can feel quite different. 
+My tip. If you’re buying close to the station, visit around the time you normally go to bed. Spend a few minutes in the bedroom with the window open.
+
+Chilliwack / Sardis
+
+16. Chilliwack Proper West
+Who it suits. First-time buyers looking for a condo or an older house close to town.
+What I’d tell a friend. I’d start on the residential streets on the Townsend side. You can stay close to town and still find a block that feels quieter. The catch is that the street can make as much difference as the house, especially near a busier road. 
+My tip. Go back after work, park where you’d actually park and walk the block. It’s a better read on the street than a midday showing.
+
+17. Sardis West Vedder
+Who it suits. Families who want a townhome or detached house and drive west on Highway 1 regularly.
+What I’d tell a friend. I’d start on the Evans Road side if the highway is part of your daily routine. The catch is that the closer you get to the busy routes, the more I’d pay attention to what you can hear from the yard. 
+My tip. Stand outside during the afternoon rush. If you’re buying for the patio, make sure it’s somewhere you’ll want to sit.
+
+18. Sardis East Vedder
+Who it suits. Families and downsizers who want flatter streets and an established neighbourhood.
+What I’d tell a friend. I’d start around Sardis Park. I like having somewhere to take a walk without making a trip out of it. The catch is that some of the older homes need work even when they show well. 
+My tip. If you like a rancher, walk the whole route from the garage to the bedroom and out to the yard. A few steps in the wrong places can matter if you’re buying to stay long term.
+
+19. Vedder Crossing
+Who it suits. Buyers who want a condo or townhome near everyday shops and would use the river trails.
+What I’d tell a friend. I like that you can pick up dinner and still get out for a walk by the river. The catch is that being close to Vedder Road can mean more traffic noise, and the walk to the trail depends on which side you’re on. 
+My tip. Walk from the unit to Vedder Park before you decide. If that’s going to be your regular dog walk, the route matters more than the distance on the listing.
+
+20. Eastern Hillsides
+Who it suits. Buyers who want a view, a quieter setting and are happy driving into town.
+What I’d tell a friend. This is where I’d look if I wanted to sit outside and look out over the valley. The catch is the hill. It changes how you use the driveway and yard, and I’d pay close attention to drainage and retaining walls on a sloped lot. 
+My tip. Walk the back of the lot after heavy rain if you can. See where the water goes, and ask for any drainage or geotechnical reports if the house sits on a steep slope.
+```
