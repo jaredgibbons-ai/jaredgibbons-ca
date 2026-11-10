@@ -12,5 +12,5 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 ## White Rock — white-rock-guide
 - Who it suits: middle-aged buyers, downsizers, young professionals.
 - What's great: close to the ocean; a different view every day; lots of sun ("30%+ more than, say, Maple Ridge" — verify against Environment Canada sunshine normals before publishing a number); lots of hills for walking.
-- The catch: (asked)
+- The catch: some areas have lots of stairs; parking can be a problem; on some streets power lines sit in the view line; Oxford Street is usually closed when it's freezing (steep hill — verify City practice); train noise along the waterfront, but you get used to it; Marine Drive gets busy in summer; older condo buildings that need repairs, though a lot of the stratas are well run.
 - Local tip: (asked)
