@@ -26,4 +26,4 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - Who it suits: buyers who want to be close to Highway 1.
 - What's great: "Walnut Grove is great." Newer than Brookswood; lots of sidewalks; Walnut Grove Community Centre in the middle; one of Langley's largest high schools (Walnut Grove Secondary — verify enrolment vs other Langley secondaries); a lot of homes from the 1990s (check sold year-built median).
 - The catch: some smaller lots around 5,000 sq ft (check sold-lot medians), but there are homes with suites as well.
-- Local tip: (asked)
+- Local tip: don't want to be too close to Highway 1 (noise). Likes Forest Hills (pocket near Forest Hills Park, 215 St — verify name/extent) and Alex Hope Field (verify name — Alex Hope Park/Elementary area).
