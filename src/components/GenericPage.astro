@@ -24,6 +24,7 @@ import REVIEW_EXCERPTS from '../data/review-excerpts.json';
 import AREA_PHOTOS from '../data/area-photos.json';
 import GUIDE_FACTS from '../data/guide-facts.json';
 import JARED_VOICE from '../data/jared-voice.json';
+import LASTMOD from '../data/lastmod.json';
 import PhotoCredit from './PhotoCredit.astro';
 import IdxEmbed from './IdxEmbed.astro';
 import ListingAlert from './ListingAlert.astro';
@@ -38,6 +39,11 @@ import EXPLORE from '../data/explore.json';
 import EXPLORE_EXTRA from '../data/explore-extra.json';
 import ExploreLinks from './ExploreLinks.astro';
 import AwardsMarquee from './AwardsMarquee.astro';
+// Guides refresh with each month's board and sold data: the date shown is the month the latest board package came out (D-201).
+const MARKET = import.meta.glob('../data/market/20[0-9][0-9]-[0-9][0-9].json', { eager: true });
+const latestMarket = Object.keys(MARKET).map((k) => k.match(/(\d{4})-(\d{2})\.json$/)).filter(Boolean).sort((x: any, y: any) => (x[0] < y[0] ? 1 : -1))[0] as RegExpMatchArray;
+const updatedDate = latestMarket ? new Date(Date.UTC(+latestMarket[1], +latestMarket[2], 1)) : new Date();   // month after the data month
+const updatedLabel = updatedDate.toLocaleDateString('en-CA', { month: 'long', year: 'numeric', timeZone: 'UTC' });
 
 const { page } = Astro.props as { page: any };
 const awRev = [...page.slug].reduce((n: number, c: string) => n + c.charCodeAt(0), 0) % 2 === 1;
@@ -98,6 +104,11 @@ const postName = String(page.title || '').split('|')[0].trim();
 const crumbs: any[] = page.slug === 'index' || page.slug === '404' ? [] : local?.breadcrumbs?.length ? local.breadcrumbs
   : String(page.path || '').startsWith('/blog.html/') ? [{ name: 'Home', href: '/index.html' }, { name: 'Blog', href: '/blog.html' }, { name: postName, href: page.path }]
   : (BREADCRUMBS as Record<string, any[]>)[page.slug] ?? [];
+if (page.slug.endsWith('-guide')) {
+  const lm = (LASTMOD as Record<string, any>)[`${origin}${page.path || '/' + page.slug + '.html'}`];
+  jsonld.push({ '@context': 'https://schema.org', '@type': 'WebPage', url: `${origin}${page.path || '/' + page.slug + '.html'}`, name: String(page.title || '').split('|')[0].trim(),
+    dateModified: lm?.d || updatedDate.toISOString().slice(0, 10), author: { '@id': `${origin}/#agent` } });
+}
 if (local?.faq?.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: local.faq.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
 // The old MLS search form leaked into six farm pages as text (form labels, a 34-item and a 275-item list of dropdown options, "Save search", "Reset", "Filters"). It is not content: drop it from "Price: Property Type / Subtype:" through "Filters".
 {
@@ -248,6 +259,8 @@ if (isGuide) {
     const tocAt = page.blocks.findIndex((b: any) => b.t === 'toc');
     page.blocks.splice(tocAt > 0 ? tocAt : h1i + 1, 0, { t: 'quickfacts', facts: gf || null, jumps });
   }
+  // "Updated <month>" and a byline under the H1 (D-201)
+  { const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1); if (h1i >= 0) page.blocks.splice(h1i + 1, 0, { t: 'updated' }); }
   // Jared's take (D-198): his own words on who the area suits, what he'd tell a friend and one tip (tools/build_jared_voice.py), right under the quick facts.
   const jv = (JARED_VOICE as Record<string, any>)[page.slug];
   if (jv) {
@@ -419,6 +432,9 @@ const explore = !_extra.length ? exploreBase
                   </dl>
                   {b.facts?.prices?.length > 0 && <p class="qf__src">Median prices from closed MLS® sales (Paragon).</p>}
                 </div>
+              );
+              if (b.t === 'updated') return (
+                <p class="upd">Updated <time datetime={updatedDate.toISOString().slice(0, 7)}>{updatedLabel}</time> · By <a href="/about.html">Jared Gibbons, REALTOR®</a></p>
               );
               if (b.t === 'jvoice') return (
                 <section class="jv on-dark" id="jareds-take" aria-labelledby="jareds-take-h">
@@ -653,6 +669,8 @@ const explore = !_extra.length ? exploreBase
   .fold__b{padding-bottom:1rem}
 
   /* VIP floorplans box: a black band with the form on a white card (copy left, form right on wide screens). */
+  .upd{margin:-.5rem 0 1rem;font-size:.85rem;color:var(--grey);letter-spacing:.02em}
+  .upd a{color:inherit}
   .jv{background:var(--ink);color:#fff;padding:clamp(1.25rem,3.5vw,2.25rem);margin:0 0 1.5rem;max-width:56rem;scroll-margin-top:calc(var(--header-h,4.25rem) + 1rem)}
   .jv__head{display:flex;align-items:center;gap:1rem;margin:0 0 1.25rem}
   .jv__img{width:4rem;height:4rem;border-radius:50%;flex:none;border:1px solid rgba(255,255,255,.35);object-fit:cover}
