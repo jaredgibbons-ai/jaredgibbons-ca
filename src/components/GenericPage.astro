@@ -312,7 +312,7 @@ if (isGuide) {
       if (qi > 0) page.blocks.splice(qi, 0, ...fit); else page.blocks.push(...fit);
     }
   }
-  const want: [RegExp, string][] = [[/^What works and what/i, 'Pros and cons'], [/^Homes for sale in /i, 'Homes for sale'], [/^Schools\b/i, 'Schools'], [/^Parks\b/i, 'Parks'], [/^Before you buy/i, 'Before you buy'], [/ right for you\?$/i, 'Right for you?'], [/questions$/i, 'Questions']];
+  const want: [RegExp, string][] = [[/^What works and what/i, 'Pros and cons'], [/^Industrial and commercial property/i, 'Industrial property'], [/^Homes for sale in /i, 'Homes for sale'], [/^Schools\b/i, 'Schools'], [/^Parks\b/i, 'Parks'], [/^Before you buy/i, 'Before you buy'], [/ right for you\?$/i, 'Right for you?'], [/questions$/i, 'Questions']];
   const used = new Set(page.blocks.filter((b: any) => b.id).map((b: any) => b.id));
   const jumps: any[] = [];
   for (const [re, label] of want) {
@@ -793,7 +793,8 @@ const explore = !_extra.length ? exploreBase
   .qf__dl > div{display:grid;grid-template-columns:minmax(9rem,12rem) 1fr;gap:.25rem 1rem;align-items:baseline}
   .qf__dl dt{font:700 .75rem var(--f-head);letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}
   .qf__dl dd{margin:0}
-  .qf__p{display:inline-block;margin-right:1.25rem;white-space:nowrap}
+  .qf__p{display:inline-block;margin-right:1.25rem;white-space:nowrap;max-width:100%}
+  @media (max-width:30rem){.qf__p{white-space:normal}}
   .qf__p strong{font-family:var(--f-head);font-weight:800}
   .qf__j{display:flex;flex-wrap:wrap;gap:.5rem}
   .qf__j a{display:inline-flex;align-items:center;min-height:2.25rem;padding:.25rem .8rem;border:1px solid var(--ink);color:var(--ink);text-decoration:none;font:700 .75rem var(--f-head);letter-spacing:.08em;text-transform:uppercase}
