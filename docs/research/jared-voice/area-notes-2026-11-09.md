@@ -80,3 +80,7 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - The catch: just maintaining the property — but you can also have fields. "I would never say no to more land." Slightly longer to get groceries, but not bad — no worse than Fort Langley.
 - Also: you can have all sorts of animals, from pigs to cows (verify Township of Langley / City of Surrey zoning + ALR farm-use rules before wording; keep general). A lot of the properties are in the ALR (verify share; link ALC).
 - Local tip: loves anything around Campbell Valley Park — his favourite. Or along the border in Hazelmere: you get views east of 190 St (verify: likely along 0/8 Ave toward the US border — confirm which road).
+
+## Langley City — langley-city guide
+- Jared's words (near publish-ready): "I'd tell a friend to look at Langley City if they're buying their first condo or want to be able to walk to grab coffee, groceries, or dinner. I like the area around Fraser Highway's one-way stretch because it feels like an actual downtown. And having SkyTrain come right into Langley City will be a big plus if you commute toward Surrey or Vancouver. It's currently expected to open in late 2029." (verify SLS opening date on the BC gov / TransLink project page at publish time; date it)
+- The catch: (asked)
