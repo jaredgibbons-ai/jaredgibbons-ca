@@ -19,7 +19,8 @@ Packs: Salmon River, Otter District, Campbell Valley, County Line / Glen Valley.
     Regional Park (from June 8, 2026); the Otter Co-op's 1922 farmers' institute roots.
   - Not used (couldn't confirm): the 2018 freshet property count, park hectares and trail lengths differing from the existing guide,
     route frequencies, winery addresses.
-  - Jared's verdict is left empty until he writes it; his Nov 9 words stay in his card and supply the lines marked "Jared".
+  - Verdicts: Jared's Nov 10 edits of the drafts (one-acre communities; more land by the Co-op; close to the park's horse trails; more hills,
+    closer to Fort Langley). His Nov 9 words stay in his card and supply the lines marked "Jared".
 python3 -I tools/build_rural_plus_2026_11_10.py"""
 import json, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROOT)
@@ -27,11 +28,12 @@ M = 'November 10, 2026'
 J = 'jared'
 E = {
  'salmon-river-guide': {
-  'status': 'draft', 'name': 'Salmon River', 'sub': 'Langley|Salmon River', 'verdict': None, 'video': None,
+  'status': 'draft', 'name': 'Salmon River', 'sub': 'Langley|Salmon River', 'verdict': 'Pick Salmon River for elbow room: one-acre communities and bigger lots with room for a shop. Look at Fort Langley instead if you want to walk to the village.', 'video': None,
   'summary': 'Salmon River is the rural middle of the Township of Langley, between Highway 1 and Fraser Highway from Murrayville east toward Aldergrove, named for the salmon-bearing river that runs north through it to the Fraser at Fort Langley. It is larger-lot houses, acreages and hobby farms on quiet rural roads.',
   'vibe': 'Elbow room: big yards, shops and paddocks on quiet rural roads, with nothing commercial in the middle of it.',
   'commute': {'from': 'the middle of the Salmon River MLS® area', 'measured': M, 'rows': [['Highway 1', 12, 7.6], ['Fort Langley', 18, 11.4], ['Surrey Central SkyTrain', 32, 28.2], ['Downtown Vancouver', 57, 53.8]]},
   'works': [
+   {'t': 'One-acre communities as well as bigger acreages.', 'by': J},
    {'t': 'Room to use the land: big yards, space for a shop, and more distance from the neighbours.', 'by': J},
    {'t': 'Houses sold for about the same median as Fort Langley, but here you are buying the lot, not the walk to the village.', 'by': J},
    {'t': 'Highway 1 is about 12 minutes from the middle of the area off-peak, and Fort Langley, Murrayville and Aldergrove are the nearby hubs.'},
@@ -56,11 +58,12 @@ E = {
   ],
  },
  'otter-district-guide': {
-  'status': 'draft', 'name': 'Otter District', 'sub': 'Langley|Otter District', 'verdict': None, 'video': None,
+  'status': 'draft', 'name': 'Otter District', 'sub': 'Langley|Otter District', 'verdict': 'Pick Otter District for more land, close to the Otter Co-op, with room for horses, a shop or a big garden. Look elsewhere if you don’t want weekends of upkeep.', 'video': None,
   'summary': 'Otter District is the south-east corner of the Township of Langley, from Fraser Highway south to the US border between Campbell Valley and Aldergrove. It is working farm country: acreages, horse properties and farms, with the Otter Co-op at 248 Street and Fraser Highway as its local hub.',
   'vibe': 'Flat, open farm country: barns, paddocks and fields on two-lane roads, with the Co-op as the landmark.',
   'commute': {'from': 'the middle of the Otter District MLS® area', 'measured': M, 'rows': [['Aldergrove', 6, 4.1], ['Highway 1', 9, 8.2], ['Surrey Central SkyTrain', 36, 36.3], ['Downtown Vancouver', 60, 61.9]]},
   'works': [
+   {'t': 'More land, and close to the Otter Co-op.', 'by': J},
    {'t': 'This is where to look if you want to use the land: a few acres for horses, a shop or a big garden.', 'by': J},
    {'t': 'The Otter Co-op at 248 Street and Fraser Highway, which grew out of the farmers’ institute local farmers formed in 1922, sells groceries, hardware, feed and fuel.'},
    {'t': 'Aldergrove is about 6 minutes away and Highway 1 about 9, from the middle of the district off-peak.'},
@@ -85,13 +88,13 @@ E = {
   ],
  },
  'campbell-valley-guide': {
-  'status': 'draft', 'name': 'Campbell Valley', 'sub': 'Langley|Campbell Valley', 'verdict': None, 'video': None,
+  'status': 'draft', 'name': 'Campbell Valley', 'sub': 'Langley|Campbell Valley', 'verdict': 'Pick Campbell Valley to be close to the horse trails at Campbell Valley Park, with privacy and room for animals. Look elsewhere if you don’t want the upkeep.', 'video': None,
   'summary': 'Campbell Valley is south Langley’s valley district, from the Surrey border east to about 232 Street and down to the US border, around Campbell Valley Regional Park and the Little Campbell River. It is acreages, horse properties, vineyards and newer estate houses, with Brookswood at its north edge.',
   'vibe': 'Private and green: horse country, farm stands and wineries around a big regional park.',
   'commute': {'from': 'the middle of the Campbell Valley MLS® area', 'measured': M, 'rows': [['Highway 1', 16, 13.3], ['Peace Arch border crossing', 21, 15.0], ['Surrey Central SkyTrain', 34, 30.4], ['Downtown Vancouver', 59, 56.1]]},
   'works': [
+   {'t': 'Close to the horse trails in Campbell Valley Park.', 'by': J},
    {'t': 'Land is the point: fields and animals, without neighbours right on top of you.', 'by': J},
-   {'t': 'Campbell Valley Regional Park, with its trails and horse trails, is the heart of the valley.', 'by': J},
    {'t': 'Wineries are part of the valley, including Township 7, Chaberton Estate and Vista D’oro.'},
    {'t': 'The Peace Arch crossing is about 21 minutes away off-peak, and White Rock is the nearest beach.'},
    {'t': 'TransLink runs a summer weekend and holiday bus from Langley Centre to the regional park.'},
@@ -115,11 +118,12 @@ E = {
   ],
  },
  'county-line-glen-valley-guide': {
-  'status': 'draft', 'name': 'County Line / Glen Valley', 'sub': 'Langley|County Line Glen Valley', 'verdict': None, 'video': None,
+  'status': 'draft', 'name': 'County Line / Glen Valley', 'sub': 'Langley|County Line Glen Valley', 'verdict': 'Pick Glen Valley for more hills and privacy, closer to Fort Langley. Look elsewhere if a low, wet lot or a steep driveway would bother you.', 'video': None,
   'summary': 'County Line / Glen Valley is the north-east corner of the Township of Langley, from east of Fort Langley to the Abbotsford line, with farm flats along the Fraser River and higher land on the slope behind. It is farms and acreages, most of it in the ALR, with Glen Valley Regional Park on the river.',
   'vibe': 'Quiet farm country toward the Fraser: river flats, berry fields and acreages on the slope.',
   'commute': {'from': 'the middle of the County Line Glen Valley MLS® area', 'measured': M, 'rows': [['Highway 1', 9, 6.0], ['Fort Langley', 15, 9.9], ['Surrey Central SkyTrain', 30, 26.6], ['Downtown Vancouver', 54, 52.3]]},
   'works': [
+   {'t': 'More hills, and closer to Fort Langley.', 'by': J},
    {'t': 'Privacy, and the river side is beautiful.', 'by': J},
    {'t': 'Glen Valley Regional Park is on the Fraser, with river fishing and riverside trails.'},
    {'t': 'Highway 1 is about 9 minutes from the middle of the area off-peak, and Fort Langley about 15.'},
