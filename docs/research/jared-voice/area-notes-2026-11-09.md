@@ -49,7 +49,7 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - Local tip: likes the area around the towers at Latimer (Latimer Heights, 200 St & 80 Ave — verify); some nice houses along Golden View Trail (verify street name) and around Cedar Grove Park (verify name/location).
 
 ## Grandview Heights (South Surrey) — grandview-heights-guide
-- Who it suits: (asked)
-- What's great: "Love Grandview" — Jared lived there for 2 years. Grandview Corners is pretty sweet; likes how it's all laid out: commercial in the middle, residential going outwards. Big stores: Walmart, Real Canadian Superstore, Thrifty Foods; a Costco is coming (verify status/opening date before publishing). Morgan Crossing is great for shopping. Lots of stores, multiple gyms.
-- The catch: (asked)
+- Who it suits: young families, professionals, investors.
+- What's great: "Love Grandview" — Jared lived there for 2 years. Grandview Corners is pretty sweet; likes how it's all laid out: commercial in the middle, residential going outwards. Big stores: Walmart, Real Canadian Superstore, Thrifty Foods; a Costco is coming (verify status/opening date before publishing). Morgan Crossing is great for shopping. Lots of stores, multiple gyms. New high school is built (Grandview Heights Secondary — verify opening year).
+- The catch: can have traffic sometimes because of the construction.
 - Local tip: (asked)
