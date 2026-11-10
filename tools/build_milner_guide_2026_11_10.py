@@ -8,7 +8,7 @@ What changed from the pack, and why
     Langley Retired Teachers' Association history and Canada's Historic Places for history, the ALC's own housing page for ALR homes.
     Our own zoning page and a contractor's site are not used as sources.
   - Bus frequency dropped (the pack's "every 30 minutes" did not match the trip planner's "every 20 minutes"); "Fort Langley" dropped
-    from the 562 description (the route leaves Glover Road at 88 Avenue, south of the village).
+    from the 562 description (not confirmed on a TransLink page; the Salmon River notes say it runs via 96 Avenue, so it may).
   - ALR housing corrected: besides a suite inside the main house, the ALC now allows one additional residence (90 m² on parcels of
     40 ha or less, 186 m² on larger ones) without an application, if the Township's zoning allows it.
   - "Truck route" not stated (not re-checked); "closed December 2004" softened to "has since closed" (the source gives no year).

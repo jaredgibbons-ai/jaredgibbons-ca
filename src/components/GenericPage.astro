@@ -282,15 +282,18 @@ if (isHub) {
 const money0 = (v: number) => '$' + Math.round(v).toLocaleString('en-CA');
 function gpPrices(gp: any): string {
   const g = (SOLD12 as any).sub[gp.sub]?.groups; if (!g) return '';
-  const parts = [['house', 'houses'], ['townhome', 'townhomes'], ['condo', 'condos']].filter(([k]) => g[k]?.n >= 5 && g[k]?.price).map(([k, l], i) => i === 0 ? `${l} sold for a median of ${money0(g[k].price)}` : `${l} ${money0(g[k].price)}`);
+  const parts = [['house', 'houses'], ['acreage', 'acreages'], ['townhome', 'townhomes'], ['condo', 'condos'], ['mobile', 'manufactured homes']].filter(([k]) => g[k]?.n >= 5 && g[k]?.price).map(([k, l], i) => i === 0 ? `${l} sold for a median of ${money0(g[k].price)}` : `${l} ${money0(g[k].price)}`);
   if (!parts.length) return '';
   const last = parts.length > 1 ? parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1] : parts[0];
   return `Over the last twelve months, ${last}.`;
 }
 function gpFacts(gp: any) {
-  const h = (SOLD12 as any).sub[gp.sub]?.groups?.house;
-  const house = h?.n >= 5 ? [h.yb && `Built ${h.yb}`, h.lot_sqft && `${h.lot_sqft.toLocaleString('en-CA')} sq ft lot`, h.beds && `${h.beds} bedrooms`].filter(Boolean).join(' · ') : '';
-  return { house, commute: gp.commute, vibe: gp.vibe };
+  const g = (SOLD12 as any).sub[gp.sub]?.groups || {};
+  const h = g.house, a = g.acreage;
+  const lot = (x: any) => x.acres >= 1 ? `${String(+x.acres.toFixed(1))}-acre lot` : x.lot_sqft >= 20000 ? `${(x.lot_sqft / 43560).toFixed(2)}-acre lot` : x.lot_sqft ? `${x.lot_sqft.toLocaleString('en-CA')} sq ft lot` : '';
+  const house = h?.n >= 5 ? [h.yb && `Built ${h.yb}`, lot(h), h.beds && `${h.beds} bedrooms`].filter(Boolean).join(' · ') : '';
+  const acreage = a?.n >= 5 ? [a.yb && `House built ${a.yb}`, lot(a)].filter(Boolean).join(' · ') : '';
+  return { house, acreage, commute: gp.commute, vibe: gp.vibe };
 }
 const isGuide = page.slug.endsWith('-guide');
 if (isGuide) {
@@ -500,6 +503,7 @@ const explore = !_extra.length ? exploreBase
                     {b.facts?.prices?.length > 0 && <div><dt>Typical sale price</dt><dd>{b.facts.prices.map((x: any) => <span class="qf__p"><span>{x[0]}</span> <strong>{x[1]}</strong></span>)}</dd></div>}
                     {b.facts?.mix && <div><dt>Sold, Nov 2025 to Oct 2026</dt><dd>{b.facts.mix}</dd></div>}
                     {b.gp?.house && <div><dt>Typical house sold</dt><dd>{b.gp.house}</dd></div>}
+                    {b.gp?.acreage && <div><dt>Typical acreage sold</dt><dd>{b.gp.acreage}</dd></div>}
                     {b.gp?.commute && <div><dt>Drive, off-peak</dt><dd>{b.gp.commute.rows.map((r: any) => <span class="qf__p"><span>{r[0]}</span> <strong>{r[1]} min</strong></span>)}</dd></div>}
                     {b.gp?.vibe && <div><dt>What it feels like</dt><dd>{b.gp.vibe}</dd></div>}
                     {b.jumps.length > 0 && <div><dt>Jump to</dt><dd class="qf__j">{b.jumps.map((j: any) => <a href={`#${j.id}`}>{j.label}</a>)}</dd></div>}
