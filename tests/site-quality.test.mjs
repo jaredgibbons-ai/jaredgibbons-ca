@@ -123,6 +123,14 @@ test('built pages: no link points at another agent\'s, brokerage\'s or listing p
   assert.equal(bad.length, 0, bad.slice(0, 5).join('; '));
 });
 
+test('built pages: sold cards carry no price, and guides list the homes Jared sold there (D-211)', { skip: !built }, () => {
+  for (const f of ['willoughby-guide.html', 'sold-properties.html', 'murrayville-guide.html']) {
+    for (const card of html(f).split('<li class="pcard"').slice(1).map((c) => c.split('</li>')[0]))
+      if (/pcard__tag[^>]*>\s*Sold\s*</.test(card)) assert.ok(!card.includes('pcard__price'), `${f}: a sold card shows a price`);
+  }
+  assert.ok(html('willoughby-guide.html').includes('Homes Jared has sold in'), 'Willoughby guide lists Jared’s sales');
+});
+
 test('built pages: guide format v2 renders on Murrayville (D-205)', { skip: !built }, () => {
   const h = html('murrayville-guide.html');
   for (const s of ['class="qa"', 'Jared’s verdict:', 'class="pc"', 'right for you?', 'https://calendly.com/jaredgibbons', 'Drive, off-peak', 'Is Murrayville a good place to live?'])

@@ -57,7 +57,7 @@ def main():
     renamed = 0                                                       # one "Jared's take" per guide
     for slug in data:
         p = os.path.join(ROOT, 'src/data/local', slug + '.json')
-        if not os.path.exists(p): continue
+        if not os.path.exists(p) or data[slug].get('draft'): continue   # a draft take (D-211) is preview-only, so the older heading stays until Jared OKs it
         d = json.load(open(p, encoding='utf-8')); hit = False
         for b in d.get('blocks', []):
             if b.get('gen') == 'jtake' and b.get('t') == 'h' and b['text'].startswith("Jared's take on "):

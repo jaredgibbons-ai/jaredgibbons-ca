@@ -2,7 +2,7 @@
 // so every listing page has a link from the site, not only from the MyRealPage widget.
 import { titleCaseAddress } from './seo';
 
-export type OwnCard = { slug: string; href: string; street: string; city: string; price: string; priceNum: number; beds?: string; baths?: string; sqft?: string; type?: string; status: string; mls?: string; soldDate?: string; soldTs: number; year: string };
+export type OwnCard = { slug: string; href: string; street: string; city: string; price: string; priceNum: number; beds?: string; baths?: string; sqft?: string; type?: string; status: string; mls?: string; soldDate?: string; soldTs: number; year: string; h1?: string };
 
 
 // The slug is the one consistent source of a listing's address (titles are sometimes marketing text, the H1 is an MLS string such as
@@ -57,7 +57,26 @@ export function ownCards(): OwnCard[] {
       slug: p.slug, href: `/our-listings.html/${p.slug}`, street: ps ? ps.street : titleCaseAddress(street), city: ps ? ps.city : city, price, priceNum: Number(price.replace(/[^\d]/g, '')) || 0,
       beds: f['Bedrooms'], baths: f['Bathrooms'], sqft: f['Floor Area'] || f['Living Area'], type: f['Dwelling Type'] || f['Property Type'] || f['Prop Type'],
       status: p.status, mls: f['MLS® Num'] || f['MLS Num'], soldDate: f['Sold Date'], soldTs, year: sd ? sd[3] : '',
+      h1: String(p.blocks.find((b: any) => b.t === 'h' && b.level === 1)?.text || ''),
     });
   }
   return out;
+}
+
+// Guides show the homes Jared has sold in their MLS® sub-area (D-211). The sub-area is in each listing's H1 ("53 19897 75a Avenue Willoughby Heights
+// Langley V2Y 3S2"). The card shows the complex name where the listing gives one (src/data/sold-display.json), else the street without the house number.
+import SOLD_DISPLAY from '../data/sold-display.json';
+const STREET_WORD = /^(avenue|ave|street|st|road|rd|drive|dr|crescent|cres|place|pl|way|boulevard|blvd|court|ct|lane|highway|hwy|close|terrace|trail|parkway|gate|row)$/i;
+export function displayStreet(c: OwnCard): string {
+  const named = (SOLD_DISPLAY as Record<string, string>)[String(c.mls || '').toUpperCase()];
+  if (named) return named;
+  const t = c.street.split(/\s+/); let i = 0;
+  while (i < t.length && /\d/.test(t[i])) i++;
+  const keep = i > 0 && i < t.length && STREET_WORD.test(t[i]) ? i - 1 : i;    // "13414 113 Avenue" -> "113 Avenue"; "2743 Sandon Drive" -> "Sandon Drive"
+  return t.slice(keep).join(' ') || c.street;
+}
+export function soldInSubArea(name: string, max = 3): OwnCard[] {
+  if (!name) return [];
+  const re = new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`);
+  return ownCards().filter((c) => c.status !== 'Active' && re.test(c.h1 || '')).sort((a, b) => b.soldTs - a.soldTs).slice(0, max);
 }

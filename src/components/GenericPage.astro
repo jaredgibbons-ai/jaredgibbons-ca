@@ -35,7 +35,7 @@ import Newsletter from './Newsletter.astro';
 import SearchQuiz from './SearchQuiz.astro';
 import HomeValue from './HomeValue.astro';
 import PropertyCard from './PropertyCard.astro';
-import { ownCards } from '../lib/own-listings';
+import { ownCards, soldInSubArea, displayStreet } from '../lib/own-listings';
 import IDX from '../data/idx-embeds.json';
 import BREADCRUMBS from '../data/breadcrumbs.json';
 import EXPLORE from '../data/explore.json';
@@ -331,17 +331,39 @@ if (isGuide) {
   // "Updated <month>" and a byline under the H1 (D-201)
   { const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1); if (h1i >= 0) page.blocks.splice(h1i + 1, 0, { t: 'updated' }); }
   // Jared's take (D-198): his own words on who the area suits, what he'd tell a friend and one tip (tools/build_jared_voice.py), right under the quick facts.
-  const jv = (JARED_VOICE as Record<string, any>)[page.slug];
+  const jvAll = (JARED_VOICE as Record<string, any>)[page.slug];
+  const jv = jvAll && (!jvAll.draft || isPreview) ? jvAll : null;   // D-211: takes drafted for Jared show in the preview only, until he OKs them
   if (jv) {
     const qf = page.blocks.findIndex((b: any) => b.t === 'quickfacts');
     const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
     const tocAt = page.blocks.findIndex((b: any) => b.t === 'toc');
     page.blocks.splice(qf >= 0 ? qf + 1 : tocAt > 0 ? tocAt : h1i + 1, 0, { t: 'jvoice', v: jv });
   }
+  // Homes Jared has sold in this MLS® sub-area (D-211): up to 3, newest first, complex or street name only, no price (a list price shown under "Sold" reads as the sale price).
+  {
+    const subName = GP?.sub ? String(GP.sub).split('|')[1] : (gf && !/^Within /.test(gf.area) && !/sub-area$/.test(gf.area) ? gf.area : '');
+    const sold = soldInSubArea(subName, 3);
+    if (sold.length) {
+      const nm = GP?.name || String(subName).replace(/ (Langley|Surrey|BC|MR|VW|VE)$/, '');
+      let at = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 2 && (/ right for you\?$/.test(String(b.text || '')) || /questions$/i.test(String(b.text || '')) || /^(Nearby neighbourhood guides|Related|Sources|More )/i.test(String(b.text || ''))));
+      if (at < 0) at = page.blocks.length;
+      page.blocks.splice(at, 0, { t: 'h', level: 2, text: `Homes Jared has sold in ${nm}` }, { t: 'jsold', cards: sold });
+    }
+  }
   // Video tour slot (D-205): only when guide-plus.json has a YouTube id for the guide; loads the player on tap.
   if (GP?.video) {
     const after = ['jvoice', 'quickfacts', 'qanswer'].map((t) => page.blocks.findIndex((b: any) => b.t === t)).find((i) => i >= 0) ?? 0;
     page.blocks.splice(after + 1, 0, { t: 'video', id: GP.video, name: GP.name });
+  }
+}
+// Jared's take on an area page that has no separate guide (D-211: Central Port Coquitlam, Port Moody's north shore): after the H1's intro paragraph.
+if (!isGuide) {
+  const jvAll = (JARED_VOICE as Record<string, any>)[page.slug];
+  const jv = jvAll && (!jvAll.draft || isPreview) ? jvAll : null;
+  if (jv) {
+    const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
+    const at = page.blocks[h1i + 1]?.t === 'p' ? h1i + 2 : h1i + 1;
+    page.blocks.splice(at, 0, { t: 'jvoice', v: jv });
   }
 }
 // Archive pages open with an H2 above the H1 ("Fraser Valley Acreages for Sale" over the longer H1): show that line as a small label above the H1, not a second giant heading.
@@ -545,6 +567,7 @@ const explore = !_extra.length ? exploreBase
                     <img class="jv__img" src="/img/jared-avatar.webp" width="96" height="96" alt="Jared Gibbons" loading="lazy" decoding="async" />
                     <div><p class="jv__eyebrow">In my words</p><h2 class="jv__h" id="jareds-take-h">Jared’s take on {b.v.name}</h2></div>
                   </div>
+                  {b.v.draft && <p class="jv__draft">Draft written for Jared to approve. Not shown on the live site until he does.</p>}
                   <dl class="jv__dl">
                     <div><dt>Who it suits</dt><dd>{b.v.suits}</dd></div>
                     <div><dt>What I’d tell a friend</dt><dd>{b.v.friend}</dd></div>
@@ -597,10 +620,16 @@ const explore = !_extra.length ? exploreBase
                   </ul>
                 </div>
               );
+              if (b.t === 'jsold') return (
+                <>
+                  <ul class="cards">{b.cards.map((c: any) => { const m = /^(\w{3}) \d+, (\d{4})$/.exec(c.soldDate || ''); return <PropertyCard href={c.href} photoSlug={c.slug} street={displayStreet(c)} city={c.city} beds={c.beds} baths={c.baths} floorArea={c.sqft ? (/sq/i.test(c.sqft) ? c.sqft : `${c.sqft} sqft`) : undefined} status="Sold" type={c.type} tags={m ? [`Sold ${m[1]} ${m[2]}`] : []} moreLabel="See the listing" />; })}</ul>
+                  <p class="jsold__all"><a href="/sold-properties.html">See all the homes Jared has sold</a></p>
+                </>
+              );
               if (b.t === 'lcards') {
                 const all = ownCards();
                 const mon = (c: any) => { const m = /^(\w{3}) \d+, (\d{4})$/.exec(c.soldDate || ''); return m ? `Sold ${m[1]} ${m[2]}` : 'Sold'; };
-                const card = (c: any) => <PropertyCard href={c.href} photoSlug={c.slug} street={c.street} city={c.city} price={c.price} beds={c.beds} baths={c.baths}
+                const card = (c: any) => <PropertyCard href={c.href} photoSlug={c.slug} street={c.street} city={c.city} price={c.status === 'Active' ? c.price : undefined} beds={c.beds} baths={c.baths}
                   floorArea={c.sqft ? (/sq/i.test(c.sqft) ? c.sqft : `${c.sqft} sqft`) : undefined} status={c.status === 'Active' ? 'Active' : c.status} type={c.type} tags={c.status === 'Active' ? [] : [mon(c)]} mls={c.mls} moreLabel="More Info" />;
                 const active = all.filter((c) => c.status === 'Active').sort((a, b) => b.priceNum - a.priceNum);
                 const done = all.filter((c) => c.status !== 'Active').sort((a, b) => b.soldTs - a.soldTs);
@@ -822,6 +851,8 @@ const explore = !_extra.length ? exploreBase
   .jv__more{border-top:1px solid rgba(255,255,255,.22);margin-top:1rem;padding-top:1rem;display:grid;grid-template-columns:11rem minmax(0,1fr);gap:1rem}
   .jv__mh{margin:0;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;opacity:.85;padding-top:.2rem;color:#fff}
   .jv__more p{margin:0 0 .6rem;max-width:var(--measure);line-height:1.6}
+  .jsold__all{margin:1.25rem 0 0}
+  .jv__draft{margin:0 0 1rem;padding:.4rem .6rem;border:1px dashed rgba(255,255,255,.5);font-size:.8rem}
   .jv__sig{margin:1.25rem 0 0;padding-top:1rem;border-top:1px solid rgba(255,255,255,.22);font-size:.85rem;opacity:.85}
   .jv__sig a{color:#fff}
   @media (max-width:40rem){.jv__dl > div,.jv__more{grid-template-columns:1fr;gap:.35rem}}

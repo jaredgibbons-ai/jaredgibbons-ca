@@ -32,7 +32,7 @@ const photoBase = import.meta.env.PUBLIC_PHOTO_BASE ?? '/listing-photos/';
         {tags.map((t) => <span class="pcard__tag">{t}</span>)}
       </p>
     )}
-    <p class="pcard__price">{price}</p>
+    {price && <p class="pcard__price">{price}</p>}
     <Tag class="pcard__addr"><a href={href}>{street}{titleRest && <span class="sr-only">{titleRest}</span>}</a></Tag>
     <p class="pcard__city">{[area, city, postal].filter(Boolean).join(' · ')}</p>
     {(beds != null || baths != null || floorArea || area_sqft) && (
