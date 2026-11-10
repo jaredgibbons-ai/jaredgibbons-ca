@@ -13,6 +13,10 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - Who it suits: middle-aged buyers, downsizers, young professionals.
 - What's great: close to the ocean; a different view every day; lots of sun ("30%+ more than, say, Maple Ridge" — verify against Environment Canada sunshine normals before publishing a number); lots of hills for walking.
 - The catch: some areas have lots of stairs; parking can be a problem; on some streets power lines sit in the view line; Oxford Street is usually closed when it's freezing (steep hill — verify City practice); train noise along the waterfront, but you get used to it; Marine Drive gets busy in summer; older condo buildings that need repairs, though a lot of the stratas are well run.
-- Local tip: for views, Royal Avenue and Columbia Street both have amazing views. Jared lived on "Park" in East Beach for a few years (confirm street name: Parker Street?) — lots of young families, a great little pocket, a little community.
+- Local tip: for views, Royal Avenue and Columbia Street both have amazing views. Jared lived on "Park" in East Beach for a few years (Parker Street — Jared confirmed) — lots of young families, a great little pocket, a little community.
 
-## Langley (next: which Langley areas first)
+## Brookswood (Langley) — brookswood-guide (Jared lives here now)
+- Who it suits: young families.
+- What's great: large lots, about 9,000 sq ft and lots of 10,000 sq ft (check against sold-lot medians); lots of trees; more privacy.
+- The catch: septic systems on most lots; newer homes may already be connected to sewer (verify against the Township's Brookswood-Fernridge servicing).
+- Local tip: (asked)
