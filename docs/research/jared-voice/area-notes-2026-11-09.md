@@ -21,3 +21,9 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - The catch: septic systems on most lots; newer homes may already be connected to sewer (verify against the Township's Brookswood-Fernridge servicing).
 - Local tip: the pocket from 196 Street to 199 Street (19600–19900 block), 32 Avenue to 36 Avenue, is a nice one — late-1980s and early-1990s homes with sidewalks. Close to South Surrey: about 15 min to Grandview, and 192 Street gets you to downtown Langley fast because there aren't as many lights (verify drive times).
 - Also likes: Bell Park; Cedar Ridge Estates on the east side near Langley Fundamental (school name — verify), another nice area with sidewalks (subdivision name — verify).
+
+## Walnut Grove (Langley) — walnut-grove-guide
+- Who it suits: buyers who want to be close to Highway 1.
+- What's great: "Walnut Grove is great." Newer than Brookswood; lots of sidewalks; Walnut Grove Community Centre in the middle; one of Langley's largest high schools (Walnut Grove Secondary — verify enrolment vs other Langley secondaries); a lot of homes from the 1990s (check sold year-built median).
+- The catch: some smaller lots around 5,000 sq ft (check sold-lot medians), but there are homes with suites as well.
+- Local tip: (asked)
