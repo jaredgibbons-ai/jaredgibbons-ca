@@ -14,6 +14,35 @@
       "region": "south-surrey-white-rock",
       "mode": "hub",
       "gen": "areamap"
+    },
+    {
+      "t": "h",
+      "level": 2,
+      "text": "Neighbourhoods inside a sub-area",
+      "gen": "gaplink",
+      "pos": "end"
+    },
+    {
+      "t": "p",
+      "text": "These neighbourhoods are searched by name but share an MLS® sub-area with a larger one, so they have a guide of their own.",
+      "gen": "gaplink",
+      "pos": "end"
+    },
+    {
+      "t": "list",
+      "items": [
+        [
+          {
+            "t": "Rosemary Heights neighbourhood guide",
+            "h": "/rosemary-heights-guide.html"
+          },
+          {
+            "t": " (inside the Morgan Creek sub-area)"
+          }
+        ]
+      ],
+      "gen": "gaplink",
+      "pos": "end"
     }
   ],
   "faq": [

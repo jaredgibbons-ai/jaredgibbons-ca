@@ -13,6 +13,9 @@ LABEL = [('house', 'Houses'), ('townhome', 'Townhomes'), ('condo', 'Condos'), ('
 MANUAL = {'aldergrove': 'Langley|Aldergrove Langley', 'brookswood': 'Langley|Brookswood Langley', 'crescent-beach-ocean-park': 'South Surrey White Rock|Crescent Bch Ocean Pk.',
           'grandview-heights': 'South Surrey White Rock|Grandview Surrey', 'north-meadows-pitt-meadows': 'Pitt Meadows|North Meadows PI', 'willoughby': 'Langley|Willoughby Heights',
           'east-chilliwack': 'Chilliwack|East Chilliwack'}
+LOCAL = {'rosemary-heights-guide': ('radius', 'rosemary-heights-elementary', 'Within 1 km of Rosemary Heights Elementary'),
+         'yorkson-langley-guide': ('radius', 'willoughby-elementary', 'Within 1 km of Willoughby Elementary'),
+         'auguston-abbotsford-guide': ('sub', 'Abbotsford|Abbotsford East', 'Abbotsford East sub-area')}
 SKIP = {'brookswood-real-estate-development', 'how-to-buy-a-mobile-home-in-bc', 'chilliwack-55-plus-neighbourhood'}
 nz = lambda s: re.sub(r'[^a-z0-9]+', ' ', s.lower()).strip()
 
@@ -53,6 +56,22 @@ def main():
         n = sum(v.get('n', 0) for v in g.values())
         if not prices and not sold: continue
         out[slug] = {'area': name, 'prices': prices, 'mix': ', '.join(f'{c:,} {l}' for c, l in sorted(sold, reverse=True)), 'n': n}
+    # New local guides for neighbourhoods inside a larger sub-area (D-203): a 1 km circle around the neighbourhood school where one sits at
+    # its centre (src/data/schools/radius-sold.json), else the sub-area it belongs to, named as such in the box.
+    rad = json.load(open(os.path.join(ROOT, 'src/data/schools/radius-sold.json'), encoding='utf-8'))
+    RLAB = [('house', 'Houses'), ('townhouse', 'Townhomes'), ('condo', 'Condos')]
+    for slug, (kind, key, area) in LOCAL.items():
+        if kind == 'radius':
+            g = rad[key]['groups']
+            prices = [[lab, money(g[t]['price'])] for t, lab in RLAB if g.get(t, {}).get('n', 0) >= 5 and g[t].get('price')]
+            sold = [(g[t]['n'], lab.lower()) for t, lab in RLAB if g.get(t, {}).get('n', 0) >= 3]
+            n = rad[key]['n']
+        else:
+            g = SUB[key]['groups']
+            prices = [[lab, money(g[t]['price'])] for t, lab in LABEL if t in g and g[t].get('n', 0) >= 5 and g[t].get('price')]
+            sold = [(g[t]['n'], lab.lower()) for t, lab in LABEL if t in g and g[t].get('n', 0) >= 3]
+            n = sum(v.get('n', 0) for v in g.values())
+        out[slug] = {'area': area, 'prices': prices, 'mix': ', '.join(f'{c:,} {l}' for c, l in sorted(sold, reverse=True)), 'n': n}
     json.dump(out, open(OUT, 'w', encoding='utf-8'), indent=1, ensure_ascii=False); open(OUT, 'a').write('\n')
     print('guides with quick facts:', len(out), '| with a price row:', sum(1 for v in out.values() if v['prices']))
 

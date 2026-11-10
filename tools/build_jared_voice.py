@@ -45,7 +45,8 @@ def main():
         for k, a, b in eds:
             assert a in data[slug][k], (slug, a); data[slug][k] = data[slug][k].replace(a, b).strip()
     for slug, v in data.items():
-        assert os.path.exists(os.path.join(ROOT, 'src/data/pages', slug + '.json')), slug
+        assert os.path.exists(os.path.join(ROOT, 'src/data/pages', slug + '.json')) or \
+            'new_page' in json.load(open(os.path.join(ROOT, 'src/data/local', slug + '.json'), encoding='utf-8')), slug   # archive guide or a new local guide (D-203)
         for k in ('suits', 'friend'): assert v.get(k), (slug, k)
         for k in ('suits', 'friend', 'tip'):
             if v.get(k): v[k] = re.sub(r'\s+', ' ', v[k].replace("'", '’')).strip()
