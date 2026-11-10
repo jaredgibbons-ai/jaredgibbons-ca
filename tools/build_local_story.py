@@ -68,10 +68,9 @@ def sales_blocks(name, key, types, heading=None, path_only=False):
             x = path_sentence(name, g, s['groups'][g])
             if x: paras.append(x)
         else: paras += type_story(name, g, s['groups'][g])
-    if path_only and paras: heading = heading or f'{name} prices through the year'
+    if path_only and paras: heading = heading or f'{name} prices through the year (Paragon closed sales)'
     if not paras: return []
-    paras.append('Source: Paragon closed sales, November 2025 to October 2026.')
-    return [{'t': 'h', 'level': 2, 'text': heading or f'What buyers paid in {name}, by the middle half and by quarter', 'gen': G, 'pos': 'end'}] + \
+    return [{'t': 'h', 'level': 2, 'text': heading or f'What buyers paid in {name}, November 2025 to October 2026 (Paragon closed sales)', 'gen': G, 'pos': 'end'}] + \
            [{'t': 'p', 'text': x, 'gen': G, 'pos': 'end'} for x in paras]
 
 
@@ -120,7 +119,7 @@ DATA = {
   'southwest-maple-ridge-condos-townhomes-for-sale': ('Southwest Maple Ridge', 'Maple Ridge|Southwest Maple Ridge', ['townhome', 'condo']),
   'quay-new-westminster-condos-townhomes-for-sale': ('the Quay', 'New Westminster|Quay', ['condo', 'townhome']),
   'aberdeen-guide': ('Aberdeen', 'Abbotsford|Aberdeen', ['house', 'townhome']),
-  'panorama-ridge-55-plus-homes-for-sale': None,
+  'panorama-ridge-55-plus-homes-for-sale': ('Panorama Ridge', 'Surrey|Panorama Ridge', ['townhome', 'condo']),
 }
 
 
@@ -197,7 +196,7 @@ def main():
     for slug, (blocks, src) in PAGES.items(): place(slug, blocks, src); print('hand', slug)
     for slug, v in DATA.items():
         if not v: continue
-        bl = sales_blocks(*v, path_only=not slug.endswith('-guide'))
+        bl = sales_blocks(*v, path_only=not (slug.endswith('-guide') or '55-plus' in slug))
         place(slug, bl, []); print('data', slug, max(0, len(bl) - 1), 'paragraphs')
 
 

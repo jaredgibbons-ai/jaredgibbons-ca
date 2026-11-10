@@ -45,6 +45,8 @@ RV = re.compile(r"""
  |\bthe\s+page\s+(?:is\s+headed|title|says)\b|\bthis\s+page's\b|\bpage\s+title\b|\beditorial\s+(?:copy|heading)\b|\bwhat\s+the\s+page\s+is\b|\bcontradicts\s+(?:itself|its\s+own)\b
  |\bflagged\s+(?:in|here|at|above|below)\b|\bname\s+trap\b|\bstale\s+citations?\b|\bfor\s+the\s+record\b|\brules-gaps\b|\bstated\s+expressly\b|\bnever\s+borrow\b|\bconflated\b
  |\bnone\s+(?:is\s+|are\s+)?verified\b|\bno\b[^.;]{0,60}?\b(?:is|are|was|were)\s+verified\b|\bverified\s+(?:below|above|here)\b|\bhas\s+none\s+verified\b|\bno\s+figure\s+of\s+any\s+kind\b
+ |\b(?:no|none)\b[^.;:]{0,80}\b(?:was|were|is|are)\s+(?:found|documented)\b|\bdocumented\s+on\s+this\s+page\b|\bis\s+invented\b|\bcited\s+exactly\b|\bnever\s+as\s+a\b
+ |\bthe\s+page\s+discusses\b|\bworking\s+(?:area|limits)\s+only\b|\bas\s+the\s+report\s+states\s+it\b|\bone\s+was\s+found\b
 """, re.I | re.X)
 NC_HEAD = re.compile(r'^\s*(?:what\s+is\s+)?(?:not|un)\s*(?:confirmed|verified)\b|^\s*what\s+is\s+not\s+confirmed\b', re.I)
 NC_CELL = re.compile(r'^\s*(?:not|un)\s*(?:confirmed|verified)\.?\s*(?:\(.*\))?\s*$', re.I)
