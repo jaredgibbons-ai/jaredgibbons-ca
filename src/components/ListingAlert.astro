@@ -1,5 +1,5 @@
 ---
-// "Email me new listings" box, shown above the live listing search. Posts to /api/forms/listing-alert
+// "Email me new listings" box, a one-line bar above the live listing search that opens into the form (D-197). Posts to /api/forms/listing-alert
 // (Turnstile + honeypot + server-side consent record). Renders only when the live forms are switched on,
 // so it never appears as a box that does nothing.
 import { ALERT_CONSENT_TEXT, ALERT_SENDER } from '../lib/listing-alert.js';
@@ -8,8 +8,9 @@ const live = import.meta.env.PUBLIC_FORMS_LIVE === 'true';
 const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
 ---
 {live && siteKey && (
+  <details class="la-d" data-la-d>
+  <summary class="la-d__s"><span class="la__title" id="la-title">Email me new listings{search ? <> for this search</> : null}</span><span class="la-d__go" aria-hidden="true">Get alerts</span></summary>
   <form class="la" data-la data-sitekey={siteKey} data-search={search} data-search-id={searchId || undefined} aria-labelledby="la-title" novalidate>
-    <p class="la__title" id="la-title">Email me new listings{search ? <> for this search</> : null}</p>
     <p class="la__lede">Get new homes by email as they come on the market. Jared sets up the alert for you.</p>
     <div class="la__row">
       <div class="la__f">
@@ -34,7 +35,13 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
     <p class="la__msg" data-msg role="status" aria-live="polite"></p>
     <div class="la__fb" data-fb hidden><p>Sending from this page is not available right now. You can email Jared instead:</p><p><a class="btn" data-mailto href="mailto:jaredgibbons@royallepage.ca">Open it in my email app</a> <a class="btn btn--ghost" href="tel:604-928-1361">Call or text 604-928-1361</a></p></div>
   </form>
+  </details>
 )}
+<script>
+  // A one-line bar above the results; the form opens on tap (D-197). Wide screens show it open, where it takes two rows.
+  const ld = document.querySelector<HTMLDetailsElement>('details[data-la-d]');
+  if (ld && window.matchMedia('(min-width: 64rem)').matches) ld.open = true;
+</script>
 <script>
   const f = document.querySelector<HTMLFormElement>('form[data-la]');
   if (f) {
@@ -80,7 +87,14 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
   }
 </script>
 <style>
-  .la{max-width:56rem;margin:0 0 var(--s4);padding:clamp(1rem,2.5vw,1.5rem);background:var(--cream);border:1px solid var(--ink);display:grid;gap:var(--s2)}
+  .la-d{max-width:56rem;margin:0 0 var(--s4);background:var(--cream);border:1px solid var(--ink)}
+  .la-d__s{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3rem;padding:.6rem clamp(1rem,2.5vw,1.5rem);cursor:pointer;list-style:none}
+  .la-d__s::-webkit-details-marker{display:none}
+  .la-d__go{flex:none;font:700 .75rem var(--f-head);letter-spacing:.1em;text-transform:uppercase;border-bottom:2px solid var(--ink);padding-bottom:2px}
+  .la-d__go::after{content:' +'}
+  .la-d[open] .la-d__go::after{content:' −'}
+  .la-d[open] .la-d__s{padding-bottom:0}
+  .la{padding:var(--s2) clamp(1rem,2.5vw,1.5rem) clamp(1rem,2.5vw,1.5rem);display:grid;gap:var(--s2)}
   .la__title{margin:0;font:800 1rem var(--f-head);text-transform:uppercase;letter-spacing:.06em}
   .la__lede{margin:0}
   .la__row{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:flex-end}

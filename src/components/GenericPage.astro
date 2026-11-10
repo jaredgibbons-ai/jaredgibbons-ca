@@ -22,6 +22,7 @@ import { isPreview, isDraftNote } from '../lib/preview';
 import { holdReason, visibleItems, isHeldHref } from '../lib/launch';
 import REVIEW_EXCERPTS from '../data/review-excerpts.json';
 import AREA_PHOTOS from '../data/area-photos.json';
+import GUIDE_FACTS from '../data/guide-facts.json';
 import PhotoCredit from './PhotoCredit.astro';
 import IdxEmbed from './IdxEmbed.astro';
 import ListingAlert from './ListingAlert.astro';
@@ -228,6 +229,25 @@ if (isHub) {
     page.blocks.splice(h1i + 1 + (page.blocks[h1i + 1]?.t === 'areamap' ? 1 : 0), 0, { t: 'toc', items });
   }
 }
+// Neighbourhood guides open with a quick-facts box (D-197): typical prices and what sold (tools/build_guide_facts.py), then jump links to the sections people look for first.
+const isGuide = page.slug.endsWith('-guide');
+if (isGuide) {
+  const gf = (GUIDE_FACTS as Record<string, any>)[page.slug];
+  const want: [RegExp, string][] = [[/^Homes for sale in /i, 'Homes for sale'], [/^Schools\b/i, 'Schools'], [/^Parks\b/i, 'Parks'], [/^Before you buy/i, 'Before you buy'], [/^Common questions$/i, 'Questions']];
+  const used = new Set(page.blocks.filter((b: any) => b.id).map((b: any) => b.id));
+  const jumps: any[] = [];
+  for (const [re, label] of want) {
+    const b = page.blocks.find((x: any) => x.t === 'h' && x.level === 2 && re.test(String(x.text || '')));
+    if (!b) continue;
+    if (!b.id) { let id = String(b.text).toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48) || 'section'; let n = 2; const base = id; while (used.has(id)) id = `${base}-${n++}`; used.add(id); b.id = id; }
+    jumps.push({ label, id: b.id });
+  }
+  if (gf || jumps.length >= 2) {
+    const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
+    const tocAt = page.blocks.findIndex((b: any) => b.t === 'toc');
+    page.blocks.splice(tocAt > 0 ? tocAt : h1i + 1, 0, { t: 'quickfacts', facts: gf || null, jumps });
+  }
+}
 // Archive pages open with an H2 above the H1 ("Fraser Valley Acreages for Sale" over the longer H1): show that line as a small label above the H1, not a second giant heading.
 {
   const b0 = page.blocks[0]; const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
@@ -263,6 +283,15 @@ if (isHub) {
 
 page.blocks = cleanArchive(page.blocks);
 
+// Reference sections fold away behind their heading (D-197): sources and the disclaimer on every page; on guides also the rules, costs, risks,
+// building-by-building and comparison sections. The heading stays an H2 inside <summary>, the text stays in the page for search engines.
+const FOLD_ALL = /^(Sources\b|Disclaimer$)/i;
+const FOLD_GUIDE = /^(Related pages$|How .+ compares|What's nearby|.+: (rules that affect buyers|costs and taxes|risks and due diligence|development and new projects|local details a buyer would not know)$|(Condo buildings|Townhome complexes|Lots and land|Mobile and manufactured homes|Duplexes and half duplexes) in )/i;
+const foldOf = (sec: any): boolean => {
+  const h = sec.kind === 'text' && sec.blocks[0]?.t === 'h' && sec.blocks[0].level === 2 ? String(sec.blocks[0].text || '') : '';
+  if (!h || sec.blocks.length < 2) return false;
+  return FOLD_ALL.test(h) || (isGuide && FOLD_GUIDE.test(h));
+};
 // Split into render sections at each level-2 heading; reviews and grid get their own sections.
 type Sec = { kind: 'text' | 'reviews' | 'grid' | 'photos'; blocks: any[]; block?: any };
 const sections: Sec[] = [];
@@ -365,12 +394,23 @@ const explore = !_extra.length ? exploreBase
     return (
       <section class:list={['section', { 'section--cream': si % 2 === 1, 'section--tight': (!sec.blocks.some((x) => x.t === 'h') && sec.blocks.length <= 3) || (isSearch && si === 0), 'section--search': isSearch && si === 0 }]}>
         <div class="wrap">
-          <div class:list={['pg', { 'pg--hub': isHub,  'pg--wide': sec.blocks.some((x) => x.t === 'lcards'), 'pg--search': isSearch && si === 0, 'pg--split': (sec as any).split && !(isSearch && si === 0) }]}>
-            {sec.blocks.map((b, bi) => {
+          <div class:list={['pg', { 'pg--hub': isHub,  'pg--wide': sec.blocks.some((x) => x.t === 'lcards'), 'pg--search': isSearch && si === 0, 'pg--split': (sec as any).split && !(isSearch && si === 0) && !foldOf(sec) }]}>
+            {(() => { const rendered = sec.blocks.map((b, bi) => {
               if (b.t === 'h') {
                 const Tag = `h${Math.min(b.level, 5)}`;
                 return <Tag id={b.id} class={(b.level === 1 ? 'pg__h1' : b.level === 2 ? 'h2' : 'pg__h') + (b.level <= 2 ? (isHub && b.level === 1 ? ' caps' : capsClass(b.text)) : '')}>{b.href ? <Rich parts={[{ t: b.text, h: b.href }]} /> : b.text}</Tag>;
               }
+              if (b.t === 'quickfacts') return (
+                <div class="qf">
+                  <p class="qf__t">Quick facts{b.facts ? ` · ${b.facts.area}` : ''}</p>
+                  <dl class="qf__dl">
+                    {b.facts?.prices?.length > 0 && <div><dt>Typical sale price</dt><dd>{b.facts.prices.map((x: any) => <span class="qf__p"><span>{x[0]}</span> <strong>{x[1]}</strong></span>)}</dd></div>}
+                    {b.facts?.mix && <div><dt>Sold, Nov 2025 to Oct 2026</dt><dd>{b.facts.mix}</dd></div>}
+                    {b.jumps.length > 0 && <div><dt>Jump to</dt><dd class="qf__j">{b.jumps.map((j: any) => <a href={`#${j.id}`}>{j.label}</a>)}</dd></div>}
+                  </dl>
+                  {b.facts?.prices?.length > 0 && <p class="qf__src">Median prices from closed MLS® sales (Paragon).</p>}
+                </div>
+              );
               if (b.t === 'toc') return (
                 <details class="toc"><summary>On this page ({b.items.length} sections)</summary>
                   <ul>{b.items.map((it: any) => <li><a href={`#${it.id}`}>{it.text}</a></li>)}</ul>
@@ -531,7 +571,7 @@ const explore = !_extra.length ? exploreBase
               );
               if (b.t === 'form') return <FormStub labels={b.labels} submit={b.submit} fields={b.fields} title={b.title} fine={b.fine} uid={`f${fid++}`} />;
               return null;
-            })}
+            }); return foldOf(sec) ? <details class="fold" data-fold><summary class="fold__s">{rendered[0]}</summary><div class="fold__b">{rendered.slice(1)}</div></details> : rendered; })()}
           </div>
         </div>
       </section>
@@ -545,6 +585,13 @@ const explore = !_extra.length ? exploreBase
 </Base>
 
 <script>
+  // A link to a section inside a folded block opens the block first (TOC, quick-facts jumps, shared links).
+  const openTo = () => { const id = decodeURIComponent(location.hash.slice(1)); if (!id) return; const el = document.getElementById(id); const d = el?.closest('details[data-fold]') as HTMLDetailsElement | null; if (d && !d.open) { d.open = true; el!.scrollIntoView(); } };
+  window.addEventListener('hashchange', openTo); openTo();
+  document.addEventListener('click', (e) => { const a = (e.target as HTMLElement).closest?.('a[href^="#"]'); if (a) setTimeout(openTo, 0); });
+</script>
+
+<script>
   // Project cards that link to #vip-floorplans put the project name into the request form, then move focus to the name field.
   document.querySelectorAll<HTMLAnchorElement>('a[href="#vip-floorplans"]').forEach((a) => a.addEventListener('click', () => {
     const lines = [...a.querySelectorAll<HTMLElement>('.cardlink__t')].map((e) => (e.textContent || '').trim()).filter((x) => x && !/^request\b/i.test(x));
@@ -555,6 +602,30 @@ const explore = !_extra.length ? exploreBase
 </script>
 
 <style>
+  /* Quick facts at the top of a guide (D-197) */
+  .qf{border:1px solid var(--ink);background:#fff;padding:clamp(1rem,2.5vw,1.5rem);margin:0 0 1.25rem;max-width:56rem}
+  .qf__t{margin:0 0 .75rem;font:800 .8125rem var(--f-head);letter-spacing:.12em;text-transform:uppercase}
+  .qf__dl{margin:0;display:grid;gap:.75rem}
+  .qf__dl > div{display:grid;grid-template-columns:minmax(9rem,12rem) 1fr;gap:.25rem 1rem;align-items:baseline}
+  .qf__dl dt{font:700 .75rem var(--f-head);letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}
+  .qf__dl dd{margin:0}
+  .qf__p{display:inline-block;margin-right:1.25rem;white-space:nowrap}
+  .qf__p strong{font-family:var(--f-head);font-weight:800}
+  .qf__j{display:flex;flex-wrap:wrap;gap:.5rem}
+  .qf__j a{display:inline-flex;align-items:center;min-height:2.25rem;padding:.25rem .8rem;border:1px solid var(--ink);color:var(--ink);text-decoration:none;font:700 .75rem var(--f-head);letter-spacing:.08em;text-transform:uppercase}
+  .qf__j a:hover{background:var(--ink);color:#fff}
+  .qf__src{margin:.75rem 0 0;font-size:.8125rem;color:var(--grey)}
+  @media (max-width:40rem){.qf__dl > div{grid-template-columns:1fr}}
+  /* Folded reference sections (D-197) */
+  .fold{border-top:2px solid var(--ink)}
+  .fold__s{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0;min-height:3rem}
+  .fold__s::-webkit-details-marker{display:none}
+  .fold__s .h2{margin:0;font-size:clamp(1.15rem,2.2vw,1.5rem)}
+  .fold__s .h2::before{display:none!important}
+  .fold__s::after{content:'+';flex:none;font:400 1.75rem/1 var(--f-head)}
+  .fold[open] > .fold__s::after{content:'−'}
+  .fold__b{padding-bottom:1rem}
+
   /* VIP floorplans box: a black band with the form on a white card (copy left, form right on wide screens). */
   .vip{background:var(--ink);color:#fff;padding:clamp(1.5rem,4vw,3rem);margin:2rem 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:center;scroll-margin-top:calc(var(--header-h,4.25rem) + 1rem)}
   .vip .h2{margin-top:0;color:#fff}

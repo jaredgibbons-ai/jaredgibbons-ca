@@ -1117,3 +1117,13 @@ After the research-wording clean-ups (D-194) 11 pages sat at 0.68–0.70. The ca
   - **Sales story from Jared's Paragon export** on the guides (middle half of prices, typical bedrooms, build year, lot or strata fee, days on market, sale-to-list, price per sq ft, the price by quarter) and, on type pages that already show the sold table, only the price by quarter. Same rules as the sold layer: a median needs 5 sales.
   - **Copied paragraphs** on six pages (GST and PTT buyer rules, Form B, suites, floodplain, park and commute notes) now point to the one page that carries the full text, so a reader is one click from it and the copy is not repeated.
 - Result: every guide and new page is at 0.70 or above (guides under the bar 0, new pages under 0.70: 0). Build clean, 151 tests pass.
+
+## D-197 — 2026-11-09 — Seven UX changes from the site review (Jared approved all seven)
+
+1. **Search pages:** the "Email me new listings" box is now a one-line bar above the results that opens into the form on tap (open by default on wide screens). It stays above the results (D-129's reason holds: a box under a long paginated list is rarely seen), but phones now see homes on the first screen.
+2. **Quick facts on guides:** a box under the H1 with the median sale price by home type and what sold (Nov 2025 to Oct 2026, Paragon), plus jump buttons (Homes for sale, Schools, Parks, Before you buy, Questions). Built by `tools/build_guide_facts.py` into `src/data/guide-facts.json` (109 guides, 102 with prices); a guide that matches no single MLS® sub-area gets jump buttons only, never a guessed price.
+3. **Folded reference sections:** Sources and the disclaimer on every page, and on guides the rules, costs, risks, development, building-by-building, comparison, related and what's-nearby sections, open with a tap. The H2 stays inside `<summary>` and the text stays in the HTML; a link to a section inside a fold opens it. West Newton on a phone: 51 screens to 30.
+4. **Tap targets:** links that stand alone in lists, fact rows and one-link paragraphs are at least 24px tall (WCAG 2.2 2.5.8); links inside running text are exempt.
+5. **Home hero proof line:** "★ 5.0 · 95 Google reviews · Top 1% Fraser Valley" (Jared's wording; the reviews part links to /reviews.html).
+6. **Home buttons:** "Search homes", "Call 604-928-1361", "Email Jared".
+7. **Phones:** the black phone/email strip is hidden under 40rem; the sticky bottom bar already has Call.

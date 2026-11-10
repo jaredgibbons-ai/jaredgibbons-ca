@@ -175,6 +175,8 @@ a:hover{text-decoration-thickness:3px}
   .mega__title{display:none}
   .topbar__right{display:none}
 }
+/* Phones: the call button is in the sticky bar at the bottom, so the black contact strip is dropped to give the page its first screen back (D-197). */
+@media (max-width:40rem){.topbar{display:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 
 /* ───────────────────────── Footer ───────────────────────── */
@@ -252,3 +254,7 @@ a:hover{text-decoration-thickness:3px}
 .explore a{color:var(--ink);text-decoration:underline;text-underline-offset:2px;font-size:.9375rem}
 .explore a:hover,.explore a:focus-visible{color:#000;text-decoration-thickness:2px}
 .explore__more{margin-top:.75rem}.explore__more summary{cursor:pointer;font-weight:700;font-size:.9375rem;padding-block:.25rem}.explore__more ul{margin-top:.5rem}
+
+/* Tap targets (WCAG 2.2, 2.5.8): links that stand alone in lists and fact rows get at least 24px of height; links inside running text are exempt (D-197). */
+main li > a:not(.btn):not(.cardlink):not(.related__card),
+main dd a, main .pcard__addr a, main p > a:only-child:not(.btn) { display:inline-block; min-height:1.5rem; padding-block:.15rem; line-height:1.25 }

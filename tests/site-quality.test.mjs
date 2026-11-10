@@ -70,3 +70,15 @@ test('built pages: each saved-search page has one correct "Email me new listings
   assert.ok(n > 1000 || n === 0, `only ${n} search pages found`);
   assert.equal(bad.length, 0, bad.slice(0, 8).join('; '));
 });
+
+test('built pages: guides open with quick facts, reference sections fold, the alert box is a one-line bar (D-197)', { skip: !built }, () => {
+  const bad = []; let guides = 0;
+  for (const f of pages) {
+    const t = html(f);
+    if (f.endsWith('-guide.html')) { guides++; if (!/class="qf"/.test(t) && /<h2[^>]*>Homes for sale in /.test(t)) bad.push(`${f}: no quick facts`); }
+    if (/<h2[^>]*class="h2[^"]*"[^>]*>Sources\b[^<]*<\/h2>/.test(t) && !/<summary class="fold__s"[^>]*><h2[^>]*>Sources\b/.test(t)) bad.push(`${f}: sources not folded`);
+    if (/<form class="la"/.test(t) && !/<details class="la-d"/.test(t)) bad.push(`${f}: alert box not collapsible`);
+  }
+  assert.ok(guides > 100 || guides === 0, `only ${guides} guides`);
+  assert.equal(bad.length, 0, bad.slice(0, 8).join('; '));
+});
