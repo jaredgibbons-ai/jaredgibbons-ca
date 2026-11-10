@@ -40,7 +40,7 @@ const isLive = live && !!kind;
   {isLive
     ? <button type="submit" class="btn">{submit}</button>
     : <button type="button" class="btn" aria-disabled="true" disabled>{submit}</button>}
-  {fine && <p class="fstub__fine">{fine}</p>}
+  {fine && <p class="fstub__fine">{fine}{!/privacy/i.test(fine) && <> <a href="/privacy.html">Privacy policy</a></>}</p>}
   {isLive && <p class="fstub__msg" data-msg role="status" aria-live="polite"></p>}
   {isLive && <div class="fstub__fb" data-fb hidden><p>Sending from this page is not available right now. Your message is ready in an email to Jared:</p><p><a class="btn" data-mailto href="mailto:jaredgibbons@royallepage.ca">Open it in my email app</a> <a class="btn btn--ghost" href="tel:604-928-1361">Call or text 604-928-1361</a></p></div>}
 </form>

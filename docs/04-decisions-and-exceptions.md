@@ -1138,3 +1138,24 @@ Guides read like reference manuals (QA item 2/4). Jared answered three questions
 - Four guides already carried an older "Jared's take on X" block (D-90 area thoughts); that heading becomes "More from Jared on X" so each page has one "Jared's take". If `build_area_thoughts.py --apply` is ever re-run, run `build_jared_voice.py` after it.
 - `tools/uniqueness.py` now counts the card text: 117 guides +91 words on average, lowest guide 0.707. Test: `tests/site-quality.test.mjs` (D-198).
 - Homepage headshot background changed to black at Jared's request (grey keyed out, soft glow so the black shirt doesn't vanish); original kept at `docs/originals/Jared-grey-background.webp`.
+
+## D-199 — 2026-11-10 — Two-day review (Nov 8–10): what was wrong and what changed
+
+Full review of the work since Nov 8: launch and preview builds, every internal link through the real Worker router (640,190 links, 0 broken; listing photos are served from R2), every image source, all 1,892 pages at phone width, JSON-LD, titles and descriptions, and a copy scan of the public text.
+
+**Bugs I introduced and fixed**
+- **D-197 tap-target rule broke the source cards on every page.** `main li > a:not(.btn)…{display:inline-block}` also hit `.src`, `.chip` and `.dp-card`, so source cards lost their card layout and, on 11 Delta pages, a long host name pushed the page 67px wider than a phone. The rule now applies to classless links only; source cards also get `minmax(0,1fr)` so a long host truncates. Phone overflow: 11 pages to 0.
+- **"Sub-area medians are not published"** (20 pages) contradicted the new quick-facts prices; it meant the board. Now "The board does not publish sub-area medians".
+- **D-194 research-wording passes missed "verified"** as a research note (650 uses on 329 public pages: "no verified condo stock", "None was verified", "How many verified … on this roster"). `tools/clean_copy_pass4.py` rewrites those to "known" / "that I know of" / "is known"; buyer instructions ("must be verified in the depreciation report", "verify it on title") stay. Public uses of "verified" 650 to under 200, the rest instructions.
+- **Langley City's SkyTrain date** had dropped out of Jared's take while tidying; restored ("expected to open in late 2029").
+
+**Older errors found and fixed**
+- 51 sentences where an old generator dropped the area name ("rental/pet lines in are listing data") now read "here".
+- Internal jargon on public pages: "banked in the L3 Richmond batch", "stated for edge completeness", "this scope", "counted entries", "on this roster", "index listings".
+- Doubled words ("specific specific", "records records", "parcel parcel-by-parcel"), ". ." endings, a capital "Published" mid-sentence (10), "the export" (now "the MLS® data").
+- Source-card titles built from file names ("News122 Excise GST HST News No 122", "OCP 2024 web", "Node", "96448 01", "R748"): a URL title map and rules in `src/lib/sources.ts`; poor titles 1,169 cards to 51.
+- The VIP floorplans form had no privacy link; every FormStub form now shows one when its fine print doesn't mention privacy.
+
+**Checked and fine:** launch build has no preview notes, drafts or archive notes; the 6 noindex pages are deliberate holds; 95-review count consistent on all 310 pages; VIP card prefill and focus work; folded sections open from a hash or jump link; West Newton sales story matches the sold data; Fort Langley, Aldergrove, Salmon River and Willoughby figures in Jared's take match the sold data.
+
+**Tests:** copy-hygiene now also scans `src/data/designed` and blocks research "verified", the medians line, dropped area names and generator doubles.

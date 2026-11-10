@@ -31,8 +31,24 @@ const host = (u: string) => { try { return new URL(u).hostname.replace(/^www\./i
 export const publisher = (url: string): string => { const h = host(url); return PUB[h] || PUB[h.replace(/^[^.]+\./, '')] || h; };
 const smart = (s: string) => s.split(' ').map((w, i) => { const lw = w.toLowerCase(); if (ACR.has(lw)) return lw.toUpperCase(); if (/^\d/.test(w) || /[A-Z]/.test(w.slice(1))) return w; if (i > 0 && /^(of|the|and|for|to|in|on|a|an|at|by|vs)$/.test(lw)) return lw; return lw.charAt(0).toUpperCase() + lw.slice(1); }).join(' ');
 const clean = (s: string) => s.replace(/\.(aspx?|pdf|html?|php|ashx|pptx?|docx?)\b/gi, ' ').replace(/[_+]+/g, ' ').replace(/\s*-\s*/g, ' ').replace(/%20/g, ' ').replace(/\s+/g, ' ').trim();
+// Titles for sources whose file names read badly as titles ("News122 Excise…", "OCP 2024 web", "Node", "96448 01"); matched on part of the URL.
+const TITLE_BY_URL: [string, string][] = [
+  ['news122/news122-excise', 'Excise and GST/HST News No. 122'], ['OCP_2024_web.pdf', 'Official Community Plan (2024)'],
+  ['pittmeadows.ca/ocp', 'Official Community Plan'], ['Park%20Amenities.pdf', 'Park amenities list'], ['ZBA%5F5000', 'Zoning Bylaw No. 5000 (2020)'],
+  ['2020-07-28-zoning-bylaw-7600', 'Zoning Bylaw No. 7600-2019'], ['statreg/96448_01', 'Taxation (Rural Area) Act'], ['statreg/98043', 'Strata Property Act'],
+  ['crbc/481_2003', 'Manufactured Home Park Tenancy Regulation'], ['search.heritageburnaby.ca/list', 'Heritage Burnaby landmark search'],
+  ['dp-pd/prof/index.cfm', 'Census Profile, 2021 Census'], ['geoweb.dnv.org/data', 'GeoWeb open data'], ['area-neighbourhood-plans/town', 'Town Centre Area Plan'],
+  ['area-neighbourhood-plans-0', 'Hammond Area Plan'], ['Tax%5FRates%5Ffor%5Fthe%5FWeb', 'Property tax rates'], ['2026%20Tax%20Rates%20Bylaw', '2026 Tax Rates Bylaw No. 3727-2026'],
+  ['service-improvements-in-chilliwack-and-agassiz-harrison', 'Service improvements in Chilliwack and Agassiz-Harrison (December 2025)'],
+  ['pitt-meadows_business-plan_2020', 'Pitt Meadows Business Plan 2020'], ['haveyoursay.fvrd.ca/cultus-lake', 'Cultus Lake engagement: questions and answers'],
+  ['chw_rg_jan2024', 'Chilliwack transit rider guide (January 2024)'], ['Notice-of-Election-by-Voting', 'Notice of election by voting'], ['2020%20McKee%20Profile', 'McKee neighbourhood profile (2020)'],
+  ['FAQ_-_Small-Scale_Housing', 'Small-scale housing: questions and answers (July 2025)'], ['Historic%20Downtown%20Neighbourhood%20Plan', 'Historic Downtown Neighbourhood Plan event boards'],
+  ['General%20Guide%20to%20Subdivision', 'General guide to the subdivision process'], ['DP2%5FGuide', 'Development permit area 2 guide (March 2026)'],
+];
 export function sourceInfo(text: string, url: string) {
   const h = host(url);
+  const fixed = TITLE_BY_URL.find(([k]) => url.includes(k));
+  if (fixed) return { pub: publisher(url), title: fixed[1], kind: /\.pdf($|\?)/i.test(url) ? 'PDF' : 'Web page', host: h };
   let t = text.replace(/^Source:\s*/i, '').replace(/\s*\(\d{1,2}\)\s*$/, '').trim();   // the notes numbered repeat links: 'chilliwack.com (2)'
   const parts = t.split(' · ');
   let title = parts.length > 1 ? parts.slice(1).join(' · ').trim() : (t.toLowerCase().replace(/^www\./, '') === h ? '' : t);
@@ -54,6 +70,14 @@ export function sourceInfo(text: string, url: string) {
     if (nt.length >= 8 && ns.length > nt.length && ns.startsWith(nt)) title = seg;
   }
   title = title.replace(/\s*\([^)]*$/, '').trim();   // a label cut inside a bracket ("... as of June 30 2022 (Co")
+  title = title.replace(/\s+(?:pdf|web(?: full\d*)?|final)$/i, '').trim();   // file-name tails: "… PDF", "… web", "… Final"
+  const zone = /maps\.delta\.ca\/Utilities\/ZoningPDF\/([A-Z0-9-]+)\.pdf/i.exec(url), route = /Route_Diagrams\/\d+\/r(\d+)\.pdf/i.exec(url);
+  if (zone) title = `Zoning Bylaw: ${zone[1].toUpperCase()} zone`;
+  else if (route) title = `Route ${route[1]} map`;
+  else if (/^OCP$/i.test(title)) title = 'Official Community Plan';
+  else if (/^FAQS?$/i.test(title)) title = 'Questions and answers';
+  if (/^[\d\s_]+$/.test(title) || /^(node|list|data|prof|park|town|term|york|atms|\d+\.aspx)$/i.test(title))
+    title = /bclaws/.test(h) ? 'BC law or regulation' : /\.pdf($|\?)/i.test(url) ? 'Official document' : 'Official page';
   if (title === title.toLowerCase() || title === title.toUpperCase()) title = smart(title);
   // spelling slips in publishers' own file names and in the notes' labels
   title = title.replace(/\bMillenium\b/g, 'Millennium').replace(/\bOakrige\b/g, 'Oakridge').replace(/\bCarraige\b/g, 'Carriage').replace(/\bTsawassen\b/g, 'Tsawwassen')
