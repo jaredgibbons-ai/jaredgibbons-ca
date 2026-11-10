@@ -1127,3 +1127,14 @@ After the research-wording clean-ups (D-194) 11 pages sat at 0.68–0.70. The ca
 5. **Home hero proof line:** "★ 5.0 · 95 Google reviews · Top 1% Fraser Valley" (Jared's wording; the reviews part links to /reviews.html).
 6. **Home buttons:** "Search homes", "Call 604-928-1361", "Email Jared".
 7. **Phones:** the black phone/email strip is hidden under 40rem; the sticky bottom bar already has Call.
+
+## D-198 — 2026-11-09 — "Jared's take" card on 117 neighbourhood guides (his own words)
+
+Guides read like reference manuals (QA item 2/4). Jared answered three questions per area (who it suits, what he'd tell a friend, one tip): the 19 core areas one by one in chat, the other 98 in five written batches. Notes, verbatim: `docs/research/jared-voice/area-notes-2026-11-09.md`; core answers tidied in `docs/research/jared-voice/core-tidied.json`.
+
+- **Built by** `tools/build_jared_voice.py` into `src/data/jared-voice.json`; rendered by `GenericPage.astro` as a black card directly under the quick-facts box, with his headshot (`/img/jared-avatar.webp`, 4 KB), an H2 "Jared's take on X", and a call/ask line. Rosemary Heights has no guide of its own (MLS® puts it in Morgan Creek), so his Rosemary answer sits on the Morgan Creek card; Ocean Park sits on the Crescent Beach / Ocean Park card.
+- **Facts checked before publishing.** Park, street and school names were checked against the guides' own researched data and the web. Changes: Golden View Trail became Goldenview Park (the park exists, the trail name doesn't); Cedar Grove Park (Willoughby) dropped (none found); the White Rock "30% more sun than Maple Ridge" figure and the Oxford Street winter closure dropped (not confirmed); "Rockport" strata name dropped; Hemlock Valley Road "unpaved upper section" dropped; "Costco coming" to Grandview dropped (status not confirmed). Number lines come from his Paragon export with the period stated (Fort Langley +21–34% median, Aldergrove $1.03M, Salmon River $1.79M, Willoughby $465/sq ft). Crescent Beach "what's in the dirt" became archaeological finds + the City's Crescent Beach floodplain building permit. SkyTrain "late 2029" matches the project's stated in-service date.
+- **Skipped by Jared:** Northeast Maple Ridge, West Chilliwack, Majuba Hill (stay factual).
+- Four guides already carried an older "Jared's take on X" block (D-90 area thoughts); that heading becomes "More from Jared on X" so each page has one "Jared's take". If `build_area_thoughts.py --apply` is ever re-run, run `build_jared_voice.py` after it.
+- `tools/uniqueness.py` now counts the card text: 117 guides +91 words on average, lowest guide 0.707. Test: `tests/site-quality.test.mjs` (D-198).
+- Homepage headshot background changed to black at Jared's request (grey keyed out, soft glow so the black shirt doesn't vanish); original kept at `docs/originals/Jared-grey-background.webp`.

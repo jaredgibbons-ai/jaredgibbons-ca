@@ -10,6 +10,8 @@ import argparse, csv, glob, json, os, re, sys
 from collections import Counter
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
+_JVP = os.path.join(ROOT, 'src/data/jared-voice.json')
+JV = json.load(open(_JVP, encoding='utf-8')) if os.path.exists(_JVP) else {}
 
 
 def text_of(b):
@@ -41,6 +43,9 @@ def page_text(slug, page, local):
         blocks = keep
     if local:
         blocks += local['blocks'] + [{'t': 'p', 'text': f['q'] + ' ' + f['a']} for f in local.get('faq', [])]
+    jv = JV.get(slug)                                   # Jared's take card on guides (D-198), rendered from src/data/jared-voice.json
+    if jv:
+        blocks = blocks + [{'t': 'p', 'text': ' '.join([jv['suits'], jv['friend'], jv.get('tip', '')] + [m['friend'] + ' ' + m.get('tip', '') for m in jv.get('more', [])])}]
     return ' '.join(text_of(b) for b in blocks)
 
 

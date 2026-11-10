@@ -82,3 +82,20 @@ test('built pages: guides open with quick facts, reference sections fold, the al
   assert.ok(guides > 100 || guides === 0, `only ${guides} guides`);
   assert.equal(bad.length, 0, bad.slice(0, 8).join('; '));
 });
+
+test('built pages: every guide with Jared’s notes shows one "Jared’s take" card under the quick facts (D-198)', { skip: !built }, () => {
+  const jv = JSON.parse(fs.readFileSync('src/data/jared-voice.json', 'utf8'));
+  const bad = [];
+  for (const [slug, v] of Object.entries(jv)) {
+    const f = pages.find((p) => p.endsWith(`/${slug}.html`) || p === `${slug}.html`);
+    if (!f) { bad.push(`${slug}: page not built`); continue; }
+    const t = html(f);
+    if ((t.match(/id="jareds-take"/g) || []).length !== 1) bad.push(`${slug}: card count`);
+    if ((t.match(/Jared’s take on /g) || []).length !== 1 || /Jared's take on /.test(t)) bad.push(`${slug}: more than one "Jared's take" heading`);
+    const qf = t.indexOf('class="qf"'), card = t.indexOf('id="jareds-take"');
+    if (qf > -1 && card < qf) bad.push(`${slug}: card above quick facts`);
+    if (!v.suits || !v.friend) bad.push(`${slug}: missing text`);
+  }
+  assert.ok(Object.keys(jv).length > 100, 'jared-voice.json looks empty');
+  assert.equal(bad.length, 0, bad.slice(0, 8).join('; '));
+});

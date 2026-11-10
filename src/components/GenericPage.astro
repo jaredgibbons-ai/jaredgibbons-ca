@@ -23,6 +23,7 @@ import { holdReason, visibleItems, isHeldHref } from '../lib/launch';
 import REVIEW_EXCERPTS from '../data/review-excerpts.json';
 import AREA_PHOTOS from '../data/area-photos.json';
 import GUIDE_FACTS from '../data/guide-facts.json';
+import JARED_VOICE from '../data/jared-voice.json';
 import PhotoCredit from './PhotoCredit.astro';
 import IdxEmbed from './IdxEmbed.astro';
 import ListingAlert from './ListingAlert.astro';
@@ -247,6 +248,14 @@ if (isGuide) {
     const tocAt = page.blocks.findIndex((b: any) => b.t === 'toc');
     page.blocks.splice(tocAt > 0 ? tocAt : h1i + 1, 0, { t: 'quickfacts', facts: gf || null, jumps });
   }
+  // Jared's take (D-198): his own words on who the area suits, what he'd tell a friend and one tip (tools/build_jared_voice.py), right under the quick facts.
+  const jv = (JARED_VOICE as Record<string, any>)[page.slug];
+  if (jv) {
+    const qf = page.blocks.findIndex((b: any) => b.t === 'quickfacts');
+    const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
+    const tocAt = page.blocks.findIndex((b: any) => b.t === 'toc');
+    page.blocks.splice(qf >= 0 ? qf + 1 : tocAt > 0 ? tocAt : h1i + 1, 0, { t: 'jvoice', v: jv });
+  }
 }
 // Archive pages open with an H2 above the H1 ("Fraser Valley Acreages for Sale" over the longer H1): show that line as a small label above the H1, not a second giant heading.
 {
@@ -410,6 +419,23 @@ const explore = !_extra.length ? exploreBase
                   </dl>
                   {b.facts?.prices?.length > 0 && <p class="qf__src">Median prices from closed MLS® sales (Paragon).</p>}
                 </div>
+              );
+              if (b.t === 'jvoice') return (
+                <section class="jv on-dark" id="jareds-take" aria-labelledby="jareds-take-h">
+                  <div class="jv__head">
+                    <img class="jv__img" src="/img/jared-avatar.webp" width="96" height="96" alt="Jared Gibbons" loading="lazy" decoding="async" />
+                    <div><p class="jv__eyebrow">In my words</p><h2 class="jv__h" id="jareds-take-h">Jared’s take on {b.v.name}</h2></div>
+                  </div>
+                  <dl class="jv__dl">
+                    <div><dt>Who it suits</dt><dd>{b.v.suits}</dd></div>
+                    <div><dt>What I’d tell a friend</dt><dd>{b.v.friend}</dd></div>
+                    {b.v.tip && <div><dt>My tip</dt><dd>{b.v.tip}</dd></div>}
+                  </dl>
+                  {(b.v.more || []).map((m: any) => (
+                    <div class="jv__more"><h3 class="jv__mh">And {m.name}</h3><div><p>{m.friend}</p>{m.tip && <p><strong>My tip:</strong> {m.tip}</p>}</div></div>
+                  ))}
+                  <p class="jv__sig">Jared Gibbons, REALTOR® · <a href="tel:+16049281361">604-928-1361</a> · <a href="/contact.html">Ask me about {b.v.name}</a></p>
+                </section>
               );
               if (b.t === 'toc') return (
                 <details class="toc"><summary>On this page ({b.items.length} sections)</summary>
@@ -627,6 +653,21 @@ const explore = !_extra.length ? exploreBase
   .fold__b{padding-bottom:1rem}
 
   /* VIP floorplans box: a black band with the form on a white card (copy left, form right on wide screens). */
+  .jv{background:var(--ink);color:#fff;padding:clamp(1.25rem,3.5vw,2.25rem);margin:0 0 1.5rem;max-width:56rem;scroll-margin-top:calc(var(--header-h,4.25rem) + 1rem)}
+  .jv__head{display:flex;align-items:center;gap:1rem;margin:0 0 1.25rem}
+  .jv__img{width:4rem;height:4rem;border-radius:50%;flex:none;border:1px solid rgba(255,255,255,.35);object-fit:cover}
+  .jv__eyebrow{margin:0 0 .2rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;opacity:.75}
+  .jv__h{margin:0;font-size:clamp(1.35rem,3vw,1.85rem);line-height:1.15;color:#fff}
+  .jv__dl{margin:0;display:grid;gap:1rem}
+  .jv__dl > div{display:grid;grid-template-columns:11rem minmax(0,1fr);gap:1rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1rem}
+  .jv__dl dt{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;opacity:.85;padding-top:.2rem}
+  .jv__dl dd{margin:0;max-width:var(--measure);line-height:1.6}
+  .jv__more{border-top:1px solid rgba(255,255,255,.22);margin-top:1rem;padding-top:1rem;display:grid;grid-template-columns:11rem minmax(0,1fr);gap:1rem}
+  .jv__mh{margin:0;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;opacity:.85;padding-top:.2rem;color:#fff}
+  .jv__more p{margin:0 0 .6rem;max-width:var(--measure);line-height:1.6}
+  .jv__sig{margin:1.25rem 0 0;padding-top:1rem;border-top:1px solid rgba(255,255,255,.22);font-size:.85rem;opacity:.85}
+  .jv__sig a{color:#fff}
+  @media (max-width:40rem){.jv__dl > div,.jv__more{grid-template-columns:1fr;gap:.35rem}}
   .vip{background:var(--ink);color:#fff;padding:clamp(1.5rem,4vw,3rem);margin:2rem 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:center;scroll-margin-top:calc(var(--header-h,4.25rem) + 1rem)}
   .vip .h2{margin-top:0;color:#fff}
   .vip .h2::before{background:#fff}
