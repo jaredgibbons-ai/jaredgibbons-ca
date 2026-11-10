@@ -31,6 +31,6 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 ## Murrayville (Langley) — murrayville-guide
 - Who it suits: families.
 - What's great: W.C. Blair pool (verify name/location); "up the hill"; Ralph's market (verify — Ralph's Farm Market?); starting to get into farm area, side by side with the Salmon River; IGA and Ralph's for shopping (verify IGA location); beautiful streets like Walnut Grove — sidewalks, big trees down the street; loves James Hill Park (verify it sits in the Murrayville sub-area vs James Hill/Brookswood boundary).
-- The catch: not a lot of suites.
+- The catch: the main downside is there aren't many houses with mortgage helpers (suites).
 - Proof point: Jared just sold a house a few doors down from James Hill Park on 219 St (pull the MLS® number/date before quoting).
-- Local tip: (asked)
+- Local tip: the streets around James Hill Park (219 St) — sidewalks, big trees.
