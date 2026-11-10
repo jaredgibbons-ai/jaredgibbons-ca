@@ -34,3 +34,9 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - The catch: the main downside is there aren't many houses with mortgage helpers (suites) — but the upside is fewer cars parked on the streets.
 - Proof point: Jared just sold a house a few doors down from James Hill Park on 219 St (pull the MLS® number/date before quoting).
 - Local tip: the streets around James Hill Park (219 St) — sidewalks, big trees.
+
+## Fort Langley (Langley) — fort-langley-guide
+- Who it suits: (asked)
+- What's great: "Fort Langley is everyone's favourite." Quiet and quaint; a weekend drive from Brookswood or Murrayville, a short drive from Walnut Grove; cute coffee shops and stores.
+- The catch: (asked)
+- Local tip: (asked)
