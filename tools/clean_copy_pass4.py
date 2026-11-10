@@ -74,6 +74,9 @@ RULES = [
     ('missing area name', re.compile(r'\b(buildings|building|complexes|complex|co-operatives|residences|residence|towers|figures|set|addresses|listing|lines|stock|named)'
                                      r' in (?=(?:are|is|sits|sit|have|has)\b)'), r'\1 here '),
     ('everything else verified', re.compile(r'\bEverything else verified in\b'), 'Everything else in'),
+    ('cite instruction', re.compile(r'\s*Use "over 95%" and cite the Business Plan\.'), ''),
+    ('quote and cite', re.compile(r'\. The current figure is "over 95%" — quote it and cite the Business Plan\.'), '.'),
+    ('salishan', re.compile(r'\bsalishan Place\b'), 'Salishan Place'),
     ('specific specific', re.compile(r'\bspecific specific\b'), 'specific'),
     ('records records', re.compile(r'\brecords records\b'), 'records'),
     ('parcel parcel-by-parcel', re.compile(r'\bPrice a Glen Valley parcel parcel-by-parcel\b'), 'Price each Glen Valley parcel on its own'),

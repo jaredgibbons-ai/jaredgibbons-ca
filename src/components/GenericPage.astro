@@ -142,7 +142,16 @@ if (local) {
   const plain = local.blocks.filter((b: any) => b.pos !== 'end' && b.pos !== 'before-form').map(asPart);
   // The FAQ closes the page content (before the contact form's heading, if the page has one) instead of sitting between the H1 and the page's own text.
   const arr = [...page.blocks.slice(0, cut), ...plain, ...page.blocks.slice(cut)];
-  if (faqBlocks.length) {
+  // One question section per page (D-202): when the archive already has its own ("Murrayville questions"), the local questions
+  // join it, minus any it already asks, instead of opening a second "Common questions" section.
+  const qAt = arr.findIndex((b: any) => b.t === 'h' && b.level === 2 && /(?:\bquestions|Frequently Asked Questions.*)$/i.test(String(b.text || '')) && !/^Common questions$/i.test(String(b.text || '')));
+  if (faqBlocks.length && qAt >= 0) {
+    let qEnd = qAt + 1; while (qEnd < arr.length && !(arr[qEnd].t === 'h' && arr[qEnd].level <= 2)) qEnd++;
+    const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    const asked = new Set(arr.slice(qAt + 1, qEnd).map((b: any) => norm(b.text || (b.parts || []).map((p: any) => p.t).join(' '))).filter((s: string) => s));
+    const extra = local.faq.filter((f: any) => !asked.has(norm(f.q))).flatMap((f: any) => [{ t: 'h', level: 3, text: f.q }, { t: 'p', parts: [{ t: f.a }] }]);
+    arr.splice(qEnd, 0, ...extra);
+  } else if (faqBlocks.length) {
     const fIdx = arr.findIndex((b: any) => b.t === 'form');
     const fAt = fIdx < 0 ? arr.length : (arr[fIdx - 1]?.t === 'h' ? fIdx - 1 : fIdx);
     arr.splice(Math.max(fAt, 0), 0, ...faqBlocks);
@@ -308,7 +317,7 @@ page.blocks = cleanArchive(page.blocks);
 // Reference sections fold away behind their heading (D-197): sources and the disclaimer on every page; on guides also the rules, costs, risks,
 // building-by-building and comparison sections. The heading stays an H2 inside <summary>, the text stays in the page for search engines.
 const FOLD_ALL = /^(Sources\b|Disclaimer$)/i;
-const FOLD_GUIDE = /^(Related pages$|How .+ compares|What's nearby|.+: (rules that affect buyers|costs and taxes|risks and due diligence|development and new projects|local details a buyer would not know)$|(Condo buildings|Townhome complexes|Lots and land|Mobile and manufactured homes|Duplexes and half duplexes) in )/i;
+const FOLD_GUIDE = /^(Related pages$|How .+ compares|What's nearby|.+: (rules that affect buyers|costs and taxes|risks and due diligence|development and new projects|local details a buyer would not know)$|(Condo buildings|Townhome complexes|Lots and land|Mobile and manufactured homes|Duplexes and half duplexes|Acreage and rural land) in |Sources for the home-type notes$)/i;
 const foldOf = (sec: any): boolean => {
   const h = sec.kind === 'text' && sec.blocks[0]?.t === 'h' && sec.blocks[0].level === 2 ? String(sec.blocks[0].text || '') : '';
   if (!h || sec.blocks.length < 2) return false;
