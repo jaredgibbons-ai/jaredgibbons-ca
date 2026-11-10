@@ -15,6 +15,7 @@ import MortgageCalc from './MortgageCalc.astro';
 import CommuteTime from '../components/CommuteTime.astro';
 import AreaMap from './AreaMap.astro';
 import SourceList from './SourceList.astro';
+import SOURCE_REPL from '../data/source-replacements.json';
 import { isSourcesHeading } from '../lib/sources';
 import { isGated } from '../lib/inventory';
 import { pickReviews } from '../lib/reviews';
@@ -195,12 +196,31 @@ if (/presale|new-construction/.test(page.slug) && !page.blocks.some((b: any) => 
 if (!NO_REVIEWS.has(page.slug) && !page.blocks.some((b: any) => b.t === 'reviews')) page.blocks.splice(page.blocks.length - endCount, 0, { t: 'reviews', heading: REVIEW_EXCERPTS.heading, intro: REVIEW_EXCERPTS.intro, items: REVIEW_EXCERPTS.items });
 
 // A page with two source lists (for example condo notes and townhome notes) must not show the same source card twice: later lists keep only what earlier ones did not show.
+// Sources on other agents' sites are swapped for the developer's or government's page, or one plain line (D-204, tools/build_source_replacements.py).
+{
+  const normUrl = (u: string) => String(u).trim().replace(/^https?:\/\/(www\.|embed\.)?/i, '').split('#')[0].replace(/\/+$/, '').toLowerCase();
+  const R = SOURCE_REPL as Record<string, { items?: any[]; text?: string; drop?: boolean }>;
+  let underSources = false;   // a source list can sit under its heading after an intro line ("Facts on this page come from ...")
+  page.blocks = page.blocks.map((b: any) => {
+    if (b.t === 'h') { underSources = isSourcesHeading(b.text); return b; }
+    if (b.t !== 'list' || !underSources) return b;
+    const items = b.items.flatMap((it: any[]) => {
+      const a = it.find((p: any) => p?.h); const r = a ? R[normUrl(a.h)] : undefined;
+      if (!r) return [it];
+      if (r.drop) return [];
+      if (r.text) return [[{ t: r.text }]];
+      return (r.items || []).map((x: any) => [x]);
+    });
+    const seen = new Set<string>();
+    return { ...b, items: items.filter((it: any[]) => { const a = it.find((p: any) => p?.h); const k = a ? 'h:' + String(a.h) : 't:' + it.map((p: any) => p.t).join(' '); if (seen.has(k)) return false; seen.add(k); return true; }) };
+  });
+}
 {
   const shown = new Set<string>(); const drop = new Set<number>();
   page.blocks.forEach((b: any, i: number) => {
     const prev = page.blocks[i - 1];
     if (b.t !== 'list' || prev?.t !== 'h' || !isSourcesHeading(prev.text)) return;
-    const keep = b.items.filter((it: any[]) => { const a = it.find((p: any) => p.h); const k = a ? String(a.h).replace(/#.*$/, '') : ''; if (!k) return true; if (shown.has(k)) return false; shown.add(k); return true; });
+    const keep = b.items.filter((it: any[]) => { const a = it.find((p: any) => p.h); const k = a ? String(a.h).replace(/#.*$/, '') : 'text:' + it.map((p: any) => p.t).join(' ').trim(); if (shown.has(k)) return false; shown.add(k); return true; });
     if (!keep.length) { drop.add(i); drop.add(i - 1); } else b.items = keep;
   });
   if (drop.size) page.blocks = page.blocks.filter((_: any, i: number) => !drop.has(i));
@@ -470,7 +490,7 @@ const explore = !_extra.length ? exploreBase
               if (b.t === 'newsletter') return <Newsletter />;
               if (b.t === 'p') return <p class={b.cls}><Rich parts={b.parts} /></p>;
               if (b.t === 'photo') return <PhotoCredit photo={b.photo} hero sizes="(min-width:48rem) 40rem, 100vw" />;
-              if (b.t === 'list' && sec.blocks[bi - 1]?.t === 'h' && isSourcesHeading(sec.blocks[bi - 1].text) && b.items.some((it: any[]) => it.some((p: any) => p.h))) return <SourceList items={b.items} />;
+              if (b.t === 'list' && sec.blocks[bi - 1]?.t === 'h' && isSourcesHeading(sec.blocks[bi - 1].text) && b.items.length) return <SourceList items={b.items} />;
               if (b.t === 'list') {
                 const shown = visibleItems(b.items);
                 if (!shown.length) return null;

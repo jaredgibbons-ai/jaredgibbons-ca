@@ -2,8 +2,9 @@
 // Sources as cards: publisher, readable title, type tag and host. Opens in a new tab (these are other people's sites).
 import { sourceInfo } from '../lib/sources';
 const { items = [] } = Astro.props as { items: any[][] };
+const seenText = new Set<string>();
 const seen = new Set<string>();
-const rows = items.filter((it) => { const a = it.find((p: any) => p.h); const k = a ? String(a.h).replace(/#.*$/, '') : ''; if (!k) return true; if (seen.has(k)) return false; seen.add(k); return true; }).map((it) => { const a = it.find((p: any) => p.h); const text = it.map((p: any) => p.t).join(' ').trim(); return a ? { ...sourceInfo(a.t || text, a.h), href: a.h } : { pub: '', title: text, kind: '', host: '', href: '' }; });
+const rows = items.filter((it) => { if (it.some((p: any) => p.h)) return true; const k = it.map((p: any) => p.t).join(' ').trim(); if (seenText.has(k)) return false; seenText.add(k); return true; }).filter((it) => { const a = it.find((p: any) => p.h); const k = a ? String(a.h).replace(/#.*$/, '') : ''; if (!k) return true; if (seen.has(k)) return false; seen.add(k); return true; }).map((it) => { const a = it.find((p: any) => p.h); const text = it.map((p: any) => p.t).join(' ').trim(); return a ? { ...sourceInfo(a.t || text, a.h), href: a.h } : { pub: '', title: text, kind: '', host: '', href: '' }; });
 ---
 <ul class="srcs">
   {rows.map((r) => (

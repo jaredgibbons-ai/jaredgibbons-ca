@@ -114,3 +114,10 @@ test('built pages: links to other agents\' and brokerages\' sites carry rel="nof
   }
   assert.equal(bad.length, 0, bad.slice(0, 5).join('; '));
 });
+
+test('built pages: no source points at another agent\'s or listing portal\'s page (D-204)', { skip: !built }, () => {
+  const bad = [];
+  const rx = /<a\b[^>]*href="https?:\/\/(?:www\.|embed\.)?(?:bccondosandhomes\.com|mikestewart\.ca|homehappy\.ca|danmarusin\.com|vancouvernewcondos\.com|livabl\.com|rew\.ca|presalesbc\.com|bentruscottrealestate\.com|rennie\.com|zolo\.ca)[/"]/g;
+  for (const f of pages) for (const m of html(f).matchAll(rx)) bad.push(`${f}: ${m[0].slice(0, 90)}`);
+  assert.equal(bad.length, 0, bad.slice(0, 5).join('; '));
+});
