@@ -458,3 +458,123 @@ Who it suits. First-time condo buyers and anyone who likes walking out for coffe
 What I’d tell a friend. I’d start around Five Corners and District 1881 if you want to be able to step out for a bite without getting in the car. The catch is that the same street you like on a Saturday afternoon might feel busier than you want when you’re trying to sleep. 
 My tip. Go back on a Friday evening. Walk the block, see where you’d park, and listen from the bedroom if you can get a second showing.
 ```
+
+
+# Batch 4 (next 20) — Jared's written answers, 2026-11-09 (verbatim; near publish-ready)
+Tidy at publish: 'Glenn Valley' -> Glen Valley. Verify: 248 St (Otter); Glen Valley Regional Park; Royal Heights Park; Bridgeview Park + Scott Road station + Surrey floodplain designation; 56 St (Tsawwassen); Fred Gingell Park lookout + stairs; Bradner Hall; 256 St (Thornhill); Powerhouse at Stave Falls; Little Mountain stairs/loop; Cedarbrook leasehold (project documents — keep 'ask for lease documents'); Chilliwack Central Rd + East Chilliwack Elementary; Yale Rd + Rosedale school; Sumas Prairie Rd + Great Blue Heron Nature Reserve; Elk View Rd + Ryder Lake Hall; Yarrow Community School + Wilson Rd North.
+
+```text
+Rural Langley
+
+1. Otter District
+Who it suits. Buyers who want a few acres for horses, a shop or a big garden and are happy to spend some weekends looking after it.
+What I’d tell a friend. I grew up on a 40-acre farm in South Langley, and Otter is where I’d look if you want to use the land. I’d start off 248th. The catch is that a place can look like the perfect horse property until you see what the back field does in November. 
+My tip. Walk the back field after a few days of rain. If you’re bringing horses, look for where you’d put a dry turnout and how you’d get hay to the barn in winter.
+
+2. County Line / Glen Valley
+Who it suits. Acreage buyers who want privacy and like the idea of being out toward the Fraser River.
+What I’d tell a friend. I’d take a drive down toward Glenn Valley Regional Park to get a feel for it. The river side is beautiful, but I’d pay close attention to whether the land is low and wet or higher up with a steeper driveway. Those are two very different places to live. 
+My tip. If the house is down on the flats, check the flood mapping for the address and get an insurance quote early. Then ask the seller what the fields look like in a wet spring.
+
+Surrey
+
+3. Royal Heights
+Who it suits. Buyers looking for an older detached house with a yard who regularly head toward North Delta or New West.
+What I’d tell a friend. I’d start near Royal Heights Park. I like that you can get into the trees for a walk and still be close to Scott Road. The catch is that some lots have a fair bit of slope, so the yard can look bigger on paper than it feels in person. 
+My tip. Walk down into the backyard during the showing. If you want a play area or a garden, find the exact spot you’d put it.
+
+4. Bridgeview
+Who it suits. Buyers who want a detached house and would make regular use of Scott Road SkyTrain station.
+What I’d tell a friend. I’d look around Bridgeview Park if you want to get a feel for the residential side. Having the train nearby is handy. The catch is that there are designated floodplain areas, so I’d look at the exact address before getting too attached to a house. 
+My tip. If there’s a finished lower level, ask about past water issues and get an insurance quote that spells out what water coverage is available.
+
+Tsawwassen
+
+5. Tsawwassen East
+Who it suits. Families looking for an established detached neighbourhood and buyers who’d rather have a yard than be right in the middle of town.
+What I’d tell a friend. I’d start on the side streets east of 56th. I like that you can be close to town and still come home to a quieter street. The catch is that some homes sit on a slope, and the walk home can feel quite different from the walk out. 
+My tip. Walk to 56th and back from the house. If you’d do that trip for coffee or groceries, the uphill leg is worth trying before you buy.
+
+6. English Bluff
+Who it suits. Buyers who want a water view or a quieter coastal setting and are comfortable looking after a more involved property.
+What I’d tell a friend. I’d take you to the Fred Gingell Park lookout first. That gives you a feel for why people love this side of Tsawwassen. The catch is that if the house sits near the bluff, I’d want to know how the lot drains and what reports exist before falling for the view. 
+My tip. If you’re buying for beach access, take the park stairs down and back up. That’s the walk you’ll actually be doing.
+
+Abbotsford
+
+7. Bradner
+Who it suits. Buyers who want acreage and like living in a farming community.
+What I’d tell a friend. I’d start around Bradner Hall and drive the roads around it. I like that it still feels like farm country. The catch is that farm country comes with early starts, equipment on the road and the odd day when you’ll smell what’s happening next door. 
+My tip. If you’re buying for a shop or barn, drive the route you’d take with a trailer. Check the gate, driveway and turning room before you decide the setup works.
+
+Pitt Meadows / Maple Ridge
+
+8. North Meadows
+Who it suits. Acreage buyers who like open views and want room for a garden, animals or equipment.
+What I’d tell a friend. I like how open it feels north of town. You can stand outside and see a long way. The catch with a low, flat property is that drainage can make a big difference to how much land you can use through the year. 
+My tip. Look at the ditches and the back of the lot after rain. If you’re planning to keep animals, find the ground you’d be able to use in February.
+
+9. Thornhill
+Who it suits. Buyers who want a treed lot, more privacy and trails nearby.
+What I’d tell a friend. I’d start around 256th if you want to hike or ride close to home. I like the tucked-away feel. The catch is that a wooded hillside lot can give you all the privacy you want and very little flat space for anything else. 
+My tip. If you’re buying for a shop, bring a tape measure and walk the spot you have in mind. Think about how you’d get a vehicle there and turn it around.
+
+Mission and area
+
+10. Dewdney / Deroche
+Who it suits. Buyers who want a rural house or some land east of Mission and are fine driving into town.
+What I’d tell a friend. I’d look here if you want open fields and some space from your neighbours. The catch is that a place on the Lougheed and one farther off it can feel completely different, even if they’re only a few minutes apart. 
+My tip. For a place near the highway, stand in the yard when traffic is moving. For a place down on the flats, check the flood mapping for that address early.
+
+11. Lake Errock
+Who it suits. Buyers who want a quieter place near the lake and are comfortable being farther from everyday services.
+What I’d tell a friend. I’d look here if being able to get out by the water would make your week better. The catch is that “near the lake” can mean a lot of things. I’d want to know exactly where I can get to the water from the house. 
+My tip. Bring your kayak in your head, if not on the roof. Walk the route you’d carry it and confirm whether the access is public or comes with the property.
+
+12. Stave Falls
+Who it suits. Buyers who want trees, privacy and somewhere that feels rural when they get home.
+What I’d tell a friend. I’d take a drive out by the Powerhouse at Stave Falls to get a feel for the area. I get the appeal if you like being surrounded by trees. The catch is that on a more tucked-away road, I’d check what internet you can actually get and how much driveway you’ll be looking after. 
+My tip. If you work from home, confirm service for the exact address with the provider. I’d also make a call from inside the house during the showing.
+
+Chilliwack and area
+
+13. Little Mountain
+Who it suits. Buyers who want a view or a hillside setting and still want to be close to town.
+What I’d tell a friend. I’d look here if you like the idea of a walk around the Little Mountain stairs and loop, then being back in town in a few minutes. The catch is that the hill can change how you use the house, especially if the driveway is steep or the yard is on several levels. 
+My tip. Try the driveway yourself. Then walk from the kitchen to the yard and see whether you’d actually use it as often as you think.
+
+14. Lower Landing
+Who it suits. Buyers looking for a newer townhome or detached home, especially if Cedarbrook is on their list.
+What I’d tell a friend. If you’re looking at Cedarbrook, I can see the appeal of getting a newer home and layout. The catch is that Lower Landing is an MLS label, and Cedarbrook’s project documents describe a leasehold land arrangement. I’d get clear on what comes with the specific home before comparing it on price. 
+My tip. At Cedarbrook, ask for the lease documents early. Have your lender confirm financing for that home and your lawyer review the terms before you commit.
+
+15. East Chilliwack
+Who it suits. Families who want a detached house with room outside and don’t mind driving into town.
+What I’d tell a friend. I’d start around Chilliwack Central Road near East Chilliwack Elementary if you want a feel for the area. I like the open farmland and mountain views. The catch is that a road can feel quiet from the backyard and still be awkward to walk along with kids. 
+My tip. If you’re counting on walking to school, do the route from the house. Look at the shoulders and crossings where you’ll actually be walking.
+
+16. Rosedale
+Who it suits. Buyers who want a smaller community, a bigger yard or an acreage on the east side of Chilliwack.
+What I’d tell a friend. I’d start around Yale Road near the school, then drive a few of the quieter roads to see which feels more like you. The catch is that a house close to the school and an acreage farther out can come with very different upkeep. 
+My tip. On an acreage, ask how the house gets its water and handles sewage. If it’s on a well or septic, get the water tests and service records early.
+
+17. Greendale
+Who it suits. Buyers who want flat land and a country feel on the west side of Chilliwack.
+What I’d tell a friend. I’d take you down Sumas Prairie Road to the Great Blue Heron Nature Reserve. It’s a good place to get a feel for what I like about Greendale. The catch is that a flat field can stay wet long after the yard around the house has dried out. 
+My tip. If you want a paddock or a big garden, walk that part of the property after rain. Pay as much attention to how you’d get to it as to the spot itself.
+
+18. Ryder Lake
+Who it suits. Buyers who want privacy, views and some land and are happy to be up out of town.
+What I’d tell a friend. I’d drive Elk View Road past Ryder Lake Hall to get a feel for it. I like how quickly it starts to feel rural. The catch is that a drive you enjoy on a clear afternoon can feel very different on a dark, icy morning. 
+My tip. Ask who clears the road and driveway in winter. If the driveway is long or steep, find out what the current owners do after a snowfall.
+
+19. Yarrow
+Who it suits. Families who want a yard and like the idea of living in a small community.
+What I’d tell a friend. I’d start around Yarrow Community School and Wilson Road North. I like that there’s a little centre to the community, even though you’ll head out of Yarrow for a lot of errands. The catch is that living close enough to walk to school depends on the road you’re on. 
+My tip. Drive through on a sunny summer Saturday if you’d be using the roads toward Cultus Lake regularly. See how that route feels when people are heading to the lake.
+
+20. Columbia Valley
+Who it suits. Buyers who want acreage and quiet and are happy living beyond Cultus Lake.
+What I’d tell a friend. I’d look here if what you want is to sit outside and have some space around you. The catch is that a quick errand can turn into a proper drive, especially when the lake is busy. 
+My tip. Drive from the house to where you’d do your weekly shop on a summer weekend. If you’re buying for a garden too, visit the lot in the late afternoon and see how early the shade comes in.
+```
