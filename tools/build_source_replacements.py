@@ -96,6 +96,11 @@ def dev_site(raw):
 CITYW = r'(?:South Surrey|Surrey City Centre|Surrey|Langley|Willoughby|Abbotsford|Coquitlam|Burquitlam|Burnaby|Metrotown|Brentwood|Vancouver|West Side|East|North|West|Richmond|Delta|Tsawwassen|Maple Ridge|Town Centre|Mission|Chilliwack|Port Moody|Poco|New West|Squamish|Mpc)'
 
 
+NAMES = {'Douglas Green Living Pacific Douglas': 'Douglas Green Living', 'Main And Sixth': 'Main + 6th (M6)', 'Main Sixth': 'Main + 6th (M6)',
+         'Knight 18 Kensington Cedar Cottage': 'Knight 18', 'Westcorp Chelsea Gate Sunshine Hills': 'Chelsea Gate', 'Preston On Fourteenth West Heights': 'Preston on Fourteenth',
+         'Hillside Homes Silver Valley': 'Hillside Homes', 'Parc Portofino Bridgeport': 'Parc Portofino', 'Viva South Newton': 'Viva', '123 145 East 13th Street': 'Millennium Central Lonsdale'}
+
+
 def clean_name(n):
     n = re.sub(r'\s+', ' ', n).strip()
     n = re.sub(r'\s+In New Westminster$|\s+Bc$', '', n).replace(' At ', ' at ')
@@ -127,7 +132,14 @@ def main():
         link = r['Developer PROJECT page URL (fill in)'].strip()
         dev = re.sub(r'\s*\(.*?\)', '', r['Developer (fill in if blank)']).strip()
         if len(dev.split()) > 4: dev = ''
-        JERRY[old] = (link if link.startswith('http') else '', '' if re.search(r'presale|condos', dev, re.I) else dev, clean_name(r['Project']))
+        name = clean_name(r['Project'])
+        name = NAMES.get(name, name)
+        if 'adera.com' in link: name = 'Crest by Adera'
+        if 'cultuslakecottages.com' in link: name = 'The Cottages at Cultus Lake'
+        if 'cnv.org' in link: name = '125–145 East 13th Street development application'
+        m = re.search(r'Archived copy of official site \(([^)]+)\)', r['Notes / source'])
+        if m and 'web.archive.org' in link: name = f'{name}: the developer’s site, archived {m.group(1)}'    # D-210: dead project sites, saved copy
+        JERRY[old] = (link if link.startswith('http') else '', '' if re.search(r'presale|condos', dev, re.I) else dev, name)
     out = {}; stats = {}
     def put(u, kind, v): out[u] = v; stats[kind] = stats.get(kind, 0) + 1
     for u in sorted(urls):
