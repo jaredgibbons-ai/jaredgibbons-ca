@@ -74,3 +74,9 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 
 ## King George Corridor / Sunnyside (South Surrey) — king-george-corridor-guide
 - Jared's words (near publish-ready, includes the tip): "I'd tell a friend to look around Sunnyside if they want to stay in South Surrey and have more condo and townhome options. It's handy for groceries, restaurants, and getting around, especially if you're near the shops on 24th. The catch is traffic noise. A place facing King George can feel completely different from one a block or two back. If you find one you like, go back around rush hour and stand on the balcony or in the yard for a minute. That'll tell you more than a quiet Sunday showing."
+
+## Hazelmere + Campbell Valley (acreage) — hazelmere-guide, campbell-valley-guide
+- Jared's words (tidy lightly): "I grew up on a 40-acre farm in South Langley, so I get why people are drawn to Hazelmere and Campbell Valley. I'd tell a friend to look there if they want room for horses, a shop, a big garden, or just enough space for the kids to run around" — and not have neighbours.
+- The catch: just maintaining the property — but you can also have fields. "I would never say no to more land." Slightly longer to get groceries, but not bad — no worse than Fort Langley.
+- Also: you can have all sorts of animals, from pigs to cows (verify Township of Langley / City of Surrey zoning + ALR farm-use rules before wording; keep general). A lot of the properties are in the ALR (verify share; link ALC).
+- Local tip: (asked)
