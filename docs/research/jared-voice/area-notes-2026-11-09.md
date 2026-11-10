@@ -10,4 +10,7 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - Local tip: homes too close to 32 Avenue get too much traffic noise. Jared likes the houses on the 11th hole of Morgan Creek Golf Course — some beautiful views.
 
 ## White Rock — white-rock-guide
-- (asked)
+- Who it suits: middle-aged buyers, downsizers, young professionals.
+- What's great: close to the ocean; a different view every day; lots of sun ("30%+ more than, say, Maple Ridge" — verify against Environment Canada sunshine normals before publishing a number); lots of hills for walking.
+- The catch: (asked)
+- Local tip: (asked)
