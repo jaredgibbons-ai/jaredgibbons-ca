@@ -19,4 +19,5 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - Who it suits: young families.
 - What's great: large lots, about 9,000 sq ft and lots of 10,000 sq ft (check against sold-lot medians); lots of trees; more privacy.
 - The catch: septic systems on most lots; newer homes may already be connected to sewer (verify against the Township's Brookswood-Fernridge servicing).
-- Local tip: (asked)
+- Local tip: the pocket from 196 Street to 199 Street (19600–19900 block), 32 Avenue to 36 Avenue, is a nice one — late-1980s and early-1990s homes with sidewalks. Close to South Surrey: about 15 min to Grandview, and 192 Street gets you to downtown Langley fast because there aren't as many lights (verify drive times).
+- Also likes: Bell Park; Cedar Ridge Estates on the east side near Langley Fundamental (school name — verify), another nice area with sidewalks (subdivision name — verify).
