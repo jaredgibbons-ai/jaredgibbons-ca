@@ -7,4 +7,7 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - What's great: central location; beautiful sidewalks on the streets; the golf course; two elementary schools; beautiful trees.
 - The catch: the larger estate homes around $2M–$2.5M usually need updating; renovated ones are over $3M.
 - Stock notes: a lot of 55+ townhomes; some large detached-house stratas (Jared thinks one is called "Rockport" — verify); the Rosemary area on the west side of Morgan Creek has a few condo buildings (verify which buildings sit in Morgan Creek vs Rosemary Heights).
-- Local tip: (asked)
+- Local tip: homes too close to 32 Avenue get too much traffic noise. Jared likes the houses on the 11th hole of Morgan Creek Golf Course — some beautiful views.
+
+## White Rock — white-rock-guide
+- (asked)
