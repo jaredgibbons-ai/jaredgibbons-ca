@@ -47,3 +47,9 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - What's great: people love that it has everything and it's new; up and coming; close to Highway 1. (Data: lowest house $/sq ft in Langley at $465, Paragon Nov 2025–Oct 2026, 179 house sales.)
 - The catch: smaller lots (check sold-lot medians), street parking, can be busy during school hours.
 - Local tip: likes the area around the towers at Latimer (Latimer Heights, 200 St & 80 Ave — verify); some nice houses along Golden View Trail (verify street name) and around Cedar Grove Park (verify name/location).
+
+## Grandview Heights (South Surrey) — grandview-heights-guide
+- Who it suits: (asked)
+- What's great: "Love Grandview" — Jared lived there for 2 years. Grandview Corners is pretty sweet; likes how it's all laid out: commercial in the middle, residential going outwards. Big stores: Walmart, Real Canadian Superstore, Thrifty Foods; a Costco is coming (verify status/opening date before publishing). Morgan Crossing is great for shopping. Lots of stores, multiple gyms.
+- The catch: (asked)
+- Local tip: (asked)
