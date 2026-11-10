@@ -68,6 +68,6 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - Jared's words (near publish-ready): "I'd tell a friend to look at Elgin Chantrell if they want a bigger lot, more privacy, and a quiet, treed neighbourhood. It's a great fit for families who want room for the kids to play or anyone who wants a bit more space between neighbours. The catch is that you'll drive for most errands, and a bigger yard means more upkeep."
 - Local tip: Elgin Heritage Park on Crescent Road, where Historic Stewart Farm is (Jared confirmed; 13723 Crescent Rd, City of Surrey). Also use as the Crescent Beach tip.
 
-## Rosemary Heights (South Surrey) — rosemary-heights guide
+## Rosemary Heights (South Surrey) — NO GUIDE YET (sits in the Morgan Creek MLS® sub-area): use on morgan-creek-guide now; candidate for its own rosemary-heights-guide page (SEO gap)
 - Jared's words (near publish-ready): "I'd tell a friend to look at Rosemary Heights if they want a quiet neighbourhood but still want to be close to everything. It's a good fit for families who want parks and schools nearby, or for someone who wants a townhome with a bit more room. You're a short drive from Morgan Crossing and Grandview Corners, so errands are easy. The catch is you'll still drive for most of those errands. And if you're looking at townhomes, pay attention to the layout and parking. Those two things make a bigger difference day to day than a few extra square feet."
 - Local tip: (asked)
