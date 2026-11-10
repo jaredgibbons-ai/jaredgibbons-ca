@@ -338,3 +338,123 @@ Who it suits. Buyers who want a view, a quieter setting and are happy driving in
 What I’d tell a friend. This is where I’d look if I wanted to sit outside and look out over the valley. The catch is the hill. It changes how you use the driveway and yard, and I’d pay close attention to drainage and retaining walls on a sloped lot. 
 My tip. Walk the back of the lot after heavy rain if you can. See where the water goes, and ask for any drainage or geotechnical reports if the house sits on a steep slope.
 ```
+
+
+# Batch 3 (next 20 by sales) — Jared's written answers, 2026-11-09 (verbatim; near publish-ready)
+Verify before publishing: Hawthorne Park + school; 56 St (Ladner); Admiral Blvd; Neilson Grove Elementary spelling (school) vs Neilsen Grove (MLS® area); Memorial Park + 44 Ave; Holly Park; Winskill Park; Beach Grove Park + dike; Cliff Drive Elementary; Centennial Beach; King Road / UFV / Abbotsford Centre; Meadowtown; Osprey Village; Laity View (school?); Dewdney Trunk Rd near 256 St; Fraser River Heritage Park; Silverdale plan (City of Mission); Gwynne Vaughan Park; Chilliwack Mountain Rd; Five Corners + District 1881.
+
+```text
+Ladner
+
+1. Hawthorne
+Who it suits. Families looking for a detached house with a yard and a school close by.
+What I’d tell a friend. I’d start on the side streets near Hawthorne Park. Having the school and fields together is handy when the kids are little. The catch is that a place right on 56th can feel a lot busier than one around the corner. 
+My tip. Go at school pickup and see what happens on your block. I’d pay particular attention to how easy it is to get in and out of the driveway.
+
+2. Neilsen Grove
+Who it suits. Downsizers who want somewhere flat to walk and families who like the quieter north end of Ladner.
+What I’d tell a friend. I’d look around Admiral Boulevard if you want a quieter street and somewhere to get out for a walk. The catch is that if you picture yourself popping into the village on foot every day, the north end may feel a little farther out than you want. 
+My tip. Walk from the house to your usual coffee or grocery stop. And if you’re writing the guide, the school is spelled Neilson Grove Elementary, while the real estate area is Neilsen Grove. 
+
+3. Delta Manor
+Who it suits. First-time buyers looking at townhomes and buyers who want to stay central without paying for a big house.
+What I’d tell a friend. This is where I’d look if I wanted a practical place close to everyday errands. The catch is that two townhomes at the same price can come with very different repair bills down the road.
+My tip. If you’re comparing older complexes, I’d read the strata minutes and depreciation report before picking a favourite. Look for work that keeps getting discussed and put off.
+
+4. Ladner Elementary
+Who it suits. Families who want to walk to school and anyone who likes being close to the village.
+What I’d tell a friend. I like the idea of walking the kids to school and heading over to Memorial Park later. That’s the kind of convenience you notice every day. The catch is that a house right by the school can get busy twice a day. 
+My tip. Start around 44th Avenue, then walk from the house to the school. If the school is a deciding factor, confirm the catchment for the exact address. 
+
+5. Holly
+Who it suits. Families who want a detached house, a backyard and an easy route out toward Highway 99.
+What I’d tell a friend. I’d start near Holly Park if you want the kids to have somewhere to play close to home. The trade-off is that I’d expect to drive into the village more often from this side of Ladner. 
+My tip. If you like a place toward the highway side, stand in the backyard during the evening rush. That’s where I’d decide whether the location works for me.
+
+Tsawwassen
+
+6. Tsawwassen Central
+Who it suits. Downsizers who want to stay close to town and families looking for an established street.
+What I’d tell a friend. I’d start around Winskill if having a park nearby and being able to get into town easily are high on your list. The catch is that a place close to the shops can still involve a walk you’d rarely do, depending on the route. 
+My tip. Walk to your usual grocery store and back. If you’re downsizing, pay attention to the grade and the crossings on the way home.
+
+7. Beach Grove
+Who it suits. Buyers who want a quieter coastal neighbourhood and would actually use the dike for walks.
+What I’d tell a friend. I’d look here if your ideal morning is getting outside for a walk before the day starts. The catch is that with an older place near the bay, I’d want to understand how the property handles wet weather. 
+My tip. Start near Beach Grove Park and walk to the dike from the house. Then go back after a good rain and see what the yard looks like. 
+
+8. Cliff Drive
+Who it suits. Families looking for a detached home on an established street and buyers who’d consider a hillside property for the outlook.
+What I’d tell a friend. I’d start with the streets around Cliff Drive Elementary. If the house is on a slope, the catch is how much that can change your day-to-day use of the yard and driveway. 
+My tip. Walk the whole lot. If the best part of the yard is behind a big retaining wall, ask who maintains the wall and what work has been done on it.
+
+9. Boundary Beach
+Who it suits. People who’ll use the beach year-round and are happy to drive into town for most errands.
+What I’d tell a friend. Being able to walk over to Centennial Beach on an ordinary Tuesday is what I’d buy here for. The catch is that I’d want to understand flood exposure and insurance for the exact address early on. 
+My tip. Get an insurance quote for the property and ask exactly what water coverage it includes. Then visit on a sunny weekend to see how beach traffic feels on your street.
+
+Abbotsford
+
+10. Poplar
+Who it suits. First-time condo buyers who want to be near UFV and buyers who need easy Highway 1 access.
+What I’d tell a friend. I’d look along King Road if you’ll regularly go to campus or Abbotsford Centre. The catch is that an event night can feel different from a normal Tuesday, especially for parking. 
+My tip. If you’re buying a condo near the arena, go back on an event night. See where a friend coming over would actually park.
+
+11. Aberdeen
+Who it suits. Families who want a detached house on the west side of Abbotsford and buyers looking for more room outside.
+What I’d tell a friend. I’d look here if you spend a lot of time in Aldergrove or Langley. There’s a big difference between buying in a subdivision and buying a place out on a rural road. With the rural place, I’d go in expecting more driving and more upkeep. 
+My tip. If it’s the land you’re buying for, walk all the way to the back. Look for the spot you’d actually use for the garden, parking or a shop, then check what the property allows.
+
+Pitt Meadows
+
+12. Mid Meadows
+Who it suits. First-time buyers and downsizers who want a condo or townhome close to shopping.
+What I’d tell a friend. I’d look toward Meadowtown if being able to pick up groceries and get your errands done close to home is a priority. The catch is that you’re near Lougheed, so I’d care a lot about which way the unit faces. 
+My tip. In a condo, go straight to the bedroom and open the window. That’s where I’d judge the road noise.
+
+13. South Meadows
+Who it suits. Families and downsizers who want flat streets and somewhere good to walk or ride a bike.
+What I’d tell a friend. I’d start around Osprey Village if the river is a big part of the appeal. The catch is that you can be close to a great walking route and still need the car for a full grocery run. 
+My tip. Walk from the house to the river, then drive from the house to where you do your weekly shop. I’d want to know how both parts of that routine feel.
+
+Maple Ridge
+
+14. Northwest Maple Ridge
+Who it suits. Families who want a detached house and regularly head west toward Pitt Meadows or the Tri-Cities.
+What I’d tell a friend. I’d start around Laity View if you want an established street and a yard. The catch is that being on the west side only saves you time if getting from your street to the main route is easy. 
+My tip. Drive out from the house during the morning rush. If there’s a left turn you’ll make every day, try it before you buy.
+
+15. Websters Corners
+Who it suits. Buyers who want a bigger lot, more privacy and a more rural feel.
+What I’d tell a friend. I’d look around the side roads off Dewdney Trunk near 256th if you want room for a garden or just some space between neighbours. The catch is that a big lot takes work, and if the property uses a well or septic system, those become part of what you’re buying. 
+My tip. On a place with a well or septic, ask for the water tests and service records early. I’d want those in hand before getting too attached to the house.
+
+Mission
+
+16. Hatzic
+Who it suits. Buyers who want a view, a bigger yard or somewhere that feels a little removed from town.
+What I’d tell a friend. I’d start on the hillside if a view and a quiet street are what you’re after. I also like having Fraser River Heritage Park nearby. The catch is that an uphill address and a low-lying one are very different purchases, so I’d look at the lot as closely as the house. 
+My tip. On a hillside lot, try the driveway and check how much yard is flat. On a low-lying lot, check the flood mapping and get an insurance quote for that address.
+
+17. Mission West
+Who it suits. Buyers who want elbow room and are comfortable driving for most things.
+What I’d tell a friend. I’d look on the Silverdale side if you want more space and like the idea of living west of town. The catch is that if you’re buying for the quiet, it’s worth finding out what’s planned around you. There’s a city plan for parts of Silverdale. 
+My tip. Pull up the city’s plan with the address in front of you. Check the land behind the house and across the road, especially if that open space is part of why you like it.
+
+Chilliwack
+
+18. Fairfield Island
+Who it suits. Families who want a detached house, a yard and quieter streets close to town.
+What I’d tell a friend. I’d start around Gwynne Vaughan Park. It’s a nice place for a walk, and I can see why someone would pick this pocket for the yard and a quieter pace. The catch is that on a low-lying lot, I’d want to know how it drains and whether there’s been water in the house. 
+My tip. Walk the backyard after a good rain and ask about any past water issues. If there’s a crawl space, make sure it gets a proper look during the inspection.
+
+19. Chilliwack Mountain
+Who it suits. Buyers who want a river or valley view and are happy to drive into town.
+What I’d tell a friend. I’d look along Chilliwack Mountain Road if the view is something you’ll enjoy every day. The catch is that a great deck can come with a steep driveway or very little flat yard. 
+My tip. Pull into the driveway and turn around yourself. Then go stand on the deck. I’d want to know how both feel, because you’ll use them more than you think.
+
+20. Chilliwack Downtown
+Who it suits. First-time condo buyers and anyone who likes walking out for coffee or dinner.
+What I’d tell a friend. I’d start around Five Corners and District 1881 if you want to be able to step out for a bite without getting in the car. The catch is that the same street you like on a Saturday afternoon might feel busier than you want when you’re trying to sleep. 
+My tip. Go back on a Friday evening. Walk the block, see where you’d park, and listen from the bedroom if you can get a second showing.
+```
