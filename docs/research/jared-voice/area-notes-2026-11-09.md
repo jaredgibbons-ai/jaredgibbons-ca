@@ -96,3 +96,9 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 
 ## Pacific Douglas (South Surrey) — pacific-douglas-guide
 - Jared's words (near publish-ready, includes tip): "I'd tell a friend to look at Pacific Douglas if they want a newer house or townhome in a quieter part of South Surrey. You're close to Peace Arch Park, and it's handy if you go across the border often." Great elementary school and community (verify: Douglas Elementary? — confirm catchment school name). "The catch is you'll probably drive for groceries, coffee, and most errands. And if you find a place near 176th, I'd go back on a busy weekend to see what border traffic feels like from that street." (176 St = Hwy 15 to Pacific Hwy crossing — verify)
+
+## Clayton (Cloverdale, Surrey) — clayton guide
+- Jared's words (near publish-ready, includes tip): "I'd look here if you want a newer townhome and like being able to walk to a park or grab coffee. The catch is parking. Some streets fill up in the evenings, so if you have two cars or people over a lot, I'd swing by after dinner and see what it's like."
+
+## Cloverdale (Surrey) — cloverdale guide
+- Jared's words (near publish-ready, includes tip): "I'd look here if you want a detached house with a proper backyard and a quieter street. I like that there's an old downtown where you can grab lunch or poke around the shops. The catch is that some of the homes with the best yards are older. I'd take a good look at the roof, windows, and drainage before getting too excited about the lot."
