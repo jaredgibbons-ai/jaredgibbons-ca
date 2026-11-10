@@ -36,7 +36,7 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - Local tip: the streets around James Hill Park (219 St) — sidewalks, big trees.
 
 ## Fort Langley (Langley) — fort-langley-guide
-- Who it suits: (asked)
+- Who it suits: young families, retirees, people who want character homes, people who don't want too much development and want to be by the river. "Feels like a movie set" (verify Fort Langley film/TV credits before any specific title is named).
 - What's great: "Fort Langley is everyone's favourite." Quiet and quaint; a weekend drive from Brookswood or Murrayville, a short drive from Walnut Grove; cute coffee shops and stores.
 - The catch: (asked)
 - Local tip: (asked)
