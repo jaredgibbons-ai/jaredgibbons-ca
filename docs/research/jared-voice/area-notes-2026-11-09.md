@@ -41,3 +41,9 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - The catch: price — feels like 20–30% higher than anywhere else in Langley. CHECKED (Paragon, Nov 2025–Oct 2026, houses): Fort Langley median $1.80M (31 sales) vs Willoughby $1.47M (+22%), Murrayville $1.49M (+21%), Brookswood $1.42M (+27%), Walnut Grove $1.34M (+34%). Per sq ft the gap is smaller: $621 vs $557–577 in Brookswood/Walnut Grove/Murrayville (+8–12%), $465 Willoughby (+34%) — so part of the premium is bigger homes/lots. Salmon River ($1.79M) is the exception. Use 'about 20–30% more on the median house' wording.
 - Also a catch: no big shopping stores close — Costco is 15–20 minutes away (verify drive time to Langley Costco, 64 Ave/200 St area).
 - Local tip: likes Gay Street or Trattle Street (both in the village core — verify spelling/extent).
+
+## Willoughby (Langley) — willoughby-guide
+- Who it suits: first-time buyers, commuters, and growing families looking for new construction.
+- What's great: (asked)
+- The catch: (asked)
+- Local tip: (asked)
