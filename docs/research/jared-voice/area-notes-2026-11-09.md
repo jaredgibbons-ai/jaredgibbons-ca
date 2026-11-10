@@ -5,5 +5,6 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 ## Morgan Creek (South Surrey) — morgan-creek-guide
 - Who it suits: downsizers and families.
 - What's great: central location; beautiful sidewalks on the streets; the golf course; two elementary schools; beautiful trees.
-- The catch: (asked)
+- The catch: the larger estate homes around $2M–$2.5M usually need updating; renovated ones are over $3M.
+- Stock notes: a lot of 55+ townhomes; some large detached-house stratas (Jared thinks one is called "Rockport" — verify); the Rosemary area on the west side of Morgan Creek has a few condo buildings (verify which buildings sit in Morgan Creek vs Rosemary Heights).
 - Local tip: (asked)
