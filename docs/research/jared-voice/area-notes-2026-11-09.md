@@ -53,3 +53,11 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 - What's great: "Love Grandview" — Jared lived there for 2 years. Grandview Corners is pretty sweet; likes how it's all laid out: commercial in the middle, residential going outwards. Big stores: Walmart, Real Canadian Superstore, Thrifty Foods; a Costco is coming (verify status/opening date before publishing). Morgan Crossing is great for shopping. Lots of stores, multiple gyms. New high school is built (Grandview Heights Secondary — verify opening year).
 - The catch: can have traffic sometimes because of the construction.
 - Local tip: likes north of Morgan Crossing — the townhomes going down the hill on 158 St (verify which side of the Grandview/Morgan Creek sub-area line this falls).
+
+## Crescent Beach (South Surrey) — crescent-beach-ocean-park-guide (Crescent Beach part)
+- Jared's words (near publish-ready): "Crescent Beach is for someone who'll actually use the beach. If your idea of a good morning is grabbing a coffee and walking along the water, you'll probably love it. It's quiet most of the year and feels like a little village. The catch is that sunny summer weekends get busy."
+- Also a catch: have to be careful building because of what's in the dirt (likely registered archaeological sites under the BC Heritage Conservation Act, plus floodplain/sea-level rules — verify with City of Surrey / BC Archaeology Branch before wording; keep it general, no site specifics).
+- Local tip: (asked)
+
+## Ocean Park (South Surrey) — crescent-beach-ocean-park-guide (Ocean Park part)
+- (asked)
