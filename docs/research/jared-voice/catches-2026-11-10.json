@@ -1,15 +1,77 @@
 {
  "_about": "Jared's catch lines (Nov 10, 2026), from his Paragon closed sales Nov 2025 to Oct 2026 and agents' public remarks (area-catch-notes.xlsx). Checked against src/data/sold/sold-12m.json, TransLink (West Coast Express schedule), the Surrey Langley SkyTrain station list and City of Delta flood material. 'final' is the wording to publish; 'changed' says what was adjusted and why.",
- "abbotsford-east-guide": {"final": "Hilly streets: expect stairs, sloped yards and driving for most errands, with limited bus service.", "changed": "'thin' -> 'limited' (routes 7, 9 and 15 do serve it)"},
- "bear-creek-green-timbers-guide": {"final": "Mostly 1980s homes, some really priced as lot value, and most sellers took under asking.", "second": "SkyTrain construction runs along Fraser Highway, with Green Timbers Station at 140 Street, until the line opens (expected late 2029).", "changed": "construction line added: station list on surreylangleyskytrain.gov.bc.ca"},
- "clayton-guide": {"final": "Dense and newer, with small lots, tandem garages and tight street parking.", "second": "Clayton Station is being built at 190 Street and Fraser Highway, so expect construction on Fraser Highway until the line opens (expected late 2029).", "changed": "none; construction line added from the official station list"},
- "east-newton-guide": {"final": "Older complexes, many of them 55+; detached homes have sat longer and mostly sold under asking.", "changed": "'older stock' narrowed to the complexes: detached houses that sold had a median build year of 2002"},
- "panorama-ridge-guide": {"final": "Car-first suburb off Highway 10 and Scott Road; many homes are from the 1990s and due for updates.", "changed": "none"},
- "sullivan-station-guide": {"final": "Mostly newer townhomes with tandem garages; detached lots are small and slower to sell.", "changed": "none"},
- "sunnyside-park-surrey-guide": {"final": "Mostly older complexes, many 55+, with higher strata fees; nearly all sales closed under asking.", "changed": "none"},
- "northwest-maple-ridge-guide": {"final": "Mostly 1980s homes, and most commutes are by car over the Golden Ears Bridge or along Lougheed.", "changed": "none"},
- "cottonwood-maple-ridge-guide": {"final": "Still filling in, with ongoing townhouse and infill building, tandem garages and smaller lots.", "changed": "none"},
- "thornhill-maple-ridge-guide": {"final": "Part rural: acreages on septic, very few buses, and homes have taken longer to sell.", "changed": "'Rural' -> 'Part rural': the detached houses that sold had a median build year of 2011 on 4,300 sq ft lots, beside 6 acreages; small sample (27 sales)"},
- "mission-bc-mission-guide": {"final": "Long commute west. The West Coast Express runs weekdays only, into Vancouver in the morning and back in the evening, and homes take longer to sell.", "changed": "WCE wording checked on TransLink: weekday rush hours only, 5 trains westbound in the morning and 5 eastbound in the evening"},
- "ladner-elementary-guide": {"final": "Low-lying behind the dikes, near the river and farmland, with older detached homes and higher strata fees.", "changed": "'slower sales lately' dropped: houses sold in a median 18 days on market (44 sales, small sample). 'Floodplain' not claimed; Delta's lowlands sit behind its dike system (City of Delta), and river-side lots can carry flood-proofing covenants, which goes in Before you buy."}
+ "abbotsford-east-guide": {
+  "final": "Hilly streets: expect stairs, sloped yards and driving for most errands, with limited bus service.",
+  "changed": "'thin' -> 'limited' (routes 7, 9 and 15 do serve it)"
+ },
+ "bear-creek-green-timbers-guide": {
+  "final": "Mostly 1980s homes, some really priced as lot value, and most sellers took under asking.",
+  "second": "SkyTrain construction runs along Fraser Highway, with Green Timbers Station at 140 Street, until the line opens (expected late 2029).",
+  "changed": "construction line added: station list on surreylangleyskytrain.gov.bc.ca"
+ },
+ "clayton-guide": {
+  "final": "Dense and newer, with small lots, tandem garages and tight street parking.",
+  "second": "Clayton Station is being built at 190 Street and Fraser Highway, so expect construction on Fraser Highway until the line opens (expected late 2029).",
+  "changed": "none; construction line added from the official station list"
+ },
+ "east-newton-guide": {
+  "final": "Older complexes, many of them 55+; detached homes have sat longer and mostly sold under asking.",
+  "changed": "'older stock' narrowed to the complexes: detached houses that sold had a median build year of 2002"
+ },
+ "panorama-ridge-guide": {
+  "final": "Car-first suburb off Highway 10 and Scott Road; many homes are from the 1990s and due for updates.",
+  "changed": "none"
+ },
+ "sullivan-station-guide": {
+  "final": "Mostly newer townhomes with tandem garages; detached lots are small and slower to sell.",
+  "changed": "none"
+ },
+ "sunnyside-park-surrey-guide": {
+  "final": "Mostly older complexes, many 55+, with higher strata fees; nearly all sales closed under asking.",
+  "changed": "none"
+ },
+ "northwest-maple-ridge-guide": {
+  "final": "Mostly 1980s homes, and most commutes are by car over the Golden Ears Bridge or along Lougheed.",
+  "changed": "none"
+ },
+ "cottonwood-maple-ridge-guide": {
+  "final": "Still filling in, with ongoing townhouse and infill building, tandem garages and smaller lots.",
+  "changed": "none"
+ },
+ "thornhill-maple-ridge-guide": {
+  "final": "Part rural: acreages on septic, very few buses, and homes have taken longer to sell.",
+  "changed": "'Rural' -> 'Part rural': the detached houses that sold had a median build year of 2011 on 4,300 sq ft lots, beside 6 acreages; small sample (27 sales)"
+ },
+ "mission-bc-mission-guide": {
+  "final": "Long commute west. The West Coast Express runs weekdays only, into Vancouver in the morning and back in the evening, and homes take longer to sell.",
+  "changed": "WCE wording checked on TransLink: weekday rush hours only, 5 trains westbound in the morning and 5 eastbound in the evening"
+ },
+ "ladner-elementary-guide": {
+  "final": "Low-lying behind the dikes, near the river and farmland, with older detached homes and higher strata fees.",
+  "changed": "'slower sales lately' dropped: houses sold in a median 18 days on market (44 sales, small sample). 'Floodplain' not claimed; Delta's lowlands sit behind its dike system (City of Delta), and river-side lots can carry flood-proofing covenants, which goes in Before you buy."
+ },
+ "chilliwack-mountain-guide": {
+  "final": "Big views, but it's hill driving with almost no bus service, and detached listings have been sitting a while.",
+  "changed": "'no buses' -> 'almost no bus service': route 59 Industrial runs limited weekday peak trips nearby (small sample, 35 sales)"
+ },
+ "chilliwack-proper-east-guide": {
+  "final": "Older homes near downtown, many sold as investor or redevelopment plays; expect updates and nearby infill.",
+  "changed": "none; houses that sold had a median build year of 1960"
+ },
+ "chilliwack-proper-west-guide": {
+  "final": "Lots of older condos, 55+ and manufactured-home parks; most sales closed a bit under asking.",
+  "changed": "none"
+ },
+ "eastern-hillsides-guide": {
+  "final": "Hillside living means driving for everything; plenty of new lots for sale, and some have sold as court-ordered sales.",
+  "changed": "'through court' -> 'as court-ordered sales'; land sales took a median 228 days on market"
+ },
+ "little-mountain-guide": {
+  "final": "Older homes on bigger lots, and few sales, so prices are harder to read.",
+  "changed": "'no bus service' dropped: routes 51 and 53 have timing points nearby (BC Transit); small sample (17 to 23 sales)"
+ },
+ "ryder-lake-guide": {
+  "final": "Rural acreages up the hill with no bus service; ask about water, septic and road access before you offer.",
+  "changed": "his export had no Ryder Lake rows, but our sold data has 12 acreage sales (median 3.9 acres, built 1985); 'no bus' is from BC Transit (no route serves Ryder Lake); 'more winter snow' dropped (not sourced)"
+ }
 }

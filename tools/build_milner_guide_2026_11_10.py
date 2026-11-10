@@ -27,28 +27,30 @@ def LINKS(pairs): return {'t': 'list', 'items': [[{'t': t, 'h': h if h.startswit
 SLUG = 'milner-langley-guide'
 PAGE = {
     'slug': SLUG, 'status': 'draft', 'updated': '2026-11-10', 'lead': 'homevalue', 'lead_place': 'Milner',
-    'new_page': {'h1': 'Milner, Langley: Neighbourhood Guide', 'title': 'Milner Langley Acreages, Homes and Rural Living Guide',
-                 'description': 'Milner in the Township of Langley: the farm village at Glover Road and 216 Street, five minutes from Highway 1. What works, what doesn’t, and ALR rules.'},
+    'new_page': {'h1': 'Milner, Langley: Neighbourhood Guide', 'title': 'Milner Langley Homes, New Development and Acreage Guide',
+                 'description': 'Milner, Langley: the south-east pocket of Willoughby by the farmland, where old acreages are becoming new homes. What works, what doesn’t, and the ALR rules.'},
     'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'Langley', 'href': '/langley-homes-for-sale.html'},
                     {'name': 'Neighbourhood guides', 'href': '/langley-neighbourhood-guides.html'}, {'name': 'Milner', 'href': f'/{SLUG}.html'}],
     'blocks': [
         {'t': 'notice', 'text': 'Draft for Jared’s approval. Written November 10, 2026 from Jared’s Milner notes and the official sources listed on the page. Jared’s verdict is still to come.', 'gen': G},
         H('Where Milner is'),
-        P('Milner is the small farm village at the old crossroads of Glover Road and 216 Street, in the Township of Langley, between Langley City to the '
-          'south-west and Fort Langley to the north-east. The crossroads became Milner Station in 1910, when the BC Electric interurban line came through, '
+        P('Milner is the small pocket on the south-east side of Willoughby, close to the farmland, around the old crossroads of Glover Road and 216 Street '
+          'in the Township of Langley, between Langley City to the south-west and Fort Langley to the north-east. The crossroads became Milner Station in 1910, when the BC Electric interurban line came through, '
           'and the name, which honours Lord Alfred Milner, won a local vote over “Berry’s Station”. The railway gave local farms a way to ship to New '
           'Westminster and Vancouver, and by 1925 the village had shops, homes, a church and a school around the station.'),
-        P('It is still farm country. Most of what sells here is acreage, hobby farms and older rural houses along Glover Road and the side roads, with '
-          'Trinity Western University’s campus (22500 University Drive) just to the east and Milner Valley Cheese, a farm cheesemaker, on Smith Crescent.'),
+        P('A lot of Milner used to be farmland and one-acre-plus parcels, and the Willoughby side is now a new development area, with stores and shops being '
+          'added slowly and more development, including stores, planned at 72 Avenue and 208 Street. East of Glover Road it is still farm country, with acreages '
+          'and older rural houses, Trinity Western University’s campus (22500 University Drive) and Milner Valley Cheese, a farm cheesemaker, on Smith Crescent.'),
         H('Homes for sale in Milner'),
-        P('There is no Milner area on MLS®, so its listings are filed under the neighbouring Langley sub-areas, and the board publishes no Milner price. '
-          'Ask me for the recent Milner-area sold list before you set a budget: acreage prices swing with the land, the house and the ALR status more than '
-          'with the neighbourhood.'),
-        LINKS([('Langley acreages for sale', 'langley-acreages-for-sale'), ('Langley farms for sale', 'langley-farms'),
+        P('There is no Milner area on MLS®, so its listings are filed under the neighbouring Langley sub-areas, the new homes mostly under Willoughby '
+          'Heights, and the board publishes no Milner price. Ask me for the recent Milner-area sold list before you set a budget: a new townhome and a '
+          'farm acreage here are very different purchases.'),
+        LINKS([('Willoughby homes for sale', 'willoughby-homes-for-sale'), ('Willoughby townhomes for sale', 'willoughby-townhomes-for-sale'), ('Langley acreages for sale', 'langley-acreages-for-sale'), ('Langley farms for sale', 'langley-farms'),
                ('Langley horse properties', 'langley-horse-properties-equestrian-farms-for-sale-mls-listings'), ('Langley houses for sale', 'langley-houses-for-sale')]),
         H('Schools near Milner'),
         P('The village had its own school from 1913, on Glover Road, and Langley High School even ran out of it from 1922 to 1924. The buildings later became '
-          'the Milner Education Centre, which has since closed, so there is no public school in the village today. Langley Schools assigns each address '
+          'the Milner Education Centre, which has since closed, so there is no public school in the old village today. On the Willoughby side, the closest public elementary '
+          'schools include Richard Bulpitt Elementary (20965 77A Avenue) and R.C. Garnett Demonstration Elementary (7096 201 Street). Langley Schools assigns each address '
           'to a catchment school, so check the exact address in the district’s school locator. The King’s School, an independent kindergarten to grade 12 '
           'school, has a Milner address.'),
         PP('Find the catchment school for an address: ', ('SD35 school locator', 'https://mybaragar.com/index.cfm?event=page.SchoolLocatorPublic&DistrictCode=BC35'),
@@ -90,12 +92,14 @@ PAGE = {
 
 PLUS = {
     'status': 'draft', 'name': 'Milner', 'sub': None,
-    'summary': 'Milner is the small farm village at Glover Road and 216 Street in the Township of Langley, between Langley City and Fort Langley. It grew up around a 1910 interurban station and is still acreages, hobby farms and older rural homes, about five minutes from Highway 1.',
-    'verdict': None,
-    'vibe': 'A farm-belt crossroads: fields, acreages and a few heritage buildings, with Trinity Western University next door.',
+    'summary': 'Milner is the small pocket on the south-east side of Willoughby, by the farmland around Glover Road and 216 Street. A lot of it used to be farmland and one-acre parcels, and it is now a new development area for families and first-time buyers, about five minutes from Highway 1, with farm acreages still on its east side.',
+    'verdict': 'Pick Milner for a newer home in a growing corner of Willoughby, next to the farmland. Look elsewhere if you need shops in walking distance today: they are still coming.',
+    'vibe': 'New homes going in where the farms were, with fields, acreages and a few heritage buildings right next door.',
     'commute': {'from': 'Glover Road in Milner (49.1277, -122.6231)', 'measured': 'November 10, 2026',
                 'rows': [['Highway 1', 5, 4.4], ['Fort Langley', 8, 6.0], ['Surrey Central SkyTrain', 22, 20.7], ['Downtown Vancouver', 46, 45.9]]},
     'works': [
+        {'t': 'A good spot for families and first-time home buyers.', 'by': 'jared'},
+        {'t': 'More stores and shops are being added, and more development, including stores, is planned at 72 Avenue and 208 Street.', 'by': 'jared'},
         {'t': 'Quick highway access: Highway 1 is about 5 minutes away at the 216 Street interchange.'},
         {'t': 'Fort Langley is about 8 minutes’ drive, and Langley City’s shops are a few minutes the other way.'},
         {'t': 'Room for a farm, horses or a big garden, with Milner Valley Cheese and other farms as neighbours.'},
@@ -103,21 +107,24 @@ PLUS = {
         {'t': 'Real history: Milner Station dates to 1910, and the Moir Residence (6840 Glover Road, 1909) is a designated heritage home.'},
     ],
     'doesnt': [
-        {'t': 'No public school in the village. The old Milner school has closed, so children go to schools in neighbouring areas.'},
+        {'t': 'The stores are coming slowly, so for now most errands are a drive.', 'by': 'jared'},
+        {'t': 'It is a development area: expect construction and changing streets nearby for a while.'},
+        {'t': 'No public school in the old village: the Milner school has closed, and the closest public elementary is Richard Bulpitt, on 77A Avenue in Willoughby.'},
         {'t': 'No SkyTrain until the Surrey Langley line opens (expected late 2029), and then the nearest station is Langley City Centre.'},
         {'t': 'Many properties run on a well and septic, which need testing and can limit adding bedrooms or a suite.'},
         {'t': 'ALR rules limit subdivision, extra homes and non-farm uses on farm parcels.'},
         {'t': 'Car-first: there is one bus route, and everything else is a drive.'},
     ],
     'fit': [
+        {'q': 'Are you a first-time buyer or a young family?', 'a': 'That’s who Milner suits: newer homes in a growing part of Willoughby. Check what is planned around the address, because the area is still filling in.', 'links': [['First-time home buyer programs', '/first-time-home-buyer-program.html']]},
         {'q': 'Do you want acreage or a small farm?', 'a': 'That’s what Milner is for. If the parcel is in the ALR, farming comes first, and subdividing or running a non-farm business needs ALC approval.', 'links': [['Langley acreages for sale', '/langley-acreages-for-sale.html']]},
         {'q': 'Do you need a mortgage-helper suite?', 'a': 'It depends on the lot. On ALR land a suite has to be inside the main house, though one small additional residence can be allowed, and a septic system has to handle it. For an easy suite, a serviced in-town street is simpler.', 'links': [['Willoughby guide', '/willoughby-guide.html'], ['Walnut Grove guide', '/walnut-grove-guide.html']]},
         {'q': 'Do you commute to Surrey or Vancouver?', 'a': 'The highway part is easy: about 5 minutes to Highway 1, 22 minutes to Surrey Central and 46 minutes to downtown Vancouver off-peak. There’s no rapid transit until late 2029.'},
-        {'q': 'Do your kids need to walk to school?', 'a': 'Then look in town. Milner has no public school, so check the catchment for the exact address, or look at Murrayville or Langley City.', 'links': [['Murrayville guide', '/murrayville-guide.html']]},
+        {'q': 'Do your kids need a school close by?', 'a': 'Check the catchment for the exact address. The old village has no public school; the closest public elementary is Richard Bulpitt (20965 77A Avenue), about a kilometre or two from most of Milner.', 'links': [['Schools in Langley', '/schools-in-langley-bc.html']]},
     ],
     'faq': [
-        {'q': 'Is Milner a good place to live?', 'a': 'For buyers who want space, quiet and a farm-belt setting five minutes from Highway 1, yes. Buyers who want walkable shops, transit and a neighbourhood school are better served in town, in Murrayville, Walnut Grove or Langley City.'},
-        {'q': 'What are the downsides of living in Milner?', 'a': 'No public school in the village, no SkyTrain until late 2029, one bus route, many properties on a well and septic, and ALR rules that limit what you can build or subdivide on farm parcels.'},
+        {'q': 'Is Milner a good place to live?', 'a': 'For families and first-time buyers who want a newer home in a growing part of Willoughby, next to the farmland and five minutes from Highway 1, yes. Stores and shops are still being added, so for now most errands are a drive.'},
+        {'q': 'What are the downsides of living in Milner?', 'a': 'Stores and shops are still coming, so errands are a drive for now; construction continues nearby; there is no public school in the old village, no SkyTrain until late 2029, one bus route, many properties on a well and septic, and ALR rules that limit what you can build or subdivide on farm parcels.'},
     ],
     'video': None,
 }
