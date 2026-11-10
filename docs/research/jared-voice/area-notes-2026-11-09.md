@@ -102,3 +102,118 @@ Rough answers as Jared gave them; tidied into his voice before publishing (gen '
 
 ## Cloverdale (Surrey) — cloverdale guide
 - Jared's words (near publish-ready, includes tip): "I'd look here if you want a detached house with a proper backyard and a quieter street. I like that there's an old downtown where you can grab lunch or poke around the shops. The catch is that some of the homes with the best yards are older. I'd take a good look at the roof, windows, and drainage before getting too excited about the lot."
+
+
+# Batch 1 (outer areas, 20 by sales) — Jared's written answers, 2026-11-09 (verbatim; near publish-ready)
+Verify before publishing: Holland Park; Goldstone Park; Newton Athletic Park; Queen Mary Park entrance at Queen Mary Blvd & 130B St; Mill Lake; McMillan (Park/area); Fishtrap Creek; West Coast Express schedule (weekday peak only — check TransLink); Port Haney station; Lougheed Hwy; Vedder Rotary Trail; Jinkerson Park; Cheam Leisure Centre; Airport Rd & Young Rd.
+Sunnyside Park: CHECKED — MLS® 'Sunnyside Park Surrey' is the South Surrey sub-area (126 sales; Sunnyside Acres Urban Forest, South Surrey Athletic Park). My 'North Surrey' label was wrong; re-asked in batch 2.
+
+```text
+Surrey
+
+1. Whalley
+Who it suits: First-time condo buyers and anyone who wants to commute by SkyTrain.
+What I’d tell a friend: I’d start around Holland Park. You can have a park, shops and a train station close by. The catch is that a condo facing King George can feel a lot busier than one a block back. 
+My tip: Walk home from the station after dinner, then spend a minute on the balcony with the door open. That’s closer to how you’ll actually live there.
+
+2. Fleetwood / Tynehead
+Who it suits: Families looking for a townhome or detached house with a bit more space.
+What I’d tell a friend: I’d look toward Tynehead if getting out for a walk matters to you. The regional park is a big draw. The catch is that getting onto Fraser Highway or out to Highway 1 can be a different story at rush hour. 
+My tip: If the listing says you can walk to the park, walk from the front door to the actual trail entrance. That’s the distance that matters.
+
+3. Sullivan Station
+Who it suits: Families moving up from a condo who want another bedroom and a park nearby.
+What I’d tell a friend: I’d start around Goldstone Park. You can get a family-sized townhome and have somewhere to take the kids without loading up the car. The catch is that some complexes feel tight once everyone’s home and the visitor spots fill up. 
+My tip: If it’s a tandem garage, picture who leaves first every morning. Then check that both cars actually fit with your bikes and storage.
+
+4. Guildford
+Who it suits: First-time buyers and downsizers who want shopping and transit close by.
+What I’d tell a friend: Guildford is easy for everyday errands. I like having Green Timbers nearby when you want a break from the busy roads. The catch is that a place facing 104th can feel very different from one tucked inside the same complex. 
+My tip: If you’re buying for mall access, walk there from the unit. Check where you cross and whether it’s a walk you’d actually do with groceries.
+
+5. West Newton
+Who it suits: Families who want more bedrooms or space for parents under one roof.
+What I’d tell a friend: I’d start near Newton Athletic Park if sports are a big part of your week. The catch is that some streets are already packed with cars by the time everyone gets home. 
+My tip: Go back after dinner and count the spots you can actually use. If the household has three cars, figure out where the third one goes.
+
+6. East Newton
+Who it suits: Buyers who want a yard and are open to an older detached house.
+What I’d tell a friend: I’d give an older place on a side street a good look if the layout works. The catch is that a fresh renovation upstairs can distract you from a basement that smells damp or windows that need replacing.
+My tip: If you’re buying for the yard, see it after a good rain. Check where the downspouts empty and whether water pools against the house.
+
+7. Queen Mary Park
+Who it suits: Buyers who want a yard and an established street without being far from central Surrey.
+What I’d tell a friend: I’d start near the park itself. The trails give you somewhere to go for a walk, and some of the side streets feel tucked away. The catch is that the busier roads can be close enough to hear from the backyard. 
+My tip: Walk into the park from Queen Mary Boulevard and 130B Street, then wander the streets around that entrance. It’s a good way to get a feel for the pocket. 
+
+8. Sunnyside Park, North Surrey
+I’d check this label before writing the entry. The City’s Sunnyside Park is on 26th Avenue in South Surrey, and the MLS area called Sunnyside Park Surrey is also in South Surrey. If your data puts it in North Surrey, I’d pull one address or MLS number from that row to see which pocket it’s actually picking up. 
+
+Abbotsford
+
+9. Central Abbotsford
+Who it suits: First-time condo buyers and downsizers who want errands and a good walking loop nearby.
+What I’d tell a friend: I’d start around Mill Lake. Being able to walk a lap before dinner is something you’ll actually use. The catch with an older condo is that a nice unit can come with a long list of building repairs. 
+My tip: If two condos are close in price, I’d read the strata minutes before picking a favourite. See what keeps coming up and whether there’s money set aside for it.
+
+10. Abbotsford East
+Who it suits: Families looking for a detached home, a yard and parks nearby.
+What I’d tell a friend: This is where I’d look if you want a view, but I’d also look at flatter streets around McMillan if you want a yard the kids will use every day. The catch with a hillside home is that the driveway and backyard can be steeper than they look in photos.
+My tip: Park in the driveway yourself and walk the whole yard. Picture getting groceries in on an icy morning or setting up a table outside.
+
+11. Abbotsford West
+Who it suits: Families who want more bedrooms and anyone who regularly drives west toward Langley.
+What I’d tell a friend: I’d look around Fishtrap Creek if you want somewhere green to walk close to home. The catch is that some homes have a lot of square footage spread over levels that may or may not work for your family. 
+My tip: If parents are moving in with you, walk the route from their parking spot to their bedroom. Count the stairs and see how much privacy they’d actually have.
+
+Mission
+
+12. Mission
+Who it suits: Buyers who want a detached house with a yard and have some flexibility on where or when they commute.
+What I’d tell a friend: I’d look here if the extra outdoor space would make a real difference to you. West Coast Express can be handy for a Vancouver commute, but it runs west in the morning and back east in the afternoon and evening on weekdays. Make sure that fits your hours. 
+My tip: If you’re counting on the train, do the whole trip once from the house. Getting to the station and finding parking are part of the commute too.
+
+Maple Ridge
+
+13. East Central Maple Ridge
+Who it suits: First-time buyers open to a townhome or an older detached house they can improve over time.
+What I’d tell a friend: I like it for buyers who want to be near town without living right in the middle of it. You get a mix of older houses and attached homes. The catch is that the walk into town varies a lot by address. 
+My tip: If you plan to walk into town, do the round trip from the house. Check the crossings and sidewalks, especially if you’ll be pushing a stroller.
+
+14. West Central Maple Ridge
+Who it suits: Condo buyers, downsizers and people who want shops and services within walking distance.
+What I’d tell a friend: I’d look toward the town centre if you want to go out for coffee or get a few errands done on foot. The catch is that traffic and street noise come with some of that convenience. 
+My tip: If the listing sells you on being close to Port Haney station, walk there and back. See how you feel about the uphill leg on the way home. 
+
+15. Cottonwood
+Who it suits: Families moving up to a bigger townhome or detached house.
+What I’d tell a friend: This is where I’d look if an extra bedroom, a garage and a park nearby matter more to you than walking to dinner. The catch is how often you might be getting back in the car for school, errands and activities. 
+My tip: Drive from the house to school and then out to Lougheed at your usual time. That short stretch on the map is the part you’ll repeat every day.
+
+Chilliwack
+
+16. Sardis South
+Who it suits: Families and downsizers who want flatter streets and easy access to outdoor space.
+What I’d tell a friend: I’d look here if you’d actually use the Vedder Rotary Trail for dog walks or bike rides. The catch is that access to shops and the trail can feel different depending on which side of Vedder Road you’re on. 
+My tip: Walk to the trail entrance from the house. If you’re buying for daily walks, check whether you’ll have to cross a busy road every time.
+
+17. Promontory
+Who it suits: Buyers who want a family-sized house or townhome and like the idea of a view or trails nearby.
+What I’d tell a friend: I’d start around Jinkerson Park if you want a spot where the kids can play or you can take the dog out. The catch is the hill. It affects everything from walking home to pulling into a steep driveway in winter. 
+My tip: Try parking and turning around in the driveway yourself. If you’d be backing down a steep slope every morning, make sure you’re comfortable with it.
+
+18. Chilliwack Proper East
+Who it suits: Buyers who’d take an older detached home with a yard and do some work over time.
+What I’d tell a friend: I’d look here if you like older houses with a bit of character and want to stay close to town. The catch is that the things you can’t see in the photos can cost more than the updates you’re already planning. 
+My tip: If you’re planning to finish the basement, check the ceiling height, look for signs of past water and price out the work before you count it as living space.
+
+19. Garrison Crossing
+Who it suits: Downsizers and families who want to walk for coffee, groceries or a swim.
+What I’d tell a friend: This is where I’d look if you want to leave the car at home more often. I like the streets around the village and having Cheam Leisure Centre nearby. The catch is that the homes can feel close together, especially if you’re coming from a place with a big yard. 
+My tip: Sit on the patio or stand in the yard during the showing. See how much sun you get and what you’re looking at across the fence.
+
+20. Chilliwack Proper South
+Who it suits: First-time condo buyers and people who want to stay central with a straightforward drive to work or errands.
+What I’d tell a friend: I’d look here if convenience is high on the list. Around Airport Road and Young Road, I’d pay particular attention to which way the unit faces. Two units in the same building can feel completely different with the windows open. 
+My tip: Stand in the bedroom with the window open during your showing. If you’re a light sleeper, that’ll tell you more than the view from the living room.
+```
