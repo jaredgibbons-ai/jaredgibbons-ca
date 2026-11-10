@@ -99,3 +99,18 @@ test('built pages: every guide with Jared’s notes shows one "Jared’s take" c
   assert.ok(Object.keys(jv).length > 100, 'jared-voice.json looks empty');
   assert.equal(bad.length, 0, bad.slice(0, 8).join('; '));
 });
+
+test('robots.txt opens on the same launch switch as the pages (D-200)', () => {
+  const t = fs.readFileSync('src/pages/robots.txt.ts', 'utf8');
+  assert.match(t, /import \{ isPreview \} from '\.\.\/lib\/preview'/);
+  assert.doesNotMatch(t, /import.meta.env.PUBLIC_LAUNCH/);
+});
+
+test('built pages: links to other agents\' and brokerages\' sites carry rel="nofollow" (D-200)', { skip: !built }, () => {
+  const bad = [];
+  for (const f of pages) {
+    for (const m of html(f).matchAll(/<a\b[^>]*href="https?:\/\/(?:www\.)?(?:bccondosandhomes\.com|mikestewart\.ca|danmarusin\.com|bentruscottrealestate\.com)[^"]*"[^>]*>/g))
+      if (!/\brel="[^"]*\bnofollow\b/.test(m[0])) bad.push(`${f}: ${m[0].slice(0, 90)}`);
+  }
+  assert.equal(bad.length, 0, bad.slice(0, 5).join('; '));
+});

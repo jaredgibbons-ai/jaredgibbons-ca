@@ -20,7 +20,7 @@ Written as a commercial SEO specialist would: what exists, what is missing, what
 | 8 | **Metro Vancouver pages** (Burnaby, Richmond, Coquitlam, Tri-Cities, North Shore, Vancouver). Home-for-sale pages only. | Large volume, heavy competition, outside Jared's core market. Built last but to the same bar (D-42, D-44). | Same as above; Muse gap files exist |
 
 ## 3. Technical and structural items
-- **Done:** sitemap.xml and robots.txt endpoints (closed in preview, open with `PUBLIC_LAUNCH=1`); FAQPage and BreadcrumbList JSON-LD on local-layer pages; new-page loader (a new page is one `src/data/local/<slug>.json` with a `new_page` header).
+- **Done:** sitemap.xml and robots.txt endpoints (closed in preview, open in the launch build, `PUBLIC_PREVIEW=false`; D-200); FAQPage and BreadcrumbList JSON-LD on local-layer pages; new-page loader (a new page is one `src/data/local/<slug>.json` with a `new_page` header).
 - **To do:** `RealEstateAgent` and `WebSite` JSON-LD on the home page (no self-serving aggregate rating); automatic breadcrumbs on all pages; hub pages linking every child (city hubs → sub-areas → sell page); `llms.txt`; image alt/size review; remove preview noindex at launch only with Jared's approval.
 - **Speed:** cache headers (immutable hashed assets, revalidated HTML), delayed analytics loader, speculation rules, performance budget tests, R2 photo route.
 

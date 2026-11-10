@@ -21,6 +21,10 @@ const WORDING = [
   [/Royal LePage Little Oak(?! Realty)(?=[.,;:"'<)\s])/g, 'Royal LePage Little Oak Realty'],
 ];
 
+// Other agents', teams' and brokerages' sites cited as sources (D-200). Developers, governments and news stay followed.
+const OTHER_AGENTS = ['bccondosandhomes.com', 'mikestewart.ca', 'homehappy.ca', 'danmarusin.com', 'vancouvernewcondos.com', 'livabl.com', 'rew.ca',
+  'presalesbc.com', 'bentruscottrealestate.com', 'rennie.com', 'realtor.ca', 'zolo.ca', 'remax.ca', 'housesigma.com', 'zealty.ca', 'condoinvancouver.ca'];
+
 function walk(dir, out = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     const p = path.join(dir, e.name);
@@ -61,11 +65,21 @@ export default function fixLinks() {
           if (p.endsWith('.html') && exists(g)) return { to: g + tail };
           return { unresolved: true };
         };
-        let rewritten = 0, dropped = 0, headingsFixed = 0, wording = 0; const unresolved = new Map();
+        let rewritten = 0, dropped = 0, headingsFixed = 0, wording = 0, nofollow = 0; const unresolved = new Map();
         for (const f of files) {
           let t = fs.readFileSync(f, 'utf8'); let changed = false;
           t = t.replace(/<a\b([^>]*?)\shref="([^"]*)"([^>]*)>([\s\S]*?)<\/a>/g, (all, a, href, b, inner) => {
-            if (!href.startsWith('/')) return all;
+            if (!href.startsWith('/')) {
+              // D-200: sources on other agents' and brokerages' sites stay as citations but pass no ranking credit (rel="nofollow")
+              const host = (href.match(/^https?:\/\/(?:www\.)?([^/:?#]+)/i) || [])[1]?.toLowerCase();
+              if (!host || !OTHER_AGENTS.some((d) => host === d || host.endsWith('.' + d))) return all;
+              const attrs = a + b;
+              if (/\brel="[^"]*\bnofollow\b/.test(attrs)) return all;
+              changed = true; nofollow++;
+              if (/\srel="/.test(a)) return `<a${a.replace(/\srel="([^"]*)"/, ' rel="$1 nofollow"')} href="${href}"${b}>${inner}</a>`;
+              if (/\srel="/.test(b)) return `<a${a} href="${href}"${b.replace(/\srel="([^"]*)"/, ' rel="$1 nofollow"')}>${inner}</a>`;
+              return `<a${a} href="${href}" rel="nofollow"${b}>${inner}</a>`;
+            }
             const r = resolve(href);
             if (r.keep) return all;
             if (r.to) { changed = true; rewritten++; return `<a${a} href="${r.to}"${b}>${inner}</a>`; }
@@ -85,7 +99,7 @@ export default function fixLinks() {
           { const before = t; for (const [re, to] of WORDING) t = t.replace(re, to); if (t !== before) { changed = true; wording++; } }
           if (changed) fs.writeFileSync(f, t);
         }
-        console.log(`[fix-links] rewritten ${rewritten}, removed ${dropped}, unresolved ${unresolved.size}, headings fixed ${headingsFixed}, wording ${wording} pages`);
+        console.log(`[fix-links] rewritten ${rewritten}, removed ${dropped}, unresolved ${unresolved.size}, headings fixed ${headingsFixed}, wording ${wording} pages, nofollow ${nofollow}`);
         if (unresolved.size) fs.writeFileSync(path.join(root, '..', 'link-unresolved.json'), JSON.stringify([...unresolved], null, 1));
         else if (fs.existsSync(path.join(root, '..', 'link-unresolved.json'))) fs.unlinkSync(path.join(root, '..', 'link-unresolved.json'));
       },
