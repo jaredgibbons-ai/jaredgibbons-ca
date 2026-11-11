@@ -464,7 +464,9 @@ push();
         if (!a.length) { ok = false; break; }
         items.push({ h: pt(sec.blocks[i]).replace(/\.$/, ''), a }); i = j;
       }
-      if (ok && items.length >= 2) sec.blocks = [...sec.blocks.slice(0, first), { t: 'subs', items }, ...sec.blocks.slice(i)];
+      // Under an h3 ("Detached Houses") the labels ("Look at", "Ask", "Watch for") are h4s, not sibling h3s (D-221).
+      const ph = sec.blocks.slice(0, first).filter((x: any) => x.t === 'h').pop();
+      if (ok && items.length >= 2) sec.blocks = [...sec.blocks.slice(0, first), { t: 'subs', items, lvl: ph && ph.level >= 3 ? 4 : 3 }, ...sec.blocks.slice(i)];
     }
     const first = sec.blocks[0];
     (sec as any).split = first?.t === 'h' && first.level === 2 && !first.href && sec.blocks.length > 1 && sec.blocks.slice(1).every((b: any) => ['p', 'list', 'faq', 'subs', 'notice', 'kvgrid', 'gcards', 'stats'].includes(b.t) || (b.t === 'h' && b.level >= 3));
@@ -603,7 +605,7 @@ const explore = !_extra.length ? exploreBase
               );
               if (b.t === 'newsletter') return <Newsletter />;
               if (b.t === 'p') return <p class={b.cls}><Rich parts={b.parts} /></p>;
-              if (b.t === 'photo') return <PhotoCredit photo={b.photo} hero sizes="(min-width:48rem) 40rem, 100vw" />;
+              if (b.t === 'photo') return <PhotoCredit photo={b.photo} sizes="(min-width:48rem) 40rem, 100vw" />;
               if (b.t === 'list' && sec.blocks[bi - 1]?.t === 'h' && isSourcesHeading(sec.blocks[bi - 1].text) && b.items.length) return <SourceList items={b.items} />;
               if (b.t === 'list') {
                 const shown = visibleItems(b.items);
@@ -690,7 +692,7 @@ const explore = !_extra.length ? exploreBase
                 <ul class="subs">
                   {b.items.map((it: any) => (
                     <li class="sub">
-                      <h3 class="sub__h">{it.h}</h3>
+                      {b.lvl === 4 ? <h4 class="sub__h">{it.h}</h4> : <h3 class="sub__h">{it.h}</h3>}
                       {it.a.map((x: any) => x.t === 'list' ? <ul class="lines">{x.items.map((li: any) => <li><Rich parts={li} /></li>)}</ul> : <p class={x.cls}><Rich parts={x.parts} /></p>)}
                     </li>
                   ))}

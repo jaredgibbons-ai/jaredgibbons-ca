@@ -191,7 +191,9 @@ function titleRuns(bl: Block[]): Block[] {
         while (k < bl.length && (bl[k].t === 'p' || bl[k].t === 'list') && !startsCard(k) && isBodyish(bl[k])) a.push(bl[k++]);
         items.push({ h: bt(bl[j]), a }); j = k;
       }
-      if (items.length >= 3) { out.push({ t: 'subs', items }); i = j - 1; continue; }
+      // Under an h3 ("Detached Houses") the card titles ("Look at", "Ask") are h4s, not sibling h3s (D-221).
+      const prevH = [...out].reverse().find((x) => x.t === 'h');
+      if (items.length >= 3) { out.push({ t: 'subs', items, lvl: prevH && (prevH as any).level >= 3 ? 4 : 3 } as Block); i = j - 1; continue; }
     }
     out.push(bl[i]);
   }

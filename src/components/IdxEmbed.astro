@@ -29,6 +29,9 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
       s.onerror = giveUp;
       box.appendChild(s);
       setTimeout(giveUp, 10000);
+      // The vendor's frames come without a title (axe frame-title, D-221): name them for screen readers as they appear.
+      const nameFrames = () => box.querySelectorAll('iframe:not([title])').forEach((f) => f.setAttribute('title', `${box.closest('section')?.getAttribute('aria-label') || 'Listings'}: MLS® listing search`));
+      new MutationObserver(nameFrames).observe(box, { childList: true, subtree: true });
     };
     if ('IntersectionObserver' in window) {
       const io = new IntersectionObserver((e) => { if (e.some((x) => x.isIntersecting)) { io.disconnect(); load(); } }, { rootMargin: '400px 0px' });

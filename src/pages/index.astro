@@ -61,8 +61,8 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
   <!-- ░░ WHY WORK WITH US ░░ -->
   <section class="section" aria-labelledby="h-why">
     <div class="wrap">
-      <h2 id="h-why" class="h2 caps">WHY WORK WITH US</h2>
-      <h3 class="subhead">OUR PROVEN PERFORMANCE</h3>
+      <h2 id="h-why" class="h2 caps">Why work with us</h2>
+      <h3 class="subhead">Our proven performance</h3>
       {import.meta.env.PUBLIC_PREVIEW !== 'false' && <p class="preview-flag">Open item OI-07: performance figures under this heading were not captured as text in the archive (likely image/script-rendered). Will be filled from the baseline zips.</p>}
     </div>
     <div class="awards-rows">
@@ -74,7 +74,7 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
   <!-- ░░ OUR LISTINGS ░░ -->
   <section class="section section--cream" aria-labelledby="h-listings">
     <div class="wrap">
-      <h2 id="h-listings" class="h2 caps">OUR LISTINGS</h2>
+      <h2 id="h-listings" class="h2 caps">Our listings</h2>
       {isPreview && <p class="notice">Listings are not connected in this preview. Cards below are the archived 31 Oct 2026 snapshot of Jared's own listings.</p>}
       <ul class="cards">
         {listings.map((l) => (
@@ -245,7 +245,7 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
   .review{background:#fff;border:1px solid var(--ink);padding:1.25rem 1.4rem;display:flex;flex-direction:column}
   .review__text{margin:0 0 1rem;font-size:1rem;flex:1}
   .review__who{margin:0;font-size:.875rem;line-height:1.4}
-  .subhead{font:700 clamp(1.125rem,2vw,1.5rem)/1.2 var(--f-head);letter-spacing:.04em;margin:1.5rem 0 1rem}
+  .subhead{font:700 clamp(1.125rem,2vw,1.5rem)/1.2 var(--f-head);letter-spacing:.04em;text-transform:uppercase;margin:1.5rem 0 1rem}
   .subhead--sm{font-size:1rem;margin-top:2rem}
   .awards-rows{margin:var(--s4) 0 0;display:grid;gap:0}
   .awards-rows :global(.awm:first-child){padding-bottom:.5rem}

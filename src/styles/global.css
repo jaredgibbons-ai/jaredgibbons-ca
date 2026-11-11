@@ -150,7 +150,7 @@ a:hover{text-decoration-thickness:3px}
 .header-cta{display:none}
 
 @media (max-width:1300px){
-  .menu-btn{display:inline-flex}
+  .menu-btn{display:inline-flex;min-height:2.75rem}
   .nav{position:fixed;inset:var(--nav-top,var(--header-h)) 0 0 0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:0 var(--gutter) 6rem;overflow:auto;transform:translateX(100%);visibility:hidden;transition:transform .2s ease,visibility 0s .2s}
   .nav.is-open{transform:none;visibility:visible;transition:transform .2s ease}
   .nav__item{flex-wrap:wrap;border-bottom:1px solid var(--rule)}
