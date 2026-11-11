@@ -351,6 +351,12 @@ if (isGuide) {
       page.blocks.splice(at, 0, { t: 'h', level: 2, text: `Homes Jared has sold in ${nm}` }, { t: 'jsold', cards: sold });
     }
   }
+  // "Email me new listings in X" on every guide (D-220): the same alert form as the search pages, placed after the pros and cons (or the quick
+  // facts), unless the page already has a live search with its own alert box. Shows only when the live forms are switched on.
+  if (!(page.blocks || []).some((b: any) => b.t === 'grid') && GP?.name) {
+    const after = ['proscons', 'jvoice', 'quickfacts', 'qanswer'].map((t) => page.blocks.findIndex((b: any) => b.t === t)).find((i) => i >= 0);
+    if (after !== undefined) page.blocks.splice(after + 1, 0, { t: 'alertbox', name: GP.name });
+  }
   // Video tour slot (D-205): only when guide-plus.json has a YouTube id for the guide; loads the player on tap.
   if (GP?.video) {
     const after = ['jvoice', 'quickfacts', 'qanswer'].map((t) => page.blocks.findIndex((b: any) => b.t === t)).find((i) => i >= 0) ?? 0;
@@ -565,6 +571,7 @@ const explore = !_extra.length ? exploreBase
                   <div class="fit__cta"><p class="fit__ct">Still not sure? Book a quick call and we’ll talk it through.</p><a class="btn" href="https://calendly.com/jaredgibbons" target="_blank" rel="noopener">Book a call with Jared</a> <a class="fit__ph" href="tel:+16049281361">or call 604-928-1361</a></div>
                 </div>
               );
+              if (b.t === 'alertbox') return <div class="alertbox"><ListingAlert search={`${b.name} guide`} title={`Get new ${b.name} listings by email`} /></div>;
               if (b.t === 'video') return (
                 <section class="vid" aria-label={`${b.name} video tour`}>
                   <button type="button" class="vid__btn" data-yt={b.id} aria-label={`Play the ${b.name} video tour`}><img src={`https://i.ytimg.com/vi/${b.id}/hqdefault.jpg`} alt="" width="480" height="360" loading="lazy" /><span class="vid__play" aria-hidden="true">▶</span></button>
@@ -863,6 +870,7 @@ const explore = !_extra.length ? exploreBase
   .jv__mh{margin:0;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;opacity:.85;padding-top:.2rem;color:#fff}
   .jv__more p{margin:0 0 .6rem;max-width:var(--measure);line-height:1.6}
   .jsold__all{margin:1.25rem 0 0}
+  .alertbox{margin:0 0 1.5rem;max-width:56rem}
   .jv__draft{margin:0 0 1rem;padding:.4rem .6rem;border:1px dashed rgba(255,255,255,.5);font-size:.8rem}
   .jv__sig{margin:1.25rem 0 0;padding-top:1rem;border-top:1px solid rgba(255,255,255,.22);font-size:.85rem;opacity:.85}
   .jv__sig a{color:#fff}
