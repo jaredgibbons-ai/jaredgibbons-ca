@@ -17,5 +17,6 @@ const u = uniq as any;
 // `enforce` is off until Jared and I have reviewed the pages under the threshold together: nothing is held out of the sitemap before then.
 const uniquenessHeld = (slug: string) => u.enforce === true && typeof u.scores[slug] === 'number' && u.scores[slug] < u.min_unique;
 // Utility pages that stay reachable and linked but are never indexed or put in the sitemap.
-const UTILITY = new Set(['photo-credits']);
+// D-221: the newsletter signup and leave-a-review forms carry almost no text (Cursor audit, thin pages); they stay linked but out of the index.
+const UTILITY = new Set(['photo-credits', 'subscribe-to-our-newsletter', 'testimonials']);
 export const isGated = (slug: string) => UTILITY.has(slug) || listingGated(slug) || uniquenessHeld(slug) || isHeld(slug);
