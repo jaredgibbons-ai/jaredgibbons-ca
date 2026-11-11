@@ -196,11 +196,6 @@
         ],
         [
           {
-            "t": "Where a bare-land strata lot did exist, the buyer would own the lot as a strata lot: strata fees and bylaws apply to the lot itself, and the purchase runs on a Form B (SPA s. 59)."
-          }
-        ],
-        [
-          {
             "t": "A designation is not an approval and no site is listed as inventory here."
           }
         ],
@@ -217,11 +212,6 @@
         [
           {
             "t": "Servicing: rural residential lots outside the urban boundary may use wells and onsite sewage rather than community water and sewer — per-parcel servicing is confirmed from the parcel's well record (provincial GWELLS) and its onsite-sewage filing, not assumed from the address."
-          }
-        ],
-        [
-          {
-            "t": "Airport overlay on the land itself: Aberdeen sits north/northeast of YXX; land covered by the Abbotsford Airport Zoning Regulations (AZR), SOR/83-253, shown on City drawing M-500, is subject to height limits, and a developer on AZR land must obtain NAV CANADA and Transport Canada approvals before the City issues a building permit."
           }
         ],
         [
@@ -286,18 +276,6 @@
       "items": [
         [
           {
-            "t": "Transit: BC Transit route 21 (Aldergrove / Abbotsford) runs along Fraser Highway at the north edge toward Bourquin Exchange."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "tn",
-      "items": [
-        [
-          {
             "t": "Schools: Aberdeen Elementary, 2975 Bradner Road, is the public elementary school physically inside the sub-area (Ministry-listed name/address). Catchment, single-address only: the recorded SD34 locator run for 2975 Bradner Road (the school's own address) returns Aberdeen Elementary → Eugene Reimer Middle → Rick Hansen Secondary; Eugene Reimer Middle's family-of-schools page lists Aberdeen Elementary among its feeder schools and names Rick Hansen Secondary (Grades 9–12) as that family's secondary school. Ministry-listed addresses for the chain: Eugene Reimer Middle School, 3433 Firhill Dr (in Abbotsford West, recorded only as the middle school's address, not as an Aberdeen sample). Catchment areas are set under SD34 Policy 18."
           }
         ]
@@ -323,18 +301,6 @@
         [
           {
             "t": "OCP: Abbotsforward 2050, the CURRENT Official Community Plan, governs; there is no Aberdeen neighbourhood plan"
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "tn",
-      "items": [
-        [
-          {
-            "t": "ALR block — full form (Aberdeen's governing land regime): subdivision within the ALR requires Agricultural Land Commission approval, and ALR residences cannot be stratified (ALC Information Bulletin 09, s. 6; Strata Property Act, s. 239; Agricultural Land Commission Act, s. 21(1)). Farm class (BC Assessment) in full three-tier form: $2,500 of gross farm income at 0.8–4 ha; $2,500 plus 5% of the actual value of the area over 4 ha above that; $10,000 under 0.8 ha — applications by October 31."
           }
         ]
       ],
@@ -697,44 +663,6 @@
       "pos": "end",
       "t": "p",
       "text": "Times are from OpenStreetMap routing, November 2026."
-    },
-    {
-      "gen": "nb",
-      "level": 3,
-      "pos": "end",
-      "t": "h",
-      "text": "Parks and recreation"
-    },
-    {
-      "gen": "nb",
-      "items": [
-        [
-          {
-            "t": "Nearest library: Mount Lehman Library, 5875 Mount Lehman Road, Fraser Valley Regional Library."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "nb",
-      "level": 3,
-      "pos": "end",
-      "t": "h",
-      "text": "Schools"
-    },
-    {
-      "gen": "nb",
-      "items": [
-        [
-          {
-            "t": "Aberdeen Elementary, grades K-5, School District 34 Abbotsford; confirm the catchment with the district."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
     },
     {
       "gen": "nb",
@@ -1469,5 +1397,13 @@
   "updated": "2026-11-01",
   "lead": "homevalue",
   "lead_place": "Aberdeen",
-  "trimmed": "2026-11-10"
+  "trimmed": "2026-11-10",
+  "hide": [
+    "ALR status is set property by property. About 72% of Abbotsford’s land",
+    "About 72% of Abbotsford’s land is in theAgricultural Land Reserve. ALR",
+    "Check theALC mapand ask the City of Abbotsford how the property is zon",
+    "How much of the land you can use (versus trees or wet ground), drainag",
+    "Type the address to see its zoning,ALR status, lot size and other publ",
+    "Written byJared Gibbons— Personal Real Estate Corporation,Royal LePage"
+  ]
 }

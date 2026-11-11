@@ -410,25 +410,6 @@
       "text": "Known park inside Central Abbotsford: 1 — Georgian Park, pad rental."
     },
     {
-      "gen": "mh",
-      "level": 3,
-      "pos": "end",
-      "t": "h",
-      "text": "The parks and communities"
-    },
-    {
-      "gen": "mh",
-      "items": [
-        [
-          {
-            "t": "Georgian Park: Plainly: a home here sits on a rented pad — the buyer owns the home (a chattel) and rents the pad; the buyer does not own the land. The tenancy is governed by the Manufactured Home Park Tenancy Act, not the Strata Property Act."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
       "t": "h",
       "level": 3,
       "text": "Where it sits and what to know here",
@@ -511,23 +492,6 @@
           "t": "."
         }
       ]
-    },
-    {
-      "t": "p",
-      "parts": [
-        {
-          "t": "The Abbotsford-wide rules for mobile and manufactured homes (zoning, strata, servicing, taxes) are on one page: "
-        },
-        {
-          "t": "buying a home in Abbotsford: the rules",
-          "h": "/abbotsford-home-buying-rules.html"
-        },
-        {
-          "t": "."
-        }
-      ],
-      "gen": "trim",
-      "pos": "end"
     },
     {
       "gen": "dx",
@@ -621,11 +585,6 @@
       "items": [
         [
           {
-            "t": "No SkyTrain, West Coast Express or SeaBus station is in Abbotsford; TransLink lists West Coast Express stations from Mission City to Waterfront only."
-          }
-        ],
-        [
-          {
             "t": "Nearest rapid-transit station: Mission City Station (West Coast Express), in Mission."
           }
         ],
@@ -681,45 +640,6 @@
         [
           {
             "t": "Abbotsford Community Library, 33355 Bevan Avenue."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "nb",
-      "level": 3,
-      "pos": "end",
-      "t": "h",
-      "text": "Schools"
-    },
-    {
-      "gen": "nb",
-      "items": [
-        [
-          {
-            "t": "Godson Elementary, grades K-5, School District 34 Abbotsford; confirm the catchment with the district."
-          }
-        ],
-        [
-          {
-            "t": "Dormick Park Elementary, grades K-5, School District 34 Abbotsford; confirm the catchment with the district."
-          }
-        ],
-        [
-          {
-            "t": "Ten Broeck Elementary, grades K-5, School District 34 Abbotsford; confirm the catchment with the district."
-          }
-        ],
-        [
-          {
-            "t": "Abbotsford Middle School, grades 6-8, School District 34 Abbotsford; confirm the catchment with the district."
-          }
-        ],
-        [
-          {
-            "t": "Abbotsford Senior Secondary School, grades 9-12, School District 34 Abbotsford; confirm the catchment with the district."
           }
         ]
       ],
@@ -891,11 +811,6 @@
         ],
         [
           {
-            "t": "Schools: Dormick Park Elementary, grades K-5, School District 34 Abbotsford; confirm the catchment with the district. Ten Broeck Elementary, grades K-5, School District 34 Abbotsford; confirm the catchment with the district. Abbotsford Middle School, grades 6-8, School District 34 Abbotsford; confirm the catchment with the district."
-          }
-        ],
-        [
-          {
             "t": "Shopping: Sevenoaks Shopping Centre, 32900 South Fraser Way. Clearbrook Town Square, 32500 South Fraser Way."
           }
         ]
@@ -1025,11 +940,6 @@
         ],
         [
           {
-            "t": "The City Centre is bordered approximately by Peardonville Road and Mill Lake to the south, Ware Street, Mill Lake Road and Horn Street to the east, Parkview Street and Tims Street to the west, and a line roughly parallel to George Ferguson Way and Maclure Road to the north."
-          }
-        ],
-        [
-          {
             "t": "The Historic Downtown focused redevelopment area is bounded by Pine Street, Cyril Street, McDougall Avenue and McCallum Road."
           }
         ],
@@ -1084,11 +994,6 @@
         [
           {
             "t": "The small-scale multi-unit housing amendment is Bylaw No. 3560-2024, adopted June 25, 2024."
-          }
-        ],
-        [
-          {
-            "t": "A secondary suite must be less than 50% of the principal unit, and garden suites and coach houses may occupy up to 15% of the lot to a maximum of 100 m²."
           }
         ],
         [
@@ -1625,11 +1530,6 @@
       "q": "Do I pay GST on a teardown or a subdivided lot?"
     },
     {
-      "a": "No. You own the home (a chattel) and rent the pad — the park owns the land, and your right to the site is the assigned pad tenancy under the Manufactured Home Park Tenancy Act. Plainly, a home on a rented pad is not land ownership.",
-      "gen": "mh",
-      "q": "In Georgian Park, do I own the land?"
-    },
-    {
       "a": "A park's age rule lives in its park rules and tenancy documents, not in a strata bylaw, so the written park rules are the deciding document; the Province's general park rule is that in a designated 55-plus park at least one tenant on the site must be 55 or older. Get the park's current rule in writing.",
       "gen": "mh",
       "q": "Is Georgian Park really 55+?"
@@ -1680,5 +1580,14 @@
   "updated": "2026-11-01",
   "lead": "homevalue",
   "lead_place": "Central Abbotsford",
-  "trimmed": "2026-11-10"
+  "trimmed": "2026-11-10",
+  "hide": [
+    "ALR status is set property by property. About 72% of Abbotsford’s land",
+    "Catchments are set by address, and one area can be split between sever",
+    "From the City of Abbotsford parks and facilities pages. Check the City",
+    "Public schools (Abbotsford School District) at addresses in or near th",
+    "Type the address to see its zoning,ALR status, lot size and other publ",
+    "What the plan allows on the lots around you, and about road or transit",
+    "Written byJared Gibbons— Personal Real Estate Corporation,Royal LePage"
+  ]
 }

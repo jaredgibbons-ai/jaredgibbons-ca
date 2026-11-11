@@ -276,18 +276,6 @@
       "items": [
         [
           {
-            "t": "The local neighbourhood name inside East Newton is Chimney Hill, carried by Chimney Hill Elementary and Chimney Heights Park."
-          }
-        ]
-      ],
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
             "t": "The East Newton Business Park plan area (128 St to 144 St, 80 Ave to the south side of 88 Ave) sits at the north end — industrial/business-park ground, not residential lot stock; a land buyer at the north edge must check neighbouring uses against that plan context."
           }
         ]
@@ -474,22 +462,12 @@
       "items": [
         [
           {
-            "t": "Nearest SkyTrain station: King George Station, on the route 321 corridor through Newton Exchange."
-          }
-        ],
-        [
-          {
             "t": "Nearest bus exchange: Newton Exchange, the south terminus of the R1 King George Boulevard RapidBus."
           }
         ],
         [
           {
             "t": "R1 King George Boulevard, TransLink: Newton Exchange to Guildford; RapidBus routes run at least every 10 minutes at peak and every 15 minutes off-peak."
-          }
-        ],
-        [
-          {
-            "t": "Route 321, TransLink: White Rock / Newton Exchange / King George Station / Surrey Central Station."
           }
         ],
         [
@@ -688,40 +666,6 @@
     {
       "t": "h",
       "level": 3,
-      "text": "Chelsea Gardens, 13888 70 Ave",
-      "gen": "nbb",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "Transit: Nearest bus exchange: Newton Exchange, named on TransLink route 324 timetable. Nearest SkyTrain station: King George Station, on the route 321 corridor through Newton Exchange. R1 King George Boulevard RapidBus (TransLink): Newton Exchange to Guildford; every 10 minutes peak, 15 minutes off-peak."
-          }
-        ],
-        [
-          {
-            "t": "Parks and recreation: Newton Recreation Centre, 13730 72 Avenue. Surrey Libraries Newton Branch, 13795 70 Avenue."
-          }
-        ],
-        [
-          {
-            "t": "Schools: Georges Vanier Elementary, SD36, 6985 142 St; confirm the catchment with the district. M B Sanford Elementary, K-7, SD36, 7318 143 St; confirm the catchment with the district."
-          }
-        ],
-        [
-          {
-            "t": "Shopping: Chalo FreshCo (grocery), 7165 138 St. Save-On-Foods (grocery), #100-7320 King George Boulevard."
-          }
-        ]
-      ],
-      "gen": "nbb",
-      "pos": "end"
-    },
-    {
-      "t": "h",
-      "level": 3,
       "text": "Chimney Ridge, 7250 144 St",
       "gen": "nbb",
       "pos": "end"
@@ -737,11 +681,6 @@
         [
           {
             "t": "Parks and recreation: Chimney Heights Park, 14677 74 Avenue."
-          }
-        ],
-        [
-          {
-            "t": "Schools: Chimney Hill Elementary, K-7, SD36, 14755 74 Ave; confirm the catchment with the district."
           }
         ]
       ],
@@ -1479,5 +1418,11 @@
   "updated": "2026-11-01",
   "lead": "homevalue",
   "lead_place": "East Newton",
-  "trimmed": "2026-11-10"
+  "trimmed": "2026-11-10",
+  "hide": [
+    "ALR status is set property by property, so check the exact address on ",
+    "Catchments are set by address and can split a neighbourhood. Check the",
+    "East Newton is a well-established and diverse neighbourhood inSurreykn",
+    "Surrey Schools (SD36). Names, grades and addresses from the Province’s"
+  ]
 }

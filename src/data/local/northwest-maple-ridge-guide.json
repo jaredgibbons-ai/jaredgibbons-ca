@@ -595,18 +595,6 @@
       "items": [
         [
           {
-            "t": "Flood frame: the City publishes North and South Alouette River and Fraser River floodplain maps, and the Fraser River flood construction level is 6.7 m geodetic (including freeboard), with no habitable floor space below that level on affected lots and rental accommodation (suites) prohibited on floodplain properties under Zoning Bylaw s.402.8(h)."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "acre",
-      "items": [
-        [
-          {
             "t": "Suites and small-scale multi-unit housing follow Maple Ridge’s citywide rules; see the"
           },
           {
@@ -1441,11 +1429,6 @@
       "q": "Is The Meadows known townhouse stock I can rely on?"
     },
     {
-      "a": "One secondary suite per lot inside the house, up to 40% of gross floor area and not in the floodplain area; eligible single-detached and duplex lots may have up to three, four or six units under the City's SSMUH bylaws — on non-ALR lots only.",
-      "gen": "tn",
-      "q": "Can I add a suite or more units to a Northwest lot?"
-    },
-    {
       "a": "Both are per-parcel checks: ALR status on the ALC mapping, floodplain status on the City's Alouette/Fraser floodplain maps. On floodplain lots, no habitable floor space may sit below the 6.7 m flood construction level and suites are prohibited.",
       "gen": "tn",
       "q": "Is my lot in the ALR or the floodplain?"
@@ -1471,16 +1454,6 @@
       "q": "What were Northwest's own market figures in September 2026?"
     },
     {
-      "a": "One half of a two-unit building sold separately — either a strata lot in a 2-lot strata plan (Form B diligence applies) or a fee-simple lot created by subdividing the parcel. If a duplex was never strata-divided or subdivided, only the whole building sells.",
-      "gen": "dx",
-      "q": "What is a half duplex, legally?"
-    },
-    {
-      "a": "One secondary suite per lot inside the single detached building, up to 40% of gross floor area and not in the floodplain area; eligible single-detached and duplex lots may also have up to three, four or six units under the City's SSMUH bylaws.",
-      "gen": "dx",
-      "q": "Can a house here have a suite or more units?"
-    },
-    {
       "a": "The City of Maple Ridge Official Community Plan — updated November 25, 2025 on the settled position in this program.",
       "gen": "muse",
       "q": "Which plan covers Northwest Maple Ridge?"
@@ -1497,5 +1470,11 @@
   "updated": "2026-11-01",
   "lead": "homevalue",
   "lead_place": "Northwest",
-  "trimmed": "2026-11-10"
+  "trimmed": "2026-11-10",
+  "hide": [
+    "MyMaple Ridge zoning guidecovers agricultural and rural zones only. Fo",
+    "Northwest Maple Ridge is an MLS® sub-area name. The City of Maple Ridg",
+    "SD42 publishes no school list for the MLS sub-area, so these are the s",
+    "The City describes an indoor pool, a fitness centre, a gymnasium and s"
+  ]
 }

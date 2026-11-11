@@ -533,25 +533,6 @@
       "level": 3,
       "pos": "end",
       "t": "h",
-      "text": "Bare-land strata"
-    },
-    {
-      "gen": "tn",
-      "items": [
-        [
-          {
-            "t": "A bare-land strata lot is strata tenure: the buyer owns the strata lot (essentially the building lot itself) and the house on it; Form B, strata fees for common property and registered bylaws apply to the lot. It is not fee-simple."
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
-    },
-    {
-      "gen": "tn",
-      "level": 3,
-      "pos": "end",
-      "t": "h",
       "text": "Development site"
     },
     {
@@ -1037,17 +1018,7 @@
       "items": [
         [
           {
-            "t": "Transit: Nearest bus exchange: Ladner Exchange, served by Routes 601, 606 and 608 (TransLink). Nearest rapid-transit station: Bridgeport Station (Canada Line), terminus of Route 601 from Ladner. Route 601 Bridgeport Station/South Delta (TransLink): via Arthur Dr, Ladner Trunk Rd and Harvest Dr to Ladner Exchange, then via Hwy 99 to Bridgeport Station."
-          }
-        ],
-        [
-          {
             "t": "Parks and recreation: Memorial Park, 5010 47 Ave, Delta. Ladner Leisure Centre, 4600 Clarence Taylor Crescent, Delta."
-          }
-        ],
-        [
-          {
-            "t": "Schools: Ladner Elementary, K-7, School District 37 Delta, 5016 44 Ave; confirm the catchment with the district. Delta Secondary, 8-12, School District 37 Delta, 4615 51 St; confirm the catchment with the district. Hawthorne Elementary, K-7, School District 37 Delta, 5160 Central Ave; confirm the catchment with the district."
           }
         ],
         [
@@ -1464,5 +1435,9 @@
   ],
   "updated": "2026-11-01",
   "lead": "homevalue",
-  "trimmed": "2026-11-10"
+  "trimmed": "2026-11-10",
+  "hide": [
+    "Catchments are set by address and can split an area. On the district’s",
+    "Lots zoned for single detached or duplex homes can have up to 3 units "
+  ]
 }
