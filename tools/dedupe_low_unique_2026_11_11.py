@@ -9,7 +9,7 @@ The text stays on the page it came from. Idempotent. python3 -I tools/dedupe_low
 import collections, glob, json, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROOT); sys.path.insert(0, 'tools')
 import uniqueness as U
-TARGETS = ['brownstones-at-morgan-crossing', 'greentree-village', 'ladner-condos-for-sale', 'abbotsford-duplexes-for-sale', 'aberdeen']
+TARGETS = sys.argv[1:] or ['brownstones-at-morgan-crossing', 'greentree-village', 'ladner-condos-for-sale', 'abbotsford-duplexes-for-sale', 'aberdeen']
 GOAL = 0.72
 
 
