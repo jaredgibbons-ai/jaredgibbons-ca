@@ -337,7 +337,8 @@ if (isGuide) {
     const qf = page.blocks.findIndex((b: any) => b.t === 'quickfacts');
     const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
     const tocAt = page.blocks.findIndex((b: any) => b.t === 'toc');
-    page.blocks.splice(qf >= 0 ? qf + 1 : tocAt > 0 ? tocAt : h1i + 1, 0, { t: 'jvoice', v: jv });
+    const after = Math.max(...['updated', 'qanswer'].map((t) => page.blocks.findIndex((b: any) => b.t === t)));   // under the byline and quick answer when there are no quick facts
+    page.blocks.splice(qf >= 0 ? qf + 1 : tocAt > 0 ? tocAt : after >= 0 ? after + 1 : h1i + 1, 0, { t: 'jvoice', v: jv });
   }
   // Homes Jared has sold in this MLS® sub-area (D-211): up to 3, newest first, complex or street name only, no price (a list price shown under "Sold" reads as the sale price).
   {
