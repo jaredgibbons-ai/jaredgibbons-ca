@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Links in for three pages the launch pack held for having fewer than 2 pages linking to them (D-213, Nov 11, 2026):
-Squamish and Whistler market stats (0 links) and the Agassiz guide (1). Each gets a short "Nearby" line on related pages.
+Squamish and Whistler market stats (0 links), the Agassiz guide (1) and the Cultus Lake rules page (1). Each gets a short "Nearby" line on related pages.
 python3 -I tools/link_orphans_2026_11_11.py"""
 import json, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROOT)
@@ -14,6 +14,9 @@ ADD = {
     'whistler-real-estate-market-stats': [('Down the highway: ', 'Squamish market stats', 'squamish-real-estate-market-stats')],
     'harrison-hot-springs-bc-guide': [('Next door: ', 'Agassiz guide', 'agassiz-bc-guide')],
     'hope-bc-guide': [('Also in the area: ', 'Agassiz guide', 'agassiz-bc-guide')],
+    'cultus-lake-guide': [('Leases, zoning, sewer and taxes at the lake: ', 'buying a home at Cultus Lake: the rules', 'cultus-lake-home-buying-rules')],
+    'lindell-beach-bc-guide': [('Leases, zoning, sewer and taxes at the lake: ', 'buying a home at Cultus Lake: the rules', 'cultus-lake-home-buying-rules')],
+    'cultus-lake': [('Leases, zoning, sewer and taxes at the lake: ', 'buying a home at Cultus Lake: the rules', 'cultus-lake-home-buying-rules')],
 }
 for slug, lines in ADD.items():
     f = f'src/data/local/{slug}.json'; raw = open(f, encoding='utf-8').read(); d = json.loads(raw)

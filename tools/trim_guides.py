@@ -210,6 +210,8 @@ def trim(slug, city_store):
 def write_city(cslug, c):
     path = os.path.join(LOCAL, f'{cslug}-home-buying-rules.json')
     old = json.load(open(path, encoding='utf-8')) if os.path.exists(path) else None
+    if old and old.get('curated'):                            # rewritten by hand (D-214): later trims link here but never rewrite it
+        return
     name = c['name']; short = name.replace('the ', '')
     kept = collections.defaultdict(list); shs = []
     if old:                                                   # keep what earlier runs moved here
