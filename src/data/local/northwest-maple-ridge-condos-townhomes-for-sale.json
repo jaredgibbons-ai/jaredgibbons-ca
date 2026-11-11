@@ -243,7 +243,7 @@
       "items": [
         [
           {
-            "t": "ALR stratification bar and housing frame: ALR status is per-parcel — check the Agricultural Land Commission's mapping for any specific lot. On ALR parcels, residences cannot be stratified (ALC Bulletin 09 s. 6; SPA s. 239; ALCA s. 21(1)), and the ALC housing frame is one principal residence at a maximum of 500 m² plus at most one additional residence of 90 m² (parcels ≤40 ha) or 186 m² (parcels >40 ha)."
+            "t": "ALR stratification bar and housing frame: ALR status is per-parcel — check the Agricultural Land Commission's mapping for any specific lot. On ALR parcels, residences cannot be stratified, and the ALC housing frame is one principal residence at a maximum of 500 m² plus at most one additional residence of 90 m² (parcels ≤40 ha) or 186 m² (parcels >40 ha)."
           }
         ]
       ],
@@ -288,20 +288,18 @@
       "gen": "tn",
       "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every condo purchase are explained once, with sources, on the page linked below."
-    },
-    {
-      "gen": "tn",
-      "items": [
-        [
-          {
-            "h": "/bc-condo-buying-rules.html",
-            "t": "BC condo buying rules"
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
+      "parts": [
+        {
+          "t": "The province-wide rules are on one page: "
+        },
+        {
+          "t": "BC condo buying rules",
+          "h": "/bc-condo-buying-rules.html"
+        },
+        {
+          "t": "."
+        }
+      ]
     },
     {
       "gen": "tn",
@@ -511,20 +509,18 @@
       "gen": "tn",
       "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every townhome purchase are explained once, with sources, on the page linked below."
-    },
-    {
-      "gen": "tn",
-      "items": [
-        [
-          {
-            "h": "/bc-townhome-buying-rules.html",
-            "t": "BC townhome buying rules"
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
+      "parts": [
+        {
+          "t": "The province-wide rules are on one page: "
+        },
+        {
+          "t": "BC townhome buying rules",
+          "h": "/bc-townhome-buying-rules.html"
+        },
+        {
+          "t": "."
+        }
+      ]
     },
     {
       "gen": "tn",

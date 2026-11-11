@@ -107,7 +107,7 @@
     ],
     [
      {
-      "t": "ALR block: subdivision within the ALR requires Agricultural Land Commission approval; ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)). Caps: principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha). Check a parcel on the ALC maps."
+      "t": "ALR block: subdivision within the ALR requires Agricultural Land Commission approval; ALR residences cannot be stratified. Caps: principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha). Check a parcel on the ALC maps."
      }
     ]
    ],
@@ -147,20 +147,18 @@
    "gen": "tn",
    "pos": "end",
    "t": "p",
-   "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
-  },
-  {
-   "gen": "tn",
-   "items": [
-    [
-     {
-      "h": "/bc-land-buying-rules.html",
-      "t": "BC land buying rules"
-     }
-    ]
-   ],
-   "pos": "end",
-   "t": "list"
+   "parts": [
+    {
+     "t": "The province-wide rules are on one page: "
+    },
+    {
+     "t": "BC land buying rules",
+     "h": "/bc-land-buying-rules.html"
+    },
+    {
+     "t": "."
+    }
+   ]
   },
   {
    "gen": "tn",

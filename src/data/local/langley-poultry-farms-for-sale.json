@@ -49,20 +49,18 @@
       "gen": "acre",
       "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every acreage purchase (Agricultural Land Reserve limits, farm class and GST on farm land) are explained once, with sources, on the page linked below."
-    },
-    {
-      "gen": "acre",
-      "items": [
-        [
-          {
-            "h": "/bc-acreage-buying-rules.html",
-            "t": "BC acreage buying rules"
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
+      "parts": [
+        {
+          "t": "The province-wide rules are on one page: "
+        },
+        {
+          "t": "BC acreage buying rules",
+          "h": "/bc-acreage-buying-rules.html"
+        },
+        {
+          "t": "."
+        }
+      ]
     },
     {
       "gen": "acre",

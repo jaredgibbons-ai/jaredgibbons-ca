@@ -266,7 +266,7 @@
       "items": [
         [
           {
-            "t": "ALR block (Clayton's north and west edge parcels): ALR residences cannot be stratified (ALC Bulletin 09 s. 6; Strata Property Act s. 239; Agricultural Land Commission Act s. 21(1)); subdivision within the ALR requires ALC approval; principal residence ≤500 m², a suite within the principal residence only, and one additional residence of 90 m² (parcels ≤40 ha) or 186 m² (parcels >40 ha)."
+            "t": "ALR block (Clayton's north and west edge parcels): ALR residences cannot be stratified; subdivision within the ALR requires ALC approval; principal residence ≤500 m², a suite within the principal residence only, and one additional residence of 90 m² (parcels ≤40 ha) or 186 m² (parcels >40 ha)."
           }
         ]
       ],
@@ -310,23 +310,21 @@
       "pos": "end"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
-          }
-        ]
-      ],
-      "gen": "tn",
-      "pos": "end"
+      "parts": [
+        {
+          "t": "The province-wide rules are on one page: "
+        },
+        {
+          "t": "BC land buying rules",
+          "h": "/bc-land-buying-rules.html"
+        },
+        {
+          "t": "."
+        }
+      ]
     },
     {
       "t": "p",
@@ -360,23 +358,21 @@
       "pos": "end"
     },
     {
+      "gen": "dx",
+      "pos": "end",
       "t": "p",
-      "text": "How a half duplex can legally be sold (strata duplex or fee-simple half duplex), the strata checks, and the tax points are explained once, with sources, on the page linked below.",
-      "gen": "dx",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "BC duplex and half-duplex buying rules",
-            "h": "/bc-duplex-half-duplex-buying-rules.html"
-          }
-        ]
-      ],
-      "gen": "dx",
-      "pos": "end"
+      "parts": [
+        {
+          "t": "The province-wide rules are on one page: "
+        },
+        {
+          "t": "BC duplex and half-duplex buying rules",
+          "h": "/bc-duplex-half-duplex-buying-rules.html"
+        },
+        {
+          "t": "."
+        }
+      ]
     },
     {
       "t": "p",

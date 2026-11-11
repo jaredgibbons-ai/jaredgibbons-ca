@@ -270,7 +270,7 @@
       "items": [
         [
           {
-            "t": "ALR block: subdivision within the ALR requires Agricultural Land Commission approval; ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)). ALC residence caps: principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha). Farm class is three-tiered ($2,500 on 0.8–4 ha; $2,500 + 5% of value over 4 ha; $10,000 under 0.8 ha; by Oct 31) — a flat \"$2,500+\" line is an error, and no farm-class claim is asserted for this area."
+            "t": "ALR block: subdivision within the ALR requires Agricultural Land Commission approval; ALR residences cannot be stratified. On ALR land the main house can be up to 500 m², a suite is allowed only inside it, and an extra residence can be up to 90 m² (186 m² on parcels over 40 ha). For farm class, BC Assessment looks for farm income of $10,000 a year on under 0.8 ha, $2,500 on 0.8 to 4 ha, and $2,500 plus 5% of the value of land over 4 ha; applications are due by October 31."
           }
         ]
       ],
@@ -293,20 +293,18 @@
       "gen": "tn",
       "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below."
-    },
-    {
-      "gen": "tn",
-      "items": [
-        [
-          {
-            "h": "/bc-land-buying-rules.html",
-            "t": "BC land buying rules"
-          }
-        ]
-      ],
-      "pos": "end",
-      "t": "list"
+      "parts": [
+        {
+          "t": "The province-wide rules are on one page: "
+        },
+        {
+          "t": "BC land buying rules",
+          "h": "/bc-land-buying-rules.html"
+        },
+        {
+          "t": "."
+        }
+      ]
     },
     {
       "t": "p",
@@ -336,7 +334,7 @@
       "gen": "nb",
       "pos": "end",
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table."
+      "text": "Times are from OpenStreetMap routing, November 2026."
     },
     {
       "gen": "nb",

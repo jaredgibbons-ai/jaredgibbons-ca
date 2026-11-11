@@ -175,7 +175,7 @@ test('acreage sections (acre): rural areas only, no note markup, no board counts
     if (f === 'bc-acreage-buying-rules.json') continue;
     const txt = JSON.stringify(mine).replace(/"h":"[^"]*"/g, '');
     assert.ok(!bad.test(txt), `${f}: acreage text leaked: ${(txt.match(bad) || [])[0]}`);
-    assert.ok(mine.some((b) => b.t === 'list' && b.items.some((i) => i[0].h === '/bc-acreage-buying-rules.html')), `${f}: no link to the rules page`);
+    assert.ok(mine.some((b) => (b.t === 'list' && b.items.some((i) => i[0].h === '/bc-acreage-buying-rules.html')) || (b.t === 'p' && (b.parts || []).some((x) => x.h === '/bc-acreage-buying-rules.html'))), `${f}: no link to the rules page`);
     pages++;
   }
   assert.ok(pages >= 60, `expected acreage sections on 60+ pages, got ${pages}`);
@@ -196,7 +196,7 @@ test('mobile-home sections (mh): no note markup or research wording, no pad-rent
     if (f === 'bc-mobile-home-buying-rules.json') continue;
     const txt = JSON.stringify(mine).replace(/"h":"[^"]*"/g, '');
     assert.ok(!bad.test(txt), `${f}: mobile-home text leaked: ${(txt.match(bad) || [])[0]}`);
-    assert.ok(mine.some((b) => b.t === 'list' && b.items.some((i) => i[0].h === '/bc-mobile-home-buying-rules.html')), `${f}: no link to the rules page`);
+    assert.ok(mine.some((b) => (b.t === 'list' && b.items.some((i) => i[0].h === '/bc-mobile-home-buying-rules.html')) || (b.t === 'p' && (b.parts || []).some((x) => x.h === '/bc-mobile-home-buying-rules.html'))), `${f}: no link to the rules page`);
     pages++;
   }
   assert.ok(pages >= 35, `expected mobile-home sections on 35+ pages, got ${pages}`);
@@ -217,7 +217,7 @@ test('duplex sections (dx): no note markup or research wording, no listing count
     const txt = JSON.stringify(mine).replace(/"h":"[^"]*"/g, '');
     assert.ok(!bad.test(txt), `${f}: duplex text leaked: ${(txt.match(bad) || [])[0]}`);
     if (f === 'bc-55-plus-strata-rules.json' || f === 'townhomes-for-sale.json') continue;
-    assert.ok(mine.some((b) => b.t === 'list' && b.items.some((i) => i[0].h === '/bc-duplex-half-duplex-buying-rules.html')), `${f}: no link to the rules page`);
+    assert.ok(mine.some((b) => (b.t === 'list' && b.items.some((i) => i[0].h === '/bc-duplex-half-duplex-buying-rules.html')) || (b.t === 'p' && (b.parts || []).some((x) => x.h === '/bc-duplex-half-duplex-buying-rules.html'))), `${f}: no link to the rules page`);
     pages++;
   }
   assert.ok(pages >= 100, `expected duplex sections on 100+ pages, got ${pages}`);

@@ -410,7 +410,7 @@
         ],
         [
           {
-            "t": "ALR rules: ALR residences cannot be stratified (ALC Bulletin 09 s.6; SPA s.239; ALCA s.21(1)); subdivision within the ALR requires ALC approval; residence caps principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha); farm class is three-tier ($2,500 on 0.8–4 ha; $2,500 + 5% of value over 4 ha; $10,000 under 0.8 ha; applications by Oct 31). No farm-class parcel in Central Coquitlam is confirmed, and a flat \"$2,500+\" figure is not accurate wherever it appears."
+            "t": "ALR rules: ALR residences cannot be stratified; subdivision within the ALR requires ALC approval; residence caps principal ≤500 m², suite within principal only, additional residence 90 m² (≤40 ha) / 186 m² (>40 ha); farm class is three-tier ($2,500 on 0.8–4 ha; $2,500 + 5% of value over 4 ha; $10,000 under 0.8 ha; applications by Oct 31). No farm-class parcel in Central Coquitlam is confirmed, and a flat \"$2,500+\" figure is not accurate wherever it appears."
           }
         ],
         [
@@ -457,23 +457,21 @@
       "pos": "end"
     },
     {
+      "gen": "tn",
+      "pos": "end",
       "t": "p",
-      "text": "The BC rules that apply to every land purchase are explained once, with sources, on the page linked below.",
-      "gen": "tn",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "BC land buying rules",
-            "h": "/bc-land-buying-rules.html"
-          }
-        ]
-      ],
-      "gen": "tn",
-      "pos": "end"
+      "parts": [
+        {
+          "t": "The province-wide rules are on one page: "
+        },
+        {
+          "t": "BC land buying rules",
+          "h": "/bc-land-buying-rules.html"
+        },
+        {
+          "t": "."
+        }
+      ]
     },
     {
       "t": "h",
@@ -588,23 +586,21 @@
       "pos": "end"
     },
     {
+      "gen": "dx",
+      "pos": "end",
       "t": "p",
-      "text": "How a half duplex can legally be sold (strata duplex or fee-simple half duplex), the strata checks, and the tax points are explained once, with sources, on the page linked below.",
-      "gen": "dx",
-      "pos": "end"
-    },
-    {
-      "t": "list",
-      "items": [
-        [
-          {
-            "t": "BC duplex and half-duplex buying rules",
-            "h": "/bc-duplex-half-duplex-buying-rules.html"
-          }
-        ]
-      ],
-      "gen": "dx",
-      "pos": "end"
+      "parts": [
+        {
+          "t": "The province-wide rules are on one page: "
+        },
+        {
+          "t": "BC duplex and half-duplex buying rules",
+          "h": "/bc-duplex-half-duplex-buying-rules.html"
+        },
+        {
+          "t": "."
+        }
+      ]
     },
     {
       "t": "h",
@@ -641,7 +637,7 @@
     },
     {
       "t": "p",
-      "text": "Facts here come from the municipality, TransLink or BC Transit, the Ministry of Education and Child Care, and the retailers’ own pages, listed under Sources. Walking and driving times were measured on OpenStreetMap routing on November 2, 2026, from the point named under the table.",
+      "text": "Times are from OpenStreetMap routing, November 2026.",
       "gen": "nb",
       "pos": "end"
     },
@@ -883,7 +879,7 @@
     },
     {
       "t": "p",
-      "text": "For each building named below, the nearest transit, parks, schools and shopping come from TransLink or BC Transit, the municipality, the Ministry of Education and Child Care and the retailers’ own pages, listed under Sources. Walking and driving times were measured on November 2, 2026 on OpenStreetMap routing, starting at the building’s street address (or the nearest point on its street where the map has no point for the building itself, marked in the table). Facts that neighbouring buildings share are listed once, under the first of them.",
+      "text": "Times are from OpenStreetMap routing from each building’s address, November 2026.",
       "gen": "nbb",
       "pos": "end"
     },
