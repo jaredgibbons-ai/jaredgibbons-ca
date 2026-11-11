@@ -65,3 +65,35 @@ def repoint(o):
         for v in o: repoint(v)
 repoint(d); save(f, d)
 print(n)
+
+# 5. A broken host (otterco-op.crs) and a mirror link (retrosearch.org) replaced by the real sites; raw-URL link text in posts and
+#    pages becomes "site · page" (the style the sources lists already use).
+n['source links'] = n['url text'] = 0
+FIXH = {'http://otterco-op.crs/': ('https://www.otterco-op.com/', 'otterco-op.com'),
+        'http://retrosearch.org/browse?url=https://www.translink.ca/schedules-and-maps/skytrain': ('https://www.translink.ca/schedules-and-maps/skytrain', 'translink.ca · skytrain')}
+from urllib.parse import urlparse, unquote
+def pretty(u):
+    p = urlparse(u); host = p.netloc.lower().removeprefix('www.')
+    seg = [s for s in unquote(p.path).split('/') if s]
+    last = re.sub(r'\.(html?|php|aspx?|pdf)$', '', seg[-1]) if seg else ''
+    last = re.sub(r'[-_]+', ' ', last).strip()
+    if re.fullmatch(r'[0-9a-f ]+', last.lower()) or re.fullmatch(r'[\d ]+', last): last = ''   # ids, not words
+    return f'{host} · {last}' if last and len(last) <= 50 else host
+def fixlinks(o):
+    if isinstance(o, dict):
+        h = o.get('h')
+        if isinstance(h, str) and h in FIXH: o['h'], o['t'] = FIXH[h]; n['source links'] += 1
+        t = o.get('t')
+        if isinstance(h, str) and isinstance(t, str) and re.match(r'^(https?://|www\.)\S+$', t.strip()): o['t'] = pretty(h if h.startswith('http') else t); n['url text'] += 1
+        for v in o.values(): fixlinks(v)
+    elif isinstance(o, list):
+        for v in o: fixlinks(v)
+for f in glob.glob('src/data/local/*.json') + glob.glob('src/data/posts/*.json') + glob.glob('src/data/pages/*.json'):
+    raw = open(f, encoding='utf-8').read()
+    if not ('otterco-op.crs' in raw or 'retrosearch.org' in raw or re.search(r'"t": ?"(https?://|www\.)', raw)): continue
+    before = dict(n); d = json.loads(raw); fixlinks(d)
+    if n == before: continue
+    ind = 1 if '\n "' in raw[:200] else (2 if '\n  "' in raw[:200] else None)
+    s = json.dumps(d, ensure_ascii=False, indent=ind) if ind else json.dumps(d, ensure_ascii=False, separators=(',', ':'))
+    open(f, 'w', encoding='utf-8').write(s + ('\n' if raw.endswith('\n') else ''))
+print(n)

@@ -29,7 +29,11 @@ const NOFOLLOW_ONLY = ['realtor.ca'];
 const HTTPS_HOSTS = ['gov.bc.ca', 'gc.ca', 'canada.ca', 'delta.ca', 'mapleridge.ca', 'burnaby.ca', 'burnaby.bc.ca', 'translink.ca', 'portmoody.ca', 'newwestcity.ca', 'surrey.ca',
   'portcoquitlam.ca', 'nvrc.ca', 'coquitlam.ca', 'sd43.bc.ca', 'vancouver.ca', 'vpl.ca', 'fvrd.ca', 'surreylibraries.ca', 'chilliwack.com', 'mission.ca', 'richmond.ca',
   'fvrl.bc.ca', 'bcfsa.ca', 'tol.ca', 'metrovancouver.org', 'pittmeadows.ca', 'coqlibrary.ca', 'bcassessment.ca', 'abbotsford.ca', 'dnv.org', 'nvdpl.ca', 'cnv.org',
-  'kentbc.ca', 'vch.ca', 'nvcl.ca', 'bpl.bc.ca', 'heritagevancouver.org', 'mybaragar.com', 'engagechilliwack.com', 'bchousing.org', 'westvancouver.ca', 'whiterockcity.ca'];
+  'kentbc.ca', 'vch.ca', 'nvcl.ca', 'bpl.bc.ca', 'heritagevancouver.org', 'mybaragar.com', 'engagechilliwack.com', 'bchousing.org', 'westvancouver.ca', 'whiterockcity.ca',
+  // D-221: large commercial and public sites that serve https (Cursor audit, http links)
+  'loblaws.ca', 'safeway.ca', 'qualico.com', 'beedie.ca', 'hope.ca', 'historicplaces.ca', 'shopwillowbrook.com', 'westbankcorp.com', 'sd38.bc.ca',
+  'fruiticana.com', 'harrisonlakehotel.com', 'theshopsatmorgancrossing.com', 'shopsemiahmoo.com', 'royalcitycentre.ca', 'haneyplacemall.com', 'highstreetfv.com',
+  'shopwestview.ca', 'scottsdalecentre.ca', 'cottonwoodcentre.ca', 'tsawwassentowncentre.ca', 'diverseproperties.com', 'furrycreekgolf.com'];
 
 function walk(dir, out = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
