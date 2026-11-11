@@ -304,7 +304,7 @@ if (isGuide) {
   if (GP) {
     const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
     let at = h1i + 1; while (['toc', 'areamap'].includes(page.blocks[at]?.t)) at++;
-    page.blocks.splice(at, 0, { t: 'h', level: 2, text: `What works and what doesn’t in ${GP.name}` }, { t: 'proscons', gp: GP });
+    if (GP.works?.length || GP.doesnt?.length) page.blocks.splice(at, 0, { t: 'h', level: 2, text: `What works and what doesn’t in ${GP.name}` }, { t: 'proscons', gp: GP });
     if (GP.fit?.length) {
       // before the questions or the closing link and source lists, whichever comes first
       const qi = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 2 && (/questions$/i.test(String(b.text || '')) || /^(Nearby neighbourhood guides|Related|Sources|More )/i.test(String(b.text || ''))));
@@ -539,7 +539,7 @@ const explore = !_extra.length ? exploreBase
               if (b.t === 'qanswer') return (
                 <section class="qa" aria-labelledby="quick-answer-h">
                   <h2 class="qa__t" id="quick-answer-h">Quick answer</h2>
-                  <p class="qa__p">{b.gp.summary} {b.prices}</p>
+                  {(b.gp.summary || b.prices) && <p class="qa__p">{b.gp.summary} {b.prices}</p>}
                   {b.gp.verdict && <p class="qa__v"><strong>Jared’s verdict:</strong> {b.gp.verdict}</p>}
                 </section>
               );
