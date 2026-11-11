@@ -7,7 +7,7 @@ text copied between sibling pages: archive template paragraphs (the same intro o
 one page and drops the copies, lowest-scoring page first, until the page reaches the target:
   - a unit is dropped only when 70% or more of its 8-word shingles are on another page and stay there (the last copy is never dropped);
   - archive paragraphs are hidden through the local layer's `hide`; local list items, paragraphs and FAQ items are removed;
-  - a page never drops under 400 words or under 8 FAQ questions; headings left with nothing under them go too.
+  - a page never drops under 400 words or under 5 FAQ questions (8 on the city-wide 55+ pages); headings left with nothing under them go too.
 Never touched: Jared's take, works/doesn't, reviews, sources and link lists, data sentences, headings, blog posts and listings.
 Guides are handled last, so a block shared between a guide and a for-sale page stays on the guide.
 Idempotent (a second run changes nothing once every page is at the target). python3 -I tools/raise_uniqueness_2026_11_11.py [--target 0.76] [--dry]"""
@@ -17,6 +17,7 @@ import uniqueness as U
 TARGET = float(sys.argv[sys.argv.index('--target') + 1]) if '--target' in sys.argv else 0.76
 DRY = '--dry' in sys.argv
 MIN_WORDS = 400
+MIN_FAQ = {f'{c}-55-plus-homes-for-sale': 8 for c in ('surrey', 'burnaby', 'coquitlam')}
 
 
 def shingles(t):
@@ -100,7 +101,7 @@ def main():
         for _, share, kind, ref, t, X in cands:
             if uniq(s) >= TARGET: break
             if W[s] - len(U.words(t)) < MIN_WORDS: continue
-            if kind == 'faq' and faq_left <= 8: continue        # pages keep at least 8 questions (or all they had)
+            if kind == 'faq' and faq_left <= MIN_FAQ.get(s, 5): continue        # pages keep at least 5 questions (8 on the city-wide 55+ pages)
             if kind == 'faq': faq_left -= 1
             if any(cnt[x] < 2 for x in X if 1 < cnt[x] < 40): continue
             for x in X: cnt[x] -= 1

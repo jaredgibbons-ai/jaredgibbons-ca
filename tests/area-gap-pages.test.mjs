@@ -40,8 +40,9 @@ test('neighbourhood sold blocks: dated, sourced, medians only where at least 5 h
     assert.ok(b.length >= 4, `${s} has no sold block`);
     const t = text(b);
     assert.match(t, /November 7, 2026/);
-    assert.match(t, /at least 5 homes sold/);
+    assert.match(t, /Source:/);   // the 5-sale rule is stated once on the methodology page each source line links to (D-227)
   }
+  assert.match(JSON.stringify(local('data-and-methodology')), /at least 5 homes sold/);
   for (const a of Object.values(nb.areas)) for (const g of Object.values(a.groups)) for (const k of ['12', '6']) assert.ok(Array.isArray(g[k]) && g[k].length === 2);
   const cb = local('crescent-beach-ocean-park-guide').blocks.find((x) => x.t === 'table' && x.gen === 'nbsold');
   const rows = cb.rows ?? [];
