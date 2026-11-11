@@ -661,10 +661,17 @@ const explore = !_extra.length ? exploreBase
                   </>
                 );
                 const shown = done.slice(0, 24);
+                // Every sold or leased listing page gets a link from the site (D-221: 91 had none). Older ones are listed by city, newest first.
+                const byCity: any = new Map();
+                for (const c of done.slice(shown.length)) { const k = c.city || 'Other'; if (!byCity.has(k)) byCity.set(k, []); byCity.get(k).push(c); }
+                const cities: any[] = [...byCity.keys()].sort((a: any, z: any) => byCity.get(z).length - byCity.get(a).length || a.localeCompare(z));
                 return (
                   <>
                     <p>The {shown.length} most recent of the {done.length} homes Jared has sold or leased, newest first. <a href="/our-listings.html">See Jared's active listings</a>.</p>
                     <ul class="cards">{shown.map(card)}</ul>
+                    {cities.length > 0 && <h2 class="h2">All earlier sales, by city</h2>}
+                    {cities.map((ct: any) => <><h3 class="h3">{ct} ({byCity.get(ct).length})</h3>
+                      <ul class="lines lines--cols">{byCity.get(ct).map((c: any) => <li><a href={c.href}>{c.street}</a>{c.type ? `, ${String(c.type).toLowerCase()}` : ''}{c.year ? ` (${c.status === 'Leased' ? 'leased' : 'sold'} ${c.year})` : ''}</li>)}</ul></>)}
                   </>
                 );
               }
@@ -984,6 +991,7 @@ const explore = !_extra.length ? exploreBase
   @media (max-width:30rem){.kv__row{grid-template-columns:1fr}}
   .lines{list-style:none;margin:0 0 1.25em;padding:0;border-top:1px solid var(--ink)}
   .lines li{padding:.55rem 0;border-bottom:1px solid var(--rule)}
+  .lines--cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));column-gap:2rem}
   .lines--links{columns:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));gap:.75rem;border-top:0;margin:0 0 1.5rem}
   .lines--links li{padding:0;border:1px solid var(--ink);background:#fff;transition:background .15s,color .15s}
   .lines--links li :global(a){display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3rem;padding:.65rem 1rem;font:700 .9375rem/1.3 var(--f-head);text-decoration:none;color:inherit}

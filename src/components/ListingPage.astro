@@ -6,7 +6,7 @@ import ExploreLinks from './ExploreLinks.astro';
 // Photos: web-size derivatives of the owner's photo export (never hotlinked from the vendor CDN).
 import Base from '../layouts/Base.astro';
 import { titleCaseAddress } from '../lib/seo';
-import { parseListingSlug } from '../lib/own-listings';
+import { parseListingSlug, ownCards } from '../lib/own-listings';
 import { capsClass } from '../lib/caps';
 import Cta from './Cta.astro';
 import ListingGallery from './ListingGallery.astro';
@@ -82,6 +82,10 @@ const _myKey = _addrKey(page.slug);
 const _dupAddr = !!_myKey && Object.keys(import.meta.glob('../data/listings/*.json')).filter((p) => _addrKey(p.split('/').pop()!.replace(/\.json$/, '')) === _myKey).length > 1;
 const _mls = /^listing\.(r\d+)/i.exec(page.slug)?.[1]?.toUpperCase();
 const h1Text = cityName ? `${addr}, ${cityName}${_dupAddr && _mls ? ` (MLS® ${_mls})` : ''}` : '';
+// More of Jared's homes in the same city (D-221): the next four in the city's list, newest first, so every listing page is linked from others.
+const _cityCards = ownCards().filter((c) => c.status !== 'Expired' && c.city && c.city === cityName).sort((a, z) => z.soldTs - a.soldTs || a.slug.localeCompare(z.slug));
+const _me = _cityCards.findIndex((c) => c.slug === page.slug);
+const moreHere = _me < 0 ? [] : [1, 2, 3, 4].map((k) => _cityCards[(_me + k) % _cityCards.length]).filter((c) => c.slug !== page.slug).filter((c, i, a) => a.findIndex((x) => x.slug === c.slug) === i);
 const rawMeta = String(seo['Meta description'] || '').replace(/^\[SOLD\]:\s*/i, '').trim();
 const metaDesc = rawMeta.length >= 70 ? rawMeta : builtMeta();
 ---
@@ -181,12 +185,21 @@ const metaDesc = rawMeta.length >= 70 ? rawMeta : builtMeta();
       {blocks.filter((b) => b.t === 'disclaimer').map((b) => <p class="ls__disc">{b.text}</p>)}
     </div>
   </section>
+  {moreHere.length > 0 && (
+    <section class="section" aria-labelledby="ls-more"><div class="wrap ls ls__more">
+      <h2 id="ls-more" class="h2">More homes Jared has sold or listed in {cityName}</h2>
+      <ul>{moreHere.map((c) => <li><a href={c.href}>{c.street}</a>{c.status === 'Active' ? ' (for sale)' : c.year ? ` (${c.status === 'Leased' ? 'leased' : 'sold'} ${c.year})` : ''}</li>)}</ul>
+      <p><a href="/sold-properties.html">All of Jared's sold homes</a></p>
+    </div></section>
+  )}
   <Cta />
   {explore && <ExploreLinks data={explore} />}
 </main>
 </Base>
 
 <style>
+    .ls__more ul{list-style:none;padding:0;margin:0 0 1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,16rem),1fr));gap:.5rem 2rem}
+  .ls__more li{padding:.5rem 0;border-bottom:1px solid var(--rule)}
   .ls{max-width:68rem}
   .ls__p{max-width:var(--measure)}
   .ls__photos{max-width:var(--measure)}

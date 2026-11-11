@@ -21,6 +21,11 @@ def add(sev, area, slug, issue, ev=''): F.append((sev, area, slug, issue, (ev or
 pages = {}
 for f in sorted(glob.glob(os.path.join(D, '*.html'))):
     slug = os.path.basename(f)[:-5]; pages[slug] = open(f, encoding='utf-8').read()
+# Blog posts and own listings are served at /blog.html/<slug> and /our-listings.html/<slug> (emitted under internal/).
+for sub, pub in (('internal/blog', 'blog.html'), ('internal/listings', 'our-listings.html')):
+    for f in sorted(glob.glob(os.path.join(D, sub, '*.html'))):
+        pages[f'{pub}/{os.path.basename(f)[:-5]}'] = open(f, encoding='utf-8').read()
+key = lambda path: (lambda q: q[:-5] if q.endswith('.html') else q)(unquote(path).strip('/')) or 'index'
 
 def text_of(h):
     h = re.sub(r'<(script|style|noscript)[^>]*>.*?</\1>', ' ', h, flags=re.S | re.I)
@@ -43,14 +48,16 @@ for slug, h in pages.items():
     else:
         titles[t].append(slug)
         if len(t) > 60: add('medium', 1, slug, f'title {len(t)} chars (over 60)', t)
-        if len(t) < 25: add('low', 1, slug, f'title {len(t)} chars (short)', t)
+        if len(t) < 30: add('low', 1, slug, f'title {len(t)} chars (short)', t)
+        if '…' in t or '...' in t: add('high', 1, slug, 'title cut off with an ellipsis', t)
         if re.search(r'(\||-|–|:)\s*$', t) or re.search(r'\bJared Gi?b?b?o?n?$', t) and not t.endswith('Gibbons'): add('high', 1, slug, 'title cut off', t)
     m = re.search(r'<meta name="description" content="([^"]*)"', h); m = html.unescape(m.group(1)) if m else ''
     if not m: add('high', 1, slug, 'missing meta description')
     else:
         metas[m].append(slug)
-        if len(m) > 160: add('medium', 1, slug, f'meta {len(m)} chars (over 160)', m)
-        if len(m) < 70: add('medium', 1, slug, f'meta {len(m)} chars (short)', m)
+        if len(m) > 158: add('medium', 1, slug, f'meta {len(m)} chars (over 158)', m)
+        if len(m) < 120: add('medium', 1, slug, f'meta {len(m)} chars (under 120)', m)
+        if '…' in m or '...' in m: add('medium', 1, slug, 'meta cut off with an ellipsis', m[-60:])
         if not re.search(r'[.!?)®]$', m): add('medium', 1, slug, 'meta does not end a sentence (cut off?)', m[-60:])
     h1s = re.findall(r'<h1[^>]*>(.*?)</h1>', h, re.S)
     if len(h1s) != 1: add('high', 1, slug, f'{len(h1s)} H1s')
@@ -60,10 +67,10 @@ for slug, h in pages.items():
         cu = c.group(1)
         if not cu.startswith('https://jaredgibbons.ca/'): add('critical', 2, slug, 'canonical not on jaredgibbons.ca', cu)
         else:
-            cs = urlparse(cu).path.strip('/').replace('.html', '') or 'index'
+            cs = key(urlparse(cu).path)
             if cs != slug: add('medium', 2, slug, 'canonical points to another page', cu)
     body = main_html(h)
-    for a in re.findall(r'<a\s[^>]*href="([^"]+)"', body):
+    for a in map(html.unescape, re.findall(r'<a\s[^>]*href="([^"]+)"', body)):
         if a.startswith(('mailto:', 'tel:', 'javascript:', 'sms:')): continue
         u = urlparse(a)
         if u.scheme in ('http', 'https') and u.netloc not in ('jaredgibbons.ca', 'www.jaredgibbons.ca'):
@@ -77,9 +84,9 @@ for slug, h in pages.items():
         if not path or path == '/': tgt = 'index' if path == '/' else slug
         else:
             p = unquote(path).lstrip('/')
-            if '/' in p.replace('.html/', '') or p.startswith(('listing-photos', 'api/', 'blog.html/', 'our-listings.html/')): continue
-            if re.search(r'\.html/', p): continue          # worker-served listing paths
-            tgt = p[:-5] if p.endswith('.html') else p
+            if p.startswith(('listing-photos', 'api/', '_astro/', 'images/')): continue
+            if '/' in p.replace('blog.html/', '').replace('our-listings.html/', ''): continue
+            tgt = key(p)
         if tgt not in pages:
             if not re.search(r'\.(pdf|jpg|png|webp|svg|xml|txt)$', tgt): add('high', 3, slug, 'internal link to a missing page', a)
             continue
@@ -88,6 +95,12 @@ for slug, h in pages.items():
     for img in re.findall(r'<img\s[^>]*>', body):
         if 'alt=' not in img: add('medium', 6, slug, 'image without alt', img[:120])
         if 'width=' not in img or 'height=' not in img: add('low', 6, slug, 'image without width/height', img[:120])
+    for hh in re.findall(r'<h[1-6][^>]*>(.*?)</h[1-6]>', body, re.S):
+        ht = text_of(hh).strip()
+        if len(ht) > 8 and ht == ht.upper() and re.search(r'[A-Z]{4}', ht): add('low', 6, slug, 'ALL CAPS heading', ht[:80])
+    for at, an in re.findall(r'<a\s[^>]*href="([^"]+)"[^>]*>(.*?)</a>', body, re.S):
+        tx_ = text_of(an).strip()
+        if re.match(r'(https?://|www\.)', tx_): add('low', 3, slug, 'raw URL as link text', tx_[:80])
     tx = text_of(body)
     for mm in WORK.finditer(tx):
         add('medium', 4, slug, f'working text: "{mm.group(0)}"', tx[max(0, mm.start() - 80):mm.end() + 60])
@@ -99,7 +112,7 @@ for slug, h in pages.items():
         except Exception as e: add('high', 5, slug, 'JSON-LD does not parse', str(e)); continue
         for node in (data if isinstance(data, list) else [data]):
             if node.get('@type') == 'FAQPage':
-                norm = lambda z: re.sub(r'\s+', ' ', re.sub(r'\s+([.,;:!?)’”])', r'\1', z))
+                norm = lambda z: re.sub(r'\s+', ' ', re.sub(r'([(“‘])\s+', r'\1', re.sub(r'\s+([.,;:!?)’”])', r'\1', z)))
                 full = norm(text_of(re.sub(r'<script.*?</script>', ' ', h, flags=re.S)))
                 for q in node.get('mainEntity', []):
                     a_ = norm(q.get('acceptedAnswer', {}).get('text', ''))[:80]
@@ -108,7 +121,7 @@ for slug, h in pages.items():
                 for it in node.get('itemListElement', []):
                     iu = it.get('item', '')
                     if isinstance(iu, str) and iu.startswith('https://jaredgibbons.ca/'):
-                        s2 = urlparse(iu).path.strip('/').replace('.html', '') or 'index'
+                        s2 = key(urlparse(iu).path)
                         if s2 not in pages: add('high', 5, slug, 'breadcrumb URL missing', iu)
     words = len(tx.split())
     if slug in indexable and words < 300: add('high', 4, slug, f'thin: {words} words in main content')
@@ -125,12 +138,11 @@ if os.path.exists(sm):
     seen = collections.Counter(locs)
     for l, n in seen.items():
         if n > 1: add('medium', 2, l, 'duplicate sitemap entry')
-        s = urlparse(l).path.strip('/').replace('.html', '') or 'index'
-        if '/' in s: continue
+        s = key(urlparse(l).path)
         if s not in pages: add('high', 2, s, 'sitemap URL has no page', l)
         elif s not in indexable: add('high', 2, s, 'noindex page in sitemap', l)
     for s in indexable:
-        if f'https://jaredgibbons.ca/{s}.html' not in seen and not (s == 'index' and 'https://jaredgibbons.ca/' in seen): add('medium', 2, s, 'indexable page not in sitemap')
+        if f'https://jaredgibbons.ca/{s}' not in seen and f'https://jaredgibbons.ca/{s}.html' not in seen and not (s == 'index' and 'https://jaredgibbons.ca/' in seen): add('medium', 2, s, 'indexable page not in sitemap')
 
 sev = collections.Counter(x[0] for x in F); kinds = collections.Counter((x[0], re.sub(r'\d+', 'N', x[3].split(':')[0].split('"')[0])) for x in F)
 print('pages', len(pages), '| indexable', len(indexable), '| findings', len(F), dict(sev))

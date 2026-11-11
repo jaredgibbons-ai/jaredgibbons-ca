@@ -3,9 +3,18 @@
 // because our-listings.html is itself a page. The Worker maps the public URL here and never serves
 // /internal/* directly.
 import ListingPage from '../../../components/ListingPage.astro';
+import PLS from '../../../data/post-listing-seo.json';
 export function getStaticPaths() {
   const mods = import.meta.glob('../../../data/listings/*.json', { eager: true }) as Record<string, any>;
-  return Object.values(mods).map((m) => ({ params: { slug: m.default.slug }, props: { page: m.default } }));
+  return Object.values(mods).map((m) => {
+    // Reviewed search title and description from tools/build_post_listing_seo.py (D-221); description '' = build it from the page's facts.
+    const f = (PLS as Record<string, any>)[m.default.slug];
+    if (!f) return { params: { slug: m.default.slug }, props: { page: m.default } };
+    const pg = { ...m.default, seo: { ...(m.default.seo || {}) } };
+    if (f.title) { pg.title = f.title; pg.seo.Title = f.title; pg.seo['OG title'] = f.title; }
+    if ('description' in f) { pg.seo['Meta description'] = f.description; pg.seo['OG description'] = f.description; }
+    return { params: { slug: pg.slug }, props: { page: pg } };
+  });
 }
 const { page } = Astro.props as { page: any };
 ---

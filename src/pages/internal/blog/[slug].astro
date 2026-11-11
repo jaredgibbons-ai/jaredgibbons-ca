@@ -3,9 +3,25 @@
 // itself a page (a file cannot also be a directory). The Worker maps the public URL here and
 // never serves /internal/* directly.
 import GenericPage from '../../../components/GenericPage.astro';
+import PLS from '../../../data/post-listing-seo.json';
+import RELATED from '../../../data/post-related.json';
 export function getStaticPaths() {
   const mods = import.meta.glob('../../../data/posts/*.json', { eager: true }) as Record<string, any>;
-  return Object.values(mods).map((m) => ({ params: { slug: m.default.slug }, props: { page: m.default } }));
+  const titleOf: Record<string, string> = {};
+  for (const m of Object.values(mods)) titleOf[m.default.slug] = String((PLS as Record<string, any>)[m.default.slug]?.title || m.default.title || '').split(' | ')[0].trim();
+  return Object.values(mods).map((m) => {
+    // Related posts (tools/build_post_related.py, D-221): every post links to up to six others on the same area or topic.
+    const rel = ((RELATED as Record<string, string[]>)[m.default.slug] || []).filter((s) => titleOf[s]);
+    const relBlocks = rel.length ? [{ t: 'h', level: 2, text: 'Related posts' }, { t: 'list', items: rel.map((s) => [{ t: titleOf[s], h: `/blog.html/${s}` }]) }] : [];
+    // Reviewed search title, description and (where the archive's was wrong) H1, from tools/build_post_listing_seo.py (D-221). Applied last.
+    const f = (PLS as Record<string, any>)[m.default.slug];
+    if (!f) return { params: { slug: m.default.slug }, props: { page: { ...m.default, blocks: [...(m.default.blocks || []), ...relBlocks] } } };
+    const pg = { ...m.default, seo: { ...(m.default.seo || {}) }, blocks: [...(m.default.blocks || []), ...relBlocks] };
+    if (f.title) { pg.title = f.title; pg.seo.Title = f.title; pg.seo['OG title'] = f.title; }
+    if (f.description) { pg.seo['Meta description'] = f.description; pg.seo['OG description'] = f.description; }
+    if (f.h1) { pg.seo.H1 = f.h1; const i = pg.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1); if (i >= 0) pg.blocks[i] = { ...pg.blocks[i], text: f.h1 }; }
+    return { params: { slug: pg.slug }, props: { page: pg } };
+  });
 }
 const { page } = Astro.props as { page: any };
 ---
