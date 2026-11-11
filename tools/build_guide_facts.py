@@ -90,6 +90,16 @@ def main():
             n = sum(v.get('n', 0) for v in g.values())
         if not prices and not sold: continue
         out[slug] = {'area': area, 'prices': prices, 'mix': ', '.join(f'{c:,} {l}' for c, l in sorted(sold, reverse=True)), 'n': n, **({'key': key} if kind == 'sub' else {})}
+    # Small areas (D-222): where twelve months give no typical price, three years of closed sales do (src/data/sold/sold-3yr-small.json).
+    y3 = json.load(open(os.path.join(ROOT, 'src/data/sold/sold-3yr-small.json'), encoding='utf-8'))
+    for slug, v in y3['guides'].items():
+        if out.get(slug, {}).get('prices'): continue
+        g = v['groups']
+        prices = [[lab, money(g[t]['price'])] for t, lab in LABEL if t in g and g[t].get('price')]
+        sold = [(g[t]['n'], lab.lower()) for t, lab in LABEL if t in g and g[t].get('n', 0) >= 3]
+        if not prices and not sold: continue
+        out[slug] = {'area': (out.get(slug) or {}).get('area', v['area']), 'prices': prices, 'mix': ', '.join(f'{c:,} {l}' for c, l in sorted(sold, reverse=True)),
+                     'n': v['n'], 'window': y3['meta']['window'], **({'key': out[slug]['key']} if out.get(slug, {}).get('key') else {})}
     json.dump(out, open(OUT, 'w', encoding='utf-8'), indent=1, ensure_ascii=False); open(OUT, 'a').write('\n')
     print('guides with quick facts:', len(out), '| with a price row:', sum(1 for v in out.values() if v['prices']))
 

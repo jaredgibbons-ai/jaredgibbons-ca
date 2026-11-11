@@ -27,6 +27,7 @@ import GUIDE_FACTS from '../data/guide-facts.json';
 import JARED_VOICE from '../data/jared-voice.json';
 import GUIDE_PLUS from '../data/guide-plus.json';
 import SOLD12 from '../data/sold/sold-12m.json';
+import SOLD3 from '../data/sold/sold-3yr-small.json';
 import LASTMOD from '../data/lastmod.json';
 import PhotoCredit from './PhotoCredit.astro';
 import IdxEmbed from './IdxEmbed.astro';
@@ -280,15 +281,25 @@ if (isHub) {
 }
 // Neighbourhood guides open with a quick-facts box (D-197): typical prices and what sold (tools/build_guide_facts.py), then jump links to the sections people look for first.
 const money0 = (v: number) => '$' + Math.round(v).toLocaleString('en-CA');
+// Twelve months of sales where they give a price; three years for the small areas where they don't (D-222, src/data/sold/sold-3yr-small.json).
+const KINDS = [['house', 'houses'], ['acreage', 'acreages'], ['townhome', 'townhomes'], ['condo', 'condos'], ['mobile', 'manufactured homes']];
+const priced = (g: any) => !!g && KINDS.some(([k]) => g[k]?.n >= 5 && g[k]?.price);
+function soldGroups(gp: any): { g: any; span: string } {
+  const g12 = (SOLD12 as any).sub[gp.sub]?.groups;
+  if (priced(g12)) return { g: g12, span: 'Over the last twelve months' };
+  const g3 = (SOLD3 as any).guides[page.slug]?.groups;
+  if (priced(g3)) return { g: g3, span: 'Over the last three years' };
+  return { g: g12 || {}, span: '' };
+}
 function gpPrices(gp: any): string {
-  const g = (SOLD12 as any).sub[gp.sub]?.groups; if (!g) return '';
-  const parts = [['house', 'houses'], ['acreage', 'acreages'], ['townhome', 'townhomes'], ['condo', 'condos'], ['mobile', 'manufactured homes']].filter(([k]) => g[k]?.n >= 5 && g[k]?.price).map(([k, l], i) => i === 0 ? `${l} sold for a median of ${money0(g[k].price)}` : `${l} ${money0(g[k].price)}`);
+  const { g, span } = soldGroups(gp); if (!span) return '';
+  const parts = KINDS.filter(([k]) => g[k]?.n >= 5 && g[k]?.price).map(([k, l], i) => i === 0 ? `${l} sold for a median of ${money0(g[k].price)}` : `${l} ${money0(g[k].price)}`);
   if (!parts.length) return '';
   const last = parts.length > 1 ? parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1] : parts[0];
-  return `Over the last twelve months, ${last}.`;
+  return `${span}, ${last}.`;
 }
 function gpFacts(gp: any) {
-  const g = (SOLD12 as any).sub[gp.sub]?.groups || {};
+  const g = soldGroups(gp).g || {};
   const h = g.house, a = g.acreage;
   const lot = (x: any) => x.acres >= 1 ? `${String(+x.acres.toFixed(1))}-acre lot` : x.lot_sqft >= 20000 ? `${(x.lot_sqft / 43560).toFixed(2)}-acre lot` : x.lot_sqft ? `${x.lot_sqft.toLocaleString('en-CA')} sq ft lot` : '';
   const house = h?.n >= 5 ? [h.yb && `Built ${h.yb}`, lot(h), h.beds && `${h.beds} bedrooms`].filter(Boolean).join(' · ') : '';
@@ -540,8 +551,8 @@ const explore = !_extra.length ? exploreBase
                 <div class="qf">
                   <p class="qf__t">Quick facts{b.facts ? ` · ${b.facts.area}` : ''}</p>
                   <dl class="qf__dl">
-                    {b.facts?.prices?.length > 0 && <div><dt>Typical sale price</dt><dd>{b.facts.prices.map((x: any) => <span class="qf__p"><span>{x[0]}</span> <strong>{x[1]}</strong></span>)}</dd></div>}
-                    {b.facts?.mix && <div><dt>Sold, Nov 2025 to Oct 2026</dt><dd>{b.facts.mix}</dd></div>}
+                    {b.facts?.prices?.length > 0 && <div><dt>{b.facts.window ? 'Typical sale price, 3 years' : 'Typical sale price'}</dt><dd>{b.facts.prices.map((x: any) => <span class="qf__p"><span>{x[0]}</span> <strong>{x[1]}</strong></span>)}</dd></div>}
+                    {b.facts?.mix && <div><dt>{b.facts.window ? 'Sold, Nov 2023 to Oct 2026' : 'Sold, Nov 2025 to Oct 2026'}</dt><dd>{b.facts.mix}</dd></div>}
                     {b.gp?.house && <div><dt>Typical house sold</dt><dd>{b.gp.house}</dd></div>}
                     {b.gp?.acreage && <div><dt>Typical acreage sold</dt><dd>{b.gp.acreage}</dd></div>}
                     {b.gp?.commute && <div><dt>Drive, off-peak</dt><dd>{b.gp.commute.rows.map((r: any) => <span class="qf__p"><span>{r[0]}</span> <strong>{r[1]} min</strong></span>)}</dd></div>}
