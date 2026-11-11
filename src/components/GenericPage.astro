@@ -464,6 +464,15 @@ push();
     (sec as any).split = first?.t === 'h' && first.level === 2 && !first.href && sec.blocks.length > 1 && sec.blocks.slice(1).every((b: any) => ['p', 'list', 'faq', 'subs', 'notice', 'kvgrid', 'gcards', 'stats'].includes(b.t) || (b.t === 'h' && b.level >= 3));
   }
 }
+// FAQ structured data from the questions the page actually shows (D-218): an archive question keeps its archive answer on the page, so the
+// JSON-LD built earlier from local.faq could carry different wording. Google requires the marked-up answer to be visible.
+{
+  const flat = (x: any) => x.t === 'list' ? x.items.map((li: any) => li.map((p: any) => p.t).join(' ')).join(' ') : (x.parts || []).map((p: any) => p.t).join(' ') || x.text || '';
+  const items = sections.flatMap((sec: any) => (sec.blocks || []).filter((b: any) => b.t === 'faq').flatMap((b: any) => b.items));
+  const at = jsonld.findIndex((j: any) => j['@type'] === 'FAQPage');
+  if (at >= 0) jsonld.splice(at, 1);
+  if (items.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: items.map((it: any) => ({ '@type': 'Question', name: it.q, acceptedAnswer: { '@type': 'Answer', text: it.a.map(flat).join(' ').replace(/\s+/g, ' ').replace(/\s+([.,;:!?)’”])/g, '$1').replace(/([(“‘])\s+/g, '$1').trim() } })) });
+}
 const linkOnly = (items: any[]) => items.every((it) => it.length === 1 && it[0].h);
 let fid = 0;
 const exploreBase = (EXPLORE as Record<string, any>)[String(page.path || '').startsWith('/blog.html/') ? 'post:' + page.slug : page.slug];

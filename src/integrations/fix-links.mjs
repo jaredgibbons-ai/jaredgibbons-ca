@@ -26,6 +26,10 @@ const WORDING = [
 // any link to them left elsewhere on a page (old blog posts, archive text) is unlinked here, text kept. realtor.ca (CREA) only gets nofollow.
 const OTHER_AGENTS = JSON.parse(fs.readFileSync(new URL('../data/other-agent-domains.json', import.meta.url), 'utf8')).domains;
 const NOFOLLOW_ONLY = ['realtor.ca'];
+const HTTPS_HOSTS = ['gov.bc.ca', 'gc.ca', 'canada.ca', 'delta.ca', 'mapleridge.ca', 'burnaby.ca', 'burnaby.bc.ca', 'translink.ca', 'portmoody.ca', 'newwestcity.ca', 'surrey.ca',
+  'portcoquitlam.ca', 'nvrc.ca', 'coquitlam.ca', 'sd43.bc.ca', 'vancouver.ca', 'vpl.ca', 'fvrd.ca', 'surreylibraries.ca', 'chilliwack.com', 'mission.ca', 'richmond.ca',
+  'fvrl.bc.ca', 'bcfsa.ca', 'tol.ca', 'metrovancouver.org', 'pittmeadows.ca', 'coqlibrary.ca', 'bcassessment.ca', 'abbotsford.ca', 'dnv.org', 'nvdpl.ca', 'cnv.org',
+  'kentbc.ca', 'vch.ca', 'nvcl.ca', 'bpl.bc.ca', 'heritagevancouver.org', 'mybaragar.com', 'engagechilliwack.com', 'bchousing.org', 'westvancouver.ca', 'whiterockcity.ca'];
 
 function walk(dir, out = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -67,11 +71,13 @@ export default function fixLinks() {
           if (p.endsWith('.html') && exists(g)) return { to: g + tail };
           return { unresolved: true };
         };
-        let rewritten = 0, dropped = 0, headingsFixed = 0, wording = 0, nofollow = 0, unlinked = 0; const unresolved = new Map();
+        let httpsUp = 0, rewritten = 0, dropped = 0, headingsFixed = 0, wording = 0, nofollow = 0, unlinked = 0; const unresolved = new Map();
         for (const f of files) {
           let t = fs.readFileSync(f, 'utf8'); let changed = false;
           t = t.replace(/<a\b([^>]*?)\shref="([^"]*)"([^>]*)>([\s\S]*?)<\/a>/g, (all, a, href, b, inner) => {
             if (!href.startsWith('/')) {
+              // D-218: public bodies' links written as http:// go out as https:// (all of these serve https)
+              if (/^http:\/\//i.test(href)) { const h0 = (href.match(/^http:\/\/([^/:?#]+)/i) || [])[1]?.toLowerCase() || ''; if (HTTPS_HOSTS.some((d) => h0 === d || h0.endsWith('.' + d))) { href = 'https://' + href.slice(7); all = `<a${a} href="${href}"${b}>${inner}</a>`; changed = true; httpsUp++; } }
               // D-200: sources on other agents' and brokerages' sites stay as citations but pass no ranking credit (rel="nofollow")
               const host = (href.match(/^https?:\/\/(?:www\.)?([^/:?#]+)/i) || [])[1]?.toLowerCase();
               if (host && OTHER_AGENTS.some((d) => host === d || host.endsWith('.' + d))) { changed = true; unlinked++; return inner; }
@@ -102,7 +108,7 @@ export default function fixLinks() {
           { const before = t; for (const [re, to] of WORDING) t = t.replace(re, to); if (t !== before) { changed = true; wording++; } }
           if (changed) fs.writeFileSync(f, t);
         }
-        console.log(`[fix-links] rewritten ${rewritten}, removed ${dropped}, unresolved ${unresolved.size}, headings fixed ${headingsFixed}, wording ${wording} pages, nofollow ${nofollow}, other-agent links unlinked ${unlinked}`);
+        console.log(`[fix-links] rewritten ${rewritten}, removed ${dropped}, unresolved ${unresolved.size}, headings fixed ${headingsFixed}, wording ${wording} pages, nofollow ${nofollow}, other-agent links unlinked ${unlinked}, http→https ${httpsUp}`);
         if (unresolved.size) fs.writeFileSync(path.join(root, '..', 'link-unresolved.json'), JSON.stringify([...unresolved], null, 1));
         else if (fs.existsSync(path.join(root, '..', 'link-unresolved.json'))) fs.unlinkSync(path.join(root, '..', 'link-unresolved.json'));
       },

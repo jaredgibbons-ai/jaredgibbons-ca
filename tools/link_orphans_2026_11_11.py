@@ -17,6 +17,8 @@ ADD = {
     'cultus-lake-guide': [('Leases, zoning, sewer and taxes at the lake: ', 'buying a home at Cultus Lake: the rules', 'cultus-lake-home-buying-rules')],
     'lindell-beach-bc-guide': [('Leases, zoning, sewer and taxes at the lake: ', 'buying a home at Cultus Lake: the rules', 'cultus-lake-home-buying-rules')],
     'cultus-lake': [('Leases, zoning, sewer and taxes at the lake: ', 'buying a home at Cultus Lake: the rules', 'cultus-lake-home-buying-rules')],
+    'fraser-valley-commercial-market-report': [('Burnaby’s industrial area up close: ', 'Lake City industrial', 'lake-city-industrial')],
+    'commercial': [('Industrial areas: ', 'Lake City, Burnaby', 'lake-city-industrial'), ('', 'Port Kells, Surrey', 'port-kells-surrey-guide')],
 }
 for slug, lines in ADD.items():
     f = f'src/data/local/{slug}.json'; raw = open(f, encoding='utf-8').read(); d = json.loads(raw)

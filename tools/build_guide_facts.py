@@ -15,7 +15,24 @@ MANUAL = {'aldergrove': 'Langley|Aldergrove Langley', 'brookswood': 'Langley|Bro
           'east-chilliwack': 'Chilliwack|East Chilliwack'}
 LOCAL = {'rosemary-heights-guide': ('radius', 'rosemary-heights-elementary', 'Within 1 km of Rosemary Heights Elementary'),
          'yorkson-langley-guide': ('radius', 'willoughby-elementary', 'Within 1 km of Willoughby Elementary'),
-         'auguston-abbotsford-guide': ('sub', 'Abbotsford|Abbotsford East', 'Abbotsford East sub-area')}
+         'auguston-abbotsford-guide': ('sub', 'Abbotsford|Abbotsford East', 'Abbotsford East sub-area'),
+         # Local guides (no archive page) matched to their MLS® sub-area by hand (D-217, Nov 11, 2026)
+         **{g: ('sub', k, a) for g, k, a in [
+             ('hemlock-valley-mission-guide', 'Mission|Hemlock', 'Hemlock'), ('bridal-falls-guide', 'East Chilliwack|Bridal Falls', 'Bridal Falls'),
+             ('west-meadows-pitt-meadows-guide', 'Pitt Meadows|West Meadows', 'West Meadows'), ('ladner-rural-guide', 'Ladner|Ladner Rural', 'Ladner Rural'),
+             ('river-valley-guide', 'Sardis|Chilliwack River Valley', 'Chilliwack River Valley'), ('east-delta-guide', 'Ladner|East Delta', 'East Delta'),
+             ('sumas-mountain-guide', 'Abbotsford|Sumas Mountain', 'Sumas Mountain'), ('serpentine-guide', 'Cloverdale|Serpentine', 'Serpentine'),
+             ('agassiz-bc-guide', 'Agassiz|Agassiz', 'Agassiz'), ('whitby-estates-west-vancouver-guide', 'West Vancouver|Whitby Estates', 'Whitby Estates'),
+             ('edgemont-north-vancouver-guide', 'North Vancouver|Edgemont', 'Edgemont'), ('lynnmour-north-vancouver-guide', 'North Vancouver|Lynnmour', 'Lynnmour'),
+             ('south-granville-vancouver-guide', 'Vancouver West|South Granville', 'South Granville'), ('sw-marine-vancouver-guide', 'Vancouver West|S.W. Marine', 'S.W. Marine'),
+             ('hope-bc-guide', 'Hope & Area|Hope', 'Hope'), ('pemberton-heights-north-vancouver-guide', 'North Vancouver|Pemberton Heights', 'Pemberton Heights'),
+             ('port-kells-surrey-guide', 'North Surrey|Port Kells', 'Port Kells'), ('dundarave-west-vancouver-guide', 'West Vancouver|Dundarave', 'Dundarave'),
+             ('mount-currie-bc-guide', 'Pemberton|Mount Currie', 'Mount Currie'), ('university-endowment-lands-vancouver-guide', 'Vancouver West|University VW', 'University VW sub-area'),
+             ('brighouse-richmond-guide', 'Richmond|Brighouse', 'Brighouse'), ('park-royal-west-vancouver-guide', 'West Vancouver|Park Royal', 'Park Royal'),
+             ('norgate-north-vancouver-guide', 'North Vancouver|Norgate', 'Norgate'), ('mount-pleasant-vancouver-guide', 'Vancouver East|Mount Pleasant VE', 'Mount Pleasant VE sub-area'),
+             ('oakridge-vancouver-guide', 'Vancouver West|Oakridge VW', 'Oakridge VW sub-area'), ('south-arm-richmond-guide', 'Richmond|South Arm', 'South Arm'),
+             ('upper-lonsdale-north-vancouver-guide', 'North Vancouver|Upper Lonsdale', 'Upper Lonsdale'),
+             ('harrison-hot-springs-bc-guide', 'Harrison Lake|Harrison Hot Springs', 'Harrison Hot Springs')]}}
 SKIP = {'brookswood-real-estate-development', 'how-to-buy-a-mobile-home-in-bc', 'chilliwack-55-plus-neighbourhood'}
 nz = lambda s: re.sub(r'[^a-z0-9]+', ' ', s.lower()).strip()
 
@@ -55,7 +72,7 @@ def main():
         sold = [(g[t]['n'], lab.lower()) for t, lab in LABEL if t in g and g[t].get('n', 0) >= 3]
         n = sum(v.get('n', 0) for v in g.values())
         if not prices and not sold: continue
-        out[slug] = {'area': name, 'prices': prices, 'mix': ', '.join(f'{c:,} {l}' for c, l in sorted(sold, reverse=True)), 'n': n}
+        out[slug] = {'area': name, 'prices': prices, 'mix': ', '.join(f'{c:,} {l}' for c, l in sorted(sold, reverse=True)), 'n': n, 'key': k}
     # New local guides for neighbourhoods inside a larger sub-area (D-203): a 1 km circle around the neighbourhood school where one sits at
     # its centre (src/data/schools/radius-sold.json), else the sub-area it belongs to, named as such in the box.
     rad = json.load(open(os.path.join(ROOT, 'src/data/schools/radius-sold.json'), encoding='utf-8'))
@@ -71,7 +88,8 @@ def main():
             prices = [[lab, money(g[t]['price'])] for t, lab in LABEL if t in g and g[t].get('n', 0) >= 5 and g[t].get('price')]
             sold = [(g[t]['n'], lab.lower()) for t, lab in LABEL if t in g and g[t].get('n', 0) >= 3]
             n = sum(v.get('n', 0) for v in g.values())
-        out[slug] = {'area': area, 'prices': prices, 'mix': ', '.join(f'{c:,} {l}' for c, l in sorted(sold, reverse=True)), 'n': n}
+        if not prices and not sold: continue
+        out[slug] = {'area': area, 'prices': prices, 'mix': ', '.join(f'{c:,} {l}' for c, l in sorted(sold, reverse=True)), 'n': n, **({'key': key} if kind == 'sub' else {})}
     json.dump(out, open(OUT, 'w', encoding='utf-8'), indent=1, ensure_ascii=False); open(OUT, 'a').write('\n')
     print('guides with quick facts:', len(out), '| with a price row:', sum(1 for v in out.values() if v['prices']))
 
