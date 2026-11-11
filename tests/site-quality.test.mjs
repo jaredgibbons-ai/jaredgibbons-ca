@@ -57,7 +57,7 @@ test('built pages: each saved-search page has one correct "Email me new listings
   const bad = []; let n = 0;
   for (const f of pages) {
     const t = html(f); const hasIdx = /class="idx"[^>]*data-idx-id="/.test(t); const forms = t.match(/<form class="la"/g) || [];
-    if (!hasIdx) { if (forms.length) bad.push(`${f}: box on a non-search page`); continue; }
+    if (!hasIdx) { if (forms.length && !(forms.length === 1 && /data-search="[^"]+ guide"/.test(t))) bad.push(`${f}: box on a non-search page`); continue; }   // a guide with no search carries one area alert (D-220)
     n++;
     if (forms.length !== 1) { bad.push(`${f}: ${forms.length} boxes`); continue; }
     const box = t.slice(t.indexOf('<form class="la"'), t.indexOf('</form>', t.indexOf('<form class="la"')));
