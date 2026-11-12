@@ -178,3 +178,13 @@ test('instagram endpoint stays closed until a Behold feed URL is configured (D-2
   const r2 = await handleInstagram(new Request('https://jaredgibbons.ca/api/instagram.json'), { INSTAGRAM_FEED_URL: 'https://evil.example/x' });
   assert.equal(r2.status, 404);
 });
+
+test('static files get long browser caching, pages revalidate (D-240)', async () => {
+  const { cacheFor } = await import('../src/worker/route.js');
+  const ok = { status: 200 };
+  assert.match(cacheFor('/index.html', ok)['cache-control'], /max-age=0/);
+  assert.match(cacheFor('/_astro/x.abc123.css', ok)['cache-control'], /immutable/);
+  assert.match(cacheFor('/fonts/lato.woff2', ok)['cache-control'], /31536000/);
+  assert.match(cacheFor('/img/Jared.webp', ok)['cache-control'], /604800/);
+  assert.deepEqual(cacheFor('/_astro/x.css', { status: 304 }), {});
+});

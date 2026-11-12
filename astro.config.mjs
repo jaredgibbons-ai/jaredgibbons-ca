@@ -11,5 +11,7 @@ export default defineConfig({
   trailingSlash: 'never',
   build: { format: 'file', inlineStylesheets: 'auto' },
   devToolbar: { enabled: false },
+  // D-240: links start loading when a visitor hovers or taps them, so the next page opens almost instantly.
+  prefetch: { prefetchAll: true, defaultStrategy: 'hover' },
   integrations: [fixLinks(), lastmod()],
 });

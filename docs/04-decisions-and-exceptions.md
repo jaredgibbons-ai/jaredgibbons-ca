@@ -1399,3 +1399,10 @@ Jared approved ("yes start go ahead"). Zone added on the **Free** plan in Jared'
 - `mail` CNAME `ghs.googlehosted.com`; `_domainconnect` CNAME (GoDaddy's, harmless)
 - No DNSSEC (no DS record), so nothing to turn off at GoDaddy. No DKIM record exists today (not added here).
 Cloudflare nameservers: **gwen.ns.cloudflare.com** and **ruben.ns.cloudflare.com** (replace pdns01/pdns02.domaincontrol.com at GoDaddy). After the switch the site and email behave exactly as now. Going live is a separate step: point jaredgibbons.ca and www at the Worker (custom domains), launch build (PUBLIC_PREVIEW=false, INDEXABLE=true), then the live checks.
+
+## D-240 — 2026-11-12 — Speed
+- **Instant next page:** Astro prefetch (`prefetchAll`, hover strategy): a link's page starts loading on hover (desktop) or touch (phones).
+- **Browser caching** (`cacheFor()` in route.js): `/_astro/` (content-hashed) and `/fonts/` one year immutable; images a week (+1 day stale-while-revalidate); search index an hour; pages still revalidate every time so edits show at once.
+- **Measured** (launch build, phone 390 px at 2×, slow 4G 1.6 Mb/s + 150 ms, CPU slowed 4×, local server without compression, third parties blocked): LCP home 1.84 s, area page 1.36 s, guide 1.40 s, mobile homes 1.36 s, listing 0.99 s, blog post 1.19 s, map hub 1.38 s; CLS 0–0.033. Google's "good" is LCP under 2.5 s and CLS under 0.1. On Cloudflare (Brotli, HTTP/3, edge) it will be faster.
+- At launch, once the zone is active: turn on Early Hints and 0-RTT in Cloudflare Speed settings. Not Rocket Loader (it rewrites scripts and breaks the forms and maps).
+GoDaddy records (Jared's screenshot, 9): the 6 real records match the Cloudflare import; the other 3 are GoDaddy's NS ×2 and SOA, which Cloudflare replaces with its own.

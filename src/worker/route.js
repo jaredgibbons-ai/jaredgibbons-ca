@@ -103,3 +103,14 @@ export function resolveAsset(path, assetExists) {
   }
   return null;
 }
+
+// Browser caching (D-240). Pages always revalidate (edits show at once). Build files with a content hash in the name
+// (/_astro/) and the fonts never change, so browsers keep them a year; images a week; the search index an hour.
+export function cacheFor(path, res) {
+  if (res.status !== 200) return {};
+  if (path.endsWith('.html')) return { 'cache-control': 'public, max-age=0, must-revalidate' };
+  if (path.startsWith('/_astro/') || path.startsWith('/fonts/')) return { 'cache-control': 'public, max-age=31536000, immutable' };
+  if (path.startsWith('/img/') || /\.(webp|jpe?g|png|svg|ico|avif)$/i.test(path)) return { 'cache-control': 'public, max-age=604800, stale-while-revalidate=86400' };
+  if (path.startsWith('/pagefind/')) return { 'cache-control': 'public, max-age=3600, stale-while-revalidate=86400' };
+  return {};
+}

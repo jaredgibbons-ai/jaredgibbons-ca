@@ -1,6 +1,6 @@
 import rules from './rules.json';
 import listingIds from './listing-ids.json';
-import { buildIndex, route, NESTED } from './route.js';
+import { buildIndex, route, NESTED, cacheFor } from './route.js';
 import { handleForm } from './forms.js';
 import { handlePhoto } from './photos.js';
 import { handleInstagram } from './instagram.js';
@@ -80,7 +80,7 @@ async function handle(request, env, ctx) {
     }
     if (decision.type === 'asset') {
       const res = await env.ASSETS.fetch(new Request(new URL(decision.path, request.url), request));
-      return withHeaders(res, decision.path.endsWith('.html') ? { 'cache-control': 'public, max-age=0, must-revalidate' } : {});
+      return withHeaders(res, cacheFor(decision.path, res));
     }
     const nf = await env.ASSETS.fetch(new Request(new URL('/404.html', request.url), { method: 'GET' }));
     return withHeaders(new Response(nf.body, { status: decision.status || 404, headers: { 'content-type': 'text/html; charset=utf-8' } }), { 'cache-control': 'no-store' });
