@@ -1431,3 +1431,12 @@ Asked by Jared after launch: go through every page for errors.
 - One blog card linked to an old WordPress preview address; it now links to the home page.
 - Not errors, left as is: the September market update's stat grid, "TBD" quoted in the seller FAQ, `/listing-photos/` (served from storage, not the build).
 - Still to do: more one-off note wording is likely on the long area pages; live listing embeds and forms can only be checked on the real domain once this computer's DNS shows the new site.
+
+## D-244 — 2026-11-12 — Brand styling for the MyRealPage listing grids (approved by Jared: "yes go ahead")
+
+- `public/idx-embed.css` restyles the vendor's results grid (`#listing-results-view`, template v2) in black, white and grey: photo, price, address, beds/baths/size, the board's "Listed by" line and logo, one "Listing details" button, page buttons. It hides the "Login with Facebook / Google / X" bar, the long title line, the description teaser and the per-card contact block. The board attribution and the reciprocity notice stay.
+- MyRealPage loads it: Listings → Settings → Advanced → Custom Header Content now holds `<link rel="stylesheet" href="https://jaredgibbons.ca/idx-embed.css">` (it was empty; footer content left empty). To undo, delete that line. Styling changes after this are made in the repo file only.
+- The Worker sends `access-control-allow-origin: *` on `/fonts/` so the site's fonts load inside the frames.
+- Checked: stylesheet answers 200 from outside (47 of 49 locations; 2 still on the old address). Previewed on a live results page by injecting the same rules. Not yet seen on a phone or inside the page on the real domain from this computer (its DNS still shows the old site).
+- MyRealPage settings read, nothing else changed: filters on for predefined searches, sold listings on, VOW sign-up prompts off, price-drop ribbons off, Mailchimp and Zapier not connected there.
+- Open: MyRealPage's own emails (listing alerts, "send listing") link to `/recip.html/listing…` addresses, which the new site sends to the search page (D-231), not to the listing. To confirm with a real alert email, then decide.
