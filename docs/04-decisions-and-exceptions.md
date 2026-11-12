@@ -1389,3 +1389,5 @@ Phones: every page was checked at 390 px wide in Chromium (D-230: no sideways sc
 - **Text Jared** on the phone bar (now Find a Home · Home Value · Call · Text): opens Messages to 604-928-1361 with "Hi Jared, I'm on your website about <page H1>." (iPhone and Android link forms). Call and Text taps are counted in Analytics (`call_jared`, `text_jared`).
 
 D-238 follow-up: privacy page no longer says a Meta (Facebook) pixel is used (none is installed on the old or new site). Add the line back if a pixel is added.
+
+D-238 follow-up (Nov 12): Jared set the build variable PUBLIC_GOOGLE_MAPS_KEY in Cloudflare. Checked on the live preview after the rebuild: the Abbotsford neighbourhood map draws with shading, the drive-time box answers ("About 1 h 15 min (80.3 km) … Abbotsford East"), listing photos load from R2 (4 of 4 that the local scan could not see answer 200; 8 of 8 on a listing page render), and site search answers ("pad rent").
