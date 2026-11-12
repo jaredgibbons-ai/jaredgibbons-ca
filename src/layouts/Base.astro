@@ -99,5 +99,52 @@ const robotsContent = preview ? 'noindex, nofollow' : robots;
     <a href="/home-evaluation.html">What's My Home Worth?</a>
     <a href="tel:604-928-1361">Call 604-928-1361</a>
   </nav>
+  <div class="read-progress" aria-hidden="true"><span></span></div>
+  <a class="to-top" href="#main" aria-label="Back to top" hidden>↑</a>
+  <script is:inline>
+    // D-235: numbers count up as they scroll into view (stat cards, home rank stats, [data-count]); a reading bar and a
+    // back-to-top button on long pages. The final figures are in the HTML (search engines and no-JS readers see them);
+    // nothing moves for visitors who ask for reduced motion.
+    (function () {
+      var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = document.querySelectorAll('.statcard__v, .rank__stats strong, [data-count]');
+      if (!still && 'IntersectionObserver' in window && els.length) {
+        var re = /^(\D*?)(\d{1,3}(?:,\d{3})+|\d+)(\.\d+)?(.*)$/;
+        var jobs = [];
+        els.forEach(function (el) {
+          if (el.children.length) return;
+          var txt = el.textContent.trim(); var m = txt.match(re);
+          if (!m) return;
+          var whole = +m[2].replace(/,/g, ''); var dec = m[3] ? m[3].length - 1 : 0; var val = whole + (m[3] ? +m[3] : 0);
+          if (!m[1] && !m[4] && whole >= 1900 && whole <= 2100) return;   // a year, not a count
+          if (val < 2) return;
+          var fmt = function (v) { var s = dec ? v.toFixed(dec) : Math.round(v).toString(); if (m[2].indexOf(',') >= 0 || whole >= 10000) { var p = s.split('.'); p[0] = p[0].replace(/\B(?=(\d{3})+(?!\d))/g, ','); s = p.join('.'); } return m[1] + s + m[4]; };
+          jobs.push({ el: el, val: val, fmt: fmt, txt: txt });
+        });
+        var run = function (j) {
+          var t0 = performance.now(), dur = 1300;
+          var step = function (t) { var k = Math.min(1, (t - t0) / dur); var e = 1 - Math.pow(1 - k, 3); j.el.textContent = k < 1 ? j.fmt(j.val * e) : j.txt; if (k < 1) requestAnimationFrame(step); };
+          requestAnimationFrame(step);
+        };
+        var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { io.unobserve(e.target); var j = e.target.__count; if (j) run(j); } }); }, { threshold: 0.4 });
+        jobs.forEach(function (j) {
+          var r = j.el.getBoundingClientRect();
+          if (r.top < innerHeight && r.bottom > 0) return;   // already on screen at load: leave it
+          j.el.__count = j; j.el.textContent = j.fmt(0); io.observe(j.el);
+        });
+      }
+      var bar = document.querySelector('.read-progress span'), top = document.querySelector('.to-top');
+      var long = function () { return document.documentElement.scrollHeight > innerHeight * 3; };
+      var tick = false;
+      var upd = function () {
+        tick = false; var h = document.documentElement.scrollHeight - innerHeight; var y = scrollY;
+        var on = long();
+        if (bar) { bar.parentNode.style.display = on ? '' : 'none'; bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, y / h) : 0) + ')'; }
+        if (top) top.hidden = !(on && y > innerHeight * 1.5);
+      };
+      addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(upd); } }, { passive: true });
+      addEventListener('resize', upd); upd();
+    })();
+  </script>
 </body>
 </html>

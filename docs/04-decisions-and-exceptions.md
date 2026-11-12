@@ -1367,3 +1367,10 @@ Jared's screen recording of MyRealPage Site Settings → Advanced, checked again
 
 ## D-234 — 2026-11-12 — Analytics were missing from the new site
 Checking the old site's custom head (D-233) showed the rebuild had no tracking at all. The old site runs GA4 `G-7YQYX2KPBR`, Google Ads `AW-10817976788` and a `contact_us` event when the contact form shows its thank-you (read from the live page in Chrome; no Meta Pixel is installed). Now in `Base.astro`, **launch build only** (the preview sends nothing): gtag with both IDs on every page, and `window.jgLead(kind)` fires `contact_us` (the Ads conversion the old site used) and GA4 `generate_lead` when any form's lead is accepted (contact, home evaluation, address check, presale VIP via FormStub; quiz; listing alert; newsletter). After launch: confirm in GA4 Realtime and that the Ads conversion action still records `contact_us`.
+
+## D-235 — 2026-11-12 — Motion and stay-longer touches
+Jared asked for moving numbers like other sites and anything that keeps visitors on the site longer.
+- **Count-up numbers:** every stat card (market pages, quick facts) and the home rank stats count up from zero when they scroll into view (1.3 s, ease-out). Final figures stay in the HTML; years are skipped; figures already on screen at load and visitors with reduced motion see no movement. Script in `Base.astro`.
+- **Home rank band:** Top 1% plus four counting stats, all already published on the site: $500M+ career sales, 10 straight years FVREB Medallion Club, 95 Google reviews at 5.0, 11+ years as a REALTOR® (since 2015).
+- **Reading bar and back-to-top:** a thin black progress line at the top and a ↑ button (above the phone action bar) on pages longer than three screens.
+- **"On this page" jump list** now on pages with 10+ sections (was 20+): 888 pages.

@@ -268,11 +268,11 @@ if (isHub) {
   // The "Neighbourhood guides · City of X" line (above or below the H1 on some hubs) says nothing the H1 and breadcrumb do not; every hub opens the same way.
   page.blocks = page.blocks.filter((b: any) => !(b.t === 'p' && (b.parts || [{ t: b.text }]).map((x: any) => x.t).join('').trim().startsWith('Neighbourhood guides ·')));
 }
-// Long pages (twenty or more H2 sections) get an "On this page" jump list right after the H1, so a reader can reach a section without scrolling thousands of pixels.
+// Long pages (ten or more H2 sections, was twenty until D-235) get an "On this page" jump list right after the H1, so a reader can reach a section without scrolling thousands of pixels.
 {
   const h2s = page.blocks.filter((b: any) => b.t === 'h' && b.level === 2 && !b.href && String(b.text || '').trim());
   const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
-  if (h2s.length >= 20 && h1i >= 0 && page.slug !== 'blog') {
+  if (h2s.length >= 10 && h1i >= 0 && page.slug !== 'blog') {
     const used = new Set(page.blocks.filter((b: any) => b.id).map((b: any) => b.id));
     const items = h2s.slice(0, 60).map((b: any) => {
       if (!b.id) { let id = String(b.text).toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48) || 'section'; let n = 2; const base = id; while (used.has(id)) id = `${base}-${n++}`; used.add(id); b.id = id; }

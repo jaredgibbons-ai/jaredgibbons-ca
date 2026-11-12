@@ -259,3 +259,12 @@ a:hover{text-decoration-thickness:3px}
 /* Plain (classless) links only: card links (.src, .chip, .dp-card, .cardlink…) keep their own layout. */
 main li > a:not([class]),
 main dd a:not([class]), main .pcard__addr a, main p > a:only-child:not([class]) { display:inline-block; min-height:1.5rem; padding-block:.15rem; line-height:1.25 }
+
+/* D-235: reading progress and back to top (long pages only, set by the script in Base.astro) */
+.read-progress{position:fixed;inset:0 0 auto 0;height:3px;z-index:60;pointer-events:none}
+.read-progress span{display:block;height:100%;background:var(--ink);transform-origin:0 50%;transform:scaleX(0)}
+.to-top{position:fixed;right:1rem;bottom:1rem;z-index:45;width:2.75rem;height:2.75rem;display:flex;align-items:center;justify-content:center;background:var(--ink);color:#fff;border:1px solid #fff;font:700 1.125rem/1 var(--f-head);text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.to-top[hidden]{display:none}
+.to-top:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+@media (max-width:720px){.to-top{bottom:4.25rem}}
+@media print{.read-progress,.to-top{display:none}}
