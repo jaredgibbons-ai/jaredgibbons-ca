@@ -1,4 +1,5 @@
-"""D-230: source links on the local layers.
+"""D-230: source links on the local layers. SUPERSEDED, DO NOT RE-RUN: dropping the items lost D-204's render-time swaps
+(developer and government replacements); the drop was undone the same evening. Kept for the record.
 
 Labels ("tol.ca · about the township.aspx" → "Township of Langley: About the Township") are made at render time by
 Rich.astro with lib/sources.ts; relabel() here is kept for reference and not called.
@@ -31,6 +32,8 @@ AGENT_HOSTS = {
  'properties.lefigaro.com', 'commercialsearch.com', 'images1.cityfeet.com', 'images1.showcase.com',
  'images.loopnet.ca', 'images.loopnet.fr', 'nexthome.ca',
 }
+
+AGENT_HOSTS |= set(json.load(open('src/data/other-agent-domains.json'))['domains']) - {'realtor.ca'}
 
 ORG = {
  'www2.gov.bc.ca': 'Province of BC', 'gov.bc.ca': 'Province of BC', 'news.gov.bc.ca': 'BC Gov News', 'archive.news.gov.bc.ca': 'BC Gov News',
