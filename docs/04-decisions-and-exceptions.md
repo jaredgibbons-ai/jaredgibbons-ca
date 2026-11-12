@@ -1406,3 +1406,6 @@ Cloudflare nameservers: **gwen.ns.cloudflare.com** and **ruben.ns.cloudflare.com
 - **Measured** (launch build, phone 390 px at 2×, slow 4G 1.6 Mb/s + 150 ms, CPU slowed 4×, local server without compression, third parties blocked): LCP home 1.84 s, area page 1.36 s, guide 1.40 s, mobile homes 1.36 s, listing 0.99 s, blog post 1.19 s, map hub 1.38 s; CLS 0–0.033. Google's "good" is LCP under 2.5 s and CLS under 0.1. On Cloudflare (Brotli, HTTP/3, edge) it will be faster.
 - At launch, once the zone is active: turn on Early Hints and 0-RTT in Cloudflare Speed settings. Not Rocket Loader (it rewrites scripts and breaks the forms and maps).
 GoDaddy records (Jared's screenshot, 9): the 6 real records match the Cloudflare import; the other 3 are GoDaddy's NS ×2 and SOA, which Cloudflare replaces with its own.
+
+## D-241 — 2026-11-12 — LAUNCH (approved by Jared: "yes go live")
+Cloudflare zone active 12:41 PM (nameservers gwen/ruben at GoDaddy). Launch build: `PUBLIC_PREVIEW=false` in `.env.production` (no preview banner, each page's own robots value, GA4 and Ads on), `INDEXABLE` "true" in `wrangler.jsonc` (no noindex header). Next, in Cloudflare: custom domains jaredgibbons.ca and www on the Worker (replacing the two A records to MyRealPage), then live checks. Rollback: remove the custom domains and restore A @ and www → 23.21.221.218 (DNS only).

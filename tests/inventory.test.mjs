@@ -25,13 +25,13 @@ test('new pages under the uniqueness threshold are left out of the sitemap', { s
   assert.ok(xml.includes('/sell-my-house-in-mission.html<'));
 });
 
-test('a launch-mode build emits each page its own robots value; normal builds stay closed', { timeout: 120000 }, () => {
+test('a launch-mode build emits each page its own robots value; the site build is the launch build since Nov 12 2026 (D-241)', { timeout: 120000 }, () => {
   execSync('npx astro build --outDir /tmp/launch-check', { env: { ...process.env, PUBLIC_PREVIEW: 'false', TEST_ALLOW_DRAFT_OUTLINES: 'yes' }, stdio: 'ignore' });
   const meta = (dir, f) => (/<meta name="robots" content="([^"]*)"/.exec(readFileSync(`${dir}/${f}.html`, 'utf8')) || [])[1];
   assert.equal(meta('/tmp/launch-check', 'sell-my-house-in-mission'), 'index, follow');
   assert.equal(meta('/tmp/launch-check', '404'), 'noindex');
   for (const slug of held.slice(0, 3)) assert.equal(meta('/tmp/launch-check', slug), 'noindex, follow');
-  assert.equal(meta('dist', 'sell-my-house-in-mission'), 'noindex, nofollow', 'normal builds stay fully closed');
+  assert.equal(meta('dist', 'sell-my-house-in-mission'), 'index, follow', 'launched: the normal build is open (PUBLIC_PREVIEW=false in .env.production)');
 });
 
 test('a launch-mode build ships no internal review notes', { timeout: 120000, skip: !existsSync('/tmp/launch-check') }, () => {

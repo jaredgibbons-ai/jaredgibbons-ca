@@ -19,8 +19,8 @@
   "services": [{ "binding": "REVIEWS", "service": "jg-reviews" }],
   // Listing photos (3,338 files x 3 sizes). Upload: tools/upload_photos_r2.sh. Served by src/worker/photos.js.
   "r2_buckets": [{ "binding": "PHOTOS", "bucket_name": "jg-listing-photos" }],
-  // Fail safe: pages are noindex unless INDEXABLE is exactly "true". Launch (Jared's approval) sets it to "true" together with the PUBLIC_PREVIEW=false build.
-  "vars": { "INDEXABLE": "false" },
+  // Fail safe: pages are noindex unless INDEXABLE is exactly "true". Set to "true" at launch, Nov 12 2026, with Jared's approval (D-241), together with PUBLIC_PREVIEW=false in .env.production.
+  "vars": { "INDEXABLE": "true" },
   // No source maps in the deploy (they embed internal notes).
   "upload_source_maps": false
 }
