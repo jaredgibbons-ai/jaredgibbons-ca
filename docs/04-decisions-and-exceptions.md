@@ -1391,3 +1391,11 @@ Phones: every page was checked at 390 px wide in Chromium (D-230: no sideways sc
 D-238 follow-up: privacy page no longer says a Meta (Facebook) pixel is used (none is installed on the old or new site). Add the line back if a pixel is added.
 
 D-238 follow-up (Nov 12): Jared set the build variable PUBLIC_GOOGLE_MAPS_KEY in Cloudflare. Checked on the live preview after the rebuild: the Abbotsford neighbourhood map draws with shading, the drive-time box answers ("About 1 h 15 min (80.3 km) … Abbotsford East"), listing photos load from R2 (4 of 4 that the local scan could not see answer 200; 8 of 8 on a listing page render), and site search answers ("pad rent").
+
+## D-239 — 2026-11-12 — jaredgibbons.ca added to Cloudflare (pending; nothing live changed)
+Jared approved ("yes start go ahead"). Zone added on the **Free** plan in Jared's Cloudflare account, AI crawler settings left at Cloudflare's defaults (allow search, AI and agents; good for AI visibility). Records imported and checked against the live GoDaddy DNS (read with dns.google before import), all set to **DNS only** so the switch changes nothing:
+- `jaredgibbons.ca` A 23.21.221.218 and `www` A 23.21.221.218 (MyRealPage, today's site)
+- MX `smtp.google.com` (priority 1) and TXT SPF `v=spf1 include:_spf.google.com ~all` (Google Workspace email on the domain)
+- `mail` CNAME `ghs.googlehosted.com`; `_domainconnect` CNAME (GoDaddy's, harmless)
+- No DNSSEC (no DS record), so nothing to turn off at GoDaddy. No DKIM record exists today (not added here).
+Cloudflare nameservers: **gwen.ns.cloudflare.com** and **ruben.ns.cloudflare.com** (replace pdns01/pdns02.domaincontrol.com at GoDaddy). After the switch the site and email behave exactly as now. Going live is a separate step: point jaredgibbons.ca and www at the Worker (custom domains), launch build (PUBLIC_PREVIEW=false, INDEXABLE=true), then the live checks.
