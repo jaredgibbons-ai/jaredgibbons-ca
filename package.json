@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node tools/build_search.mjs dist",
     "preview": "astro preview",
     "test": "node --test tests/worker.test.mjs tests/photos-worker.test.mjs tests/forms.test.mjs tests/newsletter-page.test.mjs tests/reviews-worker.test.mjs tests/inventory.test.mjs tests/data-rules.test.mjs tests/site-quality.test.mjs tests/mortgage.test.mjs tests/areamap.test.mjs tests/choropleth.test.mjs tests/commute.test.mjs tests/nearby-places.test.mjs tests/map-style.test.mjs tests/school-pages.test.mjs tests/area-gap-pages.test.mjs tests/footer-popular.test.mjs tests/lead-blocks.test.mjs tests/price-band-pages.test.mjs tests/counts.test.mjs tests/launch-holds.test.mjs tests/copy-hygiene.test.mjs",
     "rules": "python3 -I tools/build_rules.py",
@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "axe-core": "^4.14.0",
-    "esbuild": "^0.28.2"
+    "esbuild": "^0.28.2",
+    "pagefind": "1.6.0"
   }
 }

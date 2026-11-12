@@ -269,3 +269,12 @@ main dd a:not([class]), main .pcard__addr a, main p > a:only-child:not([class]) 
 @media (max-width:720px){.to-top{bottom:4.25rem}}
 @media print{.read-progress,.to-top{display:none}}
 @media (max-width:720px){.nudge:not([hidden]) ~ .to-top{display:none}}
+
+/* D-238: site search link in the header (after the nav on desktop, left of Menu on phones) */
+.search-link{display:inline-flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;color:var(--ink);order:3;flex:0 0 auto}
+.search-link:hover,.search-link:focus-visible{background:var(--ink);color:#fff}
+.site-header .nav{order:2}
+.site-header .menu-btn{order:4}
+@media (max-width:1300px){.site-header .wrap{gap:.5rem}.search-link{margin-left:auto}}
+.site-header .brand{flex:0 0 auto}
+@media (min-width:1301px){.site-header .wrap{gap:.75rem}.search-link{width:2.5rem}}

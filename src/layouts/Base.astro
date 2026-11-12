@@ -98,9 +98,21 @@ const robotsContent = preview ? 'noindex, nofollow' : robots;
   <Footer tagline={footerTagline} cell={footerCell} />
   <nav class="action-bar" aria-label="Quick actions">
     <a href="/map-search.html">Find a Home</a>
-    <a href="/home-evaluation.html">What's My Home Worth?</a>
-    <a href="tel:604-928-1361">Call 604-928-1361</a>
+    <a href="/home-evaluation.html">Home Value</a>
+    <a href="tel:604-928-1361" data-ev="call_jared">Call</a>
+    <a href="sms:+16049281361" data-ev="text_jared" class="action-bar__text">Text</a>
   </nav>
+  <script is:inline>
+    // D-238: "Text" opens the phone's messages with the page in the first line, so Jared knows what they were reading.
+    (function () {
+      var t = document.querySelector('.action-bar__text'); if (!t) return;
+      var page = (document.querySelector('h1') || {}).textContent || document.title.split('|')[0];
+      page = String(page).replace(/\s+/g, ' ').trim().slice(0, 90);
+      var body = 'Hi Jared, I\'m on your website about ' + page + '. ';
+      t.href = 'sms:+16049281361' + (/iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent) ? '&' : '?') + 'body=' + encodeURIComponent(body);
+      document.querySelectorAll('.action-bar [data-ev]').forEach(function (a) { a.addEventListener('click', function () { try { if (typeof gtag === 'function') gtag('event', a.dataset.ev, { page: location.pathname }); } catch (e) {} }); });
+    })();
+  </script>
   {Astro.url.pathname.startsWith('/internal/blog/') && <SellerNudge />}
   <div class="read-progress" aria-hidden="true"><span></span></div>
   <a class="to-top" href="#main" aria-label="Back to top" hidden>↑</a>
