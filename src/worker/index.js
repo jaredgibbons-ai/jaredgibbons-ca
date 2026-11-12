@@ -25,6 +25,8 @@ export default {
     const h = new Headers(res.headers);
     for (const [k, v] of Object.entries(SECURITY)) if (!h.has(k)) h.set(k, v);
     if (!indexable(env)) h.set('x-robots-tag', 'noindex, nofollow');
+    // The MyRealPage listing frames load /idx-embed.css from here, and it uses the site's fonts: fonts need this header to load cross-origin (D-244).
+    if (new URL(request.url).pathname.startsWith('/fonts/')) h.set('access-control-allow-origin', '*');
     return new Response(res.body, { status: res.status, statusText: res.statusText, headers: h });
   },
 };

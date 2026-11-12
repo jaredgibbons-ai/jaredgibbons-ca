@@ -1,0 +1,99 @@
+/* Brand styling for the MyRealPage listing grids shown inside jaredgibbons.ca (D-244).
+   Loaded by MyRealPage itself: Listings > Settings > Advanced > Custom Header Content holds one <link> to this file.
+   To undo, delete that line in MyRealPage. Black, white and grey only. */
+@font-face{font-family:"Montserrat";font-weight:700;font-style:normal;font-display:swap;src:url(https://jaredgibbons.ca/fonts/montserrat-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Montserrat";font-weight:800;font-style:normal;font-display:swap;src:url(https://jaredgibbons.ca/fonts/montserrat-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"Lato";font-weight:400;font-style:normal;font-display:swap;src:url(https://jaredgibbons.ca/fonts/lato-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Lato";font-weight:700;font-style:normal;font-display:swap;src:url(https://jaredgibbons.ca/fonts/lato-latin-700-normal.woff2) format("woff2")}
+
+#listing-results-view{--ink:#0a0a0a;--grey:#5b5b5b;--rule:#d9d4cc;--cream:#efeae4;font-family:"Lato",system-ui,-apple-system,"Segoe UI",sans-serif!important;color:var(--ink)!important;background:#fff!important}
+#listing-results-view *{box-sizing:border-box}
+/* the site has its own sign-in links */
+#listing-results-view .mrp-results-vow-toolbar-wrapper{display:none!important}
+
+/* count and sort row */
+#listing-results-view .mrp-results-page-summary{display:flex!important;flex-direction:row-reverse;justify-content:space-between;align-items:center;gap:1rem;margin:0 0 1rem!important;padding:0 0 .75rem!important;border-bottom:1px solid var(--ink)!important;float:none!important;width:auto!important}
+#listing-results-view .mrp-results-numbers{font:700 .75rem/1.2 "Montserrat",sans-serif!important;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)!important;float:none!important;margin:0!important}
+#listing-results-view .mrp-results-numbers *{font:inherit!important;color:inherit!important}
+#listing-results-view .search-results-sort-by-select{font:400 .9375rem/1.2 "Lato",sans-serif!important;color:var(--ink)!important;background:#fff!important;border:1px solid var(--ink)!important;border-radius:0!important;padding:.5rem .6rem!important;height:auto!important;min-height:2.5rem;float:none!important;margin:0!important;max-width:60%}
+
+/* grid */
+#listing-results-view ul.mrp-listing-results{display:grid!important;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:1.5rem;margin:0!important;padding:0!important;list-style:none!important}
+#listing-results-view ul.mrp-listing-results::before,#listing-results-view ul.mrp-listing-results::after{display:none!important;content:none!important}
+#listing-results-view li.mrp-listing-result{position:relative!important;display:flex!important;flex-direction:column;float:none!important;width:auto!important;max-width:none!important;min-height:0!important;height:auto!important;margin:0!important;padding:0!important;background:#fff!important;border:1px solid var(--ink)!important;border-radius:0!important;box-shadow:none!important;overflow:hidden}
+#listing-results-view li.mrp-listing-result:hover{box-shadow:6px 6px 0 var(--cream)!important}
+
+/* photo first */
+#listing-results-view .listing-image-and-toolbar-wrapper{order:1;position:relative!important;margin:0!important;padding:0!important;width:100%!important;border:0!important}
+#listing-results-view .mrp-listing-main-image-container{position:relative!important;margin:0!important;padding:0!important;width:100%!important;height:auto!important;aspect-ratio:3/2;overflow:hidden;border:0!important;border-radius:0!important;background:var(--cream)!important}
+#listing-results-view .mrp-listing-main-image-container .inner{position:absolute!important;inset:0;margin:0!important;padding:0!important;width:100%!important;height:100%!important}
+#listing-results-view img.mrp-listing-main-image{display:block!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover;border:0!important;border-radius:0!important;margin:0!important}
+#listing-results-view .listing-item-top-menu{display:none!important}
+#listing-results-view .mrp-vow-listing-toolbar-container{position:absolute!important;top:.5rem;right:.5rem;left:auto!important;z-index:3;margin:0!important;padding:0!important;width:auto!important}
+#listing-results-view .mrp-vow-listing-fav-button{display:grid!important;place-items:center;width:2.25rem!important;height:2.25rem!important;min-width:0!important;padding:0!important;margin:0!important;background:#fff!important;color:var(--ink)!important;border:1px solid var(--ink)!important;border-radius:0!important;box-shadow:none!important}
+#listing-results-view .mrp-vow-listing-fav-button .mdicon{color:var(--ink)!important;font-size:1.2rem!important;line-height:1!important}
+#listing-results-view .results-ribbon{filter:grayscale(1) contrast(1.1)}
+
+/* price, then address */
+#listing-results-view .mrp-listing-price-container{order:2;position:static!important;float:none!important;display:block!important;width:auto!important;margin:0!important;padding:1rem 1rem .15rem!important;background:none!important;color:var(--ink)!important;font:800 1.375rem/1.15 "Montserrat",sans-serif!important;text-align:left!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+#listing-results-view .mrp-listing-price-container *{color:inherit!important;font:inherit!important;background:none!important}
+#listing-results-view h3.listing-item-entry-title{display:none!important}
+#listing-results-view alt{order:3;display:block!important;padding:0 1rem!important;margin:0!important;font:400 .9375rem/1.4 "Lato",sans-serif!important;color:var(--grey)!important}
+#listing-results-view alt .alt-addr{display:block!important;font:700 1rem/1.3 "Lato",sans-serif!important;color:var(--ink)!important}
+#listing-results-view alt .alt-postal-code{display:none!important}
+#listing-results-view alt .alt-subarea::after{content:" · "}
+#listing-results-view alt .alt-subarea,#listing-results-view alt .alt-city{display:inline!important;font:inherit!important;color:inherit!important}
+#listing-results-view .mrp-listing-address-info,#listing-results-view .summary-property-type,#listing-results-view .mrp-listing-attribution-top-wrapper{display:none!important}
+
+/* beds, baths, size */
+#listing-results-view .mrp-listing-summary-outer{order:4;position:static!important;float:none!important;width:auto!important;margin:.6rem 1rem 0!important;padding:.6rem 0 0!important;border:0!important;border-top:1px solid var(--rule)!important;background:none!important}
+#listing-results-view .mrp-listing-summary-section{display:flex!important;flex-wrap:wrap;gap:.2rem 1rem;margin:0!important;padding:0!important;border:0!important;background:none!important;width:auto!important}
+#listing-results-view .mrp-listing-summary-section>div{display:flex!important;gap:.3rem;float:none!important;width:auto!important;margin:0!important;padding:0!important;border:0!important;background:none!important}
+#listing-results-view .mrp-listing-summary-section dt,#listing-results-view .mrp-listing-summary-section dd{display:inline!important;float:none!important;width:auto!important;margin:0!important;padding:0!important;border:0!important;background:none!important;font:400 .875rem/1.4 "Lato",sans-serif!important;color:var(--grey)!important;text-align:left!important}
+#listing-results-view .mrp-listing-summary-section dd,#listing-results-view .mrp-listing-summary-section dd *{color:var(--ink)!important;font-weight:700!important}
+#listing-results-view .summary-status,#listing-results-view .summary-mls-number{display:none!important}
+#listing-results-view .bedrooms-line:is(dt),#listing-results-view .bathrooms-line:is(dt),#listing-results-view .floor-area-line:is(dt){font-size:0!important}
+#listing-results-view dt.bedrooms-line::after{content:"Beds";font-size:.875rem}
+#listing-results-view dt.bathrooms-line::after{content:"Baths";font-size:.875rem}
+#listing-results-view dt.floor-area-line::after{content:"Size";font-size:.875rem}
+#listing-results-view .mrp-m-unit{display:none!important}
+
+/* description and the board's attribution (must stay) */
+#listing-results-view .mrp-description-and-attribution-wrapper{order:5;margin:.6rem 1rem 0!important;padding:0!important;border:0!important;background:none!important;width:auto!important;float:none!important}
+#listing-results-view .mrp-listing-description{display:none!important}
+#listing-results-view .mrp-listing-attribution-wrapper{display:block!important;margin:0!important;padding:0!important}
+#listing-results-view .mrp-listing-attribution-container{font:400 .75rem/1.4 "Lato",sans-serif!important;color:var(--grey)!important;margin:0!important;padding:0!important;text-align:left!important}
+#listing-results-view .mrp-listing-recip-logo{position:absolute!important;right:.75rem;bottom:4.1rem;margin:0!important}
+#listing-results-view .mrp-listing-recip-logo img{max-height:1.1rem!important;width:auto!important}
+
+/* one button */
+#listing-results-view .mrp-listing-details-link{order:7;margin:auto 1rem 1rem!important;padding:.9rem 0 0!important;float:none!important;width:auto!important;border:0!important;background:none!important}
+#listing-results-view .mrp-listing-details-link a{display:block!important;width:100%!important;min-height:2.75rem;padding:.85rem 1rem!important;background:var(--ink)!important;color:#fff!important;border:1px solid var(--ink)!important;border-radius:0!important;box-shadow:none!important;font:700 .75rem/1 "Montserrat",sans-serif!important;letter-spacing:.14em;text-transform:uppercase;text-align:center!important;text-decoration:none!important}
+#listing-results-view .mrp-listing-details-link a:hover,#listing-results-view .mrp-listing-details-link a:focus-visible{background:#fff!important;color:var(--ink)!important}
+#listing-results-view .mrp-listing-links-section,#listing-results-view .mrp-owner-contact-container{display:none!important}
+
+/* pages */
+#listing-results-view .listing-results-navigation-bottom{margin:1.75rem 0 0!important;padding:0!important;border:0!important;background:none!important;text-align:center!important}
+#listing-results-view .page-buttons{display:flex!important;flex-wrap:wrap;justify-content:center;gap:.4rem}
+#listing-results-view .page-buttons a{display:grid!important;place-items:center;min-width:2.75rem;height:2.75rem;padding:0 .6rem!important;margin:0!important;background:#fff!important;color:var(--ink)!important;border:1px solid var(--ink)!important;border-radius:0!important;box-shadow:none!important;font:700 .8125rem/1 "Montserrat",sans-serif!important;text-decoration:none!important;float:none!important}
+#listing-results-view .page-buttons a.current,#listing-results-view .page-buttons a:hover{background:var(--ink)!important;color:#fff!important}
+#listing-results-view .page-buttons a.disabled-link{opacity:.35;pointer-events:none}
+#listing-results-view .listing-results-navigation-bottom+.mrp-results-page-summary,#listing-results-view ul.mrp-listing-results+.mrp-results-page-summary{display:none!important}
+
+/* board notice and credit */
+#listing-results-view .mrp-listing-results-footer,#listing-results-view .mrp-listing-results-footer *{font:400 .75rem/1.5 "Lato",sans-serif!important;color:var(--grey)!important}
+#listing-results-view .mrp-listing-results-footer{margin:1.5rem 0 0!important;padding:1rem 0 0!important;border-top:1px solid var(--rule)!important}
+#listing-results-view .powered-by{opacity:.7}
+#listing-results-view a{color:var(--ink)}
+
+/* overrides of the vendor's positioned price, clipped facts box, icons and doubled button label */
+#listing-results-view .mrp-listing-price-container{transform:none!important;height:auto!important}
+#listing-results-view .mrp-listing-summary-outer,#listing-results-view .mrp-listing-summary-section{height:auto!important;max-height:none!important;overflow:visible!important}
+#listing-results-view .mrp-listing-summary-section>div.summary-status,#listing-results-view .mrp-listing-summary-section>div.summary-mls-number{display:none!important}
+#listing-results-view .mrp-listing-summary-section dt{background:none!important;min-width:0!important;height:auto!important;text-indent:0!important}
+#listing-results-view .mrp-listing-summary-section dt::before,#listing-results-view .mrp-listing-summary-section dd::before{content:none!important;display:none!important}
+#listing-results-view .mrp-listing-details-link a::before,#listing-results-view .mrp-listing-details-link a::after{content:none!important;display:none!important}
+#listing-results-view .results-item-sep{display:none!important}
+#listing-results-view .mrp-description-and-attribution-wrapper{display:flex!important;justify-content:space-between;align-items:center;gap:.75rem}
+#listing-results-view .mrp-listing-recip-logo{position:static!important;flex:0 0 auto}
+@media (max-width:480px){#listing-results-view ul.mrp-listing-results{grid-template-columns:1fr;gap:1.25rem}#listing-results-view .search-results-sort-by-select{max-width:55%}}
