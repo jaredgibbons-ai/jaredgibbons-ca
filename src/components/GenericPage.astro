@@ -56,7 +56,9 @@ const idx = IDX as { account: string; pages: Record<string, string>; special?: R
 const idxId = idx.pages[page.slug];
 const idxPath = idx.special?.[page.slug];
 // A page whose main content is a live listing search: the heading is compact and the search starts right below it (D-143).
-const isSearch = !!(idxId || idxPath);
+// The open map search is shown in the page (a frame) on these two pages (D-242).
+const isMapPage = page.slug === 'recip' || page.slug === 'map-search';
+const isSearch = !!(idxId || idxPath) || isMapPage;
 // Name of the search, sent with an "Email me new listings" signup so Jared knows which one to set up.
 const alertName = String((page.blocks || []).find((b: any) => b.t === 'h' && b.level === 1)?.text || String(page.title || '').split('|')[0]).replace(/\s+/g, ' ').trim().slice(0, 150);
 
@@ -530,6 +532,7 @@ const explore = !_extra.length ? exploreBase
         </div>
       </section>
     );
+    if (sec.kind === 'grid' && isMapPage) return <IdxEmbed frame account={idx.account} />;
     if (sec.kind === 'grid' && idxPath) return <IdxEmbed path={idxPath} account={idx.account} />;
     // Search pages (a saved search id) get the "Email me new listings" box right above the results; the open map search and "my listings" widgets do not.
     if (sec.kind === 'grid' && idxId) return <IdxEmbed id={idxId} account={idx.account}><ListingAlert search={alertName} searchId={idxId} /></IdxEmbed>;

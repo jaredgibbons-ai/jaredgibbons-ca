@@ -2,11 +2,22 @@
 // MyRealPage listing search for one page. The vendor script is added only when the block nears the
 // viewport (keeps it off the LCP/INP path) and the space is reserved so the page does not shift (CLS).
 // If nothing renders within 10 s the visitor sees the plain link to the full search instead.
-interface Props { id?: string; account: string; label?: string; path?: string }
-const { id = '', account, label = 'Listings', path } = Astro.props;
+interface Props { id?: string; account: string; label?: string; path?: string; frame?: boolean }
+const { id = '', account, label = 'Listings', path, frame = false } = Astro.props;
+// frame: the open map search shown in the page itself (D-242). The vendor's in.js for this widget only prints a "Search listings" link that
+// opens the map full screen; the frame below is the same map, visible without a click.
+const MAP = `https://idx.myrealpage.com/wps/-/tmpl~v2,idx_v2_map_pos~49.10058663823867%7C-122.78651742876207,idx_v2_map_radius~15/recip/${account}/idx.search`;
 // A saved search by id, or a special widget (my listings, the open search form) by its stored path.
 const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `recip/tmpl~v2,noframe~true/-/search-${id}.def/in.js`}`;
 ---
+{frame ? (
+<section class="section section--tight section--idx section--idxmap" aria-label="MLS® map search">
+  <div class="wrap">
+    <iframe class="idxmap" src={MAP} title="MLS® map search: homes for sale in the Fraser Valley and Metro Vancouver" loading="lazy" allow="geolocation" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <p class="idxmap__alt"><a href={MAP} target="_blank" rel="noopener">Open the map search full screen</a></p>
+  </div>
+</section>
+) : (
 <section class="section section--tight section--idx" aria-label={label}>
   <div class="wrap">
     <slot />
@@ -16,6 +27,7 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
     <p class="notice idx__fallback" hidden>The live listings did not load. <a href="/recip.html">Search Listings</a></p>
   </div>
 </section>
+)}
 <script>
   const box = document.querySelector<HTMLElement>('.idx[data-idx-src]');
   if (box) {
@@ -43,6 +55,9 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
   /* white, like the search itself (D-143) */
   .section--idx{background:#fff;padding-top:var(--s4)}
   .idx{min-height:20rem}
+  .idxmap{display:block;width:100%;height:min(46rem,78vh);height:min(46rem,78svh);min-height:30rem;border:1px solid var(--ink);background:var(--cream)}
+  .idxmap__alt{margin:.6rem 0 0;font-size:.9375rem;text-align:right}
+  @media (max-width:700px){.section--idxmap .wrap{padding-inline:0}.idxmap{border-inline:0;height:72svh;min-height:26rem}.idxmap__alt{padding-inline:var(--gutter)}}
   .idx[hidden],.idx__fallback[hidden]{display:none}
   /* MyRealPage adds its own "Login with Facebook / Google / X" bar above the results; our page has its own sign-in and account links (D-133). */
   .idx :global(.mrp-results-vow-toolbar-wrapper),.idx :global(.mrp-vow-toolbar){display:none}

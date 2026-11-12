@@ -184,9 +184,11 @@ const slug = (t: string) => t.toLowerCase().replace(/[^a-z0-9]+/g, '-');
     // desktop: open on hover/focus-in of the item
     const item = t.closest('.nav__item');
     // The panel stays open for a moment after the pointer leaves, so you can cross to a neighbouring item or reach a link without it vanishing.
-    let timer = 0;
-    item.addEventListener('mouseenter', () => { clearTimeout(timer); if (!mq.matches) { closeAll(t); t.setAttribute('aria-expanded','true'); document.getElementById(t.getAttribute('aria-controls')).hidden = false; } });
-    item.addEventListener('mouseleave', () => { if (!mq.matches) { clearTimeout(timer); timer = window.setTimeout(() => { if (!item.matches(':hover') && !item.contains(document.activeElement)) closeAll(); }, 450); } });
+    let timer = 0, intent = 0;
+    const openIt = () => { closeAll(t); t.setAttribute('aria-expanded','true'); document.getElementById(t.getAttribute('aria-controls')).hidden = false; };
+    // If another menu is already open, wait a moment before switching: moving the pointer down to a link often crosses a neighbouring item.
+    item.addEventListener('mouseenter', () => { clearTimeout(timer); if (mq.matches) return; const other = toggles.some((x) => x !== t && x.getAttribute('aria-expanded') === 'true'); clearTimeout(intent); if (other) intent = window.setTimeout(() => { if (item.matches(':hover')) openIt(); }, 320); else openIt(); });
+    item.addEventListener('mouseleave', () => { clearTimeout(intent); if (!mq.matches) { clearTimeout(timer); timer = window.setTimeout(() => { if (!item.matches(':hover') && !item.contains(document.activeElement) && !toggles.some((x) => x !== t && x.closest('.nav__item').matches(':hover'))) closeAll(); }, 900); } });
   });
   // Communities: pick a place, see its links. Desktop shows one pane at a time (hover or focus); phones open and close each place.
   const tabs = [...document.querySelectorAll('.mega__tab')];

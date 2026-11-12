@@ -158,6 +158,8 @@ a:hover{text-decoration-thickness:3px}
   .nav__toggle{width:3.25rem;height:3.25rem;margin:0}
   .nav__panel,.nav__item--wide .nav__panel{position:static;transform:none;width:100%;min-width:0;max-height:none;overflow:visible;columns:1;border:0;box-shadow:none;padding:0 0 1rem;flex-basis:100%}
   .nav__panel a{padding-left:.5rem}
+  /* the centred desktop panels must not shift on phones (the desktop rule is more specific than the reset above) */
+  .nav__item.nav__item--wide .nav__panel--mega,.nav__item.nav__item--wide .nav__panel--wide{left:auto;transform:none}
   .mega{display:block;padding:0}
   .nav__panel--mega{width:100%}
   .mm{display:block;padding:0 .5rem}
