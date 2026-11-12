@@ -1374,3 +1374,8 @@ Jared asked for moving numbers like other sites and anything that keeps visitors
 - **Home rank band:** Top 1% plus four counting stats, all already published on the site: $500M+ career sales, 10 straight years FVREB Medallion Club, 95 Google reviews at 5.0, 11+ years as a REALTOR® (since 2015).
 - **Reading bar and back-to-top:** a thin black progress line at the top and a ↑ button (above the phone action bar) on pages longer than three screens.
 - **"On this page" jump list** now on pages with 10+ sections (was 20+): 888 pages.
+
+## D-236 — 2026-11-12 — Home market strip, blog home-value card, share images
+- **Market strip** (`MarketTicker.astro`, home page under the hero): the newest `src/data/market/YYYY-MM.json` FVREB month, scrolling: South Surrey & White Rock, Langley, Surrey, Cloverdale, Abbotsford, Mission, North Delta — detached, townhome and condo benchmark prices with the year-over-year change, and sales. Each area links to its market-stats page; the label links to the Fraser Valley stats page. Pauses on hover/focus; a still, sideways-scrollable row for reduced motion; the second (looping) copy is hidden from screen readers. It updates itself when the next month's file is added.
+- **Home-value card on blog posts** (`SellerNudge.astro`): slides in from the corner at 70% of a post ("Thinking of selling? … Get my home value"), × closes it for 30 days on that browser. Not a full-screen pop-up. Clicks are counted (`nudge_click`).
+- **Share images:** 653 pages pointed their Facebook/X share image at MyRealPage's `/_media/…` files, which stop existing at the switch. They now use the site's default share card (`/img/og-default.jpg`).

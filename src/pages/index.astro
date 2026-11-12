@@ -5,6 +5,7 @@ import PropertyCard from '../components/PropertyCard.astro';
 import Stars from '../components/Stars.astro';
 import AwardsMarquee from '../components/AwardsMarquee.astro';
 import SearchQuiz from '../components/SearchQuiz.astro';
+import MarketTicker from '../components/MarketTicker.astro';
 import { reviews, awards, listings, areas, southSurreyLinks, langleyLinks, langleyHoods, quick, resources } from '../data/home';
 // As Seen In logos: [name, image height, file number]. Add more by dropping a webp in public/img and adding a row.
 const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',147,2],['Realtylink',122,3],['LoopNet',150,4],['Spacelist',99,5],['REALTOR.ca',225,6],['Royal LePage',206,7],['Kijiji',338,8]];
@@ -37,6 +38,9 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
       </div>
     </div>
   </section>
+
+  <!-- ░░ This month's market (D-236) ░░ -->
+  <MarketTicker />
 
   <!-- ░░ Where are you starting? (quiz) ░░ -->
   <SearchQuiz />

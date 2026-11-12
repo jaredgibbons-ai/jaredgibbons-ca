@@ -1,0 +1,39 @@
+---
+// Blog posts only (D-236): once a reader is ~70% down a post, a small card slides in from the corner offering a home value.
+// Not a pop-up: it covers no content, closes with ×, and stays closed for 30 days on that browser (try/catch: storage can be
+// blocked). Small banners like this are fine under Google's mobile interstitial guidance; full-screen overlays are not.
+---
+<aside class="nudge" aria-label="Home value" hidden>
+  <button class="nudge__x" type="button" aria-label="Close">×</button>
+  <p class="nudge__k">Thinking of selling?</p>
+  <p class="nudge__t">See what your home is worth in today's market. Free, no obligation.</p>
+  <a class="nudge__btn" href="/home-evaluation.html">Get my home value →</a>
+</aside>
+<script is:inline>
+  (function () {
+    var box = document.querySelector('.nudge'); if (!box) return;
+    var KEY = 'jg-nudge-closed', DAYS = 30, shown = false;
+    try { var t = +localStorage.getItem(KEY); if (t && Date.now() - t < DAYS * 864e5) return; } catch (e) {}
+    var check = function () {
+      if (shown) return;
+      var h = document.documentElement.scrollHeight - innerHeight;
+      if (h > 0 && scrollY / h > 0.7) { shown = true; box.hidden = false; requestAnimationFrame(function () { box.classList.add('is-in'); }); removeEventListener('scroll', onS); }
+    };
+    var tick = false, onS = function () { if (!tick) { tick = true; requestAnimationFrame(function () { tick = false; check(); }); } };
+    addEventListener('scroll', onS, { passive: true });
+    box.querySelector('.nudge__x').addEventListener('click', function () { box.hidden = true; try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {} });
+    box.querySelector('.nudge__btn').addEventListener('click', function () { try { if (typeof gtag === 'function') gtag('event', 'nudge_click', { where: 'blog' }); } catch (e) {} });
+  })();
+</script>
+<style>
+  .nudge{position:fixed;right:1rem;bottom:4.25rem;z-index:46;width:min(20rem,calc(100vw - 2rem));background:#fff;color:var(--ink);border:1px solid var(--ink);box-shadow:0 6px 24px rgba(0,0,0,.18);padding:1rem 1.1rem 1.1rem;transform:translateY(1rem);opacity:0;transition:transform .35s ease,opacity .35s ease}
+  .nudge.is-in{transform:none;opacity:1}
+  .nudge[hidden]{display:none}
+  .nudge__x{position:absolute;top:.25rem;right:.35rem;width:2.25rem;height:2.25rem;border:0;background:none;font:400 1.5rem/1 var(--f-head);cursor:pointer;color:var(--ink)}
+  .nudge__k{margin:0 2rem .35rem 0;font:800 .9375rem/1.2 var(--f-head);text-transform:uppercase;letter-spacing:.04em}
+  .nudge__t{margin:0 0 .8rem;font-size:.9375rem;line-height:1.4}
+  .nudge__btn{display:inline-flex;align-items:center;min-height:2.75rem;padding:.6rem 1rem;background:var(--ink);color:#fff;text-decoration:none;font:700 .8125rem/1.1 var(--f-head);letter-spacing:.08em;text-transform:uppercase}
+  @media (max-width:720px){.nudge{right:.5rem;left:.5rem;width:auto;bottom:3.75rem}}
+  @media (prefers-reduced-motion:reduce){.nudge{transition:none;transform:none}}
+  @media print{.nudge{display:none}}
+</style>

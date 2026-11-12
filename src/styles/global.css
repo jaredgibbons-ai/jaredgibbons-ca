@@ -268,3 +268,4 @@ main dd a:not([class]), main .pcard__addr a, main p > a:only-child:not([class]) 
 .to-top:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 @media (max-width:720px){.to-top{bottom:4.25rem}}
 @media print{.read-progress,.to-top{display:none}}
+@media (max-width:720px){.nudge:not([hidden]) ~ .to-top{display:none}}
