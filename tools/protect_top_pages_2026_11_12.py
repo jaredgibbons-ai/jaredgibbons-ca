@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""D-231: keep the titles Google already ranks on the pages that earn search clicks.
+"""SUPERSEDED by tools/gsc_titles_2026_11_12.py (D-232, Jared chose the new titles); do not re-run.
+D-231: keep the titles Google already ranks on the pages that earn search clicks.
 
 Search Console (jaredgibbons.ca, 3 months to Nov 11, 2026, page report) lists the pages with 5+ clicks. Their new
 titles (D-221 SEO pass) are swapped back to the archived title for launch, so the move changes only the platform,
