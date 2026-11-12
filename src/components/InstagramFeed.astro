@@ -1,0 +1,50 @@
+---
+// Home page: the six latest @jaredgibbonsrealestate posts (D-237), from /api/instagram.json (Worker, cached hourly).
+// The section is hidden until posts arrive, so nothing shows (and nothing breaks) before the feed is connected or if it fails.
+const profile = 'https://www.instagram.com/jaredgibbonsrealestate/';
+---
+<div class="ig-sentinel" aria-hidden="true"></div>
+<section class="section ig" aria-labelledby="h-ig" hidden>
+  <div class="wrap">
+    <h2 id="h-ig" class="h2 ig__h">Follow along <a href={profile} rel="noopener" target="_blank">@jaredgibbonsrealestate</a></h2>
+    <ul class="ig__grid"></ul>
+    <p class="ig__more"><a class="btn btn--ghost" href={profile} rel="noopener" target="_blank">Follow on Instagram →</a></p>
+  </div>
+</section>
+<script is:inline>
+  (function () {
+    var sec = document.querySelector('.ig'); if (!sec) return;
+    var go = function () {
+      fetch('/api/instagram.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+        if (!d || !d.posts || d.posts.length < 3) return;
+        var ul = sec.querySelector('.ig__grid');
+        d.posts.slice(0, 6).forEach(function (p) {
+          var li = document.createElement('li'), a = document.createElement('a'), img = document.createElement('img');
+          a.href = p.url; a.target = '_blank'; a.rel = 'noopener'; a.className = 'ig__tile';
+          img.src = p.img; img.alt = p.alt || 'Instagram post'; img.loading = 'lazy'; img.decoding = 'async'; img.width = 700; img.height = 700;
+          a.appendChild(img);
+          if (p.video) { var v = document.createElement('span'); v.className = 'ig__play'; v.setAttribute('aria-hidden', 'true'); v.textContent = '▶'; a.appendChild(v); }
+          var sr = document.createElement('span'); sr.className = 'sr-only'; sr.textContent = ' (opens Instagram in a new tab)'; a.appendChild(sr);
+          li.appendChild(a); ul.appendChild(li);
+        });
+        sec.hidden = false;
+      }).catch(function () {});
+    };
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (e) { if (e.some(function (x) { return x.isIntersecting; })) { io.disconnect(); go(); } }, { rootMargin: '600px 0px' });
+      io.observe(document.querySelector('.ig-sentinel'));
+    } else go();
+  })();
+</script>
+<style is:global>
+  .ig[hidden]{display:none}
+  .ig__h a{color:inherit;text-transform:none;letter-spacing:-.01em;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.15em}
+  .ig__grid{list-style:none;margin:var(--s5) 0 0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:.5rem}
+  .ig__tile{position:relative;display:block;aspect-ratio:1;overflow:hidden;background:#111;border:1px solid var(--ink)}
+  .ig__tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+  .ig__tile:hover img,.ig__tile:focus-visible img{transform:scale(1.04)}
+  .ig__play{position:absolute;right:.5rem;top:.4rem;color:#fff;font-size:1rem;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+  .ig__more{margin:var(--s5) 0 0}
+  @media (max-width:900px){.ig__grid{grid-template-columns:repeat(3,1fr)}}
+  @media (prefers-reduced-motion:reduce){.ig__tile img{transition:none}}
+</style>

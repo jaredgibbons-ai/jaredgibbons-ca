@@ -3,6 +3,7 @@ import listingIds from './listing-ids.json';
 import { buildIndex, route, NESTED } from './route.js';
 import { handleForm } from './forms.js';
 import { handlePhoto } from './photos.js';
+import { handleInstagram } from './instagram.js';
 
 const index = buildIndex(rules, listingIds);
 // Headers on every response, API and photo answers included. CSP here is frame protection only: a script allowlist needs the launch inventory of
@@ -19,8 +20,8 @@ const SECURITY = {
 const indexable = (env) => env.INDEXABLE === 'true';
 
 export default {
-  async fetch(request, env) {
-    const res = await handle(request, env);
+  async fetch(request, env, ctx) {
+    const res = await handle(request, env, ctx);
     const h = new Headers(res.headers);
     for (const [k, v] of Object.entries(SECURITY)) if (!h.has(k)) h.set(k, v);
     if (!indexable(env)) h.set('x-robots-tag', 'noindex, nofollow');
@@ -28,11 +29,12 @@ export default {
   },
 };
 
-async function handle(request, env) {
+async function handle(request, env, ctx) {
   {
     const pathname = new URL(request.url).pathname;
     if (pathname.startsWith('/api/forms/')) return handleForm(request, env);
     if (pathname.startsWith('/listing-photos/')) return handlePhoto(request, env, pathname);
+    if (pathname === '/api/instagram.json') return handleInstagram(request, env, ctx);
     // Daily Google reviews copy, served by the jg-reviews Worker over a service binding (nothing public to configure).
     if (pathname === '/api/reviews.json') {
       if (!env.REVIEWS || (request.method !== 'GET' && request.method !== 'HEAD')) return new Response('Not found', { status: 404, headers: { 'cache-control': 'no-store' } });

@@ -170,3 +170,11 @@ test('old MyRealPage listing pages and posts missing from the archive redirect (
   assert.equal(RR('/blog.html/sold-at-morgan-crossing-grandview-south-surrey-8988261').location, '/grandview-surrey.html');
   for (const to of Object.values(ids)) assert.ok(exists(`/internal/listings/${to}.html`), to);
 });
+
+test('instagram endpoint stays closed until a Behold feed URL is configured (D-237)', async () => {
+  const { handleInstagram } = await import('../src/worker/instagram.js');
+  const r1 = await handleInstagram(new Request('https://jaredgibbons.ca/api/instagram.json'), {});
+  assert.equal(r1.status, 404);
+  const r2 = await handleInstagram(new Request('https://jaredgibbons.ca/api/instagram.json'), { INSTAGRAM_FEED_URL: 'https://evil.example/x' });
+  assert.equal(r2.status, 404);
+});
