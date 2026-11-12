@@ -17,6 +17,7 @@ const numLead = (s: string) => /^[~\-−+$€£]?\s*\d/.test(s.trim()) || /^(ful
 const labelLike = (parts: Part[]) => {
   if (!parts || parts.length !== 1 || parts[0].h) return false;
   const s = parts[0].t.trim();
+  if (/^(Watch|Known|Best|Good|Ideal|Look|Ask|Popular|Great) (for|to|with|in)$/.test(s)) return true; // "Watch for", "Known for" (D-248)
   return s.length > 0 && s.length <= 34 && words(s) <= 5 && !/[.!?;]$/.test(s) && !/(^|\s)(the|a|an|of|and|to|in|for|with|or|our|my|your|this|that)$/i.test(s);
 };
 
@@ -376,5 +377,83 @@ export function upgradeBlocks(bl: Block[]): Block[] {
   out = listKv(out);
   out = h3Cards(out);
   out = titleRuns(out);
+  out = attachKickers(out);
+  return out;
+}
+
+// ---- Mending the archive's split text (D-248) ------------------------------------------------------------------------
+// The archive export broke some sentences where a link or bold phrase started ("The" / "White Rock Pier is 470 metres long"),
+// put each "· link" of a row in its own paragraph, and kept decoration (a lone "+", "-", arrow or emoji) as text. This pass
+// joins the pieces again before the page is laid out. It never changes a word.
+const TERMINAL = /[.!?:;…"”’)\]]$/;
+const SYMBOL_ONLY = /^(?:[-–—+×•·|/\\]|\p{Extended_Pictographic}|\uFE0F|\s)+$/u;
+const JOINER = /^(the|a|an|on|in|at|by|for|and|or|to|of|with|from)$/i;
+const ENDS_OPEN = /(\(|,|\b(and|or|the|of|in|to|a|an|our|using|with|for|at|by|from|see|visit|check the))$/i;
+export function mend(bl: Block[]): Block[] {
+  const plain = (b: Block) => b?.t === 'p' && !b.cls && !b.gen && Array.isArray(b.parts) && b.parts.length > 0;
+  const glue = (a: Part[], b: Part[], tight = false): Part[] => {
+    const out = a.map((x) => ({ ...x })); const add = b.map((x) => ({ ...x }));
+    const last = out[out.length - 1];
+    if (!last.h && !add[0].h) { last.t = last.t.replace(/\s+$/, '') + (tight ? '' : ' ') + add[0].t.replace(/^\s+/, ''); add.shift(); }
+    else if (tight && !add[0].h) add[0].t = add[0].t.replace(/^\s+/, '');
+    return out.concat(add);
+  };
+  const out: Block[] = [];
+  for (let i = 0; i < bl.length; i++) {
+    let b = bl[i];
+    if (plain(b)) {
+      const t = text(b.parts);
+      // decoration kept as text
+      if (SYMBOL_ONLY.test(t) && !hasLink(b.parts)) continue;
+      if (/^[-–]\s+\S/.test(b.parts[0].t) && !b.parts[0].h && out[out.length - 1]?.t === 'card') b = { ...b, parts: [{ ...b.parts[0], t: b.parts[0].t.replace(/^[-–]\s+/, '') }, ...b.parts.slice(1)] };
+      const prev = out[out.length - 1];
+      if (plain(prev)) {
+        const pt = text(prev.parts), first = b.parts[0];
+        const dot = !first.h && /^·\s*/.test(first.t.trim()) ;
+        if (dot) { out[out.length - 1] = { ...prev, parts: prev.parts.concat(b.parts.map((x: Part, k: number) => (k === 0 ? { ...x, t: '· ' + x.t.trim().replace(/^·\s*/, '') } : x)).filter((x: Part) => x.t.trim() !== '' )) }; continue; }
+        const closes = !first.h && /^[),.;]/.test(first.t.trim());
+        const opens = /\($/.test(pt);
+        const prevOpen = !TERMINAL.test(pt) && (JOINER.test(pt) || pt === 'Browse active' || /,$/.test(pt) || (ENDS_OPEN.test(pt) && words(pt) >= 4));
+        const paren = !first.h && /^\(/.test(first.t.trim()) && !/[.!?:;]$/.test(pt);
+        const joiner = !hasLink(b.parts) && JOINER.test(t) && !/[.!?:;]$/.test(pt);
+        if (closes || opens || prevOpen || paren || joiner) { out[out.length - 1] = { ...prev, parts: glue(prev.parts, b.parts, closes || opens) }; continue; }
+      }
+    }
+    // a link that was lifted out of a sentence as a small heading: "... urban centres (" / [East Central] / "and" / [West Central] / ") and ..."
+    if (b?.t === 'h' && b.level >= 3 && b.href) {
+      const prev = out[out.length - 1], next = bl[i + 1];
+      const pt = plain(prev) ? text(prev.parts) : '';
+      const nt = plain(next) ? text(next.parts) : '';
+      if (pt && !/[.!?:;]$/.test(pt) && (/\($/.test(pt) || JOINER.test(pt.split(' ').pop() || '')) && (/^[),.;]/.test(nt) || JOINER.test(nt) || /^[a-z]/.test(nt))) {
+        out[out.length - 1] = { ...prev, parts: prev.parts.concat([{ t: b.text, h: b.href }]) }; continue;
+      }
+    }
+    out.push(b);
+  }
+  // a row that is only links separated by dots reads better as a link list
+  return out.map((b) => {
+    if (!plain(b)) return b;
+    const links = b.parts.filter((x: Part) => x.h);
+    const rest = b.parts.filter((x: Part) => !x.h).map((x: Part) => x.t.replace(/[·.\s]/g, ''));
+    if (links.length >= 3 && rest.every((x: string) => x === '') && b.parts.some((x: Part) => !x.h && x.t.includes('·'))) return { t: 'list', items: links.map((x: Part) => [x]) };
+    return b;
+  });
+}
+
+// A short label left in front of a group of cards belongs to the first card as its kicker.
+export function attachKickers(bl: Block[]): Block[] {
+  const out: Block[] = [];
+  for (let i = 0; i < bl.length; i++) {
+    const b = bl[i], n = bl[i + 1];
+    if (b?.t === 'p' && !b.cls && labelLike(b.parts) && words(text(b.parts)) <= 3 && n?.t === 'kvgrid' && n.items?.[0] && !n.items[0].kicker && n.items[0].title) {
+      const later = n.items.slice(1).map((x: any) => x.kicker).filter(Boolean);
+      if (!later.length || later.includes(text(b.parts))) { n.items[0] = { ...n.items[0], kicker: text(b.parts) }; continue; }
+    }
+    // a short label directly above a small heading or a group of cards is set as a kicker, not as body text
+    if (b?.t === 'p' && !b.cls && labelLike(b.parts) && words(text(b.parts)) <= 3 && /^[A-Z0-9][A-Za-z0-9&'’ ]+$/.test(text(b.parts)) && ((n?.t === 'h' && n.level >= 3) || n?.t === 'kvgrid' || n?.t === 'kv' || n?.t === 'subs')) { out.push({ ...b, cls: 'pg__kicker' }); continue; }
+    // the same label left at the very end of a section was the next section's kicker; that section has its own heading
+    if (b?.t === 'p' && !b.cls && i === bl.length - 1 && bl.length >= 2 && labelLike(b.parts) && words(text(b.parts)) <= 3 && /^[A-Z][A-Za-z&'’ ]+$/.test(text(b.parts))) continue;
+    out.push(b);
+  }
   return out;
 }

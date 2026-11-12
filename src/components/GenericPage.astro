@@ -6,7 +6,7 @@
 import Base from '../layouts/Base.astro';
 import Rich from './Rich.astro';
 import { capsClass } from '../lib/caps';
-import { upgradeBlocks, dropOrphans, cleanArchive } from '../lib/upgrade';
+import { upgradeBlocks, dropOrphans, cleanArchive, mend } from '../lib/upgrade';
 import Cta from './Cta.astro';
 import ReviewCards from './ReviewCards.astro';
 import FormStub from './FormStub.astro';
@@ -396,6 +396,9 @@ if (!isGuide) {
   page.blocks = page.blocks.filter((b: any) => !(b.t === 'p' && (b.parts || []).map((x: any) => x.t).join('').trim() === 'ALR property search'));
 }
 
+const PAGE_SLUGS = new Set(Object.keys(import.meta.glob('../data/pages/*.json')).map((k) => k.replace(/^.*\/|\.json$/g, '')));
+page.blocks = mend(page.blocks);
+
 // Archive "Related · Area / Explore More / 01 title / Nearby View →" runs of plain paragraphs become one 'related' block (a card grid).
 {
   const txt = (b: any) => (b?.t === 'p' ? (b.parts || []).map((x: any) => x.t).join(' ').replace(/\s+/g, ' ').trim() : '');
@@ -404,10 +407,20 @@ if (!isGuide) {
     const b = bl[i];
     if (b.t === 'h' && b.text === 'Explore More') {
       const items: any[] = []; let j = i + 1;
-      while (j + 2 < bl.length && /^\d{1,2}$/.test(txt(bl[j])) && bl[j + 1]?.t === 'p' && bl[j + 2]?.t === 'p' && (bl[j + 2].parts || []).some((x: any) => x.h)) {
-        const link = bl[j + 2].parts.find((x: any) => x.h);
-        items.push({ n: txt(bl[j]), title: txt(bl[j + 1]), label: txt({ t: 'p', parts: bl[j + 2].parts.filter((x: any) => !x.h) }), href: link.h });
-        j += 3;
+      for (;;) {
+        if (j + 2 < bl.length && /^\d{1,2}$/.test(txt(bl[j])) && bl[j + 1]?.t === 'p' && bl[j + 2]?.t === 'p' && (bl[j + 2].parts || []).some((x: any) => x.h)) {
+          const link = bl[j + 2].parts.find((x: any) => x.h);
+          items.push({ n: txt(bl[j]), title: txt(bl[j + 1]), label: txt({ t: 'p', parts: bl[j + 2].parts.filter((x: any) => !x.h) }), href: link.h });
+          j += 3; continue;
+        }
+        // the number and the title in one paragraph ("02" + "Morgan Creek"), then the "Nearby View →" paragraph (D-248)
+        const pj = bl[j]?.t === 'p' ? bl[j].parts || [] : [];
+        if (j + 1 < bl.length && pj.length === 2 && /^\d{1,2}$/.test(String(pj[0].t).trim()) && bl[j + 1]?.t === 'p' && (bl[j + 1].parts || []).some((x: any) => x.h && /view/i.test(x.t))) {
+          const link = bl[j + 1].parts.find((x: any) => x.h && /view/i.test(x.t));
+          items.push({ n: String(pj[0].t).trim(), title: String(pj[1].t).trim(), label: txt({ t: 'p', parts: bl[j + 1].parts.filter((x: any) => !x.h) }), href: link.h });
+          j += 2; continue;
+        }
+        break;
       }
       if (items.length >= 2) {
         const prev = out[out.length - 1];
@@ -416,6 +429,74 @@ if (!isGuide) {
         i = j - 1; continue;
       }
     }
+    out.push(b);
+  }
+  page.blocks = out;
+}
+
+// Archive "index" rows (D-248): a count line, then for each entry a number or star, a name, a line of tags with a link, and an arrow,
+// spread over lists and paragraphs ("12 Sub-Areas · Updated Daily" / "01" / "Aldergrove" / "Rural · Acreages · Family Homes" + "Search Homes" / "→").
+// They become one 'related' card grid. Numbered steps ("01" / title / text, or "01" / small heading / text) become one 'steps' block.
+{
+  const MARK = /^(\d{1,2}|★)$/; const tx = (pp: any[]) => (pp || []).map((x: any) => x.t).join(' ').replace(/\s+/g, ' ').trim();
+  const ptxt = (b: any) => (b?.t === 'p' ? tx(b.parts) : '');
+  const out: any[] = []; const bl = page.blocks;
+  for (let i = 0; i < bl.length; i++) {
+    const b = bl[i];
+    // index rows
+    if (b.t === 'list' && b.items.length >= 2 && b.items.length <= 3 && MARK.test(tx(b.items[b.items.length - 2])) && bl[i + 1]?.t === 'p' && (bl[i + 1].parts || []).some((x: any) => x.h)) {
+      const intro = b.items.length === 3 ? tx(b.items[0]) : '';
+      const items: any[] = []; let j = i; let cur: any[][] = b.items.slice(-2); let tail = '';
+      for (;;) {
+        const pp = bl[j + 1]?.t === 'p' ? bl[j + 1].parts || [] : null; const link = pp?.find((x: any) => x.h);
+        if (!pp || !link || cur.length !== 2 || !MARK.test(tx(cur[0]))) break;
+        const item: any = { n: tx(cur[0]), title: tx(cur[1]), label: tx(pp.filter((x: any) => !x.h)), href: link.h, cta: String(link.t).replace(/\s*→\s*$/, '').trim(), extras: [] as any[] };
+        items.push(item); j += 2;
+        // a paragraph that is only links (a guide link added after the entry) belongs to the entry
+        while (bl[j]?.t === 'p' && (bl[j].parts || []).length && bl[j].parts.every((x: any) => x.h)) { item.extras.push(...bl[j].parts); j++; }
+        const nx = bl[j];
+        if (nx?.t === 'p' && ptxt(nx) === '→') { j++; break; }
+        if (nx?.t !== 'list') break;
+        const its: any[][] = nx.items; let k = 0;
+        while (k < its.length && its[k].length === 1 && its[k][0].h) { item.extras.push(its[k][0]); k++; }
+        if (tx(its[k] || []) !== '→') { j = -1; break; }
+        const rest = its.slice(k + 1);
+        if (rest.length === 2 && MARK.test(tx(rest[0]))) { cur = rest; continue; }
+        if (rest.length <= 1) { tail = rest.length ? tx(rest[0]) : ''; j++; break; }
+        j = -1; break;
+      }
+      if (j > 0 && items.length >= 2) {
+        if (intro) out.push({ t: 'p', cls: 'eyebrow', parts: [{ t: intro }] });
+        out.push({ t: 'related', eyebrow: '', title: '', items });
+        if (tail) out.push({ t: 'p', parts: [{ t: tail }] });
+        i = j - 1; continue;
+      }
+    }
+    // "name" + a "View Listings" label that lost its link: link each name to its own page when the page exists
+    if (b.t === 'h' && b.level === 3 && !b.href && ptxt(bl[i + 1]) === 'View Listings' && !(bl[i + 1].parts || []).some((x: any) => x.h)) {
+      const ALIAS: Record<string, string> = { 'crescent-beach-ocean-park': 'crescent-bch-ocean-pk' };
+      const items: any[] = []; let j = i;
+      while (bl[j]?.t === 'h' && bl[j].level === 3 && !bl[j].href && ptxt(bl[j + 1]) === 'View Listings') {
+        const sl = String(bl[j].text).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); const slug = ALIAS[sl] || sl;
+        if (!PAGE_SLUGS.has(slug)) break;
+        items.push({ n: '', title: bl[j].text, label: '', href: `/${slug}.html`, cta: 'View listings', extras: [] }); j += 2;
+      }
+      if (items.length >= 2 && !(bl[j]?.t === 'h' && bl[j].level === 3 && ptxt(bl[j + 1]) === 'View Listings')) { out.push({ t: 'related', eyebrow: '', title: '', items }); i = j - 1; continue; }
+    }
+    // numbered steps
+    if (b.t === 'p' && /^0?1$/.test(ptxt(b))) {
+      const items: any[] = []; let j = i;
+      while (bl[j]?.t === 'p' && Number(ptxt(bl[j])) === items.length + 1 && /^\d{1,2}$/.test(ptxt(bl[j])) && (bl[j + 1]?.t === 'p' || (bl[j + 1]?.t === 'h' && bl[j + 1].level >= 3)) && bl[j + 2]?.t === 'p' && !/^\d{1,2}$/.test(ptxt(bl[j + 2]))) {
+        const title = bl[j + 1].t === 'h' ? String(bl[j + 1].text) : ptxt(bl[j + 1]);
+        if (!title || title.length > 90 || (bl[j + 1].parts || []).some((x: any) => x.h)) break;
+        items.push({ n: String(items.length + 1).padStart(2, '0'), title, parts: bl[j + 2].parts }); j += 3;
+      }
+      // the last step sometimes has its title and text in one paragraph
+      { const n = bl[j], q = bl[j + 1]; if (items.length >= 2 && n?.t === 'p' && Number(ptxt(n)) === items.length + 1 && q?.t === 'p' && (q.parts || []).length === 2 && !q.parts.some((x: any) => x.h) && String(q.parts[0].t).length <= 60) { items.push({ n: String(items.length + 1).padStart(2, '0'), title: String(q.parts[0].t).trim(), parts: [q.parts[1]] }); j += 2; } }
+      if (items.length >= 2) { out.push({ t: 'steps', items }); i = j - 1; continue; }
+    }
+    // a bare section number in front of a main heading ("04" above an H2) is decoration from the old design
+    if (b.t === 'p' && /^\d{1,2}$/.test(ptxt(b)) && bl[i + 1]?.t === 'h' && bl[i + 1].level === 2) continue;
     out.push(b);
   }
   page.blocks = out;
@@ -650,17 +731,36 @@ const explore = !_extra.length ? exploreBase
               if (b.t === 'related') return (
                 <div class="related">
                   {b.eyebrow && <p class="eyebrow">{b.eyebrow}</p>}
-                  <h2 class="related__h">{b.title}</h2>
+                  {b.title && <h2 class="related__h">{b.title}</h2>}
                   <ul class="related__grid">
-                    {b.items.filter((it: any) => !isHeldHref(it.href)).map((it: any) => (
-                      <li><a class="related__card" href={it.href.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/'}>
+                    {b.items.filter((it: any) => !isHeldHref(it.href)).map((it: any) => { const own = (h: string) => h.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/'; return it.cta ? (
+                      it.extras?.length ? (
+                        <li><div class="related__card related__card--multi">
+                          <span class="related__n" aria-hidden="true">{it.n}</span>
+                          <span class="related__t">{it.title}{it.label && <span class="related__l">{it.label}</span>}</span>
+                          <span class="related__links"><a href={own(it.href)}>{it.cta}<span class="sr-only"> : {it.title}</span></a>{it.extras.filter((x: any) => !isHeldHref(x.h)).map((x: any) => <a href={own(x.h)}>{x.t}<span class="sr-only"> : {it.title}</span></a>)}</span>
+                        </div></li>
+                      ) : (
+                        <li><a class="related__card" href={own(it.href)}>
+                          {it.n && <span class="related__n" aria-hidden="true">{it.n}</span>}
+                          <span class="related__t">{it.title}{it.label && <span class="related__l">{it.label}</span>}</span>
+                          <span class="related__a">{it.cta} →</span>
+                        </a></li>
+                      )
+                    ) : (
+                      <li><a class="related__card" href={own(it.href)}>
                         <span class="related__n" aria-hidden="true">{it.n}</span>
                         <span class="related__t">{it.title}</span>
                         <span class="related__a">{it.label && !String(it.title || '').toLowerCase().trimEnd().endsWith(String(it.label).toLowerCase().trim()) ? `${it.label} ` : ''}view →</span>
                       </a></li>
-                    ))}
+                    ); })}
                   </ul>
                 </div>
+              );
+              if (b.t === 'steps') return (
+                <ol class="steps">
+                  {b.items.map((it: any) => <li><span class="steps__n" aria-hidden="true">{it.n}</span><h3 class="steps__t">{it.title}</h3><p><Rich parts={it.parts} /></p></li>)}
+                </ol>
               );
               if (b.t === 'jsold') return (
                 <>
@@ -1066,4 +1166,16 @@ const explore = !_extra.length ? exploreBase
   .related__card:hover .related__n,.related__card:focus-visible .related__n{color:#ccc}
   .related__t{font:700 1.0625rem/1.3 var(--f-head)}
   .related__a{font:600 .8125rem var(--f-head);letter-spacing:.03em;text-transform:uppercase}
+  .pg :global(p.pg__kicker),:global(p.pg__kicker){font:700 .75rem/1.3 var(--f-head);letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin:var(--s4) 0 .35rem}
+  .related__l{display:block;margin-top:.35rem;font:400 .9375rem/1.45 var(--f-body);color:var(--grey)}
+  .related__card:hover .related__l,.related__card:focus-visible .related__l{color:#ddd}
+  .related__card--multi:hover{background:#fff;color:inherit}
+  .related__links{display:flex;flex-wrap:wrap;gap:.35rem 1.25rem}
+  .related__links a{font:600 .8125rem var(--f-head);letter-spacing:.03em;text-transform:uppercase;min-height:1.75rem;display:inline-flex;align-items:center}
+  .related__links a::after{content:'→';margin-left:.35rem;font-weight:400}
+  .steps{list-style:none;margin:var(--s4) 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,18rem),1fr));gap:var(--s4)}
+  .steps li{border:1px solid var(--ink);background:#fff;padding:1rem 1.15rem}
+  .steps__n{display:block;font:700 .75rem var(--f-head);letter-spacing:.08em;color:var(--grey)}
+  .steps__t{font:700 1.0625rem/1.3 var(--f-head);margin:.4rem 0 .5rem;text-transform:none;letter-spacing:0}
+  .steps li p{margin:0;font-size:.9375rem}
 </style>
