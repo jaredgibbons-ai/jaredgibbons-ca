@@ -1356,3 +1356,11 @@ Jared chose the new titles over the archived ones ("put the new titles in"). Bef
 - White Rock: "White Rock Homes for Sale | Ocean View, Condos & Uptown" (ocean view homes white rock bc); Queensborough: "Queensborough Real Estate | …"
 - The cut-off poultry-quota post title is fixed ("… Chicken, Egg & Turkey").
 Search clicks from Search Console are people, not AI crawlers (those never appear there), so the queries are a fair guide. Check the same report 4–6 weeks after launch; adjust titles a few at a time.
+
+## D-233 — 2026-11-12 — Carried over from the old site's MyRealPage settings
+Jared's screen recording of MyRealPage Site Settings → Advanced, checked against the build:
+- **Search Console ownership tag** (`google-site-verification`, read from the live page) and the **Pinterest** domain tag were only in MRP's custom head. Without the Google one, the https://jaredgibbons.ca/ Search Console property would stop verifying after the switch. Both are now in `Base.astro` on every page.
+- **Entity markup**: the home page's RealEstateAgent now carries the old site's `sameAs` profiles (Facebook, Instagram, YouTube, TikTok, Pinterest, LinkedIn, Rate-My-Agent, Yelp), image, logo, geo and Google Maps link, plus a Person node (LinkedIn).
+- **MRP redirects** (32 read from the recording): all already handled by the Worker rules with the same targets, except three earlier decisions that stay: `langley-condos-under-700k` → condos page (MRP: under-499k), `property-search` → `/recip.html` (MRP: map-search), `marketing-plan.html` stays a page (MRP now sends it to selling.html; both pages are built and distinct, OI-28).
+- **southsurreyhomesearch.ca** (MRP external domain, 301 to /south-surrey-homes-for-sale.html) keeps working as long as MyRealPage hosts that domain; move it to Cloudflare later if MRP is ever closed.
+- GA4 `G-7YQYX2KPBR` and Google Ads `AW-10817976788` are already in the build. MRP's custom CSS/JS (menu fixes, poultry heading script) is for MRP's own template and has no place here.

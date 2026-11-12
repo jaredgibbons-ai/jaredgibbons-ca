@@ -14,14 +14,24 @@ const preview = import.meta.env.PUBLIC_PREVIEW !== 'false';
 const shareImage = ogImage || 'https://jaredgibbons.ca/img/og-default.jpg';
 const isHome = Astro.url.pathname === '/' || Astro.url.pathname === '/index.html';
 const site = 'https://jaredgibbons.ca';
-// Home-only entity markup (facts as published in the footer and profile; no ratings, no social profiles that are not confirmed)
+// Home-only entity markup (facts as published in the footer and profile; no ratings). sameAs, image, logo, geo and hasMap carry over
+// from the old site's own markup (MyRealPage custom head, D-233), so Google keeps tying these profiles to the site.
 const entity = isHome ? [
   { '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${site}/#website`, url: `${site}/`, name: 'Jared Gibbons', inLanguage: 'en-CA', publisher: { '@id': `${site}/#agent` } },
   { '@context': 'https://schema.org', '@type': 'RealEstateAgent', '@id': `${site}/#agent`, name: 'Jared Gibbons', url: `${site}/`, telephone: '+1-604-928-1361', email: 'jaredgibbons@royallepage.ca',
     description: 'Jared Gibbons is a REALTOR® with Royal LePage Little Oak Realty serving South Surrey, White Rock, Langley and the Fraser Valley.',
     parentOrganization: { '@type': 'Organization', name: 'Royal LePage Little Oak Realty' },
     address: { '@type': 'PostalAddress', streetAddress: '#201, 15272 Croydon Drive', addressLocality: 'Surrey', addressRegion: 'BC', postalCode: 'V3Z 0Z5', addressCountry: 'CA' },
-    areaServed: ['South Surrey', 'White Rock', 'Langley', 'Surrey', 'Abbotsford', 'Chilliwack', 'Fraser Valley'].map((n) => ({ '@type': 'Place', name: n })) },
+    areaServed: ['South Surrey', 'White Rock', 'Langley', 'Surrey', 'Abbotsford', 'Chilliwack', 'Fraser Valley'].map((n) => ({ '@type': 'Place', name: n })),
+    image: `${site}/img/Jared.webp`, logo: `${site}/img/site-logo.webp`,
+    geo: { '@type': 'GeoCoordinates', latitude: 49.0598, longitude: -122.79918 },
+    hasMap: 'https://maps.app.goo.gl/zvYBAj6rf2cKyjsZ9',
+    employee: { '@id': `${site}/#jared` },
+    sameAs: ['https://www.facebook.com/jaredgibbonsrealestate/', 'https://www.instagram.com/jaredgibbonsrealestate/', 'https://www.youtube.com/@JaredGibbonsRealtor',
+      'https://www.tiktok.com/@jaredgibbonsrealtor', 'https://www.pinterest.com/jaredgibbonsrealtor/', 'https://ca.linkedin.com/in/jared-gibbons-96814591',
+      'https://www.rate-my-agent.com/jared-gibbons-ratings-surrey-15968', 'https://www.yelp.ca/biz/jared-gibbons-surrey'] },
+  { '@context': 'https://schema.org', '@type': 'Person', '@id': `${site}/#jared`, name: 'Jared Gibbons', jobTitle: 'REALTOR®', url: `${site}/about.html`,
+    image: `${site}/img/Jared.webp`, worksFor: { '@type': 'Organization', name: 'Royal LePage Little Oak Realty' }, sameAs: ['https://ca.linkedin.com/in/jared-gibbons-96814591'] },
 ] : [];
 const ogUrl = canonical;
 const robotsContent = preview ? 'noindex, nofollow' : robots;
@@ -31,6 +41,9 @@ const robotsContent = preview ? 'noindex, nofollow' : robots;
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Ownership checks carried over from the old site (D-233): Google Search Console and Pinterest. Public values, not secrets. -->
+  <meta name="google-site-verification" content="CgqE26qFOHc49FhbnJO-qA0qac4IaeOquD3xgEIxnP8" />
+  <meta name="p:domain_verify" content="91c3edc90807457f5f64250c3b56c1c0" />
   <title>{title}</title>
   {canonical && <link rel="canonical" href={canonical} />}
   <link rel="icon" type="image/png" href="/favicon.png" />
