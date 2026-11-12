@@ -34,7 +34,8 @@ test('every "broken at source" row and every conflict is a 404', () => {
 });
 test('home and built pages resolve to assets', () => {
   assert.deepEqual(R('/'), { type: 'asset', path: '/index.html' });
-  for (const p of ['/fort-langley.html', '/cedar-hills.html', '/reviews.html', '/index.html']) assert.deepEqual(R(p), { type: 'asset', path: p });
+  for (const p of ['/fort-langley.html', '/cedar-hills.html', '/reviews.html']) assert.deepEqual(R(p), { type: 'asset', path: p });
+  assert.deepEqual(R('/index.html'), { type: 'redirect', location: '/', status: 301 }); // D-245
 });
 test('explicit and generic legacy forms', () => {
   assert.equal(R('/contact').location, '/contact.html');

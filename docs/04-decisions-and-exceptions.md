@@ -1440,3 +1440,12 @@ Asked by Jared after launch: go through every page for errors.
 - Checked: stylesheet answers 200 from outside (47 of 49 locations; 2 still on the old address). Previewed on a live results page by injecting the same rules. Not yet seen on a phone or inside the page on the real domain from this computer (its DNS still shows the old site).
 - MyRealPage settings read, nothing else changed: filters on for predefined searches, sold listings on, VOW sign-up prompts off, price-drop ribbons off, Mailchimp and Zapier not connected there.
 - Open: MyRealPage's own emails (listing alerts, "send listing") link to `/recip.html/listing…` addresses, which the new site sends to the search page (D-231), not to the listing. To confirm with a real alert email, then decide.
+
+## D-245 — 2026-11-12 — Fixes from Jared's full-site review
+- Phone action bar: stays off-screen until the page is scrolled 72px, and hides while a form field is in use, so it no longer sits on first-screen buttons or the field being typed in (`Base.astro`, `global.css`).
+- `/recip.html`: repeated opening paragraph merged into one; "needs.Use" run-on gone.
+- 60 dead City of New Westminster links (the city rebuilt its site; old article and PDF addresses answer 404) repointed to the matching live section page: 211 links in 35 data files. Each old address was tested in a browser on newwestcity.ca; each new target answers 200. Old addresses that still redirect were left alone. The other 8 dead outside links in the review were not listed by address, so not yet fixed.
+- `/index.html` now 301s to `/`. Three blog slugs lost their leading hyphen; old addresses redirect (`route.js` MOVED).
+- Serpentine guide: "and the The board" fixed.
+- Not changed: empty `alt` on images. All 35,774 are the decorative second copy of the awards strip (`aria-hidden`), which is the correct markup; the first copy carries the alt text. No image is missing an alt attribute.
+- Not changed: "1 (604) 9281361" on the listing frames is set in MyRealPage (Photo & Contact), an account setting; waiting on Jared's yes.

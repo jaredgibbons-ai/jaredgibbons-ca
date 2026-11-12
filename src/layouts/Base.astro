@@ -112,6 +112,20 @@ const robotsContent = preview ? 'noindex, nofollow' : robots;
       t.href = 'sms:+16049281361' + (/iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent) ? '&' : '?') + 'body=' + encodeURIComponent(body);
       document.querySelectorAll('.action-bar [data-ev]').forEach(function (a) { a.addEventListener('click', function () { try { if (typeof gtag === 'function') gtag('event', a.dataset.ev, { page: location.pathname }); } catch (e) {} }); });
     })();
+    // D-245: the bar is fixed over the whole page, so on short pages (and on first load, before
+    // scrolling) it was covering buttons and fields that happened to land in its bottom strip.
+    // Keep it off-screen until the visitor has scrolled a little, so nothing on the first screen
+    // is ever hidden under it, and it never shows at all on a page too short to scroll.
+    (function () {
+      var bar = document.querySelector('.action-bar'); if (!bar) return;
+      var shown = false;
+      var onScroll = function () {
+        var past = window.scrollY > 72;
+        if (past !== shown) { shown = past; bar.classList.toggle('is-shown', shown); }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
   </script>
   {Astro.url.pathname.startsWith('/internal/blog/') && <SellerNudge />}
   <div class="read-progress" aria-hidden="true"><span></span></div>

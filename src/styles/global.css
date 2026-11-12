@@ -203,7 +203,13 @@ a:hover{text-decoration-thickness:3px}
 @media (max-width:860px){.footer__grid{grid-template-columns:1fr;gap:var(--s6)}}
 
 /* ───────────────────────── Sticky mobile action bar ───────────────────────── */
-.action-bar{position:fixed;inset:auto 0 0 0;z-index:40;display:none;background:var(--ink);border-top:1px solid #fff}
+/* Hidden (translated off-screen) until the page has been scrolled a little (D-245): see the
+   is-shown toggle in Base.astro. That keeps it off the first screen and off short pages, so it
+   never sits on top of a button or field that hasn't been reached by scrolling yet. */
+.action-bar{position:fixed;inset:auto 0 0 0;z-index:40;display:none;background:var(--ink);border-top:1px solid #fff;transform:translateY(100%);transition:transform .2s ease}
+.action-bar.is-shown{transform:translateY(0)}
+/* never over a field being typed in */
+body:has(input:not([type=radio],[type=checkbox],[type=range],[type=button],[type=submit]):focus,textarea:focus) .action-bar{transform:translateY(100%)}
 .action-bar a{flex:1;display:flex;align-items:center;justify-content:center;min-height:3.25rem;padding:.5rem;color:#fff;font:700 .75rem/1.2 var(--f-head);letter-spacing:.1em;text-transform:uppercase;text-align:center;text-decoration:none}
 .action-bar a+a{border-left:1px solid #444}
 @media (max-width:720px){.action-bar{display:flex}body{padding-bottom:3.25rem}}

@@ -31,6 +31,11 @@ export const MOVED = {
   '/blog.html/sold-at-morgan-crossing-grandview-south-surrey-8988261': '/grandview-surrey.html',
   '/blog.html/just-sold-1265-235-st-langley-acreage-jared-gibbons-8713021': '/langley-acreages-for-sale.html',
   '/blog.html/condo-living-at-5020-221a-street-langley-8957146': '/langley-condos-for-sale.html',
+  // These three posts' slugs started with a stray hyphen until D-245; redirect in case anything
+  // already links to the old address.
+  '/blog.html/-safeway-sale-at-ocean-park-what-it-means-for-south-surrey-9116750': '/blog.html/safeway-sale-at-ocean-park-what-it-means-for-south-surrey-9116750',
+  '/blog.html/-langley-acreages-over-4-acres-best-prices-in-years-8774922': '/blog.html/langley-acreages-over-4-acres-best-prices-in-years-8774922',
+  '/blog.html/-salmon-sessions-music-festival-returns-to-south-surrey-8962711': '/blog.html/salmon-sessions-music-festival-returns-to-south-surrey-8962711',
 };
 export const MRP_LISTING = /^\/([^/]+\.html)\/(?:[^/]+\/)*listing\.[^/]*?(?:\.(\d{6,}))?(?:\.html)?\/?$/;
 export function oldListing(path, index, assetExists) {
@@ -51,6 +56,9 @@ export function route(url, index, assetExists) {
   let path = u.pathname;
   // /404.html is the error page's own file; asking for it directly must not answer 200 (soft 404)
   if (path === '/404.html') return { type: 'notfound', reason: 'error page is not a page' };
+  // /index.html is the homepage's build output filename, not a second page (D-245): send it to
+  // the canonical "/" so it is never indexed or linked to as a duplicate of the homepage.
+  if (path === '/index.html') return { type: 'redirect', location: '/' + u.search, status: 301 };
   // internal build output is reachable only through its public URL
   if (path === '/internal' || path.startsWith('/internal/')) return { type: 'notfound', reason: 'internal path' };
   // 2) exact archive rules (path, then path+query)
