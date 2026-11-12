@@ -19,7 +19,7 @@ const plain = (x: any) => (Array.isArray(x) ? x.map((p: any) => p.t).join(' ').r
 const faqItems: any[] = d.sections.flatMap((s: any) => (s.blocks ?? []).filter((b: any) => b.type === 'faq').flatMap((b: any) => b.items));
 const jsonld: any[] = [];
 if (faqItems.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqItems.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: plain(f.a) } })) });
-const crumbs = [{ name: 'Home', href: '/index.html' }, { name: page.slug === 'buying' ? 'Buy a Home' : 'Sell Your Home', href: `/${page.slug}.html` }];
+const crumbs = [{ name: 'Home', href: '/' }, { name: page.slug === 'buying' ? 'Buy a Home' : 'Sell Your Home', href: `/${page.slug}.html` }];
 const explore = (EXPLORE as Record<string, any>)[page.slug];
 const own = ownCards().filter((c) => c.status !== 'Active').sort((a, b) => b.soldTs - a.soldTs);
 const mon = (c: any) => { const m = /^(\w{3}) \d+, (\d{4})$/.exec(c.soldDate || ''); return m ? `Sold ${m[1]} ${m[2]}` : 'Sold'; };
@@ -40,7 +40,7 @@ const hero = d.hero;
   robots={seo['Meta robots'] || 'index, follow'}
   footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
   footerCell={true}
-  brandHref="/index.html"
+  brandHref="/"
 >
 <main id="main" class="dp">
   <header class="dp-hero">

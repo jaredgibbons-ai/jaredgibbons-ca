@@ -216,7 +216,12 @@ export async function handleForm(request, env, deps = {}) {
   if (typeof input._hp_url === 'string' && input._hp_url.trim() !== '') return json(200, { ok: true });
 
   const token = input['cf-turnstile-response'];
-  if (typeof token !== 'string' || !token) return json(403, { ok: false, error: 'captcha_required' });
+  if (typeof token !== 'string' || !token) {
+    // No check yet: name the missing or wrong fields first (D-246), so an empty form is not answered with only "complete the check". Nothing is stored or sent here.
+    const early = validate(kind, input).errors;
+    if (Object.keys(early).length) return json(422, { ok: false, errors: early });
+    return json(403, { ok: false, error: 'captcha_required' });
+  }
   const ver = await doFetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
     method: 'POST',
     headers: { 'content-type': 'application/x-www-form-urlencoded' },

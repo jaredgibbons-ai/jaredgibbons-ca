@@ -50,7 +50,7 @@ const _slugAddr = parseListingSlug(page.slug);
 const cityName = _slugAddr ? _slugAddr.city : (titleParts.length > 2 ? titleParts[titleParts.length - 2] : '');
 const addr = _slugAddr ? _slugAddr.street : titleCaseAddress(titleParts[0] || '');
 const seoTitle = titleParts.length > 1 ? String(page.title || '').replace(/^[^,]+/, titleCaseAddress(titleParts[0])) : String(page.title || '');
-const crumbs = _h1 ? [{ name: 'Home', href: '/index.html' }, { name: 'My Listings', href: '/our-listings.html' }, { name: _slugAddr ? `${addr}, ${cityName}` : String(_h1), href: '/our-listings.html' }] : [];
+const crumbs = _h1 ? [{ name: 'Home', href: '/' }, { name: 'My Listings', href: '/our-listings.html' }, { name: _slugAddr ? `${addr}, ${cityName}` : String(_h1), href: '/our-listings.html' }] : [];
 const statusWord = page.status === 'Sold' ? 'Sold' : page.status === 'Leased' ? 'Leased' : 'For sale';
 function builtMeta(): string {
   const dw = factMap['Dwelling Type'] || '';
@@ -105,7 +105,7 @@ const metaDesc = rawMeta.length >= 70 ? rawMeta : builtMeta();
   robots={page.status === 'Expired' ? 'noindex, follow' : (seo['Meta robots'] || 'index, follow')}
   footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
   footerCell={true}
-  brandHref="/index.html"
+  brandHref="/"
   crumbs={crumbs}
 >
 <main id="main">

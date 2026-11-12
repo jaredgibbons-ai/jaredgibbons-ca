@@ -1449,3 +1449,11 @@ Asked by Jared after launch: go through every page for errors.
 - Serpentine guide: "and the The board" fixed.
 - Not changed: empty `alt` on images. All 35,774 are the decorative second copy of the awards strip (`aria-hidden`), which is the correct markup; the first copy carries the alt text. No image is missing an alt attribute.
 - Not changed: "1 (604) 9281361" on the listing frames is set in MyRealPage (Photo & Contact), an account setting; waiting on Jared's yes.
+
+## D-246 — 2026-11-12 — Rest of the QA audit (`jaredgibbons-ca-QA-audit-2026-11-12.md`)
+- Logo and "Home" crumbs now link to `/`, not `/index.html` (GenericPage, ListingPage, DesignedPage, reviews, fort-langley, 404).
+- The 8 dead outside links the audit named, repointed (16 links, 14 files): Delta Memorial Park, FVRD tenders, Hope tax rates (https), Port Coquitlam parks directory, Surrey municipal tax sale page, Township of Langley parks page (each target seen live); the dead BC school-catchment tool now goes to the Surrey school locator already used across the site; a cut-off FVRD document address goes to fvrd.ca.
+- Forms: an empty or incomplete form now gets the field messages even before the spam check (`forms.js` validates first when no token is present; nothing is stored). When the check had not finished at the press, the page waits for it and sends once on its own, so one press is enough (`FormStub.astro`).
+- Reviews page: "More reviews are shown below" only appears when the Google list actually loads. Open: the six comments carry no source line; the source has to come from Jared. Open: whether Google reviewer names show in full when the feed is connected (BL-03).
+- Audit item "committed config would noindex the site": not current. `wrangler.jsonc` has `INDEXABLE` "true" since launch (D-241); the audit read an older checkout.
+- Alt text, checked properly this time: of 35,774 empty alts, 35,574 are the hidden second copy of the awards strip and 200 are the listing photo viewer's empty frame, which gets its alt when a photo opens. No content or listing photo is missing alt text.

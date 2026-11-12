@@ -22,9 +22,9 @@ const explore = [
   ogImage="https://jaredgibbons.ca/_media/quick-uploads/zxxkqvoxwgmo.jpg"
   footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
   footerCell={true}
-  brandHref="/index.html"
+  brandHref="/"
   current="/reviews.html"
-  crumbs={[{ name: 'Home', href: '/index.html' }, { name: 'Reviews', href: '/reviews.html' }]}
+  crumbs={[{ name: 'Home', href: '/' }, { name: 'Reviews', href: '/reviews.html' }]}
 >
 <main id="main">
   <section class="section rv-hero" aria-labelledby="h1">
@@ -48,7 +48,7 @@ const explore = [
           </li>
         ))}
       </ul>
-      <p class="rv-note">A selection of client comments. More reviews are shown below.</p>
+      <p class="rv-note">A selection of client comments.<span id="rv-more" hidden> More reviews are shown below.</span></p>
       {import.meta.env.PUBLIC_PREVIEW !== 'false' && <p class="preview-flag">Open items OI-15/OI-16: the archive text has no star ratings for these six reviews, and says "More reviews are shown below" but no further reviews were captured (they were likely loaded by the Trustindex script). Plan: Google Business Profile API feed (BL-03); until then only the six archived reviews are shown.</p>}
     </div>
   </section>
@@ -92,6 +92,7 @@ const explore = [
     if (!d || !d.reviews || !d.reviews.length) return;
     var el = function (t, c, x) { var n = document.createElement(t); if (c) n.className = c; if (x != null) n.textContent = x; return n; };
     var list = document.getElementById('google-list');
+    var more = document.getElementById('rv-more'); if (more) more.hidden = false; // only promised once there are more to show (D-246)
     d.reviews.slice(0, 24).forEach(function (r) {
       var li = el('li', 'rv'), q = el('blockquote', 'rv__body');
       q.appendChild(el('p', 'rv__title', '\u2605'.repeat(r.rating) + ' ' + r.rating + ' out of 5'));

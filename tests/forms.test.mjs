@@ -31,6 +31,8 @@ test('not configured: no destination or no captcha secret answers 503, never a f
 test('captcha is mandatory and verified server-side', async () => {
   const { 'cf-turnstile-response': _t, ...nocap } = good;
   assert.equal((await handleForm(mk(nocap), env(), { fetch: captcha() })).status, 403);
+  // D-246: with no check yet, an empty form is told which fields are missing, and nothing is stored
+  { const e = env(); const r = await handleForm(mk({ name: '', email: '', message: '' }), e, { fetch: captcha() }); assert.equal(r.status, 422); const j = await r.json(); assert.ok(j.errors.name && j.errors.email); }
   assert.equal((await handleForm(mk(good), env(), { fetch: captcha(false) })).status, 403);
 });
 test('honeypot looks accepted but stores nothing', async () => {

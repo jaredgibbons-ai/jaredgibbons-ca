@@ -50,7 +50,7 @@ const isLive = live && !!kind;
     const kind = f.dataset.kind!, siteKey = f.dataset.sitekey || '';
     const msg = f.querySelector<HTMLElement>('[data-msg]')!, fb = f.querySelector<HTMLElement>('[data-fb]')!, mailto = f.querySelector<HTMLAnchorElement>('[data-mailto]')!;
     const btn = f.querySelector<HTMLButtonElement>('button[type=submit]')!, ts = f.querySelector<HTMLElement>('[data-ts]');
-    let tsId: string | null = null, tok = '';
+    let tsId: string | null = null, tok = '', resend = false;
     const w = window as any;
     const loadTs = () => {
       if (!siteKey || !ts || tsId !== null) return; tsId = '';
@@ -61,8 +61,8 @@ const isLive = live && !!kind;
     f.addEventListener('focusin', loadTs, { once: true });
     const fields = () => [...f.querySelectorAll<HTMLInputElement>('input[name],textarea[name],select[name]')].filter((e) => e.name !== '_hp_url');
     const setErr = (name: string, t: string) => { const el = f.querySelector<HTMLElement>(`[name="${name}"]`); const e = el?.parentElement?.querySelector<HTMLElement>('.fstub__err'); if (e) e.textContent = t; };
-    f.addEventListener('submit', async (ev) => {
-      ev.preventDefault(); msg.textContent = ''; fb.hidden = true; f.querySelectorAll('.fstub__err').forEach((e) => (e.textContent = ''));
+    const send = async (ev: Event | null, again = false) => {
+      ev?.preventDefault(); msg.textContent = ''; fb.hidden = true; f.querySelectorAll('.fstub__err').forEach((e) => (e.textContent = ''));
       const data: Record<string, string> = {};
       fields().forEach((e) => { if (e.value.trim()) data[e.name] = e.value.trim(); });
       data._hp_url = (f.querySelector<HTMLInputElement>('[name=_hp_url]')?.value || ''); data.page = location.pathname; data['cf-turnstile-response'] = tok;
@@ -75,11 +75,20 @@ const isLive = live && !!kind;
         if (r.ok && j.ok) { window.jgLead?.(kind); msg.textContent = 'Sent. Thank you. Jared will reply by email or phone.'; fields().forEach((e) => (e.value = '')); return; }
         if (r.status === 422 && j.errors) { Object.entries<string>(j.errors).forEach(([k, t]) => setErr(k, t)); msg.textContent = 'Please check the highlighted fields.'; (f.querySelector('.fstub__err:not(:empty)')?.parentElement?.querySelector('input,textarea,select') as HTMLElement | null)?.focus(); }
         else if (r.status === 429) msg.textContent = 'Too many tries. Please wait a minute and send again.';
-        else if (r.status === 403 && j.error === 'captcha_required') msg.textContent = 'Please complete the check, then press the button again.';
+        else if (r.status === 403 && j.error === 'captcha_required') {
+          // The check had not finished when the button was pressed: wait for it and send once more, so one press is enough (D-246).
+          if (!again && siteKey && ts) {
+            msg.textContent = 'One moment: checking this is a real person…'; loadTs();
+            for (let i = 0; i < 60 && !tok; i++) await new Promise((res) => setTimeout(res, 250));
+            if (tok) { resend = true; return; }
+          }
+          msg.textContent = 'Please complete the check above the button, then press it again.';
+        }
         else { msg.textContent = 'Your message was not sent.'; fb.hidden = false; }
       } catch { msg.textContent = 'Your message was not sent.'; fb.hidden = false; }
-      finally { btn.disabled = false; btn.textContent = label; if (w.turnstile && tsId) { w.turnstile.reset(tsId); tok = ''; } }
-    });
+      finally { btn.disabled = false; btn.textContent = label; if (resend) { resend = false; send(null, true); } else if (w.turnstile && tsId && data['cf-turnstile-response']) { w.turnstile.reset(tsId); tok = ''; } }
+    };
+    f.addEventListener('submit', (ev) => send(ev));
   });
   // Address fields get suggestions once the form is live (the inputs are disabled in the preview, so nothing happens there).
   import { attachAddressAutocomplete } from '../lib/address-autocomplete.js';

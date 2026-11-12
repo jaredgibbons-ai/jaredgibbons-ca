@@ -114,7 +114,7 @@ const jsonld: any[] = [];
 // Breadcrumbs: the local layer's own trail, else the generated one (tools/build_breadcrumbs.py), else Home > Blog > post for blog posts.
 const postName = String(page.title || '').split('|')[0].trim();
 const crumbs: any[] = page.slug === 'index' || page.slug === '404' ? [] : local?.breadcrumbs?.length ? local.breadcrumbs
-  : String(page.path || '').startsWith('/blog.html/') ? [{ name: 'Home', href: '/index.html' }, { name: 'Blog', href: '/blog.html' }, { name: postName, href: page.path }]
+  : String(page.path || '').startsWith('/blog.html/') ? [{ name: 'Home', href: '/' }, { name: 'Blog', href: '/blog.html' }, { name: postName, href: page.path }]
   : (BREADCRUMBS as Record<string, any[]>)[page.slug] ?? [];
 if (page.slug.endsWith('-guide')) {
   const lm = (LASTMOD as Record<string, any>)[`${origin}${page.path || '/' + page.slug + '.html'}`];
@@ -516,7 +516,7 @@ const explore = !_extra.length ? exploreBase
   robots={isGated(page.slug) ? 'noindex, follow' : (seo['Meta robots'] || 'index, follow')}
   footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
   footerCell={true}
-  brandHref="/index.html"
+  brandHref="/"
 >
 <main id="main">
   {isPreview && holdReason(page.slug) && <p class="notice wrap">Held at launch: {holdReason(page.slug)}. This page is built and linked in the preview, but the launch build keeps it out of the index, the sitemap and the footer until this is fixed.</p>}
