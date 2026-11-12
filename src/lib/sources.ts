@@ -23,10 +23,11 @@ const PUB: Record<string, string> = {
   'paxlaw.ca': 'Pax Law', 'equitylawgroup.ca': 'Equity Law Group', 'homehappy.ca': 'HomeHappy', 'homecalc.ca': 'HomeCalc', 'danmarusin.com': 'Dan Marusin', 'mikestewart.ca': 'Mike Stewart', 'mybaragar.com': 'Baragar Systems',
   'bccondosandhomes.com': 'BC Condos & Homes', 'vancouvernewcondos.com': 'Vancouver New Condos', 'polyhomes.com': 'Polygon Homes', 'onni.com': 'Onni', 'saveonfoods.com': 'Save-On-Foods', 'safeway.ca': 'Safeway', 'walmart.ca': 'Walmart',
   'shoppersdrugmart.ca': 'Shoppers Drug Mart', 'thriftyfoods.com': 'Thrifty Foods', 'realcanadiansuperstore.ca': 'Real Canadian Superstore', 'heritageburnaby.ca': 'Heritage Burnaby', 'search.heritageburnaby.ca': 'Heritage Burnaby',
-  'tsawwassensprings.ca': 'Tsawwassen Springs',
+  'tsawwassensprings.ca': 'Tsawwassen Springs', 'seniorsadvocatebc.ca': 'Office of the Seniors Advocate BC', 'bchousing.org': 'BC Housing',
+  'bchydro.com': 'BC Hydro', 'bclaws.ca': 'BC Laws', 'whiterockcity.ca': 'City of White Rock', 'harrisonhotsprings.ca': 'Village of Harrison Hot Springs',
 };
 const ACR = new Set(['ocp', 'bc', 'pdf', 'alr', 'gst', 'hst', 'ptt', 'nvrc', 'fvrd', 'fvreb', 'cmhc', 'tod', 'toa', 'sd', 'ssmuh', 'rs', 'rt', 'rm', 'cd', 'ra', 'rf', 'lu', 'ocp,', 'faq', 'faqs', 'bcfsa', 'fcl', 'rcmp', 'bcaa', 'ubc', 'sfu', 'ii', 'iii', 'iv', 'ib', 'pyp', 'ssp', 'ltcap', 'tfn', 'icbc', 'id', 'xv', 'wr']);
-const GENERIC = /^(document|page|store|details|redirect|information|info|view|show|index|default|home|main|content|detail|display|item|file|filestream|download|ashx|aspx)$/i;
+const GENERIC = /^(document|page|store|details|redirect|information|info|view|show|index|default|home|main|content|detail|display|item|file|filestream|download|filedownload|ashx|aspx)$/i;
 const host = (u: string) => { try { return new URL(u).hostname.replace(/^www\./i, '').toLowerCase(); } catch { return ''; } };
 export const publisher = (url: string): string => { const h = host(url); return PUB[h] || PUB[h.replace(/^[^.]+\./, '')] || h; };
 const smart = (s: string) => s.split(' ').map((w, i) => { const lw = w.toLowerCase(); if (ACR.has(lw)) return lw.toUpperCase(); if (/^\d/.test(w) || /[A-Z]/.test(w.slice(1))) return w; if (i > 0 && /^(of|the|and|for|to|in|on|a|an|at|by|vs)$/.test(lw)) return lw; return lw.charAt(0).toUpperCase() + lw.slice(1); }).join(' ');

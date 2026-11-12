@@ -2,12 +2,19 @@
 // Inline run of archive text fragments and links, re-joined into one sentence.
 // Wording is exactly as archived; only spacing around punctuation is normalised.
 import { isHeldHref } from '../lib/launch';
+import { sourceInfo } from '../lib/sources';
 const { parts = [] } = Astro.props;
 const local = (h: string) => h.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/';
 // archive text often has a stray space before punctuation inside one fragment ("price reduction .", "informative , helpful"); remove it
 const clean = (t: string) => String(t).replace(/\s+([,.;:!?])(?=\s|$)/g, '$1');
+// Source links whose text is still "host · page slug" (D-221 replaced raw URLs that way) read as "Publisher: Title" (D-230).
+const label = (p: any) => {
+  if (!p.h || !/^[\w.-]+\.[a-z]{2,}(?::\d+)? · /i.test(p.t)) return clean(p.t);
+  const n = /\s*\((\d{1,2})\)\s*$/.exec(p.t); const s = sourceInfo(p.t, p.h);
+  return `${s.pub}: ${s.title}${s.kind === 'PDF' ? ' (PDF)' : ''}${n ? ` (${n[1]})` : ''}`;
+};
 const gap = (prev: string, cur: string) => (/^[,.;:!?)\]”’]/.test(cur) || /[(\[“‘]$/.test(prev)) ? '' : ' ';
 ---
 {parts.map((p: any, i: number) => (
-  <Fragment>{i > 0 ? gap(parts[i - 1].t, p.t) : ''}{p.h && !isHeldHref(p.h) ? <a href={local(p.h)}>{clean(p.t)}</a> : p.lead ? <strong>{clean(p.t)}</strong> : clean(p.t)}</Fragment>
+  <Fragment>{i > 0 ? gap(parts[i - 1].t, p.t) : ''}{p.h && !isHeldHref(p.h) ? <a href={local(p.h)}>{label(p)}</a> : p.lead ? <strong>{clean(p.t)}</strong> : clean(p.t)}</Fragment>
 ))}

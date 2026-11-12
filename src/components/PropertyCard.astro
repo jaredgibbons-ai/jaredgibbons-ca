@@ -37,8 +37,8 @@ const photoBase = import.meta.env.PUBLIC_PHOTO_BASE ?? '/listing-photos/';
     <p class="pcard__city">{[area, city, postal].filter(Boolean).join(' · ')}</p>
     {(beds != null || baths != null || floorArea || area_sqft) && (
       <p class="pcard__meta">
-        {beds != null && <span><Icon name="bed" /><span>{beds}<span class="sr-only"> bedrooms</span></span></span>}
-        {baths != null && <span><Icon name="bath" /><span>{baths}<span class="sr-only"> bathrooms</span></span></span>}
+        {beds != null && <span><Icon name="bed" /><span>{beds}<span class="sr-only">{String(beds) === '1' ? ' bedroom' : ' bedrooms'}</span></span></span>}
+        {baths != null && <span><Icon name="bath" /><span>{baths}<span class="sr-only">{String(baths) === '1' ? ' bathroom' : ' bathrooms'}</span></span></span>}
         {(floorArea || area_sqft) && <span><Icon name="area" /><span><span class="sr-only">Floor Area: </span>{floorArea ?? area_sqft}{areaM2 && <span class="m2"> · {areaM2}</span>}</span></span>}
       </p>
     )}

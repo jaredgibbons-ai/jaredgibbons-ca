@@ -76,6 +76,12 @@ for (const b of blocks.filter((x) => !(x.t === 'h' && x.level === 1) && x.t !== 
     bodyBlocks.push({ ...b, items });
   } else bodyBlocks.push(b);
 }
+// A heading seen already, or a heading with nothing after it (the archive's second "Area Statistics"), is dropped (D-230).
+{
+  const seenH = new Set<string>();
+  for (let i = bodyBlocks.length - 1; i >= 0; i--) if (bodyBlocks[i].t === 'h' && (i === bodyBlocks.length - 1 || bodyBlocks[i + 1]?.t === 'h')) bodyBlocks.splice(i, 1);
+  for (let i = 0; i < bodyBlocks.length; i++) if (bodyBlocks[i].t === 'h') { const k = String(bodyBlocks[i].text).trim().toLowerCase(); if (seenH.has(k)) { bodyBlocks.splice(i, 1); i--; } else seenH.add(k); }
+}
 // The same address was listed more than once (sold, then relisted): the MLS® number keeps the two H1s apart.
 const _addrKey = (s: string) => { const a = parseListingSlug(s); return a ? `${a.street}|${a.city}`.toLowerCase() : ''; };
 const _myKey = _addrKey(page.slug);

@@ -34,7 +34,7 @@ T = {
     "{N}, in the {b} month-end figures for October 2026. Listings change every day; Jared can tell you what is available now."]),
  'ratio': (r"^In October 2026, (?P<t>[a-z ]+?) in (?P<x>.+?) had a sales ratio of (?P<r>\d+)%, which the reports’ scale reads as (?P<art>an?) (?P<m>[a-z’ ]+?) market\. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers\.$", [
     "In October 2026, {t} in {x} had a sales ratio of {r}%, which the reports’ scale reads as {art} {m} market. On the reports’ scale under 12% favours buyers, 12% to 20% is balanced and over 20% favours sellers.",
-    "{X1} {t} sold at a {r}% sales ratio in October 2026, {art} {m} market on the reports’ scale (under 12% favours buyers, over 20% favours sellers).",
+    "{X1} {t} sold at a sales ratio of {r}% in October 2026, {art} {m} market on the reports’ scale (under 12% favours buyers, over 20% favours sellers).",
     "With a sales ratio of {r}% in October 2026, {t} in {x} sat in {art} {m} market. The reports read under 12% as a buyers’ market and over 20% as a sellers’ market."]),
  'srch': (r"^It lists active homes whose listing text names (?P<s>.+?), so a nearby home that leaves the name out will not show\.$", [
     "It lists active homes whose listing text names {s}, so a nearby home that leaves the name out will not show.",
