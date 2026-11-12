@@ -49,20 +49,58 @@ const titleParts = String(page.title || '').replace(/ – MLS .*$/, '').split(',
 const _slugAddr = parseListingSlug(page.slug);
 const cityName = _slugAddr ? _slugAddr.city : (titleParts.length > 2 ? titleParts[titleParts.length - 2] : '');
 const addr = _slugAddr ? _slugAddr.street : titleCaseAddress(titleParts[0] || '');
-const seoTitle = titleParts.length > 1 ? String(page.title || '').replace(/^[^,]+/, titleCaseAddress(titleParts[0])) : String(page.title || '');
-const crumbs = _h1 ? [{ name: 'Home', href: '/' }, { name: 'My Listings', href: '/our-listings.html' }, { name: _slugAddr ? `${addr}, ${cityName}` : String(_h1), href: page.path }] : []; // the last crumb is this listing's own address (D-247)
+const archiveTitle = titleParts.length > 1 ? String(page.title || '').replace(/^[^,]+/, titleCaseAddress(titleParts[0])) : String(page.title || '');
 const statusWord = page.status === 'Sold' ? 'Sold' : page.status === 'Leased' ? 'Leased' : 'For sale';
+// Search title and snippet (D-249). Title: address, city, what it is and its status, then the name, inside 60 characters.
+// "17392 2 Avenue, Surrey BC – Sold House | Jared Gibbons". A title written by hand in the archive (one that does not start with the address) is kept.
+const TYPE_WORD: Record<string, string> = { 'Single Family Residence': 'House', 'Apartment/Condo': 'Condo', 'Townhouse': 'Townhouse', 'Half Duplex': 'Half Duplex', 'Manufactured On Land': 'Manufactured Home', 'Manufactured Home': 'Manufactured Home', 'Land': 'Land', 'Commercial': 'Commercial Property', 'Industrial': 'Industrial Property', 'Industrial, Retail': 'Commercial Property', 'Residential Income': 'Income Property' };
+const typeWord = TYPE_WORD[factMap['Dwelling Type'] || ''] || TYPE_WORD[factMap['Property Type'] || factMap['Prop. Type'] || factMap['Prop Type'] || ''] || 'Home';
+// the MLS® sub-area sits between the street and the city in the archive H1 ("17392 2 AVENUE Pacific Douglas Surrey")
+const subArea = (() => {
+  if (!_slugAddr || !_h1) return '';
+  const norm = (x: string) => x.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  let h = norm(String(_h1)).replace(/\s[a-z]\d[a-z]\s?\d[a-z]\d$/, '');
+  const st = norm(_slugAddr.street), ci = norm(_slugAddr.city);
+  if (!h.startsWith(st)) return '';
+  h = h.slice(st.length).trim();
+  if (ci && h.endsWith(ci)) h = h.slice(0, -ci.length).trim();
+  // "grandview surrey" in Surrey is "Grandview"; board short forms are spelled out; a name that still carries a two-letter board code ("downtown vw") is left out
+  if (ci && h.endsWith(' ' + ci) && !/^(fort|central|north|south|east|west|port|new|mount|city of)$/.test(h.slice(0, -ci.length).trim())) h = h.slice(0, -ci.length).trim();
+  if (/\b(univer|pt)\b/.test(h) || h === 'south surrey' || h === 'white rock') return '';
+  h = h.replace(/\bbch\b/g, 'beach').replace(/\bpk\b/g, 'park').replace(/\bhts\b/g, 'heights').replace(/\bmtn\b/g, 'mountain');
+  if (!h || h.length > 30 || /\d/.test(h) || h === ci || /(^|\s)[a-z]{2}$/.test(h)) return '';
+  return h.replace(/\b[a-z]/g, (c) => c.toUpperCase());
+})();
+const _dupTitle = (() => { const k = (x: string) => { const q = parseListingSlug(x); return q ? `${q.street}|${q.city}`.toLowerCase() : ''; }; const me = k(page.slug); return !!me && Object.keys(import.meta.glob('../data/listings/*.json')).filter((f) => k(f.split('/').pop()!.replace(/\.json$/, '')) === me).length > 1; })();
+const seoTitle = (() => {
+  if (!cityName || !addr || !/^(for sale:|sold\s*-|lease\s*–)?\s*(\d|[a-z]?\d|(unit|lot|ph|th)\b)/i.test(String(page.title || ''))) return archiveTitle;
+  const what = page.status === 'Sold' ? `Sold ${typeWord}` : page.status === 'Leased' ? `Leased ${typeWord}` : `${typeWord} for Sale`;
+  const base = `${addr}, ${cityName} BC`;
+  // the same address listed more than once: the MLS® number keeps the titles apart
+  const again = _dupTitle && factMap['MLS® Num'] ? ` (MLS® ${factMap['MLS® Num']})` : '';
+  for (const t of [`${base} – ${what}${again} | Jared Gibbons`, `${base} – ${what}${again}`, `${base}${again} | Jared Gibbons`, `${base}${again}`]) if (t.length <= 60) return t;
+  return `${base}${again}`;
+})();
+const crumbs = _h1 ? [{ name: 'Home', href: '/' }, { name: 'My Listings', href: '/our-listings.html' }, { name: _slugAddr ? `${addr}, ${cityName}` : String(_h1), href: page.path }] : []; // the last crumb is this listing's own address (D-247)
 function builtMeta(): string {
-  const dw = factMap['Dwelling Type'] || '';
-  const bits = [dw, factMap['Bedrooms'] && `${factMap['Bedrooms']} bed`, factMap['Bathrooms'] && `${factMap['Bathrooms']} bath`, factMap['Floor Area'] && `${factMap['Floor Area']} sq ft`, factMap['Year Built'] && `built ${factMap['Year Built']}`].filter(Boolean) as string[];
-  const when = factMap['Sold Date'] ? `${statusWord} ${factMap['Sold Date'].replace(/^(\w+) \d+, (\d{4})$/, '$1 $2')}${price ? ` for ${price}` : ''}.` : (price ? `${price}.` : '');
-  const tail = 'Jared Gibbons, REALTOR®, Royal LePage Little Oak Realty.';
-  const head = `${statusWord}: ${addr}${cityName ? `, ${cityName}` : ''}${cityName ? ' BC' : ''}.`;
-  for (let n = bits.length; n >= 0; n--) {
-    const m = [head, bits.slice(0, n).join(', ') + (n ? '.' : ''), when, tail].filter((x) => x && x !== '.').join(' ');
-    if (m.length <= 158) return m;
+  const where = `${addr}${subArea ? `, ${subArea}` : ''}${cityName ? `, ${cityName} BC` : ''}`;
+  const whereShort = `${addr}${cityName ? `, ${cityName} BC` : ''}`;
+  const bb = [factMap['Bedrooms'] && `${factMap['Bedrooms']}-bed`, factMap['Bathrooms'] && `${factMap['Bathrooms']}-bath`].filter(Boolean).join(', ');
+  const area = factMap['Floor Area'] || factMap['Living Area'] || '';
+  const facts = [`${bb ? bb + ' ' : ''}${typeWord.toLowerCase()}`, area && `${String(area).replace(/\s*sq\.?\s*ft\.?$/i, '')} sq ft`, factMap['Year Built'] && `built ${factMap['Year Built']}`].filter(Boolean) as string[];
+  const mls = factMap['MLS® Num'] ? `MLS® ${factMap['MLS® Num']}.` : '';
+  const sold = factMap['Sold Date'] ? factMap['Sold Date'].replace(/^(\w+) \d+, (\d{4})$/, '$1 $2') : '';
+  const cap = (x: string) => x.charAt(0).toUpperCase() + x.slice(1);
+  const tries: string[] = [];
+  const tails = page.status === 'Active'
+    ? ['Book a showing with Jared Gibbons, REALTOR®: 604-928-1361.', 'Call Jared Gibbons: 604-928-1361.', 'Jared Gibbons, REALTOR®.']
+    : ['Jared Gibbons, REALTOR®, Royal LePage Little Oak Realty.', 'Jared Gibbons, REALTOR®.'];
+  for (const w of [where, whereShort]) for (const tail of tails) for (let n = facts.length; n >= 1; n--) for (const m of [mls, '']) {
+    const f = cap(facts.slice(0, n).join(', ')) + '.';
+    const head = page.status === 'Active' ? `For sale${price ? ` at ${price}` : ''}: ${w}.` : `${statusWord}${sold ? ` ${sold}` : ''}${price ? ` for ${price}` : ''}: ${w}.`;
+    tries.push([head, f, m, tail].filter(Boolean).join(' '));
   }
-  return `${head} ${tail}`;
+  return tries.find((m) => m.length <= 158) || tries[tries.length - 1];
 }
 // The archive repeats Status / Property type / MLS / Year built / Sold date in two or three fact lists. Show each fact once (first value wins),
 // and drop a list's heading when nothing is left under it.
@@ -93,7 +131,8 @@ const _cityCards = ownCards().filter((c) => c.status !== 'Expired' && c.city && 
 const _me = _cityCards.findIndex((c) => c.slug === page.slug);
 const moreHere = _me < 0 ? [] : [1, 2, 3, 4].map((k) => _cityCards[(_me + k) % _cityCards.length]).filter((c) => c.slug !== page.slug).filter((c, i, a) => a.findIndex((x) => x.slug === c.slug) === i);
 const rawMeta = String(seo['Meta description'] || '').replace(/^\[SOLD\]:\s*/i, '').trim();
-const metaDesc = rawMeta.length >= 70 ? rawMeta : builtMeta();
+// Every listing gets the factual snippet: the address, what it is, its status and price. The archive's MLS marketing text stays in the page body.
+const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMeta : builtMeta());
 ---
 <Base
   title={seoTitle}

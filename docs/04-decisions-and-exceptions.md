@@ -1473,3 +1473,9 @@ Asked by Jared after launch: go through every page for errors.
 - Communities page: the nine "View Listings" lines with no link are now linked cards.
 - Measured on the built site (fragments in body text, before → after): single connective words 135 → 24, lines starting with punctuation 342 → 36, lines ending mid-sentence 607 → 177, link labels with no link 42 → 4. Word-level comparison of every page before and after: nothing lost except the decoration and stranded labels above.
 - Still open (long tail, not yet fixed): about 130 pages with a smaller glitch of this kind, mostly guide cards where one label sits outside its card, the stat row on the landlord-tenant page, and blog posts with "-" lead-ins.
+
+## D-249 — 2026-11-12 — Search titles and snippets for all 203 listing pages (Jared: "the seo and meta for all our sold listings")
+- Title: address, city, what it is and its status, then the name, within 60 characters: "17392 2 Avenue, Surrey BC – Sold House | Jared Gibbons". Was "17392 2 Avenue, Surrey, BC – MLS R2490508". The name is dropped first when the address is long. An address listed twice carries its MLS® number so no two titles match. Six hand-written archive titles ("Acreage Home Sold in Otter District – Langley Realtor") are kept; stale ones ("For Sale:" on a sold home) are rebuilt.
+- Description: one factual line for every listing, within 158 characters: status, month and price, address with its MLS® sub-area, beds, baths, type, size, year, and Jared's name. Active listings end with the phone number. 64 listings used to show a cut-off piece of MLS marketing text with no address; that text stays in the page body.
+- No claim that Jared was the listing agent: some of these were listed by other brokerages (the credit line says so).
+- H1 unchanged (address, city). Checked on the build: 203 titles, none over 60, none repeated; 203 descriptions, none over 158, none repeated.
