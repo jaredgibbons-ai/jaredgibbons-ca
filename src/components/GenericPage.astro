@@ -741,7 +741,7 @@ const explore = !_extra.length ? exploreBase
                 </ul>
               );
               if (b.t === 'chips') return (
-                <nav class="chips" aria-label={b.label}>
+                <nav class="chips" aria-label={[b.label || 'Related pages', sec.blocks.slice(0, bi).reverse().find((x: any) => x.t === 'h')?.text].filter(Boolean).join(': ')}>
                   {b.label && <span class="chips__l">{b.label}</span>}
                   <ul>{b.items.map((c: any) => <li><a class:list={['chip', { 'is-now': c.now }]} href={c.h.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/'} aria-current={c.now ? 'true' : undefined}>{c.t}</a></li>)}</ul>
                 </nav>
@@ -752,7 +752,7 @@ const explore = !_extra.length ? exploreBase
                   if (bi < 1 || yi < 1 || b.rows.length > 6 || b.head.length < 4) return null;
                   return <ul class="statcards statcards--sm">{b.rows.map((r: any[]) => { const dv = String(r[yi]); return <li class="statcard"><span class="statcard__l">{typeof r[0] === 'object' ? r[0].t : r[0]}</span><strong class="statcard__v">{typeof r[bi] === 'object' ? r[bi].t : r[bi]}</strong><span class="statcard__s"><span class={'statcard__d ' + (/^\s*[-\u2212]/.test(dv) ? 'is-down' : 'is-up')} aria-hidden="true">{/^\s*[-\u2212]/.test(dv) ? '▼' : '▲'}</span>{/^\s*[-\u2212]/.test(dv) ? 'Down ' : /^\s*\+/.test(dv) ? 'Up ' : ''}{dv.replace(/^\s*[-+\u2212]/, '')} over 1 year</span></li>; })}</ul>;
                 })()}
-                <div class:list={['tblwrap', { 'tblwrap--narrow': b.head.length <= 3 && b.rows.length <= 12 }]} tabindex="0" role="region" aria-label={b.caption}>
+                <div class:list={['tblwrap', { 'tblwrap--narrow': b.head.length <= 3 && b.rows.length <= 12 }]} tabindex="0" role="region" aria-label={b.caption || sec.blocks.slice(0, bi).reverse().find((x: any) => x.t === 'h')?.text || 'Table'}>
                   <table class="tbl">{b.caption && <caption>{b.caption}</caption>}
                     <thead><tr>{b.head.map((h: string) => <th scope="col">{h}</th>)}</tr></thead>
                     <tbody>{b.rows.map((r: any[]) => <tr>{r.map((c, ci) => { const v = c && typeof c === 'object' ? (isHeldHref(c.h) ? c.t : <a href={c.h}>{c.t}</a>) : c; return ci === 0 ? <th scope="row">{v}</th> : <td>{v}</td>; })}</tr>)}</tbody>
