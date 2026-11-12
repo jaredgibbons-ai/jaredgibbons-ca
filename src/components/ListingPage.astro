@@ -1,4 +1,7 @@
 ---
+import PHOTO_ALTS from '../data/photo-alts.json';
+import POSTAL from '../data/listing-postal.json';
+import { listingFeatures } from '../lib/listing-features';
 import EXPLORE from '../data/explore.json';
 import { isPreview } from '../lib/preview';
 import ExploreLinks from './ExploreLinks.astro';
@@ -83,24 +86,32 @@ const seoTitle = (() => {
 })();
 const crumbs = _h1 ? [{ name: 'Home', href: '/' }, { name: 'My Listings', href: '/our-listings.html' }, { name: _slugAddr ? `${addr}, ${cityName}` : String(_h1), href: page.path }] : []; // the last crumb is this listing's own address (D-247)
 function builtMeta(): string {
-  const where = `${addr}${subArea ? `, ${subArea}` : ''}${cityName ? `, ${cityName} BC` : ''}`;
-  const whereShort = `${addr}${cityName ? `, ${cityName} BC` : ''}`;
-  const bb = [factMap['Bedrooms'] && `${factMap['Bedrooms']}-bed`, factMap['Bathrooms'] && `${factMap['Bathrooms']}-bath`].filter(Boolean).join(', ');
-  const area = factMap['Floor Area'] || factMap['Living Area'] || '';
-  const facts = [`${bb ? bb + ' ' : ''}${typeWord.toLowerCase()}`, area && `${String(area).replace(/\s*sq\.?\s*ft\.?$/i, '')} sq ft`, factMap['Year Built'] && `built ${factMap['Year Built']}`].filter(Boolean) as string[];
-  const mls = factMap['MLS® Num'] ? `MLS® ${factMap['MLS® Num']}.` : '';
+  // D-251 (Jared: "address, MLS and the postal ... and sold", "within the characters"): status and the full address with postal code and MLS® number lead,
+  // then what the home is and what stands out in its photos, then the sale; parts drop from the end of the list until it fits 155 characters.
+  const postal = (POSTAL as Record<string, string>)[page.slug] || '';
+  const mlsNo = factMap['MLS® Num'] || factMap['MLS® Number'] || '';
+  const lead = page.status === 'Active' ? 'For sale' : page.status === 'Leased' ? 'Leased' : 'Sold';
+  const place = `${addr}${cityName ? `, ${cityName} BC` : ''}${postal ? ` ${postal}` : ''}`;
+  const beds = factMap['Bedrooms'] ? `${factMap['Bedrooms']}-bed ` : '';
+  const strata = /condo|townhouse/i.test(typeWord);
+  const feats = listingFeatures(photoList.map((ph) => (PHOTO_ALTS as Record<string, string>)[ph.id] || ''), strata);
   const sold = factMap['Sold Date'] ? factMap['Sold Date'].replace(/^(\w+) \d+, (\d{4})$/, '$1 $2') : '';
-  const cap = (x: string) => x.charAt(0).toUpperCase() + x.slice(1);
-  const tries: string[] = [];
-  const tails = page.status === 'Active'
-    ? ['Book a showing with Jared Gibbons, REALTOR®: 604-928-1361.', 'Call Jared Gibbons: 604-928-1361.', 'Jared Gibbons, REALTOR®.']
-    : ['Jared Gibbons, REALTOR®, Royal LePage Little Oak Realty.', 'Jared Gibbons, REALTOR®.'];
-  for (const w of [where, whereShort]) for (const tail of tails) for (let n = facts.length; n >= 1; n--) for (const m of [mls, '']) {
-    const f = cap(facts.slice(0, n).join(', ')) + '.';
-    const head = page.status === 'Active' ? `For sale${price ? ` at ${price}` : ''}: ${w}.` : `${statusWord}${sold ? ` ${sold}` : ''}${price ? ` for ${price}` : ''}: ${w}.`;
-    tries.push([head, f, m, tail].filter(Boolean).join(' '));
-  }
-  return tries.find((m) => m.length <= 158) || tries[tries.length - 1];
+  const deal = page.status === 'Active' ? `${price ? `${price}. ` : ''}Call Jared 604-928-1361.` : `${lead}${sold ? ` ${sold}` : ''}${price ? ` for ${price}` : ''}.`;
+  const join = (xs: string[]) => (xs.length <= 1 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
+  const area = String(factMap['Floor Area'] || factMap['Living Area'] || '').replace(/\s*sq\.?\s*ft\.?$/i, '');
+  const yr = factMap['Year Built'] || '';
+  const make = (o: { sub: boolean; nf: number; beds: boolean; mlsWord: boolean; deal: boolean; sz?: boolean; yr?: boolean }) => {
+    const extra = [o.sz && area ? `${area} sq ft` : '', o.yr && yr ? `built ${yr}` : ''].filter(Boolean).join(', ');
+    const what = `${o.beds ? beds : ''}${typeWord.toLowerCase()}${o.sub && subArea ? ` in ${subArea}` : ''}${o.nf ? ` with ${join(feats.slice(0, o.nf))}` : ''}${extra ? `, ${extra}` : ''}`;
+    const head = `${lead}: ${place}${mlsNo ? `, ${o.mlsWord ? 'MLS® ' : ''}${mlsNo}` : ''}.`;
+    return [head, what.charAt(0).toUpperCase() + what.slice(1) + '.', o.deal ? deal : ''].filter(Boolean).join(' ');
+  };
+  const tries = [] as string[];
+  for (const nf of [Math.min(3, feats.length), Math.min(2, feats.length), Math.min(1, feats.length)])
+    for (const sub of [true, false]) for (const b of [true, false]) for (const [sz, y] of [[true, true], [false, true], [true, false], [false, false]]) tries.push(make({ sub, nf, beds: b, mlsWord: true, deal: true, sz, yr: y }));
+  for (const sub of [true, false]) for (const [sz, y] of [[true, true], [false, true], [true, false]]) tries.push(make({ sub, nf: 0, beds: true, mlsWord: true, deal: true, sz, yr: y }));
+  tries.push(make({ sub: true, nf: 0, beds: true, mlsWord: true, deal: true }), make({ sub: false, nf: 0, beds: true, mlsWord: true, deal: true }), make({ sub: false, nf: 0, beds: false, mlsWord: true, deal: true }), make({ sub: false, nf: 0, beds: false, mlsWord: false, deal: true }), make({ sub: false, nf: 0, beds: false, mlsWord: true, deal: false }));
+  return tries.find((m) => m.length <= 155) || tries[tries.length - 1].slice(0, 155);
 }
 // The archive repeats Status / Property type / MLS / Year built / Sold date in two or three fact lists. Show each fact once (first value wins),
 // and drop a list's heading when nothing is left under it.
