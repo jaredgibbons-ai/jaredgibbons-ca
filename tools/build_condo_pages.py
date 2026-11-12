@@ -69,7 +69,7 @@ def main():
         data = {'status': 'draft', 'slug': slug, 'updated': '2026-11-01', 'condo_page_for': houses_slug,
                 'new_page': {'title': title(disp), 'description': f'{disp}, {CITY} condos for sale: {L.num(cur["inventory"])} condos and townhomes listed in {mn} {last[:4]}, monthly sales and how {disp} compares with {CITY}. Jared Gibbons, REALTOR®.',
                              'h1': f'{disp} Condos for Sale | {CITY} Real Estate'},
-                'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': CITY, 'href': '/burnaby-homes-for-sale.html'}, {'name': f'{disp} condos', 'href': f'/{slug}.html'}],
+                'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': CITY, 'href': '/burnaby-homes-for-sale.html'}, {'name': f'{disp} condos', 'href': f'/{slug}.html'}],
                 'faq_heading': f'{disp} condos: your questions answered', 'blocks': bl, 'faq': faq,
                 'needs_from_muse': [f'Named condo buildings and townhome complexes in {name}, confirmed on strata or developer sources', f'Strata fee ranges, building ages and rental/pet rules', f'Sold prices and days on market for {name} condos (the reports give them for {CITY} as a whole)', f'Street boundaries of {name} from the Paragon sub-area map', f'A condo-filtered live listing feed for {name}', 'Jared\'s own notes on these buildings and who buys them']}
         json.dump(data, open(os.path.join(ROOT, 'src/data/local', slug + '.json'), 'w', encoding='utf-8'), indent=2, ensure_ascii=False); open(os.path.join(ROOT, 'src/data/local', slug + '.json'), 'a').write('\n')

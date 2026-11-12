@@ -303,7 +303,7 @@ def main():
         if len(sold_faq_) >= 5: faq = [q for q in faq if not q['q'].startswith(('Can Jared alert', 'Where can I see all', 'Who is Jared'))]
         j = {'status': 'draft', 'slug': slug, 'updated': '2026-11-01', 'gen_gap': True, 'hand_edited': True,
              'new_page': {'title': title(head), 'description': DESC[kind].format(N=N, T=T, w=w)[:200], 'h1': f'{head} | {region} Real Estate'},
-             'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': N, 'href': f'/{home}.html'}, {'name': head0.replace(' for Sale', ''), 'href': f'/{slug}.html'}],
+             'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': N, 'href': f'/{home}.html'}, {'name': head0.replace(' for Sale', ''), 'href': f'/{slug}.html'}],
              'faq_heading': f'{head}: your questions answered', 'blocks': bl, 'faq': faq,
              'needs_from_muse': [f'Live listing feed filtered to {noun} in {N}', 'Jared\'s own notes']}
         assert all(h_['href'].rsplit('/', 1)[1][:-5] in existing or True for h_ in j['breadcrumbs'])

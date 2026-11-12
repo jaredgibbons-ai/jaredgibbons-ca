@@ -36,7 +36,7 @@ faq = [
 ]
 d = {'status': 'draft', 'slug': 'seller-net-proceeds-calculator', 'updated': '2026-11-01', 'blocks': blocks, 'faq': faq, 'hand_edited': True,
      'new_page': {'title': 'Seller Net Proceeds Calculator | Jared Gibbons', 'description': 'Estimate what you would walk away with after selling your BC home: enter sale price, mortgage payout, commission, legal and other costs. Nothing is saved or sent.', 'h1': 'Seller Net Proceeds Calculator'},
-     'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'Seller net proceeds calculator', 'href': '/seller-net-proceeds-calculator.html'}],
+     'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': 'Seller net proceeds calculator', 'href': '/seller-net-proceeds-calculator.html'}],
      'needs_from_muse': ['Jared’s commission, legal and other closing-cost figures if he wants example costs shown (none are published until he supplies them)', 'Whether to add the calculator to the sellers menu and home evaluation page']}
 json.dump(d, open(os.path.join(ROOT, 'src/data/local/seller-net-proceeds-calculator.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('wrote calculator page')

@@ -29,7 +29,7 @@ PAGE = {
     'slug': SLUG, 'status': 'draft', 'updated': '2026-11-10', 'lead': 'homevalue', 'lead_place': 'Milner',
     'new_page': {'h1': 'Milner, Langley: Neighbourhood Guide', 'title': 'Milner Langley Homes, New Development and Acreage Guide',
                  'description': 'Milner, Langley: the south-east pocket of Willoughby by the farmland, where old acreages are becoming new homes. What works, what doesn’t, and the ALR rules.'},
-    'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'Langley', 'href': '/langley-homes-for-sale.html'},
+    'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': 'Langley', 'href': '/langley-homes-for-sale.html'},
                     {'name': 'Neighbourhood guides', 'href': '/langley-neighbourhood-guides.html'}, {'name': 'Milner', 'href': f'/{SLUG}.html'}],
     'blocks': [
         {'t': 'notice', 'text': 'Draft for Jared’s approval. Written November 10, 2026 from Jared’s Milner notes and the official sources listed on the page. Jared’s verdict is still to come.', 'gen': G},

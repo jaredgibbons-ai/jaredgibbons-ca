@@ -71,10 +71,32 @@ def short(s):
     n = re.sub(r'\s*\|.*$', '', n).strip()
     return n.title() if n.isupper() else n
 
+# Area and complex pages that none of the rules above place under their city (D-247): the city each one is in, by geography.
+HUB_NAME = {'south-surrey': 'South Surrey', 'north-surrey': 'North Surrey', 'west-vancouver': 'West Vancouver', 'north-vancouver': 'North Vancouver'}
+AREA_PARENT = {}
+for _city, _slugs in {
+    'langley': 'aldergrove-condos-for-sale aldergrove-houses-for-sale aldergrove-mobile-homes-for-sale aldergrove-townhomes-for-sale brookswood-houses-for-sale brookswood-mobile-homes-for-sale brookswood-real-estate-development-guide campbell-valley-acreages-farms-for-sale campbell-valley-houses-for-sale cheap-mobile-homes-langley-under-500k cost-of-mobile-home-pad-rental-fees-in-langley fort-langley-acreages-for-sale fort-langley-houses-for-sale murrayville-condos-for-sale murrayville-houses-for-sale murrayville-townhomes-for-sale salmon-river-acreages-farms-for-sale salmon-river-houses-for-sale walnut-grove-condos-for-sale walnut-grove-houses-for-sale walnut-grove-townhomes-for-sale willoughby-homes-for-sale city-of-langley-homes-for-sale sell-my-house-fast-in-langley-bc',
+    'south-surrey': 'morgan-crossing-homes-for-sale brownstones-at-morgan-crossing enclave-at-grandview grandview-corners-condos-townhomes-for-sale grandview-heights-guide grandview-surrey-duplexes-for-sale grandview-surrey-townhomes-for-sale greenway-townhomes-south-surrey hyde-park-south-surrey jacobsen-townhomes-south-surrey soho-townhomes-south-surrey south-village-grandview-townhomes the-heights-townhomes-south-surrey luxury-homes-for-sale-in-white-rock-south-surrey pacific-douglas-duplexes-for-sale crescent-bch-ocean-pk southsurrey-foreclosures-court-ordered-sales',
+    'north-surrey': 'guildford-condos-for-sale guildford-townhomes-for-sale whalley-condos-for-sale whalley-townhomes-for-sale',
+    'surrey': 'port-kells-acreages-for-sale surreyforeclosuresandcourtsales',
+    'cloverdale': 'cloverale-foreclosures-court-ordered-sales',
+    'chilliwack': 'bridal-falls bridal-falls-guide chilliwack-downtown-guide chilliwack-mountain-guide chilliwack-proper-east-guide chilliwack-proper-west-guide chilliwackforeclosuresandcourtsales columbia-valley-guide cultus-lake cultus-lake-guide east-chilliwack east-chilliwack-guide greendale-guide majuba-hill-guide popkum popkum-guide rosedale-guide rosedale-homes-for-sale ryder-lake-guide vedder-crossing-guide vedder-mountain-guide west-chilliwack-guide yarrow-guide',
+    'abbotsford': 'abbotsfordforeclosuresandcourtsales',
+    'mission': 'missionforeclosuresandcourtsales',
+    'maple-ridge': 'mapleridgeforeclosuresandcourtsales',
+    'delta': 'east-delta-guide',
+    'ladner': 'holly-guide',
+    'tsawwassen': 'english-bluff tsawwassen-central-guide',
+    'west-vancouver': 'british-properties cypress-park-estates',
+    'north-vancouver': 'canyon-heights-nv central-lonsdale',
+    'vancouver': 'downtown-ve downtown-vw',
+}.items():
+    for _s in _slugs.split(): AREA_PARENT[_s] = _city
+
 out, kinds = {}, {'community': 0, 'guide': 0, 'nav': 0, 'flat': 0}
 for s in sorted(exist):
     if s in ('index', '404') or local.get(s, {}).get('breadcrumbs'): continue
-    home = {'name': 'Home', 'href': '/index.html'}
+    home = {'name': 'Home', 'href': '/'}
     me = lambda n=None: {'name': n or short(s), 'href': H(s)}
     v = mapping.get(s)
     if v and '+' not in str(v[1]) and C.HUB.get(v[0]) in exist and C.HUB[v[0]] != s:
@@ -91,6 +113,8 @@ for s in sorted(exist):
         k, tail = title_city(s); trail = [home, {'name': tail, 'href': H(hubs[k])}, me(re.sub(r',\s*' + re.escape(tail) + r'$', '', head(s) or short(s)))]; kinds['title'] = kinds.get('title', 0) + 1
     elif s in navpar and navpar[s][0] in exist and navpar[s][0] != s:
         trail = [home, {'name': navpar[s][1], 'href': H(navpar[s][0])}, me()]; kinds['nav'] += 1
+    elif s in AREA_PARENT and hubs.get(AREA_PARENT[s]) in exist:
+        k = AREA_PARENT[s]; trail = [home, {'name': HUB_NAME.get(k, k.replace('-', ' ').title()), 'href': H(hubs[k])}, me()]; kinds['area'] = kinds.get('area', 0) + 1
     else:
         trail = [home, me()]; kinds['flat'] += 1
     out[s] = trail

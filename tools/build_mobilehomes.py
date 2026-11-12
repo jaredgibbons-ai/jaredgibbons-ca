@@ -166,7 +166,7 @@ def hub():
     d = {'status': 'draft', 'slug': HUB, 'updated': '2026-11-02', 'mh_page': True, 'hand_edited': True, 'blocks': bl, 'faq': faq, 'faq_heading': 'BC mobile home buying: your questions answered',
          'new_page': {'title': 'BC Mobile Home Buying Rules: Pad Rent and Registry | Jared Gibbons', 'description': 'BC mobile and manufactured home buying rules: pad tenancy, park-owner consent, pad-rent caps, the Registry, park closures and strata forms, with sources. Jared Gibbons, REALTOR®.'[:158],
                       'h1': 'BC Mobile Home Buying Rules: Pad Rent, Consent and the Registry'},
-         'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'BC Mobile Home Buying Rules', 'href': f'/{HUB}.html'}], 'needs_from_muse': ['Jared’s review of the wording']}
+         'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': 'BC Mobile Home Buying Rules', 'href': f'/{HUB}.html'}], 'needs_from_muse': ['Jared’s review of the wording']}
     T.save(HUB, d)
 
 

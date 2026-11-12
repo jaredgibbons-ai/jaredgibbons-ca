@@ -281,7 +281,7 @@ def build_new(i, c):
     bl.append(list_of_links(links_block(name, c['slug'], c['near'], vi)))
     faq = faqs(name, vi, nd[0] if nd else None, None, c.get('rules'))
     return c['slug'], dict(status='generated', slug=c['slug'], updated='2026-11-04', new_page=dict(title=title, description=desc, h1=h1),
-        breadcrumbs=[{'name': 'Home', 'href': '/index.html'}, {'name': 'Presale and new construction', 'href': '/presale-projects-fraser-valley-and-metro-vancouver.html'}, {'name': h1, 'href': f"/{c['slug']}.html"}],
+        breadcrumbs=[{'name': 'Home', 'href': '/'}, {'name': 'Presale and new construction', 'href': '/presale-projects-fraser-valley-and-metro-vancouver.html'}, {'name': h1, 'href': f"/{c['slug']}.html"}],
         faq_heading=f'New construction in {name}: your questions answered', faq=faq, blocks=bl)
 
 def patch_existing(slug, name, areas, vi):

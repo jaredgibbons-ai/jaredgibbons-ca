@@ -125,7 +125,7 @@ def main():
         data = {'status': 'draft', 'slug': slug, 'updated': '2026-11-01', 'type_page': {'area': ak, 'name': nm, 'type': t},
                 'new_page': {'title': title_of(disp, city, kd), 'description': f'{disp}, {city} {kd["noun"]} for sale: {L.num(cur["inventory"])} listed in {mn} {last[:4]}, monthly sales and how {disp} compares with {city}. Jared Gibbons, REALTOR®.',
                              'h1': f'{disp} {kd["h1"]} | {city} Real Estate'},
-                'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': city, 'href': f'/{C.HUB[ak]}.html'}, {'name': f'{disp} {kd["noun"]}', 'href': f'/{slug}.html'}],
+                'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': city, 'href': f'/{C.HUB[ak]}.html'}, {'name': f'{disp} {kd["noun"]}', 'href': f'/{slug}.html'}],
                 'faq_heading': f'{disp} {kd["noun"]}: your questions answered', 'blocks': bl, 'faq': faq,
                 'needs_from_muse': [f'Sold prices, days on market and sale-to-list ratio for {nm} {kd["noun"]} (the reports give them for {city} as a whole)'] + ([f'Named buildings and complexes in {nm}, strata fee ranges, building ages, rental and pet rules', 'The split between condos and townhomes from the Paragon export'] if t == 'condo_townhome' else [f'Typical lot sizes and ages, and Jared\'s notes on the streets in {nm}']) + ['A live listing feed filtered to this type']}
         if len(data['new_page']['description']) > 158: data['new_page']['description'] = f'{disp}, {city} {kd["noun"]} for sale: listings, sales and sales ratio for {mn} {last[:4]}. Jared Gibbons, REALTOR®.'

@@ -144,7 +144,7 @@ def title_for(head, tail=' Homes for Sale'):
 
 
 def crumbs(ck, name=None, slug=None, hub=True):
-    c = CITIES[ck]; out = [{'name': 'Home', 'href': '/index.html'}, {'name': c['name'], 'href': f'/{c["homes"]}.html'}]
+    c = CITIES[ck]; out = [{'name': 'Home', 'href': '/'}, {'name': c['name'], 'href': f'/{c["homes"]}.html'}]
     if name is not None: out += [{'name': f'{c["name"]} neighbourhood guides', 'href': f'/{c["hub"]}.html'}, {'name': name, 'href': f'/{slug}.html'}]
     else: out += [{'name': f'{c["name"]} neighbourhood guides', 'href': f'/{c["hub"]}.html'}]
     return out

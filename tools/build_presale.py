@@ -113,7 +113,7 @@ def city_page(slug, city, hub_href, hub_name, ps, extra_intro=''):
       'new_page': {'title': f'{city} Presale Condos & Townhomes {min(yr)}–{max(yr)} | Jared Gibbons',
                    'description': f'{n} {city} presale projects completing {min(yr)}–{max(yr)}: developers, home types, deposit structures and current published prices. Updated {ASOF}.',
                    'h1': f'{city} Presale Condos and Townhomes Completing {min(yr)}–{max(yr)}'},
-      'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': hub_name, 'href': hub_href}, {'name': f'{city} presales', 'href': f'/{slug}.html'}],
+      'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': hub_name, 'href': hub_href}, {'name': f'{city} presales', 'href': f'/{slug}.html'}],
       'faq_heading': f'{city} presales: your questions answered', 'blocks': b, 'faq': faq(city, ps),
       'needs_from_muse': ['Paragon presale records for ' + city, 'Jared first-hand view of the projects he has toured or sold', 'Neighbourhood for each project (sources give addresses only)']})
 
@@ -148,7 +148,7 @@ hb += [HOW, CTA]
 write('presale-projects-fraser-valley-and-metro-vancouver', {'status': 'draft', 'slug': 'presale-projects-fraser-valley-and-metro-vancouver', 'updated': a.asof,
   'new_page': {'title': f'Fraser Valley & Metro Vancouver Presales {min(yr)}–{max(yr)} | Jared Gibbons', 'description': f'{n} presale condo and townhome projects completing {min(yr)}–{max(yr)} across the Fraser Valley and Metro Vancouver, with developers, deposits and current published prices. Updated {ASOF}.',
                 'h1': f'Presale Projects in the Fraser Valley and Metro Vancouver, Completing {min(yr)}–{max(yr)}'},
-  'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': HUBN, 'href': HUB}], 'faq_heading': 'Presale list: your questions answered', 'blocks': hb,
+  'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': HUBN, 'href': HUB}], 'faq_heading': 'Presale list: your questions answered', 'blocks': hb,
   'faq': [{'q': 'Is this every presale project in the region?', 'a': f"No. It covers projects marketed publicly through presale listings and developers' own pages as of {ASOF}. Projects sold only through private or brokerage-exclusive channels may be missing, and Paragon presale data is still to be added."},
           {'q': 'Why do some projects say to ask for current pricing?', 'a': 'A price is shown only when its source dates it within the last three months. Presale prices change often, and an older price can mislead, so I give the current list on request.'},
           {'q': 'Where do the completion dates come from?', 'a': "From the developers' own pages and public presale listings. Completion estimates move, so treat them as targets and confirm with the developer."}],
@@ -157,11 +157,11 @@ write('presale-projects-fraser-valley-and-metro-vancouver', {'status': 'draft', 
 # layers on existing archive pages (blocks only; archive text untouched)
 lg = by['Langley']; n2, yr2, *_ = stats(lg)
 write('new-construction-presales-in-langley-bc', {'status': 'draft', 'slug': 'new-construction-presales-in-langley-bc', 'updated': a.asof,
-  'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'Langley', 'href': '/langley-homes-for-sale.html'}, {'name': 'Langley presales', 'href': '/new-construction-presales-in-langley-bc.html'}],
+  'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': 'Langley', 'href': '/langley-homes-for-sale.html'}, {'name': 'Langley presales', 'href': '/new-construction-presales-in-langley-bc.html'}],
   'blocks': [notice(), {'t': 'h', 'level': 2, 'text': f'Langley presale projects completing {min(yr2)}–{max(yr2)}'}] + [{'t': 'p', 'text': t} for t in lead('Langley', lg)] + [table(lg, f'Langley presale projects, snapshot {a.asof}')]})
 ss = [p for p in by['Surrey'] if p['name'] in ('Calais', 'Rockford', 'Harlowe')]
 write('south-surrey-new-construction-presales', {'status': 'draft', 'slug': 'south-surrey-new-construction-presales', 'updated': a.asof,
-  'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'South Surrey', 'href': '/south-surrey-homes-for-sale.html'}, {'name': 'South Surrey presales', 'href': '/south-surrey-new-construction-presales.html'}],
+  'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': 'South Surrey', 'href': '/south-surrey-homes-for-sale.html'}, {'name': 'South Surrey presales', 'href': '/south-surrey-new-construction-presales.html'}],
   'blocks': [notice(), {'t': 'h', 'level': 2, 'text': 'South Surrey presale projects on my list'},
              {'t': 'p', 'text': f"Three projects on my list sit in the South Surrey area, going by the locations the sources give: Calais at Semiahmoo Town Centre, Rockford at 128 Street and 17 Avenue in Ocean Park, and Harlowe at 16485 18 Avenue, described by its sources as Sunnyside Heights and Grandview Heights. All three are scheduled to complete between {min(p['year'] for p in ss)} and {max(p['year'] for p in ss)}."},
              table(ss, f'South Surrey presale projects, snapshot {a.asof}')]})

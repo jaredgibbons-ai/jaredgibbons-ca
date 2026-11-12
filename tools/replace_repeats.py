@@ -86,7 +86,7 @@ def main():
         hub['blocks'] += [{'t': 'h', 'level': 2, 'text': d['more'][0], 'gen': GEN, 'pos': 'end'}, {'t': 'list', 'items': [[{'t': a, 'h': h_}] for a, h_ in d['more'][1]], 'gen': GEN, 'pos': 'end'}]
         hub['faq'] = [{'q': q, 'a': a} for q, a in d['faq']]; hub['faq_heading'] = f'{label.capitalize()}: your questions answered'
         hub.update({'status': 'draft', 'new_page': {'title': ttl + ' | Jared Gibbons', 'description': f'{label.capitalize()}: what to look at in a house, a townhome or condo, and a larger lot, and what to ask before you write an offer. Jared Gibbons, REALTOR®.', 'h1': 'What to Look at When Buying a ' + ('Surrey' if key == 'surrey' else 'Tsawwassen') + ' Home'},
-                    'hand_edited': True, 'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': label, 'href': f'/{slug}.html'}]})
+                    'hand_edited': True, 'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': label, 'href': f'/{slug}.html'}]})
         save(slug, hub)
     n = 0
     for s, pl in plan.items():

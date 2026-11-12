@@ -68,7 +68,7 @@ def sub_rows(key):
 
 RH = ['Home type', 'Sales', 'Median price', 'Middle half of prices', 'Median days to sell', 'Sold price vs list']
 SH = ['Home type', 'Sales', 'Median price', 'Middle half of prices', 'Typical year built']
-CRUMB_HOME = {'name': 'Home', 'href': '/index.html'}
+CRUMB_HOME = {'name': 'Home', 'href': '/'}
 
 # ------------------------------------------------------------------------------------------------ Rosemary Heights
 r = RAD['rosemary-heights-elementary']; rg = r['groups']; mc = SUB['South Surrey White Rock|Morgan Creek']['groups']

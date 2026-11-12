@@ -44,7 +44,7 @@ const explore = [
               {r.title && <p class="rv__title">{r.title}</p>}
               {r.paragraphs.map((p) => <p>{p}</p>)}
             </blockquote>
-            <p class="rv__who"><strong>{r.name}</strong><br /><span class="muted">{r.source ? `${r.source} · ${r.date}` : r.date}</span></p>
+            <p class="rv__who"><strong>{r.name}</strong><br /><span class="muted">{r.source || r.date}</span></p>
           </li>
         ))}
       </ul>

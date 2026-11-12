@@ -303,7 +303,7 @@ def finish_base(x, slug, shared):
               ('Home evaluation', '/home-evaluation.html'), ('Mortgage calculator', '/mortgage-calculator.html'), ('Contact Jared', '/contact.html')]
     d['blocks'] += [{**N.H(f'More {dn} real estate', 2), 'gen': 'tn_new', 'pos': 'end'}, {**N.LK(links), 'gen': 'tn_new', 'pos': 'end'}]
     d['faq_heading'] = f'{dn} real estate: your questions answered'
-    d['breadcrumbs'] = [{'name': 'Home', 'href': '/index.html'}] + ([{'name': c.replace('-', ' ').title(), 'href': f'/{c}.html'} for c in hubs_[:1]]) + [{'name': dn, 'href': f'/{slug}.html'}]
+    d['breadcrumbs'] = [{'name': 'Home', 'href': '/'}] + ([{'name': c.replace('-', ' ').title(), 'href': f'/{c}.html'} for c in hubs_[:1]]) + [{'name': dn, 'href': f'/{slug}.html'}]
     save(slug, d)
 
 
@@ -331,7 +331,7 @@ def hubs(notes, sh_all):
             if m and N.clean(m.group(2)): faq.append({'q': m.group(1).strip(), 'a': N.clean(m.group(2))})
         d = {'status': 'draft', 'slug': K['hub'], 'updated': '2026-11-02', 'tn_page': True, 'hand_edited': True, 'blocks': bl, 'faq': faq, 'faq_heading': f'BC {K["noun"]} buying: your questions answered',
              'new_page': {'title': meta[kind][0], 'description': meta[kind][1][:158], 'h1': meta[kind][2]},
-             'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': meta[kind][2], 'href': f'/{K["hub"]}.html'}], 'needs_from_muse': ['Jared’s review of the wording']}
+             'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': meta[kind][2], 'href': f'/{K["hub"]}.html'}], 'needs_from_muse': ['Jared’s review of the wording']}
         save(K['hub'], d); print('hub', K['hub'], len(bl), 'blocks', len(faq), 'faq')
 
 

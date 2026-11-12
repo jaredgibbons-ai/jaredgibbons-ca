@@ -41,7 +41,7 @@ PAGE = {
     'new_page': {'h1': 'Port Kells, Surrey: Industrial Area and Village Guide',
                  'title': 'Port Kells Surrey Industrial Property and Area Guide',
                  'description': 'Port Kells, Surrey: the industrial area north of Highway 1 and the village south of it. Zoning, flood, pipelines, access and what to check before you buy.'},
-    'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'Surrey', 'href': '/surrey-homes-for-sale.html'},
+    'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': 'Surrey', 'href': '/surrey-homes-for-sale.html'},
                     {'name': 'Neighbourhood guides', 'href': '/surrey-neighbourhood-guides.html'}, {'name': 'Port Kells', 'href': f'/{SLUG}.html'}],
     'blocks': [
         {'t': 'notice', 'text': 'Draft for Jared’s approval. Written November 10, 2026 from City of Surrey, provincial and federal sources and the market reports listed on the page. Jared’s verdict is still to come.', 'gen': G},

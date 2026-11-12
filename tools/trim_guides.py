@@ -268,7 +268,7 @@ def write_city(cslug, c):
             'new_page': {'h1': f'Buying a Home in {name}: Zoning, Strata, Land and Tax Rules',
                          'title': f'{short} Home Buying Rules: Zoning, Strata & Taxes | Jared Gibbons'[:65].rstrip(),
                          'description': f'The rules that apply across {name} when you buy a condo, townhome, lot, acreage or mobile home: zoning, strata, servicing and taxes, with official sources.'[:158]},
-            'breadcrumbs': [{'href': '/index.html', 'name': 'Home'}, {'href': c['hub'], 'name': short}, {'href': f'/{cslug}-home-buying-rules.html', 'name': 'Home buying rules'}],
+            'breadcrumbs': [{'href': '/', 'name': 'Home'}, {'href': c['hub'], 'name': short}, {'href': f'/{cslug}-home-buying-rules.html', 'name': 'Home buying rules'}],
             'blocks': blocks, 'faq': []}
     json.dump(page, open(path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     return sum(len(text(b).split()) for b in blocks)

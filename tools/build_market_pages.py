@@ -206,7 +206,7 @@ def main():
         if len(desc) > 158: desc = desc.replace(', with detached, townhouse and apartment trends.', ', plus detached and condo trends.')
         if len(desc) > 158: desc = desc.split(', plus')[0] + '.'   # never cut mid-word (D-218)
         d = {'status': 'generated', 'slug': page, 'updated': UPDATED, 'new_page': {'title': title, 'description': desc, 'h1': f'{disp} Real Estate Market Stats, {when}'},
-             'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': f'{disp} market stats', 'href': f'/{page}.html'}],
+             'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': f'{disp} market stats', 'href': f'/{page}.html'}],
              'faq_heading': f'{disp} market stats: your questions answered', 'blocks': blocks, 'faq': faq}
         keep_extras(os.path.join(ROOT, f'src/data/local/{page}.json'), d, when)
         save(os.path.join(ROOT, f'src/data/local/{page}.json'), d); n += 1

@@ -255,7 +255,7 @@ def build_community(path, written):
     ttl = f'{disp} 55+ Homes for Sale'; ttl = ttl + ' | Jared Gibbons' if len(ttl) + 16 <= 66 else ttl
     d = {'status': 'draft', 'slug': slug, 'updated': '2026-11-01', 'n55_page': True, 'hand_edited': True, 'blocks': bl, 'faq': faq, 'faq_heading': f'{name} 55+ homes: your questions answered',
          'new_page': {'title': ttl[:70], 'description': desc[:158], 'h1': f'{name} 55+ Homes for Sale | {city} Real Estate' if city else f'{name} 55+ Homes for Sale'},
-         'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': f'{name}', 'href': f'/{comm}.html' if comm else GUIDE_FOR.get(slug, '/index.html')}, {'name': '55+ homes', 'href': f'/{slug}.html'}],
+         'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': f'{name}', 'href': f'/{comm}.html' if comm else GUIDE_FOR.get(slug, '/index.html')}, {'name': '55+ homes', 'href': f'/{slug}.html'}],
          'needs_from_muse': [f'Jared’s own notes on the {name} 55+ buildings: how units sell, what buyers ask', 'Unit counts and years built marked unconfirmed in the sources', 'Live listing feed filtered to 55+ homes']}
     save(slug, d); written.append((slug, name, city, comm)); print('wrote', slug, len(bl), 'blocks', len(faq), 'faq')
 
@@ -286,7 +286,7 @@ def build_hub():
         if k not in seen: seen.add(k); fq.append(f)
     d = {'status': 'draft', 'slug': HUB, 'updated': '2026-11-01', 'n55_page': True, 'hand_edited': True, 'blocks': bl, 'faq': fq[:8], 'faq_heading': 'BC 55+ strata rules: your questions answered',
          'new_page': {'title': 'BC 55+ Strata Rules: Age Bylaws and Rentals | Jared Gibbons', 'description': 'BC 55+ strata rules: only 55+ age bylaws are valid, who may own versus live in a unit, exemptions for spouses and caregivers, and rentals. Jared Gibbons, REALTOR®.', 'h1': 'BC 55+ Strata Rules: What Buyers Need to Know'},
-         'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'BC 55+ strata rules', 'href': f'/{HUB}.html'}], 'needs_from_muse': ['Jared’s review of the wording']}
+         'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': 'BC 55+ strata rules', 'href': f'/{HUB}.html'}], 'needs_from_muse': ['Jared’s review of the wording']}
     save(HUB, d); print('wrote hub', len(bl), 'blocks', len(d['faq']), 'faq')
 
 
@@ -402,7 +402,7 @@ def build_merged(slug, city, ns, written):
     bl += [H(f'More {city} real estate', pos='end'), {**LK(mk), 'pos': 'end'}]
     d = {'status': 'draft', 'slug': slug, 'updated': '2026-11-01', 'n55_page': True, 'hand_edited': True, 'blocks': bl, 'faq': faq[:12], 'faq_heading': f'{city} 55+ homes: your questions answered',
          'new_page': {'title': f'{city} 55+ Homes by Neighbourhood | Jared Gibbons', 'description': f'{city} 55+ homes by neighbourhood: {", ".join(allnames[:3])} and more, what type each is, local rules and buyer questions. Jared Gibbons, REALTOR®.'[:158], 'h1': f'{city} 55+ Homes for Sale by Neighbourhood'},
-         'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': f'{city} 55+ homes', 'href': '/chilliwack-55-plus-condos-for-sale.html'}, {'name': 'By neighbourhood', 'href': f'/{slug}.html'}],
+         'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': f'{city} 55+ homes', 'href': '/chilliwack-55-plus-condos-for-sale.html'}, {'name': 'By neighbourhood', 'href': f'/{slug}.html'}],
          'needs_from_muse': [f'Jared’s own notes on the {city} 55+ buildings: how units sell, what buyers ask', 'Unit counts and years built marked unconfirmed in the sources', 'Live listing feed filtered to 55+ homes']}
     save(slug, d); print('wrote merged', slug, len(bl), 'blocks', len(d['faq']), 'faq')
     for k in ns: written.append((slug, area_name(k)[0], city, k if exists(k) else None))

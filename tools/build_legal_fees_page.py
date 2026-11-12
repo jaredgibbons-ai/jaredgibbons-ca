@@ -79,7 +79,7 @@ faq = [
 ]
 d = {'status': 'draft', 'slug': SLUG, 'updated': '2026-11-02', 'blocks': blocks, 'faq': faq, 'faq_heading': 'Real estate lawyer and notary fees: your questions answered', 'hand_edited': True,
      'new_page': {'title': 'Real Estate Lawyer & Notary Fees: Langley, Surrey, White Rock', 'description': 'What lawyers and notaries publish for buying, selling and refinancing in Langley, Surrey, South Surrey and White Rock: fees, all-in costs, and what is missing.', 'h1': 'Real Estate Lawyer and Notary Fees in Langley, Surrey and White Rock'},
-     'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'Selling', 'href': '/selling.html'}, {'name': 'Lawyer and notary fees', 'href': f'/{SLUG}.html'}],
+     'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': 'Selling', 'href': '/selling.html'}, {'name': 'Lawyer and notary fees', 'href': f'/{SLUG}.html'}],
      'needs_from_muse': ['Jared\'s view on which lawyers or notaries he recommends and what clients usually pay', 'Fresh quotes if he wants South Surrey and White Rock covered']}
 json.dump(d, open(os.path.join(ROOT, f'src/data/local/{SLUG}.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('wrote', SLUG)

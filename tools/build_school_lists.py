@@ -156,7 +156,7 @@ def main():
                {'q': f'How do I find the catchment school for a {disp} address?', 'a': f'Ask {oxford([dlong(d) for d, c in main_d][:2]) if main_d else "the school district"} to confirm it for the exact street address.'}]
         d = {'status': 'generated', 'slug': f'schools-in-{slug}-bc', 'updated': UPDATED,
              'new_page': {'title': title, 'description': desc, 'h1': h1},
-             'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': h1, 'href': f'/schools-in-{slug}-bc.html'}],
+             'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': h1, 'href': f'/schools-in-{slug}-bc.html'}],
              'faq_heading': f'{disp} schools: your questions answered', 'blocks': blocks, 'faq': faq}
         path = os.path.join(ROOT, f'src/data/local/schools-in-{slug}-bc.json')
         json.dump(d, open(path, 'w', encoding='utf-8'), indent=2, ensure_ascii=False); open(path, 'a').write('\n')
@@ -231,7 +231,7 @@ def south_surrey(rows):
            {'q': 'Does all of White Rock go to the same secondary school?', 'a': 'No. White Rock Elementary feeds Semiahmoo Secondary, while Peace Arch Elementary feeds Earl Marriott Secondary.'}]
     d = {'status': 'generated', 'slug': 'schools-in-south-surrey-white-rock-bc', 'updated': UPDATED,
          'new_page': {'title': 'Schools in South Surrey & White Rock | Elementary & Secondary List', 'description': f'All {total} public schools in the four South Surrey and White Rock secondary families, with street addresses, plus independent schools. Check any address with the district.', 'h1': 'Schools in South Surrey and White Rock, BC'},
-         'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'South Surrey and White Rock schools', 'href': '/schools-in-south-surrey-white-rock-bc.html'}],
+         'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': 'South Surrey and White Rock schools', 'href': '/schools-in-south-surrey-white-rock-bc.html'}],
          'faq_heading': 'South Surrey and White Rock schools: your questions answered', 'blocks': blocks, 'faq': faq}
     path = os.path.join(ROOT, 'src/data/local/schools-in-south-surrey-white-rock-bc.json')
     json.dump(d, open(path, 'w', encoding='utf-8'), indent=2, ensure_ascii=False); open(path, 'a').write('\n')

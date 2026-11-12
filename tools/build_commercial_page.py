@@ -84,7 +84,7 @@ page = {'status': 'draft', 'slug': 'fraser-valley-commercial-market-report', 'up
  'new_page': {'title': 'Fraser Valley Commercial Market Report 2026 | Jared Gibbons',
   'description': 'Fraser Valley commercial and industrial real estate numbers for 2026: sales by city, industrial vacancy, asking rents and new supply in Surrey, Langley, Abbotsford, Delta and Chilliwack.',
   'h1': 'Fraser Valley Commercial and Industrial Real Estate Market Report'},
- 'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'Commercial', 'href': '/commercial.html'}, {'name': 'Commercial market report', 'href': '/fraser-valley-commercial-market-report.html'}],
+ 'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': 'Commercial', 'href': '/commercial.html'}, {'name': 'Commercial market report', 'href': '/fraser-valley-commercial-market-report.html'}],
  'faq_heading': 'Commercial market numbers: your questions answered', 'blocks': b, 'faq': faq,
  'needs_from_muse': ['Jared first-hand view of the commercial/industrial market and the buyer types he works with', 'Commercial listing search (IDX) for the grid on /commercial.html', 'Next reports: GVR Commercial Edge Q3 2026 and Avison Young Q4 2026']}
 out = os.path.join(ROOT, 'src/data/local/fraser-valley-commercial-market-report.json')

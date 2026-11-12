@@ -166,7 +166,7 @@ def main():
         data = {'status': 'draft', 'slug': slug, 'updated': '2026-11-01',
                 'community': {'area': ak, 'name': nm},
                 'new_page': {'title': title_for(disp, city), 'description': '', 'h1': f'{disp}, {city} Homes for Sale'},
-                'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': city, 'href': f'/{HUB[ak]}.html'}, {'name': f'{disp} real estate', 'href': f'/{slug}.html'}],
+                'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': city, 'href': f'/{HUB[ak]}.html'}, {'name': f'{disp} real estate', 'href': f'/{slug}.html'}],
                 'faq_heading': f'{disp} real estate: your questions answered', 'blocks': blocks, 'faq': faq,
                 'needs_from_muse': [f'Street boundaries of {nm} from the Paragon sub-area map, and its neighbouring communities',
                                     f'Sold prices, days on market and sale-to-list ratio for {nm} itself (the reports give them for {city} as a whole, not per community)',

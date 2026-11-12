@@ -170,7 +170,7 @@ def finish(slug, seo, crumbs, faq, bl, faq_heading, links, extra=None):
     pairs = [(t, s) for t, s in links if exists(s)]
     bl = bl + [{'t': 'h', 'level': 2, 'text': seo['links_h'], 'gen': G, 'pos': 'end'}, {'t': 'list', 'items': [[lk(t, s)] for t, s in pairs], 'gen': G, 'pos': 'end'}]
     j = dict(status='draft', slug=slug, updated=UPDATED, new_page=dict(title=seo['title'], description=seo['description'], h1=seo['h1']),
-             breadcrumbs=[{'name': 'Home', 'href': '/index.html'}] + [{'name': n, 'href': f'/{s}.html'} for n, s in crumbs] + [{'name': seo['crumb'], 'href': f'/{slug}.html'}],
+             breadcrumbs=[{'name': 'Home', 'href': '/'}] + [{'name': n, 'href': f'/{s}.html'} for n, s in crumbs] + [{'name': seo['crumb'], 'href': f'/{slug}.html'}],
              faq_heading=faq_heading, faq=[dict(q=q, a=a, gen=G) for q, a in faq], blocks=bl)
     if extra: j.update(extra)
     json.dump(j, open(f'src/data/local/{slug}.json', 'w'), indent=1, ensure_ascii=False)

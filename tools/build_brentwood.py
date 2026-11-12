@@ -144,7 +144,7 @@ def main():
         agg_g = SO.load()['sub'][sk]['groups']
         j['faq'] = list(j.get('faq', [])) + [q for t in types if t in agg_g for q in SO.sold_faq(NAME, SO.GL[t], agg_g[t], t)]
         j['status'] = 'draft'; j['updated'] = '2026-11-01'
-        j['breadcrumbs'] = [{'name': 'Home', 'href': '/index.html'}, {'name': CITY, 'href': '/burnaby-homes-for-sale.html'}, {'name': NAME, 'href': f'/{GUIDE}.html'}, {'name': {HOMES: 'Houses', CONDO: 'Condos', TOWN: 'Townhomes'}[slug], 'href': f'/{slug}.html'}]
+        j['breadcrumbs'] = [{'name': 'Home', 'href': '/'}, {'name': CITY, 'href': '/burnaby-homes-for-sale.html'}, {'name': NAME, 'href': f'/{GUIDE}.html'}, {'name': {HOMES: 'Houses', CONDO: 'Condos', TOWN: 'Townhomes'}[slug], 'href': f'/{slug}.html'}]
         j['needs_from_muse'] = ['Jared’s notes on the buildings and complexes in the sold-price table (names are as entered in the MLS®)', 'Street boundaries and the planned changes around Brentwood Town Centre', 'A feed filtered to this home type', 'Jared\'s own notes']
         save(slug, j)
         print('wrote', slug)

@@ -192,7 +192,7 @@ def hub():
     d = {'status': 'draft', 'slug': HUB, 'updated': '2026-11-02', 'acre_page': True, 'hand_edited': True, 'blocks': bl, 'faq': faq, 'faq_heading': 'BC acreage buying: your questions answered',
          'new_page': {'title': 'BC Acreage Buying Rules: ALR, Farm Class and GST | Jared Gibbons', 'description': 'BC acreage and farm buying rules: Agricultural Land Reserve limits, subdividing, farm class, GST on farmland, wells and septic, with sources. Jared Gibbons, REALTOR®.'[:158],
                       'h1': 'BC Acreage Buying Rules: ALR, Farm Class and GST'},
-         'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'BC Acreage Buying Rules', 'href': f'/{HUB}.html'}], 'needs_from_muse': ['Jared’s review of the wording']}
+         'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': 'BC Acreage Buying Rules', 'href': f'/{HUB}.html'}], 'needs_from_muse': ['Jared’s review of the wording']}
     T.save(HUB, d)
 
 

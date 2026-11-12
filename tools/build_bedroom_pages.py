@@ -177,7 +177,7 @@ def build():
         if cx: faq.append(dict(q=f"Which buildings in {city} have {bed} {types} for sale most often?", a=f"By sales over the past year: " + '; '.join(f"{x['name']} ({x['n']} sales" + (f", median {money(x['price'])}" if x['n'] >= 5 else '') + ')' for x in cx[:4]) + '.', gen=G))
         if e.get('maint'): faq.append(dict(q=f"What is the strata fee on a {bed} {typ} in {city}?", a=f"The median strata fee on the {bed} {types} that sold in {city} was {money(e['maint'])} a month. Fees vary by building, so check the building's own figure.", gen=G))
         parent = next((s for t, s in pairs if exists(s) and s.startswith(f'{ck}-{types}')), None)
-        crumbs = [{'name': 'Home', 'href': '/index.html'}] + ([{'name': f"{city} {types}", 'href': f'/{parent}.html'}] if parent else []) + [{'name': f"{bed.capitalize()} {types}", 'href': f'/{slug}.html'}]
+        crumbs = [{'name': 'Home', 'href': '/'}] + ([{'name': f"{city} {types}", 'href': f'/{parent}.html'}] if parent else []) + [{'name': f"{bed.capitalize()} {types}", 'href': f'/{slug}.html'}]
         j = dict(status='generated', slug=slug, updated='2026-11-04', new_page=dict(title=title, description=desc, h1=f"{bed.title()} {Types} for Sale in {city}"), breadcrumbs=crumbs,
                  faq_heading=f"{bed.capitalize()} {types} in {city}: your questions answered", faq=faq, blocks=bl, bedroom_page=dict(city=ck, type=g, beds=bk))
         json.dump(j, open(f'src/data/local/{slug}.json', 'w'), indent=1, ensure_ascii=False); made.append(slug)

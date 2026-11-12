@@ -69,6 +69,6 @@ faq = [
 ]
 d = {'status': 'draft', 'slug': 'data-and-methodology', 'updated': '2026-11-01', 'blocks': blocks, 'faq': faq, 'hand_edited': True,
      'new_page': {'title': 'Data and Methodology: Where Our Numbers Come From', 'description': 'Where every number on jaredgibbons.ca comes from: MLS® board statistics, SnapStats, the BC Data Catalogue, what each term means and how we word a change.', 'h1': 'Data & Methodology'},
-     'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'Data & methodology', 'href': '/data-and-methodology.html'}]}
+     'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': 'Data & methodology', 'href': '/data-and-methodology.html'}]}
 json.dump(d, open(os.path.join(ROOT, 'src/data/local/data-and-methodology.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('wrote data-and-methodology')

@@ -278,7 +278,7 @@ def assemble(c, kind):
     bl += [b for b in end if b]
     if snap: bl.append({'t': 'notice', 'text': f"Market figures are SnapStats® numbers for October 2026 and update monthly. The listings above update live from the MLS®.", 'gen': G, 'pos': 'end'})
     return slug, dict(status='generated', slug=slug, updated='2026-11-04', new_page=dict(title=title, description=desc, h1=h1),
-                      breadcrumbs=[{'name': 'Home', 'href': '/index.html'}, {'name': f'{C} homes', 'href': f'/{c["houses"]}.html'}, {'name': h1, 'href': f'/{slug}.html'}],
+                      breadcrumbs=[{'name': 'Home', 'href': '/'}, {'name': f'{C} homes', 'href': f'/{c["houses"]}.html'}, {'name': h1, 'href': f'/{slug}.html'}],
                       faq_heading=f"{h1}: your questions answered", faq=[dict(f, gen=G) for f in faq], blocks=bl)
 
 # ---------------------------------------------------------------- view pages (sourced geography + Paragon sub-area numbers)
@@ -332,7 +332,7 @@ def view_page(v):
         if h0 and h0['n'] >= 5 and h0.get('price'):
             faq.insert(0, dict(q=f"What do houses in {disp} sell for?", a=f"{h0['n']} houses sold in {disp} from {WINDOW}, at a median {money(h0['price'])} after {h0['dom']} days and {h0['ratio']:.1f}% of the last list price. That covers every house in the area, not only those with a view."))
     return slug, dict(status='generated', slug=slug, updated='2026-11-04', new_page=dict(title=v['title'], description=v['description'], h1=v['h1']),
-                      breadcrumbs=[{'name': 'Home', 'href': '/index.html'}, {'name': v['crumb'][0], 'href': f"/{v['crumb'][1]}.html"}, {'name': v['h1'], 'href': f'/{slug}.html'}],
+                      breadcrumbs=[{'name': 'Home', 'href': '/'}, {'name': v['crumb'][0], 'href': f"/{v['crumb'][1]}.html"}, {'name': v['h1'], 'href': f'/{slug}.html'}],
                       faq_heading=f"{v['h1']}: your questions answered", faq=[dict(f, gen=G) for f in faq], blocks=bl)
 
 def inbound():

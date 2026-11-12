@@ -101,7 +101,7 @@ def credits_page(pages):
     ]
     d = {'status': 'draft', 'slug': 'photo-credits', 'updated': '2026-11-03', 'blocks': blocks, 'faq': [], 'hand_edited': True,
          'new_page': {'title': 'Photo Credits | Jared Gibbons', 'description': 'Photographers, licences and source links for the open-licence area photos used on jaredgibbons.ca.', 'h1': 'Photo credits'},
-         'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'Photo credits', 'href': '/photo-credits.html'}]}
+         'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': 'Photo credits', 'href': '/photo-credits.html'}]}
     json.dump(d, open(os.path.join(ROOT, 'src/data/local/photo-credits.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 

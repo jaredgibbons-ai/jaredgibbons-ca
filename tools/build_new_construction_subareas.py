@@ -232,7 +232,7 @@ def build(cs):
         bl.append(N.list_of_links(links(c, near, reg))); bl[-1]['gen'] = G
         for b in bl: b['gen'] = G
         parent = AREA[c['area']][1]
-        crumbs = [{'name': 'Home', 'href': '/index.html'}] + ([{'name': 'New construction: ' + AREA[c['area']][0], 'href': f'/{parent}.html'}] if N.exists(parent) else [{'name': 'Presale and new construction', 'href': '/presale-projects-fraser-valley-and-metro-vancouver.html'}]) + [{'name': name, 'href': f"/{c['slug']}.html"}]
+        crumbs = [{'name': 'Home', 'href': '/'}] + ([{'name': 'New construction: ' + AREA[c['area']][0], 'href': f'/{parent}.html'}] if N.exists(parent) else [{'name': 'Presale and new construction', 'href': '/presale-projects-fraser-valley-and-metro-vancouver.html'}]) + [{'name': name, 'href': f"/{c['slug']}.html"}]
         j = dict(status='generated', slug=c['slug'], updated='2026-11-04', new_page=dict(title=title, description=desc, h1=h1), breadcrumbs=crumbs,
                  faq_heading=f'New construction in {name}: your questions answered', faq=faqs(name, rows, i), blocks=bl)
         json.dump(j, open(f"src/data/local/{c['slug']}.json", 'w'), indent=1, ensure_ascii=False)

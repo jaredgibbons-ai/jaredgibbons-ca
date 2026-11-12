@@ -132,7 +132,7 @@ def hub():
     d = {'status': 'draft', 'slug': HUB, 'updated': '2026-11-02', 'dx_page': True, 'hand_edited': True, 'blocks': bl, 'faq': faq, 'faq_heading': 'BC duplex and half-duplex buying: your questions answered',
          'new_page': {'title': 'BC Duplex and Half-Duplex Buying Rules | Jared Gibbons', 'description': 'How a half duplex is legally sold in BC (strata or fee-simple), strata checks, 55+ bylaws, property transfer tax and GST, with sources. Jared Gibbons, REALTOR®.'[:158],
                       'h1': 'BC Duplex and Half-Duplex Buying Rules'},
-         'breadcrumbs': [{'name': 'Home', 'href': '/index.html'}, {'name': 'BC Duplex and Half-Duplex Buying Rules', 'href': f'/{HUB}.html'}], 'needs_from_muse': ['Jared’s review of the wording']}
+         'breadcrumbs': [{'name': 'Home', 'href': '/'}, {'name': 'BC Duplex and Half-Duplex Buying Rules', 'href': f'/{HUB}.html'}], 'needs_from_muse': ['Jared’s review of the wording']}
     T.save(HUB, d)
 
 
