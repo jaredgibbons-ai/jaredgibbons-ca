@@ -1457,3 +1457,4 @@ Asked by Jared after launch: go through every page for errors.
 - Reviews page: "More reviews are shown below" only appears when the Google list actually loads. Open: the six comments carry no source line; the source has to come from Jared. Open: whether Google reviewer names show in full when the feed is connected (BL-03).
 - Audit item "committed config would noindex the site": not current. `wrangler.jsonc` has `INDEXABLE` "true" since launch (D-241); the audit read an older checkout.
 - Alt text, checked properly this time: of 35,774 empty alts, 35,574 are the hidden second copy of the awards strip and 200 are the listing photo viewer's empty frame, which gets its alt when a photo opens. No content or listing photo is missing alt text.
+- D-246 follow-up (Jared, 3:07 PM): the six comments on the reviews page are Google reviews; each now reads "Google review · date". Jared approved changing the MyRealPage contact phone to 604-928-1361.
