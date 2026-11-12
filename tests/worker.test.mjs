@@ -157,3 +157,16 @@ test('legacy blog month and filter URLs redirect to the blog index', () => {
     assert.deepEqual(R(p), { type: 'redirect', location: '/blog.html', status: 301 }, p);
   }
 });
+
+test('old MyRealPage listing pages and posts missing from the archive redirect (D-231)', () => {
+  const ids = JSON.parse(fs.readFileSync('src/worker/listing-ids.json', 'utf8'));
+  const ix = buildIndex(rules, ids);
+  const RR = (p) => route(`https://jaredgibbons.ca${p}`, ix, exists);
+  assert.deepEqual(RR('/our-listings.html/listing.2853-168-street-surrey-bc-r2641189.102314754'), { type: 'redirect', location: '/our-listings.html/listing.r2641189-2853-168-street-surrey-bc.102314754', status: 301 });
+  assert.deepEqual(RR('/murrayville.html/listing.r3170030-49-21746-52-avenue-langley-bc-v2y-1l4.109921749'), { type: 'redirect', location: '/murrayville.html', status: 301 });
+  assert.deepEqual(RR('/recip.html/listing.r3117566-5585-148-street-surrey-bc-v3s-3b5.108615653'), { type: 'redirect', location: '/recip.html', status: 301 });
+  assert.deepEqual(RR('/recip.html/1272399.search/SearchResults.form'), { type: 'redirect', location: '/recip.html', status: 301 });
+  assert.deepEqual(RR('/no-such-area.html/listing.r1-x.123456789'), { type: 'redirect', location: '/recip.html', status: 301 });
+  assert.equal(RR('/blog.html/sold-at-morgan-crossing-grandview-south-surrey-8988261').location, '/grandview-surrey.html');
+  for (const to of Object.values(ids)) assert.ok(exists(`/internal/listings/${to}.html`), to);
+});

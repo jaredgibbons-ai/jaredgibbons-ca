@@ -1,9 +1,10 @@
 import rules from './rules.json';
+import listingIds from './listing-ids.json';
 import { buildIndex, route, NESTED } from './route.js';
 import { handleForm } from './forms.js';
 import { handlePhoto } from './photos.js';
 
-const index = buildIndex(rules);
+const index = buildIndex(rules, listingIds);
 // Headers on every response, API and photo answers included. CSP here is frame protection only: a script allowlist needs the launch inventory of
 // third-party scripts (Google Maps, Turnstile, MyRealPage, YouTube) and is a separate step (D-140).
 const SECURITY = {
@@ -62,6 +63,7 @@ async function handle(request, env) {
       for (const pth of [u.pathname, bare]) { const m = pth.match(re); if (m) cands.add(f(m)); }
     }
     const dbl = bare.match(/^\/[^/]+\.html\/([^/]+\.html)$/); if (dbl) cands.add('/' + dbl[1]);
+    const par = bare.match(/^\/([^/]+\.html)\/.*listing\./); if (par) cands.add('/' + par[1]);   // old MRP listing pages (D-231)
     for (const c of cands) await exists(c);
     const decision = route(request.url, index, (p) => seen.get(p) === true);
 
