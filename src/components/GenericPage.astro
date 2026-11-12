@@ -550,6 +550,13 @@ const explore = !_extra.length ? exploreBase
             {(() => { const rendered = sec.blocks.map((b, bi) => {
               if (b.t === 'h') {
                 const Tag = `h${Math.min(b.level, 5)}`;
+                // A "heading" that is really a sentence or a paragraph (over 130 characters) reads as a wall of bold type (D-243):
+                // keep the name before the first dash as the heading and set the rest as text; with no short name, set it all as text.
+                if (b.level >= 2 && !b.href && b.text.length > 130) {
+                  const cut = b.text.search(/ [—–] /);
+                  if (cut > 2 && cut <= 70) return <><Tag id={b.id} class={b.level === 2 ? 'h2' + capsClass(b.text.slice(0, cut)) : 'pg__h'}>{b.text.slice(0, cut)}</Tag><p>{b.text.slice(cut + 3)}</p></>;
+                  return <p id={b.id}>{b.text}</p>;
+                }
                 return <Tag id={b.id} class={(b.level === 1 ? 'pg__h1' : b.level === 2 ? 'h2' : 'pg__h') + (b.level <= 2 ? (isHub && b.level === 1 ? ' caps' : capsClass(b.text)) : '')}>{b.href ? <Rich parts={[{ t: b.text, h: b.href }]} /> : b.text}</Tag>;
               }
               if (b.t === 'quickfacts') return (

@@ -1421,3 +1421,13 @@ D-241, RESOLVED (1:16 PM PT): Jared set Worker Access scope to "Previews only". 
 - **Search All Listings (`/recip.html`):** MyRealPage's in.js for the open search only prints a "Search listings" link that opens the map full screen, leaving a gap. The page now shows the same map search in a frame (`IdxEmbed frame`), with a "full screen" link under it.
 - **Map Search (`/map-search.html`):** had no map at all (the archive held only its text). The map frame now sits right under the H1; the long GIS sentence that was tagged H2 is a paragraph.
 - **Desktop menu:** a panel no longer swaps when the pointer crosses a neighbouring item on the way down (320 ms intent delay when another panel is open) and stays 900 ms after the pointer leaves (was 450).
+
+## D-243 — 2026-11-12 — Post-launch deep check of every page (first pass)
+
+Asked by Jared after launch: go through every page for errors.
+- **Rendered crawl, all 1,906 top-level pages plus 403 blog and listing pages, phone (390 px) and desktop (1440 px):** no sideways scroll, nothing off screen, no script errors, no broken local images, one H1 on every page. Internal links: 808,034 checked, none unresolved.
+- **Paragraph-length headings (25 pages):** a heading over 130 characters now renders as a short heading (the name before the first dash) plus normal text, or as plain text when it has no short name (`GenericPage.astro`). The reviews intro is a paragraph, not an H2.
+- **Working-note wording shown to visitors (about 230 strings on about 150 pages):** `tools/sweep_research_voice_pass6_2026_11_12.py` rewrites or drops sentences that spoke to a writer or described the web page itself ("do not quote", "a page that calls ... would be inventing", "What the page covers", "IDENTITY CALL", "verified ledger, as instructed", "first-page cards", "Checked against ...csv", a paragraph describing the agent page's own layout). No fact changed. Includes the home-evaluation FAQ answer that began "The page does not say."
+- One blog card linked to an old WordPress preview address; it now links to the home page.
+- Not errors, left as is: the September market update's stat grid, "TBD" quoted in the seller FAQ, `/listing-photos/` (served from storage, not the build).
+- Still to do: more one-off note wording is likely on the long area pages; live listing embeds and forms can only be checked on the real domain once this computer's DNS shows the new site.
