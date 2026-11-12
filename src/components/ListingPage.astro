@@ -164,7 +164,7 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
         return null;
       })}
       {photoList.length > 0
-        ? <ListingGallery photos={photoList} alts={altByPos} title={page.title} />
+        ? <ListingGallery photos={photoList} alts={altByPos} title={page.title} place={cityName ? `${addr}, ${cityName} BC` : ''} />
         : (
           <div class="ls__photos" role="note">
             <p class="ls__photos-t">Listing photos</p>

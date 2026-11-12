@@ -3,10 +3,17 @@
 // <dialog> viewer (prev / next / close, arrow keys, Esc) is layered on with a small script. Works without JS.
 // Images are web-size WebP derivatives made by tools/process_photos.py and served from PHOTO_BASE
 // (Worker route /listing-photos/* -> R2 in production; see src/worker/photos.js).
-const { photos, alts, title, base = import.meta.env.PUBLIC_PHOTO_BASE ?? '/listing-photos/' } = Astro.props as {
-  photos: { p: number; id: string; w: number; h: number }[]; alts: Record<number, string>; title: string; base?: string;
+import PHOTO_ALTS from '../data/photo-alts.json';
+const { photos, alts, title, place = '', base = import.meta.env.PUBLIC_PHOTO_BASE ?? '/listing-photos/' } = Astro.props as {
+  photos: { p: number; id: string; w: number; h: number }[]; alts: Record<number, string>; title: string; place?: string; base?: string;
 };
-const alt = (p: number) => alts[p] || `Photo ${p}: ${title}`;
+// What each photo shows, written by looking at it (D-250); the first photo also names the address. The archive's "Photo 3: address" is the fallback.
+const described = (ph: { p: number; id: string }) => {
+  const d = (PHOTO_ALTS as Record<string, string>)[ph.id];
+  if (!d) return alts[ph.p] || `Photo ${ph.p}: ${title}`;
+  return ph.p === photos[0]?.p && place ? `${d}, ${place}` : d;
+};
+const alt = (p: number) => { const ph = photos.find((x) => x.p === p); return ph ? described(ph) : alts[p] || `Photo ${p}: ${title}`; };
 const full = (id: string) => `${base}${id}-1600.webp`;
 const mid = (id: string) => `${base}${id}-960.webp`;
 const thumb = (id: string) => `${base}${id}-480.webp`;

@@ -105,7 +105,7 @@ test('worker: blog post and own-listing pages are served at their public URLs; /
   assert.equal(r.status, 200); assert.match(await r.text(), /<title>Salmon Sessions Music Festival Returns to South Surrey<\/title>/);
   const lst = fs.readdirSync(path.join(DIST, 'internal/listings')).find((f) => f.includes('similkameen'));
   r = await call('/our-listings.html/' + lst.replace(/\.html$/, ''));
-  assert.equal(r.status, 200); assert.match(await r.text(), /511 Similkameen Ave Princeton BC \| MLS 10374265/);
+  assert.equal(r.status, 200); assert.match(await r.text(), /<title>511 Similkameen Avenue, Princeton BC/);
   assert.equal((await call('/internal/blog/' + post)).status, 404);
   assert.equal((await call('/internal/listings/' + lst)).status, 404);
   assert.equal((await call('/blog.html/not-a-real-post-1')).status, 404);
