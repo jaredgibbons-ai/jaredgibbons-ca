@@ -1479,3 +1479,7 @@ Asked by Jared after launch: go through every page for errors.
 - Description: one factual line for every listing, within 158 characters: status, month and price, address with its MLS® sub-area, beds, baths, type, size, year, and Jared's name. Active listings end with the phone number. 64 listings used to show a cut-off piece of MLS marketing text with no address; that text stays in the page body.
 - No claim that Jared was the listing agent: some of these were listed by other brokerages (the credit line says so).
 - H1 unchanged (address, city). Checked on the build: 203 titles, none over 60, none repeated; 203 descriptions, none over 158, none repeated.
+
+## D-250 — 2026-11-12 — A real description for every listing photo (Jared: "yes do the listing photo descriptions")
+- All 3,338 gallery photos (3,539 placements on 203 listing pages) now have alt text that says what the photo shows ("Covered deck with stone fireplace and sectional", "Aerial view of the acreage with the boundary outlined"), written by looking at each photo on numbered contact sheets. Stored by photo id in `src/data/photo-alts.json` (`tools/merge_photo_alts.py` builds it). The first photo of each listing also names the address. The old "Photo 3: address | MLS" is only a fallback now; none are left on the build.
+- Descriptions say only what is visible; no claims about condition, age or value.
