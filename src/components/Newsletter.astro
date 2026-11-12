@@ -75,7 +75,7 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
       try {
         const r = await fetch('/api/forms/newsletter', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(data) });
         const j = await r.json().catch(() => ({}));
-        if (r.ok && j.ok) { msg.textContent = 'You are signed up. Jared will email you the monthly newsletter.'; email.value = ''; name.value = ''; consent.checked = false; return; }
+        if (r.ok && j.ok) { window.jgLead?.('newsletter'); msg.textContent = 'You are signed up. Jared will email you the monthly newsletter.'; email.value = ''; name.value = ''; consent.checked = false; return; }
         if (r.status === 422 && j.errors) { if (j.errors.email) errs.email.textContent = j.errors.email; if (j.errors.consent) errs.consent.textContent = j.errors.consent; msg.textContent = 'Please check the highlighted fields.'; }
         else if (r.status === 429) msg.textContent = 'Too many tries. Please wait a minute and send again.';
         else if (r.status === 403 && j.error === 'captcha_required') msg.textContent = 'Please complete the check, then press the button again.';

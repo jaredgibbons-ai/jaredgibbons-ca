@@ -44,6 +44,20 @@ const robotsContent = preview ? 'noindex, nofollow' : robots;
   <!-- Ownership checks carried over from the old site (D-233): Google Search Console and Pinterest. Public values, not secrets. -->
   <meta name="google-site-verification" content="CgqE26qFOHc49FhbnJO-qA0qac4IaeOquD3xgEIxnP8" />
   <meta name="p:domain_verify" content="91c3edc90807457f5f64250c3b56c1c0" />
+  {!preview && <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YQYX2KPBR"></script>}
+  {!preview && <script is:inline>
+    // Google Analytics 4 and Google Ads, the same accounts as the old site (D-234). Only on the launch build, never on the preview.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-7YQYX2KPBR');
+    gtag('config', 'AW-10817976788');
+  </script>}
+  <script is:inline>
+    // Every form calls this after the lead is accepted. 'contact_us' is the event the old site sent (Google Ads conversion);
+    // 'generate_lead' is GA4's own lead event. On the preview gtag is not loaded, so nothing is sent.
+    window.jgLead = function (kind) { try { if (typeof gtag === 'function') { gtag('event', 'contact_us', { form: kind }); gtag('event', 'generate_lead', { form: kind }); } } catch (e) {} };
+  </script>
   <title>{title}</title>
   {canonical && <link rel="canonical" href={canonical} />}
   <link rel="icon" type="image/png" href="/favicon.png" />

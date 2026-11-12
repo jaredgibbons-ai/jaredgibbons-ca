@@ -72,7 +72,7 @@ const isLive = live && !!kind;
       try {
         const r = await fetch('/api/forms/' + kind, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(data) });
         const j = await r.json().catch(() => ({}));
-        if (r.ok && j.ok) { msg.textContent = 'Sent. Thank you. Jared will reply by email or phone.'; fields().forEach((e) => (e.value = '')); return; }
+        if (r.ok && j.ok) { window.jgLead?.(kind); msg.textContent = 'Sent. Thank you. Jared will reply by email or phone.'; fields().forEach((e) => (e.value = '')); return; }
         if (r.status === 422 && j.errors) { Object.entries<string>(j.errors).forEach(([k, t]) => setErr(k, t)); msg.textContent = 'Please check the highlighted fields.'; (f.querySelector('.fstub__err:not(:empty)')?.parentElement?.querySelector('input,textarea,select') as HTMLElement | null)?.focus(); }
         else if (r.status === 429) msg.textContent = 'Too many tries. Please wait a minute and send again.';
         else if (r.status === 403 && j.error === 'captcha_required') msg.textContent = 'Please complete the check, then press the button again.';

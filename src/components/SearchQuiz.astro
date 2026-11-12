@@ -131,7 +131,7 @@ const total = 5;
       try {
         const r = await fetch('/api/forms/quiz', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(p) });
         const j = await r.json().catch(() => ({}));
-        if (r.ok && j.ok) { form.hidden = true; done.hidden = false; done.focus(); return; }
+        if (r.ok && j.ok) { window.jgLead?.('quiz'); form.hidden = true; done.hidden = false; done.focus(); return; }
         if (r.status === 422 && j.errors) { Object.entries<string>(j.errors).forEach(([k, t]) => setErr(k, t)); msg.textContent = 'Please check the highlighted fields.'; }
         else if (r.status === 429) { msg.textContent = 'Too many tries. Please wait a minute and send again.'; }
         else if (r.status === 403 && j.error === 'captcha_required') { msg.textContent = 'Please complete the check above, then press Send.'; }
