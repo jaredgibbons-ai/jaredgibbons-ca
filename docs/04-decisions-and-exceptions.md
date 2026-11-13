@@ -1503,3 +1503,9 @@ Asked by Jared after launch: go through every page for errors.
 - Shown unedited, attributed to Google, author name linked to their Google profile, "See all reviews on Google" and "Leave a review" links. No dates (Jared asked to drop them on review labels). No star-rating structured data (D-19).
 - Cost control: requested only when the visitor scrolls near the reviews, and kept 12 hours in that browser. The reviews field is a paid Places field (Place Details, Enterprise + Atmosphere); at this page's traffic it stays within or near Google's monthly free allowance.
 - When the Business Profile feed has data, it wins and Places is not called.
+
+## D-254 — 2026-11-12 — Instagram feed connected (Jared: "can you do Instagram feed"; he signed in to Behold and approved the Instagram connection himself)
+- Behold free plan, source @jaredgibbonsrealestate (Basic), one JSON feed "jaredgibbons.ca homepage". Its address is public and set as INSTAGRAM_FEED_URL in wrangler.jsonc, so it deploys with the code.
+- The Worker asks Behold at most once an hour and serves its own copy, so visitors do not count against Behold's 1,200 monthly views.
+- Photo descriptions come from Instagram's alt text, else the start of the caption cut at a word.
+- If the Instagram connection ever lapses (Behold emails Jared to reconnect), the endpoint answers empty and the home-page section hides itself.
