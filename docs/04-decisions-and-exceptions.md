@@ -1591,3 +1591,9 @@ Brief and per-item status: `docs/review/cx/`. Done in code:
 - Title "Sell My House Fast in Langley, BC | Timelines & Options" (55), new meta description (145).
 - Site-wide: a page whose own question section is headed "FAQ" now takes the local questions into it instead of a second "Common questions" section (10 pages).
 - The October numbers need refreshing monthly; they are typed into the page's local layer (`src/data/local/sell-my-house-fast-in-langley-bc.json`).
+
+## D-265 — 2026-11-13 — SEO audit of 13 Nov reviewed (`docs/review/seo-audit-2026-11-13/`)
+- **"Two origins" (audit item 1):** not a Cloudflare route. Cloudflare's own nameservers answer only Cloudflare addresses, but GoDaddy's old DNS zone still answers the old MyRealPage address (23.21.221.218, SOA pdns01.domaincontrol.com), and some resolvers still ask GoDaddy (Jared's own internet provider did this morning). Fix needs Jared's OK: delete the old A records (or the whole DNS zone) at GoDaddy, so nothing answers with the MyRealPage address. The Worker is the only thing behind Cloudflare.
+- **Done:** the empty FAQ "What is this page?" on the agent page and any FAQ with an empty answer are dropped; the Google tag script loads on the first scroll, tap or key press, or 3.5 s after load (events queue in dataLayer from the start, so the page view is still counted); the 55+ condos title is under 60.
+- **Checked, not changed:** the three "orphans" each have 5 to 8 inbound links in the build (the audit's snapshot pages were short copies); mixed-case hostnames are the same host to browsers and Google, and the canonical is lowercase; lastmod was refreshed at commit (D-259) and now only moves when a page's content changes.
+- **Review dates (audit item 3):** 70 of 78 excerpts have no date because Google shows only relative times ("2 years ago"). Exact dates are not available; Jared to decide whether to show the approximate age or keep them as they are.

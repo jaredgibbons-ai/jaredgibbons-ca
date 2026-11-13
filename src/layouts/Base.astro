@@ -49,14 +49,22 @@ const robotsContent = preview ? 'noindex, nofollow' : robots;
   <!-- Ownership checks carried over from the old site (D-233): Google Search Console and Pinterest. Public values, not secrets. -->
   <meta name="google-site-verification" content="CgqE26qFOHc49FhbnJO-qA0qac4IaeOquD3xgEIxnP8" />
   <meta name="p:domain_verify" content="91c3edc90807457f5f64250c3b56c1c0" />
-  {!preview && <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YQYX2KPBR"></script>}
   {!preview && <script is:inline>
     // Google Analytics 4 and Google Ads, the same accounts as the old site (D-234). Only on the launch build, never on the preview.
+    // The page view and any lead events queue in dataLayer at once; the Google tag script itself (about 350 KB) loads on the first
+    // scroll, tap or key press, or 3.5 s after the page has loaded, whichever comes first, so it no longer slows the first paint (D-265).
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-7YQYX2KPBR');
     gtag('config', 'AW-10817976788');
+    (function () {
+      var done = false, ev = ['scroll', 'pointerdown', 'keydown', 'touchstart'];
+      function go() { if (done) return; done = true; ev.forEach(function (e) { removeEventListener(e, go, true); });
+        var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-7YQYX2KPBR'; document.head.appendChild(s); }
+      ev.forEach(function (e) { addEventListener(e, go, { capture: true, passive: true, once: true }); });
+      if (document.readyState === 'complete') setTimeout(go, 3500); else addEventListener('load', function () { setTimeout(go, 3500); });
+    })();
   </script>}
   <script is:inline>
     // Every form calls this after the lead is accepted. 'contact_us' is the event the old site sent (Google Ads conversion);
