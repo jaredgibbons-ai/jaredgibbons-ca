@@ -168,7 +168,8 @@ test('built pages: Marketing Plan opens the selling page, and Home Evaluation ca
   for (const f of pages) assert.ok(!html(f).includes('/marketing-plan.html'), `${f} still links to /marketing-plan.html`);
   assert.ok(!fs.readFileSync(path.join(DIST, 'sitemap.xml'), 'utf8').includes('marketing-plan'), 'sitemap lists the retired page');
   const he = html('home-evaluation.html');
-  assert.ok(/<a class="biglink" href="\/selling\.html"/.test(he) && he.indexOf('class="biglink"') < he.indexOf('<form'), 'home evaluation: big marketing-plan link missing or below the form');
+  // D-261: the evaluation form comes first; the banner sits right after it, above the questions.
+  assert.ok(/<a class="biglink" href="\/selling\.html"/.test(he) && he.indexOf('class="biglink"') > he.indexOf('<form') && he.indexOf('class="biglink"') < he.indexOf('Common questions'), 'home evaluation: big marketing-plan link missing, or not between the form and the questions');
   const sell = html('selling.html');
   for (const w of ['Classifieds', 'Local news', 'REALTOR.ca', 'How long until my home is on the market?', 'Where will my home be advertised?', 'about 5 days after you sign']) assert.ok(sell.includes(w), `selling page lost "${w}" from the old marketing plan`);
 });
@@ -272,4 +273,18 @@ test('every photo on every built page has alt text written for it; listing galle
   }
   assert.ok(photos > 3500, `only ${photos} photos found`);
   assert.equal(bad.length, 0, bad.slice(0, 6).join('; '));
+});
+
+test('homepage: hero search goes to real pages, community names are links, quiz result data is present (D-261)', { skip: !built }, () => {
+  const t = html('index.html');
+  const m = t.match(/<form class="hs"[^>]*data-hs="([^"]*)"/);
+  assert.ok(m, 'hero search missing');
+  const data = JSON.parse(m[1].replace(/&quot;/g, '"').replace(/&#34;/g, '"').replace(/&amp;/g, '&'));
+  assert.ok(Object.keys(data).length >= 15);
+  for (const opts of Object.values(data)) for (const [, h] of opts) assert.ok(fs.existsSync(path.join(DIST, h.slice(1))), `hero search -> ${h} not built`);
+  const names = [...t.matchAll(/<p class="area__name"[^>]*><a href="([^"]+)"/g)].map((x) => x[1]);
+  assert.equal(names.length, 11, `${names.length} community names are links`);
+  for (const h of names) assert.ok(fs.existsSync(path.join(DIST, h.slice(1))), `${h} not built`);
+  assert.ok(/data-quiz[^>]*data-qs="/.test(t) && /data-result/.test(t), 'quiz result missing');
+  assert.ok(!/available for public display/.test(html('open-houses.html')), 'old widget message is back on Open Houses');
 });

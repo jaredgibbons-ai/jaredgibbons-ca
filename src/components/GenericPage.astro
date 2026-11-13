@@ -32,6 +32,7 @@ import LASTMOD from '../data/lastmod.json';
 import PhotoCredit from './PhotoCredit.astro';
 import IdxEmbed from './IdxEmbed.astro';
 import { mapSearchUrl } from '../lib/idx';
+import { quickSearchAreas } from '../lib/quicksearch';
 import { postImage } from '../lib/post-images';
 import ListingAlert from './ListingAlert.astro';
 import Newsletter from './Newsletter.astro';
@@ -184,7 +185,8 @@ if (local) {
   } else if (faqBlocks.length) {
     const fIdx = arr.findIndex((b: any) => b.t === 'form');
     const fAt = fIdx < 0 ? arr.length : (arr[fIdx - 1]?.t === 'h' ? fIdx - 1 : fIdx);
-    arr.splice(Math.max(fAt, 0), 0, ...faqBlocks);
+    // `faq_after_form`: a page whose form is the point (Home Evaluation) keeps the form up top and the questions after it (D-261).
+    arr.splice(local.faq_after_form && fIdx >= 0 ? fIdx + 1 : Math.max(fAt, 0), 0, ...faqBlocks);
   }
   if (formCut >= 0) { const at2 = arr.indexOf(page.blocks[formCut]); arr.splice(at2, 0, ...beforeForm); } else arr.push(...beforeForm);
   if (afterIntro.length) { const h1j = arr.findIndex((b: any) => b.t === 'h' && b.level === 1); const k = arr.findIndex((b: any, i: number) => i > h1j && b.t === 'h' && b.level === 2); arr.splice(k < 0 ? arr.length : k, 0, ...afterIntro); }
@@ -413,29 +415,14 @@ if (!isGuide) {
   if (b0?.t === 'h' && (b0.level === 2 || b0.level === 3) && h1i > 0 && h1i <= 2) page.blocks[0] = { t: 'p', cls: 'eyebrow', parts: [{ t: b0.text }] };
   // Leftover widget label from the archive, right above the ALR heading.
   page.blocks = page.blocks.filter((b: any) => !(b.t === 'p' && (b.parts || []).map((x: any) => x.t).join('').trim() === 'ALR property search'));
+  // The old listing widget's "We have found a total of 3,699 listings, but only 1,500 are available for public display. Please refine your
+  // criteria" was captured as page text on six search pages (Open Houses, Burnaby, Vancouver, Richmond, Land, Commercial). Not content (D-261).
+  { const tx = (b: any) => (b.parts || []).map((x: any) => x.t).join(' ').replace(/\s+/g, ' ').trim();
+    page.blocks = page.blocks.filter((b: any) => !(b.t === 'p' && /^(We have found a total of( [\d,]+ listings, but only)?|[\d,]+ are available for public display\.|Please refine your criteria, to narrow the total number of matching listings\.|listings, but only)$/.test(tx(b)))); }
 }
 
 const PAGE_SLUGS = new Set(Object.keys(import.meta.glob('../data/pages/*.json')).map((k) => k.replace(/^.*\/|\.json$/g, '')));
-// Quick search on the two map pages (phones, D-255): pick an area and a home type, land on that search page on this site
-// (each has the live listings and the "email me new listings" box). Only real, built, un-gated search pages are offered.
-const QS_AREAS: [string, string, string, string][] = [   // group, label, slug prefix, the area's all-homes page
-  ['South Surrey and White Rock', 'South Surrey', 'south-surrey', 'south-surrey-homes-for-sale'], ['South Surrey and White Rock', 'White Rock', 'white-rock', 'white-rock'],
-  ['Langley and Cloverdale', 'Langley', 'langley', 'langley-homes-for-sale'], ['Langley and Cloverdale', 'Cloverdale', 'cloverdale', 'cloverdale-bc'],
-  ['Surrey and Delta', 'Surrey', 'surrey', 'surrey-homes-for-sale'], ['Surrey and Delta', 'North Delta', 'north-delta', 'north-delta-homes-for-sale'],
-  ['Surrey and Delta', 'Ladner', 'ladner', 'ladner-homes-for-sale'], ['Surrey and Delta', 'Tsawwassen', 'tsawwassen', 'tsawwassen-homes-for-sale'],
-  ['Fraser Valley', 'Abbotsford', 'abbotsford', 'abbotsford-homes-for-sale'], ['Fraser Valley', 'Chilliwack', 'chilliwack', 'chilliwack-homes-for-sale'],
-  ['Fraser Valley', 'Mission', 'mission', 'mission-homes-for-sale'], ['Fraser Valley', 'Maple Ridge', 'maple-ridge', 'maple-ridge-homes-for-sale'],
-  ['Fraser Valley', 'Pitt Meadows', 'pitt-meadows', 'pitt-meadows-homes-for-sale'],
-  ['Metro Vancouver', 'Richmond', 'richmond', 'richmond-homes-for-sale'], ['Metro Vancouver', 'Vancouver', 'vancouver', 'vancouver-homes-for-sale'],
-  ['Metro Vancouver', 'Burnaby', 'burnaby', 'burnaby-homes-for-sale'], ['Metro Vancouver', 'New Westminster', 'new-westminster', 'new-westminster-homes-for-sale'],
-  ['Metro Vancouver', 'Coquitlam', 'coquitlam', 'coquitlam-homes-for-sale'], ['Metro Vancouver', 'Port Coquitlam', 'port-coquitlam', 'port-coquitlam-homes-for-sale'],
-  ['Metro Vancouver', 'Port Moody', 'port-moody', 'port-moody-homes-for-sale'],
-];
-const QS_TYPES: [string, string][] = [['Houses', 'houses-for-sale'], ['Townhomes', 'townhomes-for-sale'], ['Condos', 'condos-for-sale'], ['Acreages', 'acreages-for-sale'],
-  ['Duplexes', 'duplexes-for-sale'], ['Mobile homes', 'mobile-homes'], ['Lots and land', 'lots-land'], ['Farms', 'farms'], ['Open houses', 'open-houses']];
-const qsBuilt = (sl: string) => !!idx.pages[sl] && (PAGE_SLUGS.has(sl) || !!LOCAL[`../data/local/${sl}.json`]?.new_page) && !isGated(sl);
-const qsAreas = !isMapPage ? [] : QS_AREAS.filter(([, , , all]) => qsBuilt(all)).map(([group, label, pre, all]) => ({ group, label, key: pre,
-  opts: [['All homes', `/${all}.html`], ...QS_TYPES.filter(([, suf]) => qsBuilt(`${pre}-${suf}`)).map(([t, suf]) => [t, `/${pre}-${suf}.html`])] as [string, string][] }));
+const qsAreas = isMapPage ? quickSearchAreas() : [];
 const qsGroups = [...new Set(qsAreas.map((a) => a.group))];
 page.blocks = mend(page.blocks);
 

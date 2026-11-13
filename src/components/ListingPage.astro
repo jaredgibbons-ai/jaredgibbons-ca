@@ -55,6 +55,11 @@ const titleParts = String(page.title || '').replace(/ – MLS .*$/, '').split(',
 const _slugAddr = parseListingSlug(page.slug);
 const cityName = _slugAddr ? _slugAddr.city : (titleParts.length > 2 ? titleParts[titleParts.length - 2] : '');
 const addr = _slugAddr ? _slugAddr.street : titleCaseAddress(titleParts[0] || '');
+// First-screen actions (D-261): a showing request (email or text, filled in with this listing) and a call button. Plain links, no form.
+const where = [addr, cityName].filter(Boolean).join(', ');
+const showMail = `mailto:jaredgibbons@royallepage.ca?subject=${encodeURIComponent('Showing request: ' + where)}&body=${encodeURIComponent(`Hi Jared,\n\nI'd like to see ${where}.\n\nTimes that work for me:\n\nMy phone number:\n`)}`;
+const showSms = `sms:+16049281361?&body=${encodeURIComponent(`Hi Jared, I'd like to book a showing at ${where}.`)}`;
+const similarMail = `mailto:jaredgibbons@royallepage.ca?subject=${encodeURIComponent('Homes like ' + where)}&body=${encodeURIComponent(`Hi Jared,\n\nPlease send me homes like ${where} when they come up.\n`)}`;
 const archiveTitle = titleParts.length > 1 ? String(page.title || '').replace(/^[^,]+/, titleCaseAddress(titleParts[0])) : String(page.title || '');
 const statusWord = page.status === 'Sold' ? 'Sold' : page.status === 'Leased' ? 'Leased' : 'For sale';
 // Search title and snippet (D-249). Title: address, city, what it is and its status, then the name, inside 60 characters.
@@ -173,7 +178,11 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
               {rest.map((r) => <span class="ls__chip">{r.k ? <><span class="ls__k">{r.k}</span> {r.v}</> : r.v}</span>)}
             </>
           );
-          return <>{headN ? <h2 class="ls__sum">{inner}</h2> : <p class="ls__sum">{inner}</p>}{tailLines.map((l: string) => <p class="ls__flag">{l}</p>)}</>;
+          return <>{headN ? <h2 class="ls__sum">{inner}</h2> : <p class="ls__sum">{inner}</p>}{tailLines.map((l: string) => <p class="ls__flag">{l}</p>)}
+            <p class="ls__act">{page.status === 'Active'
+              ? <><a class="btn" href={showMail} data-ev="book_showing">Book a showing</a><a class="btn btn--ghost" href={showSms} data-ev="text_jared">Text Jared</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a></>
+              : <><a class="btn" href={similarMail}>Ask about homes like this</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a></>}</p>
+          </>;
         }
         return null;
       })}
@@ -265,6 +274,9 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
   .ls__h1{font-size:clamp(1.75rem,4vw,2.75rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 1rem;text-wrap:balance}
   .ls__sum{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1.25rem;font:600 1rem/1.4 var(--f-head);margin:0 0 var(--s5)}
   .ls__price{font-size:clamp(1.5rem,3.4vw,2.25rem);font-weight:800;letter-spacing:-.02em}
+  .ls__act{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 var(--s5)}
+  .ls__act .btn{min-height:3rem}
+  @media (max-width:520px){.ls__act .btn{flex:1 1 100%;justify-content:center}}
   .ls__flag{font:800 .8125rem var(--f-head);letter-spacing:.06em;text-transform:uppercase;margin:-.75rem 0 var(--s5)}
   .ls__k{text-transform:uppercase;letter-spacing:.06em;font-size:.75rem}
   .ls__photos{border:1px solid var(--ink);background:var(--cream);padding:2.5rem 1.25rem;margin:0 0 var(--s5);text-align:center}

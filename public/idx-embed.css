@@ -15,6 +15,9 @@
 #listing-results-view .mrp-results-page-summary{display:flex!important;flex-direction:row-reverse;justify-content:space-between;align-items:center;gap:1rem;margin:0 0 1rem!important;padding:0 0 .75rem!important;border-bottom:1px solid var(--ink)!important;float:none!important;width:auto!important}
 #listing-results-view .mrp-results-numbers{font:700 .75rem/1.2 "Montserrat",sans-serif!important;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)!important;float:none!important;margin:0!important}
 #listing-results-view .mrp-results-numbers *{font:inherit!important;color:inherit!important}
+/* "1-12 of 1,245": MyRealPage puts a hidden "/" between the range and the total, so it read "1-121,245" (D-261) */
+#listing-results-view .mrp-results-numbers .results-item-sep{display:inline!important;visibility:visible!important;font-size:0!important}
+#listing-results-view .mrp-results-numbers .results-item-sep::before{content:" of ";font-size:.75rem;letter-spacing:.1em;white-space:pre}
 #listing-results-view .search-results-sort-by-select{font:400 .9375rem/1.2 "Lato",sans-serif!important;color:var(--ink)!important;background:#fff!important;border:1px solid var(--ink)!important;border-radius:0!important;padding:.5rem .6rem!important;height:auto!important;min-height:2.5rem;float:none!important;margin:0!important;max-width:60%}
 
 /* grid */

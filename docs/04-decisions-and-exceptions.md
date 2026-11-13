@@ -1564,3 +1564,14 @@ The first version sent phone visitors off to MyRealPage's own page. Better, and 
 - **Empty alt on purpose** (decoration, so a screen reader skips it): the repeated copy of each award badge in the scrolling strip (the first copy carries the name), the photo behind the "marketing plan" banner on Home Evaluation (the link's words name it) and the empty stage of the photo viewer (it takes the photo's alt text when a photo opens).
 - **Not ours:** the live MLS® search results are MyRealPage's own markup; its photos carry alt text too ("Main Photo: <address> … MLS®# …", read from the widget's response).
 - **Found and fixed:** the old site showed the account photo (Jared's portrait) beside every listing, and the archive captured it as the last "photo" of all 200 listings. Each gallery therefore ended with a headshot whose alt text was "Portrait of a real estate agent" (106 listings showed just one home photo and the headshot). `ListingPage.astro` now leaves that one file out; galleries and their counts show home photos only. A test walks every built page for a missing or placeholder alt text and for the portrait.
+
+## D-261 — 2026-11-13 — Customer-experience brief, first pass (Jared: "Here's another review. Use it as you please")
+Brief and per-item status: `docs/review/cx/`. Done in code:
+- **Homepage:** a search box in the hero (area + home type to that live-listings page; quick-search data moved to `src/lib/quicksearch.ts`, shared with the map pages and the quiz). Community names in Search by Area are links; type links are 44px chips. On phones the reviews and listings swipe sideways (page ~15,300px, was ~21,100); `contain: paint` keeps those rows from widening the phone layout. Shorter hero photo on phones so the search is on the first screen.
+- **Quiz:** after budget and timing, step 5 shows links to matching search pages, then the optional "send me more" form.
+- **Home evaluation:** the form follows the introduction; the questions follow the form (`faq_after_form` in the local layer). The marketing-plan banner (D-256) now sits between the form and the questions.
+- **Listing pages:** Book a showing (email or text, pre-filled with the address) and Call under the price; sold listings get "Ask about homes like this".
+- **Alerts:** the "Email me new listings" form is open by default at every width.
+- **Search grids:** the results count reads "1-12 of 1,245" (MyRealPage hides its separator; `public/idx-embed.css`).
+- **Six search pages** no longer show the old widget's "only 1,500 are available for public display" text, which had been captured as page text.
+- **Neighbourhood maps:** if Google shows its own error box (daily limit, billing), the map gives way to the area list. Likely cause of the live error: the 400-a-day map-load cap from 2026-11-05; Jared to check Quotas in Google Cloud.

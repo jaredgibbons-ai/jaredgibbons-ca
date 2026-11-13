@@ -1,7 +1,8 @@
 ---
 // "Where are you starting?" quiz. Five short steps, then Send: the Worker (POST /api/forms/quiz) emails every answer to Jared.
 // While sending is not switched on (preview, or any failure), the same answers are offered as a ready-written email to Jared's inbox.
-const { heading = 'Where are you starting?', lede = 'Answer four quick questions and tell me where to send it. I will reply with homes to look at and the next steps.' } = Astro.props;
+import { quickSearchAreas } from '../lib/quicksearch';
+const { heading = 'Where are you starting?', lede = 'Answer four quick questions and see matching homes right away. Want more? I can send new ones as they list.' } = Astro.props;
 const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
 const steps = [
   { key: 'starting', q: 'Where are you starting?', multi: false, opts: ['First home', 'Moving up', 'Downsizing', 'Investing', 'Selling first, then buying', 'Just exploring'] },
@@ -11,8 +12,15 @@ const steps = [
 const budgets = ['Under $500,000', '$500,000 to $750,000', '$750,000 to $1,000,000', '$1,000,000 to $1,500,000', '$1,500,000 to $2,000,000', 'Over $2,000,000', 'Not sure yet'];
 const timings = ['Right away', 'In 1 to 3 months', 'In 3 to 6 months', 'In 6 to 12 months', 'Just looking'];
 const total = 5;
+// Instant result (D-261): after budget and timing, step 5 first shows links to matching live-listings pages on this site, then the optional
+// "send me more" form. Quiz answers map to the quick-search areas and home types (src/lib/quicksearch.ts); only built pages are linked.
+const QS = Object.fromEntries(quickSearchAreas().map((a) => [a.key, { label: a.label, opts: a.opts }]));
+const quizMap = {
+  areas: { 'South Surrey / White Rock': ['south-surrey', 'white-rock'], 'Langley': ['langley'], 'Surrey': ['surrey'], 'Cloverdale': ['cloverdale'], 'Abbotsford': ['abbotsford'] },
+  types: { 'Detached house': 'Houses', 'Townhome': 'Townhomes', 'Condo': 'Condos', 'Duplex': 'Duplexes', 'Acreage or farm': 'Acreages', 'Mobile home or 55+': 'Mobile homes' },
+};
 ---
-<section class="section sq" aria-labelledby="h-quiz" data-quiz data-sitekey={siteKey}>
+<section class="section sq" aria-labelledby="h-quiz" data-quiz data-sitekey={siteKey} data-qs={JSON.stringify(QS)} data-qmap={JSON.stringify(quizMap)}>
   <div class="wrap">
     <p class="eyebrow">Build my search</p>
     <h2 id="h-quiz" class="h2 caps">{heading}</h2>
@@ -44,7 +52,9 @@ const total = 5;
         </div>
       </fieldset>
       <fieldset class="sq__step sq__contact" data-step="5" hidden>
-        <legend class="sq__q">Where should I send it?</legend>
+        <legend class="sq__q">Homes that match</legend>
+        <ul class="sq__res" data-result></ul>
+        <p class="sq__sub sq__more">Want me to send new ones and a short plan? Optional.</p>
         <div class="sq__fields">
           <div class="sq__row"><label for="sq-name">Your name</label><input id="sq-name" name="name" autocomplete="name" required maxlength="100" /><p class="sq__err" id="sq-name-e" role="alert"></p></div>
           <div class="sq__row"><label for="sq-email">Your email</label><input id="sq-email" name="email" type="email" autocomplete="email" required maxlength="200" /><p class="sq__err" id="sq-email-e" role="alert"></p></div>
@@ -97,12 +107,26 @@ const total = 5;
       cur.textContent = String(i + 1); bar.style.width = `${((i + 1) / steps.length) * 100}%`;
       back.hidden = i === 0; next.hidden = i === steps.length - 1; send.hidden = i !== steps.length - 1;
       next.disabled = !answered(i); msg.textContent = ''; fb.hidden = true;
-      if (i === steps.length - 1) loadTurnstile();
-      (steps[i].querySelector('input') as HTMLElement | null)?.focus({ preventScroll: true });
+      if (i === steps.length - 1) { fillResult(); loadTurnstile(); }
+      (steps[i].querySelector('.sq__go, input') as HTMLElement | null)?.focus({ preventScroll: true });
     };
     form.addEventListener('change', () => { next.disabled = !answered(at); });
     next.addEventListener('click', () => { if (answered(at)) show(at + 1); });
     back.addEventListener('click', () => show(at - 1));
+    function fillResult() {
+      const ul = form.querySelector<HTMLElement>('[data-result]'); if (!ul) return;
+      const QS = JSON.parse(root!.dataset.qs || '{}') as Record<string, { label: string; opts: [string, string][] }>;
+      const M = JSON.parse(root!.dataset.qmap || '{}') as { areas: Record<string, string[]>; types: Record<string, string> };
+      const keys = [...new Set(vals('areas').flatMap((a) => M.areas[a] || []))].filter((k) => QS[k]);
+      const want = [...new Set(vals('types').map((t) => M.types[t]).filter(Boolean))];
+      const links: [string, string][] = [];
+      for (const k of keys) {
+        const opts = QS[k].opts; const hits = want.map((w) => opts.find(([t]) => t === w)).filter(Boolean) as [string, string][];
+        if (hits.length) hits.forEach(([t, h]) => links.push([`${t} in ${QS[k].label}`, h])); else links.push([`All homes in ${QS[k].label}`, opts[0][1]]);
+      }
+      if (!links.length) links.push(['Search every area on the map', '/map-search.html']);
+      ul.replaceChildren(...links.slice(0, 6).map(([t, h]) => { const li = document.createElement('li'); const a = document.createElement('a'); a.className = 'sq__go'; a.href = h; a.textContent = t + ' →'; li.appendChild(a); return li; }));
+    }
     function loadTurnstile() {
       const key = root!.dataset.sitekey, box = form.querySelector<HTMLElement>('[data-ts]');
       if (!key || !box || tsId !== null) return;
@@ -180,4 +204,8 @@ const total = 5;
   .sq__done{max-width:48rem;background:var(--cream);border:1px solid var(--ink);padding:clamp(1.25rem,3vw,2rem);margin-top:var(--s5)}
   .sq__done:focus{outline:3px solid var(--ink)}
   @media (max-width:40rem){.sq__fields{grid-template-columns:1fr}.sq__nav .btn{flex:1 1 auto;justify-content:center}}
+  .sq__res{list-style:none;margin:0 0 1.25rem;padding:0;display:grid;gap:.5rem}
+  :global(.sq__go){display:flex;align-items:center;min-height:3rem;padding:.6rem 1rem;background:var(--ink);color:#fff;font:700 .875rem/1.25 var(--f-head);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:2px solid var(--ink)}
+  :global(.sq__go:hover){background:#fff;color:var(--ink)}
+  .sq__more{margin-top:0}
 </style>

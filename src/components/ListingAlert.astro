@@ -8,7 +8,7 @@ const live = import.meta.env.PUBLIC_FORMS_LIVE === 'true';
 const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
 ---
 {live && siteKey && (
-  <details class="la-d" data-la-d>
+  <details class="la-d" data-la-d open>
   <summary class="la-d__s"><span class="la__title" id="la-title">{title || <>Email me new listings{search ? <> for this search</> : null}</>}</span><span class="la-d__go" aria-hidden="true">Get alerts</span></summary>
   <form class="la" data-la data-sitekey={siteKey} data-search={search} data-search-id={searchId || undefined} aria-labelledby="la-title" novalidate>
     <p class="la__lede">Get new homes by email as they come on the market. Jared sets up the alert for you.</p>
@@ -38,9 +38,7 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
   </details>
 )}
 <script>
-  // A one-line bar above the results; the form opens on tap (D-197). Wide screens show it open, where it takes two rows.
-  const ld = document.querySelector<HTMLDetailsElement>('details[data-la-d]');
-  if (ld && window.matchMedia('(min-width: 64rem)').matches) ld.open = true;
+  // The alert form shows open at every width (D-261; it was folded on phones under D-197). The bar still folds it away on tap.
 </script>
 <script>
   const f = document.querySelector<HTMLFormElement>('form[data-la]');

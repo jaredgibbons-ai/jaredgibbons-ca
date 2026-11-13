@@ -7,8 +7,13 @@ import AwardsMarquee from '../components/AwardsMarquee.astro';
 import SearchQuiz from '../components/SearchQuiz.astro';
 import MarketTicker from '../components/MarketTicker.astro';
 import InstagramFeed from '../components/InstagramFeed.astro';
+import { quickSearchAreas, quickSearchGroups } from '../lib/quicksearch';
 import { reviews, awards, listings, areas, southSurreyLinks, langleyLinks, langleyHoods, quick, resources } from '../data/home';
 // As Seen In logos: [name, image height, file number]. Add more by dropping a webp in public/img and adding a row.
+// Hero search (D-261): area and home type straight to that live-listings page on this site.
+const hsAreas = quickSearchAreas(); const hsGroups = quickSearchGroups(hsAreas);
+// Search by Area (D-261): each community name opens that community's all-homes page.
+const areaHome: Record<string, string> = Object.fromEntries(hsAreas.map((a) => [a.label, a.opts[0][1]]));
 const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',147,2],['Realtylink',122,3],['LoopNet',150,4],['Spacelist',99,5],['REALTOR.ca',225,6],['Royal LePage',206,7],['Kijiji',338,8]];
 ---
 <Base
@@ -28,10 +33,19 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
         <h1 id="h-hero" class="hero__h1"><span class="hero__name">JARED GIBBONS</span> <span class="hero__role">South Surrey Realtor</span></h1>
         <p class="hero__tag">Top 1% of Fraser Valley REALTORS®</p>
         <p class="hero__proof"><a href="/reviews.html"><span class="hero__stars" aria-hidden="true">★</span> 5.0 · 95 Google reviews</a><span aria-hidden="true"> · </span><span>#1 in South Surrey by FVREB Medallion Club points</span></p>
+        <form class="hs" action="/map-search.html" data-hs={JSON.stringify(Object.fromEntries(hsAreas.map((a) => [a.key, a.opts])))} role="search" aria-label="Search homes for sale">
+          <label class="hs__f"><span>Area</span>
+            <select name="area">{hsGroups.map((g) => <optgroup label={g}>{hsAreas.filter((a) => a.group === g).map((a) => <option value={a.key}>{a.label}</option>)}</optgroup>)}</select>
+          </label>
+          <label class="hs__f"><span>Home type</span>
+            <select name="type">{hsAreas[0]?.opts.map(([t, h]) => <option value={h}>{t}</option>)}</select>
+          </label>
+          <button type="submit" class="btn hs__go">Search homes</button>
+        </form>
         <p class="hero__actions">
-          <a class="btn" href="/recip.html">Search homes</a>
+          <a class="btn btn--ghost" href="/map-search.html">Map search</a>
           <a class="btn btn--ghost" href="tel:604-928-1361">Call 604-928-1361</a>
-          <a class="btn btn--ghost" href="mailto:jaredgibbons@royallepage.ca">Email Jared</a>
+          <a class="btn btn--ghost hero__mail" href="mailto:jaredgibbons@royallepage.ca">Email Jared</a>
         </p>
       </div>
       <div class="hero__media">
@@ -50,7 +64,7 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
   <section class="section section--cream" aria-labelledby="h-reviews">
     <div class="wrap">
       <h2 id="h-reviews" class="h2 caps">What clients say</h2>
-      <ul class="reviews">
+      <ul class="reviews row-swipe">
         {reviews.slice(0, Math.floor(reviews.length / 3) * 3).map((r) => (
           <li class="review">
             <Stars rating={5} />
@@ -81,7 +95,7 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
     <div class="wrap">
       <h2 id="h-listings" class="h2 caps">Our listings</h2>
       {isPreview && <p class="notice">Listings are not connected in this preview. Cards below are the archived 31 Oct 2026 snapshot of Jared's own listings.</p>}
-      <ul class="cards">
+      <ul class="cards row-swipe">
         {listings.map((l) => (
           <PropertyCard
             href={`/our-listings.html/listing.${l.slug}`}
@@ -143,7 +157,7 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
           <li class="area">
             <span class="area__n" aria-hidden="true">{a.n}</span>
             <div>
-              <p class="area__name">{a.name}</p>
+              {areaHome[a.name] ? <p class="area__name"><a href={areaHome[a.name]}>{a.name}<span class="sr-only"> homes for sale</span></a></p> : <p class="area__name">{a.name}</p>}
               <p class="area__hoods">{a.hoods}</p>
               <ul class="area__types">
                 {a.types.map(([label, href]) => <li><a href={href}>{label}<span class="sr-only"> in {a.name}</span></a></li>)}
@@ -227,7 +241,26 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
 </main>
 </Base>
 
+<script>
+  // Hero search (D-261): the home-type list follows the chosen area; Search homes opens that live-listings page. Without JS the form
+  // goes to the map search page.
+  const hs = document.querySelector<HTMLFormElement>('form.hs[data-hs]');
+  if (hs) {
+    const data = JSON.parse(hs.dataset.hs || '{}') as Record<string, [string, string][]>;
+    const area = hs.elements.namedItem('area') as HTMLSelectElement, type = hs.elements.namedItem('type') as HTMLSelectElement;
+    const fill = () => { type.replaceChildren(...(data[area.value] || []).map(([t, h]) => { const o = document.createElement('option'); o.value = h; o.textContent = t; return o; })); };
+    area.addEventListener('change', fill); fill();
+    hs.addEventListener('submit', (e) => { e.preventDefault(); location.href = /^\/[a-z0-9-]+\.html$/.test(type.value) ? type.value : '/map-search.html'; });
+  }
+</script>
+
 <style>
+  .hs{display:grid;grid-template-columns:1fr 1fr auto;gap:.6rem;align-items:end;margin:0 0 1rem;padding:1rem;border:1px solid var(--ink);background:#fff;max-width:44rem}
+  .hs__f{display:block;min-width:0}
+  .hs__f span{display:block;margin:0 0 .3rem;font:700 .6875rem/1.2 var(--f-head);letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+  .hs__f select{width:100%;min-height:3.25rem;padding:.4rem .5rem;border:1px solid var(--ink);border-radius:0;background:#fff;color:var(--ink);font:400 1rem var(--f-body)}
+  .hs__go{min-height:3.25rem;justify-content:center}
+  @media (max-width:520px){.hs{grid-template-columns:1fr 1fr}.hs__go{grid-column:1/-1}.hero__mail{display:none}}
   /* Home-only sizing; the shared heading style (800, tight, .caps) is in global.css */
   .hero__h1{margin:0;font-size:1rem;line-height:1;font-weight:400;letter-spacing:0}
   .hero__name{display:block;font-weight:800;letter-spacing:-.05em}
@@ -251,6 +284,8 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
   .hero__media{aspect-ratio:6/7;background:#000;border:1px solid var(--ink);overflow:hidden}
   .hero__media img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
   @media (max-width:820px){.hero__grid{grid-template-columns:1fr}.hero__media{aspect-ratio:4/3;order:-1}}
+  /* Phones (D-261): a shorter photo so the home search is on the first screen */
+  @media (max-width:520px){.hero__media{aspect-ratio:2/1}.hero__media img{object-position:50% 22%}.hero__tag{margin:1rem 0 1.25rem}.hero__proof{margin:-.5rem 0 1rem}}
 
   .reviews{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));gap:var(--s5);margin:var(--s6) 0}
   .review{background:#fff;border:1px solid var(--ink);padding:1.25rem 1.4rem;display:flex;flex-direction:column}
@@ -284,8 +319,13 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
   .area__n{font:700 .8125rem var(--f-head);letter-spacing:.08em;padding-top:.3rem}
   .area__name{font:700 1.5rem/1.15 var(--f-head);margin:0}
   .area__hoods{color:var(--grey);font-size:.9375rem;margin:.25rem 0 .75rem}
-  .area__types{display:flex;flex-wrap:wrap;gap:.25rem 1rem}
+  .area__types{display:flex;flex-wrap:wrap;gap:.5rem}
   .area__types a{font:700 .75rem var(--f-head);letter-spacing:.1em;text-transform:uppercase}
+  .area__name a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;min-height:2.75rem}
+  .area__name a::after{content:' →';margin-left:.35em;font-weight:400}
+  .area__name a:hover{text-decoration:underline}
+  .area__types a{display:inline-flex;align-items:center;min-height:2.75rem;padding:0 .9rem;border:1px solid var(--ink);text-decoration:none}
+  .area__types a:hover{background:var(--ink);color:#fff}
   .cant{display:flex;flex-wrap:wrap;gap:var(--s4);align-items:center;justify-content:space-between;border:1px solid var(--ink);background:#fff;padding:1.25rem 1.5rem}
   .cant p{margin:0;font:600 1rem var(--f-head)}
 
@@ -309,4 +349,10 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
   .tile__t{font-size:.9375rem}
 
   .cta .lede{max-width:none;font-size:clamp(1.125rem,2vw,1.5rem)}
+  /* Phones (D-261): reviews and listings scroll sideways instead of stacking (the page was about 21,000px tall). All of them stay in the page. */
+  @media (max-width:40rem){
+    ul.row-swipe{display:flex;gap:.75rem;overflow-x:auto;contain:paint;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;margin-inline:calc(-1 * var(--gutter));padding:0 var(--gutter) .75rem;scroll-padding-inline:var(--gutter)}
+    ul.row-swipe > :global(li){flex:0 0 86%;max-width:86%;min-width:0;scroll-snap-align:start}
+    ul.row-swipe .review__text{display:-webkit-box;-webkit-line-clamp:9;line-clamp:9;-webkit-box-orient:vertical;overflow:hidden}
+  }
 </style>

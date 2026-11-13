@@ -231,6 +231,11 @@ const window_ = (sold as any).meta.window;
         }
         setupFlyover();
         setupNearby();
+        // Google shows its own "This page can't load Google Maps correctly" box (daily limit reached, billing off) without calling
+        // gm_authFailure, and leaves a dark "for development purposes only" map. Watch for that box and show the area list instead (D-261).
+        const broken = () => !!host.querySelector('.gm-err-container, .gm-err-message, .dismissButton') || /development purposes only/i.test(host.textContent || '');
+        let checks = 0;
+        const watch = setInterval(() => { if (broken()) { clearInterval(watch); fail('The map is not available right now. The areas are listed below.'); } else if (++checks > 20) clearInterval(watch); }, 500);
       } catch (e) { fail('The map could not load. The areas are listed below.'); }
     };
 
