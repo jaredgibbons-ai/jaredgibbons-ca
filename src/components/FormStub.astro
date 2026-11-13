@@ -18,8 +18,8 @@ const names = rows.map((r: any) => keyOf(r.label));
 const has = (k: string) => names.includes(k);
 const kind = kindProp ? kindProp : fields ? 'home-evaluation' : has('message') ? 'contact' : has('address') && has('email') ? 'home-evaluation' : has('address') && !has('email') ? 'property-check' : '';
 const isLive = live && !!kind;
-// Reply promise on home evaluation requests (Jared, Nov 13 2026: "Reply within 12 hours"; D-269).
-const promise = kind === 'home-evaluation' ? 'Jared replies within 12 hours.' : '';
+// Reply promise on home evaluation requests (Jared, Nov 13 2026: "Jared respond same day"; D-269, D-270).
+const promise = kind === 'home-evaluation' ? 'Jared replies the same day.' : '';
 ---
 <form class:list={['fstub', { 'fstub--grid': !!fields }]} data-key={key} data-promise={promise || undefined} data-kind={isLive ? kind : undefined} data-sitekey={isLive ? siteKey : undefined} aria-describedby={isLive ? undefined : `${uid}-note`} onsubmit={isLive ? undefined : 'return false'} novalidate>
   {title && <p class="fstub__title">{title}</p>}

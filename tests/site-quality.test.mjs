@@ -313,7 +313,7 @@ test('listing media, map, example rate, 12-hour reply, zoning lookup on farm pag
   assert.ok(/data-mapgo/.test(html(`internal/listings/${slugs[0]}.html`)), 'map missing');
   const rate = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/example-rate.json'), 'utf8')).rate;
   assert.ok(html(`internal/listings/${slugs[0]}.html`).includes(`id="mc-rate" data-k="rate" type="text" inputmode="decimal" autocomplete="off" value="${rate}"`), 'example rate not prefilled');
-  assert.ok(/within 12 hours/.test(html('home-evaluation.html')), 'home evaluation reply time missing');
+  assert.ok(/Jared replies the same day/.test(html('home-evaluation.html')), 'home evaluation reply time missing');
   for (const [f, n] of [['langley-acreages-for-sale.html', 17], ['abbotsford-farms.html', 10], ['farms.html', 64]]) {
     const rows = (html(f).match(/<tr data-zls=/g) || []).length;
     assert.equal(rows, n, `${f}: ${rows} zoning rows`);
