@@ -325,7 +325,7 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
 <style>
   .ls__media{margin:0 0 var(--s5)}
   .ls__vid{margin:0;max-width:52rem}
-  .ls__vid iframe,.ls__play{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}
+  .ls__vid :global(iframe),.ls__play{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}
   .ls__play{position:relative;padding:0;cursor:pointer;overflow:hidden}
   .ls__play img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;transition:opacity .15s}
   .ls__play:hover img{opacity:1}
@@ -336,9 +336,9 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
   .ls__map{border:1px solid var(--ink);background:var(--cream);padding:var(--s5);display:grid;gap:.6rem;justify-items:start}
   .ls__map p{margin:0;font-weight:600}
   .ls__map a{color:var(--ink)}
-  .ls__map.is-on{padding:0;background:#fff}
+  .ls__map.is-on{display:block;padding:0;background:#fff}
   .ls__map.is-on p{padding:.6rem .85rem}
-  .ls__map iframe{display:block;width:100%;height:clamp(16rem,45vw,26rem);border:0}
+  .ls__map :global(iframe){display:block;width:100%;height:clamp(16rem,45vw,26rem);border:0}
     .ls__more ul{list-style:none;padding:0;margin:0 0 1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,16rem),1fr));gap:.5rem 2rem}
   .ls__more li{padding:.5rem 0;border-bottom:1px solid var(--rule)}
   .ls{max-width:68rem}
