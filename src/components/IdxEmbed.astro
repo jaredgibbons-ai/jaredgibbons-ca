@@ -13,8 +13,19 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
 {frame ? (
 <section class="section section--tight section--idx section--idxmap" aria-label="MLS® map search">
   <div class="wrap">
-    <iframe class="idxmap" src={MAP} title="MLS® map search: homes for sale in the Fraser Valley and Metro Vancouver" loading="lazy" allow="geolocation" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    {/* Desktop and tablet: the map in the page. Phones (D-255): a map inside a small frame traps the finger, hides its filters and shows no listings,
+        so phones get one button that opens the map full screen, then the listings as photo cards that scroll with the page. */}
+    <iframe class="idxmap" data-src={MAP} title="MLS® map search: homes for sale in the Fraser Valley and Metro Vancouver" allow="geolocation" referrerpolicy="strict-origin-when-cross-origin"></iframe>
     <p class="idxmap__alt"><a href={MAP} target="_blank" rel="noopener">Open the map search full screen</a></p>
+    {id && (
+      <div class="idxphone">
+        <p class="idxphone__cta"><a class="btn" href={MAP} target="_blank" rel="noopener">Open the map search →</a></p>
+        <p class="idxphone__note">Search by map, price, type or MLS® number. Or scroll the newest listings below.</p>
+        <div class="idx" data-idx-src={src} data-idx-id={id}></div>
+        <p class="notice idx__fallback" hidden>The live listings did not load. <a href={MAP} target="_blank" rel="noopener">Open the map search</a></p>
+      </div>
+    )}
+    <noscript><p class="notice"><a href={MAP}>Open the MLS® map search</a></p></noscript>
   </div>
 </section>
 ) : (
@@ -29,6 +40,13 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
 </section>
 )}
 <script>
+  // The map frame loads only on screens wide enough to show it; phones never download it.
+  const map = document.querySelector<HTMLIFrameElement>('iframe.idxmap[data-src]');
+  if (map) {
+    const wide = matchMedia('(min-width:701px)');
+    const set = () => { if ((wide.matches || !document.querySelector('.idxphone')) && !map.src) map.src = map.dataset.src!; };
+    set(); wide.addEventListener('change', set);
+  }
   const box = document.querySelector<HTMLElement>('.idx[data-idx-src]');
   if (box) {
     const fb = box.parentElement?.querySelector<HTMLElement>('.idx__fallback');
@@ -57,7 +75,17 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
   .idx{min-height:20rem}
   .idxmap{display:block;width:100%;height:min(46rem,78vh);height:min(46rem,78svh);min-height:30rem;border:1px solid var(--ink);background:var(--cream)}
   .idxmap__alt{margin:.6rem 0 0;font-size:.9375rem;text-align:right}
-  @media (max-width:700px){.section--idxmap .wrap{padding-inline:0}.idxmap{border-inline:0;height:72svh;min-height:26rem}.idxmap__alt{padding-inline:var(--gutter)}}
+  .idxphone{display:none}
+  @media (max-width:700px){
+    .section--idxmap:has(.idxphone) .idxmap,.section--idxmap:has(.idxphone) .idxmap__alt{display:none}
+    .idxphone{display:block}
+    .idxphone__cta{margin:0 0 .6rem}
+    .idxphone__cta .btn{width:100%;justify-content:center;min-height:3.25rem;font-size:.9375rem}
+    .idxphone__note{margin:0 0 var(--s4);font-size:.9375rem}
+    .section--idxmap:not(:has(.idxphone)) .wrap{padding-inline:0}
+    .section--idxmap:not(:has(.idxphone)) .idxmap{border-inline:0;height:72svh;min-height:26rem}
+    .section--idxmap:not(:has(.idxphone)) .idxmap__alt{padding-inline:var(--gutter)}
+  }
   .idx[hidden],.idx__fallback[hidden]{display:none}
   /* MyRealPage adds its own "Login with Facebook / Google / X" bar above the results; our page has its own sign-in and account links (D-133). */
   .idx :global(.mrp-results-vow-toolbar-wrapper),.idx :global(.mrp-vow-toolbar){display:none}

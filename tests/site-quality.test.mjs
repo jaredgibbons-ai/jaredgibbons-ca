@@ -43,7 +43,9 @@ test('built pages: each listing search block names a numeric search id, loads fr
     const t = html(f); const m = t.match(/data-idx-src="([^"]*)"/);
     if (!m) continue;
     const slug = f.replace(/\.html$/, '');
-    if (special[slug]) { if (m[1] !== `https://idx.myrealpage.com/wps/rest/${data.account}/l/idx2/${special[slug]}`) bad.push(`${f}: wrong special src`); }
+    // The two open-map pages show a saved search as photo cards on phones (D-255); that block names the South Surrey search.
+    if (/class="idxphone"/.test(t)) { if (!m[1].endsWith(`/-/search-${ids['south-surrey-homes-for-sale']}.def/in.js`)) bad.push(`${f}: wrong phone search`); }
+    else if (special[slug]) { if (m[1] !== `https://idx.myrealpage.com/wps/rest/${data.account}/l/idx2/${special[slug]}`) bad.push(`${f}: wrong special src`); }
     else if (!/^https:\/\/idx\.myrealpage\.com\/wps\/rest\/\d+\/l\/idx2\/recip\/[^"]*\/-\/search-\d+\.def\/in\.js$/.test(m[1])) bad.push(`${f}: src ${m[1]}`);
     if (ids[f.replace(/\.html$/, '')] && !m[1].includes(`search-${ids[f.replace(/\.html$/, '')]}.def`)) bad.push(`${f}: wrong id`);
     if (/<script[^>]+src="https:\/\/idx\.myrealpage/.test(t)) bad.push(`${f}: vendor script is not lazy`);
@@ -56,7 +58,7 @@ test('built pages: each listing search block names a numeric search id, loads fr
 test('built pages: each saved-search page has one correct "Email me new listings" box', { skip: !built }, () => {
   const bad = []; let n = 0;
   for (const f of pages) {
-    const t = html(f); const hasIdx = /class="idx"[^>]*data-idx-id="/.test(t); const forms = t.match(/<form class="la"/g) || [];
+    const t = html(f); const hasIdx = /class="idx"[^>]*data-idx-id="/.test(t) && !/class="idxphone"/.test(t); const forms = t.match(/<form class="la"/g) || [];
     if (!hasIdx) { if (forms.length && !(forms.length === 1 && /data-search="[^"]+ guide"/.test(t))) bad.push(`${f}: box on a non-search page`); continue; }   // a guide with no search carries one area alert (D-220)
     n++;
     if (forms.length !== 1) { bad.push(`${f}: ${forms.length} boxes`); continue; }

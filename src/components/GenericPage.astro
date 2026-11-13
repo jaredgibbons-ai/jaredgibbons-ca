@@ -613,7 +613,7 @@ const explore = !_extra.length ? exploreBase
         </div>
       </section>
     );
-    if (sec.kind === 'grid' && isMapPage) return <IdxEmbed frame account={idx.account} />;
+    if (sec.kind === 'grid' && isMapPage) return <IdxEmbed frame id={idx.pages['south-surrey-homes-for-sale']} account={idx.account} />;
     if (sec.kind === 'grid' && idxPath) return <IdxEmbed path={idxPath} account={idx.account} />;
     // Search pages (a saved search id) get the "Email me new listings" box right above the results; the open map search and "my listings" widgets do not.
     if (sec.kind === 'grid' && idxId) return <IdxEmbed id={idxId} account={idx.account}><ListingAlert search={alertName} searchId={idxId} /></IdxEmbed>;

@@ -1509,3 +1509,8 @@ Asked by Jared after launch: go through every page for errors.
 - The Worker asks Behold at most once an hour and serves its own copy, so visitors do not count against Behold's 1,200 monthly views.
 - Photo descriptions come from Instagram's alt text, else the start of the caption cut at a word.
 - If the Instagram connection ever lapses (Behold emails Jared to reconnect), the endpoint answers empty and the home-page section hides itself.
+
+## D-255 — 2026-11-12 — Phones: the two map-search pages show listing cards and a full-screen map button instead of the map in a frame (Jared: "its just not the best on the iphone")
+- Checked at 390 px: the MyRealPage map inside a frame shows only blobs, hides its filters under "More", shows no listing list, and dragging pans the map instead of scrolling the page.
+- At 700 px and under, /recip.html and /map-search.html now show one full-width button "Open the map search" (the same MyRealPage map, full screen, where its phone layout works) and then the South Surrey saved search as photo cards that scroll with the page. The map frame is not downloaded on phones.
+- Desktop and tablet are unchanged (D-242). Still MyRealPage throughout.
