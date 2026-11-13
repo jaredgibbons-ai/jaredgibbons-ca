@@ -175,7 +175,7 @@ if (local) {
   const arr = [...page.blocks.slice(0, cut), ...plain, ...page.blocks.slice(cut)];
   // One question section per page (D-202): when the archive already has its own ("Murrayville questions"), the local questions
   // join it, minus any it already asks, instead of opening a second "Common questions" section.
-  const qAt = arr.findIndex((b: any) => b.t === 'h' && b.level === 2 && /(?:\bquestions|Frequently Asked Questions.*)$/i.test(String(b.text || '')) && !/^Common questions$/i.test(String(b.text || '')));
+  const qAt = arr.findIndex((b: any) => b.t === 'h' && b.level === 2 && /(?:\bquestions|Frequently Asked Questions.*|^FAQs?)$/i.test(String(b.text || '')) && !/^Common questions$/i.test(String(b.text || '')));
   if (faqBlocks.length && qAt >= 0) {
     let qEnd = qAt + 1; while (qEnd < arr.length && !(arr[qEnd].t === 'h' && arr[qEnd].level <= 2)) qEnd++;
     const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();

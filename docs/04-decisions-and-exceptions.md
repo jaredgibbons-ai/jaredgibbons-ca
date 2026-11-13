@@ -1584,3 +1584,10 @@ Brief and per-item status: `docs/review/cx/`. Done in code:
 
 ## D-263 — 2026-11-13 — Home Evaluation: the marketing plan banner is bigger and sits right above the form (Jared: "make the marketing plan link much bigger and bolder and a statement about check out our marketing plan")
 - Headline "Check out our marketing plan" (eyebrow "Selling your home?"), larger type and button, taller photo, a grey offset shadow. Position `before-form` (reverses the D-261 move below the form).
+
+## D-264 — 2026-11-13 — /sell-my-house-fast-in-langley-bc.html rebuilt (Jared: "what can we do to improve this page")
+- Fixed: a broken sentence ("When you are ready to discuss timing and options, me for a straightforward conversation" had lost its link); two question sections (archive "FAQ" plus "Common questions", one question asked twice with different answers, a buyer question about private showings); three related links all labelled "Willoughby Heights real estate" and buyer-only links.
+- Added: "How fast Langley homes are selling right now" with the October 2026 FVREB figures for Langley (benchmark, sales, for sale, sales-to-active by home type; board-wide days to sell), "Three ways to sell fast in Langley, and what each costs" (MLS priced to draw offers; light prep then list, with the 5-day / 2-to-3-day go-live from the marketing plan; cash buyer at 15-25% less, a figure the page already gave), links to the home evaluation and net proceeds calculator, the "Check out our marketing plan" banner, seller FAQs (buy first or sell first; costs and when you become a client), FVREB in sources.
+- Title "Sell My House Fast in Langley, BC | Timelines & Options" (55), new meta description (145).
+- Site-wide: a page whose own question section is headed "FAQ" now takes the local questions into it instead of a second "Common questions" section (10 pages).
+- The October numbers need refreshing monthly; they are typed into the page's local layer (`src/data/local/sell-my-house-fast-in-langley-bc.json`).
