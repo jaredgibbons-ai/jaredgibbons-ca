@@ -263,7 +263,7 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
     <section class="section" aria-labelledby="ls-map-h">
       <div class="wrap ls">
         <h2 class="ls__h" id="ls-map-h">Location</h2>
-        <div class="ls__map" data-map={`https://www.google.com/maps?q=${encodeURIComponent(mapQ)}&z=15&output=embed`}>
+        <div class="ls__map" data-map={mapQ} data-key={import.meta.env.PUBLIC_GOOGLE_MAPS_KEY || ''}>
           <button type="button" class="btn btn--ghost" data-mapgo>Show the map</button>
           <p><a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQ)}`} target="_blank" rel="noopener">{mapQ} <span aria-hidden="true">↗</span></a></p>
         </div>
@@ -314,12 +314,27 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
     f.title = b.getAttribute('aria-label') || 'Video tour'; f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen = true;
     b.replaceWith(f);
   }));
-  // Map: load Google Maps on tap.
-  document.querySelectorAll<HTMLElement>('.ls__map[data-map]').forEach((m) => m.querySelector('[data-mapgo]')?.addEventListener('click', () => {
-    const f = document.createElement('iframe');
-    f.src = m.dataset.map!; f.title = 'Map'; f.loading = 'lazy'; f.referrerPolicy = 'no-referrer-when-downgrade';
-    m.prepend(f); m.querySelector('[data-mapgo]')?.remove(); m.classList.add('is-on');
-  }));
+  // Map: on tap, find the address with Places and show it on a Google map with a pin (same key and loader as the area maps).
+  import { loadGoogle } from '../lib/gmaps.js';
+  document.querySelectorAll<HTMLElement>('.ls__map[data-map]').forEach((m) => {
+    const btn = m.querySelector<HTMLButtonElement>('[data-mapgo]');
+    if (!m.dataset.key) { btn?.remove(); return; }
+    btn?.addEventListener('click', async () => {
+      btn.disabled = true; btn.textContent = 'Loading the map…';
+      try {
+        const g: any = await loadGoogle(m.dataset.key!);
+        const { Place } = await g.maps.importLibrary('places');
+        const { places } = await Place.searchByText({ textQuery: m.dataset.map, fields: ['location'], maxResultCount: 1, region: 'ca' });
+        if (!places?.length) throw new Error('not found');
+        const { Map } = await g.maps.importLibrary('maps');
+        const box = document.createElement('div'); box.className = 'ls__gmap'; m.prepend(box);
+        const at = places[0].location;
+        const map = new Map(box, { center: at, zoom: 15, mapTypeControl: true, streetViewControl: true, fullscreenControl: true, clickableIcons: false });
+        new g.maps.Marker({ position: at, map, title: m.dataset.map });
+        btn.remove(); m.classList.add('is-on');
+      } catch { btn.textContent = 'The map is not available right now'; }
+    });
+  });
 </script>
 
 <style>
@@ -338,7 +353,7 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
   .ls__map a{color:var(--ink)}
   .ls__map.is-on{display:block;padding:0;background:#fff}
   .ls__map.is-on p{padding:.6rem .85rem}
-  .ls__map :global(iframe){display:block;width:100%;height:clamp(16rem,45vw,26rem);border:0}
+  .ls__map :global(.ls__gmap){display:block;width:100%;height:clamp(16rem,45vw,26rem)}
     .ls__more ul{list-style:none;padding:0;margin:0 0 1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,16rem),1fr));gap:.5rem 2rem}
   .ls__more li{padding:.5rem 0;border-bottom:1px solid var(--rule)}
   .ls{max-width:68rem}
