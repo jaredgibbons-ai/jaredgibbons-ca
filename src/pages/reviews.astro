@@ -49,11 +49,11 @@ const explore = [
         ))}
       </ul>
       <p class="rv-note">A selection of client comments.<span id="rv-more" hidden> More reviews are shown below.</span></p>
-      {import.meta.env.PUBLIC_PREVIEW !== 'false' && <p class="preview-flag">Open items OI-15/OI-16: the archive text has no star ratings for these six reviews, and says "More reviews are shown below" but no further reviews were captured (they were likely loaded by the Trustindex script). Plan: Google Business Profile API feed (BL-03); until then only the six archived reviews are shown.</p>}
+      {import.meta.env.PUBLIC_PREVIEW !== 'false' && <p class="preview-flag">Open items OI-15/OI-16: the archive text has no star ratings for these six reviews, and says "More reviews are shown below" but no further reviews were captured (they were likely loaded by the Trustindex script). Plan: Google Business Profile API feed (BL-03). Until then the page adds Google's rating, count and up to 5 recent reviews from Google Places (D-253).</p>}
     </div>
   </section>
 
-  <section class="section" id="google-live" aria-labelledby="h-google" hidden>
+  <section class="section" id="google-live" aria-labelledby="h-google" data-key={import.meta.env.PUBLIC_GOOGLE_MAPS_KEY || ''} hidden>
     <div class="wrap">
       <h2 id="h-google" class="h2 caps">Latest Google reviews</h2>
       <p class="rv-note" id="google-summary"></p>
@@ -82,35 +82,81 @@ const explore = [
   </section>
 </main>
 
-<script is:inline>
-// Progressive enhancement: the six archived reviews above are the page. When the daily Google feed has data, show it too.
-// Reviews are shown as Google returns them (unedited), attributed to Google. No star-rating structured data (self-serving, D-19).
-(function () {
-  var sec = document.getElementById('google-live');
-  if (!sec || !window.fetch) return;
-  fetch('/api/reviews.json', { headers: { accept: 'application/json' } }).then(function (r) { return r.status === 200 ? r.json() : null; }).then(function (d) {
-    if (!d || !d.reviews || !d.reviews.length) return;
-    var el = function (t, c, x) { var n = document.createElement(t); if (c) n.className = c; if (x != null) n.textContent = x; return n; };
-    var list = document.getElementById('google-list');
-    var more = document.getElementById('rv-more'); if (more) more.hidden = false; // only promised once there are more to show (D-246)
-    d.reviews.slice(0, 24).forEach(function (r) {
-      var li = el('li', 'rv'), q = el('blockquote', 'rv__body');
-      q.appendChild(el('p', 'rv__title', '\u2605'.repeat(r.rating) + ' ' + r.rating + ' out of 5'));
-      if (r.text) r.text.split(/\n{2,}/).forEach(function (p) { q.appendChild(el('p', '', p)); });
-      if (r.reply) { var rep = el('p', '', 'Reply from Jared: ' + r.reply.text); rep.style.fontStyle = 'italic'; q.appendChild(rep); }
-      var who = el('p', 'rv__who'), b = el('strong', '', r.name); who.appendChild(b);
-      if (r.date) { who.appendChild(document.createElement('br')); who.appendChild(el('span', 'muted', new Date(r.date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' }) + ' \u00b7 Google review')); }
-      li.appendChild(q); li.appendChild(who); list.appendChild(li);
-    });
-    var sum = document.getElementById('google-summary');
-    if (d.totalReviewCount) sum.textContent = (d.averageRating ? d.averageRating.toFixed(1) + ' average from ' : '') + d.totalReviewCount + ' Google reviews';
-    var links = document.getElementById('google-links');
-    if (d.profileUrl) { var a = el('a', '', 'See all reviews on Google'); a.href = d.profileUrl; a.rel = 'noopener'; links.appendChild(a); }
-    if (d.profileUrl && d.reviewUrl) links.appendChild(document.createTextNode(' \u00b7 '));
-    if (d.reviewUrl) { var w = el('a', '', 'Leave a review'); w.href = d.reviewUrl; w.rel = 'noopener'; links.appendChild(w); }
-    sec.hidden = false;
-  }).catch(function () {});
-})();
+<script>
+// Progressive enhancement: the six archived reviews above are the page. When Google reviews are available, show them too.
+// Source 1: the daily Google Business Profile feed (/api/reviews.json, all reviews; waits on Google access, BL-03).
+// Source 2 (fallback, D-253): Google Places in the visitor's browser with our restricted key: rating, count and up to 5 reviews.
+// Loaded only when the visitor nears the section, and kept for 12 hours in the browser so repeat visits make no new request.
+// Reviews are shown as Google returns them (unedited), attributed to Google, author linked to their Google profile. No star-rating structured data (D-19).
+import { loadGoogle } from '../lib/gmaps.js';
+const PLACE_ID = 'ChIJi3WbELfEhVQRCk86YYxb5us';
+const WRITE = 'https://search.google.com/local/writereview?placeid=' + PLACE_ID;
+const CACHE = 'jg-greviews-v1', TTL = 12 * 3600 * 1000;
+const sec = document.getElementById('google-live');
+const key = sec?.dataset.key || '';
+const el = (t: string, c?: string, x?: string | null) => { const n = document.createElement(t); if (c) n.className = c; if (x != null) n.textContent = x; return n; };
+
+type R = { rating: number; text?: string; name: string; uri?: string; reply?: { text: string } };
+type D = { reviews: R[]; averageRating?: number; totalReviewCount?: number; profileUrl?: string; reviewUrl?: string; viaPlaces?: boolean };
+
+function render(d: D) {
+  if (!sec || !d || !d.reviews || !d.reviews.length) return;
+  const list = document.getElementById('google-list')!;
+  const more = document.getElementById('rv-more'); if (more) more.hidden = false; // only promised once there are more to show (D-246)
+  list.replaceChildren();
+  d.reviews.slice(0, 24).forEach((r) => {
+    const li = el('li', 'rv'), q = el('blockquote', 'rv__body');
+    const n = Math.max(0, Math.min(5, Math.round(r.rating || 0)));
+    if (n) q.appendChild(el('p', 'rv__title', '\u2605'.repeat(n) + ' ' + n + ' out of 5'));
+    if (r.text) r.text.split(/\n{2,}/).forEach((p) => q.appendChild(el('p', '', p)));
+    if (r.reply) { const rep = el('p', '', 'Reply from Jared: ' + r.reply.text); rep.style.fontStyle = 'italic'; q.appendChild(rep); }
+    const who = el('p', 'rv__who');
+    if (r.uri && /^https:\/\/www\.google\.com\//.test(r.uri)) { const a = el('a', '', r.name) as HTMLAnchorElement; a.href = r.uri; a.rel = 'noopener nofollow'; const b = el('strong'); b.appendChild(a); who.appendChild(b); }
+    else who.appendChild(el('strong', '', r.name));
+    who.appendChild(document.createElement('br')); who.appendChild(el('span', 'muted', 'Google review'));
+    li.appendChild(q); li.appendChild(who); list.appendChild(li);
+  });
+  const sum = document.getElementById('google-summary')!;
+  if (d.totalReviewCount) sum.textContent = (d.averageRating ? d.averageRating.toFixed(1) + ' average from ' : '') + d.totalReviewCount + ' Google reviews' + (d.viaPlaces ? ' \u00b7 a few recent ones below' : '');
+  const links = document.getElementById('google-links')!;
+  links.replaceChildren();
+  if (d.profileUrl) { const a = el('a', '', 'See all reviews on Google') as HTMLAnchorElement; a.href = d.profileUrl; a.rel = 'noopener'; links.appendChild(a); }
+  if (d.profileUrl && d.reviewUrl) links.appendChild(document.createTextNode(' \u00b7 '));
+  if (d.reviewUrl) { const w = el('a', '', 'Leave a review') as HTMLAnchorElement; w.href = d.reviewUrl; w.rel = 'noopener'; links.appendChild(w); }
+  sec.hidden = false;
+}
+
+function cached(): D | null { try { const c = JSON.parse(localStorage.getItem(CACHE) || 'null'); return c && Date.now() - c.at < TTL ? c.d : null; } catch { return null; } }
+function keep(d: D) { try { localStorage.setItem(CACHE, JSON.stringify({ at: Date.now(), d })); } catch { /* private mode: fine */ } }
+
+async function fromPlaces(): Promise<D | null> {
+  const hit = cached(); if (hit) return hit;
+  const g: any = await loadGoogle(key);
+  const { Place } = await g.maps.importLibrary('places');
+  const p = new Place({ id: PLACE_ID });
+  await p.fetchFields({ fields: ['reviews', 'rating', 'userRatingCount', 'googleMapsURI'] });
+  const reviews: R[] = (p.reviews || []).filter((r: any) => r && r.text).map((r: any) => ({ rating: r.rating, text: r.text, name: r.authorAttribution?.displayName || 'Google user', uri: r.authorAttribution?.uri || undefined }));
+  if (!reviews.length) return null;
+  const d: D = { reviews, averageRating: p.rating ?? undefined, totalReviewCount: p.userRatingCount ?? undefined, profileUrl: p.googleMapsURI || undefined, reviewUrl: WRITE, viaPlaces: true };
+  keep(d);
+  return d;
+}
+
+function placesWhenNear() {
+  if (!sec || !key) return;
+  const go = () => { fromPlaces().then((d) => d && render(d)).catch(() => {}); };
+  if (!('IntersectionObserver' in window)) return go();
+  const anchor = document.getElementById('rv-more')?.closest('section') || sec;
+  const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { io.disconnect(); go(); } }, { rootMargin: '600px 0px' });
+  io.observe(anchor);
+}
+
+if (sec) {
+  fetch('/api/reviews.json', { headers: { accept: 'application/json' } })
+    .then((r) => (r.status === 200 ? r.json() : null))
+    .then((d) => { if (d && d.reviews && d.reviews.length) render(d); else placesWhenNear(); })
+    .catch(() => placesWhenNear());
+}
 </script>
 </Base>
 
