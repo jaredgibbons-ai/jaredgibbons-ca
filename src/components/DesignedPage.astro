@@ -11,15 +11,19 @@ import FormStub from './FormStub.astro';
 import PropertyCard from './PropertyCard.astro';
 import { ownCards } from '../lib/own-listings';
 import EXPLORE from '../data/explore.json';
+import REVIEW_EXCERPTS from '../data/review-excerpts.json';
 
 const { page, d } = Astro.props as { page: any; d: any };
 const seo = page.seo || {};
 const origin = 'https://jaredgibbons.ca';
-const plain = (x: any) => (Array.isArray(x) ? x.map((p: any) => p.t).join(' ').replace(/\s+([,.;:!?])/g, '$1') : String(x ?? ''));
+const plain = (x: any): string => (Array.isArray(x) ? (x.length && (x[0].p || x[0].li) ? x.map((b: any) => b.li ? b.li.map((it: any) => plain(it)).join('; ') : plain(b.p)).join(' ') : x.map((p: any) => p.t).join(' ').replace(/\s+([,.;:!?])/g, '$1')) : String(x ?? ''));
 const faqItems: any[] = d.sections.flatMap((s: any) => (s.blocks ?? []).filter((b: any) => b.type === 'faq').flatMap((b: any) => b.items));
 const jsonld: any[] = [];
 if (faqItems.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqItems.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: plain(f.a) } })) });
-const crumbs = [{ name: 'Home', href: '/' }, { name: page.slug === 'buying' ? 'Buy a Home' : 'Sell Your Home', href: `/${page.slug}.html` }];
+const crumbs = d.kind === 'faq' ? [{ name: 'Home', href: '/' }, { name: 'Buy a Home', href: '/buying.html' }, { name: d.crumb, href: `/${page.slug}.html` }] : [{ name: 'Home', href: '/' }, { name: d.crumb || (page.slug === 'buying' ? 'Buy a Home' : 'Sell Your Home'), href: `/${page.slug}.html` }];
+// About page (D-266): Person markup tied to the site-wide agent, and dated Google review excerpts for "@reviews".
+if (d.kind === 'about') jsonld.push({ '@context': 'https://schema.org', '@type': 'AboutPage', url: `${origin}/${page.slug}.html`, mainEntity: { '@type': 'Person', '@id': `${origin}/#jared`, name: 'Jared Gibbons', jobTitle: 'REALTOR®', image: `${origin}/img/Jared.webp`, telephone: '+1-604-928-1361', email: 'jaredgibbons@royallepage.ca', worksFor: { '@type': 'RealEstateAgent', '@id': `${origin}/#agent`, name: 'Royal LePage Little Oak Realty' } } });
+const REVIEWS = (REVIEW_EXCERPTS as any).items.filter((r: any) => r.when !== 'Google review').map((r: any) => ({ q: r.quote, who: r.who, date: r.when.replace(/ · Google review$/, ''), src: 'Google review' }));
 const explore = (EXPLORE as Record<string, any>)[page.slug];
 const own = ownCards().filter((c) => c.status !== 'Active').sort((a, b) => b.soldTs - a.soldTs);
 const mon = (c: any) => { const m = /^(\w{3}) \d+, (\d{4})$/.exec(c.soldDate || ''); return m ? `Sold ${m[1]} ${m[2]}` : 'Sold'; };
@@ -60,7 +64,7 @@ const HAS800 = (src: string) => existsSync(`public${src}-800.webp`);
       </div>
       {hero.image && (
         <figure class="dp-hero__img">
-          <img src={`${hero.image.src}.webp`} srcset={HAS800(hero.image.src) ? `${hero.image.src}-800.webp 800w, ${hero.image.src}.webp ${hero.image.w}w` : undefined} sizes="100vw" width={hero.image.w} height={hero.image.h} alt={hero.image.alt} fetchpriority="high" decoding="async" />
+          <img src={`${hero.image.src}.webp`} srcset={hero.image.srcset || (HAS800(hero.image.src) ? `${hero.image.src}-800.webp 800w, ${hero.image.src}.webp ${hero.image.w}w` : undefined)} sizes={hero.image.ratio ? '(min-width:60rem) 40vw, 100vw' : '100vw'} width={hero.image.w} height={hero.image.h} alt={hero.image.alt} fetchpriority="high" decoding="async" style={hero.image.ratio ? `aspect-ratio:${hero.image.ratio};object-position:${hero.image.pos || '50% 50%'}` : undefined} />
         </figure>
       )}
     </div>
@@ -182,6 +186,13 @@ const HAS800 = (src: string) => existsSync(`public${src}-800.webp`);
               ))}
             </ul>
           );
+          if (b.type === 'prose') return <div class="dp-prose">{b.items.map((t: any) => <p>{isRich(t) ? <Rich parts={t} /> : t}</p>)}</div>;
+          if (b.type === 'contact') return (
+            <ul class="dp-contact">
+              {b.items.map((c: any) => <li><span class="dp-contact__k">{c.k}</span><a class="dp-contact__t" href={c.href} rel={/^https?:/.test(c.href) ? 'noopener' : undefined}>{c.t}</a>{c.d && <span class="dp-contact__d">{c.d}</span>}</li>)}
+            </ul>
+          );
+          if (b.type === 'quotes') b = { ...b, items: b.items === '@reviews' ? REVIEWS : b.items };
           if (b.type === 'quotes') return (
             <>
               <ul class:list={['dp-quotes', { 'dp-quotes--two': b.layout === 'two' }]}>
@@ -199,10 +210,12 @@ const HAS800 = (src: string) => existsSync(`public${src}-800.webp`);
           if (b.type === 'faq') return (
             <>
               <div class="dp-faq">
-                {b.items.map((f: any) => (
-                  <details>
+                {b.items.map((f: any, i: number) => (
+                  <details open={b.open && i < 1 ? true : undefined}>
                     <summary>{f.q}</summary>
-                    <p>{isRich(f.a) ? <Rich parts={f.a} /> : f.a}</p>
+                    {Array.isArray(f.a) && f.a.length && (f.a[0].p || f.a[0].li)
+                      ? <div class="dp-faq__a">{f.a.map((x: any) => x.li ? <ul>{x.li.map((it: any) => <li><Rich parts={it} /></li>)}</ul> : <p><Rich parts={x.p} /></p>)}</div>
+                      : <p>{isRich(f.a) ? <Rich parts={f.a} /> : f.a}</p>}
                   </details>
                 ))}
               </div>
@@ -462,4 +475,16 @@ const HAS800 = (src: string) => existsSync(`public${src}-800.webp`);
   .dp-vf :global(.fstub .btn){background:#fff;color:var(--ink);border-color:#fff;opacity:.6}
   .dp-close__foot{margin:var(--s5) 0 0;font-size:.875rem;color:var(--cream-deep)}
   .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .dp-prose{max-width:46rem}
+  .dp-prose p{font-size:1.125rem;line-height:1.7;margin:0 0 1.1rem}
+  .dp-contact{list-style:none;margin:var(--s4) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:1px;background:var(--ink);border:1px solid var(--ink)}
+  .dp-contact li{background:#fff;padding:1.25rem 1.3rem;display:flex;flex-direction:column;gap:.35rem}
+  .dp-contact__k{font:700 .6875rem/1.2 var(--f-head);letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+  .dp-contact__t{font:800 clamp(1.05rem,1.8vw,1.35rem)/1.25 var(--f-head);color:var(--ink);text-decoration:none;overflow-wrap:anywhere}
+  .dp-contact__t:hover{text-decoration:underline}
+  .dp-contact__d{font-size:.875rem;color:var(--grey)}
+  .dp-faq__a{padding:0 0 .5rem}
+  .dp-faq__a p{margin:0 0 .8rem}
+  .dp-faq__a ul{margin:0 0 .9rem;padding-left:1.2rem}
+  .dp-faq__a li{margin:0 0 .35rem}
 </style>

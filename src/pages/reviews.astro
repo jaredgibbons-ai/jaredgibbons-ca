@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import reviews from '../data/reviews.json';
+import GOOGLE_ALL from '../data/google-reviews.json';
 // Text is parsed verbatim from the archive record (docs/archive-extracts/reviews.html.md) by tools/import step; do not retype.
 // Star ratings are NOT in the archived text for this page (OI-15). When confirmed, pass rating to <Stars/> (always gold, D-19).
 const explore = [
@@ -36,7 +37,7 @@ const explore = [
 
   <section class="section section--cream" aria-labelledby="h-comments">
     <div class="wrap">
-      <h2 id="h-comments" class="h2 caps">Client comments</h2>
+      <h2 id="h-comments" class="h2 caps">Featured reviews</h2>
       <ul class="rv-list">
         {reviews.map((r) => (
           <li class="rv">
@@ -44,12 +45,29 @@ const explore = [
               {r.title && <p class="rv__title">{r.title}</p>}
               {r.paragraphs.map((p) => <p>{p}</p>)}
             </blockquote>
-            <p class="rv__who"><strong>{r.name}</strong><br /><span class="muted">{r.source || r.date}</span></p>
+            <p class="rv__who"><strong>{r.name}</strong><br /><span class="muted">{[r.source, r.date].filter(Boolean).join(' · ')}</span></p>
           </li>
         ))}
       </ul>
-      <p class="rv-note">A selection of client comments.<span id="rv-more" hidden> More reviews are shown below.</span></p>
+      <p class="rv-note">Six Google reviews, with the dates they were posted.<span id="rv-more" hidden> More reviews are shown below.</span></p>
       {import.meta.env.PUBLIC_PREVIEW !== 'false' && <p class="preview-flag">Open items OI-15/OI-16: the archive text has no star ratings for these six reviews, and says "More reviews are shown below" but no further reviews were captured (they were likely loaded by the Trustindex script). Plan: Google Business Profile API feed (BL-03). Until then the page adds Google's rating, count and up to 5 recent reviews from Google Places (D-253).</p>}
+    </div>
+  </section>
+
+  <!-- Every written 5-star Google review (export of 1 Nov 2026, tools/data/google-reviews-2026-11-01.json; D-266). Verbatim, initials only. -->
+  <section class="section" aria-labelledby="h-all">
+    <div class="wrap">
+      <h2 id="h-all" class="h2 caps">All {GOOGLE_ALL.length} written Google reviews</h2>
+      <p class="rv-note"><span class="rv-stars" aria-hidden="true">★★★★★</span> 5.0 on Google from 95 reviews. Every review with written comments is below, word for word, with the reviewer's initials. Times are as Google showed them on 1 November 2026. <a href="https://maps.app.goo.gl/zvYBAj6rf2cKyjsZ9" rel="noopener">See them on Google</a>.</p>
+      <ul class="rv-list rv-list--all">
+        {GOOGLE_ALL.map((r) => (
+          <li class="rv">
+            <p class="rv-stars" aria-label="5 out of 5 stars">★★★★★</p>
+            <blockquote class="rv__body"><p>{r.text}</p></blockquote>
+            <p class="rv__who"><strong>{r.who}</strong><br /><span class="muted">Google review · {r.when}</span></p>
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 
@@ -183,4 +201,7 @@ if (sec) {
   .explore__k{font:600 .75rem var(--f-head);letter-spacing:.14em;text-transform:uppercase}
   .explore__t{font:700 1.25rem/1.2 var(--f-head);margin:.2rem 0 .35rem}
   .explore__v{font:700 .75rem var(--f-head);letter-spacing:.1em;text-transform:uppercase}
+  .rv-stars{color:var(--star);letter-spacing:.1em;margin:0 0 .6rem}
+  .rv-list--all{columns:3 20rem;column-gap:var(--s5);display:block}
+  .rv-list--all .rv{break-inside:avoid;margin:0 0 var(--s5)}
 </style>

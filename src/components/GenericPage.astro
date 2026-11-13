@@ -934,6 +934,18 @@ const explore = !_extra.length ? exploreBase
               if (b.t === 'areamap') return <AreaMap region={b.region} mode={b.mode} current={b.current} />;
               if (b.t === 'btnlink') return <p><a class="btn" href={b.href} rel="noopener" target="_blank">{b.label}<span class="sr-only"> (opens in a new tab)</span></a></p>;
               // Blog index (D-258): the newest market update as one dark band with its headline numbers.
+              // End of every blog post (D-266): the author, with a photo and direct contact.
+              if (b.t === 'authorbox') return (
+                <aside class="abox" aria-label="About the author">
+                  <img class="abox__img" src="/img/Jared-480.webp" width="480" height="614" alt="Jared Gibbons, REALTOR®" loading="lazy" decoding="async" />
+                  <div class="abox__txt">
+                    <p class="abox__k">Written by</p>
+                    <p class="abox__n"><a href="/jared.html">Jared Gibbons, REALTOR®</a></p>
+                    <p class="abox__d">Royal LePage Little Oak Realty. Raised on a Langley farm, selling South Surrey, White Rock, Langley and the Fraser Valley since 2015. Top 1% of Fraser Valley REALTORS®.</p>
+                    <p class="abox__c"><a class="btn" href="tel:+16049281361" data-ev="call_jared">Call or text 604-928-1361</a><a class="btn btn--ghost" href="mailto:jaredgibbons@royallepage.ca">Email Jared</a><a class="btn btn--ghost" href="/home-evaluation.html">What's my home worth?</a></p>
+                  </div>
+                </aside>
+              );
               if (b.t === 'mktfeature') return (
                 <div class="mkf on-dark">
                   <div class="mkf__txt">
@@ -1382,4 +1394,13 @@ const explore = !_extra.length ? exploreBase
   .steps__n{display:block;font:700 .75rem var(--f-head);letter-spacing:.08em;color:var(--grey)}
   .steps__t{font:700 1.0625rem/1.3 var(--f-head);margin:.4rem 0 .5rem;text-transform:none;letter-spacing:0}
   .steps li p{margin:0;font-size:.9375rem}
+  .abox{display:grid;grid-template-columns:9rem 1fr;gap:1.5rem;align-items:center;max-width:var(--prose);margin:var(--s6) 0 0;padding:1.5rem;border:1px solid var(--ink);background:#fff}
+  .abox__img{width:9rem;height:9rem;object-fit:cover;object-position:50% 18%;display:block;background:#000}
+  .abox__k{margin:0 0 .2rem;font:700 .6875rem/1.2 var(--f-head);letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+  .abox__n{margin:0 0 .5rem;font:800 1.25rem/1.2 var(--f-head)}
+  .abox__n a{color:inherit;text-decoration:none}
+  .abox__d{margin:0 0 1rem;font-size:.9375rem;line-height:1.55}
+  .abox__c{margin:0;display:flex;flex-wrap:wrap;gap:.5rem}
+  .abox__c .btn{min-height:2.75rem}
+  @media (max-width:36rem){.abox{grid-template-columns:1fr}.abox__img{width:6.5rem;height:6.5rem}}
 </style>

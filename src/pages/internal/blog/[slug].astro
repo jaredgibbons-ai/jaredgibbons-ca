@@ -12,7 +12,9 @@ export function getStaticPaths() {
   return Object.values(mods).map((m) => {
     // Related posts (tools/build_post_related.py, D-221): every post links to up to six others on the same area or topic.
     const rel = ((RELATED as Record<string, string[]>)[m.default.slug] || []).filter((s) => titleOf[s]);
-    const relBlocks = rel.length ? [{ t: 'h', level: 2, text: 'Related posts' }, { t: 'list', items: rel.map((s) => [{ t: titleOf[s], h: `/blog.html/${s}` }]) }] : [];
+    const author = [{ t: 'authorbox' }];   // D-266: every post ends with who wrote it and how to reach him
+    const relBlocks0 = rel.length ? [{ t: 'h', level: 2, text: 'Related posts' }, { t: 'list', items: rel.map((s) => [{ t: titleOf[s], h: `/blog.html/${s}` }]) }] : [];
+    const relBlocks = [...author, ...relBlocks0];
     // Reviewed search title, description and (where the archive's was wrong) H1, from tools/build_post_listing_seo.py (D-221). Applied last.
     const f = (PLS as Record<string, any>)[m.default.slug];
     if (!f) return { params: { slug: m.default.slug }, props: { page: { ...m.default, blocks: [...(m.default.blocks || []), ...relBlocks] } } };
