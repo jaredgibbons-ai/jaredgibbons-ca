@@ -94,7 +94,9 @@ const WRITE = 'https://search.google.com/local/writereview?placeid=' + PLACE_ID;
 const CACHE = 'jg-greviews-v1', TTL = 12 * 3600 * 1000;
 const sec = document.getElementById('google-live');
 const key = sec?.dataset.key || '';
-const el = (t: string, c?: string, x?: string | null) => { const n = document.createElement(t); if (c) n.className = c; if (x != null) n.textContent = x; return n; };
+// Astro scopes this page's styles with a data-astro-cid-* attribute; elements made here need the same one to get the card styling.
+const cid = sec ? sec.getAttributeNames().find((a) => a.startsWith('data-astro-cid-')) : undefined;
+const el = (t: string, c?: string, x?: string | null) => { const n = document.createElement(t); if (cid) n.setAttribute(cid, ''); if (c) n.className = c; if (x != null) n.textContent = x; return n; };
 
 type R = { rating: number; text?: string; name: string; uri?: string; reply?: { text: string } };
 type D = { reviews: R[]; averageRating?: number; totalReviewCount?: number; profileUrl?: string; reviewUrl?: string; viaPlaces?: boolean };
