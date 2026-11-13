@@ -202,3 +202,53 @@ test('built pages: the October 2026 market update has its tables, sources and qu
   const bad = walk(DIST).filter((p) => /property="og:image" content="[^"]*\/(?:wps\/rest|_media)\//.test(fs.readFileSync(p, 'utf8')));
   assert.equal(bad.length, 0, `share image on the old host: ${bad.slice(0, 3).join(', ')}`);
 });
+
+test('blog post photos: each has its files and alt text; posts show the photo, their own share card and BlogPosting markup; index cards carry it (D-259)', { skip: !built }, () => {
+  const IMG = JSON.parse(fs.readFileSync('src/data/post-images.json', 'utf8'));
+  const posts = fs.readdirSync('src/data/posts').map((f) => f.replace(/\.json$/, ''));
+  const unesc = (s) => s.replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n)).replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+  const attr = (tag, name) => { const m = tag.match(new RegExp(`\\s${name}="([^"]*)"`)); return m ? unesc(m[1]) : null; };
+  const SITE = 'https://jaredgibbons.ca';
+  assert.ok(Object.keys(IMG).length >= 198, 'post photos went missing from src/data/post-images.json');
+  const bad = [];
+  for (const slug of posts) {
+    const r = IMG[slug];
+    const t = fs.readFileSync(path.join(DIST, 'internal/blog', slug + '.html'), 'utf8');
+    const head = t.slice(0, t.indexOf('</head>'));
+    const og = (head.match(/<meta property="og:image" content="([^"]*)"/) || [])[1];
+    const ld = [...head.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => JSON.parse(m[1])).find((j) => j['@type'] === 'BlogPosting');
+    const figs = [...t.matchAll(/<figure class="phero"[^>]*>\s*<img\b([^>]*)>/g)];
+    if (!ld || !ld.headline || !ld.datePublished || ld.author?.name !== 'Jared Gibbons' || ld.mainEntityOfPage?.['@id'] !== `${SITE}/blog.html/${slug}`) { bad.push(`${slug}: BlogPosting markup`); continue; }
+    if (!head.includes(`<meta property="article:published_time" content="${ld.datePublished}"`) || !head.includes('<meta property="og:type" content="article"')) bad.push(`${slug}: article tags`);
+    if (!r) {   // a post with no photo of its own: no picture, the default card, no image line
+      if (figs.length || ld.image || og !== `${SITE}/img/og-default.jpg`) bad.push(`${slug}: has no photo record but shows one`);
+      continue;
+    }
+    if (typeof r.alt !== 'string' || r.alt.length < 25 || r.alt.length > 170 || /^(an? )?(image|photo|picture) of\b/i.test(r.alt) || /[.\s]$/.test(r.alt) || /\s{2}/.test(r.alt)) bad.push(`${slug}: alt text "${r.alt}"`);
+    if (r.widths[r.widths.length - 1] !== r.w || r.w > 1200 || r.widths.some((w, i) => i && w <= r.widths[i - 1])) bad.push(`${slug}: sizes`);
+    for (const w of r.widths) if (!fs.existsSync(path.join(DIST, 'img/blog', `${slug}-${w}.webp`))) bad.push(`${slug}: ${w}.webp is missing`);
+    if (!!r.og !== fs.existsSync(path.join(DIST, 'img/blog', `${slug}-og.jpg`))) bad.push(`${slug}: share card file`);
+    if (figs.length !== 1) { bad.push(`${slug}: ${figs.length} lead photos`); continue; }
+    const img = figs[0][1];
+    if (attr(img, 'alt') !== r.alt || attr(img, 'width') !== String(r.w) || attr(img, 'height') !== String(r.h) || attr(img, 'fetchpriority') !== 'high' || /\sloading="lazy"/.test(img)) bad.push(`${slug}: lead photo attributes`);
+    if (attr(img, 'srcset') !== r.widths.map((w) => `/img/blog/${slug}-${w}.webp ${w}w`).join(', ')) bad.push(`${slug}: srcset`);
+    if (!(t.indexOf('class="byline"') < figs[0].index && figs[0].index < t.indexOf('</figure>'))) bad.push(`${slug}: photo is not under the byline`);
+    if (og !== (r.og ? `${SITE}/img/blog/${slug}-og.jpg` : `${SITE}/img/og-default.jpg`)) bad.push(`${slug}: og:image ${og}`);
+    if (r.og && (!head.includes(`<meta property="og:image:width" content="${r.og[0]}"`) || !head.includes(`<meta property="og:image:height" content="${r.og[1]}"`) || !/<meta property="og:image:alt" content="[^"]{25,}"/.test(head))) bad.push(`${slug}: share card size or alt`);
+    if (JSON.stringify(ld.image) !== JSON.stringify([...(r.og ? [`${SITE}/img/blog/${slug}-og.jpg`] : []), `${SITE}/img/blog/${slug}-${r.w}.webp`])) bad.push(`${slug}: BlogPosting image`);
+    if (!/<meta name="robots" content="[^"]*max-image-preview:large/.test(head)) bad.push(`${slug}: robots`);
+  }
+  for (const slug of Object.keys(IMG)) if (!posts.includes(slug)) bad.push(`${slug}: a photo for a post that does not exist`);
+  assert.equal(bad.length, 0, bad.slice(0, 8).join('; '));
+  // the index: every card has a picture box; a post with a photo shows it with its alt text, a post without shows the monogram tile
+  const cards = [...html('blog.html').matchAll(/<li class="post"[^>]*>([\s\S]*?)<\/li>/g)].map((m) => m[1]);
+  for (const c of cards) {
+    const slug = c.match(/href="\/blog\.html\/([^"]+)"/)[1]; const r = IMG[slug];
+    const box = c.match(/<div class="post__ph([^"]*)"[^>]*>\s*<img\b([^>]*)>/);
+    assert.ok(box, `${slug}: card has no picture box`);
+    if (!r) { assert.ok(/post__ph--none/.test(box[1]) && attr(box[2], 'alt') === '', `${slug}: no photo, but the card is not the plain tile`); continue; }
+    assert.equal(attr(box[2], 'alt'), r.alt, `${slug}: card alt text`);
+    assert.ok(attr(box[2], 'srcset').includes(`/img/blog/${slug}-${r.widths[0]}.webp ${r.widths[0]}w`) && attr(box[2], 'loading') === 'lazy' && attr(box[2], 'width') && attr(box[2], 'height'), `${slug}: card photo attributes`);
+    assert.equal(/post__ph--whole/.test(box[1]), r.fit === 'contain', `${slug}: card crop`);
+  }
+});

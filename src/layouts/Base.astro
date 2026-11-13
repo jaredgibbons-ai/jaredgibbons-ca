@@ -4,7 +4,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { fitTitle, fitMeta } from '../lib/seo';
-const { title: rawTitle, description: rawDescription, canonical, footerTagline, footerCell = false, current = '', brandHref = '/', ogTitle, ogDescription, ogImage, jsonld = [], robots = '', crumbs = [] } = Astro.props;
+const { title: rawTitle, description: rawDescription, canonical, footerTagline, footerCell = false, current = '', brandHref = '/', ogTitle, ogDescription, ogImage, ogImageMeta, article, jsonld = [], robots = '', crumbs = [] } = Astro.props;
 const title = fitTitle(rawTitle);
 const description = fitMeta(rawDescription);
 const ogDesc = fitMeta(ogDescription) ?? description;
@@ -15,6 +15,8 @@ const preview = import.meta.env.PUBLIC_PREVIEW !== 'false';
 // Share images on MyRealPage's /_media/ path are not part of the new site and stop loading at the switch (D-236): use the default card.
 // The same goes for blog-post images under MyRealPage's /wps/rest/ path (198 posts, each answered 404 after the switch; D-258).
 const shareImage = ogImage && !/\/_media\/|\/wps\/rest\//.test(ogImage) ? ogImage : 'https://jaredgibbons.ca/img/og-default.jpg';
+// A page's own share card (blog posts, D-259) says its size and what it shows; `article` marks a post and carries its dates.
+const ownCard = ogImageMeta && shareImage === ogImage ? ogImageMeta : null;
 const isHome = Astro.url.pathname === '/' || Astro.url.pathname === '/index.html';
 const site = 'https://jaredgibbons.ca';
 // Home-only entity markup (facts as published in the footer and profile; no ratings). sameAs, image, logo, geo and hasMap carry over
@@ -74,7 +76,10 @@ const robotsContent = preview ? 'noindex, nofollow' : robots;
   <meta property="og:image" content={shareImage} />
   {shareImage.endsWith('/img/og-default.jpg') && <meta property="og:image:width" content="1200" />}{shareImage.endsWith('/img/og-default.jpg') && <meta property="og:image:height" content="630" />}
   {shareImage.endsWith('/img/og-default.jpg') && <meta property="og:image:alt" content="Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, South Surrey, White Rock and Langley" />}
-  <meta property="og:type" content="website" />
+  {ownCard && <meta property="og:image:width" content={String(ownCard.w)} />}{ownCard && <meta property="og:image:height" content={String(ownCard.h)} />}
+  {ownCard && <meta property="og:image:alt" content={ownCard.alt} />}
+  <meta property="og:type" content={article ? 'article' : 'website'} />
+  {article?.published && <meta property="article:published_time" content={article.published} />}{article?.modified && <meta property="article:modified_time" content={article.modified} />}
   <meta property="og:site_name" content="Jared Gibbons" />
   <meta property="og:locale" content="en_CA" />
   {ogUrl && <meta property="og:url" content={ogUrl} />}
@@ -82,6 +87,7 @@ const robotsContent = preview ? 'noindex, nofollow' : robots;
   {(ogTitle ?? title) && <meta name="twitter:title" content={ogTitle ?? title} />}
   {(ogDescription ?? description) && <meta name="twitter:description" content={ogDescription ?? description} />}
   <meta name="twitter:image" content={shareImage} />
+  {ownCard && <meta name="twitter:image:alt" content={ownCard.alt} />}
   {[...entity, ...jsonld, ...crumbLd].map((j: any) => <script type="application/ld+json" set:html={JSON.stringify(j).replace(/</g, '\\u003c')} />)}
 </head>
 <body>

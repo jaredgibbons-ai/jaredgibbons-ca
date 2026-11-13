@@ -5,6 +5,7 @@ import DesignedPage from '../components/DesignedPage.astro';
 import SEO_OVERRIDES from '../data/seo-overrides.json';
 import SEO_FINAL from '../data/seo-final.json';
 import PLS from '../data/post-listing-seo.json';
+import { postImage } from '../lib/post-images';
 export function getStaticPaths() {
   const mods = import.meta.glob('../data/pages/*.json', { eager: true }) as Record<string, any>;
   const out = Object.values(mods).map((m) => ({ params: { slug: m.default.slug }, props: { page: m.default } }));
@@ -44,7 +45,7 @@ export function getStaticPaths() {
     const years = [...new Set(posts.map((q) => q.year))];
     blog.props.page = { ...blog.props.page, blocks: [
       h1, ...(lede ? [{ t: 'p', cls: 'lede', parts: [{ t: lede.text.charAt(0) + lede.text.slice(1).toLowerCase() + '.' }] }] : []), ...feature,
-      { t: 'h', level: 2, text: 'Latest posts' }, { t: 'postgrid', items: posts.slice(0, 24) },
+      { t: 'h', level: 2, text: 'Latest posts' }, { t: 'postgrid', items: posts.slice(0, 24).map((q) => ({ ...q, img: postImage(q.href.split('/').pop()!) })) },   // each card carries its post's lead photo (D-259)
       { t: 'h', level: 2, text: 'All blog posts by year' }, { t: 'postyears', years: years.map((y) => ({ year: y, posts: posts.filter((q) => q.year === y) })) },
     ] };
   }

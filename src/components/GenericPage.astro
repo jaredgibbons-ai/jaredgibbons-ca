@@ -32,6 +32,7 @@ import LASTMOD from '../data/lastmod.json';
 import PhotoCredit from './PhotoCredit.astro';
 import IdxEmbed from './IdxEmbed.astro';
 import { mapSearchUrl } from '../lib/idx';
+import { postImage } from '../lib/post-images';
 import ListingAlert from './ListingAlert.astro';
 import Newsletter from './Newsletter.astro';
 import SearchQuiz from './SearchQuiz.astro';
@@ -117,6 +118,20 @@ const postName = String(page.title || '').split('|')[0].trim();
 const crumbs: any[] = page.slug === 'index' || page.slug === '404' ? [] : local?.breadcrumbs?.length ? local.breadcrumbs
   : String(page.path || '').startsWith('/blog.html/') ? [{ name: 'Home', href: '/' }, { name: 'Blog', href: '/blog.html' }, { name: postName, href: page.path }]
   : (BREADCRUMBS as Record<string, any[]>)[page.slug] ?? [];
+// Blog posts (D-259): the lead photo copied from the old blog (shown under the byline, used for the share card), and BlogPosting markup
+// with the dates the post itself shows. A post with no photo of its own simply has neither picture nor image line.
+const isPost = String(page.path || '').startsWith('/blog.html/');
+const hero = isPost ? postImage(page.slug) : null;
+const published = isPost ? String(seo.Published || '') : '';
+const modified = isPost && String(seo.Modified || '') > published ? String(seo.Modified) : published;
+if (isPost) {
+  const headline = String((page.blocks || []).find((b: any) => b.t === 'h' && b.level === 1)?.text || postName);
+  jsonld.push({ '@context': 'https://schema.org', '@type': 'BlogPosting', mainEntityOfPage: { '@type': 'WebPage', '@id': page.canonical }, headline: headline.length > 110 ? headline.slice(0, 109).replace(/\s+\S*$/, '') + '…' : headline,
+    ...(seo['Meta description'] ? { description: seo['Meta description'] } : {}), ...(published ? { datePublished: published, dateModified: modified } : {}),
+    ...(hero ? { image: [...(hero.ogUrl ? [hero.ogUrl] : []), hero.url] } : {}), inLanguage: 'en-CA',
+    author: { '@type': 'Person', '@id': `${origin}/#jared`, name: 'Jared Gibbons', url: `${origin}/about.html` },
+    publisher: { '@type': 'RealEstateAgent', '@id': `${origin}/#agent`, name: 'Jared Gibbons', url: `${origin}/` } });
+}
 if (page.slug.endsWith('-guide')) {
   const lm = (LASTMOD as Record<string, any>)[`${origin}${page.path || '/' + page.slug + '.html'}`];
   jsonld.push({ '@context': 'https://schema.org', '@type': 'WebPage', url: `${origin}${page.path || '/' + page.slug + '.html'}`, name: String(page.title || '').split('|')[0].trim(),
@@ -616,10 +631,12 @@ const explore = !_extra.length ? exploreBase
   description={seo['Meta description'] || undefined}
   ogTitle={seo['OG title'] || undefined}
   ogDescription={seo['OG description'] || undefined}
-  ogImage={seo['OG image'] || undefined}
+  ogImage={hero ? (hero.ogUrl ?? undefined) : (seo['OG image'] || undefined)}
+  ogImageMeta={hero?.og ? { w: hero.og[0], h: hero.og[1], alt: hero.alt } : undefined}
+  article={isPost ? { published, modified } : undefined}
   jsonld={jsonld}
   crumbs={crumbs}
-  robots={isGated(page.slug) ? 'noindex, follow' : (seo['Meta robots'] || 'index, follow')}
+  robots={isGated(page.slug) ? 'noindex, follow' : (seo['Meta robots'] || 'index, follow') + (hero ? ', max-image-preview:large' : '')}
   footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
   footerCell={true}
   brandHref="/"
@@ -755,6 +772,15 @@ const explore = !_extra.length ? exploreBase
                 </details>
               );
               if (b.t === 'newsletter') return <Newsletter />;
+              // A post's lead photo sits right under its byline, at its own shape and never enlarged (D-259).
+              if (b.t === 'p' && b.cls === 'byline' && hero) return (
+                <>
+                  <p class="byline"><Rich parts={b.parts} /></p>
+                  <figure class="phero" style={`max-width:${hero.heroW}px`}>
+                    <img src={hero.src} srcset={hero.srcset} sizes={`(min-width: ${hero.heroW + 48}px) ${hero.heroW}px, 100vw`} width={hero.w} height={hero.h} alt={hero.alt} fetchpriority="high" decoding="async" />
+                  </figure>
+                </>
+              );
               if (b.t === 'p') return <p class={b.cls}><Rich parts={b.parts} /></p>;
               if (b.t === 'photo') return <PhotoCredit photo={b.photo} sizes="(min-width:48rem) 40rem, 100vw" />;
               if (b.t === 'list' && (sec.blocks[bi - 1]?.t === 'h' && isSourcesHeading(sec.blocks[bi - 1].text) || isSourcesIntro(sec.blocks[bi - 1])) && b.items.length) return <SourceList items={b.items} />;
@@ -932,11 +958,18 @@ const explore = !_extra.length ? exploreBase
                   {b.stats?.length > 0 && <ul class="mkf__stats">{b.stats.map((x: any) => <li><strong>{x.value}</strong><span>{x.label}</span></li>)}</ul>}
                 </div>
               );
-              // Blog index: the newest posts as dated cards; the whole card is the link.
+              // Blog index: the newest posts as dated cards with each post's lead photo (D-259); the whole card is the link.
+              // A post with no photo of its own gets the monogram on black, so the grid stays even (in the single column on a phone that tile is left out).
+              // `sizes` names 66vw on a phone, where the card is really the full column: a 3x screen then takes the 800px file, not the 1200px one.
               if (b.t === 'postgrid') return (
                 <ul class="posts">
                   {b.items.map((q: any) => (
                     <li class="post">
+                      {q.img
+                        ? <div class:list={['post__ph', { 'post__ph--whole': q.img.fit === 'contain' }]} style={q.img.fit === 'contain' ? `background:${q.img.bg}` : undefined}>
+                            <img src={q.img.src} srcset={q.img.srcset} sizes="(min-width:64rem) 25rem, (min-width:42rem) 46vw, 66vw" width={q.img.w} height={q.img.h} alt={q.img.alt} loading="lazy" decoding="async" style={q.img.pos ? `object-position:${q.img.pos}` : undefined} />
+                          </div>
+                        : <div class="post__ph post__ph--none"><img src="/img/jg-monogram.webp" width="600" height="472" alt="" loading="lazy" decoding="async" /></div>}
                       {q.date && <p class="post__d"><time datetime={q.iso}>{q.date}</time></p>}
                       <h3 class="post__t"><a href={q.href}>{q.title}</a></h3>
                       {q.excerpt && <p class="post__x">{q.excerpt}</p>}
@@ -1156,6 +1189,12 @@ const explore = !_extra.length ? exploreBase
   @media (max-width:52rem){.mkf{grid-template-columns:1fr}}
   .posts{list-style:none;margin:var(--s5) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));gap:var(--s4)}
   .post{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--ink);padding:1.25rem 1.3rem 1.1rem;transition:background .15s,color .15s}
+  .post__ph{margin:-1.25rem -1.3rem 1.1rem;aspect-ratio:3/2;overflow:hidden;background:#e9e9e9;border-bottom:1px solid var(--ink)}
+  .post__ph img{display:block;width:100%;height:100%;object-fit:cover}
+  .post__ph--whole img{object-fit:contain}
+  .post__ph--none{background:var(--ink);display:grid;place-items:center}
+  .post__ph--none img{width:30%;height:auto;filter:invert(1)}
+  .post:hover .post__ph,.post:focus-within .post__ph{border-bottom-color:#fff}
   .post__d{margin:0 0 .6rem;font:700 .6875rem/1.2 var(--f-head);letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
   .post__t{margin:0 0 .6rem;font:700 1.125rem/1.25 var(--f-head);letter-spacing:-.01em;text-wrap:balance}
   .post__t a{color:inherit;text-decoration:none}
@@ -1166,7 +1205,7 @@ const explore = !_extra.length ? exploreBase
   .post:hover .post__d,.post:focus-within .post__d{color:#d2d2d2}
   .post__t a:focus-visible{outline:none}
   .post:focus-within{outline:3px solid var(--ink);outline-offset:3px}
-  @media (max-width:40rem){.post:nth-child(n+13){display:none}}
+  @media (max-width:40rem){.post:nth-child(n+13),.post__ph--none{display:none}}
   .pyears{margin:var(--s5) 0 0;border-top:1px solid var(--ink)}
   .py{border-bottom:1px solid var(--ink)}
   .py summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:1rem;min-height:3.5rem;padding:.5rem 0}
@@ -1219,6 +1258,8 @@ const explore = !_extra.length ? exploreBase
   .pg__h{font-size:1.25rem;margin:2rem 0 .75rem}
   .pg p,.pg li,.pg a{overflow-wrap:anywhere}
   .byline{font:600 .8125rem var(--f-head);letter-spacing:.04em}
+  .phero{margin:var(--s5) 0 var(--s6)}
+  .phero img{display:block;width:100%;height:auto;background:#e9e9e9;outline:1px solid rgba(10,10,10,.1);outline-offset:-1px}
   .pg .h2,.pg .h2.caps{margin-top:0;margin-bottom:var(--s5)}
   .pg .h2::before{content:'';display:block;width:2.5rem;height:3px;background:var(--ink);margin-bottom:.9rem}
   .pg__h{font-size:1.125rem;margin:1.75rem 0 .6rem;letter-spacing:-.01em}
