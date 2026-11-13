@@ -18,8 +18,10 @@ const names = rows.map((r: any) => keyOf(r.label));
 const has = (k: string) => names.includes(k);
 const kind = kindProp ? kindProp : fields ? 'home-evaluation' : has('message') ? 'contact' : has('address') && has('email') ? 'home-evaluation' : has('address') && !has('email') ? 'property-check' : '';
 const isLive = live && !!kind;
+// Reply promise on home evaluation requests (Jared, Nov 13 2026: "Reply within 12 hours"; D-269).
+const promise = kind === 'home-evaluation' ? 'Jared replies within 12 hours.' : '';
 ---
-<form class:list={['fstub', { 'fstub--grid': !!fields }]} data-key={key} data-kind={isLive ? kind : undefined} data-sitekey={isLive ? siteKey : undefined} aria-describedby={isLive ? undefined : `${uid}-note`} onsubmit={isLive ? undefined : 'return false'} novalidate>
+<form class:list={['fstub', { 'fstub--grid': !!fields }]} data-key={key} data-promise={promise || undefined} data-kind={isLive ? kind : undefined} data-sitekey={isLive ? siteKey : undefined} aria-describedby={isLive ? undefined : `${uid}-note`} onsubmit={isLive ? undefined : 'return false'} novalidate>
   {title && <p class="fstub__title">{title}</p>}
   {!isLive && <p id={`${uid}-note`} class="notice">This form is not connected in the preview. Nothing you type here is sent.</p>}
   <div class="fstub__fields">
@@ -37,6 +39,7 @@ const isLive = live && !!kind;
   </div>
   {isLive && <div class="fstub__hp" aria-hidden="true"><label for={`${uid}-hp`}>Leave this empty</label><input id={`${uid}-hp`} name="_hp_url" tabindex="-1" autocomplete="off" /></div>}
   {isLive && siteKey && <div class="fstub__ts" data-ts></div>}
+  {promise && <p class="fstub__promise"><svg aria-hidden="true" viewBox="0 0 20 20" width="16" height="16"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 5.5V10l3 2" fill="none" stroke="currentColor" stroke-width="2"/></svg>{promise}</p>}
   {isLive
     ? <button type="submit" class="btn">{submit}</button>
     : <button type="button" class="btn" aria-disabled="true" disabled>{submit}</button>}
@@ -72,7 +75,7 @@ const isLive = live && !!kind;
       try {
         const r = await fetch('/api/forms/' + kind, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(data) });
         const j = await r.json().catch(() => ({}));
-        if (r.ok && j.ok) { window.jgLead?.(kind); msg.textContent = 'Sent. Thank you. Jared will reply by email or phone.'; fields().forEach((e) => (e.value = '')); return; }
+        if (r.ok && j.ok) { window.jgLead?.(kind); msg.textContent = f.dataset.promise ? 'Sent. Thank you. ' + f.dataset.promise.replace('Jared replies', 'Jared will reply by email or phone') : 'Sent. Thank you. Jared will reply by email or phone.'; fields().forEach((e) => (e.value = '')); return; }
         if (r.status === 422 && j.errors) { Object.entries<string>(j.errors).forEach(([k, t]) => setErr(k, t)); msg.textContent = 'Please check the highlighted fields.'; (f.querySelector('.fstub__err:not(:empty)')?.parentElement?.querySelector('input,textarea,select') as HTMLElement | null)?.focus(); }
         else if (r.status === 429) msg.textContent = 'Too many tries. Please wait a minute and send again.';
         else if (r.status === 403 && j.error === 'captcha_required') {
@@ -126,5 +129,6 @@ const isLive = live && !!kind;
   .fstub__fb p{margin:0 0 .75rem}
   .fstub__fb .btn{margin:0 .5rem .5rem 0}
   .fstub__fine{margin:0;font-size:.8125rem;color:#444}
+  .fstub__promise{display:flex;align-items:center;gap:.45rem;margin:0 0 .75rem;font:700 .875rem/1.3 var(--f-head)}
   @media (max-width:40rem){.fstub--grid .fstub__fields{grid-template-columns:1fr}}
 </style>

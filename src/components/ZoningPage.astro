@@ -252,8 +252,10 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Zoning Guide', href: '/zon
     const reveal = () => { const h = location.hash.slice(1); if (!h.startsWith('zd-') || h === 'zd-dir') return; const el = document.getElementById(h); if (el && (el.hidden || el.closest('[hidden]'))) { fm = ''; ft = ''; q.value = ''; press('data-zm', ''); press('data-zt', ''); apply(); el.scrollIntoView(); } };
     window.addEventListener('hashchange', reveal);
     // ?q=A1 opens the directory filtered
-    const pq = new URLSearchParams(location.search).get('q');
-    if (pq) { q.value = pq; apply(); }
+    const sp = new URLSearchParams(location.search), pq = sp.get('q'), pm = sp.get('m');
+    if (pm && munis.some((s) => s.dataset.zmuni === pm)) { fm = pm; press('data-zm', fm); }
+    if (pq) q.value = pq;
+    if (pq || pm) { apply(); document.getElementById('zd-dir')?.scrollIntoView(); }
   }
 </script>
 

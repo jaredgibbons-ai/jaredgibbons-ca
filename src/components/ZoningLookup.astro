@@ -1,0 +1,107 @@
+---
+// Zoning lookup for farm, acreage and land pages (D-269): the farm and rural zones from the zoning guide (src/data/zonings.json)
+// for the page's municipality (all seven when the page covers the whole valley), with a search that filters the rows and
+// hands off to the full guide (/zonings.html?q=…). Each row links to that zone's card in the guide.
+import Z from '../data/zonings.json';
+
+const { muni = '' } = Astro.props as { muni?: string };
+const d = Z as any;
+const FARM = ['Agricultural / Farm', 'Rural / Acreage'];
+const munis = (muni ? d.munis.filter((m: any) => m.id === muni) : d.munis) as any[];
+const many = munis.length > 1;
+const place = many ? 'the Fraser Valley' : String(munis[0]?.name || '').replace(/^Township/, 'the Township');
+const lot = (z: any) => {
+  const f = z.fields.find((x: any) => x[0] === 'Min. new lot' || x[0] === 'Min. lot');
+  if (!f) return '';
+  const v = String(f[1]);
+  const m = /^.*?\)/.exec(v) || /^.*?(?=\.\s|\.$|;)/.exec(v);
+  return (m ? m[0] : v).replace(/[.,;]\s*$/, '').trim();
+};
+const rows = munis.flatMap((m: any) => m.zones.filter((z: any) => FARM.includes(z.type)).map((z: any) => ({ m: m.name.replace(/^Township of /, ''), id: z.id, code: z.code, name: z.name, type: z.type === 'Agricultural / Farm' ? 'Farm' : 'Rural', lot: lot(z), txt: z.fields.map((f: any) => f[1]).join(' ') })));
+const hintWord = ['coach house', 'secondary suite', 'kennel', 'greenhouse', 'winery', 'farm retail'].find((w) => rows.some((r: any) => r.txt.toLowerCase().includes(w))) || 'farm';
+const uid = `zl${Math.random().toString(36).slice(2, 7)}`;
+---
+{rows.length > 0 && (
+<section class="section zl" aria-labelledby={`${uid}-h`}>
+  <div class="wrap">
+    <div class="zl__head">
+      <div>
+        <p class="eyebrow">Zoning lookup</p>
+        <h2 class="h2" id={`${uid}-h`}>Check the zoning before you buy</h2>
+        <p class="zl__lead">Farm, rural and acreage zones in {place}, in plain English: what each allows and the smallest lot it can be split into. Search a code like {rows[0].code} or a word like "{hintWord}".</p>
+      </div>
+      <p class="zl__links"><a class="btn" href="/zonings.html#zd-lookup">Check an address</a> <a class="btn btn--ghost" href={`/zonings.html${muni ? `#${muni}` : ''}`}>Full zoning guide</a></p>
+    </div>
+    <form class="zl__search" action="/zonings.html" method="get" role="search">
+      <label for={`${uid}-q`} class="zl__vh">Search zones</label>
+      <input id={`${uid}-q`} name="q" type="search" placeholder={`Search ${rows.length} farm and acreage zones`} autocomplete="off" data-zlq />
+      {muni && <input type="hidden" name="m" value={muni} />}
+      <button type="submit" class="btn btn--ghost">Search the full guide</button>
+    </form>
+    <div class="zl__wrap" tabindex="0" role="region" aria-label="Farm and acreage zones">
+      <table class="zl__t">
+        <thead><tr>{many && <th scope="col">Area</th>}<th scope="col">Zone</th><th scope="col">Type</th><th scope="col">Smallest new lot</th><th scope="col"><span class="zl__vh">Details</span></th></tr></thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr data-zls={`${r.m} ${r.code} ${r.code.replace(/-/g, '')} ${r.name} ${r.type} ${r.txt}`.toLowerCase()}>
+              {many && <td>{r.m}</td>}
+              <th scope="row"><span class="zl__code">{r.code}</span> <span class="zl__name">{r.name}</span></th>
+              <td><span class:list={['zl__type', { 'zl__type--farm': r.type === 'Farm' }]}>{r.type}</span></td>
+              <td>{r.lot || '—'}</td>
+              <td><a href={`/zonings.html#${r.id}`} aria-label={`${r.code} ${r.name}: what it allows`}>Details →</a></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p class="zl__none" data-zln hidden>No farm or acreage zone matches. Press Enter to search the full zoning guide.</p>
+    </div>
+    <p class="zl__fine">Summaries checked against each official bylaw on October 2, 2026. Zoning changes often: confirm with the municipality, and on ALR land with the Agricultural Land Commission.</p>
+  </div>
+</section>
+)}
+
+<script>
+  document.querySelectorAll<HTMLElement>('.zl').forEach((s) => {
+    const q = s.querySelector<HTMLInputElement>('[data-zlq]'); const none = s.querySelector<HTMLElement>('[data-zln]');
+    const rows = [...s.querySelectorAll<HTMLElement>('tr[data-zls]')];
+    q?.addEventListener('input', () => {
+      const w = q.value.toLowerCase().split(/\s+/).filter(Boolean); let n = 0;
+      for (const r of rows) { const ok = w.every((x) => r.dataset.zls!.includes(x) || r.dataset.zls!.includes(x.replace(/-/g, ''))); r.hidden = !ok; if (ok) n++; }
+      if (none) none.hidden = n > 0;
+    });
+  });
+</script>
+
+<style>
+  .zl{border-top:1px solid var(--ink)}
+  .zl__head{display:flex;flex-wrap:wrap;gap:var(--s4) var(--s6);align-items:end;justify-content:space-between;margin-bottom:var(--s5)}
+  .zl__head > div{max-width:44rem}
+  .zl__head .eyebrow{color:var(--grey)}
+  .zl__lead{margin:0;line-height:1.6}
+  .zl__links{display:flex;flex-wrap:wrap;gap:.6rem;margin:0}
+  .zl__vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .zl__search{display:flex;gap:.6rem;margin:0 0 var(--s4)}
+  .zl__search input{flex:1;min-width:0;min-height:3rem;padding:.6rem .9rem;border:2px solid var(--ink);border-radius:0;font:600 1rem var(--f-body);-webkit-appearance:none;appearance:none}
+  .zl__search input:focus{outline:3px solid var(--ink);outline-offset:2px}
+  .zl__wrap{max-height:30rem;overflow:auto;border:1px solid var(--ink);background:#fff}
+  .zl__t{width:100%;border-collapse:collapse;font-size:.9375rem}
+  .zl__t thead th{position:sticky;top:0;background:var(--ink);color:#fff;text-align:left;font:700 .75rem var(--f-head);letter-spacing:.08em;text-transform:uppercase;padding:.6rem .85rem;white-space:nowrap}
+  .zl__t td,.zl__t tbody th{text-align:left;padding:.6rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top;font-weight:400}
+  .zl__t tr[hidden]{display:none}
+  .zl__code{display:block;font:800 1.0625rem/1.2 var(--f-head)}
+  .zl__name{display:block;color:#444;font-size:.875rem;line-height:1.35}
+  .zl__type{display:inline-block;padding:.2rem .45rem;font:700 .6875rem/1 var(--f-head);letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--ink)}
+  .zl__type--farm{background:var(--ink);color:#fff}
+  .zl__t a{font:700 .8125rem var(--f-head);color:var(--ink);white-space:nowrap}
+  .zl__none{margin:0;padding:1rem;font-weight:600}
+  .zl__fine{margin:var(--s3) 0 0;font-size:.8125rem;color:var(--grey)}
+  @media (max-width:40rem){
+    .zl__search{flex-wrap:wrap}.zl__search .btn{flex:1 1 100%;justify-content:center}
+    .zl__links .btn{flex:1 1 100%;justify-content:center}
+    .zl__t thead{display:none}
+    .zl__t tr{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem .75rem;padding:.75rem .85rem;border-bottom:1px solid var(--rule)}
+    .zl__t td,.zl__t tbody th{padding:0;border:0;font-size:.875rem}
+    .zl__t tbody th{flex:1 1 100%;order:-1}
+    .zl__t td:last-child{margin-left:auto}
+  }
+</style>

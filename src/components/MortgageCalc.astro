@@ -1,6 +1,7 @@
 ---
 // Mortgage payment + BC property transfer tax estimator. Runs in the browser only: nothing is sent or stored.
-// No interest rate is built in (the visitor types the rate their lender quoted). Maths and sources: src/lib/mortgage.js (D-100).
+// The rate field starts on a labelled example rate (src/data/example-rate.json, updated monthly, D-269); the visitor changes it to theirs. Maths and sources: src/lib/mortgage.js (D-100).
+import RATE from '../data/example-rate.json';
 const { price = null, exemption = 'none' } = Astro.props as { price?: number | null; exemption?: 'none' | 'first' | 'new' };
 const priceText = price ? Math.round(price).toLocaleString('en-CA') : '';
 ---
@@ -19,8 +20,8 @@ const priceText = price ? Math.round(price).toLocaleString('en-CA') : '';
     </div>
     <div class="mc__row">
       <label for="mc-rate">Interest rate (%)</label>
-      <input id="mc-rate" data-k="rate" type="text" inputmode="decimal" autocomplete="off" placeholder="Your lender’s rate" aria-describedby="mc-rate-h mc-rate-e" />
-      <small id="mc-rate-h">Enter the rate you were quoted. Rates change often, so none is filled in.</small><small id="mc-rate-e" class="mc__err" role="alert"></small>
+      <input id="mc-rate" data-k="rate" type="text" inputmode="decimal" autocomplete="off" value={String(RATE.rate)} placeholder="Your lender’s rate" aria-describedby="mc-rate-h mc-rate-e" />
+      <small id="mc-rate-h">Example rate: {RATE.rate}% {RATE.label} (<a href={RATE.sourceUrl} rel="noopener">{RATE.source}</a>, {RATE.asOf}). Change it to the rate you were quoted.</small><small id="mc-rate-e" class="mc__err" role="alert"></small>
     </div>
     <div class="mc__row">
       <label for="mc-years">Amortization</label>

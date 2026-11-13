@@ -299,3 +299,24 @@ test('zoning guide: all 278 zones as cards with a bylaw link, a working filter b
   assert.ok(!/<li>Municipality<\/li>|<li>All types<\/li>|Showing all 278 zones\.<\/p>/.test(t), 'old filter text is back');
   assert.ok(!/<dd>\s*<\/dd>/.test(t), 'empty zone field');
 });
+
+test('listing media, map, example rate, 12-hour reply, zoning lookup on farm pages (D-269)', { skip: !built }, () => {
+  const media = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/listing-media.json'), 'utf8'));
+  const slugs = Object.keys(media).filter((k) => !k.startsWith('_'));
+  assert.ok(slugs.length >= 8, `${slugs.length} listings with media`);
+  for (const s of slugs) {
+    const t = html(`internal/listings/${s}.html`);
+    assert.ok(t.includes(`data-yt="${media[s].video}"`), `${s}: video missing`);
+    assert.ok(/id="ls-media"/.test(t) && /href="#ls-media"/.test(t), `${s}: video section or button missing`);
+    assert.ok(/"@type":"RealEstateListing"/.test(t), `${s}: listing markup missing`);
+  }
+  assert.ok(/data-mapgo/.test(html(`internal/listings/${slugs[0]}.html`)), 'map missing');
+  const rate = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/example-rate.json'), 'utf8')).rate;
+  assert.ok(html(`internal/listings/${slugs[0]}.html`).includes(`id="mc-rate" data-k="rate" type="text" inputmode="decimal" autocomplete="off" value="${rate}"`), 'example rate not prefilled');
+  assert.ok(/within 12 hours/.test(html('home-evaluation.html')), 'home evaluation reply time missing');
+  for (const [f, n] of [['langley-acreages-for-sale.html', 17], ['abbotsford-farms.html', 10], ['farms.html', 64]]) {
+    const rows = (html(f).match(/<tr data-zls=/g) || []).length;
+    assert.equal(rows, n, `${f}: ${rows} zoning rows`);
+  }
+  assert.ok(!/class="section zl/.test(html('burnaby-acreages-for-sale.html')), 'zoning lookup on a page outside the guide');
+});

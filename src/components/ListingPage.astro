@@ -14,6 +14,7 @@ import { capsClass } from '../lib/caps';
 import Cta from './Cta.astro';
 import ListingGallery from './ListingGallery.astro';
 import MortgageCalc from './MortgageCalc.astro';
+import MEDIA from '../data/listing-media.json';
 
 // Web-size photo lists written by tools/process_photos.py (Drive folder 10 -> src/data/listing-photos/<slug>.json)
 const PHOTO_LISTS = import.meta.glob('../data/listing-photos/*.json', { eager: true, import: 'default' }) as Record<string, any[]>;
@@ -151,6 +152,19 @@ const _me = _cityCards.findIndex((c) => c.slug === page.slug);
 const moreHere = _me < 0 ? [] : [1, 2, 3, 4].map((k) => _cityCards[(_me + k) % _cityCards.length]).filter((c) => c.slug !== page.slug).filter((c, i, a) => a.findIndex((x) => x.slug === c.slug) === i);
 const rawMeta = String(seo['Meta description'] || '').replace(/^\[SOLD\]:\s*/i, '').trim();
 // Every listing gets the factual snippet: the address, what it is, its status and price. The archive's MLS marketing text stays in the page body.
+// Video and 3D tour (D-269): src/data/listing-media.json. The video loads only when tapped (a photo and a play button until then).
+const media = (MEDIA as Record<string, any>)[page.slug] as { video?: string; tour3d?: string } | undefined;
+// Map (D-269): the listing's address on Google Maps, loaded when tapped.
+const mapQ = [addr, [cityName ? `${cityName}, BC` : '', (POSTAL as Record<string, string>)[page.slug] || ''].filter(Boolean).join(' ')].filter(Boolean).join(', ');
+// Structured data (D-269): the listing as a schema.org RealEstateListing with its offer, address and photos.
+const _postal = (POSTAL as Record<string, string>)[page.slug] || '';
+const listingLd: any[] = cityName && addr ? [{ '@context': 'https://schema.org', '@type': 'RealEstateListing', name: h1Text || addr, url: page.canonical,
+  image: photoList.slice(0, 6).map((ph) => new URL(`${import.meta.env.PUBLIC_PHOTO_BASE ?? '/listing-photos/'}${ph.id}-960.webp`, 'https://jaredgibbons.ca').href),
+  ...(factMap['MLS® Num'] ? { identifier: factMap['MLS® Num'] } : {}),
+  offers: { '@type': 'Offer', priceCurrency: 'CAD', ...(priceNum ? { price: priceNum } : {}), availability: page.status === 'Active' ? 'https://schema.org/InStock' : 'https://schema.org/SoldOut',
+    seller: { '@type': 'RealEstateAgent', '@id': 'https://jaredgibbons.ca/#agent' } },
+  about: { '@type': 'Place', address: { '@type': 'PostalAddress', streetAddress: addr, addressLocality: cityName, addressRegion: 'BC', addressCountry: 'CA', ...(_postal ? { postalCode: _postal } : {}) } },
+  ...(media?.video ? { subjectOf: { '@type': 'VideoObject', name: `Video tour of ${where}`, embedUrl: `https://www.youtube.com/embed/${media.video}`, thumbnailUrl: `https://i.ytimg.com/vi/${media.video}/hqdefault.jpg`, contentUrl: `https://www.youtube.com/watch?v=${media.video}` } } : {}) }] : [];
 const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMeta : builtMeta());
 ---
 <Base
@@ -160,6 +174,7 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
   ogTitle={seoTitle}
   ogDescription={metaDesc}
   ogImage={seo['OG image'] || undefined}
+  jsonld={listingLd}
   robots={page.status === 'Expired' ? 'noindex, follow' : (seo['Meta robots'] || 'index, follow')}
   footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
   footerCell={true}
@@ -180,7 +195,7 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
           );
           return <>{headN ? <h2 class="ls__sum">{inner}</h2> : <p class="ls__sum">{inner}</p>}{tailLines.map((l: string) => <p class="ls__flag">{l}</p>)}
             <p class="ls__act">{page.status === 'Active'
-              ? <><a class="btn" href={showMail} data-ev="book_showing">Book a showing</a><a class="btn btn--ghost" href={showSms} data-ev="text_jared">Text Jared</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a></>
+              ? <><a class="btn" href={showMail} data-ev="book_showing">Book a showing</a><a class="btn btn--ghost" href={showSms} data-ev="text_jared">Text Jared</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a>{media?.video && <a class="btn btn--ghost" href="#ls-media">▶ Watch the video</a>}{media?.tour3d && <a class="btn btn--ghost" href={media.tour3d} target="_blank" rel="noopener">3D tour</a>}</>
               : <><a class="btn" href={similarMail}>Ask about homes like this</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a></>}</p>
           </>;
         }
@@ -194,6 +209,20 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
             <p>No photos are on file for this listing yet.</p>
           </div>
         )}
+      {(media?.video || media?.tour3d) && (
+        <div class="ls__media" id="ls-media">
+          {media.video && (
+            <figure class="ls__vid">
+              <button type="button" class="ls__play" data-yt={media.video} aria-label={`Play the video tour of ${where}`}>
+                <img src={`https://i.ytimg.com/vi/${media.video}/hqdefault.jpg`} alt={`Video tour of ${where}`} width="480" height="360" loading="lazy" decoding="async" />
+                <span class="ls__playi" aria-hidden="true"><svg viewBox="0 0 68 48" width="68" height="48"><rect width="68" height="48" rx="10" fill="#0a0a0a" fill-opacity=".85"/><path d="M27 15l18 9-18 9z" fill="#fff"/></svg></span>
+              </button>
+              <figcaption>Video tour · <a href={`https://www.youtube.com/watch?v=${media.video}`} target="_blank" rel="noopener">Watch on YouTube</a></figcaption>
+            </figure>
+          )}
+          {media.tour3d && <p class="ls__tour"><a class="btn" href={media.tour3d} target="_blank" rel="noopener">Open the 3D tour <span aria-hidden="true">↗</span></a></p>}
+        </div>
+      )}
       {isPreview && page.status === 'Active' && (
         <p class="notice">Status is shown as captured in the archive on 2026-10-31. Live status needs the listing feed, which is not connected in the preview.</p>
       )}
@@ -230,6 +259,18 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
     </div>
   </section>
 
+  {mapQ && cityName && (
+    <section class="section" aria-labelledby="ls-map-h">
+      <div class="wrap ls">
+        <h2 class="ls__h" id="ls-map-h">Location</h2>
+        <div class="ls__map" data-map={`https://www.google.com/maps?q=${encodeURIComponent(mapQ)}&z=15&output=embed`}>
+          <button type="button" class="btn btn--ghost" data-mapgo>Show the map</button>
+          <p><a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQ)}`} target="_blank" rel="noopener">{mapQ} <span aria-hidden="true">↗</span></a></p>
+        </div>
+      </div>
+    </section>
+  )}
+
   {priceNum > 0 && (
     <section class="section" aria-labelledby="ls-mc-h">
       <div class="wrap ls">
@@ -265,7 +306,39 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
 </main>
 </Base>
 
+<script>
+  // Video: swap the photo for the YouTube player on tap (no YouTube code loads before that).
+  document.querySelectorAll<HTMLButtonElement>('.ls__play[data-yt]').forEach((b) => b.addEventListener('click', () => {
+    const f = document.createElement('iframe');
+    f.src = `https://www.youtube-nocookie.com/embed/${b.dataset.yt}?autoplay=1&rel=0`;
+    f.title = b.getAttribute('aria-label') || 'Video tour'; f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen = true;
+    b.replaceWith(f);
+  }));
+  // Map: load Google Maps on tap.
+  document.querySelectorAll<HTMLElement>('.ls__map[data-map]').forEach((m) => m.querySelector('[data-mapgo]')?.addEventListener('click', () => {
+    const f = document.createElement('iframe');
+    f.src = m.dataset.map!; f.title = 'Map'; f.loading = 'lazy'; f.referrerPolicy = 'no-referrer-when-downgrade';
+    m.prepend(f); m.querySelector('[data-mapgo]')?.remove(); m.classList.add('is-on');
+  }));
+</script>
+
 <style>
+  .ls__media{margin:0 0 var(--s5)}
+  .ls__vid{margin:0;max-width:52rem}
+  .ls__vid iframe,.ls__play{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}
+  .ls__play{position:relative;padding:0;cursor:pointer;overflow:hidden}
+  .ls__play img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;transition:opacity .15s}
+  .ls__play:hover img{opacity:1}
+  .ls__playi{position:absolute;inset:0;display:grid;place-items:center}
+  .ls__vid figcaption{margin-top:.5rem;font:600 .8125rem var(--f-head);color:var(--grey)}
+  .ls__vid figcaption a{color:var(--ink)}
+  .ls__tour{margin:var(--s4) 0 0}
+  .ls__map{border:1px solid var(--ink);background:var(--cream);padding:var(--s5);display:grid;gap:.6rem;justify-items:start}
+  .ls__map p{margin:0;font-weight:600}
+  .ls__map a{color:var(--ink)}
+  .ls__map.is-on{padding:0;background:#fff}
+  .ls__map.is-on p{padding:.6rem .85rem}
+  .ls__map iframe{display:block;width:100%;height:clamp(16rem,45vw,26rem);border:0}
     .ls__more ul{list-style:none;padding:0;margin:0 0 1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,16rem),1fr));gap:.5rem 2rem}
   .ls__more li{padding:.5rem 0;border-bottom:1px solid var(--rule)}
   .ls{max-width:68rem}

@@ -14,9 +14,9 @@
 | 10 | Shorter phone homepage | **Partly (D-261):** reviews and listings swipe sideways on phones; page about 15,300px (was about 21,100), Search by Area at about 4,500px (was 11,500). Area link blocks kept for SEO. |
 | 11 | Tappable communities | **Done (D-261):** names link to each community's all-homes page; type links are 44px chips. |
 | 12 | Quiz instant result | **Done (D-261):** step 5 shows matching search pages first; the contact form is optional below. |
-| 13 | Home evaluation form | **Partly (D-261):** form now right after the introduction (about 830px down on a phone), questions after it. Two-step form and the reply timeframe need Jared. |
-| 14 | Own listing pages | **Partly (D-261):** Book a showing (email or text, filled in), Call, under the price. Video/3D tour links and a map need Jared's links. |
-| 15 | Calculator example rate | Needs Jared: which rate to show and who updates it. |
+| 13 | Home evaluation form | **Partly (D-261):** form now right after the introduction (about 830px down on a phone), questions after it. Reply time added: "Jared replies within 12 hours" (D-269). Two-step form still open. |
+| 14 | Own listing pages | **Partly (D-261):** Book a showing (email or text, filled in), Call, under the price. Video on the 8 active listings that have one, map on every listing (D-269). 3D tours: none public; slot ready when Jared sends links. |
+| 15 | Calculator example rate | **Done (D-269):** example 4.69% 5-yr fixed (RateHub, Nov 12, 2026) prefilled; src/data/example-rate.json, update monthly. |
 | 16 | About page rewrite | Needs Jared (first-person copy, photo, video). |
 | 17 | Alerts everywhere | **Partly (D-261):** the alert form is open by default everywhere it shows. |
 | 18 | Log in / Saved homes | Needs MyRealPage: the account lives inside their frame. |
