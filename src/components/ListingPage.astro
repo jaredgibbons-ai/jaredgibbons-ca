@@ -153,7 +153,7 @@ const moreHere = _me < 0 ? [] : [1, 2, 3, 4].map((k) => _cityCards[(_me + k) % _
 const rawMeta = String(seo['Meta description'] || '').replace(/^\[SOLD\]:\s*/i, '').trim();
 // Every listing gets the factual snippet: the address, what it is, its status and price. The archive's MLS marketing text stays in the page body.
 // Video and 3D tour (D-269): src/data/listing-media.json. The video loads only when tapped (a photo and a play button until then).
-const media = (MEDIA as Record<string, any>)[page.slug] as { video?: string; tour3d?: string } | undefined;
+const media = (MEDIA as Record<string, any>)[page.slug] as { video?: string; tour3d?: string; floorplan?: { id: string; w: number; h: number } } | undefined;
 // Map (D-269): the listing's address on Google Maps, loaded when tapped.
 const mapQ = [addr, [cityName ? `${cityName}, BC` : '', (POSTAL as Record<string, string>)[page.slug] || ''].filter(Boolean).join(' ')].filter(Boolean).join(', ');
 // Structured data (D-269): the listing as a schema.org RealEstateListing with its offer, address and photos.
@@ -195,8 +195,8 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
           );
           return <>{headN ? <h2 class="ls__sum">{inner}</h2> : <p class="ls__sum">{inner}</p>}{tailLines.map((l: string) => <p class="ls__flag">{l}</p>)}
             <p class="ls__act">{page.status === 'Active'
-              ? <><a class="btn" href={showMail} data-ev="book_showing">Book a showing</a><a class="btn btn--ghost" href={showSms} data-ev="text_jared">Text Jared</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a>{media?.video && <a class="btn btn--ghost" href="#ls-media">▶ Watch the video</a>}{media?.tour3d && <a class="btn btn--ghost" href={media.tour3d} target="_blank" rel="noopener">3D tour</a>}</>
-              : <><a class="btn" href={similarMail}>Ask about homes like this</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a></>}</p>
+              ? <><a class="btn" href={showMail} data-ev="book_showing">Book a showing</a><a class="btn btn--ghost" href={showSms} data-ev="text_jared">Text Jared</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a>{media?.video && <a class="btn btn--ghost" href="#ls-media">▶ Watch the video</a>}{media?.floorplan && <a class="btn btn--ghost" href="#ls-fp">Floor plan</a>}{media?.tour3d && <a class="btn btn--ghost" href={media.tour3d} target="_blank" rel="noopener">3D tour</a>}</>
+              : <><a class="btn" href={similarMail}>Ask about homes like this</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a>{media?.video && <a class="btn btn--ghost" href="#ls-media">▶ Watch the video</a>}</>}</p>
           </>;
         }
         return null;
@@ -209,7 +209,7 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
             <p>No photos are on file for this listing yet.</p>
           </div>
         )}
-      {(media?.video || media?.tour3d) && (
+      {(media?.video || media?.tour3d || media?.floorplan) && (
         <div class="ls__media" id="ls-media">
           {media.video && (
             <figure class="ls__vid">
@@ -218,6 +218,14 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
                 <span class="ls__playi" aria-hidden="true"><svg viewBox="0 0 68 48" width="68" height="48"><rect width="68" height="48" rx="10" fill="#0a0a0a" fill-opacity=".85"/><path d="M27 15l18 9-18 9z" fill="#fff"/></svg></span>
               </button>
               <figcaption>Video tour · <a href={`https://www.youtube.com/watch?v=${media.video}`} target="_blank" rel="noopener">Watch on YouTube</a></figcaption>
+            </figure>
+          )}
+          {media.floorplan && (
+            <figure class="ls__fp" id="ls-fp">
+              <a href={`/img/floorplans/${media.floorplan.id}-1800.webp`} target="_blank" rel="noopener" aria-label={`Open the floor plan of ${where} full size`}>
+                <img src={`/img/floorplans/${media.floorplan.id}-900.webp`} srcset={`/img/floorplans/${media.floorplan.id}-900.webp 900w, /img/floorplans/${media.floorplan.id}-1800.webp 1800w`} sizes="(min-width:56rem) 52rem, 100vw" width="900" height={Math.round(900 * media.floorplan.h / media.floorplan.w)} alt={`Floor plan of ${where} with room sizes and floor areas`} loading="lazy" decoding="async" />
+              </a>
+              <figcaption>Floor plan, laser measured · <a href={`/img/floorplans/${media.floorplan.id}-1800.webp`} target="_blank" rel="noopener">Open full size</a></figcaption>
             </figure>
           )}
           {media.tour3d && <p class="ls__tour"><a class="btn" href={media.tour3d} target="_blank" rel="noopener">Open the 3D tour <span aria-hidden="true">↗</span></a></p>}
@@ -348,6 +356,12 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
   .ls__vid figcaption{margin-top:.5rem;font:600 .8125rem var(--f-head);color:var(--grey)}
   .ls__vid figcaption a{color:var(--ink)}
   .ls__tour{margin:var(--s4) 0 0}
+  .ls__media{display:grid;gap:var(--s5)}
+  .ls__fp{margin:0;max-width:52rem;scroll-margin-top:calc(var(--header-h) + 1rem)}
+  .ls__fp a{display:block;border:1px solid var(--ink);background:#fff}
+  .ls__fp img{display:block;width:100%;height:auto;max-height:80vh;object-fit:contain}
+  .ls__fp figcaption{margin-top:.5rem;font:600 .8125rem var(--f-head);color:var(--grey)}
+  .ls__fp figcaption a{display:inline;border:0;color:var(--ink)}
   .ls__map{border:1px solid var(--ink);background:var(--cream);padding:var(--s5);display:grid;gap:.6rem;justify-items:start}
   .ls__map p{margin:0;font-weight:600}
   .ls__map a{color:var(--ink)}

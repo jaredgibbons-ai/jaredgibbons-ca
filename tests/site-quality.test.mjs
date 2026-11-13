@@ -303,11 +303,16 @@ test('zoning guide: all 278 zones as cards with a bylaw link, a working filter b
 test('listing media, map, example rate, 12-hour reply, zoning lookup on farm pages (D-269)', { skip: !built }, () => {
   const media = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/listing-media.json'), 'utf8'));
   const slugs = Object.keys(media).filter((k) => !k.startsWith('_'));
-  assert.ok(slugs.length >= 8, `${slugs.length} listings with media`);
+  assert.ok(slugs.filter((k) => media[k].video).length >= 100 && slugs.filter((k) => media[k].floorplan).length >= 9, `${slugs.length} listings with media`);
   for (const s of slugs) {
     const t = html(`internal/listings/${s}.html`);
-    assert.ok(t.includes(`data-yt="${media[s].video}"`), `${s}: video missing`);
-    assert.ok(/id="ls-media"/.test(t) && /href="#ls-media"/.test(t), `${s}: video section or button missing`);
+    if (media[s].video) {
+      assert.ok(t.includes(`data-yt="${media[s].video}"`), `${s}: video missing`);
+      assert.ok(/id="ls-media"/.test(t) && /href="#ls-media"/.test(t), `${s}: video section or button missing`);
+    }
+    if (media[s].floorplan) {
+      assert.ok(/id="ls-fp"/.test(t) && fs.existsSync(path.join(DIST, `img/floorplans/${media[s].floorplan.id}-900.webp`)), `${s}: floor plan missing`);
+    }
     assert.ok(/"@type":"RealEstateListing"/.test(t), `${s}: listing markup missing`);
   }
   assert.ok(/data-mapgo/.test(html(`internal/listings/${slugs[0]}.html`)), 'map missing');
@@ -319,4 +324,17 @@ test('listing media, map, example rate, 12-hour reply, zoning lookup on farm pag
     assert.equal(rows, n, `${f}: ${rows} zoning rows`);
   }
   assert.ok(!/class="section zl/.test(html('burnaby-acreages-for-sale.html')), 'zoning lookup on a page outside the guide');
+});
+
+test('home evaluation is two steps; ten rewritten posts carry their own body (D-271)', { skip: !built }, () => {
+  const t = html('home-evaluation.html');
+  assert.ok(/data-steps/.test(t) && /data-next/.test(t) && /data-g="1"/.test(t) && /data-g="2"/.test(t), 'two-step form missing');
+  const rw = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/post-rewrites.json'), 'utf8'));
+  assert.equal(Object.keys(rw).length, 10);
+  for (const [slug, r] of Object.entries(rw)) {
+    const p = html(`internal/blog/${slug}.html`);
+    assert.ok(p.includes(`<title>${r.title.replace(/'/g, '&#39;').replace(/&(?!#)/g, '&amp;')}`), `${slug}: title`);
+    assert.ok(/Updated [A-Z][a-z]+ \d+, 20\d\d/.test(p), `${slug}: updated date`);
+    assert.ok(!/real estate today \(/.test(p), `${slug}: generic area section still there`);
+  }
 });
