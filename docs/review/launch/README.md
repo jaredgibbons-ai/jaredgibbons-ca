@@ -27,3 +27,6 @@ Jared approved the West Vancouver golf course homes page. Total approved: 736 pa
 
 ## Update 2026-11-08 (96 pages approved)
 Jared approved the 96 pages that came out of hold after Jerry's searches (D-186). Pack now shows A 668 and E 164 approved; only Mt Lehman is held. Nothing is launched.
+
+## Update 2026-11-12 (October market update)
+Jared asked for an October stats post; the new page `october-2026-market-update-south-surrey-white-rock-langley` is approved the same day (listed under `later` in `approvals.json`). Pack: 849 new pages, 1 held (Mt Lehman, unchanged).

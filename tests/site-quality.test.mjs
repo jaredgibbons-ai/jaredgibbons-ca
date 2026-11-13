@@ -139,3 +139,66 @@ test('built pages: guide format v2 renders on Murrayville (D-205)', { skip: !bui
     assert.ok(h.includes(s), `missing ${s}`);
   assert.ok(h.indexOf('class="qa"') < h.indexOf('class="qf"'), 'quick answer comes before quick facts');
 });
+
+// D-255: on phones the two map pages offer a quick search (area + home type) and open the map full screen on the page itself.
+test('built pages: the map pages offer a quick search whose every choice is a real page, and a full-screen map (D-255)', { skip: !built }, () => {
+  for (const f of ['recip.html', 'map-search.html']) {
+    const t = html(f);
+    const m = t.match(/<form class="qs"[^>]*data-qs="([^"]*)"/);
+    assert.ok(m, `${f}: quick search missing`);
+    const data = JSON.parse(m[1].replace(/&quot;/g, '"').replace(/&#34;/g, '"').replace(/&amp;/g, '&'));
+    const areas = Object.keys(data);
+    assert.ok(areas.length >= 15, `${f}: only ${areas.length} areas`);
+    for (const a of areas) {
+      assert.equal(data[a][0][0], 'All homes', `${f}: ${a} does not start with All homes`);
+      for (const [, href] of data[a]) assert.ok(/^\/[a-z0-9-]+\.html$/.test(href) && fs.existsSync(path.join(DIST, href.slice(1))), `${f}: ${a} -> ${href} is not a built page`);
+    }
+    assert.ok(/<a class="btn btn--ghost"[^>]*href="https:\/\/idx\.myrealpage\.com\/[^"]*idx\.search"[^>]*data-map-open/.test(t), `${f}: map button missing or not a plain link`);
+    assert.ok(/<div class="mapfs" id="mapfs" role="dialog" aria-modal="true"[^>]*data-src="https:\/\/idx\.myrealpage\.com\/[^"]*"[^>]*hidden/.test(t), `${f}: full-screen map container missing`);
+    assert.ok(!/<iframe[^>]*class="idxmap"[^>]*\ssrc=/.test(t), `${f}: the desktop map frame must not load until the screen is wide enough`);
+  }
+});
+
+// D-256: the selling page is the marketing plan; the old address forwards and nothing links to it.
+test('built pages: Marketing Plan opens the selling page, and Home Evaluation carries the big link to it (D-256)', { skip: !built }, () => {
+  assert.ok(!fs.existsSync(path.join(DIST, 'marketing-plan.html')), 'marketing-plan.html is still built');
+  const home = html('index.html');
+  assert.ok(/<a href="\/selling\.html"[^>]*>Marketing Plan<\/a>/.test(home), 'menu: Marketing Plan does not open /selling.html');
+  assert.ok(!/Selling Resources/.test(home), 'menu still says Selling Resources');
+  for (const f of pages) assert.ok(!html(f).includes('/marketing-plan.html'), `${f} still links to /marketing-plan.html`);
+  assert.ok(!fs.readFileSync(path.join(DIST, 'sitemap.xml'), 'utf8').includes('marketing-plan'), 'sitemap lists the retired page');
+  const he = html('home-evaluation.html');
+  assert.ok(/<a class="biglink" href="\/selling\.html"/.test(he) && he.indexOf('class="biglink"') < he.indexOf('<form'), 'home evaluation: big marketing-plan link missing or below the form');
+  const sell = html('selling.html');
+  for (const w of ['Classifieds', 'Local news', 'REALTOR.ca', 'How long until my home is on the market?', 'Where will my home be advertised?', 'about 5 days after you sign']) assert.ok(sell.includes(w), `selling page lost "${w}" from the old marketing plan`);
+});
+
+// D-257 / D-258: the monthly market update is a real page with tables, and the blog index is an index (not 50 stacked posts).
+test('built pages: blog index features the newest market update, shows dated cards and lists every post once by year (D-258)', { skip: !built }, () => {
+  const t = html('blog.html');
+  const posts = fs.readdirSync(path.join(DIST, 'internal', 'blog')).filter((f) => f.endsWith('.html')).map((f) => '/blog.html/' + f.replace(/\.html$/, ''));
+  const feature = t.match(/<div class="mkf[^"]*"[\s\S]*?<h2 class="mkf__h"[^>]*><a href="([^"]+)"/);
+  assert.ok(feature && /^\/[a-z]+-20\d\d-market-update-[a-z-]+\.html$/.test(feature[1]) && fs.existsSync(path.join(DIST, feature[1].slice(1))), 'no market update featured, or it is not a built page');
+  const locals = fs.readdirSync('src/data/local').filter((f) => /-market-update-/.test(f)).map((f) => JSON.parse(fs.readFileSync(`src/data/local/${f}`, 'utf8'))).filter((l) => l.market_update);
+  const newest = locals.sort((a, b) => String(b.market_update).localeCompare(String(a.market_update)))[0];
+  assert.equal(feature[1], `/${newest.slug}.html`, 'the featured market update is not the newest one');
+  const cards = [...t.matchAll(/<li class="post"[^>]*>([\s\S]*?)<\/li>/g)].map((m) => m[1]);
+  assert.equal(cards.length, 24, `${cards.length} cards`);
+  for (const c of cards) assert.ok(/<time datetime="20\d\d-\d\d-\d\d"/.test(c) && /<h3 class="post__t"[^>]*><a href="\/blog\.html\/[^"]+"/.test(c), 'a card has no date or no link');
+  const listed = [...t.matchAll(/<ul class="py__list"[^>]*>([\s\S]*?)<\/ul>/g)].flatMap((m) => [...m[1].matchAll(/href="(\/blog\.html\/[^"]+)"/g)].map((x) => x[1]));
+  assert.equal(listed.length, posts.length, `${listed.length} posts listed by year, ${posts.length} built`);
+  assert.deepEqual([...new Set(listed)].sort(), posts.sort(), 'the by-year list and the built posts differ');
+  assert.ok(!/\?blog=\d+/.test(t), 'old category filters (they changed nothing) are back');
+  assert.ok(!/Read the full post/.test(t), 'the stacked-post layout is back');
+});
+
+test('built pages: the October 2026 market update has its tables, sources and questions, and no share image points at the old host (D-257, D-258)', { skip: !built }, () => {
+  const f = 'october-2026-market-update-south-surrey-white-rock-langley.html';
+  const t = html(f);
+  assert.equal((t.match(/<table class="tbl"/g) || []).length, 5, 'tables');
+  for (const w of ['1,051', '9,164', '$860,000', '$1,606,500', '29.2%', 'fvreb.bc.ca/statistics/Package202610.pdf', 'bankofcanada.ca/2026/10/fad-press-release-2026-10-28/', '"@type":"FAQPage"']) assert.ok(t.includes(w), `missing ${w}`);
+  assert.ok(fs.readFileSync(path.join(DIST, 'sitemap.xml'), 'utf8').includes(`/${f}<`), 'not in the sitemap');
+  const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(path.join(d, e.name)) : e.name.endsWith('.html') ? [path.join(d, e.name)] : []));
+  const bad = walk(DIST).filter((p) => /property="og:image" content="[^"]*\/(?:wps\/rest|_media)\//.test(fs.readFileSync(p, 'utf8')));
+  assert.equal(bad.length, 0, `share image on the old host: ${bad.slice(0, 3).join(', ')}`);
+});

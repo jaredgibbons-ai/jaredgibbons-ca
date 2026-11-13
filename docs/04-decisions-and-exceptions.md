@@ -1514,3 +1514,29 @@ Asked by Jared after launch: go through every page for errors.
 - Checked at 390 px: the MyRealPage map inside a frame shows only blobs, hides its filters under "More", shows no listing list, and dragging pans the map instead of scrolling the page.
 - At 700 px and under, /recip.html and /map-search.html now show one full-width button "Open the map search" (the same MyRealPage map, full screen, where its phone layout works) and then the South Surrey saved search as photo cards that scroll with the page. The map frame is not downloaded on phones.
 - Desktop and tablet are unchanged (D-242). Still MyRealPage throughout.
+
+### D-255 addendum, same day: quick search and a full-screen map (Jared: "is that our best option for 1?")
+The first version sent phone visitors off to MyRealPage's own page. Better, and now live:
+- **Quick search** under the heading (phones only): Area and Home type, then "Show listings" goes straight to that search page on this site (20 areas, up to 10 home types each; only built, un-gated pages with a live search are offered, checked by a test). Those pages carry the "email me new listings" box.
+- **"Open the map search" fills the screen with the map on the page itself** (`#mapfs` in `IdxEmbed.astro`): a Back bar on top, the map frame below, created on the first tap. The page behind does not scroll, so a finger moves the map. The phone's Back button closes it. A "New tab" link in the bar opens MyRealPage's own page for anyone who prefers it; without JavaScript the button is a plain link to that page.
+- South Surrey listing cards stay underneath. Desktop and tablet are unchanged.
+- Not verifiable from here: a real iPhone (Safari). Checked at phone size in Chrome and in Playwright's iPhone profile only. If Safari blocks MyRealPage's sign-in inside the frame, switch the button to the plain link (remove `data-map-open`).
+
+## D-256 — 2026-11-12 — The selling page is the Marketing Plan (Jared: "this is under selling resources and is a very good page, shouldn't this be in the marketing plan?"; "yes 2 is great. it should also be a big link in the home evaluation leading to it")
+- **Menu:** Sell Your Home > "Marketing Plan" opens `/selling.html`. "Selling Resources" is gone as a label; its slot is the Net Proceeds Calculator (a live page that had no menu link).
+- **`/marketing-plan.html` forwards (301) to `/selling.html`** (`MOVED` in route.js). This closes OI-28: Jared's redirect sheet planned it and the old MyRealPage site already did it. The archive record moved to `src/data/pages-retired/`, the local layer to `src/data/local-held/`; every internal link is rewritten (`link-fixes.json`), and the page is out of the sitemap.
+- **Nothing lost:** what only the old page said is now on the selling page: REW.ca, Royal LePage Sphere and the postcards in the checklist; REALTOR.ca, classifieds (Facebook Marketplace, Craigslist, Kijiji) and local news under Reach; the trades network and "live about 5 days after you sign, 2 to 3 if show-ready" under Prep; four questions in the FAQ.
+- **Wording on the page:** first in-page link and hero button say "marketing plan"; section label "I · The marketing plan". Title "Sell Your Home in South Surrey & Langley | Marketing Plan" (57), description rewritten with the phrase (154). `tools/seo_final/fix_04.json` records it; `seo-final.json` was edited by hand because re-running `build_seo_final.py` would undo the 32 Search Console titles of D-232 (it did, on a trial run, and was reverted).
+- **Home Evaluation:** a full-width dark banner with the twilight photo, right after the introduction, the whole of it one link to the marketing plan (new block type `biglink`, new position `after-intro`).
+
+## D-257 — 2026-11-12 — October 2026 market update (Jared: "for the blog, lets do a october stats post")
+- New page `/october-2026-market-update-south-surrey-white-rock-langley.html`, written by `tools/build_market_update.py` from `src/data/market/2026-10.json` (FVREB package, released November 3, 2026). Board-wide totals, the 11% ratio, days to sell and year-to-date lines are keyed in from the news release and each is checked against the PDF text. Every comparison ("tightest", "smallest drop", "every area lower than a year ago") is asserted against the data before the file is written.
+- Bank of Canada: raised to 2.5% on October 28, 2026, next announcement December 9 (read from the Bank's own release, which the page links).
+- Same shape as September, plus Mission, real tables, headline stat cards and five questions (FAQ markup). Approved the same day (`approvals.json`); 85% unique wording; linked from the blog, the September update and the Fraser Valley market-stats page.
+- **September's page repaired:** the archive capture had flattened its tables into lists of single numbers. Its wording is kept word for word (`replace_body` layer); the four tables are rebuilt from the September package, and every rebuilt figure is checked to be one the old page printed. The link to the September package PDF is left as plain text (its address could not be opened from here to confirm).
+
+## D-258 — 2026-11-12 — Blog index rebuilt; post share images
+- `/blog.html` was 50 posts stacked one per band with no dates (28,900 px tall on desktop, 42,900 px on a phone). Now: the newest market update as one band with its four headline numbers, the 24 newest posts as dated cards (12 on phones), then every post by year in three folding lists (all 200 links stay in the page). 5,100 px desktop, 8,100 px phone.
+- The four old category links (`/blog.html?blog=…`) changed nothing on the new site and are gone.
+- **Share images:** 198 posts named a share image under MyRealPage's `/wps/rest/…` path, which answers 404 since the switch (checked live). They now use the default card, like the `/_media/` ones (D-236). The original post photos are not in the archive; they could be copied from the old server if Jared wants them (asked).
+

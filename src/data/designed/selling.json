@@ -2,7 +2,7 @@
   "kind": "selling",
   "slug": "selling",
   "nav": [
-    {"label": "The package", "href": "#package"}, {"label": "Photos", "href": "#photos"}, {"label": "Film", "href": "#film"},
+    {"label": "Marketing plan", "href": "#package"}, {"label": "Photos", "href": "#photos"}, {"label": "Film", "href": "#film"},
     {"label": "Floor plans", "href": "#plans"}, {"label": "Print", "href": "#print"}, {"label": "Reach", "href": "#reach"},
     {"label": "Prep", "href": "#prep"}, {"label": "Process", "href": "#process"}, {"label": "Costs", "href": "#costs"},
     {"label": "Reviews", "href": "#reviews"}, {"label": "FAQ", "href": "#faq"}, {"label": "Home value", "href": "#home-value"}
@@ -12,7 +12,7 @@
     "h1": "Sell better",
     "tag": "Selling a home in South Surrey, White Rock, Langley and the Fraser Valley.",
     "lead": "A full marketing package on every listing, priced on recent local sales and run by Jared Gibbons: 11+ years, and Top 1% of Fraser Valley REALTORS®.",
-    "ctas": [{"label": "Get my home value", "href": "#home-value", "primary": true}, {"label": "See the package", "href": "#package"}],
+    "ctas": [{"label": "Get my home value", "href": "#home-value", "primary": true}, {"label": "See the marketing plan", "href": "#package"}],
     "image": {"src": "/img/selling/selling-01-twilight-front-exterior-langley", "w": 1600, "h": 1066, "alt": "Renovated Langley home at twilight, front exterior with the lights on"},
     "stats": [
       {"k": "11+ years", "v": "selling homes"},
@@ -23,12 +23,13 @@
     ]
   },
   "sections": [
-    {"id": "package", "label": "I · The package", "h2": "What every listing gets", "blocks": [
+    {"id": "package", "label": "I · The marketing plan", "h2": "What every listing gets", "blocks": [
       {"type": "checklist", "items": [
         "Pricing plan from recent nearby sales", "Staging help", "Pre-list cleaning and repair plan",
         "Professional HDR photography", "Drone photos", "Cinematic listing video",
         "Short vertical video for social", "3D virtual tour", "Laser-measured floor plans",
         "Printed feature booklet", "MLS® listing and my website", "Paid ads on Facebook, Instagram, YouTube and TikTok",
+        "Paid placement on REW.ca", "Royal LePage Sphere listing boost", "5,000 postcards, plus Just Listed and Just Sold mailouts",
         "Feedback after every showing", "Offer review and negotiation", "Help from accepted offer to closing"]}]},
     {"id": "photos", "label": "II · Photography", "h2": "Photos that stop the scroll", "lead": "Professional HDR photos, shot to show light, space and flow.", "blocks": [
       {"type": "gallery", "cols": 4, "items": [
@@ -75,9 +76,12 @@
         {"k": "Social posts", "d": "Posts and reels on my own channels."},
         {"k": "YouTube", "d": "The full video on my channel."},
         {"k": "Print", "d": "Feature booklets at showings and open houses."},
-        {"k": "Signage", "d": "Yard sign and open house signs."}, {"k": "REW.ca", "d": "Paid placement on REW.ca."}, {"k": "Royal LePage Sphere", "d": "A listing boost through Royal LePage Sphere."}, {"k": "Postcards", "d": "5,000 postcards, plus Just Listed and Just Sold mailouts."}], "small": true},
+        {"k": "Signage", "d": "Yard sign and open house signs."}, {"k": "REW.ca", "d": "Paid placement on REW.ca."}, {"k": "Royal LePage Sphere", "d": "A listing boost through Royal LePage Sphere."}, {"k": "Postcards", "d": "5,000 postcards, plus Just Listed and Just Sold mailouts."},
+        {"k": "REALTOR.ca", "d": "The full listing with photos, floor plan and 3D tour."}, {"k": "Classifieds", "d": "Facebook Marketplace, Craigslist and Kijiji, for buyers who are not searching MLS® sites."}, {"k": "Local news", "d": "Your listing on local online news outlets."}], "small": true},
       {"type": "sold", "h": "Recently sold", "count": 9, "more": {"label": "See more of Jared's sold homes", "href": "/sold-properties.html"}}]},
-    {"id": "prep", "label": "VII · Prep", "h2": "Getting your home ready", "lead": "You don't need to renovate. We pick the few jobs worth doing, such as cleaning, small repairs and clearing clutter, and staging help comes with every listing."},
+    {"id": "prep", "label": "VII · Prep", "h2": "Getting your home ready", "lead": "You don't need to renovate. We pick the few jobs worth doing, such as cleaning, small repairs and clearing clutter, and staging help comes with every listing.", "blocks": [
+      {"type": "note", "d": "Most homes need less work than owners expect. I line up the work through my trades network."},
+      {"type": "note", "d": "Listings typically go live about 5 days after you sign. If the home is already show-ready, it can be 2 to 3 days."}]},
     {"id": "process", "label": "VIII · Process", "h2": "How selling works", "blocks": [
       {"type": "steps", "items": [
         {"n": "1", "t": "First chat", "d": "We talk about your goals and timing. This is free."},
@@ -217,7 +221,10 @@
       {"type": "faq", "items": [
         {"q": "What costs come with selling a home in B.C.?", "a": [{"t": "Common costs include legal or notary fees, the fee to discharge your mortgage, GST on legal fees, any mortgage prepayment penalty and your share of property taxes. BCFSA lists these on its "}, {"t": "selling costs page", "h": "https://www.bcfsa.ca/public-resources/real-estate/selling-home/what-costs-come-with-selling-home"}, {"t": "."}]},
         {"q": "How do you decide my list price?", "a": [{"t": "I look at what similar homes near you sold for recently, what is listed now and what makes your home different. You get a price range with the reasons. Start with a "}, {"t": "free home evaluation", "h": "/home-evaluation.html"}, {"t": "."}]},
-        {"q": "What marketing does my listing get?", "a": "Every listing gets professional photos, drone photos, cinematic video, a 3D tour, laser-measured floor plans, staging help, a printed feature booklet and paid ads on Facebook, Instagram, YouTube and TikTok."},
+        {"q": "What is included in your marketing plan?", "a": "Every listing gets professional HDR photos, drone photos, a cinematic video, a short vertical video, a laser-measured floor plan, a 3D virtual tour, a printed feature booklet, staging help, paid ads on Facebook, Instagram, YouTube and TikTok, paid placement on REW.ca, a Royal LePage Sphere listing boost, 5,000 postcards and Just Listed and Just Sold mailouts."},
+        {"q": "Where will my home be advertised?", "a": "On the MLS® and the sites that pull from it, REW.ca, jaredgibbons.ca, my email list, YouTube, paid Facebook, Instagram and TikTok ads, Facebook Marketplace, Craigslist, Kijiji and local online news, plus mail and print."},
+        {"q": "How long until my home is on the market?", "a": "Typically about 5 days after you sign, or 2 to 3 days if the home is already ready to show."},
+        {"q": "Do I get feedback after showings?", "a": "Yes. I send feedback after every showing, then review and negotiate each offer with you through to closing."},
         {"q": "Can a buyer back out after I accept their offer?", "a": [{"t": "For most homes in B.C., a buyer can cancel within three business days after you accept. They must tell you in writing and pay you 0.25% of the offer price. See the "}, {"t": "BCFSA rules", "h": "https://www.bcfsa.ca/public-resources/real-estate/home-buyer-rescission-period"}, {"t": "."}]},
         {"q": "Do I pay tax if I sell soon after buying?", "a": [{"t": "The BC home flipping tax may apply if you owned the home for less than 730 days. Some exemptions apply. See the "}, {"t": "Government of B.C. page", "h": "https://www2.gov.bc.ca/gov/content/taxes/income-taxes/bc-home-flipping-tax"}, {"t": " and talk to an accountant."}]},
         {"q": "Do I need to renovate before selling?", "a": "Usually not. Cleaning, small repairs and clearing clutter often matter more. I'll tell you which jobs are worth doing, and staging help comes with every listing."},

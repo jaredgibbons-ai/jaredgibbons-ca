@@ -6,6 +6,10 @@ copywriters were given (title 38-60, H1 20-60 with no pipe, description 135-158 
 figures, no banned wording, no duplicate title or description anywhere on the site) and refuses to write on any failure.
 [...slug].astro applies the file last, so deleting an entry falls back to the layer underneath.
 Also writes docs/review/seo/seo-before-after-2026-11-05.csv (current vs new) for review.
+
+DO NOT RE-RUN AS IS (2026-11-12): src/data/seo-final.json was edited after the last run by tools/protect_top_pages_2026_11_12.py and
+tools/gsc_titles_2026_11_12.py (D-231, D-232: 32 titles written from Search Console queries). A re-run puts the older titles back.
+Move those titles into a fix_*.json here first, or edit seo-final.json by hand (as D-256 did for the selling page).
 """
 import csv, glob, json, os, re, sys
 sys.dont_write_bytecode = True

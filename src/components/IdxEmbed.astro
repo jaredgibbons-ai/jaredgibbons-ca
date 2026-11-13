@@ -2,11 +2,12 @@
 // MyRealPage listing search for one page. The vendor script is added only when the block nears the
 // viewport (keeps it off the LCP/INP path) and the space is reserved so the page does not shift (CLS).
 // If nothing renders within 10 s the visitor sees the plain link to the full search instead.
+import { mapSearchUrl } from '../lib/idx';
 interface Props { id?: string; account: string; label?: string; path?: string; frame?: boolean }
 const { id = '', account, label = 'Listings', path, frame = false } = Astro.props;
 // frame: the open map search shown in the page itself (D-242). The vendor's in.js for this widget only prints a "Search listings" link that
 // opens the map full screen; the frame below is the same map, visible without a click.
-const MAP = `https://idx.myrealpage.com/wps/-/tmpl~v2,idx_v2_map_pos~49.10058663823867%7C-122.78651742876207,idx_v2_map_radius~15/recip/${account}/idx.search`;
+const MAP = mapSearchUrl(account);
 // A saved search by id, or a special widget (my listings, the open search form) by its stored path.
 const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `recip/tmpl~v2,noframe~true/-/search-${id}.def/in.js`}`;
 ---
@@ -14,19 +15,30 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
 <section class="section section--tight section--idx section--idxmap" aria-label="MLS® map search">
   <div class="wrap">
     {/* Desktop and tablet: the map in the page. Phones (D-255): a map inside a small frame traps the finger, hides its filters and shows no listings,
-        so phones get one button that opens the map full screen, then the listings as photo cards that scroll with the page. */}
+        so phones get one button under the page heading (GenericPage) that opens the map full screen, then the listings here as photo cards that scroll with the page. */}
     <iframe class="idxmap" data-src={MAP} title="MLS® map search: homes for sale in the Fraser Valley and Metro Vancouver" allow="geolocation" referrerpolicy="strict-origin-when-cross-origin"></iframe>
     <p class="idxmap__alt"><a href={MAP} target="_blank" rel="noopener">Open the map search full screen</a></p>
     {id && (
       <div class="idxphone">
-        <p class="idxphone__cta"><a class="btn" href={MAP} target="_blank" rel="noopener">Open the map search →</a></p>
-        <p class="idxphone__note">Search by map, price, type or MLS® number. Or scroll the newest listings below.</p>
+        <p class="idxphone__note">South Surrey homes for sale are below. For an address, a price range or an MLS® number, <a href={MAP} data-map-open>open the map search</a>.</p>
         <div class="idx" data-idx-src={src} data-idx-id={id}></div>
         <p class="notice idx__fallback" hidden>The live listings did not load. <a href={MAP} target="_blank" rel="noopener">Open the map search</a></p>
       </div>
     )}
     <noscript><p class="notice"><a href={MAP}>Open the MLS® map search</a></p></noscript>
   </div>
+  {id && (
+    <div class="mapfs" id="mapfs" role="dialog" aria-modal="true" aria-label="MLS® map search" data-src={MAP} hidden>
+      {/* Phones: "Open the map search" fills the screen with the map on this page (D-255). The page behind does not scroll, so a finger
+          moves the map, and the visitor stays on jaredgibbons.ca. The frame is only created on the first open. */}
+      <div class="mapfs__bar">
+        <button type="button" class="mapfs__close"><span aria-hidden="true">←</span> Back</button>
+        <span class="mapfs__t" aria-hidden="true">MLS® map search</span>
+        <a class="mapfs__new" href={MAP} target="_blank" rel="noopener">New tab<span class="sr-only"> (opens the map search in a new tab)</span></a>
+      </div>
+      <div class="mapfs__frame"><p class="mapfs__wait">Loading the map…</p></div>
+    </div>
+  )}
 </section>
 ) : (
 <section class="section section--tight section--idx" aria-label={label}>
@@ -46,6 +58,41 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
     const wide = matchMedia('(min-width:701px)');
     const set = () => { if ((wide.matches || !document.querySelector('.idxphone')) && !map.src) map.src = map.dataset.src!; };
     set(); wide.addEventListener('change', set);
+  }
+  // Phones: a link marked data-map-open opens the map full screen on this page instead of leaving for the vendor's page (D-255).
+  // Without JavaScript, or on a wide screen, the link simply works as a link.
+  const fs = document.getElementById('mapfs');
+  if (fs) {
+    const phone = matchMedia('(max-width:700px)');
+    const holder = fs.querySelector<HTMLElement>('.mapfs__frame')!, closeBtn = fs.querySelector<HTMLButtonElement>('.mapfs__close')!;
+    let frame: HTMLIFrameElement | null = null, opener: HTMLElement | null = null;
+    const open = (from: HTMLElement | null) => {
+      if (!frame) {
+        frame = document.createElement('iframe');
+        frame.title = 'MLS® map search: homes for sale in the Fraser Valley and Metro Vancouver';
+        frame.allow = 'geolocation'; frame.referrerPolicy = 'strict-origin-when-cross-origin';
+        frame.src = fs.dataset.src!;
+        holder.appendChild(frame);
+      }
+      opener = from; fs.hidden = false; document.documentElement.classList.add('mapfs-open');
+      if (history.state?.mapfs !== 1) history.pushState({ mapfs: 1 }, '');   // the phone's Back button closes the map instead of leaving the page
+      closeBtn.focus();
+    };
+    const close = (fromBack = false) => {
+      if (fs.hidden) return;
+      fs.hidden = true; document.documentElement.classList.remove('mapfs-open');
+      if (!fromBack && history.state?.mapfs === 1) history.back();
+      opener?.focus({ preventScroll: true });
+    };
+    document.addEventListener('click', (e) => {
+      const a = (e.target as Element | null)?.closest?.('a[data-map-open]') as HTMLElement | null;
+      if (!a || !phone.matches || (e as MouseEvent).metaKey || (e as MouseEvent).ctrlKey) return;
+      e.preventDefault(); open(a);
+    });
+    closeBtn.addEventListener('click', () => close());
+    addEventListener('popstate', () => close(true));
+    addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    phone.addEventListener('change', () => { if (!phone.matches) close(); });
   }
   const box = document.querySelector<HTMLElement>('.idx[data-idx-src]');
   if (box) {
@@ -79,13 +126,23 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
   @media (max-width:700px){
     .section--idxmap:has(.idxphone) .idxmap,.section--idxmap:has(.idxphone) .idxmap__alt{display:none}
     .idxphone{display:block}
-    .idxphone__cta{margin:0 0 .6rem}
-    .idxphone__cta .btn{width:100%;justify-content:center;min-height:3.25rem;font-size:.9375rem}
     .idxphone__note{margin:0 0 var(--s4);font-size:.9375rem}
     .section--idxmap:not(:has(.idxphone)) .wrap{padding-inline:0}
     .section--idxmap:not(:has(.idxphone)) .idxmap{border-inline:0;height:72svh;min-height:26rem}
     .section--idxmap:not(:has(.idxphone)) .idxmap__alt{padding-inline:var(--gutter)}
   }
+  /* Full-screen map on phones (D-255) */
+  .mapfs{position:fixed;inset:0;height:100dvh;z-index:200;display:flex;flex-direction:column;background:#fff;overscroll-behavior:contain}
+  .mapfs[hidden]{display:none}
+  .mapfs__bar{flex:none;display:flex;align-items:center;justify-content:space-between;gap:.5rem;min-height:3rem;padding:env(safe-area-inset-top,0) .25rem 0;background:var(--ink);color:#fff;touch-action:none}
+  .mapfs__close{appearance:none;border:0;background:none;color:#fff;cursor:pointer;display:inline-flex;align-items:center;gap:.45rem;min-height:2.75rem;padding:0 .9rem;font:700 .8125rem/1 var(--f-head);letter-spacing:.1em;text-transform:uppercase}
+  .mapfs__t{font:700 .6875rem/1 var(--f-head);letter-spacing:.14em;text-transform:uppercase;color:#d2d2d2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mapfs__new{display:inline-flex;align-items:center;min-height:2.75rem;padding:0 .9rem;color:#fff;font:700 .6875rem/1 var(--f-head);letter-spacing:.1em;text-transform:uppercase}
+  .mapfs__close:focus-visible,.mapfs__new:focus-visible{outline:2px solid #fff;outline-offset:-4px;box-shadow:none}
+  .mapfs__frame{position:relative;flex:1;min-height:0;background:var(--cream)}
+  .mapfs__wait{position:absolute;inset:0;margin:0;display:flex;align-items:center;justify-content:center;font:600 .875rem var(--f-head);letter-spacing:.04em}
+  .mapfs__frame :global(iframe){position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent}
+  :global(html.mapfs-open),:global(html.mapfs-open body){overflow:hidden}
   .idx[hidden],.idx__fallback[hidden]{display:none}
   /* MyRealPage adds its own "Login with Facebook / Google / X" bar above the results; our page has its own sign-in and account links (D-133). */
   .idx :global(.mrp-results-vow-toolbar-wrapper),.idx :global(.mrp-vow-toolbar){display:none}

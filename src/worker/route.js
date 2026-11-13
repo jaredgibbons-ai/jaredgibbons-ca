@@ -36,6 +36,9 @@ export const MOVED = {
   '/blog.html/-safeway-sale-at-ocean-park-what-it-means-for-south-surrey-9116750': '/blog.html/safeway-sale-at-ocean-park-what-it-means-for-south-surrey-9116750',
   '/blog.html/-langley-acreages-over-4-acres-best-prices-in-years-8774922': '/blog.html/langley-acreages-over-4-acres-best-prices-in-years-8774922',
   '/blog.html/-salmon-sessions-music-festival-returns-to-south-surrey-8962711': '/blog.html/salmon-sessions-music-festival-returns-to-south-surrey-8962711',
+  // The marketing plan is the selling page (D-256, Jared: "shouldn't this be in the marketing plan?"). The old site already sent
+  // this address there (MyRealPage redirect, OI-28); the page's own facts were folded into /selling.html first.
+  '/marketing-plan.html': '/selling.html',
 };
 export const MRP_LISTING = /^\/([^/]+\.html)\/(?:[^/]+\/)*listing\.[^/]*?(?:\.(\d{6,}))?(?:\.html)?\/?$/;
 export function oldListing(path, index, assetExists) {

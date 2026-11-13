@@ -4,6 +4,7 @@ import GenericPage from '../components/GenericPage.astro';
 import DesignedPage from '../components/DesignedPage.astro';
 import SEO_OVERRIDES from '../data/seo-overrides.json';
 import SEO_FINAL from '../data/seo-final.json';
+import PLS from '../data/post-listing-seo.json';
 export function getStaticPaths() {
   const mods = import.meta.glob('../data/pages/*.json', { eager: true }) as Record<string, any>;
   const out = Object.values(mods).map((m) => ({ params: { slug: m.default.slug }, props: { page: m.default } }));
@@ -16,32 +17,36 @@ export function getStaticPaths() {
     if (ov.description) { pg.seo['Meta description'] = ov.description; pg.seo['OG description'] = ov.description; }
     if (ov.h1) { pg.seo.H1 = ov.h1; const h = pg.blocks.find((b: any) => b.t === 'h' && b.level === 1); if (h) h.text = ov.h1; else pg.blocks.unshift({ t: 'h', level: 1, text: ov.h1 }); }
   }
-  // The archive's blog index carries the full text of the 55 newest posts one after another (about 280,000 px tall on a phone). It becomes a proper
-  // index: each of those posts keeps its heading link, byline and a short lead, then a "Read the full post" link; every post is then listed as a link.
+  // The archive's blog index carries the full text of the newest posts one after another (about 280,000 px tall on a phone), and an earlier
+  // rebuild still stacked 50 of them one per band with no dates (29,000 px). It is now a real index (D-258): the latest market update up top,
+  // the 24 newest posts as dated cards, then every post listed by year. Titles and summaries are the reviewed ones (post-listing-seo.json).
   const blog = out.find((o) => o.params.slug === 'blog');
   if (blog) {
     const B: any[] = blog.props.page.blocks;
-    const starts = B.map((b, i) => (b.t === 'h' && b.level === 2 && /\/blog\.html\/[^?#]+$/.test(String(b.href || '')) ? i : -1)).filter((i) => i >= 0);
-    const tailAt = B.findIndex((b, i) => i > (starts[starts.length - 1] ?? 0) && b.t === 'p' && b.parts?.[0]?.t === 'Blogs');
-    const lead = (txt: string) => { if (txt.length <= 300) return txt; const c = txt.slice(0, 300); const e = Math.max(c.lastIndexOf('. '), c.lastIndexOf('? ')); return e > 120 ? c.slice(0, e + 1) : c.slice(0, c.lastIndexOf(' ')).replace(/[,;:\s]+$/, '') + '…'; };
-    const ptxt = (b: any) => (b.parts || []).reduce((a: string, x: any, i: number) => a + (i && !/^[,.;:!?)\]”’]/.test(x.t) ? ' ' : '') + x.t, '').replace(/\s+([,.;:!?])(?=\s|$)/g, '$1');
-    const head = B.slice(0, starts[0] ?? 0);
-    const body: any[] = [];
-    starts.forEach((st, k) => {
-      const end = k + 1 < starts.length ? starts[k + 1] : (tailAt > 0 ? tailAt : B.length);
-      const sec = B.slice(st, end);
-      body.push(sec[0]);
-      const by = sec.slice(1, 4).find((b) => b.t === 'p' && /^by$/i.test(String(b.parts?.[0]?.t).trim()));
-      if (by) body.push(by);
-      const first = sec.slice(1).find((b) => b.t === 'p' && ptxt(b).length > 110 && !/accurate as of|legal or tax advice|general information|campaign proposals|Nothing has been/i.test(ptxt(b)) && !/^by$/i.test(String(b.parts?.[0]?.t).trim()));
-      if (first) body.push({ t: 'p', parts: [{ t: lead(ptxt(first)) }] });
-      body.push({ t: 'p', parts: [{ t: 'Read the full post', h: sec[0].href }] });
-    });
+    const fmt = (iso: string, o: Intl.DateTimeFormatOptions) => new Date(iso).toLocaleDateString('en-US', { timeZone: 'America/Vancouver', ...o });
     const posts = Object.values(import.meta.glob('../data/posts/*.json', { eager: true, import: 'default' }) as Record<string, any>)
-      .filter((q: any) => q.canonical && q.title)
-      .sort((a: any, b: any) => String(b.seo?.Published || '').localeCompare(String(a.seo?.Published || '')));
-    const all = [{ t: 'h', level: 2, text: 'All Blog Posts' }, { t: 'list', items: posts.map((q: any) => [{ t: String(q.title).replace(/ \| Jared Gibbons.*$/, ''), h: q.canonical }]) }];
-    blog.props.page = { ...blog.props.page, blocks: [...head, ...body, ...all, ...(tailAt > 0 ? B.slice(tailAt) : [])] };
+      .filter((q: any) => q.canonical && q.title && q.slug)
+      .sort((a: any, b: any) => String(b.seo?.Published || '').localeCompare(String(a.seo?.Published || '')))
+      .map((q: any) => { const f = (PLS as Record<string, any>)[q.slug] || {}; const iso = String(q.seo?.Published || '');
+        return { title: String(f.title || q.title).replace(/ \| Jared Gibbons.*$/, '').trim(), href: `/blog.html/${q.slug}`, iso: iso.slice(0, 10),
+          date: iso ? fmt(iso, { month: 'short', day: 'numeric', year: 'numeric' }) : '', short: iso ? fmt(iso, { month: 'short', day: 'numeric' }) : '', year: iso ? fmt(iso, { year: 'numeric' }) : 'Earlier',
+          excerpt: String(f.description || q.seo?.['Meta description'] || '').trim() }; });
+    // The newest monthly market update (a page written by tools/build_market_update.py; it carries `market_update: "YYYY-MM"`).
+    const locals0 = import.meta.glob('../data/local/*.json', { eager: true, import: 'default' }) as Record<string, any>;
+    const mk = Object.values(locals0).filter((l: any) => l.market_update && l.new_page).sort((a: any, b: any) => String(b.market_update).localeCompare(String(a.market_update)))[0] as any;
+    const prevLink = B.flatMap((x: any) => x.parts || []).find((x: any) => /market-update/.test(String(x.h || '')));
+    const feature = mk ? [{ t: 'mktfeature', eyebrow: 'Latest market update', title: mk.new_page.h1, href: `/${mk.slug}.html`, summary: mk.new_page.description,
+      stats: (mk.blocks.find((x: any) => x.t === 'stats')?.items || []).map((it: any) => ({ label: it.label, value: it.value })),
+      prev: prevLink ? { t: String(prevLink.t).replace(/:.*$/, ''), h: String(prevLink.h).replace(/^https:\/\/jaredgibbons\.ca/, '') } : null }]
+      : (prevLink ? [{ t: 'p', parts: [{ t: 'Latest market update:' }, prevLink] }] : []);
+    const h1 = B.find((x: any) => x.t === 'h' && x.level === 1) || { t: 'h', level: 1, text: 'Blog' };
+    const lede = B.find((x: any) => x.t === 'h' && x.level === 2 && !x.href);   // "Read the Latest Real Estate News, Market Updates, and Helpful Tips"
+    const years = [...new Set(posts.map((q) => q.year))];
+    blog.props.page = { ...blog.props.page, blocks: [
+      h1, ...(lede ? [{ t: 'p', cls: 'lede', parts: [{ t: lede.text.charAt(0) + lede.text.slice(1).toLowerCase() + '.' }] }] : []), ...feature,
+      { t: 'h', level: 2, text: 'Latest posts' }, { t: 'postgrid', items: posts.slice(0, 24) },
+      { t: 'h', level: 2, text: 'All blog posts by year' }, { t: 'postyears', years: years.map((y) => ({ year: y, posts: posts.filter((q) => q.year === y) })) },
+    ] };
   }
   // /our-listings.html and /sold-properties.html showed only the MyRealPage widget, so 192 of Jared's 203 listing pages had no link from the site. Both now carry a
   // static card list built from src/data/listings (photos, price, facts), which also works when the widget does not load.

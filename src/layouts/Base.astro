@@ -13,7 +13,8 @@ const crumbLd = crumbs.length > 1 ? [{ '@context': 'https://schema.org', '@type'
 const preview = import.meta.env.PUBLIC_PREVIEW !== 'false';
 // Pages with no image of their own (search and market-stat pages) share a default card, not a text-only one.
 // Share images on MyRealPage's /_media/ path are not part of the new site and stop loading at the switch (D-236): use the default card.
-const shareImage = ogImage && !/\/_media\//.test(ogImage) ? ogImage : 'https://jaredgibbons.ca/img/og-default.jpg';
+// The same goes for blog-post images under MyRealPage's /wps/rest/ path (198 posts, each answered 404 after the switch; D-258).
+const shareImage = ogImage && !/\/_media\/|\/wps\/rest\//.test(ogImage) ? ogImage : 'https://jaredgibbons.ca/img/og-default.jpg';
 const isHome = Astro.url.pathname === '/' || Astro.url.pathname === '/index.html';
 const site = 'https://jaredgibbons.ca';
 // Home-only entity markup (facts as published in the footer and profile; no ratings). sameAs, image, logo, geo and hasMap carry over
