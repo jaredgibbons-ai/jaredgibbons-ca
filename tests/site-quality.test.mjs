@@ -168,8 +168,8 @@ test('built pages: Marketing Plan opens the selling page, and Home Evaluation ca
   for (const f of pages) assert.ok(!html(f).includes('/marketing-plan.html'), `${f} still links to /marketing-plan.html`);
   assert.ok(!fs.readFileSync(path.join(DIST, 'sitemap.xml'), 'utf8').includes('marketing-plan'), 'sitemap lists the retired page');
   const he = html('home-evaluation.html');
-  // D-261: the evaluation form comes first; the banner sits right after it, above the questions.
-  assert.ok(/<a class="biglink" href="\/selling\.html"/.test(he) && he.indexOf('class="biglink"') > he.indexOf('<form') && he.indexOf('class="biglink"') < he.indexOf('Common questions'), 'home evaluation: big marketing-plan link missing, or not between the form and the questions');
+  // D-263: Jared wants the marketing plan banner big and right above the form.
+  assert.ok(/<a class="biglink" href="\/selling\.html"/.test(he) && he.indexOf('class="biglink"') < he.indexOf('<form') && /Check out our marketing plan/.test(he), 'home evaluation: big marketing-plan link missing or below the form');
   const sell = html('selling.html');
   for (const w of ['Classifieds', 'Local news', 'REALTOR.ca', 'How long until my home is on the market?', 'Where will my home be advertised?', 'about 5 days after you sign']) assert.ok(sell.includes(w), `selling page lost "${w}" from the old marketing plan`);
 });

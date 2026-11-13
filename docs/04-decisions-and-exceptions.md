@@ -1581,3 +1581,6 @@ Brief and per-item status: `docs/review/cx/`. Done in code:
 - Fixed while doing it: MyRealPage gives the description box a fixed height, which let the "Listed by" line slide under the button.
 - Not in the card data: year built, lot size, days on market. Those would need MyRealPage to add fields to the card template (support request).
 - Checked by injecting the rules on the live results page before committing.
+
+## D-263 — 2026-11-13 — Home Evaluation: the marketing plan banner is bigger and sits right above the form (Jared: "make the marketing plan link much bigger and bolder and a statement about check out our marketing plan")
+- Headline "Check out our marketing plan" (eyebrow "Selling your home?"), larger type and button, taller photo, a grey offset shadow. Position `before-form` (reverses the D-261 move below the form).

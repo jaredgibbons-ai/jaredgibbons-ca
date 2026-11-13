@@ -1208,14 +1208,14 @@ const explore = !_extra.length ? exploreBase
   .py__list a{min-width:0}
   .py__list time{flex:none;font-size:.8125rem;color:var(--grey);white-space:nowrap}
   @media (max-width:48rem){.py__list{columns:1}}
-  .biglink{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);max-width:none;margin:var(--s5) 0 0;background:var(--ink);color:#fff;text-decoration:none;border:1px solid var(--ink)}
+  .biglink{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);max-width:none;margin:var(--s6) 0 var(--s6);box-shadow:8px 8px 0 #d2d2d2;background:var(--ink);color:#fff;text-decoration:none;border:1px solid var(--ink)}
   .biglink__txt{display:flex;flex-direction:column;justify-content:center;gap:.65rem;padding:clamp(1.5rem,4vw,3rem)}
   .biglink__k{font:700 .75rem/1.2 var(--f-head);letter-spacing:.16em;text-transform:uppercase;color:#d2d2d2}
-  .biglink__h{font:800 clamp(1.5rem,3.2vw,2.5rem)/1.05 var(--f-head);letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance}
+  .biglink__h{font:800 clamp(1.9rem,4.4vw,3.4rem)/1 var(--f-head);letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance}
   .biglink__d{font-size:1.0625rem;line-height:1.5;max-width:34rem;color:#ececec}
-  .biglink__cta{align-self:flex-start;margin-top:.6rem;display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;padding:.6rem 1.2rem;background:#fff;color:var(--ink);border:2px solid #fff;font:700 .8125rem/1 var(--f-head);letter-spacing:.1em;text-transform:uppercase;transition:background .15s,color .15s}
+  .biglink__cta{align-self:flex-start;margin-top:.6rem;display:inline-flex;align-items:center;gap:.5rem;min-height:3.25rem;padding:.8rem 1.5rem;background:#fff;color:var(--ink);border:2px solid #fff;font:800 .9375rem/1 var(--f-head);letter-spacing:.1em;text-transform:uppercase;transition:background .15s,color .15s}
   .biglink:hover .biglink__cta,.biglink:focus-visible .biglink__cta{background:transparent;color:#fff}
-  .biglink__img{display:block;width:100%;height:100%;min-height:15rem;max-height:20rem;object-fit:cover}
+  .biglink__img{display:block;width:100%;height:100%;min-height:18rem;max-height:24rem;object-fit:cover}
   @media (max-width:48rem){.biglink{grid-template-columns:1fr}.biglink__img{order:-1;min-height:0;height:11rem}}
   /* Phones only: the full-screen map button under the heading of the two map pages (D-255). */
   .mapcta{display:none}
