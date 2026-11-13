@@ -46,6 +46,7 @@ import EXPLORE from '../data/explore.json';
 import EXPLORE_EXTRA from '../data/explore-extra.json';
 import ExploreLinks from './ExploreLinks.astro';
 import ZoningLookup from './ZoningLookup.astro';
+import SoldVideos from './SoldVideos.astro';
 // Farm, acreage and land pages get the zoning lookup (D-269): the municipality's farm and rural zones from the zoning guide.
 const ZL_PAGE = /(acreage|farms?\b|farms-|lots-land|horse-propert|poultry|chicken-farm|egg-farm|broiler|turkey-farm)/;
 const ZL_MUNI: [RegExp, string][] = [[/^abbotsford/, 'zd-abbotsford'], [/^(langley|fort-langley|campbell-valley|salmon-river)/, 'zd-langley'], [/^(surrey|south-surrey|cloverdale|port-kells)/, 'zd-surrey'], [/^(tsawwassen|ladner|delta|north-delta)/, 'zd-delta'], [/^chilliwack/, 'zd-chilliwack'], [/^maple-ridge/, 'zd-mapleridge'], [/^mission/, 'zd-mission']];
@@ -1033,7 +1034,8 @@ const explore = !_extra.length ? exploreBase
   })}
   {local?.lead === 'quiz' && <SearchQuiz heading={local.lead_heading} />}
   {local?.lead === 'homevalue' && <HomeValue place={local.lead_place} />}
-  {(ZL_PAGE.test(page.slug) || page.slug === 'land') && !/landplans|land-use|landlord|^(burnaby|coquitlam|new-westminster|port-coquitlam|port-moody|pitt-meadows)-/.test(page.slug) && <ZoningLookup muni={ZL_MUNI.find(([re]) => re.test(page.slug))?.[1] || ''} />}
+  {(ZL_PAGE.test(page.slug) || page.slug === 'land') && !/landplans|land-use|landlord|^(burnaby|coquitlam|new-westminster|port-coquitlam|port-moody|pitt-meadows|princeton)-/.test(page.slug) && <ZoningLookup muni={ZL_MUNI.find(([re]) => re.test(page.slug))?.[1] || ''} />}
+  <SoldVideos slug={page.slug} />
   <Cta />
   {explore && <ExploreLinks data={explore} />}
 </main>

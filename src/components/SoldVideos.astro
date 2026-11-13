@@ -1,0 +1,84 @@
+---
+// "Homes Jared has sold in <place>, on video" (D-273): city hubs, city search pages and guides show up to six of Jared's own
+// listing videos from that place (src/data/listing-media.json, matched to the listing by its address slug), newest first.
+// Each card links to the listing page, where the video plays. The YouTube thumbnail loads lazily; nothing plays on this page.
+import MEDIA from '../data/listing-media.json';
+import { ownCards, displayStreet } from '../lib/own-listings';
+
+const { slug } = Astro.props as { slug: string };
+// page slug -> [place name, test on the listing slug]
+const PLACES: [RegExp, string, RegExp][] = [
+  [/^white-rock(-guide|-condo-buildings|-waterfront-homes-for-sale|-hillside-homes-for-sale)?$/, 'White Rock', /-white-rock-/],
+  [/^south-surrey-homes-for-sale$/, 'South Surrey and White Rock', /-(surrey|white-rock)-bc-v(4a|4b|3z)/],
+  [/^surrey(-homes-for-sale|-neighbourhood-guides)?$/, 'Surrey', /-surrey-(bc|r\d)/],
+  [/^langley(-homes-for-sale|-neighbourhood-guides)$/, 'Langley', /-(langley|aldergrove)-/],
+  [/^aldergrove(-guide)?$/, 'Aldergrove', /-aldergrove-|-langley-bc-v4w/],
+  [/^abbotsford(-homes-for-sale|-neighbourhood-guides)$/, 'Abbotsford', /-abbotsford-/],
+  [/^maple-ridge(-homes-for-sale|-neighbourhood-guides)$/, 'Maple Ridge', /-maple-ridge-/],
+  [/^chilliwack(-homes-for-sale|-neighbourhood-guides)$/, 'Chilliwack', /-chilliwack-/],
+  [/^mission(-homes-for-sale|-neighbourhood-guides)$/, 'Mission', /-mission-bc-/],
+  [/^(north-)?delta(-homes-for-sale|-neighbourhood-guides)$/, 'Delta', /-(delta|ladner|tsawwassen)-bc-/],
+  [/^princeton-bc-(guide|homes-for-sale)$/, 'Princeton', /-princeton-/],
+];
+const hit = PLACES.find(([re]) => re.test(slug));
+const CARDS = new Map(ownCards().map((c) => [c.slug, c]));
+const media = MEDIA as Record<string, any>;
+const seen = new Set<string>();
+const cards = !hit ? [] : Object.entries(media)
+  .filter(([k, v]) => k !== '_note' && v?.video && hit[2].test(k) && CARDS.has(k))
+  .map(([k, v]) => {
+    const c = CARDS.get(k)!;
+    const sold = /sold/i.test(String(c.status || ''));
+    // sold homes show the street, not the house number (as on the other sold cards)
+    const where = `${sold ? displayStreet(c) : c.street}, ${c.city}`;
+    return { k, video: v.video as string, href: c.href, where, addr: `${c.street}|${c.city}`.toLowerCase(), sold, note: [sold ? (c.year ? `Sold ${c.year}` : 'Sold') : c.price, c.beds ? `${c.beds} bed` : '', /apartment|condo/i.test(String(c.type || '')) ? 'condo' : /town/i.test(String(c.type || '')) ? 'townhome' : ''].filter(Boolean).join(' · '), n: c.soldTs || Number((k.match(/\.(\d+)$/) || [])[1] || 0) };
+  })
+  .sort((a, b) => b.n - a.n)
+  .filter((c) => { if (seen.has(c.video) || seen.has(c.addr)) return false; seen.add(c.video); seen.add(c.addr); return true; })   // one card per video and per address (relistings)
+  .slice(0, 6);
+const place = hit?.[1] || '';
+const anySold = cards.some((c) => c.sold);
+---
+{cards.length >= 2 && (
+<section class="section sv" aria-labelledby="sv-h">
+  <div class="wrap">
+    <p class="eyebrow">On video</p>
+    <h2 class="h2" id="sv-h">{anySold ? `Homes Jared has sold in ${place}` : `Jared's listings in ${place}`}</h2>
+    <p class="sv__lead">Video tours of Jared's own listings in {place}. Tap one to see the home, the video and the floor plan.</p>
+    <ul class="sv__grid">
+      {cards.map((c) => (
+        <li>
+          <a class="sv__card" href={`${c.href}#ls-media`}>
+            <span class="sv__img">
+              <img src={`https://i.ytimg.com/vi/${c.video}/mqdefault.jpg`} alt="" width="320" height="180" loading="lazy" decoding="async" />
+              <span class="sv__play" aria-hidden="true"><svg viewBox="0 0 68 48" width="48" height="34"><rect width="68" height="48" rx="10" fill="#0a0a0a" fill-opacity=".85"/><path d="M27 15l18 9-18 9z" fill="#fff"/></svg></span>
+              {c.sold && <span class="sv__tag">Sold</span>}
+            </span>
+            <span class="sv__where">{c.where}</span>
+            {c.note && <span class="sv__price">{c.note}</span>}
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p class="sv__more"><a href="/sold-properties.html">All homes Jared has sold →</a></p>
+  </div>
+</section>
+)}
+
+<style>
+  .sv{border-top:1px solid var(--rule)}
+  .sv .eyebrow{color:var(--grey)}
+  .sv__lead{margin:0 0 var(--s5);max-width:44rem}
+  .sv__grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:var(--s5)}
+  .sv__card{display:flex;flex-direction:column;gap:.35rem;color:var(--ink);text-decoration:none}
+  .sv__img{position:relative;display:block;aspect-ratio:16/9;background:#111;overflow:hidden}
+  .sv__img img{width:100%;height:100%;object-fit:cover;display:block;opacity:.9;transition:opacity .15s}
+  .sv__card:hover .sv__img img,.sv__card:focus-visible .sv__img img{opacity:1}
+  .sv__play{position:absolute;inset:0;display:grid;place-items:center}
+  .sv__tag{position:absolute;left:.5rem;top:.5rem;background:#fff;color:var(--ink);font:700 .6875rem/1 var(--f-head);letter-spacing:.08em;text-transform:uppercase;padding:.3rem .45rem}
+  .sv__where{font:700 1rem/1.3 var(--f-head)}
+  .sv__card:hover .sv__where{text-decoration:underline}
+  .sv__price{color:var(--grey);font-size:.9375rem}
+  .sv__more{margin:var(--s4) 0 0}
+  .sv__more a{font-weight:700;color:var(--ink)}
+</style>

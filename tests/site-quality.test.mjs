@@ -326,15 +326,31 @@ test('listing media, map, example rate, 12-hour reply, zoning lookup on farm pag
   assert.ok(!/class="section zl/.test(html('burnaby-acreages-for-sale.html')), 'zoning lookup on a page outside the guide');
 });
 
-test('home evaluation is two steps; ten rewritten posts carry their own body (D-271)', { skip: !built }, () => {
+test('home evaluation is two steps; twenty rewritten posts carry their own body (D-271, D-273)', { skip: !built }, () => {
   const t = html('home-evaluation.html');
   assert.ok(/data-steps/.test(t) && /data-next/.test(t) && /data-g="1"/.test(t) && /data-g="2"/.test(t), 'two-step form missing');
   const rw = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/post-rewrites.json'), 'utf8'));
-  assert.equal(Object.keys(rw).length, 10);
+  assert.equal(Object.keys(rw).length, 20);   // ten more in D-273
   for (const [slug, r] of Object.entries(rw)) {
     const p = html(`internal/blog/${slug}.html`);
     assert.ok(p.includes(`<title>${r.title.replace(/'/g, '&#39;').replace(/&(?!#)/g, '&amp;')}`), `${slug}: title`);
     assert.ok(/Updated [A-Z][a-z]+ \d+, 20\d\d/.test(p), `${slug}: updated date`);
     assert.ok(!/real estate today \(/.test(p), `${slug}: generic area section still there`);
   }
+});
+
+test('White Rock and Princeton pages, sold floor plans and area video strips (D-273)', { skip: !built }, () => {
+  for (const s of ['white-rock-condo-buildings', 'white-rock-waterfront-homes-for-sale', 'white-rock-hillside-homes-for-sale', 'princeton-bc-guide', 'princeton-bc-homes-for-sale', 'princeton-bc-acreages-for-sale', 'princeton-bc-lots-land']) {
+    const t = html(`${s}.html`);
+    assert.ok(/<h1[^>]*>[^<]+<\/h1>/.test(t), `${s}: no h1`);
+    assert.ok(/"@type":"FAQPage"/.test(t), `${s}: no FAQ data`);
+  }
+  assert.ok(/Soleil/.test(html('white-rock-condo-buildings.html')) && /1588 Johnston Road/.test(html('white-rock-condo-buildings.html')), 'tower table missing');
+  assert.ok(!/class="section zl/.test(html('princeton-bc-acreages-for-sale.html')), 'Fraser Valley zoning lookup on a Princeton page');
+  assert.ok(/White Rock in four parts/.test(html('white-rock-guide.html')), 'white-rock-guide sections missing');
+  const media = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/listing-media.json'), 'utf8'));
+  const fps = Object.entries(media).filter(([k, v]) => k !== '_note' && v.floorplan);
+  assert.ok(fps.length >= 40, `only ${fps.length} floor plans`);
+  for (const [k, v] of fps) assert.ok(fs.existsSync(path.join(DIST, 'img/floorplans', `${v.floorplan.id}-900.webp`)), `${k}: floor plan image missing`);
+  for (const f of ['white-rock.html', 'langley-homes-for-sale.html', 'south-surrey-homes-for-sale.html']) assert.ok(/class="section sv"/.test(html(f)) && /i\.ytimg\.com\/vi\//.test(html(f)), `${f}: no video strip`);
 });

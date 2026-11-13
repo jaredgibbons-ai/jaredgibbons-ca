@@ -15,7 +15,7 @@
 | 11 | Tappable communities | **Done (D-261):** names link to each community's all-homes page; type links are 44px chips. |
 | 12 | Quiz instant result | **Done (D-261):** step 5 shows matching search pages first; the contact form is optional below. |
 | 13 | Home evaluation form | **Partly (D-261):** form now right after the introduction (about 830px down on a phone), questions after it. Reply time added: "Jared replies the same day" (D-270). Two-step form still open. |
-| 14 | Own listing pages | **Partly (D-261):** Book a showing (email or text, filled in), Call, under the price. Video on the 8 active listings that have one, map on every listing (D-269). 3D tours: none public; slot ready when Jared sends links. |
+| 14 | Own listing pages | **Partly (D-261):** Book a showing (email or text, filled in), Call, under the price. Video on the 8 active listings that have one, map on every listing (D-269). Floor plans on 42 listings, sold included (D-273); area pages show Jared's listing videos (D-273). 3D tours: none public; slot ready when Jared sends links. |
 | 15 | Calculator example rate | **Done (D-269):** example 4.69% 5-yr fixed (RateHub, Nov 12, 2026) prefilled; src/data/example-rate.json, update monthly. |
 | 16 | About page rewrite | Needs Jared (first-person copy, photo, video). |
 | 17 | Alerts everywhere | **Partly (D-261):** the alert form is open by default everywhere it shows. |
