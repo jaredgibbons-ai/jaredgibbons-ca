@@ -67,7 +67,7 @@ PAGES.append(page(
     'White Rock Condo Buildings, Tower by Tower',
     [('White Rock condos', '/white-rock-condos-for-sale.html')],
     [
-        NOTE('Building figures are from the City of White Rock’s development info sheets, read November 13, 2026. The live search is not connected yet.'),
+        NOTE('Building figures are from the City of White Rock’s development info sheets, read November 13, 2026. Live search: Gerry’s 1452069.'),
         P('Most of White Rock’s newer condos are in a few blocks of the Town Centre, around Johnston Road, Thrift Avenue, Foster Street and Martin Street, uphill from the beach. The City publishes an info sheet for each major project with its height, number of homes and shop space. Here is what each tower is, side by side, so you can narrow the search before a showing.'),
         GRID,
         H('White Rock’s condo towers at a glance'),

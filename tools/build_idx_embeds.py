@@ -125,7 +125,7 @@ def main():
             pages[slug] = sid
     # Bedroom searches (24) and the 2026-11-06 new searches (29, coach houses, suites, penthouses): worksheets Jerry returns with the two "(Jerry fills)" columns filled.
     # Drop the returned file in docs/review/idx under the name shown; columns are read by header, rows with no search id or an embed code that does not match are skipped and reported.
-    for fn in ('bedroom-searches-2026-11-04-DONE.xlsx', 'new-searches-2026-11-06-DONE.xlsx', 'school-radius-searches-2026-11-07-DONE.xlsx', 'area-gap-searches-2026-11-07-DONE.xlsx', 'price-band-searches-2026-11-07-DONE.xlsx', 'price-band-searches-2026-11-08-DONE.xlsx', 'remaining-searches-2026-11-08-DONE.xlsx'):
+    for fn in ('bedroom-searches-2026-11-04-DONE.xlsx', 'new-searches-2026-11-06-DONE.xlsx', 'school-radius-searches-2026-11-07-DONE.xlsx', 'area-gap-searches-2026-11-07-DONE.xlsx', 'price-band-searches-2026-11-07-DONE.xlsx', 'price-band-searches-2026-11-08-DONE.xlsx', 'remaining-searches-2026-11-08-DONE.xlsx', 'wr-searches-2026-11-13-DONE.xlsx'):
         fp = os.path.join(ROOT, 'docs/review/idx', fn)
         if not os.path.exists(fp): continue
         for wsx in (openpyxl.load_workbook(fp, read_only=True).worksheets if fn.startswith('remaining-searches') else openpyxl.load_workbook(fp, read_only=True).worksheets[:1]):
@@ -137,7 +137,7 @@ def main():
               if not slug: continue
               # school worksheet: skipped rows have no id, and the held rows (0 listings) have no page yet; neither is a problem
               if fn.startswith('school-radius') and (not sid.isdigit() or not os.path.exists(os.path.join(ROOT, 'src/data/local', slug + '.json'))): continue
-              if fn.startswith('remaining-searches') and not sid.isdigit(): continue   # skipped rows (no sub-area in the board picker) wait for a different search
+              if fn.startswith(('remaining-searches', 'wr-searches')) and not sid.isdigit(): continue   # skipped rows (no sub-area in the board picker) wait for a different search
               if not sid.isdigit(): problems.append((fn + ': no search id', slug, sid)); continue
               if f'search-{sid}' not in code or ACCOUNT not in code:
                   problems.append((fn + ': embed code does not match id/account', slug, sid)); continue
