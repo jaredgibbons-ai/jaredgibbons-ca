@@ -6,15 +6,17 @@
 const TTL = 3600;
 export async function handleInstagram(request, env, ctx) {
   const notFound = () => new Response('Not found', { status: 404, headers: { 'cache-control': 'no-store' } });
-  if (!env.INSTAGRAM_FEED_URL || !/^https:\/\/feeds\.behold\.so\/[\w-]+$/.test(env.INSTAGRAM_FEED_URL)) return notFound();
+  // No feed yet (or the feed is down): answer 204, empty, so the home page logs no error and simply keeps the section hidden (D-252).
+  const empty = () => new Response(null, { status: 204, headers: { 'cache-control': 'no-store' } });
   if (request.method !== 'GET' && request.method !== 'HEAD') return notFound();
+  if (!env.INSTAGRAM_FEED_URL || !/^https:\/\/feeds\.behold\.so\/[\w-]+$/.test(env.INSTAGRAM_FEED_URL)) return empty();
   const cache = caches.default;
   const key = new Request('https://jaredgibbons.ca/api/instagram.json?v=1');
   const hit = await cache.match(key);
   if (hit) return hit;
   try {
     const r = await fetch(env.INSTAGRAM_FEED_URL, { cf: { cacheTtl: TTL } });
-    if (!r.ok) return notFound();
+    if (!r.ok) return empty();
     const d = await r.json();
     const posts = (d.posts || []).slice(0, 6).map((p) => {
       const s = p.sizes || {};
@@ -26,5 +28,5 @@ export async function handleInstagram(request, env, ctx) {
       headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': `public, max-age=${TTL}` } });
     if (posts.length) ctx?.waitUntil?.(cache.put(key, res.clone()));
     return res;
-  } catch { return notFound(); }
+  } catch { return empty(); }
 }

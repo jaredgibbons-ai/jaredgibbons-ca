@@ -88,7 +88,7 @@ const explore = [
 (function () {
   var sec = document.getElementById('google-live');
   if (!sec || !window.fetch) return;
-  fetch('/api/reviews.json', { headers: { accept: 'application/json' } }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+  fetch('/api/reviews.json', { headers: { accept: 'application/json' } }).then(function (r) { return r.status === 200 ? r.json() : null; }).then(function (d) {
     if (!d || !d.reviews || !d.reviews.length) return;
     var el = function (t, c, x) { var n = document.createElement(t); if (c) n.className = c; if (x != null) n.textContent = x; return n; };
     var list = document.getElementById('google-list');

@@ -27,6 +27,9 @@ const isRich = (x: any) => Array.isArray(x);
 const href = (h: string) => h.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/';
 let fid = 0;
 const hero = d.hero;
+// a phone gets the 800px copy of a large photo when one exists (D-252)
+import { existsSync } from 'node:fs';
+const HAS800 = (src: string) => existsSync(`public${src}-800.webp`);
 ---
 <Base
   title={page.title}
@@ -57,7 +60,7 @@ const hero = d.hero;
       </div>
       {hero.image && (
         <figure class="dp-hero__img">
-          <img src={`${hero.image.src}.webp`} width={hero.image.w} height={hero.image.h} alt={hero.image.alt} fetchpriority="high" decoding="async" />
+          <img src={`${hero.image.src}.webp`} srcset={HAS800(hero.image.src) ? `${hero.image.src}-800.webp 800w, ${hero.image.src}.webp ${hero.image.w}w` : undefined} sizes="100vw" width={hero.image.w} height={hero.image.h} alt={hero.image.alt} fetchpriority="high" decoding="async" />
         </figure>
       )}
     </div>
@@ -232,7 +235,7 @@ const hero = d.hero;
             </>
           );
           if (b.type === 'figure') return (
-            <figure class="dp-fig" style={`max-width:${b.max ?? '100%'}`}><img src={`${b.src}.webp`} width={b.w} height={b.h} alt={b.alt} loading="lazy" decoding="async" /></figure>
+            <figure class="dp-fig" style={`max-width:${b.max ?? '100%'}`}><img src={`${b.src}.webp`} srcset={HAS800(b.src) ? `${b.src}-800.webp 800w, ${b.src}.webp ${b.w}w` : undefined} sizes={`(min-width:64rem) min(${b.max ?? '60rem'}, 60rem), 100vw`} width={b.w} height={b.h} alt={b.alt} loading="lazy" decoding="async" /></figure>
           );
           if (b.type === 'booklet') return (
             <ul class="dp-book" tabindex="0" aria-label="Printed booklet, 9 pages (scroll sideways)">

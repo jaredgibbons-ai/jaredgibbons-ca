@@ -175,9 +175,9 @@ test('old MyRealPage listing pages and posts missing from the archive redirect (
 test('instagram endpoint stays closed until a Behold feed URL is configured (D-237)', async () => {
   const { handleInstagram } = await import('../src/worker/instagram.js');
   const r1 = await handleInstagram(new Request('https://jaredgibbons.ca/api/instagram.json'), {});
-  assert.equal(r1.status, 404);
+  assert.equal(r1.status, 204); // empty, not an error (D-252)
   const r2 = await handleInstagram(new Request('https://jaredgibbons.ca/api/instagram.json'), { INSTAGRAM_FEED_URL: 'https://evil.example/x' });
-  assert.equal(r2.status, 404);
+  assert.equal(r2.status, 204);
 });
 
 test('static files get long browser caching, pages revalidate (D-240)', async () => {

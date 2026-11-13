@@ -129,7 +129,7 @@ const robotsContent = preview ? 'noindex, nofollow' : robots;
   </script>
   {Astro.url.pathname.startsWith('/internal/blog/') && <SellerNudge />}
   <div class="read-progress" aria-hidden="true"><span></span></div>
-  <a class="to-top" href="#main" aria-label="Back to top" hidden>↑</a>
+  <nav class="to-top-nav" aria-label="Back to top"><a class="to-top" href="#main" aria-label="Back to top" hidden>↑</a></nav>
   <script is:inline>
     // D-235: numbers count up as they scroll into view (stat cards, home rank stats, [data-count]); a reading bar and a
     // back-to-top button on long pages. The final figures are in the HTML (search engines and no-JS readers see them);

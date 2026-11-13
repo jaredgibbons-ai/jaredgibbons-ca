@@ -15,7 +15,7 @@ const profile = 'https://www.instagram.com/jaredgibbonsrealestate/';
   (function () {
     var sec = document.querySelector('.ig'); if (!sec) return;
     var go = function () {
-      fetch('/api/instagram.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+      fetch('/api/instagram.json').then(function (r) { return r.status === 200 ? r.json() : null; }).then(function (d) {
         if (!d || !d.posts || d.posts.length < 3) return;
         var ul = sec.querySelector('.ig__grid');
         d.posts.slice(0, 6).forEach(function (p) {

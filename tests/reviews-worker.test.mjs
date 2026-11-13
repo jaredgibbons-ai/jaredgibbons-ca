@@ -101,11 +101,11 @@ test('site Worker: /api/reviews.json passes through the service binding, and 404
   await build({ entryPoints: ['src/worker/index.js'], bundle: true, format: 'esm', outfile: out, logLevel: 'silent' });
   const site = (await import(out)).default;
   const req = (m = 'GET') => new Request('https://jaredgibbons.ca/api/reviews.json', { method: m });
-  assert.equal((await site.fetch(req(), {})).status, 404);
+  assert.equal((await site.fetch(req(), {})).status, 204); // not connected: empty, not an error (D-252)
   const REVIEWS = { fetch: async (r) => { assert.equal(new URL(r.url).pathname, '/reviews.json'); return json({ reviews: [{ name: 'A', rating: 5, text: 'x' }] }); } };
   const ok = await site.fetch(req(), { REVIEWS });
   assert.equal(ok.status, 200); assert.equal((await ok.json()).reviews.length, 1);
   assert.equal((await site.fetch(req('POST'), { REVIEWS })).status, 404);
   const down = { fetch: async () => { throw new Error('down'); } };
-  assert.equal((await site.fetch(req(), { REVIEWS: down })).status, 404);
+  assert.equal((await site.fetch(req(), { REVIEWS: down })).status, 204);
 });

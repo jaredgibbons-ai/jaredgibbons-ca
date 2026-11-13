@@ -39,13 +39,16 @@ async function handle(request, env, ctx) {
     if (pathname === '/api/instagram.json') return handleInstagram(request, env, ctx);
     // Daily Google reviews copy, served by the jg-reviews Worker over a service binding (nothing public to configure).
     if (pathname === '/api/reviews.json') {
-      if (!env.REVIEWS || (request.method !== 'GET' && request.method !== 'HEAD')) return new Response('Not found', { status: 404, headers: { 'cache-control': 'no-store' } });
+      if (request.method !== 'GET' && request.method !== 'HEAD') return new Response('Not found', { status: 404, headers: { 'cache-control': 'no-store' } });
+      // Not connected yet or not ready: 204, empty, so the reviews page logs no error and keeps the Google block hidden (D-252).
+      const none = () => new Response(null, { status: 204, headers: { 'cache-control': 'no-store' } });
+      if (!env.REVIEWS) return none();
       try {
         const r = await env.REVIEWS.fetch(new Request('https://jg-reviews/reviews.json'));
         // jg-reviews is still a placeholder until the Google Business Profile feed is connected (BL-03): pass through only a real JSON answer.
-        if (r.ok && !/json/i.test(r.headers.get('content-type') || '')) return new Response('Not found', { status: 404, headers: { 'cache-control': 'no-store' } });
+        if (!r.ok || !/json/i.test(r.headers.get('content-type') || '')) return none();
         return new Response(r.body, { status: r.status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': r.ok ? 'public, max-age=900' : 'no-store', 'x-content-type-options': 'nosniff' } });
-      } catch { return new Response('Not found', { status: 404, headers: { 'cache-control': 'no-store' } }); }
+      } catch { return none(); }
     }
     if (request.method !== 'GET' && request.method !== 'HEAD') {
       return new Response('Method Not Allowed', { status: 405, headers: { allow: 'GET, HEAD' } });
