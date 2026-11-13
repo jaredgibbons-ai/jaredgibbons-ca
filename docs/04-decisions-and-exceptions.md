@@ -1575,3 +1575,9 @@ Brief and per-item status: `docs/review/cx/`. Done in code:
 - **Search grids:** the results count reads "1-12 of 1,245" (MyRealPage hides its separator; `public/idx-embed.css`).
 - **Six search pages** no longer show the old widget's "only 1,500 are available for public display" text, which had been captured as page text.
 - **Neighbourhood maps:** if Google shows its own error box (daily limit, billing), the map gives way to the area list. Likely cause of the live error: the 400-a-day map-load cap from 2026-11-05; Jared to check Quotas in Google Cloud.
+
+## D-262 — 2026-11-13 — More on each listing card in the live search grids (Jared: "are we able to add more details to each listing?")
+- `public/idx-embed.css` (the stylesheet MyRealPage loads into its grids) now shows what the cards already carried but the site hid: the MLS® number, the first three lines of the listing description, and MyRealPage's own "View photos" and "Schedule viewing / Email" buttons (the second opens their booking form with a date picker; the lead goes to Jared's MyRealPage inbox). The board's "Listed by" line stays under the description.
+- Fixed while doing it: MyRealPage gives the description box a fixed height, which let the "Listed by" line slide under the button.
+- Not in the card data: year built, lot size, days on market. Those would need MyRealPage to add fields to the card template (support request).
+- Checked by injecting the rules on the live results page before committing.

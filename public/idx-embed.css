@@ -100,3 +100,24 @@
 #listing-results-view .mrp-description-and-attribution-wrapper{display:flex!important;justify-content:space-between;align-items:center;gap:.75rem}
 #listing-results-view .mrp-listing-recip-logo{position:static!important;flex:0 0 auto}
 @media (max-width:480px){#listing-results-view ul.mrp-listing-results{grid-template-columns:1fr;gap:1.25rem}#listing-results-view .search-results-sort-by-select{max-width:55%}}
+
+/* More on each card (D-262, Jared: "are we able to add more details to each listing?"): MLS number, the first lines of the
+   description, and two actions MyRealPage already provides (photos, schedule a viewing). */
+#listing-results-view .mrp-listing-summary-section>div.summary-mls-number{display:flex!important;flex-basis:100%}
+#listing-results-view .mrp-listing-summary-section>div.summary-mls-number dt,#listing-results-view .mrp-listing-summary-section>div.summary-mls-number dd,#listing-results-view .mrp-listing-summary-section>div.summary-mls-number dd *{font:400 .75rem/1.4 "Lato",sans-serif!important;color:var(--grey)!important;letter-spacing:.02em}
+#listing-results-view .mrp-listing-links-section{order:5;display:block!important;position:static!important;margin:.7rem 1rem 0!important;padding:0!important;width:auto!important;float:none!important;background:none!important;border:0!important}
+#listing-results-view .mrp-listing-links-section .menu-handle,#listing-results-view .mrp-listing-links-section li:not(.mrp-res-item-photos-outer):not(.mrp-res-item-contact-outer){display:none!important}
+#listing-results-view .mrp-listing-links-section ul{display:flex!important;flex-wrap:wrap;gap:.4rem;position:static!important;margin:0!important;padding:0!important;list-style:none!important;background:none!important;border:0!important;box-shadow:none!important;width:auto!important;height:auto!important;visibility:visible!important;opacity:1!important}
+#listing-results-view .mrp-listing-links-section li{display:block!important;float:none!important;margin:0!important;padding:0!important;width:auto!important;border:0!important;background:none!important}
+#listing-results-view .mrp-listing-links-section a.mrp-listing-link{display:inline-flex!important;align-items:center;min-height:2.25rem;padding:0 .75rem!important;border:1px solid var(--ink)!important;border-radius:0!important;background:#fff!important;color:var(--ink)!important;font:700 .6875rem/1 "Montserrat",sans-serif!important;letter-spacing:.08em;text-transform:uppercase;text-decoration:none!important}
+#listing-results-view .mrp-listing-links-section a.mrp-listing-link::before,#listing-results-view .mrp-listing-links-section a.mrp-listing-link::after{content:none!important;display:none!important}
+#listing-results-view .mrp-listing-links-section a.mrp-listing-link:hover{background:var(--ink)!important;color:#fff!important}
+#listing-results-view .mrp-description-and-attribution-wrapper{order:6;display:block!important}
+#listing-results-view .mrp-description-and-attribution-wrapper .mrp-listing-description{display:block!important;margin:0 0 .6rem!important;padding:0!important;height:auto!important;max-height:none!important;float:none!important;width:auto!important;font:400 .875rem/1.5 "Lato",sans-serif!important;color:var(--ink)!important}
+#listing-results-view .mrp-listing-description .inner{display:-webkit-box!important;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font:inherit!important;color:inherit!important}
+#listing-results-view .mrp-listing-description .more-details{display:none!important}
+#listing-results-view li.mrp-listing-result>*{flex-shrink:0}
+#listing-results-view .mrp-listing-summary-section>div.summary-mls-number dt{font-size:0!important}
+#listing-results-view .mrp-listing-summary-section>div.summary-mls-number dt::after{content:"MLS® ";font-size:.75rem}
+#listing-results-view .mrp-listing-description .full-text-tab{display:none!important}
+#listing-results-view .mrp-description-and-attribution-wrapper,#listing-results-view .mrp-listing-attribution-wrapper{height:auto!important;max-height:none!important;overflow:visible!important}
