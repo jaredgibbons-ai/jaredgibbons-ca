@@ -252,3 +252,24 @@ test('blog post photos: each has its files and alt text; posts show the photo, t
     assert.equal(/post__ph--whole/.test(box[1]), r.fit === 'contain', `${slug}: card crop`);
   }
 });
+
+test('every photo on every built page has alt text written for it; listing galleries do not show the agent portrait (D-260)', { skip: !built }, () => {
+  const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? (e.name === 'pagefind' ? [] : walk(path.join(d, e.name))) : e.name.endsWith('.html') ? [path.join(d, e.name)] : []));
+  const bad = []; let photos = 0;
+  for (const f of walk(DIST)) {
+    const t = fs.readFileSync(f, 'utf8'); const name = path.relative(DIST, f);
+    if (t.includes('ae8d7fd2e938b2d2') || t.includes('Portrait of a real estate agent')) bad.push(`${name}: the old account photo is in the listing gallery`);
+    for (const m of t.matchAll(/<img\b([^>]*)>/g)) {
+      const a = m[1]; const src = (a.match(/\ssrc="([^"]*)"/) || [])[1] || '';
+      if (!/\salt="/.test(a)) { bad.push(`${name}: no alt attribute on ${src.slice(0, 60)}`); continue; }
+      // photographs (not logos, award badges or the lightbox's empty stage): listing, blog, area and selling-page photos
+      if (!/^\/(?:listing-photos|img\/blog|img\/areas|img\/selling)\//.test(src)) continue;
+      photos++;
+      const alt = (a.match(/\salt="([^"]*)"/) || [])[1];
+      if (/class="biglink__img"/.test(a)) continue;   // the banner behind the "marketing plan" link is decoration; the link's own words name it
+      if (alt.trim().length < 5 || /^Photo \d+:/.test(alt) || /^(image|photo|picture)$/i.test(alt.trim())) bad.push(`${name}: weak alt "${alt}" on ${src.slice(0, 60)}`);
+    }
+  }
+  assert.ok(photos > 3500, `only ${photos} photos found`);
+  assert.equal(bad.length, 0, bad.slice(0, 6).join('; '));
+});

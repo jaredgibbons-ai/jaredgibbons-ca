@@ -36,7 +36,10 @@ const rest: { k?: string; v: string }[] = [];
     else rest.push({ v: ls[i] });
   }
 }
-const photoList: { p: number; id: string; w: number; h: number }[] = PHOTO_LISTS[`../data/listing-photos/${page.slug}.json`] ?? [];
+// The old site's account photo (Jared's portrait, shown beside every listing there) was captured as the last "photo" of all 200 listings,
+// so each gallery ended with a headshot captioned "Portrait of a real estate agent". It is not a listing photo and is left out (D-260).
+const ACCOUNT_PHOTO = 'ae8d7fd2e938b2d2';
+const photoList: { p: number; id: string; w: number; h: number }[] = (PHOTO_LISTS[`../data/listing-photos/${page.slug}.json`] ?? []).filter((ph) => ph.id !== ACCOUNT_PHOTO);
 // archive alt text per position ("Photo 3: <address> | MLS ...")
 const altByPos: Record<number, string> = {};
 for (const a of page.photos.alts ?? []) { const m = /^Photo (\d+):/.exec(a); if (m) altByPos[Number(m[1])] = a.replace(/^(Photo \d+: )([^,]+)/, (_x: string, p1: string, p2: string) => p1 + titleCaseAddress(p2)); }
