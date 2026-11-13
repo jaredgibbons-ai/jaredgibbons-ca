@@ -339,14 +339,14 @@ test('home evaluation is two steps; twenty rewritten posts carry their own body 
   }
 });
 
-test('White Rock and Princeton pages, sold floor plans and area video strips (D-273)', { skip: !built }, () => {
-  for (const s of ['white-rock-condo-buildings', 'white-rock-waterfront-homes-for-sale', 'white-rock-hillside-homes-for-sale', 'princeton-bc-guide', 'princeton-bc-homes-for-sale', 'princeton-bc-acreages-for-sale', 'princeton-bc-lots-land']) {
+test('White Rock pages (Princeton removed, D-274), sold floor plans and area video strips (D-273)', { skip: !built }, () => {
+  for (const s of ['white-rock-condo-buildings', 'white-rock-waterfront-homes-for-sale', 'white-rock-hillside-homes-for-sale']) {
     const t = html(`${s}.html`);
     assert.ok(/<h1[^>]*>[^<]+<\/h1>/.test(t), `${s}: no h1`);
     assert.ok(/"@type":"FAQPage"/.test(t), `${s}: no FAQ data`);
   }
   assert.ok(/Soleil/.test(html('white-rock-condo-buildings.html')) && /1588 Johnston Road/.test(html('white-rock-condo-buildings.html')), 'tower table missing');
-  assert.ok(!/class="section zl/.test(html('princeton-bc-acreages-for-sale.html')), 'Fraser Valley zoning lookup on a Princeton page');
+  for (const s of ['princeton-bc-guide', 'princeton-bc-homes-for-sale', 'princeton-bc-acreages-for-sale', 'princeton-bc-lots-land']) assert.ok(!fs.existsSync(path.join(DIST, `${s}.html`)), `${s} should be gone (D-274)`);
   assert.ok(/White Rock in four parts/.test(html('white-rock-guide.html')), 'white-rock-guide sections missing');
   const media = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/listing-media.json'), 'utf8'));
   const fps = Object.entries(media).filter(([k, v]) => k !== '_note' && v.floorplan);

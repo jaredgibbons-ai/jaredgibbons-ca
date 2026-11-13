@@ -18,7 +18,6 @@ const PLACES: [RegExp, string, RegExp][] = [
   [/^chilliwack(-homes-for-sale|-neighbourhood-guides)$/, 'Chilliwack', /-chilliwack-/],
   [/^mission(-homes-for-sale|-neighbourhood-guides)$/, 'Mission', /-mission-bc-/],
   [/^(north-)?delta(-homes-for-sale|-neighbourhood-guides)$/, 'Delta', /-(delta|ladner|tsawwassen)-bc-/],
-  [/^princeton-bc-(guide|homes-for-sale)$/, 'Princeton', /-princeton-/],
 ];
 const hit = PLACES.find(([re]) => re.test(slug));
 const CARDS = new Map(ownCards().map((c) => [c.slug, c]));

@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""White Rock and Princeton pages (D-273).
+"""White Rock pages (D-273; the Princeton pages were removed in D-274: no MyRealPage search can cover the Interior board).
 
-Seven new pages and a stronger White Rock guide, written by hand from the sources listed on each page (read November 13, 2026):
+Three new pages and a stronger White Rock guide, written by hand from the sources listed on each page (read November 13, 2026):
 
-    python3 -I tools/build_wr_princeton_pages.py   -> src/data/local/<slug>.json
+    python3 -I tools/build_wr_pages.py   -> src/data/local/<slug>.json
 
 White Rock: condo buildings (tower by tower), waterfront (Marine Drive) and hillside / ocean view homes, plus new sections on
-white-rock-guide (its archive body stays). Princeton: guide, homes, acreages, lots and land. The live listing box on each new page
-is empty until Gerry's MyRealPage saved search is wired in src/data/idx-embeds.json (docs/review/idx/wr-princeton-searches-2026-11-13.xlsx).
+white-rock-guide (its archive body stays). The live listing box on each new page
+is empty until Gerry's MyRealPage saved search is wired in src/data/idx-embeds.json (docs/review/idx/wr-searches-2026-11-13.xlsx).
 Text uses the post-rewrite markup: [text](url) is a link and **text** is bold.
 """
 import json, re, sys
@@ -190,121 +190,6 @@ PAGES.append(page(
      {'q': 'What can my neighbour build below me in White Rock?', 'a': 'Whatever their zone allows under White Rock Zoning Bylaw 2024, No. 2506, including the small-scale multi-unit housing provisions and any rezoning. Several RS-1 lots have been rezoned to RS-2 for two-lot subdivisions.'},
      {'q': 'What does an ocean view house cost in White Rock?', 'a': 'From November 2025 to October 2026, White Rock’s 95 detached sales had a median of $1,565,000 and a middle half of $1,257,500 to $2,033,095. View homes are mostly in the upper half.'}],
     'White Rock hillside homes: your questions answered'))
-
-# ---------------------------------------------------------------- Princeton
-PRN_SOLD = [('511 Similkameen Avenue', '/our-listings.html/listing.10374265-511-similkameen-avenue-princeton-bc-v0x-1w0.107986859'),
-            ('139/143 Angela Avenue', '/our-listings.html/listing.139-143-angela-avenue-princeton-10352922.106171503')]
-PRN_SRC = ['[Town of Princeton: Official Community Plan](https://www.princeton.ca/p/ocp)',
-           '[Regional District of Okanagan-Similkameen: Electoral Area H Zoning Bylaw update](https://rec.rdos.bc.ca/development-services/planning/strategic-projects/electoral-area-h-zoning-bylaw-update/)',
-           '[BC Government: Princeton flood recovery community summary](https://www2.gov.bc.ca/assets/gov/public-safety-and-emergency-services/emergency-preparedness-response-recovery/embc/reports/princeton-community_summary.pdf)',
-           '[Statistics Canada: 2021 Census of Population](https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm)']
-PRN_LINKS = ['[Living in Princeton, BC: the guide](/princeton-bc-guide.html)',
-             '[Princeton homes for sale](/princeton-bc-homes-for-sale.html)',
-             '[Princeton acreages for sale](/princeton-bc-acreages-for-sale.html)',
-             '[Princeton lots and land for sale](/princeton-bc-lots-land.html)',
-             '[Hope, BC guide](/hope-bc-guide.html)']
-SOLDLINE = 'Jared has sold in Princeton: [a three-bedroom house on Similkameen Avenue](' + PRN_SOLD[0][1] + ') and [a house and shop on two RM3-zoned lots on Angela Avenue](' + PRN_SOLD[1][1] + ').'
-FLOOD = ('**The 2021 flood:** in November 2021 the Tulameen and Similkameen rivers overflowed their banks and dikes. The Town declared a state of emergency and 290 households (571 residents) were displaced at first. '
-         'The Province’s summary lists $11.9 million in interim flood support, more than $4 million of it for drinking water repairs, and funding for a flood hazard assessment of both rivers. The Town’s 2024 request for federal flood-mitigation funding was turned down.')
-SSMUH = '**Suites:** under the Province’s 2023 small-scale multi-unit housing law, every BC municipality must allow a secondary suite or a detached accessory dwelling on most single-family lots. The three-to-four-unit rule applies only in municipalities of more than 5,000 people, and Princeton has under 3,000.'
-
-def prn(slug, title, desc, h1, crumbs, body, faq, fh, note='The live search is not connected yet.'):
-    return page(slug, title, desc, h1, crumbs, [NOTE('Facts are from the sources listed, read November 13, 2026. ' + note)] + body + [H('More Princeton real estate'), L(*[x for x in PRN_LINKS if f'/{slug}.html' not in x]), H('Sources'), L(*PRN_SRC)], faq, fh)
-
-PAGES.append(prn(
-    'princeton-bc-guide',
-    'Living in Princeton, BC: Homes, Flood History & Schools',
-    'Princeton, BC for home buyers: where the Tulameen meets the Similkameen, the 2021 flood, schools, hospital, zoning, and town versus rural lots.',
-    'Living in Princeton, BC',
-    [],
-    [P('Princeton is a town of 2,894 people (2021 census, up 2.3% from 2016) in the Similkameen Valley, where the Tulameen River runs into the Similkameen at 650 metres above sea level. It sits at the junction of Highways 3 and 5A: Hope is 133 km west on Highway 3, Merritt 90 km north on 5A and Keremeos 67 km east. Founded in 1858, it became a village in 1951 and a town in 1978. Forestry and mining built it; the Copper Mountain mine south of town is now owned by Hudbay Minerals.'),
-     P(SOLDLINE),
-     GRID,
-     H('Town or rural Princeton'),
-     L('**Inside the town** (about 59 km²): the Town of Princeton sets zoning and runs water and sewer. Its Official Community Plan Bylaw No. 1044, 2023 was adopted December 20, 2023 and plans to 2042.',
-       '**Outside the town:** rural Princeton is Electoral Area H of the Regional District of Okanagan-Similkameen. Its Zoning Bylaw No. 3065, 2024 (adopted July 25, 2024) replaced Bylaw No. 2498 to allow more small-scale housing; the OCP is Bylaw No. 2497, 2012. Rural homes are usually on a well and septic.',
-       SSMUH),
-     H('Flood history: what to check'),
-     L(FLOOD,
-       '**Before you buy near either river:** ask the Town or the Regional District whether the lot is in a floodplain, check the flood history in the disclosure, and get a quote for flood coverage from your insurer before you remove conditions.'),
-     H('Schools, health care and getting around'),
-     L('**Schools:** School District 58 (Nicola-Similkameen) runs John Allison Elementary (K–3), Vermilion Forks Elementary (4–7) and Princeton Secondary (8–12).',
-       '**Health care:** Princeton General Hospital has a 6-bed acute care unit and Ridgewood Lodge, a 36-bed extended care unit.',
-       '**Getting around:** Princeton Aerodrome has no scheduled flights; the nearest scheduled service is Penticton Regional Airport, with Kelowna International beyond it.',
-       '**Outdoors:** the Kettle Valley Rail Trail and China Ridge trails for biking, hiking and cross-country skiing, Manning Park to the west, and fishing on both rivers. The town has a pool, a 700-seat arena, a curling rink and 14 parks.')],
-    [{'q': 'How far is Princeton from the Fraser Valley?', 'a': 'Princeton is 133 km east of Hope on Highway 3 (the Crowsnest Highway), and 90 km south of Merritt on Highway 5A.'},
-     {'q': 'Did Princeton flood in 2021?', 'a': 'Yes. In November 2021 the Tulameen and Similkameen rivers overflowed their banks and dikes; 290 households (571 residents) were displaced at first. Ask about flood history and floodplain status for any lot near either river.'},
-     {'q': 'Can I add a suite to a house in Princeton?', 'a': 'Under BC’s 2023 small-scale multi-unit housing law, every municipality must allow a secondary suite or a detached accessory dwelling on most single-family lots. Confirm the lot’s zone with the Town of Princeton, or with the Regional District for rural Area H.'},
-     {'q': 'Which school district serves Princeton?', 'a': 'School District 58 (Nicola-Similkameen): John Allison Elementary (K–3), Vermilion Forks Elementary (4–7) and Princeton Secondary (8–12).'}],
-    'Princeton, BC: your questions answered'))
-
-PAGES.append(prn(
-    'princeton-bc-homes-for-sale',
-    'Princeton BC Homes for Sale | Town & Rural Princeton',
-    'Princeton, BC homes for sale in town and rural Area H: houses, mobile homes and cabins, with flood, zoning and well checks before you buy.',
-    'Homes for Sale in Princeton, BC',
-    [('Princeton guide', '/princeton-bc-guide.html')],
-    [P('Houses in Princeton range from 1910s and 1920s homes on town lots near the rivers to newer houses, mobile homes and cabins on rural land in the Similkameen Valley. This search covers the Town of Princeton and the rural area around it. ' + SOLDLINE),
-     GRID,
-     H('What to check on a Princeton house'),
-     L('**Floodplain and flood history:** the 2021 flood reached homes along the Tulameen and Similkameen. Ask the Town whether the lot is in a floodplain and check the disclosure.',
-       '**Age of the house:** many town houses are a century old. Budget for the wiring, plumbing, foundation and roof, and get an inspection.',
-       '**Water and septic:** town lots are on Town water and sewer; rural houses are usually on a well and septic. Test the well for flow and quality and have the septic inspected.',
-       '**Zoning:** the Town of Princeton zones town lots; rural Area H is zoned by the Regional District under Bylaw No. 3065, 2024.',
-       SSMUH),
-     H('Princeton and its rivers'),
-     L(FLOOD)],
-    [{'q': 'Are Princeton homes on town water?', 'a': 'Homes inside the Town of Princeton are on the Town’s water and sewer. Rural homes in Area H are usually on a private well and septic system, which you should test and inspect before removing conditions.'},
-     {'q': 'Did the 2021 flood affect Princeton homes?', 'a': 'Yes. In November 2021 the Tulameen and Similkameen overflowed their banks and dikes, and 290 households were displaced at first. Ask about flood history and floodplain status for any home near the rivers.'},
-     {'q': 'Has Jared sold homes in Princeton?', 'a': 'Yes, including a three-bedroom house on Similkameen Avenue and a house and shop on two RM3-zoned lots on Angela Avenue.'}],
-    'Princeton homes: your questions answered'))
-
-PAGES.append(prn(
-    'princeton-bc-acreages-for-sale',
-    'Princeton BC Acreages for Sale | Similkameen Valley',
-    'Acreages for sale around Princeton, BC: rural Area H zoning, wells and septic, the ALR, flood and wildfire checks for land in the Similkameen.',
-    'Acreages for Sale near Princeton, BC',
-    [('Princeton guide', '/princeton-bc-guide.html')],
-    [P('Most acreage around Princeton is outside the town, in Electoral Area H of the Regional District of Okanagan-Similkameen, along the Similkameen and Tulameen valleys and the highways out of town. This search lists properties of one acre or more around Princeton.'),
-     GRID,
-     H('Rules for rural Princeton land'),
-     L('**Zoning:** Electoral Area H Zoning Bylaw No. 3065, 2024, adopted July 25, 2024, replaced Bylaw No. 2498, 2012. It was rewritten for the Province’s small-scale housing law and sets building types, density, setbacks, height and parcel coverage for each zone.',
-       '**Community plan:** the Area H Official Community Plan is Bylaw No. 2497, 2012.',
-       '**Agricultural Land Reserve:** check whether the parcel is in the ALR before planning a second home, a subdivision or a non-farm use; the Agricultural Land Commission sets those rules, not the zoning.',
-       '**Subdivision** of rural land goes through the Province’s approving officer as well as the zoning, so confirm the minimum parcel size for the zone before you count on splitting a lot.'),
-     H('Before you buy an acreage near Princeton'),
-     L('**Well:** a flow test and a water quality test, and the well record if there is one.',
-       '**Septic:** an inspection, and the filing record for the system.',
-       '**Flood:** low land along either river can flood; the November 2021 flood hit both valleys. Check floodplain maps and get an insurance quote early.',
-       '**Wildfire:** ask your insurer about the property’s wildfire rating and look at the FireSmart condition of the buildings and the trees around them.',
-       '**Access:** confirm the road is public or that a registered easement covers the driveway, and who ploughs it in winter.')],
-    [{'q': 'Who zones acreages around Princeton?', 'a': 'Outside the town, the Regional District of Okanagan-Similkameen, under Electoral Area H Zoning Bylaw No. 3065, 2024 (adopted July 25, 2024). Inside the town, the Town of Princeton.'},
-     {'q': 'Is Princeton acreage in the ALR?', 'a': 'Some is and some is not. Check the parcel with the Agricultural Land Commission before you plan a second home, a subdivision or any non-farm use.'},
-     {'q': 'What should I test on a rural Princeton property?', 'a': 'The well (flow and water quality), the septic system, the floodplain status near the rivers, wildfire risk for insurance, and the legal access to the property.'}],
-    'Princeton acreages: your questions answered'))
-
-PAGES.append(prn(
-    'princeton-bc-lots-land',
-    'Princeton BC Lots & Land for Sale | Building Lots',
-    'Building lots and land for sale in Princeton, BC: town lots on water and sewer, rural parcels, suites and zoning, flood checks and costs to build.',
-    'Lots and Land for Sale in Princeton, BC',
-    [('Princeton guide', '/princeton-bc-guide.html')],
-    [P('Land in Princeton runs from serviced town lots to bare rural parcels in the valley. This search lists vacant lots and land for sale in and around Princeton. ' + SOLDLINE),
-     GRID,
-     H('Town lots and rural land'),
-     L('**Town lots:** zoned by the Town of Princeton and served by Town water and sewer. The Official Community Plan Bylaw No. 1044, 2023 sets where the town plans to grow to 2042.',
-       '**Rural land:** zoned by the Regional District under Electoral Area H Zoning Bylaw No. 3065, 2024, and usually needing a well and septic.',
-       SSMUH),
-     H('Before you buy a lot in Princeton'),
-     L('**Floodplain:** ask the Town or the Regional District whether the lot is in a floodplain; the 2021 flood reached both river valleys.',
-       '**Services:** for a town lot, ask the Town what it costs to connect water and sewer and whether development cost charges apply. For rural land, price a well and septic system first.',
-       '**What you can build:** read the zone for height, setbacks and lot coverage, and whether a suite or carriage house is allowed.',
-       '**Building permits:** the Town issues permits in town; the Regional District issues them in Area H.')],
-    [{'q': 'Can I build a house and a suite on a Princeton lot?', 'a': 'Under BC’s 2023 small-scale multi-unit housing law, every municipality must allow a secondary suite or a detached accessory dwelling on most single-family lots. Check the zone with the Town of Princeton (or the Regional District for rural land) first.'},
-     {'q': 'Who issues building permits in Princeton?', 'a': 'The Town of Princeton inside town limits, and the Regional District of Okanagan-Similkameen for rural Electoral Area H.'},
-     {'q': 'Are Princeton lots in a floodplain?', 'a': 'Some near the Tulameen and Similkameen rivers are. Ask the Town or the Regional District about the specific lot before you buy.'}],
-    'Princeton lots and land: your questions answered'))
-
 
 # ---------------------------------------------------------------- white-rock-guide: new sections on the archive page
 WR_GUIDE_BLOCKS = [

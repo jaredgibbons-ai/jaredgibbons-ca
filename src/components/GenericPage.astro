@@ -1034,7 +1034,7 @@ const explore = !_extra.length ? exploreBase
   })}
   {local?.lead === 'quiz' && <SearchQuiz heading={local.lead_heading} />}
   {local?.lead === 'homevalue' && <HomeValue place={local.lead_place} />}
-  {(ZL_PAGE.test(page.slug) || page.slug === 'land') && !/landplans|land-use|landlord|^(burnaby|coquitlam|new-westminster|port-coquitlam|port-moody|pitt-meadows|princeton)-/.test(page.slug) && <ZoningLookup muni={ZL_MUNI.find(([re]) => re.test(page.slug))?.[1] || ''} />}
+  {(ZL_PAGE.test(page.slug) || page.slug === 'land') && !/landplans|land-use|landlord|^(burnaby|coquitlam|new-westminster|port-coquitlam|port-moody|pitt-meadows)-/.test(page.slug) && <ZoningLookup muni={ZL_MUNI.find(([re]) => re.test(page.slug))?.[1] || ''} />}
   <SoldVideos slug={page.slug} />
   <Cta />
   {explore && <ExploreLinks data={explore} />}
