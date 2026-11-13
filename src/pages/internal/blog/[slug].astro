@@ -5,6 +5,7 @@
 import GenericPage from '../../../components/GenericPage.astro';
 import PLS from '../../../data/post-listing-seo.json';
 import RELATED from '../../../data/post-related.json';
+import CONTEXT from '../../../data/post-context.json';
 export function getStaticPaths() {
   const mods = import.meta.glob('../../../data/posts/*.json', { eager: true }) as Record<string, any>;
   const titleOf: Record<string, string> = {};
@@ -12,7 +13,7 @@ export function getStaticPaths() {
   return Object.values(mods).map((m) => {
     // Related posts (tools/build_post_related.py, D-221): every post links to up to six others on the same area or topic.
     const rel = ((RELATED as Record<string, string[]>)[m.default.slug] || []).filter((s) => titleOf[s]);
-    const author = [{ t: 'authorbox' }];   // D-266: every post ends with who wrote it and how to reach him
+    const author = [...(((CONTEXT as Record<string, any>)[m.default.slug]?.blocks) || []), { t: 'authorbox' }];   // D-267: local context on short posts, then   // D-266: every post ends with who wrote it and how to reach him
     const relBlocks0 = rel.length ? [{ t: 'h', level: 2, text: 'Related posts' }, { t: 'list', items: rel.map((s) => [{ t: titleOf[s], h: `/blog.html/${s}` }]) }] : [];
     const relBlocks = [...author, ...relBlocks0];
     // Reviewed search title, description and (where the archive's was wrong) H1, from tools/build_post_listing_seo.py (D-221). Applied last.

@@ -1604,3 +1604,8 @@ Brief and per-item status: `docs/review/cx/`. Done in code:
 - **Every blog post** ends with an author box: photo, short bio, call/text, email, home value link (178 of 200 posts had no contact in the article).
 - **/reviews.html** lists all 87 written five-star Google reviews from the 1 Nov 2026 export, verbatim, initials, with Google's relative times stated as of that date. The six featured reviews now show their dates.
 - Not done: 46 posts are under 300 words and 8 have no internal links in the text (list on request).
+
+## D-267 — 2026-11-13 — Short and unlinked blog posts get a local-context section (Jared: "please fix these pages and add links … make sure they are good for my seo")
+- 80 posts (under 300 words, or no link to another page of the site in the text) get "<Area> real estate today (<month>)" before the author box: that area's benchmark prices for detached, townhouse and condo with the 1-year change (newest FVREB or GVR figures in `src/data/market/`), a paragraph for the post's kind (a listing or sale, rates and market, rules and taxes, growth and transit, community life), and links to the area's listings, guides and market stats. Built by `tools/build_post_context.py` into `src/data/post-context.json`; every link is checked against the build. Re-run it monthly after the new market file so the figures stay current.
+- Result: no post under 300 words (shortest now 316); every post links into the site from its text.
+- The added section is the same pattern across posts, so it is context, not unique writing; the posts that matter most still benefit from a rewrite.
