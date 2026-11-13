@@ -1,0 +1,406 @@
+---
+// Zoning directory (D-268). Data: src/data/zonings.json, written from the archive record by tools/build_zonings.py (same wording).
+// Every zone is in the HTML (search engines and no-JS readers get all 278); the filter bar only hides cards.
+import Base from '../layouts/Base.astro';
+import FormStub from './FormStub.astro';
+import Z from '../data/zonings.json';
+
+const { page, faq = [] } = Astro.props as { page: any; faq?: any[] };
+const seo = page.seo || {};
+const d = Z as any;
+const total = d.munis.reduce((n: number, m: any) => n + m.zones.length, 0);
+const TYPE_KEY: Record<string, string> = { 'Agricultural / Farm': 'farm', 'Rural / Acreage': 'rural', Residential: 'res', Other: 'other' };
+const typeCount = (t: string) => d.munis.reduce((n: number, m: any) => n + m.zones.filter((z: any) => z.type === t).length, 0);
+const shortName = (n: string) => n.replace(/^Township of /, '');
+// text with links: a space between pieces unless the next one starts with punctuation
+const join = (ps: any[]) => ps.map((p, i) => ({ ...p, sp: i > 0 && !/^[,.;:)]/.test(p.t) }));
+const plain = (s: string) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+const jsonld: any[] = [];
+if (faq.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: plain(f.a) } })) });
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Zoning Guide', href: '/zonings.html' }];
+---
+<Base
+  title={page.title}
+  canonical={page.canonical}
+  description={seo['Meta description'] || undefined}
+  ogTitle={seo['OG title'] || undefined}
+  ogDescription={seo['OG description'] || undefined}
+  ogImage={seo['OG image'] || undefined}
+  jsonld={jsonld}
+  crumbs={crumbs}
+  robots={seo['Meta robots'] || 'index, follow'}
+  footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
+  footerCell={true}
+  brandHref="/"
+>
+<main id="main" class="zd">
+  <header class="zd-hero">
+    <div class="wrap zd-hero__in">
+      <div class="zd-hero__txt">
+        <p class="eyebrow">{d.eyebrow} · Fraser Valley</p>
+        <h1 class="zd-h1">{seo.H1 || page.title}</h1>
+        <p class="zd-lead">{d.lead}</p>
+        <p class="zd-checked"><svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4"/></svg><span>{d.checked}</span></p>
+        <p class="zd-ctas">
+          <a class="btn btn--inv" href="#zd-dir">Browse all {total} zones</a>
+          <a class="btn btn--line" href="#zd-lookup">Check an address</a>
+        </p>
+      </div>
+      <ul class="zd-stats">
+        <li><strong>{total}</strong><span>zones summarized</span></li>
+        <li><strong>{d.munis.length}</strong><span>municipalities</span></li>
+        <li><strong>{typeCount('Agricultural / Farm') + typeCount('Rural / Acreage')}</strong><span>farm, rural and acreage zones</span></li>
+        <li><strong>100%</strong><span>of zones link to the official bylaw</span></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="zd-lookup" id="zd-lookup" aria-labelledby="zd-lookup-h">
+    <div class="wrap zd-lookup__in">
+      <div class="zd-lookup__txt">
+        <h2 id="zd-lookup-h" class="zd-h2">{d.lookup.h}</h2>
+        <p>{d.lookup.d}</p>
+        <p class="zd-lookup__alt">
+          <a href="tel:+16049281361">Call or text 604-928-1361</a>
+          <span aria-hidden="true">·</span>
+          <a href="mailto:jaredgibbons@royallepage.ca?subject=Zoning%20and%20ALR%20check">jaredgibbons@royallepage.ca</a>
+        </p>
+      </div>
+      <div class="zd-lookup__form">
+        <FormStub labels={d.lookup.labels} submit={d.lookup.submit} fine={d.lookup.fine} uid="zdf" />
+      </div>
+    </div>
+  </section>
+
+  <div class="zd-dir" id="zd-dir">
+    <div class="zd-bar" data-zbar>
+      <div class="wrap zd-bar__in">
+        <div class="zd-search">
+          <label for="zd-q" class="vh">Search a zone code or keyword</label>
+          <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M13 13l5 5" stroke="currentColor" stroke-width="2"/></svg>
+          <input id="zd-q" type="search" placeholder="Search a zone code or keyword, e.g. A1, RU-3, coach house" autocomplete="off" data-zq />
+          <button type="button" class="zd-clear" data-zclear hidden>Clear</button>
+        </div>
+        <div class="zd-chips" role="group" aria-label="Municipality">
+          <button type="button" class="zd-chip" aria-pressed="true" data-zm="">All</button>
+          {d.munis.map((m: any) => <button type="button" class="zd-chip" aria-pressed="false" data-zm={m.id}>{shortName(m.name)}</button>)}
+        </div>
+        <div class="zd-sels">
+          <label class="vh" for="zd-sm">Municipality</label>
+          <select id="zd-sm" data-zsm><option value="">All municipalities</option>{d.munis.map((m: any) => <option value={m.id}>{m.name}</option>)}</select>
+          <label class="vh" for="zd-st">Zone type</label>
+          <select id="zd-st" data-zst><option value="">All zone types</option>{d.types.map((t: string) => <option value={TYPE_KEY[t]}>{t}</option>)}</select>
+        </div>
+        <div class="zd-row">
+        <div class="zd-chips zd-chips--type" role="group" aria-label="Zone type">
+          <button type="button" class="zd-chip zd-chip--sm" aria-pressed="true" data-zt="">All types</button>
+          {d.types.map((t: string) => <button type="button" class="zd-chip zd-chip--sm" aria-pressed="false" data-zt={TYPE_KEY[t]}>{t}</button>)}
+        </div>
+        <p class="zd-count" role="status" aria-live="polite" data-zcount>Showing all {total} zones</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <p class="zd-none" data-znone hidden>No zones match that search. Try a shorter code (for example "RU" or "A1"), choose "All", or <a href="#zd-lookup">send me the address</a> and I'll look it up.</p>
+
+      {d.munis.map((m: any) => (
+        <section class="zd-muni" id={m.id} data-zmuni={m.id} aria-labelledby={`${m.id}-h`}>
+          <header class="zd-muni__head">
+            <div>
+              <p class="zd-muni__n"><span data-zmc>{m.zones.length}</span> zones</p>
+              <h2 id={`${m.id}-h`} class="zd-h2">{m.name} zoning</h2>
+              <p class="zd-muni__by"><strong>{m.bylaw}</strong>. {m.source}</p>
+            </div>
+            <a class="btn btn--ghost zd-muni__btn" href={m.href} target="_blank" rel="noopener">Official bylaw <span aria-hidden="true">↗</span><span class="vh"> (opens in a new tab)</span></a>
+          </header>
+          <ul class="zd-grid">
+            {m.zones.map((z: any) => (
+              <li class="zd-card" id={z.id} data-zt={TYPE_KEY[z.type]}>
+                <p class="zd-card__top"><span class:list={['zd-type', `zd-type--${TYPE_KEY[z.type]}`]}>{z.type}</span>{z.formerly && <span class="zd-was">Formerly {z.formerly}</span>}</p>
+                <h3 class="zd-card__h"><span class="zd-code">{z.code}</span> <span class="zd-name">{z.name}</span></h3>
+                {z.fields.length > 0 && (
+                  <dl class="zd-dl">
+                    {z.fields.map((f: any) => <div><dt>{f[0]}</dt><dd>{f[1]}</dd></div>)}
+                  </dl>
+                )}
+                {z.note && <p class="zd-note">Note: {z.note}</p>}
+                <p class="zd-card__foot"><a href={z.href} target="_blank" rel="noopener">Official bylaw, {z.ref} <span aria-hidden="true">↗</span><span class="vh"> (opens in a new tab)</span></a><span>Checked Oct 2, 2026</span></p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+
+      <aside class="zd-help">
+        <div>
+          <h2 class="zd-h3">Not sure which zone applies?</h2>
+          <p>Zone maps and amendments change. Check an address's current zone and ALR status at the top of the page, or ask me and I'll confirm it with the municipality's records.</p>
+        </div>
+        <p class="zd-help__ctas"><a class="btn" href="#zd-lookup">Check an address</a> <a class="btn btn--ghost" href="tel:+16049281361">Call or text 604-928-1361</a></p>
+      </aside>
+    </div>
+  </div>
+
+  <section class="zd-sec zd-alr" id="zd-alr" aria-labelledby="zd-alr-h">
+    <div class="wrap zd-two">
+      <div>
+        <p class="eyebrow">Agricultural Land Reserve</p>
+        <h2 id="zd-alr-h" class="zd-h2">ALR basics</h2>
+        <p class="zd-alr__lead">{d.alr.paras[0]}</p>
+        <ul class="zd-links">{d.alr.links.map((l: any) => <li><a href={l.h} target="_blank" rel="noopener">{l.t} <span aria-hidden="true">↗</span></a></li>)}</ul>
+        <p class="zd-src">{d.alr.source}</p>
+      </div>
+      <ol class="zd-facts">
+        {d.alr.paras.slice(1).map((p: string) => <li>{p}</li>)}
+      </ol>
+    </div>
+  </section>
+
+  <section class="zd-sec" id="zd-check" aria-labelledby="zd-check-h">
+    <div class="wrap">
+      <p class="eyebrow">Farm and acreage buyers</p>
+      <h2 id="zd-check-h" class="zd-h2">Before you buy: what to check</h2>
+      <ol class="zd-checks">
+        {d.checks.map((c: any) => (
+          <li><h3 class="zd-h4">{c.k}</h3><p>{join(c.d).map((p: any) => <>{p.sp && ' '}{p.h ? <a href={p.h} target={/^https?:/.test(p.h) ? '_blank' : undefined} rel={/^https?:/.test(p.h) ? 'noopener' : undefined}>{p.t}</a> : p.t}</>)}</p></li>
+        ))}
+      </ol>
+      <div class="zd-band">
+        <div>
+          <p class="zd-band__h">Send me an address</p>
+          <p>I'll check its zoning and ALR status and tell you what to confirm with the municipality.</p>
+        </div>
+        <p class="zd-help__ctas"><a class="btn btn--inv" href="#zd-lookup">Check an address</a> <a class="btn btn--line" href="tel:+16049281361">Call or text 604-928-1361</a></p>
+      </div>
+      <p class="zd-own">Own rural land? <a href="/home-evaluation.html">Get a home evaluation →</a></p>
+    </div>
+  </section>
+
+  <section class="zd-sec" aria-labelledby="zd-rel-h">
+    <div class="wrap">
+      <h2 id="zd-rel-h" class="zd-h2">Related guides and listings</h2>
+      <ul class="zd-rel">
+        {d.related.map((l: any) => <li><a href={l.h}><span>{l.t}</span><span aria-hidden="true">→</span></a></li>)}
+      </ul>
+    </div>
+  </section>
+
+  {faq.length > 0 && (
+    <section class="zd-sec" aria-labelledby="zd-faq-h">
+      <div class="wrap zd-faqwrap">
+        <h2 id="zd-faq-h" class="zd-h2">Zoning questions</h2>
+        <div class="zd-faq">
+          {faq.map((f: any, i: number) => <details open={i === 0}><summary>{f.q}</summary><p set:html={f.a} /></details>)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="zd-sec zd-disc" aria-labelledby="zd-disc-h">
+    <div class="wrap">
+      <h2 id="zd-disc-h" class="zd-h4">Disclaimer</h2>
+      <p>{d.general[0]} {d.general[1]}</p>
+      <p>{d.disclaimer}</p>
+      <p>Source: <a href="https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/" target="_blank" rel="noopener">alc.gov.bc.ca</a> and each municipality's bylaw linked above. Jared Gibbons, Royal LePage Little Oak Realty · <a href="tel:+16049281361">604-928-1361</a> · <a href="mailto:jaredgibbons@royallepage.ca">jaredgibbons@royallepage.ca</a></p>
+    </div>
+  </section>
+</main>
+</Base>
+
+<script>
+  // Filter: municipality, type and keyword. Cards stay in the page; non-matching ones are hidden.
+  const bar = document.querySelector<HTMLElement>('[data-zbar]');
+  if (bar) {
+    const q = document.querySelector<HTMLInputElement>('[data-zq]')!;
+    const clear = document.querySelector<HTMLButtonElement>('[data-zclear]')!;
+    const count = document.querySelector<HTMLElement>('[data-zcount]')!;
+    const none = document.querySelector<HTMLElement>('[data-znone]')!;
+    const munis = [...document.querySelectorAll<HTMLElement>('[data-zmuni]')];
+    const cards = munis.flatMap((s) => [...s.querySelectorAll<HTMLElement>('.zd-card')].map((c) => ({ c, m: s.dataset.zmuni!, t: c.dataset.zt!, s: (c.textContent || '').toLowerCase().replace(/\s+/g, ' ') })));
+    const total = cards.length;
+    let fm = '', ft = '';
+    const norm = (s: string) => s.toLowerCase().replace(/\s+/g, ' ').trim();
+    const apply = () => {
+      const words = norm(q.value).split(' ').filter(Boolean);
+      let shown = 0;
+      const per: Record<string, number> = {};
+      for (const k of cards) {
+        const ok = (!fm || k.m === fm) && (!ft || k.t === ft) && words.every((w) => k.s.includes(w) || k.s.replace(/-/g, '').includes(w.replace(/-/g, '')));
+        k.c.hidden = !ok;
+        if (ok) { shown++; per[k.m] = (per[k.m] || 0) + 1; }
+      }
+      for (const s of munis) { const n = per[s.dataset.zmuni!] || 0; s.hidden = n === 0; const e = s.querySelector('[data-zmc]'); if (e) e.textContent = String(n); }
+      none.hidden = shown > 0;
+      clear.hidden = !q.value;
+      count.textContent = shown === total ? `Showing all ${total} zones` : `Showing ${shown} of ${total} zones`;
+    };
+    const press = (attr: string, val: string) => { bar.querySelectorAll<HTMLButtonElement>(`button[${attr}]`).forEach((b) => b.setAttribute('aria-pressed', String(b.getAttribute(attr) === val))); const sel = bar.querySelector<HTMLSelectElement>(attr === 'data-zm' ? '[data-zsm]' : '[data-zst]'); if (sel) sel.value = val; };
+    bar.addEventListener('click', (e) => {
+      const b = (e.target as HTMLElement).closest<HTMLButtonElement>('button');
+      if (!b) return;
+      if (b.hasAttribute('data-zm')) { fm = b.dataset.zm || ''; press('data-zm', fm); apply(); document.getElementById('zd-dir')?.scrollIntoView({ block: 'start' }); }
+      else if (b.hasAttribute('data-zt')) { ft = b.dataset.zt || ''; press('data-zt', ft); apply(); }
+      else if (b.hasAttribute('data-zclear')) { q.value = ''; apply(); q.focus(); }
+    });
+    const sm = document.querySelector<HTMLSelectElement>('[data-zsm]')!, st = document.querySelector<HTMLSelectElement>('[data-zst]')!;
+    sm.addEventListener('change', () => { fm = sm.value; press('data-zm', fm); apply(); });
+    st.addEventListener('change', () => { ft = st.value; press('data-zt', ft); apply(); });
+    let tm = 0;
+    q.addEventListener('input', () => { clearTimeout(tm); tm = window.setTimeout(apply, 120); });
+    // A jump link to a municipality or a zone (e.g. #zd-surrey) shows everything again so the target is visible.
+    const reveal = () => { const h = location.hash.slice(1); if (!h.startsWith('zd-') || h === 'zd-dir') return; const el = document.getElementById(h); if (el && (el.hidden || el.closest('[hidden]'))) { fm = ''; ft = ''; q.value = ''; press('data-zm', ''); press('data-zt', ''); apply(); el.scrollIntoView(); } };
+    window.addEventListener('hashchange', reveal);
+    // ?q=A1 opens the directory filtered
+    const pq = new URLSearchParams(location.search).get('q');
+    if (pq) { q.value = pq; apply(); }
+  }
+</script>
+
+<style>
+  .vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .zd-h1{font:800 var(--h1)/1.08 var(--f-head);letter-spacing:-.01em;margin:0 0 var(--s4)}
+  .zd-h2{font:800 clamp(1.4rem,2.4vw,1.9rem)/1.15 var(--f-head);margin:0 0 var(--s3)}
+  .zd-h3{font:800 1.2rem/1.25 var(--f-head);margin:0 0 var(--s2)}
+  .zd-h4{font:800 1rem/1.3 var(--f-head);margin:0 0 var(--s2)}
+
+  /* hero */
+  .zd-hero{background:var(--ink);color:#fff;padding-block:clamp(2.25rem,5vw,4.5rem) clamp(2rem,4vw,3.5rem)}
+  .zd-hero .eyebrow{color:#bdbdbd}
+  .zd-hero__in{display:grid;gap:var(--s6);align-items:end}
+  @media (min-width:60rem){.zd-hero__in{grid-template-columns:1.35fr 1fr;gap:var(--s8)}}
+  .zd-lead{font-size:1.125rem;line-height:1.6;max-width:40rem;color:#e8e8e8;margin:0 0 var(--s4)}
+  .zd-checked{display:flex;align-items:flex-start;gap:.6rem;max-width:40rem;font:600 .8125rem/1.4 var(--f-head);color:#cfcfcf;margin:0 0 var(--s5)}
+  .zd-checked svg{flex:none;color:#fff;margin-top:.05rem}
+  .zd-ctas,.zd-help__ctas{display:flex;flex-wrap:wrap;gap:var(--s3);margin:0}
+  .btn--inv{background:#fff;color:var(--ink);border-color:#fff}
+  .btn--inv:hover{background:transparent;color:#fff}
+  .btn--line{background:transparent;color:#fff;border-color:#fff}
+  .btn--line:hover{background:#fff;color:var(--ink)}
+  .zd-stats{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #3a3a3a}
+  .zd-stats li{padding:var(--s4) var(--s4) var(--s4) 0;border-bottom:1px solid #3a3a3a}
+  .zd-stats li:nth-child(odd){border-right:1px solid #3a3a3a}
+  .zd-stats li:nth-child(even){padding-left:var(--s4)}
+  .zd-stats strong{display:block;font:800 clamp(1.8rem,3.4vw,2.6rem)/1 var(--f-head)}
+  .zd-stats span{display:block;margin-top:.35rem;font-size:.875rem;color:#bdbdbd;line-height:1.35}
+
+  /* address lookup */
+  .zd-lookup{background:var(--cream);border-bottom:1px solid var(--ink);padding-block:clamp(1.75rem,3.5vw,3rem)}
+  .zd-lookup__in{display:grid;gap:var(--s5)}
+  @media (min-width:60rem){.zd-lookup__in{grid-template-columns:1fr 1.1fr;gap:var(--s7);align-items:start}}
+  .zd-lookup__txt p{margin:0 0 var(--s3);line-height:1.6;max-width:36rem}
+  .zd-lookup__alt{display:flex;flex-wrap:wrap;gap:.5rem;font:700 .875rem var(--f-head)}
+  .zd-lookup__alt a{color:var(--ink)}
+  .zd-lookup__form :global(.fstub){background:#fff;border:1px solid var(--ink);padding:var(--s5);margin:0}
+
+  /* filter bar */
+  .zd-dir{padding-bottom:var(--s7)}
+  .zd-bar{position:sticky;top:var(--header-h);z-index:40;background:#fff;border-bottom:1px solid var(--ink);box-shadow:0 6px 16px -12px rgba(0,0,0,.35)}
+  .zd-bar__in{display:grid;gap:.6rem;padding-block:.85rem}
+  .zd-search{position:relative;display:flex;align-items:center}
+  .zd-search svg{position:absolute;left:.9rem;color:var(--grey);pointer-events:none}
+  .zd-search input{width:100%;min-height:3rem;padding:.6rem 5.5rem .6rem 2.75rem;border:2px solid var(--ink);border-radius:0;font:600 1rem var(--f-body);background:#fff;color:var(--ink);-webkit-appearance:none;appearance:none}
+  .zd-search input::placeholder{color:#7a7a7a;font-weight:400}
+  .zd-search input:focus{outline:3px solid var(--ink);outline-offset:2px}
+  .zd-search input::-webkit-search-cancel-button{display:none}
+  .zd-clear{position:absolute;right:.4rem;min-height:2.25rem;padding:0 .8rem;border:0;background:var(--cream);font:700 .75rem var(--f-head);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+  .zd-chips{display:flex;gap:.4rem;align-items:center;overflow-x:auto;scrollbar-width:none;margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter)}
+  .zd-chips::-webkit-scrollbar{display:none}
+  .zd-chip{flex:none;min-height:2.25rem;padding:0 .95rem;border:1px solid var(--ink);background:#fff;color:var(--ink);font:700 .8125rem/1 var(--f-head);white-space:nowrap;cursor:pointer;transition:background .12s,color .12s}
+  .zd-chip:hover{background:var(--cream)}
+  .zd-chip[aria-pressed="true"]{background:var(--ink);color:#fff}
+  .zd-chip--sm{min-height:2rem;padding:0 .75rem;font-size:.75rem;border-color:var(--rule)}
+  .zd-chip--sm[aria-pressed="true"]{border-color:var(--ink)}
+  .zd-row{display:flex;align-items:center;gap:var(--s4);min-width:0}
+  .zd-row .zd-chips{flex:1 1 auto;min-width:0}
+  .zd-count{margin:0;flex:none;font:600 .8125rem var(--f-head);color:var(--grey);white-space:nowrap}
+  .zd-sels{display:none;grid-template-columns:1fr 1fr;gap:.5rem}
+  .zd-sels select{min-height:2.75rem;width:100%;padding:0 2rem 0 .7rem;border:1px solid var(--ink);border-radius:0;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230a0a0a' stroke-width='2'/%3E%3C/svg%3E") no-repeat right .7rem center;font:700 .8125rem var(--f-head);color:var(--ink);-webkit-appearance:none;appearance:none}
+  .zd-none{margin:var(--s6) 0 0;padding:var(--s5);border:1px dashed var(--ink);background:var(--cream);font-weight:600}
+
+  /* municipalities and zone cards */
+  .zd-muni{padding-top:clamp(2rem,4vw,3.25rem);scroll-margin-top:calc(var(--header-h) + 9.5rem)}
+  .zd-muni__head{display:flex;flex-wrap:wrap;gap:var(--s4) var(--s6);align-items:end;justify-content:space-between;padding-bottom:var(--s4);margin-bottom:var(--s5);border-bottom:2px solid var(--ink)}
+  .zd-muni__head > div{max-width:46rem}
+  .zd-muni__n{margin:0 0 .35rem;font:700 .75rem var(--f-head);letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+  .zd-muni__by{margin:0;color:var(--grey);font-size:.9375rem;line-height:1.55}
+  .zd-muni__by strong{color:var(--ink)}
+  .zd-muni__btn{flex:none}
+  .zd-grid{list-style:none;margin:0;padding:0;display:grid;gap:var(--s4);grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr))}
+  .zd-card{display:flex;flex-direction:column;border:1px solid var(--rule);background:#fff;padding:var(--s5) var(--s5) var(--s4);scroll-margin-top:calc(var(--header-h) + 10rem);transition:border-color .15s,box-shadow .15s}
+  .zd-card:hover{border-color:var(--ink);box-shadow:0 10px 24px -18px rgba(0,0,0,.5)}
+  .zd-card:target{border-color:var(--ink);box-shadow:0 0 0 2px var(--ink)}
+  .zd-card[hidden],.zd-muni[hidden]{display:none}
+  .zd-card__top{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 var(--s3)}
+  .zd-type{display:inline-block;padding:.28rem .55rem;font:700 .6875rem/1 var(--f-head);letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--ink)}
+  .zd-type--farm{background:var(--ink);color:#fff}
+  .zd-type--rural{background:#4a4a4a;color:#fff;border-color:#4a4a4a}
+  .zd-type--res{background:#fff;color:var(--ink)}
+  .zd-type--other{background:#f2f2f2;color:var(--grey);border-color:#d6d6d6}
+  .zd-was{display:inline-block;padding:.28rem .55rem;font:600 .6875rem/1 var(--f-head);background:var(--cream);color:var(--ink)}
+  .zd-card__h{margin:0 0 var(--s3);font:700 1rem/1.3 var(--f-head)}
+  .zd-code{display:block;font:800 1.6rem/1.05 var(--f-head);letter-spacing:-.01em;margin-bottom:.2rem}
+  .zd-name{display:block;color:#333}
+  .zd-dl{margin:0 0 var(--s4);display:grid;gap:.6rem}
+  .zd-dl div{display:grid;gap:.15rem;padding-top:.6rem;border-top:1px solid #ececec}
+  .zd-dl dt{font:700 .6875rem/1.2 var(--f-head);letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+  .zd-dl dd{margin:0;font-size:.9375rem;line-height:1.5}
+  .zd-note{margin:.6rem 0 var(--s4);font-size:.8125rem;line-height:1.45;color:var(--grey)}
+  .zd-card__foot{margin-top:auto!important;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.35rem .75rem;margin:0;padding-top:var(--s3);border-top:1px solid var(--ink);font:600 .75rem/1.3 var(--f-head);color:var(--grey)}
+  .zd-card__foot a{color:var(--ink);font-weight:700}
+
+  .zd-help,.zd-band{display:flex;flex-wrap:wrap;gap:var(--s4) var(--s6);align-items:center;justify-content:space-between;margin-top:clamp(2rem,4vw,3rem);padding:var(--s6);border:1px solid var(--ink);background:var(--cream)}
+  .zd-help > div,.zd-band > div{max-width:40rem}
+  .zd-help p,.zd-band p{margin:0}
+  .zd-band{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .zd-band__h{font:800 1.3rem/1.2 var(--f-head);margin:0 0 .35rem!important}
+
+  /* lower sections */
+  .zd-sec{padding-block:clamp(2.25rem,4.5vw,4rem);border-top:1px solid var(--rule)}
+  .zd-sec .eyebrow{color:var(--grey)}
+  .zd-two{display:grid;gap:var(--s6)}
+  @media (min-width:60rem){.zd-two{grid-template-columns:1fr 1.25fr;gap:var(--s8)}}
+  .zd-alr{background:var(--cream);border-top:1px solid var(--ink)}
+  .zd-alr__lead{font-size:1.0625rem;line-height:1.6;margin:0 0 var(--s4)}
+  .zd-links{list-style:none;margin:0 0 var(--s4);padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+  .zd-links a{display:inline-flex;align-items:center;gap:.35rem;min-height:2.5rem;padding:0 .9rem;border:1px solid var(--ink);background:#fff;font:700 .8125rem var(--f-head);color:var(--ink);text-decoration:none}
+  .zd-links a:hover{background:var(--ink);color:#fff}
+  .zd-src{margin:0;font-size:.8125rem;color:var(--grey)}
+  .zd-facts{list-style:none;counter-reset:f;margin:0;padding:0;display:grid;gap:var(--s3)}
+  .zd-facts li{counter-increment:f;position:relative;background:#fff;border:1px solid var(--cream-deep);padding:var(--s4) var(--s5) var(--s4) 3.75rem;line-height:1.55}
+  .zd-facts li::before{content:counter(f,decimal-leading-zero);position:absolute;left:var(--s5);top:var(--s4);font:800 1rem/1.55 var(--f-head)}
+  .zd-checks{list-style:none;margin:var(--s5) 0 0;padding:0;display:grid;gap:var(--s4);grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));counter-reset:c}
+  @media (min-width:60rem){.zd-checks{grid-template-columns:repeat(3,1fr);gap:var(--s5) var(--s6)}}
+  .zd-checks li{counter-increment:c;border-top:2px solid var(--ink);padding-top:var(--s4)}
+  .zd-checks li::before{content:counter(c,decimal-leading-zero);display:block;font:800 .8125rem var(--f-head);letter-spacing:.15em;color:var(--grey);margin-bottom:.4rem}
+  .zd-checks p{margin:0;line-height:1.55}
+  .zd-checks a{color:var(--ink)}
+  .zd-own{margin:var(--s5) 0 0;font:700 .9375rem var(--f-head)}
+  .zd-own a{color:var(--ink)}
+  .zd-rel{list-style:none;margin:var(--s4) 0 0;padding:0;display:grid;gap:0 var(--s6);grid-template-columns:repeat(auto-fill,minmax(min(100%,22rem),1fr))}
+  .zd-rel a{display:flex;justify-content:space-between;gap:var(--s4);align-items:center;min-height:3.25rem;padding:.6rem 0;border-bottom:1px solid var(--rule);font:700 .9375rem/1.35 var(--f-head);color:var(--ink);text-decoration:none}
+  .zd-rel a:hover span:first-child{text-decoration:underline}
+  .zd-faqwrap{max-width:52rem}
+  .zd-faq details{border-bottom:1px solid var(--rule)}
+  .zd-faq summary{cursor:pointer;padding:var(--s4) 2rem var(--s4) 0;font:700 1rem/1.4 var(--f-head);list-style:none;position:relative}
+  .zd-faq summary::-webkit-details-marker{display:none}
+  .zd-faq summary::after{content:'+';position:absolute;right:0;top:50%;transform:translateY(-50%);font:400 1.5rem var(--f-head)}
+  .zd-faq details[open] summary::after{content:'–'}
+  .zd-faq p{margin:0 0 var(--s4);line-height:1.6}
+  .zd-disc p{margin:0 0 var(--s3);max-width:60rem;font-size:.875rem;line-height:1.6;color:var(--grey)}
+  .zd-disc a{color:var(--ink)}
+
+  @media (max-width:40rem){
+    .zd-bar__in{padding-block:.6rem;gap:.5rem}
+    .zd-bar .zd-chips{display:none}
+    .zd-sels{display:grid}
+    .zd-row{justify-content:flex-end}
+    .zd-search input{min-height:2.75rem}
+    .zd-ctas .btn{flex:1 1 100%;justify-content:center}
+    .zd-muni{scroll-margin-top:calc(var(--header-h) + 8.5rem)}
+    .zd-chips--type{flex-wrap:nowrap}
+    .zd-search input{font-size:16px}
+    .zd-help,.zd-band{padding:var(--s5)}
+    .zd-muni__btn{width:100%;justify-content:center}
+  }
+</style>

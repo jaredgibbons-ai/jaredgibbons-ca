@@ -288,3 +288,14 @@ test('homepage: hero search goes to real pages, community names are links, quiz 
   assert.ok(/data-quiz[^>]*data-qs="/.test(t) && /data-result/.test(t), 'quiz result missing');
   assert.ok(!/available for public display/.test(html('open-houses.html')), 'old widget message is back on Open Houses');
 });
+
+test('zoning guide: all 278 zones as cards with a bylaw link, a working filter bar, no leftover filter text (D-268)', { skip: !built }, () => {
+  const t = html('zonings.html');
+  const cards = t.match(/<li class="zd-card"[^>]*id="zd-/g) || [];
+  assert.equal(cards.length, 278, `${cards.length} zone cards`);
+  assert.equal((t.match(/class="zd-card__foot"[^>]*><a href="https:/g) || []).length, 278, 'every zone links to its bylaw');
+  for (const id of ['zd-abbotsford', 'zd-langley', 'zd-surrey', 'zd-delta', 'zd-chilliwack', 'zd-mapleridge', 'zd-mission', 'zd-alr', 'zd-check', 'zd-lookup']) assert.ok(t.includes(`id="${id}"`), `#${id} missing`);
+  assert.ok(/data-zq/.test(t) && /data-zsm/.test(t) && /data-zcount/.test(t), 'filter bar missing');
+  assert.ok(!/<li>Municipality<\/li>|<li>All types<\/li>|Showing all 278 zones\.<\/p>/.test(t), 'old filter text is back');
+  assert.ok(!/<dd>\s*<\/dd>/.test(t), 'empty zone field');
+});

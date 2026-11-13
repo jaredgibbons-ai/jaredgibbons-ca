@@ -1,0 +1,4559 @@
+{
+ "eyebrow": "Zoning directory",
+ "h2": "Zoning in Abbotsford, Langley, Surrey, Delta and the Fraser Valley",
+ "lead": "Plain-English summaries of farm, rural, acreage and residential zones, with a link to the official bylaw for every zone. Start with the agricultural and rural zones if you are looking at a farm or acreage, or search any zone code.",
+ "checked": "Checked against each official bylaw on October 2, 2026. Zoning changes often, so always confirm with the municipality.",
+ "general": [
+  "General information only.",
+  "These summaries may not reflect recent amendments and are not legal advice. Always confirm zoning, permitted uses and ALR status with the municipality and the Agricultural Land Commission before you buy."
+ ],
+ "lookup": {
+  "h": "Looking at a specific property?",
+  "d": "Type an address to see its zoning, ALR status, lot size and other public map checks. It covers Surrey, Langley (City and Township) and Abbotsford for now. Anywhere else, send me the address and I'll check its zoning, ALR status and what you can build before you write an offer.",
+  "labels": [
+   "Property address",
+   "Your name (optional)"
+  ],
+  "submit": "Check this address",
+  "fine": "General information from public municipal and provincial maps, not a survey or legal advice. The address is only used to look up public map data."
+ },
+ "types": [
+  "Agricultural / Farm",
+  "Rural / Acreage",
+  "Residential",
+  "Other"
+ ],
+ "munis": [
+  {
+   "id": "zd-abbotsford",
+   "name": "Abbotsford",
+   "bylaw": "City of Abbotsford Zoning Bylaw, 2014 (No. 2400-2014)",
+   "source": "Source: Online consolidated bylaw (laws.abbotsford.ca). All standard zones.",
+   "href": "https://laws.abbotsford.ca/civix/content/coa/coabylaws/z/zoning/?xsl=/templates/browse.xsl",
+   "zones": [
+    {
+     "id": "zd-abbotsford-a1",
+     "code": "A1",
+     "name": "Agricultural One Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Purpose",
+       "Agricultural uses and complementary activities, consistent with the Agricultural Land Commission Act."
+      ],
+      [
+       "Main uses",
+       "Agriculture, one single detached dwelling, boarding house, residential care. Accessory uses include agri-tourism, farm retail sales, farm product processing, farm alcohol production, and farm worker housing."
+      ],
+      [
+       "Extra homes",
+       "One secondary suite (up to 100 m²). One accessory farm dwelling unit on lots of at least 0.4 ha: up to 90 m² on lots of 40 ha or less, up to 186 m² on larger lots, subject to ALR rules or ALC approval."
+      ],
+      [
+       "Min. new lot",
+       "8.0 ha (about 19.8 acres), with limited exceptions in s.210.5."
+      ],
+      [
+       "ALR",
+       "The bylaw notes that the ALC Act and the ALR Use Regulation requirements also apply."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400210",
+     "ref": "s.210"
+    },
+    {
+     "id": "zd-abbotsford-a2",
+     "code": "A2",
+     "name": "Agricultural Two Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Same agricultural and residential uses as A1."
+      ],
+      [
+       "Min. new lot",
+       "16 ha (about 39.5 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400220",
+     "ref": "s.220"
+    },
+    {
+     "id": "zd-abbotsford-a3",
+     "code": "A3",
+     "name": "Agricultural and Resource Processing Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "A1 uses plus resource processing."
+      ],
+      [
+       "Min. new lot",
+       "Same as A1."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400230",
+     "ref": "s.230"
+    },
+    {
+     "id": "zd-abbotsford-a4",
+     "code": "A4",
+     "name": "Agricultural and Produce Processing Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "A1 uses plus produce processing."
+      ],
+      [
+       "Min. new lot",
+       "Same as A1."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400240",
+     "ref": "s.240"
+    },
+    {
+     "id": "zd-abbotsford-a5",
+     "code": "A5",
+     "name": "Agricultural and Farm Industrial Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "A1 uses plus farm industrial use and growing medium manufacturing."
+      ],
+      [
+       "Min. new lot",
+       "Same as A1."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400250",
+     "ref": "s.250"
+    },
+    {
+     "id": "zd-abbotsford-a6",
+     "code": "A6",
+     "name": "Agricultural and Commercial Mushroom Composting Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "A1 uses plus a commercial mushroom composting facility where approved by the ALC."
+      ],
+      [
+       "Min. new lot",
+       "7.3 ha for a composting facility; otherwise same as A1."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400260",
+     "ref": "s.260"
+    },
+    {
+     "id": "zd-abbotsford-rr",
+     "code": "RR",
+     "name": "Rural Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Purpose",
+       "Single detached dwellings and agricultural uses on large lots in a rural setting."
+      ],
+      [
+       "Main uses",
+       "Single detached dwelling, agriculture, resource processing, residential care, supported housing. Accessory farm retail sales."
+      ],
+      [
+       "Extra homes",
+       "Secondary suite; coach house only on lots over 0.4 ha."
+      ],
+      [
+       "Min. new lot",
+       "4 ha (about 9.9 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400310",
+     "ref": "s.310"
+    },
+    {
+     "id": "zd-abbotsford-cr",
+     "code": "CR",
+     "name": "Country Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Purpose",
+       "Single detached dwellings and agricultural uses on large lots."
+      ],
+      [
+       "Main uses",
+       "As RR, without resource processing."
+      ],
+      [
+       "Extra homes",
+       "Secondary suite; coach house only on lots over 0.4 ha."
+      ],
+      [
+       "Min. new lot",
+       "2 ha (about 4.9 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400320",
+     "ref": "s.320"
+    },
+    {
+     "id": "zd-abbotsford-sr",
+     "code": "SR",
+     "name": "Suburban Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Purpose",
+       "Single detached dwellings on suburban lots."
+      ],
+      [
+       "Extra homes",
+       "Secondary suite; coach house on lots over 0.4 ha."
+      ],
+      [
+       "Also allowed",
+       "Accessory produce sales."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400330",
+     "ref": "s.330"
+    },
+    {
+     "id": "zd-abbotsford-srh",
+     "code": "SRH",
+     "name": "Suburban Residential Hobby Farm Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Purpose",
+       "Single detached dwellings on suburban lots with small-scale hobby farming."
+      ],
+      [
+       "Extra homes",
+       "A coach house on land in the ALR needs ALC approval."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400335",
+     "ref": "s.335"
+    },
+    {
+     "id": "zd-abbotsford-rs1",
+     "code": "RS1",
+     "name": "Urban Estate Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached dwellings on large urban lots."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400340",
+     "ref": "s.340"
+    },
+    {
+     "id": "zd-abbotsford-rs3",
+     "code": "RS3",
+     "name": "Urban Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached dwellings on medium urban-sized lots."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400350",
+     "ref": "s.350"
+    },
+    {
+     "id": "zd-abbotsford-ssmuh",
+     "code": "SSMUH",
+     "name": "1 Small-Scale Multi-Unit Housing One Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended to enable small-scale residential development on urban lots designated SSMUH 1 in the OCP."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400351",
+     "ref": "s.351"
+    },
+    {
+     "id": "zd-abbotsford-ssmuh-2",
+     "code": "SSMUH",
+     "name": "2 Small-Scale Multi-Unit Housing Two Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended to enable small-scale residential development on urban lots designated SSMUH 2 in the OCP."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400352",
+     "ref": "s.352"
+    },
+    {
+     "id": "zd-abbotsford-ssmuh-3",
+     "code": "SSMUH",
+     "name": "2-g Small-Scale Multi-Unit Housing 2 – Greenfield Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended to enable small-scale residential development on greenfield lots designated SSMUH 2 in the OCP."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400353",
+     "ref": "s.353"
+    },
+    {
+     "id": "zd-abbotsford-ssmuh-4",
+     "code": "SSMUH",
+     "name": "3 Small-Scale Multi-Unit Housing Three Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended to enable small-scale residential development on large lots designated SSMUH 3 in the OCP."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400354",
+     "ref": "s.354"
+    },
+    {
+     "id": "zd-abbotsford-ssmuh-5",
+     "code": "SSMUH",
+     "name": "4 Small-Scale Multi-Unit Housing Four Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended to enable small-scale residential development on suburban lots designated SSMUH 4 in the OCP."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400355",
+     "ref": "s.355"
+    },
+    {
+     "id": "zd-abbotsford-rs3-i",
+     "code": "RS3-i",
+     "name": "Urban Residential Zone, Infill",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached dwellings on urban lots in the Urban 3-Infill Land Use Designation."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400356",
+     "ref": "s.356"
+    },
+    {
+     "id": "zd-abbotsford-th1",
+     "code": "TH1",
+     "name": "Townhouse 1 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended to enable a transition from small-scale residential development to ground-oriented multi-unit residential development on lands abutting a Local Road and designated Townhouse in the OCP."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400357",
+     "ref": "s.357"
+    },
+    {
+     "id": "zd-abbotsford-th2",
+     "code": "TH2",
+     "name": "Townhouse 2 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended to enable a transition from small-scale residential development to ground-oriented multi-unit residential development on lands abutting an Arterial Road or a Collector Road and designated Townhouse in the OCP."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400358",
+     "ref": "s.358"
+    },
+    {
+     "id": "zd-abbotsford-rs4",
+     "code": "RS4",
+     "name": "Duplex Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached dwellings or duplexes (strata and fee simple) on urban lots."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400360",
+     "ref": "s.360"
+    },
+    {
+     "id": "zd-abbotsford-rs4-i",
+     "code": "RS4-i",
+     "name": "Duplex Residential Zone, Infill",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for duplexes (strata and fee simple) on urban lots in the Urban 3-Infill Land Use Designation."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400365",
+     "ref": "s.365"
+    },
+    {
+     "id": "zd-abbotsford-rs5",
+     "code": "RS5",
+     "name": "Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached dwellings on standard lots without lane access."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400370",
+     "ref": "s.370"
+    },
+    {
+     "id": "zd-abbotsford-rs5-a",
+     "code": "RS5-A",
+     "name": "Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached dwellings on standard lots without secondary suites or lane access."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400375",
+     "ref": "s.375"
+    },
+    {
+     "id": "zd-abbotsford-rs6",
+     "code": "RS6",
+     "name": "Compact Lot Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached dwellings on compact lots."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400380",
+     "ref": "s.380"
+    },
+    {
+     "id": "zd-abbotsford-rs6-c",
+     "code": "RS6-C",
+     "name": "Compact Lot Coach House Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached dwellings and coach houses above accessory buildings on compact lots with rear lane access."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400385",
+     "ref": "s.385"
+    },
+    {
+     "id": "zd-abbotsford-rs7",
+     "code": "RS7",
+     "name": "Infill Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached dwellings and garden suites on compact lots in the SSMUH 1 and Townhouse Land Use Designation."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400386",
+     "ref": "s.386"
+    },
+    {
+     "id": "zd-abbotsford-rch",
+     "code": "RCH",
+     "name": "Coach House Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached dwellings and coach houses on urban lots with municipal lane access in the Urban 3 – Infill Land Use Designation and new neighbourhoods."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400387",
+     "ref": "s.387"
+    },
+    {
+     "id": "zd-abbotsford-rsmh",
+     "code": "RSMH",
+     "name": "Infill Manufactured Home Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached dwellings and fee simple manufactured homes on urban lots."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400388",
+     "ref": "s.388"
+    },
+    {
+     "id": "zd-abbotsford-rsh",
+     "code": "RSH",
+     "name": "Urban Residential Hybrid Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for conventional single detached dwellings and fee simple mobile homes on urban lots."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b24001390",
+     "ref": "s.390"
+    },
+    {
+     "id": "zd-abbotsford-rcs",
+     "code": "RCS",
+     "name": "Residential Corner Store Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for residential uses with accessory commercial uses in primarily residential areas in the Urban 3 – Infill or Urban 4 – Detached Land Use Designations in accordance with the policy contained within the Official Community Plan."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400395",
+     "ref": "s.395"
+    },
+    {
+     "id": "zd-abbotsford-rm16",
+     "code": "RM16",
+     "name": "Low Density Townhouse Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for townhouse developments at lower densities, up to 16 units per hectare."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400405",
+     "ref": "s.405"
+    },
+    {
+     "id": "zd-abbotsford-rm30",
+     "code": "RM30",
+     "name": "Low Density Townhouse Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for townhouse developments at lower densities, up to 30 units per hectare."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400410",
+     "ref": "s.410"
+    },
+    {
+     "id": "zd-abbotsford-rm45",
+     "code": "RM45",
+     "name": "Medium Density Townhouse Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for townhouse developments at medium densities, up to 45 units per hectare."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400420",
+     "ref": "s.420"
+    },
+    {
+     "id": "zd-abbotsford-rm60",
+     "code": "RM60",
+     "name": "High Density Townhouse Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for townhouse developments at higher densities, up to 60 units per hectare."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400430",
+     "ref": "s.430"
+    },
+    {
+     "id": "zd-abbotsford-rmg",
+     "code": "RMG",
+     "name": "Multifamily Ground Oriented Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended to enable ground oriented multi-unit residential development for lands designated Townhouse in the OCP."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400431",
+     "ref": "s.431"
+    },
+    {
+     "id": "zd-abbotsford-rmf",
+     "code": "RMF",
+     "name": "Multi-Unit Residential Flex Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for townhouse developments at higher densities, up to 60 units per hectare, and to allow for secondary suites within townhouses."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400435",
+     "ref": "s.435"
+    },
+    {
+     "id": "zd-abbotsford-rmx",
+     "code": "RMX",
+     "name": "Multiplex Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended to establish specific land use and development regulations for three and four unit townhouse developments on existing urban lots in the Townhouse Land Use Designation."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400436",
+     "ref": "s.436"
+    },
+    {
+     "id": "zd-abbotsford-rmr",
+     "code": "RMR",
+     "name": "Rowhouse Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended to enable rowhouse development on consolidated lots that are designated Townhouse in the OCP."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400440",
+     "ref": "s.440"
+    },
+    {
+     "id": "zd-abbotsford-rml",
+     "code": "RML",
+     "name": "Low Rise Apartment Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for low-rise developments up to six storeys in height, including residential buildings and buildings for congregate care."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400450",
+     "ref": "s.450"
+    },
+    {
+     "id": "zd-abbotsford-rmm",
+     "code": "RMM",
+     "name": "Mid Rise Apartment Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for mid-rise developments up to six (6) storeys in height, including residential buildings and buildings for congregate care, for lands designated Apartment in the City’s Official Community Plan."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400460",
+     "ref": "s.460"
+    },
+    {
+     "id": "zd-abbotsford-rmm-r",
+     "code": "RMM-R",
+     "name": "Mid Rise Apartment Zone – Rental",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for mid-rise developments up to six (6) storeys in height, including residential buildings and buildings for congregate care which are restricted to residential rental tenure only, for lands designated Apartment in the City’s Official Community Plan."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/aea2a6aeb",
+     "ref": "s.465"
+    },
+    {
+     "id": "zd-abbotsford-rhr",
+     "code": "RHR",
+     "name": "High Rise Apartment Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for high-rise developments up to 80 metres in height, including residential buildings and buildings for congregate care."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400470",
+     "ref": "s.470"
+    },
+    {
+     "id": "zd-abbotsford-rmu",
+     "code": "RMU",
+     "name": "Mixed Use Apartment Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for low-rise, mixed-use developments up to six storeys in height, consisting of limited commercial uses on the first and second floors and apartment or congregate housing uses on upper floors."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400480",
+     "ref": "s.480"
+    },
+    {
+     "id": "zd-abbotsford-rmc",
+     "code": "RMC",
+     "name": "City Centre Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for multi storey residential buildings for lands designated City Centre Core or City Centre Residential in the City Centre Neighbourhood Plan."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400492",
+     "ref": "s.490"
+    },
+    {
+     "id": "zd-abbotsford-rh1",
+     "code": "RH1",
+     "name": "Manufactured Home Park Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for manufactured homes on individual pads within an unsubdivided manufactured home park."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400490",
+     "ref": "s.491"
+    },
+    {
+     "id": "zd-abbotsford-c1",
+     "code": "C1",
+     "name": "Local Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for small-scale commercial uses in primarily residential areas."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400510",
+     "ref": "s.510"
+    },
+    {
+     "id": "zd-abbotsford-c2",
+     "code": "C2",
+     "name": "Neighbourhood Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for many commercial uses that meet the needs of the broader neighbourhood, in developments up to 10,000 m² in size."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400520",
+     "ref": "s.520"
+    },
+    {
+     "id": "zd-abbotsford-c3",
+     "code": "C3",
+     "name": "Community Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for many commercial uses that meet the needs of the community, in developments over 10,000 m² in size."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400530",
+     "ref": "s.530"
+    },
+    {
+     "id": "zd-abbotsford-c4",
+     "code": "C4",
+     "name": "Service Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for many commercial uses in buildings two storeys or less, in an automobile-oriented environment."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400540",
+     "ref": "s.540"
+    },
+    {
+     "id": "zd-abbotsford-csc",
+     "code": "CSC",
+     "name": "Secondary Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended to serve a neighbourhood or city wide area with commercial uses along with indoor industrial, for lands designated Secondary Commercial in the Official Community Plan."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400545",
+     "ref": "s.545"
+    },
+    {
+     "id": "zd-abbotsford-crz",
+     "code": "CRZ",
+     "name": "Regional Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended to provide for large format retail centres with large anchor tenants and surface parking on lands designated Regional Commercial in the Official Community Plan."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400547",
+     "ref": "s.547"
+    },
+    {
+     "id": "zd-abbotsford-c5",
+     "code": "C5",
+     "name": "City Centre Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for many uses appropriate for the City Centre including retail, office, financial, service and residential uses in conjunction with commercial uses, in low-rise buildings up to six storeys."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400550",
+     "ref": "s.550"
+    },
+    {
+     "id": "zd-abbotsford-ccm",
+     "code": "CCM",
+     "name": "City Centre Mixed Use Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for multi storey buildings and many uses, for lands designated City Centre Core in the City Centre Neighbourhood Plan."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400555",
+     "ref": "s.555"
+    },
+    {
+     "id": "zd-abbotsford-chr",
+     "code": "CHR",
+     "name": "Commercial High Rise Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for commercial and mixed-use developments up to 80 metres in height along and within close proximity to the City’s Primary Transit Corridor."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400560",
+     "ref": "s.560"
+    },
+    {
+     "id": "zd-abbotsford-c7",
+     "code": "C7",
+     "name": "Historic Downtown Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for commercial and mixed-use developments in the Historic Downtown area."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400570",
+     "ref": "s.570"
+    },
+    {
+     "id": "zd-abbotsford-cgs",
+     "code": "CGS",
+     "name": "Gas Station Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended to provide a zone to meet the specific safety and health standards required to accommodate gas stations, automobile maintenance and repair facilities and other associated uses."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400580",
+     "ref": "s.580"
+    },
+    {
+     "id": "zd-abbotsford-cam",
+     "code": "CAM",
+     "name": "Automall Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for automobile, commercial vehicle, and recreational vehicle dealerships and other associated uses within an automall format."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400585",
+     "ref": "s.585"
+    },
+    {
+     "id": "zd-abbotsford-crc",
+     "code": "CRC",
+     "name": "Recreation and Campground Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for outdoor sport uses, campgrounds and resort accommodation uses on large lots."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400590",
+     "ref": "s.590"
+    },
+    {
+     "id": "zd-abbotsford-cgc",
+     "code": "CGC",
+     "name": "Golf Course Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for golf courses and uses associated with golf courses, including accessory buildings, club houses, driving ranges and other associated uses."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400595",
+     "ref": "s.595"
+    },
+    {
+     "id": "zd-abbotsford-ucz",
+     "code": "UCZ",
+     "name": "Urban Centre Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended to enable a mix of multi-unit residential and commercial uses that serve a city-wide and neighbourhood function, on lands designated Urban Centre in the OCP."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400596",
+     "ref": "s.596"
+    },
+    {
+     "id": "zd-abbotsford-ncz",
+     "code": "NCZ",
+     "name": "Neighbourhood Centre Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended to enable a mix of multi unit residential and commercial uses that function as neighbourhood gathering places and destinations including shops, restaurants, cafes, and services, on land designated Neighbourhood Centre in the OCP."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400597",
+     "ref": "s.597"
+    },
+    {
+     "id": "zd-abbotsford-i1",
+     "code": "I1",
+     "name": "Residential Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached dwellings on industrial lots, with home based businesses and small-scale industrial uses."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400610",
+     "ref": "s.610"
+    },
+    {
+     "id": "zd-abbotsford-liz",
+     "code": "LIZ",
+     "name": "Light Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for commercial vehicle parking with a limited number of light industrial uses and outdoor storage."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400615",
+     "ref": "s.615"
+    },
+    {
+     "id": "zd-abbotsford-i2",
+     "code": "I2",
+     "name": "General Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for a mix of light industrial uses."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400620",
+     "ref": "s.620"
+    },
+    {
+     "id": "zd-abbotsford-i3",
+     "code": "I3",
+     "name": "High Impact Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for high impact industrial uses, as well as a limited number of light industrial uses that are compatible with high impact uses."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400630",
+     "ref": "s.630"
+    },
+    {
+     "id": "zd-abbotsford-i4",
+     "code": "I4",
+     "name": "Airport Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for airport facilities and limited commercial uses that are complementary to the Abbotsford International Airport."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400640",
+     "ref": "s.640"
+    },
+    {
+     "id": "zd-abbotsford-i5",
+     "code": "I5",
+     "name": "Special Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for a variety of site-specific industrial uses."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400650",
+     "ref": "s.650"
+    },
+    {
+     "id": "zd-abbotsford-p1",
+     "code": "P1",
+     "name": "Civic Institutional Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for general civic and institutional uses."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400710",
+     "ref": "s.710"
+    },
+    {
+     "id": "zd-abbotsford-p2",
+     "code": "P2",
+     "name": "Park, Open Space and School Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for public uses such as parks, child care centres and schools."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400720",
+     "ref": "s.720"
+    },
+    {
+     "id": "zd-abbotsford-p3",
+     "code": "P3",
+     "name": "Assembly Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for assembly and school uses."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400730",
+     "ref": "s.730"
+    },
+    {
+     "id": "zd-abbotsford-p4",
+     "code": "P4",
+     "name": "Special Housing Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for congregate housing, congregate care uses and other community support services."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400740",
+     "ref": "s.740"
+    },
+    {
+     "id": "zd-abbotsford-p5",
+     "code": "P5",
+     "name": "River Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended to provide for the use of a river for water-related recreation, storage, transportation and other related uses."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400750",
+     "ref": "s.750"
+    },
+    {
+     "id": "zd-abbotsford-p6",
+     "code": "P6",
+     "name": "Entertainment and Sports Centre Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for entertainment and sports uses."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400760",
+     "ref": "s.760"
+    },
+    {
+     "id": "zd-abbotsford-p7",
+     "code": "P7",
+     "name": "University/College Campus Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for educational, recreational, residential and commercial uses associated with universities, colleges and other post-secondary educational institutions."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400770",
+     "ref": "s.770"
+    },
+    {
+     "id": "zd-abbotsford-p8",
+     "code": "P8",
+     "name": "Health Campus Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for uses on lands designated Health Campus in the City’s Official Community Plan."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/2014b2400780",
+     "ref": "s.780"
+    },
+    {
+     "id": "zd-abbotsford-n1",
+     "code": "N1,",
+     "name": "N2 … Comprehensive Development Zones",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Site-specific zones numbered N1, N2 and up (Section 800). Each has its own permitted uses and rules, so read the zone that applies to the property."
+      ]
+     ],
+     "href": "https://laws.abbotsford.ca/civix/content/coa/coabylaws/z/zoning/2014b2400800/?xsl=/templates/browse.xsl",
+     "ref": "Section 800"
+    }
+   ]
+  },
+  {
+   "id": "zd-langley",
+   "name": "Township of Langley",
+   "bylaw": "Township of Langley Zoning Bylaw No. 2500",
+   "source": "Source: Section PDFs on tol.ca (Section 100 updated July 28, 2026). Rural, suburban and residential zones in detail; commercial, industrial and institutional zones grouped. City of Langley has its own, separate zoning bylaw.",
+   "href": "https://www.tol.ca/en/building-development/zoning-bylaw.aspx",
+   "zones": [
+    {
+     "id": "zd-langley-ru-1",
+     "code": "RU-1",
+     "name": "Rural Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Agriculture, equestrian centres and riding stables, commercial greenhouses, mushroom farms, veterinary clinics, residential use. Feedlots and intensive swine operations only as the bylaw allows."
+      ],
+      [
+       "Homes",
+       "Subject to the ALC Act, no more than 2 single family dwellings or mobile homes per lot, with exceptions set out in the bylaw."
+      ],
+      [
+       "Min. new lot",
+       "1.7 ha (about 4.2 acres), per s.110.1."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=1",
+     "ref": "s.201"
+    },
+    {
+     "id": "zd-langley-ru-2",
+     "code": "RU-2",
+     "name": "Rural Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "RU-1 uses plus kennels, dog daycare, fur farms and animal pounds."
+      ],
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=6",
+     "ref": "s.202"
+    },
+    {
+     "id": "zd-langley-ru-3",
+     "code": "RU-3",
+     "name": "Rural Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "RU-1 uses."
+      ],
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=8",
+     "ref": "s.203"
+    },
+    {
+     "id": "zd-langley-ru-4",
+     "code": "RU-4",
+     "name": "Rural Floodplain Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "RU-1 uses plus a class B marina."
+      ],
+      [
+       "Floodplain",
+       "Homes must be built at the Flood Construction Level on natural ground, without fill."
+      ],
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=12",
+     "ref": "s.204"
+    },
+    {
+     "id": "zd-langley-ru-5",
+     "code": "RU-5",
+     "name": "Rural Floodplain Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Floodplain",
+       "The Flood Construction Level may be reached by structural elevation or up to 0.91 m of fill."
+      ],
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=14",
+     "ref": "s.205"
+    },
+    {
+     "id": "zd-langley-ru-5a",
+     "code": "RU-5A",
+     "name": "Rural Floodplain Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=16",
+     "ref": "s.205A"
+    },
+    {
+     "id": "zd-langley-ru-6",
+     "code": "RU-6",
+     "name": "Rural Processing Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "RU-1 uses plus meat processing plants or abattoirs (no retail sales) in a fully enclosed building."
+      ],
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "note": "Named “Rural Processing Zone” in s.104.1; the Section 200 heading reads “Agricultural Processing Zone”.",
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=17",
+     "ref": "s.206"
+    },
+    {
+     "id": "zd-langley-ru-8",
+     "code": "RU-8",
+     "name": "Rural Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "RU-1 uses and conditions."
+      ],
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=19",
+     "ref": "s.208"
+    },
+    {
+     "id": "zd-langley-ru-11",
+     "code": "RU-11",
+     "name": "Rural Estate Winery Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Agriculture, a licensed winery and one dwelling."
+      ],
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "note": "Named “Rural Estate Winery Zone” in s.104.1; the Section 200 heading reads “Rural Winery Zone”.",
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=24",
+     "ref": "s.211"
+    },
+    {
+     "id": "zd-langley-ru-14",
+     "code": "RU-14",
+     "name": "Rural Farm Market Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Purpose",
+       "A farm market on a farm in the ALR."
+      ],
+      [
+       "Limits",
+       "Farm market site up to 0.4 ha and no more than 5% of the farm unit; area for products from off the farm up to 130 m²; farm unit at least 8.0 ha."
+      ],
+      [
+       "Subdivision",
+       "No subdivision is permitted to facilitate an RU-14 development."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=27",
+     "ref": "s.214"
+    },
+    {
+     "id": "zd-langley-ru-3a",
+     "code": "RU-3A",
+     "name": "Rural Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Homes",
+       "One single family dwelling."
+      ],
+      [
+       "Min. new lot",
+       "0.17 ha (about 0.42 acres)."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=10",
+     "ref": "s.203A"
+    },
+    {
+     "id": "zd-langley-sr-1",
+     "code": "SR-1",
+     "name": "Suburban Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Homes",
+       "One small-scale multi-unit housing development, or one single family dwelling plus one accessory dwelling unit (if there is no secondary suite), subject to the ALC Act where it applies."
+      ],
+      [
+       "Also allowed",
+       "Agricultural uses."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-300-Suburban-Residential-(SR)-Zones.pdf#page=1",
+     "ref": "s.301"
+    },
+    {
+     "id": "zd-langley-sr-2",
+     "code": "SR-2",
+     "name": "Suburban Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Homes",
+       "One single family dwelling or mobile home, plus an accessory dwelling unit if outside the urban containment boundary and there is no secondary suite."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-300-Suburban-Residential-(SR)-Zones.pdf#page=4",
+     "ref": "s.302"
+    },
+    {
+     "id": "zd-langley-sr-3",
+     "code": "SR-3",
+     "name": "Suburban Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Homes",
+       "Small-scale multi-unit housing, or one single family dwelling plus an accessory dwelling unit."
+      ],
+      [
+       "Agriculture",
+       "Only on land in the ALR."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-300-Suburban-Residential-(SR)-Zones.pdf#page=7",
+     "ref": "s.303"
+    },
+    {
+     "id": "zd-langley-sr-3a",
+     "code": "SR-3A",
+     "name": "Suburban Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Homes",
+       "One single family dwelling plus an accessory dwelling unit."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-300-Suburban-Residential-(SR)-Zones.pdf#page=9",
+     "ref": "s.304"
+    },
+    {
+     "id": "zd-langley-sr-3b",
+     "code": "SR-3B",
+     "name": "Suburban Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Homes",
+       "One single family dwelling plus an accessory dwelling unit."
+      ],
+      [
+       "Min. new lot",
+       "2,023 m² (about 0.5 acres). Added by Bylaw No. 6144 (July 27, 2026)."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-300-Suburban-Residential-(SR)-Zones.pdf#page=10",
+     "ref": "s.305"
+    },
+    {
+     "id": "zd-langley-cre-1",
+     "code": "CRE-1",
+     "name": "Comprehensive Rural Estates Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Min. new lot",
+       "0.2 ha, with an average of 0.33 ha and an overall density of no more than 1.61 units per hectare."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=37",
+     "ref": "s.413"
+    },
+    {
+     "id": "zd-langley-r-1a",
+     "code": "R-1A",
+     "name": "Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Min. new lot",
+       "Set out in s.401.8."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=1",
+     "ref": "s.401"
+    },
+    {
+     "id": "zd-langley-r-1b",
+     "code": "R-1B",
+     "name": "Residential Zone",
+     "type": "Residential",
+     "fields": [],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=4",
+     "ref": "s.402"
+    },
+    {
+     "id": "zd-langley-r-1c",
+     "code": "R-1C",
+     "name": "Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Min. new lot",
+       "464.5 m², with an average lot size of 557.4 m²."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=4",
+     "ref": "s.402"
+    },
+    {
+     "id": "zd-langley-r-1d",
+     "code": "R-1D",
+     "name": "Residential Zone",
+     "type": "Residential",
+     "fields": [],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=4",
+     "ref": "s.402"
+    },
+    {
+     "id": "zd-langley-r-1e",
+     "code": "R-1E",
+     "name": "Residential Zone",
+     "type": "Residential",
+     "fields": [],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=4",
+     "ref": "s.402"
+    },
+    {
+     "id": "zd-langley-r-cl",
+     "code": "R-CL",
+     "name": "Residential Compact Lot Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Min. new lot",
+       "220 m² (about 2,368 sq ft), front or rear-loaded; see s.403.7."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=7",
+     "ref": "s.403"
+    },
+    {
+     "id": "zd-langley-r-cl-a",
+     "code": "R-CL(A)",
+     "name": "Residential Compact Lot Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Min. new lot",
+       "275 m² front-loaded, 266 m² rear-loaded (excluding corner lots); see s.404.9."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=11",
+     "ref": "s.404"
+    },
+    {
+     "id": "zd-langley-r-cl-b",
+     "code": "R-CL(B)",
+     "name": "Residential Compact Lot Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Min. new lot",
+       "315 m² front-loaded, 266 m² rear-loaded (excluding corner lots); see s.405.9."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=16",
+     "ref": "s.405"
+    },
+    {
+     "id": "zd-langley-r-cl-ch",
+     "code": "R-CL(CH)",
+     "name": "Residential Compact Lot Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Min. new lot",
+       "390 m² (about 4,198 sq ft) for rear-loaded lots; 465 m² for corner lots."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=20",
+     "ref": "s.406"
+    },
+    {
+     "id": "zd-langley-r-cl-rh",
+     "code": "R-CL(RH)",
+     "name": "Residential Compact Lot Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Min. new lot",
+       "168 m² for an internal rowhouse lot, 201 m² for an end lot and 254 m² for a corner lot."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=23",
+     "ref": "s.407"
+    },
+    {
+     "id": "zd-langley-r-cl-mh",
+     "code": "R-CL(MH)",
+     "name": "Residential Compact Lot Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Min. new lot",
+       "592 m² (about 6,372 sq ft); 656 m² for corner lots."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=26",
+     "ref": "s.408"
+    },
+    {
+     "id": "zd-langley-r-cl-sd",
+     "code": "R-CL(SD)",
+     "name": "Residential Compact Lot Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Min. new lot",
+       "201 m² for an interior lot and 254 m² for a corner lot, with a maximum of 280 m²."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=29",
+     "ref": "s.409"
+    },
+    {
+     "id": "zd-langley-r-2",
+     "code": "R-2",
+     "name": "Residential Zone",
+     "type": "Residential",
+     "fields": [],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=32",
+     "ref": "s.410"
+    },
+    {
+     "id": "zd-langley-mh-1",
+     "code": "MH-1",
+     "name": "Residential Mobile Home Park Zone",
+     "type": "Residential",
+     "fields": [],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=34",
+     "ref": "s.411"
+    },
+    {
+     "id": "zd-langley-fh-1",
+     "code": "FH-1",
+     "name": "Residential Float Home Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Main uses",
+       "Up to 40 float homes moored at a Class \"C\" marina, plus one single family dwelling or mobile home on the upland lot for the owner, manager or caretaker."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-400-Residential-(R,-MH,-FH-and-CRE)-Zones.pdf#page=35",
+     "ref": "s.412"
+    },
+    {
+     "id": "zd-langley-rm-1",
+     "code": "RM-1",
+     "name": "to RM-4 Multiple Family Residential Zones",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Zones RM-1, RM-2, RM-3, RM-3A and RM-4. Minimum new lot: 3,716 m² in RM-1; 1,672 m² in RM-2 and RM-3."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-500-Multiple-Family-Residential-(RM)-Zones.pdf",
+     "ref": "Section 500"
+    },
+    {
+     "id": "zd-langley-ru-7",
+     "code": "RU-7",
+     "name": "Fraser River Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Purpose",
+       "Uses on and along the Fraser River."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=18",
+     "ref": "s.207"
+    },
+    {
+     "id": "zd-langley-ru-9",
+     "code": "RU-9",
+     "name": "Rural Butcher Shop Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Butcher shop up to 450 m²."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=20",
+     "ref": "s.209"
+    },
+    {
+     "id": "zd-langley-ru-10",
+     "code": "RU-10",
+     "name": "Rural Golf Course Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Golf course."
+      ],
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=22",
+     "ref": "s.210"
+    },
+    {
+     "id": "zd-langley-ru-12",
+     "code": "RU-12",
+     "name": "Rural Game Farm Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Game farm or zoological park, with up to 4 dwellings."
+      ],
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=25",
+     "ref": "s.212"
+    },
+    {
+     "id": "zd-langley-ru-13",
+     "code": "RU-13",
+     "name": "Canadian Forces Station Zone",
+     "type": "Other",
+     "fields": [],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-200-Rural-Zones.pdf#page=26",
+     "ref": "s.213"
+    },
+    {
+     "id": "zd-langley-c-1",
+     "code": "C-1",
+     "name": "to C-18 Commercial Zones",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Includes C-1 Regional Commercial, C-2 to C-2D Community Commercial, C-3 and C-3A Service Commercial, C-4 and C-5 Neighbourhood Commercial, C-6 Service Station, C-7, C-8 and C-13 to C-16 Limited Commercial, C-9 Campground Commercial, C-10 Customs Commercial, C-11 Farm Auction, C-12 Liquor Primary, C-17 Carvolth Commercial and C-18 Carvolth Business Park."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-600-Commercial-(C)-Zones.pdf",
+     "ref": "Section 600"
+    },
+    {
+     "id": "zd-langley-m-1a",
+     "code": "M-1A",
+     "name": "to M-14 Industrial Zones",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Includes M-1A and M-1B Service Industrial, M-2 to M-2B General Industrial, M-3, M-4 and M-13 Heavy Industrial, M-5, M-5A, M-6 and M-10 Limited Industrial, M-7 Salvage Industrial, M-8 Industrial Transition, M-11 Business/Office Park, M-12 Rural Service Industrial and M-14 Brookswood Employment (added July 27, 2026)."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-700-Industrial-(M)-Zones.pdf",
+     "ref": "Section 700"
+    },
+    {
+     "id": "zd-langley-p-1",
+     "code": "P-1",
+     "name": "to P-6 Institutional Zones",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Includes P-1 and P-1A Civic Institutional, P-2A to P-2R Community Care Facility, P-3 and P-3A Residential Institutional, P-4 Airport, P-5 and P-5A Limited Institutional, and P-6 Post Office."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-800-Institutional-(P)-Zones.pdf",
+     "ref": "Section 800"
+    },
+    {
+     "id": "zd-langley-cd",
+     "code": "CD",
+     "name": "Comprehensive Development Zones",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Site-specific zones (CD-1, CD-2 and up), each with its own rules. Check the zone that applies to the property."
+      ]
+     ],
+     "href": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Zoning-Bylaws/Section-100-Administration.pdf",
+     "ref": "s.104.1"
+    }
+   ]
+  },
+  {
+   "id": "zd-surrey",
+   "name": "Surrey",
+   "bylaw": "Surrey Zoning By-law, 1993, No. 12000",
+   "source": "Source: Consolidated PDF on surrey.ca (updated Sept 23, 2026). Residential zones R1 to R7 replaced the RF, RH and RQ zones on July 8, 2024. Former codes are shown on each card.",
+   "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf",
+   "zones": [
+    {
+     "id": "zd-surrey-a-1",
+     "code": "A-1",
+     "name": "General Agriculture Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Purpose",
+       "Agriculture on lots of at least 2 ha, protecting land designated Agricultural in the OCP."
+      ],
+      [
+       "Main uses",
+       "Agriculture and horticulture; one single family dwelling (which may contain one secondary suite); intensive agriculture (inside the ALR only); farm alcohol production; forestry; horse riding and boarding. Agri-tourism and kennels are limited to 10% building coverage."
+      ],
+      [
+       "Min. new lot",
+       "4 ha (about 9.9 acres) inside the ALR; 2 ha (about 4.9 acres) outside it."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=92",
+     "ref": "Part 10"
+    },
+    {
+     "id": "zd-surrey-a-2",
+     "code": "A-2",
+     "name": "Intensive Agriculture Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Purpose",
+       "General and intensive agriculture, inside or outside the ALR."
+      ],
+      [
+       "Also allowed",
+       "Aquaculture; soil processing (outside the ALR unless authorized)."
+      ],
+      [
+       "Min. new lot",
+       "4 ha (about 9.9 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=97",
+     "ref": "Part 11"
+    },
+    {
+     "id": "zd-surrey-ra",
+     "code": "RA",
+     "name": "Acreage Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Purpose",
+       "Acreage lots typically 4,050 m² (about 1 acre) or larger, with up to 2 dwelling units. Existing lots under 4,050 m² may have small-scale multi-unit housing of 2 to 6 units."
+      ]
+     ],
+     "formerly": "RA One-Acre",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=102",
+     "ref": "Part 12"
+    },
+    {
+     "id": "zd-surrey-r1",
+     "code": "R1",
+     "name": "Suburban Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Purpose",
+       "Small-scale multi-unit housing (2 to 6 units) on suburban lots typically larger than 1,858 m² (about 0.46 acres)."
+      ],
+      [
+       "Agriculture",
+       "Only on lots of 2 ha or more, excluding poultry, mushroom, piggery and mink operations."
+      ]
+     ],
+     "formerly": "RH (Half-Acre Residential)",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=115",
+     "ref": "Part 13"
+    },
+    {
+     "id": "zd-surrey-r2",
+     "code": "R2",
+     "name": "Quarter Acre Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for small-scale multi-unit housing on large lots typically 930 m² or larger, which may accommodate 2 to 6 dwelling units, where lot size may be reduced with substantial public open space set aside within the subdivision."
+      ],
+      [
+       "Min. new lot",
+       "930 m² (about 10,010 sq ft), with reductions where public open space is set aside."
+      ]
+     ],
+     "formerly": "RQ (Quarter Acre Residential)",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=125",
+     "ref": "Part 14"
+    },
+    {
+     "id": "zd-surrey-r2-o",
+     "code": "R2-O",
+     "name": "Oceanfront Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for small-scale multi-unit housing on oceanfront lots typically 1,000 m² or larger, which may accommodate 2 to 6 dwelling units, where there are no lots located between the subject lot and the oceanfront, except for railway land."
+      ]
+     ],
+     "formerly": "RF-O",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=135",
+     "ref": "Part 14A"
+    },
+    {
+     "id": "zd-surrey-r3",
+     "code": "R3",
+     "name": "Urban Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for small-scale multi-unit housing on urban sized lots typically 560 m² or larger, which may accommodate 2 to 6 dwelling units."
+      ]
+     ],
+     "formerly": "RF, RF-SS",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=143",
+     "ref": "Part 15"
+    },
+    {
+     "id": "zd-surrey-r4",
+     "code": "R4",
+     "name": "Small Lot Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for small-scale multi-unit housing on small lots typically 336 m² or larger, which may accommodate 2 to 6 dwelling units."
+      ]
+     ],
+     "formerly": "RF-13, RF-12, RF-12C",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=155",
+     "ref": "Part 16"
+    },
+    {
+     "id": "zd-surrey-r5",
+     "code": "R5",
+     "name": "Compact Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for small-scale multi-unit housing on compact and typically rear lane accessed lots 291 m² or larger, which may accommodate 2 to 6 dwelling units."
+      ]
+     ],
+     "formerly": "RF-10, RF-9, RF-9C",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=164",
+     "ref": "Part 17"
+    },
+    {
+     "id": "zd-surrey-r6",
+     "code": "R6",
+     "name": "Semi-Detached Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for small-scale multi-unit housing on small narrow lots typically less than 280 m², containing a zero-lot line Semi-Detached Residential Building, which may accommodate 2 to 3 dwelling units, or on lots larger than 280 m², containing a zero-lot line Duplex, which may accommodate 4 to 6 dwelling units."
+      ]
+     ],
+     "formerly": "RF-SD",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=180",
+     "ref": "Part 18"
+    },
+    {
+     "id": "zd-surrey-r7",
+     "code": "R7",
+     "name": "Cluster Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for a range of residential development, from small‑scale multi-unit housing, to townhouses, to low‑rise apartments, that are clustered on portions of a site, and where open space is provided to protect natural features, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=187",
+     "ref": "Part 18A"
+    },
+    {
+     "id": "zd-surrey-rm-m",
+     "code": "RM-M",
+     "name": "Manufactured Home Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for the provision of manufactured home parks."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=189",
+     "ref": "Part 19"
+    },
+    {
+     "id": "zd-surrey-mr1",
+     "code": "MR1",
+     "name": "Low Density Townhouse Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for low density townhouses, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "formerly": "RM-10",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=191",
+     "ref": "Part 20"
+    },
+    {
+     "id": "zd-surrey-mr2",
+     "code": "MR2",
+     "name": "Medium Density Townhouse Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for medium density townhouses, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "formerly": "RM-15",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=194",
+     "ref": "Part 21"
+    },
+    {
+     "id": "zd-surrey-mr3",
+     "code": "MR3",
+     "name": "Row House Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for attached dwelling units on lots contained in a row housing building."
+      ]
+     ],
+     "formerly": "RM-23",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=197",
+     "ref": "Part 21A"
+    },
+    {
+     "id": "zd-surrey-mr4",
+     "code": "MR4",
+     "name": "High Density Townhouse Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for high density townhouses, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "formerly": "RM-30",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=200",
+     "ref": "Part 22"
+    },
+    {
+     "id": "zd-surrey-mr5",
+     "code": "MR5",
+     "name": "Stacked Townhouse Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for stacked townhouses, typically 3 to 4 storeys, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=203",
+     "ref": "Part 22A"
+    },
+    {
+     "id": "zd-surrey-mr6",
+     "code": "MR6",
+     "name": "Low-Rise (4 Storey) Apartment Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for low-rise apartment buildings, typically 3 to 4 storeys, with optional accessory uses such as commercial, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "formerly": "RM-45",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=206",
+     "ref": "Part 23"
+    },
+    {
+     "id": "zd-surrey-mr6-c",
+     "code": "MR6-C",
+     "name": "Low-Rise (4 Storey) Apartment with Commercial Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for low-rise mixed-use apartment buildings, typically 3 to 4 storeys, with required ground floor commercial, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=210",
+     "ref": "Part 23A"
+    },
+    {
+     "id": "zd-surrey-rm-70",
+     "code": "RM-70",
+     "name": "Multiple Residential 70 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for medium density, high- rise multiple unit residential buildings and related private amenity spaces, which are to be developed in accordance with a comprehensive design."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=214",
+     "ref": "Part 24"
+    },
+    {
+     "id": "zd-surrey-mr7",
+     "code": "MR7",
+     "name": "Low-Rise (5-8 Storey) Apartment Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for low-rise apartment buildings, typically 5 to 8 storeys, with optional accessory uses such as commercial, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=218",
+     "ref": "Part 24A"
+    },
+    {
+     "id": "zd-surrey-mr7-c",
+     "code": "MR7-C",
+     "name": "Low-Rise (5-8 Storey) Apartment with Commercial Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for low-rise mixed-use apartment buildings, typically 5 to 8 storeys, with required ground floor commercial, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=222",
+     "ref": "Part 24B"
+    },
+    {
+     "id": "zd-surrey-mr8",
+     "code": "MR8",
+     "name": "Mid-Rise Apartment Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for mid-rise apartment buildings, typically 10 to 20 storeys, with optional accessory uses such as commercial, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "formerly": "RM-135",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=226",
+     "ref": "Part 25"
+    },
+    {
+     "id": "zd-surrey-mr8-c",
+     "code": "MR8-C",
+     "name": "Mid-Rise Apartment with Commercial Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for mid-rise mixed-use apartment buildings, typically up to 25 storeys, with required ground floor commercial, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=230",
+     "ref": "Part 25A"
+    },
+    {
+     "id": "zd-surrey-mr9",
+     "code": "MR9",
+     "name": "High-Rise Apartment Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for high-rise apartment buildings, typically up to 40 storeys, with optional accessory uses such as commercial, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "formerly": "RMC-135",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=234",
+     "ref": "Part 26"
+    },
+    {
+     "id": "zd-surrey-mr9-c",
+     "code": "MR9-C",
+     "name": "High-Rise Apartment with Commercial Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for high-rise mixed-use apartment buildings, typically up to 40 storeys, with required ground floor commercial, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=238",
+     "ref": "Part 26A"
+    },
+    {
+     "id": "zd-surrey-mr10",
+     "code": "MR10",
+     "name": "City Centre High-Rise Apartment Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for high-density high-rise apartment buildings in City Centre, typically in tower form, with optional accessory uses such as commercial, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "formerly": "RMC-150",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=242",
+     "ref": "Part 27"
+    },
+    {
+     "id": "zd-surrey-mr10-c",
+     "code": "MR10-C",
+     "name": "City Centre High-Rise Apartment with Commercial Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for high-density high-rise mixed-use apartment buildings in City Centre, typically in tower form, with required ground floor commercial, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=246",
+     "ref": "Part 27A"
+    },
+    {
+     "id": "zd-surrey-rms-1",
+     "code": "RMS-1",
+     "name": "Special Care Housing 1 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for outside Town Centres (see Schedule D), the development of care facilities, which may be subject to the Community Care and Assisted Living Act, as amended."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=254",
+     "ref": "Part 28"
+    },
+    {
+     "id": "zd-surrey-rms-1a",
+     "code": "RMS-1A",
+     "name": "Special Care Housing 1A Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for alcohol and drug recovery houses and single family dwellings."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=256",
+     "ref": "Part 28A"
+    },
+    {
+     "id": "zd-surrey-rms-2",
+     "code": "RMS-2",
+     "name": "Special Care Housing 2 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for the development within Town Centres (see Schedule D), of care facilities, which may be subject to the Community Care and Assisted Living Act, as amended."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=259",
+     "ref": "Part 29"
+    },
+    {
+     "id": "zd-surrey-r5-s",
+     "code": "R5-S",
+     "name": "Special Compact Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for small-scale multi-unit housing on compact and typically rear lane accessed lots 291 m² or larger, which may accommodate 2 to 6 dwelling units, with optional limited commercial accessory uses."
+      ]
+     ],
+     "formerly": "RF-10S, RF-9S",
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=172",
+     "ref": "Part 17A"
+    },
+    {
+     "id": "zd-surrey-pc",
+     "code": "PC",
+     "name": "Cemetery Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended to accommodate cemeteries and related uses, subject to the Cemetery and Funeral Services Act, as amended."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=261",
+     "ref": "Part 30"
+    },
+    {
+     "id": "zd-surrey-pa-1",
+     "code": "PA-1",
+     "name": "Assembly Hall 1 Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for neighbourhood-scale assembly halls, including places of worship, private schools and child care centres."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=263",
+     "ref": "Part 31"
+    },
+    {
+     "id": "zd-surrey-pa-2",
+     "code": "PA-2",
+     "name": "Assembly Hall 2 Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for regional-scale assembly halls, including places of worship, private schools and child care centres."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=266",
+     "ref": "Part 32"
+    },
+    {
+     "id": "zd-surrey-pi",
+     "code": "PI",
+     "name": "Institutional Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended to accommodate public and private hospitals and public and private universities and colleges."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=268",
+     "ref": "Part 33"
+    },
+    {
+     "id": "zd-surrey-c-4",
+     "code": "C-4",
+     "name": "Local Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for local small scale commercial developments."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=270",
+     "ref": "Part 34"
+    },
+    {
+     "id": "zd-surrey-c-5",
+     "code": "C-5",
+     "name": "Neighbourhood Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for neighbourhood scale shopping nodes."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=272",
+     "ref": "Part 35"
+    },
+    {
+     "id": "zd-surrey-c-8",
+     "code": "C-8",
+     "name": "Community Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for community shopping centres serving a community of several neighbourhoods."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=275",
+     "ref": "Part 36"
+    },
+    {
+     "id": "zd-surrey-c-8a",
+     "code": "C-8A",
+     "name": "Community Commercial A Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for community shopping areas."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=278",
+     "ref": "Part 36A"
+    },
+    {
+     "id": "zd-surrey-c-8b",
+     "code": "C-8B",
+     "name": "Community Commercial B Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for community shopping areas."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=280",
+     "ref": "Part 36B"
+    },
+    {
+     "id": "zd-surrey-c-15",
+     "code": "C-15",
+     "name": "Town Centre Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for retail and service commercial facilities, offices, recreation and associated uses as well as residential uses developed in a comprehensive manner, serving a town of several communities."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=283",
+     "ref": "Part 37"
+    },
+    {
+     "id": "zd-surrey-c-35",
+     "code": "C-35",
+     "name": "Downtown Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for comprehensive commercial projects of retail, office, service, recreational and residential uses in City Centre."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=286",
+     "ref": "Part 38"
+    },
+    {
+     "id": "zd-surrey-chi",
+     "code": "CHI",
+     "name": "Highway Commercial Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for those commercial and related uses requiring large lots and exposure to major highways, which generally are not accommodated in shopping centre, Town Centre or City Centre (Schedule D) developments."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=289",
+     "ref": "Part 39"
+    },
+    {
+     "id": "zd-surrey-cg-1",
+     "code": "CG-1",
+     "name": "Self-Service Gasoline Station Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for self-service gasoline stations and accessory uses."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=294",
+     "ref": "Part 40"
+    },
+    {
+     "id": "zd-surrey-cg-2",
+     "code": "CG-2",
+     "name": "Combined Service Gasoline Station Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for full-service gasoline stations or combined full-service and self-service gasoline stations and accessory uses including convenience store and automotive repair."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=297",
+     "ref": "Part 41"
+    },
+    {
+     "id": "zd-surrey-cta",
+     "code": "CTA",
+     "name": "Tourist Accommodation Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for tourist accommodation, tourist trailer parks and camp-sites and shall apply in conjunction with the Surrey Mobile Home and Trailer Regulations and Control By-law, as amended."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=300",
+     "ref": "Part 42"
+    },
+    {
+     "id": "zd-surrey-ccr",
+     "code": "CCR",
+     "name": "Child Care Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for large child care centres within a single family dwelling."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=303",
+     "ref": "Part 43"
+    },
+    {
+     "id": "zd-surrey-cpr",
+     "code": "CPR",
+     "name": "Commercial Recreation Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for commercial recreational uses."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=305",
+     "ref": "Part 44"
+    },
+    {
+     "id": "zd-surrey-cpg",
+     "code": "CPG",
+     "name": "Golf Course Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for golf courses as recreational commercial developments."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=308",
+     "ref": "Part 45"
+    },
+    {
+     "id": "zd-surrey-cpm",
+     "code": "CPM",
+     "name": "Marina Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for marinas and associated uses as recreational commercial developments."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=310",
+     "ref": "Part 46"
+    },
+    {
+     "id": "zd-surrey-ib",
+     "code": "IB",
+     "name": "Business Park Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for the comprehensive design of industrial business parks."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=312",
+     "ref": "Part 47"
+    },
+    {
+     "id": "zd-surrey-ib-1",
+     "code": "IB-1",
+     "name": "Business Park 1 Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended to permit development of industrial business parks with a high standard of design forming part of a comprehensive design."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=316",
+     "ref": "Part 47A"
+    },
+    {
+     "id": "zd-surrey-ib-2",
+     "code": "IB-2",
+     "name": "Business Park 2 Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for industrial business park uses that are generally compatible with one another and with adjoining zones and with a high standard of design."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=320",
+     "ref": "Part 47B"
+    },
+    {
+     "id": "zd-surrey-ib-3",
+     "code": "IB-3",
+     "name": "Business Park 3 Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for the comprehensive design of industrial business parks."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=324",
+     "ref": "Part 47C"
+    },
+    {
+     "id": "zd-surrey-il",
+     "code": "IL",
+     "name": "Light Impact Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for light impact industry, transportation industry, warehouses, distribution centres and limited office and service uses."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=329",
+     "ref": "Part 48"
+    },
+    {
+     "id": "zd-surrey-il-1",
+     "code": "IL-1",
+     "name": "Light Impact Industrial 1 Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for light impact industry and limited office and service uses with a high standard of design."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=334",
+     "ref": "Part 48A"
+    },
+    {
+     "id": "zd-surrey-ih",
+     "code": "IH",
+     "name": "High Impact Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for all industrial uses, including high impact industry and incidental sales activities."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=339",
+     "ref": "Part 49"
+    },
+    {
+     "id": "zd-surrey-ia",
+     "code": "IA",
+     "name": "Agro-Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for industries which process agricultural products or provide services to agriculture."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=350",
+     "ref": "Part 51"
+    },
+    {
+     "id": "zd-surrey-cd",
+     "code": "CD",
+     "name": "Comprehensive Development Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Site-specific zones based on a comprehensive plan that conforms to the OCP. Each CD zone is adopted as its own by-law, so check the by-law for the property."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=353",
+     "ref": "Part 52"
+    },
+    {
+     "id": "zd-surrey-mr10-cbd",
+     "code": "MR10-CBD",
+     "name": "Central Business District Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for high-density high-rise commercial, institutional, and office buildings in City Centre within the Central Business District in the OCP, typically in tower form, that are developed in accordance with a comprehensive design. Residential uses will be permitted only when minimum commercial, institutional, or office use requirements are met."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=250",
+     "ref": "Part 27B"
+    },
+    {
+     "id": "zd-surrey-o1",
+     "code": "O1",
+     "name": "Office Employment Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for low-rise, mid-rise, or high-rise office, institutional, or employment buildings, with many heights between 4 and 40 storeys, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=343",
+     "ref": "Part 50"
+    },
+    {
+     "id": "zd-surrey-o2",
+     "code": "O2",
+     "name": "City Centre Office Employment Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for high-density mid-rise to high-rise office, institutional, or employment buildings with optional lower level commercial, inside City Centre, typically in tower form, that are developed in accordance with a comprehensive design."
+      ]
+     ],
+     "href": "https://www.surrey.ca/sites/default/files/bylaws/BYL_Zoning_12000.pdf#page=347",
+     "ref": "Part 50A"
+    }
+   ]
+  },
+  {
+   "id": "zd-delta",
+   "name": "Delta",
+   "bylaw": "Delta Zoning Bylaw No. 7600, 2017",
+   "source": "Source: Consolidated PDF (to April 21, 2026). All standard zones.",
+   "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf",
+   "zones": [
+    {
+     "id": "zd-delta-a1",
+     "code": "A1",
+     "name": "Agriculture Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Purpose",
+       "Farming, breeding pets, kennels and related uses."
+      ],
+      [
+       "Homes",
+       "One farm house per lot, up to 500 m² total residential floor area, which may contain one secondary suite. One accessory farm dwelling unit: up to 90 m² on lots of 40 ha or less, 186 m² on larger lots. An additional farm house needs an agrologist report and ALC approval."
+      ],
+      [
+       "Farm home plate",
+       "Up to 3,600 m², no deeper than 60 m."
+      ],
+      [
+       "Subdivision",
+       "Only as allowed by the OCP and the ALC; where permitted, minimum 8 ha (about 19.8 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=121",
+     "ref": "s.10.10"
+    },
+    {
+     "id": "zd-delta-a2",
+     "code": "A2",
+     "name": "Golf Course and Agriculture Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Purpose",
+       "Golf courses in addition to farming, breeding pets, kennels and related uses."
+      ],
+      [
+       "Min. lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=134",
+     "ref": "s.10.20"
+    },
+    {
+     "id": "zd-delta-a3",
+     "code": "A3",
+     "name": "Urban Interface Agriculture Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Purpose",
+       "Soil-based farming and related uses."
+      ],
+      [
+       "Homes",
+       "One farm house; farm home plate up to 3,600 m² and 60 m deep."
+      ],
+      [
+       "Subdivision",
+       "Not permitted in this zone."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=136",
+     "ref": "s.10.30"
+    },
+    {
+     "id": "zd-delta-rs1",
+     "code": "RS1",
+     "name": "Single Detached Residential 1 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached housing in lower density residential areas."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=139",
+     "ref": "s.11.10"
+    },
+    {
+     "id": "zd-delta-rs2",
+     "code": "RS2",
+     "name": "Single Detached Residential 2 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached housing and limited nursery and crop and animal raising uses in lower density residential areas."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=141",
+     "ref": "s.11.20"
+    },
+    {
+     "id": "zd-delta-rs3",
+     "code": "RS3",
+     "name": "Single Detached Residential 3 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached housing on small lots in the vicinity of Georgia Strait."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=144",
+     "ref": "s.11.30"
+    },
+    {
+     "id": "zd-delta-rs4",
+     "code": "RS4",
+     "name": "Single Detached Residential 4 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached housing on lots at least 610 m² in area."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=146",
+     "ref": "s.11.40"
+    },
+    {
+     "id": "zd-delta-rs4a",
+     "code": "RS4A",
+     "name": "Single Detached Residential 4A Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached housing of a smaller size on lots at least 610 m² in area."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=148",
+     "ref": "s.11.41"
+    },
+    {
+     "id": "zd-delta-rs5",
+     "code": "RS5",
+     "name": "Single Detached Residential 5 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached housing on lots at least 460 m² in area."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=150",
+     "ref": "s.11.50"
+    },
+    {
+     "id": "zd-delta-rs6",
+     "code": "RS6",
+     "name": "Single Detached Residential 6 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached housing on lots at least 390 m² in area."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=152",
+     "ref": "s.11.60"
+    },
+    {
+     "id": "zd-delta-rs7",
+     "code": "RS7",
+     "name": "Single Detached Residential 7 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached housing on lots at least 335 m² in area."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=154",
+     "ref": "s.11.70"
+    },
+    {
+     "id": "zd-delta-rsc",
+     "code": "RSC",
+     "name": "Single Detached Residential Coach House Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "This zone is a legacy zone and is not intended for new development."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=156",
+     "ref": "s.11.80"
+    },
+    {
+     "id": "zd-delta-rsf",
+     "code": "RSF",
+     "name": "Single Detached Residential Floating Home Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for floating homes."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=160",
+     "ref": "s.11.90"
+    },
+    {
+     "id": "zd-delta-rd1",
+     "code": "RD1",
+     "name": "Duplex/Single Detached Residential 1 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for duplex and single detached housing on larger lots."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=163",
+     "ref": "s.12.10"
+    },
+    {
+     "id": "zd-delta-rd2",
+     "code": "RD2",
+     "name": "Duplex/Single Detached Residential 2 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for duplex and single detached housing on waterfront lots in Beach Grove, developed in a manner which complements the area and preserves waterfront views for these lots."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=166",
+     "ref": "s.12.20"
+    },
+    {
+     "id": "zd-delta-rd3",
+     "code": "RD3",
+     "name": "Duplex/Single Detached Residential 3 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for single detached housing, and on larger lots, duplex housing."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=169",
+     "ref": "s.12.30"
+    },
+    {
+     "id": "zd-delta-rd4",
+     "code": "RD4",
+     "name": "Infill Duplex Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for infill duplex housing on smaller duplex lots."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=172",
+     "ref": "s.12.40"
+    },
+    {
+     "id": "zd-delta-rh40",
+     "code": "RH40",
+     "name": "Strata House Residential 40 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for strata house developments which are similar in appearance to single detached housing."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=175",
+     "ref": "s.13.10"
+    },
+    {
+     "id": "zd-delta-rt40",
+     "code": "RT40",
+     "name": "Townhouse Residential 40 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for townhouse developments at a maximum density of 40 units per hectare."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=178",
+     "ref": "s.13.20"
+    },
+    {
+     "id": "zd-delta-rt50",
+     "code": "RT50",
+     "name": "Townhouse Residential 50 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for townhouses or a combination of townhouses and low rise apartment buildings developed at a maximum density of 50 units per hectare."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=180",
+     "ref": "s.13.21"
+    },
+    {
+     "id": "zd-delta-rt62",
+     "code": "RT62",
+     "name": "Townhouse Residential 62 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for townhouse developments at a maximum density of 62 units per hectare."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=182",
+     "ref": "s.13.22"
+    },
+    {
+     "id": "zd-delta-rt76",
+     "code": "RT76",
+     "name": "Townhouse Residential 76 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for townhouse developments at a maximum density of 76 units per hectare."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=184",
+     "ref": "s.13.24"
+    },
+    {
+     "id": "zd-delta-th-2",
+     "code": "TH-2",
+     "name": "Townhouse Residential 2 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Principal use",
+       "Townhouse."
+      ],
+      [
+       "Lot coverage",
+       "Up to 45%."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=186",
+     "ref": "s.13.26"
+    },
+    {
+     "id": "zd-delta-ra20",
+     "code": "RA20",
+     "name": "Apartment Residential 20 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for low rise apartment developments at a maximum density of 20 units per hectare."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=188",
+     "ref": "s.13.30"
+    },
+    {
+     "id": "zd-delta-ra112",
+     "code": "RA112",
+     "name": "Apartment Residential 112 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for low-rise apartment developments at a maximum density of 112 units per hectare."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=190",
+     "ref": "s.13.32"
+    },
+    {
+     "id": "zd-delta-ra120",
+     "code": "RA120",
+     "name": "Apartment Residential 120 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for low rise apartment developments at a maximum density of 120 units per hectare."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=192",
+     "ref": "s.13.33"
+    },
+    {
+     "id": "zd-delta-ra180r",
+     "code": "RA180R",
+     "name": "Apartment Townhouse Residential 180 Rental Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for low to mid rise apartment and townhouse developments limited to rental residential tenure, at a maximum density of 180 units per hectare."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=195",
+     "ref": "s.13.45"
+    },
+    {
+     "id": "zd-delta-ra6",
+     "code": "RA6",
+     "name": "Apartment Residential 6 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended for residential developments up to 6 storeys in height along arterial streets and collector streets."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=197",
+     "ref": "s.13.50"
+    },
+    {
+     "id": "zd-delta-mupge",
+     "code": "MUPGE",
+     "name": "Mixed Use Port Guichon East Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Intent",
+       "Intended primarily for residential uses in addition to fish boat and small craft moorage and cottage business, reflecting the area's diverse history and character."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=229",
+     "ref": "s.15.20"
+    },
+    {
+     "id": "zd-delta-c1",
+     "code": "C1",
+     "name": "Core Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for many commercial and service uses in addition to limited residential uses serving a larger community."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=199",
+     "ref": "s.14.10"
+    },
+    {
+     "id": "zd-delta-c1a",
+     "code": "C1A",
+     "name": "Core Commercial A Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for many commercial and service uses in addition to limited residential uses serving a larger community."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=202",
+     "ref": "s.14.11"
+    },
+    {
+     "id": "zd-delta-c1c",
+     "code": "C1C",
+     "name": "Core Commercial Cannabis Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for many commercial uses, including a cannabis dispensary, and service uses in addition to limited residential uses serving a larger community."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=204",
+     "ref": "s.14.12"
+    },
+    {
+     "id": "zd-delta-c2",
+     "code": "C2",
+     "name": "Community Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for a range of commercial and service uses serving a community of several neighbourhoods."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=205",
+     "ref": "s.14.20"
+    },
+    {
+     "id": "zd-delta-c2a",
+     "code": "C2A",
+     "name": "Neighbourhood Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for small scale commercial uses, serving a local neighbourhood in a residential context."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=207",
+     "ref": "s.14.21"
+    },
+    {
+     "id": "zd-delta-c3",
+     "code": "C3",
+     "name": "Tourist Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for hotels, motels and related facilities outside core commercial areas."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=210",
+     "ref": "s.14.30"
+    },
+    {
+     "id": "zd-delta-c4",
+     "code": "C4",
+     "name": "Service Station Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for gas stations and automobile maintenance and repair facilities."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=212",
+     "ref": "s.14.40"
+    },
+    {
+     "id": "zd-delta-c4a",
+     "code": "C4A",
+     "name": "Service Station Commercial A Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for gas stations which may include restaurant services, and automobile maintenance and repair facilities."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=214",
+     "ref": "s.14.41"
+    },
+    {
+     "id": "zd-delta-c4b",
+     "code": "C4B",
+     "name": "Highway Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for highway oriented commercial uses on one described lot."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=216",
+     "ref": "s.14.42"
+    },
+    {
+     "id": "zd-delta-c4c",
+     "code": "C4C",
+     "name": "Car Wash Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for stand-alone car wash facilities."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=218",
+     "ref": "s.14.45"
+    },
+    {
+     "id": "zd-delta-c5",
+     "code": "C5",
+     "name": "Private Recreation Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for a range of indoor and outdoor recreation facilities."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=219",
+     "ref": "s.14.50"
+    },
+    {
+     "id": "zd-delta-c5a",
+     "code": "C5A",
+     "name": "Limited Private Recreation Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for a limited range of indoor recreation facilities and related services."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=220",
+     "ref": "s.14.51"
+    },
+    {
+     "id": "zd-delta-cs1",
+     "code": "CS1",
+     "name": "Service Commercial 1 Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for a range of service commercial uses."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=221",
+     "ref": "s.14.60"
+    },
+    {
+     "id": "zd-delta-cs2",
+     "code": "CS2",
+     "name": "Service Commercial 2 Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for many service commercial uses."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=223",
+     "ref": "s.14.65"
+    },
+    {
+     "id": "zd-delta-mulw",
+     "code": "MULW",
+     "name": "Mixed Use Ladner Waterfront Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for a mix of commercial, service, recreational, and limited residential uses on the Ladner waterfront."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=225",
+     "ref": "s.15.10"
+    },
+    {
+     "id": "zd-delta-mul",
+     "code": "MUL",
+     "name": "Mixed Use Ladner Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for many commercial and service uses in addition to limited residential uses."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=235",
+     "ref": "s.15.30"
+    },
+    {
+     "id": "zd-delta-mu6",
+     "code": "MU6",
+     "name": "Mixed Use Apartment 6 Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for mixed use developments up to 6 storeys in height along arterial streets and collector streets."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=238",
+     "ref": "s.15.40"
+    },
+    {
+     "id": "zd-delta-mu6r",
+     "code": "MU6R",
+     "name": "Mixed Use Apartment 6 Rental Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for mixed use developments, limited to rental residential tenure, up to 6 storeys in height along arterial streets and collector streets."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=241",
+     "ref": "s.15.41"
+    },
+    {
+     "id": "zd-delta-i1",
+     "code": "I1",
+     "name": "Low Impact Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for low impact industrial uses in addition to limited commercial and service commercial uses."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=245",
+     "ref": "s.16.10"
+    },
+    {
+     "id": "zd-delta-i1s",
+     "code": "I1S",
+     "name": "Special Low Impact Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for river and agriculture oriented industrial uses of low impact in addition to limited service commercial uses along the riverfront."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=248",
+     "ref": "s.16.15"
+    },
+    {
+     "id": "zd-delta-i2",
+     "code": "I2",
+     "name": "Medium Impact Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for low to medium impact industrial uses and a limited range of commercial and service commercial uses."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=250",
+     "ref": "s.16.20"
+    },
+    {
+     "id": "zd-delta-i2c",
+     "code": "I2C",
+     "name": "Medium Impact Industrial Cannabis Zone",
+     "type": "Other",
+     "fields": [],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=252",
+     "ref": "s.16.21"
+    },
+    {
+     "id": "zd-delta-i3",
+     "code": "I3",
+     "name": "Extraction Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for sand, gravel and peat extraction and related processing."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=254",
+     "ref": "s.16.30"
+    },
+    {
+     "id": "zd-delta-i4",
+     "code": "I4",
+     "name": "Marine Terminal Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for marine transportation and related uses."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=256",
+     "ref": "s.16.40"
+    },
+    {
+     "id": "zd-delta-i5",
+     "code": "I5",
+     "name": "River Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for limited industrial and recreation uses in the river."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=257",
+     "ref": "s.16.50"
+    },
+    {
+     "id": "zd-delta-i6",
+     "code": "I6",
+     "name": "Waterfront Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for marine oriented industrial and service uses along the waterfront."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=258",
+     "ref": "s.16.60"
+    },
+    {
+     "id": "zd-delta-i7",
+     "code": "I7",
+     "name": "High Impact Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for high impact industrial uses."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=260",
+     "ref": "s.16.70"
+    },
+    {
+     "id": "zd-delta-i8",
+     "code": "I8",
+     "name": "Airport Terminal Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for airport and aviation related uses and business park uses."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=261",
+     "ref": "s.16.80"
+    },
+    {
+     "id": "zd-delta-hc",
+     "code": "HC",
+     "name": "Health Care Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for community care and mental health facilities in addition to hospitals."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=265",
+     "ref": "s.17.10"
+    },
+    {
+     "id": "zd-delta-hs",
+     "code": "HS",
+     "name": "Health Care Services Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for health care services in addition to general office uses."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=267",
+     "ref": "s.17.50"
+    },
+    {
+     "id": "zd-delta-p",
+     "code": "P",
+     "name": "Public Use Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for public facilities and uses, including assembly, public services, and community services."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=269",
+     "ref": "s.18.10"
+    },
+    {
+     "id": "zd-delta-p1b",
+     "code": "P1B",
+     "name": "Community Service Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for public facilities, parks and facilities providing instruction in languages and the arts."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=272",
+     "ref": "s.18.12"
+    },
+    {
+     "id": "zd-delta-p2",
+     "code": "P2",
+     "name": "Public Sanitary Landfill Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for public sanitary landfills and waste facilities."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=273",
+     "ref": "s.18.20"
+    },
+    {
+     "id": "zd-delta-pr",
+     "code": "PR",
+     "name": "Public Parks and Recreation Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for park, recreation and cultural facilities in addition to restaurant services."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=274",
+     "ref": "s.18.30"
+    },
+    {
+     "id": "zd-delta-pf1",
+     "code": "PF1",
+     "name": "Funeral Home 1 Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for a funeral home and related services on one described lot."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=276",
+     "ref": "s.18.35"
+    },
+    {
+     "id": "zd-delta-fs",
+     "code": "FS",
+     "name": "Foreshore Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Intended for limited recreation uses in the water, in addition to boat moorage."
+      ]
+     ],
+     "href": "https://delta.civicweb.net/filepro/document/177229/7600%20-%20Delta%20Zoning%20Bylaw.pdf#page=278",
+     "ref": "s.18.40"
+    }
+   ]
+  },
+  {
+   "id": "zd-chilliwack",
+   "name": "Chilliwack",
+   "bylaw": "City of Chilliwack Zoning Bylaw 2020, No. 5000",
+   "source": "Source: Consolidated PDF on chilliwack.com (updated Sept 2, 2026). Agricultural and rural zones only.",
+   "href": "https://www.chilliwack.com/main/page.cfm?id=377",
+   "zones": [
+    {
+     "id": "zd-chilliwack-al",
+     "code": "AL",
+     "name": "Agricultural Lowland Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Conditional and general agriculture, single detached dwelling, manufactured home. Ancillary uses include an accessory dwelling unit and farm retail sales."
+      ],
+      [
+       "Homes",
+       "No more than 1 principal residential structure per lot."
+      ],
+      [
+       "Min. new lot",
+       "7.5 ha (about 18.5 acres) where excluded or exempt from the ALR or approved for ALR subdivision; smaller lots only by boundary adjustment or homesite severance as set out in the bylaw."
+      ],
+      [
+       "Farm home plate",
+       "Up to 4,000 m² for the principal residential use and 1,000 m² for an additional residential use."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=78",
+     "ref": "s.6.01"
+    },
+    {
+     "id": "zd-chilliwack-au",
+     "code": "AU",
+     "name": "Agricultural Upland Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Same uses as AL."
+      ],
+      [
+       "Min. new lot",
+       "Same rules as AL."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=81",
+     "ref": "s.6.02"
+    },
+    {
+     "id": "zd-chilliwack-as",
+     "code": "AS",
+     "name": "Agricultural Small Lot Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Conditional and general agriculture, single detached dwelling, manufactured home."
+      ],
+      [
+       "Min. new lot",
+       "2 ha (about 4.9 acres) if approved for ALR subdivision; 1 ha by boundary adjustment."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=83",
+     "ref": "s.6.03"
+    },
+    {
+     "id": "zd-chilliwack-ar",
+     "code": "AR",
+     "name": "Agricultural Residential Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "AL uses plus restricted agriculture; general agriculture only on lots in the ALR."
+      ],
+      [
+       "Min. new lot",
+       "0.2 ha with community water; otherwise 1 ha (about 2.5 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=86",
+     "ref": "s.6.04"
+    },
+    {
+     "id": "zd-chilliwack-ac",
+     "code": "AC",
+     "name": "Agricultural Commercial Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Agriculture plus commercial agriculture and large animal veterinary use."
+      ],
+      [
+       "Min. new lot",
+       "2 ha (about 4.9 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=89",
+     "ref": "s.6.05"
+    },
+    {
+     "id": "zd-chilliwack-afp",
+     "code": "AFP",
+     "name": "Agricultural Food Processing Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Food processing, general agriculture, warehousing."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=92",
+     "ref": "s.6.06"
+    },
+    {
+     "id": "zd-chilliwack-r",
+     "code": "R",
+     "name": "Rural Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Main uses",
+       "Conditional and restricted agriculture, single detached dwelling, manufactured home."
+      ],
+      [
+       "Min. new lot",
+       "4 ha (about 9.9 acres); 1 ha by boundary adjustment."
+      ]
+     ],
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=94",
+     "ref": "s.7.01"
+    },
+    {
+     "id": "zd-chilliwack-rh",
+     "code": "RH",
+     "name": "Rural Hillside Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Main uses",
+       "Conditional and general agriculture, single detached dwelling, manufactured home."
+      ],
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ]
+     ],
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=96",
+     "ref": "s.7.02"
+    },
+    {
+     "id": "zd-chilliwack-rr",
+     "code": "RR",
+     "name": "Rural Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Main uses",
+       "Restricted and conditional agriculture, single detached dwelling, manufactured home."
+      ],
+      [
+       "Min. new lot",
+       "1 ha (about 2.5 acres)."
+      ]
+     ],
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=98",
+     "ref": "s.7.03"
+    },
+    {
+     "id": "zd-chilliwack-hr",
+     "code": "HR",
+     "name": "Hillside Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Main uses",
+       "Single detached dwelling or manufactured home."
+      ],
+      [
+       "Min. new lot",
+       "0.2 ha with community water; otherwise 0.4 ha (about 1 acre)."
+      ]
+     ],
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=100",
+     "ref": "s.7.04"
+    },
+    {
+     "id": "zd-chilliwack-sr",
+     "code": "SR",
+     "name": "Suburban Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Main uses",
+       "Single detached dwelling or manufactured home."
+      ],
+      [
+       "Min. new lot",
+       "650 m² with water and sewer; 0.2 ha with community water; otherwise 1 ha."
+      ]
+     ],
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=102",
+     "ref": "s.7.05"
+    },
+    {
+     "id": "zd-chilliwack-scr",
+     "code": "SCR",
+     "name": "Suburban Clustered Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Main uses",
+       "Single detached dwelling, duplex, townhouse, manufactured home."
+      ]
+     ],
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=104",
+     "ref": "s.7.06"
+    },
+    {
+     "id": "zd-chilliwack-shr",
+     "code": "SHR",
+     "name": "Suburban Hillside Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Main uses",
+       "Single detached dwelling."
+      ]
+     ],
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=106",
+     "ref": "s.7.07"
+    },
+    {
+     "id": "zd-chilliwack-ev",
+     "code": "EV",
+     "name": "Ecovillage Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Main uses",
+       "Single detached dwelling, duplex, townhouse and restricted agriculture, plus community uses such as child care, school and convenience commercial. Up to 37 dwelling units in total."
+      ]
+     ],
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=108",
+     "ref": "s.7.08"
+    },
+    {
+     "id": "zd-chilliwack-rnc",
+     "code": "RNC",
+     "name": "Rural Neighbourhood Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Commercial agriculture and convenience commercial."
+      ]
+     ],
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=111",
+     "ref": "s.7.09"
+    }
+   ]
+  },
+  {
+   "id": "zd-mapleridge",
+   "name": "Maple Ridge",
+   "bylaw": "Maple Ridge Zoning Bylaw No. 7600-2019",
+   "source": "Source: Consolidated PDF (to July 28, 2026). Agricultural and rural residential zones only.",
+   "href": "https://www.mapleridge.ca/build-do-business/community-planning/zoning-bylaw",
+   "zones": [
+    {
+     "id": "zd-mapleridge-a-1",
+     "code": "A-1",
+     "name": "Small Holding Agricultural Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Agricultural, forest resource, commercial cannabis production, single detached residential. Commercial kennel only on lots of 4.0 ha or more."
+      ],
+      [
+       "Min. lot",
+       "2 ha (about 4.9 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=107",
+     "ref": "s.501"
+    },
+    {
+     "id": "zd-mapleridge-a-2",
+     "code": "A-2",
+     "name": "Upland Agricultural Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Agricultural and forest resource uses, single detached residential; also limited outdoor paintball or laser tag."
+      ],
+      [
+       "Min. lot",
+       "4 ha (about 9.9 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=111",
+     "ref": "s.502"
+    },
+    {
+     "id": "zd-mapleridge-a-3",
+     "code": "A-3",
+     "name": "Extensive Agricultural Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Extensive agricultural and forest resource uses."
+      ],
+      [
+       "Min. lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=115",
+     "ref": "s.503"
+    },
+    {
+     "id": "zd-mapleridge-a-4",
+     "code": "A-4",
+     "name": "Intensive Greenhouse Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Purpose",
+       "Intensive cultivation of crops in greenhouse structures."
+      ],
+      [
+       "Min. lot",
+       "1.8 ha (about 4.4 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=119",
+     "ref": "s.504"
+    },
+    {
+     "id": "zd-mapleridge-a-5",
+     "code": "A-5",
+     "name": "Agricultural Only Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Purpose",
+       "Intensive agricultural use with limited buildings and structures. Residential is not a principal use."
+      ],
+      [
+       "Min. lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=123",
+     "ref": "s.505"
+    },
+    {
+     "id": "zd-mapleridge-rs-2",
+     "code": "RS-2",
+     "name": "Single Detached Suburban Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Purpose",
+       "Agricultural and suburban single detached residential uses outside the urban area boundary."
+      ]
+     ],
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=145",
+     "ref": "s.610"
+    },
+    {
+     "id": "zd-mapleridge-rs-3",
+     "code": "RS-3",
+     "name": "Single Detached Rural Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Purpose",
+       "Agricultural and rural single detached residential uses outside the urban area boundary."
+      ],
+      [
+       "Min. lot",
+       "0.8 ha (about 2 acres) with community water; 2.0 ha without."
+      ]
+     ],
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=151",
+     "ref": "s.611"
+    }
+   ]
+  },
+  {
+   "id": "zd-mission",
+   "name": "Mission",
+   "bylaw": "District of Mission Zoning Bylaw 5949-2020",
+   "source": "Source: Consolidated PDF (updated Sept 23, 2026). Agricultural and rural zones only.",
+   "href": "https://www.mission.ca/council-government/bylaws-policies/zoning-bylaw",
+   "zones": [
+    {
+     "id": "zd-mission-a80",
+     "code": "A80",
+     "name": "Agriculture 80 Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Purpose",
+       "Agriculture, agri-tourism and related activities under the ALC Act, on lots designated Agriculture."
+      ],
+      [
+       "Homes",
+       "One single family dwelling or one manufactured home, plus one secondary suite or one secondary detached unit (coach house, garden cottage or manufactured home). House size follows the ALC Act."
+      ],
+      [
+       "Min. lot",
+       "8.0 ha (about 19.8 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=284",
+     "ref": "s.1701"
+    },
+    {
+     "id": "zd-mission-a36",
+     "code": "A36",
+     "name": "Agriculture 36 Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Same as A80."
+      ],
+      [
+       "Min. lot",
+       "3.6 ha (about 8.9 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=284",
+     "ref": "s.1701"
+    },
+    {
+     "id": "zd-mission-a16",
+     "code": "A16",
+     "name": "Agriculture 16 Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Same as A80."
+      ],
+      [
+       "Min. lot",
+       "1.6 ha (about 4 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=284",
+     "ref": "s.1701"
+    },
+    {
+     "id": "zd-mission-ru80",
+     "code": "RU80",
+     "name": "Rural 80 Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Purpose",
+       "One single family dwelling or manufactured home with a range of agricultural uses, on land designated Rural."
+      ],
+      [
+       "Extra homes",
+       "A secondary family dwelling may be allowed by covenant on lots of 1.6 ha or more."
+      ],
+      [
+       "Min. lot",
+       "8 ha (about 19.8 acres)."
+      ]
+     ],
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=219",
+     "ref": "s.1201"
+    },
+    {
+     "id": "zd-mission-ru36",
+     "code": "RU36",
+     "name": "Rural 36 Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Main uses",
+       "Same as RU80."
+      ],
+      [
+       "Min. lot",
+       "3.6 ha (about 8.9 acres)."
+      ]
+     ],
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=219",
+     "ref": "s.1201"
+    },
+    {
+     "id": "zd-mission-ru16",
+     "code": "RU16",
+     "name": "Rural 16 Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Main uses",
+       "Same as RU80."
+      ],
+      [
+       "Min. lot",
+       "1.6 ha (about 4 acres)."
+      ]
+     ],
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=219",
+     "ref": "s.1201"
+    },
+    {
+     "id": "zd-mission-ru80s",
+     "code": "RU80s",
+     "name": "Rural 80 Secondary Dwelling Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Purpose",
+       "A single family dwelling with a secondary detached unit, plus agricultural uses. RU36s and RU16s follow the same pattern."
+      ]
+     ],
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=223",
+     "ref": "s.1202"
+    },
+    {
+     "id": "zd-mission-rr7",
+     "code": "RR7",
+     "name": "Rural Residential 7 Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Purpose",
+       "One single family dwelling on a lot designated Rural Residential."
+      ],
+      [
+       "Agriculture",
+       "Minor agriculture on lots of 0.36 ha or more."
+      ],
+      [
+       "Min. lot",
+       "0.7 ha (about 1.73 acres)."
+      ]
+     ],
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=213",
+     "ref": "s.1101"
+    },
+    {
+     "id": "zd-mission-rr7s",
+     "code": "RR7s",
+     "name": "Rural Residential 7 Secondary Dwelling Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Purpose",
+       "One duplex, or one single family dwelling with a secondary detached unit."
+      ]
+     ],
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=215",
+     "ref": "s.1102"
+    }
+   ]
+  }
+ ],
+ "alr": {
+  "paras": [
+   "The Agricultural Land Reserve (ALR) is provincial. On ALR land, Agricultural Land Commission (ALC) rules apply in addition to municipal zoning, and local governments can add further restrictions.",
+   "Generally one residence is allowed per parcel. The principal residence can be up to 500 m² in total floor area, with no more than 1,000 m² of fill placed for its construction.",
+   "A secondary suite is allowed only inside the principal residence, and only if local bylaws allow it.",
+   "One additional detached residence may be allowed without an ALC application if only one residence exists when construction starts: up to 90 m² on parcels of 40 ha or less, or up to 186 m² on parcels over 40 ha. It does not need to be for farm help. Local zoning may still limit it.",
+   "Most subdivision of ALR land needs ALC approval, including parcels under 2 acres."
+  ],
+  "links": [
+   {
+    "t": "Check the ALR map",
+    "h": "https://www.alc.gov.bc.ca/alr-maps/"
+   },
+   {
+    "t": "ALC: housing in the ALR",
+    "h": "https://www.alc.gov.bc.ca/use-of-alr-land/housing-in-the-alr/"
+   },
+   {
+    "t": "ALC: subdivision",
+    "h": "https://www.alc.gov.bc.ca/use-of-alr-land/subdivision-in-the-alr/"
+   }
+  ],
+  "source": "Source: Agricultural Land Commission, checked October 2, 2026."
+ },
+ "checks": [
+  {
+   "k": "ALR status",
+   "d": [
+    {
+     "t": "Check the"
+    },
+    {
+     "t": "ALC's ALR map",
+     "h": "https://www.alc.gov.bc.ca/alr-maps/"
+    },
+    {
+     "t": ", then confirm with the municipality."
+    }
+   ]
+  },
+  {
+   "k": "The zone and its minimum lot size",
+   "d": [
+    {
+     "t": "Don't assume a property can be subdivided. Check the minimum lot size, and on ALR land, ALC approval."
+    }
+   ]
+  },
+  {
+   "k": "How many homes are allowed",
+   "d": [
+    {
+     "t": "Zoning and ALC rules both limit homes, suites and coach houses."
+    }
+   ]
+  },
+  {
+   "k": "Septic",
+   "d": [
+    {
+     "t": "Ask for septic records and have the system inspected. Septic rules come from the health authority."
+    }
+   ]
+  },
+  {
+   "k": "Water",
+   "d": [
+    {
+     "t": "Find out whether it's a well or municipal water. For a well, ask about yield, water quality and any water licence."
+    }
+   ]
+  },
+  {
+   "k": "Farm class and animals",
+   "d": [
+    {
+     "t": "Ask BC Assessment whether the property has farm class. If you plan to keep livestock or poultry, ask about BC's Premises ID program."
+    }
+   ]
+  }
+ ],
+ "related": [
+  {
+   "t": "A1 zoning in BC: what it means for buyers",
+   "h": "/blog.html/a1-zoning-in-bc-what-it-means-for-buyers-jared-gibbons-8957123"
+  },
+  {
+   "t": "Guide to buying land in BC's ALR",
+   "h": "/blog.html/guide-to-buying-land-in-bcs-alr-realtor-jared-gibbons-8864007"
+  },
+  {
+   "t": "Buying an acreage in Langley",
+   "h": "/blog.html/buying-acreage-in-langley-alr-rural-plan-well-rules-9171874"
+  },
+  {
+   "t": "Municipal land use plans",
+   "h": "/land-use-plans.html"
+  },
+  {
+   "t": "Langley acreages for sale",
+   "h": "/langley-acreages-for-sale.html"
+  },
+  {
+   "t": "Langley farms and agricultural land",
+   "h": "/langley-farms-for-sale-acreages-agricultural-land-mls.html"
+  },
+  {
+   "t": "Fraser Valley acreages for sale",
+   "h": "/fraser-valley-acreages-for-sale.html"
+  },
+  {
+   "t": "Abbotsford farms",
+   "h": "/abbotsford-farms.html"
+  },
+  {
+   "t": "Surrey farms",
+   "h": "/surrey-farms.html"
+  },
+  {
+   "t": "Ladner (Delta) farms",
+   "h": "/ladner-farms.html"
+  },
+  {
+   "t": "Langley farms",
+   "h": "/langley-farms.html"
+  },
+  {
+   "t": "Chilliwack farms",
+   "h": "/chilliwack-farms.html"
+  },
+  {
+   "t": "Maple Ridge farms",
+   "h": "/maple-ridge-farms.html"
+  },
+  {
+   "t": "Mission farms",
+   "h": "/mission-farms.html"
+  }
+ ],
+ "disclaimer": "This directory is a general summary prepared from each municipality's published zoning bylaw and the Agricultural Land Commission's website, checked October 2, 2026. Bylaws are amended often, site-specific zones and covenants may apply, and summaries leave out many regulations (setbacks, density, parking, floodplain and development permit requirements, among others). It is not legal, planning or survey advice. Always confirm zoning, permitted uses, lot size and ALR status directly with the municipality and the ALC before you buy, sell or build. City of Langley and Pitt Meadows are not covered here."
+}

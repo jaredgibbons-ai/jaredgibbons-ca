@@ -2,6 +2,8 @@
 // Generic archive-driven pages. Bespoke pages (index, fort-langley, reviews) are explicit files and win.
 import GenericPage from '../components/GenericPage.astro';
 import DesignedPage from '../components/DesignedPage.astro';
+import ZoningPage from '../components/ZoningPage.astro';   // the zoning directory has its own layout (D-268)
+import ZLOCAL from '../data/local/zonings.json';
 import SEO_OVERRIDES from '../data/seo-overrides.json';
 import SEO_FINAL from '../data/seo-final.json';
 import PLS from '../data/post-listing-seo.json';
@@ -83,4 +85,4 @@ const { page } = Astro.props as { page: any };
 const designedMods = import.meta.glob('../data/designed/*.json', { eager: true, import: 'default' }) as Record<string, any>;
 const designed = Object.entries(designedMods).find(([f]) => f.endsWith(`/${page.slug}.json`))?.[1];
 ---
-{designed ? <DesignedPage page={page} d={designed} /> : <GenericPage page={page} />}
+{page.slug === 'zonings' ? <ZoningPage page={page} faq={(ZLOCAL as any).faq.filter((f: any) => f.gen === 'muse')} /> : designed ? <DesignedPage page={page} d={designed} /> : <GenericPage page={page} />}
