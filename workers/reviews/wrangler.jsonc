@@ -10,7 +10,9 @@
   "kv_namespaces": [{ "binding": "REVIEWS_KV" }],
   "vars": {
     // The Google account also manages Pet Care by Gina, so pick Jared's profile: a location id (locations/<id>) or part of its title.
-    "GBP_LOCATION": "Jared Gibbons"
+    "GBP_LOCATION": "Jared Gibbons",
+    // Reviews Jared says are fake and must not be shown: "initials|YYYY-MM-DD" (UTC), comma-separated (D-284).
+    "REVIEW_EXCLUDE": "Q.A.|2019-05-28"
   },
   "observability": { "enabled": true }
 }
