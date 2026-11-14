@@ -369,3 +369,15 @@ test('market stats chart and report sign-up, Nov-Dec event posts, more floor pla
   const media = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/listing-media.json'), 'utf8'));
   assert.ok(Object.values(media).filter((v) => v && v.floorplan).length >= 56, 'floor plans missing');
 });
+
+test('D-282: condo building pages build, carry facts, and only wired searches show a listings box', () => {
+  for (const s of ['soleil-white-rock-condos', 'semiah-white-rock-condos', 'morgan-crossing-south-surrey-condos', 'halvo-south-surrey-condos']) {
+    const h = html(`${s}.html`);
+    assert.ok(/at a glance/.test(h), `${s}: facts table missing`);
+    assert.ok(!/<h1[^>]*>[^<]*(#1|Top 1%|Medallion)/.test(h), `${s}: ranking in H1`);
+  }
+  assert.ok(/1588 Johnston Road/.test(html('soleil-white-rock-condos.html')));
+  assert.ok(/search-1452096/.test(html('soleil-white-rock-condos.html')), 'Soleil search not wired');
+  assert.ok(!/search-1452118/.test(html('morgan-crossing-south-surrey-condos.html')), 'Morgan Crossing search should wait for the fix');
+  assert.ok(/soleil-white-rock-condos\.html/.test(html('white-rock-condo-buildings.html')), 'hub does not link the building pages');
+});
