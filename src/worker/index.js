@@ -72,7 +72,7 @@ async function handle(request, env, ctx) {
     const dbl = bare.match(/^\/[^/]+\.html\/([^/]+\.html)$/); if (dbl) cands.add('/' + dbl[1]);
     const par = bare.match(/^\/([^/]+\.html)\/.*listing\./); if (par) cands.add('/' + par[1]);   // old MRP listing pages (D-231)
     for (const c of cands) await exists(c);
-    const decision = route(request.url, index, (p) => seen.get(p) === true);
+    const decision = route(request.url, index, (p) => seen.get(p) === true, request.headers.get('host') || '');
 
     const withHeaders = (res, extra = {}) => {
       const h = new Headers(res.headers);

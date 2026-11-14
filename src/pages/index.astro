@@ -32,7 +32,7 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
       <div class="hero__copy">
         <h1 id="h-hero" class="hero__h1"><span class="hero__name">JARED GIBBONS</span> <span class="hero__role">South Surrey Realtor</span></h1>
         <p class="hero__tag">Top 1% of Fraser Valley REALTORS®</p>
-        <p class="hero__proof"><a href="/reviews.html"><span class="hero__stars" aria-hidden="true">★</span> 5.0 · 95 Google reviews</a><span aria-hidden="true"> · </span><span>#1 in South Surrey by FVREB Medallion Club points</span></p>
+        <p class="hero__proof"><a href="/reviews.html"><span class="hero__stars" aria-hidden="true">★</span> 5.0 · 94 Google reviews</a><span aria-hidden="true"> · </span><span>#1 in South Surrey / White Rock by FVREB Medallion Club points (2025 and 2026 YTD)</span></p>
         <form class="hs" action="/map-search.html" data-hs={JSON.stringify(Object.fromEntries(hsAreas.map((a) => [a.key, a.opts])))} role="search" aria-label="Search homes for sale">
           <label class="hs__f"><span>Area</span>
             <select name="area">{hsGroups.map((g) => <optgroup label={g}>{hsAreas.filter((a) => a.group === g).map((a) => <option value={a.key}>{a.label}</option>)}</optgroup>)}</select>
@@ -117,16 +117,16 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
     <div class="wrap rank__grid">
       <div>
         <p class="eyebrow">South Surrey Real Estate</p>
-        <h2 id="h-rank" class="h2 rank__h">South Surrey's #1 Ranked Realtor</h2>
-        <p class="lede">#1 in South Surrey and White Rock by Fraser Valley Real Estate Board Medallion Club points, 2025 and 2026 to date. #1 agent at Royal LePage Little Oak Realty in 2025.</p>
+        <h2 id="h-rank" class="h2 rank__h">#1 REALTOR® in South Surrey / White Rock by FVREB Medallion Club points (2025 and 2026 YTD)</h2>
+        <p class="lede">#1 of the Top 25 individuals at Royal LePage Little Oak Realty (2025). 10 straight years in the FVREB Medallion Club. Top 1% of all REALTORS® in the Fraser Valley.</p>
         <p><a class="btn" href="/south-surrey-real-estate-agent-jared-gibbons-realtor.html">Explore South Surrey →</a></p>
       </div>
       <ul class="rank__stats">
-        <li><strong>Top 1%</strong><span>Fraser Valley REALTORS® (FVREB)</span></li>
+        <li><strong>Top 1%</strong><span>of all REALTORS® in the Fraser Valley</span></li>
         <li><strong>$500M+</strong><span>Career sales</span></li>
+        <li><strong>94</strong><span>Google reviews, 5.0 rating</span></li>
         <li><strong>10</strong><span>Straight years, FVREB Medallion Club</span></li>
-        <li><strong>95</strong><span>Google reviews, 5.0 rating</span></li>
-        <li><strong>11+</strong><span>Years as a REALTOR®, since 2015</span></li>
+        <li><strong>2015</strong><span>REALTOR® since</span></li>
       </ul>
     </div>
   </section>
@@ -298,7 +298,7 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
   .awards-rows :global(.awm + .awm){padding-top:.5rem}
 
   .rank__grid{display:grid;grid-template-columns:1.5fr 1fr;gap:var(--s7);align-items:center}
-  .rank__h{font-size:clamp(2.25rem,6vw,5rem);line-height:1;letter-spacing:-.03em}
+  .rank__h{font-size:clamp(1.6rem,3.4vw,2.9rem);line-height:1.08;letter-spacing:-.02em}
   .rank__stats{display:grid;grid-template-columns:1fr 1fr;gap:var(--s5) var(--s6)}
   .rank__stats li:first-child{grid-column:1/-1}
   .rank__stats li{border-top:1px solid #fff;padding-top:var(--s3);display:flex;flex-direction:column}

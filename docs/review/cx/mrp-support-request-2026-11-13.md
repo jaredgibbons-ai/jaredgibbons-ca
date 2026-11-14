@@ -13,6 +13,7 @@ I'm moving my IDX searches onto my new site, jaredgibbons.ca (account 67649, nof
 3. Results count: the grid shows "SHOWING: 1-121,249" instead of "1–12 of 1,249". Is that a setting on your side?
 4. Log in / saved homes: is there a direct URL I can link to from my site's header that opens the visitor's account (log in and saved homes)? Can the sign-up form be shortened (name, email, password) with Google sign-in first, and what does "Duration: 30 days" on the form mean?
 5. Search by address: can a search be opened by URL with an address or MLS® number filled in (for example /recip.html?keyword=...)? I'd like my site's search box to hand address searches to the IDX.
+6. Map search layout shift: on the map search (recip/67649/idx.search), the disclaimer blocks (.reb-disclaimer, .data-update-date, .mrp-mls-disclaimer) and the bottom-left map controls move or collapse a second or two after the page loads. Google's page-speed test counts that as layout shift on my map page (CLS about 0.15 on phones). Can the disclaimer have a fixed spot or reserved height so nothing moves after load? The console also says the Mapbox GL JS stylesheet doesn't match the script version (it loads mapbox-gl.css v0.45.0).
 
 Thanks,
 Jared

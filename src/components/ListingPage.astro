@@ -1,4 +1,5 @@
 ---
+import VIDEO_DATES from '../data/video-upload-dates.json';   // YouTube upload dates, read from each video's page (Search Console: uploadDate is required)
 import PHOTO_ALTS from '../data/photo-alts.json';
 import POSTAL from '../data/listing-postal.json';
 import { listingFeatures } from '../lib/listing-features';
@@ -161,10 +162,11 @@ const _postal = (POSTAL as Record<string, string>)[page.slug] || '';
 const listingLd: any[] = cityName && addr ? [{ '@context': 'https://schema.org', '@type': 'RealEstateListing', name: h1Text || addr, url: page.canonical,
   image: photoList.slice(0, 6).map((ph) => new URL(`${import.meta.env.PUBLIC_PHOTO_BASE ?? '/listing-photos/'}${ph.id}-960.webp`, 'https://jaredgibbons.ca').href),
   ...(factMap['MLS® Num'] ? { identifier: factMap['MLS® Num'] } : {}),
-  offers: { '@type': 'Offer', priceCurrency: 'CAD', ...(priceNum ? { price: priceNum } : {}), availability: page.status === 'Active' ? 'https://schema.org/InStock' : 'https://schema.org/SoldOut',
-    seller: { '@type': 'RealEstateAgent', '@id': 'https://jaredgibbons.ca/#agent' } },
+  // No Offer when the page shows no price (leases, price on request): an Offer without a price is invalid markup (audit 2026-11-13).
+  ...(priceNum ? { offers: { '@type': 'Offer', priceCurrency: 'CAD', price: priceNum, availability: page.status === 'Active' ? 'https://schema.org/InStock' : 'https://schema.org/SoldOut',
+    seller: { '@type': 'RealEstateAgent', '@id': 'https://jaredgibbons.ca/#agent' } } } : {}),
   about: { '@type': 'Place', address: { '@type': 'PostalAddress', streetAddress: addr, addressLocality: cityName, addressRegion: 'BC', addressCountry: 'CA', ...(_postal ? { postalCode: _postal } : {}) } },
-  ...(media?.video ? { subjectOf: { '@type': 'VideoObject', name: `Video tour of ${where}`, embedUrl: `https://www.youtube.com/embed/${media.video}`, thumbnailUrl: `https://i.ytimg.com/vi/${media.video}/hqdefault.jpg`, contentUrl: `https://www.youtube.com/watch?v=${media.video}` } } : {}) }] : [];
+  ...(media?.video && (VIDEO_DATES as Record<string, string>)[media.video] ? { subjectOf: { '@type': 'VideoObject', name: `Video tour of ${where}`, description: `Video tour of ${where}, filmed for Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty.`, uploadDate: (VIDEO_DATES as Record<string, string>)[media.video], embedUrl: `https://www.youtube.com/embed/${media.video}`, thumbnailUrl: `https://i.ytimg.com/vi/${media.video}/hqdefault.jpg`, contentUrl: `https://www.youtube.com/watch?v=${media.video}` } } : {}) }] : [];
 const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMeta : builtMeta());
 ---
 <Base
@@ -173,7 +175,7 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
   description={metaDesc}
   ogTitle={seoTitle}
   ogDescription={metaDesc}
-  ogImage={seo['OG image'] || undefined}
+  ogImage={photoList[0] ? new URL(`${import.meta.env.PUBLIC_PHOTO_BASE ?? '/listing-photos/'}${photoList[0].id}-960.webp`, 'https://jaredgibbons.ca').href : (seo['OG image'] && !/myrealpage\.com/.test(seo['OG image']) ? seo['OG image'] : undefined)}
   jsonld={listingLd}
   robots={page.status === 'Expired' ? 'noindex, follow' : (seo['Meta robots'] || 'index, follow')}
   footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
