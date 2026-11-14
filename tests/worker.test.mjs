@@ -22,6 +22,11 @@ test('host rules: http and www go to https apex', () => {
   assert.deepEqual(route('http://jaredgibbons.ca/', idx, exists), { type: 'redirect', location: 'https://jaredgibbons.ca/', status: 301 });
   assert.deepEqual(route('https://www.jaredgibbons.ca/x.html?a=1', idx, exists), { type: 'redirect', location: 'https://jaredgibbons.ca/x.html?a=1', status: 301 });
 });
+test('host rules: a mixed-case host 301s once to the lowercase apex (audit 2026-11-13)', () => {
+  assert.deepEqual(route('https://JaredGibbons.ca/about.html', idx, exists, 'JaredGibbons.ca'), { type: 'redirect', location: 'https://jaredgibbons.ca/about.html', status: 301 });
+  assert.deepEqual(route('https://WWW.JaredGibbons.ca/about.html', idx, exists, 'WWW.JaredGibbons.ca'), { type: 'redirect', location: 'https://jaredgibbons.ca/about.html', status: 301 });
+  assert.notEqual(route('https://jaredgibbons.ca/about.html', idx, exists, 'jaredgibbons.ca').type, 'redirect');
+});
 test('the old marketing-plan address forwards to the selling page (D-256)', () => {
   assert.deepEqual(R('/marketing-plan.html'), { type: 'redirect', location: '/selling.html', status: 301 });
   assert.deepEqual(R('/marketing-plan.html?utm_source=x'), { type: 'redirect', location: '/selling.html?utm_source=x', status: 301 });
