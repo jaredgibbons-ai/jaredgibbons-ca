@@ -83,7 +83,7 @@ export async function pullReviews(env, fetchImpl = fetch) {
   for (const a of accounts) {
     const locs = (await getJson(fetchImpl, locationsUrl(a.name), token)).locations || [];
     const want = env.GBP_LOCATION;
-    const hit = want ? locs.find((l) => l.name === want || `locations/${l.name}` === want) : null;
+    const hit = want ? locs.find((l) => l.name === want || `locations/${l.name}` === want || String(l.title || '').toLowerCase().includes(String(want).toLowerCase())) : null;   // id or part of the title
     if (hit) { account = a; loc = hit; break; }
     if (!want && locs.length === 1 && !loc) { account = a; loc = locs[0]; }
     else if (!want && locs.length > 1) throw new FeedError('multiple_locations', `Several locations found (${locs.map((l) => l.title).join(', ')}); set GBP_LOCATION`);
