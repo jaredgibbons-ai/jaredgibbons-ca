@@ -1,4 +1,5 @@
 ---
+import fs from 'node:fs';
 /**
  * One property-card component for every listing surface (My Listings, community grids, sold).
  * Sold-property cards reuse this exact markup/styling; only `status`, `tags` and which meta rows
@@ -7,17 +8,19 @@
 import Icon from './Icon.astro';
 // First photo of the listing (web-size WebP from the R2 route; lists written by tools/process_photos.py)
 const PHOTO_LISTS = import.meta.glob('../data/listing-photos/*.json', { eager: true, import: 'default' }) as Record<string, any[]>;
-const { photoSlug, as: Tag = 'h3', titleRest, areaM2, moreLabel = "More Info", href, street, city, postal, area, price, beds, baths, area_sqft, floorArea, status, type, mls, brokerage, listedBy, description, tags = [] } = Astro.props;
+const { photoSlug, as: Tag = 'h3', titleRest, areaM2, moreLabel = "More Info", href, street, city, postal, area, price, beds, baths, area_sqft, floorArea, status, type, mls, brokerage, listedBy, description, tags = [], sizes = '(min-width:64rem) 25rem, (min-width:40rem) 33vw, 100vw' } = Astro.props;
 const fmt = (n) => n;
 // The home page's slug can differ from the listing's own slug in the middle; the vendor id after the last dot is the same, so fall back to that.
 const photoKey = photoSlug ? (`../data/listing-photos/${photoSlug}.json` in PHOTO_LISTS ? `../data/listing-photos/${photoSlug}.json` : Object.keys(PHOTO_LISTS).find((k) => k.endsWith(`.${String(photoSlug).split('.').pop()}.json`))) : undefined;
 const photo = photoKey ? (PHOTO_LISTS[photoKey] ?? [])[0] : undefined;
 const photoBase = import.meta.env.PUBLIC_PHOTO_BASE ?? '/listing-photos/';
+// A 640w copy exists for the homepage cards (public/img/home-cards, audit 2026-11-13): phones then load 640w instead of 960w.
+const mid = photo && fs.existsSync(`public/img/home-cards/${photo.id}-640.webp`) ? `/img/home-cards/${photo.id}-640.webp 640w, ` : '';
 ---
 <li class="pcard" data-status={status ?? undefined}>
   {photo ? (
     <div class="pcard__media">
-      <img src={`${photoBase}${photo.id}-480.webp`} srcset={`${photoBase}${photo.id}-480.webp 480w, ${photoBase}${photo.id}-960.webp 960w`} sizes="(min-width:64rem) 25rem, (min-width:40rem) 33vw, 100vw" width={photo.w >= photo.h ? 480 : Math.round(480 * photo.w / photo.h)} height={photo.w >= photo.h ? Math.round(480 * photo.h / photo.w) : 480} alt={`${street}, ${city}`} loading="lazy" decoding="async" />
+      <img src={`${photoBase}${photo.id}-480.webp`} srcset={`${photoBase}${photo.id}-480.webp 480w, ${mid}${photoBase}${photo.id}-960.webp 960w`} sizes={sizes} width={photo.w >= photo.h ? 480 : Math.round(480 * photo.w / photo.h)} height={photo.w >= photo.h ? Math.round(480 * photo.h / photo.w) : 480} alt={`${street}, ${city}`} loading="lazy" decoding="async" />
     </div>
   ) : (
     <div class="pcard__media" role="img" aria-label={`Photo of ${street}, ${city} — pending`}>
