@@ -1,0 +1,8 @@
+url,issue,severity,canonical,detail
+https://JaredGibbons.ca/about.html,mixed-case host returns 200,Low,https://jaredgibbons.ca/about.html,"worker 200, canonical lowercase"
+https://jaredgibbons.ca/about.html?utm_source=audit,tracking query served 200,Low,https://jaredgibbons.ca/about.html,canonical strips the query
+https://jaredgibbons.ca/our-listings.html?cat=SOLD,filter query served 200,Low,https://jaredgibbons.ca/our-listings.html,canonical is the unfiltered URL
+https://jaredgibbons.ca/CONTACT.html,uppercase path 404,Low,,"real 404, not a duplicate"
+https://jaredgibbons.ca/,robots meta omitted,Low,https://jaredgibbons.ca/,still indexable; no x-robots-tag
+https://jaredgibbons.ca/fort-langley.html,robots meta omitted,Low,https://jaredgibbons.ca/fort-langley.html,still indexable; no x-robots-tag
+https://jaredgibbons.ca/reviews.html,robots meta omitted,Low,https://jaredgibbons.ca/reviews.html,still indexable; no x-robots-tag
