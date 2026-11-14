@@ -154,8 +154,8 @@ SEARCH = {'soleil-white-rock-condos': '1452096', 'foster-martin-white-rock-condo
           'monaco-white-rock-condos': '1452102', 'fantom-white-rock-condos': '1452103', 'avra-white-rock-condos': '1452104',
           'belaire-white-rock-condos': '1452106', 'sussex-house-white-rock-condos': '1452107', 'pacific-terrace-white-rock-condos': '1452108',
           'bayview-place-white-rock-condos': '1452110', 'white-rock-square-condos': None, 'summit-white-rock-condos': '1452112',
-          'king-crescent-south-surrey-condos': None, 'heights-grandview-south-surrey-condos': '1452116', 'southaven-south-surrey-condos': None,
-          'morgan-crossing-south-surrey-condos': None, 'forest-ridge-south-surrey-condos': '1452119', 'halvo-south-surrey-condos': '1452120'}
+          'king-crescent-south-surrey-condos': None, 'heights-grandview-south-surrey-condos': '1452116', 'southaven-south-surrey-condos': '1452117',
+          'morgan-crossing-south-surrey-condos': '1452118', 'forest-ridge-south-surrey-condos': '1452119', 'halvo-south-surrey-condos': '1452120'}
 
 NAV = {WR: ('White Rock condos', '/white-rock-condos-for-sale.html'), SS: ('South Surrey condos', '/south-surrey-condos-for-sale.html')}
 
