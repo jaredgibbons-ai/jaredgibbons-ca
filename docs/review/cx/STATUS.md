@@ -20,6 +20,6 @@
 | 16 | About page rewrite | Needs Jared (first-person copy, photo, video). |
 | 17 | Alerts everywhere | **Partly (D-261):** the alert form is open by default everywhere it shows. |
 | 18 | Log in / Saved homes | Needs MyRealPage: the account lives inside their frame. |
-| 19 | Monthly posts current | October update done (D-257); blog points to the newest automatically. Things to Do for October/November not written. |
-| 20 | Stats chart + report signup | Not done. |
+| 19 | Monthly posts current | October update done (D-257); blog points to the newest automatically. Things to Do for November–December 2026 written for White Rock/South Surrey and Langley (D-276). |
+| 20 | Stats chart + report signup | **Done (D-276):** five-year benchmark chart and "Get the monthly market report" sign-up on all 22 market stats pages. |
 | 21 | Blog cards | Done (D-258, D-259): photo, date, all posts by year. Category chips not done. |

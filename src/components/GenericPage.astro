@@ -36,6 +36,7 @@ import { quickSearchAreas } from '../lib/quicksearch';
 import { postImage } from '../lib/post-images';
 import ListingAlert from './ListingAlert.astro';
 import Newsletter from './Newsletter.astro';
+import MarketChart from './MarketChart.astro';
 import SearchQuiz from './SearchQuiz.astro';
 import HomeValue from './HomeValue.astro';
 import PropertyCard from './PropertyCard.astro';
@@ -263,6 +264,18 @@ const isSourcesIntro = (b: any) => b?.t === 'p' && /^Facts on this page come fro
     if (!keep.length) { drop.add(i); drop.add(i - 1); } else b.items = keep;
   });
   if (drop.size) page.blocks = page.blocks.filter((_: any, i: number) => !drop.has(i));
+}
+
+// Market stats pages (D-276): a five-year benchmark chart right after the benchmark table, then the monthly market report sign-up.
+if (/-real-estate-market-stats$/.test(page.slug)) {
+  const at = page.blocks.findIndex((b: any) => b.t === 'table' && /benchmark prices and changes/i.test(b.caption || ''));
+  if (at >= 0) {
+    const place = String(page.blocks[at].caption).replace(/\s*MLS®? benchmark prices and changes.*$/i, '').trim();
+    page.blocks = [...page.blocks.slice(0, at + 1), { t: 'mchart', table: page.blocks[at], place }, ...page.blocks.slice(at + 1)];
+    const sales = page.blocks.findIndex((b: any, i: number) => i > at + 1 && b.t === 'h' && b.level === 2);
+    const where = sales > 0 ? sales : page.blocks.length;
+    page.blocks.splice(where, 0, { t: 'newsletter', title: 'Get the monthly market report', lede: `One email a month with ${place ? place + ' ' : ''}benchmark prices, sales and what they mean, from Jared.` });
+  }
 }
 
 // Newsletter page: the archive captured only the form's labels (Name, Email, a consent line, Subscribe). Swap them for the working sign-up.
@@ -763,7 +776,8 @@ const explore = !_extra.length ? exploreBase
                   <ul>{b.items.map((it: any) => <li><a href={`#${it.id}`}>{it.text}</a></li>)}</ul>
                 </details>
               );
-              if (b.t === 'newsletter') return <Newsletter />;
+              if (b.t === 'newsletter') return <Newsletter title={b.title} lede={b.lede} />;
+              if (b.t === 'mchart') return <MarketChart table={b.table} place={b.place} />;
               // A post's lead photo sits right under its byline, at its own shape and never enlarged (D-259).
               if (b.t === 'p' && b.cls === 'byline' && hero) return (
                 <>

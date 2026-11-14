@@ -6,19 +6,21 @@
 import { NEWSLETTER_CONSENT_TEXT, NEWSLETTER_SENDER } from '../lib/newsletter.js';
 const live = import.meta.env.PUBLIC_FORMS_LIVE === 'true';
 const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
+// The market stats pages (D-276) use it as "Get the monthly market report": same list and consent, its own heading.
+const { title = '', lede = '' } = Astro.props as { title?: string; lede?: string };
 ---
 {!(live && siteKey) && (
   <div class="nl">
-    <p class="nl__title">Subscribe by email</p>
-    <p class="nl__lede">To get the monthly newsletter, email Jared and he will add you. You can unsubscribe at any time.</p>
+    <p class="nl__title">{title || 'Subscribe by email'}</p>
+    <p class="nl__lede">{lede ? `${lede} Email Jared and he will add you. You can unsubscribe at any time.` : 'To get the monthly newsletter, email Jared and he will add you. You can unsubscribe at any time.'}</p>
     <p><a class="btn" href={`mailto:jaredgibbons@royallepage.ca?subject=${encodeURIComponent('Newsletter')}&body=${encodeURIComponent('Please add me to the monthly newsletter. I agree to receive it and can unsubscribe at any time.')}`}>Email Jared to subscribe</a> <a class="btn btn--ghost" href="tel:604-928-1361">Call or text 604-928-1361</a></p>
     <p class="nl__fine">{NEWSLETTER_SENDER}{" "}<a href="/privacy.html">Privacy Policy</a></p>
   </div>
 )}
 {live && siteKey && (
   <form class="nl" data-nl data-sitekey={siteKey} aria-labelledby="nl-title" novalidate>
-    <p class="nl__title" id="nl-title">Sign up for the newsletter</p>
-    <p class="nl__lede">One email a month with market updates, new listings and real estate tips from Jared.</p>
+    <p class="nl__title" id="nl-title">{title || 'Sign up for the newsletter'}</p>
+    <p class="nl__lede">{lede || 'One email a month with market updates, new listings and real estate tips from Jared.'}</p>
     <div class="nl__row">
       <div class="nl__f">
         <label for="nl-name">Name (optional)</label>

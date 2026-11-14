@@ -354,3 +354,18 @@ test('White Rock pages (Princeton removed, D-274), sold floor plans and area vid
   for (const [k, v] of fps) assert.ok(fs.existsSync(path.join(DIST, 'img/floorplans', `${v.floorplan.id}-900.webp`)), `${k}: floor plan image missing`);
   for (const f of ['white-rock.html', 'langley-homes-for-sale.html', 'south-surrey-homes-for-sale.html']) assert.ok(/class="section sv"/.test(html(f)) && /i\.ytimg\.com\/vi\//.test(html(f)), `${f}: no video strip`);
 });
+
+test('market stats chart and report sign-up, Nov-Dec event posts, more floor plans (D-276)', { skip: !built }, () => {
+  for (const s of ['south-surrey-white-rock-real-estate-market-stats', 'langley-real-estate-market-stats', 'abbotsford-real-estate-market-stats']) {
+    const t = html(`${s}.html`);
+    assert.ok(/class="mc"/.test(t) && /<polyline/.test(t), `${s}: no chart`);
+    assert.ok(/Get the monthly market report/.test(t), `${s}: no report sign-up`);
+    assert.ok(!/\$\d\.M/.test(t), `${s}: bad axis label`);
+  }
+  for (const s of ['things-to-do-white-rock-south-surrey-november-december-2026', 'langley-holiday-events-november-december-2026']) {
+    assert.ok(fs.existsSync(path.join(DIST, 'internal/blog', `${s}.html`)), `${s} not built`);
+    assert.ok(html('blog.html').includes(s), `${s} not on the blog index`);
+  }
+  const media = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/listing-media.json'), 'utf8'));
+  assert.ok(Object.values(media).filter((v) => v && v.floorplan).length >= 56, 'floor plans missing');
+});

@@ -1,0 +1,68 @@
+---
+// Benchmark price chart for the market stats pages (D-276). Drawn from the page's own MLS® benchmark table: the board reports
+// today's benchmark and its change over 1, 3 and 6 months and 1, 3 and 5 years, so each earlier value is benchmark / (1 + change).
+// One line per home type on a true time scale (months back), in the brand greys; the table above stays the accessible source.
+const { table, place = '' } = Astro.props as { table: { caption?: string; head: string[]; rows: string[][] }; place?: string };
+const BACK: Record<string, number> = { '1 month': 1, '3 months': 3, '6 months': 6, '1 year': 12, '3 years': 36, '5 years': 60 };
+const money = (s: string) => Number(String(s).replace(/[^\d.]/g, '')) || 0;
+const pct = (s: string) => { const t = String(s).replace('−', '-').replace('%', '').replace('+', '').trim(); const n = Number(t); return t && !isNaN(n) ? n / 100 : null; };
+const cols = table.head.map((h, i) => [h, i] as const).filter(([h]) => h in BACK);
+const series = table.rows.map((r) => {
+  const now = money(r[1]);
+  if (!now) return null;
+  const pts = [{ m: 0, v: now }, ...cols.map(([h, i]) => { const p = pct(r[i]); return p === null ? null : { m: BACK[h], v: now / (1 + p) }; }).filter(Boolean) as { m: number; v: number }[]];
+  return pts.length >= 4 ? { name: r[0], pts: pts.sort((a, b) => b.m - a.m), now, five: pct(r[cols.find(([h]) => h === '5 years')?.[1] ?? -1] ?? '') } : null;
+}).filter(Boolean) as { name: string; pts: { m: number; v: number }[]; now: number; five: number | null }[];
+const W = 760, H = 340, L = 74, R = 170, T = 18, B = 40;
+const all = series.flatMap((s) => s.pts.map((p) => p.v));
+const lo0 = Math.min(...all), hi0 = Math.max(...all);
+const stepGuess = (hi0 - lo0) / 4;
+const mag = Math.pow(10, Math.floor(Math.log10(stepGuess || 1)));
+const step = [1, 2, 2.5, 5, 10].map((k) => k * mag).find((k) => (hi0 - lo0) / k <= 5) || 10 * mag;
+const lo = Math.floor(lo0 / step) * step, hi = Math.ceil(hi0 / step) * step;
+const x = (m: number) => L + ((60 - m) / 60) * (W - L - R);
+const y = (v: number) => T + (1 - (v - lo) / (hi - lo || 1)) * (H - T - B);
+const ticks: number[] = []; for (let v = lo; v <= hi + 1; v += step) ticks.push(v);
+const k = (v: number) => (v >= 1e6 ? `$${parseFloat((v / 1e6).toFixed(2))}M` : `$${Math.round(v / 1e3)}K`);
+const STY = [{ w: 3.5, c: '#0a0a0a', d: '' }, { w: 2.5, c: '#555', d: '' }, { w: 2.5, c: '#8a8a8a', d: '7 5' }, { w: 2.5, c: '#b5b5b5', d: '2 5' }];
+// end labels: spread so they do not overlap
+const ends = series.map((s, i) => ({ i, y: y(s.now) })).sort((a, b) => a.y - b.y);
+for (let j = 1; j < ends.length; j++) if (ends[j].y - ends[j - 1].y < 30) ends[j].y = ends[j - 1].y + 30;
+const endY = Object.fromEntries(ends.map((e) => [e.i, e.y]));
+const lead = series[0];
+const summary = lead && lead.five !== null ? `${lead.name} benchmark ${k(lead.now)} today, ${lead.five >= 0 ? 'up' : 'down'} ${Math.abs(Math.round(lead.five * 1000) / 10)}% over five years.` : '';
+---
+{series.length > 0 && (
+<figure class="mc" aria-labelledby="mc-cap">
+  <figcaption id="mc-cap" class="mc__cap"><strong class="mc__t">{place ? `${place} benchmark prices over five years` : 'Benchmark prices over five years'}</strong> {summary}</figcaption>
+  <div class="mc__wrap">
+    <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Line chart of MLS® benchmark prices by home type, five years ago to today. ${summary}`}>
+      {ticks.map((t) => (<g><line x1={L} x2={W - R} y1={y(t)} y2={y(t)} class="mc__grid" /><text x={L - 10} y={y(t) + 4} text-anchor="end" class="mc__ax">{k(t)}</text></g>))}
+      {[[60, '5 yrs ago'], [36, '3 yrs'], [12, '1 yr'], [0, 'Now']].map(([m, t]) => (<text x={x(m as number)} y={H - 12} text-anchor={m === 0 ? 'end' : m === 60 ? 'start' : 'middle'} class="mc__ax">{t}</text>))}
+      {series.map((s, i) => (
+        <g>
+          <polyline points={s.pts.map((p) => `${x(p.m).toFixed(1)},${y(p.v).toFixed(1)}`).join(' ')} fill="none" stroke={STY[i % 4].c} stroke-width={STY[i % 4].w} stroke-dasharray={STY[i % 4].d || undefined} stroke-linejoin="round" stroke-linecap="round" />
+          {s.pts.map((p) => <circle cx={x(p.m)} cy={y(p.v)} r={i === 0 ? 3.5 : 2.5} fill={STY[i % 4].c}><title>{`${s.name}, ${p.m === 0 ? 'now' : p.m < 12 ? `${p.m} month${p.m > 1 ? 's' : ''} ago` : `${p.m / 12} year${p.m > 12 ? 's' : ''} ago`}: ${k(p.v)}`}</title></circle>)}
+          <text x={W - R + 10} y={endY[i] + 4} class="mc__lab" fill={i === 0 ? '#0a0a0a' : '#444'}>{s.name.replace(/^All home types$/, 'All types')}</text>
+          <text x={W - R + 10} y={endY[i] + 19} class="mc__val">{k(s.now)}</text>
+        </g>
+      ))}
+    </svg>
+  </div>
+  <p class="mc__fine">Earlier values are worked back from this month's benchmark and the board's reported change over each period, so the line joins those points; it does not show every month.</p>
+</figure>
+)}
+
+<style>
+  .mc{margin:var(--s5) 0;padding:var(--s4);border:1px solid var(--ink);background:#fff}
+  .mc__cap{margin:0 0 var(--s3);line-height:1.5}
+  .mc__t{display:block}
+  .mc__wrap{overflow-x:auto}
+  .mc svg{display:block;width:100%;min-width:520px;height:auto}
+  .mc__grid{stroke:#e3e3e3;stroke-width:1}
+  .mc__ax{font:600 12px var(--f-body);fill:#666}
+  .mc__lab{font:700 13px var(--f-head)}
+  .mc__val{font:600 12px var(--f-body);fill:#666}
+  @media (max-width:40rem){.mc{padding:var(--s3)}.mc svg{min-width:0}.mc__ax{font-size:22px}.mc__lab{font-size:25px}.mc__val{display:none}}
+  .mc__fine{margin:var(--s3) 0 0;font-size:.8125rem;color:var(--grey)}
+</style>
