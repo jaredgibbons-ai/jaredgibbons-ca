@@ -120,8 +120,8 @@ PAGES.append(page(
     'White Rock Waterfront Homes for Sale',
     [('White Rock homes', '/white-rock.html')],
     [
-        NOTE('Facts are from the City of White Rock, read November 13, 2026. The live search is not connected yet.'),
-        P('White Rock’s waterfront is Marine Drive: about two kilometres of road between East Beach and West Beach, with the promenade and the sandy beach of Semiahmoo Bay below it and homes stepping up the slope behind. This search covers White Rock homes on and just above Marine Drive. For Crescent Beach and Ocean Park in Surrey, see [waterfront homes in White Rock and South Surrey](/south-surrey-white-rock-waterfront-homes-for-sale.html).'),
+        NOTE('Facts are from the City of White Rock, read November 13, 2026. Live search: Gerry’s 1452071 (keyword “Marine”).'),
+        P('White Rock’s waterfront is Marine Drive: about two kilometres of road between East Beach and West Beach, with the promenade and the sandy beach of Semiahmoo Bay below it and homes stepping up the slope behind. This search lists White Rock homes for sale whose listing mentions Marine Drive. For Crescent Beach and Ocean Park in Surrey, see [waterfront homes in White Rock and South Surrey](/south-surrey-white-rock-waterfront-homes-for-sale.html).'),
         GRID,
         H('East Beach, West Beach and the pier'),
         L('**The pier** splits the two beaches. It is 470 metres long, first built in 1914/15, and a December 20, 2018 storm destroyed a third of it; the repaired section reopened in 2019. The federal government has approved in principle $25,935,000 toward replacing the rest.',
@@ -161,8 +161,8 @@ PAGES.append(page(
     'White Rock Hillside and Ocean View Homes',
     [('White Rock homes', '/white-rock.html')],
     [
-        NOTE('Facts are from the City of White Rock, read November 13, 2026. The live search is not connected yet.'),
-        P('White Rock climbs from the beach to North Bluff Road, so most of the city’s houses sit on a slope facing Semiahmoo Bay. This search covers White Rock houses and townhomes listed with an ocean or water view, from the streets just above Marine Drive up to Uptown. For Ocean Park and the Surrey bluff, see [ocean view homes in White Rock and South Surrey](/south-surrey-white-rock-ocean-view-homes-for-sale.html).'),
+        NOTE('Facts are from the City of White Rock, read November 13, 2026. Live search: Gerry’s 1452072 (keywords “ocean” or “water”).'),
+        P('White Rock climbs from the beach to North Bluff Road, so most of the city’s houses sit on a slope facing Semiahmoo Bay. This search lists White Rock houses, townhomes and duplexes whose listing mentions the ocean or water, from the streets just above Marine Drive up to Uptown. For Ocean Park and the Surrey bluff, see [ocean view homes in White Rock and South Surrey](/south-surrey-white-rock-ocean-view-homes-for-sale.html).'),
         GRID,
         H('What you get on the hillside'),
         L('**The view is the price.** Two houses a street apart can differ by hundreds of thousands of dollars for what is in front of them. Stand in each main room and on the deck, not just at the front door.',
