@@ -58,13 +58,13 @@ const explore = [
   <section class="section" aria-labelledby="h-all">
     <div class="wrap">
       <h2 id="h-all" class="h2 caps">All {GOOGLE_ALL.length} written Google reviews</h2>
-      <p class="rv-note"><span class="rv-stars" aria-hidden="true">★★★★★</span> 5.0 on Google from 95 reviews. Every review with written comments is below, word for word, with the reviewer's initials. Times are as Google showed them on 1 November 2026. <a href="https://maps.app.goo.gl/zvYBAj6rf2cKyjsZ9" rel="noopener">See them on Google</a>.</p>
+      <p class="rv-note"><span class="rv-stars" aria-hidden="true">★★★★★</span> 5.0 on Google from 94 reviews. Every review with written comments is below, word for word, with the reviewer's initials. Where we have the calendar date it is shown; otherwise the time is as Google showed it on 1 November 2026. <a href="https://maps.app.goo.gl/zvYBAj6rf2cKyjsZ9" rel="noopener">See them on Google</a>.</p>
       <ul class="rv-list rv-list--all">
         {GOOGLE_ALL.map((r) => (
           <li class="rv">
             <p class="rv-stars" aria-label="5 out of 5 stars">★★★★★</p>
             <blockquote class="rv__body"><p>{r.text}</p></blockquote>
-            <p class="rv__who"><strong>{r.who}</strong><br /><span class="muted">Google review · {r.when}</span></p>
+            <p class="rv__who"><strong>{r.who}</strong><br /><span class="muted">{r.date ? `${r.date} · Google review` : `Google review · “${r.when}” as of 1 Nov 2026`}</span></p>
           </li>
         ))}
       </ul>
@@ -109,14 +109,17 @@ const explore = [
 import { loadGoogle } from '../lib/gmaps.js';
 const PLACE_ID = 'ChIJi3WbELfEhVQRCk86YYxb5us';
 const WRITE = 'https://search.google.com/local/writereview?placeid=' + PLACE_ID;
-const CACHE = 'jg-greviews-v1', TTL = 12 * 3600 * 1000;
+const CACHE = 'jg-greviews-v2', TTL = 12 * 3600 * 1000;
 const sec = document.getElementById('google-live');
 const key = sec?.dataset.key || '';
 // Astro scopes this page's styles with a data-astro-cid-* attribute; elements made here need the same one to get the card styling.
 const cid = sec ? sec.getAttributeNames().find((a) => a.startsWith('data-astro-cid-')) : undefined;
 const el = (t: string, c?: string, x?: string | null) => { const n = document.createElement(t); if (cid) n.setAttribute(cid, ''); if (c) n.className = c; if (x != null) n.textContent = x; return n; };
 
-type R = { rating: number; text?: string; name: string; uri?: string; reply?: { text: string } };
+type R = { rating: number; text?: string; name: string; uri?: string; date?: string; reply?: { text: string } };
+// Initials only on this site (audit 2026-11-13): "Jane Q. Doe" -> "J.Q.D.", "Richard" -> "R.". The full Google name is never printed or linked.
+const initials = (n: string) => { const w = String(n || '').replace(/[^\p{L}\s'-]/gu, ' ').trim().split(/\s+/).filter(Boolean); return w.length ? w.map((x) => x[0].toUpperCase() + '.').join('') : 'Google user'; };
+const calDate = (iso?: string) => { if (!iso) return ''; const d = new Date(iso); return isNaN(+d) ? '' : d.toLocaleDateString('en-CA', { day: 'numeric', month: 'long', year: 'numeric' }); };
 type D = { reviews: R[]; averageRating?: number; totalReviewCount?: number; profileUrl?: string; reviewUrl?: string; viaPlaces?: boolean };
 
 function render(d: D) {
@@ -131,9 +134,8 @@ function render(d: D) {
     if (r.text) r.text.split(/\n{2,}/).forEach((p) => q.appendChild(el('p', '', p)));
     if (r.reply) { const rep = el('p', '', 'Reply from Jared: ' + r.reply.text); rep.style.fontStyle = 'italic'; q.appendChild(rep); }
     const who = el('p', 'rv__who');
-    if (r.uri && /^https:\/\/www\.google\.com\//.test(r.uri)) { const a = el('a', '', r.name) as HTMLAnchorElement; a.href = r.uri; a.rel = 'noopener nofollow'; const b = el('strong'); b.appendChild(a); who.appendChild(b); }
-    else who.appendChild(el('strong', '', r.name));
-    who.appendChild(document.createElement('br')); who.appendChild(el('span', 'muted', 'Google review'));
+    who.appendChild(el('strong', '', initials(r.name)));
+    who.appendChild(document.createElement('br')); who.appendChild(el('span', 'muted', (r.date ? r.date + ' \u00b7 ' : '') + 'Google review'));
     li.appendChild(q); li.appendChild(who); list.appendChild(li);
   });
   const sum = document.getElementById('google-summary')!;
@@ -155,7 +157,7 @@ async function fromPlaces(): Promise<D | null> {
   const { Place } = await g.maps.importLibrary('places');
   const p = new Place({ id: PLACE_ID });
   await p.fetchFields({ fields: ['reviews', 'rating', 'userRatingCount', 'googleMapsURI'] });
-  const reviews: R[] = (p.reviews || []).filter((r: any) => r && r.text).map((r: any) => ({ rating: r.rating, text: r.text, name: r.authorAttribution?.displayName || 'Google user', uri: r.authorAttribution?.uri || undefined }));
+  const reviews: R[] = (p.reviews || []).filter((r: any) => r && r.text).map((r: any) => ({ rating: r.rating, text: r.text, name: initials(r.authorAttribution?.displayName || ''), date: calDate(r.publishTime) || undefined }));
   if (!reviews.length) return null;
   const d: D = { reviews, averageRating: p.rating ?? undefined, totalReviewCount: p.userRatingCount ?? undefined, profileUrl: p.googleMapsURI || undefined, reviewUrl: WRITE, viaPlaces: true };
   keep(d);

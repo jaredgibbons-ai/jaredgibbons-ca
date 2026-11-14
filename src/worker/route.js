@@ -50,10 +50,12 @@ export function oldListing(path, index, assetExists) {
   return m[1] === 'our-listings.html' || m[1] === 'mylistings.html' ? '/our-listings.html' : '/recip.html';
 }
 
-export function route(url, index, assetExists) {
+export function route(url, index, assetExists, rawHost = '') {
   const u = new URL(url);
-  // 1) host / protocol (the zone should also do this; kept here so previews behave the same)
-  if (u.hostname === 'www.jaredgibbons.ca' || (u.protocol === 'http:' && u.hostname.endsWith('jaredgibbons.ca'))) {
+  // 1) host / protocol (the zone should also do this; kept here so previews behave the same).
+  // URL() lowercases the host, so a mixed-case Host header (https://JaredGibbons.ca/...) is checked on the raw header (audit 2026-11-13).
+  const mixedCase = /[A-Z]/.test(rawHost) && rawHost.toLowerCase().replace(/:\d+$/, '').endsWith('jaredgibbons.ca');
+  if (u.hostname === 'www.jaredgibbons.ca' || mixedCase || (u.protocol === 'http:' && u.hostname.endsWith('jaredgibbons.ca'))) {
     return { type: 'redirect', location: `https://jaredgibbons.ca${u.pathname}${u.search}`, status: 301 };
   }
   let path = u.pathname;

@@ -22,6 +22,12 @@
   // Fail safe: pages are noindex unless INDEXABLE is exactly "true". Set to "true" at launch, Nov 12 2026, with Jared's approval (D-241), together with PUBLIC_PREVIEW=false in .env.production.
   // INSTAGRAM_FEED_URL: the Behold JSON feed of @jaredgibbonsrealestate (a public address, not a secret; D-254).
   "vars": { "INDEXABLE": "true", "INSTAGRAM_FEED_URL": "https://feeds.behold.so/dqzt9cz84r2ClNcqKfvz" },
+  // Preview builds (pull requests, `wrangler preview`): same photos, email and Instagram feed, but never indexable.
+  "previews": {
+    "vars": { "INDEXABLE": "false", "INSTAGRAM_FEED_URL": "https://feeds.behold.so/dqzt9cz84r2ClNcqKfvz" },
+    "r2_buckets": [{ "binding": "PHOTOS", "bucket_name": "jg-listing-photos" }],
+    "send_email": [{ "name": "EMAIL" }]
+  },
   // No source maps in the deploy (they embed internal notes).
   "upload_source_maps": false
 }

@@ -52,17 +52,19 @@ const priceText = price ? Math.round(price).toLocaleString('en-CA') : '';
   <p class="mc__src">Property transfer tax and exemptions follow the Government of BC pages on the <a href="https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/calculation-examples" rel="noopener">property transfer tax</a>, <a href="https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers/current-amount" rel="noopener">first-time buyer exemption</a> and <a href="https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption/exemption-amounts" rel="noopener">newly built home exemption</a>. Insurance premiums follow the <a href="https://www.cmhc-schl.gc.ca/en/finance-and-investing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/cmhc-mortgage-loan-insurance-cost" rel="noopener">CMHC premium table</a>. Fixed-rate mortgages compound semi-annually. Not included: legal fees, strata fees, property tax, GST on new homes, the 20% additional tax for foreign buyers, and adjustments on completion.</p>
 </form>
 <script>
-  import { estimate } from '../lib/mortgage.js';
+  import { estimate, payment } from '../lib/mortgage.js';
   const f = document.getElementById('mc') as HTMLFormElement | null;
   if (f) {
     const out = document.getElementById('mc-out') as HTMLElement;
     const el = (k: string) => f.querySelector(`[data-k="${k}"]`) as HTMLInputElement;
     const cad = (n: number, d = 0) => '$' + n.toLocaleString('en-CA', { minimumFractionDigits: d, maximumFractionDigits: d });
     const err = (k: string, m: string) => { (document.getElementById(`mc-${k}-e`) as HTMLElement).textContent = m; m ? el(k).setAttribute('aria-invalid', 'true') : el(k).removeAttribute('aria-invalid'); };
+    // A field is only marked as missing after the visitor has left it or cleared it (audit 2026-11-13): an untouched form is not an error.
+    const touched = new Set<string>();
     function read(k: string, label: string, max: number | null, optional = false): number | null | false {
       const raw = el(k).value.replace(/[$,\s]/g, '');
       err(k, '');
-      if (raw === '') { if (optional) return null; err(k, `Enter ${label}.`); return false; }
+      if (raw === '') { if (optional) return null; if (touched.has(k)) err(k, `Enter ${label}.`); return k === 'price' ? null : false; }
       if (!/^(\d+\.?\d*|\.\d+)$/.test(raw)) { err(k, 'Enter a number, for example 650000.'); return false; }
       const v = parseFloat(raw);
       if (max != null && v > max) { err(k, `Enter a number up to ${max}.`); return false; }
@@ -82,6 +84,8 @@ const priceText = price ? Math.round(price).toLocaleString('en-CA') : '';
       if (e.premium) h += row(`Mortgage insurance premium (${e.premiumPct}%, added to the mortgage)`, cad(e.premium));
       h += row('Mortgage amount', cad(e.loan));
       h += e.pay == null ? row(FREQ[freq], 'Enter a rate to see this') : row(FREQ[freq], cad(e.pay, 2), 'mc__net');
+      // Stress test: lenders qualify you at the higher of your rate + 2 points or 5.25% (federal minimum qualifying rate). Monthly, estimate only.
+      if (rate != null) { const q = Math.max((rate as number) + 2, 5.25); h += row(`Qualifying payment, stress test (monthly at ${parseFloat(q.toFixed(2))}%, estimate)`, cad(payment(e.loan, q, parseInt(el('years').value, 10), 12), 2)); }
       h += row('Property transfer tax before exemption', cad(e.tax));
       if (ex !== 'none') h += row('Exemption', '−' + cad(e.exempt)) + row('Property transfer tax payable', cad(e.taxDue));
       h += row('Down payment plus property transfer tax', cad(e.cash), 'mc__tot') + '</tbody></table>';
@@ -89,7 +93,8 @@ const priceText = price ? Math.round(price).toLocaleString('en-CA') : '';
       if (ex !== 'none' && e.exempt === 0) h += '<p class="notice">At this price the exemption you selected does not apply.</p>';
       out.innerHTML = h;
     }
-    f.addEventListener('input', run);
+    f.addEventListener('focusout', (ev) => { const k = (ev.target as HTMLElement)?.getAttribute?.('data-k'); if (k) { touched.add(k); run(); } });
+    f.addEventListener('input', (ev) => { const t = ev.target as HTMLInputElement; const k = t?.getAttribute?.('data-k'); if (k && t.value === '') touched.add(k); run(); });
     f.addEventListener('change', run);
     run();
   }
