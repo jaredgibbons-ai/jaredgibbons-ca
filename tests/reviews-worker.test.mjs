@@ -109,3 +109,10 @@ test('site Worker: /api/reviews.json passes through the service binding, and 404
   const down = { fetch: async () => { throw new Error('down'); } };
   assert.equal((await site.fetch(req(), { REVIEWS: down })).status, 204);
 });
+
+test('REVIEW_EXCLUDE drops a review by initials and date', async () => {
+  const { excluded } = await import('../workers/reviews/src/index.js');
+  assert.equal(excluded({ REVIEW_EXCLUDE: 'J.G.|2022-04-04, X.|2020-01-01' }, { name: 'J.G.', date: '2022-04-04T10:00:00Z' }), true);
+  assert.equal(excluded({ REVIEW_EXCLUDE: 'J.G.|2022-04-04' }, { name: 'J.G.', date: '2022-04-05T10:00:00Z' }), false);
+  assert.equal(excluded({}, { name: 'J.G.', date: '2022-04-04T10:00:00Z' }), false);
+});
