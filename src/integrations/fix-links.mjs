@@ -16,8 +16,9 @@ const WORKER_SERVED = /^\/(?:listing-photos\/|blog\.html\/|our-listings\.html\/|
 const WORDING = [
   [/\b[Mm]ore than \$500\s?(?:M|million) in (?:career )?sales\b/g, '$500M+ in career sales'],
   [/\$500M\+ in sales\b/g, '$500M+ in career sales'],
-  [/\b10 consecutive years in the FVREB Medallion Club\b/g, '10 straight years in the FVREB Medallion Club'],
-  [/\b10 consecutive years FVREB Medallion Club\b/g, '10 straight years in the FVREB Medallion Club'],
+  // Audit 2026-11-13: approved ranking wording only. The Medallion-years and "11+ years" lines were taken out of the copy;
+  // "Top 1% of all ..." reads "Top 1% of Fraser Valley REALTORS®".
+  [/\b[Tt]op 1% of all (?:Fraser Valley )?(?:REALTORS®|Realtors)(?: in the Fraser Valley)?(?: \((?:FVREB|Fraser Valley Real Estate Board)\))?/g, 'Top 1% of Fraser Valley REALTORS®'],
   [/Royal LePage Little Oak(?! Realty)(?=[.,;:"'<)\s])/g, 'Royal LePage Little Oak Realty'],
 ];
 

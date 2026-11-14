@@ -20,7 +20,7 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
   title="South Surrey Realtor | White Rock & Langley | Jared Gibbons"
   canonical="https://jaredgibbons.ca/"
   current="/"
-  description="South Surrey Realtor Jared Gibbons: 10 straight years in the FVREB Medallion Club. Search homes in South Surrey, White Rock and Langley, or get a home value."
+  description="South Surrey Realtor Jared Gibbons, #1 in South Surrey / White Rock by FVREB Medallion Club points. Search homes in South Surrey, White Rock and Langley."
   ogTitle="South Surrey Realtor | White Rock & Langley | Jared Gibbons"
   ogImage="https://jaredgibbons.ca/_media/quick-uploads/fwueizblbkjk.jpg"
 >
@@ -32,7 +32,7 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
       <div class="hero__copy">
         <h1 id="h-hero" class="hero__h1"><span class="hero__name">JARED GIBBONS</span> <span class="hero__role">South Surrey Realtor</span></h1>
         <p class="hero__tag">Top 1% of Fraser Valley REALTORS®</p>
-        <p class="hero__proof"><a href="/reviews.html"><span class="hero__stars" aria-hidden="true">★</span> 5.0 · 95 Google reviews</a><span aria-hidden="true"> · </span><span>#1 in South Surrey by FVREB Medallion Club points</span></p>
+        <p class="hero__proof"><a href="/reviews.html"><span class="hero__stars" aria-hidden="true">★</span> 5.0 · 95 Google reviews</a><span aria-hidden="true"> · </span><span>#1 in South Surrey / White Rock by FVREB Medallion Club points (2025 and 2026 YTD)</span></p>
         <form class="hs" action="/map-search.html" data-hs={JSON.stringify(Object.fromEntries(hsAreas.map((a) => [a.key, a.opts])))} role="search" aria-label="Search homes for sale">
           <label class="hs__f"><span>Area</span>
             <select name="area">{hsGroups.map((g) => <optgroup label={g}>{hsAreas.filter((a) => a.group === g).map((a) => <option value={a.key}>{a.label}</option>)}</optgroup>)}</select>
@@ -112,21 +112,21 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
     </div>
   </section>
 
-  <!-- ░░ South Surrey's #1 Ranked Realtor ░░ -->
+  <!-- ░░ Ranking (approved wording, audit 2026-11-13) ░░ -->
   <section class="section section--ink rank on-dark" aria-labelledby="h-rank">
     <div class="wrap rank__grid">
       <div>
         <p class="eyebrow">South Surrey Real Estate</p>
-        <h2 id="h-rank" class="h2 rank__h">South Surrey's #1 Ranked Realtor</h2>
-        <p class="lede">#1 in South Surrey and White Rock by Fraser Valley Real Estate Board Medallion Club points, 2025 and 2026 to date. #1 agent at Royal LePage Little Oak Realty in 2025.</p>
+        <h2 id="h-rank" class="h2 rank__h">#1 REALTOR® in South Surrey / White Rock by FVREB Medallion Club points (2025 and 2026 YTD)</h2>
+        <p class="lede">#1 of the Top 25 individuals at Royal LePage Little Oak Realty (2025). Top 1% of Fraser Valley REALTORS®.</p>
         <p><a class="btn" href="/south-surrey-real-estate-agent-jared-gibbons-realtor.html">Explore South Surrey →</a></p>
       </div>
       <ul class="rank__stats">
-        <li><strong>Top 1%</strong><span>Fraser Valley REALTORS® (FVREB)</span></li>
+        <li><strong>Top 1%</strong><span>of Fraser Valley REALTORS®</span></li>
+        <!-- $500M+ is not part of the approved ranking sentence; kept because Jared confirmed it earlier (flagged in the audit PR). -->
         <li><strong>$500M+</strong><span>Career sales</span></li>
-        <li><strong>10</strong><span>Straight years, FVREB Medallion Club</span></li>
-        <li><strong>95</strong><span>Google reviews, 5.0 rating</span></li>
-        <li><strong>11+</strong><span>Years as a REALTOR®, since 2015</span></li>
+                <li><strong>95</strong><span>Google reviews, 5.0 rating</span></li>
+        <li><strong>2015</strong><span>REALTOR® since 2015</span></li>
       </ul>
     </div>
   </section>
@@ -150,7 +150,7 @@ const seenLogos: [string, number, number][] = [['Craigslist',164,1],['REW.ca',14
       <p class="eyebrow">Fraser Valley · Metro Vancouver · BC</p>
       <h2 id="h-area" class="h2 caps">Search by Area</h2>
       <p class="lede"><strong>Every community.</strong> <strong>Every property type.</strong></p>
-      <p class="prose">As South Surrey's #1 ranked REALTOR®, Jared Gibbons serves buyers and sellers across 11 communities in the Fraser Valley and Metro Vancouver. Select a community to search attached homes, detached homes, townhomes, or acreages.</p>
+      <p class="prose">Jared Gibbons serves buyers and sellers across 11 communities in the Fraser Valley and Metro Vancouver. Select a community to search attached homes, detached homes, townhomes, or acreages.</p>
       <p class="eyebrow">11 Communities · Updated Daily from MLS®</p>
       <ol class="areas">
         {areas.map((a) => (
