@@ -2,7 +2,7 @@
 
 | # | Item | Status |
 |---|---|---|
-| 1 | Google Maps error on guide hubs | **Code done (D-261):** when Google shows its own error box the map is replaced by the area list. **Cause, likely:** the Maps JavaScript API daily cap of 400 map loads set on 2026-11-05 (docs/google-maps-key-setup.md), hit on launch day. Jared to sign in to Google Cloud and check Quotas; raise it (for example 2,000/day) if so. |
+| 1 | Google Maps error on guide hubs | **Done (D-279): daily cap raised 400 → 1,000 with an 80% email alert.** **Code done (D-261):** when Google shows its own error box the map is replaced by the area list. **Cause, likely:** the Maps JavaScript API daily cap of 400 map loads set on 2026-11-05 (docs/google-maps-key-setup.md), hit on launch day. Jared to sign in to Google Cloud and check Quotas; raise it (for example 2,000/day) if so. |
 | 2 | Locked cards first in results | MyRealPage setting / support request (not in the repo). |
 | 3 | "Signup" cells on MLS detail | MyRealPage setting / support request. |
 | 4 | "SHOWING: 1-121,249" | **Done (D-261):** MyRealPage hides its "/" separator; idx-embed.css now shows " of ". Checked by injecting the rule on the live results page. |
