@@ -9,8 +9,8 @@
   "triggers": { "crons": ["17 11 * * *"] },
   "kv_namespaces": [{ "binding": "REVIEWS_KV" }],
   "vars": {
-    // Only needed if the Google account manages more than one location: set to locations/<id> (a plain variable, not a secret).
-    "GBP_LOCATION": ""
+    // The Google account also manages Pet Care by Gina, so pick Jared's profile: a location id (locations/<id>) or part of its title.
+    "GBP_LOCATION": "Jared Gibbons"
   },
   "observability": { "enabled": true }
 }

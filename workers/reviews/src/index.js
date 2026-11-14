@@ -75,6 +75,9 @@ export async function accessToken(env, fetchImpl = fetch) {
   return j.access_token;
 }
 
+// Reviews Jared has said are fake and must not be shown (REVIEW_EXCLUDE, comma-separated "initials|YYYY-MM-DD", date in UTC as Google stores it).
+export const excluded = (env, n) => String(env.REVIEW_EXCLUDE || '').split(',').map((x) => x.trim()).filter(Boolean).includes(`${n.name}|${String(n.date || '').slice(0, 10)}`);
+
 export async function pullReviews(env, fetchImpl = fetch) {
   const token = await accessToken(env, fetchImpl);
   const accounts = (await getJson(fetchImpl, ACCOUNTS_URL, token)).accounts || [];
@@ -83,7 +86,7 @@ export async function pullReviews(env, fetchImpl = fetch) {
   for (const a of accounts) {
     const locs = (await getJson(fetchImpl, locationsUrl(a.name), token)).locations || [];
     const want = env.GBP_LOCATION;
-    const hit = want ? locs.find((l) => l.name === want || `locations/${l.name}` === want) : null;
+    const hit = want ? locs.find((l) => l.name === want || `locations/${l.name}` === want || String(l.title || '').toLowerCase().includes(String(want).toLowerCase())) : null;   // id or part of the title
     if (hit) { account = a; loc = hit; break; }
     if (!want && locs.length === 1 && !loc) { account = a; loc = locs[0]; }
     else if (!want && locs.length > 1) throw new FeedError('multiple_locations', `Several locations found (${locs.map((l) => l.title).join(', ')}); set GBP_LOCATION`);
@@ -94,7 +97,7 @@ export async function pullReviews(env, fetchImpl = fetch) {
     const j = await getJson(fetchImpl, reviewsUrl(account.name, loc.name, page), token);
     if (j.averageRating != null) avg = Number(j.averageRating);
     if (j.totalReviewCount != null) total = Number(j.totalReviewCount);
-    for (const r of j.reviews || []) { const n = normalizeReview(r); if (n) reviews.push(n); }
+    for (const r of j.reviews || []) { const n = normalizeReview(r); if (n && !excluded(env, n)) reviews.push(n); }
     page = j.nextPageToken || '';
     if (!page || reviews.length >= MAX_REVIEWS) break;
   }
