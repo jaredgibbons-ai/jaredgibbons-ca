@@ -6,6 +6,7 @@
 // - Secrets come from the environment and are never logged or returned.
 const TOKEN_URL = 'https://oauth2.googleapis.com/token';
 const ACCOUNTS_URL = 'https://mybusinessaccountmanagement.googleapis.com/v1/accounts';
+export const initials = (n) => { const w = String(n || '').replace(/[^\p{L}\s'-]/gu, ' ').trim().split(/\s+/).filter(Boolean); return w.length ? w.map((x) => x[0].toUpperCase() + '.').join('') : 'A Google user'; };
 const locationsUrl = (account) => `https://mybusinessbusinessinformation.googleapis.com/v1/${account}/locations?readMask=name,title,metadata&pageSize=100`;
 const reviewsUrl = (account, location, page) =>
   `https://mybusiness.googleapis.com/v4/${account}/${location}/reviews?pageSize=50&orderBy=updateTime%20desc${page ? `&pageToken=${encodeURIComponent(page)}` : ''}`;
@@ -33,7 +34,8 @@ export function normalizeReview(r) {
   if (!rating) return null;
   const anon = r.reviewer?.isAnonymous === true || !r.reviewer?.displayName;
   const out = {
-    name: anon ? 'A Google user' : String(r.reviewer.displayName).slice(0, 100),
+    // Initials only (site rule, audit 2026-11-13): "Jane Q. Doe" -> "J.Q.D.". The full name never leaves this Worker.
+    name: anon ? 'A Google user' : initials(r.reviewer.displayName),
     rating,
     text: cleanComment(r.comment),
     date: r.createTime || r.updateTime || null,
