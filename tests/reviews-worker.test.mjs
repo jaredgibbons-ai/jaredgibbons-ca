@@ -34,7 +34,7 @@ test('cleanComment keeps the reviewer\'s original words, not the machine transla
 });
 test('normalizeReview keeps public fields only', () => {
   const n = normalizeReview({ reviewId: 'secret-id', reviewer: { displayName: 'Sam B.', profilePhotoUrl: 'https://x/p.jpg' }, starRating: 'FOUR', comment: 'ok', createTime: '2026-10-01T00:00:00Z' });
-  assert.deepEqual(n, { name: 'Sam B.', rating: 4, text: 'ok', date: '2026-10-01T00:00:00Z' });
+  assert.deepEqual(n, { name: 'S.B.', rating: 4, text: 'ok', date: '2026-10-01T00:00:00Z' });
   assert.equal(normalizeReview({ reviewer: { isAnonymous: true }, starRating: 'FIVE' }).name, 'A Google user');
   assert.equal(normalizeReview({ starRating: 'STAR_RATING_UNSPECIFIED' }), null);
 });
