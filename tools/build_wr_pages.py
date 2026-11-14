@@ -121,7 +121,7 @@ PAGES.append(page(
     [('White Rock homes', '/white-rock.html')],
     [
         NOTE('Facts are from the City of White Rock, read November 13, 2026. Live search: Gerry’s 1452071 (keyword “Marine”).'),
-        P('White Rock’s waterfront is Marine Drive: about two kilometres of road between East Beach and West Beach, with the promenade and the sandy beach of Semiahmoo Bay below it and homes stepping up the slope behind. This search lists White Rock homes for sale whose listing mentions Marine Drive. For Crescent Beach and Ocean Park in Surrey, see [waterfront homes in White Rock and South Surrey](/south-surrey-white-rock-waterfront-homes-for-sale.html).'),
+        P('White Rock’s waterfront is Marine Drive: about two kilometres of road between East Beach and West Beach, with the promenade and the sandy beach of Semiahmoo Bay below it and homes stepping up the slope behind. This search lists White Rock homes for sale whose listing mentions Marine Drive or marine views. For Crescent Beach and Ocean Park in Surrey, see [waterfront homes in White Rock and South Surrey](/south-surrey-white-rock-waterfront-homes-for-sale.html).'),
         GRID,
         H('East Beach, West Beach and the pier'),
         L('**The pier** splits the two beaches. It is 470 metres long, first built in 1914/15, and a December 20, 2018 storm destroyed a third of it; the repaired section reopened in 2019. The federal government has approved in principle $25,935,000 toward replacing the rest.',
