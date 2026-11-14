@@ -174,7 +174,7 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
   description={metaDesc}
   ogTitle={seoTitle}
   ogDescription={metaDesc}
-  ogImage={seo['OG image'] || undefined}
+  ogImage={photoList[0] ? new URL(`${import.meta.env.PUBLIC_PHOTO_BASE ?? '/listing-photos/'}${photoList[0].id}-960.webp`, 'https://jaredgibbons.ca').href : (seo['OG image'] && !/myrealpage\.com/.test(seo['OG image']) ? seo['OG image'] : undefined)}
   jsonld={listingLd}
   robots={page.status === 'Expired' ? 'noindex, follow' : (seo['Meta robots'] || 'index, follow')}
   footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"
