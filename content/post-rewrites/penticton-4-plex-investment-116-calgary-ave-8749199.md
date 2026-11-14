@@ -1,9 +1,9 @@
 ---
-title: Penticton Fourplex for Sale: 116 Calgary Ave ($1,299,000)
-description: 116 Calgary Ave, Penticton: a 2018 fourplex, fully tenanted, separately metered, in-suite laundry. $1,299,000, MLS® 10395824.
+title: Penticton Fourplex for Sale: 116 Calgary Ave ($1,279,000)
+description: 116 Calgary Ave, Penticton: a 2018 fourplex, fully tenanted, separately metered, in-suite laundry. $1,279,000, MLS® 10395824.
 h1: Penticton Fourplex Investment: 116 Calgary Avenue
 ---
-If you're looking for a newer, low-maintenance rental building outside the Lower Mainland, 116 Calgary Avenue in Penticton is worth a look. It's a 2018 purpose-built fourplex, fully tenanted, listed at **$1,299,000** (MLS® 10395824).
+If you're looking for a newer, low-maintenance rental building outside the Lower Mainland, 116 Calgary Avenue in Penticton is worth a look. It's a 2018 purpose-built fourplex, fully tenanted, listed at **$1,279,000** (MLS® 10395824).
 
 ## The property
 

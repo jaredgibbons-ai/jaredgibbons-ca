@@ -51,7 +51,7 @@ export const listings = [
   { slug: 'c8082016-203-210-30610-progressive-way-abbotsford-bc-v2t-6z2.109793866', street: '203 & 210 30610 Progressive Way', city: 'Abbotsford', brokerage: 'Royal LePage Little Oak Realty', price: '$699,000', sqft: '1,385sqft' },
   { slug: 'r3158924-a218-8929-202-street-langley-bc-v1m-0b4.109644627', street: 'A218 8929 202 Street', city: 'Langley', brokerage: 'Royal LePage Little Oak Realty', price: '$405,000', beds: 1, baths: 1, sqft: '726sqft' },
   { slug: 'r3153853-16216-20-avenue-surrey-bc-v3z-9m8.109518803', street: '16216 20 Avenue', city: 'Surrey', brokerage: 'Royal LePage Little Oak Realty', price: '$4,900,000', beds: 3, baths: 3, sqft: '3,726sqft' },
-  { slug: '10395824-116-calgary-avenue-penticton-bc-v2a-2t6.109415142', street: '116 Calgary Avenue', city: 'Penticton', price: '$1,299,000', n1: 4, sqft: '3,120sqft' },
+  { slug: '10395824-116-calgary-avenue-penticton-bc-v2a-2t6.109415142', street: '116 Calgary Avenue', city: 'Penticton', price: '$1,279,000', n1: 4, sqft: '3,120sqft' },
   { slug: 'r3135211-2552-200-street-langley-bc-v2z-1x1.109094647', street: '2552 200 Street', city: 'Langley', brokerage: 'Royal LePage Little Oak Realty', price: '$2,700,000', beds: 2, baths: 1, sqft: '1,118sqft' },
 ];
 
