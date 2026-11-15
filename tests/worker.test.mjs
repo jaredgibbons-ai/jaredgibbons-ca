@@ -129,7 +129,7 @@ test('worker D-140: fail-safe noindex, security headers on every answer, redirec
   assert.equal((await call('/404.html')).status, 404);
   assert.equal((await call('/blog.html/blog.feed')).status, 410);
   r = await call('/cedar-hills.html');
-  for (const h of ['x-frame-options', 'content-security-policy', 'permissions-policy', 'strict-transport-security']) assert.ok(r.headers.get(h), h);
+  for (const h of ['x-frame-options', 'content-security-policy', 'content-security-policy-report-only', 'permissions-policy', 'strict-transport-security']) assert.ok(r.headers.get(h), h);
   // every answer is noindex unless INDEXABLE is exactly "true": a boolean, "TRUE", "1" or nothing all stay closed
   for (const v of [undefined, 'false', true, 'TRUE', '1', 'yes']) { r = await worker.fetch(new Request('https://jaredgibbons.ca/cedar-hills.html'), { ...env, INDEXABLE: v }); assert.equal(r.headers.get('x-robots-tag'), 'noindex, nofollow', String(v)); }
   r = await worker.fetch(new Request('https://jaredgibbons.ca/cedar-hills.html'), { ...env, INDEXABLE: 'true' });
