@@ -57,7 +57,8 @@ test('delivery: webhook receives the lead; any failing destination is a 502 (not
   assert.equal((await handleForm(mk(good), { TURNSTILE_SECRET: 's', LEAD_WEBHOOK_URL: 'https://hooks.example/lead' }, { fetch: bad })).status, 502);
 });
 test('schemas: property check needs only an address; home evaluation needs contact details', () => {
-  assert.deepEqual(validate('property-check', { address: '1 Main St' }).errors, {});
+  assert.deepEqual(validate('property-check', { address: '1 Main St', email: 'a@b.ca' }).errors, {});
+  assert.ok(validate('property-check', { address: '1 Main St' }).errors.email, 'a zoning report request needs an email to reply to');
   assert.ok(validate('home-evaluation', { address: '1 Main St' }).errors.email);
 });
 

@@ -21,7 +21,7 @@ import { ALERT_CONSENT_TEXT } from '../lib/listing-alert.js';
 import { NEWSLETTER_CONSENT_TEXT } from '../lib/newsletter.js';
 
 const MAX_BODY = 20 * 1024;
-const FORM_TITLES = { contact: 'Contact form', 'home-evaluation': 'Home evaluation request', 'property-check': 'Property check request', quiz: 'Home search quiz', 'listing-alert': 'New listing alert signup', newsletter: 'Newsletter signup', 'presale-vip': 'Presale VIP floorplans request' };
+const FORM_TITLES = { contact: 'Contact form', 'home-evaluation': 'Home evaluation request', 'property-check': 'Zoning report request', quiz: 'Home search quiz', 'listing-alert': 'New listing alert signup', newsletter: 'Newsletter signup', 'presale-vip': 'Presale VIP floorplans request' };
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 // Fields follow the labels captured in the archive (`Your name:`, `Your email:` ...). The archive did
@@ -49,7 +49,10 @@ export const SCHEMAS = {
   },
   'property-check': {
     address: { label: 'Property address', required: true, max: 200 },
-    name: { label: 'Your name (optional)', max: 100 },
+    name: { label: 'Your name', max: 100 },
+    // A reply needs somewhere to go (D-290): the old form asked for an address and an optional name only.
+    email: { label: 'Your email', required: true, max: 200, email: true },
+    phone: { label: 'Your phone number', max: 30, phone: true },
   },
   // Home page "Where are you starting?" quiz. Multi-choice answers arrive as one comma-separated line.
   quiz: {
@@ -133,6 +136,8 @@ export async function landFacts(address, city, doFetch = fetch) {
     const r = await Promise.race([lookup(q, doFetch), new Promise((res) => setTimeout(() => res(null), 5000))]);
     if (!r || r.status !== 'ok') return '';
     const parts = [r.zones.map((z) => [z.code, z.name].filter(Boolean).join(' ')).join(' / '), r.alr === true ? 'in the ALR' : r.alr === false ? 'not in the ALR' : ''];
+    if (r.ocp) parts.push(`OCP: ${r.ocp}`);
+    if (r.flood === true) parts.push('in a mapped flood area');
     if (r.lot) parts.push(`lot about ${r.lot.acres >= 0.5 ? `${r.lot.acres} acres` : `${r.lot.sqft.toLocaleString('en-CA')} sq ft`} (whole parcel)`);
     return `${parts.filter(Boolean).join(', ')} (${r.locality} map, matched ${r.address})`;
   } catch { return ''; }
