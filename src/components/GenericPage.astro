@@ -3,6 +3,7 @@
 // Generic archive-driven page. Content comes from src/data/pages/<slug>.json, produced by
 // tools/import_pages.py from the folder-09 page records. Bespoke pages (index, fort-langley,
 // reviews) are explicit files and take precedence over this route.
+import ZoningFind from './ZoningFind.astro';
 import Base from '../layouts/Base.astro';
 import Rich from './Rich.astro';
 import { capsClass } from '../lib/caps';
@@ -660,7 +661,23 @@ const explore = !_extra.length ? exploreBase
         </div>
       </section>
     );
-    if (sec.kind === 'grid' && isMapPage) return <IdxEmbed frame id={idx.pages['south-surrey-homes-for-sale']} account={idx.account} />;
+    if (sec.kind === 'grid' && isMapPage) return (
+      <>
+        <IdxEmbed frame id={idx.pages['south-surrey-homes-for-sale']} account={idx.account} />
+        {page.slug === 'map-search' && (
+          <section class="section section--tight mapzone" aria-labelledby="mapzone-h">
+            <div class="wrap mapzone__in">
+              <div>
+                <h2 class="h2" id="mapzone-h">Check a property's zoning and ALR status</h2>
+                <p>Found a home or a lot on the map? Type its address to see the exact zone, whether it is in the Agricultural Land Reserve, and the lot size, read from the municipality's own map. It covers Surrey, White Rock, Langley (City and Township) and Abbotsford.</p>
+                <p><a href="/zonings.html">See the full zoning guide</a></p>
+              </div>
+              <div><ZoningFind /></div>
+            </div>
+          </section>
+        )}
+      </>
+    );
     if (sec.kind === 'grid' && idxPath) return <IdxEmbed path={idxPath} account={idx.account} />;
     // Search pages (a saved search id) get the "Email me new listings" box right above the results; the open map search and "my listings" widgets do not.
     if (sec.kind === 'grid' && idxId) return <IdxEmbed id={idxId} account={idx.account}><ListingAlert search={alertName} searchId={idxId} /></IdxEmbed>;
@@ -691,7 +708,7 @@ const explore = !_extra.length ? exploreBase
                   <>
                     {heading}
                     <div class="mapcta">
-                      <form class="qs" data-qs={JSON.stringify(Object.fromEntries(qsAreas.map((a) => [a.key, a.opts])))} hidden>
+                      <form class="qs" data-qs={JSON.stringify(Object.fromEntries(qsAreas.map((a) => [a.key, a.opts])))}>
                         <p class="qs__t">Quick search</p>
                         <div class="qs__row">
                           <label class="qs__f" for="qs-area"><span>Area</span>
@@ -1251,6 +1268,9 @@ const explore = !_extra.length ? exploreBase
   .biglink__img{display:block;width:100%;height:100%;min-height:18rem;max-height:24rem;object-fit:cover}
   @media (max-width:48rem){.biglink{grid-template-columns:1fr}.biglink__img{order:-1;min-height:0;height:11rem}}
   /* Phones only: the full-screen map button under the heading of the two map pages (D-255). */
+  .mapzone__in{display:grid;gap:var(--s5)}
+  @media (min-width:60rem){.mapzone__in{grid-template-columns:1fr 1.1fr;gap:var(--s7);align-items:start}}
+  .mapzone p{max-width:36rem;line-height:1.6}
   .mapcta{display:none}
   @media (max-width:700px){
     .mapcta{display:block;margin:0 0 1.25rem}
