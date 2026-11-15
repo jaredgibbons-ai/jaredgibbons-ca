@@ -3,6 +3,7 @@
 // for the page's municipality (all seven when the page covers the whole valley), with a search that filters the rows and
 // hands off to the full guide (/zonings.html?q=…). Each row links to that zone's card in the guide.
 import Z from '../data/zonings.json';
+import ZoningFind from './ZoningFind.astro';
 
 const { muni = '' } = Astro.props as { muni?: string };
 const d = Z as any;
@@ -30,7 +31,11 @@ const uid = `zl${Math.random().toString(36).slice(2, 7)}`;
         <h2 class="h2" id={`${uid}-h`}>Check the zoning before you buy</h2>
         <p class="zl__lead">Farm, rural and acreage zones in {place}, in plain English: what each allows and the smallest lot it can be split into. Search a code like {rows[0].code} or a word like "{hintWord}".</p>
       </div>
-      <p class="zl__links"><a class="btn" href="/zonings.html#zd-lookup">Check an address</a> <a class="btn btn--ghost" href={`/zonings.html${muni ? `#${muni}` : ''}`}>Full zoning guide</a></p>
+      <p class="zl__links"><a class="btn btn--ghost" href={`/zonings.html${muni ? `#${muni}` : ''}`}>Full zoning guide</a></p>
+    </div>
+    <div class="zl__find">
+      <p class="zl__findh">Check one property: type its address for the exact zone, ALR status and lot size.</p>
+      <ZoningFind />
     </div>
     <form class="zl__search" action="/zonings.html" method="get" role="search">
       <label for={`${uid}-q`} class="zl__vh">Search zones</label>
@@ -73,6 +78,8 @@ const uid = `zl${Math.random().toString(36).slice(2, 7)}`;
 </script>
 
 <style>
+  .zl__find{max-width:44rem;margin:0 0 var(--s5)}
+  .zl__findh{margin:0 0 .6rem;font-weight:700}
   .zl{border-top:1px solid var(--ink)}
   .zl__head{display:flex;flex-wrap:wrap;gap:var(--s4) var(--s6);align-items:end;justify-content:space-between;margin-bottom:var(--s5)}
   .zl__head > div{max-width:44rem}
