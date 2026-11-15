@@ -18,7 +18,7 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim
 const jsonld: any[] = [];
 if (faq.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: plain(f.a) } })) });
 // The archive wording, plus White Rock (the live lookup covers it, D-285).
-const lookupLead = String(d.lookup.d).replace('It covers Surrey, Langley', 'It covers Surrey, White Rock, Langley');
+const lookupLead = String(d.lookup.d).replace('It covers Surrey, Langley', 'It covers Surrey, White Rock, Delta, Langley').replace('and Abbotsford for now', 'Maple Ridge and Abbotsford for now');
 const crumbs = [{ name: 'Home', href: '/' }, { name: 'Zoning Guide', href: '/zonings.html' }];
 ---
 <Base
