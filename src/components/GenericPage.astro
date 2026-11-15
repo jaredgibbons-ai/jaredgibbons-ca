@@ -5,6 +5,7 @@
 // reviews) are explicit files and take precedence over this route.
 import ZoningFind from './ZoningFind.astro';
 import SoldProof from './SoldProof.astro';
+import SOLD from '../data/sold-streets.js';
 import Base from '../layouts/Base.astro';
 import Rich from './Rich.astro';
 import { capsClass } from '../lib/caps';
@@ -69,6 +70,8 @@ const idxPath = idx.special?.[page.slug];
 // A page whose main content is a live listing search: the heading is compact and the search starts right below it (D-143).
 // The open map search is shown in the page (a frame) on these two pages (D-242).
 const isMapPage = page.slug === 'recip' || page.slug === 'map-search';
+const _ap = (SOLD as any).subareas?.[`/${page.slug}.html`] as { name: string; side: string } | undefined;
+const areaProof = !_ap ? '' : _ap.side === 'BS' ? `Jared has sold homes in ${_ap.name} and helped buyers purchase here.` : _ap.side === 'S' ? `Jared has sold homes in ${_ap.name}.` : `Jared has helped buyers purchase in ${_ap.name}.`;
 const isSearch = !!(idxId || idxPath) || isMapPage;
 // Name of the search, sent with an "Email me new listings" signup so Jared knows which one to set up.
 const alertName = String((page.blocks || []).find((b: any) => b.t === 'h' && b.level === 1)?.text || String(page.title || '').split('|')[0]).replace(/\s+/g, ' ').trim().slice(0, 150);
@@ -725,6 +728,8 @@ const explore = !_extra.length ? exploreBase
                     </div>
                   </>
                 );
+                // Neighbourhood pages where Jared has sold or helped a buyer (D-293): one line under the H1, no counts.
+                if (b.level === 1 && areaProof) return <>{heading}<p class="areaproof"><strong>{areaProof}</strong> <a href="/home-evaluation.html">What is my home worth?</a></p></>;
                 return heading;
               }
               if (b.t === 'quickfacts') return (
@@ -1288,6 +1293,8 @@ const explore = !_extra.length ? exploreBase
   .pg--search p{max-width:56rem;margin-bottom:0}
   .section--search{padding-bottom:0}
   .pg :global(p){margin:0 0 1em}
+  .areaproof{margin:-.5rem 0 1.25rem;padding:.6rem .85rem;border-left:4px solid var(--ink);background:#fff;max-width:44rem;line-height:1.5}
+  .areaproof a{margin-left:.35rem;white-space:nowrap}
   .pg__h1{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.05;letter-spacing:-.025em;margin:0 0 1.25rem;text-wrap:balance;max-width:40ch}
   .pg__h1.caps{max-width:48ch}
   .pg--hub .pg__h1,.pg--hub .pg__h1.caps{font-size:clamp(1.75rem,3.2vw,2.5rem);max-width:none;margin-bottom:1rem}
