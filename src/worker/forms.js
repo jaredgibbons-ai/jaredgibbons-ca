@@ -150,7 +150,7 @@ const sKey = (x) => String(x).toLowerCase().replace(/\b(street|st)\b\.?/g, 'st')
   .replace(/\b(crescent|cres)\b\.?/g, 'cres').replace(/\b(boulevard|blvd)\b\.?/g, 'blvd').replace(/\b(highway|hwy)\b\.?/g, 'hwy').replace(/\b(place|pl)\b\.?/g, 'pl').replace(/(\d)(st|nd|rd|th)\b/g, '$1').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
 export function soldNearby(address, city = '') {
   const a = ` ${sKey(address)} `, c = sKey(city);
-  for (const b of SOLD.buildings) for (const civic of b.civic) if (a.includes(` ${sKey(civic)} `)) return `Jared has sold in this building (${b.name})`;
+  for (const b of SOLD.buildings) for (const civic of b.civic) if (a.includes(` ${sKey(civic)} `)) return b.side === 'B' ? `Jared has helped a buyer purchase in this building (${b.name})` : b.side === 'BS' ? `Jared has sold and helped buyers purchase in this building (${b.name})` : `Jared has sold in this building (${b.name})`;
   for (const [area, streets] of Object.entries(SOLD.areas)) {
     const town = sKey(area).replace(/^south /, '');
     if (c ? !c.includes(town) : !a.includes(` ${town} `)) continue;

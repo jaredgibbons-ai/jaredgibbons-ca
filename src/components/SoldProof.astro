@@ -8,7 +8,7 @@ const PAGES: Record<string, string[]> = {
   'sell-my-house-in-surrey': ['Surrey', 'South Surrey'],
   'sell-my-house-in-south-surrey-white-rock': ['South Surrey', 'White Rock'],
 };
-const areas = (PAGES[slug] || []).map((a) => ({ a, streets: ((S as any).areas[a] || []) as string[], buildings: ((S as any).buildings as any[]).filter((b) => b.area === a && !/Commerce Centre|Business Centre|Plaza|Shopping Centre|Trailer Park/i.test(b.name)).map((b) => b.name as string) })).filter((x) => x.streets.length);
+const areas = (PAGES[slug] || []).map((a) => ({ a, streets: ((S as any).areas[a] || []) as string[], buildings: ((S as any).buildings as any[]).filter((b) => b.area === a && b.side.includes('S') && !/Commerce Centre|Business Centre|Plaza|Shopping Centre|Trailer Park/i.test(b.name)).map((b) => b.name as string) })).filter((x) => x.streets.length);
 const list = (xs: string[]) => xs.length > 1 ? `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}` : xs[0];
 ---
 {areas.length > 0 && (
