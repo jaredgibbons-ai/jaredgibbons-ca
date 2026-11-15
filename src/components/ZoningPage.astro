@@ -2,7 +2,6 @@
 // Zoning directory (D-268). Data: src/data/zonings.json, written from the archive record by tools/build_zonings.py (same wording).
 // Every zone is in the HTML (search engines and no-JS readers get all 278); the filter bar only hides cards.
 import Base from '../layouts/Base.astro';
-import FormStub from './FormStub.astro';
 import ZoningFind from './ZoningFind.astro';
 import Z from '../data/zonings.json';
 
@@ -71,10 +70,6 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Zoning Guide', href: '/zon
       </div>
       <div class="zd-lookup__form">
         <ZoningFind fine={d.lookup.fine} />
-        <details class="zd-ask">
-          <summary>Rather have me check it? Send me the address</summary>
-          <FormStub labels={d.lookup.labels} submit="Send it to Jared" fine="I'll reply with the zoning, ALR status and what you can build." uid="zdf" />
-        </details>
       </div>
     </div>
   </section>
@@ -301,9 +296,6 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Zoning Guide', href: '/zon
   .zd-lookup__alt{display:flex;flex-wrap:wrap;gap:.5rem;font:700 .875rem var(--f-head)}
   .zd-lookup__alt a{color:var(--ink)}
   .zd-lookup__form :global(.fstub){background:#fff;border:1px solid var(--ink);padding:var(--s5);margin:0}
-  .zd-ask{margin-top:var(--s3)}
-  .zd-ask summary{cursor:pointer;font:700 .875rem var(--f-head);padding:.5rem 0}
-  .zd-ask :global(.fstub){background:#fff;border:1px solid var(--ink);padding:var(--s5);margin:.5rem 0 0}
 
   /* filter bar */
   .zd-dir{padding-bottom:var(--s7)}

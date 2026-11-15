@@ -92,6 +92,20 @@ test('a suite address is the building; a hung request is retried once', async ()
   assert.equal(n, 2);
 });
 
+test('community plan and flood area come back when the city publishes them (D-290)', async () => {
+  const r = await lookup('2725 192 St Surrey', mock([
+    ['geocoder', geo()],
+    ['Planning/MapServer/18', { features: [{ attributes: { ZONING_TEXT: 'RA' } }] }],
+    ['Planning/MapServer/14', { features: [{ attributes: { LAND_USE: 'Suburban' } }, { attributes: { LAND_USE: 'Suburban' } }] }],
+    ['Planning/MapServer/4', { count: 1 }],
+    ['Planning/MapServer/0', { count: 0 }],
+  ]));
+  assert.equal(r.ocp, 'Suburban');
+  assert.equal(r.flood, true);
+  assert.equal(r.alr, false);
+  assert.equal(MUNIS['Township of Langley'].ocp, undefined);
+});
+
 test('area and sources', () => {
   assert.equal(ringArea(sq), 5000);
   for (const m of Object.values(MUNIS)) assert.match(m.zoning, /^https:\/\//);
