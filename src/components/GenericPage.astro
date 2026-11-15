@@ -71,7 +71,8 @@ const idxPath = idx.special?.[page.slug];
 // The open map search is shown in the page (a frame) on these two pages (D-242).
 const isMapPage = page.slug === 'recip' || page.slug === 'map-search';
 const _ap = (SOLD as any).subareas?.[`/${page.slug}.html`] as { name: string; side: string } | undefined;
-const areaProof = !_ap ? '' : _ap.side === 'BS' ? `Jared has sold homes in ${_ap.name} and helped buyers purchase here.` : _ap.side === 'S' ? `Jared has sold homes in ${_ap.name}.` : `Jared has helped buyers purchase in ${_ap.name}.`;
+const _apSold = !_ap ? '' : ((_ap as any).n === 1 ? 'a home' : 'homes');   // n: closed sales in that MLS® sub-area (Paragon), used for the wording only, never shown
+const areaProof = !_ap ? '' : _ap.side === 'BS' ? `Jared has sold ${_apSold} in ${_ap.name} and helped buyers purchase here.` : _ap.side === 'S' ? `Jared has sold ${_apSold} in ${_ap.name}.` : `Jared has helped buyers purchase in ${_ap.name}.`;
 const isSearch = !!(idxId || idxPath) || isMapPage;
 // Name of the search, sent with an "Email me new listings" signup so Jared knows which one to set up.
 const alertName = String((page.blocks || []).find((b: any) => b.t === 'h' && b.level === 1)?.text || String(page.title || '').split('|')[0]).replace(/\s+/g, ' ').trim().slice(0, 150);
