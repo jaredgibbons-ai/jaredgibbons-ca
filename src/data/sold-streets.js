@@ -1680,223 +1680,278 @@ export default {
  "subareas": {
   "/abbotsford-east.html": {
    "name": "Abbotsford East",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Abbotsford East"
   },
   "/abbotsford-west.html": {
    "name": "Abbotsford West",
-   "side": "S"
+   "side": "S",
+   "mls": "Abbotsford West"
   },
   "/aberdeen.html": {
    "name": "Aberdeen in Abbotsford",
-   "side": "S"
+   "side": "S",
+   "mls": "Aberdeen"
   },
   "/albion.html": {
    "name": "Albion",
-   "side": "S"
+   "side": "S",
+   "mls": "Albion"
   },
   "/aldergrove.html": {
    "name": "Aldergrove",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Aldergrove Langley"
   },
   "/annieville.html": {
    "name": "Annieville",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Annieville"
   },
   "/bear-creek-green-timbers.html": {
    "name": "Bear Creek Green Timbers",
-   "side": "B"
+   "side": "B",
+   "mls": "Bear Creek Green Timbers"
   },
   "/bolivar-heights.html": {
    "name": "Bolivar Heights",
-   "side": "S"
+   "side": "S",
+   "mls": "Bolivar Heights"
   },
   "/brookswood.html": {
    "name": "Brookswood",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Brookswood Langley"
   },
   "/campbell-valley.html": {
    "name": "Campbell Valley",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Campbell Valley"
   },
   "/central-abbotsford.html": {
    "name": "Central Abbotsford",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Central Abbotsford"
   },
   "/chilliwack-proper-east.html": {
    "name": "Chilliwack Proper East",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Chilliwack Proper East"
   },
   "/chilliwack-proper-south.html": {
    "name": "Chilliwack Proper South",
-   "side": "S"
+   "side": "S",
+   "mls": "Chilliwack Proper South"
   },
   "/clayton.html": {
    "name": "Clayton",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Clayton"
   },
   "/cloverdale-bc.html": {
    "name": "Cloverdale",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Cloverdale BC"
   },
   "/cottonwood-mr.html": {
    "name": "Cottonwood",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Cottonwood MR"
   },
   "/county-line-glen-valley.html": {
    "name": "County Line Glen Valley",
-   "side": "BS"
+   "side": "BS",
+   "mls": "County Line Glen Valley"
   },
   "/crescent-bch-ocean-pk.html": {
    "name": "Crescent Beach & Ocean Park",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Crescent Bch Ocean Pk."
   },
   "/cultus-lake.html": {
    "name": "Cultus Lake",
-   "side": "S"
+   "side": "S",
+   "mls": "Cultus Lake North"
   },
   "/durieu.html": {
    "name": "Durieu in Mission",
-   "side": "S"
+   "side": "S",
+   "mls": "Durieu"
   },
   "/east-central.html": {
    "name": "East Central Maple Ridge",
-   "side": "BS"
+   "side": "BS",
+   "mls": "East Central"
   },
   "/east-newton.html": {
    "name": "East Newton",
-   "side": "BS"
+   "side": "BS",
+   "mls": "East Newton"
   },
   "/elgin-chantrell.html": {
    "name": "Elgin Chantrell",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Elgin Chantrell"
   },
   "/fleetwood-tynehead.html": {
    "name": "Fleetwood Tynehead",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Fleetwood Tynehead"
   },
   "/fort-langley.html": {
    "name": "Fort Langley",
-   "side": "S"
+   "side": "S",
+   "mls": "Fort Langley"
   },
   "/fraser-heights.html": {
    "name": "Fraser Heights",
-   "side": "S"
+   "side": "S",
+   "mls": "Fraser Heights"
   },
   "/grandview-surrey.html": {
    "name": "Grandview Heights",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Grandview Surrey"
   },
   "/guildford.html": {
    "name": "Guildford",
-   "side": "S"
+   "side": "S",
+   "mls": "Guildford"
   },
   "/hazelmere.html": {
    "name": "Hazelmere",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Hazelmere"
   },
   "/king-george-corridor.html": {
    "name": "King George Corridor",
-   "side": "BS"
+   "side": "BS",
+   "mls": "King George Corridor"
   },
   "/langley-city.html": {
    "name": "Langley City",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Langley City"
   },
   "/mission-bc.html": {
    "name": "Mission",
-   "side": "S"
+   "side": "S",
+   "mls": "Mission BC"
   },
   "/morgan-creek.html": {
    "name": "Morgan Creek",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Morgan Creek"
   },
   "/murrayville.html": {
    "name": "Murrayville",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Murrayville"
   },
   "/otter-district.html": {
    "name": "Otter District",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Otter District"
   },
   "/pacific-douglas.html": {
    "name": "Pacific Douglas",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Pacific Douglas"
   },
   "/panorama-ridge.html": {
    "name": "Panorama Ridge",
-   "side": "B"
+   "side": "B",
+   "mls": "Panorama Ridge"
   },
   "/poplar.html": {
    "name": "Poplar in Abbotsford",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Poplar"
   },
   "/queen-mary-park-surrey.html": {
    "name": "Queen Mary Park",
-   "side": "S"
+   "side": "S",
+   "mls": "Queen Mary Park Surrey"
   },
   "/rosedale-homes-for-sale.html": {
    "name": "Rosedale",
-   "side": "S"
+   "side": "S",
+   "mls": "Rosedale"
   },
   "/salmon-river.html": {
    "name": "Salmon River",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Salmon River"
   },
   "/sardis-south.html": {
    "name": "Sardis South",
-   "side": "S"
+   "side": "S",
+   "mls": "Sardis South"
   },
   "/sardis-west-vedder.html": {
    "name": "Sardis West Vedder",
-   "side": "B"
+   "side": "B",
+   "mls": "Sardis West Vedder"
   },
   "/serpentine.html": {
    "name": "Serpentine",
-   "side": "S"
+   "side": "S",
+   "mls": "Serpentine"
   },
   "/silver-valley.html": {
    "name": "Silver Valley",
-   "side": "S"
+   "side": "S",
+   "mls": "Silver Valley"
   },
   "/sullivan-station.html": {
    "name": "Sullivan Station",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Sullivan Station"
   },
   "/sumas-prairie.html": {
    "name": "Sumas Prairie",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Sumas Prairie"
   },
   "/sunnyside-park-surrey.html": {
    "name": "Sunnyside Park",
-   "side": "S"
+   "side": "S",
+   "mls": "Sunnyside Park Surrey"
   },
   "/walnut-grove.html": {
    "name": "Walnut Grove",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Walnut Grove"
   },
   "/west-central.html": {
    "name": "West Central Maple Ridge",
-   "side": "S"
+   "side": "S",
+   "mls": "West Central"
   },
   "/west-newton.html": {
    "name": "West Newton",
-   "side": "S"
+   "side": "S",
+   "mls": "West Newton"
   },
   "/whalley.html": {
    "name": "Whalley",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Whalley"
   },
   "/white-rock.html": {
    "name": "White Rock",
-   "side": "BS"
+   "side": "BS",
+   "mls": "White Rock"
   },
   "/whonnock.html": {
    "name": "Whonnock",
-   "side": "B"
+   "side": "B",
+   "mls": "Whonnock"
   },
   "/willoughby-heights.html": {
    "name": "Willoughby Heights",
-   "side": "BS"
+   "side": "BS",
+   "mls": "Willoughby Heights"
   }
  }
 };

@@ -355,6 +355,15 @@ function gpFacts(gp: any) {
   return { house, acreage, commute: gp.commute, vibe: gp.vibe };
 }
 const isGuide = page.slug.endsWith('-guide');
+// Neighbourhood pages with a "Jared has sold here" line (D-293) also show up to 3 homes he sold in that MLS® sub-area, the same cards the guides carry (D-211, D-295).
+if (!isGuide && (_ap as any)?.mls && !(page.blocks || []).some((b: any) => b.t === 'jsold')) {
+  const sold = soldInSubArea((_ap as any).mls, 3);
+  if (sold.length) {
+    let at = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 2 && (/questions$/i.test(String(b.text || '')) || /^(Explore more|Nearby|Related|Sources|More )/i.test(String(b.text || ''))));
+    if (at < 0) at = page.blocks.length;
+    page.blocks.splice(at, 0, { t: 'h', level: 2, text: `Homes Jared has sold in ${_ap!.name}` }, { t: 'jsold', cards: sold });
+  }
+}
 if (isGuide) {
   const gf = (GUIDE_FACTS as Record<string, any>)[page.slug];
   // The archive's "Neighbourhood guide · Township of Langley" line under the H1 repeats the breadcrumb.
