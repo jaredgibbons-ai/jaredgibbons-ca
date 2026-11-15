@@ -237,3 +237,15 @@ test('lead email carries the zoning, ALR and lot size of the address (D-289)', a
   const m = leadEmail({ kind: 'home-evaluation', fields: { name: 'A', address: '1265 235 St' }, land: line, received_at: '', page: '' });
   assert.match(m.text, /^Zoning: RU-3 Rural, in the ALR/m);
 });
+
+test('lead email says when Jared has sold in that building or on that street (D-292)', async () => {
+  const { soldNearby } = await import('../src/worker/forms.js');
+  assert.equal(soldNearby('1807-15152 Russell Ave, White Rock'), 'Jared has sold in this building (Miramar Village)');
+  assert.equal(soldNearby('4410 208 Street', 'Langley'), 'Jared has sold on this street (208 Street, Langley)');
+  assert.equal(soldNearby('4410 208th St, Langley BC'), 'Jared has sold on this street (208 Street, Langley)');
+  assert.equal(soldNearby('4410 208 Street', 'Kamloops'), '');
+  assert.equal(soldNearby('1 Nowhere Lane', 'Langley'), '');
+  assert.equal(soldNearby('12208 Street Rd, Langley'), '');
+  const m = leadEmail({ kind: 'home-evaluation', fields: { name: 'A', address: '4410 208 Street', city: 'Langley' }, received_at: '', page: '' });
+  assert.match(m.text, /^Past sales: Jared has sold on this street \(208 Street, Langley\)$/m);
+});

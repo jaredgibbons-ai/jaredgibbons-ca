@@ -17,6 +17,7 @@
 //                       It never blocks or changes a lead; with no key, or on any error, the line says "not checked". Set as a Worker secret only.
 
 import { lookup } from './zoning.js';
+import SOLD from '../data/sold-streets.js';
 import { ALERT_CONSENT_TEXT } from '../lib/listing-alert.js';
 import { NEWSLETTER_CONSENT_TEXT } from '../lib/newsletter.js';
 
@@ -138,6 +139,22 @@ export async function landFacts(address, city, doFetch = fetch) {
   } catch { return ''; }
 }
 
+// "Jared has sold here" for the address a lead typed (D-292): the building, else the street, from his own deal records (street names only).
+// A numbered street must agree with the city when one is typed; '' when nothing matches.
+const sKey = (x) => String(x).toLowerCase().replace(/\b(street|st)\b\.?/g, 'st').replace(/\b(avenue|ave)\b\.?/g, 'ave').replace(/\b(road|rd)\b\.?/g, 'rd').replace(/\b(drive|dr)\b\.?/g, 'dr')
+  .replace(/\b(crescent|cres)\b\.?/g, 'cres').replace(/\b(boulevard|blvd)\b\.?/g, 'blvd').replace(/\b(highway|hwy)\b\.?/g, 'hwy').replace(/\b(place|pl)\b\.?/g, 'pl').replace(/(\d)(st|nd|rd|th)\b/g, '$1').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
+export function soldNearby(address, city = '') {
+  const a = ` ${sKey(address)} `, c = sKey(city);
+  for (const b of SOLD.buildings) for (const civic of b.civic) if (a.includes(` ${sKey(civic)} `)) return `Jared has sold in this building (${b.name})`;
+  for (const [area, streets] of Object.entries(SOLD.areas)) {
+    const town = sKey(area).replace(/^south /, '');
+    if (c ? !c.includes(town) : !a.includes(` ${town} `)) continue;
+    const hit = streets.find((s) => a.includes(` ${sKey(s)} `));
+    if (hit) return `Jared has sold on this street (${hit}, ${area})`;
+  }
+  return '';
+}
+
 // Plain text laid out as "Label: value" lines so Keyvera can read the name, email, phone, message and the
 // home asked about. Multi-line messages go last, after the single-line fields.
 export function leadEmail(lead) {
@@ -149,6 +166,7 @@ export function leadEmail(lead) {
   if (f.address) lines.push(`Address: ${oneLine(f.address)}`);
   if (f.address && lead.address_check) lines.push(`Address check: ${CHECK_TEXT[lead.address_check] || 'not checked'}`);
   if (f.address && lead.land) lines.push(`Zoning: ${oneLine(lead.land)}`);
+  if (f.address && soldNearby(f.address, f.city)) lines.push(`Past sales: ${soldNearby(f.address, f.city)}`);
   if (f.subject) lines.push(`Subject: ${oneLine(f.subject)}`);
   if (lead.kind === 'presale-vip') { lines.push(`Project: ${oneLine(f.project) || 'not named (general presale request)'}`); lines.push('Wants: VIP floorplans and pricing'); }
   if (lead.kind === 'home-evaluation') for (const k of ['city', 'postal', 'bedrooms', 'bathrooms', 'size', 'features']) if (f[k]) lines.push(`${SCHEMAS['home-evaluation'][k].label}: ${oneLine(f[k])}`);

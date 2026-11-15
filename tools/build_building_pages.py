@@ -157,6 +157,7 @@ SEARCH = {'soleil-white-rock-condos': '1452096', 'foster-martin-white-rock-condo
           'king-crescent-south-surrey-condos': '1452114', 'heights-grandview-south-surrey-condos': '1452116', 'southaven-south-surrey-condos': '1452117',
           'morgan-crossing-south-surrey-condos': '1452118', 'forest-ridge-south-surrey-condos': '1452119', 'halvo-south-surrey-condos': '1452120'}
 
+SOLD_HERE = {'miramar-village-white-rock-condos', 'morgan-crossing-south-surrey-condos', 'belaire-white-rock-condos', 'forest-ridge-south-surrey-condos'}
 NAV = {WR: ('White Rock condos', '/white-rock-condos-for-sale.html'), SS: ('South Surrey condos', '/south-surrey-condos-for-sale.html')}
 
 
@@ -188,6 +189,9 @@ def build(b):
                                 + (f'Live search: Gerry’s {SEARCH[slug]}.' if has else 'Listing box waits on a fixed MyRealPage search.'), 'gen': G},
         P(b['intro']),
     ]
+    # Jared has sold in this building (his own deal records, D-292). No count, no dates.
+    if slug in SOLD_HERE:
+        blocks.append(P(f'Jared has listed and sold homes at {name}. If you own here, he knows what buyers in this building pay for, and he can show you the recent sold prices before you decide. Call or text 604-928-1361.'))
     if has:
         blocks += [H(f'{name} condos for sale now'), {'t': 'grid', 'gen': G}]
     else:
@@ -216,6 +220,8 @@ def build(b):
         {'q': f'How big is {name}?', 'a': f'{name} is {b["storeys"]} storeys with {b["homes"]}.'},
         {'q': f'What amenities does {name} have?', 'a': b['amen']},
     ]
+    if slug in SOLD_HERE:
+        faq.append({'q': f'Has Jared sold homes at {name}?', 'a': f'Yes. Jared Gibbons has listed and sold homes at {name}. Call or text 604-928-1361 for the recent sold prices in the building.'})
     faq = [dict(f, gen=G) for f in faq] + [FAQ_SHOW]
     assert len(title) <= 60, (slug, title)
     assert len(desc) <= 155, (slug, len(desc))
