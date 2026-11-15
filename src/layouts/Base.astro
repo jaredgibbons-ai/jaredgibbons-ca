@@ -46,6 +46,8 @@ const robotsContent = preview ? 'noindex, nofollow' : robots;
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- iPhones turn "96 15500" in an address into a phone link; real numbers on the site are already tel: links. -->
+  <meta name="format-detection" content="telephone=no" />
   <!-- Ownership checks carried over from the old site (D-233): Google Search Console and Pinterest. Public values, not secrets. -->
   <meta name="google-site-verification" content="CgqE26qFOHc49FhbnJO-qA0qac4IaeOquD3xgEIxnP8" />
   <meta name="p:domain_verify" content="91c3edc90807457f5f64250c3b56c1c0" />
