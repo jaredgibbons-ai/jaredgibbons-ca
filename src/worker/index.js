@@ -4,6 +4,7 @@ import { buildIndex, route, NESTED, cacheFor } from './route.js';
 import { handleForm } from './forms.js';
 import { handlePhoto } from './photos.js';
 import { handleInstagram } from './instagram.js';
+import { handleZoning } from './zoning.js';
 
 const index = buildIndex(rules, listingIds);
 // Headers on every response, API and photo answers included. CSP here is frame protection only: a script allowlist needs the launch inventory of
@@ -37,6 +38,7 @@ async function handle(request, env, ctx) {
     if (pathname.startsWith('/api/forms/')) return handleForm(request, env);
     if (pathname.startsWith('/listing-photos/')) return handlePhoto(request, env, pathname);
     if (pathname === '/api/instagram.json') return handleInstagram(request, env, ctx);
+    if (pathname === '/api/zoning') return handleZoning(request);
     // Daily Google reviews copy, served by the jg-reviews Worker over a service binding (nothing public to configure).
     if (pathname === '/api/reviews.json') {
       if (request.method !== 'GET' && request.method !== 'HEAD') return new Response('Not found', { status: 404, headers: { 'cache-control': 'no-store' } });
