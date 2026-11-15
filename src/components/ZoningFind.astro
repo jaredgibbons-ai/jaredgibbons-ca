@@ -1,6 +1,7 @@
 ---
 // Address -> zoning lookup box (D-285): used on the zoning guide and the map search page. Asks /api/zoning (src/worker/zoning.js).
 import Z from '../data/zonings.json';
+import FormStub from './FormStub.astro';
 const { fine = (Z as any).lookup.fine } = Astro.props as { fine?: string };
 // Ids of the zone cards in the guide, so a result only links to a card that exists.
 const codes = (Z as any).munis.flatMap((m: any) => m.zones.map((z: any) => z.id)).join(' ');
@@ -14,8 +15,15 @@ const codes = (Z as any).munis.flatMap((m: any) => m.zones.map((z: any) => z.id)
   <p class="zd-find__fine">{fine}</p>
 </form>
 <div class="zd-res" data-zres role="status" aria-live="polite" hidden></div>
+<details class="zd-ask" data-zask>
+  <summary>Want the full picture? Ask me for a zoning report</summary>
+  <FormStub labels={['Property address', 'Your name', 'Your email', 'Your phone number (optional)']} kind="property-check" submit="Send me the report" fine="I'll reply with the zoning, ALR status, what you can build and anything on title worth knowing. Free, no obligation." uid="zdf" />
+</details>
 
 <style is:global>
+  .zd-ask{margin-top:var(--s3)}
+  .zd-ask summary{cursor:pointer;font:700 .875rem var(--f-head);padding:.5rem 0}
+  .zd-ask .fstub{background:#fff;border:1px solid var(--ink);padding:var(--s5);margin:.5rem 0 0}
   .zd-find{background:#fff;border:1px solid var(--ink);padding:var(--s5)}
   .zd-find label{display:block;font:700 .8125rem var(--f-head);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem}
   .zd-find__row{display:flex;flex-wrap:wrap;gap:.5rem}
@@ -46,7 +54,17 @@ const codes = (Z as any).munis.flatMap((m: any) => m.zones.map((z: any) => z.id)
     const onGuide = !!document.getElementById('zd-dir');
     const el = (tag: string, cls = '', txt = '') => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt) e.textContent = txt; return e; };
     const link = (href: string, txt: string, cls = 'btn btn--ghost', blank = false) => { const a = el('a', cls, txt) as HTMLAnchorElement; a.href = href; if (blank) { a.target = '_blank'; a.rel = 'noopener'; } return a; };
-    const ask = (addr: string) => link(`mailto:jaredgibbons@royallepage.ca?subject=${encodeURIComponent('Zoning check: ' + addr)}`, 'Email me this address');
+    const askBox = document.querySelector<HTMLDetailsElement>('[data-zask]');
+    const ask = (addr: string) => {
+      const btn = el('button', 'btn btn--ghost', 'Get a full zoning report') as HTMLButtonElement; btn.type = 'button';
+      btn.addEventListener('click', () => {
+        if (!askBox) { location.href = `mailto:jaredgibbons@royallepage.ca?subject=${encodeURIComponent('Zoning check: ' + addr)}`; return; }
+        askBox.open = true;
+        const a = askBox.querySelector<HTMLInputElement>('input[name="address"]'); if (a && addr) a.value = addr;
+        (askBox.querySelector<HTMLInputElement>('input[name="name"]') || a)?.focus();
+      });
+      return btn;
+    };
     const msg = (text: string, addr: string) => {
       res.replaceChildren(el('p', 'zd-res__msg', text));
       const c = el('p', 'zd-res__ctas'); c.append(link('tel:+16049281361', 'Call or text 604-928-1361', 'btn'), ask(addr)); res.append(c);
@@ -72,13 +90,16 @@ const codes = (Z as any).munis.flatMap((m: any) => m.zones.map((z: any) => z.id)
         const row = (k: string, v: string) => { dl.append(el('dt', '', k), el('dd', '', v)); };
         row('Municipality', r.locality);
         row('ALR', r.alr === true ? 'In the Agricultural Land Reserve' : r.alr === false ? 'Not in the Agricultural Land Reserve' : 'Could not check right now');
+        if (r.ocp) row('Community plan (OCP)', r.ocp);
+        if (r.flood === true) row('Flood', 'Inside a flood area on the city map: ask about flood construction levels and insurance');
+        if (r.flood === false) row('Flood', 'Not in a mapped flood area on the city map');
         if (r.lot) row('Lot size', `About ${r.lot.acres >= 0.5 ? `${r.lot.acres} acres` : `${r.lot.sqft.toLocaleString('en-CA')} sq ft`} (${r.lot.sqm.toLocaleString('en-CA')} m², measured from the city map)`);
         res.append(dl);
         if (r.alr === true) ctas.append(link(`${onGuide ? '' : '/zonings.html'}#zd-alr`, 'ALR rules'));
         ctas.append(ask(addr));
         res.append(ctas, el('p', 'zd-res__note', `From the ${r.locality} public zoning map today. Maps can lag a recent rezoning, and a strata or condo shows the whole parcel, so confirm with the municipality before you rely on it.`));
         if (r.zones.length > 1) res.append(el('p', 'zd-res__note', 'More than one zone touches this property (split zoning).'));
-      } else if (r.status === 'unsupported') msg(`${r.locality || 'That area'} is not in the address lookup yet (it covers Surrey, White Rock, Langley City, the Township of Langley and Abbotsford). Send me the address and I'll check the zoning and ALR status for you.`, addr);
+      } else if (r.status === 'unsupported') msg(`${r.locality || 'That area'} is not in the address lookup yet (it covers Surrey, White Rock, Delta, Langley City, the Township of Langley, Maple Ridge and Abbotsford). Send me the address and I'll check the zoning and ALR status for you.`, addr);
       else if (r.status === 'notfound') msg(`I could not match that to one exact property${r.locality ? ` in ${r.locality}` : ''}. Check the house number and street (for example "2725 192 Street, Surrey"), or send it to me and I'll look it up.`, addr);
       else if (r.status === 'nozone') msg('That address is on the map but has no zone drawn on it (road, park or water lot). Send it to me and I\'ll check with the municipality.', addr);
       else if (r.status === 'bad') msg('Type the house number, street and city, for example "2725 192 Street, Surrey".', addr);

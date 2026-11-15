@@ -10,14 +10,19 @@ const AB = 'https://services8.arcgis.com/ZYlQy38aWlfDG1Qh/arcgis/rest/services';
 const SU = 'https://gisservices.surrey.ca/arcgis/rest/services';                           // City of Surrey
 const LC = 'https://maps.langleycity.ca/server/rest/services/Maps/Open_Data/MapServer';    // City of Langley
 const WR = 'https://maps.whiterockcity.ca/server/rest/services/opendata';                  // City of White Rock
+const MR = 'https://geoservices.mapleridge.ca/server/rest/services/DataCatalog';          // City of Maple Ridge
+const DE = 'https://maps.delta.ca/arcgis/rest/services/DeltaMap';                          // City of Delta
 
+// `ocp` is the Official Community Plan land-use layer and its field; `flood` the city's mapped flood area (D-290). The Township publishes neither.
 // `guide` is the municipality's section id in the zoning guide (src/data/zonings.json), when it has one.
 export const MUNIS = {
-  'Surrey': { name: 'Surrey', guide: 'zd-surrey', zoning: `${SU}/Public/Planning/MapServer/18`, code: 'ZONING_TEXT', desc: 'ZONING', alr: `${SU}/Public/Planning/MapServer/0`, lot: `${SU}/Lots/MapServer/7`, map: 'https://cosmos.surrey.ca/' },
+  'Surrey': { name: 'Surrey', guide: 'zd-surrey', zoning: `${SU}/Public/Planning/MapServer/18`, code: 'ZONING_TEXT', desc: 'ZONING', alr: `${SU}/Public/Planning/MapServer/0`, lot: `${SU}/Lots/MapServer/7`, ocp: [`${SU}/Public/Planning/MapServer/14`, 'LAND_USE'], flood: `${SU}/Public/Planning/MapServer/4`, map: 'https://cosmos.surrey.ca/' },
   'Township of Langley': { name: 'Township of Langley', guide: 'zd-langley', zoning: `${T}/Zoning/FeatureServer/0`, code: 'Zone', desc: 'ZoneCategory', alr: `${T}/OpenData_AgriculturalLandReserve/FeatureServer/0`, lot: `${T}/Parcels/FeatureServer/0`, map: 'https://www.tol.ca/en/services/geosource-maps.aspx' },
-  'Langley': { name: 'City of Langley', guide: '', zoning: `${LC}/90`, code: 'ZONING', desc: '', alr: `${LC}/189`, lot: `${LC}/181`, map: 'https://www.langleycity.ca/' },
-  'Abbotsford': { name: 'Abbotsford', guide: 'zd-abbotsford', zoning: `${AB}/Development_Layers_External_Feature/FeatureServer/45`, code: 'ZONING', desc: '', alr: `${AB}/Development_Layers_External_Feature/FeatureServer/1`, lot: `${AB}/Parcel_Layers_External_Feature/FeatureServer/0`, map: 'https://www.abbotsford.ca/' },
-  'White Rock': { name: 'White Rock', guide: '', zoning: `${WR}/Zoning/MapServer/0`, code: 'ZONE_CODE', desc: 'ZONE_DESC', alr: '', lot: `${WR}/Parcel/MapServer/0`, map: 'https://www.whiterockcity.ca/' },
+  'Langley': { name: 'City of Langley', guide: '', zoning: `${LC}/90`, code: 'ZONING', desc: '', alr: `${LC}/189`, lot: `${LC}/181`, ocp: [`${LC}/191`, 'LANDUSE'], flood: `${LC}/163`, map: 'https://www.langleycity.ca/' },
+  'Abbotsford': { name: 'Abbotsford', guide: 'zd-abbotsford', zoning: `${AB}/Development_Layers_External_Feature/FeatureServer/45`, code: 'ZONING', desc: '', alr: `${AB}/Development_Layers_External_Feature/FeatureServer/1`, lot: `${AB}/Parcel_Layers_External_Feature/FeatureServer/0`, ocp: [`${AB}/Development_Layers_External_Feature/FeatureServer/38`, 'Draft_OCP_LandUse'], flood: `${AB}/Development_Layers_External_Feature/FeatureServer/17`, map: 'https://www.abbotsford.ca/' },
+  'Maple Ridge': { name: 'Maple Ridge', guide: 'zd-mapleridge', zoning: `${MR}/PlanningDevelopment/MapServer/6`, code: 'ZoningCode', desc: '', alr: `${MR}/PlanningDevelopment/MapServer/0`, lot: `${MR}/Property/MapServer/3`, ocp: [`${MR}/PlanningDevelopment/MapServer/4`, 'LandUseDescription'], map: 'https://www.mapleridge.ca/' },
+  'Delta': { name: 'Delta', guide: 'zd-delta', zoning: `${DE}/Planning/MapServer/11`, code: 'ZONING', desc: 'ZONING_DESCRIPTION', link: 'ZONING_PDF', alr: `${DE}/Planning/MapServer/6`, lot: `${DE}/Property/MapServer/23`, map: 'https://www.delta.ca/' },
+  'White Rock': { name: 'White Rock', guide: '', zoning: `${WR}/Zoning/MapServer/0`, code: 'ZONE_CODE', desc: 'ZONE_DESC', alr: '', lot: `${WR}/Parcel/MapServer/0`, ocp: [`${WR}/Landuse/MapServer/0`, 'OCP_Description'], flood: `${WR}/Flood_Plain_Areas/MapServer/0`, map: 'https://www.whiterockcity.ca/' },
 };
 
 const json = (body, status = 200, cache = 'no-store') => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': cache, 'x-content-type-options': 'nosniff' } });
@@ -85,28 +90,34 @@ export async function lookup(address, fetcher = fetch) {
   if (!pt) pt = await localPoint(fetcher, key, p).catch(() => null);
   if (!pt) return { status: 'notfound', address: shown, locality: m.name };
 
-  const [z, a, l] = await Promise.all([
+  const [z, a, l, o, fl] = await Promise.all([
     get(fetcher, at(m.zoning, pt)),
     m.alr ? get(fetcher, inAlr(m.alr, pt)).catch(() => null) : Promise.resolve({ count: 0 }),
     m.lot ? get(fetcher, at(m.lot, pt, true)).catch(() => null) : Promise.resolve(null),
+    m.ocp ? get(fetcher, at(m.ocp[0], pt).replace('outFields=*', `outFields=${m.ocp[1]}`)).catch(() => null) : Promise.resolve(null),
+    m.flood ? get(fetcher, inAlr(m.flood, pt)).catch(() => null) : Promise.resolve(null),
   ]);
   const seen = new Set();
   const zones = [];
   for (const x of z.features || []) {
     const code = String(x.attributes[m.code] || '').trim();
-    if (!code || seen.has(code)) continue;
+    if (!code || seen.has(code) || code === 'ROAD') continue;
     seen.add(code);
     const zone = { code };
     const d = m.desc && String(x.attributes[m.desc] || '').trim();
-    if (d) zone.name = d;
+    // Delta writes its zone names in capitals.
+    if (d) zone.name = d === d.toUpperCase() ? d.toLowerCase().replace(/_/g, ' / ').replace(/\b[a-z]/g, (c) => c.toUpperCase()) : d;
     const by = String(x.attributes.BY_LAW_01 || '').trim();   // Surrey: the CD bylaw number
     if (by) zone.bylaw = by;
-    const link = String(x.attributes.WEBLINK || '');
-    if (/^https:\/\/cosmos\.surrey\.ca\//.test(link)) zone.link = link;
+    const link = String(x.attributes[m.link || 'WEBLINK'] || '');
+    if (/^https:\/\/(cosmos\.surrey\.ca|maps\.delta\.ca)\//.test(link)) zone.link = link;
     zones.push(zone);
   }
   if (!zones.length) return { status: 'nozone', address: shown, locality: m.name };
   const out = { status: 'ok', address: shown, locality: m.name, guide: m.guide, map: m.map, zones, alr: a && typeof a.count === 'number' ? a.count > 0 : null };
+  const plan = [...new Set(((o && o.features) || []).map((x) => String(x.attributes[m.ocp[1]] || '').trim()).filter(Boolean))];
+  if (plan.length) out.ocp = plan.join(' / ').slice(0, 120);
+  if (fl && typeof fl.count === 'number') out.flood = fl.count > 0;
   const lots = (l && l.features) || [];
   if (lots.length === 1 && lots[0].geometry) {
     const sqm = ringArea(lots[0].geometry.rings);

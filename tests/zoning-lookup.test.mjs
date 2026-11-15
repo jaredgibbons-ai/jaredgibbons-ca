@@ -92,8 +92,32 @@ test('a suite address is the building; a hung request is retried once', async ()
   assert.equal(n, 2);
 });
 
+test('community plan and flood area come back when the city publishes them (D-290)', async () => {
+  const r = await lookup('2725 192 St Surrey', mock([
+    ['geocoder', geo()],
+    ['Planning/MapServer/18', { features: [{ attributes: { ZONING_TEXT: 'RA' } }] }],
+    ['Planning/MapServer/14', { features: [{ attributes: { LAND_USE: 'Suburban' } }, { attributes: { LAND_USE: 'Suburban' } }] }],
+    ['Planning/MapServer/4', { count: 1 }],
+    ['Planning/MapServer/0', { count: 0 }],
+  ]));
+  assert.equal(r.ocp, 'Suburban');
+  assert.equal(r.flood, true);
+  assert.equal(r.alr, false);
+  assert.equal(MUNIS['Township of Langley'].ocp, undefined);
+});
+
+test('Delta: capital-letter names are tidied, the city PDF is linked, a road is not a zone', async () => {
+  const r = await lookup('6469 Meadow Pl Delta', mock([
+    ['geocoder', geo({ civicNumber: 6469, streetName: 'Meadow', streetType: 'Pl', localityName: 'Delta' })],
+    ['Planning/MapServer/11', { features: [{ attributes: { ZONING: 'ROAD', ZONING_DESCRIPTION: 'ROAD' } }, { attributes: { ZONING: 'RD3', ZONING_DESCRIPTION: 'DUPLEX_SINGLE DETACHED RESIDENTIAL 3', ZONING_PDF: 'https://maps.delta.ca/Utilities/ZoningPDF/RD3.pdf' } }] }],
+    ['Planning/MapServer/6', { count: 0 }],
+  ]));
+  assert.deepEqual(r.zones, [{ code: 'RD3', name: 'Duplex / Single Detached Residential 3', link: 'https://maps.delta.ca/Utilities/ZoningPDF/RD3.pdf' }]);
+  assert.equal(r.guide, 'zd-delta');
+});
+
 test('area and sources', () => {
   assert.equal(ringArea(sq), 5000);
   for (const m of Object.values(MUNIS)) assert.match(m.zoning, /^https:\/\//);
-  assert.deepEqual(Object.keys(MUNIS).sort(), ['Abbotsford', 'Langley', 'Surrey', 'Township of Langley', 'White Rock']);
+  assert.deepEqual(Object.keys(MUNIS).sort(), ['Abbotsford', 'Delta', 'Langley', 'Maple Ridge', 'Surrey', 'Township of Langley', 'White Rock']);
 });
