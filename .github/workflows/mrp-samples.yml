@@ -4,13 +4,14 @@ on:
   push:
     branches: [mrp-samples]
 permissions:
-  contents: read
+  contents: write
 jobs:
   fetch:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: |
-          mkdir s && cd s
+          mkdir -p samples && cd samples
           B='https://idx.myrealpage.com/wps/-/tmpl~v2,noframe~true/mylistings/67649'
           UA='jaredgibbons.ca listing sync'
           curl -sS -A "$UA" "$B/mylistings(active).def/SearchResults.form" -o active.html
@@ -21,7 +22,9 @@ jobs:
           grep -o 'href="[^"]*listing\.[^"]*"' sold.html | head -5 > sold-links.txt || true
           grep -o 'href="[^"]*_pg=[^"]*"' sold.html | head -5 > pager.txt || true
           ls -la
-      - uses: actions/upload-artifact@v4
-        with:
-          name: mrp-samples
-          path: s
+      - run: |
+          git config user.name "mrp-samples"
+          git config user.email "mrp-samples@users.noreply.github.com"
+          git add samples
+          git commit -m "MyRealPage sample pages [skip ci]"
+          git push
