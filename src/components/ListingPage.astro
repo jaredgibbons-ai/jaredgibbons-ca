@@ -65,7 +65,7 @@ const land = lz && !factMap['Zoning'] ? {
   zones: lz.zones.map((z) => ({ ...z, card: lz.guide ? zoneCards[`${lz.guide}-${zslug(z.code)}`] : undefined })),
   locality: lz.locality, alr: lz.alr,
   lot: lz.sqm && lz.sqm > 150 && !factMap['Lot Size'] && /single family|manufactured on land/i.test(factMap['Dwelling Type'] || '') || (lz.sqm && !factMap['Lot Size'] && /^land$/i.test(factMap['Property Type'] || '')) ? (lz.sqm >= 2023 ? `About ${(lz.sqm / 4046.8564).toFixed(2)} acres` : `About ${Math.round(lz.sqm * 10.7639).toLocaleString('en-CA')} sq ft`) : '',
-  checked: new Date((LZ as any).checked + 'T12:00:00Z').toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }),
+  checked: new Date(((lz as any).checked || (LZ as any).checked) + 'T12:00:00Z').toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }),
 } : null;
 const titleParts = String(page.title || '').replace(/ – MLS .*$/, '').split(', ');
 const _slugAddr = parseListingSlug(page.slug);
