@@ -25,6 +25,9 @@ export function parseFeed(html) {
   }
   return out;
 }
+// Listings on another real estate board, which Jared's MyRealPage feed does not carry. They are kept by hand and never reported as gone or changed.
+// 109415142: 116 Calgary Avenue, Penticton (Okanagan board). Jared, Nov 15 2026: for sale, re-listed at $1,279,000.
+export const OFF_FEED = new Set(['109415142']);
 const num = (p) => Number(String(p).replace(/[^\d]/g, ''));
 
 /** Pure decision: what to change and what to report. listings: [{ file, id, status, price, title }]. */
@@ -33,7 +36,7 @@ export function plan(listings, feed) {
   const here = new Set();
   for (const l of listings) {
     here.add(l.id);
-    if (l.status !== 'Active') continue;
+    if (l.status !== 'Active' || OFF_FEED.has(l.id)) continue;
     const f = feed.get(l.id);
     if (!f) { gone.push(l); continue; }
     if (num(f.price) === num(l.price)) continue;

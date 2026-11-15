@@ -34,6 +34,11 @@ test('a price change is planned; gone and new listings are reported, sold ones a
   assert.equal(report(plan([site[1]], parseFeed(li('200', '$799,000', 'C8082741'))), true), 'All active listing prices match MLS.');
 });
 
+test('a listing on another board is left alone', () => {
+  const p = plan([{ file: 'c.json', id: '109415142', status: 'Active', price: '$1,279,000', title: '116 Calgary Ave', slug: 'listing.x.109415142' }], parseFeed(html));
+  assert.deepEqual([p.changes.length, p.gone.length, p.odd.length], [0, 0, 0]);
+});
+
 test('an implausible jump is reported, never written', () => {
   const p = plan([site[0]], parseFeed(li('109878342', '$104,900', 'R3168794')));
   assert.equal(p.changes.length, 0);
