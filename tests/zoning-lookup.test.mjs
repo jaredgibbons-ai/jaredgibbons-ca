@@ -17,7 +17,7 @@ test('exact address: zone, bylaw, ALR and lot size come back', async () => {
   const r = await lookup('2725 192 St Surrey', mock([
     ['geocoder.api.gov.bc.ca', geo()],
     ['Planning/MapServer/18', { features: [{ attributes: { ZONING_TEXT: 'CD', ZONING: 'Comprehensive Development Zone', BY_LAW_01: 'B/L 16074', WEBLINK: 'https://cosmos.surrey.ca/x.pdf#nameddest=CD' } }] }],
-    ['Planning/MapServer/0', { features: [] }],
+    ['Planning/MapServer/0', { count: 0 }],
     ['Lots/MapServer/7', { features: [{ attributes: {}, geometry: { rings: sq } }] }],
   ]));
   assert.equal(r.status, 'ok');
@@ -44,7 +44,7 @@ test('block-level match: the municipality\'s own address data finds the lot, or 
     ['geocoder.api.gov.bc.ca', blk],
     ['where=', { features: [{ attributes: { HOUSE: 1265, STREET: '235 ST' }, centroid: { x: -122.5749, y: 49.0245 } }] }],
     ['Zoning/FeatureServer/0', { features: [{ attributes: { Zone: 'RU-3', ZoneCategory: 'Rural' } }] }],
-    ['AgriculturalLandReserve', { features: [{ attributes: {} }] }],
+    ['AgriculturalLandReserve', { count: 1 }],
     ['Parcels/FeatureServer/0', { features: [{ attributes: {}, geometry: { rings: sq } }] }],
   ], calls));
   assert.equal(ok.status, 'ok');

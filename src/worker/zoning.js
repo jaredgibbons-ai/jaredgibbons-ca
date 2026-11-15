@@ -30,6 +30,8 @@ async function get(fetcher, url) {
   if (j && j.error) throw new Error('upstream error');
   return j;
 }
+// ALR: count only. Asking Surrey's ALR layer for attributes times out (one very large polygon); a count answers in milliseconds.
+const inAlr = (layer, [x, y]) => `${layer}/query?f=json&geometry=${x},${y}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&returnCountOnly=true`;
 const at = (layer, [x, y], geom = false) => `${layer}/query?f=json&geometry=${x},${y}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&returnGeometry=${geom}${geom ? '&outSR=26910' : ''}`;
 
 // Square metres of a polygon in UTM zone 10N (metres), holes subtracted (rings are signed).
@@ -79,7 +81,7 @@ export async function lookup(address, fetcher = fetch) {
 
   const [z, a, l] = await Promise.all([
     get(fetcher, at(m.zoning, pt)),
-    m.alr ? get(fetcher, at(m.alr, pt)).catch(() => null) : Promise.resolve({ features: [] }),
+    m.alr ? get(fetcher, inAlr(m.alr, pt)).catch(() => null) : Promise.resolve({ count: 0 }),
     m.lot ? get(fetcher, at(m.lot, pt, true)).catch(() => null) : Promise.resolve(null),
   ]);
   const seen = new Set();
@@ -98,7 +100,7 @@ export async function lookup(address, fetcher = fetch) {
     zones.push(zone);
   }
   if (!zones.length) return { status: 'nozone', address: shown, locality: m.name };
-  const out = { status: 'ok', address: shown, locality: m.name, guide: m.guide, map: m.map, zones, alr: a ? (a.features || []).length > 0 : null };
+  const out = { status: 'ok', address: shown, locality: m.name, guide: m.guide, map: m.map, zones, alr: a && typeof a.count === 'number' ? a.count > 0 : null };
   const lots = (l && l.features) || [];
   if (lots.length === 1 && lots[0].geometry) {
     const sqm = ringArea(lots[0].geometry.rings);
