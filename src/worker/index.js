@@ -13,6 +13,24 @@ const SECURITY = {
   'referrer-policy': 'strict-origin-when-cross-origin',
   'x-frame-options': 'SAMEORIGIN',
   'content-security-policy': "frame-ancestors 'self'; base-uri 'self'",
+  // Step 1 of the script allowlist (D-286): the full policy in report-only mode. Nothing is blocked; the browser console lists what
+  // the policy would have blocked. Once the live pages (map, listing search, forms, video, analytics) show a clean console, the
+  // same text moves to the enforcing header above. 'unsafe-inline' stays: the pages carry small inline scripts and styles.
+  'content-security-policy-report-only': [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://www.googletagmanager.com https://maps.googleapis.com https://maps.gstatic.com https://challenges.cloudflare.com",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "img-src 'self' data: blob: https:",
+    "font-src 'self' data: https://fonts.gstatic.com",
+    "connect-src 'self' https://*.googleapis.com https://*.gstatic.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://challenges.cloudflare.com",
+    "frame-src https://*.myrealpage.com https://www.youtube-nocookie.com https://www.youtube.com https://challenges.cloudflare.com https://www.google.com",
+    "worker-src 'self' blob:",
+    "media-src 'self' https:",
+    "object-src 'none'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    "frame-ancestors 'self'",
+  ].join('; '),
   'permissions-policy': 'camera=(), microphone=(), payment=(), usb=()',
   'strict-transport-security': 'max-age=31536000',
 };
