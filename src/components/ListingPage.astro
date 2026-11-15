@@ -2,6 +2,8 @@
 import VIDEO_DATES from '../data/video-upload-dates.json';   // YouTube upload dates, read from each video's page (Search Console: uploadDate is required)
 import PHOTO_ALTS from '../data/photo-alts.json';
 import POSTAL from '../data/listing-postal.json';
+import LZ from '../data/listing-zoning.json';
+import ZG from '../data/zonings.json';
 import { listingFeatures } from '../lib/listing-features';
 import EXPLORE from '../data/explore.json';
 import { isPreview } from '../lib/preview';
@@ -53,6 +55,18 @@ const telHref = (s: string) => 'tel:' + s;
 // Search snippet. The archive's meta is often empty ("[SOLD]:" alone) or MLS marketing text, so an empty one is built from the facts on the page.
 const factMap: Record<string, string> = {};
 for (const b of blocks) if (b.t === 'facts') for (const it of b.items) { const k = String(it.k).replace(/:$/, ''); if (!(k in factMap) && it.v?.[0]) factMap[k] = String(it.v[0]); }
+// Zoning, ALR and lot size from the municipality's public map (D-289, src/data/listing-zoning.json, read through /api/zoning).
+// Left out where the listing already states its zoning. Lot size only for a house or land on its own lot (a strata shows the whole parcel).
+const lz = (LZ as any).listings[page.slug] as { zones: { code: string; bylaw?: string }[]; locality: string; guide: string; alr?: boolean; sqm?: number } | undefined;
+const zoneCards: Record<string, { id: string; name: string }> = {};
+for (const m of (ZG as any).munis) for (const z of m.zones) zoneCards[z.id] = { id: z.id, name: z.name };
+const zslug = (c: string) => c.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const land = lz && !factMap['Zoning'] ? {
+  zones: lz.zones.map((z) => ({ ...z, card: lz.guide ? zoneCards[`${lz.guide}-${zslug(z.code)}`] : undefined })),
+  locality: lz.locality, alr: lz.alr,
+  lot: lz.sqm && lz.sqm > 150 && !factMap['Lot Size'] && /single family|manufactured on land/i.test(factMap['Dwelling Type'] || '') || (lz.sqm && !factMap['Lot Size'] && /^land$/i.test(factMap['Property Type'] || '')) ? (lz.sqm >= 2023 ? `About ${(lz.sqm / 4046.8564).toFixed(2)} acres` : `About ${Math.round(lz.sqm * 10.7639).toLocaleString('en-CA')} sq ft`) : '',
+  checked: new Date((LZ as any).checked + 'T12:00:00Z').toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }),
+} : null;
 const titleParts = String(page.title || '').replace(/ – MLS .*$/, '').split(', ');
 const _slugAddr = parseListingSlug(page.slug);
 const cityName = _slugAddr ? _slugAddr.city : (titleParts.length > 2 ? titleParts[titleParts.length - 2] : '');
@@ -269,6 +283,25 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
     </div>
   </section>
 
+  {land && (
+    <section class="section" aria-labelledby="ls-zone-h">
+      <div class="wrap ls">
+        <h2 class="ls__h" id="ls-zone-h">Zoning and land</h2>
+        <dl class="ls__facts">
+          {land.zones.map((z) => (
+            <div class="ls__row">
+              <dt>Zoning</dt>
+              <dd>{z.code}{z.card ? ` (${z.card.name})` : /^CD/i.test(z.code) ? ' (Comprehensive Development: a site-specific zone)' : ''}{z.bylaw && `, By-law ${z.bylaw}`}{z.card && <> · <a href={`/zonings.html#${z.card.id}`}>What {z.code} allows</a></>}</dd>
+            </div>
+          ))}
+          {land.alr !== undefined && <div class="ls__row"><dt>Agricultural Land Reserve</dt><dd>{land.alr ? <>In the ALR · <a href="/zonings.html#zd-alr">ALR rules</a></> : 'Not in the ALR'}</dd></div>}
+          {land.lot && <div class="ls__row"><dt>Lot size (city map)</dt><dd>{land.lot}</dd></div>}
+        </dl>
+        <p class="ls__zfine">From the {land.locality} public zoning map, checked {land.checked}. General information, not a survey or legal advice; zoning can change, so confirm with the municipality. <a href="/zonings.html#zd-lookup">Check another address</a></p>
+      </div>
+    </section>
+  )}
+
   {mapQ && cityName && (
     <section class="section" aria-labelledby="ls-map-h">
       <div class="wrap ls">
@@ -387,6 +420,7 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
   .ls__photos p{margin:0}
   .ls__photos-t{font:700 .875rem var(--f-head);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35rem!important}
   .ls__h{font-size:1.25rem;margin:2rem 0 .75rem}
+  .ls__zfine{margin:0;font-size:.8125rem;line-height:1.5;color:#555;max-width:56rem}
   .ls__h:first-child{margin-top:0}
   .ls__p{margin:0 0 1em}
   .ls__list{list-style:none;padding:0;margin:0 0 1.25em;display:flex;flex-wrap:wrap;gap:.25rem 1rem}

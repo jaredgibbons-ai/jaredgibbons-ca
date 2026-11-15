@@ -222,3 +222,18 @@ test('presale VIP floorplans request: name, email and phone are required; the pr
   assert.match(m.text, /Presale VIP floorplans request/); assert.match(m.text, /Project: Latimer Walk/); assert.match(m.text, /Phone: 604-555-0100/);
   assert.match(leadEmail({ kind: 'presale-vip', received_at: 't', fields: { name: 'Pat' } }).text, /general presale request/);
 });
+
+test('lead email carries the zoning, ALR and lot size of the address (D-289)', async () => {
+  const { landFacts } = await import('../src/worker/forms.js');
+  const maps = async (url) => new Response(JSON.stringify(
+    url.includes('geocoder') ? { features: [{ geometry: { coordinates: [-122.57, 49.02] }, properties: { civicNumber: 1265, streetName: '235', streetType: 'St', streetDirection: '', localityName: 'Township of Langley', matchPrecision: 'CIVIC_NUMBER' } }] }
+      : url.includes('Zoning/FeatureServer') ? { features: [{ attributes: { Zone: 'RU-3', ZoneCategory: 'Rural' } }] }
+        : url.includes('AgriculturalLandReserve') ? { count: 1 }
+          : { features: [{ attributes: {}, geometry: { rings: [[[0, 0], [200, 0], [200, 100], [0, 100], [0, 0]]] } }] }));
+  const line = await landFacts('1265 235 St', 'Langley', maps);
+  assert.equal(line, 'RU-3 Rural, in the ALR, lot about 4.94 acres (whole parcel) (Township of Langley map, matched 1265 235 St, Township of Langley)');
+  assert.equal(await landFacts('1 Nowhere', '', async () => { throw new Error('down'); }), '');
+  assert.equal(await landFacts('1 Nowhere', '', async () => new Response('{}')), '');
+  const m = leadEmail({ kind: 'home-evaluation', fields: { name: 'A', address: '1265 235 St' }, land: line, received_at: '', page: '' });
+  assert.match(m.text, /^Zoning: RU-3 Rural, in the ALR/m);
+});

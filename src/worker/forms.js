@@ -16,6 +16,7 @@
 //   GOOGLE_ADDRESS_VALIDATION_KEY  optional secret: a SERVER key (restricted to Address Validation API) that adds one "Address check" line to the lead.
 //                       It never blocks or changes a lead; with no key, or on any error, the line says "not checked". Set as a Worker secret only.
 
+import { lookup } from './zoning.js';
 import { ALERT_CONSENT_TEXT } from '../lib/listing-alert.js';
 import { NEWSLETTER_CONSENT_TEXT } from '../lib/newsletter.js';
 
@@ -124,6 +125,19 @@ const CHECK_TEXT = { complete: 'confirmed as a complete address', check: 'could 
 
 const oneLine = (v) => String(v || '').replace(/[\r\n\u2028\u2029]+/g, ' ').trim();
 
+// Zoning, ALR and lot size for the address a lead typed (D-289), read from the municipality's public map (zoning.js). One line for the
+// email, or '' when the address is not matched or the map does not answer within 5 seconds. Never throws, never blocks a lead.
+export async function landFacts(address, city, doFetch = fetch) {
+  try {
+    const q = [address, city && !String(address).toLowerCase().includes(String(city).toLowerCase()) ? city : ''].filter(Boolean).join(', ');
+    const r = await Promise.race([lookup(q, doFetch), new Promise((res) => setTimeout(() => res(null), 5000))]);
+    if (!r || r.status !== 'ok') return '';
+    const parts = [r.zones.map((z) => [z.code, z.name].filter(Boolean).join(' ')).join(' / '), r.alr === true ? 'in the ALR' : r.alr === false ? 'not in the ALR' : ''];
+    if (r.lot) parts.push(`lot about ${r.lot.acres >= 0.5 ? `${r.lot.acres} acres` : `${r.lot.sqft.toLocaleString('en-CA')} sq ft`} (whole parcel)`);
+    return `${parts.filter(Boolean).join(', ')} (${r.locality} map, matched ${r.address})`;
+  } catch { return ''; }
+}
+
 // Plain text laid out as "Label: value" lines so Keyvera can read the name, email, phone, message and the
 // home asked about. Multi-line messages go last, after the single-line fields.
 export function leadEmail(lead) {
@@ -134,6 +148,7 @@ export function leadEmail(lead) {
   if (f.phone) lines.push(`Phone: ${oneLine(f.phone)}`);
   if (f.address) lines.push(`Address: ${oneLine(f.address)}`);
   if (f.address && lead.address_check) lines.push(`Address check: ${CHECK_TEXT[lead.address_check] || 'not checked'}`);
+  if (f.address && lead.land) lines.push(`Zoning: ${oneLine(lead.land)}`);
   if (f.subject) lines.push(`Subject: ${oneLine(f.subject)}`);
   if (lead.kind === 'presale-vip') { lines.push(`Project: ${oneLine(f.project) || 'not named (general presale request)'}`); lines.push('Wants: VIP floorplans and pricing'); }
   if (lead.kind === 'home-evaluation') for (const k of ['city', 'postal', 'bedrooms', 'bathrooms', 'size', 'features']) if (f[k]) lines.push(`${SCHEMAS['home-evaluation'][k].label}: ${oneLine(f[k])}`);
@@ -237,7 +252,7 @@ export async function handleForm(request, env, deps = {}) {
 
   const id = crypto.randomUUID();
   const lead = { id, kind, received_at: new Date().toISOString(), page: String(input.page || '').slice(0, 300), fields: clean };
-  if (clean.address) lead.address_check = await checkAddress(clean.address, env, doFetch);
+  if (clean.address) [lead.address_check, lead.land] = await Promise.all([checkAddress(clean.address, env, doFetch), landFacts(clean.address, clean.city, doFetch)]);
   const results = [], mail = [];
   if (env.LEADS_DB) {
     results.push(env.LEADS_DB.prepare('INSERT INTO leads (id, kind, received_at, page, fields) VALUES (?, ?, ?, ?, ?)')
