@@ -20,7 +20,8 @@ const lot = (z: any) => {
 };
 const rows = munis.flatMap((m: any) => m.zones.filter((z: any) => FARM.includes(z.type)).map((z: any) => ({ m: m.name.replace(/^Township of /, ''), id: z.id, code: z.code, name: z.name, type: z.type === 'Agricultural / Farm' ? 'Farm' : 'Rural', lot: lot(z), txt: z.fields.map((f: any) => f[1]).join(' ') })));
 const hintWord = ['coach house', 'secondary suite', 'kennel', 'greenhouse', 'winery', 'farm retail'].find((w) => rows.some((r: any) => r.txt.toLowerCase().includes(w))) || 'farm';
-const uid = `zl${Math.random().toString(36).slice(2, 7)}`;
+// A fixed id (one block per page): a random one changed every build, so these pages got a new sitemap date each time.
+const uid = `zl-${muni || "all"}`;
 ---
 {rows.length > 0 && (
 <section class="section zl" aria-labelledby={`${uid}-h`}>
