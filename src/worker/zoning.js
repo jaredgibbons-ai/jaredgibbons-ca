@@ -23,12 +23,17 @@ export const MUNIS = {
 const json = (body, status = 200, cache = 'no-store') => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': cache, 'x-content-type-options': 'nosniff' } });
 const sql = (s) => String(s).replace(/'/g, "''").replace(/[%_\;]/g, '');
 
+// One retry: Surrey's map server now and then leaves a request hanging and answers the same one in 30 ms a moment later.
 async function get(fetcher, url) {
-  const r = await fetcher(url, { headers: { accept: 'application/json' }, signal: AbortSignal.timeout(9000) });
-  if (!r.ok) throw new Error(`upstream ${r.status}`);
-  const j = await r.json();
-  if (j && j.error) throw new Error('upstream error');
-  return j;
+  for (const ms of [3500, 6000]) {
+    try {
+      const r = await fetcher(url, { headers: { accept: 'application/json' }, signal: AbortSignal.timeout(ms) });
+      if (!r.ok) throw new Error(`upstream ${r.status}`);
+      const j = await r.json();
+      if (j && j.error) throw new Error('upstream error');
+      return j;
+    } catch (e) { if (ms === 6000) throw e; }
+  }
 }
 // ALR: count only. Asking Surrey's ALR layer for attributes times out (one very large polygon); a count answers in milliseconds.
 const inAlr = (layer, [x, y]) => `${layer}/query?f=json&geometry=${x},${y}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&returnCountOnly=true`;
@@ -75,7 +80,8 @@ export async function lookup(address, fetcher = fetch) {
   const shown = `${p.civicNumber}${p.civicNumberSuffix || ''} ${street}, ${m ? m.name : key}`;
   if (!m) return { status: 'unsupported', address: shown, locality: key };
 
-  let pt = p.matchPrecision === 'CIVIC_NUMBER' ? f.geometry.coordinates : null;
+  // UNIT: a suite in a building the province knows (102-3480 146A St); the point is the building's parcel.
+  let pt = p.matchPrecision === 'CIVIC_NUMBER' || p.matchPrecision === 'UNIT' ? f.geometry.coordinates : null;
   if (!pt) pt = await localPoint(fetcher, key, p).catch(() => null);
   if (!pt) return { status: 'notfound', address: shown, locality: m.name };
 

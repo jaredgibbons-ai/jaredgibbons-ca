@@ -79,6 +79,19 @@ test('the ALR layer failing does not hide the zone', async () => {
   assert.equal(r.lot, undefined);
 });
 
+test('a suite address is the building; a hung request is retried once', async () => {
+  let n = 0;
+  const flaky = async (url) => {
+    if (url.includes('geocoder')) return new Response(JSON.stringify(geo({ matchPrecision: 'UNIT', unitNumber: '102' })));
+    if (url.includes('MapServer/18') && n++ === 0) throw new Error('timeout');
+    return new Response(JSON.stringify(url.includes('MapServer/18') ? { features: [{ attributes: { ZONING_TEXT: 'RM-45' } }] } : { count: 0, features: [] }));
+  };
+  const r = await lookup('102-2725 192 St Surrey', flaky);
+  assert.equal(r.status, 'ok');
+  assert.equal(r.zones[0].code, 'RM-45');
+  assert.equal(n, 2);
+});
+
 test('area and sources', () => {
   assert.equal(ringArea(sq), 5000);
   for (const m of Object.values(MUNIS)) assert.match(m.zoning, /^https:\/\//);
