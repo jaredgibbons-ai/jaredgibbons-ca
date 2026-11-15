@@ -1,0 +1,27 @@
+# One-off: fetch sample MyRealPage pages (public listing pages) so the listing importer can be written against the real markup.
+name: mrp-samples
+on:
+  push:
+    branches: [mrp-samples]
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          mkdir s && cd s
+          B='https://idx.myrealpage.com/wps/-/tmpl~v2,noframe~true/mylistings/67649'
+          UA='jaredgibbons.ca listing sync'
+          curl -sS -A "$UA" "$B/mylistings(active).def/SearchResults.form" -o active.html
+          curl -sS -A "$UA" "$B/mylistings(sold).def/SearchResults.form" -o sold.html
+          curl -sS -A "$UA" "$B/mylistings(sold).def/SearchResults.form?_pg=2" -o sold2.html
+          curl -sS -A "$UA" "$B/listing.r3168794-96-15500-rosemary-heights-crescent-surrey-v3z-0k1.109878342" -o detail-active.html
+          curl -sS -A "$UA" "$B/listing.r2946489-2623-216-street-langley-v2z-1p4.103799274" -o detail-sold.html
+          grep -o 'href="[^"]*listing\.[^"]*"' sold.html | head -5 > sold-links.txt || true
+          grep -o 'href="[^"]*_pg=[^"]*"' sold.html | head -5 > pager.txt || true
+          ls -la
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mrp-samples
+          path: s
