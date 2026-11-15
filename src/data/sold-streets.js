@@ -1678,6 +1678,18 @@ export default {
   }
  ],
  "subareas": {
+  "/abbotsford-east.html": {
+   "name": "Abbotsford East",
+   "side": "BS"
+  },
+  "/abbotsford-west.html": {
+   "name": "Abbotsford West",
+   "side": "S"
+  },
+  "/aberdeen.html": {
+   "name": "Aberdeen in Abbotsford",
+   "side": "S"
+  },
   "/albion.html": {
    "name": "Albion",
    "side": "S"
@@ -1706,6 +1718,18 @@ export default {
    "name": "Campbell Valley",
    "side": "BS"
   },
+  "/central-abbotsford.html": {
+   "name": "Central Abbotsford",
+   "side": "BS"
+  },
+  "/chilliwack-proper-east.html": {
+   "name": "Chilliwack Proper East",
+   "side": "BS"
+  },
+  "/chilliwack-proper-south.html": {
+   "name": "Chilliwack Proper South",
+   "side": "S"
+  },
   "/clayton.html": {
    "name": "Clayton",
    "side": "BS"
@@ -1726,17 +1750,37 @@ export default {
    "name": "Crescent Beach & Ocean Park",
    "side": "BS"
   },
+  "/cultus-lake.html": {
+   "name": "Cultus Lake",
+   "side": "S"
+  },
+  "/durieu.html": {
+   "name": "Durieu in Mission",
+   "side": "S"
+  },
+  "/east-central.html": {
+   "name": "East Central Maple Ridge",
+   "side": "BS"
+  },
   "/east-newton.html": {
    "name": "East Newton",
    "side": "BS"
   },
   "/elgin-chantrell.html": {
    "name": "Elgin Chantrell",
-   "side": "S"
+   "side": "BS"
   },
   "/fleetwood-tynehead.html": {
    "name": "Fleetwood Tynehead",
    "side": "BS"
+  },
+  "/fort-langley.html": {
+   "name": "Fort Langley",
+   "side": "S"
+  },
+  "/fraser-heights.html": {
+   "name": "Fraser Heights",
+   "side": "S"
   },
   "/grandview-surrey.html": {
    "name": "Grandview Heights",
@@ -1758,6 +1802,10 @@ export default {
    "name": "Langley City",
    "side": "BS"
   },
+  "/mission-bc.html": {
+   "name": "Mission",
+   "side": "S"
+  },
   "/morgan-creek.html": {
    "name": "Morgan Creek",
    "side": "BS"
@@ -1768,7 +1816,7 @@ export default {
   },
   "/otter-district.html": {
    "name": "Otter District",
-   "side": "B"
+   "side": "BS"
   },
   "/pacific-douglas.html": {
    "name": "Pacific Douglas",
@@ -1778,13 +1826,29 @@ export default {
    "name": "Panorama Ridge",
    "side": "B"
   },
+  "/poplar.html": {
+   "name": "Poplar in Abbotsford",
+   "side": "BS"
+  },
   "/queen-mary-park-surrey.html": {
    "name": "Queen Mary Park",
+   "side": "S"
+  },
+  "/rosedale-homes-for-sale.html": {
+   "name": "Rosedale",
    "side": "S"
   },
   "/salmon-river.html": {
    "name": "Salmon River",
    "side": "BS"
+  },
+  "/sardis-south.html": {
+   "name": "Sardis South",
+   "side": "S"
+  },
+  "/sardis-west-vedder.html": {
+   "name": "Sardis West Vedder",
+   "side": "B"
   },
   "/serpentine.html": {
    "name": "Serpentine",
@@ -1796,11 +1860,23 @@ export default {
   },
   "/sullivan-station.html": {
    "name": "Sullivan Station",
+   "side": "BS"
+  },
+  "/sumas-prairie.html": {
+   "name": "Sumas Prairie",
+   "side": "BS"
+  },
+  "/sunnyside-park-surrey.html": {
+   "name": "Sunnyside Park",
    "side": "S"
   },
   "/walnut-grove.html": {
    "name": "Walnut Grove",
    "side": "BS"
+  },
+  "/west-central.html": {
+   "name": "West Central Maple Ridge",
+   "side": "S"
   },
   "/west-newton.html": {
    "name": "West Newton",
@@ -1808,7 +1884,7 @@ export default {
   },
   "/whalley.html": {
    "name": "Whalley",
-   "side": "S"
+   "side": "BS"
   },
   "/white-rock.html": {
    "name": "White Rock",
