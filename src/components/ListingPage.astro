@@ -79,7 +79,9 @@ const showMail = `mailto:jaredgibbons@royallepage.ca?subject=${encodeURIComponen
 const showSms = `sms:+16049281361?&body=${encodeURIComponent(`Hi Jared, I'd like to book a showing at ${where}.`)}`;
 const similarMail = `mailto:jaredgibbons@royallepage.ca?subject=${encodeURIComponent('Homes like ' + where)}&body=${encodeURIComponent(`Hi Jared,\n\nPlease send me homes like ${where} when they come up.\n`)}`;
 const archiveTitle = titleParts.length > 1 ? String(page.title || '').replace(/^[^,]+/, titleCaseAddress(titleParts[0])) : String(page.title || '');
-const statusWord = page.status === 'Sold' ? 'Sold' : page.status === 'Leased' ? 'Leased' : 'For sale';
+// A purchase (D-312): Jared represented the buyer. The old site showed these as his sales, with the wrong "Listed by" line.
+const purchase = page.side === 'buyer';
+const statusWord = purchase ? 'Purchased' : page.status === 'Sold' ? 'Sold' : page.status === 'Leased' ? 'Leased' : 'For sale';
 // Search title and snippet (D-249). Title: address, city, what it is and its status, then the name, inside 60 characters.
 // "17392 2 Avenue, Surrey BC – Sold House | Jared Gibbons". A title written by hand in the archive (one that does not start with the address) is kept.
 const TYPE_WORD: Record<string, string> = { 'Single Family Residence': 'House', 'Apartment/Condo': 'Condo', 'Townhouse': 'Townhouse', 'Half Duplex': 'Half Duplex', 'Manufactured On Land': 'Manufactured Home', 'Manufactured Home': 'Manufactured Home', 'Land': 'Land', 'Commercial': 'Commercial Property', 'Industrial': 'Industrial Property', 'Industrial, Retail': 'Commercial Property', 'Residential Income': 'Income Property' };
@@ -102,8 +104,8 @@ const subArea = (() => {
 })();
 const _dupTitle = (() => { const k = (x: string) => { const q = parseListingSlug(x); return q ? `${q.street}|${q.city}`.toLowerCase() : ''; }; const me = k(page.slug); return !!me && Object.keys(import.meta.glob('../data/listings/*.json')).filter((f) => k(f.split('/').pop()!.replace(/\.json$/, '')) === me).length > 1; })();
 const seoTitle = (() => {
-  if (!cityName || !addr || !/^(for sale:|sold\s*-|lease\s*–)?\s*(\d|[a-z]?\d|(unit|lot|ph|th)\b)/i.test(String(page.title || ''))) return archiveTitle;
-  const what = page.status === 'Sold' ? `Sold ${typeWord}` : page.status === 'Leased' ? `Leased ${typeWord}` : `${typeWord} for Sale`;
+  if (!cityName || !addr || (!purchase && !/^(for sale:|sold\s*-|lease\s*–)?\s*(\d|[a-z]?\d|(unit|lot|ph|th)\b)/i.test(String(page.title || '')))) return archiveTitle;
+  const what = purchase ? `${typeWord} Purchased` : page.status === 'Sold' ? `Sold ${typeWord}` : page.status === 'Leased' ? `Leased ${typeWord}` : `${typeWord} for Sale`;
   const base = `${addr}, ${cityName} BC`;
   // the same address listed more than once: the MLS® number keeps the titles apart
   const again = _dupTitle && factMap['MLS® Num'] ? ` (MLS® ${factMap['MLS® Num']})` : '';
@@ -116,7 +118,7 @@ function builtMeta(): string {
   // then what the home is and what stands out in its photos, then the sale; parts drop from the end of the list until it fits 155 characters.
   const postal = (POSTAL as Record<string, string>)[page.slug] || '';
   const mlsNo = factMap['MLS® Num'] || factMap['MLS® Number'] || '';
-  const lead = page.status === 'Active' ? 'For sale' : page.status === 'Leased' ? 'Leased' : 'Sold';
+  const lead = purchase ? 'Purchased' : page.status === 'Active' ? 'For sale' : page.status === 'Leased' ? 'Leased' : 'Sold';
   const place = `${addr}${cityName ? `, ${cityName} BC` : ''}${postal ? ` ${postal}` : ''}`;
   const beds = factMap['Bedrooms'] ? `${factMap['Bedrooms']}-bed ` : '';
   const strata = /condo|townhouse/i.test(typeWord);
@@ -211,7 +213,7 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
               {rest.map((r) => <span class="ls__chip">{r.k ? <><span class="ls__k">{r.k}</span> {r.v}</> : r.v}</span>)}
             </>
           );
-          return <>{headN ? <h2 class="ls__sum">{inner}</h2> : <p class="ls__sum">{inner}</p>}{tailLines.map((l: string) => <p class="ls__flag">{l}</p>)}
+          return <>{headN ? <h2 class="ls__sum">{inner}</h2> : <p class="ls__sum">{inner}</p>}{tailLines.map((l: string) => <p class="ls__flag">{l}</p>)}{purchase && <p class="ls__flag">Purchased: Jared Gibbons represented the buyer.</p>}
             <p class="ls__act">{page.status === 'Active'
               ? <><a class="btn" href={showMail} data-ev="book_showing">Book a showing</a><a class="btn btn--ghost" href={showSms} data-ev="text_jared">Text Jared</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a>{media?.video && <a class="btn btn--ghost" href="#ls-media">▶ Watch the video</a>}{media?.floorplan && <a class="btn btn--ghost" href="#ls-fp">Floor plan</a>}{media?.tour3d && <a class="btn btn--ghost" href={media.tour3d} target="_blank" rel="noopener">3D tour</a>}</>
               : <><a class="btn" href={similarMail}>Ask about homes like this</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a>{media?.video && <a class="btn btn--ghost" href="#ls-media">▶ Watch the video</a>}</>}</p>
@@ -335,14 +337,14 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
           <p><a href={`mailto:${b.lines[3]}`}>{b.lines[3]}</a></p>
         </div>
       ))}
-      {blocks.filter((b) => b.t === 'credit').map((b) => <p class="ls__credit">{b.text}</p>)}
+      {!purchase && blocks.filter((b) => b.t === 'credit').map((b) => <p class="ls__credit">{b.text}</p>)}
       {blocks.filter((b) => b.t === 'disclaimer').map((b) => <p class="ls__disc">{b.text}</p>)}
     </div>
   </section>
   {moreHere.length > 0 && (
     <section class="section" aria-labelledby="ls-more"><div class="wrap ls ls__more">
-      <h2 id="ls-more" class="h2">More homes Jared has sold or listed in {cityName}</h2>
-      <ul>{moreHere.map((c) => <li><a href={c.href}>{c.street}</a>{c.status === 'Active' ? ' (for sale)' : c.year ? ` (${c.status === 'Leased' ? 'leased' : 'sold'} ${c.year})` : ''}</li>)}</ul>
+      <h2 id="ls-more" class="h2">{moreHere.some((c) => c.buyer) ? `More homes Jared has sold, listed or helped buyers purchase in ${cityName}` : `More homes Jared has sold or listed in ${cityName}`}</h2>
+      <ul>{moreHere.map((c) => <li><a href={c.href}>{c.street}</a>{c.status === 'Active' ? ' (for sale)' : c.year ? ` (${c.status === 'Leased' ? 'leased' : c.buyer ? 'purchased' : 'sold'} ${c.year})` : ''}</li>)}</ul>
       <p><a href="/sold-properties.html">All of Jared's sold homes</a></p>
     </div></section>
   )}

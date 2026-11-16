@@ -9,7 +9,7 @@ import Cta from './Cta.astro';
 import ExploreLinks from './ExploreLinks.astro';
 import FormStub from './FormStub.astro';
 import PropertyCard from './PropertyCard.astro';
-import { ownCards } from '../lib/own-listings';
+import { ownCards, displayStreet } from '../lib/own-listings';
 import EXPLORE from '../data/explore.json';
 import REVIEW_EXCERPTS from '../data/review-excerpts.json';
 
@@ -25,7 +25,7 @@ const crumbs = d.kind === 'faq' ? [{ name: 'Home', href: '/' }, { name: 'Buy a H
 if (d.kind === 'about') jsonld.push({ '@context': 'https://schema.org', '@type': 'AboutPage', url: `${origin}/${page.slug}.html`, mainEntity: { '@type': 'Person', '@id': `${origin}/#jared`, name: 'Jared Gibbons', jobTitle: 'REALTOR®', image: `${origin}/img/Jared.webp`, telephone: '+1-604-928-1361', email: 'jaredgibbons@royallepage.ca', worksFor: { '@type': 'RealEstateAgent', '@id': `${origin}/#agent`, name: 'Royal LePage Little Oak Realty' } } });
 const REVIEWS = (REVIEW_EXCERPTS as any).items.filter((r: any) => r.when !== 'Google review').map((r: any) => ({ q: r.quote, who: r.who, date: r.when.replace(/ · Google review$/, ''), src: 'Google review' }));
 const explore = (EXPLORE as Record<string, any>)[page.slug];
-const own = ownCards().filter((c) => c.status !== 'Active').sort((a, b) => b.soldTs - a.soldTs);
+const own = ownCards().filter((c) => c.status !== 'Active' && !c.buyer).sort((a, b) => b.soldTs - a.soldTs);
 const mon = (c: any) => { const m = /^(\w{3}) \d+, (\d{4})$/.exec(c.soldDate || ''); return m ? `Sold ${m[1]} ${m[2]}` : 'Sold'; };
 const isRich = (x: any) => Array.isArray(x);
 const href = (h: string) => h.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/';
@@ -262,7 +262,7 @@ const HAS800 = (src: string) => existsSync(`public${src}-800.webp`);
               <h3 class="dp-sub">{b.h}</h3>
               <ul class="cards">
                 {own.slice(0, b.count ?? 9).map((c: any) => (
-                  <PropertyCard href={c.href} photoSlug={c.slug} street={c.street} city={c.city} price={c.price} beds={c.beds} baths={c.baths}
+                  <PropertyCard href={c.href} photoSlug={c.slug} street={displayStreet(c)} city={c.city} beds={c.beds} baths={c.baths}
                     floorArea={c.sqft ? (/sq/i.test(c.sqft) ? c.sqft : `${c.sqft} sqft`) : undefined} status={c.status} type={c.type} tags={[mon(c)]} mls={c.mls} moreLabel="More Info" />
                 ))}
               </ul>
