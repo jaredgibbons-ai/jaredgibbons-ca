@@ -10,7 +10,7 @@ import collections, glob, importlib.util, json, os, re, sys
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'); HERE = os.path.dirname(os.path.abspath(__file__))
 def _load(name, fn):
     spec = importlib.util.spec_from_file_location(name, os.path.join(HERE, fn)); m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m); return m
-NB = _load('nbmod', 'build_nearby.py'); T = NB.T; N = NB.N; LOCAL = N.LOCAL; PAGES = N.PAGES
+HV = _load('hvmod', 'heading_voice.py'); NB = _load('nbmod', 'build_nearby.py'); T = NB.T; N = NB.N; LOCAL = N.LOCAL; PAGES = N.PAGES
 NOTES = os.path.join(ROOT, 'docs/research/local-notes-uniqueness'); G = 'uq'; SFX = '-extra-2026-11-03.md'
 # A note that describes another place than our page (checked against the note's Page: line and the page title) is held here. Holly and Hawthorne (Ladner) were redone on 2026-11-03 and now publish.
 QUARANTINE = {'lower-landing': 'every note filed under this slug (uniqueness, nearby, types, acreages, 55+, Muse FAQs, 5 buildings) described London Landing in Steveston, Richmond; our page is Lower Landing, Chilliwack (a Paragon sub-area with no City-published boundary). Held until Jared supplies the Paragon sub-area boundary or streets.'}
@@ -97,7 +97,7 @@ def LK(items): return {**N.LK(items), 'gen': G, 'pos': 'end'}
 def build(slug, t):
     lines0 = t.split('\n'); name = re.sub(r'\s*—\s*Extra Local Notes.*$', '', lines0[0][2:]).strip()
     name = re.sub(r'\s+(Neighbourhood|Area Guide|Guide)$', '', name, flags=re.I).strip() or name
-    sec = sections(t); bl = []; urls = []; faq = []
+    sec = sections(t); bl = []; urls = []; faq = []; taken = set()   # headings already used on this page (plain headings, D-308)
     for k in range(1, 11):
         ls = sec.get(k, [])
         if k == 10:
@@ -108,7 +108,7 @@ def build(slug, t):
             f, u = qa(ls); faq += f; urls += u; continue
         items, u = bullets(ls); urls += u
         if len(items) >= 1 and sum(len(x) for x in items) >= 120:
-            bl += [H(f'{name}: {SECS[k]}'), LI(items)]
+            bl += [H(HV.heading(slug, name, SECS[k], taken)), LI(items)]; taken.add(bl[-2]['text'].lower())
     nc, u = bullets(sec.get('nc', []))
     nc = [x for x in nc if not re.search(r'\bParagon\b|sub-area code|catchment results|locator', x)][:5]
     # D-194: the NOT CONFIRMED list is research bookkeeping and is not published.
