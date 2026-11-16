@@ -28,7 +28,8 @@ const blocks: any[] = page.blocks;
 const sumBlock = blocks.find((b) => b.t === 'summary');
 // price first, then "label: value" pairs, then free values (type, area)
 const headN: number = sumBlock?.heading_n ?? 0;
-const headLines: string[] = sumBlock ? (headN ? sumBlock.lines.slice(0, headN) : sumBlock.lines) : [];
+// A masked rent ("$[***]/mth" on two leased commercial listings) is the board hiding the figure: it is not shown or used as a price (review of Nov 15 2026).
+const headLines: string[] = (sumBlock ? (headN ? sumBlock.lines.slice(0, headN) : sumBlock.lines) : []).filter((l: string) => !l.includes('[***]'));
 const tailLines: string[] = sumBlock && headN ? sumBlock.lines.slice(headN) : [];
 // price first, then "label: value" pairs, then free values (type, area)
 const price = headLines.find((l: string) => l.startsWith('$')) ?? '';

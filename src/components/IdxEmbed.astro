@@ -102,10 +102,15 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
       if (started) return; started = true;
       const s = document.createElement('script');
       s.id = 'mrpscript'; s.async = true; s.src = box.dataset.idxSrc!;
-      const giveUp = () => { if (fb && ![...box.children].some((c) => c !== s)) { fb.hidden = false; box.hidden = true; } };
+      // The "did not load" note shows when the script fails, or after 45 seconds with nothing drawn. On a phone the vendor's script can take
+      // 20 seconds and more, and the old 10-second limit showed the note while the listings were still loading (review of Nov 15 2026).
+      // If the listings arrive after the note, the note goes away again.
+      const drawn = () => [...box.children].some((c) => c !== s);
+      const giveUp = () => { if (fb && !drawn()) { fb.hidden = false; box.hidden = true; } };
       s.onerror = giveUp;
       box.appendChild(s);
-      setTimeout(giveUp, 10000);
+      setTimeout(giveUp, 45000);
+      new MutationObserver(() => { if (fb && drawn() && box.hidden) { box.hidden = false; fb.hidden = true; } }).observe(box, { childList: true });
       // The vendor's frames come without a title (axe frame-title, D-221): name them for screen readers as they appear.
       const nameFrames = () => box.querySelectorAll('iframe:not([title])').forEach((f) => f.setAttribute('title', `${box.closest('section')?.getAttribute('aria-label') || 'Listings'}: MLS® listing search`));
       new MutationObserver(nameFrames).observe(box, { childList: true, subtree: true });
