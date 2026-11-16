@@ -33,10 +33,15 @@ const headN: number = sumBlock?.heading_n ?? 0;
 const headLines: string[] = (sumBlock ? (headN ? sumBlock.lines.slice(0, headN) : sumBlock.lines) : []).filter((l: string) => !l.includes('[***]'));
 const tailLines: string[] = sumBlock && headN ? sumBlock.lines.slice(headN) : [];
 // price first, then "label: value" pairs, then free values (type, area)
-const price = headLines.find((l: string) => l.startsWith('$')) ?? '';
+const rawPrice = headLines.find((l: string) => l.startsWith('$')) ?? '';
+// No sold prices (D-318, Jared 2026-11-16: "take off the sold prices"): a sold or purchased home shows no price anywhere on its page,
+// in its search snippet or its structured data. Active listings keep theirs; leased ones keep the rent.
+const showPrice = page.status !== 'Sold';
+const price = showPrice ? rawPrice : '';
+const PRICE_FACT = /^(price|original price|previous price|mls® & price|sold price|list price):?$/i;
 const rest: { k?: string; v: string }[] = [];
 {
-  const ls: string[] = headLines.filter((l: string) => l !== price);
+  const ls: string[] = headLines.filter((l: string) => l !== rawPrice);
   for (let i = 0; i < ls.length; i++) {
     if (ls[i].endsWith(':') && i + 1 < ls.length) { rest.push({ k: ls[i], v: ls[i + 1] }); i++; }
     else rest.push({ v: ls[i] });
@@ -148,7 +153,7 @@ const seenFacts = new Set<string>();
 const bodyBlocks: any[] = [];
 for (const b of blocks.filter((x) => !(x.t === 'h' && x.level === 1) && x.t !== 'summary' && x.t !== 'credit' && x.t !== 'disclaimer' && x.t !== 'agent')) {
   if (b.t === 'facts') {
-    const items = b.items.filter((it: any) => { const k = factKey(it.k); if (seenFacts.has(k)) return false; seenFacts.add(k); return true; });
+    const items = b.items.filter((it: any) => { if (!showPrice && PRICE_FACT.test(String(it.k).trim())) return false; const k = factKey(it.k); if (seenFacts.has(k)) return false; seenFacts.add(k); return true; });
     if (!items.length) { if (bodyBlocks.at(-1)?.t === 'h') bodyBlocks.pop(); continue; }
     bodyBlocks.push({ ...b, items });
   } else bodyBlocks.push(b);
@@ -187,7 +192,7 @@ const listingLd: any[] = cityName && addr ? [{ '@context': 'https://schema.org',
     seller: { '@type': 'RealEstateAgent', '@id': 'https://jaredgibbons.ca/#agent' } } } : {}),
   about: { '@type': 'Place', address: { '@type': 'PostalAddress', streetAddress: addr, addressLocality: cityName, addressRegion: 'BC', addressCountry: 'CA', ...(_postal ? { postalCode: _postal } : {}) } },
   ...(media?.video && (VIDEO_DATES as Record<string, string>)[media.video] ? { subjectOf: { '@type': 'VideoObject', name: `Video tour of ${where}`, description: `Video tour of ${where}, filmed for Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty.`, uploadDate: (VIDEO_DATES as Record<string, string>)[media.video], embedUrl: `https://www.youtube.com/embed/${media.video}`, thumbnailUrl: `https://i.ytimg.com/vi/${media.video}/hqdefault.jpg`, contentUrl: `https://www.youtube.com/watch?v=${media.video}` } } : {}) }] : [];
-const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMeta : builtMeta());
+const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 && (showPrice || !rawMeta.includes('$')) ? rawMeta : builtMeta());
 ---
 <Base
   title={seoTitle}
