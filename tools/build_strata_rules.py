@@ -30,6 +30,7 @@ PAGES = {
     'willoughby-condos-for-sale': (['Willoughby Heights'], ['Condo']), 'willoughby-townhomes-for-sale': (['Willoughby Heights'], ['Townhome']),
     'willoughby-heights-langley-condos-townhomes-for-sale': (['Willoughby Heights'], ['Condo', 'Townhome']),
     'white-rock-condos-for-sale': (['White Rock'], ['Condo']),
+    'white-rock-townhomes-for-sale': (['White Rock'], ['Townhome']), 'crescent-beach-ocean-park-condos-townhomes-for-sale': (['Crescent Beach & Ocean Park'], ['Condo', 'Townhome']),
     'grandview-south-surrey-condos-townhomes-for-sale': (['Grandview'], ['Condo', 'Townhome']), 'grandview-surrey-townhomes-for-sale': (['Grandview'], ['Townhome']),
     'king-george-corridor-south-surrey-condos-townhomes-for-sale': (['King George Corridor'], ['Condo', 'Townhome']),
     'morgan-creek-south-surrey-condos-townhomes-for-sale': (['Morgan Creek'], ['Condo', 'Townhome']),

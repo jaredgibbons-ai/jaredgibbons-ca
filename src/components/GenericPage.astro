@@ -49,6 +49,7 @@ import IDX from '../data/idx-embeds.json';
 import BREADCRUMBS from '../data/breadcrumbs.json';
 import STRATA_RULES from '../data/strata-rules.json';
 import PARK_RULES from '../data/park-rules.json';
+import NB_LINKS from '../data/nb-type-links.json';
 import EXPLORE from '../data/explore.json';
 import EXPLORE_EXTRA from '../data/explore-extra.json';
 import ExploreLinks from './ExploreLinks.astro';
@@ -96,6 +97,13 @@ if (local?.faq?.length) {
   // The two plain questions were generated with the page name inserted ("Can Jared show me homes in Open?", "… in Our?", "… in Sold Properties?"); the unnamed wording reads right on every page.
   local.faq = local.faq.map((f: any) => /^Can Jared show me homes in .+\?$/.test(f.q) ? { ...f, q: 'Can I book a private showing with Jared?' } : /^How do I find out what my home in .+ is worth\?$/.test(f.q) ? { ...f, q: 'How do I find out what my home is worth?' } : f);
   local.faq = local.faq.filter((f: any) => { const k = String(f.q).trim().toLowerCase(); if (seenQ.has(k)) return false; seenQ.add(k); return !INTERNAL_FAQ.test(f.q + ' ' + f.a) && String(f.a || '').trim().length > 0; });   // no empty answers (SEO audit 2026-11-13)
+}
+// Links to the D-316 neighbourhood type pages from their neighbourhood page and the city type page (src/data/nb-type-links.json).
+{
+  const nl = (NB_LINKS as any).links[page.slug];
+  if (nl && local?.blocks) local.blocks = [...local.blocks,
+    { t: 'h', level: 2, text: /-for-sale$/.test(page.slug) ? 'Search by neighbourhood' : 'Search by home type', pos: 'end', gen: 'nb34' },
+    { t: 'list', pos: 'end', gen: 'nb34', items: nl.map(([t, h]: [string, string]) => [{ t, h }]) }];
 }
 // Mobile home park directory (D-315, src/data/park-rules.json from tools/build_park_rules.py): a "Type" column (pad rental, co-op shares,
 // strata lot, own the land) and "55+" in Notes where every MLS® listing that fills the age field agrees. Matched by civic number and street.
