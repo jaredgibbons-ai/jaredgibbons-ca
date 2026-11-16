@@ -139,6 +139,9 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.a
   // An empty or broken page must never read as "everything left the market".
   if (feed.size === 0) { console.error('No listings could be read from MyRealPage. Nothing changed.'); process.exit(1); }
   const p = plan(readListings(), feed);
+  // Most of the site's active listings missing at once reads as a broken or half-loaded page, not a real change: stop before marking anything.
+  const active = readListings().filter((l) => l.status === 'Active' && !OFF_FEED.has(l.id)).length;
+  if (active >= 4 && p.gone.length > active / 2) { console.error(`${p.gone.length} of ${active} active listings are missing from the MyRealPage list. That looks like a bad read. Nothing changed.`); process.exit(1); }
   const get = async (url) => (await fetch(url, { headers: { 'user-agent': 'jaredgibbons.ca listing sync' } })).text();
   // Listings that left the active list: sold ones are marked sold with their date; the rest are reported.
   if (fi < 0) Object.assign(p, await findSold(p.gone, get));

@@ -1,7 +1,8 @@
-# Daily price sync for Jared's own listing pages (D-298, tools/sync_listings.mjs).
-# Reads his active listings from MyRealPage. A changed price is written, the site is built and tested, and the change is pushed to main,
-# which deploys it. Anything else (a listing that left the market, a new listing with no page) is reported in an issue, not edited.
-name: Listing price sync
+# Twice-daily sync for Jared's own listing pages (D-298, D-299, tools/sync_listings.mjs).
+# Reads his active and sold listings from MyRealPage. A changed price or a sale is written, the site is built and tested, and the change is
+# pushed to main, which deploys it. Anything else (a listing that left the market unsold, a new listing with no page) goes in one issue,
+# which is only added to when the report changes and is closed when nothing needs a look.
+name: Listing sync
 on:
   schedule:
     - cron: '23 13 * * *'   # 5:23 or 6:23 am Pacific
@@ -38,11 +39,19 @@ jobs:
           git config user.name "listing-sync"
           git config user.email "listing-sync@users.noreply.github.com"
           git add src/data
-          git commit -m "Listing prices updated from MLS (daily sync)" -m "$(cat sync-report.txt)"
+          git commit -m "Listings updated from MLS (sync)" -m "$(cat sync-report.txt)"
           git push
-      - if: steps.sync.outputs.attention == 'true'
+      - if: ${{ !inputs.dry }}
         env:
           GH_TOKEN: ${{ github.token }}
+          ATTENTION: ${{ steps.sync.outputs.attention }}
         run: |
           n=$(gh issue list --state open --search "Listings need a look in:title" --json number --jq '.[0].number')
-          if [ -n "$n" ]; then gh issue comment "$n" --body-file sync-report.txt; else gh issue create --title "Listings need a look (MLS sync)" --body-file sync-report.txt; fi
+          if [ "$ATTENTION" != "true" ]; then
+            if [ -n "$n" ]; then gh issue close "$n" --comment "Nothing needs a look any more: every active listing matches MLS."; fi
+            exit 0
+          fi
+          if [ -z "$n" ]; then gh issue create --title "Listings need a look (MLS sync)" --body-file sync-report.txt; exit 0; fi
+          # Say it once: only add a comment when the report differs from the last thing said on the issue.
+          last=$(gh issue view "$n" --json body,comments --jq 'if (.comments|length) > 0 then .comments[-1].body else .body end')
+          if [ "$(printf '%s' "$last" | tr -d '[:space:]')" != "$(tr -d '[:space:]' < sync-report.txt)" ]; then gh issue comment "$n" --body-file sync-report.txt; fi
