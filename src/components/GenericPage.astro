@@ -917,7 +917,7 @@ const explore = !_extra.length ? exploreBase
                       <ul class="cards">{active.map(card)}</ul></>}
                     <h2 class="h2">Recently sold</h2>
                     <ul class="cards">{done.slice(0, 12).map(card)}</ul>
-                    <p><a class="btn" href="/sold-properties.html">See all {done.length} sold homes</a></p>
+                    <p><a class="btn" href="/sold-properties.html">See all sold homes</a></p>
                   </>
                 );
                 const shown = done.slice(0, 24);
@@ -927,7 +927,7 @@ const explore = !_extra.length ? exploreBase
                 const cities: any[] = [...byCity.keys()].sort((a: any, z: any) => byCity.get(z).length - byCity.get(a).length || a.localeCompare(z));
                 return (
                   <>
-                    <p>The {shown.length} most recent of the {done.length} homes Jared has sold or leased, newest first. <a href="/our-listings.html">See Jared's active listings</a>.</p>
+                    <p>Jared's most recent sales, newest first. <a href="/our-listings.html">See Jared's active listings</a>.</p>
                     <ul class="cards">{shown.map(card)}</ul>
                     {cities.length > 0 && <h2 class="h2">All earlier sales, by city</h2>}
                     {cities.map((ct: any) => <><h3 class="h3">{ct} ({byCity.get(ct).length})</h3>
