@@ -6,7 +6,8 @@ const { fine = (Z as any).lookup.fine } = Astro.props as { fine?: string };
 // Ids of the zone cards in the guide, so a result only links to a card that exists.
 const codes = (Z as any).munis.flatMap((m: any) => m.zones.map((z: any) => z.id)).join(' ');
 ---
-<form class="zd-find" data-zfind data-zcodes={codes} action="/api/zoning" method="get" novalidate>
+{/* No action attribute: Google follows GET forms, and /api/ is closed to crawlers (Search Console "Blocked by robots.txt", Nov 15 2026). The script does the lookup. */}
+<form class="zd-find" data-zfind data-zcodes={codes} novalidate>
   <label for="zd-addr">Property address</label>
   <div class="zd-find__row">
     <input id="zd-addr" name="address" type="text" inputmode="text" autocomplete="street-address" placeholder="e.g. 2725 192 Street, Surrey" maxlength="120" required data-zaddr />
