@@ -184,7 +184,11 @@ def build(b):
     if b['builder']: rows.append(['Builder', b['builder']])
     if b['plan']: rows.append(['Strata plan', b['plan']])
     rows.append(['Street level', b['street']])
-    others = [x for x in B if x['city'] == city and x['slug'] != slug][:8]
+    # the 8 buildings after this one in the same city, wrapping round, so every building page gets links from its siblings
+    # (taking the first 8 left the last few White Rock pages with only the hub linking to them; 2026-11-16)
+    same = [x for x in B if x['city'] == city]
+    k = next(i for i, x in enumerate(same) if x['slug'] == slug)
+    others = (same[k + 1:] + same[:k])[:8]
     blocks = [
         {'t': 'notice', 'text': f'Draft for Jared’s approval. Building facts from the City of White Rock info sheets and the MLS® strata building records, read {READ}. '
                                 + (f'Live search: Gerry’s {SEARCH[slug]}.' if has else 'Listing box waits on a fixed MyRealPage search.'), 'gen': G},
@@ -197,7 +201,7 @@ def build(b):
         blocks += [H(f'{name} condos for sale now'), {'t': 'grid', 'gen': G}]
     else:
         blocks += [H(f'{name} condos for sale now'),
-                   P(f'Live listings for this building are being set up. Until then, see [{NAV[city][0]} for sale]({NAV[city][1]}) or call or text Jared at 604-928-1361 and he will send you every {name} listing as it comes up.')]
+                   P(f'Call or text Jared at 604-928-1361 for every {name} listing as it comes up, or see [{NAV[city][0]} for sale]({NAV[city][1]}).')]
     blocks += [
         H(f'{name} at a glance'),
         {'t': 'table', 'caption': f'{name} building facts', 'head': ['', name], 'rows': rows,
@@ -207,10 +211,10 @@ def build(b):
         H(f'Living at {name}'),
         P(b['living']),
         H(f'Before you buy at {name}'),
-        L(f'**Read the strata package:** the Form B, two years of minutes, the bylaws, the depreciation report and the contingency reserve fund balance. They show what {name} owners are planning to fix and pay for.',
-          '**Rentals:** since November 24, 2022, BC stratas cannot ban owners from renting, except in age-restricted buildings. Short-term rental limits can still apply.',
-          '**Pets and parking:** pet limits, parking stalls, storage lockers and electric car charging are set by the bylaws and the title, home by home. Check them for the exact home you are buying.',
-          '**Price it on recent sales in the building:** Jared pulls the sold prices for the building and the homes that compete with it before you write an offer.'),
+        # Kept short on purpose (2026-11-16): the general strata checklist lives on /bc-condo-buying-rules.html, so 21 building
+        # pages no longer repeat the same four bullets (that repetition put 20 of them under the 70% uniqueness gate).
+        P(f'Ask for the {name} strata package' + (f' (strata plan {b["plan"]})' if b['plan'] else '')
+          + f' and the recent {name} sales before you write an offer. Rentals, pets, parking and the Form B: [BC condo buying rules](/bc-condo-buying-rules.html).'),
         H('More condo buildings nearby'),
         L(*[f'[{x["name"]} condos]({"/" + x["slug"] + ".html"})' for x in others],
           '[White Rock condo buildings, tower by tower](/white-rock-condo-buildings.html)',
