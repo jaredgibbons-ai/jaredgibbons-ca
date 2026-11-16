@@ -15,7 +15,7 @@ const list = (xs: string[]) => xs.length > 1 ? `${xs.slice(0, -1).join(', ')} an
 <section class="section section--tight sp" aria-labelledby="sp-h">
   <div class="wrap">
     <h2 class="h2" id="sp-h">Where Jared has sold in {list(areas.map((x) => x.a))}</h2>
-    <p class="sp__lead">Jared has listed and sold homes on these streets since 2017. If yours is one of them, he already knows what buyers there pay for.</p>
+    <p class="sp__lead">Jared has sold homes on these streets since 2017 (closed MLS® sales). If yours is one of them, he already knows what buyers there pay for.</p>
     {areas.map((x) => (
       <div class="sp__area">
         {areas.length > 1 && <h3 class="sp__h">{x.a}</h3>}

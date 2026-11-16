@@ -6,6 +6,7 @@
 import ZoningFind from './ZoningFind.astro';
 import SoldProof from './SoldProof.astro';
 import SOLD from '../data/sold-streets.js';
+import SOLDP from '../data/sold-paragon.json';
 import Base from '../layouts/Base.astro';
 import Rich from './Rich.astro';
 import { capsClass } from '../lib/caps';
@@ -71,7 +72,12 @@ const idxPath = idx.special?.[page.slug];
 // The open map search is shown in the page (a frame) on these two pages (D-242).
 const isMapPage = page.slug === 'recip' || page.slug === 'map-search';
 const _ap = (SOLD as any).subareas?.[`/${page.slug}.html`] as { name: string; side: string } | undefined;
-const areaProof = !_ap ? '' : _ap.side === 'BS' ? `Jared has sold homes in ${_ap.name} and helped buyers purchase here.` : _ap.side === 'S' ? `Jared has sold homes in ${_ap.name}.` : `Jared has helped buyers purchase in ${_ap.name}.`;
+// Jared's closed MLS® sales in a sub-area (Paragon export, D-297): street names only, no prices. Key: the MLS® sub-area name, letters only.
+const paragonSold = (mls: string) => ((SOLDP as any).bySub[String(mls || '').toLowerCase().replace(/[^a-z]/g, '')] || []) as { st: string; type: string; ym: string; beds?: number; baths?: number; sqft?: number; dom?: number; slug?: string }[];
+const _MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const soldLine = (e: any) => [`${e.type}${e.type === 'Land' ? '' : ''} on ${e.st}`, [e.beds && `${e.beds} bed`, e.baths && `${e.baths} bath`].filter(Boolean).join(', '), e.sqft && `${e.sqft.toLocaleString('en-CA')} sq ft`, e.dom && `sold in ${e.dom} ${e.dom === 1 ? 'day' : 'days'}`].filter(Boolean).join(' · ');
+const _apSold = !_ap ? '' : ((_ap as any).n === 1 ? 'a home' : 'homes');   // n: closed sales in that MLS® sub-area (Paragon), used for the wording only, never shown
+const areaProof = !_ap ? '' : _ap.side === 'BS' ? `Jared has sold ${_apSold} in ${_ap.name} and helped buyers purchase here.` : _ap.side === 'S' ? `Jared has sold ${_apSold} in ${_ap.name}.` : `Jared has helped buyers purchase in ${_ap.name}.`;
 const isSearch = !!(idxId || idxPath) || isMapPage;
 // Name of the search, sent with an "Email me new listings" signup so Jared knows which one to set up.
 const alertName = String((page.blocks || []).find((b: any) => b.t === 'h' && b.level === 1)?.text || String(page.title || '').split('|')[0]).replace(/\s+/g, ' ').trim().slice(0, 150);
@@ -355,6 +361,16 @@ function gpFacts(gp: any) {
   return { house, acreage, commute: gp.commute, vibe: gp.vibe };
 }
 const isGuide = page.slug.endsWith('-guide');
+// Neighbourhood pages with a "Jared has sold here" line (D-293) also show up to 3 homes he sold in that MLS® sub-area, the same cards the guides carry (D-211, D-295).
+if (!isGuide && (_ap as any)?.mls && !(page.blocks || []).some((b: any) => b.t === 'jsold')) {
+  const sold = soldInSubArea((_ap as any).mls, 3);
+  const more = paragonSold((_ap as any).mls).filter((e) => !sold.some((c) => `listing.${c.slug}`.endsWith(String(e.slug || '~')) || c.slug === e.slug));
+  if (sold.length || more.length) {
+    let at = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 2 && (/questions$/i.test(String(b.text || '')) || /^(Explore more|Nearby|Related|Sources|More )/i.test(String(b.text || ''))));
+    if (at < 0) at = page.blocks.length;
+    page.blocks.splice(at, 0, { t: 'h', level: 2, text: `Homes Jared has sold in ${_ap!.name}` }, { t: 'jsold', cards: sold, more });
+  }
+}
 if (isGuide) {
   const gf = (GUIDE_FACTS as Record<string, any>)[page.slug];
   // The archive's "Neighbourhood guide · Township of Langley" line under the H1 repeats the breadcrumb.
@@ -403,11 +419,12 @@ if (isGuide) {
   {
     const subName = GP?.sub ? String(GP.sub).split('|')[1] : (gf && !/^Within /.test(gf.area) && !/sub-area$/.test(gf.area) ? gf.area : '');
     const sold = soldInSubArea(subName, 3);
-    if (sold.length) {
+    const more = paragonSold(subName).filter((e) => !sold.some((c) => c.slug === e.slug));
+    if (sold.length || more.length) {
       const nm = GP?.name || String(subName).replace(/ (Langley|Surrey|BC|MR|VW|VE)$/, '');
       let at = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 2 && (/ right for you\?$/.test(String(b.text || '')) || /questions$/i.test(String(b.text || '')) || /^(Nearby neighbourhood guides|Related|Sources|More )/i.test(String(b.text || ''))));
       if (at < 0) at = page.blocks.length;
-      page.blocks.splice(at, 0, { t: 'h', level: 2, text: `Homes Jared has sold in ${nm}` }, { t: 'jsold', cards: sold });
+      page.blocks.splice(at, 0, { t: 'h', level: 2, text: `Homes Jared has sold in ${nm}` }, { t: 'jsold', cards: sold, more });
     }
   }
   // "Email me new listings in X" on every guide (D-220): the same alert form as the search pages, placed after the pros and cons (or the quick
@@ -866,7 +883,23 @@ const explore = !_extra.length ? exploreBase
               );
               if (b.t === 'jsold') return (
                 <>
-                  <ul class="cards">{b.cards.map((c: any) => { const m = /^(\w{3}) \d+, (\d{4})$/.exec(c.soldDate || ''); return <PropertyCard href={c.href} photoSlug={c.slug} street={displayStreet(c)} city={c.city} beds={c.beds} baths={c.baths} floorArea={c.sqft ? (/sq/i.test(c.sqft) ? c.sqft : `${c.sqft} sqft`) : undefined} status="Sold" type={c.type} tags={m ? [`Sold ${m[1]} ${m[2]}`] : []} moreLabel="See the listing" />; })}</ul>
+                  {b.cards.length > 0 && <ul class="cards">{b.cards.map((c: any) => { const m = /^(\w{3}) \d+, (\d{4})$/.exec(c.soldDate || ''); return <PropertyCard href={c.href} photoSlug={c.slug} street={displayStreet(c)} city={c.city} beds={c.beds} baths={c.baths} floorArea={c.sqft ? (/sq/i.test(c.sqft) ? c.sqft : `${c.sqft} sqft`) : undefined} status="Sold" type={c.type} tags={m ? [`Sold ${m[1]} ${m[2]}`] : []} moreLabel="See the listing" />; })}</ul>}
+                  {(b.more || []).length > 0 && (
+                    <div class="jsoldm">
+                      {b.cards.length > 0 && <h3 class="jsoldm__h">More of Jared's sales here</h3>}
+                      <ul class="jsoldm__l">
+                        {b.more.slice(0, 8).map((e: any) => <li><span class="jsoldm__d">{_MON[Number(e.ym.slice(5, 7)) - 1]} {e.ym.slice(0, 4)}</span> {e.slug ? <a href={`/our-listings.html/${e.slug}`}>{soldLine(e)}</a> : soldLine(e)}</li>)}
+                      </ul>
+                      {b.more.length > 8 && (
+                        <details class="jsoldm__more"><summary>Show earlier sales</summary>
+                          <ul class="jsoldm__l">
+                            {b.more.slice(8).map((e: any) => <li><span class="jsoldm__d">{_MON[Number(e.ym.slice(5, 7)) - 1]} {e.ym.slice(0, 4)}</span> {e.slug ? <a href={`/our-listings.html/${e.slug}`}>{soldLine(e)}</a> : soldLine(e)}</li>)}
+                          </ul>
+                        </details>
+                      )}
+                      <p class="jsoldm__src">Closed MLS® sales with Jared as the listing agent, 2017 to November 2026. Street names only.</p>
+                    </div>
+                  )}
                   <p class="jsold__all"><a href="/sold-properties.html">See all the homes Jared has sold</a></p>
                 </>
               );
@@ -1293,6 +1326,13 @@ const explore = !_extra.length ? exploreBase
   .pg--search p{max-width:56rem;margin-bottom:0}
   .section--search{padding-bottom:0}
   .pg :global(p){margin:0 0 1em}
+  .jsoldm{margin:var(--s4) 0 0;max-width:60rem}
+  .jsoldm__h{font-size:1.0625rem;margin:0 0 .5rem}
+  .jsoldm__l{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+  .jsoldm__l li{padding:.55rem 0;border-bottom:1px solid #d9d9d9;line-height:1.45}
+  .jsoldm__d{display:inline-block;min-width:5.25rem;font:700 .8125rem var(--f-head);letter-spacing:.04em;text-transform:uppercase;color:#555}
+  .jsoldm__more summary{cursor:pointer;font:700 .875rem var(--f-head);padding:.6rem 0}
+  .jsoldm__src{margin:.6rem 0 0;font-size:.8125rem;color:#555}
   .areaproof{margin:-.5rem 0 1.25rem;padding:.6rem .85rem;border-left:4px solid var(--ink);background:#fff;max-width:44rem;line-height:1.5}
   .areaproof a{margin-left:.35rem;white-space:nowrap}
   .pg__h1{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.05;letter-spacing:-.025em;margin:0 0 1.25rem;text-wrap:balance;max-width:40ch}
