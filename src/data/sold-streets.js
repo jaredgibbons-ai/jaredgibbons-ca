@@ -1097,7 +1097,7 @@ export default {
    "n": 2
   },
   "/aberdeen.html": {
-   "name": "Aberdeen in Abbotsford",
+   "name": "Aberdeen, Abbotsford",
    "side": "S",
    "mls": "Aberdeen",
    "n": 1
@@ -1133,7 +1133,7 @@ export default {
    "n": 0
   },
   "/boyd-park.html": {
-   "name": "Boyd Park in Richmond",
+   "name": "Boyd Park, Richmond",
    "side": "S",
    "mls": "Boyd Park",
    "n": 1
@@ -1151,7 +1151,7 @@ export default {
    "n": 0
   },
   "/brighouse-richmond-guide.html": {
-   "name": "Brighouse in Richmond",
+   "name": "Brighouse, Richmond",
    "side": "S",
    "mls": "Brighouse",
    "n": 1
@@ -1247,7 +1247,7 @@ export default {
    "n": 1
   },
   "/durieu.html": {
-   "name": "Durieu in Mission",
+   "name": "Durieu, Mission",
    "side": "S",
    "mls": "Durieu",
    "n": 1
@@ -1307,19 +1307,19 @@ export default {
    "n": 3
   },
   "/hawthorne.html": {
-   "name": "Hawthorne in Ladner",
+   "name": "Hawthorne, Ladner",
    "side": "S",
    "mls": "Hawthorne",
    "n": 1
   },
   "/holly.html": {
-   "name": "Holly in Ladner",
+   "name": "Holly, Ladner",
    "side": "B",
    "mls": "Holly",
    "n": 0
   },
   "/killarney-ve.html": {
-   "name": "Killarney in Vancouver",
+   "name": "Killarney, Vancouver",
    "side": "BS",
    "mls": "Killarney VE",
    "n": 1
@@ -1349,7 +1349,7 @@ export default {
    "n": 2
   },
   "/montecito.html": {
-   "name": "Montecito in Burnaby",
+   "name": "Montecito, Burnaby",
    "side": "S",
    "mls": "Montecito",
    "n": 1
@@ -1373,13 +1373,13 @@ export default {
    "n": 6
   },
   "/new-horizons-coquitlam.html": {
-   "name": "New Horizons in Coquitlam",
+   "name": "New Horizons, Coquitlam",
    "side": "S",
    "mls": "New Horizons",
    "n": 1
   },
   "/nordel.html": {
-   "name": "Nordel in North Delta",
+   "name": "Nordel, North Delta",
    "side": "S",
    "mls": "Nordel",
    "n": 2
@@ -1421,7 +1421,7 @@ export default {
    "n": 0
   },
   "/renfrew-vancouver.html": {
-   "name": "Renfrew in Vancouver",
+   "name": "Renfrew, Vancouver",
    "side": "BS",
    "mls": "Renfrew VE",
    "n": 1
@@ -1509,7 +1509,7 @@ export default {
    "n": 0
   },
   "/victoria-vancouver.html": {
-   "name": "Victoria in Vancouver",
+   "name": "Victoria, Vancouver",
    "side": "B",
    "mls": "Victoria VE",
    "n": 0
