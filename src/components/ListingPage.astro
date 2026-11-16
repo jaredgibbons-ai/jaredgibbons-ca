@@ -6,6 +6,7 @@ import LZ from '../data/listing-zoning.json';
 import ZG from '../data/zonings.json';
 import { listingFeatures } from '../lib/listing-features';
 import EXPLORE from '../data/explore.json';
+import LAREA from '../data/listing-area.json';
 import { isPreview } from '../lib/preview';
 import ExploreLinks from './ExploreLinks.astro';
 // Own-listing detail page. Content comes from src/data/listings/<slug>.json (tools/import_listings.py).
@@ -58,6 +59,10 @@ const explore = (EXPLORE as Record<string, any>)['listing:' + page.slug];
 const _h1 = (blocks.find((b: any) => b.t === 'h' && b.level === 1) as any)?.text;
 const priceNum = /^\$[\d,]+$/.test(price) ? Number(price.replace(/[$,]/g, '')) : 0;
 const telHref = (s: string) => 'tel:' + s;
+// "The neighbourhood now" on sold and leased pages (D-322, tools/build_listing_area.py): what the listing's MLS® sub-area sells for today
+// and where to see its homes for sale. No price of this home.
+const area = page.status !== 'Active' ? ((LAREA as any).listings[page.slug] as { sub: string; noun: string; page: string | null; n?: number; price?: number; dom?: number; ratio?: number } | undefined) : undefined;
+const areaWindow = (LAREA as any).window as string;
 
 // Search snippet. The archive's meta is often empty ("[SOLD]:" alone) or MLS marketing text, so an empty one is built from the facts on the page.
 const factMap: Record<string, string> = {};
@@ -344,6 +349,18 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 && (show
     </section>
   )}
 
+  {area && (
+    <section class="section" aria-labelledby="ls-area-h">
+      <div class="wrap ls">
+        <h2 class="ls__h" id="ls-area-h">{area.sub} now</h2>
+        {area.n && area.price && <p class="ls__p">From {areaWindow}, {area.n.toLocaleString('en-CA')} {area.noun} sold in {area.sub} at a median price of ${area.price.toLocaleString('en-CA')}, half of them within {area.dom} days{area.ratio ? ` and at a median ${area.ratio.toFixed(1)}% of the list price` : ''}. Source: Paragon closed sales.</p>}
+        <ul class="ls__list">
+          {area.page && <li><a href={`/${area.page}.html`}>{area.sub} homes for sale now</a></li>}
+          <li><a href="/home-evaluation.html">What is my {area.sub} home worth?</a></li>
+        </ul>
+      </div>
+    </section>
+  )}
   <section class="section">
     <div class="wrap ls">
       {blocks.filter((b) => b.t === 'agent').slice(0, 1).map((b) => (

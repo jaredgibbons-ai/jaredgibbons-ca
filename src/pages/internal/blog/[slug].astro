@@ -7,7 +7,22 @@ import PLS from '../../../data/post-listing-seo.json';
 import RELATED from '../../../data/post-related.json';
 import CONTEXT from '../../../data/post-context.json';
 import REWRITES from '../../../data/post-rewrites.json';
+import UPDATES from '../../../data/post-updates.json';
 export function getStaticPaths() {
+  // Old posts with no clicks (D-322, tools/build_post_updates.py): a dated update note under the title, and/or noindex (the post stays
+  // on the site and keeps its links; the sitemap leaves it out).
+  function withUpdate(pg: any) {
+    const u = (UPDATES as Record<string, any>)[pg.slug];
+    if (!u) return pg;
+    const out = { ...pg, seo: { ...(pg.seo || {}) }, blocks: [...(pg.blocks || [])] };
+    if (u.noindex) out.seo['Meta robots'] = 'noindex, follow';
+    if (u.note) {
+      const i = out.blocks.findIndex((b: any) => b.cls === 'byline');
+      const j = i >= 0 ? i + 1 : Math.max(0, out.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1) + 1);
+      out.blocks.splice(j, 0, { t: 'p', cls: 'update', parts: u.note });
+    }
+    return out;
+  }
   const mods = import.meta.glob('../../../data/posts/*.json', { eager: true }) as Record<string, any>;
   const titleOf: Record<string, string> = {};
   for (const m of Object.values(mods)) titleOf[m.default.slug] = String((PLS as Record<string, any>)[m.default.slug]?.title || m.default.title || '').split(' | ')[0].trim();
@@ -29,13 +44,13 @@ export function getStaticPaths() {
     const relBlocks = [...author, ...relBlocks0];
     // Reviewed search title, description and (where the archive's was wrong) H1, from tools/build_post_listing_seo.py (D-221). Applied last.
     const f = (PLS as Record<string, any>)[m.default.slug] || (rw ? {} : undefined);
-    if (!f) return { params: { slug: m.default.slug }, props: { page: { ...m.default, blocks: [...(m.default.blocks || []), ...relBlocks] } } };
+    if (!f) return { params: { slug: m.default.slug }, props: { page: withUpdate({ ...m.default, blocks: [...(m.default.blocks || []), ...relBlocks] }) } };
     const pg = { ...m.default, seo: { ...(m.default.seo || {}) }, blocks: [...(m.default.blocks || []), ...relBlocks] };
     if (f.title) { pg.title = f.title; pg.seo.Title = f.title; pg.seo['OG title'] = f.title; }
     if (f.description) { pg.seo['Meta description'] = f.description; pg.seo['OG description'] = f.description; }
     if (f.h1) { pg.seo.H1 = f.h1; const i = pg.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1); if (i >= 0) pg.blocks[i] = { ...pg.blocks[i], text: f.h1 }; }
     if (rw) { pg.title = rw.title; pg.seo.Title = rw.title; pg.seo['OG title'] = rw.title; pg.seo['Meta description'] = rw.description; pg.seo['OG description'] = rw.description; pg.seo.H1 = rw.h1; const i = pg.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1); if (i >= 0) pg.blocks[i] = { ...pg.blocks[i], text: rw.h1 }; }
-    return { params: { slug: pg.slug }, props: { page: pg } };
+    return { params: { slug: pg.slug }, props: { page: withUpdate(pg) } };
   });
 }
 const { page } = Astro.props as { page: any };
