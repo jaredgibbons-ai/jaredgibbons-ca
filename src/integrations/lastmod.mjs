@@ -33,7 +33,9 @@ export default function lastmod() {
           // Without this, every page with a form or a map hashed differently on Cloudflare and got the build day as its date (review of Nov 15 2026).
           const body = (a >= 0 && b > a ? html.slice(a, b) : html).replace(/ data-astro-cid-[a-z0-9]+/g, '').replace(/ data-key(?:="(?:AIza[\w-]{30,})?")?(?=[\s>])/g, ' data-key')
             // Scripts are behaviour, not content: a change to how a listings box loads must not re-date 1,300 pages. Structured data (ld+json) stays in.
-            .replace(/<script(?![^>]*ld\+json)[^>]*>[\s\S]*?<\/script>/g, '');
+            .replace(/<script(?![^>]*ld\+json)[^>]*>[\s\S]*?<\/script>/g, '')
+            // The shared "Ready to get started?" call/email band is page furniture, not the page's own content (D-308).
+            .replace(/<section[^>]*aria-labelledby="h-ready"[^>]*>[\s\S]*?<\/section>/g, '');
           const h = crypto.createHash('sha1').update(body).digest('hex').slice(0, 12);
           const prev = manifest[loc];
           const d = prev && prev.h === h ? prev.d : today;
