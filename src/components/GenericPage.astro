@@ -47,6 +47,7 @@ import PropertyCard from './PropertyCard.astro';
 import { ownCards, soldInSubArea, displayStreet } from '../lib/own-listings';
 import IDX from '../data/idx-embeds.json';
 import BREADCRUMBS from '../data/breadcrumbs.json';
+import STRATA_RULES from '../data/strata-rules.json';
 import EXPLORE from '../data/explore.json';
 import EXPLORE_EXTRA from '../data/explore-extra.json';
 import ExploreLinks from './ExploreLinks.astro';
@@ -94,6 +95,28 @@ if (local?.faq?.length) {
   // The two plain questions were generated with the page name inserted ("Can Jared show me homes in Open?", "… in Our?", "… in Sold Properties?"); the unnamed wording reads right on every page.
   local.faq = local.faq.map((f: any) => /^Can Jared show me homes in .+\?$/.test(f.q) ? { ...f, q: 'Can I book a private showing with Jared?' } : /^How do I find out what my home in .+ is worth\?$/.test(f.q) ? { ...f, q: 'How do I find out what my home is worth?' } : f);
   local.faq = local.faq.filter((f: any) => { const k = String(f.q).trim().toLowerCase(); if (seenQ.has(k)) return false; seenQ.add(k); return !INTERNAL_FAQ.test(f.q + ' ' + f.a) && String(f.a || '').trim().length > 0; });   // no empty answers (SEO audit 2026-11-13)
+}
+// Pets, rentals and age rules by complex (D-313, src/data/strata-rules.json from tools/build_strata_rules.py): what the MLS® listings in each
+// complex say, not the bylaws. Only facts that rarely change (year built, homes, pets, rentals, age), so the tables do not need upkeep.
+{
+  const SR: any = STRATA_RULES;
+  const pg = SR.pages[page.slug];
+  if (pg && local?.blocks) {
+    const rs = pg.rows.map((i: number) => SR.rows[i]);
+    const long = rs.length > 15;
+    local.blocks = [...local.blocks,
+      { t: 'h', level: 2, text: long ? 'Pets, rentals and age rules for every complex' : 'Pets, rentals and age rules by complex', pos: 'end', gen: 'strata' },
+      { t: 'p', pos: 'end', gen: 'strata', text: `What recent MLS® listings in each complex say about pets, renting out your home and age limits (checked ${SR.checked}). It comes from the listings, not the strata bylaws, so read the bylaws or ask me before you buy. "Yes, with limits" usually means a cap on the number or size of pets, or on how many homes can be rented. "Ask me" means listings in the same complex disagree.` },
+      { t: 'table', pos: 'end', gen: 'strata', caption: 'Pets, rentals and age rules by complex', head: ['Complex', ...(pg.mixed ? ['Type'] : []), 'Built', 'Homes', 'Pets', 'Rentals', 'Age'],
+        rows: rs.map((r: any) => [r.name, ...(pg.mixed ? [r.type] : []), r.built || '—', r.homes || '—', r.pets, r.rentals, r.age]) },
+    ];
+  }
+  const bi = SR.buildings[page.slug];
+  if (bi !== undefined && local?.blocks) {
+    const r = SR.rows[bi];
+    local.blocks = local.blocks.map((b: any) => (b.t === 'table' && String(b.caption || '').endsWith('building facts')
+      ? { ...b, rows: [...b.rows, ['Pets (per listings)', r.pets], ['Rentals (per listings)', r.rentals], ['Age limit (per listings)', r.age]] } : b));
+  }
 }
 // Guide format v2 (D-205, src/data/guide-plus.json): its search-style questions ("Is X a good place to live?") lead the page's questions.
 const GP = (GUIDE_PLUS as Record<string, any>)[page.slug];
@@ -588,7 +611,7 @@ page.blocks = cleanArchive(page.blocks);
 
 // Reference sections fold away behind their heading (D-197): sources and the disclaimer on every page; on guides also the rules, costs, risks,
 // building-by-building and comparison sections. The heading stays an H2 inside <summary>, the text stays in the page for search engines.
-const FOLD_ALL = /^(Sources\b|Disclaimer$)/i;
+const FOLD_ALL = /^(Sources\b|Disclaimer$|Pets, rentals and age rules for every complex$)/i;
 const FOLD_GUIDE = /^(Related pages$|Nearby areas to look at$|More nearby areas$|Other nearby areas$|How .+ compares|What's nearby|.+: (rules that affect buyers|costs and taxes|risks and due diligence|development and new projects|local details a buyer would not know)$|(Condo buildings|Townhome complexes|Lots and land|Mobile and manufactured homes|Duplexes and half duplexes|Acreage and rural land) in |Sources for the home-type notes$)/i;
 const foldOf = (sec: any): boolean => {
   const h = sec.kind === 'text' && sec.blocks[0]?.t === 'h' && sec.blocks[0].level === 2 ? String(sec.blocks[0].text || '') : '';
