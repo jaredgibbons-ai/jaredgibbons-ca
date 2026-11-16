@@ -213,6 +213,21 @@ if (local) {
 // Contact fix (D-73): 148 archive pages print jared@jaredgibbons.ca, which is not Jared's address; shown as jaredgibbons@royallepage.ca. The archive record is untouched.
 page.blocks = JSON.parse(JSON.stringify(page.blocks).replaceAll('jared@jaredgibbons.ca', 'jaredgibbons@royallepage.ca'));
 
+// One name per kind of section (Jared, Nov 16 2026, D-308): the nearby-area link lists had four names, the archive card grid was
+// "Explore More", and one notes builder titled its sources "Sources for the home-type notes". A second list or sources section on
+// the same page gets "More nearby areas" / "More sources" so no page repeats a heading.
+{
+  const RENAME: Record<string, string> = { 'Related pages': 'Nearby areas to look at', 'More real estate nearby': 'Nearby areas to look at', 'Nearby areas & related pages': 'Nearby areas to look at', 'Explore More': 'Also worth a look', 'Sources for the home-type notes': 'Sources' };
+  const AGAIN: Record<string, string[]> = { 'Nearby areas to look at': ['More nearby areas', 'Other nearby areas'], 'Sources': ['More sources', 'Further sources'] };
+  const seen = new Set(page.blocks.filter((b: any) => b.t === 'h' && !(String(b.text) in RENAME)).map((b: any) => String(b.text)));
+  for (const b of page.blocks) {
+    if (b.t !== 'h' || !(String(b.text) in RENAME)) continue;
+    let name = RENAME[String(b.text)];
+    for (const alt of AGAIN[name] || []) { if (!seen.has(name)) break; name = alt; }
+    b.text = name; seen.add(name);
+  }
+}
+
 // Area photos (D-89, src/data/area-photos.json, tools/build_area_photos.py): public-licence photos with the credit shown under each one.
 // An H2 that repeats the page H1 word for word (guide pages carried both) is dropped; the H1 already says it.
 {
@@ -472,7 +487,7 @@ page.blocks = mend(page.blocks);
   const out: any[] = []; const bl = page.blocks;
   for (let i = 0; i < bl.length; i++) {
     const b = bl[i];
-    if (b.t === 'h' && b.text === 'Explore More') {
+    if (b.t === 'h' && (b.text === 'Explore More' || b.text === 'Also worth a look')) {
       const items: any[] = []; let j = i + 1;
       for (;;) {
         if (j + 2 < bl.length && /^\d{1,2}$/.test(txt(bl[j])) && bl[j + 1]?.t === 'p' && bl[j + 2]?.t === 'p' && (bl[j + 2].parts || []).some((x: any) => x.h)) {
@@ -492,7 +507,7 @@ page.blocks = mend(page.blocks);
       if (items.length >= 2) {
         const prev = out[out.length - 1];
         const eyebrow = prev && /^Related\s*·/.test(txt(prev)) ? (out.pop(), txt(prev)) : '';
-        out.push({ t: 'related', eyebrow, title: 'Explore More', items });
+        out.push({ t: 'related', eyebrow, title: b.text, items });
         i = j - 1; continue;
       }
     }
@@ -574,7 +589,7 @@ page.blocks = cleanArchive(page.blocks);
 // Reference sections fold away behind their heading (D-197): sources and the disclaimer on every page; on guides also the rules, costs, risks,
 // building-by-building and comparison sections. The heading stays an H2 inside <summary>, the text stays in the page for search engines.
 const FOLD_ALL = /^(Sources\b|Disclaimer$)/i;
-const FOLD_GUIDE = /^(Related pages$|How .+ compares|What's nearby|.+: (rules that affect buyers|costs and taxes|risks and due diligence|development and new projects|local details a buyer would not know)$|(Condo buildings|Townhome complexes|Lots and land|Mobile and manufactured homes|Duplexes and half duplexes|Acreage and rural land) in |Sources for the home-type notes$)/i;
+const FOLD_GUIDE = /^(Related pages$|Nearby areas to look at$|More nearby areas$|Other nearby areas$|How .+ compares|What's nearby|.+: (rules that affect buyers|costs and taxes|risks and due diligence|development and new projects|local details a buyer would not know)$|(Condo buildings|Townhome complexes|Lots and land|Mobile and manufactured homes|Duplexes and half duplexes|Acreage and rural land) in |Sources for the home-type notes$)/i;
 const foldOf = (sec: any): boolean => {
   const h = sec.kind === 'text' && sec.blocks[0]?.t === 'h' && sec.blocks[0].level === 2 ? String(sec.blocks[0].text || '') : '';
   if (!h || sec.blocks.length < 2) return false;
