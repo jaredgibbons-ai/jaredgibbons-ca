@@ -48,6 +48,7 @@ import { ownCards, soldInSubArea, displayStreet } from '../lib/own-listings';
 import IDX from '../data/idx-embeds.json';
 import BREADCRUMBS from '../data/breadcrumbs.json';
 import STRATA_RULES from '../data/strata-rules.json';
+import PARK_RULES from '../data/park-rules.json';
 import EXPLORE from '../data/explore.json';
 import EXPLORE_EXTRA from '../data/explore-extra.json';
 import ExploreLinks from './ExploreLinks.astro';
@@ -95,6 +96,22 @@ if (local?.faq?.length) {
   // The two plain questions were generated with the page name inserted ("Can Jared show me homes in Open?", "… in Our?", "… in Sold Properties?"); the unnamed wording reads right on every page.
   local.faq = local.faq.map((f: any) => /^Can Jared show me homes in .+\?$/.test(f.q) ? { ...f, q: 'Can I book a private showing with Jared?' } : /^How do I find out what my home in .+ is worth\?$/.test(f.q) ? { ...f, q: 'How do I find out what my home is worth?' } : f);
   local.faq = local.faq.filter((f: any) => { const k = String(f.q).trim().toLowerCase(); if (seenQ.has(k)) return false; seenQ.add(k); return !INTERNAL_FAQ.test(f.q + ' ' + f.a) && String(f.a || '').trim().length > 0; });   // no empty answers (SEO audit 2026-11-13)
+}
+// Mobile home park directory (D-315, src/data/park-rules.json from tools/build_park_rules.py): a "Type" column (pad rental, co-op shares,
+// strata lot, own the land) and "55+" in Notes where every MLS® listing that fills the age field agrees. Matched by civic number and street.
+if (page.slug === 'mobile-home-parks-fraser-valley' && local?.blocks) {
+  const PR: any = (PARK_RULES as any).parks;
+  const k = (a: any) => { const m = /^\s*(\d+)\s+(\w+)/.exec(String(a)); return m ? `${m[1]} ${m[2].toLowerCase()}` : ''; };
+  local.blocks = local.blocks.map((b: any) => {
+    if (b.t === 'table' && b.head?.[0] === 'Park' && b.head?.[1] === 'Address' && b.head?.[2] === 'Notes') {
+      return { ...b, head: ['Park', 'Address', 'Type', 'Notes'], rows: b.rows.map((r: any[]) => { const p = PR[k(r[1])];
+        return [r[0], r[1], p?.type || '—', r[2] === '—' && p?.age ? '55+ (per listings)' : r[2]]; }) };
+    }
+    const t = typeof b.text === 'string' ? b.text : '';
+    if (b.t === 'p' && /^Notes mark what listings or park information state about the age rule/.test(t))
+      return { ...b, text: 'Type is how you hold the spot: a pad rental (you own the home and rent the pad, under the Manufactured Home Park Tenancy Act), co-op shares, a strata lot, or the land itself. A dash means it is not confirmed. ' + t + ' "55+ (per listings)" means every MLS® listing in that park that fills in the age field says 55+; confirm with the park, because only a park where every pad is reserved for people 55 or older is a 55+ park under the Human Rights Code.' };
+    return b;
+  });
 }
 // Pets and age rules by complex (D-313, D-314; src/data/strata-rules.json from tools/build_strata_rules.py): what the MLS® listings in each
 // complex say, not the bylaws. Only facts that rarely change (year built, homes, pets, age), so the tables do not need upkeep. Rentals are
