@@ -22,6 +22,11 @@ pages, names = {}, {}
 for f in glob.glob(f'{ROOT}/src/data/pages/*.json'):
     d = json.load(open(f)); s = d['slug']; pages[s] = d
     names[s] = h1_of(d) or re.split(r'\s*[|–-]\s*Jared', d.get('title', ''))[0].strip()
+# The page heading the site actually shows comes from seo-final.json (it overrides the archive H1, which on ~90 pages is an old
+# sentence such as "Every active Abbotsford home listing, newest first"). The last breadcrumb uses it (SEO copy review, Nov 16 2026).
+SEO_H1 = {k: v.get('h1', '') for k, v in json.load(open(f'{ROOT}/src/data/seo-final.json')).items()}
+for s_, h_ in SEO_H1.items():
+    if s_ in names and h_ and len(h_) <= 60: names[s_] = h_
 local = {os.path.basename(f)[:-5]: json.load(open(f)) for f in glob.glob(f'{ROOT}/src/data/local/*.json')}
 for s, l in local.items():
     if l.get('new_page'): names[s] = l['new_page'].get('h1') or names.get(s, s)
@@ -93,6 +98,7 @@ for _city, _slugs in {
 }.items():
     for _s in _slugs.split(): AREA_PARENT[_s] = _city
 
+UP = {'cloverdale-bc': ('Surrey', 'surrey-homes-for-sale'), 'mission-bc': ('Communities', 'communities')}
 out, kinds = {}, {'community': 0, 'guide': 0, 'nav': 0, 'flat': 0}
 for s in sorted(exist):
     if s in ('index', '404') or local.get(s, {}).get('breadcrumbs'): continue
@@ -117,6 +123,10 @@ for s in sorted(exist):
         k = AREA_PARENT[s]; trail = [home, {'name': HUB_NAME.get(k, k.replace('-', ' ').title()), 'href': H(hubs[k])}, me()]; kinds['area'] = kinds.get('area', 0) + 1
     else:
         trail = [home, me()]; kinds['flat'] += 1
+    # A hub whose city step has the same name as the page itself ("Home > Cloverdale > Cloverdale", the middle step pointing at
+    # the houses page) takes the city one level up instead (SEO copy review, Nov 16 2026).
+    if len(trail) == 3 and trail[1]['name'] == trail[2]['name'] and s in UP:
+        trail = [home, {'name': UP[s][0], 'href': H(UP[s][1])}, trail[2]]
     out[s] = trail
 json.dump(out, open(f'{ROOT}/src/data/breadcrumbs.json', 'w'), ensure_ascii=False, indent=0)
 print(len(out), kinds)
