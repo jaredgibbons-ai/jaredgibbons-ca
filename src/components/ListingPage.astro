@@ -18,6 +18,7 @@ import Cta from './Cta.astro';
 import ListingGallery from './ListingGallery.astro';
 import MortgageCalc from './MortgageCalc.astro';
 import MEDIA from '../data/listing-media.json';
+import { photoUrl, type Photo } from '../lib/photo-url';
 
 // Web-size photo lists written by tools/process_photos.py (Drive folder 10 -> src/data/listing-photos/<slug>.json)
 const PHOTO_LISTS = import.meta.glob('../data/listing-photos/*.json', { eager: true, import: 'default' }) as Record<string, any[]>;
@@ -44,7 +45,7 @@ const rest: { k?: string; v: string }[] = [];
 // The old site's account photo (Jared's portrait, shown beside every listing there) was captured as the last "photo" of all 200 listings,
 // so each gallery ended with a headshot captioned "Portrait of a real estate agent". It is not a listing photo and is left out (D-260).
 const ACCOUNT_PHOTO = 'ae8d7fd2e938b2d2';
-const photoList: { p: number; id: string; w: number; h: number }[] = (PHOTO_LISTS[`../data/listing-photos/${page.slug}.json`] ?? []).filter((ph) => ph.id !== ACCOUNT_PHOTO);
+const photoList: Photo[] = (PHOTO_LISTS[`../data/listing-photos/${page.slug}.json`] ?? []).filter((ph) => ph.id !== ACCOUNT_PHOTO);
 // archive alt text per position ("Photo 3: <address> | MLS ...")
 const altByPos: Record<number, string> = {};
 for (const a of page.photos.alts ?? []) { const m = /^Photo (\d+):/.exec(a); if (m) altByPos[Number(m[1])] = a.replace(/^(Photo \d+: )([^,]+)/, (_x: string, p1: string, p2: string) => p1 + titleCaseAddress(p2)); }
@@ -119,7 +120,7 @@ function builtMeta(): string {
   const place = `${addr}${cityName ? `, ${cityName} BC` : ''}${postal ? ` ${postal}` : ''}`;
   const beds = factMap['Bedrooms'] ? `${factMap['Bedrooms']}-bed ` : '';
   const strata = /condo|townhouse/i.test(typeWord);
-  const feats = listingFeatures(photoList.map((ph) => (PHOTO_ALTS as Record<string, string>)[ph.id] || ''), strata);
+  const feats = listingFeatures(photoList.map((ph) => ph.cap || (PHOTO_ALTS as Record<string, string>)[ph.id || ''] || ''), strata);
   const sold = factMap['Sold Date'] ? factMap['Sold Date'].replace(/^(\w+) \d+, (\d{4})$/, '$1 $2') : '';
   const deal = page.status === 'Active' ? `${price ? `${price}. ` : ''}Call Jared 604-928-1361.` : `${lead}${sold ? ` ${sold}` : ''}${price ? ` for ${price}` : ''}.`;
   const join = (xs: string[]) => (xs.length <= 1 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
@@ -175,7 +176,7 @@ const mapQ = [addr, [cityName ? `${cityName}, BC` : '', (POSTAL as Record<string
 // Structured data (D-269): the listing as a schema.org RealEstateListing with its offer, address and photos.
 const _postal = (POSTAL as Record<string, string>)[page.slug] || '';
 const listingLd: any[] = cityName && addr ? [{ '@context': 'https://schema.org', '@type': 'RealEstateListing', name: h1Text || addr, url: page.canonical,
-  image: photoList.slice(0, 6).map((ph) => new URL(`${import.meta.env.PUBLIC_PHOTO_BASE ?? '/listing-photos/'}${ph.id}-960.webp`, 'https://jaredgibbons.ca').href),
+  image: photoList.slice(0, 6).map((ph) => new URL(photoUrl(ph, 960), 'https://jaredgibbons.ca').href),
   ...(factMap['MLS® Num'] ? { identifier: factMap['MLS® Num'] } : {}),
   // No Offer when the page shows no price (leases, price on request): an Offer without a price is invalid markup (audit 2026-11-13).
   ...(priceNum ? { offers: { '@type': 'Offer', priceCurrency: 'CAD', price: priceNum, availability: page.status === 'Active' ? 'https://schema.org/InStock' : 'https://schema.org/SoldOut',
@@ -190,7 +191,7 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 ? rawMet
   description={metaDesc}
   ogTitle={seoTitle}
   ogDescription={metaDesc}
-  ogImage={photoList[0] ? new URL(`${import.meta.env.PUBLIC_PHOTO_BASE ?? '/listing-photos/'}${photoList[0].id}-960.webp`, 'https://jaredgibbons.ca').href : (seo['OG image'] && !/myrealpage\.com/.test(seo['OG image']) ? seo['OG image'] : undefined)}
+  ogImage={photoList[0] ? new URL(photoUrl(photoList[0], 960), 'https://jaredgibbons.ca').href : (seo['OG image'] && !/myrealpage\.com/.test(seo['OG image']) ? seo['OG image'] : undefined)}
   jsonld={listingLd}
   robots={page.status === 'Expired' ? 'noindex, follow' : (seo['Meta robots'] || 'index, follow')}
   footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings"

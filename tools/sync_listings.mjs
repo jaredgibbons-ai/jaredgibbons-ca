@@ -3,7 +3,8 @@
 // This reads Jared's active listings from his public MyRealPage page and, where an Active listing here shows a different price, writes the new price into
 // src/data/listings/<file>.json (the headline price line) and the homepage card in src/data/home.ts. "Original Price" is never touched.
 // A listing that left the active list and is in Jared's sold list is marked sold with its sold date (D-299) and comes off the homepage cards.
-// One that left without selling (expired, cancelled), or a new listing that has no page yet, is reported, not edited.
+// A listing that is active on MLS and has no page here gets one, built from its own MyRealPage page (D-302); its photos load from
+// MyRealPage's photo server until they are processed like the rest. One that left without selling (expired, cancelled) is reported, not edited.
 //   node tools/sync_listings.mjs            fetch, apply, print a report (exit 0)
 //   node tools/sync_listings.mjs --dry      fetch and report, write nothing
 //   node tools/sync_listings.mjs --file x   read the MyRealPage HTML from a file (tests)
@@ -97,6 +98,149 @@ export function applySold(l, root = ROOT) {
   return true;
 }
 
+// ---- New listings (D-302): a listing that is active on MLS and has no page here gets one, built from its own MyRealPage page. ----
+const ent = (t) => String(t).replace(/&reg;/g, '®').replace(/&amp;/g, '&').replace(/&times;/g, '×').replace(/&nbsp;/g, ' ').replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+// Visible text of a fragment: metric twins (hidden on MyRealPage) and tags dropped, whitespace collapsed.
+const txt = (h) => ent(String(h).replace(/<span class="mrp-m-unit"[\s\S]*?<\/span>/g, '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+const cls = (html, c) => { const m = new RegExp(`class="${c}"[^>]*>([\\s\\S]*?)</(?:span|div|h1|h2)>`).exec(html); return m ? txt(m[1]) : ''; };
+const pairs = (h) => [...String(h).matchAll(/<dt>([\s\S]*?)<\/dt>\s*<dd[^>]*>([\s\S]*?)<\/dd>/g)].map((m) => ({ k: txt(m[1]), v: [txt(m[2])] })).filter((x) => x.k && x.v[0]);
+
+/** A listing's MyRealPage page -> { page, photos } in this site's own shapes, or { error } when something a page needs is missing.
+ *  item: { id, slug ('listing.r…-….<id>'), mls }. tail: the agent and disclaimer blocks of an existing listing file. */
+export function buildListing(html, item, tail = []) {
+  const h = String(html);
+  const t1 = /<h1 class="mrp-listing-title">([\s\S]*?)<\/h1>/.exec(h);
+  if (!t1) return { error: 'no title' };
+  const street = txt(t1[1].split('<div')[0]);
+  const subarea = cls(t1[1], 'subarea'), city = cls(t1[1], 'city'), postal = cls(t1[1], 'postal-code');
+  const pi = (/<h2 class="mrp-listing-price-info">([\s\S]*?)<\/h2>/.exec(h) || [])[1] || '';
+  const price = (cls(pi, 'price').match(/^\$\d{1,3}(?:,\d{3})+$/) || [])[0];
+  const di = h.indexOf('class="mrp-listing-description"');
+  const desc = di > 0 ? txt((/class="mrp-listing-description"[^>]*>([\s\S]*?)<\/div>/.exec(h.slice(di - 5)) || [])[1] || '') : '';
+  const top = pairs(h.slice(0, di > 0 ? di : 0)).filter((x, i, a) => a.findIndex((y) => y.k === x.k) === i);
+  const status = (top.find((x) => x.k === 'Status:') || { v: [''] }).v[0];
+  if (!street || !city || !price || !desc || status !== 'Active') return { error: `missing ${[!street && 'street', !city && 'city', !price && 'price', !desc && 'description', status !== 'Active' && 'Active status'].filter(Boolean).join(', ')}` };
+
+  // Photos: the full-size address and caption from the photo tab, the 320-wide address from the thumbnail strip.
+  const small = new Map([...h.matchAll(/<img\s+src="(https:\/\/iss-cdn\.myrealpage\.com\/[^"]+)"\s+data-full-src="(https:\/\/iss-cdn\.myrealpage\.com\/[^"]+)"/g)].map((m) => [m[2], m[1]]));
+  const pc = h.indexOf('mrp-listing-details-all-photos-container');
+  const photos = [];
+  if (pc > 0) for (const li of h.slice(pc, h.indexOf('</ul>', pc)).split('<li>').slice(1)) {
+    const l = (/data-src="(https:\/\/iss-cdn\.myrealpage\.com\/[^"]+)"/.exec(li) || [])[1];
+    if (!l) continue;
+    const cap = txt((/class="mrp-listing-full-size-description">([\s\S]*?)<\/div>\s*<\/div>/.exec(li) || [])[1] || '');
+    const ph = { p: photos.length + 1, w: 1600, h: 1067, g: 1, u: small.get(l) ? { s: small.get(l), l } : { l } };
+    if (cap) ph.cap = cap;
+    photos.push(ph);
+  }
+  if (!photos.length) return { error: 'no photos' };
+
+  const beds = cls(pi, 'beds').replace(/^beds:\s*/, ''), baths = cls(pi, 'baths').replace(/^baths:\s*/, ''), area = cls(pi, 'floor-area'), year = cls(pi, 'year').replace(/^built:\s*/, ''), ptype = cls(pi, 'property-type');
+  const lines = [price];
+  if (ptype) lines.push(ptype);
+  if (beds) lines.push('beds:', beds);
+  if (baths) lines.push('baths:', baths);
+  if (area) lines.push(area);
+  if (year) lines.push('built:', year);
+  const h1 = [street, subarea, city, postal].filter(Boolean).join(' ');
+  const blocks = [{ t: 'h', level: 1, text: h1 }, { t: 'summary', lines, heading_n: lines.length }, { t: 'facts', items: top }, { t: 'p', parts: [{ t: desc }] }];
+  // The fact sections ("General Info:", "Land Info:" …) and the room tables, in the order MyRealPage shows them. Area statistics are left out: they go stale.
+  const end = h.indexOf('mrp-listing-attribution-container');
+  for (const sec of h.slice(di, end > di ? end : undefined).split(/<div class="(?=mrp-listing-(?:wide-)?info-section|room-info-section|bathroom-info-section)/).slice(1)) {
+    const label = txt((/<label class="section-head[^"]*">([\s\S]*?)<\/label>/.exec(sec) || [])[1] || '').replace(/:$/, '');
+    if (!label) continue;
+    if (/^(bath)?room-info-section/.test(sec)) {
+      const dls = [...sec.split(/<div class="mrp-/)[0].matchAll(/<dl[^>]*>([\s\S]*?)<\/dl>/g)].map((m) => m[1]);
+      const head = [...(dls[0] || '').matchAll(/<dt>([\s\S]*?)<\/dt>/g)].map((m) => txt(m[1]));
+      const rows = dls.slice(1).map((d) => [...d.matchAll(/<dd[^>]*>([\s\S]*?)<\/dd>/g)].map((m) => txt(m[1]))).filter((r) => r.length);
+      if (head.length && rows.length) blocks.push({ t: 'table', caption: label, head, rows });
+      continue;
+    }
+    const own = sec.split('</div>')[0];
+    // A wide section is one labelled value ("Interior Features: …"): it joins the facts above it, as on the older pages.
+    if (sec.startsWith('mrp-listing-wide-info-section')) {
+      const v = txt((/<dd[^>]*>([\s\S]*?)<\/dd>/.exec(own) || [])[1] || ''), last = blocks[blocks.length - 1];
+      if (v && last.t === 'facts' && !last.items.some((x) => x.k === `${label}:`)) last.items.push({ k: `${label}:`, v: [v] });
+      continue;
+    }
+    const items = pairs(own).filter((x) => x.k !== 'Previous Price:');
+    if (items.length) blocks.push({ t: 'h', level: 3, text: label }, { t: 'facts', items });
+  }
+  const brokerage = txt((/class="mrp-listing-attribution-container"[^>]*>([\s\S]*?)<\/div>/.exec(h) || [])[1] || '').replace(/^Listed by\s*/, '') || 'Royal LePage Little Oak Realty';
+  // The agent block and the board's disclaimer are copied from an existing listing file (tail), not typed here.
+  for (const b of tail) if (b.t === 'agent') blocks.push(b);
+  blocks.push({ t: 'credit', text: `Listed by ${brokerage}` });
+  for (const b of tail) if (b.t === 'disclaimer') blocks.push(b);
+
+  const fact = (k) => (blocks.filter((b) => b.t === 'facts').flatMap((b) => b.items).find((x) => x.k === k) || { v: [''] }).v[0];
+  const kind = fact('Dwelling Type:') || ptype || 'Home';
+  const where = subarea && subarea !== city ? `${subarea}, ${city}` : city;
+  const title = `${street}, ${city} | ${subarea && subarea !== city ? `${subarea} ` : ''}${kind} for Sale`;
+  const bb = [beds && `${beds} bed`, baths && `${String(baths).replace(/\.0$/, '')} bath`].filter(Boolean).join(', ');
+  // Search description, 160 characters at most: the longest form that fits.
+  const lead = `${street}, ${city}: ${bb ? `${bb} ` : ''}${kind.toLowerCase()} for sale in ${where}`, sz = area ? `, ${area.replace(/\.$/, '')}` : '', num = `MLS® ${item.mls || fact('MLS® Num:')}`;
+  const meta = [`${lead}${sz}. ${num}. Listed by Jared Gibbons, Royal LePage Little Oak Realty.`, `${lead}${sz}. ${num}. Listed by Jared Gibbons, REALTOR®.`, `${lead}. ${num}. Listed by Jared Gibbons, REALTOR®.`, `${lead}. ${num}.`].find((m) => m.length <= 160) || `${street}, ${city}: ${kind.toLowerCase()} for sale. ${num}.`;
+  const url = `https://jaredgibbons.ca/our-listings.html/${item.slug}`;
+  const page = {
+    slug: item.slug, path: `/our-listings.html/${item.slug}`, url, kind: 'listing', title, canonical: url,
+    seo: { Title: title, 'Meta description': meta, H1: h1, Canonical: url, 'Meta robots': 'index, follow', 'OG title': title, 'OG description': meta, 'OG image': '', Published: '', Modified: '' },
+    status: 'Active', brokerage, photos: { count: photos.length, alts: photos.map((ph) => `Photo ${ph.p}: ${ph.cap || `${street}, ${city}`}`), captions: photos.map((ph) => ph.cap || '') }, blocks,
+  };
+  const video = (/youtube\.com\/embed\/([\w-]{11})/.exec(h) || [])[1] || '';
+  return { page, photos, card: { street, city, postal, price, beds, baths, area, brokerage }, video };
+}
+
+/** Width and height of a JPEG, PNG or WebP from its first bytes, or null. */
+export function imageSize(b) {
+  if (b.length > 24 && b[0] === 0x89 && b[1] === 0x50) return { w: b.readUInt32BE(16), h: b.readUInt32BE(20) };
+  if (b.length > 30 && b.toString('ascii', 0, 4) === 'RIFF' && b.toString('ascii', 8, 12) === 'WEBP') {
+    const k = b.toString('ascii', 12, 16);
+    if (k === 'VP8X') return { w: 1 + b.readUIntLE(24, 3), h: 1 + b.readUIntLE(27, 3) };
+    if (k === 'VP8 ') return { w: b.readUInt16LE(26) & 0x3fff, h: b.readUInt16LE(28) & 0x3fff };
+    if (k === 'VP8L') { const n = b.readUInt32LE(21); return { w: 1 + (n & 0x3fff), h: 1 + ((n >> 14) & 0x3fff) }; }
+    return null;
+  }
+  if (b[0] !== 0xff || b[1] !== 0xd8) return null;
+  for (let i = 2; i + 9 < b.length;) {
+    if (b[i] !== 0xff) return null;
+    const m = b[i + 1];
+    if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) return { w: b.readUInt16BE(i + 7), h: b.readUInt16BE(i + 5) };
+    i += 2 + b.readUInt16BE(i + 2);
+  }
+  return null;
+}
+
+/** Writes a new listing: its page file, photo list, the old-address redirect id, postal code, video and a homepage card. Returns false (nothing written) if the page exists. */
+export function writeListing({ page, photos, card, video }, id, root = ROOT) {
+  const p = path.join(root, 'src/data/listings', `${page.slug}.json`);
+  if (fs.existsSync(p)) return false;
+  fs.writeFileSync(p, JSON.stringify(page));
+  fs.mkdirSync(path.join(root, 'src/data/listing-photos'), { recursive: true });
+  fs.writeFileSync(path.join(root, 'src/data/listing-photos', `${page.slug}.json`), JSON.stringify(photos));
+  const addKey = (file, key, value) => {
+    const fp = path.join(root, file);
+    if (!fs.existsSync(fp)) return;
+    const s = fs.readFileSync(fp, 'utf8'), at = s.lastIndexOf('}');
+    if (at < 0 || s.includes(`"${key}":`)) return;
+    const t = `${s.slice(0, at).replace(/\s*$/, '')},\n${JSON.stringify(key)}: ${JSON.stringify(value)}\n}${s.slice(at + 1)}`;
+    try { JSON.parse(t); fs.writeFileSync(fp, t); } catch { /* leave the file as it was */ }
+  };
+  addKey('src/worker/listing-ids.json', String(id), page.slug);
+  if (card.postal) addKey('src/data/listing-postal.json', page.slug, card.postal);
+  if (video) addKey('src/data/listing-media.json', page.slug, { video });
+  const hp = path.join(root, 'src/data/home.ts');
+  if (fs.existsSync(hp)) {
+    const q = (v) => `'${String(v).replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`;
+    const f = [`slug: ${q(page.slug.replace(/^listing\./, ''))}`, `street: ${q(card.street)}`, `city: ${q(card.city)}`, `brokerage: ${q(card.brokerage)}`, `price: ${q(card.price)}`];
+    if (/^\d+$/.test(card.beds)) f.push(`beds: ${card.beds}`);
+    if (/^\d+(\.0)?$/.test(card.baths)) f.push(`baths: ${Number(card.baths)}`);
+    if (card.area) f.push(`sqft: ${q(card.area.replace(/\s*sq\.? ?ft\.?/i, 'sqft'))}`);
+    const s = fs.readFileSync(hp, 'utf8');
+    if (s.includes('export const listings = [\n')) fs.writeFileSync(hp, s.replace('export const listings = [\n', `export const listings = [\n  { ${f.join(', ')} },\n`));
+  }
+  return true;
+}
+
 export function readListings(root = ROOT) {
   const dir = path.join(root, 'src/data/listings');
   return fs.readdirSync(dir).filter((f) => f.endsWith('.json')).map((file) => {
@@ -121,13 +265,14 @@ export function apply(change, root = ROOT) {
   return true;
 }
 
-export function report({ changes, gone, odd, fresh, sold = [] }, written) {
+export function report({ changes, gone, odd, fresh, sold = [], made = [] }, written) {
   const L = [];
+  for (const m of made) L.push(`PAGE   ${m.title}: new listing, page made from MyRealPage${written ? '' : ' (not written)'}. Photos load from MyRealPage until they are processed.`);
   for (const c of sold) L.push(`SOLD   ${c.title}: sold ${c.soldDate}${written ? '' : ' (not written)'}`);
   for (const c of changes) L.push(`PRICE  ${c.title}: ${c.price} -> ${c.to}${written ? '' : ' (not written)'}`);
   for (const c of odd) L.push(`CHECK  ${c.title}: site ${c.price}, MLS ${c.to}. Too big a jump to change automatically.`);
   for (const g of gone) L.push(`GONE   ${g.title}: Active on the site, not in the MLS active list and not in the sold list (expired, cancelled or pending?).`);
-  for (const f of fresh) L.push(`NEW    MLS ${f.mls || f.id} at ${f.price}: active on MLS, no page on the site yet.`);
+  for (const f of fresh) L.push(`NEW    MLS ${f.mls || f.id} at ${f.price}: active on MLS, no page on the site yet${f.why ? ` (a page could not be made: ${f.why})` : ''}.`);
   return L.length ? L.join('\n') : 'All active listing prices match MLS.';
 }
 
@@ -146,11 +291,27 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.a
   // Listings that left the active list: sold ones are marked sold with their date; the rest are reported.
   if (fi < 0) Object.assign(p, await findSold(p.gone, get));
   p.sold = p.sold || [];
+  // New listings: build each one's page from its own MyRealPage page. One that cannot be built stays in the report as NEW.
+  p.made = [];
+  if (fi < 0 && p.fresh.length) {
+    const all = readListings();
+    const dfile = all.filter((l) => l.status === 'Active' && !OFF_FEED.has(l.id)).map((l) => JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/listings', l.file), 'utf8')).blocks.filter((b) => b.t === 'agent' || b.t === 'disclaimer')).find((t) => t.length === 2) || [];
+    const left = [];
+    for (const f of p.fresh) {
+      const slug = (String(f.url).match(/\/(listing\.[a-z0-9-]+\.\d+)$/) || [])[1];
+      let b = slug && slug.endsWith(`.${f.id}`) ? buildListing(await get(f.url), { id: f.id, slug, mls: f.mls }, dfile) : { error: 'no page address' };
+      if (b.error) { left.push({ ...f, why: b.error }); continue; }
+      // Real photo shapes, read from the small copies (a few kB each). A photo that cannot be read keeps the usual 3:2.
+      await Promise.all(b.photos.map(async (ph) => { try { const r = await fetch(ph.u.s || ph.u.l, { headers: { accept: 'image/jpeg,image/png', range: 'bytes=0-65535' } }); const z = imageSize(Buffer.from(await r.arrayBuffer())); if (z && z.w > 50 && z.h > 50) { ph.h = Math.round(1600 * z.h / z.w); delete ph.g; } } catch { /* keep the guess */ } }));
+      if (dry || writeListing(b, f.id)) p.made.push({ title: b.page.title }); else left.push({ ...f, why: 'a page file with that name already exists' });
+    }
+    p.fresh = left;
+  }
   if (!dry) { for (const c of p.changes) apply(c); p.sold = p.sold.filter((c) => applySold(c) || (p.gone.push(c), false)); }
   const text = report(p, !dry);
   console.log(text);
   if (process.env.GITHUB_OUTPUT) {
-    fs.appendFileSync(process.env.GITHUB_OUTPUT, `changed=${!dry && p.changes.length + p.sold.length > 0}\nattention=${p.gone.length + p.odd.length + p.fresh.length > 0}\n`);
+    fs.appendFileSync(process.env.GITHUB_OUTPUT, `changed=${!dry && p.changes.length + p.sold.length + p.made.length > 0}\nattention=${p.gone.length + p.odd.length + p.fresh.length + p.made.length > 0}\n`);
     fs.writeFileSync('sync-report.txt', text + '\n');
   }
 }

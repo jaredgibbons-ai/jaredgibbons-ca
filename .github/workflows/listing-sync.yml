@@ -1,6 +1,7 @@
 # Twice-daily sync for Jared's own listing pages (D-298, D-299, tools/sync_listings.mjs).
 # Reads his active and sold listings from MyRealPage. A changed price or a sale is written, the site is built and tested, and the change is
-# pushed to main, which deploys it. Anything else (a listing that left the market unsold, a new listing with no page) goes in one issue,
+# pushed to main, which deploys it. A new listing gets a page built from its MyRealPage page (D-302). Anything else (a listing that left
+# the market unsold, a new listing whose page could not be built) and every page it made goes in one issue,
 # which is only added to when the report changes and is closed when nothing needs a look.
 name: Listing sync
 on:
@@ -38,7 +39,7 @@ jobs:
         run: |
           git config user.name "listing-sync"
           git config user.email "listing-sync@users.noreply.github.com"
-          git add src/data
+          git add src/data src/worker/listing-ids.json
           git commit -m "Listings updated from MLS (sync)" -m "$(cat sync-report.txt)"
           git push
       - if: ${{ !inputs.dry }}
