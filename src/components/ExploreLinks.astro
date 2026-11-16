@@ -2,7 +2,9 @@
 // "Explore" link block at the end of every listing-search page (data: src/data/explore.json, tools/build_explore.py).
 // Template output, not page content. Not part of the main menu.
 import { isHeldHref } from '../lib/launch';
-const { data } = Astro.props as { data: { cols: { h: string; links: string[][]; more: string[][] }[] } };
+const { data: full, compact = false } = Astro.props as { data: { cols: { h: string; links: string[][]; more: string[][] }[] }; compact?: boolean };
+// compact (listing pages, D-321): two columns of five links and no "Show more", so the block no longer outweighs the listing itself.
+const data = full && compact ? { cols: full.cols.slice(0, 2).map((c) => ({ ...c, links: c.links.slice(0, 5), more: [] })) } : full;
 ---
 {data && data.cols.length > 0 && (
   <aside class="explore" aria-labelledby="explore-h">

@@ -308,7 +308,8 @@ test('listing media, map, example rate, 12-hour reply, zoning lookup on farm pag
     const t = html(`internal/listings/${s}.html`);
     if (media[s].video) {
       assert.ok(t.includes(`data-yt="${media[s].video}"`), `${s}: video missing`);
-      assert.ok(/id="ls-media"/.test(t) && /href="#ls-media"/.test(t), `${s}: video section or button missing`);
+      // Sold and leased listings show the video right under the summary (D-321); active ones keep the section and the jump button.
+      assert.ok(/ls__vid--top/.test(t) || (/id="ls-media"/.test(t) && /href="#ls-media"/.test(t)), `${s}: video section or button missing`);
     }
     if (media[s].floorplan) {
       assert.ok(/id="ls-fp"/.test(t) && fs.existsSync(path.join(DIST, `img/floorplans/${media[s].floorplan.id}-900.webp`)), `${s}: floor plan missing`);

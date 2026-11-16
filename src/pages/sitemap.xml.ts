@@ -2,6 +2,7 @@
 // Preview builds still emit it, but robots.txt keeps the whole preview closed (see robots.txt.ts).
 import type { APIRoute } from 'astro';
 import { isGated } from '../lib/inventory';
+import UPDATES from '../data/post-updates.json';
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 
@@ -17,6 +18,7 @@ export const GET: APIRoute = () => {
       if (p.status === 'Expired') continue; // A-03: expired listings stay reachable but noindexed
       const robots = String(p.seo?.['Meta robots'] ?? '');
       if (/noindex/i.test(robots)) continue;
+      if ((UPDATES as Record<string, any>)[p.slug]?.noindex) continue;   // old posts hidden from Google (D-322)
       if (isGated(p.slug)) continue; // under the 5-active-listing rule (src/data/inventory/gate.json)
       if (p.canonical) urls.add(p.canonical);
     }
