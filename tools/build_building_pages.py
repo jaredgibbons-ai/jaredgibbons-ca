@@ -158,7 +158,8 @@ SEARCH = {'soleil-white-rock-condos': '1452096', 'foster-martin-white-rock-condo
           'morgan-crossing-south-surrey-condos': '1452118', 'forest-ridge-south-surrey-condos': '1452119', 'halvo-south-surrey-condos': '1452120'}
 
 # S = sold there, BS = sold there and helped buyers purchase there (Jared's deal records, D-292, D-293)
-SOLD_HERE = {'miramar-village-white-rock-condos': 'BS', 'morgan-crossing-south-surrey-condos': 'BS', 'belaire-white-rock-condos': 'S', 'forest-ridge-south-surrey-condos': 'BS'}
+# Sides checked against Paragon (listing side Nov 15, buyer side Nov 16 2026): Belaire gained a buyer-side purchase, Forest Ridge has none.
+SOLD_HERE = {'miramar-village-white-rock-condos': 'BS', 'morgan-crossing-south-surrey-condos': 'BS', 'belaire-white-rock-condos': 'BS', 'forest-ridge-south-surrey-condos': 'S'}
 NAV = {WR: ('White Rock condos', '/white-rock-condos-for-sale.html'), SS: ('South Surrey condos', '/south-surrey-condos-for-sale.html')}
 
 
