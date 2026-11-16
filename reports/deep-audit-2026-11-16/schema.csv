@@ -1,0 +1,11 @@
+type,pages,errors,warnings,what_was_checked,result
+BreadcrumbList,1926,0,0,"Required itemListElement, position, name, and item URL. Last item URL checked against the page.",No errors. Present on every page except the homepage.
+FAQPage,1526,0,1,Each question needs a name and an acceptedAnswer text.,Structure is valid. Google does not show FAQ rich results on realtor sites. The markup is kept on purpose for AI search. Not a defect to remove.
+BlogPosting,202,0,1,"Article rich result wants headline, image, datePublished, author, and publisher.logo.","Headline, date and author are present. Publisher has no logo, so the Article rich result is incomplete on all 202 posts."
+RealEstateAgent,1,0,0,"The full entity on the homepage: name, telephone, address, image.","Homepage entity has name, 604-928-1361 and #201, 15272 Croydon Drive. No diploma field. 201 other RealEstateAgent nodes are @id references on listing offers, which is valid."
+Offer,201,0,0,price and priceCurrency.,201 offers include a price and CAD. Listings with no price do not emit an Offer.
+VideoObject,116,0,0,"name, thumbnailUrl, uploadDate.",No missing required fields in the 116 video objects.
+Review,0,0,0,Review rich result.,"None on the site. Review text stays on the page as initials and verbatim quotes, not as review schema."
+AggregateRating,0,0,0,AggregateRating rich result.,None. Star ratings are not marked up.
+WebSite,1,0,0,Homepage WebSite node.,Present on the homepage only.
+RealEstateListing,203,0,0,Listing with address. Offer only when a price is shown.,203 listings. No Offer without a price.
