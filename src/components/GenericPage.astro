@@ -1326,11 +1326,13 @@ const explore = !_extra.length ? exploreBase
   .pg--search p{max-width:56rem;margin-bottom:0}
   .section--search{padding-bottom:0}
   .pg :global(p){margin:0 0 1em}
-  .jsoldm{margin:var(--s4) 0 0;max-width:60rem}
+  .jsoldm{margin:var(--s5) 0 0;max-width:60rem}
   .jsoldm__h{font-size:1.0625rem;margin:0 0 .5rem}
   .jsoldm__l{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
-  .jsoldm__l li{padding:.55rem 0;border-bottom:1px solid #d9d9d9;line-height:1.45}
-  .jsoldm__d{display:inline-block;min-width:5.25rem;font:700 .8125rem var(--f-head);letter-spacing:.04em;text-transform:uppercase;color:#555}
+  .jsoldm__l li{display:grid;grid-template-columns:5.25rem 1fr;gap:0 .5rem;align-items:baseline;padding:.55rem 0;border-bottom:1px solid #d9d9d9;line-height:1.45}
+  .jsoldm__l li a{justify-self:start}
+  @media (max-width:520px){.jsoldm__l li{grid-template-columns:1fr}}
+  .jsoldm__d{font:700 .8125rem var(--f-head);letter-spacing:.04em;text-transform:uppercase;color:#555}
   .jsoldm__more summary{cursor:pointer;font:700 .875rem var(--f-head);padding:.6rem 0}
   .jsoldm__src{margin:.6rem 0 0;font-size:.8125rem;color:#555}
   .areaproof{margin:-.5rem 0 1.25rem;padding:.6rem .85rem;border-left:4px solid var(--ink);background:#fff;max-width:44rem;line-height:1.5}
