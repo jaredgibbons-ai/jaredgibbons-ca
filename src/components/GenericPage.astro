@@ -96,26 +96,69 @@ if (local?.faq?.length) {
   local.faq = local.faq.map((f: any) => /^Can Jared show me homes in .+\?$/.test(f.q) ? { ...f, q: 'Can I book a private showing with Jared?' } : /^How do I find out what my home in .+ is worth\?$/.test(f.q) ? { ...f, q: 'How do I find out what my home is worth?' } : f);
   local.faq = local.faq.filter((f: any) => { const k = String(f.q).trim().toLowerCase(); if (seenQ.has(k)) return false; seenQ.add(k); return !INTERNAL_FAQ.test(f.q + ' ' + f.a) && String(f.a || '').trim().length > 0; });   // no empty answers (SEO audit 2026-11-13)
 }
-// Pets, rentals and age rules by complex (D-313, src/data/strata-rules.json from tools/build_strata_rules.py): what the MLS® listings in each
-// complex say, not the bylaws. Only facts that rarely change (year built, homes, pets, rentals, age), so the tables do not need upkeep.
+// Pets and age rules by complex (D-313, D-314; src/data/strata-rules.json from tools/build_strata_rules.py): what the MLS® listings in each
+// complex say, not the bylaws. Only facts that rarely change (year built, homes, pets, age), so the tables do not need upkeep. Rentals are
+// left out: since November 24, 2022 a BC strata cannot ban or cap long-term rentals, so the listing field is out of date.
 {
   const SR: any = STRATA_RULES;
+  const LANG = new Set(['Aldergrove', 'Langley City', 'Murrayville', 'Walnut Grove', 'Willoughby Heights', 'Fort Langley', 'Salmon River', 'Brookswood', 'Brookswood Langley']);
+  const petLink = (rs: any[]) => {
+    const lang = rs.filter((r: any) => LANG.has(r.sub)).length * 2 > rs.length;
+    const town = rs.filter((r: any) => r.type === 'Townhome').length * 2 > rs.length;
+    const slug = `${lang ? 'langley' : 'south-surrey-white-rock'}-pet-friendly-${town ? 'townhomes' : 'condos'}-for-sale`;
+    return { t: 'p', pos: 'end', gen: 'strata', parts: [{ t: 'Every complex in one place: ' }, { t: `pet-friendly ${town ? 'townhomes' : 'condos'} in ${lang ? 'Langley' : 'South Surrey and White Rock'}`, h: `/${slug}.html` }, { t: '.' }] };
+  };
+  const HUB: Record<string, string> = { 'south-surrey-condos-for-sale': 'south-surrey-white-rock-pet-friendly-condos-for-sale', 'south-surrey-townhomes-for-sale': 'south-surrey-white-rock-pet-friendly-townhomes-for-sale',
+    'langley-condos-for-sale': 'langley-pet-friendly-condos-for-sale', 'langley-townhomes-for-sale': 'langley-pet-friendly-townhomes-for-sale' };
+  if (HUB[page.slug] && local?.blocks) {
+    const town = /townhomes/.test(page.slug), lang = /^langley/.test(page.slug);
+    local.blocks = [...local.blocks, { t: 'p', pos: 'end', gen: 'strata', parts: [{ t: 'Have a dog or cat? See which complexes allow them: ' }, { t: `pet-friendly ${town ? 'townhomes' : 'condos'} in ${lang ? 'Langley' : 'South Surrey and White Rock'}`, h: `/${HUB[page.slug]}.html` }, { t: '.' }] }];
+  }
   const pg = SR.pages[page.slug];
   if (pg && local?.blocks) {
     const rs = pg.rows.map((i: number) => SR.rows[i]);
     const long = rs.length > 15;
     local.blocks = [...local.blocks,
-      { t: 'h', level: 2, text: long ? 'Pets, rentals and age rules for every complex' : 'Pets, rentals and age rules by complex', pos: 'end', gen: 'strata' },
-      { t: 'p', pos: 'end', gen: 'strata', text: `What recent MLS® listings in each complex say about pets, renting out your home and age limits (checked ${SR.checked}). It comes from the listings, not the strata bylaws, so read the bylaws or ask me before you buy. "Yes, with limits" usually means a cap on the number or size of pets, or on how many homes can be rented. "Ask me" means listings in the same complex disagree.` },
-      { t: 'table', pos: 'end', gen: 'strata', caption: 'Pets, rentals and age rules by complex', head: ['Complex', ...(pg.mixed ? ['Type'] : []), 'Built', 'Homes', 'Pets', 'Rentals', 'Age'],
-        rows: rs.map((r: any) => [r.name, ...(pg.mixed ? [r.type] : []), r.built || '—', r.homes || '—', r.pets, r.rentals, r.age]) },
+      { t: 'h', level: 2, text: long ? 'Pets and age rules for every complex' : 'Pets and age rules by complex', pos: 'end', gen: 'strata' },
+      { t: 'p', pos: 'end', gen: 'strata', text: `What recent MLS® listings in each complex say about pets and age limits (checked ${SR.checked}). It comes from the listings, not the strata bylaws, so read the bylaws or ask me before you buy. "Yes, with limits" usually means a cap on the number, kind or size of pets. "Ask me" means listings in the same complex disagree. Renting out is allowed in every complex: since November 24, 2022 a BC strata cannot ban or cap long-term rentals, though it can still ban short-term stays such as Airbnb.` },
+      { t: 'table', pos: 'end', gen: 'strata', caption: 'Pets and age rules by complex', head: ['Complex', ...(pg.mixed ? ['Type'] : []), 'Built', 'Homes', 'Pets', 'Age'],
+        rows: rs.map((r: any) => [r.name, ...(pg.mixed ? [r.type] : []), r.built || '—', r.homes || '—', r.pets, r.age]) },
+      petLink(rs),
     ];
   }
   const bi = SR.buildings[page.slug];
   if (bi !== undefined && local?.blocks) {
     const r = SR.rows[bi];
     local.blocks = local.blocks.map((b: any) => (b.t === 'table' && String(b.caption || '').endsWith('building facts')
-      ? { ...b, rows: [...b.rows, ['Pets (per listings)', r.pets], ['Rentals (per listings)', r.rentals], ['Age limit (per listings)', r.age]] } : b));
+      ? { ...b, rows: [...b.rows, ['Pets (per listings)', r.pets + (r.dogs || r.cats ? ` (dogs: ${(r.dogs || '—').toLowerCase()}, cats: ${(r.cats || '—').toLowerCase()})` : '')], ['Age limit (per listings)', r.age]] } : b));
+  }
+  // Pet-friendly pages (D-314): counts, the "no pets" and "cats, not dogs" lists and a table per neighbourhood, all from the data,
+  // so a new workbook updates the pages without editing them.
+  const pp = SR.petpages?.[page.slug];
+  if (pp && local?.blocks) {
+    const rs = pp.map((i: number) => SR.rows[i]);
+    const town = /townhomes/.test(page.slug);
+    const region = /^langley/.test(page.slug) ? 'Langley' : 'South Surrey and White Rock';
+    const one = town ? 'townhouse complex' : 'condo building', many = town ? 'townhouse complexes' : 'condo buildings';
+    const allow = rs.filter((r: any) => /^Yes/.test(r.pets)).length, no = rs.filter((r: any) => r.pets === 'No');
+    const catsOnly = rs.filter((r: any) => r.pets !== 'No' && r.dogs === 'No' && r.cats === 'Yes');
+    const two = rs.filter((r: any) => r.npets === '2').length, onep = rs.filter((r: any) => r.npets === '1').length;
+    const nm = (r: any) => `${r.name} (${r.sub}${r.built ? `, built ${r.built}` : ''})`;
+    const out: any[] = [
+      { t: 'h', level: 2, text: `Which ${many} in ${region} allow pets`, gen: 'petdata' },
+      { t: 'p', gen: 'petdata', text: `Recent MLS® listings cover ${rs.length} ${many} in ${region} (checked ${SR.checked}). In ${allow} of them the listings say pets are allowed, almost always with limits; in ${no.length} they say no pets${catsOnly.length ? `. ${catsOnly.length} of the ${allow} take cats but not dogs` : ''}. Where listings give a number, ${two >= onep ? `two pets is the most common (${two} ${many}), then one (${onep})` : `one pet is the most common (${onep} ${many}), then two (${two})`}.` },
+    ];
+    if (no.length) out.push({ t: 'h', level: 3, text: `${town ? 'Complexes' : 'Buildings'} where the listings say no pets`, gen: 'petdata' }, { t: 'list', gen: 'petdata', items: no.map((r: any) => [{ t: nm(r) }]) });
+    if (catsOnly.length) out.push({ t: 'h', level: 3, text: `Cats yes, dogs no`, gen: 'petdata' }, { t: 'list', gen: 'petdata', items: catsOnly.map((r: any) => [{ t: nm(r) }]) });
+    const by: Record<string, any[]> = {};
+    for (const r of rs) (by[r.sub] ||= []).push(r);
+    out.push({ t: 'h', level: 2, text: `Pet rules for every ${one}, by neighbourhood`, gen: 'petdata' });
+    for (const [sub, list] of Object.entries(by).sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]))) {
+      out.push({ t: 'h', level: 3, text: `${sub} ${town ? 'townhomes' : 'condos'}`, gen: 'petdata' },
+        { t: 'table', gen: 'petdata', caption: `${sub} ${many}: pet rules per MLS® listings`, head: ['Complex', 'Built', 'Pets', 'Dogs', 'Cats', 'How many'],
+          rows: list.map((r: any) => [r.name, r.built || '—', r.pets, r.dogs || '—', r.cats || '—', r.npets || '—']) });
+    }
+    local.blocks = local.blocks.flatMap((b: any) => (b.t === 'petdata' ? out : [b]));
   }
 }
 // New-construction and presale pages open with their own facts (D-311, from Cursor's duplicate-page review): the 85 new-construction
@@ -637,7 +680,7 @@ page.blocks = cleanArchive(page.blocks);
 
 // Reference sections fold away behind their heading (D-197): sources and the disclaimer on every page; on guides also the rules, costs, risks,
 // building-by-building and comparison sections. The heading stays an H2 inside <summary>, the text stays in the page for search engines.
-const FOLD_ALL = /^(Sources\b|Disclaimer$|Pets, rentals and age rules for every complex$)/i;
+const FOLD_ALL = /^(Sources\b|Disclaimer$|Pets and age rules for every complex$)/i;
 const FOLD_GUIDE = /^(Related pages$|Nearby areas to look at$|More nearby areas$|Other nearby areas$|How .+ compares|What's nearby|.+: (rules that affect buyers|costs and taxes|risks and due diligence|development and new projects|local details a buyer would not know)$|(Condo buildings|Townhome complexes|Lots and land|Mobile and manufactured homes|Duplexes and half duplexes|Acreage and rural land) in |Sources for the home-type notes$)/i;
 const foldOf = (sec: any): boolean => {
   const h = sec.kind === 'text' && sec.blocks[0]?.t === 'h' && sec.blocks[0].level === 2 ? String(sec.blocks[0].text || '') : '';
