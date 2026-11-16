@@ -19,11 +19,11 @@ const SECURITY = {
   // same text moves to the enforcing header above. 'unsafe-inline' stays: the pages carry small inline scripts and styles.
   'content-security-policy-report-only': [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://www.googletagmanager.com https://maps.googleapis.com https://maps.gstatic.com https://challenges.cloudflare.com https://static.cloudflareinsights.com https://googleads.g.doubleclick.net https://www.googleadservices.com",
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://www.googletagmanager.com https://maps.googleapis.com https://maps.gstatic.com https://challenges.cloudflare.com https://static.cloudflareinsights.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://*.myrealpage.com",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.myrealpage.com",
     "img-src 'self' data: blob: https:",
-    "font-src 'self' data: https://fonts.gstatic.com",
-    "connect-src 'self' https://*.googleapis.com https://*.gstatic.com https://www.googletagmanager.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.google.com https://*.doubleclick.net https://cloudflareinsights.com https://challenges.cloudflare.com",
+    "font-src 'self' data: https://fonts.gstatic.com https://*.myrealpage.com",
+    "connect-src 'self' https://*.googleapis.com https://*.gstatic.com https://www.googletagmanager.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.google.com https://*.doubleclick.net https://cloudflareinsights.com https://challenges.cloudflare.com https://*.myrealpage.com",
     "frame-src https://*.myrealpage.com https://www.youtube-nocookie.com https://www.youtube.com https://challenges.cloudflare.com https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net",
     "worker-src 'self' blob:",
     "media-src 'self' https:",

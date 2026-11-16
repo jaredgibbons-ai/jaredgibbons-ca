@@ -122,6 +122,8 @@ const initials = (n: string) => { const w = String(n || '').replace(/[^\p{L}\s'-
 const calDate = (iso?: string) => { if (!iso) return ''; const d = new Date(iso); return isNaN(+d) ? '' : d.toLocaleDateString('en-CA', { day: 'numeric', month: 'long', year: 'numeric' }); };
 type D = { reviews: R[]; averageRating?: number; totalReviewCount?: number; profileUrl?: string; reviewUrl?: string; viaPlaces?: boolean };
 
+// "2026-04-21T02:39:36Z" -> "20 April 2026" (Pacific time), the same form as the written reviews above.
+function niceDate(iso: string) { const t = new Date(iso); return isNaN(t.getTime()) ? '' : t.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'America/Vancouver' }); }
 function render(d: D) {
   if (!sec || !d || !d.reviews || !d.reviews.length) return;
   const list = document.getElementById('google-list')!;
@@ -135,7 +137,7 @@ function render(d: D) {
     // Jared's replies to reviews are not shown (Jared, Nov 15 2026: "my reviews shouldn't have the replies on them").
     const who = el('p', 'rv__who');
     who.appendChild(el('strong', '', initials(r.name)));
-    who.appendChild(document.createElement('br')); who.appendChild(el('span', 'muted', (r.date ? r.date + ' \u00b7 ' : '') + 'Google review'));
+    who.appendChild(document.createElement('br')); who.appendChild(el('span', 'muted', (r.date ? niceDate(r.date) + ' \u00b7 ' : '') + 'Google review'));
     li.appendChild(q); li.appendChild(who); list.appendChild(li);
   });
   const sum = document.getElementById('google-summary')!;
