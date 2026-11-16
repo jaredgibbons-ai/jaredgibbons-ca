@@ -242,7 +242,8 @@ test('lead email carries the zoning, ALR and lot size of the address (D-289)', a
 test('lead email says when Jared has sold in that building or on that street (D-292)', async () => {
   const { soldNearby } = await import('../src/worker/forms.js');
   assert.equal(soldNearby('1807-15152 Russell Ave, White Rock'), 'Jared has sold and helped buyers purchase in this building (Miramar Village)');
-  assert.equal(soldNearby('101 5485 Brydon Crescent, Langley'), 'Jared has helped a buyer purchase in this building (Serenade)');
+  assert.equal(soldNearby('407 19885 76 Avenue, Langley'), 'Jared has helped a buyer purchase in this building (Hayer Town Centre)');
+  assert.equal(soldNearby('101 5485 Brydon Crescent, Langley'), '');   // Serenade: in the deal folders, not a Paragon buyer-side sale (Nov 16 2026)
   assert.equal(soldNearby('4410 208 Street', 'Langley'), 'Jared has sold on this street (208 Street, Langley)');
   assert.equal(soldNearby('4410 208th St, Langley BC'), 'Jared has sold on this street (208 Street, Langley)');
   assert.equal(soldNearby('4410 208 Street', 'Kamloops'), '');

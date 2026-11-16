@@ -1,6 +1,6 @@
 // Streets, buildings and neighbourhoods where Jared has sold or helped buyers (D-292, D-293). A JS module so the Worker and the pages share one copy.
 export default {
- "note": "Streets, buildings and neighbourhoods where Jared has sold (S) or helped a buyer purchase (B), from his own deal records (2017 to 2026). Names only: no house numbers of single homes, units, counts or dates.",
+ "note": "Streets, buildings and neighbourhoods where Jared has sold (S) or helped a buyer purchase (B). S from Paragon closed sales with Jared as listing agent; B from Paragon closed sales with Jared as the buyer's agent (export of Nov 16 2026), plus one commercial purchase. Names only: no house numbers of single homes, units, counts or dates.",
  "areas": {
   "Langley": [
    "0 Avenue",
@@ -133,7 +133,7 @@ export default {
    "civic": [
     "15219 Royal Avenue"
    ],
-   "side": "S"
+   "side": "BS"
   },
   {
    "name": "Apple Greene",
@@ -206,7 +206,7 @@ export default {
    "civic": [
     "14824 North Bluff Road"
    ],
-   "side": "S"
+   "side": "BS"
   },
   {
    "name": "Berkeley Village",
@@ -222,7 +222,7 @@ export default {
    "civic": [
     "13819 232 Street"
    ],
-   "side": "S"
+   "side": "BS"
   },
   {
    "name": "Brooklyn Village",
@@ -254,7 +254,7 @@ export default {
    "civic": [
     "9688 162A Street"
    ],
-   "side": "BS"
+   "side": "S"
   },
   {
    "name": "Capstan Way",
@@ -278,7 +278,7 @@ export default {
    "civic": [
     "8737 212 Street"
    ],
-   "side": "S"
+   "side": "BS"
   },
   {
    "name": "Chilton Layne",
@@ -286,7 +286,7 @@ export default {
    "civic": [
     "20281 53A Avenue"
    ],
-   "side": "S"
+   "side": "BS"
   },
   {
    "name": "Clearbrook Village",
@@ -330,14 +330,6 @@ export default {
    "side": "BS"
   },
   {
-   "name": "Creekside at Aldergrove Town Centre",
-   "area": "Langley",
-   "civic": [
-    "3100 272 Street"
-   ],
-   "side": "B"
-  },
-  {
    "name": "Crescendo",
    "area": "South Surrey",
    "civic": [
@@ -368,7 +360,7 @@ export default {
    "civic": [
     "20211 66 Avenue"
    ],
-   "side": "S"
+   "side": "BS"
   },
   {
    "name": "Elgin House at Harvard Gardens",
@@ -376,7 +368,7 @@ export default {
    "civic": [
     "15168 33 Avenue"
    ],
-   "side": "S"
+   "side": "BS"
   },
   {
    "name": "Encore at Hillcrest",
@@ -433,7 +425,7 @@ export default {
     "3585 146A Street",
     "14588 McDougall Drive"
    ],
-   "side": "BS"
+   "side": "S"
   },
   {
    "name": "Forest Village",
@@ -449,15 +441,7 @@ export default {
    "civic": [
     "6963 Victoria Drive"
    ],
-   "side": "S"
-  },
-  {
-   "name": "Freestyle",
-   "area": "South Surrey",
-   "civic": [
-    "16678 25 Avenue"
-   ],
-   "side": "B"
+   "side": "BS"
   },
   {
    "name": "Glenmore",
@@ -473,7 +457,7 @@ export default {
    "civic": [
     "15775 Mountain View Drive"
    ],
-   "side": "BS"
+   "side": "S"
   },
   {
    "name": "Guildford Greene",
@@ -513,7 +497,7 @@ export default {
    "civic": [
     "2425 166 Street"
    ],
-   "side": "BS"
+   "side": "S"
   },
   {
    "name": "Hudson & Singer",
@@ -521,7 +505,7 @@ export default {
    "civic": [
     "20838 78B Avenue"
    ],
-   "side": "BS"
+   "side": "S"
   },
   {
    "name": "Hyde Park",
@@ -537,7 +521,7 @@ export default {
    "civic": [
     "150 E Cordova Street"
    ],
-   "side": "S"
+   "side": "BS"
   },
   {
    "name": "Kallisto",
@@ -545,7 +529,7 @@ export default {
    "civic": [
     "3009 156 Street"
    ],
-   "side": "BS"
+   "side": "S"
   },
   {
    "name": "Kingston House",
@@ -561,15 +545,7 @@ export default {
    "civic": [
     "15828 27 Avenue"
    ],
-   "side": "BS"
-  },
-  {
-   "name": "Koret Lofts",
-   "area": "Vancouver",
-   "civic": [
-    "55 E Cordova Street"
-   ],
-   "side": "B"
+   "side": "S"
   },
   {
    "name": "La Galleria",
@@ -604,14 +580,6 @@ export default {
    "side": "BS"
   },
   {
-   "name": "Mayfair at West Village",
-   "area": "Langley",
-   "civic": [
-    "19897 75A Avenue"
-   ],
-   "side": "B"
-  },
-  {
    "name": "McMillan Place",
    "area": "Langley",
    "civic": [
@@ -636,7 +604,7 @@ export default {
    "civic": [
     "13740 75A Avenue"
    ],
-   "side": "S"
+   "side": "BS"
   },
   {
    "name": "Morgan Crossing",
@@ -690,20 +658,12 @@ export default {
    "side": "S"
   },
   {
-   "name": "Nico Wynd",
-   "area": "Surrey",
-   "civic": [
-    "14025 Nico Wynd Place"
-   ],
-   "side": "B"
-  },
-  {
    "name": "Nuovo",
    "area": "Surrey",
    "civic": [
     "19448 68 Avenue"
    ],
-   "side": "S"
+   "side": "BS"
   },
   {
    "name": "Paddington Station",
@@ -727,7 +687,7 @@ export default {
    "civic": [
     "466 East 8th Avenue"
    ],
-   "side": "S"
+   "side": "BS"
   },
   {
    "name": "Parker House",
@@ -775,7 +735,7 @@ export default {
    "civic": [
     "15137 33 Avenue"
    ],
-   "side": "S"
+   "side": "BS"
   },
   {
    "name": "Prince Albert Court",
@@ -790,14 +750,6 @@ export default {
    "area": "Abbotsford",
    "civic": [
     "30610 Progressive Way"
-   ],
-   "side": "B"
-  },
-  {
-   "name": "Prospect at Harbourview",
-   "area": "Nanaimo",
-   "civic": [
-    "151 Haliburton Street"
    ],
    "side": "B"
   },
@@ -871,7 +823,7 @@ export default {
    "civic": [
     "6747 203 Street"
    ],
-   "side": "S"
+   "side": "BS"
   },
   {
    "name": "Scott Plaza Trailer Park",
@@ -880,14 +832,6 @@ export default {
     "9132 120 Street"
    ],
    "side": "S"
-  },
-  {
-   "name": "Serenade",
-   "area": "Langley",
-   "civic": [
-    "5485 Brydon Crescent"
-   ],
-   "side": "B"
   },
   {
    "name": "South Point Walk 2",
@@ -906,14 +850,6 @@ export default {
    "side": "B"
   },
   {
-   "name": "Spectrum 3",
-   "area": "Vancouver",
-   "civic": [
-    "131 Regiment Square"
-   ],
-   "side": "B"
-  },
-  {
    "name": "Sun at 72",
    "area": "Surrey",
    "civic": [
@@ -927,15 +863,7 @@ export default {
    "civic": [
     "9976 149 Street"
    ],
-   "side": "S"
-  },
-  {
-   "name": "Tate Downtown",
-   "area": "Vancouver",
-   "civic": [
-    "1283 Howe Street"
-   ],
-   "side": "B"
+   "side": "BS"
   },
   {
    "name": "Tehama",
@@ -968,14 +896,6 @@ export default {
     "1001 Homer Street"
    ],
    "side": "S"
-  },
-  {
-   "name": "The Commons",
-   "area": "Langley",
-   "civic": [
-    "8230 208B Street"
-   ],
-   "side": "B"
   },
   {
    "name": "The Crossing",
@@ -1015,7 +935,7 @@ export default {
    "civic": [
     "8915 202 Street"
    ],
-   "side": "S"
+   "side": "BS"
   },
   {
    "name": "The Heritage",
@@ -1026,26 +946,10 @@ export default {
    "side": "BS"
   },
   {
-   "name": "The Hudson",
-   "area": "Vancouver",
-   "civic": [
-    "610 Granville Street"
-   ],
-   "side": "B"
-  },
-  {
    "name": "The Jacob",
    "area": "Abbotsford",
    "civic": [
     "33886 Pine Street"
-   ],
-   "side": "B"
-  },
-  {
-   "name": "The Loop",
-   "area": "South Surrey",
-   "civic": [
-    "2350 165 Street"
    ],
    "side": "B"
   },
@@ -1152,7 +1056,7 @@ export default {
    "civic": [
     "2958 159 Street"
    ],
-   "side": "S"
+   "side": "BS"
   },
   {
    "name": "Windermere",
@@ -1188,7 +1092,7 @@ export default {
   },
   "/abbotsford-west.html": {
    "name": "Abbotsford West",
-   "side": "S",
+   "side": "BS",
    "mls": "Abbotsford West",
    "n": 2
   },
@@ -1200,7 +1104,7 @@ export default {
   },
   "/albion.html": {
    "name": "Albion",
-   "side": "S",
+   "side": "BS",
    "mls": "Albion",
    "n": 1
   },
@@ -1212,14 +1116,9 @@ export default {
   },
   "/annieville.html": {
    "name": "Annieville",
-   "side": "BS",
+   "side": "S",
    "mls": "Annieville",
    "n": 1
-  },
-  "/bear-creek-green-timbers.html": {
-   "name": "Bear Creek Green Timbers",
-   "side": "B",
-   "mls": "Bear Creek Green Timbers"
   },
   "/bolivar-heights.html": {
    "name": "Bolivar Heights",
@@ -1227,11 +1126,29 @@ export default {
    "mls": "Bolivar Heights",
    "n": 1
   },
+  "/boundary-beach.html": {
+   "name": "Boundary Beach",
+   "side": "B",
+   "mls": "Boundary Beach",
+   "n": 0
+  },
   "/boyd-park.html": {
    "name": "Boyd Park in Richmond",
    "side": "S",
    "mls": "Boyd Park",
    "n": 1
+  },
+  "/bradner.html": {
+   "name": "Bradner",
+   "side": "B",
+   "mls": "Bradner",
+   "n": 0
+  },
+  "/brentwood-park.html": {
+   "name": "Brentwood Park",
+   "side": "B",
+   "mls": "Brentwood Park",
+   "n": 0
   },
   "/brighouse-richmond-guide.html": {
    "name": "Brighouse in Richmond",
@@ -1259,7 +1176,7 @@ export default {
   },
   "/central-port-coquitlam.html": {
    "name": "Central Port Coquitlam",
-   "side": "S",
+   "side": "BS",
    "mls": "Central Pt Coquitlam",
    "n": 1
   },
@@ -1268,6 +1185,12 @@ export default {
    "side": "BS",
    "mls": "Chilliwack Proper East",
    "n": 2
+  },
+  "/citadel-port-coquitlam.html": {
+   "name": "Citadel",
+   "side": "B",
+   "mls": "Citadel PQ",
+   "n": 0
   },
   "/clayton.html": {
    "name": "Clayton",
@@ -1301,19 +1224,19 @@ export default {
   },
   "/crescent-bch-ocean-pk.html": {
    "name": "Crescent Beach & Ocean Park",
-   "side": "BS",
+   "side": "S",
    "mls": "Crescent Bch Ocean Pk.",
    "n": 2
   },
   "/downtown-ve.html": {
    "name": "Downtown Eastside Vancouver",
-   "side": "S",
+   "side": "BS",
    "mls": "Downtown VE",
    "n": 1
   },
   "/downtown-vw.html": {
    "name": "Downtown Vancouver",
-   "side": "S",
+   "side": "BS",
    "mls": "Downtown VW",
    "n": 1
   },
@@ -1341,20 +1264,33 @@ export default {
    "mls": "East Newton",
    "n": 1
   },
-  "/elgin-chantrell.html": {
-   "name": "Elgin Chantrell",
+  "/eastern-hillsides.html": {
+   "name": "Eastern Hillsides",
    "side": "B",
-   "mls": "Elgin Chantrell"
+   "mls": "Eastern Hillsides",
+   "n": 0
+  },
+  "/edmonds-be.html": {
+   "name": "Edmonds",
+   "side": "B",
+   "mls": "Edmonds BE",
+   "n": 0
+  },
+  "/false-creek.html": {
+   "name": "False Creek",
+   "side": "B",
+   "mls": "False Creek",
+   "n": 0
   },
   "/fleetwood-tynehead.html": {
    "name": "Fleetwood Tynehead",
-   "side": "BS",
+   "side": "S",
    "mls": "Fleetwood Tynehead",
    "n": 3
   },
   "/fort-langley.html": {
    "name": "Fort Langley",
-   "side": "S",
+   "side": "BS",
    "mls": "Fort Langley",
    "n": 1
   },
@@ -1366,7 +1302,7 @@ export default {
   },
   "/guildford.html": {
    "name": "Guildford",
-   "side": "S",
+   "side": "BS",
    "mls": "Guildford",
    "n": 3
   },
@@ -1376,14 +1312,15 @@ export default {
    "mls": "Hawthorne",
    "n": 1
   },
-  "/hazelmere.html": {
-   "name": "Hazelmere",
+  "/holly.html": {
+   "name": "Holly in Ladner",
    "side": "B",
-   "mls": "Hazelmere"
+   "mls": "Holly",
+   "n": 0
   },
   "/killarney-ve.html": {
    "name": "Killarney in Vancouver",
-   "side": "S",
+   "side": "BS",
    "mls": "Killarney VE",
    "n": 1
   },
@@ -1399,9 +1336,15 @@ export default {
    "mls": "Langley City",
    "n": 12
   },
+  "/little-mountain.html": {
+   "name": "Little Mountain",
+   "side": "B",
+   "mls": "Little Mountain",
+   "n": 0
+  },
   "/mission-bc.html": {
    "name": "Mission",
-   "side": "S",
+   "side": "BS",
    "mls": "Mission BC",
    "n": 2
   },
@@ -1453,15 +1396,17 @@ export default {
    "mls": "Pacific Douglas",
    "n": 4
   },
-  "/panorama-ridge.html": {
-   "name": "Panorama Ridge",
+  "/port-guichon.html": {
+   "name": "Port Guichon",
    "side": "B",
-   "mls": "Panorama Ridge"
+   "mls": "Port Guichon",
+   "n": 0
   },
-  "/poplar.html": {
-   "name": "Poplar in Abbotsford",
+  "/port-moody-centre.html": {
+   "name": "Port Moody Centre",
    "side": "B",
-   "mls": "Poplar"
+   "mls": "Port Moody Centre",
+   "n": 0
   },
   "/queen-mary-park-surrey.html": {
    "name": "Queen Mary Park",
@@ -1469,15 +1414,21 @@ export default {
    "mls": "Queen Mary Park Surrey",
    "n": 2
   },
+  "/queensborough.html": {
+   "name": "Queensborough",
+   "side": "B",
+   "mls": "Queensborough",
+   "n": 0
+  },
   "/renfrew-vancouver.html": {
    "name": "Renfrew in Vancouver",
-   "side": "S",
+   "side": "BS",
    "mls": "Renfrew VE",
    "n": 1
   },
   "/rosedale-homes-for-sale.html": {
    "name": "Rosedale",
-   "side": "S",
+   "side": "BS",
    "mls": "Rosedale",
    "n": 1
   },
@@ -1489,13 +1440,13 @@ export default {
   },
   "/sapperton-new-westminster.html": {
    "name": "Sapperton",
-   "side": "S",
+   "side": "BS",
    "mls": "Sapperton",
    "n": 1
   },
   "/sardis-south.html": {
    "name": "Sardis South",
-   "side": "S",
+   "side": "BS",
    "mls": "Sardis South",
    "n": 1
   },
@@ -1506,7 +1457,7 @@ export default {
   },
   "/silver-valley.html": {
    "name": "Silver Valley",
-   "side": "S",
+   "side": "BS",
    "mls": "Silver Valley",
    "n": 2
   },
@@ -1515,6 +1466,18 @@ export default {
    "side": "S",
    "mls": "Simon Fraser Univer.",
    "n": 1
+  },
+  "/south-marine-vancouver.html": {
+   "name": "South Marine",
+   "side": "B",
+   "mls": "South Marine",
+   "n": 0
+  },
+  "/steelhead.html": {
+   "name": "Steelhead",
+   "side": "B",
+   "mls": "Steelhead",
+   "n": 0
   },
   "/sullivan-station.html": {
    "name": "Sullivan Station",
@@ -1529,15 +1492,27 @@ export default {
   },
   "/sunnyside-park-surrey.html": {
    "name": "Sunnyside Park",
-   "side": "S",
+   "side": "BS",
    "mls": "Sunnyside Park Surrey",
    "n": 1
   },
   "/university-endowment-lands-vancouver-guide.html": {
    "name": "the University Endowment Lands",
-   "side": "S",
+   "side": "BS",
    "mls": "University VW",
    "n": 1
+  },
+  "/vedder-crossing.html": {
+   "name": "Vedder Crossing",
+   "side": "B",
+   "mls": "Vedder Crossing",
+   "n": 0
+  },
+  "/victoria-vancouver.html": {
+   "name": "Victoria in Vancouver",
+   "side": "B",
+   "mls": "Victoria VE",
+   "n": 0
   },
   "/walnut-grove.html": {
    "name": "Walnut Grove",
@@ -1559,7 +1534,7 @@ export default {
   },
   "/west-newton.html": {
    "name": "West Newton",
-   "side": "S",
+   "side": "BS",
    "mls": "West Newton",
    "n": 1
   },
@@ -1594,7 +1569,7 @@ export default {
   },
   "/yaletown-vancouver.html": {
    "name": "Yaletown",
-   "side": "S",
+   "side": "BS",
    "mls": "Yaletown",
    "n": 2
   }
