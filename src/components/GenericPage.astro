@@ -77,8 +77,8 @@ const _ap = (SOLD as any).subareas?.[`/${page.slug}.html`] as { name: string; si
 const paragonSold = (mls: string) => ((SOLDP as any).bySub[String(mls || '').toLowerCase().replace(/[^a-z]/g, '')] || []) as { st: string; type: string; ym: string; beds?: number; baths?: number; sqft?: number; dom?: number; slug?: string }[];
 const _MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const soldLine = (e: any) => [`${e.type}${e.type === 'Land' ? '' : ''} on ${e.st}`, [e.beds && `${e.beds} bed`, e.baths && `${e.baths} bath`].filter(Boolean).join(', '), e.sqft && `${e.sqft.toLocaleString('en-CA')} sq ft`, e.dom && `sold in ${e.dom} ${e.dom === 1 ? 'day' : 'days'}`].filter(Boolean).join(' · ');
-const _apSold = !_ap ? '' : ((_ap as any).n === 1 ? 'a home' : 'homes');   // n: closed sales in that MLS® sub-area (Paragon), used for the wording only, never shown
-const areaProof = !_ap ? '' : _ap.side === 'BS' ? `Jared has sold ${_apSold} in ${_ap.name} and helped buyers purchase here.` : _ap.side === 'S' ? `Jared has sold ${_apSold} in ${_ap.name}.` : `Jared has helped buyers purchase in ${_ap.name}.`;
+// "Jared has sold in X", Jared's own words (Nov 15 2026). No "a home" / "homes": the singular told readers it was one sale (D-310).
+const areaProof = !_ap ? '' : _ap.side === 'BS' ? `Jared has sold in ${_ap.name} and helped buyers purchase here.` : _ap.side === 'S' ? `Jared has sold in ${_ap.name}.` : `Jared has helped buyers purchase in ${_ap.name}.`;
 const isSearch = !!(idxId || idxPath) || isMapPage;
 // Name of the search, sent with an "Email me new listings" signup so Jared knows which one to set up.
 const alertName = String((page.blocks || []).find((b: any) => b.t === 'h' && b.level === 1)?.text || String(page.title || '').split('|')[0]).replace(/\s+/g, ' ').trim().slice(0, 150);
@@ -117,6 +117,32 @@ if (local?.faq?.length) {
     local.blocks = local.blocks.map((b: any) => (b.t === 'table' && String(b.caption || '').endsWith('building facts')
       ? { ...b, rows: [...b.rows, ['Pets (per listings)', r.pets], ['Rentals (per listings)', r.rentals], ['Age limit (per listings)', r.age]] } : b));
   }
+}
+// New-construction and presale pages open with their own facts (D-311, from Cursor's duplicate-page review): the 85 new-construction
+// pages opened with the shared listing-alert form, and the presale city pages with the same two sentences. Each now opens with its
+// own line, taken from lower on the same page. A sentence placed before the listings box no longer says "the search above".
+if (local?.blocks?.length && (/^new-construction-/.test(page.slug) || /presale/.test(page.slug))) {
+  const ptext = (b: any) => (b?.t === 'p' ? (typeof b.text === 'string' ? b.text : (b.parts || []).map((x: any) => x.t).join('')) : '');
+  let bl: any[] = [...local.blocks];
+  const g = bl.findIndex((b: any) => b.t === 'grid');
+  if (g >= 0) bl = bl.map((b: any, i: number) => (i < g && b.t === 'p' && typeof b.text === 'string' ? { ...b, text: b.text.replace(/\b([Tt]he) (search|listings) above\b/g, '$1 $2 below') } : b));
+  let opener: any = null;
+  // New construction: the "newest homes that sold" line, moved up from the "What newer homes … have sold for" section.
+  const NEWEST = /^(Over .+, the newest homes to close in |The most recently built homes that sold in |Looking at .+ had the newest sold |.+ led .+ for newness |In .+ had the newest stock of any |By build year, .+ are the newest homes selling in )/;
+  const ni = bl.findIndex((b: any, i: number) => i > g && b.t === 'p' && typeof b.text === 'string' && NEWEST.test(b.text) && !/presale/.test(page.slug));
+  if (ni > g && g >= 0) { opener = bl[ni]; bl.splice(ni, 1); }
+  // Presale: how many projects are tracked and when they finish, from the "at a glance" paragraph (kept there in full).
+  const pi = bl.findIndex((b: any) => /^The list holds \d+ /.test(ptext(b)));
+  if (!opener && pi >= 0 && /presale/.test(page.slug)) {
+    const first = ptext(bl[pi]).split(/(?<=\.)\s/)[0];
+    const and = (x: string) => x.replace(/, ([^,]+)$/, ' and $1');
+    let m = /^The list holds (\d+) presale projects in (.+?) with estimated completion between (\d{4}) and (\d{4}): (.+)\.$/.exec(first);
+    if (m) opener = { t: 'p', text: `I'm tracking ${m[1]} presale projects in ${m[2]} scheduled to finish between ${m[3]} and ${m[4]}: ${and(m[5])}.` };
+    m = m ? null : /^The list holds (\d+) projects: (.+)\.$/.exec(first);
+    if (m) opener = { t: 'p', text: `I'm tracking ${m[1]} presale projects across the Fraser Valley and Metro Vancouver: ${and(m[2].replace(/ completing in (\d{4})(?=,| and|$)/g, ' in $1').replace(/^(\d+) in (\d{4})/, '$1 completing in $2'))}.` };
+  }
+  if (opener) bl.unshift({ ...opener, gen: 'opener' });
+  local.blocks = bl;
 }
 // Guide format v2 (D-205, src/data/guide-plus.json): its search-style questions ("Is X a good place to live?") lead the page's questions.
 const GP = (GUIDE_PLUS as Record<string, any>)[page.slug];
@@ -943,9 +969,9 @@ const explore = !_extra.length ? exploreBase
               );
               if (b.t === 'lcards') {
                 const all = ownCards();
-                const mon = (c: any) => { const m = /^(\w{3}) \d+, (\d{4})$/.exec(c.soldDate || ''); return m ? `Sold ${m[1]} ${m[2]}` : 'Sold'; };
-                const card = (c: any) => <PropertyCard href={c.href} photoSlug={c.slug} street={c.street} city={c.city} price={c.status === 'Active' ? c.price : undefined} beds={c.beds} baths={c.baths}
-                  floorArea={c.sqft ? (/sq/i.test(c.sqft) ? c.sqft : `${c.sqft} sqft`) : undefined} status={c.status === 'Active' ? 'Active' : c.status} type={c.type} tags={c.status === 'Active' ? [] : [mon(c)]} mls={c.mls} moreLabel="More Info" />;
+                const mon = (c: any) => { const w = c.buyer ? 'Purchased' : 'Sold'; const m = /^(\w{3}) \d+, (\d{4})$/.exec(c.soldDate || ''); return m ? `${w} ${m[1]} ${m[2]}` : w; };
+                const card = (c: any) => <PropertyCard href={c.href} photoSlug={c.slug} street={c.status === 'Active' ? c.street : displayStreet(c)} city={c.city} price={c.status === 'Active' ? c.price : undefined} beds={c.beds} baths={c.baths}
+                  floorArea={c.sqft ? (/sq/i.test(c.sqft) ? c.sqft : `${c.sqft} sqft`) : undefined} status={c.status === 'Active' ? 'Active' : c.buyer ? 'Purchased' : c.status} type={c.type} tags={c.status === 'Active' ? [] : [mon(c)]} mls={c.mls} moreLabel="More Info" />;
                 const active = all.filter((c) => c.status === 'Active').sort((a, b) => b.priceNum - a.priceNum);
                 const done = all.filter((c) => c.status !== 'Active').sort((a, b) => b.soldTs - a.soldTs);
                 if (b.mode === 'active') return (
@@ -965,11 +991,11 @@ const explore = !_extra.length ? exploreBase
                 const cities: any[] = [...byCity.keys()].sort((a: any, z: any) => byCity.get(z).length - byCity.get(a).length || a.localeCompare(z));
                 return (
                   <>
-                    <p>Jared's most recent sales, newest first. <a href="/our-listings.html">See Jared's active listings</a>.</p>
+                    <p>Jared's most recent sales and the homes he helped buyers purchase, newest first. <a href="/our-listings.html">See Jared's active listings</a>.</p>
                     <ul class="cards">{shown.map(card)}</ul>
-                    {cities.length > 0 && <h2 class="h2">All earlier sales, by city</h2>}
-                    {cities.map((ct: any) => <><h3 class="h3">{ct} ({byCity.get(ct).length})</h3>
-                      <ul class="lines lines--cols">{byCity.get(ct).map((c: any) => <li><a href={c.href}>{c.street}</a>{c.type ? `, ${String(c.type).toLowerCase()}` : ''}{c.year ? ` (${c.status === 'Leased' ? 'leased' : 'sold'} ${c.year})` : ''}</li>)}</ul></>)}
+                    {cities.length > 0 && <h2 class="h2">All earlier sales and purchases, by city</h2>}
+                    {cities.map((ct: any) => <><h3 class="h3">{ct}</h3>
+                      <ul class="lines lines--cols">{byCity.get(ct).map((c: any) => <li><a href={c.href}>{displayStreet(c)}</a>{c.type ? `, ${String(c.type).toLowerCase()}` : ''}{c.year ? ` (${c.status === 'Leased' ? 'leased' : c.buyer ? 'purchased' : 'sold'} ${c.year})` : ''}</li>)}</ul></>)}
                   </>
                 );
               }

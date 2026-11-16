@@ -30,7 +30,7 @@ const cards = !hit ? [] : Object.entries(media)
     const sold = /sold/i.test(String(c.status || ''));
     // sold homes show the street, not the house number (as on the other sold cards)
     const where = `${sold ? displayStreet(c) : c.street}, ${c.city}`;
-    return { k, video: v.video as string, href: c.href, where, addr: `${c.street}|${c.city}`.toLowerCase(), sold, note: [sold ? (c.year ? `Sold ${c.year}` : 'Sold') : c.price, c.beds ? `${c.beds} bed` : '', /apartment|condo/i.test(String(c.type || '')) ? 'condo' : /town/i.test(String(c.type || '')) ? 'townhome' : ''].filter(Boolean).join(' · '), n: c.soldTs || Number((k.match(/\.(\d+)$/) || [])[1] || 0) };
+    return { k, video: v.video as string, href: c.href, where, addr: `${c.street}|${c.city}`.toLowerCase(), sold, note: [sold ? `${c.buyer ? 'Purchased' : 'Sold'}${c.year ? ` ${c.year}` : ''}` : c.price, c.beds ? `${c.beds} bed` : '', /apartment|condo/i.test(String(c.type || '')) ? 'condo' : /town/i.test(String(c.type || '')) ? 'townhome' : ''].filter(Boolean).join(' · '), n: c.soldTs || Number((k.match(/\.(\d+)$/) || [])[1] || 0) };
   })
   .sort((a, b) => b.n - a.n)
   .filter((c) => { if (seen.has(c.video) || seen.has(c.addr)) return false; seen.add(c.video); seen.add(c.addr); return true; })   // one card per video and per address (relistings)
