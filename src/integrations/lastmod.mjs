@@ -29,7 +29,9 @@ export default function lastmod() {
           const f = fileFor(loc.replace(/&amp;/g, '&')); if (!f) return all;
           const html = fs.readFileSync(f, 'utf8');
           const a = html.indexOf('<main'), b = html.lastIndexOf('</main>');
-          const body = (a >= 0 && b > a ? html.slice(a, b) : html).replace(/ data-astro-cid-[a-z0-9]+/g, '');
+          // The Google Maps key is a build variable on Cloudflare and is absent in a local build, so data-key="AIza…" there is data-key or data-key="" here.
+          // Without this, every page with a form or a map hashed differently on Cloudflare and got the build day as its date (review of Nov 15 2026).
+          const body = (a >= 0 && b > a ? html.slice(a, b) : html).replace(/ data-astro-cid-[a-z0-9]+/g, '').replace(/ data-key(?:="(?:AIza[\w-]{30,})?")?(?=[\s>])/g, ' data-key');
           const h = crypto.createHash('sha1').update(body).digest('hex').slice(0, 12);
           const prev = manifest[loc];
           const d = prev && prev.h === h ? prev.d : today;
