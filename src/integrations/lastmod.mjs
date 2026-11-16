@@ -33,10 +33,14 @@ export default function lastmod() {
           // Without this, every page with a form or a map hashed differently on Cloudflare and got the build day as its date (review of Nov 15 2026).
           const body = (a >= 0 && b > a ? html.slice(a, b) : html).replace(/ data-astro-cid-[a-z0-9]+/g, '').replace(/ data-key(?:="(?:AIza[\w-]{30,})?")?(?=[\s>])/g, ' data-key')
             // Scripts are behaviour, not content: a change to how a listings box loads must not re-date 1,300 pages. Structured data (ld+json) stays in.
-            .replace(/<script(?![^>]*ld\+json)[^>]*>[\s\S]*?<\/script>/g, '');
+            .replace(/<script(?![^>]*ld\+json)[^>]*>[\s\S]*?<\/script>/g, '')
+            // The quick-search menu's option list (data-qs, every page with the search quiz) is site navigation, not the page's content:
+            // a new search page added to it must not re-date ~1,000 pages (D-316).
+            .replace(/ data-qs="[^"]*"/g, ' data-qs');
           const h = crypto.createHash('sha1').update(body).digest('hex').slice(0, 12);
           const prev = manifest[loc];
-          const d = prev && prev.h === h ? prev.d : today;
+          // LASTMOD_REHASH=1 (once, after a change to what is hashed): store the new hashes and keep every page's date.
+          const d = prev && (prev.h === h || process.env.LASTMOD_REHASH === '1') ? prev.d : today;
           if (!prev || prev.h !== h) changed++;
           next[loc] = { h, d };
           return `<url><loc>${loc}</loc><lastmod>${d}</lastmod></url>`;

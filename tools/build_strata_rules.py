@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""Pets, rentals and age rules by complex, South Surrey / White Rock and Langley (D-313).
+"""Pets and age rules by complex, South Surrey / White Rock and Langley (D-313).
 
 Input: Pete's workbook "Condo and Townhouse Complex Rules - South Surrey and Langley" (Paragon Residential Attached listings,
 active and sold, researched 2026-11-16). It is an MLS® export, so it stays out of this repository:
     python3 -I tools/build_strata_rules.py /path/to/complex-rules.xlsx   -> src/data/strata-rules.json
 
-Only facts that rarely change are kept, so the tables do not need updating: year built, number of homes, pets, rentals, age.
+Only facts that rarely change are kept, so the tables do not need updating: year built, number of homes, pets (dogs, cats, how many), age.
+Rentals are left out: since November 24, 2022 a BC strata cannot ban or cap long-term rentals, so the listing field is out of date (D-314).
 Strata fees, prices and listing counts are left out. Each rule is what the listings in that complex say, not the bylaws:
-  - every listing that states it agrees -> Yes / Yes, with limits / No / 55+ / 19+ / No age limit (a blank field says nothing)
+  - every listing that states it agrees -> Yes / Yes, with limits / No / 55+ / No age limit (a blank field says nothing)
   - the listings disagree               -> Ask me
   - no listing states it            -> Not stated
 """
@@ -17,7 +18,9 @@ import openpyxl
 
 ROOT = Path(__file__).resolve().parent.parent
 TABS = {'South Surrey White Rock condos': 'Condo', 'South Surrey townhomes': 'Townhome', 'Langley condos': 'Condo', 'Langley townhomes': 'Townhome'}
-SUB = {'Crescent Bch Ocean Pk.': 'Crescent Beach & Ocean Park', 'Aldergrove Langley': 'Aldergrove', 'Grandview Surrey': 'Grandview', 'Sunnyside Park Surrey': 'Sunnyside Park'}
+SUB = {'Crescent Bch Ocean Pk.': 'Crescent Beach & Ocean Park', 'Aldergrove Langley': 'Aldergrove', 'Grandview Surrey': 'Grandview', 'Sunnyside Park Surrey': 'Sunnyside Park', 'Brookswood Langley': 'Brookswood'}
+PETPAGES = {'south-surrey-white-rock-pet-friendly-condos-for-sale': (False, 'Condo'), 'south-surrey-white-rock-pet-friendly-townhomes-for-sale': (False, 'Townhome'),
+            'langley-pet-friendly-condos-for-sale': (True, 'Condo'), 'langley-pet-friendly-townhomes-for-sale': (True, 'Townhome')}
 # Which pages show which complexes: MLS® sub-areas and home types.
 PAGES = {
     'aldergrove-condos-for-sale': (['Aldergrove'], ['Condo']), 'aldergrove-townhomes-for-sale': (['Aldergrove'], ['Townhome']),
@@ -27,6 +30,7 @@ PAGES = {
     'willoughby-condos-for-sale': (['Willoughby Heights'], ['Condo']), 'willoughby-townhomes-for-sale': (['Willoughby Heights'], ['Townhome']),
     'willoughby-heights-langley-condos-townhomes-for-sale': (['Willoughby Heights'], ['Condo', 'Townhome']),
     'white-rock-condos-for-sale': (['White Rock'], ['Condo']),
+    'white-rock-townhomes-for-sale': (['White Rock'], ['Townhome']), 'crescent-beach-ocean-park-condos-townhomes-for-sale': (['Crescent Beach & Ocean Park'], ['Condo', 'Townhome']),
     'grandview-south-surrey-condos-townhomes-for-sale': (['Grandview'], ['Condo', 'Townhome']), 'grandview-surrey-townhomes-for-sale': (['Grandview'], ['Townhome']),
     'king-george-corridor-south-surrey-condos-townhomes-for-sale': (['King George Corridor'], ['Condo', 'Townhome']),
     'morgan-creek-south-surrey-condos-townhomes-for-sale': (['Morgan Creek'], ['Condo', 'Townhome']),
@@ -38,7 +42,7 @@ PAGES = {
     'south-surrey-white-rock-55-plus-condos-for-sale': ('SSWR55', ['Condo']), 'south-surrey-white-rock-55-plus-townhomes-for-sale': ('SSWR55', ['Townhome']),
     'langley-55-plus-condos-for-sale': ('LAN55', ['Condo']), 'langley-55-plus-townhomes-for-sale': ('LAN55', ['Townhome']),
 }
-LANGLEY = {'Aldergrove', 'Langley City', 'Murrayville', 'Walnut Grove', 'Willoughby Heights', 'Fort Langley', 'Salmon River', 'Brookswood'}
+LANGLEY = {'Aldergrove', 'Langley City', 'Murrayville', 'Walnut Grove', 'Willoughby Heights', 'Fort Langley', 'Salmon River', 'Brookswood', 'Brookswood Langley'}
 
 
 def parts(s):
@@ -67,12 +71,18 @@ def pets(lab):
     return ''
 
 
-def rentals(lab):
-    l = lab.lower()
-    if 'not allowed' in l: return 'No'
-    if 'with restriction' in l: return 'Yes, with limits'
-    if 'allowed' in l: return 'Yes'
-    return ''
+def dogs_cats(s):
+    """'# of Pets field: (blank): 2; 2: 1; Dogs Yes 2 / No 0; Cats Yes 2 / No 0' -> dogs Yes, cats Yes, number 2 (only when every
+    listing that fills the field gives the same number)."""
+    s = str(s); out = {}
+    for k in ('Dogs', 'Cats'):
+        m = re.search(k + r' Yes (\d+) / No (\d+)', s)
+        y, n = (int(m.group(1)), int(m.group(2))) if m else (0, 0)
+        out[k.lower()] = 'Yes' if y and not n else 'No' if n and not y else 'Ask me' if y and n else ''
+    m = re.search(r'# of Pets field: ([^;]*(?:; (?:\(blank\)|\d+): \d+)*)', s)
+    nums = set(re.findall(r'(?:^|; )(\d+): \d+', m.group(1))) if m else set()
+    out['npets'] = nums.pop() if len(nums) == 1 else ''
+    return out
 
 
 def age(s):
@@ -104,13 +114,14 @@ def main(src):
             rows.append({'name': str(d['Complex / building name']).strip(), 'sub': sub, 'type': kind, 'addr': str(d['Street address (no unit #)'] or '').strip(),
                          'built': built, 'homes': homes,
                          'pets': rule(d['Pets (per MLS listings, not the strata bylaws)'], pets),
-                         'rentals': rule(d['Rentals (per MLS listings, not the strata bylaws)'], rentals),
+                         **dogs_cats(d['Pets (per MLS listings, not the strata bylaws)']),
                          'age': age(d['Age restriction (per MLS listings, not the strata bylaws)'])})
     # Names as listings spell them: "NEWPORT at WEST BEACH" -> "Newport at West Beach", "Luxia AT Yorkson" -> "Luxia at Yorkson".
     def tidy(n):
         n = re.sub(r'\bAT\b', 'at', n)
         return ' '.join(w.title() if w.isupper() and len(w) > 3 and not re.search(r'\d', w) else w for w in n.split(' '))
-    for r in rows: r['name'] = tidy(r['name'])
+    FIX = {'Cambrige': 'Cambridge'}   # listing typos
+    for r in rows: r['name'] = FIX.get(tidy(r['name']), tidy(r['name']))
     # One row per complex: the same first street address and type under several names ("Altus", "Altus White Rock",
     # "Unnamed complex at 1526 Finlay Street") keeps the plain name. Different buildings sharing an address keep their own rows.
     groups = {}
@@ -134,7 +145,9 @@ def main(src):
         k = (re.sub(r'[^a-z0-9]', '', r['name'].lower()), r['type'], r['sub'])
         if k not in seen: seen[k] = r; rows.append(r); continue
         o = seen[k]
-        for f in ('pets', 'rentals', 'age'): o[f] = both(o[f], r[f])
+        for f in ('pets', 'age'): o[f] = both(o[f], r[f])
+        for f in ('dogs', 'cats'): o[f] = o[f] if o[f] == r[f] or not r[f] else r[f] if not o[f] else 'Ask me'
+        o['npets'] = o['npets'] if o['npets'] == r['npets'] or not r['npets'] else r['npets'] if not o['npets'] else ''
         if r['addr'] and r['addr'] not in o['addr']: o['addr'] = (o['addr'] + '; ' + r['addr']).strip('; ')
         for f in ('built', 'homes'): o[f] = o[f] or r[f]
     rows.sort(key=lambda r: r['name'].lower())
@@ -145,6 +158,10 @@ def main(src):
         else:
             pick = [i for i, r in enumerate(rows) if r['sub'] in subs and r['type'] in types]
         if pick: pages[slug] = {'rows': pick, 'mixed': len(types) > 1}
+    # Pet-friendly pages (D-314): every condo or townhouse complex in the region, by type.
+    petpages = {}
+    for slug, (lang, typ) in PETPAGES.items():
+        petpages[slug] = [i for i, r in enumerate(rows) if r['type'] == typ and (r['sub'] in LANGLEY) == lang]
     # Building pages (src/data/local/*-condos.json with a "<name> building facts" table): matched by name, else by street address.
     buildings = {}
     for f in sorted((ROOT / 'src/data/local').glob('*-condos.json')):
@@ -155,8 +172,8 @@ def main(src):
         i = next((i for i, r in enumerate(rows) if r['name'].lower() == nm), None)
         if i is None and addr: i = next((i for i, r in enumerate(rows) if addr in r['addr'].lower()), None)
         if i is not None: buildings[f.stem] = i
-    out = {'_note': 'Pets, rentals and age rules by complex, from the MLS® listings in each complex (Paragon, active and sold, checked November 2026), not the strata bylaws. Built by tools/build_strata_rules.py (D-313).',
-           'checked': 'November 2026', 'rows': rows, 'pages': pages, 'buildings': buildings}
+    out = {'_note': 'Pets and age rules by complex, from the MLS® listings in each complex (Paragon, active and sold, checked November 2026), not the strata bylaws. Built by tools/build_strata_rules.py (D-313).',
+           'checked': 'November 2026', 'rows': rows, 'pages': pages, 'buildings': buildings, 'petpages': petpages}
     (ROOT / 'src/data/strata-rules.json').write_text(json.dumps(out, ensure_ascii=False, indent=0) + '\n')
     print(len(rows), 'complexes;', {k: len(v['rows']) for k, v in pages.items()})
 
