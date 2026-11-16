@@ -115,3 +115,60 @@ test('sold: every active listing file on the site can be marked sold cleanly', a
     assert.equal(applySold({ ...l, soldDate: 'Nov 20, 2026' }, root), true, l.file);
   }
 });
+
+// New listings (D-302): a page built from the listing's own MyRealPage page.
+import { buildListing, writeListing, imageSize } from '../tools/sync_listings.mjs';
+const DETAIL = fs.readFileSync(new URL('./fixtures/mrp-detail-active.html', import.meta.url), 'utf8');
+const ITEM = { id: '109878342', slug: 'listing.r3168794-96-15500-rosemary-heights-crescent-surrey-v3z-0k1.109878342', mls: 'R3168794' };
+const TAIL = [{ t: 'agent', lines: ['AGENT'] }, { t: 'disclaimer', text: 'BOARD TEXT' }];
+
+test('a new listing page is built in the same shape as the existing ones', () => {
+  const b = buildListing(DETAIL, ITEM, TAIL);
+  assert.equal(b.error, undefined);
+  const { page, photos, card, video } = b;
+  assert.equal(page.status, 'Active');
+  assert.equal(page.blocks[0].text, '96 15500 Rosemary Heights Crescent Morgan Creek Surrey V3Z 0K1');
+  assert.deepEqual(page.blocks[1], { t: 'summary', lines: ['$1,049,000', 'Residential', 'beds:', '3', 'baths:', '3.0', '2,042 sq. ft.', 'built:', '2001'], heading_n: 9 });
+  assert.deepEqual(page.blocks[2].items.map((x) => x.k), ['Status:', 'Prop. Type:', 'MLS® Num:', 'Bedrooms:', 'Bathrooms:', 'Year Built:']);
+  assert.match(page.blocks[3].parts[0].t, /^Welcome to The Carrington/);
+  assert.deepEqual(page.blocks.filter((x) => x.t === 'h' && x.level === 3).map((x) => x.text), ['General Info', 'Additional Info', 'Other Details', 'Listing Info', 'Land Info']);
+  assert.deepEqual(page.blocks.filter((x) => x.t === 'table').map((x) => x.caption), ['Room Information', 'Bathrooms']);
+  const facts = page.blocks.filter((x) => x.t === 'facts').flatMap((x) => x.items);
+  assert.equal(facts.find((x) => x.k === 'Living Area:').v[0], '2,042 sq. ft.');       // the hidden metric twin is dropped
+  assert.equal(facts.find((x) => x.k === 'Zoning:').v[0], 'MF');
+  assert.ok(facts.some((x) => x.k === 'Interior Features:'));
+  assert.ok(!facts.some((x) => /Avg list price|Previous Price/.test(x.k)));              // no area statistics, no previous price
+  assert.deepEqual(page.blocks.slice(-3).map((x) => x.t), ['agent', 'credit', 'disclaimer']);
+  assert.ok(page.seo['Meta description'].length <= 160);
+  assert.equal(photos.length, 40);
+  assert.ok(photos.every((ph) => /^https:\/\/iss-cdn\.myrealpage\.com\//.test(ph.u.l) && /rs:auto:320:0:0/.test(ph.u.s)));
+  assert.match(photos[0].cap, /garage/);
+  assert.deepEqual([card.street, card.city, card.postal, card.price], ['96 15500 Rosemary Heights Crescent', 'Surrey', 'V3Z 0K1', '$1,049,000']);
+  assert.equal(video, 'IDHYWlx7rzM');
+  // The sync's own price and sold edits must work on a page it made.
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'newl-'));
+  fs.mkdirSync(path.join(root, 'src/data/listings'), { recursive: true }); fs.mkdirSync(path.join(root, 'src/worker'), { recursive: true });
+  fs.writeFileSync(path.join(root, 'src/data/home.ts'), "export const listings = [\n  { slug: 'other.1', price: '$1' },\n];\n");
+  fs.writeFileSync(path.join(root, 'src/worker/listing-ids.json'), '{\n"1": "listing.other.1"\n}');
+  assert.equal(writeListing(b, ITEM.id, root), true);
+  assert.equal(writeListing(b, ITEM.id, root), false);                                    // never overwrites a page
+  assert.equal(JSON.parse(fs.readFileSync(path.join(root, 'src/worker/listing-ids.json'), 'utf8'))[ITEM.id], ITEM.slug);
+  assert.match(fs.readFileSync(path.join(root, 'src/data/home.ts'), 'utf8'), /^export const listings = \[\n  \{ slug: 'r3168794-96-15500-rosemary-heights-crescent-surrey-v3z-0k1\.109878342', street: '96 15500 Rosemary Heights Crescent', city: 'Surrey', brokerage: 'Royal LePage Little Oak Realty', price: '\$1,049,000', beds: 3, baths: 3, sqft: '2,042sqft' \},\n/);
+  const l = { file: `${ITEM.slug}.json`, slug: ITEM.slug, price: '$1,049,000', to: '$999,000', soldDate: 'Dec 01, 2026' };
+  assert.equal(apply(l, root), true);
+  assert.equal(applySold(l, root), true);
+});
+
+test('a listing page is not made from a page that is missing what it needs', () => {
+  assert.match(buildListing('<html></html>', ITEM, TAIL).error, /title/);
+  assert.match(buildListing(DETAIL.replace(/(<dt>Status:<\/dt>\s*<dd[^>]*>)\s*Active/g, '$1Sold'), ITEM, TAIL).error, /Active status/);
+  assert.match(buildListing(DETAIL.replace(/mrp-listing-details-all-photos-container/g, 'x'), ITEM, TAIL).error, /photos/);
+});
+
+test('photo sizes are read from the first bytes', () => {
+  const png = Buffer.alloc(30); png[0] = 0x89; png[1] = 0x50; png.writeUInt32BE(320, 16); png.writeUInt32BE(213, 20);
+  assert.deepEqual(imageSize(png), { w: 320, h: 213 });
+  const jpg = Buffer.from([0xff, 0xd8, 0xff, 0xe0, 0x00, 0x04, 0x00, 0x00, 0xff, 0xc0, 0x00, 0x11, 0x08, 0x00, 0xd5, 0x01, 0x40, 0x03, 0x00, 0x00]);
+  assert.deepEqual(imageSize(jpg), { w: 320, h: 213 });
+  assert.equal(imageSize(Buffer.from('not an image at all, just some text')), null);
+});

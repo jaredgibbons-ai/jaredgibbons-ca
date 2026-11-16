@@ -4,31 +4,32 @@
 // Images are web-size WebP derivatives made by tools/process_photos.py and served from PHOTO_BASE
 // (Worker route /listing-photos/* -> R2 in production; see src/worker/photos.js).
 import PHOTO_ALTS from '../data/photo-alts.json';
+import { photoUrl, photoSrcset, type Photo } from '../lib/photo-url';
 const { photos, alts, title, place = '', base = import.meta.env.PUBLIC_PHOTO_BASE ?? '/listing-photos/' } = Astro.props as {
-  photos: { p: number; id: string; w: number; h: number }[]; alts: Record<number, string>; title: string; place?: string; base?: string;
+  photos: Photo[]; alts: Record<number, string>; title: string; place?: string; base?: string;
 };
 // What each photo shows, written by looking at it (D-250); the first photo also names the address. The archive's "Photo 3: address" is the fallback.
-const described = (ph: { p: number; id: string }) => {
-  const d = (PHOTO_ALTS as Record<string, string>)[ph.id];
+const described = (ph: Photo) => {
+  const d = ph.cap || (PHOTO_ALTS as Record<string, string>)[ph.id || ''];
   if (!d) return alts[ph.p] || `Photo ${ph.p}: ${title}`;
   return ph.p === photos[0]?.p && place ? `${d}, ${place}` : d;
 };
 const alt = (p: number) => { const ph = photos.find((x) => x.p === p); return ph ? described(ph) : alts[p] || `Photo ${p}: ${title}`; };
-const full = (id: string) => `${base}${id}-1600.webp`;
-const mid = (id: string) => `${base}${id}-960.webp`;
-const thumb = (id: string) => `${base}${id}-480.webp`;
+const full = (ph: Photo) => photoUrl(ph, 1600, base);
+const mid = (ph: Photo) => photoUrl(ph, 960, base);
+const thumb = (ph: Photo) => photoUrl(ph, 480, base);
 const hero = photos[0];
 ---
 <section class="gal" aria-label={`Listing photos (${photos.length})`} data-gal>
   <h2 class="gal__t">Listing photos ({photos.length})</h2>
-  <a class="gal__hero" href={full(hero.id)} data-i="0" style={`aspect-ratio:${hero.w}/${hero.h}`}>
-    <img src={mid(hero.id)} srcset={`${mid(hero.id)} 960w, ${full(hero.id)} 1600w`} sizes="(min-width:64rem) 60rem, 100vw" width={hero.w} height={hero.h} alt={alt(hero.p)} fetchpriority="high" decoding="async" />
+  <a class="gal__hero" href={full(hero)} data-i="0" style={hero.g ? undefined : `aspect-ratio:${hero.w}/${hero.h}`}>
+    <img src={mid(hero)} srcset={photoSrcset(hero, [960, 1600], base)} sizes="(min-width:64rem) 60rem, 100vw" width={hero.w} height={hero.h} alt={alt(hero.p)} fetchpriority="high" decoding="async" />
     <span class="gal__open">View {photos.length} photos</span>
   </a>
   {photos.length > 1 && (
     <ul class="gal__thumbs">
       {photos.slice(1).map((ph, i) => (
-        <li><a href={full(ph.id)} data-i={i + 1}><img src={thumb(ph.id)} width={ph.w >= ph.h ? 480 : Math.round(480 * ph.w / ph.h)} height={ph.w >= ph.h ? Math.round(480 * ph.h / ph.w) : 480} alt={alt(ph.p)} loading="lazy" decoding="async" /></a></li>
+        <li><a href={full(ph)} data-i={i + 1}><img src={thumb(ph)} width={ph.w >= ph.h ? 480 : Math.round(480 * ph.w / ph.h)} height={ph.w >= ph.h ? Math.round(480 * ph.h / ph.w) : 480} alt={alt(ph.p)} loading="lazy" decoding="async" /></a></li>
       ))}
     </ul>
   )}
@@ -43,7 +44,7 @@ const hero = photos[0];
       <button type="button" class="lb__btn" data-next>Next</button>
     </div>
   </dialog>
-  <script type="application/json" data-list set:html={JSON.stringify(photos.map((ph) => ({ src: full(ph.id), alt: alt(ph.p) })))}></script>
+  <script type="application/json" data-list set:html={JSON.stringify(photos.map((ph) => ({ src: full(ph), alt: alt(ph.p) })))}></script>
 </section>
 
 <script>
