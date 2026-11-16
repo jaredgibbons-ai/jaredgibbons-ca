@@ -81,7 +81,7 @@ def build(a, k):
         L(f'[Every {A["short"]} {K["home"]} for sale]({hub})', f'[Pet-friendly {"townhomes" if k == "condos" else "condos"} in {A["name"]}](/{other}.html)',
           f'[55+ {K["home"]}s in {A["name"]}]({p55})', '[Call or text Jared: 604-928-1361](tel:+16049281361)'),
         H(f'{A["name"]} {K["home"]}s for sale now'),
-        P(f'These are all the {K["home"]}s for sale in {A["name"]}, not only pet-friendly ones. Check the complex in the tables below, then ask me for the bylaws before you write an offer.'),
+        P(f'These are the {K["home"]}s for sale in {A["name"]} whose MLS® listing says pets are allowed. Limits differ by complex, so check it in the tables below, then ask me for the bylaws before you write an offer.'),
         GRID,
         H('How to read the tables'),
         L('**Pets:** "Yes, with limits" means the listings say pets are allowed with restrictions; "No" means they say no pets; "Ask me" means listings in the same complex disagree; "Not stated" means none of them say.',
