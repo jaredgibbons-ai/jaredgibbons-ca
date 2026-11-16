@@ -127,11 +127,15 @@ if (page.slug === 'mobile-home-parks-fraser-valley' && local?.blocks) {
 {
   const SR: any = STRATA_RULES;
   const LANG = new Set(['Aldergrove', 'Langley City', 'Murrayville', 'Walnut Grove', 'Willoughby Heights', 'Fort Langley', 'Salmon River', 'Brookswood', 'Brookswood Langley']);
+  const PETREG: Record<string, [string, string]> = { ss: ['south-surrey-white-rock', 'South Surrey and White Rock'], lan: ['langley', 'Langley'], chw: ['chilliwack', 'Chilliwack'] };
   const petLink = (rs: any[]) => {
-    const lang = rs.filter((r: any) => LANG.has(r.sub)).length * 2 > rs.length;
+    const cnt: Record<string, number> = {};
+    for (const r of rs) { const g = r.region || (LANG.has(r.sub) ? 'lan' : 'ss'); cnt[g] = (cnt[g] || 0) + 1; }
+    const reg = Object.entries(cnt).sort((a, b) => b[1] - a[1])[0]?.[0];
+    if (!reg || !PETREG[reg]) return null;   // no pet-friendly page for Tsawwassen or Ladner (almost every complex there allows pets)
     const town = rs.filter((r: any) => r.type === 'Townhome').length * 2 > rs.length;
-    const slug = `${lang ? 'langley' : 'south-surrey-white-rock'}-pet-friendly-${town ? 'townhomes' : 'condos'}-for-sale`;
-    return { t: 'p', pos: 'end', gen: 'strata', parts: [{ t: 'Every complex in one place: ' }, { t: `pet-friendly ${town ? 'townhomes' : 'condos'} in ${lang ? 'Langley' : 'South Surrey and White Rock'}`, h: `/${slug}.html` }, { t: '.' }] };
+    const slug = `${PETREG[reg][0]}-pet-friendly-${town ? 'townhomes' : 'condos'}-for-sale`;
+    return { t: 'p', pos: 'end', gen: 'strata', parts: [{ t: 'Every complex in one place: ' }, { t: `pet-friendly ${town ? 'townhomes' : 'condos'} in ${PETREG[reg][1]}`, h: `/${slug}.html` }, { t: '.' }] };
   };
   const HUB: Record<string, string> = { 'south-surrey-condos-for-sale': 'south-surrey-white-rock-pet-friendly-condos-for-sale', 'south-surrey-townhomes-for-sale': 'south-surrey-white-rock-pet-friendly-townhomes-for-sale',
     'langley-condos-for-sale': 'langley-pet-friendly-condos-for-sale', 'langley-townhomes-for-sale': 'langley-pet-friendly-townhomes-for-sale' };
@@ -148,7 +152,7 @@ if (page.slug === 'mobile-home-parks-fraser-valley' && local?.blocks) {
       { t: 'p', pos: 'end', gen: 'strata', text: `What recent MLS® listings in each complex say about pets and age limits (checked ${SR.checked}). It comes from the listings, not the strata bylaws, so read the bylaws or ask me before you buy. "Yes, with limits" usually means a cap on the number, kind or size of pets. "Ask me" means listings in the same complex disagree. Renting out is allowed in every complex: since November 24, 2022 a BC strata cannot ban or cap long-term rentals, though it can still ban short-term stays such as Airbnb.` },
       { t: 'table', pos: 'end', gen: 'strata', caption: 'Pets and age rules by complex', head: ['Complex', ...(pg.mixed ? ['Type'] : []), 'Built', 'Homes', 'Pets', 'Age'],
         rows: rs.map((r: any) => [r.name, ...(pg.mixed ? [r.type] : []), r.built || '—', r.homes || '—', r.pets, r.age]) },
-      petLink(rs),
+      ...[petLink(rs)].filter(Boolean),
     ];
   }
   const bi = SR.buildings[page.slug];
@@ -163,7 +167,7 @@ if (page.slug === 'mobile-home-parks-fraser-valley' && local?.blocks) {
   if (pp && local?.blocks) {
     const rs = pp.map((i: number) => SR.rows[i]);
     const town = /townhomes/.test(page.slug);
-    const region = /^langley/.test(page.slug) ? 'Langley' : 'South Surrey and White Rock';
+    const region = /^langley/.test(page.slug) ? 'Langley' : /^chilliwack/.test(page.slug) ? 'Chilliwack' : 'South Surrey and White Rock';
     const one = town ? 'townhouse complex' : 'condo building', many = town ? 'townhouse complexes' : 'condo buildings';
     const allow = rs.filter((r: any) => /^Yes/.test(r.pets)).length, no = rs.filter((r: any) => r.pets === 'No');
     const catsOnly = rs.filter((r: any) => r.pets !== 'No' && r.dogs === 'No' && r.cats === 'Yes');

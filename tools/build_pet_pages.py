@@ -39,27 +39,37 @@ AREAS = {
             'hoods': 'Willoughby, Langley City, Walnut Grove, Murrayville, Aldergrove and Fort Langley',
             'condo': '/langley-condos-for-sale.html', 'town': '/langley-townhomes-for-sale.html',
             '55': ('/langley-55-plus-condos-for-sale.html', '/langley-55-plus-townhomes-for-sale.html')},
+    'chw': {'name': 'Chilliwack', 'short': 'Chilliwack', 'crumb': ('Chilliwack', '/chilliwack-homes-for-sale.html'),
+            'hoods': 'Chilliwack Proper, downtown, Sardis, Vedder Crossing, Garrison Crossing and Promontory',
+            'condo': '/chilliwack-condos-for-sale.html', 'town': '/chilliwack-townhomes-for-sale.html',
+            '55': ('/chilliwack-55-plus-condos-for-sale.html', '/chilliwack-55-plus-townhomes-for-sale.html')},
 }
+TWIN = {'ss': 'lan', 'lan': 'ss', 'chw': 'lan'}
 KINDS = {
     'condos': {'Kind': 'Condos', 'one': 'condo building', 'many': 'condo buildings', 'home': 'condo'},
     'townhomes': {'Kind': 'Townhomes', 'one': 'townhouse complex', 'many': 'townhouse complexes', 'home': 'townhome'},
 }
 SLUGS = {('ss', 'condos'): 'south-surrey-white-rock-pet-friendly-condos-for-sale', ('ss', 'townhomes'): 'south-surrey-white-rock-pet-friendly-townhomes-for-sale',
-         ('lan', 'condos'): 'langley-pet-friendly-condos-for-sale', ('lan', 'townhomes'): 'langley-pet-friendly-townhomes-for-sale'}
+         ('lan', 'condos'): 'langley-pet-friendly-condos-for-sale', ('lan', 'townhomes'): 'langley-pet-friendly-townhomes-for-sale',
+         ('chw', 'condos'): 'chilliwack-pet-friendly-condos-for-sale', ('chw', 'townhomes'): 'chilliwack-pet-friendly-townhomes-for-sale'}
 TITLES = {('ss', 'condos'): 'Pet-Friendly Condos for Sale in South Surrey & White Rock',
           ('ss', 'townhomes'): 'Pet-Friendly Townhomes for Sale in South Surrey & White Rock',
           ('lan', 'condos'): 'Pet-Friendly Condos for Sale in Langley',
-          ('lan', 'townhomes'): 'Pet-Friendly Townhomes for Sale in Langley'}
+          ('lan', 'townhomes'): 'Pet-Friendly Townhomes for Sale in Langley',
+          ('chw', 'condos'): 'Pet-Friendly Condos for Sale in Chilliwack',
+          ('chw', 'townhomes'): 'Pet-Friendly Townhomes for Sale in Chilliwack'}
 META = {('ss', 'condos'): ('Pet-Friendly Condos South Surrey & White Rock', 'Pet-friendly condos for sale in South Surrey and White Rock: dogs, cats and how many pets each building allows, per MLS® listings.'),
         ('ss', 'townhomes'): ('Pet-Friendly Townhomes South Surrey & White Rock', 'Pet-friendly townhomes for sale in South Surrey and White Rock: dogs, cats and how many pets each complex allows, per MLS® listings.'),
         ('lan', 'condos'): ('Pet-Friendly Condos for Sale in Langley, BC', 'Pet-friendly Langley condos for sale: dogs, cats and how many pets each building in Willoughby, Langley City and Walnut Grove allows.'),
-        ('lan', 'townhomes'): ('Pet-Friendly Townhomes for Sale in Langley, BC', 'Pet-friendly Langley townhomes for sale: dogs, cats and how many pets each complex in Willoughby, Walnut Grove and Murrayville allows.')}
+        ('lan', 'townhomes'): ('Pet-Friendly Townhomes for Sale in Langley, BC', 'Pet-friendly Langley townhomes for sale: dogs, cats and how many pets each complex in Willoughby, Walnut Grove and Murrayville allows.'),
+        ('chw', 'condos'): ('Pet-Friendly Condos for Sale in Chilliwack, BC', 'Pet-friendly Chilliwack condos for sale: which buildings allow dogs and cats, how many, and which say no pets, per MLS® listings.'),
+        ('chw', 'townhomes'): ('Pet-Friendly Townhomes for Sale in Chilliwack, BC', 'Pet-friendly Chilliwack townhomes for sale: which complexes in Sardis, Garrison Crossing and Promontory allow dogs and cats, and how many.')}
 
 
 def build(a, k):
     A, K, slug = AREAS[a], KINDS[k], SLUGS[(a, k)]
     other = SLUGS[(a, 'townhomes' if k == 'condos' else 'condos')]
-    twin = SLUGS[('lan' if a == 'ss' else 'ss', k)]
+    twin = SLUGS[(TWIN[a], k)]
     hub = A['condo'] if k == 'condos' else A['town']
     p55 = A['55'][0 if k == 'condos' else 1]
     title, desc = META[(a, k)]
@@ -88,7 +98,7 @@ def build(a, k):
           f'**Certified guide and service dogs are exempt.** Owners, tenants and visitors can keep a certified guide or service dog regardless of a strata\'s pet bylaws ([Province of BC]({GOV})).',
           '**The listing is not the bylaw.** Listing fields are filled in by the seller\'s agent and are sometimes out of date. The bylaws in the Form B package are what count, and rules passed at the last meeting are in the minutes.',
           '**Ask before you remove subjects.** Ask the strata manager in writing whether your pet, by kind, number and size, is allowed, and keep the answer with your offer. I can do this for you.'),
-        P(f'Looking in {"Langley" if a == "ss" else "South Surrey and White Rock"} too? See [pet-friendly {k} there](/{twin}.html).'),
+        P(f'Looking in {AREAS[TWIN[a]]["name"]} too? See [pet-friendly {k} there](/{twin}.html).'),
     ]
     faq = [
         {'q': f'Which {K["many"]} in {A["name"]} allow dogs?', 'a': f'Most do. The tables on this page show, for every {K["one"]} with recent MLS® listings, whether the listings say dogs and cats are allowed and how many pets. A short list of buildings say no pets or cats only. Confirm in the bylaws before you buy.'},
