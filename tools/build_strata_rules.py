@@ -3,7 +3,7 @@
 
 Input: Pete's workbook "Condo and Townhouse Complex Rules - South Surrey and Langley" (Paragon Residential Attached listings,
 active and sold, researched 2026-11-16). It is an MLS® export, so it stays out of this repository:
-    python3 -I tools/build_strata_rules.py /path/to/complex-rules.xlsx   -> src/data/strata-rules.json
+    python3 -I tools/build_strata_rules.py /path/to/complex-rules.xlsx /path/to/complex-rules-delta-chilliwack.xlsx   -> src/data/strata-rules.json
 
 Only facts that rarely change are kept, so the tables do not need updating: year built, number of homes, pets (dogs, cats, how many), age.
 Rentals are left out: since November 24, 2022 a BC strata cannot ban or cap long-term rentals, so the listing field is out of date (D-314).
@@ -17,10 +17,19 @@ from pathlib import Path
 import openpyxl
 
 ROOT = Path(__file__).resolve().parent.parent
-TABS = {'South Surrey White Rock condos': 'Condo', 'South Surrey townhomes': 'Townhome', 'Langley condos': 'Condo', 'Langley townhomes': 'Townhome'}
+# Workbook tab -> (home type, region). The first workbook covers Langley and South Surrey / White Rock; the second (D-319)
+# Tsawwassen, Ladner and Chilliwack. Tabs a workbook does not have are skipped.
+TABS = {'South Surrey White Rock condos': ('Condo', 'ss'), 'South Surrey townhomes': ('Townhome', 'ss'), 'Langley condos': ('Condo', 'lan'), 'Langley townhomes': ('Townhome', 'lan'),
+        'Tsawwassen condos': ('Condo', 'tsa'), 'Tsawwassen townhomes': ('Townhome', 'tsa'), 'Ladner condos': ('Condo', 'lad'), 'Ladner townhomes': ('Townhome', 'lad'),
+        'Chilliwack condos': ('Condo', 'chw'), 'Chilliwack townhomes': ('Townhome', 'chw')}
 SUB = {'Crescent Bch Ocean Pk.': 'Crescent Beach & Ocean Park', 'Aldergrove Langley': 'Aldergrove', 'Grandview Surrey': 'Grandview', 'Sunnyside Park Surrey': 'Sunnyside Park', 'Brookswood Langley': 'Brookswood'}
-PETPAGES = {'south-surrey-white-rock-pet-friendly-condos-for-sale': (False, 'Condo'), 'south-surrey-white-rock-pet-friendly-townhomes-for-sale': (False, 'Townhome'),
-            'langley-pet-friendly-condos-for-sale': (True, 'Condo'), 'langley-pet-friendly-townhomes-for-sale': (True, 'Townhome')}
+PETPAGES = {'south-surrey-white-rock-pet-friendly-condos-for-sale': ('ss', 'Condo'), 'south-surrey-white-rock-pet-friendly-townhomes-for-sale': ('ss', 'Townhome'),
+            'langley-pet-friendly-condos-for-sale': ('lan', 'Condo'), 'langley-pet-friendly-townhomes-for-sale': ('lan', 'Townhome'),
+            'chilliwack-pet-friendly-condos-for-sale': ('chw', 'Condo'), 'chilliwack-pet-friendly-townhomes-for-sale': ('chw', 'Townhome')}
+TSA = ['Beach Grove', 'Boundary Beach', 'Cliff Drive', 'English Bluff', 'Pebble Hill', 'Tsawwassen Central', 'Tsawwassen East', 'Tsawwassen North']
+LAD = ['Delta Manor', 'East Delta', 'Hawthorne', 'Holly', 'Ladner Elementary', 'Ladner Rural', 'Neilsen Grove', 'Port Guichon', 'Westham Island']
+CHW = ['Chilliwack Downtown', 'Chilliwack Mountain', 'Chilliwack Proper East', 'Chilliwack Proper South', 'Chilliwack Proper West', 'Cultus Lake North', 'Eastern Hillsides',
+       'Garrison Crossing', 'Little Mountain', 'Lower Landing', 'Promontory', 'Sardis East Vedder', 'Sardis South', 'Sardis West Vedder', 'Vedder Crossing', 'Vedder Mountain', 'Yarrow']
 # Which pages show which complexes: MLS® sub-areas and home types.
 PAGES = {
     'aldergrove-condos-for-sale': (['Aldergrove'], ['Condo']), 'aldergrove-townhomes-for-sale': (['Aldergrove'], ['Townhome']),
@@ -41,7 +50,26 @@ PAGES = {
     # 55+ pages: only the complexes whose listings all say 55+ (or 19+)
     'south-surrey-white-rock-55-plus-condos-for-sale': ('SSWR55', ['Condo']), 'south-surrey-white-rock-55-plus-townhomes-for-sale': ('SSWR55', ['Townhome']),
     'langley-55-plus-condos-for-sale': ('LAN55', ['Condo']), 'langley-55-plus-townhomes-for-sale': ('LAN55', ['Townhome']),
+    'boundary-beach-tsawwassen-condos-townhomes-for-sale': (['Boundary Beach'], ['Condo', 'Townhome']),
+    'chilliwack-downtown-condos-townhomes-for-sale': (['Chilliwack Downtown'], ['Condo', 'Townhome']),
+    'chilliwack-mountain-condos-townhomes-for-sale': (['Chilliwack Mountain'], ['Condo', 'Townhome']),
+    'chilliwack-proper-east-condos-townhomes-for-sale': (['Chilliwack Proper East'], ['Condo', 'Townhome']),
+    'chilliwack-proper-south-condos-townhomes-for-sale': (['Chilliwack Proper South'], ['Condo', 'Townhome']),
+    'chilliwack-proper-west-condos-townhomes-for-sale': (['Chilliwack Proper West'], ['Condo', 'Townhome']),
+    'cliff-drive-tsawwassen-condos-townhomes-for-sale': (['Cliff Drive'], ['Condo', 'Townhome']),
+    'delta-manor-ladner-condos-townhomes-for-sale': (['Delta Manor'], ['Condo', 'Townhome']),
+    'hawthorne-ladner-condos-townhomes-for-sale': (['Hawthorne'], ['Condo', 'Townhome']),
+    'ladner-elementary-condos-townhomes-for-sale': (['Ladner Elementary'], ['Condo', 'Townhome']),
+    'neilsen-grove-ladner-condos-townhomes-for-sale': (['Neilsen Grove'], ['Condo', 'Townhome']),
+    'tsawwassen-central-condos-townhomes-for-sale': (['Tsawwassen Central'], ['Condo', 'Townhome']),
+    'tsawwassen-north-condos-townhomes-for-sale': (['Tsawwassen North'], ['Condo', 'Townhome']),
+    'tsawwassen-condos-for-sale': (TSA, ['Condo']), 'tsawwassen-townhomes-for-sale': (TSA, ['Townhome']),
+    'ladner-condos-for-sale': (LAD, ['Condo']), 'ladner-townhomes-for-sale': (LAD, ['Townhome']),
+    'chilliwack-condos-for-sale': (CHW, ['Condo']), 'chilliwack-townhomes-for-sale': (CHW, ['Townhome']),
+    'sardis-condos-for-sale': (['Sardis West Vedder', 'Sardis East Vedder', 'Sardis South'], ['Condo']), 'sardis-townhomes-for-sale': (['Sardis West Vedder', 'Sardis East Vedder', 'Sardis South'], ['Townhome']),
+    'chilliwack-55-plus-condos-for-sale': ('CHW55', ['Condo']), 'chilliwack-55-plus-townhomes-for-sale': ('CHW55', ['Townhome']),
 }
+AGE55 = {'SSWR55': ('ss',), 'LAN55': ('lan',), 'CHW55': ('chw',)}
 LANGLEY = {'Aldergrove', 'Langley City', 'Murrayville', 'Walnut Grove', 'Willoughby Heights', 'Fort Langley', 'Salmon River', 'Brookswood', 'Brookswood Langley'}
 
 
@@ -96,10 +124,11 @@ def age(s):
     return ps[0][0]
 
 
-def main(src):
-    wb = openpyxl.load_workbook(src, read_only=True, data_only=True)
+def main(srcs):
     rows = []
-    for tab, kind in TABS.items():
+    for tab, (kind, region) in TABS.items():
+        wb = next((w for w in (openpyxl.load_workbook(p, read_only=True, data_only=True) for p in srcs) if tab in w.sheetnames), None)
+        if wb is None: continue
         r = [x for x in wb[tab].iter_rows(values_only=True) if any(c is not None for c in x)]
         H = r[1]
         for x in r[2:]:
@@ -111,7 +140,7 @@ def main(src):
             sub = SUB.get(sub, sub)
             built = (re.match(r'^(\d{4})', str(d['Year built'])) or [None, ''])[1]
             homes = (re.match(r'^(\d+) \(stated on', str(d['Total units in strata plan (as stated in listings)'])) or [None, ''])[1]
-            rows.append({'name': str(d['Complex / building name']).strip(), 'sub': sub, 'type': kind, 'addr': str(d['Street address (no unit #)'] or '').strip(),
+            rows.append({'name': str(d['Complex / building name']).strip(), 'sub': sub, 'type': kind, 'region': region, 'addr': str(d['Street address (no unit #)'] or '').strip(),
                          'built': built, 'homes': homes,
                          'pets': rule(d['Pets (per MLS listings, not the strata bylaws)'], pets),
                          **dogs_cats(d['Pets (per MLS listings, not the strata bylaws)']),
@@ -125,9 +154,9 @@ def main(src):
     # One row per complex: the same first street address and type under several names ("Altus", "Altus White Rock",
     # "Unnamed complex at 1526 Finlay Street") keeps the plain name. Different buildings sharing an address keep their own rows.
     groups = {}
-    for r in rows: groups.setdefault((r['addr'].split(';')[0].strip().lower(), r['type']), []).append(r)
+    for r in rows: groups.setdefault((r['addr'].split(';')[0].strip().lower(), r['type'], r['region']), []).append(r)
     keep = []
-    for (addr, _), g in groups.items():
+    for (addr, _, _), g in groups.items():
         if not addr: keep += g; continue
         named = [r for r in g if not r['name'].startswith('Unnamed complex')] or g[:1]
         names = [r['name'].lower() for r in named]
@@ -153,15 +182,15 @@ def main(src):
     rows.sort(key=lambda r: r['name'].lower())
     pages = {}
     for slug, (subs, types) in PAGES.items():
-        if subs in ('SSWR55', 'LAN55'):
-            pick = [i for i, r in enumerate(rows) if r['type'] in types and r['age'] in ('55+', '19+') and ((r['sub'] in LANGLEY) == (subs == 'LAN55'))]
+        if isinstance(subs, str) and subs in AGE55:
+            pick = [i for i, r in enumerate(rows) if r['type'] in types and r['age'] == '55+' and r['region'] in AGE55[subs]]
         else:
             pick = [i for i, r in enumerate(rows) if r['sub'] in subs and r['type'] in types]
         if pick: pages[slug] = {'rows': pick, 'mixed': len(types) > 1}
     # Pet-friendly pages (D-314): every condo or townhouse complex in the region, by type.
     petpages = {}
-    for slug, (lang, typ) in PETPAGES.items():
-        petpages[slug] = [i for i, r in enumerate(rows) if r['type'] == typ and (r['sub'] in LANGLEY) == lang]
+    for slug, (reg, typ) in PETPAGES.items():
+        petpages[slug] = [i for i, r in enumerate(rows) if r['type'] == typ and r['region'] == reg]
     # Building pages (src/data/local/*-condos.json with a "<name> building facts" table): matched by name, else by street address.
     buildings = {}
     for f in sorted((ROOT / 'src/data/local').glob('*-condos.json')):
@@ -179,4 +208,4 @@ def main(src):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1])
+    main(sys.argv[1:])
