@@ -178,6 +178,8 @@ const rawMeta = String(seo['Meta description'] || '').replace(/^\[SOLD\]:\s*/i, 
 // Every listing gets the factual snippet: the address, what it is, its status and price. The archive's MLS marketing text stays in the page body.
 // Video and 3D tour (D-269): src/data/listing-media.json. The video loads only when tapped (a photo and a play button until then).
 const media = (MEDIA as Record<string, any>)[page.slug] as { video?: string; tour3d?: string; floorplan?: { id: string; w: number; h: number } } | undefined;
+// Sold and leased pages with a video tour show it right under the summary (D-321): the video is the most useful thing left on them.
+const vidTop = page.status !== 'Active' && !!media?.video;
 // Map (D-269): the listing's address on Google Maps, loaded when tapped.
 const mapQ = [addr, [cityName ? `${cityName}, BC` : '', (POSTAL as Record<string, string>)[page.slug] || ''].filter(Boolean).join(' ')].filter(Boolean).join(', ');
 // Structured data (D-269): the listing as a schema.org RealEstateListing with its offer, address and photos.
@@ -216,14 +218,22 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 && (show
         if (b.t === 'summary') {
           const inner = (
             <>
-              <span class="ls__price">{price}</span>
+              {price && <span class="ls__price">{price}</span>}
               {rest.map((r) => <span class="ls__chip">{r.k ? <><span class="ls__k">{r.k}</span> {r.v}</> : r.v}</span>)}
             </>
           );
           return <>{headN ? <h2 class="ls__sum">{inner}</h2> : <p class="ls__sum">{inner}</p>}{tailLines.map((l: string) => <p class="ls__flag">{l}</p>)}{purchase && <p class="ls__flag">Purchased: Jared Gibbons represented the buyer.</p>}
             <p class="ls__act">{page.status === 'Active'
               ? <><a class="btn" href={showMail} data-ev="book_showing">Book a showing</a><a class="btn btn--ghost" href={showSms} data-ev="text_jared">Text Jared</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a>{media?.video && <a class="btn btn--ghost" href="#ls-media">▶ Watch the video</a>}{media?.floorplan && <a class="btn btn--ghost" href="#ls-fp">Floor plan</a>}{media?.tour3d && <a class="btn btn--ghost" href={media.tour3d} target="_blank" rel="noopener">3D tour</a>}</>
-              : <><a class="btn" href={similarMail}>Ask about homes like this</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a>{media?.video && <a class="btn btn--ghost" href="#ls-media">▶ Watch the video</a>}</>}</p>
+              : <><a class="btn" href={similarMail}>Ask about homes like this</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a>{media?.video && !vidTop && <a class="btn btn--ghost" href="#ls-media">▶ Watch the video</a>}</>}</p>
+            {vidTop && (
+            <figure class="ls__vid ls__vid--top">
+              <button type="button" class="ls__play" data-yt={media!.video} aria-label={`Play the video tour of ${where}`}>
+                <img src={`https://i.ytimg.com/vi/${media!.video}/hqdefault.jpg`} alt={`Video tour of ${where}`} width="480" height="360" decoding="async" />
+                <span class="ls__playi" aria-hidden="true"><svg viewBox="0 0 68 48" width="68" height="48"><rect width="68" height="48" rx="10" fill="#0a0a0a" fill-opacity=".85"/><path d="M27 15l18 9-18 9z" fill="#fff"/></svg></span>
+              </button>
+              <figcaption>Video tour · <a href={`https://www.youtube.com/watch?v=${media!.video}`} target="_blank" rel="noopener">Watch on YouTube</a></figcaption>
+            </figure>)}
           </>;
         }
         return null;
@@ -236,9 +246,9 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 && (show
             <p>No photos are on file for this listing yet.</p>
           </div>
         )}
-      {(media?.video || media?.tour3d || media?.floorplan) && (
+      {((media?.video && !vidTop) || media?.tour3d || media?.floorplan) && (
         <div class="ls__media" id="ls-media">
-          {media.video && (
+          {media.video && !vidTop && (
             <figure class="ls__vid">
               <button type="button" class="ls__play" data-yt={media.video} aria-label={`Play the video tour of ${where}`}>
                 <img src={`https://i.ytimg.com/vi/${media.video}/hqdefault.jpg`} alt={`Video tour of ${where}`} width="480" height="360" loading="lazy" decoding="async" />
@@ -356,7 +366,7 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 && (show
     </div></section>
   )}
   <Cta />
-  {explore && <ExploreLinks data={explore} />}
+  {explore && <ExploreLinks data={explore} compact={true} />}
 </main>
 </Base>
 
@@ -394,6 +404,7 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 && (show
 <style>
   .ls__media{margin:0 0 var(--s5)}
   .ls__vid{margin:0;max-width:52rem}
+  .ls__vid--top{margin:1.25rem 0 1.5rem}
   .ls__vid :global(iframe),.ls__play{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}
   .ls__play{position:relative;padding:0;cursor:pointer;overflow:hidden}
   .ls__play img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;transition:opacity .15s}

@@ -98,6 +98,28 @@ if (local?.faq?.length) {
   local.faq = local.faq.map((f: any) => /^Can Jared show me homes in .+\?$/.test(f.q) ? { ...f, q: 'Can I book a private showing with Jared?' } : /^How do I find out what my home in .+ is worth\?$/.test(f.q) ? { ...f, q: 'How do I find out what my home is worth?' } : f);
   local.faq = local.faq.filter((f: any) => { const k = String(f.q).trim().toLowerCase(); if (seenQ.has(k)) return false; seenQ.add(k); return !INTERNAL_FAQ.test(f.q + ' ' + f.a) && String(f.a || '').trim().length > 0; });   // no empty answers (SEO audit 2026-11-13)
 }
+// School pages (D-321): the method paragraph and the general checklist every "Homes for sale near <school>" page repeated now live on
+// one explainer page; each school page keeps one line and a link, plus its own checklist items (its median, its nearest other school).
+if (/^homes-near-/.test(page.slug) && local?.blocks) {
+  const EX = '/buying-a-home-near-a-school-bc.html';
+  const tx = (b: any) => (typeof b?.text === 'string' ? b.text : (b?.parts || []).map((x: any) => x.t).join(''));
+  const bl: any[] = [];
+  for (let i = 0; i < local.blocks.length; i++) {
+    const b = local.blocks[i], nx = local.blocks[i + 1];
+    if (b.t === 'h' && /^How the .+ search works$/.test(b.text) && nx?.t === 'p' && /^MLS® listings are not tagged by school/.test(tx(nx))) {
+      const school = b.text.replace(/^How the (.+) search works$/, '$1');
+      bl.push({ t: 'p', gen: nx.gen, parts: [{ t: `The listings above are homes whose MLS® description names ${school}, so a nearby home that leaves the name out will not show. See` }, { t: 'how the school searches and sold prices work', h: EX }, { t: '.' }] });
+      i++; continue;
+    }
+    if (b.t === 'list' && local.blocks[i - 1]?.t === 'h' && /^Before you offer on a home near /.test(local.blocks[i - 1].text)) {
+      const keep = b.items.filter((it: any) => !/^(Confirm the catchment|Go past|View the home on a school day|Visit on a school day)/.test(it.map((x: any) => x.t).join('')));
+      bl.push({ ...b, items: [...keep, [{ t: 'Confirm the catchment for the exact address and see the street at drop-off and pick-up. More in' }, { t: 'the checklist for buying near a school', h: EX }, { t: '.' }]] });
+      continue;
+    }
+    bl.push(b);
+  }
+  local.blocks = bl;
+}
 // Links to the D-316 neighbourhood type pages from their neighbourhood page and the city type page (src/data/nb-type-links.json).
 {
   const nl = (NB_LINKS as any).links[page.slug];
