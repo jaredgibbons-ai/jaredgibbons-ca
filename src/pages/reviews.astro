@@ -132,7 +132,7 @@ function render(d: D) {
     const n = Math.max(0, Math.min(5, Math.round(r.rating || 0)));
     if (n) q.appendChild(el('p', 'rv__title', '\u2605'.repeat(n) + ' ' + n + ' out of 5'));
     if (r.text) r.text.split(/\n{2,}/).forEach((p) => q.appendChild(el('p', '', p)));
-    if (r.reply) { const rep = el('p', '', 'Reply from Jared: ' + r.reply.text); rep.style.fontStyle = 'italic'; q.appendChild(rep); }
+    // Jared's replies to reviews are not shown (Jared, Nov 15 2026: "my reviews shouldn't have the replies on them").
     const who = el('p', 'rv__who');
     who.appendChild(el('strong', '', initials(r.name)));
     who.appendChild(document.createElement('br')); who.appendChild(el('span', 'muted', (r.date ? r.date + ' \u00b7 ' : '') + 'Google review'));

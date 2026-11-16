@@ -1,7 +1,7 @@
 // jg-reviews: daily pull of Jared's own Google Business Profile reviews (read-only) -> KV -> GET /reviews.json.
 //
 // - Runs on a cron. Visitors never cause a Google call, so the 600/min quota cannot be hit by traffic.
-// - Keeps only public review fields: display name, star rating, text, dates, and Jared's reply. No profile photos, no reviewer ids/emails.
+// - Keeps only public review fields: display name, star rating, text and dates (not Jared's replies). No profile photos, no reviewer ids/emails.
 // - Never overwrites a good copy with an empty or failed pull. A failed run only updates the status record.
 // - Secrets come from the environment and are never logged or returned.
 const TOKEN_URL = 'https://oauth2.googleapis.com/token';
@@ -40,8 +40,7 @@ export function normalizeReview(r) {
     text: cleanComment(r.comment),
     date: r.createTime || r.updateTime || null,
   };
-  const reply = cleanComment(r.reviewReply?.comment);
-  if (reply) out.reply = { text: reply, date: r.reviewReply.updateTime || null };
+  // Jared's replies are left out of the feed: he does not want them shown with the reviews (Nov 15 2026).
   return out;
 }
 
