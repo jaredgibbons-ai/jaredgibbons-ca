@@ -214,7 +214,7 @@ def build(b):
         H(f'Before you buy at {name}'),
         # Kept short on purpose (2026-11-16): the general strata checklist lives on /bc-condo-buying-rules.html, so 21 building
         # pages no longer repeat the same four bullets (that repetition put 20 of them under the 70% uniqueness gate).
-        P(f'Ask for the {name} strata package' + (f' (strata plan {b["plan"]})' if b['plan'] else '')
+        P(f'Ask for {"" if name.startswith("The ") else "the "}{name} strata package' + (f' (strata plan {b["plan"]})' if b['plan'] else '')
           + f' and the recent {name} sales before you write an offer. Rentals, pets, parking and the Form B: [BC condo buying rules](/bc-condo-buying-rules.html).'),
         H('More condo buildings nearby'),
         L(*[f'[{x["name"]} condos]({"/" + x["slug"] + ".html"})' for x in others],
