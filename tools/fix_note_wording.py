@@ -65,6 +65,7 @@ SUBS = [
     (r'\s*\b(?:Designation and Construction Control Bylaw No\. 2384, 2008 - Consolidated|(?:Drainage )?System Protection Bylaw No\. 2266, 2007 - Consolidated Version|Bylaw No\. 2505, 2011 - Consolidated Version_0)\.pdf\b\.?', ''),
     (r'^Ravine-edge character: Parks and Open Space\.pdf$', ''),
     (r'\s*\bArea [A-H] - Residential Rates 20\d\d\.pdf\b\.?', ''),   # a file name left after a sentence (D-331)
+    (r': the housing stock$', ': the homes'),   # section headings (D-339)
     (r'(?:(?<=[.!?)"”])(?<![Nn]o\.)\s+|^)(?:- )?[^.!?/—:\n]{1,70}?\.pdf\b\.?(?=\s|$)', ''),
     (r'\b(excluded|named|detailed|described|carried|stated|noted|corrected|blended|established|row|table|zones|townhomes|frame|thresholds|minimums|product|buildings|building|rule|rules|facts|exemptions|checks|Road|sources|complex|categories|covenants|centre|chains|area|Area|unresolved|zero|consent) in\.(?=\s|$)', r'\1.'),
     (r'\bMarket context, labelled correctly:\s*', 'Market context: '), (r'\b(\w+ 20\d\d) context only, never land figures:', r'\1 figures for homes, not land:'),
@@ -107,7 +108,7 @@ SUBS = [
 ]
 SUBS = [(re.compile(a), b) for a, b in SUBS]
 MARK = re.compile(DROP.pattern + r'|Ministry-listed|cited to|cross-reference only|single-address|locator run|strata block|land block|NAME NOTE|[Nn]aming note|Board-name note|'
-                  r'stated at the top|stated plainly|redirect case|conflict IN SOURCES|unsettled|non-transferable|labelled as community-level|TOWNSHIP —|CITY —|labelled correctly|never land|Tenure record only|POINTER|Cross-reference only|land reader|page name|Spelling lock|the AREA|re-documented|Count-once|\.pdf\b| in\.(?:\s|$)|standing note|233–234', re.I)
+                  r'stated at the top|stated plainly|redirect case|conflict IN SOURCES|unsettled|non-transferable|labelled as community-level|TOWNSHIP —|CITY —|labelled correctly|never land|Tenure record only|POINTER|Cross-reference only|land reader|page name|Spelling lock|the AREA|re-documented|Count-once|\.pdf\b| in\.(?:\s|$)|standing note|233–234|: the housing stock$', re.I)
 EMPH = re.compile(r'(?<![A-Z-])(LEASEHOLD PREPAID(?=[ -]strata)|LEASEHOLD|PREPAID|FEE-SIMPLE|UNDIVIDED-INTEREST|HOUSING|CURRENT|UNDER|INCLUDING|TAXABLE|RENTAL|DISTINCT|DIFFERENT|THREE|FULL|LEASE|NOT|NEVER|ONLY|IF|AND|OR|TOWNHOME|TOWNHOUSE|PRESALE|RESTRICTIONS|STATUS|CO-OP|PREPAID(?=-strata))(?![A-Z]|-[A-Z])')
 
 
