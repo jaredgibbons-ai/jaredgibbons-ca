@@ -71,6 +71,10 @@ def page_block(ns):
     return bl
 
 
+# North Vancouver (Lynn Valley) buildings the notes file under Coquitlam's Canyon Springs (D-334)
+WRONG_PAGE = {('canyon-springs', 'Balmoral House'), ('canyon-springs', 'Kirkstone Gardens')}
+
+
 def home_page(n):
     h = n['home']; progs = n['progs']
     if '55-plus' in progs:
@@ -86,6 +90,7 @@ def main():
         if not n: unres.append(os.path.basename(f)); continue
         tg = home_page(n)
         if not tg: notarget.append(n['home']); continue
+        if (tg, n['name']) in WRONG_PAGE: continue
         pages[tg].append(n)
     for p in glob.glob(f'{LOCAL}/*.json'):
         j = json.load(open(p, encoding='utf-8'))
