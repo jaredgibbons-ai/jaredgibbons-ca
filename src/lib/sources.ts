@@ -44,8 +44,51 @@ const TITLE_BY_URL: [string, string][] = [
   ['pitt-meadows_business-plan_2020', 'Pitt Meadows Business Plan 2020'], ['haveyoursay.fvrd.ca/cultus-lake', 'Cultus Lake engagement: questions and answers'],
   ['chw_rg_jan2024', 'Chilliwack transit rider guide (January 2024)'], ['Notice-of-Election-by-Voting', 'Notice of election by voting'], ['2020%20McKee%20Profile', 'McKee neighbourhood profile (2020)'],
   ['FAQ_-_Small-Scale_Housing', 'Small-scale housing: questions and answers (July 2025)'], ['Historic%20Downtown%20Neighbourhood%20Plan', 'Historic Downtown Neighbourhood Plan event boards'],
+  ['langleycity.ca/media/file/2026taxrates', '2026 tax rates'], ['letstalk.delta.ca/84averoadway', '84 Avenue roadway project'], ['letstalk.delta.ca/56stmup', '56 Street multi-use path'],
+  ['vcn.bc.ca/norquay/22localareas', "Vancouver's 22 local areas"], ['translink.ca/r6', 'R6 Scott Road RapidBus'], ['surreyschools.ca/-it-s-a-beautiful', "It's a beautiful school: Cole Snokomish Elementary opens"],
   ['General%20Guide%20to%20Subdivision', 'General guide to the subdivision process'], ['DP2%5FGuide', 'Development permit area 2 guide (March 2026)'],
 ];
+// File names that carry upload hashes, %20 written as "20", dropped apostrophes or slug acronyms ("efc5943a… Schedule C OCP",
+// "Ladner20Village20Core", "Surreys Trees", "Silverdale Mis") made unreadable card titles (site review 2026-11-17, D-327).
+const APOS: [RegExp, string][] = [[/\b(Surrey|Burnaby|Vancouver|Coquitlam|Canada|Authority|Delta|Richmond|Abbotsford|Chilliwack|Langley|Mission|Port Coquitlam)s\b(?=\s+(?!and\b|or\b|to\b|in\b|of\b|are\b|is\b|meet\b)[A-Za-z0-9])/g, "$1's"],
+  [/\bIt S a\b/g, "It's a"], [/\bWhats\b/g, "What's"], [/\bLets\b/g, "Let's"]];
+const ACRONYM: [RegExp, string][] = [[/\bMis\b/g, 'MIS'], [/\bIsmp\b/g, 'ISMP'], [/\bIrmp\b/g, 'IRMP'], [/\bServicebc\b/g, 'Service BC'], [/\bDpa\b/g, 'DPA'], [/\bCotw\b/g, 'COTW'],
+  [/\bGhss\b/g, 'GHSS'], [/\bSlp\b/g, 'SLP'], [/\bCmb Parp\b/g, 'CMB PARP'], [/\bGbl\b/g, 'GBL'], [/\bMpsd\b/g, 'MPSD'], [/\bAm Routes\b/g, 'Morning bus routes'], [/\bZB\b/g, 'Zoning Bylaw']];
+// A code with nothing readable in it ("2014b2400140", "P3", "Tt503", "Page10"); multi-word codes such as "PLR 7924 0269 00" are left alone.
+const codeOnly = (x: string) => !/\s/.test(x) && /\d/.test(x) && !/[A-Za-z]{5,}/.test(x) && !/^(SD|R|RS|RT|RM|RF|CD)\d+$/.test(x);
+const weak = (x: string) => !/[A-Za-z]{5,}/.test(x.replace(/\b\w*\d\w*\b/g, ' '));
+const FALLBACK: [RegExp, string][] = [[/laws\.abbotsford\.ca\/.*coabylaws/i, 'City bylaw'], [/laws\.abbotsford\.ca\/.*coaother/i, 'City policy'], [/council\.vancouver\.ca/i, 'Council report'],
+  [/guidelines\.vancouver\.ca/i, 'Planning guidelines'], [/bylaws\.vancouver\.ca/i, 'City bylaw'], [/bclaws\.gov\.bc\.ca/i, 'BC law or regulation'], [/alc\.gov\.bc\.ca\/.*applications-and-decisions/i, 'ALC application decision'], [/richmond\.ca\/.*Bylaw_/i, 'City bylaw'],
+  [/supabase\.co|storage\.googleapis\.com|files\.edl\.io|amazonaws\.com\/project|webflow\.com|kleinprojectmarketing/i, 'Project document'], [/_files\/ugd\/|filesusr\.com/i, 'Document (PDF)']];
+function tidy(t: string, url: string, h: string): string {
+  let s = t;
+  const tt = /^tt(\w+)$/i.exec(s);
+  if (tt && /translink|bctransit/.test(h)) return `Route ${tt[1].toUpperCase()} timetable`;
+  const hashed = /\b[0-9a-f]{20,}\b|\b[0-9a-f]{6,8}\s[0-9a-f]{4}\s/i.test(s);
+  s = s.replace(/(?<=[a-z])20(\d{1,3})20(?=[A-Z])/g, ' $1 ').replace(/\b28([A-Z][a-z]{2}) (\d{4})29\b/g, '($1 $2)');
+  if ((s.match(/[a-z]20[A-Z]/g) || []).length >= 2)                     // %20 written as "20": "Ladner20Village20Core20LVC"
+    s = s.replace(/(?<=[a-z])20(?=[A-Z])/g, ' ').replace(/(?<=[a-z])20(?=(?:19|20)\d\d)/g, ' ').replace(/(?<=\b(?:19|20)\d\d)20\b/g, '').replace(/\b20(?=[A-Z])/g, '').replace(/2028/g, ' (');
+  s = s.replace(/\.[0-9a-f]{9,12}\b/gi, '')                             // media-library suffixes (".210ffe2562")
+    .replace(/\b[0-9a-f]{20,}\b/gi, ' ')                                 // upload hashes
+    .replace(/\b[0-9a-f]{6,8}(?:\s[0-9a-f]{4}){3}\s[0-9a-f]{12}\b/gi, ' ')  // UUIDs ("F5d95918 9fb9 473e A62d 779ec16b1b5c")
+    .replace(/\b(?:Docs\s)?[0-9a-f]{6}\s(?=[0-9a-f]{8,}\b)/gi, ' ').replace(/\b[0-9a-f]{8,}\b/gi, (m) => (/[a-f]/.test(m) && /\d/.test(m) ? ' ' : m))
+    .replace(/(?<=\d|[A-Za-z]|\s)20\d{16}\b/g, '').replace(/\s\d{12,}\b/g, '')   // upload timestamps (202103081701305643)
+    .replace(/^\.\w+$/, '').replace(/\bDocx\d*\b/g, '').replace(/\s+/g, ' ').trim();
+  if (hashed) s = s.replace(/^\d\s(?=[A-Z])/, '');
+  s = s.replace(/\b(\d+)([A-Z][a-z]+)([A-Z][a-z]+)\b/g, '$1 $2 $3');   // "256AreaPlan"
+  for (const [re, to] of APOS) s = s.replace(re, to);
+  for (const [re, to] of ACRONYM) s = s.replace(re, to);
+  s = s.replace(/\b(\w{4,}) \1\b(?! Westminster)/g, '$1');            // "Beautiful Beautiful" (not "a New New Westminster")
+  if (/fraserhealth\.ca/i.test(url) && (!s || s.startsWith('.'))) { try { s = smart(decodeURIComponent(new URL(url).pathname.split('/').filter(Boolean).pop() || '').replace(/-/g, ' ')); } catch { /* keep */ } }
+  const bp = /pagesarchive\.blackpress\.ca\/.*\/[A-Z]{3,6}(\d{2})(\d{2})(\d{2})[_A-Z0-9]*\.pdf/i.exec(url);   // "ABBNZ260226" -> newspaper page, Feb 26, 2026
+  if (bp && /^[A-Z]{3,6}\d{6}/.test(s)) { const mo = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][+bp[2] - 1]; return mo ? `Newspaper page, ${mo} ${+bp[3]}, 20${bp[1]}` : 'Newspaper page'; }
+  const m = /bccourts\.ca\/.*\/(\d{4})(BCSC|BCCA)0*(\d+)\.htm/i.exec(url);
+  if (m) return `Court decision ${m[1]} ${m[2].toUpperCase()} ${m[3]}`;
+  const fb = FALLBACK.find(([re]) => re.test(url));
+  if (!s || s.length < 3 || codeOnly(s) || /^(Doc|Bylaw|Docs|Document)$/i.test(s) || (fb && weak(s)))
+    s = fb ? fb[1] : /\.pdf($|\?)/i.test(url) ? 'Official document' : 'Official page';
+  return s;
+}
 export function sourceInfo(text: string, url: string) {
   const h = host(url);
   const fixed = TITLE_BY_URL.find(([k]) => url.includes(k));
@@ -84,6 +127,7 @@ export function sourceInfo(text: string, url: string) {
   title = title.replace(/\bMillenium\b/g, 'Millennium').replace(/\bOakrige\b/g, 'Oakridge').replace(/\bCarraige\b/g, 'Carriage').replace(/\bTsawassen\b/g, 'Tsawwassen')
     .replace(/\bWhats Happening\b/g, "What's Happening").replace(/\bGuidlines\b/g, 'Guidelines').replace(/\bCommunitiy\b/g, 'Community').replace(/\bBulding\b/g, 'Building')
     .replace(/\bAbbottsford\b/g, 'Abbotsford').replace(/\b([Aa])ssigment\b/g, '$1ssignment');
+  title = tidy(title, url, h);
   if (title.length > 90) title = title.slice(0, 88).replace(/\s+\S*$/, '') + '…';
   const kind = /\.pdf($|\?)/i.test(url) ? 'PDF' : /\.(xlsx?|csv)($|\?)/i.test(url) ? 'Spreadsheet' : /\.pptx?($|\?)/i.test(url) ? 'Slides' : 'Web page';
   return { pub: publisher(url), title, kind, host: h };
