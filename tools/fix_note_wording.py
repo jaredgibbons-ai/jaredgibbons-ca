@@ -60,6 +60,10 @@ SUBS = [
     (r'\s*\(Ministry-listed\)', ''),
     (r',\s*labelled correctly\b', ''), (r'\bnever land figures\b', 'not land figures'),
     (r'\s*\(\s+[^()]*?\.pdf\)', ''),
+    (r'Floodplain (?:Bylaw No\. )?Designation and Construction Control Bylaw No\. Designation and Construction Control Bylaw No\. 2384, 2008 - Consolidated\.pdf', 'Floodplain Designation and Construction Control Bylaw No. 2384, 2008.'),
+    (r'Floodplain Bylaw No\. Designation and Construction Control Bylaw No\. 2384, 2008 - Consolidated\.pdf', 'Floodplain Designation and Construction Control Bylaw No. 2384, 2008.'),
+    (r'\s*\b(?:Designation and Construction Control Bylaw No\. 2384, 2008 - Consolidated|(?:Drainage )?System Protection Bylaw No\. 2266, 2007 - Consolidated Version|Bylaw No\. 2505, 2011 - Consolidated Version_0)\.pdf\b\.?', ''),
+    (r'^Ravine-edge character: Parks and Open Space\.pdf$', ''),
     (r'\s*\bArea [A-H] - Residential Rates 20\d\d\.pdf\b\.?', ''),   # a file name left after a sentence (D-331)
     (r'(?:(?<=[.!?)"”])(?<![Nn]o\.)\s+|^)(?:- )?[^.!?/—:\n]{1,70}?\.pdf\b\.?(?=\s|$)', ''),
     (r'\b(excluded|named|detailed|described|carried|stated|noted|corrected|blended|established|row|table|zones|townhomes|frame|thresholds|minimums|product|buildings|building|rule|rules|facts|exemptions|checks|Road|sources|complex|categories|covenants|centre|chains|area|Area|unresolved|zero|consent) in\.(?=\s|$)', r'\1.'),
