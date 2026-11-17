@@ -117,10 +117,10 @@ def unshout(s):
 
 
 SENT = re.compile(r'(?<=[.!?])\s+(?=[A-Z0-9“"(É])')
-count = {'manual': 0, 'drop': 0, 'sub': 0, 'strings': 0, 'removed': 0}
+count = {'rewrite': 0, 'manual': 0, 'drop': 0, 'sub': 0, 'strings': 0, 'removed': 0}
 
 
-def fix(s):
+def _fix(s):
     if EMPH.search(s) and len(s) > 40:
         u = unshout(s)
         if u != s: count['sub'] += 1; s = u
@@ -139,6 +139,19 @@ def fix(s):
     s = re.sub(r'\s{2,}', ' ', s).replace(' ,', ',').replace(' .', '.').replace('( ', '(')
     if s != o: count['strings'] += 1
     return s.strip() if s != o else s
+
+
+# Plain-language rewrites of whole research-note sentences (D-329), keyed by the sentence as the passes above leave it, so they
+# still apply after the local layer is regenerated from the same notes. A sentence whose source note changed no longer matches
+# and keeps its generated wording until it is rewritten again.
+RW = json.load(open(os.path.join(ROOT, 'tools/data/plain-rewrites.json'), encoding='utf-8'))
+
+
+def fix(s):
+    if s in RW: count['rewrite'] += 1; return RW[s]
+    r = _fix(s)
+    if r in RW: count['rewrite'] += 1; return RW[r]
+    return r
 
 
 def walk(o, key=None):
