@@ -128,5 +128,9 @@ for s in sorted(exist):
     if len(trail) == 3 and trail[1]['name'] == trail[2]['name'] and s in UP:
         trail = [home, {'name': UP[s][0], 'href': H(UP[s][1])}, trail[2]]
     out[s] = trail
+# A city that is also its own community page (Cloverdale, Mission) gave its guide two crumbs with the same name; keep the community
+# page, the guide's direct parent (site review 2026-11-17, D-327).
+for s_, tr in out.items():
+    out[s_] = [c for i, c in enumerate(tr) if not (0 < i < len(tr) - 1 and tr[i + 1]['name'] == c['name'])]
 json.dump(out, open(f'{ROOT}/src/data/breadcrumbs.json', 'w'), ensure_ascii=False, indent=0)
 print(len(out), kinds)
