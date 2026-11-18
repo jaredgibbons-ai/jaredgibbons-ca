@@ -180,11 +180,14 @@ const h1Text = cityName ? `${addr}, ${cityName}${_dupAddr && _mls ? ` (MLS® ${_
 const _cityCards = ownCards().filter((c) => c.status !== 'Expired' && c.city && c.city === cityName).sort((a, z) => z.soldTs - a.soldTs || a.slug.localeCompare(z.slug));
 const _me = _cityCards.findIndex((c) => c.slug === page.slug);
 const moreHere = _me < 0 ? [] : [1, 2, 3, 4].map((k) => _cityCards[(_me + k) % _cityCards.length]).filter((c) => c.slug !== page.slug).filter((c, i, a) => a.findIndex((x) => x.slug === c.slug) === i);
-// Homes for sale now (D-349): up to three of Jared's active listings, the same city and home type first, then the nearest in price.
-const _myType = (ownCards().find((c) => c.slug === page.slug)?.type || '').toLowerCase();
+// Homes for sale now (D-349, order changed in D-352): up to three of Jared's active listings. The same home type first, then the nearest
+// in price, then the same city: a $2.7M property was suggesting $400K condos because they were the only others in its city.
+const _meCard = ownCards().find((c) => c.slug === page.slug);
+const _myType = (_meCard?.type || '').toLowerCase();
+const _myPrice = _meCard?.priceNum || priceNum;   // a sold page shows no price, but its price still orders the suggestions
 const forSaleNow = ownCards().filter((c) => c.status === 'Active' && c.slug !== page.slug)
-  .map((c) => ({ c, score: (c.city === cityName ? 0 : 2) + ((c.type || '').toLowerCase() === _myType && _myType ? 0 : 1), gap: priceNum && c.priceNum ? Math.abs(c.priceNum - priceNum) : Number.MAX_SAFE_INTEGER }))
-  .sort((a, z) => a.score - z.score || a.gap - z.gap || a.c.slug.localeCompare(z.c.slug)).slice(0, 3).map((x) => x.c);
+  .map((c) => ({ c, type: (c.type || '').toLowerCase() === _myType && _myType ? 0 : 1, city: c.city === cityName ? 0 : 1, gap: _myPrice && c.priceNum ? Math.abs(c.priceNum - _myPrice) : Number.MAX_SAFE_INTEGER }))
+  .sort((a, z) => a.type - z.type || a.gap - z.gap || a.city - z.city || a.c.slug.localeCompare(z.c.slug)).slice(0, 3).map((x) => x.c);
 const pageUrl = `https://jaredgibbons.ca/our-listings.html/${page.slug}`;
 // Left off the printed feature sheet: the vendor's "Area Statistics" block (a heading and what follows it, up to the next heading).
 const noPrint = new WeakSet<any>();

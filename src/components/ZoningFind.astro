@@ -10,7 +10,8 @@ const codes = (Z as any).munis.flatMap((m: any) => m.zones.map((z: any) => z.id)
 <form class="zd-find" data-zfind data-zcodes={codes} novalidate>
   <label for="zd-addr">Property address</label>
   <div class="zd-find__row">
-    <input id="zd-addr" name="address" type="text" inputmode="text" autocomplete="street-address" placeholder="e.g. 2725 192 Street, Surrey" maxlength="120" required data-zaddr />
+    <input id="zd-addr" name="address" type="text" inputmode="text" autocomplete="off" list="zd-sug" placeholder="Start typing: 2725 192 Street" maxlength="120" required data-zaddr />
+    <datalist id="zd-sug"></datalist>
     <button type="submit" class="btn" data-zgo>Check zoning</button>
   </div>
   <p class="zd-find__fine">{fine}</p>
@@ -39,6 +40,9 @@ const codes = (Z as any).munis.flatMap((m: any) => m.zones.map((z: any) => z.id)
   .zd-res dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1rem;margin:0 0 var(--s4);padding-top:.75rem;border-top:1px solid #d9d9d9}
   .zd-res dt{font:700 .8125rem var(--f-head);letter-spacing:.06em;text-transform:uppercase;color:#555}
   .zd-res dd{margin:0;line-height:1.45}
+  .zd-res .zd-res__type{margin:0 0 .6rem;font:700 .6875rem var(--f-head);letter-spacing:.12em;text-transform:uppercase;color:#555}
+  .zd-res dl.zd-res__allows{grid-template-columns:1fr;gap:.15rem 0;padding-top:0;border-top:0}
+  .zd-res dl.zd-res__allows dd{margin:0 0 .6rem}
   .zd-res .zd-res__ctas{display:flex;flex-wrap:wrap;gap:.5rem;margin:0}
   .zd-res .zd-res__msg{margin:0 0 var(--s3);line-height:1.6}
   .zd-res .zd-res__note{margin:var(--s3) 0 0;font-size:.8125rem;line-height:1.5;color:#555}
@@ -71,7 +75,10 @@ const codes = (Z as any).munis.flatMap((m: any) => m.zones.map((z: any) => z.id)
       const c = el('p', 'zd-res__ctas'); c.append(link('tel:+16049281361', 'Call or text 604-928-1361', 'btn'), ask(addr)); res.append(c);
     };
     const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-    const show = (r: any, typed: string) => {
+    // The guide's zone summaries, fetched once, the first time a result needs them.
+    let zoneData: Promise<Record<string, { n: string; t: string; f: [string, string][]; h: string; r: string }>> | null = null;
+    const zones = () => (zoneData ||= fetch('/zoning-zones.json').then((x) => (x.ok ? x.json() : {})).catch(() => ({})));
+    const show = async (r: any, typed: string) => {
       res.hidden = false;
       const addr = r.address || typed;
       if (r.status === 'ok') {
@@ -84,7 +91,17 @@ const codes = (Z as any).munis.flatMap((m: any) => m.zones.map((z: any) => z.id)
           if (name) res.append(el('p', 'zd-res__name', name));
           if (cd) res.append(el('p', 'zd-res__name', 'A Comprehensive Development zone has its own site-specific bylaw: the rules are written for this one property or project. I can pull the bylaw for you.'));
           const id = r.guide ? `${r.guide}-${slug(z.code)}` : '';
-          if (id && codes.has(id)) ctas.append(link(`${onGuide ? '' : '/zonings.html'}#${id}`, `What ${z.code} allows`, 'btn'));
+          if (id && codes.has(id)) {
+            // What the zone allows, printed here (D-352): the guide's own summary lines for this zone, then the bylaw section.
+            const g = (await zones())[id];
+            if (g) {
+              if (g.t) res.append(el('p', 'zd-res__type', g.t));
+              if (g.f.length) { const zl = el('dl', 'zd-res__allows'); for (const [k, v] of g.f) zl.append(el('dt', '', k), el('dd', '', v)); res.append(zl); }
+              else res.append(el('p', 'zd-res__name', `I haven't written a plain-English summary of ${z.code} yet. The bylaw section below has the permitted uses, lot sizes and setbacks, or ask me and I'll go through it with you.`));
+              if (g.h) ctas.append(link(g.h, `${z.code} in the bylaw${g.r ? ` (${g.r})` : ''}`, 'btn', true));
+            }
+            ctas.append(link(`${onGuide ? '' : '/zonings.html'}#${id}`, `${z.code} in the zoning guide`));
+          }
           else if (z.link) ctas.append(link(z.link, `${z.code} in the bylaw`, 'btn', true));
         }
         const dl = el('dl');
@@ -110,10 +127,34 @@ const codes = (Z as any).munis.flatMap((m: any) => m.zones.map((z: any) => z.id)
       go.disabled = true; go.textContent = 'Checking…';
       try {
         const r = await fetch(`/api/zoning?address=${encodeURIComponent(typed)}`, { headers: { accept: 'application/json' } });
-        show(await r.json(), typed);
-      } catch { show({ status: 'error' }, typed); }
+        await show(await r.json(), typed);
+      } catch { await show({ status: 'error' }, typed); }
       go.disabled = false; go.textContent = 'Check zoning';
     };
+    // Address suggestions as you type (D-352), from the Province's public address service (BC Address Geocoder), limited to the
+    // municipalities the lookup covers. Picking a suggestion runs the check. If the service is slow or down, typing still works.
+    const sug = find.querySelector<HTMLDataListElement>('#zd-sug');
+    const AREAS = 'Surrey,White Rock,Delta,Langley,Township of Langley,Maple Ridge,Abbotsford';
+    let sugTimer = 0, sugSeq = 0, lastRun = '';
+    const suggest = async (q: string) => {
+      const seq = ++sugSeq;
+      try {
+        const u = new URL('https://geocoder.api.gov.bc.ca/addresses.json');
+        u.searchParams.set('addressString', q); u.searchParams.set('autoComplete', 'true'); u.searchParams.set('maxResults', '8');
+        u.searchParams.set('brief', 'true'); u.searchParams.set('localities', AREAS);
+        const j = await (await fetch(u, { headers: { accept: 'application/json' } })).json();
+        if (seq !== sugSeq || !sug) return;
+        const list = [...new Set((j.features || []).map((f: any) => f.properties || {}).filter((p: any) => p.matchPrecision === 'CIVIC_NUMBER' && p.fullAddress && !p.fullAddress.includes(' -- ')).map((p: any) => String(p.fullAddress).replace(/, BC$/, '')))].slice(0, 6) as string[];
+        sug.replaceChildren(...list.map((a) => { const o = document.createElement('option'); o.value = a; return o; }));
+      } catch { /* no suggestions this time */ }
+    };
+    inp.addEventListener('input', () => {
+      const v = inp.value.replace(/\s+/g, ' ').trim();
+      // A value that matches a suggestion exactly was picked from the list: check it straight away.
+      if (sug && v !== lastRun && [...sug.options].some((o) => o.value === v)) { lastRun = v; run(v); return; }
+      clearTimeout(sugTimer);
+      if (v.length >= 4 && /\d/.test(v)) sugTimer = window.setTimeout(() => suggest(v), 220);
+    });
     find.addEventListener('submit', (e) => {
       e.preventDefault();
       const typed = inp.value.replace(/\s+/g, ' ').trim();
