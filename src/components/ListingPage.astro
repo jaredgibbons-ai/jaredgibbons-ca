@@ -17,6 +17,7 @@ import { parseListingSlug, ownCards } from '../lib/own-listings';
 import { capsClass } from '../lib/caps';
 import Cta from './Cta.astro';
 import ListingGallery from './ListingGallery.astro';
+import PropertyCard from './PropertyCard.astro';
 import MortgageCalc from './MortgageCalc.astro';
 import MEDIA from '../data/listing-media.json';
 import { photoUrl, type Photo } from '../lib/photo-url';
@@ -179,6 +180,16 @@ const h1Text = cityName ? `${addr}, ${cityName}${_dupAddr && _mls ? ` (MLS® ${_
 const _cityCards = ownCards().filter((c) => c.status !== 'Expired' && c.city && c.city === cityName).sort((a, z) => z.soldTs - a.soldTs || a.slug.localeCompare(z.slug));
 const _me = _cityCards.findIndex((c) => c.slug === page.slug);
 const moreHere = _me < 0 ? [] : [1, 2, 3, 4].map((k) => _cityCards[(_me + k) % _cityCards.length]).filter((c) => c.slug !== page.slug).filter((c, i, a) => a.findIndex((x) => x.slug === c.slug) === i);
+// Homes for sale now (D-349): up to three of Jared's active listings, the same city and home type first, then the nearest in price.
+const _myType = (ownCards().find((c) => c.slug === page.slug)?.type || '').toLowerCase();
+const forSaleNow = ownCards().filter((c) => c.status === 'Active' && c.slug !== page.slug)
+  .map((c) => ({ c, score: (c.city === cityName ? 0 : 2) + ((c.type || '').toLowerCase() === _myType && _myType ? 0 : 1), gap: priceNum && c.priceNum ? Math.abs(c.priceNum - priceNum) : Number.MAX_SAFE_INTEGER }))
+  .sort((a, z) => a.score - z.score || a.gap - z.gap || a.c.slug.localeCompare(z.c.slug)).slice(0, 3).map((x) => x.c);
+const pageUrl = `https://jaredgibbons.ca/our-listings.html/${page.slug}`;
+// Left off the printed feature sheet: the vendor's "Area Statistics" block (a heading and what follows it, up to the next heading).
+const noPrint = new WeakSet<any>();
+{ let off = false; for (const b of blocks) { if (b.t === 'h') off = /^area statistics$/i.test(String(b.text || '').trim()); if (off) noPrint.add(b); } }
+const np = (b: any) => (noPrint.has(b) ? ' ls__np' : '');
 const rawMeta = String(seo['Meta description'] || '').replace(/^\[SOLD\]:\s*/i, '').trim();
 // Every listing gets the factual snippet: the address, what it is, its status and price. The archive's MLS marketing text stays in the page body.
 // Video and 3D tour (D-269): src/data/listing-media.json. The video loads only when tapped (a photo and a play button until then).
@@ -231,6 +242,14 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 && (show
             <p class="ls__act">{page.status === 'Active'
               ? <><a class="btn" href={showMail} data-ev="book_showing">Book a showing</a><a class="btn btn--ghost" href={showSms} data-ev="text_jared">Text Jared</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a>{media?.video && <a class="btn btn--ghost" href="#ls-media">▶ Watch the video</a>}{media?.floorplan && <a class="btn btn--ghost" href="#ls-fp">Floor plan</a>}{media?.tour3d && <a class="btn btn--ghost" href={media.tour3d} target="_blank" rel="noopener">3D tour</a>}</>
               : <><a class="btn" href={similarMail}>Ask about homes like this</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call 604-928-1361</a>{media?.video && !vidTop && <a class="btn btn--ghost" href="#ls-media">▶ Watch the video</a>}</>}</p>
+            <p class="ls__share">
+              <span class="ls__share-l">Share</span>
+              <button type="button" class="ls__sh" data-copy={pageUrl}>Copy link</button>
+              <a class="ls__sh" href={`sms:?&body=${encodeURIComponent(`${where}: ${pageUrl}`)}`} data-ev="share_text">Text</a>
+              <a class="ls__sh" href={`mailto:?subject=${encodeURIComponent(where)}&body=${encodeURIComponent(`Have a look at ${where}:\n${pageUrl}`)}`} data-ev="share_email">Email</a>
+              <a class="ls__sh" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`} target="_blank" rel="noopener" data-ev="share_facebook">Facebook<span class="sr-only"> (opens in a new tab)</span></a>
+              <button type="button" class="ls__sh" data-print>Print feature sheet</button>
+            </p>
             {vidTop && (
             <figure class="ls__vid ls__vid--top">
               <button type="button" class="ls__play" data-yt={media!.video} aria-label={`Play the video tour of ${where}`}>
@@ -282,11 +301,11 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 && (show
   <section class="section section--cream">
     <div class="wrap ls">
       {bodyBlocks.map((b) => {
-        if (b.t === 'h') return <h2 class="ls__h">{b.text}</h2>;
-        if (b.t === 'p') return <p class="ls__p">{b.parts.map((x: any) => x.h ? <a href={x.h}>{x.t}</a> : x.t).reduce((a: any[], x: any, i: number) => (a.length ? [...a, /^[.,;:!?)]/.test(String(b.parts[i].t || '')) ? '' : ' ', x] : [x]), [])}</p>;
+        if (b.t === 'h') return <h2 class={'ls__h' + np(b)}>{b.text}</h2>;
+        if (b.t === 'p') return <p class={'ls__p' + np(b)}>{b.parts.map((x: any) => x.h ? <a href={x.h}>{x.t}</a> : x.t).reduce((a: any[], x: any, i: number) => (a.length ? [...a, /^[.,;:!?)]/.test(String(b.parts[i].t || '')) ? '' : ' ', x] : [x]), [])}</p>;
         if (b.t === 'list') return <ul class="ls__list">{b.items.map((it: any) => <li>{it.map((x: any) => x.t).join(' ')}</li>)}</ul>;
         if (b.t === 'facts') return (
-          <dl class="ls__facts">
+          <dl class={'ls__facts' + np(b)}>
             {b.items.map((it: any) => (
               <div class="ls__row">
                 <dt>{it.k}</dt>
@@ -382,8 +401,21 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 && (show
       <p><a href="/sold-properties.html">All of Jared's sold homes</a></p>
     </div></section>
   )}
+  {forSaleNow.length > 0 && (
+    <section class="section section--cream ls__now" aria-labelledby="ls-now-h"><div class="wrap">
+      <h2 id="ls-now-h" class="h2">{page.status === 'Active' ? 'More homes for sale' : 'Homes for sale now'}</h2>
+      <ul class="cards">{forSaleNow.map((c) => <PropertyCard href={c.href} photoSlug={c.slug} street={c.street} city={c.city} price={c.price} beds={c.beds} baths={c.baths} floorArea={c.sqft} type={c.type} status="Active" />)}</ul>
+      <p class="ls__nowl">{area?.page && <a class="btn btn--ghost" href={`/${area.page}.html`}>{area.sub} homes for sale</a>}<a class="btn btn--ghost" href="/our-listings.html">All of Jared's listings</a><a class="btn btn--ghost" href="/recip.html">Search all listings</a></p>
+    </div></section>
+  )}
+  <p class="ls__printfoot">Jared Gibbons, REALTOR® · Royal LePage Little Oak Realty · 604-928-1361 · jaredgibbons@royallepage.ca · jaredgibbons.ca</p>
   <Cta />
   {explore && <ExploreLinks data={explore} compact={true} />}
+  <div class="ls__stick" data-stick hidden>
+    {page.status === 'Active'
+      ? <><a class="btn" href={showMail} data-ev="book_showing">Book a showing</a><a class="btn btn--ghost" href={showSms} data-ev="text_jared">Text</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call</a></>
+      : <><a class="btn" href={similarMail}>Ask about homes like this</a><a class="btn btn--ghost" href="tel:604-928-1361" data-ev="call_jared">Call</a></>}
+  </div>
 </main>
 </Base>
 
@@ -395,6 +427,22 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 && (show
     f.title = b.getAttribute('aria-label') || 'Video tour'; f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen = true;
     b.replaceWith(f);
   }));
+  // Share row (D-349): copy the page's address, or print the page as a feature sheet (the print layout is at the end of the styles).
+  document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((b) => b.addEventListener('click', async () => {
+    const label = b.textContent;
+    try { await navigator.clipboard.writeText(b.dataset.copy!); b.textContent = 'Link copied'; }
+    catch { window.prompt('Copy this link', b.dataset.copy); }
+    setTimeout(() => { b.textContent = label; }, 2500);
+  }));
+  document.querySelectorAll<HTMLButtonElement>('[data-print]').forEach((b) => b.addEventListener('click', () => window.print()));
+  // Phones: once the buttons under the price have scrolled away, the same actions stay at the bottom of the screen.
+  const stick = document.querySelector<HTMLElement>('[data-stick]'), act = document.querySelector<HTMLElement>('.ls__act');
+  if (stick && act && 'IntersectionObserver' in window) {
+    new IntersectionObserver(([e]) => {
+      const show = !e.isIntersecting && e.boundingClientRect.top < 0;
+      stick.hidden = !show; document.documentElement.classList.toggle('has-stick', show);
+    }).observe(act);
+  }
   // Map: on tap, find the address with Places and show it on a Google map with a pin (same key and loader as the area maps).
   import { loadGoogle } from '../lib/gmaps.js';
   document.querySelectorAll<HTMLElement>('.ls__map[data-map]').forEach((m) => {
@@ -479,4 +527,52 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 && (show
   .ls__credit{font:600 .875rem var(--f-head);margin:0 0 .75rem}
   .ls__disc{font-size:.8125rem;color:var(--grey);margin:0}
   @media (max-width:36rem){.ls__row{grid-template-columns:1fr;gap:.15rem}}
+  /* Share row (D-349) */
+  .ls__share{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .5rem;margin:.9rem 0 1.5rem;font-size:.875rem}
+  .ls__share-l{font:700 .6875rem/1 var(--f-head);letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-right:.25rem}
+  .ls__sh{appearance:none;display:inline-flex;align-items:center;min-height:2.25rem;padding:0 .8rem;border:1px solid var(--ink);border-radius:0;background:#fff;color:var(--ink);font:700 .75rem/1 var(--f-head);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;cursor:pointer}
+  .ls__sh:hover{background:var(--ink);color:#fff}
+  .ls__nowl{display:flex;flex-wrap:wrap;gap:.75rem;margin:var(--s5) 0 0}
+  .ls__printfoot{display:none}
+  /* Phones: the showing buttons stay on screen */
+  .ls__stick{display:none}
+  @media (max-width:700px){
+    .ls__stick:not([hidden]){position:fixed;left:0;right:0;bottom:0;z-index:90;display:flex;gap:.5rem;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid var(--ink);box-shadow:0 -6px 18px rgba(0,0,0,.08)}
+    .ls__stick .btn{flex:1 1 0;justify-content:center;min-height:3rem;padding-inline:.5rem;font-size:.8125rem;white-space:nowrap}
+    .ls__stick .btn:first-child{flex:2 1 0}
+  }
 </style>
+<style is:global>
+  /* On a listing page the phone's bottom bar is the listing's own (Book a showing, Text, Call), not the site-wide one. */
+  @media (max-width:720px){body:has(.ls__h1) .action-bar{display:none!important}html.has-stick .to-top{bottom:5.25rem}}
+  /* Feature sheet (D-349): what "Print feature sheet" prints or saves as a PDF. The address, price, facts, photos, description and
+     floor plan, with Jared's contact line at the foot; the site's menus, buttons, video, maps, calculator and forms are left off. */
+  @media print{
+    @page{margin:12mm}
+    body:has(.ls__h1) .site-header,body:has(.ls__h1) .site-footer,body:has(.ls__h1) .cta,body:has(.ls__h1) .skip,body:has(.ls__h1) nav,
+    body:has(.ls__h1) .action-bar,body:has(.ls__h1) .to-top-nav,body:has(.ls__h1) .ls__act,body:has(.ls__h1) .ls__share,body:has(.ls__h1) .ls__stick,body:has(.ls__h1) .ls__vid,body:has(.ls__h1) .ls__now,body:has(.ls__h1) .ls__more,
+    body:has(.ls__h1) .ls__map,body:has(.ls__h1) section:has(#ls-map-h),body:has(.ls__h1) section:has(#ls-mc-h),body:has(.ls__h1) section:has(#ls-area-h),
+    body:has(.ls__h1) .explore,body:has(.ls__h1) form,body:has(.ls__h1) iframe,body:has(.ls__h1) button,body:has(.ls__h1) .crumbs{display:none!important}
+    body:has(.ls__h1){background:#fff!important;color:#000!important;font-size:10.5pt}
+    body:has(.ls__h1) .section{padding:0 0 6mm!important;background:#fff!important}
+    body:has(.ls__h1) .wrap{max-width:none!important;padding:0!important}
+    body:has(.ls__h1) a{color:#000!important;text-decoration:none!important}
+    body:has(.ls__h1) img{break-inside:avoid}
+    body:has(.ls__h1) h2,body:has(.ls__h1) h3{break-after:avoid}
+    body:has(.ls__h1) .ls__np,body:has(.ls__h1) .ls__np + .ls__facts,body:has(.ls__h1) .ls__disc,body:has(.ls__h1) .ls__agent,body:has(.ls__h1) .gal__t,body:has(.ls__h1) .gal__open,body:has(.ls__h1) .gal__thumbs li:nth-child(n+5),body:has(.ls__h1) dialog{display:none!important}
+    body:has(.ls__h1) .ls__h1{font-size:20pt!important;margin:0 0 2mm!important}
+    body:has(.ls__h1) .gal__hero{display:block;aspect-ratio:auto!important}
+    body:has(.ls__h1) .gal__hero img{display:block;width:100%;height:auto;max-height:100mm;object-fit:cover}
+    body:has(.ls__h1) .gal__thumbs{display:grid!important;grid-template-columns:repeat(4,1fr);gap:2mm;margin:2mm 0 0;padding:0;list-style:none}
+    body:has(.ls__h1) .gal__thumbs img{display:block;width:100%;height:28mm;object-fit:cover}
+    body:has(.ls__h1) .ls__facts{display:block!important;columns:2;column-gap:10mm;margin:0 0 4mm}
+    body:has(.ls__h1) .ls__row{display:grid!important;grid-template-columns:42% 58%;gap:0 2mm;break-inside:avoid;padding:.8mm 0;border-bottom:.5pt solid #bbb;font-size:9pt}
+    body:has(.ls__h1) .ls__row dt,body:has(.ls__h1) .ls__row dd{margin:0;padding:0;border:0}
+    body:has(.ls__h1) .ls__h{font-size:11pt!important;margin:4mm 0 1.5mm!important}
+    body:has(.ls__h1) .ls__table{font-size:8.5pt}
+    body:has(.ls__h1) .ls__table th,body:has(.ls__h1) .ls__table td{padding:.6mm 1.5mm}
+    body:has(.ls__h1) .ls__fp img{max-height:120mm;width:auto;max-width:100%}
+    body:has(.ls__h1) .ls__printfoot{display:block!important;margin:6mm 0 0;padding-top:3mm;border-top:1px solid #000;font:700 9.5pt/1.4 var(--f-head);text-align:center}
+  }
+</style>
+
