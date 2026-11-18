@@ -14,6 +14,9 @@ const MR = 'https://geoservices.mapleridge.ca/server/rest/services/DataCatalog';
 const DE = 'https://maps.delta.ca/arcgis/rest/services/DeltaMap';                          // City of Delta
 const CH = 'https://maps.chilliwack.com/arcgis/rest/services/External';                    // City of Chilliwack
 const MI = 'https://esri.mission.ca/ags/rest/services/Geocortex/Planning/MapServer';       // City of Mission
+const BU = 'https://gis.burnaby.ca/arcgis/rest/services/OpenData';                              // City of Burnaby
+const CQ = 'https://geodata.coquitlam.ca/arcgis/rest/services/DynamicServices';                // City of Coquitlam
+const VA = 'https://opendata.vancouver.ca/api/explore/v2.1/catalog/datasets/zoning-districts-and-labels';   // City of Vancouver (open data API, not a map server)
 // The Province's ALR polygons, for a municipality whose own map service has no ALR layer (Mission).
 const BC_ALR = 'https://delivery.maps.gov.bc.ca/arcgis/rest/services/whse/bcgw_pub_whse_legal_admin_boundaries/MapServer/23';
 
@@ -31,6 +34,10 @@ export const MUNIS = {
   'Chilliwack': { name: 'Chilliwack', guide: 'zd-chilliwack', zoning: `${CH}/Dynamic_Zone/MapServer/3`, code: 'CalcField', desc: '', alr: `${CH}/Dynamic_ALR/MapServer/0`, lot: `${CH}/Dynamic_Parcels/MapServer/1`, ocp: [`${CH}/Dynamic_OCP2050/MapServer/3`, 'LandUse'], map: 'https://www.chilliwack.com/' },
   // Mission (D-354): no public parcel layer, so no lot size; ALR from the Province's layer.
   'Mission': { name: 'Mission', guide: 'zd-mission', zoning: `${MI}/2`, code: 'Zone_Class', desc: 'Zoning', alr: BC_ALR, lot: '', ocp: [`${MI}/24`, 'O2_Type_1'], map: 'https://www.mission.ca/' },
+  // Vancouver, Burnaby and Coquitlam (D-355): ALR from the Province's layer. Vancouver's zoning comes from its open data API (`ods`).
+  'Vancouver': { name: 'Vancouver', guide: 'zd-vancouver', zoning: VA, ods: true, code: 'zoning_district', desc: 'zoning_classification', alr: BC_ALR, lot: '', map: 'https://vancouver.ca/' },
+  'Burnaby': { name: 'Burnaby', guide: '', zoning: `${BU}/OpenData1/MapServer/8`, code: 'ZONECODE', desc: '', alr: BC_ALR, lot: '', map: 'https://www.burnaby.ca/' },
+  'Coquitlam': { name: 'Coquitlam', guide: 'zd-coquitlam', zoning: `${CQ}/Planning/MapServer/1`, code: 'ZONING', desc: '', alr: BC_ALR, lot: `${CQ}/Cadastral/MapServer/16`, map: 'https://www.coquitlam.ca/' },
 };
 
 const json = (body, status = 200, cache = 'no-store') => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': cache, 'x-content-type-options': 'nosniff' } });
@@ -50,6 +57,13 @@ async function get(fetcher, url) {
 }
 // ALR: count only. Asking Surrey's ALR layer for attributes times out (one very large polygon); a count answers in milliseconds.
 const inAlr = (layer, [x, y]) => `${layer}/query?f=json&geometry=${x},${y}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&returnCountOnly=true`;
+// An open data API (Vancouver) answers in its own shape; hand back the map-server shape the rest of the lookup reads.
+async function zonesAt(fetcher, m, pt) {
+  if (!m.ods) return get(fetcher, at(m.zoning, pt));
+  const where = `intersects(geom, geom'POINT(${pt[0]} ${pt[1]})')`;
+  const j = await get(fetcher, `${m.zoning}/records?limit=5&select=${m.code},${m.desc}&where=${encodeURIComponent(where)}`);
+  return { features: (j.results || []).map((r) => ({ attributes: r })) };
+}
 const at = (layer, [x, y], geom = false) => `${layer}/query?f=json&geometry=${x},${y}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&returnGeometry=${geom}${geom ? '&outSR=26910' : ''}`;
 
 // Square metres of a polygon in UTM zone 10N (metres), holes subtracted (rings are signed).
@@ -99,7 +113,7 @@ export async function lookup(address, fetcher = fetch) {
   if (!pt) return { status: 'notfound', address: shown, locality: m.name };
 
   const [z, a, l, o, fl] = await Promise.all([
-    get(fetcher, at(m.zoning, pt)),
+    zonesAt(fetcher, m, pt),
     m.alr ? get(fetcher, inAlr(m.alr, pt)).catch(() => null) : Promise.resolve({ count: 0 }),
     m.lot ? get(fetcher, at(m.lot, pt, true)).catch(() => null) : Promise.resolve(null),
     m.ocp ? get(fetcher, at(m.ocp[0], pt).replace('outFields=*', `outFields=${m.ocp[1]}`)).catch(() => null) : Promise.resolve(null),

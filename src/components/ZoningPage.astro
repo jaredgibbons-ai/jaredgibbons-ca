@@ -312,6 +312,8 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Zoning Guide', href: '/zon
   .zd-clear{position:absolute;right:.4rem;min-height:2.25rem;padding:0 .8rem;border:0;background:var(--cream);font:700 .75rem var(--f-head);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
   .zd-chips{display:flex;gap:.4rem;align-items:center;overflow-x:auto;scrollbar-width:none;margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter)}
   .zd-chips::-webkit-scrollbar{display:none}
+  /* Twelve municipalities no longer fit on one line (D-355): the municipality row wraps instead of scrolling out of sight. */
+  .zd-chips:not(.zd-chips--type){flex-wrap:wrap;overflow-x:visible}
   .zd-chip{flex:none;min-height:2.25rem;padding:0 .95rem;border:1px solid var(--ink);background:#fff;color:var(--ink);font:700 .8125rem/1 var(--f-head);white-space:nowrap;cursor:pointer;transition:background .12s,color .12s}
   .zd-chip:hover{background:var(--cream)}
   .zd-chip[aria-pressed="true"]{background:var(--ink);color:#fff}

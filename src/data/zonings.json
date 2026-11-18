@@ -1,15 +1,15 @@
 {
  "eyebrow": "Zoning directory",
- "h2": "Zoning in Langley, Surrey, White Rock, Abbotsford, Delta and the Fraser Valley",
+ "h2": "Zoning in Langley, Surrey, White Rock, Delta, Abbotsford, Vancouver and the Fraser Valley",
  "lead": "Plain-English summaries of residential, farm, rural, acreage, commercial and industrial zones: what you can build, the smallest new lot and the height limit, with a link to the official bylaw for every zone. Type an address to see its zone, or search any zone code.",
- "checked": "Checked against each official bylaw on October 2, 2026, with fuller summaries and the White Rock and City of Langley zones added November 18, 2026. Zoning changes often, so always confirm with the municipality.",
+ "checked": "Checked against each official bylaw on October 2, 2026, with fuller summaries and White Rock, City of Langley, Pitt Meadows, Coquitlam and Vancouver added November 18, 2026. Zoning changes often, so always confirm with the municipality.",
  "general": [
   "General information only.",
   "These summaries may not reflect recent amendments and are not legal advice. Always confirm zoning, permitted uses and ALR status with the municipality and the Agricultural Land Commission before you buy."
  ],
  "lookup": {
   "h": "Looking at a specific property?",
-  "d": "Type an address to see its zoning, ALR status, lot size and other public map checks. It covers Surrey, White Rock, Delta, Langley (City and Township), Maple Ridge, Abbotsford, Chilliwack and Mission. Anywhere else, send me the address and I'll check its zoning, ALR status and what you can build before you write an offer.",
+  "d": "Type an address to see its zoning, ALR status, lot size and other public map checks. It covers Surrey, White Rock, Langley (City and Township), Delta including Ladner and Tsawwassen, Maple Ridge, Abbotsford, Chilliwack including Sardis, Mission, Vancouver, Burnaby and Coquitlam. Anywhere else, send me the address and I'll check its zoning, ALR status and what you can build before you write an offer.",
   "labels": [
    "Property address",
    "Your name (optional)"
@@ -9827,6 +9827,944 @@
    ]
   },
   {
+   "id": "zd-pittmeadows",
+   "name": "Pitt Meadows",
+   "bylaw": "City of Pitt Meadows Zoning Bylaw No. 2505, 2011",
+   "source": "Source: Bylaw PDF on pittmeadows.ca, revised to January 11, 2022. All zones. It predates the 2024 provincial small-scale housing rules, which now allow up to 3, 4 or 6 homes on many residential lots, so confirm the current unit count with the City. Pitt Meadows publishes no zoning map data, so the address lookup does not cover it.",
+   "href": "https://www.pittmeadows.ca/business-and-building/zoning-and-land-use/zoning-and-rezoning",
+   "zones": [
+    {
+     "id": "zd-pittmeadows-a-1",
+     "code": "A-1",
+     "name": "General Agricultural Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Agriculture, kennels, agri-tourism and farm retail sales."
+      ],
+      [
+       "Homes",
+       "One farm house per lot, up to 500 m² (about 5,382 sq ft) of floor area, which can have a secondary suite. One additional farm house on lots of 8 ha to under 40 ha, and two on 40 ha or more. Migrant farm-worker housing is also allowed."
+      ],
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage for homes 5% on lots under 4 ha and 1% on larger lots. Farm house up to 2.5 storeys or 10 m (about 33 ft)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.8.1"
+    },
+    {
+     "id": "zd-pittmeadows-a-2",
+     "code": "A-2",
+     "name": "Large Lot Agricultural Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Agriculture, kennels, agri-tourism and farm retail sales."
+      ],
+      [
+       "Homes",
+       "One farm house per lot, up to 500 m² (about 5,382 sq ft) of floor area, which can have a secondary suite. One additional farm house on lots of 8 ha to under 40 ha, and two on 40 ha or more. Migrant farm-worker housing is also allowed."
+      ],
+      [
+       "Min. new lot",
+       "16 ha (about 39.5 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage for homes 5% on lots under 4 ha and 1% on larger lots. Farm house up to 2.5 storeys or 10 m (about 33 ft)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.8.2"
+    },
+    {
+     "id": "zd-pittmeadows-a-3",
+     "code": "A-3",
+     "name": "Agricultural and Farm Industrial Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Agriculture, farm industrial uses, kennels and farm retail sales."
+      ],
+      [
+       "Homes",
+       "One farm house per lot, up to 500 m² of floor area."
+      ],
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "Limits",
+       "Farm house up to 2.5 storeys or 10 m (about 33 ft)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.8.3"
+    },
+    {
+     "id": "zd-pittmeadows-a-4",
+     "code": "A-4",
+     "name": "Agricultural and Golf Course Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Agriculture and golf courses, with a clubhouse, driving range, restaurant and banquet facility."
+      ],
+      [
+       "Homes",
+       "One caretaker unit per golf course, up to 100 m²."
+      ],
+      [
+       "Min. new lot",
+       "16 ha (about 39.5 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 1%. Buildings up to 12 m (about 39 ft)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.8.4"
+    },
+    {
+     "id": "zd-pittmeadows-a-5",
+     "code": "A-5",
+     "name": "Agricultural and Wildlife Management Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Agriculture and wildlife management, with farm retail sales. No dwellings are listed."
+      ],
+      [
+       "Min. new lot",
+       "16 ha (about 39.5 acres)."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.8.5"
+    },
+    {
+     "id": "zd-pittmeadows-rr-1",
+     "code": "RR-1",
+     "name": "Estate Lot Rural Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Homes",
+       "One single-family dwelling per lot, with a secondary suite and a garden suite allowed."
+      ],
+      [
+       "Also allowed",
+       "Light agriculture, bed and breakfast, boarding and a home-based business. Farm retail sales."
+      ],
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 10%. Homes up to 2.5 storeys or 10 m (about 33 ft), whichever is less."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.9.1"
+    },
+    {
+     "id": "zd-pittmeadows-rr-2",
+     "code": "RR-2",
+     "name": "Large Lot Rural Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Homes",
+       "One single-family dwelling per lot, with a secondary suite and a garden suite allowed."
+      ],
+      [
+       "Also allowed",
+       "Light agriculture, bed and breakfast, boarding and a home-based business."
+      ],
+      [
+       "Min. new lot",
+       "4 ha (about 9.9 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 10%. Homes up to 2.5 storeys or 10 m (about 33 ft), whichever is less."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.9.2"
+    },
+    {
+     "id": "zd-pittmeadows-rr-3",
+     "code": "RR-3",
+     "name": "Medium Lot Rural Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Homes",
+       "One single-family dwelling per lot, with a secondary suite and a garden suite allowed."
+      ],
+      [
+       "Also allowed",
+       "Light agriculture, bed and breakfast, boarding and a home-based business."
+      ],
+      [
+       "Min. new lot",
+       "2 ha (about 4.9 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 10%. Homes up to 2.5 storeys or 10 m (about 33 ft), whichever is less."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.9.3"
+    },
+    {
+     "id": "zd-pittmeadows-rr-4",
+     "code": "RR-4",
+     "name": "Small Lot Rural Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Homes",
+       "One single-family dwelling per lot, with a secondary suite and a garden suite allowed."
+      ],
+      [
+       "Also allowed",
+       "Light agriculture, bed and breakfast, boarding and a home-based business."
+      ],
+      [
+       "Min. new lot",
+       "1 ha (about 2.5 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 10%. Homes up to 2.5 storeys or 10 m (about 33 ft), whichever is less."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.9.4"
+    },
+    {
+     "id": "zd-pittmeadows-rr-5",
+     "code": "RR-5",
+     "name": "Rural Residential Cluster Housing Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Homes",
+       "Single-family dwellings in a cluster layout, with a secondary suite and a garden suite allowed."
+      ],
+      [
+       "Min. new lot",
+       "0.2 ha (about 0.5 acres), with 70% of the lots at least 0.4 ha."
+      ],
+      [
+       "Limits",
+       "Lot coverage 11%. Homes up to 2.5 storeys or 10 m (about 33 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.9.5"
+    },
+    {
+     "id": "zd-pittmeadows-rs",
+     "code": "RS",
+     "name": "Large Lot Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "One single-family dwelling, with a secondary suite and a garden suite allowed."
+      ],
+      [
+       "Also allowed",
+       "Light agriculture, boarding and a home-based business."
+      ],
+      [
+       "Min. new lot",
+       "0.2 ha (about 0.5 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 30%. Homes up to 9 m (about 30 ft) with a pitched roof, otherwise 7.4 m."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.10.1"
+    },
+    {
+     "id": "zd-pittmeadows-r-1",
+     "code": "R-1",
+     "name": "Medium Lot Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "A single-family dwelling, or a duplex on a corner or through lot."
+      ],
+      [
+       "Min. new lot",
+       "409 m² (about 4,402 sq ft) for a single-family dwelling; 660 m² for a duplex."
+      ],
+      [
+       "Limits",
+       "Lot coverage 40%. Homes up to 2 storeys and 9 m (about 30 ft) with a pitched roof, otherwise 7.4 m."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.10.2"
+    },
+    {
+     "id": "zd-pittmeadows-r-2",
+     "code": "R-2",
+     "name": "Small Lot Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "One single-family dwelling."
+      ],
+      [
+       "Min. new lot",
+       "350 m² (about 3,767 sq ft)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 50%. Homes up to 2 storeys and 9 m (about 30 ft) with a pitched roof, otherwise 7.4 m."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.10.3"
+    },
+    {
+     "id": "zd-pittmeadows-rd",
+     "code": "RD",
+     "name": "Duplex Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "A duplex or a single-family dwelling."
+      ],
+      [
+       "Min. new lot",
+       "790 m² (about 8,503 sq ft)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 40%. Homes up to 9 m (about 30 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.10.4"
+    },
+    {
+     "id": "zd-pittmeadows-rm-1",
+     "code": "RM-1",
+     "name": "Multi-Family Residential 1 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Townhouses."
+      ],
+      [
+       "Min. new lot",
+       "0.4 ha (about 1 acre)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 40%. Buildings up to 10 m (about 33 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.10.5"
+    },
+    {
+     "id": "zd-pittmeadows-rm-2",
+     "code": "RM-2",
+     "name": "Multi-Family Residential 2 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Townhouses and apartments."
+      ],
+      [
+       "Min. new lot",
+       "3,035 m² (about 0.75 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 40%. Buildings up to 10 m (about 33 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.10.6"
+    },
+    {
+     "id": "zd-pittmeadows-rm-3",
+     "code": "RM-3",
+     "name": "Multi-Family Residential 3 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Townhouses and apartments."
+      ],
+      [
+       "Min. new lot",
+       "0.4 ha (about 1 acre)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 40%. Buildings up to 13 m (about 43 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.10.7"
+    },
+    {
+     "id": "zd-pittmeadows-rm-4",
+     "code": "RM-4",
+     "name": "Multi-Family Residential 4 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Mid-rise and high-rise apartments."
+      ],
+      [
+       "Min. new lot",
+       "0.4 ha (about 1 acre)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 40%. Buildings up to 40 m (about 131 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.10.8"
+    },
+    {
+     "id": "zd-pittmeadows-rm-5",
+     "code": "RM-5",
+     "name": "Multi-Family Residential 5 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "High-rise apartments."
+      ],
+      [
+       "Min. new lot",
+       "0.4 ha (about 1 acre)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 50%. Buildings up to 40 m (about 131 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.10.9"
+    },
+    {
+     "id": "zd-pittmeadows-c-1",
+     "code": "C-1",
+     "name": "Highway Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Retail, offices, hotels, restaurants, vehicle dealerships, car washes and gas bars."
+      ],
+      [
+       "Min. new lot",
+       "2.5 ha (about 6.2 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 50%. Buildings up to 12 m (about 39 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.11.1"
+    },
+    {
+     "id": "zd-pittmeadows-c-2",
+     "code": "C-2",
+     "name": "Neighbourhood Centre Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Retail, offices, restaurants (including drive-through), liquor retail and veterinary clinics."
+      ],
+      [
+       "Min. new lot",
+       "6,000 m² (about 1.5 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 60%. Buildings up to 12 m (about 39 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.11.2"
+    },
+    {
+     "id": "zd-pittmeadows-c-3",
+     "code": "C-3",
+     "name": "Community Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Retail, offices, personal services, restaurants and government services."
+      ],
+      [
+       "Homes",
+       "One accessory dwelling unit per parcel."
+      ],
+      [
+       "Min. new lot",
+       "1,000 m² (about 10,764 sq ft)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 60%. Buildings up to 12 m or 3 storeys, whichever is less."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.11.3"
+    },
+    {
+     "id": "zd-pittmeadows-c-4",
+     "code": "C-4",
+     "name": "Local Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Offices and child daycare."
+      ],
+      [
+       "Homes",
+       "An accessory residence for the proprietor and family."
+      ],
+      [
+       "Min. new lot",
+       "668 m² beside a residential lot, or 500 m² beside a commercial lot."
+      ],
+      [
+       "Limits",
+       "Lot coverage 40%. Buildings up to 9 m (about 30 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.11.4"
+    },
+    {
+     "id": "zd-pittmeadows-c-5",
+     "code": "C-5",
+     "name": "Gas Station Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "A gas station with retail, a restaurant (including drive-through) and a car wash."
+      ],
+      [
+       "Min. new lot",
+       "1,400 m² (about 0.35 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 30%. Buildings up to 6 m (about 20 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.11.5"
+    },
+    {
+     "id": "zd-pittmeadows-c-6",
+     "code": "C-6",
+     "name": "Neighbourhood Pub Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "A neighbourhood pub (minor liquor-primary establishment) with accessory liquor retail."
+      ],
+      [
+       "Min. new lot",
+       "1,500 m² (about 0.37 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 50%. Buildings up to 12 m (about 39 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.11.6"
+    },
+    {
+     "id": "zd-pittmeadows-tc",
+     "code": "TC",
+     "name": "Town Centre Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Retail, offices, hotels, restaurants, personal services and cultural uses."
+      ],
+      [
+       "Homes",
+       "Apartments in mixed-use buildings."
+      ],
+      [
+       "Min. new lot",
+       "2,000 m² (about 0.5 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 60%, or 90% with landscaped roofs. Buildings up to 16 m or 4 storeys, whichever is less."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.12.1"
+    },
+    {
+     "id": "zd-pittmeadows-mc",
+     "code": "MC",
+     "name": "Mainstreet Commercial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Retail, personal services, restaurants, offices, indoor recreation and cultural facilities."
+      ],
+      [
+       "Homes",
+       "Apartments and townhomes."
+      ],
+      [
+       "Min. new lot",
+       "450 m² (about 4,844 sq ft)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 95%. Buildings up to 12 m or 3 storeys."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.12.2"
+    },
+    {
+     "id": "zd-pittmeadows-i-1",
+     "code": "I-1",
+     "name": "General Industrial Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "General industry, warehousing, storage, recycling depots and vehicle body repair, with a caretaker unit."
+      ],
+      [
+       "Min. new lot",
+       "1.7 ha (about 4.2 acres)."
+      ],
+      [
+       "Limits",
+       "Buildings up to 12 m (about 39 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.13.1"
+    },
+    {
+     "id": "zd-pittmeadows-i-2",
+     "code": "I-2",
+     "name": "Light Industrial Warehouse Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Warehousing with accessory offices."
+      ],
+      [
+       "Min. new lot",
+       "8.4 ha (about 20.8 acres)."
+      ],
+      [
+       "Limits",
+       "Buildings up to 12 m (about 39 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.13.2"
+    },
+    {
+     "id": "zd-pittmeadows-i-3",
+     "code": "I-3",
+     "name": "Light Industrial Business Park Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Light industry, offices, restaurants, retail, personal services and child daycare, with a caretaker unit."
+      ],
+      [
+       "Min. new lot",
+       "2,000 m² (about 0.5 acres)."
+      ],
+      [
+       "Limits",
+       "Buildings up to 12 m (about 39 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.13.3"
+    },
+    {
+     "id": "zd-pittmeadows-i-4",
+     "code": "I-4",
+     "name": "Industrial Storage Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Truck and rail terminals, transportation depots, storage and commercial vehicle parking, with a caretaker unit."
+      ],
+      [
+       "Min. new lot",
+       "8.25 ha (about 20.4 acres)."
+      ],
+      [
+       "Limits",
+       "Buildings up to 12 m (about 39 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.13.4"
+    },
+    {
+     "id": "zd-pittmeadows-i-5",
+     "code": "I-5",
+     "name": "Airport Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Airport terminals and runways, aviation businesses, aircraft servicing, government services and restaurants."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.13.5"
+    },
+    {
+     "id": "zd-pittmeadows-or-1",
+     "code": "OR-1",
+     "name": "Outdoor Recreation 1 Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Golf courses and hotels, with a clubhouse, restaurant and one caretaker unit."
+      ],
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 15%. Buildings up to 12 m (about 39 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.14.1"
+    },
+    {
+     "id": "zd-pittmeadows-or-2",
+     "code": "OR-2",
+     "name": "Outdoor Recreation 2 Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Marinas, recreation, hotels, vehicle and indoor storage, retail, restaurants and offices, with a caretaker unit."
+      ],
+      [
+       "Min. new lot",
+       "8 ha (about 19.8 acres)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 40%. Buildings up to 12 m or 3 storeys, whichever is less."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.14.2"
+    },
+    {
+     "id": "zd-pittmeadows-p-1",
+     "code": "P-1",
+     "name": "Community Assembly Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Government services, schools, colleges, community and cultural services, child daycare and recreation."
+      ],
+      [
+       "Limits",
+       "Lot coverage 40%. Buildings up to 12 m (about 39 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.15.1"
+    },
+    {
+     "id": "zd-pittmeadows-p-2",
+     "code": "P-2",
+     "name": "Assembly Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Places of worship, community services, child daycare and recreation."
+      ],
+      [
+       "Min. new lot",
+       "800 m² (about 8,611 sq ft)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 40%. Buildings up to 9 m; places of worship 12 m."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.15.2"
+    },
+    {
+     "id": "zd-pittmeadows-p-3",
+     "code": "P-3",
+     "name": "River Zone",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Floats and docks that give access to the neighbouring upland lots, mooring buoys and non-motorized recreation."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.15.3"
+    },
+    {
+     "id": "zd-pittmeadows-cd",
+     "code": "CD",
+     "name": "Comprehensive Development Zones (CD-A to CD-M)",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Thirteen site-specific zones, each tied to named subdivision plans: mostly compact single-family lots (CD-A, CD-B, CD-C, CD-D, CD-F, CD-I, CD-J), townhouses (CD-G, CD-K, CD-L), seniors housing (CD-E), mixed housing near the waterfront (CD-H) and two rural parcels (CD-M). Check the CD zone that applies to the property."
+      ]
+     ],
+     "covers": [
+      "CD-A",
+      "CD-B",
+      "CD-C",
+      "CD-D",
+      "CD-E",
+      "CD-F",
+      "CD-G",
+      "CD-H",
+      "CD-I",
+      "CD-J",
+      "CD-K",
+      "CD-L",
+      "CD-M"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.pittmeadows.ca/sites/default/files/2022-05/2505%2C%202011%20Zoning%20Bylaw%20Revised%202022-01-11_1.pdf",
+     "ref": "s.16"
+    }
+   ]
+  },
+  {
    "id": "zd-mission",
    "name": "Mission",
    "bylaw": "District of Mission Zoning Bylaw 5949-2020",
@@ -10050,6 +10988,807 @@
      "ref": "s.1102"
     }
    ]
+  },
+  {
+   "id": "zd-coquitlam",
+   "name": "Coquitlam",
+   "bylaw": "City of Coquitlam Zoning Bylaw No. 3000, 1996",
+   "source": "Source: Part PDFs on coquitlam.ca (amended to Bylaw No. 5521, 2026). The low-density residential zones in detail; apartment, mixed-use, commercial, industrial and institutional zones grouped. Legacy zone lot sizes come from the City's 2023 zoning summary.",
+   "href": "https://www.coquitlam.ca/zoningbylaw",
+   "zones": [
+    {
+     "id": "zd-coquitlam-r-1",
+     "code": "R-1",
+     "name": "Small-Scale Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "R-1 is Coquitlam's main small-scale housing zone: up to 4 dwelling units per lot."
+      ],
+      [
+       "Min. new lot",
+       "650 m² (about 6,997 sq ft), at least 18.5 m (61 ft) wide."
+      ],
+      [
+       "Limits",
+       "Floor area ratio 0.65 for one or two units and 0.75 for three or four. Lot coverage 50%. Buildings up to three storeys and 11 m (about 36 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/DocumentCenter/View/1174/Part-10-Low-Density-Residential-Zones-PDF--RS-2-R-1-to-R-4-RTM-1-RT-2-and-RMH-1-Zones",
+     "ref": "Part 10"
+    },
+    {
+     "id": "zd-coquitlam-r-2",
+     "code": "R-2",
+     "name": "Compact Small-Scale Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Up to 4 dwelling units on a compact lot, or 3 on a lot of 280 m² or less, in up to two principal buildings."
+      ],
+      [
+       "Min. new lot",
+       "465 m² (about 5,005 sq ft), at least 12.5 m (41 ft) wide."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.75 times the lot area. Lot coverage 50%. Buildings up to three storeys and 11 m (about 36 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/DocumentCenter/View/1174/Part-10-Low-Density-Residential-Zones-PDF--RS-2-R-1-to-R-4-RTM-1-RT-2-and-RMH-1-Zones",
+     "ref": "Part 10"
+    },
+    {
+     "id": "zd-coquitlam-r-3",
+     "code": "R-3",
+     "name": "Transitional Small-Scale Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Up to two principal dwelling units and two accessory units in one principal building; on a lot of 280 m² or less, three units in total."
+      ],
+      [
+       "Min. new lot",
+       "650 m² (about 6,997 sq ft), at least 18.5 m (61 ft) wide."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.5 times the lot area. Lot coverage 45%. Buildings up to three storeys and 11 m (about 36 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/DocumentCenter/View/1174/Part-10-Low-Density-Residential-Zones-PDF--RS-2-R-1-to-R-4-RTM-1-RT-2-and-RMH-1-Zones",
+     "ref": "Part 10"
+    },
+    {
+     "id": "zd-coquitlam-r-4",
+     "code": "R-4",
+     "name": "Intensive Small-Scale Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Ground-oriented housing with at least three dwelling units per lot, in one or more principal buildings."
+      ],
+      [
+       "Min. new lot",
+       "930 m² (about 10,010 sq ft)."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.85 times the lot area. Lot coverage 50%. Buildings up to 9.5 m, or 11 m (about 36 ft) with a pitched roof."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/DocumentCenter/View/1174/Part-10-Low-Density-Residential-Zones-PDF--RS-2-R-1-to-R-4-RTM-1-RT-2-and-RMH-1-Zones",
+     "ref": "Part 10"
+    },
+    {
+     "id": "zd-coquitlam-rs-2",
+     "code": "RS-2",
+     "name": "Rural Residential Zone",
+     "type": "Rural / Acreage",
+     "fields": [
+      [
+       "Homes",
+       "One single-detached dwelling, plus one accessory dwelling unit inside it. No more than 2.5 units per hectare."
+      ],
+      [
+       "Also allowed",
+       "Limited agriculture."
+      ],
+      [
+       "Min. new lot",
+       "4,050 m² (about 1 acre)."
+      ],
+      [
+       "Limits",
+       "Lot coverage 45%, with farm buildings limited to 20%. Buildings up to 7.3 m, or 11 m (about 36 ft) with a pitched roof."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/DocumentCenter/View/1174/Part-10-Low-Density-Residential-Zones-PDF--RS-2-R-1-to-R-4-RTM-1-RT-2-and-RMH-1-Zones",
+     "ref": "Part 10"
+    },
+    {
+     "id": "zd-coquitlam-rtm-1",
+     "code": "RTM-1",
+     "name": "Street-Oriented Village Home Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Street-facing attached homes, each on its own lot, in rows of up to eight."
+      ],
+      [
+       "Min. new lot",
+       "210 m² (about 2,260 sq ft) for a fee-simple lot."
+      ],
+      [
+       "Limits",
+       "Floor area ratio 0.9. Lot coverage 45%. Buildings up to 7.3 m, or 11 m (about 36 ft) with a pitched roof."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/DocumentCenter/View/1174/Part-10-Low-Density-Residential-Zones-PDF--RS-2-R-1-to-R-4-RTM-1-RT-2-and-RMH-1-Zones",
+     "ref": "Part 10"
+    },
+    {
+     "id": "zd-coquitlam-rt-2",
+     "code": "RT-2",
+     "name": "Townhouse Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Townhouse developments. Lock-off units are allowed only in the Evergreen Line station areas."
+      ],
+      [
+       "Min. new lot",
+       "1,110 m² (about 0.27 acres)."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.9 times the lot area, or 1.1 with the parking bonus. Lot coverage 45%. Buildings up to three storeys."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/DocumentCenter/View/1174/Part-10-Low-Density-Residential-Zones-PDF--RS-2-R-1-to-R-4-RTM-1-RT-2-and-RMH-1-Zones",
+     "ref": "Part 10"
+    },
+    {
+     "id": "zd-coquitlam-rmh-1",
+     "code": "RMH-1",
+     "name": "Mobile Home Park Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Main uses",
+       "A mobile home park, with one mobile home for every 500 m² of the park and one single-detached dwelling for the park."
+      ],
+      [
+       "Min. new lot",
+       "2 ha (about 4.9 acres) for the park; each mobile home space at least 325 m²."
+      ],
+      [
+       "Limits",
+       "Lot coverage 50%. Mobile homes one storey; other buildings up to 7.5 m."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/DocumentCenter/View/1174/Part-10-Low-Density-Residential-Zones-PDF--RS-2-R-1-to-R-4-RTM-1-RT-2-and-RMH-1-Zones",
+     "ref": "Part 10"
+    },
+    {
+     "id": "zd-coquitlam-rm-1",
+     "code": "RM-1",
+     "name": "Two-Storey Low Density Apartment Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Two-storey apartments and townhouses."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/zoningbylaw",
+     "ref": "Part 12"
+    },
+    {
+     "id": "zd-coquitlam-rm-2",
+     "code": "RM-2",
+     "name": "Three-Storey Medium Density Apartment Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Three-storey apartments and townhouses."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/zoningbylaw",
+     "ref": "Part 12"
+    },
+    {
+     "id": "zd-coquitlam-ra",
+     "code": "RA",
+     "name": "Apartment Residential Zones (RA-1, RA-2, RA-3)",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Coquitlam's newer apartment zones: RA-1 Medium-Density Residential, RA-2 Transit-Oriented Medium-Density Residential and RA-3 High-Density Residential."
+      ]
+     ],
+     "covers": [
+      "RA-1",
+      "RA-2",
+      "RA-3"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/zoningbylaw",
+     "ref": "Part 12"
+    },
+    {
+     "id": "zd-coquitlam-mu",
+     "code": "MU",
+     "name": "Mixed-Use Zones (MU-1 to MU-4)",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Housing above or beside shops and services: MU-1 Medium-Density Mixed-Use, MU-2 High-Density Mixed-Use, MU-3 Transit-Oriented Mixed-Use and MU-4 Urban Centre Mixed-Use."
+      ]
+     ],
+     "covers": [
+      "MU-1",
+      "MU-2",
+      "MU-3",
+      "MU-4"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/zoningbylaw",
+     "ref": "Part 13"
+    },
+    {
+     "id": "zd-coquitlam-rs-1",
+     "code": "RS-1",
+     "name": "One-Family Residential Zone (legacy)",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Single-family lots. A legacy zone: it stays on existing properties but is kept in Part 22 of the bylaw."
+      ],
+      [
+       "Min. new lot",
+       "650 m² (about 6,997 sq ft), per the City's zoning summary."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/DocumentCenter/View/15229/Part-22-Legacy-Zones-PDF--RS-1-RS-3-RS-4-RT-1-RT-3-and-RM-3-to-RM-6-Zones",
+     "ref": "Part 22"
+    },
+    {
+     "id": "zd-coquitlam-rs-3",
+     "code": "RS-3",
+     "name": "One-Family Residential Zone (legacy)",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Single-family lots. A legacy zone: it stays on existing properties but is kept in Part 22 of the bylaw."
+      ],
+      [
+       "Min. new lot",
+       "555 m² (about 5,974 sq ft), per the City's zoning summary."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/DocumentCenter/View/15229/Part-22-Legacy-Zones-PDF--RS-1-RS-3-RS-4-RT-1-RT-3-and-RM-3-to-RM-6-Zones",
+     "ref": "Part 22"
+    },
+    {
+     "id": "zd-coquitlam-rs-4",
+     "code": "RS-4",
+     "name": "One-Family Compact Residential Zone (legacy)",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Compact single-family lots. A legacy zone: it stays on existing properties but is kept in Part 22 of the bylaw."
+      ],
+      [
+       "Min. new lot",
+       "375 m² (about 4,036 sq ft), per the City's zoning summary."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/DocumentCenter/View/15229/Part-22-Legacy-Zones-PDF--RS-1-RS-3-RS-4-RT-1-RT-3-and-RM-3-to-RM-6-Zones",
+     "ref": "Part 22"
+    },
+    {
+     "id": "zd-coquitlam-rt-1",
+     "code": "RT-1",
+     "name": "Infill Residential Zone (legacy)",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Ground-oriented infill housing with up to 4 principal dwelling units per lot. A legacy zone: it stays on existing properties but is kept in Part 22 of the bylaw."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/DocumentCenter/View/15229/Part-22-Legacy-Zones-PDF--RS-1-RS-3-RS-4-RT-1-RT-3-and-RM-3-to-RM-6-Zones",
+     "ref": "Part 22"
+    },
+    {
+     "id": "zd-coquitlam-rt-3",
+     "code": "RT-3",
+     "name": "Multiplex Residential Zone (legacy)",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Ground-oriented infill housing on larger lots. A legacy zone: it stays on existing properties but is kept in Part 22 of the bylaw."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/DocumentCenter/View/15229/Part-22-Legacy-Zones-PDF--RS-1-RS-3-RS-4-RT-1-RT-3-and-RM-3-to-RM-6-Zones",
+     "ref": "Part 22"
+    },
+    {
+     "id": "zd-coquitlam-rm-3-to-rm-6",
+     "code": "RM-3 to RM-6",
+     "name": "Multi-Storey Apartment Residential Zones (legacy)",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Apartment zones kept for existing sites: RM-3 at 4 to 8 storeys, RM-4 and RM-4A at 8 to 12, RM-5 at 8 to 20, and RM-6, for the SkyTrain station core areas, with no height limit in the zone."
+      ]
+     ],
+     "covers": [
+      "RM-3",
+      "RM-4",
+      "RM-4A",
+      "RM-5",
+      "RM-6"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/DocumentCenter/View/15229/Part-22-Legacy-Zones-PDF--RS-1-RS-3-RS-4-RT-1-RT-3-and-RM-3-to-RM-6-Zones",
+     "ref": "Part 22"
+    },
+    {
+     "id": "zd-coquitlam-a-3",
+     "code": "A-3",
+     "name": "Agricultural and Resource Zone",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Coquitlam's agricultural and resource zone."
+      ],
+      [
+       "ALR",
+       "If the lot is in the ALR, Agricultural Land Commission rules on homes, fill and subdivision also apply."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/zoningbylaw",
+     "ref": "Part 8"
+    },
+    {
+     "id": "zd-coquitlam-c",
+     "code": "C",
+     "name": "Commercial, Business and Industrial Zones",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "C-1 Local Commercial, C-2 General Commercial, C-6 Casino Commercial, CS-1 Service Commercial, SS-1 Service Station, B-1 Business Enterprise, M-1 General Industrial and M-2 Industrial Business."
+      ]
+     ],
+     "covers": [
+      "C-1",
+      "C-2",
+      "C-6",
+      "CS-1",
+      "SS-1",
+      "B-1",
+      "M-1",
+      "M-2"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/zoningbylaw",
+     "ref": "Parts 15 to 19"
+    },
+    {
+     "id": "zd-coquitlam-p",
+     "code": "P",
+     "name": "Institutional Zones (P-1 to P-5)",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "P-1 Civic Institutional, P-2 Special Institutional, P-3 Special Recreational, P-4 Special Care Institutional and P-5 Special Park."
+      ]
+     ],
+     "covers": [
+      "P-1",
+      "P-2",
+      "P-3",
+      "P-4",
+      "P-5"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/zoningbylaw",
+     "ref": "Part 20"
+    },
+    {
+     "id": "zd-coquitlam-cd",
+     "code": "CD",
+     "name": "Comprehensive Development Zones",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Site-specific zones (CD-1 to CD-56), each written for one site, such as CD-13 at 901 Lougheed Highway. Check the CD zone that applies to the property."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.coquitlam.ca/zoningbylaw",
+     "ref": "Part 21"
+    }
+   ]
+  },
+  {
+   "id": "zd-vancouver",
+   "name": "Vancouver",
+   "bylaw": "City of Vancouver Zoning and Development By-law No. 3575",
+   "source": "Source: District schedules on bylaws.vancouver.ca (R1-1 dated June 2026; R3, R4 and R5 dated October 2025). The R1-1, R3, R4 and R5 districts in detail; RT, RM, RR, commercial, industrial and historic districts grouped, each with its own schedule.",
+   "href": "https://vancouver.ca/home-property-development/zoning-land-use-document-library-amendments.aspx",
+   "zones": [
+    {
+     "id": "zd-vancouver-r1-1",
+     "code": "R1-1",
+     "name": "Residential Inclusive District",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "R1-1 is the City of Vancouver's Residential Inclusive zone for small-scale housing. A lot of 306 m² (about 3,294 sq ft) or more can have a multiplex of 3 or 4 homes, a duplex or a single detached house. A lot of 464 m² or more can have 5 homes, and a lot of 557 m² (about 5,996 sq ft) or more can have 6, or up to 8 where all but one are rental."
+      ],
+      [
+       "Extra homes",
+       "A laneway house and secondary suites are conditional uses, and a character house can be kept and converted or joined by an infill home."
+      ],
+      [
+       "Min. new lot",
+       "306 m² with 7.3 m (24 ft) of frontage for a house or duplex, and 10 m for a 3 or 4 unit multiplex; 464 m² and 13.4 m for 5 units; 557 m² and 15.1 m for 6 or more."
+      ],
+      [
+       "Limits",
+       "Floor space ratio 1.00 for a multiplex, 0.70 for a duplex and 0.60 for a single detached house. Buildings up to 11.5 m (about 38 ft) and 3 storeys; a rear building up to 8.5 m and 2 storeys. Site coverage 50% for houses and duplexes."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://bylaws.vancouver.ca/Zoning/zoning-by-law-district-schedule-r1-1.pdf",
+     "ref": "R1-1 schedule"
+    },
+    {
+     "id": "zd-vancouver-r3",
+     "code": "R3",
+     "name": "Low-Rise Residential Districts (R3-1, R3-2, R3-3)",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Low-rise apartments and mixed-use residential buildings, plus apartments combined with townhouses. Smaller forms are still allowed: townhouses, duplexes, single detached houses and multiple dwellings of up to 8 units. R3-2 requires all homes to be rental."
+      ],
+      [
+       "Min. new lot",
+       "460 m² (about 4,951 sq ft)."
+      ],
+      [
+       "Limits",
+       "Floor space ratio up to 2.70 for rental apartments, depending on the size and shape of the site, and up to 3.00 with 20% below-market rental in a transit-oriented area or all social housing; 2.00 or less for strata apartments in R3-1; 1.45 for other uses. Apartments up to 23 m (about 75 ft), or 27.5 m with the below-market or social housing bonus; townhouses 10.7 m."
+      ]
+     ],
+     "covers": [
+      "R3-1",
+      "R3-2",
+      "R3-3"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://bylaws.vancouver.ca/zoning/zoning-by-law-district-schedule-r3.pdf",
+     "ref": "R3 schedule"
+    },
+    {
+     "id": "zd-vancouver-r4",
+     "code": "R4",
+     "name": "Mid-Rise Residential District (R4-1)",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Mid-rise apartments and mixed-use residential buildings, which must include 20% below-market rental homes or be all social housing. Low-rise apartments are also allowed. Smaller forms are still allowed: townhouses, duplexes, single detached houses and multiple dwellings of up to 8 units."
+      ],
+      [
+       "Min. new lot",
+       "1,532 m² (about 0.38 acres) with 45.7 m of frontage, or 1,348 m² and 40 m on a corner."
+      ],
+      [
+       "Limits",
+       "Floor space ratio 4.00 for a mid-rise apartment, 4.30 for mid-rise mixed use and 1.45 for other uses. Mid-rise buildings up to 47 m (about 154 ft); low-rise 23 m, or 27.5 m with conditions."
+      ]
+     ],
+     "covers": [
+      "R4-1"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://bylaws.vancouver.ca/zoning/zoning-by-law-district-schedule-r4.pdf",
+     "ref": "R4 schedule"
+    },
+    {
+     "id": "zd-vancouver-r5",
+     "code": "R5",
+     "name": "High-Rise Residential Districts (R5-1 to R5-4)",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "High-rise apartments and mixed-use residential buildings, with low-rise apartments also allowed. Smaller forms are still allowed: townhouses, duplexes, single detached houses and multiple dwellings of up to 8 units. R5-2 and R5-4 require high-rises to be all rental."
+      ],
+      [
+       "Min. new lot",
+       "1,532 m² (about 0.38 acres) with 45.7 m of frontage, or 1,348 m² and 40 m on a corner."
+      ],
+      [
+       "Limits",
+       "Floor space ratio for a high-rise apartment from 5.00 to 6.50 depending on the sub-district and tenure (0.30 more for mixed use); the top tier needs rental with 20% below-market homes or social housing. High-rises up to 84 m (about 276 ft), or 69 m in R5-2; low-rise buildings 23 m, or 27.5 m with conditions."
+      ]
+     ],
+     "covers": [
+      "R5-1",
+      "R5-2",
+      "R5-3",
+      "R5-4"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://bylaws.vancouver.ca/zoning/zoning-by-law-district-schedule-r5.pdf",
+     "ref": "R5 schedule"
+    },
+    {
+     "id": "zd-vancouver-rt",
+     "code": "RT",
+     "name": "Two-Family Residential Districts (RT-1 to RT-11N)",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "The RT districts allow single detached houses and duplexes in most districts, along with infill homes and conversion of older houses into several dwellings. Laneway houses are allowed in some."
+      ],
+      [
+       "Limits",
+       "Each RT district has its own schedule with its floor space ratio, height and character-retention rules. Check the schedule for the exact district, for example RT-7 or RT-8."
+      ]
+     ],
+     "covers": [
+      "RT-1",
+      "RT-2",
+      "RT-3",
+      "RT-4",
+      "RT-4A",
+      "RT-4AN",
+      "RT-4N",
+      "RT-5",
+      "RT-5N",
+      "RT-6",
+      "RT-7",
+      "RT-8",
+      "RT-9",
+      "RT-10",
+      "RT-10N",
+      "RT-11",
+      "RT-11N"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://bylaws.vancouver.ca/zoning/zoning-by-law-section-9.pdf",
+     "ref": "Section 9"
+    },
+    {
+     "id": "zd-vancouver-rm",
+     "code": "RM",
+     "name": "Multiple Dwelling Districts (RM-1 to RM-12N, FM-1)",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "The RM districts allow apartments and other multiple dwellings, with townhouses and rowhouses in several districts. Single detached houses and duplexes remain allowed in most. RM-11, RM-11N and RM-12N also list secondary suites and laneway houses."
+      ],
+      [
+       "Limits",
+       "Each RM district has its own schedule with its floor space ratio and height. Check the schedule for the exact district, for example RM-4 or RM-8A."
+      ]
+     ],
+     "covers": [
+      "FM-1",
+      "RM-1",
+      "RM-1N",
+      "RM-2",
+      "RM-3",
+      "RM-3A",
+      "RM-4",
+      "RM-4N",
+      "RM-5",
+      "RM-5A",
+      "RM-5B",
+      "RM-5C",
+      "RM-5D",
+      "RM-6",
+      "RM-7",
+      "RM-7N",
+      "RM-7AN",
+      "RM-8",
+      "RM-8N",
+      "RM-8A",
+      "RM-8AN",
+      "RM-9",
+      "RM-9N",
+      "RM-9A",
+      "RM-9AN",
+      "RM-9BN",
+      "RM-10",
+      "RM-10N",
+      "RM-11",
+      "RM-11N",
+      "RM-12N"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://bylaws.vancouver.ca/zoning/zoning-by-law-section-9.pdf",
+     "ref": "Section 9"
+    },
+    {
+     "id": "zd-vancouver-rr",
+     "code": "RR",
+     "name": "Residential Rental Districts (RR-1 to RR-3B)",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Rental housing districts: townhouses in RR-1, apartments and townhouses in RR-2A, RR-2B and RR-2C, and mixed-use residential buildings in RR-3A and RR-3B."
+      ]
+     ],
+     "covers": [
+      "RR-1",
+      "RR-2A",
+      "RR-2B",
+      "RR-2C",
+      "RR-3A",
+      "RR-3B"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://bylaws.vancouver.ca/zoning/zoning-by-law-section-9.pdf",
+     "ref": "Section 9"
+    },
+    {
+     "id": "zd-vancouver-c",
+     "code": "C",
+     "name": "Commercial Districts (C-1 to C-8, FC-1, FC-2)",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Vancouver's commercial districts: C-1, C-2, C-2B, C-2C, C-2C1, C-3A, C-5, C-5A, C-6, C-7 and C-8, plus FC-1 and FC-2. Each has its own schedule of permitted uses, density and height."
+      ],
+      [
+       "Homes",
+       "In C-2, multiple dwellings are a listed use and mixed-use residential buildings are conditional."
+      ]
+     ],
+     "covers": [
+      "C-1",
+      "C-2",
+      "C-2B",
+      "C-2C",
+      "C-2C1",
+      "C-3A",
+      "C-5",
+      "C-5A",
+      "C-6",
+      "C-7",
+      "C-8",
+      "FC-1",
+      "FC-2"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://bylaws.vancouver.ca/zoning/zoning-by-law-section-9.pdf",
+     "ref": "Section 9"
+    },
+    {
+     "id": "zd-vancouver-i",
+     "code": "I",
+     "name": "Industrial Districts (I, IC, M and MC)",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Vancouver's industrial districts: I-1, I-1A, I-1B, I-1C, I-2, I-3 and I-4, IC-1 to IC-3, M-1, M-1A, M-1B and M-2, and MC-1 and MC-2. Each has its own schedule. Housing is not a general use; I-2 lists only a dwelling tied to an artist studio in certain areas."
+      ]
+     ],
+     "covers": [
+      "I-1",
+      "I-1A",
+      "I-1B",
+      "I-1C",
+      "I-2",
+      "I-3",
+      "I-4",
+      "IC-1",
+      "IC-2",
+      "IC-3",
+      "M-1",
+      "M-1A",
+      "M-1B",
+      "M-2",
+      "MC-1",
+      "MC-2"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://bylaws.vancouver.ca/zoning/zoning-by-law-section-9.pdf",
+     "ref": "Section 9"
+    },
+    {
+     "id": "zd-vancouver-ha",
+     "code": "HA",
+     "name": "Historic Area Districts (HA-1 to HA-3)",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "The historic area districts: HA-1 and HA-1A in Chinatown, HA-2 in Gastown and HA-3 in Yaletown. Each has its own schedule and design rules."
+      ]
+     ],
+     "covers": [
+      "HA-1",
+      "HA-1A",
+      "HA-2",
+      "HA-3"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://bylaws.vancouver.ca/zoning/zoning-by-law-section-9.pdf",
+     "ref": "Section 9"
+    },
+    {
+     "id": "zd-vancouver-cd",
+     "code": "CD",
+     "name": "Comprehensive Development Districts",
+     "type": "Other",
+     "fields": [
+      [
+       "Intent",
+       "Site-specific and area-specific districts: CD-1 (each numbered CD-1 has its own by-law for one site), the Downtown District (DD), Downtown-Eastside/Oppenheimer (DEOD), False Creek (FCCDD), First Shaughnessy (FSD), Central Waterfront (CWD) and BC Place/Expo (BCPED). Check the by-law or official development plan for the property."
+      ]
+     ],
+     "covers": [
+      "DD",
+      "DEOD",
+      "FCCDD",
+      "FSD",
+      "CWD",
+      "BCPED"
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://bylaws.vancouver.ca/zoning/zoning-by-law-section-9.pdf",
+     "ref": "Section 9"
+    }
+   ]
   }
  ],
  "alr": {
@@ -10191,5 +11930,5 @@
    "h": "/mission-farms.html"
   }
  ],
- "disclaimer": "This directory is a general summary prepared from each municipality's published zoning bylaw and the Agricultural Land Commission's website, checked October 2, 2026 and expanded November 18, 2026. Bylaws are amended often, site-specific zones and covenants may apply, and summaries leave out many regulations (setbacks, density, parking, floodplain and development permit requirements, among others). It is not legal, planning or survey advice. Always confirm zoning, permitted uses, lot size and ALR status directly with the municipality and the ALC before you buy, sell or build. Pitt Meadows is not covered here."
+ "disclaimer": "This directory is a general summary prepared from each municipality's published zoning bylaw and the Agricultural Land Commission's website, checked October 2, 2026 and expanded November 18, 2026. Bylaws are amended often, site-specific zones and covenants may apply, and summaries leave out many regulations (setbacks, density, parking, floodplain and development permit requirements, among others). It is not legal, planning or survey advice. Always confirm zoning, permitted uses, lot size and ALR status directly with the municipality and the ALC before you buy, sell or build."
 }

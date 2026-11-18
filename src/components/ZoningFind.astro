@@ -123,7 +123,7 @@ const alias = JSON.stringify(Object.fromEntries((Z as any).munis.flatMap((m: any
         ctas.append(ask(addr));
         res.append(ctas, el('p', 'zd-res__note', `From the ${r.locality} public zoning map today. Maps can lag a recent rezoning, and a strata or condo shows the whole parcel, so confirm with the municipality before you rely on it.`));
         if (r.zones.length > 1) res.append(el('p', 'zd-res__note', 'More than one zone touches this property (split zoning).'));
-      } else if (r.status === 'unsupported') msg(`${r.locality || 'That area'} is not in the address lookup yet (it covers Surrey, White Rock, Delta, Langley City, the Township of Langley, Maple Ridge, Abbotsford, Chilliwack and Mission). Send me the address and I'll check the zoning and ALR status for you.`, addr);
+      } else if (r.status === 'unsupported') msg(`${r.locality || 'That area'} is not in the address lookup yet (it covers Surrey, White Rock, Delta, Langley City, the Township of Langley, Maple Ridge, Abbotsford, Chilliwack, Mission, Vancouver, Burnaby and Coquitlam). Send me the address and I'll check the zoning and ALR status for you.`, addr);
       else if (r.status === 'notfound') msg(`I could not match that to one exact property${r.locality ? ` in ${r.locality}` : ''}. Check the house number and street (for example "2725 192 Street, Surrey"), or send it to me and I'll look it up.`, addr);
       else if (r.status === 'nozone') msg('That address is on the map but has no zone drawn on it (road, park or water lot). Send it to me and I\'ll check with the municipality.', addr);
       else if (r.status === 'bad') msg('Type the house number, street and city, for example "2725 192 Street, Surrey".', addr);
@@ -140,7 +140,7 @@ const alias = JSON.stringify(Object.fromEntries((Z as any).munis.flatMap((m: any
     // Address suggestions as you type (D-352), from the Province's public address service (BC Address Geocoder), limited to the
     // municipalities the lookup covers. Picking a suggestion runs the check. If the service is slow or down, typing still works.
     const sug = find.querySelector<HTMLDataListElement>('#zd-sug');
-    const AREAS = 'Surrey,White Rock,Delta,Langley,Township of Langley,Maple Ridge,Abbotsford,Chilliwack,Mission';
+    const AREAS = 'Surrey,White Rock,Delta,Langley,Township of Langley,Maple Ridge,Abbotsford,Chilliwack,Mission,Vancouver,Burnaby,Coquitlam';
     let sugTimer = 0, sugSeq = 0, lastRun = '';
     const suggest = async (q: string) => {
       const seq = ++sugSeq;

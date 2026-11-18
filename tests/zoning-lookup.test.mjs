@@ -60,7 +60,7 @@ test('block-level match: the municipality\'s own address data finds the lot, or 
 });
 
 test('outside the covered municipalities, junk, and upstream failure', async () => {
-  assert.equal((await lookup('100 Main St Vancouver', mock([['geocoder', geo({ localityName: 'Vancouver' })]]))).status, 'unsupported');
+  assert.equal((await lookup('100 Main St Richmond', mock([['geocoder', geo({ localityName: 'Richmond' })]]))).status, 'unsupported');
   assert.equal((await lookup('Surrey', mock([]))).status, 'bad');
   assert.equal((await lookup('x'.repeat(130) + '1', mock([]))).status, 'bad');
   assert.equal((await lookup('1 Nowhere Rd', mock([['geocoder', { features: [{ geometry: { coordinates: [0, 0] }, properties: { localityName: 'Surrey', matchPrecision: 'LOCALITY', civicNumber: '', streetName: '' } }] }]]))).status, 'notfound');
@@ -116,10 +116,22 @@ test('Delta: capital-letter names are tidied, the city PDF is linked, a road is 
   assert.equal(r.guide, 'zd-delta');
 });
 
+test('Vancouver (D-355): zoning from the open data API, in the same shape as the map servers', async () => {
+  const calls = [];
+  const r = await lookup('453 W 12th Ave Vancouver', mock([
+    ['geocoder', geo({ civicNumber: 453, streetName: '12th', streetType: 'Ave', streetDirection: 'W', localityName: 'Vancouver' })],
+    ['zoning-districts-and-labels/records', { total_count: 1, results: [{ zoning_district: 'CD-1 (46)', zoning_classification: 'Comprehensive Development' }] }],
+    ['MapServer/23', { count: 0 }],
+  ], calls));
+  assert.deepEqual(r.zones, [{ code: 'CD-1 (46)', name: 'Comprehensive Development' }]);
+  assert.equal(r.guide, 'zd-vancouver'); assert.equal(r.alr, false);
+  assert.ok(calls.some((u) => u.includes('intersects') && u.includes('POINT')), 'point query sent to the open data API');
+});
+
 test('area and sources', () => {
   assert.equal(ringArea(sq), 5000);
   for (const m of Object.values(MUNIS)) assert.match(m.zoning, /^https:\/\//);
-  assert.deepEqual(Object.keys(MUNIS).sort(), ['Abbotsford', 'Chilliwack', 'Delta', 'Langley', 'Maple Ridge', 'Mission', 'Surrey', 'Township of Langley', 'White Rock']);
+  assert.deepEqual(Object.keys(MUNIS).sort(), ['Abbotsford', 'Burnaby', 'Chilliwack', 'Coquitlam', 'Delta', 'Langley', 'Maple Ridge', 'Mission', 'Surrey', 'Township of Langley', 'Vancouver', 'White Rock']);
 });
 
 test('Chilliwack and Mission (D-354): current zone code, provincial ALR for Mission, no lot size without a parcel layer', async () => {
