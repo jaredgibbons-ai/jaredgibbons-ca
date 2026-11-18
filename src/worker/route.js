@@ -39,6 +39,10 @@ export const MOVED = {
   // The marketing plan is the selling page (D-256, Jared: "shouldn't this be in the marketing plan?"). The old site already sent
   // this address there (MyRealPage redirect, OI-28); the page's own facts were folded into /selling.html first.
   '/marketing-plan.html': '/selling.html',
+  // Two pages answered the same search: /langley-city.html and /city-of-langley-homes-for-sale.html (site check 2026-11-18, D-359).
+  // Search Console (16 months) shows Google ranking /langley-city.html for the Langley City searches (positions 24 to 36) and the
+  // other page only for general "mls langley" searches, so the second now forwards to the first and every link points there.
+  '/city-of-langley-homes-for-sale.html': '/langley-city.html',
   // The old site's post at this address was about an Aldergrove condo, not the Croydon Drive price drop its URL named (site review
   // 2026-11-17, D-327). Moved to an address that matches; the Croydon price drop is /blog.html/price-reduced-south-surrey-2-bedroom-condo-8934352.
   '/blog.html/10k-price-drop-south-surrey-condo-at-15735-croydon-dr-619k-8934508': '/blog.html/aldergrove-strata-condo-301-27215-aldergrove-town-centre-drive-8934508',

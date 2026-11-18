@@ -20,6 +20,7 @@ const PUB: Record<string, string> = {
   'fraserhealth.ca': 'Fraser Health', 'vch.ca': 'Vancouver Coastal Health', 'canada.ca': 'Government of Canada', 'cmhc-schl.gc.ca': 'CMHC', 'www12.statcan.gc.ca': 'Statistics Canada', 'statcan.gc.ca': 'Statistics Canada',
   'info.bcassessment.ca': 'BC Assessment', 'bcassessment.ca': 'BC Assessment', 'bcrea.bc.ca': 'BC Real Estate Association', 'bcfsa.ca': 'BC Financial Services Authority', 'fvreb.bc.ca': 'Fraser Valley Real Estate Board', 'news.fvreb.bc.ca': 'Fraser Valley Real Estate Board',
   'cadreb.com': 'Chilliwack and District Real Estate Board', 'chf.bc.ca': 'Co-operative Housing Federation of BC', 'jaredgibbons.ca': 'Jared Gibbons', 'pagesarchive.blackpress.ca': 'Black Press archive',
+  'hexaflexagon-salmon-whfg.squarespace.com': 'Developer site', 'missioncoop.wixsite.com': 'Mission Co-op',
   'paxlaw.ca': 'Pax Law', 'equitylawgroup.ca': 'Equity Law Group', 'homehappy.ca': 'HomeHappy', 'homecalc.ca': 'HomeCalc', 'danmarusin.com': 'Dan Marusin', 'mikestewart.ca': 'Mike Stewart', 'mybaragar.com': 'Baragar Systems',
   'bccondosandhomes.com': 'BC Condos & Homes', 'vancouvernewcondos.com': 'Vancouver New Condos', 'polyhomes.com': 'Polygon Homes', 'onni.com': 'Onni', 'saveonfoods.com': 'Save-On-Foods', 'safeway.ca': 'Safeway', 'walmart.ca': 'Walmart',
   'shoppersdrugmart.ca': 'Shoppers Drug Mart', 'thriftyfoods.com': 'Thrifty Foods', 'realcanadiansuperstore.ca': 'Real Canadian Superstore', 'heritageburnaby.ca': 'Heritage Burnaby', 'search.heritageburnaby.ca': 'Heritage Burnaby',

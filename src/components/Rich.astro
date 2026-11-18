@@ -3,7 +3,19 @@
 // Wording is exactly as archived; only spacing around punctuation is normalised.
 import { isHeldHref } from '../lib/launch';
 import { sourceInfo } from '../lib/sources';
-const { parts = [] } = Astro.props;
+import SOURCE_REPL from '../data/source-replacements.json';
+const { parts: raw = [] } = Astro.props;
+// Links to other agents' pages that reach a list outside a "Sources" section still get the D-204 swap (developer or government page,
+// or a plain line), so no other agent is named as a source anywhere (site check 2026-11-18, D-359).
+const normUrl = (u: string) => String(u).trim().replace(/^https?:\/\/(www\.|embed\.)?/i, '').split('#')[0].replace(/\/+$/, '').toLowerCase();
+const REPL = SOURCE_REPL as Record<string, { items?: any[]; text?: string; drop?: boolean }>;
+const parts = (raw as any[]).flatMap((p: any) => {
+  const r = p?.h ? REPL[normUrl(p.h)] : undefined;
+  if (!r) return [p];
+  if (r.drop) return [];
+  if (r.text) return [{ t: r.text }];
+  return (r.items || []).slice(0, 1).map((x: any) => ({ ...x }));
+});
 const local = (h: string) => h.replace(/^https:\/\/jaredgibbons\.ca(?=\/|$)/, '') || '/';
 // archive text often has a stray space before punctuation inside one fragment ("price reduction .", "informative , helpful"); remove it
 const clean = (t: string) => String(t).replace(/\s+([,.;:!?])(?=\s|$)/g, '$1');
