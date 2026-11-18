@@ -97,8 +97,21 @@ const promise = kind === 'home-evaluation' ? 'Jared replies the same day.' : '';
         const j = await r.json();
         if (asked !== addr || j.status !== 'ok' || !j.zones?.length) return;
         const el = (t: string, c: string, txt = '') => { const e = document.createElement(t); if (c) e.className = c; if (txt) e.textContent = txt; return e; };
-        const zn = j.zones.map((z: any) => [z.code, z.name].filter(Boolean).join(', ')).join(' / ');
-        const rows: [string, string, string?][] = [['Zoning', zn, j.guide ? `/zonings.html#${j.guide}` : '']];
+        // The zone's name and what it allows come from the zoning guide (D-360): some maps (Township of Langley) give only the code.
+        const w = window as any;
+        const ZZ = await (w.__jgZones ||= fetch('/zoning-zones.json').then((r) => r.json()).catch(() => ({})));
+        if (asked !== addr) return;
+        const slug = (c: string) => String(c).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        const first = (t: string) => { const s = String(t).split(/(?<=[.!?])\s+/)[0]; return s.length > 170 ? s.slice(0, 167).replace(/\s+\S*$/, '') + '…' : s; };
+        let zhref = j.guide ? `/zonings.html#${j.guide}` : '';
+        const zn = j.zones.map((z: any, i: number) => {
+          const id = j.guide ? `${j.guide}-${slug(z.code)}` : ''; const e = id ? ZZ[id] : null;
+          if (e && i === 0) zhref = `/zonings.html#${e.a || id}`;
+          const name = z.name || (e && e.n) || '';
+          const f = e && (e.f.find((x: any) => x[0] === 'Homes') || e.f.find((x: any) => /^(Main uses|Purpose|Intent)$/.test(x[0])));
+          return [z.code, name].filter(Boolean).join(', ') + (f ? `: ${first(f[1])}` : '');
+        }).join(' / ');
+        const rows: [string, string, string?][] = [['Zoning', zn, zhref]];
         if (j.lot) rows.push(['Lot size (from the map)', `About ${j.lot.sqft.toLocaleString('en-CA')} sq ft${j.lot.acres >= 0.25 ? ` (${j.lot.acres} acres)` : ''}`]);
         if (j.alr !== null && j.alr !== undefined) rows.push(['Agricultural Land Reserve', j.alr ? 'In the ALR' : 'Not in the ALR']);
         if (j.flood) rows.push(['Floodplain', 'Shown in a floodplain area on the city map']);

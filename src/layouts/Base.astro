@@ -21,8 +21,12 @@ const isHome = Astro.url.pathname === '/' || Astro.url.pathname === '/index.html
 const site = 'https://jaredgibbons.ca';
 // Home-only entity markup (facts as published in the footer and profile; no ratings). sameAs, image, logo, geo and hasMap carry over
 // from the old site's own markup (MyRealPage custom head, D-233), so Google keeps tying these profiles to the site.
-const entity = isHome ? [
-  { '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${site}/#website`, url: `${site}/`, name: 'Jared Gibbons', inLanguage: 'en-CA', publisher: { '@id': `${site}/#agent` } },
+// The contact page carries the same agent and person markup, plus ContactPage, so "realtor near me" results can tie the address,
+// phone and service area to the page people land on to get in touch (D-360).
+const isContact = Astro.url.pathname === '/contact.html';
+const entity = isHome || isContact ? [
+  ...(isHome ? [{ '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${site}/#website`, url: `${site}/`, name: 'Jared Gibbons', inLanguage: 'en-CA', publisher: { '@id': `${site}/#agent` } }]
+    : [{ '@context': 'https://schema.org', '@type': 'ContactPage', url: `${site}/contact.html`, name: 'Contact Jared Gibbons', about: { '@id': `${site}/#agent` } }]),
   { '@context': 'https://schema.org', '@type': 'RealEstateAgent', '@id': `${site}/#agent`, name: 'Jared Gibbons', url: `${site}/`, telephone: '+1-604-928-1361', email: 'jaredgibbons@royallepage.ca',
     description: 'Jared Gibbons is a REALTOR® with Royal LePage Little Oak Realty serving South Surrey, White Rock, Langley and the Fraser Valley.',
     parentOrganization: { '@type': 'Organization', name: 'Royal LePage Little Oak Realty' },
