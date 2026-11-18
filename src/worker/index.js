@@ -23,7 +23,7 @@ const SECURITY = {
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.myrealpage.com",
     "img-src 'self' data: blob: https:",
     "font-src 'self' data: https://fonts.gstatic.com https://*.myrealpage.com",
-    "connect-src 'self' https://*.googleapis.com https://*.gstatic.com https://www.googletagmanager.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.google.com https://*.doubleclick.net https://cloudflareinsights.com https://challenges.cloudflare.com https://*.myrealpage.com",
+    "connect-src 'self' https://geocoder.api.gov.bc.ca https://*.googleapis.com https://*.gstatic.com https://www.googletagmanager.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.google.com https://*.doubleclick.net https://cloudflareinsights.com https://challenges.cloudflare.com https://*.myrealpage.com",
     "frame-src https://*.myrealpage.com https://www.youtube-nocookie.com https://www.youtube.com https://challenges.cloudflare.com https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net",
     "worker-src 'self' blob:",
     "media-src 'self' https:",
