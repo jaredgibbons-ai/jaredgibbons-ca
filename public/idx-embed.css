@@ -157,3 +157,16 @@
 #listing-details-view tr:has(a.mrp-vow-signup),#listing-details-view li:has(>a.mrp-vow-signup),#listing-details-view a.mrp-vow-signup{display:none!important}
 /* Buttons everywhere MyRealPage draws them (the map's sold cards, pop-up forms): black, square */
 .btn-primary,.vow-only-button{background:#0a0a0a!important;border-color:#0a0a0a!important;color:#fff!important;border-radius:0!important;background-image:none!important;box-shadow:none!important;text-shadow:none!important}
+
+/* ---- Map search (D-350): the site's fonts, black in place of orange and blue. The price pins and cluster circles on the map are
+   drawn on a canvas by MyRealPage's script and cannot be styled from here. Icon fonts are left alone. ---- */
+.mrp-idx-branding,.mrp-idx-form-container{font-family:"Lato",system-ui,-apple-system,"Segoe UI",sans-serif!important;color:#0a0a0a}
+.mrp-idx-form-container :is(div,span,label,a,button,input,select,option,p,li,h1,h2,h3,h4,td,th):not(.mdicon):not(.mdiicon):not([class*="mdi-"]):not([class*="glyphicon"]),
+.mrp-idx-branding :is(div,span,a):not(.mdicon):not(.mdiicon):not([class*="mdi-"]):not([class*="glyphicon"]){font-family:"Lato",system-ui,-apple-system,"Segoe UI",sans-serif!important}
+.mrp-idx-branding .name{font:800 1.2rem/1.1 "Montserrat",sans-serif!important;letter-spacing:-.01em;text-transform:uppercase;color:#0a0a0a!important}
+.mrp-idx-branding .office{font:700 .6875rem/1.3 "Montserrat",sans-serif!important;letter-spacing:.12em;text-transform:uppercase;color:#5b5b5b!important}
+.mrp-idx-branding a,.mrp-idx-form-container a{color:#0a0a0a!important}
+.mrp-idx-form-container .thumb-price{font:800 1rem/1.2 "Montserrat",sans-serif!important;color:#0a0a0a!important}
+.mrp-idx-form-container .mrp-search-button,.mrp-idx-form-container .btn-danger{background:#0a0a0a!important;border-color:#0a0a0a!important;color:#fff!important}
+.mrp-idx-form-container .btn,.mrp-idx-form-container input,.mrp-idx-form-container select{border-radius:0!important}
+.mrp-idx-form-container .control-group-pane label{font-weight:700!important}
