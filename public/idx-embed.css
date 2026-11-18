@@ -130,3 +130,30 @@
 .mrp-details-vow-toolbar-wrapper:has(.mrp-vow-toolbar-non-auth),
 .mrp-results-vow-toolbar-wrapper:has(.mrp-vow-toolbar-non-auth),
 .mrp-idx-form-vow-toolbar-wrapper:has(.mrp-vow-toolbar-non-auth){display:none!important}
+
+/* ---- Listing detail pages (D-347): black, white and grey in place of MyRealPage's default blue ---- */
+#listing-details-view{--ink:#0a0a0a;--grey:#5b5b5b;--rule:#d9d4cc;--cream:#efeae4;font-family:"Lato",system-ui,-apple-system,"Segoe UI",sans-serif!important;color:var(--ink)!important;background:#fff!important}
+#listing-details-view a{color:var(--ink)!important}
+#listing-details-view h1,#listing-details-view h2,#listing-details-view h3,#listing-details-view h4,#listing-details-view .mrp-listing-price-container,#listing-details-view .mrp-listing-address-info h1{font-family:"Montserrat","Lato",sans-serif!important;color:var(--ink)!important}
+#listing-details-view h3,#listing-details-view h4{font-weight:700!important;letter-spacing:.01em}
+/* buttons */
+#listing-details-view .btn-primary,.mrp-popup-button-bar .btn-primary,#listing-details-view input[type=submit],#listing-details-view button[type=submit]{background:var(--ink,#0a0a0a)!important;border-color:var(--ink,#0a0a0a)!important;color:#fff!important;border-radius:0!important;box-shadow:none!important;text-shadow:none!important;background-image:none!important}
+#listing-details-view .btn-default,#listing-details-view .btn{border-radius:0!important}
+/* tabs: Details / Photos / Map */
+#listing-details-view .mrp-listing-details-tabs>li>a{color:var(--grey)!important;font:700 .75rem/1 "Montserrat",sans-serif!important;letter-spacing:.1em;text-transform:uppercase;border-radius:0!important}
+#listing-details-view .mrp-listing-details-tabs>li.active>a,#listing-details-view .mrp-listing-details-tabs>li>a:hover{color:var(--ink)!important;background:none!important}
+#listing-details-view .mrp-listing-details-tabs,#listing-details-view .mrp-listing-details-tabs>li,#listing-details-view .mrp-listing-details-tabs>li.active{border-color:var(--ink)!important}
+/* icon row beside the price, share row, link list, sidebar */
+#listing-details-view .mdicon[class*="mdi-"],#listing-details-view .details-sm-share-item,#listing-details-view .mrp-listing-links-section li,#listing-details-view .mrp-ll-footer{background-color:var(--ink)!important}
+#listing-details-view .details-sm-share-item a,#listing-details-view .mrp-listing-links-section li a,#listing-details-view .mrp-ll-footer,#listing-details-view .mrp-ll-footer a{color:#fff!important}
+#listing-details-view .mrp-ll-sidebar{border-color:var(--ink)!important}
+#listing-details-view svg{color:var(--ink)!important}
+#listing-details-view dd,#listing-details-view .mrp-i-unit,#listing-details-view .mrp-m-unit{color:var(--ink)!important;border-bottom-color:var(--grey)!important}
+/* viewing-time tiles and form fields */
+#listing-details-view input[type=text],#listing-details-view input[type=email],#listing-details-view input[type=tel],#listing-details-view textarea,#listing-details-view select{border:1px solid var(--ink)!important;border-radius:0!important;box-shadow:none!important}
+#listing-details-view .results-ribbon{filter:grayscale(1) contrast(1.1)}
+#listing-details-view .mrp-listing-links-section li,#listing-details-view .mrp-ll-sidebar,#listing-details-view .mrp-ll-sidebar *{border-radius:0!important}
+/* Fields MyRealPage holds back from visitors who are not signed in print a "Signup" link where the value would be; the row goes instead (D-346). */
+#listing-details-view tr:has(a.mrp-vow-signup),#listing-details-view li:has(>a.mrp-vow-signup),#listing-details-view a.mrp-vow-signup{display:none!important}
+/* Buttons everywhere MyRealPage draws them (the map's sold cards, pop-up forms): black, square */
+.btn-primary,.vow-only-button{background:#0a0a0a!important;border-color:#0a0a0a!important;color:#fff!important;border-radius:0!important;background-image:none!important;box-shadow:none!important;text-shadow:none!important}

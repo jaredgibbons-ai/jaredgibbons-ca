@@ -68,6 +68,9 @@ const robotsContent = preview ? 'noindex, nofollow' : robots;
       if (document.readyState === 'complete') setTimeout(go, 3500); else addEventListener('load', function () { setTimeout(go, 3500); });
     })();
   </script>}
+  {/* A pasted MyRealPage link (/langley-farms.html#!listing.r3166590-….109833423) opens that listing's own page (D-347). Checked once, before
+      the search widget loads, so clicking a listing on a search page still opens it in place. */}
+  <script is:inline>(function(){var m=location.hash.match(/^#!(listing\.[a-z0-9.\-]+\.\d{6,})/i);if(m&&location.pathname.indexOf('/listing.')<0)location.replace('/recip.html/'+m[1]);})();</script>
   <script is:inline>
     // Every form calls this after the lead is accepted. 'contact_us' is the event the old site sent (Google Ads conversion);
     // 'generate_lead' is GA4's own lead event. On the preview gtag is not loaded, so nothing is sent.
