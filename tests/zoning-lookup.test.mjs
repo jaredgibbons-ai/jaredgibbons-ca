@@ -119,5 +119,25 @@ test('Delta: capital-letter names are tidied, the city PDF is linked, a road is 
 test('area and sources', () => {
   assert.equal(ringArea(sq), 5000);
   for (const m of Object.values(MUNIS)) assert.match(m.zoning, /^https:\/\//);
-  assert.deepEqual(Object.keys(MUNIS).sort(), ['Abbotsford', 'Delta', 'Langley', 'Maple Ridge', 'Surrey', 'Township of Langley', 'White Rock']);
+  assert.deepEqual(Object.keys(MUNIS).sort(), ['Abbotsford', 'Chilliwack', 'Delta', 'Langley', 'Maple Ridge', 'Mission', 'Surrey', 'Township of Langley', 'White Rock']);
+});
+
+test('Chilliwack and Mission (D-354): current zone code, provincial ALR for Mission, no lot size without a parcel layer', async () => {
+  const calls = [];
+  const c = await lookup('8550 Young Rd Chilliwack', mock([
+    ['geocoder', geo({ civicNumber: 8550, streetName: 'Young', streetType: 'Rd', localityName: 'Chilliwack' })],
+    ['Dynamic_Zone/MapServer/3', { features: [{ attributes: { ZONE: 'RS2', CalcField: 'RSV2' } }, { attributes: { ZONE: 'RH', CalcField: 'None' } }] }],
+    ['Dynamic_ALR/MapServer/0', { count: 1 }],
+  ], calls));
+  assert.deepEqual(c.zones, [{ code: 'RSV2' }]);
+  assert.equal(c.guide, 'zd-chilliwack'); assert.equal(c.alr, true);
+  const m = await lookup('33000 Dewdney Trunk Rd Mission', mock([
+    ['geocoder', geo({ civicNumber: 33000, streetName: 'Dewdney Trunk', streetType: 'Rd', localityName: 'Mission' })],
+    ['Planning/MapServer/2/query', { features: [{ attributes: { Zone_Class: 'RU36s', Zoning: 'Rural 36 Secondary Dwelling Zone' } }] }],
+    ['bcgw_pub_whse_legal_admin_boundaries/MapServer/23', { count: 0 }],
+    ['Planning/MapServer/24/query', { features: [{ attributes: { O2_Type_1: 'Rural' } }] }],
+  ], calls));
+  assert.deepEqual(m.zones, [{ code: 'RU36s', name: 'Rural 36 Secondary Dwelling Zone' }]);
+  assert.equal(m.guide, 'zd-mission'); assert.equal(m.alr, false); assert.equal(m.ocp, 'Rural'); assert.equal(m.lot, undefined);
+  assert.equal(MUNIS['Langley'].guide, 'zd-langleycity'); assert.equal(MUNIS['White Rock'].guide, 'zd-whiterock');
 });
