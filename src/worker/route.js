@@ -98,6 +98,10 @@ export function route(url, index, assetExists, rawHost = '') {
   // 5b) doubled prefix from relative links on the old site: /<page>.html/<other-page>.html -> /<other-page>.html when that page exists
   const dbl = path.match(/^\/[^/]+\.html\/([^/]+\.html)$/);
   if (dbl && assetExists('/' + dbl[1])) return { type: 'redirect', location: '/' + dbl[1] + u.search, status: 301 };
+  // 5b2) any MLS® listing under the search page, shown inside the site (D-345): /recip.html/listing.<slug>.<id>. Jared's own
+  //      listings keep their real pages (5c sends them there); anything else gets the one listing template, address unchanged.
+  const ml = path.match(/^\/recip\.html\/listing\.[^/]*?\.(\d{6,})$/);
+  if (ml && !index.listingIds.get(ml[1])) return { type: 'asset', path: '/mls-listing.html' };
   // 5c) old MyRealPage listing detail pages (D-231)
   const ol = oldListing(path, index, assetExists);
   if (ol) return { type: 'redirect', location: ol + u.search, status: 301 };

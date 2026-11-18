@@ -1,0 +1,62 @@
+---
+// One MLS® listing from the MyRealPage feed, shown inside the site (D-345). The Worker serves this file for
+// /recip.html/listing.<slug>.<id> when the listing is not one of Jared's own (those have real pages). The listing itself is
+// MyRealPage's detail view in the vendor's self-sizing frame; this page only supplies the site around it. Not indexed: these are
+// other brokerages' listings that change daily.
+import Base from '../layouts/Base.astro';
+import idx from '../data/idx-embeds.json';
+---
+<Base robots="noindex" title="MLS® Listing | Jared Gibbons" description="MLS® listing details, photos and map for a home for sale in South Surrey, Langley, White Rock or the Fraser Valley. Book a showing with Jared Gibbons, REALTOR®, at 604-928-1361." footerTagline="South Surrey Realtor | Homes for Sale, Condos & MLS Listings" footerCell={true} brandHref="/">
+<main id="main">
+  <section class="section section--tight ml" aria-label="MLS® listing">
+    <div class="wrap">
+      <p class="ml__back"><a href="/recip.html">&larr; Search all listings</a></p>
+      <h1 class="ml__h" data-ml-title>MLS® listing</h1>
+      <div class="ml__box idx" data-ml-account={idx.account}></div>
+      <p class="notice ml__gone" data-ml-gone hidden>This listing isn't available. It may have sold or come off the market. <a href="/recip.html">Search current listings</a></p>
+      <div class="ml__cta">
+        <p>Want to see this home, or know what it's really worth? Call or text Jared at <a href="tel:604-928-1361">604-928-1361</a>.</p>
+        <p class="ml__btns"><a class="btn" href="/contact.html">Book a showing</a> <a class="btn btn--ghost" href="/recip.html">Search more listings</a></p>
+      </div>
+      <noscript><p class="notice">This listing needs JavaScript. <a href="/recip.html">Search listings</a> or call 604-928-1361.</p></noscript>
+    </div>
+  </section>
+</main>
+</Base>
+<script>
+  // The listing is named by the address: /recip.html/listing.<slug>.<id>
+  const box = document.querySelector<HTMLElement>('.ml__box');
+  const gone = document.querySelector<HTMLElement>('[data-ml-gone]');
+  const m = location.pathname.match(/\/(listing\.[a-z0-9.\-]*?\.(\d{6,}))\/?$/i);
+  if (box && m) {
+    // A readable heading from the slug: "r3166590-1496-240-street-langley-v2z-1l1" -> "1496 240 Street Langley"
+    const slug = m[1].replace(/^listing\./, '').replace(/\.\d+$/, '');
+    const words = slug.split('-').filter((w) => !/^r\d{6,}$/i.test(w) && w !== 'bc');
+    const pc = words.length >= 2 && /^[a-z]\d[a-z]$/i.test(words[words.length - 2]) && /^\d[a-z]\d$/i.test(words[words.length - 1]) ? 2 : 0;
+    const name = words.slice(0, words.length - pc).map((w) => (/^\d/.test(w) ? w.toUpperCase() : w.charAt(0).toUpperCase() + w.slice(1))).join(' ');
+    const h = document.querySelector<HTMLElement>('[data-ml-title]');
+    if (name && h) { h.textContent = name; document.title = `${name} | MLS® Listing | Jared Gibbons`; }
+    const s = document.createElement('script');
+    s.id = 'mrpscript'; s.async = true;
+    s.src = `https://idx.myrealpage.com/wps/rest/${box.dataset.mlAccount}/l/idx2/recip/tmpl~v2,noframe~true/-/${m[1]}/in.js`;
+    const drawn = () => [...box.children].some((c) => c !== s);
+    const giveUp = () => { if (gone && !drawn()) { gone.hidden = false; box.hidden = true; } };
+    s.onerror = giveUp;
+    box.appendChild(s);
+    setTimeout(giveUp, 45000);
+    new MutationObserver(() => {
+      if (gone && drawn() && box.hidden) { box.hidden = false; gone.hidden = true; }
+      box.querySelectorAll('iframe:not([title])').forEach((f) => f.setAttribute('title', `MLS® listing: ${name || 'details'}`));
+    }).observe(box, { childList: true, subtree: true });
+  } else if (gone && box) { gone.hidden = false; box.hidden = true; }
+</script>
+<style>
+  .ml{background:#fff}
+  .ml__back{margin:0 0 var(--s3);font-size:.9375rem}
+  .ml__h{font-size:clamp(1.5rem,3.5vw,2.25rem);line-height:1.15;letter-spacing:-.015em;margin:0 0 var(--s4)}
+  .ml__box{min-height:36rem;border:1px solid var(--ink)}
+  .ml__box[hidden],.ml__gone[hidden]{display:none}
+  .ml__box :global(iframe){display:block;width:100%;border:0}
+  .ml__cta{margin-top:var(--s6);padding-top:var(--s5);border-top:1px solid var(--ink)}
+  .ml__btns{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s3)}
+</style>
