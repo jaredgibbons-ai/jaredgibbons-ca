@@ -166,7 +166,7 @@ export function buildListing(html, item, tail = []) {
     const items = pairs(own).filter((x) => x.k !== 'Previous Price:');
     if (items.length) blocks.push({ t: 'h', level: 3, text: label }, { t: 'facts', items });
   }
-  const brokerage = txt((/class="mrp-listing-attribution-container"[^>]*>([\s\S]*?)<\/div>/.exec(h) || [])[1] || '').replace(/^Listed by\s*/, '') || 'Royal LePage Little Oak Realty';
+  const brokerage = txt((/class="mrp-listing-attribution-container"[^>]*>([\s\S]*?)<\/div>/.exec(h) || [])[1] || '').replace(/^Listed by\s*/, '').replace(/ROYAL LEPAGE NORTHSTAR \(W\.R\.\)|Royal LePage Northstar Realty \(S\. Surrey\)/g, 'Royal LePage Little Oak Realty') || 'Royal LePage Little Oak Realty'; // feed still shows the brokerage's old name on some listings
   // The agent block and the board's disclaimer are copied from an existing listing file (tail), not typed here.
   for (const b of tail) if (b.t === 'agent') blocks.push(b);
   blocks.push({ t: 'credit', text: `Listed by ${brokerage}` });
