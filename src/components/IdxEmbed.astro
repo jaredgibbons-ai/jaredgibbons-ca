@@ -3,8 +3,9 @@
 // viewport (keeps it off the LCP/INP path) and the space is reserved so the page does not shift (CLS).
 // If nothing renders within 10 s the visitor sees the plain link to the full search instead.
 import { mapSearchUrl } from '../lib/idx';
-interface Props { id?: string; account: string; label?: string; path?: string; frame?: boolean }
-const { id = '', account, label = 'Listings', path, frame = false } = Astro.props;
+interface Props { id?: string; account: string; label?: string; path?: string; frame?: boolean; gridFirst?: boolean }
+const { id = '', account, label = 'Listings', path, frame = false, gridFirst = false } = Astro.props;
+// gridFirst (D-348): the search page shows listings as photo cards at every width, like the phone layout; the map is one click away.
 // frame: the open map search shown in the page itself (D-242). The vendor's in.js for this widget only prints a "Search listings" link that
 // opens the map full screen; the frame below is the same map, visible without a click.
 const MAP = mapSearchUrl(account);
@@ -12,15 +13,15 @@ const MAP = mapSearchUrl(account);
 const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `recip/tmpl~v2,noframe~true/-/search-${id}.def/in.js`}`;
 ---
 {frame ? (
-<section class="section section--tight section--idx section--idxmap" aria-label="MLS® map search">
+<section class={'section section--tight section--idx section--idxmap' + (gridFirst ? ' section--idxgrid' : '')} aria-label={gridFirst ? 'MLS® listings' : 'MLS® map search'}>
   <div class="wrap">
     {/* Desktop and tablet: the map in the page. Phones (D-255): a map inside a small frame traps the finger, hides its filters and shows no listings,
         so phones get one button under the page heading (GenericPage) that opens the map full screen, then the listings here as photo cards that scroll with the page. */}
-    <iframe class="idxmap" data-src={MAP} title="MLS® map search: homes for sale in the Fraser Valley and Metro Vancouver" allow="geolocation" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    <p class="idxmap__alt"><a href={MAP} target="_blank" rel="noopener">Open the map search full screen</a></p>
+    {!gridFirst && <iframe class="idxmap" data-src={MAP} title="MLS® map search: homes for sale in the Fraser Valley and Metro Vancouver" allow="geolocation" referrerpolicy="strict-origin-when-cross-origin"></iframe>}
+    {!gridFirst && <p class="idxmap__alt"><a href={MAP} target="_blank" rel="noopener">Open the map search full screen</a></p>}
     {id && (
       <div class="idxphone">
-        <p class="idxphone__note">South Surrey homes for sale are below. For an address, a price range or an MLS® number, <a href={MAP} data-map-open>open the map search</a>.</p>
+        <p class="idxphone__note">South Surrey homes for sale are below. For an address, a price range or an MLS® number, <a href={gridFirst ? '/map-search.html' : MAP} data-map-open>open the map search</a>.</p>
         <div class="idx" data-idx-src={src} data-idx-id={id}></div>
         <p class="notice idx__fallback" hidden>The live listings did not load. <a href={MAP} target="_blank" rel="noopener">Open the map search</a></p>
       </div>
@@ -128,6 +129,8 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
   .idxmap{display:block;width:100%;height:min(46rem,78vh);height:min(46rem,78svh);min-height:30rem;border:1px solid var(--ink);background:var(--cream)}
   .idxmap__alt{margin:.6rem 0 0;font-size:.9375rem;text-align:right}
   .idxphone{display:none}
+  .section--idxgrid .idxphone{display:block}
+  .section--idxgrid .idxphone__note{margin:0 0 var(--s4);font-size:.9375rem}
   @media (max-width:700px){
     .section--idxmap:has(.idxphone) .idxmap,.section--idxmap:has(.idxphone) .idxmap__alt{display:none}
     .idxphone{display:block}

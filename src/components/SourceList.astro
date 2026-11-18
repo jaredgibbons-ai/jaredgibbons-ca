@@ -1,12 +1,14 @@
 ---
 // Sources as cards: publisher, readable title, type tag and host. Opens in a new tab (these are other people's sites).
 import { sourceInfo } from '../lib/sources';
-const { items = [] } = Astro.props as { items: any[][] };
+const { items = [], compact = false } = Astro.props as { items: any[][]; compact?: boolean };
 const seenText = new Set<string>();
 const seen = new Set<string>();
 const rows = items.filter((it) => { if (it.some((p: any) => p.h)) return true; const k = it.map((p: any) => p.t).join(' ').trim(); if (seenText.has(k)) return false; seenText.add(k); return true; }).filter((it) => { const a = it.find((p: any) => p.h); const k = a ? String(a.h).replace(/#.*$/, '') : ''; if (!k) return true; if (seen.has(k)) return false; seen.add(k); return true; }).map((it) => { const a = it.find((p: any) => p.h); const text = it.map((p: any) => p.t).join(' ').trim(); return a ? { ...sourceInfo(a.t || text, a.h), href: a.h } : { pub: '', title: text, kind: '', host: '', href: '' }; });
 ---
-<ul class="srcs">
+{compact
+  ? <p class="srcfew">{rows.length > 1 ? 'Sources' : 'Source'}: {rows.map((r, i) => <>{i > 0 ? ' · ' : ''}{r.href ? <a href={r.href} target="_blank" rel="noopener">{r.pub ? `${r.pub}, ` : ''}{r.title}<span class="sr-only"> (opens in a new tab)</span></a> : r.title}</>)}</p>
+  : <ul class="srcs">
   {rows.map((r) => (
     <li>{r.href
       ? <a class="src" href={r.href} target="_blank" rel="noopener">
@@ -17,8 +19,10 @@ const rows = items.filter((it) => { if (it.some((p: any) => p.h)) return true; c
       : <p class="src src--plain"><span class="src__title">{r.title}</span></p>}
     </li>
   ))}
-</ul>
+</ul>}
 <style is:global>
+  .srcfew{margin:1.5rem 0 0;padding-top:.9rem;border-top:1px solid var(--rule,#d9d4cc);font-size:.875rem;color:var(--grey);max-width:none}
+  .srcfew a{color:inherit}
   .srcs{list-style:none;margin:0 0 1.5rem;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));gap:.75rem}
   .srcs > li{min-width:0}
   .src{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr auto;gap:.35rem;height:100%;padding:.9rem 1rem;border:1px solid var(--ink);background:#fff;color:var(--ink);text-decoration:none;overflow-wrap:anywhere}
