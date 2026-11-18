@@ -743,7 +743,16 @@ type Sec = { kind: 'text' | 'reviews' | 'grid' | 'photos'; blocks: any[]; block?
 const sections: Sec[] = [];
 let cur: Sec = { kind: 'text', blocks: [] };
 const push = () => { if (cur.blocks.length) sections.push(cur); cur = { kind: 'text', blocks: [] }; };
+// One or two sources do not get a section of their own (D-348, Jared: "sources? looks odd"): a full-width band with a fold and one
+// card read as an empty block. They close the section above as one small line.
+const fewSources = new Set<any>(), dropHeads = new Set<any>();
+page.blocks.forEach((b: any, i: number) => {
+  const l = page.blocks[i + 1] as any, after = page.blocks[i + 2] as any;
+  if (b.t === 'h' && b.level === 2 && isSourcesHeading(b.text) && l?.t === 'list' && (l.items || []).length <= 2 && (!after || (after.t === 'h' && after.level === 2) || ['reviews', 'grid', 'photos'].includes(after.t))) { dropHeads.add(b); fewSources.add(l); }
+});
 for (const b of page.blocks) {
+  if (dropHeads.has(b)) continue;
+  if (fewSources.has(b)) { cur.blocks.push({ t: 'srcfew', items: (b as any).items }); continue; }
   if (b.t === 'reviews') { push(); sections.push({ kind: 'reviews', blocks: [], block: b }); continue; }
   if (b.t === 'grid') { push(); sections.push({ kind: 'grid', blocks: [] }); continue; }
   if (b.t === 'photos') { push(); sections.push({ kind: 'photos', blocks: [], block: b }); continue; }
@@ -842,7 +851,7 @@ const explore = !_extra.length ? exploreBase
     );
     if (sec.kind === 'grid' && isMapPage) return (
       <>
-        <IdxEmbed frame id={idx.pages['south-surrey-homes-for-sale']} account={idx.account} />
+        <IdxEmbed frame gridFirst={page.slug === 'recip'} id={idx.pages['south-surrey-homes-for-sale']} account={idx.account} />
         {page.slug === 'map-search' && (
           <section class="section section--tight mapzone" aria-labelledby="mapzone-h">
             <div class="wrap mapzone__in">
@@ -886,7 +895,7 @@ const explore = !_extra.length ? exploreBase
                 if (b.level === 1 && isMapPage) return (
                   <>
                     {heading}
-                    <div class="mapcta">
+                    <div class={'mapcta' + (page.slug === 'recip' ? ' mapcta--always' : '')}>
                       <form class="qs" data-qs={JSON.stringify(Object.fromEntries(qsAreas.map((a) => [a.key, a.opts])))}>
                         <p class="qs__t">Quick search</p>
                         <div class="qs__row">
@@ -899,7 +908,7 @@ const explore = !_extra.length ? exploreBase
                         </div>
                         <button type="submit" class="btn">Show listings →</button>
                       </form>
-                      <p class="mapcta__map"><a class="btn btn--ghost" href={mapSearchUrl(idx.account)} data-map-open>Open the map search →</a></p>
+                      <p class="mapcta__map"><a class="btn btn--ghost" href={page.slug === 'recip' ? '/map-search.html' : mapSearchUrl(idx.account)} data-map-open>Open the map search →</a></p>
                     </div>
                   </>
                 );
@@ -987,6 +996,7 @@ const explore = !_extra.length ? exploreBase
               );
               if (b.t === 'p') return <p class={b.cls}><Rich parts={b.parts} /></p>;
               if (b.t === 'photo') return <PhotoCredit photo={b.photo} sizes="(min-width:48rem) 40rem, 100vw" />;
+              if (b.t === 'srcfew') return <SourceList items={b.items} compact />;
               if (b.t === 'list' && (sec.blocks[bi - 1]?.t === 'h' && isSourcesHeading(sec.blocks[bi - 1].text) || isSourcesIntro(sec.blocks[bi - 1])) && b.items.length) return <SourceList items={b.items} />;
               if (b.t === 'list') {
                 const shown = visibleItems(b.items);
@@ -1469,6 +1479,20 @@ const explore = !_extra.length ? exploreBase
   @media (min-width:60rem){.mapzone__in{grid-template-columns:1fr 1.1fr;gap:var(--s7);align-items:start}}
   .mapzone p{max-width:36rem;line-height:1.6}
   .mapcta{display:none}
+  /* The search page (D-348): the quick search and the listings at every width; the map is a button. */
+  @media (min-width:701px){
+    .mapcta--always{display:flex;flex-wrap:wrap;align-items:flex-end;gap:1rem;margin:0 0 1.5rem}
+    .mapcta--always .qs{flex:1 1 30rem;max-width:46rem;display:grid;grid-template-columns:1fr auto;gap:.7rem 1rem;align-items:end;border:1px solid var(--ink);padding:1rem 1.1rem 1.1rem;background:#fff}
+    .mapcta--always .qs[hidden]{display:none}
+    .mapcta--always .qs__t{grid-column:1/-1;margin:0;font:800 .8125rem/1.2 var(--f-head);letter-spacing:.14em;text-transform:uppercase}
+    .mapcta--always .qs__row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin:0}
+    .mapcta--always .qs__f{display:block;min-width:0}
+    .mapcta--always .qs__f span{display:block;margin:0 0 .3rem;font:700 .6875rem/1.2 var(--f-head);letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+    .mapcta--always .qs__f select{width:100%;min-height:3rem;padding:.4rem .5rem;border:1px solid var(--ink);border-radius:0;background:#fff;color:var(--ink);font:400 1rem var(--f-body)}
+    .mapcta--always .qs .btn{min-height:3rem}
+    .mapcta--always .mapcta__map{margin:0}
+    .mapcta--always .mapcta__map .btn{min-height:3rem}
+  }
   @media (max-width:700px){
     .mapcta{display:block;margin:0 0 1.25rem}
     .mapcta .btn{width:100%;justify-content:center;min-height:3.25rem;font-size:.9375rem}

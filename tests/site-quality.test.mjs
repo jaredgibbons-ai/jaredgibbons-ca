@@ -153,7 +153,10 @@ test('built pages: the map pages offer a quick search whose every choice is a re
       assert.equal(data[a][0][0], 'All homes', `${f}: ${a} does not start with All homes`);
       for (const [, href] of data[a]) assert.ok(/^\/[a-z0-9-]+\.html$/.test(href) && fs.existsSync(path.join(DIST, href.slice(1))), `${f}: ${a} -> ${href} is not a built page`);
     }
-    assert.ok(/<a class="btn btn--ghost"[^>]*href="https:\/\/idx\.myrealpage\.com\/[^"]*idx\.search"[^>]*data-map-open/.test(t), `${f}: map button missing or not a plain link`);
+    // D-348: the search page shows listings, and its map button opens the site's own map page (the vendor's map on phones, full screen).
+    const mapHref = f === 'recip.html' ? /<a class="btn btn--ghost"[^>]*href="\/map-search\.html"[^>]*data-map-open/ : /<a class="btn btn--ghost"[^>]*href="https:\/\/idx\.myrealpage\.com\/[^"]*idx\.search"[^>]*data-map-open/;
+    assert.ok(mapHref.test(t), `${f}: map button missing or not a plain link`);
+    if (f === 'recip.html') assert.ok(!/<iframe[^>]*class="idxmap"/.test(t) && /section--idxgrid/.test(t), 'recip.html: the search page shows listings, not the map frame');
     assert.ok(/<div class="mapfs" id="mapfs" role="dialog" aria-modal="true"[^>]*data-src="https:\/\/idx\.myrealpage\.com\/[^"]*"[^>]*hidden/.test(t), `${f}: full-screen map container missing`);
     assert.ok(!/<iframe[^>]*class="idxmap"[^>]*\ssrc=/.test(t), `${f}: the desktop map frame must not load until the screen is wide enough`);
   }
