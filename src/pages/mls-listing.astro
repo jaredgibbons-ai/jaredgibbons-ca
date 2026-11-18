@@ -48,6 +48,12 @@ import idx from '../data/idx-embeds.json';
       if (gone && drawn() && box.hidden) { box.hidden = false; gone.hidden = true; }
       box.querySelectorAll('iframe:not([title])').forEach((f) => f.setAttribute('title', `MLS® listing: ${name || 'details'}`));
     }).observe(box, { childList: true, subtree: true });
+    // A sold or removed listing: MyRealPage sends the frame to this site's search page (its off-market setting). A frame on our own
+    // origin is the only one this page can read, so being able to read it is the signal: go to the search page itself.
+    box.addEventListener('load', (e) => {
+      const f = e.target as HTMLIFrameElement;
+      try { if (f.tagName === 'IFRAME' && f.contentWindow && f.contentWindow.location.hostname === location.hostname) location.replace('/recip.html'); } catch { /* the listing: another origin */ }
+    }, true);
   } else if (gone && box) { gone.hidden = false; box.hidden = true; }
 </script>
 <style>
