@@ -63,6 +63,20 @@ def main():
         rec = {'sub': label(nm), 'noun': NOUN[g], 'page': next((p for p in sorted(pages, key=len) if norm(p) in (base, norm(nm))), None)}
         if s.get('n', 0) >= S.MIN_MED and 'price' in s: rec.update(n=s['n'], price=s['price'], dom=s['dom'], ratio=s.get('ratio'))
         out[d['slug']] = rec
+    # Still unplaced: Pete's Paragon lookup of the older pages (src/data/listing-subareas.json, D-358).
+    extra = json.loads((ROOT / 'src/data/listing-subareas.json').read_text())['listings']
+    for slug, name in extra.items():
+        if slug in out: continue
+        k = next((v for kk, v in subs.items() if kk in (norm(name), norm(name) + 'langley', norm(name) + 'surrey')), None)
+        if not k: continue
+        d = json.loads((ROOT / 'src/data/listings' / f'{slug}.json').read_text())
+        dt = next((it['v'][0] for b in d['blocks'] if b.get('t') == 'facts' for it in b['items'] if it['k'] == 'Dwelling Type:' and it['v']), '')
+        g = DT.get(dt, 'house')
+        s = agg['sub'][k]['groups'].get(g, {}); nm = k.split('|', 1)[1]
+        base = norm(re.sub(r'\s+(Langley|Surrey|BC|MR)$', '', nm))
+        rec = {'sub': label(nm), 'noun': NOUN[g], 'page': next((p for p in sorted(pages, key=len) if norm(p) in (base, norm(nm), base + 'guide')), None)}
+        if s.get('n', 0) >= S.MIN_MED and 'price' in s: rec.update(n=s['n'], price=s['price'], dom=s['dom'], ratio=s.get('ratio'))
+        out[slug] = rec
     meta = {'_note': 'Neighbourhood figures for sold listing pages (D-322), from the Paragon 12-month aggregate. Built by tools/build_listing_area.py.', 'window': S.WINDOW}
     (ROOT / 'src/data/listing-area.json').write_text(json.dumps({**meta, 'listings': out}, ensure_ascii=False, indent=1) + '\n')
     print(len(out), 'listings;', sum(1 for v in out.values() if 'price' in v), 'with figures;', sum(1 for v in out.values() if v['page']), 'with a neighbourhood page')

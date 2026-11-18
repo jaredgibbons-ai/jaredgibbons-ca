@@ -2,7 +2,7 @@
  "eyebrow": "Zoning directory",
  "h2": "Zoning in Langley, Surrey, White Rock, Delta, Abbotsford, Vancouver and the Fraser Valley",
  "lead": "Plain-English summaries of residential, farm, rural, acreage, commercial and industrial zones: what you can build, the smallest new lot and the height limit, with a link to the official bylaw for every zone. Type an address to see its zone, or search any zone code.",
- "checked": "Checked against each official bylaw on October 2, 2026, with fuller summaries and White Rock, City of Langley, Pitt Meadows, Coquitlam and Vancouver added November 18, 2026. Zoning changes often, so always confirm with the municipality.",
+ "checked": "Checked against each official bylaw on October 2, 2026, with fuller summaries, White Rock, City of Langley, Pitt Meadows, Coquitlam, Vancouver and Burnaby, and the urban zones of Maple Ridge, Mission and Chilliwack added November 18, 2026. Zoning changes often, so always confirm with the municipality.",
  "general": [
   "General information only.",
   "These summaries may not reflect recent amendments and are not legal advice. Always confirm zoning, permitted uses and ALR status with the municipality and the Agricultural Land Commission before you buy."
@@ -9371,7 +9371,7 @@
    "id": "zd-chilliwack",
    "name": "Chilliwack",
    "bylaw": "City of Chilliwack Zoning Bylaw 2020, No. 5000",
-   "source": "Source: Consolidated PDF on chilliwack.com (updated Sept 2, 2026). Agricultural and rural zones only.",
+   "source": "Source: Consolidated PDF on chilliwack.com (updated Sept 2, 2026). Agricultural, rural and residential zones.",
    "href": "https://www.chilliwack.com/main/page.cfm?id=377",
    "zones": [
     {
@@ -9655,6 +9655,393 @@
      ],
      "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=111",
      "ref": "s.7.09"
+    },
+    {
+     "id": "zd-chilliwack-r1-a",
+     "code": "R1-A",
+     "name": "Urban Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "R1-A is Chilliwack's standard urban zone (much of Sardis included): one detached house or multi-section manufactured home, with a secondary suite, coach house or garden suite (up to 100 m²). Small-scale multi-unit housing (s.4.08(7)): inside the urban growth boundary, on lots under 4,050 m² with city water and sewer, up to 4 units in total (3 on lots of 280 m² or less) as suites, coach houses or garden suites, with a floor area ratio up to 0.75."
+      ],
+      [
+       "Min. new lot",
+       "500 m² (about 5,380 sq ft) with city water and sewer, 0.2 ha with city water only; at least 15 m wide and 30 m deep (20 m wide in some cases)."
+      ],
+      [
+       "Limits",
+       "Floor area ratio 0.6. Homes up to 10 m (about 33 ft). Lot coverage 25% on septic."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=113",
+     "ref": "s.8.01"
+    },
+    {
+     "id": "zd-chilliwack-r1-b",
+     "code": "R1-B",
+     "name": "Urban Duplex Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "A duplex. Small-scale multi-unit housing (s.4.08(7)): inside the urban growth boundary, on lots under 4,050 m² with city water and sewer, up to 4 units in total (3 on lots of 280 m² or less) as suites, coach houses or garden suites, with a floor area ratio up to 0.75."
+      ],
+      [
+       "Min. new lot",
+       "630 m² (about 6,780 sq ft), at least 20 m wide and 25 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area ratio 0.6. Up to 10 m (about 33 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=116",
+     "ref": "s.8.02"
+    },
+    {
+     "id": "zd-chilliwack-r1-c",
+     "code": "R1-C",
+     "name": "Urban Infill Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "One detached house or manufactured home on a small infill lot, with a secondary suite. Small-scale multi-unit housing (s.4.08(7)): inside the urban growth boundary, on lots under 4,050 m² with city water and sewer, up to 4 units in total (3 on lots of 280 m² or less) as suites, coach houses or garden suites, with a floor area ratio up to 0.75."
+      ],
+      [
+       "Min. new lot",
+       "300 m² (about 3,230 sq ft) and 10 m wide; 360 m² and 12 m wide on a corner; 30 m deep."
+      ],
+      [
+       "Limits",
+       "Up to 10 m (about 33 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=118",
+     "ref": "s.8.03"
+    },
+    {
+     "id": "zd-chilliwack-r2",
+     "code": "R2",
+     "name": "Urban Residential Transition Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "A detached house, an apartment or a boarding house: up to 40 homes or 80 sleeping units per hectare."
+      ],
+      [
+       "Min. new lot",
+       "700 m² (about 7,530 sq ft), at least 20 m wide and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area ratio 0.6. Lot coverage 40%. Up to 10 m (about 33 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=120",
+     "ref": "s.8.04"
+    },
+    {
+     "id": "zd-chilliwack-r2-a",
+     "code": "R2-A",
+     "name": "Seniors Conversion Housing Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "A detached house, or a boarding house for seniors of up to 10 residents plus 2 staff (80 sleeping units per hectare)."
+      ],
+      [
+       "Min. new lot",
+       "From 500 m² for a house and 675 m² for a boarding house, larger in some cases (900 m² and 1,000 m²); 15 to 20 m wide and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area ratio 0.5 (0.25 on the larger lots). Lot coverage 40% (25%). Up to 10 m (about 33 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=122",
+     "ref": "s.8.05"
+    },
+    {
+     "id": "zd-chilliwack-r3",
+     "code": "R3",
+     "name": "Small Lot Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "One detached house or multi-section manufactured home on a small lot, with a secondary suite. Small-scale multi-unit housing (s.4.08(7)): inside the urban growth boundary, on lots under 4,050 m² with city water and sewer, up to 4 units in total (3 on lots of 280 m² or less) as suites, coach houses or garden suites, with a floor area ratio up to 0.75."
+      ],
+      [
+       "Min. new lot",
+       "360 m² (about 3,880 sq ft), at least 12 m wide (13.5 m on a corner) and 25 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area ratio 0.75. Lot coverage 50%. Up to 10 m (about 33 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=124",
+     "ref": "s.8.06"
+    },
+    {
+     "id": "zd-chilliwack-r3-a",
+     "code": "R3-A",
+     "name": "Clustered Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Detached houses in a cluster (usually a strata), each with a possible secondary suite: up to 25 homes per hectare."
+      ],
+      [
+       "Min. new lot",
+       "0.4 ha (about 1 acre), at least 25 m wide and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Lot coverage 50%. Up to 8.5 m (about 28 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=126",
+     "ref": "s.8.07"
+    },
+    {
+     "id": "zd-chilliwack-r4",
+     "code": "R4",
+     "name": "Low Density Multi-Unit Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Duplexes and townhouses: up to 40 homes per hectare."
+      ],
+      [
+       "Min. new lot",
+       "1,200 m² (about 12,920 sq ft), at least 30 m wide and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area ratio 0.75. Lot coverage 50%. Up to 10 m (about 33 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=129",
+     "ref": "s.8.08"
+    },
+    {
+     "id": "zd-chilliwack-r4-a",
+     "code": "R4-A",
+     "name": "Medium Density Multi-Unit Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Duplexes and townhouses: up to 50 homes per hectare."
+      ],
+      [
+       "Min. new lot",
+       "1,200 m² (about 12,920 sq ft), at least 30 m wide and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area ratio 0.85. Lot coverage 50%."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=131",
+     "ref": "s.8.09"
+    },
+    {
+     "id": "zd-chilliwack-r4-b",
+     "code": "R4-B",
+     "name": "Low Density Multi-Unit Secondary Suite Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Duplexes and townhouses, up to 40 homes per hectare. A townhouse may have its own suite of up to 90 m²."
+      ],
+      [
+       "Min. new lot",
+       "1,200 m² (about 12,920 sq ft), at least 30 m wide and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area ratio 0.75. Lot coverage 50%. Up to 10 m (about 33 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=133",
+     "ref": "s.8.10"
+    },
+    {
+     "id": "zd-chilliwack-r5",
+     "code": "R5",
+     "name": "Low Rise Apartment Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Apartments, assisted or independent living, and boarding houses. Up to 155 apartments per hectare, 225 with small units, and up to 400 with density benefits."
+      ],
+      [
+       "Min. new lot",
+       "1,000 m² (about 10,760 sq ft), at least 30 m wide and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Up to 17.5 m (about 57 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=136",
+     "ref": "s.8.11"
+    },
+    {
+     "id": "zd-chilliwack-r6",
+     "code": "R6",
+     "name": "Mid Rise Apartment Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Apartments, assisted or independent living, and boarding houses. Up to 200 apartments per hectare, 250 with small units, and up to 400 with density benefits."
+      ],
+      [
+       "Min. new lot",
+       "1,000 m² (about 10,760 sq ft), at least 30 m wide and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Up to 25 m (about 82 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=139",
+     "ref": "s.8.12"
+    },
+    {
+     "id": "zd-chilliwack-r7",
+     "code": "R7",
+     "name": "Special Service Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Apartments and townhouses, with general commercial uses: up to 100 apartments per hectare."
+      ],
+      [
+       "Min. new lot",
+       "900 m² (about 9,690 sq ft), at least 30 m wide and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Lot coverage 60%. Up to 15 m (about 49 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=142",
+     "ref": "s.8.13"
+    },
+    {
+     "id": "zd-chilliwack-r8",
+     "code": "R8",
+     "name": "Supportive Housing Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Supportive housing, up to 250 units per hectare, with sleeping units, a school and general commercial uses."
+      ],
+      [
+       "Min. new lot",
+       "450 m² (about 4,840 sq ft), at least 15 m wide and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Lot coverage 60%. Up to 15 m (about 49 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=144",
+     "ref": "s.8.14"
+    },
+    {
+     "id": "zd-chilliwack-r9",
+     "code": "R9",
+     "name": "Affordable Rental Housing Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Rental apartments, up to 365 per hectare, with a club or lodge, a school and general commercial uses."
+      ],
+      [
+       "Min. new lot",
+       "1,000 m² (about 10,760 sq ft), at least 30 m wide and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Lot coverage 60% (90% for a parking structure). Up to 25 m (about 82 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=146",
+     "ref": "s.8.15"
+    },
+    {
+     "id": "zd-chilliwack-rmh",
+     "code": "RMH",
+     "name": "Manufactured Home Park Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "A manufactured home park. Site sizes and layout follow the city's Mobile Home Parks Bylaw."
+      ],
+      [
+       "Min. new lot",
+       "2 ha (about 4.9 acres), at least 25 m wide."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=149",
+     "ref": "s.8.16"
+    },
+    {
+     "id": "zd-chilliwack-rc",
+     "code": "RC",
+     "name": "Commercial Conversion Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "A detached house with a secondary suite, or the house converted to a general commercial use."
+      ],
+      [
+       "Min. new lot",
+       "450 m² (about 4,840 sq ft), at least 15 m wide and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Lot coverage 50%. Up to 10 m (about 33 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.chilliwack.com/main/attachments/Files/377/ZBA_5000_-_Zoning_Bylaw_2020_2.pdf#page=151",
+     "ref": "s.8.17"
     }
    ]
   },
@@ -9662,7 +10049,7 @@
    "id": "zd-mapleridge",
    "name": "Maple Ridge",
    "bylaw": "Maple Ridge Zoning Bylaw No. 7600-2019",
-   "source": "Source: Consolidated PDF (to July 28, 2026). Agricultural and rural residential zones only.",
+   "source": "Source: Consolidated PDF (to July 28, 2026). Agricultural, rural and residential zones.",
    "href": "https://www.mapleridge.ca/build-do-business/community-planning/zoning-bylaw",
    "zones": [
     {
@@ -9823,6 +10210,542 @@
      ],
      "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=151",
      "ref": "s.611"
+    },
+    {
+     "id": "zd-mapleridge-rs-1",
+     "code": "RS-1",
+     "name": "Single Detached Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "RS-1 is Maple Ridge's standard single detached zone: one detached home, or an assisted living residence. Inside the Urban Containment Boundary, the Urban Infill rules (s.402.29) allow up to 4 dwelling units on lots over 280 m² (3 on smaller lots), or up to 6 within 400 m of a prescribed bus stop, as a house-plex, courtyard homes or townhouses. Not in Transit-Oriented Areas."
+      ],
+      [
+       "Also allowed",
+       "A secondary suite and a detached garden suite (up to 140 m² or 15% of the lot, whichever is less), boarding, a home-based business, hobby beekeeping, neighbourhood daycare and short-term rental."
+      ],
+      [
+       "Min. new lot",
+       "668 m² (about 7,190 sq ft), at least 18 m wide and 27 m deep."
+      ],
+      [
+       "Limits",
+       "Lot coverage 40% for all buildings. Main building up to 8 m (about 26 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=129",
+     "ref": "s.605"
+    },
+    {
+     "id": "zd-mapleridge-rs-1a",
+     "code": "RS-1a",
+     "name": "Single Detached (Amenity) Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "One detached home of at least 120 m² finished floor area, or an assisted living residence. Inside the Urban Containment Boundary, the Urban Infill rules (s.402.29) allow up to 4 dwelling units on lots over 280 m² (3 on smaller lots), or up to 6 within 400 m of a prescribed bus stop, as a house-plex, courtyard homes or townhouses. Not in Transit-Oriented Areas."
+      ],
+      [
+       "Also allowed",
+       "A secondary suite and a detached garden suite (up to 140 m² or 15% of the lot, whichever is less), boarding, a home-based business, hobby beekeeping, neighbourhood daycare and short-term rental."
+      ],
+      [
+       "Min. new lot",
+       "668 m² (about 7,190 sq ft), at least 18 m wide and 27 m deep."
+      ],
+      [
+       "Limits",
+       "Lot coverage 40%. Main building up to 9.5 m (about 31 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=133",
+     "ref": "s.606"
+    },
+    {
+     "id": "zd-mapleridge-rs-1b",
+     "code": "RS-1b",
+     "name": "Single Detached (Medium Density) Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "One detached home on a medium-sized lot. Inside the Urban Containment Boundary, the Urban Infill rules (s.402.29) allow up to 4 dwelling units on lots over 280 m² (3 on smaller lots), or up to 6 within 400 m of a prescribed bus stop, as a house-plex, courtyard homes or townhouses. Not in Transit-Oriented Areas."
+      ],
+      [
+       "Also allowed",
+       "A secondary suite and a detached garden suite (up to 140 m² or 15% of the lot, whichever is less), boarding, a home-based business, hobby beekeeping, neighbourhood daycare and short-term rental."
+      ],
+      [
+       "Min. new lot",
+       "557 m² (about 6,000 sq ft), at least 15 m wide and 27 m deep. In the Albion area, a density bonus allows lots of 371 m², 12 m wide (13.5 m on a corner) and 24 m deep."
+      ],
+      [
+       "Limits",
+       "Lot coverage 40%. Main building up to 9.5 m (about 31 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=136",
+     "ref": "s.607"
+    },
+    {
+     "id": "zd-mapleridge-rs-1c",
+     "code": "RS-1c",
+     "name": "Single Detached (Low Density) Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "One detached home or a duplex, or an assisted living residence, on a larger lot. Inside the Urban Containment Boundary, the Urban Infill rules (s.402.29) allow up to 4 dwelling units on lots over 280 m² (3 on smaller lots), or up to 6 within 400 m of a prescribed bus stop, as a house-plex, courtyard homes or townhouses. Not in Transit-Oriented Areas."
+      ],
+      [
+       "Also allowed",
+       "A secondary suite and a detached garden suite (up to 140 m² or 15% of the lot, whichever is less), boarding, a home-based business, hobby beekeeping, neighbourhood daycare and short-term rental."
+      ],
+      [
+       "Min. new lot",
+       "1,200 m² (about 12,920 sq ft), at least 24 m wide and 36 m deep."
+      ],
+      [
+       "Limits",
+       "Lot coverage 25% with a detached home, 35% with a duplex. Main building up to 9.5 m (about 31 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=139",
+     "ref": "s.608"
+    },
+    {
+     "id": "zd-mapleridge-rs-1d",
+     "code": "RS-1d",
+     "name": "Single Detached (Half Acre) Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "One detached home or a duplex on a half-acre lot, for areas without city sewer. Inside the Urban Containment Boundary, the Urban Infill rules (s.402.29) allow up to 4 dwelling units on lots over 280 m² (3 on smaller lots), or up to 6 within 400 m of a prescribed bus stop, as a house-plex, courtyard homes or townhouses. Not in Transit-Oriented Areas."
+      ],
+      [
+       "Also allowed",
+       "A secondary suite and a detached garden suite (up to 140 m² or 15% of the lot, whichever is less), boarding, a home-based business, hobby beekeeping, neighbourhood daycare and short-term rental."
+      ],
+      [
+       "Min. new lot",
+       "2,000 m² (about half an acre), at least 30 m wide and 40 m deep."
+      ],
+      [
+       "Limits",
+       "Lot coverage 15% with a detached home, 25% with a duplex. Main building up to 9.5 m (about 31 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=142",
+     "ref": "s.609"
+    },
+    {
+     "id": "zd-mapleridge-srs",
+     "code": "SRS",
+     "name": "Special Urban Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "One detached home on a larger urban lot. Inside the Urban Containment Boundary, the Urban Infill rules (s.402.29) allow up to 4 dwelling units on lots over 280 m² (3 on smaller lots), or up to 6 within 400 m of a prescribed bus stop, as a house-plex, courtyard homes or townhouses. Not in Transit-Oriented Areas."
+      ],
+      [
+       "Also allowed",
+       "A secondary suite and a detached garden suite (up to 140 m² or 15% of the lot, whichever is less), boarding, a home-based business, hobby beekeeping, neighbourhood daycare and short-term rental."
+      ],
+      [
+       "Min. new lot",
+       "837 m² (about 9,010 sq ft), at least 18 m wide and 27 m deep."
+      ],
+      [
+       "Limits",
+       "Lot coverage 40%. Main building up to 9.5 m (about 31 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=161",
+     "ref": "s.614"
+    },
+    {
+     "id": "zd-mapleridge-rur",
+     "code": "RUR",
+     "name": "Urban Infill Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "RUR is Maple Ridge's small-scale multi-unit zone: a detached home, duplex, triplex, fourplex, or courtyard homes or townhouses of up to six units. Up to 4 units on lots over 280 m² (3 on smaller lots), or 6 within 400 m of a prescribed bus stop (s.402.29)."
+      ],
+      [
+       "Also allowed",
+       "A secondary suite, a detached garden suite, boarding, a home-based business and short-term rental."
+      ],
+      [
+       "Min. new lot",
+       "450 m² (about 4,840 sq ft), at least 12 m wide (13.5 m on a corner) and 24 m deep."
+      ],
+      [
+       "Limits",
+       "Lot coverage 50% where up to four units are allowed, 60% for up to six. Main buildings up to 9.5 m (about 31 ft); accessory buildings 4.5 m."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=197",
+     "ref": "s.627"
+    },
+    {
+     "id": "zd-mapleridge-rst",
+     "code": "RST",
+     "name": "Street Townhouse Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Street townhouses on their own fee-simple lots, up to four attached, in Silver Valley areas shown as Eco-Cluster. One home per lot."
+      ],
+      [
+       "Also allowed",
+       "A home-based business and boarding."
+      ],
+      [
+       "Min. new lot",
+       "Interior unit 195 m² and 7.5 m wide; end unit 234 m² and 9 m wide; exterior end unit 273 m² and 10.5 m wide. 30 m deep with a lane, 27 m without."
+      ],
+      [
+       "Limits",
+       "Each home up to 223 m² of floor area, not counting the basement and garage. Lot coverage 65% (interior), 55% (end) and 45% (exterior end). Up to 9.5 m (about 31 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=155",
+     "ref": "s.612"
+    },
+    {
+     "id": "zd-mapleridge-rst-sv",
+     "code": "RST-SV",
+     "name": "Street Townhouse Residential - Silver Valley Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Street townhouses on their own fee-simple lots, up to six attached, in Silver Valley outside the Eco-Cluster areas. One home per lot."
+      ],
+      [
+       "Also allowed",
+       "A home-based business and boarding."
+      ],
+      [
+       "Min. new lot",
+       "With a lane: interior 225 m², end 252 m², exterior end 315 m². Without a lane: 202 m², 235 m² and 283 m². Widths 7.5 m, 8.7 m and 10.5 m; 30 m deep with a lane, 27 m without."
+      ],
+      [
+       "Limits",
+       "Each home up to 223 m² of floor area. Lot coverage 65% (interior), 55% (end) and 45% (exterior end). Up to 9.5 m (about 31 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=158",
+     "ref": "s.613"
+    },
+    {
+     "id": "zd-mapleridge-rt-2",
+     "code": "RT-2",
+     "name": "Ground-Oriented Residential Infill Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "A triplex, a fourplex or courtyard housing, as infill in existing neighbourhoods."
+      ],
+      [
+       "Also allowed",
+       "A secondary suite, boarding, a home-based business and short-term rental."
+      ],
+      [
+       "Min. new lot",
+       "Triplex 800 m², 20 m wide and 27 m deep; fourplex 850 m², 22 m wide and 30 m deep; courtyard housing 950 m², 25 m wide and 35 m deep. In the Town Centre: 700 m², 800 m² and 900 m²."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.75 times the lot area. Lot coverage 45%. Main buildings up to 8 m (about 26 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=164",
+     "ref": "s.616"
+    },
+    {
+     "id": "zd-mapleridge-rm-1",
+     "code": "RM-1",
+     "name": "Low Density Townhouse Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Townhouses: two or more attached homes, up to six in a block (45 m long at most)."
+      ],
+      [
+       "Also allowed",
+       "A home-based business and boarding."
+      ],
+      [
+       "Min. new lot",
+       "1,000 m² (about 10,760 sq ft), at least 27 m wide and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.6 times the lot area (a few named lots slightly more). Townhouses up to 9.5 m (about 31 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=168",
+     "ref": "s.617"
+    },
+    {
+     "id": "zd-mapleridge-rm-2",
+     "code": "RM-2",
+     "name": "Medium Density Apartment Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Apartment buildings."
+      ],
+      [
+       "Also allowed",
+       "A home-based business and boarding."
+      ],
+      [
+       "Min. new lot",
+       "1,300 m² (about 13,990 sq ft), at least 30 m wide."
+      ],
+      [
+       "Limits",
+       "Floor area 1.8 times the lot area, up to 2.5 with added density for underground parking. In the Town Centre (outside Port Haney): 11 m to 22 m and up to six storeys. Elsewhere and in Port Haney: up to 15 m and four storeys."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=172",
+     "ref": "s.618"
+    },
+    {
+     "id": "zd-mapleridge-rm-3",
+     "code": "RM-3",
+     "name": "Medium/High Density Apartment Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Apartment buildings of 5 to 12 storeys in the Town Centre."
+      ],
+      [
+       "Also allowed",
+       "A home-based business and boarding."
+      ],
+      [
+       "Min. new lot",
+       "1,300 m² (about 13,990 sq ft), at least 30 m wide."
+      ],
+      [
+       "Limits",
+       "Floor area 1.2 times the lot area, up to 3.6 with added density. Buildings from 18 m (five storeys) to 43 m (12 storeys)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=175",
+     "ref": "s.619"
+    },
+    {
+     "id": "zd-mapleridge-rm-4",
+     "code": "RM-4",
+     "name": "Medium Density Townhouse and Apartment Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Townhouses and apartments."
+      ],
+      [
+       "Also allowed",
+       "A home-based business and boarding."
+      ],
+      [
+       "Min. new lot",
+       "1,115 m² (about 12,000 sq ft), at least 18 m wide."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.75 times the lot area. Apartments up to 11 m, townhouses 9.5 m; 15 m in Port Haney."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=178",
+     "ref": "s.620"
+    },
+    {
+     "id": "zd-mapleridge-rm-5",
+     "code": "RM-5",
+     "name": "Low Density Townhouse and Apartment Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Townhouses and apartments, each home with its own private outdoor space."
+      ],
+      [
+       "Also allowed",
+       "A home-based business and boarding."
+      ],
+      [
+       "Min. new lot",
+       "1,115 m² (about 12,000 sq ft), at least 30 m wide."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.8 times the lot area. Lot coverage 45%. Apartments up to 11 m, townhouses 9.5 m."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=181",
+     "ref": "s.621"
+    },
+    {
+     "id": "zd-mapleridge-rm-6",
+     "code": "RM-6",
+     "name": "Town Centre High Density Apartment Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "High-rise apartments in the Town Centre, at least ten storeys."
+      ],
+      [
+       "Also allowed",
+       "A home-based business and boarding."
+      ],
+      [
+       "Min. new lot",
+       "2,000 m² (about 21,530 sq ft), at least 30 m wide."
+      ],
+      [
+       "Limits",
+       "Floor area 1.6 times the lot area, up to 4.0 with added density. Buildings from 37 m (ten storeys) to 73 m."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=184",
+     "ref": "s.622"
+    },
+    {
+     "id": "zd-mapleridge-re",
+     "code": "RE",
+     "name": "Independent Seniors Living Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Independent seniors living."
+      ],
+      [
+       "Min. new lot",
+       "2.0 ha (about 4.9 acres), at least 60 m wide."
+      ],
+      [
+       "Limits",
+       "Floor area 1.4 times the lot area (up to five storeys), or up to 2.2 with added density. Lot coverage 40%. Up to 15 m (about 49 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=187",
+     "ref": "s.623"
+    },
+    {
+     "id": "zd-mapleridge-rg",
+     "code": "RG",
+     "name": "Cluster Housing Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "A low-density urban strata: clusters of detached homes, or blocks of three or more attached homes. Up to 15 homes per net hectare."
+      ],
+      [
+       "Also allowed",
+       "With a detached home: a secondary suite, boarding, a home-based business and short-term rental. With cluster housing: boarding and a home-based business."
+      ],
+      [
+       "Min. new lot",
+       "0.8 ha (about 2 acres), at least 60 m wide."
+      ],
+      [
+       "Limits",
+       "Lot coverage 35%. Up to 9.5 m (about 31 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=189",
+     "ref": "s.624"
+    },
+    {
+     "id": "zd-mapleridge-rg-2",
+     "code": "RG-2",
+     "name": "Suburban Residential Strata Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "A low-density suburban strata of detached homes, duplexes or attached clusters. Up to 2.5 homes per net hectare (3.64 on one named bare land strata)."
+      ],
+      [
+       "Also allowed",
+       "With a detached home: a secondary suite, boarding, a home-based business and short-term rental."
+      ],
+      [
+       "Min. new lot",
+       "4.0 ha (about 9.9 acres), at least 75 m wide."
+      ],
+      [
+       "Limits",
+       "Lot coverage 10%. Up to 9.5 m (about 31 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=191",
+     "ref": "s.625"
+    },
+    {
+     "id": "zd-mapleridge-rmh",
+     "code": "RMH",
+     "name": "Manufactured Home Park Residential Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "A manufactured home park, up to 17 homes per net hectare. Each home at least 65 m². One caretaker's house is allowed."
+      ],
+      [
+       "Also allowed",
+       "A home-based business."
+      ],
+      [
+       "Min. new lot",
+       "4.0 ha (about 9.9 acres), at least 75 m wide."
+      ],
+      [
+       "Limits",
+       "Each home site: coverage 40%. Homes up to 4.5 m (about 15 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mapleridge.ca/media/file/zoning-bylaw-7600-2019#page=194",
+     "ref": "s.626"
     }
    ]
   },
@@ -10768,7 +11691,7 @@
    "id": "zd-mission",
    "name": "Mission",
    "bylaw": "District of Mission Zoning Bylaw 5949-2020",
-   "source": "Source: Consolidated PDF (updated Sept 23, 2026). Agricultural and rural zones only.",
+   "source": "Source: Consolidated PDF (updated Sept 23, 2026). Agricultural, rural and residential zones.",
    "href": "https://www.mission.ca/council-government/bylaws-policies/zoning-bylaw",
    "zones": [
     {
@@ -10986,6 +11909,1073 @@
      "checked": "Nov 18, 2026",
      "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=215",
      "ref": "s.1102"
+    },
+    {
+     "id": "zd-mission-mm1",
+     "code": "MM1",
+     "name": "Mid-Rise Multi-unit One Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Mid-rise multi-unit residential buildings."
+      ],
+      [
+       "Min. new lot",
+       "0.36 ha (about 0.89 acres)."
+      ],
+      [
+       "Limits",
+       "Floor area up to 2.0 times the lot area. Lot coverage 60%. Up to 19.8 m (65 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=160",
+     "ref": "s.601"
+    },
+    {
+     "id": "zd-mission-md465",
+     "code": "MD465",
+     "name": "Multi-unit Duplex 465 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Attached homes on lots set aside for them. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "A coach house or garden cottage, one secondary suite, and a home-based business."
+      ],
+      [
+       "Min. new lot",
+       "465 m² (about 5,010 sq ft), at least 16 m wide (17.5 m on a corner) and 30 m deep. Fee-simple duplex halves: 232 m², 8 m wide (8.8 m on a corner)."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.6 times the lot area. Lot coverage 40%. Main building up to 10.5 m (about 34 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=164",
+     "ref": "s.701"
+    },
+    {
+     "id": "zd-mission-mb558",
+     "code": "MB558",
+     "name": "Multi-unit Boarding House 558 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "A boarding house, or: One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "A coach house or garden cottage, one secondary suite, and a home-based business."
+      ],
+      [
+       "Min. new lot",
+       "558 m² (about 6,010 sq ft), at least 18 m wide (19.5 m on a corner) and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.6 times the lot area. Lot coverage 40%. Main building up to 10.5 m (about 34 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=164",
+     "ref": "s.701"
+    },
+    {
+     "id": "zd-mission-mmp",
+     "code": "MMP",
+     "name": "Multi-unit Manufactured Home Park Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Renewal of manufactured home parks that existed when the bylaw took effect: up to 20 homes per hectare, each site at least 335 m². No duplexes, suites or coach houses."
+      ],
+      [
+       "Also allowed",
+       "Amenity space, a home-based business and enclosed storage."
+      ],
+      [
+       "Min. new lot",
+       "2.0 ha (about 4.9 acres)."
+      ],
+      [
+       "Limits",
+       "Homes up to 7.5 m (about 25 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=168",
+     "ref": "s.702"
+    },
+    {
+     "id": "zd-mission-mr1",
+     "code": "MR1",
+     "name": "Multi-unit Rowhouse One Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "One rowhouse per fee-simple lot, attached with no side setback."
+      ],
+      [
+       "Also allowed",
+       "A home-based business."
+      ],
+      [
+       "Min. new lot",
+       "Interior 165 m², 6 m wide; end 200 m², 7.2 m wide; corner 226 m², 8.7 m wide; all 28 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 1.0 times the lot area. Lot coverage 60% (interior) or 50% (end and corner). Up to 11 m (about 36 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=170",
+     "ref": "s.703"
+    },
+    {
+     "id": "zd-mission-mt1",
+     "code": "MT1",
+     "name": "Multi-unit Townhouse One Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Townhouses."
+      ],
+      [
+       "Also allowed",
+       "A child care centre, a home-based business and a caretaker's home."
+      ],
+      [
+       "Min. new lot",
+       "500 m² (about 5,380 sq ft)."
+      ],
+      [
+       "Limits",
+       "Floor area up to 1.0 times the lot area. Lot coverage 55%. Up to 12 m (about 39 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=172",
+     "ref": "s.704"
+    },
+    {
+     "id": "zd-mission-ma1",
+     "code": "MA1",
+     "name": "Multi-unit Apartment One Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Apartments."
+      ],
+      [
+       "Also allowed",
+       "A child care centre and a home-based business."
+      ],
+      [
+       "Min. new lot",
+       "500 m² (about 5,380 sq ft)."
+      ],
+      [
+       "Limits",
+       "Floor area 1.0 times the lot area, up to 1.25 or 1.5 with a housing agreement. Lot coverage 50%. Up to 13 m (about 43 ft), or 19.8 m (65 ft) with the density bonus."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=176",
+     "ref": "s.705"
+    },
+    {
+     "id": "zd-mission-ma2",
+     "code": "MA2",
+     "name": "Multi-unit Apartment Two Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Apartments, at a lower density than MA1."
+      ],
+      [
+       "Also allowed",
+       "A child care centre and a home-based business."
+      ],
+      [
+       "Min. new lot",
+       "500 m² (about 5,380 sq ft)."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.75 times the lot area. Lot coverage 40%. Up to 13 m (about 43 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=176",
+     "ref": "s.705"
+    },
+    {
+     "id": "zd-mission-uc465",
+     "code": "UC465",
+     "name": "Urban Compact 465 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Compact urban lots. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "One secondary suite, a home-based business, and boarding or residential care. No coach house."
+      ],
+      [
+       "Min. new lot",
+       "465 m² (about 5,010 sq ft), at least 14 m wide (15.5 m on a corner) and 25 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.70 times the lot area (335 m² at most). Lot coverage 45%. Main building up to 10.5 m (about 34 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=180",
+     "ref": "s.801"
+    },
+    {
+     "id": "zd-mission-uc372",
+     "code": "UC372",
+     "name": "Urban Compact 372 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Compact urban lots with detached garages off a lane. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "One secondary suite, a home-based business, and boarding or residential care. No coach house."
+      ],
+      [
+       "Min. new lot",
+       "372 m² (about 4,000 sq ft), at least 12 m wide (13.5 m on a corner) and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.75 times the lot area (270 m² at most). Lot coverage 55%. Main building up to 10.5 m (about 34 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=180",
+     "ref": "s.801"
+    },
+    {
+     "id": "zd-mission-uc465s",
+     "code": "UC465s",
+     "name": "Urban Compact 465 Secondary Dwelling Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "As UC465, plus a coach house or garden cottage. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "One secondary suite or a coach house or garden cottage, a home-based business, and boarding or residential care."
+      ],
+      [
+       "Min. new lot",
+       "465 m² (about 5,010 sq ft), at least 14 m wide (17.5 m on a corner) and 25 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.70 times the lot area (335 m² at most). Lot coverage 45%. Main building up to 10.5 m (about 34 ft); a coach house 8 m."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=183",
+     "ref": "s.802"
+    },
+    {
+     "id": "zd-mission-uc372s",
+     "code": "UC372s",
+     "name": "Urban Compact 372 Secondary Dwelling Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "As UC372, plus a coach house or garden cottage. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "One secondary suite or a coach house or garden cottage, a home-based business, and boarding or residential care."
+      ],
+      [
+       "Min. new lot",
+       "372 m² (about 4,000 sq ft), at least 12 m wide (13.5 m on a corner) and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.75 times the lot area (270 m² at most). Lot coverage 55%. Main building up to 10.5 m (about 34 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=183",
+     "ref": "s.802"
+    },
+    {
+     "id": "zd-mission-uc300",
+     "code": "UC300",
+     "name": "Urban Compact 300 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Small lots in Silverdale Central. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "One secondary suite, a home-based business, and boarding or residential care. No coach house."
+      ],
+      [
+       "Min. new lot",
+       "300 m² (about 3,230 sq ft). With a lane: 10 m wide (11.5 m on a corner) and 30 m deep. Without: 11 m (12.5 m) and 25 m deep."
+      ],
+      [
+       "Limits",
+       "Floor space up to 300 m². Lot coverage 55% with a lane, 50% without. Main building up to 10.5 m (about 34 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=186",
+     "ref": "s.803"
+    },
+    {
+     "id": "zd-mission-r930",
+     "code": "R930",
+     "name": "Urban Residential 930 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Mission's largest urban residential lots. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "One secondary suite, a home-based business, and boarding or residential care. A coach house or garden cottage only on lots over 930 m²."
+      ],
+      [
+       "Min. new lot",
+       "930 m² (about 10,010 sq ft), at least 18 m wide (19.5 m on a corner) and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.50 times the lot area (511 m² at most). Lot coverage 35%. Main building up to 10.5 m (about 34 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=191",
+     "ref": "s.901"
+    },
+    {
+     "id": "zd-mission-r669",
+     "code": "R669",
+     "name": "Urban Residential 669 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Standard urban residential lots. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "One secondary suite, a home-based business, and boarding or residential care. No coach house."
+      ],
+      [
+       "Min. new lot",
+       "669 m² (about 7,200 sq ft), at least 18 m wide (19.5 m on a corner) and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.50 times the lot area (362 m² at most). Lot coverage 35%. Main building up to 10.5 m (about 34 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=191",
+     "ref": "s.901"
+    },
+    {
+     "id": "zd-mission-r558",
+     "code": "R558",
+     "name": "Urban Residential 558 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Mid-sized urban residential lots. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "One secondary suite, a home-based business, and boarding or residential care. A supportive recovery home (up to 10 people) with conditions. No coach house."
+      ],
+      [
+       "Min. new lot",
+       "558 m² (about 6,010 sq ft), at least 18 m wide (19.5 m on a corner) and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.60 times the lot area (353 m² at most). Lot coverage 40%. Main building up to 10.5 m (about 34 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=191",
+     "ref": "s.901"
+    },
+    {
+     "id": "zd-mission-r465",
+     "code": "R465",
+     "name": "Urban Residential 465 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Smaller urban residential lots. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "One secondary suite, a home-based business, and boarding or residential care. No coach house."
+      ],
+      [
+       "Min. new lot",
+       "465 m² (about 5,010 sq ft), at least 16 m wide (17.5 m on a corner) and 25 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.60 times the lot area (334 m² at most). Lot coverage 45%. Main building up to 10.5 m (about 34 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=191",
+     "ref": "s.901"
+    },
+    {
+     "id": "zd-mission-r669s",
+     "code": "R669s",
+     "name": "Urban Residential 669 Secondary Dwelling Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "As R669, plus a coach house or garden cottage. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "One secondary suite or a coach house or garden cottage, a home-based business, and boarding or residential care."
+      ],
+      [
+       "Min. new lot",
+       "669 m² (about 7,200 sq ft), at least 18 m wide (19.5 m on a corner) and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.50 times the lot area (362 m² at most). Lot coverage 35%. Main building up to 10.5 m (about 34 ft); a coach house 8 m."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=195",
+     "ref": "s.902"
+    },
+    {
+     "id": "zd-mission-r558s",
+     "code": "R558s",
+     "name": "Urban Residential 558 Secondary Dwelling Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "As R558, plus a coach house or garden cottage. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "One secondary suite or a coach house or garden cottage, a home-based business, and boarding or residential care."
+      ],
+      [
+       "Min. new lot",
+       "558 m² (about 6,010 sq ft), at least 18 m wide (19.5 m on a corner) and 30 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.60 times the lot area (353 m² at most). Lot coverage 40%. Main building up to 10.5 m (about 34 ft); a coach house 8 m."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=195",
+     "ref": "s.902"
+    },
+    {
+     "id": "zd-mission-r465s",
+     "code": "R465s",
+     "name": "Urban Residential 465 Secondary Dwelling Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "As R465, plus a coach house or garden cottage. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "One secondary suite or a coach house or garden cottage, a home-based business, and boarding or residential care."
+      ],
+      [
+       "Min. new lot",
+       "465 m² (about 5,010 sq ft), at least 16 m wide (17.5 m on a corner) and 25 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.60 times the lot area (334 m² at most). Lot coverage 45%. Main building up to 10.5 m (about 34 ft); a coach house 8 m."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=195",
+     "ref": "s.902"
+    },
+    {
+     "id": "zd-mission-s10",
+     "code": "S10",
+     "name": "Suburban 10 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Quarter-acre lots between suburban and urban areas. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "One secondary suite, a home-based business, and boarding or residential care. No coach house."
+      ],
+      [
+       "Min. new lot",
+       "0.1 ha (about 0.25 acres), at least 25 m wide (27.5 m on a corner) and 35 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.50 times the lot area (511 m² at most). Lot coverage 35%. Main building up to 10.5 m (about 34 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=200",
+     "ref": "s.1001"
+    },
+    {
+     "id": "zd-mission-s10s",
+     "code": "S10s",
+     "name": "Suburban 10 Secondary Dwelling Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "As S10, plus a coach house or garden cottage. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "One secondary suite or a coach house or garden cottage, a home-based business, and boarding or residential care."
+      ],
+      [
+       "Min. new lot",
+       "0.1 ha (about 0.25 acres), at least 25 m wide (27.5 m on a corner) and 35 m deep."
+      ],
+      [
+       "Limits",
+       "Floor area up to 0.50 times the lot area (511 m² at most). Lot coverage 35%. Main building up to 9.5 m (about 31 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=203",
+     "ref": "s.1002"
+    },
+    {
+     "id": "zd-mission-s20",
+     "code": "S20",
+     "name": "Suburban 20 Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Half-acre suburban lots; the multi-unit forms only with city water and sewer. One of: a single family dwelling, duplex, triplex, fourplex or infill townhouse. Up to 4 units on lots over 280 m² (3 on smaller lots), and 2 (a home and a suite) without city water and sewer."
+      ],
+      [
+       "Also allowed",
+       "One secondary suite, a home-based business, and boarding or residential care. No coach house."
+      ],
+      [
+       "Min. new lot",
+       "0.2 ha (about 0.49 acres) with city water, 0.7 ha (1.73 acres) without; at least 25 m wide (30 m on a corner) and 40 m deep."
+      ],
+      [
+       "Limits",
+       "Lot coverage 20%. Main building up to 11 m (about 36 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=206",
+     "ref": "s.1003"
+    },
+    {
+     "id": "zd-mission-s20s",
+     "code": "S20s",
+     "name": "Suburban 20 Secondary Dwelling Zone",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "A single family dwelling or a duplex; with city water, also a triplex, fourplex or infill townhouse. With a single family dwelling: a secondary suite, or a coach house or garden cottage."
+      ],
+      [
+       "Also allowed",
+       "Boarding or residential care."
+      ],
+      [
+       "Min. new lot",
+       "0.2 ha (about 0.49 acres) with city water, 0.7 ha (1.72 acres) without; at least 25 m wide (30 m on a corner) and 40 m deep."
+      ],
+      [
+       "Limits",
+       "Lot coverage 20%. Main building up to 11 m (about 36 ft)."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.mission.ca/media/file/5949-2020-zoning-bylaw-completepdf#page=209",
+     "ref": "s.1004"
+    }
+   ]
+  },
+  {
+   "id": "zd-burnaby",
+   "name": "Burnaby",
+   "bylaw": "Burnaby Zoning Bylaw 2026, Bylaw No. 14815",
+   "source": "Source: the City's July 2026 district summary guides and district PDFs (the bylaw took effect July 1, 2026). All districts.",
+   "href": "https://www.burnaby.ca/zoningbylaw",
+   "zones": [
+    {
+     "id": "zd-burnaby-r1",
+     "code": "R1",
+     "name": "Small-Scale Multi-Unit Housing District",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "R1 covers almost all of Burnaby's former single- and two-family lots. Up to 3 units on lots of 280 m² (3,014 sq ft) or less, 4 on larger lots, and 6 on lots of 281 m² or more within a Frequent Transit Network Area (400 m of a 15-minute bus stop). Forms include a house with a suite and a laneway home, duplexes, multiplexes of 3 to 6 units, cottage courts and fee-simple rowhouses. Units can be stratified; suites cannot."
+      ],
+      [
+       "Min. new lot",
+       "281 m² and 10 m wide. Rowhouse lots: up to 280 m², 5 m wide (6.2 m for an end unit)."
+      ],
+      [
+       "Height",
+       "Front buildings up to 10 m: 2.5 storeys for 1 or 2 units, 3 storeys for 3 to 6. Rear buildings 7.5 m and 2 storeys. Basements count as a storey; flat roofs 0.5 m less."
+      ],
+      [
+       "Limits",
+       "No floor area limit. Lot coverage 40% for 1 to 4 units (30% on lots over 567 m² with 1 or 2 units), 45% for 5 or 6, and 55% on rowhouse lots. Parking: none within a Frequent Transit Network Area; elsewhere 1 space for the first unit and 0.5 for each extra unit."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-10/R1-Small-Scale-Multi-Unit-Housing-Summary-Guide.pdf",
+     "ref": "Part 3"
+    },
+    {
+     "id": "zd-burnaby-r2",
+     "code": "R2",
+     "name": "Townhouse District",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Ground-oriented townhouses."
+      ],
+      [
+       "Also allowed",
+       "Live-work units, congregate housing, child care (up to 25 children) and small secondary shops and services. Home-based business, lock-off units and short-term rental."
+      ],
+      [
+       "Height",
+       "Up to 4 storeys."
+      ],
+      [
+       "Limits",
+       "No floor area ratio, lot size or lot coverage limits: height, setbacks, building separation and floorplate size set what can be built. At least 30% of the site permeable. Each district has an \"r\" sub-district for purpose-built rental."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-10/R2-R8-Multifamily-Residential-Districts-Summary-Guide.pdf",
+     "ref": "Part 3",
+     "covers": [
+      "R2r"
+     ]
+    },
+    {
+     "id": "zd-burnaby-r3",
+     "code": "R3",
+     "name": "Low-Rise Apartment 1 District",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Apartments, which may include ground-level townhouses."
+      ],
+      [
+       "Also allowed",
+       "Townhouses, live-work units, congregate housing (group homes, assisted living, care facilities), child care, and small secondary shops, cafés and services (up to 250 m² each). Home-based business, lock-off units and short-term rental as accessory uses."
+      ],
+      [
+       "Height",
+       "Up to 4 storeys, or 6 where non-market rental housing is provided."
+      ],
+      [
+       "Limits",
+       "No floor area ratio, lot size or lot coverage limits: height, setbacks, building separation and floorplate size set what can be built. At least 30% of the site permeable. Each district has an \"r\" sub-district for purpose-built rental."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-10/R2-R8-Multifamily-Residential-Districts-Summary-Guide.pdf",
+     "ref": "Part 3",
+     "covers": [
+      "R3r"
+     ]
+    },
+    {
+     "id": "zd-burnaby-r4",
+     "code": "R4",
+     "name": "Low-Rise Apartment 2 District",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Apartments, which may include ground-level townhouses."
+      ],
+      [
+       "Also allowed",
+       "Townhouses, live-work units, congregate housing (group homes, assisted living, care facilities), child care, and small secondary shops, cafés and services (up to 250 m² each). Home-based business, lock-off units and short-term rental as accessory uses."
+      ],
+      [
+       "Height",
+       "Up to 6 storeys, or 8 within a Transit-Oriented Area (800 m of a SkyTrain station)."
+      ],
+      [
+       "Limits",
+       "No floor area ratio, lot size or lot coverage limits: height, setbacks, building separation and floorplate size set what can be built. At least 30% of the site permeable. Each district has an \"r\" sub-district for purpose-built rental."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-10/R2-R8-Multifamily-Residential-Districts-Summary-Guide.pdf",
+     "ref": "Part 3",
+     "covers": [
+      "R4r"
+     ]
+    },
+    {
+     "id": "zd-burnaby-r5",
+     "code": "R5",
+     "name": "Mid-Rise Apartment 1 District",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Apartments, which may include ground-level townhouses."
+      ],
+      [
+       "Also allowed",
+       "Townhouses, live-work units, congregate housing (group homes, assisted living, care facilities), child care, and small secondary shops, cafés and services (up to 250 m² each). Home-based business, lock-off units and short-term rental as accessory uses."
+      ],
+      [
+       "Height",
+       "Base height 12 storeys. More height may be supported where community amenities or non-market housing are provided."
+      ],
+      [
+       "Limits",
+       "No floor area ratio, lot size or lot coverage limits: height, setbacks, building separation and floorplate size set what can be built. At least 30% of the site permeable. Each district has an \"r\" sub-district for purpose-built rental."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-10/R2-R8-Multifamily-Residential-Districts-Summary-Guide.pdf",
+     "ref": "Part 3",
+     "covers": [
+      "R5r"
+     ]
+    },
+    {
+     "id": "zd-burnaby-r6",
+     "code": "R6",
+     "name": "Mid-Rise Apartment 2 District",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "Apartments, which may include ground-level townhouses."
+      ],
+      [
+       "Also allowed",
+       "Townhouses, live-work units, congregate housing (group homes, assisted living, care facilities), child care, and small secondary shops, cafés and services (up to 250 m² each). Home-based business, lock-off units and short-term rental as accessory uses."
+      ],
+      [
+       "Height",
+       "Base height 20 storeys, with more possible for amenities or non-market housing."
+      ],
+      [
+       "Limits",
+       "No floor area ratio, lot size or lot coverage limits: height, setbacks, building separation and floorplate size set what can be built. At least 30% of the site permeable. Each district has an \"r\" sub-district for purpose-built rental."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-10/R2-R8-Multifamily-Residential-Districts-Summary-Guide.pdf",
+     "ref": "Part 3",
+     "covers": [
+      "R6r"
+     ]
+    },
+    {
+     "id": "zd-burnaby-r7",
+     "code": "R7",
+     "name": "High-Rise Apartment 1 District",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "High-rise apartments, which may include ground-level townhouses."
+      ],
+      [
+       "Also allowed",
+       "Townhouses, live-work units, congregate housing (group homes, assisted living, care facilities), child care, and small secondary shops, cafés and services (up to 250 m² each). Home-based business, lock-off units and short-term rental as accessory uses."
+      ],
+      [
+       "Height",
+       "Base height 30 storeys, with more possible for amenities or non-market housing."
+      ],
+      [
+       "Limits",
+       "No floor area ratio, lot size or lot coverage limits: height, setbacks, building separation and floorplate size set what can be built. At least 30% of the site permeable. Each district has an \"r\" sub-district for purpose-built rental."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-10/R2-R8-Multifamily-Residential-Districts-Summary-Guide.pdf",
+     "ref": "Part 3",
+     "covers": [
+      "R7r"
+     ]
+    },
+    {
+     "id": "zd-burnaby-r8",
+     "code": "R8",
+     "name": "High-Rise Apartment 2 District",
+     "type": "Residential",
+     "fields": [
+      [
+       "Homes",
+       "High-rise apartments, which may include ground-level townhouses."
+      ],
+      [
+       "Also allowed",
+       "Townhouses, live-work units, congregate housing (group homes, assisted living, care facilities), child care, and small secondary shops, cafés and services (up to 250 m² each). Home-based business, lock-off units and short-term rental as accessory uses."
+      ],
+      [
+       "Height",
+       "Base height 40 storeys, with more possible for amenities or non-market housing."
+      ],
+      [
+       "Limits",
+       "No floor area ratio, lot size or lot coverage limits: height, setbacks, building separation and floorplate size set what can be built. At least 30% of the site permeable. Each district has an \"r\" sub-district for purpose-built rental."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-10/R2-R8-Multifamily-Residential-Districts-Summary-Guide.pdf",
+     "ref": "Part 3",
+     "covers": [
+      "R8r"
+     ]
+    },
+    {
+     "id": "zd-burnaby-c1",
+     "code": "C1",
+     "name": "Neighbourhood Commercial District",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Shops, restaurants, personal and business services, offices, health care, child care, education, artist studios, recreation, hotels and live-work units. No nightclubs or overnight animal boarding; ground-level street corners are kept for shops, restaurants and services."
+      ],
+      [
+       "Homes",
+       "With a residential (R) overlay on the same site, homes above or beside the commercial space, with the R district setting the height."
+      ],
+      [
+       "Limits",
+       "Pedestrian-oriented buildings up to 4 storeys. No lot size, lot coverage or floor area ratio limits; at least 20% of the site permeable."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-10/C1-C2-Commercial-Districts-Summary-Guide.pdf",
+     "ref": "Part 3"
+    },
+    {
+     "id": "zd-burnaby-c2",
+     "code": "C2",
+     "name": "General Commercial District",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Everything in C1, plus gaming, hospitals, parking facilities, research and development, service stations (gas, car wash, auto repair) and, above ground level, storage. Offices, hotels and parkades sit above ground-level storefronts."
+      ],
+      [
+       "Homes",
+       "With a residential (R) overlay, mixed-use buildings and taller office towers in the Town Centres."
+      ],
+      [
+       "Limits",
+       "Buildings up to 8 storeys, or taller with an R overlay. No lot size, lot coverage or floor area ratio limits; at least 20% of the site permeable."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-10/C1-C2-Commercial-Districts-Summary-Guide.pdf",
+     "ref": "Part 3"
+    },
+    {
+     "id": "zd-burnaby-e1",
+     "code": "E1",
+     "name": "Employment District",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Light industrial, research and development, film studios, warehousing and distribution, trades, offices, health care, recreation, artist studios and child care. Replaces the former M and B districts with I1."
+      ],
+      [
+       "Homes",
+       "Live-work units, and limited rental housing near transit where an overlay applies."
+      ],
+      [
+       "Limits",
+       "Buildings up to 8 storeys. No lot size or coverage limits; at least 10% of the site permeable."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-10/E1-I1-Employment-and-Industrial-Districts-Summary-Guide.pdf",
+     "ref": "Part 3"
+    },
+    {
+     "id": "zd-burnaby-i1",
+     "code": "I1",
+     "name": "Industrial District",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Manufacturing, processing, warehousing and distribution, contractor yards, lumber mills and food processing. Retail and restaurants up to 250 m² per lot; offices above ground level. The I1a sub-district adds heavier industry, kept 100 to 150 m from homes, schools and child care."
+      ],
+      [
+       "Limits",
+       "Buildings up to 4 storeys. At least 10% of the site permeable. Storage facilities are not allowed within 400 m of a SkyTrain station."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-10/E1-I1-Employment-and-Industrial-Districts-Summary-Guide.pdf",
+     "ref": "Part 3",
+     "covers": [
+      "I1a"
+     ]
+    },
+    {
+     "id": "zd-burnaby-p1",
+     "code": "P1",
+     "name": "Parks, Open Spaces and Natural Areas District",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Parks, natural areas, recreation facilities and civic amenities, with park-related cafés, retail and community gardens. P1a protects forests, ravines and waterways."
+      ],
+      [
+       "Limits",
+       "No district-specific height limit."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-10/P1-P2-Public-and-Institutional-Districts-Summary-Guide.pdf",
+     "ref": "Part 3",
+     "covers": [
+      "P1a"
+     ]
+    },
+    {
+     "id": "zd-burnaby-p2",
+     "code": "P2",
+     "name": "Institutional District",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Schools, post-secondary campuses, hospitals, recreation centres, places of worship, social services and supportive housing. Most uses must be on publicly owned or operated land. P2a is for elementary and secondary schools."
+      ],
+      [
+       "Limits",
+       "Generally up to 8 storeys; cemeteries 4 and institutional housing 6; post-secondary lands 12 and hospitals 20."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-10/P1-P2-Public-and-Institutional-Districts-Summary-Guide.pdf",
+     "ref": "Part 3",
+     "covers": [
+      "P2a"
+     ]
+    },
+    {
+     "id": "zd-burnaby-a1",
+     "code": "A1",
+     "name": "Agriculture District",
+     "type": "Agricultural / Farm",
+     "fields": [
+      [
+       "Main uses",
+       "Agriculture, which must use at least 30% of the lot under an agriculture plan the City accepts. Farm retail, processing, agri-tourism and farm events are supported."
+      ],
+      [
+       "Homes",
+       "One single-family home with one secondary suite, accessory to the farm use. Up to 500 m² of residential floor area, including residential accessory buildings."
+      ],
+      [
+       "Limits",
+       "Homes up to 10.5 m and 2.5 storeys; farm buildings 15 m. Not every A1 lot is in the ALR; where it is, ALC rules apply as well."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-10/A1-Agriculture-District-Summary-Guide.pdf",
+     "ref": "Part 3"
+    },
+    {
+     "id": "zd-burnaby-cd",
+     "code": "CD",
+     "name": "Comprehensive Development District",
+     "type": "Other",
+     "fields": [
+      [
+       "Main uses",
+       "Site-specific zoning for a single development, approved by rezoning against a guideline district and a plan of development."
+      ],
+      [
+       "Limits",
+       "Uses, density and height come from the site's own rezoning bylaw and plans, so check the property's CD bylaw with the City."
+      ]
+     ],
+     "checked": "Nov 18, 2026",
+     "href": "https://www.burnaby.ca/sites/default/files/acquiadam/2021-05/CD%20Comprehensive%20Development%20Districts.pdf",
+     "ref": "CD"
     }
    ]
   },

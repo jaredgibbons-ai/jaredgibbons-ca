@@ -48,6 +48,7 @@ const promise = kind === 'home-evaluation' ? 'Jared replies the same day.' : '';
   ))}
   </div>
   {steps && <p class="fstub__stepbtns" data-stepbtns hidden><button type="button" class="btn" data-next>Next: where should I send it? <span aria-hidden="true">→</span></button></p>}
+  {steps && <div class="fstub__snap" data-snap hidden aria-live="polite"></div>}
   {steps && <p class="fstub__morebtn" data-morewrap hidden><button type="button" class="fstub__link" data-more aria-expanded="false">+ Add your home's details (optional, helps me price it)</button> <button type="button" class="fstub__link" data-back>← Change the address</button></p>}
   {isLive && <div class="fstub__hp" aria-hidden="true"><label for={`${uid}-hp`}>Leave this empty</label><input id={`${uid}-hp`} name="_hp_url" tabindex="-1" autocomplete="off" /></div>}
   {isLive && siteKey && <div class="fstub__ts" data-ts></div>}
@@ -81,11 +82,44 @@ const promise = kind === 'home-evaluation' ? 'Jared replies the same day.' : '';
       if (a && !a.disabled && !a.value.trim()) { if (err) err.textContent = 'Enter the address of the home.'; a.focus(); return; }
       if (err) err.textContent = '';
       step(2); q<HTMLInputElement>('[name=name]')?.focus();
+      snapshot([a?.value.trim(), q<HTMLInputElement>('[name=city]')?.value.trim()].filter(Boolean).join(', '));
     });
+    // Instant snapshot (D-357): while the visitor fills in step 2, the address goes to /api/zoning (the municipality's public map)
+    // and what comes back is shown under the step: zone, lot size, ALR and floodplain. The same lines go to Jared with the request.
+    // Built with textContent only. If the area is not covered or the map is slow, nothing shows and the form works as before.
+    const box = q('[data-snap]')!;
+    let asked = '';
+    const snapshot = async (addr: string) => {
+      if (!addr || addr === asked) return; asked = addr; box.hidden = true; box.replaceChildren(); delete f.dataset.snap;
+      try {
+        const ctl = new AbortController(); setTimeout(() => ctl.abort(), 8000);
+        const r = await fetch(`/api/zoning?address=${encodeURIComponent(addr)}`, { headers: { accept: 'application/json' }, signal: ctl.signal });
+        const j = await r.json();
+        if (asked !== addr || j.status !== 'ok' || !j.zones?.length) return;
+        const el = (t: string, c: string, txt = '') => { const e = document.createElement(t); if (c) e.className = c; if (txt) e.textContent = txt; return e; };
+        const zn = j.zones.map((z: any) => [z.code, z.name].filter(Boolean).join(', ')).join(' / ');
+        const rows: [string, string, string?][] = [['Zoning', zn, j.guide ? `/zonings.html#${j.guide}` : '']];
+        if (j.lot) rows.push(['Lot size (from the map)', `About ${j.lot.sqft.toLocaleString('en-CA')} sq ft${j.lot.acres >= 0.25 ? ` (${j.lot.acres} acres)` : ''}`]);
+        if (j.alr !== null && j.alr !== undefined) rows.push(['Agricultural Land Reserve', j.alr ? 'In the ALR' : 'Not in the ALR']);
+        if (j.flood) rows.push(['Floodplain', 'Shown in a floodplain area on the city map']);
+        if (j.ocp) rows.push(['Community plan', j.ocp]);
+        box.append(el('p', 'fstub__snaph', `What public maps show for ${j.address || addr}`));
+        const dl = el('dl', 'fstub__snapl');
+        for (const [k, v, h] of rows) {
+          dl.append(el('dt', '', k));
+          const dd = el('dd', '', v);
+          if (h) { const a2 = el('a', '', 'What this zone allows') as HTMLAnchorElement; a2.href = h; dd.append(' ', a2); }
+          dl.append(dd);
+        }
+        box.append(dl, el('p', 'fstub__snapf', 'From the municipality\'s public map, not a survey. Your price range comes from the closest recent sales: tell me where to send it.'));
+        box.hidden = false;
+        f.dataset.snap = rows.map(([k, v]) => `${k}: ${v}`).join('\n');
+      } catch { /* the form works without it */ }
+    };
     q('[data-back]')!.addEventListener('click', () => { step(1); q<HTMLInputElement>('[name=address]')?.focus(); });
     more.addEventListener('click', () => { const on = more.getAttribute('aria-expanded') !== 'true'; more.setAttribute('aria-expanded', String(on)); show(g('3'), on); if (on) g('3')[0]?.querySelector<HTMLElement>('input,select,textarea')?.focus(); });
     // a sent form goes back to step 1
-    f.addEventListener('jg:sent', () => step(1));
+    f.addEventListener('jg:sent', () => { step(1); asked = ''; box.hidden = true; delete f.dataset.snap; });
   });
   // Live forms: post to the Worker. Anything but a confirmed "ok" is shown as not sent, with the email fallback.
   document.querySelectorAll<HTMLFormElement>('form.fstub[data-kind]').forEach((f) => {
@@ -107,6 +141,7 @@ const promise = kind === 'home-evaluation' ? 'Jared replies the same day.' : '';
       ev?.preventDefault(); msg.textContent = ''; fb.hidden = true; f.querySelectorAll('.fstub__err').forEach((e) => (e.textContent = ''));
       const data: Record<string, string> = {};
       fields().forEach((e) => { if (e.value.trim()) data[e.name] = e.value.trim(); });
+      if (f.dataset.snap) data.notes = [data.notes, `Public map check (instant snapshot):\n${f.dataset.snap}`].filter(Boolean).join('\n\n').slice(0, 3000);
       data._hp_url = (f.querySelector<HTMLInputElement>('[name=_hp_url]')?.value || ''); data.page = location.pathname; data['cf-turnstile-response'] = tok;
       const body = [`${kind} form`, '', ...fields().filter((e) => e.value.trim()).map((e) => `${(e.parentElement?.querySelector('label')?.textContent || e.name)}: ${e.value.trim()}`)].join('\n');
       mailto.href = `mailto:jaredgibbons@royallepage.ca?subject=${encodeURIComponent('Website ' + kind.replace('-', ' ') + (data.name ? ' from ' + data.name : ''))}&body=${encodeURIComponent(body)}`;
@@ -144,6 +179,15 @@ const promise = kind === 'home-evaluation' ? 'Jared replies the same day.' : '';
   .addrsug ul{list-style:none;margin:0;padding:0}
   .addrsug li{padding:.65rem .8rem;min-height:2.75rem;display:flex;align-items:center;cursor:pointer}
   .addrsug li.is-active,.addrsug li:hover{background:var(--cream)}
+  /* The snapshot's contents are built by the script (D-357), so these rules are global. */
+  .fstub__snap{border:1px solid var(--ink);background:#fff;padding:1rem 1.25rem;margin:0 0 var(--s3)}
+  .fstub__snaph{margin:0 0 .6rem;font:800 .8125rem/1.3 var(--f-head);letter-spacing:.06em;text-transform:uppercase}
+  .fstub__snapl{display:grid;grid-template-columns:max-content 1fr;gap:.35rem 1rem;margin:0}
+  .fstub__snapl dt{font-weight:700}
+  .fstub__snapl dd{margin:0}
+  .fstub__snapl a{color:var(--ink);text-underline-offset:3px}
+  .fstub__snapf{margin:.75rem 0 0;font-size:.8125rem;color:#444}
+  @media (max-width:40rem){.fstub__snapl{grid-template-columns:1fr}.fstub__snapl dd{margin-bottom:.4rem}}
   .addrsug__attr{margin:0;padding:.35rem .8rem;font-size:.75rem;color:#444;border-top:1px solid var(--rule)}
 </style>
 <style>
