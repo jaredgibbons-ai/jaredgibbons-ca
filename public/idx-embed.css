@@ -121,3 +121,12 @@
 #listing-results-view .mrp-listing-summary-section>div.summary-mls-number dt::after{content:"MLS® ";font-size:.75rem}
 #listing-results-view .mrp-listing-description .full-text-tab{display:none!important}
 #listing-results-view .mrp-description-and-attribution-wrapper,#listing-results-view .mrp-listing-attribution-wrapper{height:auto!important;max-height:none!important;overflow:visible!important}
+
+/* No "Login with Facebook / Google / X · Signup · Login" bar (D-346, Jared: "take away all the logins everywhere").
+   Applies wherever MyRealPage shows it to a visitor who is not signed in: listing detail pages, the detail view opened from the
+   map, and the search form. A signed-in visitor's own toolbar (.mrp-vow-toolbar-auth) is left alone, and so is the "Signup / Login"
+   button on sold listings: the boards require an account for sold data, and that button is how a visitor gets one. */
+.mrp-vow-toolbar-non-auth{display:none!important}
+.mrp-details-vow-toolbar-wrapper:has(.mrp-vow-toolbar-non-auth),
+.mrp-results-vow-toolbar-wrapper:has(.mrp-vow-toolbar-non-auth),
+.mrp-idx-form-vow-toolbar-wrapper:has(.mrp-vow-toolbar-non-auth){display:none!important}
