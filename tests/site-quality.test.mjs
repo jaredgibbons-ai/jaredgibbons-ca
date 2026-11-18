@@ -292,15 +292,21 @@ test('homepage: hero search goes to real pages, community names are links, quiz 
   assert.ok(!/available for public display/.test(html('open-houses.html')), 'old widget message is back on Open Houses');
 });
 
-test('zoning guide: all 278 zones as cards with a bylaw link, a working filter bar, no leftover filter text (D-268)', { skip: !built }, () => {
+test('zoning guide: all 441 zones as cards with a bylaw link, a working filter bar, no leftover filter text (D-268, D-354)', { skip: !built }, () => {
   const t = html('zonings.html');
   const cards = t.match(/<li class="zd-card"[^>]*id="zd-/g) || [];
-  assert.equal(cards.length, 278, `${cards.length} zone cards`);
-  assert.equal((t.match(/class="zd-card__foot"[^>]*><a href="https:/g) || []).length, 278, 'every zone links to its bylaw');
-  for (const id of ['zd-abbotsford', 'zd-langley', 'zd-surrey', 'zd-delta', 'zd-chilliwack', 'zd-mapleridge', 'zd-mission', 'zd-alr', 'zd-check', 'zd-lookup']) assert.ok(t.includes(`id="${id}"`), `#${id} missing`);
+  assert.equal(cards.length, 441, `${cards.length} zone cards`);
+  assert.equal((t.match(/class="zd-card__foot"[^>]*><a href="https:/g) || []).length, 441, 'every zone links to its bylaw');
+  for (const id of ['zd-abbotsford', 'zd-langley', 'zd-langleycity', 'zd-surrey', 'zd-whiterock', 'zd-delta', 'zd-chilliwack', 'zd-mapleridge', 'zd-pittmeadows', 'zd-mission', 'zd-coquitlam', 'zd-vancouver', 'zd-alr', 'zd-check', 'zd-lookup']) assert.ok(t.includes(`id="${id}"`), `#${id} missing`);
   assert.ok(/data-zq/.test(t) && /data-zsm/.test(t) && /data-zcount/.test(t), 'filter bar missing');
   assert.ok(!/<li>Municipality<\/li>|<li>All types<\/li>|Showing all 278 zones\.<\/p>/.test(t), 'old filter text is back');
   assert.ok(!/<dd>\s*<\/dd>/.test(t), 'empty zone field');
+  // D-354: at most the site-specific CD cards and the few zones whose bylaw page could not be read keep a one-line summary.
+  const Z = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/zonings.json'), 'utf8'));
+  const thin = Z.munis.flatMap((m) => m.zones).filter((z) => z.fields.length === 1 && /^(Intent|Purpose)$/.test(z.fields[0][0])).map((z) => z.id);
+  assert.ok(thin.length <= 14, `${thin.length} zones with a one-line summary: ${thin.join(' ')}`);
+  const alias = JSON.parse((t.match(/data-zalias="([^"]*)"/) || [])[1].replace(/&quot;/g, '"').replace(/&#34;/g, '"'));
+  assert.equal(alias['zd-langley-p-2c'], 'zd-langley-p-2a-to-p-2r'); assert.equal(alias['zd-mission-ru36s'], 'zd-mission-ru80s');
 });
 
 test('listing media, map, example rate, 12-hour reply, zoning lookup on farm pages (D-269)', { skip: !built }, () => {
@@ -323,7 +329,7 @@ test('listing media, map, example rate, 12-hour reply, zoning lookup on farm pag
   const rate = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/example-rate.json'), 'utf8')).rate;
   assert.ok(html(`internal/listings/${slugs[0]}.html`).includes(`id="mc-rate" data-k="rate" type="text" inputmode="decimal" autocomplete="off" value="${rate}"`), 'example rate not prefilled');
   assert.ok(/Jared replies the same day/.test(html('home-evaluation.html')), 'home evaluation reply time missing');
-  for (const [f, n] of [['langley-acreages-for-sale.html', 17], ['abbotsford-farms.html', 10], ['farms.html', 64]]) {
+  for (const [f, n] of [['langley-acreages-for-sale.html', 17], ['abbotsford-farms.html', 10], ['farms.html', 77]]) {
     const rows = (html(f).match(/<tr data-zls=/g) || []).length;
     assert.equal(rows, n, `${f}: ${rows} zoning rows`);
   }

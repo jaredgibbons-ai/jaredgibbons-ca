@@ -1,6 +1,6 @@
 ---
 // Zoning directory (D-268). Data: src/data/zonings.json, written from the archive record by tools/build_zonings.py (same wording).
-// Every zone is in the HTML (search engines and no-JS readers get all 278); the filter bar only hides cards.
+// Every zone is in the HTML (search engines and no-JS readers get all of them); the filter bar only hides cards.
 import Base from '../layouts/Base.astro';
 import ZoningFind from './ZoningFind.astro';
 import Z from '../data/zonings.json';
@@ -11,14 +11,15 @@ const d = Z as any;
 const total = d.munis.reduce((n: number, m: any) => n + m.zones.length, 0);
 const TYPE_KEY: Record<string, string> = { 'Agricultural / Farm': 'farm', 'Rural / Acreage': 'rural', Residential: 'res', Other: 'other' };
 const typeCount = (t: string) => d.munis.reduce((n: number, m: any) => n + m.zones.filter((z: any) => z.type === t).length, 0);
-const shortName = (n: string) => n.replace(/^Township of /, '');
+// Two Langleys in the guide since D-354, so the Township's chip says which.
+const shortName = (n: string) => (n === 'Township of Langley' ? 'Langley Township' : n);
 // text with links: a space between pieces unless the next one starts with punctuation
 const join = (ps: any[]) => ps.map((p, i) => ({ ...p, sp: i > 0 && !/^[,.;:)]/.test(p.t) }));
 const plain = (s: string) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
 const jsonld: any[] = [];
 if (faq.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: plain(f.a) } })) });
-// The archive wording, plus White Rock (the live lookup covers it, D-285).
-const lookupLead = String(d.lookup.d).replace('It covers Surrey, Langley', 'It covers Surrey, White Rock, Delta, Langley').replace(' and Abbotsford for now', ', Maple Ridge and Abbotsford for now');
+// Which municipalities the address lookup covers is written in the data (D-354).
+const lookupLead = String(d.lookup.d);
 const crumbs = [{ name: 'Home', href: '/' }, { name: 'Zoning Guide', href: '/zonings.html' }];
 ---
 <Base
@@ -127,7 +128,7 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Zoning Guide', href: '/zon
                   </dl>
                 )}
                 {z.note && <p class="zd-note">Note: {z.note}</p>}
-                <p class="zd-card__foot"><a href={z.href} target="_blank" rel="noopener">Official bylaw, {z.ref} <span aria-hidden="true">↗</span><span class="vh"> (opens in a new tab)</span></a><span>Checked Oct 2, 2026</span></p>
+                <p class="zd-card__foot"><a href={z.href} target="_blank" rel="noopener">Official bylaw, {z.ref} <span aria-hidden="true">↗</span><span class="vh"> (opens in a new tab)</span></a><span>Checked {z.checked || 'Oct 2, 2026'}</span></p>
               </li>
             ))}
           </ul>
@@ -311,6 +312,8 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Zoning Guide', href: '/zon
   .zd-clear{position:absolute;right:.4rem;min-height:2.25rem;padding:0 .8rem;border:0;background:var(--cream);font:700 .75rem var(--f-head);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
   .zd-chips{display:flex;gap:.4rem;align-items:center;overflow-x:auto;scrollbar-width:none;margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter)}
   .zd-chips::-webkit-scrollbar{display:none}
+  /* Twelve municipalities no longer fit on one line (D-355): the municipality row wraps instead of scrolling out of sight. */
+  .zd-chips:not(.zd-chips--type){flex-wrap:wrap;overflow-x:visible}
   .zd-chip{flex:none;min-height:2.25rem;padding:0 .95rem;border:1px solid var(--ink);background:#fff;color:var(--ink);font:700 .8125rem/1 var(--f-head);white-space:nowrap;cursor:pointer;transition:background .12s,color .12s}
   .zd-chip:hover{background:var(--cream)}
   .zd-chip[aria-pressed="true"]{background:var(--ink);color:#fff}

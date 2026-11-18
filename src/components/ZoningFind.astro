@@ -5,9 +5,12 @@ import FormStub from './FormStub.astro';
 const { fine = (Z as any).lookup.fine } = Astro.props as { fine?: string };
 // Ids of the zone cards in the guide, so a result only links to a card that exists.
 const codes = (Z as any).munis.flatMap((m: any) => m.zones.map((z: any) => z.id)).join(' ');
+// A card that stands for several zones (Township P-2A to P-2R, Mission RU36s and RU16s) lists them in `covers`: their ids point at that card (D-354).
+const slugId = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const alias = JSON.stringify(Object.fromEntries((Z as any).munis.flatMap((m: any) => m.zones.flatMap((z: any) => (z.covers || []).map((c: string) => [`${m.id}-${slugId(c)}`, z.id])))));
 ---
 {/* No action attribute: Google follows GET forms, and /api/ is closed to crawlers (Search Console "Blocked by robots.txt", Nov 15 2026). The script does the lookup. */}
-<form class="zd-find" data-zfind data-zcodes={codes} novalidate>
+<form class="zd-find" data-zfind data-zcodes={codes} data-zalias={alias} novalidate>
   <label for="zd-addr">Property address</label>
   <div class="zd-find__row">
     <input id="zd-addr" name="address" type="text" inputmode="text" autocomplete="off" list="zd-sug" placeholder="Start typing: 2725 192 Street" maxlength="120" required data-zaddr />
@@ -56,6 +59,7 @@ const codes = (Z as any).munis.flatMap((m: any) => m.zones.map((z: any) => z.id)
     const go = find.querySelector<HTMLButtonElement>('[data-zgo]')!;
     const res = document.querySelector<HTMLElement>('[data-zres]')!;
     const codes = new Set((find.dataset.zcodes || '').split(' '));
+    const alias: Record<string, string> = JSON.parse(find.dataset.zalias || '{}');
     const onGuide = !!document.getElementById('zd-dir');
     const el = (tag: string, cls = '', txt = '') => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt) e.textContent = txt; return e; };
     const link = (href: string, txt: string, cls = 'btn btn--ghost', blank = false) => { const a = el('a', cls, txt) as HTMLAnchorElement; a.href = href; if (blank) { a.target = '_blank'; a.rel = 'noopener'; } return a; };
@@ -90,7 +94,9 @@ const codes = (Z as any).munis.flatMap((m: any) => m.zones.map((z: any) => z.id)
           const name = [z.name, z.bylaw && `(${z.bylaw})`].filter(Boolean).join(' ');
           if (name) res.append(el('p', 'zd-res__name', name));
           if (cd) res.append(el('p', 'zd-res__name', 'A Comprehensive Development zone has its own site-specific bylaw: the rules are written for this one property or project. I can pull the bylaw for you.'));
-          const id = r.guide ? `${r.guide}-${slug(z.code)}` : '';
+          let id = r.guide ? `${r.guide}-${slug(z.code)}` : '';
+          // A grouped card, or the guide's one CD card for a numbered site-specific zone (CD-12).
+          if (id && !codes.has(id)) id = alias[id] || (cd && codes.has(`${r.guide}-cd`) ? `${r.guide}-cd` : id);
           if (id && codes.has(id)) {
             // What the zone allows, printed here (D-352): the guide's own summary lines for this zone, then the bylaw section.
             const g = (await zones())[id];
@@ -117,7 +123,7 @@ const codes = (Z as any).munis.flatMap((m: any) => m.zones.map((z: any) => z.id)
         ctas.append(ask(addr));
         res.append(ctas, el('p', 'zd-res__note', `From the ${r.locality} public zoning map today. Maps can lag a recent rezoning, and a strata or condo shows the whole parcel, so confirm with the municipality before you rely on it.`));
         if (r.zones.length > 1) res.append(el('p', 'zd-res__note', 'More than one zone touches this property (split zoning).'));
-      } else if (r.status === 'unsupported') msg(`${r.locality || 'That area'} is not in the address lookup yet (it covers Surrey, White Rock, Delta, Langley City, the Township of Langley, Maple Ridge and Abbotsford). Send me the address and I'll check the zoning and ALR status for you.`, addr);
+      } else if (r.status === 'unsupported') msg(`${r.locality || 'That area'} is not in the address lookup yet (it covers Surrey, White Rock, Delta, Langley City, the Township of Langley, Maple Ridge, Abbotsford, Chilliwack, Mission, Vancouver, Burnaby and Coquitlam). Send me the address and I'll check the zoning and ALR status for you.`, addr);
       else if (r.status === 'notfound') msg(`I could not match that to one exact property${r.locality ? ` in ${r.locality}` : ''}. Check the house number and street (for example "2725 192 Street, Surrey"), or send it to me and I'll look it up.`, addr);
       else if (r.status === 'nozone') msg('That address is on the map but has no zone drawn on it (road, park or water lot). Send it to me and I\'ll check with the municipality.', addr);
       else if (r.status === 'bad') msg('Type the house number, street and city, for example "2725 192 Street, Surrey".', addr);
@@ -134,7 +140,7 @@ const codes = (Z as any).munis.flatMap((m: any) => m.zones.map((z: any) => z.id)
     // Address suggestions as you type (D-352), from the Province's public address service (BC Address Geocoder), limited to the
     // municipalities the lookup covers. Picking a suggestion runs the check. If the service is slow or down, typing still works.
     const sug = find.querySelector<HTMLDataListElement>('#zd-sug');
-    const AREAS = 'Surrey,White Rock,Delta,Langley,Township of Langley,Maple Ridge,Abbotsford';
+    const AREAS = 'Surrey,White Rock,Delta,Langley,Township of Langley,Maple Ridge,Abbotsford,Chilliwack,Mission,Vancouver,Burnaby,Coquitlam';
     let sugTimer = 0, sugSeq = 0, lastRun = '';
     const suggest = async (q: string) => {
       const seq = ++sugSeq;

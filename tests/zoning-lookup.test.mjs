@@ -60,7 +60,7 @@ test('block-level match: the municipality\'s own address data finds the lot, or 
 });
 
 test('outside the covered municipalities, junk, and upstream failure', async () => {
-  assert.equal((await lookup('100 Main St Vancouver', mock([['geocoder', geo({ localityName: 'Vancouver' })]]))).status, 'unsupported');
+  assert.equal((await lookup('100 Main St Richmond', mock([['geocoder', geo({ localityName: 'Richmond' })]]))).status, 'unsupported');
   assert.equal((await lookup('Surrey', mock([]))).status, 'bad');
   assert.equal((await lookup('x'.repeat(130) + '1', mock([]))).status, 'bad');
   assert.equal((await lookup('1 Nowhere Rd', mock([['geocoder', { features: [{ geometry: { coordinates: [0, 0] }, properties: { localityName: 'Surrey', matchPrecision: 'LOCALITY', civicNumber: '', streetName: '' } }] }]]))).status, 'notfound');
@@ -116,8 +116,40 @@ test('Delta: capital-letter names are tidied, the city PDF is linked, a road is 
   assert.equal(r.guide, 'zd-delta');
 });
 
+test('Vancouver (D-355): zoning from the open data API, in the same shape as the map servers', async () => {
+  const calls = [];
+  const r = await lookup('453 W 12th Ave Vancouver', mock([
+    ['geocoder', geo({ civicNumber: 453, streetName: '12th', streetType: 'Ave', streetDirection: 'W', localityName: 'Vancouver' })],
+    ['zoning-districts-and-labels/records', { total_count: 1, results: [{ zoning_district: 'CD-1 (46)', zoning_classification: 'Comprehensive Development' }] }],
+    ['MapServer/23', { count: 0 }],
+  ], calls));
+  assert.deepEqual(r.zones, [{ code: 'CD-1 (46)', name: 'Comprehensive Development' }]);
+  assert.equal(r.guide, 'zd-vancouver'); assert.equal(r.alr, false);
+  assert.ok(calls.some((u) => u.includes('intersects') && u.includes('POINT')), 'point query sent to the open data API');
+});
+
 test('area and sources', () => {
   assert.equal(ringArea(sq), 5000);
   for (const m of Object.values(MUNIS)) assert.match(m.zoning, /^https:\/\//);
-  assert.deepEqual(Object.keys(MUNIS).sort(), ['Abbotsford', 'Delta', 'Langley', 'Maple Ridge', 'Surrey', 'Township of Langley', 'White Rock']);
+  assert.deepEqual(Object.keys(MUNIS).sort(), ['Abbotsford', 'Burnaby', 'Chilliwack', 'Coquitlam', 'Delta', 'Langley', 'Maple Ridge', 'Mission', 'Surrey', 'Township of Langley', 'Vancouver', 'White Rock']);
+});
+
+test('Chilliwack and Mission (D-354): current zone code, provincial ALR for Mission, no lot size without a parcel layer', async () => {
+  const calls = [];
+  const c = await lookup('8550 Young Rd Chilliwack', mock([
+    ['geocoder', geo({ civicNumber: 8550, streetName: 'Young', streetType: 'Rd', localityName: 'Chilliwack' })],
+    ['Dynamic_Zone/MapServer/3', { features: [{ attributes: { ZONE: 'RS2', CalcField: 'RSV2' } }, { attributes: { ZONE: 'RH', CalcField: 'None' } }] }],
+    ['Dynamic_ALR/MapServer/0', { count: 1 }],
+  ], calls));
+  assert.deepEqual(c.zones, [{ code: 'RSV2' }]);
+  assert.equal(c.guide, 'zd-chilliwack'); assert.equal(c.alr, true);
+  const m = await lookup('33000 Dewdney Trunk Rd Mission', mock([
+    ['geocoder', geo({ civicNumber: 33000, streetName: 'Dewdney Trunk', streetType: 'Rd', localityName: 'Mission' })],
+    ['Planning/MapServer/2/query', { features: [{ attributes: { Zone_Class: 'RU36s', Zoning: 'Rural 36 Secondary Dwelling Zone' } }] }],
+    ['bcgw_pub_whse_legal_admin_boundaries/MapServer/23', { count: 0 }],
+    ['Planning/MapServer/24/query', { features: [{ attributes: { O2_Type_1: 'Rural' } }] }],
+  ], calls));
+  assert.deepEqual(m.zones, [{ code: 'RU36s', name: 'Rural 36 Secondary Dwelling Zone' }]);
+  assert.equal(m.guide, 'zd-mission'); assert.equal(m.alr, false); assert.equal(m.ocp, 'Rural'); assert.equal(m.lot, undefined);
+  assert.equal(MUNIS['Langley'].guide, 'zd-langleycity'); assert.equal(MUNIS['White Rock'].guide, 'zd-whiterock');
 });

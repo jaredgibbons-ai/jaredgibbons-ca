@@ -12,17 +12,32 @@ const LC = 'https://maps.langleycity.ca/server/rest/services/Maps/Open_Data/MapS
 const WR = 'https://maps.whiterockcity.ca/server/rest/services/opendata';                  // City of White Rock
 const MR = 'https://geoservices.mapleridge.ca/server/rest/services/DataCatalog';          // City of Maple Ridge
 const DE = 'https://maps.delta.ca/arcgis/rest/services/DeltaMap';                          // City of Delta
+const CH = 'https://maps.chilliwack.com/arcgis/rest/services/External';                    // City of Chilliwack
+const MI = 'https://esri.mission.ca/ags/rest/services/Geocortex/Planning/MapServer';       // City of Mission
+const BU = 'https://gis.burnaby.ca/arcgis/rest/services/OpenData';                              // City of Burnaby
+const CQ = 'https://geodata.coquitlam.ca/arcgis/rest/services/DynamicServices';                // City of Coquitlam
+const VA = 'https://opendata.vancouver.ca/api/explore/v2.1/catalog/datasets/zoning-districts-and-labels';   // City of Vancouver (open data API, not a map server)
+// The Province's ALR polygons, for a municipality whose own map service has no ALR layer (Mission).
+const BC_ALR = 'https://delivery.maps.gov.bc.ca/arcgis/rest/services/whse/bcgw_pub_whse_legal_admin_boundaries/MapServer/23';
 
 // `ocp` is the Official Community Plan land-use layer and its field; `flood` the city's mapped flood area (D-290). The Township publishes neither.
 // `guide` is the municipality's section id in the zoning guide (src/data/zonings.json), when it has one.
 export const MUNIS = {
   'Surrey': { name: 'Surrey', guide: 'zd-surrey', zoning: `${SU}/Public/Planning/MapServer/18`, code: 'ZONING_TEXT', desc: 'ZONING', alr: `${SU}/Public/Planning/MapServer/0`, lot: `${SU}/Lots/MapServer/7`, ocp: [`${SU}/Public/Planning/MapServer/14`, 'LAND_USE'], flood: `${SU}/Public/Planning/MapServer/4`, map: 'https://cosmos.surrey.ca/' },
   'Township of Langley': { name: 'Township of Langley', guide: 'zd-langley', zoning: `${T}/Zoning/FeatureServer/0`, code: 'Zone', desc: 'ZoneCategory', alr: `${T}/OpenData_AgriculturalLandReserve/FeatureServer/0`, lot: `${T}/Parcels/FeatureServer/0`, map: 'https://www.tol.ca/en/services/geosource-maps.aspx' },
-  'Langley': { name: 'City of Langley', guide: '', zoning: `${LC}/90`, code: 'ZONING', desc: '', alr: `${LC}/189`, lot: `${LC}/181`, ocp: [`${LC}/191`, 'LANDUSE'], flood: `${LC}/163`, map: 'https://www.langleycity.ca/' },
+  'Langley': { name: 'City of Langley', guide: 'zd-langleycity', zoning: `${LC}/90`, code: 'ZONING', desc: '', alr: `${LC}/189`, lot: `${LC}/181`, ocp: [`${LC}/191`, 'LANDUSE'], flood: `${LC}/163`, map: 'https://www.langleycity.ca/' },
   'Abbotsford': { name: 'Abbotsford', guide: 'zd-abbotsford', zoning: `${AB}/Development_Layers_External_Feature/FeatureServer/45`, code: 'ZONING', desc: '', alr: `${AB}/Development_Layers_External_Feature/FeatureServer/1`, lot: `${AB}/Parcel_Layers_External_Feature/FeatureServer/0`, ocp: [`${AB}/Development_Layers_External_Feature/FeatureServer/38`, 'Draft_OCP_LandUse'], flood: `${AB}/Development_Layers_External_Feature/FeatureServer/17`, map: 'https://www.abbotsford.ca/' },
   'Maple Ridge': { name: 'Maple Ridge', guide: 'zd-mapleridge', zoning: `${MR}/PlanningDevelopment/MapServer/6`, code: 'ZoningCode', desc: '', alr: `${MR}/PlanningDevelopment/MapServer/0`, lot: `${MR}/Property/MapServer/3`, ocp: [`${MR}/PlanningDevelopment/MapServer/4`, 'LandUseDescription'], map: 'https://www.mapleridge.ca/' },
   'Delta': { name: 'Delta', guide: 'zd-delta', zoning: `${DE}/Planning/MapServer/11`, code: 'ZONING', desc: 'ZONING_DESCRIPTION', link: 'ZONING_PDF', alr: `${DE}/Planning/MapServer/6`, lot: `${DE}/Property/MapServer/23`, map: 'https://www.delta.ca/' },
-  'White Rock': { name: 'White Rock', guide: '', zoning: `${WR}/Zoning/MapServer/0`, code: 'ZONE_CODE', desc: 'ZONE_DESC', alr: '', lot: `${WR}/Parcel/MapServer/0`, ocp: [`${WR}/Landuse/MapServer/0`, 'OCP_Description'], flood: `${WR}/Flood_Plain_Areas/MapServer/0`, map: 'https://www.whiterockcity.ca/' },
+  'White Rock': { name: 'White Rock', guide: 'zd-whiterock', zoning: `${WR}/Zoning/MapServer/0`, code: 'ZONE_CODE', desc: 'ZONE_DESC', alr: '', lot: `${WR}/Parcel/MapServer/0`, ocp: [`${WR}/Landuse/MapServer/0`, 'OCP_Description'], flood: `${WR}/Flood_Plain_Areas/MapServer/0`, map: 'https://www.whiterockcity.ca/' },
+  // Chilliwack (D-354): the map's ZONE field still holds codes from the 2001 bylaw; CalcField is the current Bylaw 5000 zone, the one printed on the city map.
+  'Chilliwack': { name: 'Chilliwack', guide: 'zd-chilliwack', zoning: `${CH}/Dynamic_Zone/MapServer/3`, code: 'CalcField', desc: '', alr: `${CH}/Dynamic_ALR/MapServer/0`, lot: `${CH}/Dynamic_Parcels/MapServer/1`, ocp: [`${CH}/Dynamic_OCP2050/MapServer/3`, 'LandUse'], map: 'https://www.chilliwack.com/' },
+  // Mission (D-354): no public parcel layer, so no lot size; ALR from the Province's layer.
+  'Mission': { name: 'Mission', guide: 'zd-mission', zoning: `${MI}/2`, code: 'Zone_Class', desc: 'Zoning', alr: BC_ALR, lot: '', ocp: [`${MI}/24`, 'O2_Type_1'], map: 'https://www.mission.ca/' },
+  // Vancouver, Burnaby and Coquitlam (D-355): ALR from the Province's layer. Vancouver's zoning comes from its open data API (`ods`).
+  'Vancouver': { name: 'Vancouver', guide: 'zd-vancouver', zoning: VA, ods: true, code: 'zoning_district', desc: 'zoning_classification', alr: BC_ALR, lot: '', map: 'https://vancouver.ca/' },
+  'Burnaby': { name: 'Burnaby', guide: '', zoning: `${BU}/OpenData1/MapServer/8`, code: 'ZONECODE', desc: '', alr: BC_ALR, lot: '', map: 'https://www.burnaby.ca/' },
+  'Coquitlam': { name: 'Coquitlam', guide: 'zd-coquitlam', zoning: `${CQ}/Planning/MapServer/1`, code: 'ZONING', desc: '', alr: BC_ALR, lot: `${CQ}/Cadastral/MapServer/16`, map: 'https://www.coquitlam.ca/' },
 };
 
 const json = (body, status = 200, cache = 'no-store') => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': cache, 'x-content-type-options': 'nosniff' } });
@@ -42,6 +57,13 @@ async function get(fetcher, url) {
 }
 // ALR: count only. Asking Surrey's ALR layer for attributes times out (one very large polygon); a count answers in milliseconds.
 const inAlr = (layer, [x, y]) => `${layer}/query?f=json&geometry=${x},${y}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&returnCountOnly=true`;
+// An open data API (Vancouver) answers in its own shape; hand back the map-server shape the rest of the lookup reads.
+async function zonesAt(fetcher, m, pt) {
+  if (!m.ods) return get(fetcher, at(m.zoning, pt));
+  const where = `intersects(geom, geom'POINT(${pt[0]} ${pt[1]})')`;
+  const j = await get(fetcher, `${m.zoning}/records?limit=5&select=${m.code},${m.desc}&where=${encodeURIComponent(where)}`);
+  return { features: (j.results || []).map((r) => ({ attributes: r })) };
+}
 const at = (layer, [x, y], geom = false) => `${layer}/query?f=json&geometry=${x},${y}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&returnGeometry=${geom}${geom ? '&outSR=26910' : ''}`;
 
 // Square metres of a polygon in UTM zone 10N (metres), holes subtracted (rings are signed).
@@ -91,7 +113,7 @@ export async function lookup(address, fetcher = fetch) {
   if (!pt) return { status: 'notfound', address: shown, locality: m.name };
 
   const [z, a, l, o, fl] = await Promise.all([
-    get(fetcher, at(m.zoning, pt)),
+    zonesAt(fetcher, m, pt),
     m.alr ? get(fetcher, inAlr(m.alr, pt)).catch(() => null) : Promise.resolve({ count: 0 }),
     m.lot ? get(fetcher, at(m.lot, pt, true)).catch(() => null) : Promise.resolve(null),
     m.ocp ? get(fetcher, at(m.ocp[0], pt).replace('outFields=*', `outFields=${m.ocp[1]}`)).catch(() => null) : Promise.resolve(null),
@@ -101,7 +123,7 @@ export async function lookup(address, fetcher = fetch) {
   const zones = [];
   for (const x of z.features || []) {
     const code = String(x.attributes[m.code] || '').trim();
-    if (!code || seen.has(code) || code === 'ROAD') continue;
+    if (!code || seen.has(code) || code === 'ROAD' || code === 'None') continue;
     seen.add(code);
     const zone = { code };
     const d = m.desc && String(x.attributes[m.desc] || '').trim();
