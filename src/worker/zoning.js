@@ -36,7 +36,7 @@ export const MUNIS = {
   'Mission': { name: 'Mission', guide: 'zd-mission', zoning: `${MI}/2`, code: 'Zone_Class', desc: 'Zoning', alr: BC_ALR, lot: '', ocp: [`${MI}/24`, 'O2_Type_1'], map: 'https://www.mission.ca/' },
   // Vancouver, Burnaby and Coquitlam (D-355): ALR from the Province's layer. Vancouver's zoning comes from its open data API (`ods`).
   'Vancouver': { name: 'Vancouver', guide: 'zd-vancouver', zoning: VA, ods: true, code: 'zoning_district', desc: 'zoning_classification', alr: BC_ALR, lot: '', map: 'https://vancouver.ca/' },
-  'Burnaby': { name: 'Burnaby', guide: '', zoning: `${BU}/OpenData1/MapServer/8`, code: 'ZONECODE', desc: '', alr: BC_ALR, lot: '', map: 'https://www.burnaby.ca/' },
+  'Burnaby': { name: 'Burnaby', guide: 'zd-burnaby', zoning: `${BU}/OpenData1/MapServer/8`, code: 'ZONECODE', desc: '', alr: BC_ALR, lot: '', map: 'https://www.burnaby.ca/' },
   'Coquitlam': { name: 'Coquitlam', guide: 'zd-coquitlam', zoning: `${CQ}/Planning/MapServer/1`, code: 'ZONING', desc: '', alr: BC_ALR, lot: `${CQ}/Cadastral/MapServer/16`, map: 'https://www.coquitlam.ca/' },
 };
 

@@ -7,17 +7,16 @@ import { handleInstagram } from './instagram.js';
 import { handleZoning } from './zoning.js';
 
 const index = buildIndex(rules, listingIds);
-// Headers on every response, API and photo answers included. CSP here is frame protection only: a script allowlist needs the launch inventory of
-// third-party scripts (Google Maps, Turnstile, MyRealPage, YouTube) and is a separate step (D-140).
+// Headers on every response, API and photo answers included.
 const SECURITY = {
   'x-content-type-options': 'nosniff',
   'referrer-policy': 'strict-origin-when-cross-origin',
   'x-frame-options': 'SAMEORIGIN',
-  'content-security-policy': "frame-ancestors 'self'; base-uri 'self'",
-  // Step 1 of the script allowlist (D-286): the full policy in report-only mode. Nothing is blocked; the browser console lists what
-  // the policy would have blocked. Once the live pages (map, listing search, forms, video, analytics) show a clean console, the
-  // same text moves to the enforcing header above. 'unsafe-inline' stays: the pages carry small inline scripts and styles.
-  'content-security-policy-report-only': [
+  // The script allowlist (D-286 step 1, enforced in D-357 step 2). Step 1 sent it report-only; on Nov 18 2026 the live home page, map search,
+  // a community listing search, the home evaluation form (address suggestions, Turnstile), a listing with its video and map, the reviews
+  // page and the zoning lookup loaded nothing outside it and raised no violation, so it now blocks. 'unsafe-inline' stays: the pages carry
+  // small inline scripts and styles. A new third-party service needs its host added here first.
+  'content-security-policy': [
     "default-src 'self'",
     "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://www.googletagmanager.com https://maps.googleapis.com https://maps.gstatic.com https://challenges.cloudflare.com https://static.cloudflareinsights.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://*.myrealpage.com",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.myrealpage.com",
