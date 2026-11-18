@@ -170,3 +170,21 @@
 .mrp-idx-form-container .mrp-search-button,.mrp-idx-form-container .btn-danger{background:#0a0a0a!important;border-color:#0a0a0a!important;color:#fff!important}
 .mrp-idx-form-container .btn,.mrp-idx-form-container input,.mrp-idx-form-container select{border-radius:0!important}
 .mrp-idx-form-container .control-group-pane label{font-weight:700!important}
+
+/* Map search, second pass (D-351): the site's look. Black 1px borders, square corners, no shadows, Montserrat capitals on controls. */
+.mrp-idx-branding{background:#fff!important;border-bottom:1px solid #0a0a0a!important}
+.mrp-idx-branding .home-button{background:#0a0a0a!important;color:#fff!important}
+.mrp-idx-branding .home-button :is(span,i,a){color:#fff!important}
+.mrp-idx-branding .tel,.mrp-idx-branding .email,.mrp-idx-branding .email a{font-weight:700!important;color:#0a0a0a!important}
+.mrp-idx-form-container .quick-search-opt,.mrp-idx-form-container .places-options.omni,.mrp-idx-form-container .omnibox-container{border:1px solid #0a0a0a!important;box-shadow:none!important;border-radius:0!important;background:#fff!important}
+.mrp-idx-form-container .places-options.omni .omnibox-container{border:0!important}
+.mrp-idx-form-container .quick-search-opt,.mrp-idx-form-container .quick-search-opt :is(span,div,label,a,button):not(.mdicon):not(.mdiicon):not([class*="mdi-"]):not([class*="glyphicon"]){font:700 .6875rem/1 "Montserrat",sans-serif!important;letter-spacing:.1em!important;text-transform:uppercase!important;color:#0a0a0a!important}
+.mrp-idx-form-container .btn-circle{background:#0a0a0a!important;color:#fff!important;border:1px solid #fff!important;border-radius:0!important;box-shadow:none!important}
+.mrp-idx-form-container .btn-circle :is(span,i){color:#fff!important}
+.mrp-idx-form-container .mrp-listing-thumb{box-shadow:none!important;border-bottom:1px solid #d9d4cc!important}
+.mrp-idx-form-container .thumb-address{font-weight:700!important;color:#0a0a0a!important}
+.mrp-idx-form-container .thumb-details,.mrp-idx-form-container .thumb-attribution,.mrp-idx-form-container .thumb-attribution span{color:#5b5b5b!important}
+.mrp-idx-form-container .thumb-details-button.details-btn{background:#0a0a0a!important;color:#fff!important;border-radius:0!important;font:700 .625rem/1 "Montserrat",sans-serif!important;letter-spacing:.1em!important;text-transform:uppercase!important}
+.mrp-idx-form-container .ribbon.NEW-BANNER,.mrp-idx-form-container .ribbon.SOLD-BANNER,.mrp-idx-form-container .ribbon{background:#0a0a0a!important;color:#fff!important;font:700 .5625rem/1.6 "Montserrat",sans-serif!important;letter-spacing:.1em!important;box-shadow:none!important}
+.mrp-idx-form-container .dropdown-menu,.mrp-idx-form-container .popover,.mrp-idx-form-container .modal-content{border:1px solid #0a0a0a!important;border-radius:0!important;box-shadow:none!important}
+.mrp-idx-form-container .btn-default{border:1px solid #0a0a0a!important;border-radius:0!important;background:#fff!important;color:#0a0a0a!important;box-shadow:none!important;text-shadow:none!important;background-image:none!important}
