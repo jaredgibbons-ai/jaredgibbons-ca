@@ -742,7 +742,7 @@ page.blocks = cleanArchive(page.blocks);
 // Reference sections fold away behind their heading (D-197): sources and the disclaimer on every page; on guides also the rules, costs, risks,
 // building-by-building and comparison sections. The heading stays an H2 inside <summary>, the text stays in the page for search engines.
 const FOLD_ALL = /^(Sources\b|Disclaimer$|Pets and age rules for every complex$)/i;
-const FOLD_GUIDE = /^(Related pages$|Nearby areas to look at$|More nearby areas$|Other nearby areas$|How .+ compares|What's nearby|.+: (rules that affect buyers|costs and taxes|risks and due diligence|development and new projects|local details a buyer would not know)$|(Condo buildings|Townhome complexes|Lots and land|Mobile and manufactured homes|Duplexes and half duplexes|Acreage and rural land) in |Sources for the home-type notes$)/i;
+const FOLD_GUIDE = /^(Related pages$|Nearby areas to look at$|More nearby areas$|Other nearby areas$|How .+ compares|What's nearby|.+: (rules that affect buyers|costs and taxes|risks and due diligence|development and new projects|local details a buyer would not know|new projects and development|details most buyers miss)$|Rules for (buying .+ in|buyers in) |Costs and taxes on .+ in |Buying .+: risks to check$|How .+ compare$|(Condo buildings|Townhome complexes|Lots and land|Mobile and manufactured homes|Duplexes and half duplexes|Acreage and rural land) in |Sources for the home-type notes$)/i;
 const foldOf = (sec: any): boolean => {
   const h = sec.kind === 'text' && sec.blocks[0]?.t === 'h' && sec.blocks[0].level === 2 ? String(sec.blocks[0].text || '') : '';
   if (!h || sec.blocks.length < 2) return false;
