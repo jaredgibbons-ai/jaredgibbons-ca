@@ -194,7 +194,7 @@ YORKSON = {
           'low-rise condos rather than detached lots, and why construction is still going on in places. Its centre is the Town Centre at 208 Street and 80 '
           'Avenue. On MLS® Yorkson is not an area of its own: listings sit in the Willoughby Heights sub-area with the rest of Willoughby.'),
         H('Homes for sale in Yorkson'),
-        PP('The live searches cover all of Willoughby, Yorkson included: ', ('Willoughby homes for sale', '/willoughby-homes-for-sale.html'), '. For listings that name a '
+        PP('The live searches cover all of Willoughby, Yorkson included: ', ('Willoughby homes for sale', '/willoughby-heights.html'), '. For listings that name a '
            'Yorkson school, try ', ('homes near Willoughby Elementary', '/homes-near-willoughby-elementary.html'), ' and ', ('homes near Lynn Fripps Elementary', '/homes-near-lynn-fripps-elementary.html'), '.'),
         LINKS([('Willoughby townhomes for sale', 'willoughby-townhomes-for-sale'), ('Willoughby condos for sale', 'willoughby-condos-for-sale'),
                ('Willoughby houses for sale', 'willoughby-houses-for-sale'), ('New construction in Willoughby Heights', 'new-construction-willoughby-heights')]),

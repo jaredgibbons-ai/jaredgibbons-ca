@@ -8,7 +8,8 @@ const root = path.resolve(import.meta.dirname, '..');
 const read = (f) => JSON.parse(fs.readFileSync(path.join(root, f), 'utf8'));
 const local = (s) => read(`src/data/local/${s}.json`);
 const seo = read('tools/seo_final/fix_02.json');
-const NEW = ['north-vancouver-condos-for-sale', 'furry-creek-homes-for-sale', 'ocean-park-homes-for-sale', 'crescent-beach-homes-for-sale'];
+// The Ocean Park and Crescent Beach pages folded into /crescent-bch-ocean-pk.html (D-371); their sections moved there.
+const NEW = ['north-vancouver-condos-for-sale', 'furry-creek-homes-for-sale'];
 const text = (o) => JSON.stringify(o);
 
 test('area gap pages: drafts with a listings placeholder, own SEO entry and at least 3 inbound links', () => {
@@ -23,14 +24,11 @@ test('area gap pages: drafts with a listings placeholder, own SEO entry and at l
   }
 });
 
-test('Ocean Park and Crescent Beach pages say the sold figures cover both communities and never claim a radius or a separate median', () => {
-  for (const s of ['ocean-park-homes-for-sale', 'crescent-beach-homes-for-sale']) {
-    const t = text(local(s));
-    assert.match(t, /F53/);
-    assert.match(t, /(together|both)/);
-    assert.match(t, /(listing names|mentions|mention)/);
-    assert.doesNotMatch(t, /within \d+ ?(km|metres|miles)/i);
-  }
+test('the folded Ocean Park and Crescent Beach sections on the hub never claim a radius or a separate median (D-371)', () => {
+  const t = text(local('crescent-bch-ocean-pk').blocks.filter((b) => b.gen === 'fold1119'));
+  assert.match(t, /Ocean Park landmarks/);
+  assert.match(t, /Flood rules/);
+  assert.doesNotMatch(t, /within \d+ ?(km|metres|miles)/i);
 });
 
 test('neighbourhood sold blocks: dated, sourced, medians only where at least 5 homes sold', () => {
