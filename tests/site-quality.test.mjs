@@ -334,6 +334,11 @@ test('listing media, map, example rate, 12-hour reply, zoning lookup on farm pag
     assert.equal(rows, n, `${f}: ${rows} zoning rows`);
   }
   assert.ok(!/class="section zl/.test(html('burnaby-acreages-for-sale.html')), 'zoning lookup on a page outside the guide');
+  // Valley-wide topic pages keep the address check and search but not the shared 78-row table (D-362).
+  for (const f of ['poultry-farms-for-sale-bc.html', 'broiler-farms-for-sale-bc.html', 'chicken-farms.html', 'egg-farms-for-sale-bc.html']) {
+    assert.ok(/class="section zl/.test(html(f)) && !/<tr data-zls=/.test(html(f)), `${f}: compact zoning lookup expected`);
+  }
+  assert.ok(!/for Sale homes for sale|Guides homes for sale/i.test(html('abbotsford-mobile-homes.html')), 'doubled "homes for sale" link text');
 });
 
 test('home evaluation is two steps; twenty rewritten posts carry their own body (D-271, D-273)', { skip: !built }, () => {
