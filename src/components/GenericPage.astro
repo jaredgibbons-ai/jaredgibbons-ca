@@ -280,6 +280,14 @@ const postName = String(page.title || '').split('|')[0].trim();
 const crumbs: any[] = page.slug === 'index' || page.slug === '404' ? [] : local?.breadcrumbs?.length ? local.breadcrumbs
   : String(page.path || '').startsWith('/blog.html/') ? [{ name: 'Home', href: '/' }, { name: 'Blog', href: '/blog.html' }, { name: postName, href: page.path }]
   : (BREADCRUMBS as Record<string, any[]>)[page.slug] ?? [];
+// The generated trail stores each page's H1 from when it was built; titles and H1s change (D-366 to D-372), so the last crumb (this page)
+// takes the H1 it has now, in the visible trail and in the BreadcrumbList markup (D-373).
+{
+  const last = crumbs[crumbs.length - 1];
+  const h1Now = String((page.blocks || []).find((b: any) => b.t === 'h' && b.level === 1)?.text || '').replace(/<[^>]+>/g, '').trim();
+  const here = page.path || `/${page.slug}.html`;
+  if (last && h1Now && last.href === here && last.name !== h1Now && !local?.breadcrumbs?.length) crumbs[crumbs.length - 1] = { ...last, name: h1Now };
+}
 // Blog posts (D-259): the lead photo copied from the old blog (shown under the byline, used for the share card), and BlogPosting markup
 // with the dates the post itself shows. A post with no photo of its own simply has neither picture nor image line.
 const isPost = String(page.path || '').startsWith('/blog.html/');
@@ -294,10 +302,15 @@ if (isPost) {
     author: { '@type': 'Person', '@id': `${origin}/#jared`, name: 'Jared Gibbons', url: `${origin}/about.html` },
     publisher: { '@type': 'RealEstateAgent', '@id': `${origin}/#agent`, name: 'Jared Gibbons', url: `${origin}/` } });
 }
-if (page.slug.endsWith('-guide')) {
-  const lm = (LASTMOD as Record<string, any>)[`${origin}${page.path || '/' + page.slug + '.html'}`];
+// "Updated <date>" (D-373): the date the page's own content last changed, the same date as its sitemap <lastmod> (src/integrations/lastmod.mjs
+// rewrites both after the build, so the page never shows a date older than its content). Shown under the H1 and given as dateModified.
+const NO_UPDATED = new Set(['404', 'index', 'privacy', 'subscribe-to-our-newsletter', 'contact', 'photo-credits', 'blog', 'reviews', 'terms-of-use', 'disclaimer']);
+const showUpdated = !isPost && !NO_UPDATED.has(page.slug);
+const lmISO = String((LASTMOD as Record<string, any>)[`${origin}${page.path || '/' + page.slug + '.html'}`]?.d || new Date().toISOString().slice(0, 10));
+const lmLabel = new Date(`${lmISO}T12:00:00Z`).toLocaleDateString('en-CA', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+if (showUpdated) {
   jsonld.push({ '@context': 'https://schema.org', '@type': 'WebPage', url: `${origin}${page.path || '/' + page.slug + '.html'}`, name: String(page.title || '').split('|')[0].trim(),
-    dateModified: lm?.d || updatedDate.toISOString().slice(0, 10), author: { '@id': `${origin}/#agent` } });
+    dateModified: lmISO, author: { '@id': `${origin}/#agent` } });
 }
 // Events a post lists (D-367): each becomes an Event, so a dated community event can show as an event result.
 for (const e of (page.events || []) as any[]) jsonld.push({ '@context': 'https://schema.org', '@type': 'Event', name: e.name, description: e.description, startDate: e.startDate, ...(e.endDate ? { endDate: e.endDate } : {}), eventStatus: 'https://schema.org/EventScheduled', eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode', isAccessibleForFree: !!e.free, ...(e.free ? { offers: { '@type': 'Offer', price: 0, priceCurrency: 'CAD', availability: 'https://schema.org/InStock', url: page.canonical } } : {}), location: { '@type': 'Place', name: e.place, address: { '@type': 'PostalAddress', streetAddress: e.street, addressLocality: e.city, addressRegion: 'BC', addressCountry: 'CA' } }, url: page.canonical });
@@ -338,7 +351,8 @@ if (local) {
   const arr = [...page.blocks.slice(0, cut), ...plain, ...page.blocks.slice(cut)];
   // One question section per page (D-202): when the archive already has its own ("Murrayville questions"), the local questions
   // join it, minus any it already asks, instead of opening a second "Common questions" section.
-  const qAt = arr.findIndex((b: any) => b.t === 'h' && b.level === 2 && /(?:\bquestions|Frequently Asked Questions.*|^FAQs?)$/i.test(String(b.text || '')) && !/^Common questions$/i.test(String(b.text || '')));
+  // D-373: also "...: your questions answered", "Guildford FAQs", "Crescent Beach & Ocean Park FAQ" and "Questions buyers ask" (19 pages showed a second section).
+  const qAt = arr.findIndex((b: any) => b.t === 'h' && b.level === 2 && /(?:\bquestions(?: answered)?|Frequently Asked Questions.*|\bFAQs?|^Questions (?:buyers|sellers|people) ask.*)$/i.test(String(b.text || '')) && !/^Common questions$/i.test(String(b.text || '')));
   if (faqBlocks.length && qAt >= 0) {
     let qEnd = qAt + 1; while (qEnd < arr.length && !(arr[qEnd].t === 'h' && arr[qEnd].level <= 2)) qEnd++;
     const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
@@ -616,6 +630,10 @@ if (!isGuide) {
     const at = page.blocks[h1i + 1]?.t === 'p' ? h1i + 2 : h1i + 1;
     page.blocks.splice(at, 0, { t: 'jvoice', v: jv });
   }
+}
+if (!isGuide && showUpdated && !page.blocks.some((b: any) => b.t === 'updated')) {
+  const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
+  if (h1i >= 0) page.blocks.splice(h1i + 1, 0, { t: 'updated' });
 }
 // Archive pages open with an H2 above the H1 ("Fraser Valley Acreages for Sale" over the longer H1): show that line as a small label above the H1, not a second giant heading.
 {
@@ -942,7 +960,7 @@ const explore = !_extra.length ? exploreBase
                 </div>
               );
               if (b.t === 'updated') return (
-                <p class="upd">Updated <time datetime={updatedDate.toISOString().slice(0, 7)}>{updatedLabel}</time> · By <a href="/about.html">Jared Gibbons, REALTOR®</a></p>
+                <p class="upd">Updated <time data-lm datetime={lmISO}>{lmLabel}</time> · By <a href="/about.html">Jared Gibbons, REALTOR®</a></p>
               );
               if (b.t === 'qanswer') return (
                 <section class="qa" aria-labelledby="quick-answer-h">
