@@ -31,7 +31,8 @@ test('the old marketing-plan address forwards to the selling page (D-256)', () =
   assert.deepEqual(R('/marketing-plan.html'), { type: 'redirect', location: '/selling.html', status: 301 });
   assert.deepEqual(R('/chicken-farms.html'), { type: 'redirect', location: '/poultry-farms-for-sale-bc.html', status: 301 });   // D-363
   for (const [f, t] of [['willoughby-homes-for-sale', 'willoughby-heights'], ['willoughby-heights-langley-houses-for-sale', 'willoughby-houses-for-sale'],
-    ['crescent-beach-homes-for-sale', 'crescent-bch-ocean-pk'], ['ocean-park-homes-for-sale', 'crescent-bch-ocean-pk']]) {
+    ['crescent-beach-homes-for-sale', 'crescent-bch-ocean-pk'], ['ocean-park-homes-for-sale', 'crescent-bch-ocean-pk'],
+    ['willoughby-heights-langley-condos-townhomes-for-sale', 'willoughby-townhomes-for-sale'], ['new-construction-cloverdale-bc', 'new-construction-cloverdale']]) {
     assert.deepEqual(R(`/${f}.html`), { type: 'redirect', location: `/${t}.html`, status: 301 });   // D-371
   }
   assert.deepEqual(R('/realtor/south-surrey'), { type: 'redirect', location: '/south-surrey-real-estate-agent-jared-gibbons-realtor.html', status: 301 });   // D-365

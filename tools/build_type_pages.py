@@ -17,7 +17,8 @@ import build_snapstats_layers as L
 import build_community_pages as C
 
 ROOT = L.ROOT
-HELD = {'salmon-river-langley-condos-townhomes-for-sale'}   # held out of the build: the area has no condo or townhome stock (Jared, 2026-11-06); file kept in src/data/local-held/
+HELD = {'salmon-river-langley-condos-townhomes-for-sale',   # held out of the build: the area has no condo or townhome stock (Jared, 2026-11-06); file kept in src/data/local-held/
+        'willoughby-heights-langley-condos-townhomes-for-sale'}   # folded into the townhome page with a 301 (D-376)
 MIN_AVG = 3   # build and keep at a 3-month average of 3+ listings (Jared, 2026-11-02: communities just under 5 get a page). Under 3 for three windows in a row = fold candidate (listed, never removed without Jared)
 KINDS = {
     'detached': dict(suffix='houses-for-sale', noun='houses', title='Houses for Sale', h1='Houses for Sale', cityrole='houses', cross='condo_townhome', short='Houses'),

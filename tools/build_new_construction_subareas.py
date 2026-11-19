@@ -211,6 +211,7 @@ def links(c, near, reg):
 def build(cs):
     mp = {(r['board area'], r['board sub-area']): r['our pages that match (slug)'] for r in csv.DictReader(open('docs/review/idx/subarea-page-map-2026-11-04.csv'))}
     by_area = {}
+    cs = [c for c in cs if c['slug'] != 'new-construction-cloverdale-bc']   # folded into new-construction-cloverdale with a 301 (D-376)
     for c in cs: by_area.setdefault(c['area'], []).append(c)
     regs = {}
     for i, c in enumerate(cs):

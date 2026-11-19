@@ -53,6 +53,10 @@ export const MOVED = {
   '/willoughby-heights-langley-houses-for-sale.html': '/willoughby-houses-for-sale.html',
   '/crescent-beach-homes-for-sale.html': '/crescent-bch-ocean-pk.html',
   '/ocean-park-homes-for-sale.html': '/crescent-bch-ocean-pk.html',
+  // D-376: the combined Willoughby Heights condo and townhome page (its searches were for townhomes; its building notes moved to the
+  // condo and townhome pages) and the second Cloverdale new-construction page (its tables repeated the main page's).
+  '/willoughby-heights-langley-condos-townhomes-for-sale.html': '/willoughby-townhomes-for-sale.html',
+  '/new-construction-cloverdale-bc.html': '/new-construction-cloverdale.html',
   // The Google Ads campaign "south surrey seller add" (paused Nov 2026) still lands on the old site's /realtor/south-surrey,
   // which the new site does not have (found Nov 19 2026, D-365). Its headline is "South Surrey Realtors"; send it to that page.
   '/realtor/south-surrey': '/south-surrey-real-estate-agent-jared-gibbons-realtor.html',
