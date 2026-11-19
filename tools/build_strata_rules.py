@@ -37,7 +37,7 @@ PAGES = {
     'murrayville-condos-for-sale': (['Murrayville'], ['Condo']), 'murrayville-townhomes-for-sale': (['Murrayville'], ['Townhome']),
     'walnut-grove-condos-for-sale': (['Walnut Grove'], ['Condo']), 'walnut-grove-townhomes-for-sale': (['Walnut Grove'], ['Townhome']),
     'willoughby-condos-for-sale': (['Willoughby Heights'], ['Condo']), 'willoughby-townhomes-for-sale': (['Willoughby Heights'], ['Townhome']),
-    'willoughby-heights-langley-condos-townhomes-for-sale': (['Willoughby Heights'], ['Condo', 'Townhome']),
+    # willoughby-heights-langley-condos-townhomes-for-sale folded into the townhome page (D-376)
     'white-rock-condos-for-sale': (['White Rock'], ['Condo']),
     'white-rock-townhomes-for-sale': (['White Rock'], ['Townhome']), 'crescent-beach-ocean-park-condos-townhomes-for-sale': (['Crescent Beach & Ocean Park'], ['Condo', 'Townhome']),
     'grandview-south-surrey-condos-townhomes-for-sale': (['Grandview'], ['Condo', 'Townhome']), 'grandview-surrey-townhomes-for-sale': (['Grandview'], ['Townhome']),
