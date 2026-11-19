@@ -201,3 +201,12 @@ test('static files get long browser caching, pages revalidate (D-240)', async ()
   assert.match(cacheFor('/img/Jared.webp', ok)['cache-control'], /604800/);
   assert.deepEqual(cacheFor('/_astro/x.css', { status: 304 }), {});
 });
+
+test('open-house pages name the right weekend in Vancouver time (D-368)', async () => {
+  const { weekendLabel } = await import('../src/lib/weekend.js');
+  assert.equal(weekendLabel(new Date('2026-11-19T20:00:00Z')).text, 'Saturday, November 21 and Sunday, November 22');   // Thursday
+  assert.equal(weekendLabel(new Date('2026-11-22T06:00:00Z')).text, 'Saturday, November 21 and Sunday, November 22');   // late Saturday evening in Vancouver
+  assert.equal(weekendLabel(new Date('2026-11-22T20:00:00Z')).text, 'Saturday, November 21 and Sunday, November 22');   // Sunday
+  assert.equal(weekendLabel(new Date('2026-11-23T20:00:00Z')).text, 'Saturday, November 28 and Sunday, November 29');   // Monday
+  assert.equal(weekendLabel(new Date('2026-12-30T20:00:00Z')).text, 'Saturday, January 2 and Sunday, January 3');
+});

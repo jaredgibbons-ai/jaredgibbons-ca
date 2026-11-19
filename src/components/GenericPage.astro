@@ -54,6 +54,7 @@ import EXPLORE from '../data/explore.json';
 import EXPLORE_EXTRA from '../data/explore-extra.json';
 import ExploreLinks from './ExploreLinks.astro';
 import ZoningLookup from './ZoningLookup.astro';
+import { weekendLabel } from '../lib/weekend.js';
 import SoldVideos from './SoldVideos.astro';
 // Farm, acreage and land pages get the zoning lookup (D-269): the municipality's farm and rural zones from the zoning guide.
 const ZL_PAGE = /(acreage|farms?\b|farms-|lots-land|horse-propert|poultry|chicken-farm|egg-farm|broiler|turkey-farm)/;
@@ -353,6 +354,13 @@ if (local) {
   if (formCut >= 0) { const at2 = arr.indexOf(page.blocks[formCut]); arr.splice(at2, 0, ...beforeForm); } else arr.push(...beforeForm);
   if (afterIntro.length) { const h1j = arr.findIndex((b: any) => b.t === 'h' && b.level === 1); const k = arr.findIndex((b: any, i: number) => i > h1j && b.t === 'h' && b.level === 2); arr.splice(k < 0 ? arr.length : k, 0, ...afterIntro); }
   page.blocks = [...arr, ...endBlocks];
+}
+
+// Open-house pages say which weekend (D-368): a dated line under the H1. The Worker rewrites [data-weekend] on every request,
+// so the date stays right between builds; the build writes the same label as the starting text.
+if (/(^|-)open-houses$/.test(page.slug)) {
+  const h1i = page.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1);
+  if (h1i >= 0 && !page.blocks.some((b: any) => b.t === 'weekend')) page.blocks.splice(h1i + 1, 0, { t: 'weekend', text: weekendLabel().text });
 }
 
 // Contact fix (D-73): 148 archive pages print jared@jaredgibbons.ca, which is not Jared's address; shown as jaredgibbons@royallepage.ca. The archive record is untouched.
@@ -1105,6 +1113,7 @@ const explore = !_extra.length ? exploreBase
                   </>
                 );
               }
+              if (b.t === 'weekend') return <p class="ohwk"><span class="ohwk__k">This weekend</span> <strong data-weekend>{b.text}</strong></p>;
               if (b.t === 'notice') { if (isDraftNote(b.text) && !isPreview) return null; return <p class="notice">{b.text}</p>; }
               if (b.t === 'faq') return (
                 <div class="faqlist">
@@ -1321,6 +1330,8 @@ const explore = !_extra.length ? exploreBase
 </script>
 
 <style>
+  .ohwk{margin:.25rem 0 1.25rem;font-size:1.05rem}
+  .ohwk__k{display:inline-block;background:#0a0a0a;color:#fff;font:700 .7rem/1 Montserrat,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:.45rem .6rem;margin-right:.4rem;vertical-align:middle}
   /* Quick facts at the top of a guide (D-197) */
   .qf{border:1px solid var(--ink);background:#fff;padding:clamp(1rem,2.5vw,1.5rem);margin:0 0 1.25rem;max-width:56rem}
   .qf__t{margin:0 0 .75rem;font:800 .8125rem var(--f-head);letter-spacing:.12em;text-transform:uppercase}
