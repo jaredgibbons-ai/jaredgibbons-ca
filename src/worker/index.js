@@ -1,3 +1,4 @@
+import { weekendLabel } from '../lib/weekend.js';
 import rules from './rules.json';
 import listingIds from './listing-ids.json';
 import { buildIndex, route, NESTED, cacheFor } from './route.js';
@@ -104,6 +105,13 @@ async function handle(request, env, ctx) {
     }
     if (decision.type === 'asset') {
       const res = await env.ASSETS.fetch(new Request(new URL(decision.path, request.url), request));
+      // Open-house pages (D-368): fill in this weekend's dates on every request, so they are right between builds.
+      // The page changes each week, so no ETag (a 304 would keep last week's date).
+      if (res.status === 200 && /(^|[/-])open-houses\.html$/.test(decision.path)) {
+        const h = withHeaders(res, { ...cacheFor(decision.path, res) }); h.headers.delete('etag');
+        const label = weekendLabel().text;
+        return new HTMLRewriter().on('[data-weekend]', { element(el) { el.setInnerContent(label); } }).transform(h);
+      }
       return withHeaders(res, cacheFor(decision.path, res));
     }
     const nf = await env.ASSETS.fetch(new Request(new URL('/404.html', request.url), { method: 'GET' }));
