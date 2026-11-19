@@ -150,17 +150,16 @@
   {
    "name": "East Newton",
    "city": "Surrey",
-   "text": "Single-family subdivision houses close to four SD36 schools make East Newton the family end of the Surrey market. Locals call one part of it Chimney Hill.",
+   "text": "Single-family subdivision houses close to SD36 schools like Chimney Hill Elementary and Frank Hurt Secondary make East Newton the family end of the Surrey market. Locals call one part of it Chimney Hill.",
    "page": "east-newton",
-   "status": "verify",
-   "flags": [
-    "four SD36 schools"
-   ],
+   "status": "ready",
+   "flags": [],
    "check": {
     "muse": "UNCONFIRMED",
     "muse_source": "https://www.surrey.ca/renovating-building-development/land-planning-development/land-use-planning/newton-land-use-plans/east-newton-ncps",
     "date": "2026-11-03"
-   }
+   },
+   "checked": "2026-11-19: Schools: the guide lists more than four SD36 schools in and near the area (Chimney Hill, T.E. Scott, M B Sanford and Georges Vanier elementaries, Frank Hurt and Tamanawis secondaries), so \"four\" became two named ones."
   },
   {
    "name": "Fleetwood Tynehead",
@@ -189,17 +188,16 @@
   {
    "name": "North Surrey",
    "city": "Surrey",
-   "text": "North Surrey isn’t really one neighbourhood. It’s Surrey’s urban north, with Whalley, Guildford and Fleetwood pockets around the Green Timbers Urban Forest. People come here for the City Centre towers and Holland Park more than a village feel.",
+   "text": "North Surrey isn’t really one neighbourhood. It’s Surrey’s urban north, from Whalley and Guildford to Fraser Heights, Cedar Hills and Port Kells. People come here for the City Centre towers and Holland Park more than a village feel.",
    "page": "north-surrey-houses-for-sale",
-   "status": "verify",
-   "flags": [
-    "one neighbourhood"
-   ],
+   "status": "ready",
+   "flags": [],
    "check": {
     "muse": "UNCONFIRMED",
     "muse_source": "https://www.surrey.ca/about-surrey/our-communities/whalley",
     "date": "2026-11-03"
-   }
+   },
+   "checked": "2026-11-19: Areas: FVREB’s North Surrey is eight sub-areas (Bridgeview, Bolivar Heights, Fraser Heights, Royal Heights, Cedar Hills, Whalley, Guildford, Port Kells); Fleetwood is not one of them, so it was swapped for sub-areas that are."
   },
   {
    "name": "Panorama Ridge",
@@ -228,18 +226,17 @@
   {
    "name": "Royal Heights, Surrey",
    "city": "Surrey",
-   "text": "Small and self-contained, Royal Heights is an enclave whose story is elevation and views over the lowland. Most of the houses around the park date from the mid-1960s.",
+   "text": "Small and self-contained, Royal Heights is an enclave whose story is elevation and views over the lowland. Most of the houses around the park date from the late 1950s to the early 1970s, when the streets were first built.",
    "page": "royal-heights",
-   "status": "verify",
-   "flags": [
-    "1960s"
-   ],
+   "status": "ready",
+   "flags": [],
    "check": {
     "muse": "CORRECTED",
     "muse_source": "https://www.surrey.ca/city-government/council-meetings-documents/corporate-reports/r017-royal-heights-park-neighbourhood-rezoning-proposal",
     "date": "2026-11-03",
     "suggested": "Most of the houses around Royal Heights Park were built in the late 1950s to early 1970s (City of Surrey Corporate Report R017, January 2026)."
-   }
+   },
+   "checked": "2026-11-19: Age: the City says most homes there were built from the late 1950s to the early 1970s; the typical house sold was built in 1960 (royal-heights-guide). \"Mid-1960s\" was when the park was set up."
   },
   {
    "name": "Serpentine",
@@ -332,18 +329,17 @@
   {
    "name": "Murrayville, Langley",
    "city": "Langley",
-   "text": "Around the historic Five Corners at Fraser Highway and 216 Street, Murrayville is the Township’s traditional civic core and an established central neighbourhood. It’s also one of only two heritage conservation areas in the",
+   "text": "Around the historic Five Corners at Fraser Highway and 216 Street, Murrayville is the Township’s traditional civic core and an established central neighbourhood. It’s also one of only two heritage conservation areas in the Township.",
    "page": "murrayville-houses-for-sale",
-   "status": "verify",
-   "flags": [
-    "one of only two heritage conservation areas"
-   ],
+   "status": "ready",
+   "flags": [],
    "check": {
     "muse": "TRUE",
     "muse_source": "https://www.tol.ca/en/news/new-bylaw-protects-valuable-heritage-sites.aspx",
     "date": "2026-11-03",
     "note": "Township page says Fort Langley and Murrayville are the two areas with heritage designation. 'Only two heritage conservation areas' is not the page's wording. Suggest: 'one of two heritage-designated areas in the Township'."
-   }
+   },
+   "checked": "2026-11-19: Heritage conservation area: one of two in the Township (murrayville-guide). The PDF text ended mid-sentence (\"in the\"); completed with the guide’s wording."
   },
   {
    "name": "Otter District",
@@ -356,35 +352,32 @@
   {
    "name": "Salmon River",
    "city": "Langley",
-   "text": "Named for the river, Salmon River is a rural acreage and farm district. Its Salmon River Uplands designation is there to protect the rural residential character.",
+   "text": "Salmon River, along the river of the same name, is a rural acreage and farm district. Its Salmon River Uplands designation is there to protect the rural residential character.",
    "page": "salmon-river-houses-for-sale",
-   "status": "verify",
-   "flags": [
-    "Named for"
-   ],
+   "status": "ready",
+   "flags": [],
    "check": {
     "muse": "TRUE",
     "muse_source": "https://ic10.esolg.ca/11207577_TownshipofLangley/en/the-township/resources/plans-reports-strategies/Community-Neighbourhood-Plans/Community/Rural-Community-Plan-Bylaw-(No.-3250).pdf",
     "date": "2026-11-03",
     "note": "Bylaw PDF not re-checked (very long)."
-   }
+   },
+   "checked": "2026-11-19: Uplands: the Rural Plan keeps the Salmon River Uplands for rural residential and agricultural uses (salmon-river-guide, Bylaw 5983). \"Named for the river\" reworded to what the guide supports."
   },
   {
    "name": "Walnut Grove",
    "city": "Langley",
    "text": "Planned since 1979, Walnut Grove is an established planned community in northwest Langley, north of Highway 1. Shops, movie theatres and the Walnut Grove Community Centre make everyday life easy.",
    "page": "walnut-grove-houses-for-sale",
-   "status": "verify",
-   "flags": [
-    "1979",
-    "since"
-   ],
+   "status": "ready",
+   "flags": [],
    "check": {
     "muse": "TRUE",
     "muse_source": "https://www.tol.ca/en/services/resources/bylaw-services/bylaws/Neighbourhood-Plan-Bylaws/Walnut-Grove-Neighbourhood-Plan---Redwoods.pdf",
     "date": "2026-11-03",
     "note": "Neighbourhood plan PDF could not be opened for a second check (site blocks readers)."
-   }
+   },
+   "checked": "2026-11-19: Walnut Grove Community Plan adopted November 26, 1979 (walnut-grove-guide, Township OCP Schedule 6)."
   },
   {
    "name": "Abbotsford",
