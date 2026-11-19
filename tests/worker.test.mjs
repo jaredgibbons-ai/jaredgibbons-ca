@@ -30,6 +30,7 @@ test('host rules: a mixed-case host 301s once to the lowercase apex (audit 2026-
 test('the old marketing-plan address forwards to the selling page (D-256)', () => {
   assert.deepEqual(R('/marketing-plan.html'), { type: 'redirect', location: '/selling.html', status: 301 });
   assert.deepEqual(R('/chicken-farms.html'), { type: 'redirect', location: '/poultry-farms-for-sale-bc.html', status: 301 });   // D-363
+  assert.deepEqual(R('/realtor/south-surrey'), { type: 'redirect', location: '/south-surrey-real-estate-agent-jared-gibbons-realtor.html', status: 301 });   // D-365
   assert.deepEqual(R('/marketing-plan.html?utm_source=x'), { type: 'redirect', location: '/selling.html?utm_source=x', status: 301 });
 });
 test('every archive redirect row behaves as documented', () => {

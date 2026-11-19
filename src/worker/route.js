@@ -47,6 +47,10 @@ export const MOVED = {
   // both, and both slipped ("chicken farms for sale": 1.3 to 15). Jared, Nov 19 2026: "Yes you can do 1" (D-363). The poultry page
   // held the chicken searches before, so it keeps them; the chicken page's own questions moved there.
   '/chicken-farms.html': '/poultry-farms-for-sale-bc.html',
+  // The Google Ads campaign "south surrey seller add" (paused Nov 2026) still lands on the old site's /realtor/south-surrey,
+  // which the new site does not have (found Nov 19 2026, D-365). Its headline is "South Surrey Realtors"; send it to that page.
+  '/realtor/south-surrey': '/south-surrey-real-estate-agent-jared-gibbons-realtor.html',
+  '/realtor/south-surrey/': '/south-surrey-real-estate-agent-jared-gibbons-realtor.html',
   // The old site's post at this address was about an Aldergrove condo, not the Croydon Drive price drop its URL named (site review
   // 2026-11-17, D-327). Moved to an address that matches; the Croydon price drop is /blog.html/price-reduced-south-surrey-2-bedroom-condo-8934352.
   '/blog.html/10k-price-drop-south-surrey-condo-at-15735-croydon-dr-619k-8934508': '/blog.html/aldergrove-strata-condo-301-27215-aldergrove-town-centre-drive-8934508',
