@@ -8,6 +8,7 @@ import RELATED from '../../../data/post-related.json';
 import CONTEXT from '../../../data/post-context.json';
 import REWRITES from '../../../data/post-rewrites.json';
 import UPDATES from '../../../data/post-updates.json';
+import EVENTS from '../../../data/post-events.json';   // dated events a post lists, as Event markup (D-367)
 export function getStaticPaths() {
   // Old posts with no clicks (D-322, tools/build_post_updates.py): a dated update note under the title, and/or noindex (the post stays
   // on the site and keeps its links; the sitemap leaves it out).
@@ -50,6 +51,8 @@ export function getStaticPaths() {
     if (f.description) { pg.seo['Meta description'] = f.description; pg.seo['OG description'] = f.description; }
     if (f.h1) { pg.seo.H1 = f.h1; const i = pg.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1); if (i >= 0) pg.blocks[i] = { ...pg.blocks[i], text: f.h1 }; }
     if (rw) { pg.title = rw.title; pg.seo.Title = rw.title; pg.seo['OG title'] = rw.title; pg.seo['Meta description'] = rw.description; pg.seo['OG description'] = rw.description; pg.seo.H1 = rw.h1; const i = pg.blocks.findIndex((b: any) => b.t === 'h' && b.level === 1); if (i >= 0) pg.blocks[i] = { ...pg.blocks[i], text: rw.h1 }; }
+    const evs = (EVENTS as Record<string, any[]>)[pg.slug];
+    if (evs) (pg as any).events = evs;
     return { params: { slug: pg.slug }, props: { page: withUpdate(pg) } };
   });
 }

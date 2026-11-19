@@ -345,7 +345,7 @@ test('home evaluation is two steps; twenty rewritten posts carry their own body 
   const t = html('home-evaluation.html');
   assert.ok(/data-steps/.test(t) && /data-next/.test(t) && /data-g="1"/.test(t) && /data-g="2"/.test(t), 'two-step form missing');
   const rw = JSON.parse(fs.readFileSync(path.join(DIST, '..', 'src/data/post-rewrites.json'), 'utf8'));
-  assert.equal(Object.keys(rw).length, 20);   // ten more in D-273
+  assert.equal(Object.keys(rw).length, 21);   // ten more in D-273; the ALR guide in D-367
   for (const [slug, r] of Object.entries(rw)) {
     const p = html(`internal/blog/${slug}.html`);
     assert.ok(p.includes(`<title>${r.title.replace(/'/g, '&#39;').replace(/&(?!#)/g, '&amp;')}`), `${slug}: title`);
