@@ -397,3 +397,15 @@ test('D-282: condo building pages build, carry facts, and only wired searches sh
   assert.ok(/search-1452114/.test(html('king-crescent-south-surrey-condos.html')), 'King + Crescent search (fixed Nov 14) not wired');
   assert.ok(/soleil-white-rock-condos\.html/.test(html('white-rock-condo-buildings.html')), 'hub does not link the building pages');
 });
+
+test('pages show the date their content last changed, the same as the sitemap and the WebPage markup (D-373)', () => {
+  const sm = fs.readFileSync(path.join(DIST, 'sitemap.xml'), 'utf8');
+  for (const s of ['willoughby-houses-for-sale', 'south-surrey-condos-for-sale', 'panorama-ridge-guide', 'abbotsford-1-bedroom-condos-for-sale']) {
+    const h = html(`${s}.html`);
+    const d = sm.match(new RegExp(`<loc>https://jaredgibbons\\.ca/${s}\\.html</loc><lastmod>([^<]+)</lastmod>`))[1];
+    assert.match(h, new RegExp(`<time data-lm datetime="${d}"[^>]*>[A-Z][a-z]+ \\d{1,2}, \\d{4}</time>`), `${s}: visible date`);
+    assert.match(h, new RegExp(`"@type":"WebPage"[^<]*"dateModified":"${d}"`), `${s}: dateModified`);
+  }
+  // one question section per page: the local questions join the page's own FAQ section (D-202, widened in D-373)
+  for (const s of ['south-surrey-condos-for-sale', 'guildford', 'crescent-bch-ocean-pk']) assert.ok(!/<h2[^>]*>Common questions<\/h2>/.test(html(`${s}.html`)), `${s}: second question section`);
+});

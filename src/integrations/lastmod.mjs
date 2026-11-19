@@ -36,13 +36,22 @@ export default function lastmod() {
             .replace(/<script(?![^>]*ld\+json)[^>]*>[\s\S]*?<\/script>/g, '')
             // The quick-search menu's option list (data-qs, every page with the search quiz) is site navigation, not the page's content:
             // a new search page added to it must not re-date ~1,000 pages (D-316).
-            .replace(/ data-qs="[^"]*"/g, ' data-qs');
+            .replace(/ data-qs="[^"]*"/g, ' data-qs')
+            // The "Updated <date>" line shows this very date (D-373): it is the result, not part of what is compared.
+            .replace(/<time data-lm datetime="[^"]*"[^>]*>[^<]*<\/time>/g, '<time data-lm></time>');
           const h = crypto.createHash('sha1').update(body).digest('hex').slice(0, 12);
           const prev = manifest[loc];
           // LASTMOD_REHASH=1 (once, after a change to what is hashed): store the new hashes and keep every page's date.
           const d = prev && (prev.h === h || process.env.LASTMOD_REHASH === '1') ? prev.d : today;
           if (!prev || prev.h !== h) changed++;
           next[loc] = { h, d };
+          // Write the final date into the page: the "Updated" line and the WebPage dateModified (both rendered from the manifest before this build).
+          if (html.includes('data-lm')) {
+            const label = new Date(`${d}T12:00:00Z`).toLocaleDateString('en-CA', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+            const out = html.replace(/<time data-lm datetime="[^"]*"([^>]*)>[^<]*<\/time>/g, `<time data-lm datetime="${d}"$1>${label}</time>`)
+              .replace(/("@type":"WebPage","url":"[^"]*","name":"(?:[^"\\]|\\.)*","dateModified":")\d{4}-\d{2}-\d{2}/, `$1${d}`);
+            if (out !== html) fs.writeFileSync(f, out);
+          }
           return `<url><loc>${loc}</loc><lastmod>${d}</lastmod></url>`;
         });
         fs.writeFileSync(smPath, xml);
