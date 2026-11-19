@@ -129,7 +129,7 @@ def main():
         if slug == 'surrey':
             blocks.append({'t': 'p', 'text': 'Read how South Surrey school catchments work', 'h': '/south-surrey-school-catchments.html'})
         SECT = [('elementary', 'Public elementary schools in {c}'), ('middle', 'Public middle schools in {c}'), ('secondary', 'Public secondary schools in {c}'),
-                ('other', 'Other public schools and programs in {c}'), ('independent', 'Independent schools in {c}'), ('post', 'Colleges and universities in {c}')]
+                ('other', 'Other public schools and programs in {c}'), ('independent', 'Private and independent schools in {c}'), ('post', 'Colleges and universities in {c}')]
         for key, head in SECT:
             g = sorted(groups.get(key, []), key=lambda r: (r['city'] != cities[0], r['city'], r['name'].lower()))
             if not g: continue
@@ -222,7 +222,7 @@ def south_surrey(rows):
         m = [r for r in pool if _k(r['name']) == _k(n) and r['public_or_private'] != 'Public']
         if not m: raise SystemExit('independent not found: ' + n)
         ir.append([m[0]['name'], m[0]['street_address'], m[0]['city']])
-    blocks.append({'t': 'h', 'level': 2, 'text': f'Independent schools in the South Surrey area ({len(ir)})'})
+    blocks.append({'t': 'h', 'level': 2, 'text': f'Private and independent schools in the South Surrey area ({len(ir)})'})
     blocks.append({'t': 'p', 'text': 'Independent schools set their own admission rules and fees, and a home\'s address gives no priority for a place. This is not a full list of independent schools nearby; contact each school directly.'})
     blocks.append({'t': 'table', 'caption': 'Independent schools in the South Surrey area with street addresses', 'head': ['School', 'Street address', 'Community'], 'rows': ir,
                    'source': 'Source: BC Ministry of Education and Child Care school list, read 2026-11-01.'})
