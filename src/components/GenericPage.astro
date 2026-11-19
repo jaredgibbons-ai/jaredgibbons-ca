@@ -135,11 +135,11 @@ if (page.slug === 'mobile-home-parks-fraser-valley' && local?.blocks) {
   local.blocks = local.blocks.map((b: any) => {
     if (b.t === 'table' && b.head?.[0] === 'Park' && b.head?.[1] === 'Address' && b.head?.[2] === 'Notes') {
       return { ...b, head: ['Park', 'Address', 'Type', 'Notes'], rows: b.rows.map((r: any[]) => { const p = PR[k(r[1])];
-        return [r[0], r[1], p?.type || '—', r[2] === '—' && p?.age ? '55+ (per listings)' : r[2]]; }) };
+        return [r[0], r[1], p?.type || '—', r[2] === '—' && p?.age ? '55+ (from MLS® listings)' : r[2]]; }) };
     }
     const t = typeof b.text === 'string' ? b.text : '';
     if (b.t === 'p' && /^Notes mark what listings or park information state about the age rule/.test(t))
-      return { ...b, text: 'Type is how you hold the spot: a pad rental (you own the home and rent the pad, under the Manufactured Home Park Tenancy Act), co-op shares, a strata lot, or the land itself. A dash means it is not confirmed. ' + t + ' "55+ (per listings)" means every MLS® listing in that park that fills in the age field says 55+; confirm with the park, because only a park where every pad is reserved for people 55 or older is a 55+ park under the Human Rights Code.' };
+      return { ...b, text: 'Type is how you hold the spot: a pad rental (you own the home and rent the pad, under the Manufactured Home Park Tenancy Act), co-op shares, a strata lot, or the land itself. A dash means it is not confirmed. ' + t + ' "55+ (from MLS® listings)" means every MLS® listing in that park that fills in the age field says 55+; confirm with the park, because only a park where every pad is reserved for people 55 or older is a 55+ park under the Human Rights Code.' };
     return b;
   });
 }
@@ -181,7 +181,7 @@ if (page.slug === 'mobile-home-parks-fraser-valley' && local?.blocks) {
   if (bi !== undefined && local?.blocks) {
     const r = SR.rows[bi];
     local.blocks = local.blocks.map((b: any) => (b.t === 'table' && String(b.caption || '').endsWith('building facts')
-      ? { ...b, rows: [...b.rows, ['Pets (per listings)', r.pets + (r.dogs || r.cats ? ` (dogs: ${(r.dogs || '—').toLowerCase()}, cats: ${(r.cats || '—').toLowerCase()})` : '')], ['Age limit (per listings)', r.age]] } : b));
+      ? { ...b, rows: [...b.rows, ['Pets (from MLS® listings)', r.pets + (r.dogs || r.cats ? ` (dogs: ${(r.dogs || '—').toLowerCase()}, cats: ${(r.cats || '—').toLowerCase()})` : '')], ['Age limit (from MLS® listings)', r.age]] } : b));
   }
   // Pet-friendly pages (D-314): counts, the "no pets" and "cats, not dogs" lists and a table per neighbourhood, all from the data,
   // so a new workbook updates the pages without editing them.
@@ -1175,6 +1175,7 @@ const explore = !_extra.length ? exploreBase
               </>);
               if (b.t === 'calc') return b.which === 'mortgage' ? <MortgageCalc price={b.price} exemption={b.exemption} /> : <NetProceedsCalc />;
               if (b.t === 'areamap') return <AreaMap region={b.region} mode={b.mode} current={b.current} />;
+              if (b.t === 'officemap') return <figure class="omap"><iframe src={`https://www.google.com/maps?q=${encodeURIComponent(b.q)}&output=embed`} title={b.title} loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></figure>;   // the office on Google Maps (contact page, D-360)
               if (b.t === 'btnlink') return <p><a class="btn" href={b.href} rel="noopener" target="_blank">{b.label}<span class="sr-only"> (opens in a new tab)</span></a></p>;
               // Blog index (D-258): the newest market update as one dark band with its headline numbers.
               // End of every blog post (D-266): the author, with a photo and direct contact.
@@ -1678,4 +1679,6 @@ const explore = !_extra.length ? exploreBase
   .abox__c{margin:0;display:flex;flex-wrap:wrap;gap:.5rem}
   .abox__c .btn{min-height:2.75rem}
   @media (max-width:36rem){.abox{grid-template-columns:1fr}.abox__img{width:6.5rem;height:6.5rem}}
+  .omap{margin:0 0 var(--s4);border:1px solid var(--ink);aspect-ratio:16/9;max-height:26rem;background:var(--cream)}
+  .omap iframe{display:block;width:100%;height:100%;border:0}
 </style>

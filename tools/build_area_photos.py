@@ -15,7 +15,7 @@ SKIP = {'north-surrey_01': 'equirectangular 360 image, distorted and shows a per
 PAGE = {
  'abbotsford': 'abbotsford-homes-for-sale', 'belcarra': 'belcarra-port-moody', 'brentwood': 'brentwood-homes-for-sale', 'burnaby': 'burnaby-homes-for-sale',
  'capitol-hill': 'capitol-hill-bn', 'central-burnaby': 'central-burnaby-houses-for-sale', 'central-meadows': 'central-meadows-pitt-meadows', 'central-park': 'central-park-bs',
- 'chilliwack': 'chilliwack-homes-for-sale', 'city-of-langley': 'city-of-langley-homes-for-sale', 'cloverdale': 'cloverdale-neighbourhood-guides', 'coquitlam': 'coquitlam-homes-for-sale',
+ 'chilliwack': 'chilliwack-homes-for-sale', 'city-of-langley': 'langley-city', 'cloverdale': 'cloverdale-neighbourhood-guides', 'coquitlam': 'coquitlam-homes-for-sale',
  'downtown-new-westminster': 'downtown-new-westminster-condos-townhomes-for-sale', 'fraserview': 'fraserview-nw', 'glenwood': 'glenwood-port-coquitlam', 'grandview': 'grandview-heights-guide',
  'harbour-place': 'harbour-place-coquitlam', 'heritage-woods': 'heritage-woods-port-moody', 'highgate': 'highgate-burnaby', 'ladner': 'ladner-homes-for-sale',
  'lower-mary-hill': 'lower-mary-hill-port-coquitlam', 'maple-ridge': 'maple-ridge-homes-for-sale', 'metrotown': 'metrotown-homes-for-sale', 'mountain-meadows': 'mountain-meadows-port-moody',

@@ -16,7 +16,7 @@ UPDATED = '2026-11-01'
 # slug, display name, csv cities, hub pages that get a link, nearby-context sentence (verifiable only)
 CITIES = [
     ('surrey', 'Surrey', ['Surrey'], ['surrey-homes-for-sale', 'surrey-neighbourhood-guides', 'south-surrey-homes-for-sale'], 'surrey-homes-for-sale', 'surrey-neighbourhood-guides'),
-    ('langley', 'Langley', ['Langley', 'Aldergrove', 'Fort Langley'], ['langley-homes-for-sale', 'langley-neighbourhood-guides', 'city-of-langley-homes-for-sale'], 'langley-homes-for-sale', 'langley-neighbourhood-guides'),
+    ('langley', 'Langley', ['Langley', 'Aldergrove', 'Fort Langley'], ['langley-homes-for-sale', 'langley-neighbourhood-guides', 'langley-city'], 'langley-homes-for-sale', 'langley-neighbourhood-guides'),
     ('abbotsford', 'Abbotsford', ['Abbotsford'], ['abbotsford-homes-for-sale', 'abbotsford-neighbourhood-guides'], 'abbotsford-homes-for-sale', 'abbotsford-neighbourhood-guides'),
     ('chilliwack', 'Chilliwack', ['Chilliwack', 'Cultus Lake', 'Rosedale'], ['chilliwack-homes-for-sale', 'chilliwack-neighbourhood-guides'], 'chilliwack-homes-for-sale', 'chilliwack-neighbourhood-guides'),
     ('delta', 'Delta', ['Delta'], ['delta-homes-for-sale', 'delta-neighbourhood-guides'], 'delta-homes-for-sale', 'delta-neighbourhood-guides'),
