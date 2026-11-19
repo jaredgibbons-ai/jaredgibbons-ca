@@ -103,6 +103,8 @@ def main():
     out = {}
     for f in sorted(glob.glob(str(DIST / 'internal/blog/*.html'))):
         slug = os.path.basename(f)[:-5]
+        if prev.get(slug, {}).get('manual'):   # hand-built sections (the A1 zone table, D-365) are kept as they are
+            out[slug] = prev[slug]; continue
         t = open(f).read(); m = t[t.index('<main'):t.index('</main>')]
         art = re.sub(r'<(script|style)[\s\S]*?</\1>', '', m).split('class="abox"')[0]
         art = art.split('post-context')[0]
