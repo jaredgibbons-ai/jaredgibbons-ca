@@ -12,7 +12,7 @@ import json, os, glob
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROOT)
 PAGES = ['langley-mobile-homes', 'index', 'mission-mobile-homes', 'langley-foreclosures-court-ordered-sales', 'abbotsford-mobile-homes',
  'langley-horse-properties-equestrian-farms-for-sale-mls-listings', 'our-listings', 'broiler-farms-for-sale-bc', 'langley-acreages-for-sale',
- 'abbotsford-farms', 'surrey-mobile-homes', 'campbell-valley-acreages-farms-for-sale', 'maple-ridge-mobile-homes', 'chicken-farms',
+ 'abbotsford-farms', 'surrey-mobile-homes', 'campbell-valley-acreages-farms-for-sale', 'maple-ridge-mobile-homes',
  'south-surrey-open-houses', 'south-surrey-mobile-homes', 'mobile-home-parks-fraser-valley', 'zonings', 'chilliwack-poultry-farms-for-sale',
  'egg-farms-for-sale-bc', 'surreyforeclosuresandcourtsales', 'langley-farms-for-sale-acreages-agricultural-land-mls', 'langley-poultry-farms-for-sale',
  'cost-of-mobile-home-pad-rental-fees-in-langley', 'cloverale-foreclosures-court-ordered-sales', 'poultry-farms-for-sale-bc',
