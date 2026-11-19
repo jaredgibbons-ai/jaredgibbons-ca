@@ -1241,7 +1241,7 @@ const explore = !_extra.length ? exploreBase
                     {b.text && <span class="biglink__d">{b.text}</span>}
                     <span class="biglink__cta">{b.label} <span aria-hidden="true">→</span></span>
                   </span>
-                  {b.img && <img class="biglink__img" src={`${b.img}-800.webp`} srcset={`${b.img}-800.webp 800w, ${b.img}.webp ${b.w}w`} sizes="(min-width:48rem) 36rem, 100vw" width={b.w} height={b.h} alt="" loading="lazy" decoding="async" />}
+                  {b.img && <img class="biglink__img" src={`${b.img}-800.webp`} srcset={`${b.img}-800.webp 800w, ${b.img}.webp ${b.w}w`} sizes="(min-width:48rem) 36rem, 100vw" width={b.w} height={b.h} alt={b.alt || ""} loading="lazy" decoding="async" />}
                 </a>
               );
               if (b.t === 'commute') return <CommuteTime region={b.region} current={b.current} />;
