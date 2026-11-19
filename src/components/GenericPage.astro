@@ -298,6 +298,8 @@ if (page.slug.endsWith('-guide')) {
   jsonld.push({ '@context': 'https://schema.org', '@type': 'WebPage', url: `${origin}${page.path || '/' + page.slug + '.html'}`, name: String(page.title || '').split('|')[0].trim(),
     dateModified: lm?.d || updatedDate.toISOString().slice(0, 10), author: { '@id': `${origin}/#agent` } });
 }
+// Events a post lists (D-367): each becomes an Event, so a dated community event can show as an event result.
+for (const e of (page.events || []) as any[]) jsonld.push({ '@context': 'https://schema.org', '@type': 'Event', name: e.name, description: e.description, startDate: e.startDate, ...(e.endDate ? { endDate: e.endDate } : {}), eventStatus: 'https://schema.org/EventScheduled', eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode', isAccessibleForFree: !!e.free, ...(e.free ? { offers: { '@type': 'Offer', price: 0, priceCurrency: 'CAD', availability: 'https://schema.org/InStock', url: page.canonical } } : {}), location: { '@type': 'Place', name: e.place, address: { '@type': 'PostalAddress', streetAddress: e.street, addressLocality: e.city, addressRegion: 'BC', addressCountry: 'CA' } }, url: page.canonical });
 if (local?.faq?.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: local.faq.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
 // The old MLS search form leaked into six farm pages as text (form labels, a 34-item and a 275-item list of dropdown options, "Save search", "Reset", "Filters"). It is not content: drop it from "Price: Property Type / Subtype:" through "Filters".
 {
