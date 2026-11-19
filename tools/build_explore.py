@@ -147,6 +147,10 @@ def label(s):
     out = re.sub(r'\b(Homes|homes) homes for sale$', r'\1 for sale', out)
     out = re.sub(r'(?i)\b(neighbourhood) neighbourhood guide$', r'\1 guide', out)
     out = re.sub(r'(?i)\b(sales) homes for sale$', r'\1', out)
+    # a page name that already says what it is: never "Langley Poultry Farms for Sale homes for sale" (D-362)
+    if out.endswith(' homes for sale') and re.search(r'(?i)(for sale|guides?|penthouses|real estate( & land)?)( —.*)?$', out[:-15]):
+        out = re.sub(r'\s+—.*$', '', out[:-15]).strip()
+        if out == 'Penthouses': out = f'{NAME(city_of(s))} penthouses for sale'
     return out
 
 def build():

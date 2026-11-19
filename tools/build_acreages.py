@@ -16,7 +16,7 @@ N = T.N; LOCAL = N.LOCAL
 NOTES = os.path.join(ROOT, 'docs/research/local-notes-acreages'); G = 'acre'; HUB = 'bc-acreage-buying-rules'
 RURAL = set("""abbotsford-farms abbotsford-poultry-farms chilliwack-farms chilliwack-poultry-farms-for-sale cloverdale-farms ladner-farms langley-farms langley-farms-for-sale-acreages-agricultural-land-mls
 langley-acreages-for-sale langley-horse-properties-equestrian-farms-for-sale-mls-listings langley-poultry-farms-for-sale maple-ridge-farms mission-farms south-surrey-farms surrey-farms tsawwassen-farms
-fraser-valley-acreages-for-sale campbell-valley-acreages-farms-for-sale salmon-river-acreages-farms-for-sale farms poultry-farms-for-sale-bc broiler-farms-for-sale-bc chicken-farms egg-farms-for-sale-bc
+fraser-valley-acreages-for-sale campbell-valley-acreages-farms-for-sale salmon-river-acreages-farms-for-sale farms poultry-farms-for-sale-bc broiler-farms-for-sale-bc egg-farms-for-sale-bc
 turkey-farms-for-sale-bc buying-a-chicken-farm-bc
 aberdeen abbotsford-west abbotsford-east agassiz albion barnston-island big-bend bradner campbell-valley chilliwack-mountain county-line-glen-valley durieu east-chilliwack east-delta eastern-hillsides
 hatzic hazelmere kent ladner-rural matsqui mission-west mt-lehman north-maple-ridge north-meadows-pi northeast northwest-maple-ridge otter-district poplar port-guichon salmon-river serpentine silver-valley

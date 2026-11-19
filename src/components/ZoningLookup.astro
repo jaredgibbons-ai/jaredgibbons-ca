@@ -5,7 +5,9 @@
 import Z from '../data/zonings.json';
 import ZoningFind from './ZoningFind.astro';
 
-const { muni = '' } = Astro.props as { muni?: string };
+// compact: the address check and the search only, no full zone table. Valley-wide topic pages (poultry, broiler, egg...) all
+// carried the same 78-row table, so a third of each page was the same text; the table stays on the farm hub and the guide (D-362).
+const { muni = '', compact = false } = Astro.props as { muni?: string; compact?: boolean };
 const d = Z as any;
 const FARM = ['Agricultural / Farm', 'Rural / Acreage'];
 const munis = (muni ? d.munis.filter((m: any) => m.id === muni) : d.munis) as any[];
@@ -30,7 +32,9 @@ const uid = `zl-${muni || "all"}`;
       <div>
         <p class="eyebrow">Zoning lookup</p>
         <h2 class="h2" id={`${uid}-h`}>Check the zoning before you buy</h2>
-        <p class="zl__lead">Farm, rural and acreage zones in {place}, in plain English: what each allows and the smallest lot it can be split into. Search a code like {rows[0].code} or a word like "{hintWord}".</p>
+        {compact
+          ? <p class="zl__lead">Zoning and ALR status decide whether a farm can add barns, a second home or a farm store. Check one address below, or search the {rows.length} farm and acreage zones in {place} in the full guide.</p>
+          : <p class="zl__lead">Farm, rural and acreage zones in {place}, in plain English: what each allows and the smallest lot it can be split into. Search a code like {rows[0].code} or a word like "{hintWord}".</p>}
       </div>
       <p class="zl__links"><a class="btn btn--ghost" href={`/zonings.html${muni ? `#${muni}` : ''}`}>Full zoning guide</a></p>
     </div>
@@ -40,11 +44,11 @@ const uid = `zl-${muni || "all"}`;
     </div>
     <form class="zl__search" action="/zonings.html" method="get" role="search">
       <label for={`${uid}-q`} class="zl__vh">Search zones</label>
-      <input id={`${uid}-q`} name="q" type="search" placeholder={`Search ${rows.length} farm and acreage zones`} autocomplete="off" data-zlq />
+      <input id={`${uid}-q`} name="q" type="search" placeholder={`Search ${rows.length} farm and acreage zones`} autocomplete="off" data-zlq={compact ? undefined : ''} />
       {muni && <input type="hidden" name="m" value={muni} />}
       <button type="submit" class="btn btn--ghost">Search the full guide</button>
     </form>
-    <div class="zl__wrap" tabindex="0" role="region" aria-label="Farm and acreage zones">
+    {!compact && <div class="zl__wrap" tabindex="0" role="region" aria-label="Farm and acreage zones">
       <table class="zl__t">
         <thead><tr>{many && <th scope="col">Area</th>}<th scope="col">Zone</th><th scope="col">Type</th><th scope="col">Smallest new lot</th><th scope="col"><span class="zl__vh">Details</span></th></tr></thead>
         <tbody>
@@ -60,7 +64,7 @@ const uid = `zl-${muni || "all"}`;
         </tbody>
       </table>
       <p class="zl__none" data-zln hidden>No farm or acreage zone matches. Press Enter to search the full zoning guide.</p>
-    </div>
+    </div>}
     <p class="zl__fine">Summaries checked against each official bylaw on October 2, 2026. Zoning changes often: confirm with the municipality, and on ALR land with the Agricultural Land Commission.</p>
   </div>
 </section>

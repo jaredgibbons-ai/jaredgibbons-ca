@@ -43,6 +43,10 @@ export const MOVED = {
   // Search Console (16 months) shows Google ranking /langley-city.html for the Langley City searches (positions 24 to 36) and the
   // other page only for general "mls langley" searches, so the second now forwards to the first and every link points there.
   '/city-of-langley-homes-for-sale.html': '/langley-city.html',
+  // /chicken-farms.html and /poultry-farms-for-sale-bc.html answered the same searches: after the move to the new site Google showed
+  // both, and both slipped ("chicken farms for sale": 1.3 to 15). Jared, Nov 19 2026: "Yes you can do 1" (D-363). The poultry page
+  // held the chicken searches before, so it keeps them; the chicken page's own questions moved there.
+  '/chicken-farms.html': '/poultry-farms-for-sale-bc.html',
   // The old site's post at this address was about an Aldergrove condo, not the Croydon Drive price drop its URL named (site review
   // 2026-11-17, D-327). Moved to an address that matches; the Croydon price drop is /blog.html/price-reduced-south-surrey-2-bedroom-condo-8934352.
   '/blog.html/10k-price-drop-south-surrey-condo-at-15735-croydon-dr-619k-8934508': '/blog.html/aldergrove-strata-condo-301-27215-aldergrove-town-centre-drive-8934508',

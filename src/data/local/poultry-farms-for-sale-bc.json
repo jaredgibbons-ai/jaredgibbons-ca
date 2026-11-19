@@ -1,6 +1,137 @@
 {
   "blocks": [
     {
+      "t": "h",
+      "level": 2,
+      "text": "How BC poultry farms are bought and sold",
+      "pos": "after-intro",
+      "gen": "poultryhub"
+    },
+    {
+      "t": "p",
+      "pos": "after-intro",
+      "gen": "poultryhub",
+      "parts": [
+        {
+          "t": "A working BC poultry farm sells as three things together: the land, the barns and equipment, and the quota. Quota is the right to produce commercially, and a provincial board runs it for each sector:"
+        }
+      ]
+    },
+    {
+      "t": "list",
+      "pos": "after-intro",
+      "gen": "poultryhub",
+      "items": [
+        [
+          {
+            "t": "Chicken (broiler) farms",
+            "h": "/broiler-farms-for-sale-bc.html"
+          },
+          {
+            "t": ": BC Chicken Marketing Board, quota in kilograms of live weight per production period."
+          }
+        ],
+        [
+          {
+            "t": "Egg and layer farms",
+            "h": "/egg-farms-for-sale-bc.html"
+          },
+          {
+            "t": ": BC Egg Marketing Board, quota counted in laying hens."
+          }
+        ],
+        [
+          {
+            "t": "Turkey farms",
+            "h": "/turkey-farms-for-sale-bc.html"
+          },
+          {
+            "t": ": BC Turkey Marketing Board, quota in kilograms of live weight."
+          }
+        ],
+        [
+          {
+            "t": "Broiler hatching egg farms: BC Broiler Hatching Egg Commission."
+          }
+        ]
+      ]
+    },
+    {
+      "t": "p",
+      "pos": "after-intro",
+      "gen": "poultryhub",
+      "parts": [
+        {
+          "t": "Quota does not run with the land. Buyer and seller apply to the board together, the barns must be approved premises, and the quota is part of the sale only if the Contract of Purchase and Sale says so. The full explanation: "
+        },
+        {
+          "t": "how poultry quota works in BC",
+          "h": "/blog.html/how-poultry-quota-works-in-bc-chicken-egg-and-turkey-farms-explained-9126255"
+        },
+        {
+          "t": "."
+        }
+      ]
+    },
+    {
+      "t": "h",
+      "level": 3,
+      "text": "Where BC's poultry farms are",
+      "pos": "after-intro",
+      "gen": "poultryhub"
+    },
+    {
+      "t": "list",
+      "pos": "after-intro",
+      "gen": "poultryhub",
+      "items": [
+        [
+          {
+            "t": "Abbotsford poultry farms",
+            "h": "/abbotsford-poultry-farms.html"
+          },
+          {
+            "t": ": the province's densest cluster of chicken and egg barns, close to processors, feed mills and poultry vets."
+          }
+        ],
+        [
+          {
+            "t": "Chilliwack poultry farms",
+            "h": "/chilliwack-poultry-farms-for-sale.html"
+          },
+          {
+            "t": ": often a lower land cost for the same barn and quota package, which is why expanding growers watch it."
+          }
+        ],
+        [
+          {
+            "t": "Langley poultry farms",
+            "h": "/langley-poultry-farms-for-sale.html"
+          },
+          {
+            "t": ": supply-managed income on some of BC's most valuable ALR land, where large parcels are scarce."
+          }
+        ]
+      ]
+    },
+    {
+      "t": "p",
+      "pos": "after-intro",
+      "gen": "poultryhub",
+      "parts": [
+        {
+          "t": "Before you write an offer, read the "
+        },
+        {
+          "t": "guide to buying a chicken farm in BC",
+          "h": "/buying-a-chicken-farm-bc.html"
+        },
+        {
+          "t": ": quota checks, premises approval, biosecurity and financing."
+        }
+      ]
+    },
+    {
       "gen": "acre",
       "level": 2,
       "pos": "end",
@@ -94,12 +225,6 @@
             "h": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/news122/news122-excise-gst-hst-news-no-122.html",
             "t": "canada.ca · news122 excise gst hst news no 122"
           }
-        ],
-        [
-          {
-            "h": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/repairs-and-maintenance/depreciation-reports/depreciation-report-requirements",
-            "t": "www2.gov.bc.ca · depreciation report requirements"
-          }
         ]
       ],
       "pos": "end",
@@ -126,6 +251,31 @@
       "a": "Jared Gibbons, REALTOR® with Royal LePage Little Oak Realty, works across the Fraser Valley and Metro Vancouver. Call or text 604-928-1361 or use the contact form on this site.",
       "gen": "bank-faq",
       "q": "Who can help me buy or sell in BC?"
+    },
+    {
+      "q": "Does the quota come with a poultry farm when I buy it?",
+      "a": "Only if the contract says so. Quota does not run with the land: buyer and seller apply to the provincial marketing board for the transfer, and the board approves it and the premises. Write the quota amount and the board-approval condition into the Contract of Purchase and Sale.",
+      "gen": "poultryhub"
+    },
+    {
+      "q": "Can I start a new chicken or egg farm in BC without buying quota?",
+      "a": "Not at commercial scale. Chicken, egg, turkey and hatching egg production are supply-managed, so producing commercially needs quota issued or transferred with the board's approval. Buying an existing farm with quota is the usual way in.",
+      "gen": "poultryhub"
+    },
+    {
+      "a": "It matters because the quota, board and production cycle are different assets. A broiler farm sells meat birds grown in eight-week allocation periods set through Chicken Farmers of Canada, while a layer farm's value sits in egg quota under a different board. Confirm which board's quota is actually included in the sale, in writing, before valuing barns or land.",
+      "gen": "chickenmerge",
+      "q": "Is a chicken farm a broiler farm or an egg farm — and why does it matter at purchase?"
+    },
+    {
+      "a": "Not on the quota you bought. The Province's own disease order lists the BC Chicken Marketing Board and the BC Egg Marketing Board as separate regulators with separate quota holders, and each sector's transfer rules live with its own board.",
+      "gen": "chickenmerge",
+      "q": "Can I buy one chicken farm and switch it from meat to eggs later?"
+    },
+    {
+      "a": "Board reporting confirms all chicken growers must retain annual certification in both national programs and that audits are performed on-farm for registered growers, with 314 registered growers audited at multiple sites in 2024. Gaps found after purchase become the buyer's compliance problem.",
+      "gen": "chickenmerge",
+      "q": "What certification paperwork should I ask the seller for?"
     }
   ],
   "slug": "poultry-farms-for-sale-bc",
