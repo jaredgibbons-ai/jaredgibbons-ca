@@ -1175,7 +1175,7 @@ const explore = !_extra.length ? exploreBase
               </>);
               if (b.t === 'calc') return b.which === 'mortgage' ? <MortgageCalc price={b.price} exemption={b.exemption} /> : <NetProceedsCalc />;
               if (b.t === 'areamap') return <AreaMap region={b.region} mode={b.mode} current={b.current} />;
-              if (b.t === 'officemap') return <figure class="omap"><iframe src={`https://www.google.com/maps?q=${encodeURIComponent(b.q)}&output=embed`} title={b.title} loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></figure>;   // the office on Google Maps (contact page, D-360)
+              if (b.t === 'officemap') return <figure class="omap"><iframe src={`https://www.google.com/maps?q=${encodeURIComponent(b.q)}&z=15&output=embed`} title={b.title} loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></figure>;   // Jared's Google Business Profile pin (contact page, D-360). The brokerage name alone pins Little Oak's other office in north Surrey.
               if (b.t === 'btnlink') return <p><a class="btn" href={b.href} rel="noopener" target="_blank">{b.label}<span class="sr-only"> (opens in a new tab)</span></a></p>;
               // Blog index (D-258): the newest market update as one dark band with its headline numbers.
               // End of every blog post (D-266): the author, with a photo and direct contact.
