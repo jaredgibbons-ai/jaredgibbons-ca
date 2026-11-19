@@ -72,8 +72,8 @@ add('morgan-creek-south-surrey-condos-townhomes-for-sale', 'own-R3168794-05', 'S
 add('grandview-south-surrey-houses-for-sale', 'own-R3153853-03', 'South Surrey - Grandvi', 'R3153853-3.jpg', 'Aerial view over Grandview Heights forest and farm lots with Boundary Bay and the new neighbourhoods beyond')
 add('grandview-south-surrey-houses-for-sale', 'own-R3153853-04', 'South Surrey - Grandvi', 'R3153853-4.jpg', 'Aerial view of Grandview Heights rural lots, tilled fields and the Highway 99 corridor')
 add('grandview-surrey', 'own-R3153853-05', 'South Surrey - Grandvi', 'R3153853-5.jpg', 'Aerial view along a Grandview road with farm lots on one side and new townhome developments on the other')
-add('ocean-park-homes-for-sale', 'own-oceanpark-01', 'South Surrey - Ocean P', 'MLSTBD-1846-127A-1.jpg', 'West-coast style Ocean Park home with a stone chimney and tall cedars along the driveway')
-add('ocean-park-homes-for-sale', 'own-oceanpark-02', 'South Surrey - Ocean P', 'MLSTBD-1846-127A-2.jpg', 'Front of a cedar-clad Ocean Park house with picture windows under mature trees')
+add('crescent-bch-ocean-pk', 'own-oceanpark-01', 'South Surrey - Ocean P', 'MLSTBD-1846-127A-1.jpg', 'West-coast style Ocean Park home with a stone chimney and tall cedars along the driveway')
+add('crescent-bch-ocean-pk', 'own-oceanpark-02', 'South Surrey - Ocean P', 'MLSTBD-1846-127A-2.jpg', 'Front of a cedar-clad Ocean Park house with picture windows under mature trees')
 # Surrey: Fleetwood, Clayton
 add('fleetwood-tynehead', 'own-R3065812-05', 'Surrey - Fleetwood', 'R3065812-5.jpg', 'Aerial view of Fleetwood white-and-grey townhomes along a quiet complex street')
 add('fleetwood-tynehead', 'own-R3065812-03', 'Surrey - Fleetwood', 'R3065812-3.jpg', 'Aerial view of rows of Fleetwood townhomes with back patios and green landscaping between the buildings')

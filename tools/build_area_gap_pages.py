@@ -266,7 +266,8 @@ def write_xlsx(made):
 
 
 def main():
-    made = [nv_condos(), furry_creek(), coast('ocean-park'), coast('crescent-beach')]
+    # The Ocean Park and Crescent Beach pages folded into crescent-bch-ocean-pk (D-371), so they are no longer built.
+    made = [nv_condos(), furry_creek()]
     N.NEW.update(j['slug'] for j in made)
     for j in made: N.TITLE[j['slug']] = j['new_page']['h1']
     N.write_seo(made)
@@ -282,7 +283,7 @@ def main():
     end_link('furry-creek-bc-guide', 'fchublink', 'Furry Creek homes for sale', [('Furry Creek homes for sale', 'furry-creek-homes-for-sale')])
     end_link('west-vancouver-homes-for-sale', 'fchublink', 'Furry Creek', [('Furry Creek homes for sale', 'furry-creek-homes-for-sale')])
     end_link('west-vancouver-real-estate-market-stats', 'fchublink', 'Furry Creek', [('Furry Creek homes for sale', 'furry-creek-homes-for-sale')])
-    coastlinks = [('Ocean Park homes for sale', 'ocean-park-homes-for-sale'), ('Crescent Beach homes for sale', 'crescent-beach-homes-for-sale')]
+    coastlinks = [('Crescent Beach & Ocean Park homes for sale', 'crescent-bch-ocean-pk')]   # D-371
     for host in ('crescent-beach-ocean-park-guide', 'ocean-view-homes-crescent-beach-ocean-park', 'south-surrey-homes-for-sale', 'white-rock', 'white-rock-guide', 'south-surrey-white-rock-waterfront-homes-for-sale'):
         end_link(host, 'coastlinks', 'Ocean Park and Crescent Beach homes', coastlinks)
     write_xlsx(made)

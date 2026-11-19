@@ -45,7 +45,7 @@ PAGE = {
         P('There is no Milner area on MLS®, so its listings are filed under the neighbouring Langley sub-areas, the new homes mostly under Willoughby '
           'Heights, and the board publishes no Milner price. Ask me for the recent Milner-area sold list before you set a budget: a new townhome and a '
           'farm acreage here are very different purchases.'),
-        LINKS([('Willoughby homes for sale', 'willoughby-homes-for-sale'), ('Willoughby townhomes for sale', 'willoughby-townhomes-for-sale'), ('Langley acreages for sale', 'langley-acreages-for-sale'), ('Langley farms for sale', 'langley-farms'),
+        LINKS([('Willoughby homes for sale', 'willoughby-heights'), ('Willoughby townhomes for sale', 'willoughby-townhomes-for-sale'), ('Langley acreages for sale', 'langley-acreages-for-sale'), ('Langley farms for sale', 'langley-farms'),
                ('Langley horse properties', 'langley-horse-properties-equestrian-farms-for-sale-mls-listings'), ('Langley houses for sale', 'langley-houses-for-sale')]),
         H('Schools near Milner'),
         P('The village had its own school from 1913, on Glover Road, and Langley High School even ran out of it from 1922 to 1924. The buildings later became '

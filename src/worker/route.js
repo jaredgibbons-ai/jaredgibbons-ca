@@ -47,6 +47,12 @@ export const MOVED = {
   // both, and both slipped ("chicken farms for sale": 1.3 to 15). Jared, Nov 19 2026: "Yes you can do 1" (D-363). The poultry page
   // held the chicken searches before, so it keeps them; the chicken page's own questions moved there.
   '/chicken-farms.html': '/poultry-farms-for-sale-bc.html',
+  // Near-duplicate pages split the same searches; each folds into the page Google already ranks (Search Console, 90 days). Jared,
+  // Nov 19 2026: "merge, fold and do the next batch" (D-371). The Crescent Beach and Ocean Park pages' own sections moved to the hub.
+  '/willoughby-homes-for-sale.html': '/willoughby-heights.html',
+  '/willoughby-heights-langley-houses-for-sale.html': '/willoughby-houses-for-sale.html',
+  '/crescent-beach-homes-for-sale.html': '/crescent-bch-ocean-pk.html',
+  '/ocean-park-homes-for-sale.html': '/crescent-bch-ocean-pk.html',
   // The Google Ads campaign "south surrey seller add" (paused Nov 2026) still lands on the old site's /realtor/south-surrey,
   // which the new site does not have (found Nov 19 2026, D-365). Its headline is "South Surrey Realtors"; send it to that page.
   '/realtor/south-surrey': '/south-surrey-real-estate-agent-jared-gibbons-realtor.html',

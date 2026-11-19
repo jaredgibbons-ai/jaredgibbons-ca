@@ -139,7 +139,7 @@ PAGES.append(page(
         L('[White Rock hillside and ocean view homes](/white-rock-hillside-homes-for-sale.html)',
           '[White Rock condo buildings, tower by tower](/white-rock-condo-buildings.html)',
           '[Waterfront homes in White Rock and South Surrey](/south-surrey-white-rock-waterfront-homes-for-sale.html)',
-          '[Crescent Beach homes for sale](/crescent-beach-homes-for-sale.html)',
+          '[Crescent Beach & Ocean Park homes for sale](/crescent-bch-ocean-pk.html)',
           '[Living in White Rock: the guide](/white-rock-guide.html)'),
         H('Sources'),
         L('[City of White Rock: Pier and Promenade](https://www.whiterockcity.ca/401/Pier-Promenade)',
