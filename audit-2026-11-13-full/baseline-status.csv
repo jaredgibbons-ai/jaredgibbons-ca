@@ -1,0 +1,25 @@
+prior_finding,prior_severity,status,evidence
+Two origins (Apache and Worker),Critical,not reproduced,1905/1905 sitemap URLs and 32 repeat probes returned server cloudflare. contact.html/ is now a Worker 301. No Apache header this session.
+"Mobile LCP over 4s on home, listing, map",High,fixed on retest,"Lighthouse 12.8.2 mobile simulated: home 2.1s, listing 2.7s, map 1.9s, south-surrey homes 1.7s. GTM script now loads after scroll or 3.5s (Base.astro). Image waste of about 440 KiB remains."
+Review excerpts missing a date,High,still open,"70 of 78 in review-excerpts.json. Also new: homepage full names, and relative dates on /reviews.html."
+Click depth over 3 and 3 orphans,High,wrong on a full crawl,"With every internal link counted: max depth 3, 0 orphans, 0 unreachable. The 13 Nov graph used short or truncated HTML."
+Empty FAQ answer What is this page,Medium,fixed in rendered HTML,The empty question is still in src/data/local/south-surrey-real-estate-agent-jared-gibbons-realtor.json but is not in the live JSON-LD or visible text.
+FAQPage on commercial pages,Medium,still open,1505 sitemap URLs emit FAQPage.
+Every sitemap lastmod is 2026-11-13,Medium,partially changed,"Now 980 URLs on 2026-11-13 and 925 on 2026-11-14. Still a build date, not the article date."
+CSP has no script allowlist,Medium,still open,Policy is still frame-ancestors and base-uri only. IDX templates still fail best-practices on third-party cookies.
+Top 1% and 10 straight years claims,Medium,"still open, now a confirmed wording breach",Footer still says Top 1% of all REALTORS. Homepage still says 10 straight years. Raised to High against the approved wording.
+No building pages; Semrush top 3 is 13 keywords,Medium,still open,"Canada domain_rank unchanged: rank 348452, 1062 keywords, 13 in positions 1-3, 442 visits. Keyword list could not be pulled (API units zero)."
+Mixed-case host returns 200,Low,still open,https://JaredGibbons.ca/about.html is 200.
+No web manifest,Low,still open,/site.webmanifest and /manifest.webmanifest are 404. /favicon.ico is also 404. /favicon.png is 200.
+No terms page,Low,still open,Not in the sitemap. Privacy and the MLS disclaimer are in the footer.
+Archive conflict URLs 404 on purpose,Low,not re-fetched,route.js still 404s conflicting archive rows. Not requested live this session.
+12 Nov bottom bar overlap,Low,not remeasured,Code still hides .action-bar until scroll. Not checked at 375/390/430.
+12 Nov Photo N alt text,Low,not reproduced,0 alts matching Photo N across 1905 pages.
+12 Nov links to /index.html,Low,still fixed,/index.html is 301 to /.
+12 Nov breadcrumb to /our-listings.html,Low,not reproduced,No breadcrumb last-item mismatches in the 1905-page pass.
+12 Nov Maps OverQuotaMapError,Medium,not reproduced,Map search loaded. Console logged 1743 listings found. Warning: mapbox-gl.css missing.
+12 Nov embeddable.less failure,Medium,not reproduced,"Map page loaded mrp-bootstrap.less, common.less and idx-form.less at HTTP 200."
+12 Nov widget phone 1 (604) 9281361,Low,not reproduced,Map iframe shows 604-928-1361.
+12 Nov reviews and instagram 404,High,partially fixed,reviews.json is 204. instagram.json GET is 200.
+INDEXABLE false,High,still fixed,wrangler.jsonc INDEXABLE is true. No x-robots-tag on sitemap URLs.
+Empty form posts rejected,Low,not retested,"No form POSTs this session, per the audit rules."

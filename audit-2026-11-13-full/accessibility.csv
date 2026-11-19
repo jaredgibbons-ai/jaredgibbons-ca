@@ -1,0 +1,9 @@
+url,check,result,severity,detail
+https://jaredgibbons.ca/,lighthouse accessibility,1,Low,Mobile and desktop Lighthouse accessibility category scored 1. Not a full axe crawl.
+https://jaredgibbons.ca/map-search.html,lighthouse accessibility,1,Low,"Category score 1. Console warned that mapbox-gl.css is missing, which can hide map controls."
+https://jaredgibbons.ca/mortgage-calculator.html,labels,present,Low,"Home price, down payment, rate, amortization and frequency all have labels."
+https://jaredgibbons.ca/mortgage-calculator.html,error before input,shown,Medium,On load the empty price field is already aria-invalid with 'Enter a home price.'
+https://jaredgibbons.ca/,skip link,present,Low,Skip to content points at #main.
+https://jaredgibbons.ca/,image alt missing,0,Low,0 img elements lacked an alt attribute across 1905 pages.
+https://jaredgibbons.ca/,heading order,no skips,Low,No heading-level skip found in the 1905-page crawl.
+sitewide,lang,en-CA,Low,html lang=en-CA on every sitemap URL.
