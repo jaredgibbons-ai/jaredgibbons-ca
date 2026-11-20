@@ -76,6 +76,15 @@ export function displayStreet(c: OwnCard): string {
   const keep = i > 0 && i < t.length && STREET_WORD.test(t[i]) ? i - 1 : i;    // "13414 113 Avenue" -> "113 Avenue"; "2743 Sandon Drive" -> "Sandon Drive"
   return t.slice(keep).join(' ') || c.street;
 }
+// Surrey listings in the South Surrey / White Rock MLS® sub-areas are labelled "South Surrey" on cards (buyer/seller review, Nov 20 2026:
+// Morgan Crossing in Grandview Surrey read as plain "Surrey"). The sub-area comes from the listing's H1, else Pete's lookup (D-358).
+import SUBAREAS from '../data/listing-subareas.json';
+const SOUTH_SURREY = /\b(Grandview Surrey|Morgan Creek|Pacific Douglas|Sunnyside Park Surrey|Elgin Chantrell|Crescent Bch Ocean Pk|King George Corridor|Hazelmere)\b/;
+export function placeOf(c: OwnCard): string {
+  if (c.city !== 'Surrey') return c.city;
+  const sub = `${c.h1 || ''} ${(SUBAREAS as any).listings?.[c.slug] || ''}`;
+  return SOUTH_SURREY.test(sub) ? 'South Surrey' : c.city;
+}
 export function soldInSubArea(name: string, max = 3): OwnCard[] {
   if (!name) return [];
   const re = new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`);

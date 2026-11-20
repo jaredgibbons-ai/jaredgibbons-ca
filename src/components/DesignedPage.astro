@@ -9,7 +9,7 @@ import Cta from './Cta.astro';
 import ExploreLinks from './ExploreLinks.astro';
 import FormStub from './FormStub.astro';
 import PropertyCard from './PropertyCard.astro';
-import { ownCards, displayStreet } from '../lib/own-listings';
+import { ownCards, displayStreet, placeOf } from '../lib/own-listings';
 import EXPLORE from '../data/explore.json';
 import REVIEW_EXCERPTS from '../data/review-excerpts.json';
 
@@ -264,7 +264,7 @@ const SET = (src: string, w: number) => `${src}-800.webp 800w, ${existsSync(`pub
               <h3 class="dp-sub">{b.h}</h3>
               <ul class="cards">
                 {own.slice(0, b.count ?? 9).map((c: any) => (
-                  <PropertyCard href={c.href} photoSlug={c.slug} street={displayStreet(c)} city={c.city} beds={c.beds} baths={c.baths}
+                  <PropertyCard href={c.href} photoSlug={c.slug} street={displayStreet(c)} city={placeOf(c)} beds={c.beds} baths={c.baths}
                     floorArea={c.sqft ? (/sq/i.test(c.sqft) ? c.sqft : `${c.sqft} sqft`) : undefined} status={c.status} type={c.type} tags={[mon(c)]} mls={c.mls} moreLabel="More Info" />
                 ))}
               </ul>

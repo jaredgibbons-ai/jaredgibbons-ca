@@ -187,7 +187,7 @@ def main():
             b, f, u = section(n, shared[n['kind']], seen); bl += b; faq += f; urls_all += u
         # drop junk fragments, empty lists and headings left with nothing under them
         for b in bl:
-            if b['t'] == 'list': b['items'] = [i for i in b['items'] if len(i[0]['t']) >= 18 and not i[0]['t'].lower().startswith('none verified')]
+            if b['t'] == 'list': b['items'] = [i for i in b['items'] if len(i[0]['t']) >= 18 and not i[0]['t'].lower().startswith('none verified') and re.sub(r'[()\s]|as of [A-Z][a-z]+ \d{1,2}, \d{4}', '', i[0]['t'])]  # a line cleaned down to "( (as of <date>))" is dropped (Clayton, Nov 20 2026)
         bl = [b for b in bl if not (b['t'] == 'list' and not b['items']) and not (b['t'] == 'p' and len(b['text']) < 18)]
         bl = [b for i, b in enumerate(bl) if not (b['t'] == 'h' and (i + 1 == len(bl) or bl[i + 1]['t'] == 'h' and bl[i + 1]['level'] <= b['level']))]
         if len(bl) < 4: continue

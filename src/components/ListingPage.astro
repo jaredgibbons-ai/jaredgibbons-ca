@@ -1,4 +1,7 @@
 ---
+// Raw feed values read as code (buyer/seller review, Nov 20 2026): true/false become Yes/No, and a one-decimal dollar amount gets its cents ("$7,835.5" -> "$7,835.50").
+const fv = (v: string) => (v === 'true' ? 'Yes' : v === 'false' ? 'No' : String(v).replace(/(\$[\d,]+\.\d)(?!\d)/g, (_: string, a: string) => a + '0'));
+
 import VIDEO_DATES from '../data/video-upload-dates.json';   // YouTube upload dates, read from each video's page (Search Console: uploadDate is required)
 import PHOTO_ALTS from '../data/photo-alts.json';
 import POSTAL from '../data/listing-postal.json';
@@ -312,7 +315,7 @@ const metaDesc = cityName && addr ? builtMeta() : (rawMeta.length >= 70 && (show
             {b.items.map((it: any) => (
               <div class="ls__row">
                 <dt>{it.k}</dt>
-                <dd>{it.v.length ? it.v.map((v: string, i: number) => <>{i > 0 && <br />}{v}</>) : ''}</dd>
+                <dd>{it.v.length ? it.v.map((v: string, i: number) => <>{i > 0 && <br />}{fv(v)}</>) : ''}</dd>
               </div>
             ))}
           </dl>
