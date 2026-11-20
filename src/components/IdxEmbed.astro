@@ -23,7 +23,7 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
       <div class="idxphone">
         <p class="idxphone__note">South Surrey homes for sale are below. For an address, a price range or an MLS® number, <a href={gridFirst ? '/map-search.html' : MAP} data-map-open>open the map search</a>.</p>
         <div class="idx" data-idx-src={src} data-idx-id={id}></div>
-        <p class="notice idx__fallback" hidden>The live listings did not load. <a href={MAP} target="_blank" rel="noopener">Open the map search</a></p>
+        <p class="notice idx__fallback" hidden data-href={MAP} data-label="Open the map search" data-new></p>
       </div>
     )}
     <noscript><p class="notice"><a href={MAP}>Open the MLS® map search</a></p></noscript>
@@ -48,7 +48,7 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
     <div class="idx" data-idx-src={src} data-idx-id={id || undefined}>
     </div>
     <noscript><p class="notice">Live MLS® listings need JavaScript. <a href="/recip.html">Search Listings</a></p></noscript>
-    <p class="notice idx__fallback" hidden>The live listings did not load. <a href="/recip.html">Search Listings</a></p>
+    <p class="notice idx__fallback" hidden data-href="/recip.html" data-label="Search Listings"></p>
   </div>
 </section>
 )}
@@ -97,7 +97,18 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
   }
   const box = document.querySelector<HTMLElement>('.idx[data-idx-src]');
   if (box) {
-    const fb = box.parentElement?.querySelector<HTMLElement>('.idx__fallback');
+    // The "did not load" note (review of Nov 20 2026) is written only when the listings fail, so the HTML Google reads does not carry
+    // "The live listings did not load." on every inventory page.
+    const fb = box.parentElement?.querySelector<HTMLElement>('.idx__fallback') || null;
+    const showFb = () => {
+      if (!fb) return;
+      if (!fb.textContent) {
+        const a = document.createElement('a'); a.href = fb.dataset.href || '/recip.html'; a.textContent = fb.dataset.label || 'Search Listings';
+        if (fb.dataset.new !== undefined) { a.target = '_blank'; a.rel = 'noopener'; }
+        fb.append('The live listings did not load. ', a);
+      }
+      fb.hidden = false;
+    };
     let started = false;
     const load = () => {
       if (started) return; started = true;
@@ -107,11 +118,11 @@ const src = `https://idx.myrealpage.com/wps/rest/${account}/l/idx2/${path ?? `re
       // 20 seconds and more, and the old 10-second limit showed the note while the listings were still loading (review of Nov 15 2026).
       // If the listings arrive after the note, the note goes away again.
       const drawn = () => [...box.children].some((c) => c !== s);
-      const giveUp = () => { if (fb && !drawn()) { fb.hidden = false; box.hidden = true; } };
+      const giveUp = () => { if (!drawn()) { showFb(); box.hidden = true; } };
       s.onerror = giveUp;
       box.appendChild(s);
       setTimeout(giveUp, 45000);
-      new MutationObserver(() => { if (fb && drawn() && box.hidden) { box.hidden = false; fb.hidden = true; } }).observe(box, { childList: true });
+      new MutationObserver(() => { if (drawn() && box.hidden) { box.hidden = false; if (fb) fb.hidden = true; } }).observe(box, { childList: true });
       // The vendor's frames come without a title (axe frame-title, D-221): name them for screen readers as they appear.
       const nameFrames = () => box.querySelectorAll('iframe:not([title])').forEach((f) => f.setAttribute('title', `${box.closest('section')?.getAttribute('aria-label') || 'Listings'}: MLS® listing search`));
       new MutationObserver(nameFrames).observe(box, { childList: true, subtree: true });
