@@ -300,7 +300,8 @@ if (isPost) {
     ...(seo['Meta description'] ? { description: seo['Meta description'] } : {}), ...(published ? { datePublished: published, dateModified: modified } : {}),
     ...(hero ? { image: [...(hero.ogUrl ? [hero.ogUrl] : []), hero.url] } : {}), inLanguage: 'en-CA',
     author: { '@type': 'Person', '@id': `${origin}/#jared`, name: 'Jared Gibbons', url: `${origin}/about.html` },
-    publisher: { '@type': 'RealEstateAgent', '@id': `${origin}/#agent`, name: 'Jared Gibbons', url: `${origin}/` } });
+    // Publisher logo (Cursor deep audit, Nov 16): Article rich results ask for one. 370 x 166 site logo.
+    publisher: { '@type': 'RealEstateAgent', '@id': `${origin}/#agent`, name: 'Jared Gibbons', url: `${origin}/`, logo: { '@type': 'ImageObject', url: `${origin}/img/site-logo.webp`, width: 370, height: 166 } } });
 }
 // "Updated <date>" (D-373): the date the page's own content last changed, the same date as its sitemap <lastmod> (src/integrations/lastmod.mjs
 // rewrites both after the build, so the page never shows a date older than its content). Shown under the H1 and given as dateModified.
