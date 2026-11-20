@@ -71,6 +71,11 @@ export function oldListing(path, index, assetExists) {
   if (!m) return null;
   const own = m[2] && index.listingIds.get(m[2]);
   if (own) return `/our-listings.html/${own}`;
+  // Someone else's MLS® listing with its MyRealPage id (D-387): show that listing inside the site (D-345 template) instead of the
+  // area page it hung under. These old addresses are the site's biggest source of search clicks (Search Console, Oct 23 to Nov 19
+  // 2026: 756 of 1,305 clicks on listing URLs), and the searcher typed that address.
+  const tail = path.match(/\/(listing\.[^/]*?\.\d{6,})(?:\.html)?\/?$/);
+  if (m[2] && tail) return `/recip.html/${tail[1]}`;
   if (m[1] !== 'our-listings.html' && m[1] !== 'mylistings.html' && m[1] !== 'recip.html' && assetExists('/' + m[1])) return '/' + m[1];
   return m[1] === 'our-listings.html' || m[1] === 'mylistings.html' ? '/our-listings.html' : '/recip.html';
 }
