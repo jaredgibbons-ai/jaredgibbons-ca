@@ -212,7 +212,7 @@ a:hover{text-decoration-thickness:3px}
 body:has(input:not([type=radio],[type=checkbox],[type=range],[type=button],[type=submit]):focus,textarea:focus) .action-bar{transform:translateY(100%)}
 .action-bar a{flex:1;display:flex;align-items:center;justify-content:center;min-height:3.25rem;padding:.5rem;color:#fff;font:700 .75rem/1.2 var(--f-head);letter-spacing:.1em;text-transform:uppercase;text-align:center;text-decoration:none}
 .action-bar a+a{border-left:1px solid #444}
-@media (max-width:720px){.action-bar{display:flex}body{padding-bottom:3.25rem}}
+@media (max-width:720px){.action-bar{display:flex;padding-bottom:env(safe-area-inset-bottom)}body{padding-bottom:calc(3.25rem + 1px + env(safe-area-inset-bottom))}}
 
 /* ───────────────────────── Property card (shared by active, sold, community grids) ───────────────────────── */
 .cards{display:grid;gap:var(--s5);grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr))}

@@ -34,6 +34,8 @@ const hero = d.hero;
 // a phone gets the 800px copy of a large photo when one exists (D-252)
 import { existsSync } from 'node:fs';
 const HAS800 = (src: string) => existsSync(`public${src}-800.webp`);
+// 800w, a 1200w step when there is one (3x phones; tools/make_1200_variants.py), then the full file.
+const SET = (src: string, w: number) => `${src}-800.webp 800w, ${existsSync(`public${src}-1200.webp`) ? `${src}-1200.webp 1200w, ` : ''}${src}.webp ${w}w`;
 ---
 <Base
   title={page.title}
@@ -64,7 +66,7 @@ const HAS800 = (src: string) => existsSync(`public${src}-800.webp`);
       </div>
       {hero.image && (
         <figure class="dp-hero__img">
-          <img src={`${hero.image.src}.webp`} srcset={hero.image.srcset || (HAS800(hero.image.src) ? `${hero.image.src}-800.webp 800w, ${hero.image.src}.webp ${hero.image.w}w` : undefined)} sizes={hero.image.ratio ? '(min-width:60rem) 40vw, 100vw' : '100vw'} width={hero.image.w} height={hero.image.h} alt={hero.image.alt} fetchpriority="high" decoding="async" style={hero.image.ratio ? `aspect-ratio:${hero.image.ratio};object-position:${hero.image.pos || '50% 50%'}` : undefined} />
+          <img src={`${hero.image.src}.webp`} srcset={hero.image.srcset || (HAS800(hero.image.src) ? SET(hero.image.src, hero.image.w) : undefined)} sizes={hero.image.ratio ? '(min-width:60rem) 40vw, 100vw' : '100vw'} width={hero.image.w} height={hero.image.h} alt={hero.image.alt} fetchpriority="high" decoding="async" style={hero.image.ratio ? `aspect-ratio:${hero.image.ratio};object-position:${hero.image.pos || '50% 50%'}` : undefined} />
         </figure>
       )}
     </div>
@@ -229,7 +231,7 @@ const HAS800 = (src: string) => existsSync(`public${src}-800.webp`);
           if (b.type === 'gallery') return (
             <ul class="dp-gal" style={`--cols:${b.cols ?? 4}`}>
               {b.items.map((g: any) => (
-                <li><img src={`${g.src}-800.webp`} srcset={`${g.src}-800.webp 800w, ${g.src}.webp ${g.w}w`} sizes={`(min-width:64rem) ${Math.round(70 / (b.cols ?? 4))}rem, (min-width:40rem) 50vw, 100vw`} width="800" height={Math.round(800 * g.h / g.w)} alt={g.alt} loading="lazy" decoding="async" /></li>
+                <li><img src={`${g.src}-800.webp`} srcset={SET(g.src, g.w)} sizes={`(min-width:64rem) ${Math.round(70 / (b.cols ?? 4))}rem, (min-width:40rem) 50vw, 100vw`} width="800" height={Math.round(800 * g.h / g.w)} alt={g.alt} loading="lazy" decoding="async" /></li>
               ))}
             </ul>
           );
@@ -248,7 +250,7 @@ const HAS800 = (src: string) => existsSync(`public${src}-800.webp`);
             </>
           );
           if (b.type === 'figure') return (
-            <figure class="dp-fig" style={`max-width:${b.max ?? '100%'}`}><img src={`${b.src}.webp`} srcset={HAS800(b.src) ? `${b.src}-800.webp 800w, ${b.src}.webp ${b.w}w` : undefined} sizes={`(min-width:64rem) min(${b.max ?? '60rem'}, 60rem), 100vw`} width={b.w} height={b.h} alt={b.alt} loading="lazy" decoding="async" /></figure>
+            <figure class="dp-fig" style={`max-width:${b.max ?? '100%'}`}><img src={`${b.src}.webp`} srcset={HAS800(b.src) ? SET(b.src, b.w) : undefined} sizes={`(min-width:64rem) min(${b.max ?? '60rem'}, 60rem), 100vw`} width={b.w} height={b.h} alt={b.alt} loading="lazy" decoding="async" /></figure>
           );
           if (b.type === 'booklet') return (
             <ul class="dp-book" tabindex="0" aria-label="Printed booklet, 9 pages (scroll sideways)">

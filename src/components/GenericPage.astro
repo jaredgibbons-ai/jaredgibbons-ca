@@ -67,6 +67,20 @@ const updatedDate = latestMarket ? new Date(Date.UTC(+latestMarket[1], +latestMa
 const updatedLabel = updatedDate.toLocaleDateString('en-CA', { month: 'long', year: 'numeric', timeZone: 'UTC' });
 
 const { page } = Astro.props as { page: any };
+// Heading before the listings (mobile audit, Nov 20 2026): on six archive pages (Sardis and Chilliwack 55+ condos/townhomes/houses,
+// Chilliwack poultry farms) the listing grid came before the H1, so a phone showed the alert form and the grid first and the H1 sat
+// 1,200-1,600px down. The H1, its intro line and a short all-caps eyebrow just above it now open the page, as on every other search page.
+{
+  const bl = page.blocks || [];
+  const g = bl.findIndex((b: any) => b.t === 'grid');
+  const h = bl.findIndex((b: any) => b.t === 'h' && b.level === 1);
+  if (g >= 0 && h > g) {
+    const ptx = (b: any) => (b?.t === 'p' ? (typeof b.text === 'string' ? b.text : (b.parts || []).map((x: any) => x.t).join('')) : '');
+    const eyebrow = h > 0 && bl[h - 1]?.t === 'p' && ptx(bl[h - 1]).length <= 60 && ptx(bl[h - 1]) === ptx(bl[h - 1]).toUpperCase() ? h - 1 : h;
+    const end = bl[h + 1]?.t === 'p' ? h + 2 : h + 1;
+    page.blocks = [...bl.slice(eyebrow, end), ...bl.slice(0, eyebrow), ...bl.slice(end)];
+  }
+}
 const awRev = [...page.slug].reduce((n: number, c: string) => n + c.charCodeAt(0), 0) % 2 === 1;
 const seo = page.seo || {};
 const idx = IDX as { account: string; pages: Record<string, string>; special?: Record<string, string> };
@@ -1625,7 +1639,7 @@ const explore = !_extra.length ? exploreBase
   .kvgrid--wide{grid-template-columns:1fr;max-width:64rem}
   .kv{background:#fff;border:1px solid var(--rule);border-top:3px solid var(--ink);padding:1.1rem 1.35rem .5rem;min-width:0}
   .section--cream .kv{border-color:var(--cream-deep);border-top-color:var(--ink)}
-  .kv__k{font:700 .6875rem/1.3 var(--f-head);letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin:0 0 .35rem}
+  .kv__k{font:700 .75rem/1.3 var(--f-head);letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin:0 0 .35rem}
   .kv__h{font:800 1rem/1.25 var(--f-head);letter-spacing:-.005em;margin:0 0 .6rem}
   .kv__rows{margin:0}
   .kv__h a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.2em}
