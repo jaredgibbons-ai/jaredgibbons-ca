@@ -1942,3 +1942,9 @@ tools/area_overviews_2_2026_11_20.py.
 - The three guides had 9 to 12 inbound links; their area's house, townhome and condo pages now link to them.
 - Not changed: Murrayville, Fort Langley houses, Panorama Ridge and Sullivan Station houses, Surrey acreages, Langley open houses and the ocean-view page already rank for their own searches (Murrayville at 8 to 19); nothing on them was wrong. The Guildford new-construction page is shown for "Zenith Guildford" searches, a Matte Homes condo building at 14297 103A Avenue; no primary source for it was found, so it is not added.
 tools/core_pages_7_2026_11_20.py.
+
+**D-382 (2026-11-20) Jared's third batch of area overviews, on eight pages.** Jared sent Area-overviews-SEO-batch3.docx: Sunnyside / Elgin-Chantrell, Rosemary Heights / King George Corridor, Hazelmere / Campbell Valley, Fraser Heights and West Newton (text kept in docs/research/area-overviews/).
+- His words are kept, and every fact matched the sources the area guides already cite, so nothing was edited. His file is also more accurate than the site on one point: Xw'epiteng Elementary (the former Hall's Prairie) is a land-based learning program of choice, not Hazelmere's catchment school, as the Hazelmere page had implied.
+- Three of his sections pair two areas that each have a page, so each page gets the shared opening, its own area's part and the shared closing, under an H2 naming that area: Sunnyside Park and Elgin-Chantrell; the King George Corridor page (both parts, since the two meet at Highway 99) and the Rosemary Heights guide (its part); Hazelmere and Campbell Valley. Fraser Heights and West Newton go on their hub pages whole. Each links to the school locator and the area guide.
+- Old archive marketing text removed: Campbell Valley ("Langley's Rural Escape") and West Newton ("Surrey's Affordable Family Hub", "exceptional value", "good schools"), neither sourced.
+tools/area_overviews_3_2026_11_20.py.
