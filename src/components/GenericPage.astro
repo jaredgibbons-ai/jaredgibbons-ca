@@ -58,6 +58,9 @@ import { weekendLabel } from '../lib/weekend.js';
 import SoldVideos from './SoldVideos.astro';
 // Farm, acreage and land pages get the zoning lookup (D-269): the municipality's farm and rural zones from the zoning guide.
 const ZL_PAGE = /(acreage|farms?\b|farms-|lots-land|horse-propert|poultry|chicken-farm|egg-farm|broiler|turkey-farm)/;
+// Farm and acreage pages get farm wording in the alert box, quiz and closing box (Jared approved, Nov 20 2026, D-393). Lots-and-land pages are not farms.
+const FARM_PAGE = /(acreage|farms?\b|farms-|horse-propert|poultry|chicken-farm|egg-farm|broiler|turkey-farm)/;
+const POULTRY_PAGE = /(poultry|chicken-farm|egg-farm|broiler|turkey-farm)/;
 const ZL_MUNI: [RegExp, string][] = [[/^abbotsford/, 'zd-abbotsford'], [/^(langley|fort-langley|campbell-valley|salmon-river)/, 'zd-langley'], [/^(surrey|south-surrey|cloverdale|port-kells)/, 'zd-surrey'], [/^(tsawwassen|ladner|delta|north-delta)/, 'zd-delta'], [/^chilliwack/, 'zd-chilliwack'], [/^maple-ridge/, 'zd-mapleridge'], [/^mission/, 'zd-mission']];
 import AwardsMarquee from './AwardsMarquee.astro';
 // Guides refresh with each month's board and sold data: the date shown is the month the latest board package came out (D-201).
@@ -911,7 +914,7 @@ const explore = !_extra.length ? exploreBase
     );
     if (sec.kind === 'grid' && idxPath) return <IdxEmbed path={idxPath} account={idx.account} />;
     // Search pages (a saved search id) get the "Email me new listings" box right above the results; the open map search and "my listings" widgets do not.
-    if (sec.kind === 'grid' && idxId) return <IdxEmbed id={idxId} account={idx.account}><ListingAlert search={alertName} searchId={idxId} /></IdxEmbed>;
+    if (sec.kind === 'grid' && idxId) return <IdxEmbed id={idxId} account={idx.account}><ListingAlert search={alertName} searchId={idxId} lede={FARM_PAGE.test(page.slug) ? 'Get new farm listings by email as they come on the market. Jared sets up the alert for you.' : undefined} /></IdxEmbed>;
     if (sec.kind === 'grid') return (
       <section class="section section--tight" aria-label="Listings">
         <div class="wrap">
@@ -1322,11 +1325,11 @@ const explore = !_extra.length ? exploreBase
       </section>
     );
   })}
-  {local?.lead === 'quiz' && <SearchQuiz heading={local.lead_heading} />}
+  {local?.lead === 'quiz' && (FARM_PAGE.test(page.slug) ? <SearchQuiz heading={local.lead_heading} farm lede="Tell me what you're after (farm type, acres, barns, quota or no quota) and I'll send you what fits, including off-market farms when I know of them." /> : <SearchQuiz heading={local.lead_heading} />)}
   {local?.lead === 'homevalue' && <HomeValue place={local.lead_place} />}
   <SoldProof slug={page.slug} />{(ZL_PAGE.test(page.slug) || page.slug === 'land') && !/landplans|land-use|landlord|^(burnaby|coquitlam|new-westminster|port-coquitlam|port-moody|pitt-meadows)-/.test(page.slug) && <ZoningLookup muni={ZL_MUNI.find(([re]) => re.test(page.slug))?.[1] || ''} compact={!ZL_MUNI.some(([re]) => re.test(page.slug)) && !['farms', 'land', 'fraser-valley-acreages-for-sale'].includes(page.slug)} />}
   <SoldVideos slug={page.slug} />
-  <Cta />
+  {FARM_PAGE.test(page.slug) ? <Cta heading="Buying or selling a farm?" lede={POULTRY_PAGE.test(page.slug) ? 'today. Quota, barns and land: we’ll go through all three.' : 'today. Land, zoning, water and buildings: we’ll go through all of it.'} /> : <Cta />}
   {explore && <ExploreLinks data={explore} />}
 </main>
 </Base>

@@ -3,7 +3,7 @@
 
 Jared, Nov 20 2026: "commercial should just be metro vancouver and the fraser valley, can we do each city for commercial? and then south surrey and
 langley cloverdale and abbotsford we can ... break it down into categories" -> categories "industrial, office, retail, land and business".
-Lease listings are left out (for sale only), an assumption Jared was told about.
+Jared, later the same day: "yes do leases as well". Pages and searches cover property for sale and for lease (businesses: for sale only).
 
     python3 -I tools/build_commercial_pages.py      -> src/data/local/<slug>.json (new pages) + docs/review/idx/commercial-searches-2026-11-20.xlsx
 
@@ -39,7 +39,9 @@ def L(items):
     return {'t': 'list', 'items': out, 'gen': G}
 def TB(cap, head, rows, src): return {'t': 'table', 'caption': cap, 'head': head, 'rows': rows, 'source': src, 'gen': G}
 def chk_title(t): assert 30 <= len(t) <= 60, (len(t), t); return t
-def chk_desc(d): assert 110 <= len(d) <= 160, (len(d), d); return d
+def chk_desc(d):
+    if len(d) > 160: d = d.replace(', with recent sales and zoning.', ', plus recent sales and zones.').replace(' and businesses on the MLS®', ' and businesses')
+    assert 110 <= len(d) <= 160, (len(d), d); return d
 
 # ------------------------------------------------------------------ cities (Metro Vancouver and the Fraser Valley)
 # key: (name, MLS areas for Gerry, municipality row in the GVR table, Avison Young submarket, zoning keys)
@@ -120,7 +122,7 @@ def ind_line(sub, nm):
 
 def page(slug, title, desc, h1, crumbs, blocks, faq, faqh):
     return dict(status='draft', slug=slug, updated=DAY, new_page=dict(title=chk_title(title), description=chk_desc(desc), h1=h1), breadcrumbs=crumbs,
-                faq_heading=faqh, blocks=[{'t': 'notice', 'text': 'Draft for Jared’s approval. Commercial figures are from GVR Commercial Edge (Q2 2026) and Avison Young (Q3 2026); zones are the municipal bylaw summaries on the zoning guide. For sale listings only.', 'gen': G}] + blocks,
+                faq_heading=faqh, blocks=[{'t': 'notice', 'text': 'Draft for Jared’s approval. Commercial figures are from GVR Commercial Edge (Q2 2026) and Avison Young (Q3 2026); zones are the municipal bylaw summaries on the zoning guide. Sale and lease listings.', 'gen': G}] + blocks,
                 faq=[dict(q=q, a=a, gen=G) for q, a in faq])
 
 def city_slug(k): return f'{k}-commercial-real-estate-for-sale'
@@ -136,7 +138,7 @@ for key, (nm, mls, row, sub, mk) in CITIES.items():
     slug = city_slug(key); fv = key in FV
     region = 'the Fraser Valley' if fv else 'Metro Vancouver'
     b = [P(f'Commercial property for sale in {nm}: industrial buildings and strata units, offices, retail space, commercial land and businesses listed on the MLS®. '
-           f'This search shows properties for sale only; spaces for lease are not included. Call or text Jared Gibbons at 604-928-1361 for a property that is not listed, or to value one you own.'),
+           f'The search shows space for sale and for lease. Call or text Jared Gibbons at 604-928-1361 for a property that is not listed, or to value one you own.'),
          {'t': 'grid', 'gen': G}]
     area = next((a for a, v in AREAS.items() if v[1] == key), None)
     if area:
@@ -170,14 +172,14 @@ for key, (nm, mls, row, sub, mk) in CITIES.items():
     faq = []
     if row: faq.append((f'How many commercial properties sold in {nm} recently?', sales_line(row, nm, 'the City of Surrey' if key in ('south-surrey-white-rock', 'cloverdale') else row)))
     if sub: faq.append((f'What is industrial vacancy in {nm}?', ind_line(sub, nm)))
-    t = f'{nm} Commercial Real Estate for Sale'
-    title = t if len(t) <= 60 else f'{nm} Commercial Property for Sale'
+    t = f'{nm} Commercial Real Estate for Sale & Lease'
+    title = next(x for x in (t, f'{nm} Commercial Property for Sale & Lease', f'{nm} Commercial Real Estate', f'{nm} Commercial Property') if len(x) <= 60)
     if len(title) < 30: title = f'{title} | MLS®'
-    desc = f'Commercial real estate for sale in {nm}: industrial, office, retail, land and businesses on the MLS®, with recent sales and zoning.' if row or zs else f'Commercial real estate for sale in {nm}, BC: industrial, office, retail, commercial land and businesses for sale on the MLS®.'
-    made.append(page(slug, title, desc, f'{nm} Commercial Real Estate for Sale',
+    desc = f'Commercial real estate for sale and lease in {nm}: industrial, office, retail, land and businesses on the MLS®, with recent sales and zoning.' if row or zs else f'Commercial real estate for sale and lease in {nm}, BC: industrial, office, retail, land and businesses on the MLS®.'
+    made.append(page(slug, title, desc, f'{nm} Commercial Real Estate for Sale and Lease',
                      [{'name': 'Home', 'href': '/'}, {'name': 'Commercial', 'href': '/commercial.html'}, {'name': f'{nm} commercial', 'href': f'/{slug}.html'}],
                      b, faq, f'{nm} commercial real estate: your questions answered'))
-    sheet.append([slug, f'{nm} Commercial Real Estate for Sale', f'https://jaredgibbons.ca/{slug}.html', f'COMM {nm}', mls, '(none)', 'All commercial types', 'For sale only (no leases)', '(none)', 'Active', '', '', ''])
+    sheet.append([slug, f'{nm} Commercial Real Estate for Sale and Lease', f'https://jaredgibbons.ca/{slug}.html', f'COMM {nm}', mls, '(none)', 'All commercial types', 'For sale AND for lease', '(none)', 'Active', '', '', ''])
 
 # ------------------------------------------------------------------ category pages
 BUSINESS_TIPS = ['Business only or with the property: many MLS® business listings sell the business and its lease, not the building. The listing says which.',
@@ -191,12 +193,12 @@ for akey, (anm, ckey, amls) in AREAS.items():
     for c, cd in CATS.items():
         slug = cat_slug(akey, c); lab = cd['label']
         noun = 'businesses' if c == 'business' else lab.lower()
-        b = [P({'industrial': f'Industrial property for sale in {anm}: warehouses, industrial buildings, shop condos and industrial strata units listed on the MLS®.',
-                'office': f'Office space for sale in {anm}: office buildings and office strata units listed on the MLS®.',
-                'retail': f'Retail space for sale in {anm}: storefronts, retail strata units and retail buildings listed on the MLS®.',
-                'land': f'Commercial and industrial land for sale in {anm}: lots and development sites listed on the MLS® as commercial land.',
+        b = [P({'industrial': f'Industrial property for sale and lease in {anm}: warehouses, industrial buildings, shop condos and industrial strata units listed on the MLS®.',
+                'office': f'Office space for sale and lease in {anm}: office buildings and office strata units listed on the MLS®.',
+                'retail': f'Retail space for sale and lease in {anm}: storefronts, retail strata units and retail buildings listed on the MLS®.',
+                'land': f'Commercial and industrial land for sale and lease in {anm}: lots and development sites listed on the MLS® as commercial land.',
                 'business': f'Businesses for sale in {anm}, with or without the real estate, listed on the MLS®.'}[c]
-               + ' For sale only; space for lease is not included. Call or text Jared Gibbons at 604-928-1361 to ask about one of these, or about something not listed.'),
+               + (' Space for lease is included.' if c != 'business' else '') + ' Call or text Jared Gibbons at 604-928-1361 to ask about one of these, or about something not listed.'),
              {'t': 'grid', 'gen': G}]
         if c in FACTS.AREA.get(akey, {}):
             fh, fi = FACTS.AREA[akey][c]
@@ -228,17 +230,17 @@ for akey, (anm, ckey, amls) in AREAS.items():
         if row and cd['asset']:
             m = MUNI[row]; idx = {'Industrial': 4, 'Land': 5, 'Office': 6, 'Retail & other': 7}[cd['asset']]
             faq.append((f'How many {cd["short"]} properties sold in {"Surrey" if row == "Surrey" else anm} recently?', f'{m[idx]} in the second quarter of 2026, out of {m[1]} commercial sales in {"the City of Surrey" if row == "Surrey" else row} (GVR Commercial Edge).'))
-        h1 = f'{anm} {lab} for Sale' if c != 'business' else f'Businesses for Sale in {anm}'
+        h1 = f'{anm} {lab} for Sale and Lease' if c != 'business' else f'Businesses for Sale in {anm}'
         title = h1 if len(h1) >= 30 else f'{h1} | MLS® Listings'
-        desc = {'industrial': f'Industrial property for sale in {anm}: warehouses, shop condos and industrial strata on the MLS®, with vacancy, rents and industrial zones.',
-                'office': f'Office space for sale in {anm}: office buildings and strata units on the MLS®, with recent office sales and the zones that allow offices.',
-                'retail': f'Retail space for sale in {anm}: storefronts and retail strata units on the MLS®, with recent sales and the zones that allow retail.',
-                'land': f'Commercial and industrial land for sale in {anm} on the MLS®, with recent land sales and the smallest new lot in each zone.',
+        desc = {'industrial': f'Industrial property for sale and lease in {anm}: warehouses, shop condos and industrial strata on the MLS®, with vacancy, rents and industrial zones.',
+                'office': f'Office space for sale and lease in {anm}: office buildings and strata units on the MLS®, with recent office sales and the zones that allow offices.',
+                'retail': f'Retail space for sale and lease in {anm}: storefronts and retail strata units on the MLS®, with recent sales and the zones that allow retail.',
+                'land': f'Commercial and industrial land for sale and lease in {anm} on the MLS®, with recent land sales and the smallest new lot in each zone.',
                 'business': f'Businesses for sale in {anm} on the MLS®, with or without the real estate, plus what to ask for before you buy a business.'}[c]
         made.append(page(slug, title, desc, h1,
                          [{'name': 'Home', 'href': '/'}, {'name': 'Commercial', 'href': '/commercial.html'}, {'name': f'{nm} commercial', 'href': f'/{city_slug(ckey)}.html'}, {'name': h1, 'href': f'/{slug}.html'}],
                          b, faq, f'{h1}: your questions answered'))
-        sheet.append([slug, h1, f'https://jaredgibbons.ca/{slug}.html', f'COMM {anm} {lab}', amls, '(none)', cd['mls'], 'For sale only (no leases)', '(none)', 'Active', '', '', ''])
+        sheet.append([slug, h1, f'https://jaredgibbons.ca/{slug}.html', f'COMM {anm} {lab}', amls, '(none)', cd['mls'], 'For sale only' if c == 'business' else 'For sale AND for lease', '(none)', 'Active', '', '', ''])
 
 taken = {f[:-5] for f in os.listdir('src/data/pages')}
 for j in made:
@@ -253,14 +255,14 @@ wb = Workbook(); ws = wb.active; ws.title = 'Commercial searches'
 ws.append(['Page slug', 'Page heading', 'Page URL', 'Search name to save in MyRealPage', 'MLS area', 'Sub-area filter', 'Commercial type', 'Other filters', 'Price filter', 'Status', 'Search ID (Gerry fills)', 'Embed code (Gerry fills)', 'Notes'])
 ws.append(['commercial', 'Fraser Valley Commercial Real Estate for Sale (existing page, search 1450191)', 'https://jaredgibbons.ca/commercial.html', 'COMM Metro Vancouver + Fraser Valley (edit 1450191)',
            'Metro Vancouver and Fraser Valley areas only: Vancouver West, Vancouver East, Burnaby North/South/East, New Westminster, Richmond, Ladner, Tsawwassen, Coquitlam, Port Coquitlam, Port Moody, North Vancouver, West Vancouver, Maple Ridge, Pitt Meadows, Surrey, North Surrey, South Surrey White Rock, Cloverdale, North Delta, Langley, Abbotsford, Mission, Chilliwack, Sardis, Yarrow, Agassiz, Harrison, Hope. Leave out Sunshine Coast, Squamish, Whistler, Pemberton, the Islands and anything outside these.',
-           '(none)', 'All commercial types', 'For sale only (no leases)', '(none)', 'Active', '1450191', '(no change if you edit the existing search)', 'Edit the existing search rather than making a new one, so the page keeps working.'])
+           '(none)', 'All commercial types', 'For sale AND for lease', '(none)', 'Active', '1450191', '(no change if you edit the existing search)', 'Edit the existing search rather than making a new one, so the page keeps working.'])
 for r in sheet: ws.append(r)
 for c in ws[1]: c.font = Font(bold=True)
 for col, w in zip('ABCDEFGHIJKLM', [42, 44, 60, 40, 50, 16, 30, 24, 12, 10, 18, 30, 40]): ws.column_dimensions[col].width = w
 ws.freeze_panes = 'A2'
 n = wb.create_sheet('Notes')
 for line in ['One saved MyRealPage search per page, noframe template, same set-up as the earlier searches (Status Active, no price filter).',
-             'All of these are FOR SALE only: please exclude lease listings in every search.',
+             'Include lease listings as well as sales in every search (column H), except the business searches, which are for sale only.',
              'Commercial type: use the MLS® commercial property type (Industrial, Office, Retail, Land, Business). If Business has "with property" and "without property", include both.',
              'City searches use all commercial types. Surrey = the four Surrey board areas without the White Rock sub-area; South Surrey and White Rock together = South Surrey White Rock.',
              'Row 2 is an edit to the existing commercial search (1450191), which today returns listings from across BC.',

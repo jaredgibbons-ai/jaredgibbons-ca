@@ -1,10 +1,11 @@
 ---
-// Shared closing call to action ("Ready to get started?") — text as archived.
+// Shared closing call to action ("Ready to get started?") — text as archived. Farm and poultry pages pass their own (D-393).
+const { heading = 'Ready to get started?', lede = "today and let's discuss your next home sale or purchase." } = Astro.props;
 ---
 <section class="section section--ink on-dark cta" aria-labelledby="h-ready">
   <div class="wrap">
-    <h2 id="h-ready" class="h2 caps">Ready to get started?</h2>
-    <p class="lede">Call <a href="tel:604-928-1361">604-928-1361</a> or <a href="mailto:jaredgibbons@royallepage.ca">Email me</a> today and let's discuss your next home sale or purchase.</p>
+    <h2 id="h-ready" class="h2 caps">{heading}</h2>
+    <p class="lede">Call <a href="tel:604-928-1361">604-928-1361</a> or <a href="mailto:jaredgibbons@royallepage.ca">Email me</a> {lede}</p>
   </div>
 </section>
 <style>

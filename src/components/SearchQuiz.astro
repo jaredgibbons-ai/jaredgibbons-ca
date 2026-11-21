@@ -2,14 +2,15 @@
 // "Where are you starting?" quiz. Five short steps, then Send: the Worker (POST /api/forms/quiz) emails every answer to Jared.
 // While sending is not switched on (preview, or any failure), the same answers are offered as a ready-written email to Jared's inbox.
 import { quickSearchAreas } from '../lib/quicksearch';
-const { heading = 'Where are you starting?', lede = 'Answer four quick questions and see matching homes right away. Want more? I can send new ones as they list.' } = Astro.props;
+const { heading = 'Where are you starting?', lede = 'Answer four quick questions and see matching homes right away. Want more? I can send new ones as they list.', farm = false } = Astro.props;
 const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITEKEY || '';
 const steps = [
   { key: 'starting', q: 'Where are you starting?', multi: false, opts: ['First home', 'Moving up', 'Downsizing', 'Investing', 'Selling first, then buying', 'Just exploring'] },
   { key: 'types', q: 'What are you looking for?', hint: 'Pick all that fit.', multi: true, opts: ['Detached house', 'Townhome', 'Condo', 'Duplex', 'House with a suite', 'Acreage or farm', 'Mobile home or 55+', 'Not sure yet'] },
   { key: 'areas', q: 'Where?', hint: 'Pick all that fit.', multi: true, opts: ['South Surrey / White Rock', 'Langley', 'Surrey', 'Cloverdale', 'Abbotsford', 'Elsewhere in the Fraser Valley', 'Not sure yet'] },
 ];
-const budgets = ['Under $500,000', '$500,000 to $750,000', '$750,000 to $1,000,000', '$1,000,000 to $1,500,000', '$1,500,000 to $2,000,000', 'Over $2,000,000', 'Not sure yet'];
+// Farm and acreage pages (D-393): their listings run well past $2M, so the top band splits.
+const budgets = ['Under $500,000', '$500,000 to $750,000', '$750,000 to $1,000,000', '$1,000,000 to $1,500,000', '$1,500,000 to $2,000,000', ...(farm ? ['$2,000,000 to $5,000,000', 'Over $5,000,000'] : ['Over $2,000,000']), 'Not sure yet'];
 const timings = ['Right away', 'In 1 to 3 months', 'In 3 to 6 months', 'In 6 to 12 months', 'Just looking'];
 const total = 5;
 // Instant result (D-261): after budget and timing, step 5 first shows links to matching live-listings pages on this site, then the optional
