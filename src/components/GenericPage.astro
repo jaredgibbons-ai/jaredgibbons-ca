@@ -38,6 +38,7 @@ import IdxEmbed from './IdxEmbed.astro';
 import { mapSearchUrl } from '../lib/idx';
 import { quickSearchAreas } from '../lib/quicksearch';
 import { postImage } from '../lib/post-images';
+import POST_GALLERIES from '../data/post-galleries.json';
 import ListingAlert from './ListingAlert.astro';
 import Newsletter from './Newsletter.astro';
 import MarketChart from './MarketChart.astro';
@@ -309,6 +310,22 @@ const crumbs: any[] = page.slug === 'index' || page.slug === '404' ? [] : local?
 // with the dates the post itself shows. A post with no photo of its own simply has neither picture nor image line.
 const isPost = String(page.path || '').startsWith('/blog.html/');
 const hero = isPost ? postImage(page.slug) : null;
+// Listing photos from Jared's own deal folders for the old listing posts (D-394): a small grid placed before the post's second
+// heading (or after its third paragraph when it has fewer headings), so the opening text stays right under the lead photo.
+{
+  const gal = isPost ? (POST_GALLERIES as Record<string, any[]>)[page.slug] : undefined;
+  if (gal?.length && !(page.blocks || []).some((b: any) => b.t === 'pgal')) {
+    const bl = page.blocks as any[];
+    const by = bl.findIndex((b: any) => b.t === 'p' && b.cls === 'byline');
+    let at = -1, paras = 0, heads = 0;
+    for (let i = Math.max(by + 1, 0); i < bl.length; i++) {
+      if (bl[i].t === 'h' && bl[i].level >= 2 && ++heads === 2) { at = i; break; }
+      if (bl[i].t === 'p' && !bl[i].cls && ++paras === 3 && heads < 1) { at = i + 1; break; }
+    }
+    if (at < 0) at = Math.min(Math.max(by + 3, 0), bl.length);
+    bl.splice(at, 0, { t: 'pgal', items: gal });
+  }
+}
 const published = isPost ? String(seo.Published || '') : '';
 const modified = isPost && String(seo.Modified || '') > published ? String(seo.Modified) : published;
 if (isPost) {
@@ -1040,6 +1057,16 @@ const explore = !_extra.length ? exploreBase
                   </figure>
                 </>
               );
+              if (b.t === 'pgal') return (
+                <figure class="pgal">
+                  <ul class="pgal__grid">
+                    {b.items.map((ph: any) => (
+                      <li><a href={ph.src960}><img src={ph.src480} srcset={`${ph.src480} 480w, ${ph.src960} 960w`} sizes="(min-width:48rem) 20rem, 50vw" width={ph.w} height={ph.h} alt={ph.alt} loading="lazy" decoding="async" /></a></li>
+                    ))}
+                  </ul>
+                  <figcaption>Photos from this listing</figcaption>
+                </figure>
+              );
               if (b.t === 'p') return <p class={b.cls}><Rich parts={b.parts} /></p>;
               if (b.t === 'photo') return <PhotoCredit photo={b.photo} sizes="(min-width:48rem) 40rem, 100vw" />;
               if (b.t === 'srcfew') return <SourceList items={b.items} compact />;
@@ -1587,6 +1614,11 @@ const explore = !_extra.length ? exploreBase
   .pg p,.pg li,.pg a{overflow-wrap:anywhere}
   .byline{font:600 .8125rem var(--f-head);letter-spacing:.04em}
   .phero{margin:var(--s5) 0 var(--s6)}
+  .pgal{margin:var(--s5) 0 var(--s6)}
+  .pgal__grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}
+  .pgal__grid a{display:block}
+  .pgal__grid img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;background:#e9e9e9}
+  .pgal figcaption{margin-top:.5rem;font-size:.875rem;color:var(--grey)}
   .phero img{display:block;width:100%;height:auto;background:#e9e9e9;outline:1px solid rgba(10,10,10,.1);outline-offset:-1px}
   .pg .h2,.pg .h2.caps{margin-top:0;margin-bottom:var(--s5)}
   .pg .h2::before{content:'';display:block;width:2.5rem;height:3px;background:var(--ink);margin-bottom:.9rem}
