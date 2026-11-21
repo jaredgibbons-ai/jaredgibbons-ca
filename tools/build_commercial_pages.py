@@ -31,7 +31,12 @@ SRC_AY = 'Avison Young, Metro Vancouver industrial market report, Q3 2026 (as re
 
 def P(t): return {'t': 'p', 'text': t, 'gen': G}
 def H(t, l=2): return {'t': 'h', 'level': l, 'text': t, 'gen': G}
-def L(items): return {'t': 'list', 'items': [[{'t': i}] for i in items], 'gen': G}
+def L(items):
+    out = []
+    for i in items:
+        m = re.fullmatch(r'\[([^\]]+)\]\(([^)]+)\)', i)
+        out.append([{'t': m.group(1), 'h': m.group(2)}] if m else [{'t': i}])
+    return {'t': 'list', 'items': out, 'gen': G}
 def TB(cap, head, rows, src): return {'t': 'table', 'caption': cap, 'head': head, 'rows': rows, 'source': src, 'gen': G}
 def chk_title(t): assert 30 <= len(t) <= 60, (len(t), t); return t
 def chk_desc(d): assert 110 <= len(d) <= 160, (len(d), d); return d
@@ -94,7 +99,7 @@ def first(s, n=230):
 def munis_of(mk):
     labs = [MUNI_LABEL.get(m, m) for m in mk]
     return labs[0] if len(labs) == 1 else ' and '.join([', '.join(labs[:-1]), labs[-1]])
-def zlist(zs): return {'t': 'list', 'items': [[{'t': f'[{z["code"]} {z["name"]}](/zonings.html#{z["id"]})' + (f' ({MUNI_LABEL.get(z["muni"], z["muni"])})' if z['muni'] in ('whiterock', 'langleycity') else '')}] for z in zs], 'gen': G}
+def zlist(zs): return {'t': 'list', 'items': [[{'t': f'{z["code"]} {z["name"]}' + (f' ({MUNI_LABEL.get(z["muni"], z["muni"])})' if z['muni'] in ('whiterock', 'langleycity') else ''), 'h': f'/zonings.html#{z["id"]}'}] for z in zs], 'gen': G}
 def zone_rows(zs, with_lot=False):
     rows = []
     for z in zs:
@@ -121,6 +126,10 @@ def page(slug, title, desc, h1, crumbs, blocks, faq, faqh):
 def city_slug(k): return f'{k}-commercial-real-estate-for-sale'
 def cat_slug(a, c): return f'{a}-{CATS[c]["slug"]}'
 
+sys.path.insert(0, os.path.join(ROOT, 'tools'))
+import commercial_facts_2026_11_20 as FACTS
+def FL(items): return {'t': 'list', 'items': [[{'t': f'{t} ([{lab}]({url}), read November 20, 2026)'}] for t, lab, url in items], 'gen': G}
+
 made, sheet = [], []
 # ------------------------------------------------------------------ city pages
 for key, (nm, mls, row, sub, mk) in CITIES.items():
@@ -133,6 +142,8 @@ for key, (nm, mls, row, sub, mk) in CITIES.items():
     if area:
         b += [H(f'{AREAS[area][0]} commercial property by type'),
               L([f'[{AREAS[area][0]} {CATS[c]["label"].lower() if c != "business" else "businesses"} for sale](/{cat_slug(area, c)}.html)' for c in CATS])]
+    if key in FACTS.CITY:
+        b += [H(f'Commercial and industrial areas in {nm}'), FL(FACTS.CITY[key])]
     if row:
         lab = 'the City of Surrey as a whole' if key in ('south-surrey-white-rock', 'cloverdale') else row
         b += [H(f'What sold in {nm}'), P(sales_line(row, nm, lab) + (' Commercial Edge reports Surrey as one city, so these figures include South Surrey, Cloverdale, Newton, Guildford and Whalley.' if lab.startswith('the City') else '')
@@ -156,7 +167,7 @@ for key, (nm, mls, row, sub, mk) in CITIES.items():
     others = [k for k in (FV if fv else MV) if k != key]
     b += [H(f'Commercial real estate in other {"Fraser Valley" if fv else "Metro Vancouver"} cities'), L([f'[{CITIES[k][0]}](/{city_slug(k)}.html)' for k in others]),
           P('See also [all commercial listings](/commercial.html) and the [Fraser Valley commercial market report](/fraser-valley-commercial-market-report.html).')]
-    faq = [(f'Does this page show {nm} commercial space for lease?', 'No. The search lists commercial property for sale only. For space to lease, call or text Jared at 604-928-1361 and he will pull the current lease listings for you.')]
+    faq = []
     if row: faq.append((f'How many commercial properties sold in {nm} recently?', sales_line(row, nm, 'the City of Surrey' if key in ('south-surrey-white-rock', 'cloverdale') else row)))
     if sub: faq.append((f'What is industrial vacancy in {nm}?', ind_line(sub, nm)))
     t = f'{nm} Commercial Real Estate for Sale'
@@ -187,6 +198,9 @@ for akey, (anm, ckey, amls) in AREAS.items():
                 'business': f'Businesses for sale in {anm}, with or without the real estate, listed on the MLS®.'}[c]
                + ' For sale only; space for lease is not included. Call or text Jared Gibbons at 604-928-1361 to ask about one of these, or about something not listed.'),
              {'t': 'grid', 'gen': G}]
+        if c in FACTS.AREA.get(akey, {}):
+            fh, fi = FACTS.AREA[akey][c]
+            b += [H(fh), FL(fi)]
         if row and cd['asset']:
             m = MUNI[row]; idx = {'Industrial': 4, 'Land': 5, 'Office': 6, 'Retail & other': 7}[cd['asset']]
             whole = row == 'Surrey'
@@ -199,15 +213,18 @@ for akey, (anm, ckey, amls) in AREAS.items():
         pick = {'industrial': is_ind, 'office': is_office, 'retail': lambda z: is_retail(z) and not is_ind(z), 'land': lambda z: bool(z['lot'])}.get(c)
         if pick:
             sel = [z for z in zs if pick(z)]
+            if c == 'land' and akey == 'cloverdale':   # the same Surrey table is on the South Surrey land page; link to it instead of repeating it
+                b += [H('Smallest new lot by zone'), P('Cloverdale uses the City of Surrey zoning bylaw. The smallest new lot in each Surrey commercial and industrial zone is listed on the [South Surrey commercial land page](/south-surrey-commercial-land-for-sale.html), and every zone is on the [zoning guide](/zonings.html).')]
+                sel = []
             if sel:
                 b += [H(f'{munis_of(mk)} zones that allow {cd["short"]} uses' if c != 'land' else f'Smallest new lot by zone, {munis_of(mk)}'),
                       P('Each zone links to its full summary on the zoning guide.' + (f' These are municipal zones, so some apply to parts of {"Surrey" if "surrey" in mk else "the municipality"} outside {anm}.' if akey in ('south-surrey', 'cloverdale') else '') + ' A zone that allows a use may still need a permit or a rezoning for a specific site, so check the address with the municipality before you buy.'),
                       (TB(f'{munis_of(mk)}: commercial and industrial zones and their smallest new lot', ['Zone', 'Municipality', 'Smallest new lot'], zone_rows(sel, with_lot=True), 'Municipal zoning bylaws, as summarised on the zoning guide.') if c == 'land' else zlist(sel))]
         if c == 'business':
-            b += [H(f'Buying a business in {anm}: what to ask for'), L(BUSINESS_TIPS)]
+            b += [H(f'What to ask for before you buy a business'), L(BUSINESS_TIPS)]
         b += [H(f'More {anm} commercial property'),
               L([f'[{anm} {CATS[o]["label"].lower() if o != "business" else "businesses"} for sale](/{cat_slug(akey, o)}.html)' for o in CATS if o != c] + [f'[All {nm} commercial real estate](/{city_slug(ckey)}.html)'])]
-        faq = [(f'Does this page include {noun} for lease?', 'No, only property for sale. For lease listings, call or text Jared at 604-928-1361.')]
+        faq = []
         if row and cd['asset']:
             m = MUNI[row]; idx = {'Industrial': 4, 'Land': 5, 'Office': 6, 'Retail & other': 7}[cd['asset']]
             faq.append((f'How many {cd["short"]} properties sold in {"Surrey" if row == "Surrey" else anm} recently?', f'{m[idx]} in the second quarter of 2026, out of {m[1]} commercial sales in {"the City of Surrey" if row == "Surrey" else row} (GVR Commercial Edge).'))
