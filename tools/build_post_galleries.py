@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Listing photos inside the old listing blog posts (D-394).
 
-The old posts only ever showed one lead photo plus Jared's headshot. The listing photos for 13 of those properties are in
+The old posts only ever showed one lead photo plus Jared's headshot. The listing photos for 17 of those properties are in
 Jared's Google Drive deal folders; four per property were picked by looking at them (no people, no paperwork, no family
 photos, no other brokerages' signs) and given plain alt text. This tool turns the picked originals into web sizes and
 writes src/data/post-galleries.json, which GenericPage.astro shows as a small "Photos from this listing" grid in each post.
@@ -37,6 +37,11 @@ POSTS = {
     '8929-202': ['1-bed-den-at-the-grove-walnut-grove-469k-9028946', 'walnut-grove-1-bed-den-drops-to-439000-the-grove-9111628', 'walnut-grove-condo-price-drop-a218-8929-202-st-langley-9160362'],
     'miller': ['just-sold-renovated-home-at-8316-miller-crescent-mission-8692568'],
     'enterprise': ['industrial-unit-for-lease-in-cloverdale-104-19232-enterprise-way-8897647'],
+    '27215-401': ['new-listing-401-27215-aldergrove-town-centre-drive-8851532', 'brand-new-554-sq-ft-strata-401-aldergrove-town-centre-dr-langley-8934509'],
+    '27215-309': ['bright-contemporary-1-bed-condo-in-aldergroves-new-urban-hub-8851541'],
+    '16216-20ave': ['south-surrey-estate-on-acreage-16216-20-avenue-pacific-douglas-8882963'],
+    '19897-75a': ['4-bed-townhome-in-willoughby-53-19897-75a-ave-8750493', '4-bedroom-in-willoughby-heights-relisted-5319897-75a-ave-langley-8946669',
+                  '4-bedroom-townhome-in-willoughby-heights-8850548', '53-19897-75a-ave-langley-4-bed-townhome-at-mayfair-9115463'],
 }
 
 
